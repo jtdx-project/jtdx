@@ -1,0 +1,33 @@
+// Status=review
+
+Download and execute the package file {win32}, following these
+instructions:
+
+- Install _WSJT-X_ into its own directory rather than in the conventional
+location +C:\Program Files\WSJTX+.  Suggested installation directories are
++C:\WSJTX+ or +C:\WSJT\WSJTX+.
+
+- All program files relating to _WSJT-X_ will be stored in the chosen
+installation directory and its subdirectories. 
+
+- Logs and other writeable files will normally be found in the 
+directory +C:\Users\<username>\AppData\Local\WSJT-X+.
+
+IMPORTANT: Note that your computer might be configured so that this
+directory is "`invisible`".  It's there, however, and accessible.
+An alternative (shortcut) directory name is %LOCALAPPDATA%\WSJT-X\.
+
+- The built-in Windows facility for time synchronization is usually
+not adequate. We recommend the program _Meinberg NTP_ (see {ntpsetup}
+for downloading and installation instructions) or _Dimension 4_ from
+{dimension4}.
+
+- _WSJT-X_ expects your sound card to do its raw sampling at 48000 Hz.
+To ensure that this will be so when running under recent versions of
+Windows, open the system's *Sound* control panel and select in turn the
+*Recording* and *Playback* tabs. Click on *Properties*, then
+*Advanced*, and select *16 bit, 48000 Hz (DVD Quality)*.
+
+- You can uninstall _WSJT-X_ by clicking its *Uninstall* link in the
+Windows *Start* menu, or by using *Uninstall a Program* on the
+Windows Control Panel.

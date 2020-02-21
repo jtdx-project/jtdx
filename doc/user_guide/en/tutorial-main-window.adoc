@@ -1,0 +1,16 @@
+// Status=review
+
+- Click the *Stop* button on the main window to halt any data acquisition.  
+
+- Select *JT9* from the *Mode* menu and *Deep* from the *Decode* menu.
+
+- Set the audio frequencies to *Tx 1224 Hz* and *Rx 1224 Hz*.  
+
+IMPORTANT: Sliders and spinner controls respond to *Arrow* key presses
+and *Page Up/Down* key presses, with the *Page* keys moving the
+controls in larger steps.  You can also type numbers directly into
+the spinner controls.
+
+- Select *Tab 2* (below the *Decode* button) to choose the alternative
+set of controls for generating and selecting Tx messages.
+

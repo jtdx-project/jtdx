@@ -1,0 +1,58 @@
+
+ __       __   ______      _____  ________      __    __ 
+|  \  _  |  \ /      \    |     \|        \    |  \  |  \
+| $$ / \ | $$|  $$$$$$\    \$$$$$ \$$$$$$$$    | $$  | $$
+| $$/  $\| $$| $$___\$$      | $$   | $$ ______ \$$\/  $$
+| $$  $$$\ $$ \$$    \  __   | $$   | $$|      \ >$$  $$ 
+| $$ $$\$$\$$ _\$$$$$$\|  \  | $$   | $$ \$$$$$$/  $$$$\ 
+| $$$$  \$$$$|  \__| $$| $$__| $$   | $$       |  $$ \$$\
+| $$$    \$$$ \$$    $$ \$$    $$   | $$       | $$  | $$
+ \$$      \$$  \$$$$$$   \$$$$$$     \$$        \$$   \$$
+                                                         
+                                                         
+                                                         
+Thanks to:
+
+    The FFTW library (http://www.fftw.org) without which the efficient
+generation of  discrete fast Fourier transformations  essential to the
+decoding DSP algorithms of WSJT-X would  be a considerable part of the
+project.
+
+    The Qt project (http://qt-project.org) that allows us to deliver a
+rich  industrial strength  cross platform  GUI application  written in
+C++.
+
+    Nate  Bargmann, N0NB,  and  the Hamlib  developer  team for  their
+excellent library  and for  prompt review and  acceptance of  the many
+pull requests for upstream patches to Hamlib.
+
+    Dave  Bernstein,  AA6YQ, for  being  so  receptive to  suggestions
+allowing WSJT-X to  cooperate with his excellent Amateur  Radio DX and
+award chasing suite (http://www.dxlabsuite.com).
+
+    Laurie Cowcher,  VK3AMA, for  developing the  partner applications
+JTAlertX and  JTMacrosX (http://www.hamapps.com) that make  DX chasing
+with WSJT-X such an efficient and pleasurable experience.
+
+    The  CMake build  and packaging  tools (http://www.cmake.org)  for
+their comprehensive  scripting tools that make  automation of building
+and packaging on all supported platforms possible.
+
+    The  NSIS  MS  Windows  installer scripting  and  generator  tools
+(http://nsis.sourceforge.net) that, through  the CPack NSIS generator,
+allows us to build a comprehensive Windows installer package.
+
+    The GNU Compiler Collection (http://gcc.gnu.org) that allows us to
+compile and link  C++, Fortran and C code to  the latest Standards and
+with high quality optimization.
+
+     The clang C++ & C compiler  front ends and LLVM compiler back end
+tools  (http://clang.llvm.org)  that  provide  us  with  another,  gcc
+compatible, high quality C++ and C compiler and Standard Library suite
+which, particularly on Apple Mac, allows  our code to be ported to the
+maximum number of platforms.
+
+    The  MinGW  project  (http://www.mingw.org)  that  ports  the  gcc
+compilers and related GNU tools to the MS Windows environment allowing
+a high quality  C++, Fortran and C application to  be portable between
+native MS Windows and other platforms such as Linux and Apple Mac.

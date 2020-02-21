@@ -1,0 +1,124 @@
+		Brief Description of chkfft, by K1JT
+		------------------------------------
+
+Discrete Fourier transforms (DFTs) are found at the root of most
+digital signal processing tasks. In WSJT and its sister programs the
+transforms are done using the FFTW library, and subroutine four2
+provides a convenient interface to the library.  Program chkfft is a
+command-line utility offering a convenient way to test FFT execution
+times under a variety of circumstances.
+
+To compile chkfft in Linux:
+
+$ gfortran -o chkfft chkfft.f90 four2a.f90 f77_wisdom.f90 gran.c -lfftw3f
+
+To compile chkfft in Windows (you may need to customize the hard-coded
+path shown here for libfftw3f-3.dll):
+
+> gfortran -o chkfft chkfft.f90 four2a.f90 f77_wisdom.f90 gran.c \
+  /JTSDK-QT/appsupport/runtime/libfftw3f-3.dll
+
+To see a brief usage message, type chkfft at the command prompt:
+ 
+$ chkfft
+ Usage: chkfft <nfft | infile> nr nw nc np
+        nfft:   length of FFT
+        nfft=0: do lengths 2^n, n=2^4 to 2^23
+        infile: name of file with nfft values, one per line
+        nr:     0/1 to not read (or read) wisdom
+        nw:     0/1 to not write (or write) wisdom
+        nc:     0/1 for real or complex data
+        np:     0-4 patience for finding best algorithm
+
+As an example, to measure the speed of a complex DFT of length 131072:
+
+#######################################################################
+$ chkfft 131072 0 1 1 2
+
+nfft:     131072   nr: 0   nw 1   nc: 1   np: 2
+
+    NFFT     Time        rms      MHz   MFlops  iters  tplan
+-------------------------------------------------------------
+  131072  0.0021948  0.00000032  59.72  5076.1     231   2.9
+#######################################################################
+
+Program output shows that on the test machine the average time for one
+forward (or inverse) transform of length N=131072 is about 2.2 ms,
+corresponding to slightly over 5 GFlops computing speed.  The planning
+time in FFTW was 2.9 s.
+
+Running the command again with parameter nr=1 will use the 
+"wisdom" already accumulated for complex N=131072 FFTs.  The execution
+speed will be essentially the same, but no planning time is required:  
+
+#######################################################################
+$ chkfft 131072 1 1 1 2
+
+nfft:     131072   nr: 1   nw 1   nc: 1   np: 2
+
+    NFFT     Time        rms      MHz   MFlops  iters  tplan
+-------------------------------------------------------------
+  131072  0.0021575  0.00000032  60.75  5164.0     235   0.0
+#######################################################################
+
+Optimized algorithms can compute DFTs much faster for lengths that are
+the product of small integers.  Length N=131072 = 2^17 is a good
+example, and FFTs should be very efficient.  For comparison, look at
+the speed for N=131071, a prime number.  The average time is now about
+7 times larger:
+
+#######################################################################
+C:\JTSDK-QT\src\wsjtx\lib>chkfft 131071 1 1 1 2
+
+nfft:     131071   nr: 1   nw 1   nc: 1   np: 2
+
+    NFFT     Time        rms      MHz   MFlops  iters  tplan
+-------------------------------------------------------------
+  131071  0.0153637  0.00000065   8.53   725.2      33   5.6
+#######################################################################
+
+Here's an example that measures execution times for all integral
+power-of-2 lengths from 2^4 to 2^23:
+
+#######################################################################
+$ chkfft 0 1 1 1 2
+
+nfft:          0   nr: 1   nw 1   nc: 1   np: 2
+
+  n   N=2^n    Time        rms      MHz   MFlops  iters  tplan
+---------------------------------------------------------------
+ 4      16  0.0000003  0.00000014  58.61  1172.2 1000000   0.0
+ 5      32  0.0000004  0.00000016  89.19  2229.6 1000000   0.0
+ 6      64  0.0000006  0.00000016 109.44  3283.2  866975   0.0
+ 7     128  0.0000009  0.00000021 135.92  4757.1  538369   0.0
+ 8     256  0.0000016  0.00000020 158.40  6335.8  313701   0.0
+ 9     512  0.0000032  0.00000021 162.53  7313.8  160943   0.1
+10    1024  0.0000067  0.00000023 152.53  7626.5   75521   0.1
+11    2048  0.0000136  0.00000025 150.42  8273.3   37239   0.2
+12    4096  0.0000316  0.00000027 129.75  7784.8   16060   0.3
+13    8192  0.0000720  0.00000026 113.75  7393.8    7040   0.5
+14   16384  0.0001620  0.00000028 101.11  7078.0    3129   0.9
+15   32768  0.0003227  0.00000030 101.53  7615.1    1571   1.7
+16   65536  0.0010020  0.00000030  65.41  5232.5     506   4.1
+17  131072  0.0021575  0.00000032  60.75  5164.0     235   0.0
+18  262144  0.0053937  0.00000032  48.60  4374.2      94   3.6
+19  524288  0.0190668  0.00000034  27.50  2612.2      27   6.8
+20 1048576  0.0468001  0.00000035  22.41  2240.5      11   2.4
+21 2097152  0.0936012  0.00000036  22.41  2352.5       6  31.6
+22 4194304  0.1949997  0.00000037  21.51  2366.0       3   9.8
+23 8388608  0.4212036  0.00000038  19.92  2290.3       2 112.9
+#######################################################################
+
+Test data for all transforms is gaussian random noise of zero mean and
+standard deviation 1.  Tabulated values of "rms" are the
+root-mean-square differences between the original data and the
+back-transfmred data.
+
+File nfft.dat contains all numbers between 2^3 and 2^23 with no factor
+greater than 7, followed by their factors.  These numbers are good
+choices for FFT lengths.  File all_fft.out gives the result on one
+machine of running the command 
+
+$ chkfft nfft.dat 0 1 1 2
+
+Take note: this task may take as much as 24 hours, or even more!

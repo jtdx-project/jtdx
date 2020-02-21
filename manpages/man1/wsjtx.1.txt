@@ -1,0 +1,121 @@
+:doctype: manpage
+:man source: AsciiDoc
+:man version: {VERSION}
+:man manual: WSJT-X Manual
+= wsjtx(1)
+
+== NAME
+
+wsjtx, jt9 - Weak signal communications program.
+
+== SYNOPSIS
+
+*wsjtx* ['OPTIONS']
+
+== DESCRIPTION
+
+*wsjtx* is a weak signal communications program supporting several operating
+modes: JT65, JT9, JT4 and WSPR (*wsjtx* version 1 supported JT9 only).
+
+WSJT-X home page:: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx.html
+
+WSJT-X User's Guide::
+http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-{VERSION}.html
+
+An alternative JT65 decoder executable *kvasd* for i386 Ubuntu is
+available at http://www.physics.princeton.edu/pulsar/K1JT/kvasd .
+This decoder is not open-source, is not included in the wsjtx package,
+and is not required for JT65 decoding.
+
+== OPTIONS
+*-r, --rig-name*[=RIGNAME]::
+
+Enable multiple instances of the wsjtx(1) application to run
+concurrently.  Each RIGNAME must be unique. One instance may use no
+RIGNAME. If this option is not supplied then only one instance of
+wsjtx(1) may be run at any time.
+
+*-v, --version*:: Display the application version.
+
+*-h,--help*:: Display usage information.
+
+*--test-mode*::
+
+When this option is provided all writable files will be placed in a
+special test location (~/.qttest).  This option is only for
+application testing and is not designed for normal operations.  **Use
+with caution**.
+
+== FILES
+
+Most of the following files are in a directory path containing the
+directory name *WSJT-X[ - RIGNAME]* which indicates the value of the
+command line option *--rig-name=RIGNAME* to indicate multiple instances of
+*wsjtx* running concurrently. All writable files listed below are
+therefore unique to each concurrent instance of *wsjtx*. If the
+*--rig-name* command line option is not supplied or the *RIGNAME* argument
+is not supplied then the directory paths below will have the directory
+*WSJT-X*.
+
+~/.config/WSJT-X[ - RIGNAME].ini::
+
+This file stores the application
+configuration settings.
+
+~/.local/share/WSJT-X[ - RIGNAME]/ALL.txt::
+
+*ALL.txt* contains a record of transmitted and received messages and
+other activity such as frequency or band changes.
+
+~/.local/share/WSJT-X[ - RIGNAME]/save/::
+
+Is the default location for saved .WAV files recorded by the
+application.  The .WAV file save location may be changed in the
+applications settings dialog.
+
+~/.local/share/WSJT-X[ - RIGNAME]/save/samples/::
+
+Sample .WAV files suppied with the application are found in this
+directory, they may be played back in the application and are referred
+to in the user guide tutorial sections.
+
+~/.local/share/WSJT-X[ -RIGNAME]/timer.out::
+
+This is a diagnostic file that records decode performance profiling
+information.
+
+~/.local/share/WSJT-X[ - RIGNAME]/cty.dat::
+
+This file is not required as a version of it is embedded in the
+application, but if you wish an updated version can be placed here.
+If present that version will be used in preference to the embedded
+version.
+
+~/.local/share/WSJT-X[ - RIGNAME]/wsjtx.log::
+
+This is a plain text CSV record of logged QSOs.
+
+~/.local/share/WSJT-X[ - RIGNAME]/wsjtx_log.adi::
+
+This is a record of QSOs logged in the ADIF format which is suitable
+for import into many Ham Radio logging programs.
+
+== AUTHOR
+
+Joe Taylor, K1JT.
+
+== COPYING
+
+*wsjtx* is Copyright (C) 2001 - 2015 by Joseph H. Taylor, Jr., K1JT,
+with contributions from additional authors.  WSJT-X is Open Source
+software, licensed under the GNU General Public License (GPLv3).
+
+*wsjtx* includes the ``**Hamlib - Ham Radio Control Libraries**''
+software which is licensed under the GNU Lesser General Public License
+(LGPL).  Home page https://sourceforge.net/apps/mediawiki/hamlib,
+sources from https://sourceforge.net/p/hamlib/code/ci/master/tree/.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.

@@ -1,0 +1,13 @@
+// Status=review
+
+- *Bins/Pixel* = 4
+- *JT65 .... JT9* = 2500
+- *Start* = 200 Hz
+- *N Avg* = 5
+- *Palette* = Digipan
+- *Flatten* = checked
+- Select *Cumulative* for data display
+- *Gain* and *Zero* sliders set near midscale
+
+- Use the mouse to adjust the width of the *Wide Graph* so that its
+upper frequency limit is about 2400 Hz.

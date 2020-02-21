@@ -1,0 +1,61 @@
+#!/bin/sh
+# this script characterizes a single code over a narrow range of Eb/No
+# note relationship between noise standard deviation, sigma, and Eb/No:
+# Eb/No = 1/(2*R*sigma^2)
+# If R=1/2, then Eb/No = 1/sigma^2  Right? Check this. 
+
+set -e  # Stop if an error occurs
+set -v  # Echo commands as they are read
+
+#make-ldpc ldpc-144-72.pchk 80 160 12 evenboth 6x3/4x4 no4cycle
+#make-ldpc ldpc-144-72.pchk 72 144 33 evenboth 6x3/4x4 no4cycle
+#make-ldpc ldpc-144-72.pchk 72 144 8 evenboth 3 no4cycle
+#make-ldpc ldpc-144-72.pchk 72 144 1087 evenboth 3x3/7x4 no4cycle
+#make-ldpc ldpc-144-72.pchk 72 144 1022 evenboth 4x3/6x4 no4cycle
+make-ldpc ldpc-144-72.pchk 72 144 3012 evenboth 3x3/7x4 no4cycle
+
+#cp ldpc-144-72-6x3-4x4-sf1.pchk ldpc-144-72.pchk
+make-gen  ldpc-144-72.pchk ldpc-144-72.gen dense
+rand-src  ldpc-144-72.src 2 72x1000000
+encode    ldpc-144-72.pchk ldpc-144-72.gen ldpc-144-72.src \
+          ldpc-144-72.enc
+
+# NOISE STANDARD DEVIATION 0.75, Eb/N0 = 2.50 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.75
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.75\
+         prprp 250
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src 
+
+# NOISE STANDARD DEVIATION 0.80, Eb/N0 = 1.94 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.80
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.80\
+         prprp 250
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src 
+
+# NOISE STANDARD DEVIATION 0.85, Eb/N0 = 1.41 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.85
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.85\
+         prprp 250
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src 
+
+# NOISE STANDARD DEVIATION 0.90, Eb/N0 = 0.92 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.90
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.90\
+         prprp 250
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src 
+
+# NOISE STANDARD DEVIATION 0.95, Eb/N0 = 0.45 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.95
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.95\
+         prprp 250
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src

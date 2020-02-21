@@ -1,0 +1,16 @@
+// Status=review
+
+[[FigTxMacros]]
+image::tx-macros.png[align="center",alt="Tx Macros Screen"]
+
+*Tx Macros* are an aid for sending brief, frequently used free-text
+messages such as the examples shown above.
+
+- To add a new message to the list, enter the desired text (up to 13
+characters) in the entry field at top, then click *Add*.
+
+- To remove an unwanted message, click on the message and then on
+*Delete*.
+
+- You can reorder your macro messages by using drag-and-drop. The
+new order will be preserved when _WSJT-X_ is restarted.

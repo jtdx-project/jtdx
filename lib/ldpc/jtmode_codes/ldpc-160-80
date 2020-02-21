@@ -1,0 +1,32 @@
+#!/bin/sh
+# this script characterizes a single code over a narrow range of Eb/No
+# note relationship between noise standard deviation, sigma, and Eb/No:
+# Eb/No = 1/(2*R*sigma^2)
+# If R=1/2, then Eb/No = 1/sigma^2  Right? Check this. 
+
+set -e  # Stop if an error occurs
+set -v  # Echo commands as they are read
+
+#make-ldpc ldpc-160-80.pchk 80 160 3 evenboth 2x3/8x4 no4cycle
+
+cp ldpc-160-80-2x3-8x4-sf4.pchk ldpc-160-80.pchk
+make-gen  ldpc-160-80.pchk ldpc-160-80.gen dense
+rand-src  ldpc-160-80.src 1 80x1000000
+encode    ldpc-160-80.pchk ldpc-160-80.gen ldpc-160-80.src \
+          ldpc-160-80.enc
+
+rate=0.5
+for i in `seq -1 10`;
+do
+  db=$(echo "scale=5; $i/2.0" | bc)
+  ebno=$(echo "scale=5; e(0.1*$db*l(10.0))" | bc -l)
+  sigma=$(echo "scale=5; 1/sqrt(2*$rate*$ebno)" | bc)
+  echo db $db ebno $ebno sigma $sigma
+
+  transmit ldpc-160-80.enc ldpc-160-80.rec 1 awgn $sigma
+  decode   ldpc-160-80.pchk ldpc-160-80.rec ldpc-160-80.dec awgn 0.9\
+         prprp 250
+  verify   ldpc-160-80.pchk ldpc-160-80.dec ldpc-160-80.gen \
+         ldpc-160-80.src 
+
+done

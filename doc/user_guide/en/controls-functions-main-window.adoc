@@ -1,0 +1,51 @@
+// Status=review
+The following buttons appear just under the decoded text windows on
+the main screen:
+
+//.Main UI Controls
+image::main-ui-controls.png[align="left",width=650,alt="Main UI Controls"]
+
+* *Log QSO* raises a dialog window pre-filled with known information
+about a QSO you have nearly completed.  You can edit or add to this
+information before clicking *OK* to log the QSO.  If you check *Prompt
+me to log QSO* on the *Setup* menu, the program will raise the
+confirmation screen automatically when you send a message containing
+73.
+
+//.Log QSO Window
+image::log-qso.png[align="center",alt="Log QSO"]
+
+* *Stop* will terminate normal data acquisition in case you want to
+freeze the waterfall or open and explore a previously recorded audio
+file.
+
+* *Monitor* restarts normal receive operation.  This button is
+highlighted in green when the _WSJT-X_ is receiving.  If you are
+using CAT control, toggling *Monitor* OFF relinquishes control of the
+rig; if _Monitor returns to last used frequency_ is selected
+on the *Settings | General* tab, toggling *Monitor* back ON will
+return to the original frequency.
+
+* *Erase* clears the right-hand decoded text window. 
+Double-clicking *Erase* clears both text windows.
+
+* *Decode* tells the program to repeat the decoding procedure at the
+Rx frequency (green marker on waterfall scale), using the most recently
+completed sequence of received data.  
+
+* *Enable Tx* toggles the program into automatic T/R sequencing mode
+and highlights the button in red.  A transmission will start at
+the beginning of the selected (odd or even) sequence, or immediately
+if appropriate.  A transmission will not be started any later than 24
+s into a UTC minute.
+
+* *Halt Tx* terminates a transmission in progress and disables
+automatic T/R sequencing.
+
+* *Tune* may be used to switch into Tx mode and generate an
+unmodulated carrier at the specified Tx frequency (red marker on
+waterfall scale).  This process may be useful for adjusting an antenna
+tuner.  The button is highlighted in red while *Tune* is active.
+Toggle the button a second time or click *Halt Tx* to terminate the
+*Tune* process.
+

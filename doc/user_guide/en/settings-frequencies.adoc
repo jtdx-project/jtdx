@@ -1,0 +1,55 @@
+// Status=review
+
+[[FIG_BAND_SETTINGS]]
+image::settings-frequencies.png[align="center",alt="Frequency Screen"]
+
+_Working Frequencies_: By default the *Working Frequencies* table
+contains a list of currently recommended dial frequencies for each
+mode.  You can modify the frequency table as desired.
+
+- To change an existing entry, click to select it, type a desired
+frequency in MHz, and hit *Enter* on the keyboard. The program will
+format your frequency value appropriately and add a band designator.
+
+- To add a new entry, right-click anywhere on the frequency table and
+select *Insert*.  Enter a frequency in MHz in the popup box and select
+the desired mode (or leave the Mode selection blank).  Then click
+*OK*.  The table may include more than one frequency for a given band.
+
+- To delete an entry, right-click it and select *Delete*.
+
+- Click the *Reset* button to return the table to its default
+configuration.
+
+_Frequency Calibration_: If you have calibrated your radio using WWV
+or other reliable frequency references, or perhaps with the technique
+described {fmt_wspr}, enter the measured values for _Intercept_ A and
+_Slope_ B in the equation
+
+ Dial error = A + B*f
+
+where "`Dial error`" and A are in Hz, f is frequency in MHz, and B is
+in parts per million (ppm).
+
+Frequency values sent to the radio and received from it will
+then be adjusted accordingly so that frequencies displayed by _WSJT-X_
+are accurate.
+
+_Station Information_: You can save *Band*, *Offset* and *Antenna
+Description* information for your station.  The antenna information
+will be included in reception reports sent to {pskreporter}.  By
+default the frequency offset for each band is zero.  Nonzero offsets
+may be added if (for example) a transverter is in use.
+
+- For a simple setup approach you might want to delete any unwanted
+bands -- for example, bands where you have no equipment.  Then click
+on a *Frequency* entry and type *Ctrl+A* to "`select all,`" and
+drag-and-drop the entries onto the _Station Information_ table.  You
+can then add any transverter offsets and antenna details.
+
+- To avoid typing the same information many times, you can
+drag-and-drop entries between the lines of the _Station Information_
+table.
+
+- When all settings have been configured to your liking, click *OK* to
+dismiss the *Settings* window.

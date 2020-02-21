@@ -1,0 +1,54 @@
+:doctype: manpage
+:man source: AsciiDoc
+:man version: {VERSION}
+:man manual: WSJT-X Manual
+= wsjtx(1)
+
+== NAME
+
+message_aggregator - Reference example UDP server
+
+== SYNOPSIS
+
+*message_aggregator*
+
+== DESCRIPTION
+
+*message_aggregator* does not serve any useful purpose other than to
+ demonstrate the UDP message features of *WSJT-X*. It is a small GUI
+ application that interacts with any running *WSJT-X* instances.
+
+Developers writing add on applications may find the source code of
+message_aggregator contained in the *WSJT-X* code repository
+useful. The files NetworkMessage.hpp, MessageServer.hpp,
+MessageClient.hpp and their associated implementations along with the
+application source MessageAggregator.cpp should cover all the required
+areas. All these files can be found at:
+
+https://sourceforge.net/p/wsjt/wsjt/HEAD/tree/branches/wsjtx/
+
+*message_aggregator* may also be used as a multi-cast UDP server which
+allows multiple instances of *message_aggregator* to be run
+concurrently, to do this simply use a suitable multi-cast group
+address in *message_aggregator* and in *WSJT-X* in the
+"*Settings->Reporting->UDP Server*" pane e.g. 239.255.0.1 or ff03::1
+for a local scope group.
+
+Note that on some systems it may be necessary to add a static
+multi-cast route to the routing table before multi-cast traffic can be
+routed to sockets on the same host as the sender.
+
+== AUTHOR
+
+Bill Somerville, G4WJS.
+
+== COPYING
+
+*message_aggregator* is Copyright (C) 2015 by William Somerville, G4WJS,
+with contributions from additional authors.  *message_aggregator* is Open Source
+software, licensed under the GNU General Public License (GPLv3).
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.

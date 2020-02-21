@@ -1,0 +1,48 @@
+// Status=review
+
+Program menus offer many options for configuration and operation.
+Most of the items are self-explanatory; a few additional details are
+provided below.  Keyboard shortcuts for some frequently used menu
+items are listed at the right.
+
+==== WSJT-X menu
+image::MacAppMenu.png[align="left",alt="Mac App Menu"]
+
+This menu appears on the Macintosh only. *Settings* appears here,
+labeled as *Preferences*, rather than on the *File* menu.  *About
+WSJT-X* appears here rather than on the *Help* menu.
+
+[[FILE_MENU]]
+==== File menu
+image::file-menu.png[align="left",alt="File Menu"]
+
+[[VIEW_MENU]]
+==== View Menu
+image::view-menu.png[align="left",alt="View Menu"]
+
+[[MODE_MENU]]
+==== Mode Menu
+image::mode-menu.png[align="left",alt="Mode Menu"]
+
+[[DECODE_MENU]]
+==== Decode Menu
+image::decode-menu.png[align="left",alt="Decode Menu"]
+
+[[SAVE_MENU]]
+[[SAVE-WAV]]
+==== Save Menu
+image::save-menu.png[align="left",alt="Save Menu"]
+
+Choose *Save all* to save received data as audio +.wav+ files.
+*Save decoded* will save only those files containing at least one 
+decoded message.  
+
+[[HELP_MENU]]
+==== Help Menu
+image::help-menu.png[align="left",alt="Help Menu"]
+
+===== Keyboard Shortcuts (F3)
+image::keyboard-shortcuts.png[align="left",alt="Keyboard Shortcuts"]
+
+===== Special Mouse Commands (F5)
+image::special-mouse-commands.png[align="left",alt="Special Mouse Commands"]

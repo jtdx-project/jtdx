@@ -1,0 +1,37 @@
+<table cellpadding=5>
+  <tr>
+    <th align="right">Click on</th>
+    <th align="left">Action</th>
+  </tr>
+  <tr>
+    <td align="right">Waterfall:</td>
+    <td>Set Rx frequency.<br/>
+        Double-click to set Rx frequency and decode there.<br/>
+        Ctrl-click to set Rx and Tx frequencies.<br/>
+		Unlocked TX=RX:<br/>
+		use left button to set RX frequency<br/>
+		use ALT+left button to set RX frequency and switch on Filter<br/>
+		use right button to set TX frequency
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Decoded text:</td>
+    <td>Double-click to copy second callsign to Dx Call,<br/>
+        locator to Dx Grid; change Rx and Tx frequencies to<br/>
+        decoded signal's frequency; generate standard messages.<br/>
+        If first callsign is your own, Tx frequency is not<br/>
+        changed unless CTRL is held down when double-clicking.<br/><br/>
+        ALT+double-click will also halt Tx if Enable Tx button is active.<br/><br/>
+        CTRL+ALT+double-click will only add second callsign from decoded<br/>
+        message into wanted callsign list.
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Erase button:</td>
+    <td>Click right button to erase QSO window.<br/>
+        Click left button to erase Band Activity window.<br/>
+        Double-click left or right button to erase QSO <br/>
+        and Band Activity windows.
+    </td>
+  </tr>
+</table>

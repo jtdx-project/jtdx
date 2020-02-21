@@ -1,0 +1,53 @@
+// Status=review
+
+The following controls appear at the bottom of the Wide Graph window.
+With the exception of *JT65 nnnn JT9*, they affect only the graphical
+displays — they have no effect on the decoding process.
+
+image::wide-graph-controls.png[align="center",alt="Wide Graph Controls"]
+
+- *Bins/Pixel* controls the displayed frequency resolution.  Set this
+value to 1 for the highest possible resolution, or to higher numbers
+to compress the spectral display. Normal operation with a convenient
+window size works well at 2 to 8 bins per pixel.
+
+- *JT65 nnnn JT9* sets the dividing point (blue marker) for wide-band
+decoding of JT65 and JT9 signals in *JT9+JT65* mode.  The decoder
+looks for JT65 signals everywhere, but JT9 signals only above this
+frequency.
+
+- *Start nnn Hz* sets the low-frequency starting point of the
+waterfall frequency scale.
+
+- *N Avg* is the number of successive FFTs to be averaged before
+updating the spectral display.  Values around 5 are suitable for
+normal JT9 and JT65 operation.  Adjust *N Avg* to make the waterfall
+move faster or slower, as desired.
+
+- A dropdown list below the *Palette* label lets you select from a
+wide range of waterfall color palettes.  
+
+- Click *Adjust* to activate a window that allows you to create a
+user-defined palette.
+
+- Check *Flatten* if you want _WSJT-X_ to compensate for a sloping or
+uneven response across the received passband.  For this feature to
+work properly, you should restrict the range of displayed frequencies
+so that only the active part of the spectrum is shown.
+
+- Select *Current* or *Cumulative* for the spectrum displayed in the
+bottom one-third of the Wide Graph window.  *Current* is the average
+spectrum over the most recent *N Avg* FFT calculations.  *Cumulative*
+is the average spectrum since the start of the present UTC minute.
+*Linear Avg* is useful in JT4 mode, especially when short-form
+messages are used.
+
+- Four sliders control reference levels and scaling for waterfall
+colors and the spectrum plot.  Values around midscale are usually
+about right, depending on the input signal level, the chosen palette,
+and your own preferences.
+
+- *Smoothing* is active only when *Linear Average* has been selected.
+Smoothing the displayed spectrum over more than one bin can enhance
+your ability to detect weak EME signals with Doppler spread more than
+a few Hz.

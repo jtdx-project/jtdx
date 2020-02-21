@@ -1,0 +1,116 @@
+////
+Link file to hold all links
+File Location: ./doc/common/links.adoc
+Usage example: include::../common/links.adoc[]
+Syntax: [link-id] [link] [displayed text]
+
+Example:
+:pskreporter: http://pskreporter.info/pskmap.html[PSK Reporter]
+
+[link-id] = :pskreporter:
+[link] http://pskreporter.info/pskmap.html
+[displayed text] PSK Reporter
+
+Perform searches from the doc root directory: C:\JTSDK-DOC\doc
+Search: grep -rl --exclude-dir="*\.svn" {pskreporter} .
+		grep -rl --exclude-dir="*\.svn" PSK Reporter .
+		grep -rl --exclude-dir="*\.svn" {devsvn} .
+        grep -rl --exclude-dir="*\.svn" {kvasd} .
+        grep -rl --exclude-dir="*\.svn" {ntpsetup} .
+
+Include links.adoc: grep -rl --exclude-dir="*\.svn" pskreporter .
+Exclude links.adoc: grep -rl --exclude-dir="*\.svn" {pskreporter} .
+
+Note(s):
+a). Don't forget a space then "." at the end.
+b). To include links.adoc file itself, remove the brackets {} from
+the pattern search:
+c). Look at each of the files listed to ensure the [displayed test]
+still makes sense in the caption. If not, just add another link.
+d). Edit lines as needed. Keeping them in alphabetic order help see dupes.
+
+////
+
+// General URL's
+//:launchpadac6sl: https://launchpad.net/~jnogatch/+archive/wsjtx[WSJT-X Linux Packages]
+:alarmejt: http://f5jmh.free.fr/index.php?page=english[AlarmeJT]
+:asciidoc_cheatsheet: http://powerman.name/doc/asciidoc[AsciiDoc Cheatsheet]
+:asciidoc_help: http://www.methods.co.nz/asciidoc/userguide.html[AsciiDoc User Guide]
+:asciidoc_questions: http://www.methods.co.nz/asciidoc/faq.html[AsciiDoc FAQ]
+:asciidoc_syntax: http://xpt.sourceforge.net/techdocs/nix/tool/asciidoc-syn/ascs01-AsciiDocMarkupSyntaxQuickSummary/single/[AsciiDoc Syntax]
+:asciidoctor_style: http://asciidoctor.org/docs/asciidoc-writers-guide/#delimited-blocks[AsciiDoctor Styles Guide]
+:asciidoctor_syntax: http://asciidoctor.org/docs/asciidoc-writers-guide/#delimited-blocks[AsciiDoctor Syntax Guide]
+:cc_by_sa: http://creativecommons.org/licenses/by-sa/3.0/[Commons Attribution-ShareAlike 3.0 Unported License]
+:debian32: http://physics.princeton.edu/pulsar/K1JT/wsjtx_{VERSION}_i386.deb[wsjtx_{VERSION}_i386.deb]
+:debian64: http://physics.princeton.edu/pulsar/K1JT/wsjtx_{VERSION}_amd64.deb[wsjtx_{VERSION}_amd64.deb]
+:debian: http://www.debian.org/[Debian]
+:dev_guide: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjt-dev-guide.html[Dev-Guide]
+:devsvn1: http://sourceforge.net/p/wsjt/wsjt/HEAD/tree/[Devel-SVN]
+:devsvn: http://sourceforge.net/p/wsjt/wsjt/HEAD/tree/[SourceForge]
+:dimension4: http://www.thinkman.com/dimension4/[Thinking Man Software]
+:download: http://physics.princeton.edu/pulsar/K1JT/wsjtx.html[Download Page]
+:dxatlas: http://www.dxatlas.com/[Afreet Software, Inc.]
+:dxlcommander: http://www.dxlabsuite.com/commander/[Commander]
+:dxlsuite: http://www.dxlabsuite.com/[DX Lab Suite]
+:fedora32: http://physics.princeton.edu/pulsar/K1JT/wsjtx-{VERSION}-i686.rpm[wsjtx-{VERSION}-i686.rpm]
+:fedora64: http://physics.princeton.edu/pulsar/K1JT/wsjtx-{VERSION}-x86_64.rpm[wsjtx-{VERSION}-x86_64.rpm]
+:fmt_arrl: http://www.arrl.org/frequency-measuring-test[ARRL FMT Info]
+:fmt_group: https://groups.yahoo.com/neo/groups/FMT-nuts/info[FMT Group]
+:fmt_k5cm: http://www.k5cm.com/[FMT Event Info]
+:fmt_wspr: http://www.physics.princeton.edu/pulsar/K1JT/FMT_User.pdf[here]
+:gnu_gpl: http://www.gnu.org/licenses/gpl-3.0.txt[GNU General Public License]
+:homepage: http://physics.princeton.edu/pulsar/K1JT/[WSJT Home Page]
+:hrd: http://www.hrdsoftwarellc.com/[Ham Radio Deluxe]
+:jt4eme: http://physics.princeton.edu/pulsar/K1JT/WSJT-X_1.6.0_for_JT4_v7.pdf[here]
+:jt65protocol: http://physics.princeton.edu/pulsar/K1JT/JT65.pdf[QEX]
+:jtalert: http://hamapps.hamspots.net[JT-ALERT-X]
+:kvasd-installer: http://physics.princeton.edu/pulsar/K1JT/kv-installer.txt[here]
+:launchpadki7mt: https://launchpad.net/~ki7mt[KI7MT PPA's]
+:log4om: http://www.log4om.com[Log4OM]
+:msys_url: http://sourceforge.net/projects/mingwbuilds/files/external-binary-packages/[MSYS Download]
+:ntpsetup: http://www.satsignal.eu/ntp/setup.html[Network Time Protocol Setup]
+:osx_instructions: http://physics.princeton.edu/pulsar/K1JT/OSX_Readme[here]
+:ppa: http://en.wikipedia.org/wiki/Personal_Package_Archive[PPA]
+:projsummary: http://sourceforge.net/projects/wsjt/[Project Summary]
+:pskreporter: http://pskreporter.info/pskmap.html[PSK Reporter]
+:sourceforge: https://sourceforge.net/user/registration[SourceForge]
+:sourceforge-jtsdk: https://sourceforge.net/projects/jtsdk[SourceForge JTSDK]
+:ubuntu_sdk: https://launchpad.net/~ubuntu-sdk-team/+archive/ppa[Ubuntu SDK Notice]
+:wsjt_yahoo_group: https://groups.yahoo.com/neo/groups/wsjtgroup/info[WSJT Group]
+:wsjtx: http://physics.princeton.edu/pulsar/K1JT/wsjtx.html[WSJT-X]
+:wspr0_guide: http://www.physics.princeton.edu/pulsar/K1JT/WSPR0_Instructions.TXT[WSPR0 Guide]
+:wspr: http://physics.princeton.edu/pulsar/K1JT/wspr.html[WSPR Home Page]
+:wsprnet: http://wsprnet.org/drupal/[WSPRnet]
+:wsprnet_activity: http://wsprnet.org/drupal/wsprnet/activity[WSPRnet Activity page]
+
+// Download Links
+:cty_dat: http://www.country-files.com/cty/[here]
+:hamlib3: https://dl.dropboxusercontent.com/u/4192709/Hamlib-integration-wsjtx.zip[Download]
+:jtsdk_doc: http://physics.princeton.edu/pulsar/K1JT/JTSDK-DOC.exe[Download]
+:jtsdk_installer: http://sourceforge.net/projects/jtsdk/files/win32/2.0.0/JTSDK-2.0.0-B2-Win32.exe/download[Download]
+:jtsdk_omnirig: http://sourceforge.net/projects/jtsdk/files/win32/2.0.0/base/contrib/OmniRig.zip/download[Download]
+:jtsdk_py: http://physics.princeton.edu/pulsar/K1JT/JTSDK-PY.exe[Download]
+:jtsdk_qt: http://physics.princeton.edu/pulsar/K1JT/JTSDK-QT.exe[Download]
+:jtsdk_vcredist: http://sourceforge.net/projects/jtsdk/files/win32/2.0.0/base/contrib/vcredist_x86.exe/download[Download]
+:kvasd: http://physics.princeton.edu/pulsar/K1JT/kvasd[kvasd]
+:nh6z: http://www.nh6z.net/Amatuer_Radio_Station_NH6Z/Other_Peoples_Software.html[here]
+:omnirig: http://www.dxatlas.com/OmniRig/Files/OmniRig.zip[Download]
+:osx: http://physics.princeton.edu/pulsar/K1JT/wsjtx-{VERSION}-Darwin.dmg[wsjtx-{VERSION}-Darwin.dmg]
+:svn: http://subversion.apache.org/packages.html#windows[Subversion]
+:win32: http://physics.princeton.edu/pulsar/K1JT/wsjtx-{VERSION}-win32.exe[wsjtx-{VERSION}-win32.exe]
+:wsjt_svn: http://sourceforge.net/p/wsjt/wsjt/HEAD/tree/[here]
+:wspr_code: http://physics.princeton.edu/pulsar/K1JT/WSPRcode.exe[WSPRcode.exe]
+:wspr_svn: http://sourceforge.net/p/wsjt/wsjt/HEAD/tree/branches/wspr/[here]
+:kvasd_installer: http://sourceforge.net/projects/wsjt/files/kvasd-installer/kvasd-installer-1.12.14/kvasd-installer-1.12.14.tar.gz/download[kvasd-installer]
+
+// MAIL-TO links
+:alex_efros: mailto:powerman@powerman.name[Alex Efros]
+:bill_somerville: mailto:g4wjs -at- c l a s s d e s i g n -dot- com [G4WJS]
+:dev_mail_list: http://sourceforge.net/mailarchive/forum.php?forum_name=wsjt-devel[WSJT Developers Email List]
+:dev_mail_svn: https://sourceforge.net/auth/subscriptions/[WSJT SVN Archives]
+:devmail: mailto:wsjt-devel@lists.sourceforge.net[wsjt-devel]
+:devmail1: mailto:wsjt-devel@lists.sourceforge.net[Post Message]
+:wsjtgroup_mail: mailto:wsjtgroup@yahoogroups.com[Post Message]
+:greg_beam: mailto:ki7mt@yahoo.com[KI7MT]
+:joe_taylor: mailto:joe@princeton.edu[K1JT]
+:stuart_rackman: mailto:srackham@gmail.com[Stuart Rackham]

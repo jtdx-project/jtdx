@@ -1,0 +1,24 @@
+                     Linux          Windows
+Program          Time  Decodes   Time  Decodes
+-------------------------------------------------
+wsprd (Mar 2013) 2413   1451     2718   1451
+
+k9an-wsprd       1800   2122
+k9an_wsprd -q     354   1939
+
+wsprd             399   2190      356   2190   
+wsprd -q          214   2034      192   2034
+
+wsprd*           1240   2215
+wsprd#           1599   2220
+
+-------------------------------------------------
+* maxcycles=30000
+# maxcycles=20000, iifac=1
+-------------------------------------------------
+Test data: 638 *.wav files (recorded by WSJT-X)
+-------------------------------------------------
+Linux machine:     Core 2 Duo, E6750 CPU
+Windows machine:   4-Core i5-2500 CPU
+wsprd git commit:  eecc274
+-------------------------------------------------

@@ -1,0 +1,13 @@
+// Status=review
+[[FIG_CONFIG_RPT]]
+image::reporting.png[align="center",alt="Reporting Screen"]
+
+- _Logging_: Choose any desired options from this group.
+
+- _Network Services_: Check *Enable PSK Reporter Spotting* to send
+reception reports to the {pskreporter} mapping facility.
+
+- _UDP Server_: This group of options controls the network name or
+address and port number used by a program that will receive status
+updates from _WSJT-X_.  Cooperating applications like _JTAlert_ use 
+this feature to obtain information about a running _WSJT-X_ instance.

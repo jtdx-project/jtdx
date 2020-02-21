@@ -1,0 +1,124 @@
+/* the routine unpk() is not in wsprd_utils.c */
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include <stdint.h>
+#include <time.h>
+
+#include "wsprd_utils.h"
+
+unsigned int nhash_( const void *key, size_t length, uint32_t initval);
+
+void unpk_(signed char message[], int *nhashtab, char call_loc_pow[])
+{
+  int i,n1,n2,n3,ndbm,ihash,nadd,noprint,nh;
+  char callsign[13],grid[5],grid6[7],cdbm[3];
+  static char hashtab[32768][13];
+  FILE *fhash;
+
+  if(*nhashtab==1) {
+    char line[80], hcall[12];
+    if( (fhash=fopen("hashtable.txt","r+")) ) {
+      while (fgets(line, sizeof(line), fhash) != NULL) {
+	sscanf(line,"%d %s",&nh,hcall);
+	strcpy(*hashtab+nh*13,hcall);
+      }
+    } else {
+      fhash=fopen("hashtable.txt","w+");
+    }
+    fclose(fhash);
+    return;
+  }
+
+  if(*nhashtab==2) {
+    fhash=fopen("hashtable.txt","w");
+    for (i=0; i<32768; i++) {
+      if( strncmp(hashtab[i],"\0",1) != 0 ) {
+	fprintf(fhash,"%5d %s\n",i,*hashtab+i*13);
+      }
+    }
+    fclose(fhash);
+    return;
+  }
+
+  unpack50(message,&n1,&n2);
+  unpackcall(n1,callsign);
+  unpackgrid(n2, grid);
+  int ntype = (n2&127) - 64;
+  callsign[12]=0;
+  grid[4]=0;
+
+/*
+ Based on the value of ntype, decide whether this is a Type 1, 2, or 
+ 3 message.
+
+ * Type 1: 6 digit call, grid, power - ntype is positive and is a member 
+         of the set {0,3,7,10,13,17,20...60}
+
+ * Type 2: extended callsign, power - ntype is positive but not
+         a member of the set of allowed powers
+
+ * Type 3: hash, 6 digit grid, power - ntype is negative.
+*/
+
+  if( (ntype >= 0) && (ntype <= 62) ) {
+    int nu=ntype%10;
+    if( nu == 0 || nu == 3 || nu == 7 ) {
+      ndbm=ntype;
+      memset(call_loc_pow,0,sizeof(char)*23);
+      sprintf(cdbm,"%2d",ndbm);
+      strncat(call_loc_pow,callsign,strlen(callsign));
+      strncat(call_loc_pow," ",1);
+      strncat(call_loc_pow,grid,4);
+      strncat(call_loc_pow," ",1);
+      strncat(call_loc_pow,cdbm,2);
+      strncat(call_loc_pow,"\0",1);
+      ihash=nhash_(callsign,strlen(callsign),(uint32_t)146);
+      strcpy(*hashtab+ihash*13,callsign);
+    } else {
+      nadd=nu;
+      if( nu > 3 ) nadd=nu-3;
+      if( nu > 7 ) nadd=nu-7;
+      n3=n2/128+32768*(nadd-1);
+      unpackpfx(n3,callsign);
+      ndbm=ntype-nadd;
+      memset(call_loc_pow,0,sizeof(char)*23);
+      sprintf(cdbm,"%2d",ndbm);
+      strncat(call_loc_pow,callsign,strlen(callsign));
+      strncat(call_loc_pow," ",1);
+      strncat(call_loc_pow,cdbm,2);
+      strncat(call_loc_pow,"\0",1);
+      ihash=nhash_(callsign,strlen(callsign),(uint32_t)146);
+      strcpy(*hashtab+ihash*13,callsign);
+      noprint=0;
+    }
+  } else if ( ntype < 0 ) {
+    ndbm=-(ntype+1);
+    memset(grid6,0,sizeof(char)*7);
+    strncat(grid6,callsign+5,1);
+    strncat(grid6,callsign,5);
+    ihash=(n2-ntype-64)/128;
+    if( strncmp(hashtab[ihash],"\0",1) != 0 ) {
+      sprintf(callsign,"<%s>",hashtab[ihash]);
+    } else {
+      sprintf(callsign,"%5s","<...>");
+    }
+
+    memset(call_loc_pow,0,sizeof(char)*23);
+    sprintf(cdbm,"%2d",ndbm);
+    strncat(call_loc_pow,callsign,strlen(callsign));
+    strncat(call_loc_pow," ",1);
+    strncat(call_loc_pow,grid6,strlen(grid6));
+    strncat(call_loc_pow," ",1);
+    strncat(call_loc_pow,cdbm,2);
+    strncat(call_loc_pow,"\0",1);
+                
+    noprint=0;
+                
+// I don't know what to do with these... They show up as "A000AA" grids.
+    if( ntype == -64 ) noprint=1;  
+  }
+  //  printf("\nUnpacked in C:    %s\n",call_loc_pow);
+}

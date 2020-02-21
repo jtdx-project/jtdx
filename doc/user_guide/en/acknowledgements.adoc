@@ -1,0 +1,27 @@
+// Status=review
+
+Since 2005 the _WSJT_ project (including programs _WSJT_, _MAP65_,
+_WSPR_, _WSJT-X_, and _WSPR-X_) has been "`open source`", with all
+code licensed under the GNU Public License (GPL).  Many users of these
+programs, too numerous to mention here individually, have contributed
+suggestions and advice that have greatly aided the development of
+_WSJT_ and its sister programs.
+
+For _WSJT-X_ in particular, we acknowledge contributions from *AC6SL,
+AE4JY, DJ0OT, G4KLA, G4WJS, K3WYC, K9AN, KA6MAL, KA9Q, KB1ZMX, KD6EKQ,
+KI7MT, KK1D, ND0B, PY2SDR, VK3ACF, VK4BDJ, W4TI, W4TV, and W9MDB*.
+Each of these amateurs has helped to bring the program’s design, code,
+and documentation to its present state.
+
+Most of the color palettes for the _WSJT-X_ waterfall were copied from
+the excellent, well documented, open-source program _fldigi_, by *W1HKJ*
+and friends.
+
+We use development tools and libraries from many sources.  We
+particularly wish to acknowledge importance of the GNU Compiler
+Collection from the Free Software Foundation, the "clang" compiler
+from LLVM at the University of Illinois, and the Qt Project from Digia
+PLC.  Other important resources include the FFTW library by Matteo
+Frigo and Steven G. Johnson; SLALIB, the Positional Astronomy Library
+by P. T.  Wallace; and a high-precision planetary ephemeris and
+associated software from NASA's Jet Propulsion Laboratory.

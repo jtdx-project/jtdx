@@ -1,0 +1,98 @@
+// Status=review
+
+For this step and the next, you may want to pretend you are K1JT
+by entering that callsign temporarily as *My Call* on the 
+*Settings | General* tab.  Your results should then be identical to
+those shown in the screen shot below.
+
+.Open a Wave File:
+
+- Select *File | Open* and select the file
++...\save\samples\130418_1742.wav+. When the file opens you should see
+something similar to the to the following screen shot:
+
+[[X12]]
+image::main-ui-1.6.png[align="center",alt="Main UI and Wide Graph"]
+
+.Decoding Overview
+
+Decoding takes place at the end of a receive sequence and proceeds in
+two steps.  The first decode is done at the selected Rx frequency,
+indicated by the U-shaped green marker on the waterfall scale.
+Results appear in both the left (*Band Activity*) and right (*Rx
+Frequency*) text windows on the main screen. The program then finds
+and decodes all signals in the selected mode over the displayed
+frequency range. The red marker on the waterfall scale indicates your
+Tx frequency.
+
+Seven JT9 signals are present in the example file, all decodable.
+When this file was recorded KF4RWA was finishing a QSO with K1JT.
+Since the green marker was placed at his audio frequency, 1224 Hz, his
+message "`K1JT KF4RWA 73`" is decoded first and appears in the *Rx
+Frequency* window. The *Band Activity* window shows this message plus
+all decodes at other frequencies.  By default lines containing CQ are
+highlighted in green, and lines with *My Call* (in this case K1JT) in
+red.
+
+[[X13]]
+.Decoding Controls
+
+To gain some feeling for controls frequently used when making QSOs,
+try clicking with the mouse on the decoded text lines and on the
+waterfall spectral display. You should be able to confirm the
+following behavior:
+
+- Double-click on either of the decoded lines highlighted in
+green. This action produces the following results:
+
+** Callsign and locator of a station calling CQ are copied to the *DX
+Call* and *DX Grid* entry fields.
+
+** Messages are generated for a standard minimal QSO.
+
+** The *Tx even* box is checked or cleared appropriately, so that you
+will transmit in the proper (odd or even) minutes.
+
+** The Rx and Tx frequency markers are moved to the frequency of the
+CQing station.
+
+** The *Gen Msg* ("`generated message`") radio button at bottom right 
+of the main window is selected.
+
+** If you had checked *Double-click on call sets Tx Enable* on the
+*Setup* menu, *Enable Tx* would be activated and a transmission would
+start automatically at the proper time.
+
+- Double-click on the decoded message "`K1JT N5KDV EM41`",
+highlighted in red.  Results will be similar to those in the
+previous step, except the Tx frequency (red marker) is not
+moved.  Such messages are usually in response to your own CQ, or from
+a tail-ender, and you probably want your Tx frequency to stay where it
+was.
+
+- By holding down the *Ctrl* key when double-clicking on a decoded
+line you can cause both Tx and Rx frequencies to be moved.  This
+behavior can also be forced by checking *Lock Tx=Rx*.
+
+- Double-click on the message from KF4RWA in either window. He is
+sending "`73`" to K1JT, signifying that the QSO is over.  Most likely
+you want to send 73 to him, so the message "`KF4RWA K1JT 73`" is
+automatically generated and selected for your next transmission.
+(Alternatively, you might choose to send a free text message or to
+call CQ again.)
+
+- Click somewhere on the waterfall to set Rx frequency (green marker
+on waterfall scale).
+
+- Ctrl-click on the waterfall to set both Rx and Tx frequencies.
+
+- Double-click on a signal in the waterfall to set Rx frequency and
+start a narrow-band decode there. Decoded text will appear in the
+right window only.
+
+- Ctrl-double-click on a signal to set both Rx and Tx frequencies and
+decode at the new frequency.
+
+- Click *Erase* to clear the right window. 
+
+- Double-click *Erase* to clear both text windows.

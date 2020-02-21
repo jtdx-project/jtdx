@@ -1,0 +1,55 @@
+// Status=review
+
+Two arrangements of controls are provided for generating and selecting
+Tx messages.  Controls familiar to users of program _WSJT_
+appear on *Tab 1*, providing six fields for message entry.
+Pre-formatted messages for the standard minimal QSO are generated when
+you click *Generate Std Msgs* or double-click on an appropriate line
+in one of the decoded text windows.
+
+//.Traditional Message Menu
+image::traditional-msg-box.png[align="center",alt="Traditional Message Menu"]
+
+* Select the next message to be transmitted (at the start of your next
+Tx sequence) by clicking on the circle under *Next*.
+
+* To change to a specified Tx message immediately during a
+transmission, click on a rectangular button under the *Now* label.
+Changing a Tx message in mid-stream will slightly reduce the chance of
+a correct decode, but it is usually OK if done in the first 10-15 s of
+a transmission.
+
+* All six Tx message fields are editable.  You can modify an
+automatically generated message or enter a desired message, keeping in
+mind the limits on message content.  See <<PROTOCOLS,Protocol
+Specifications>> for details.
+
+* Click on the pull-down arrow for message #5 to select one of the
+pre-stored messages entered on the *Settings | Tx Macros* tab.
+Pressing *Enter* on a modified message #5 automatically adds that
+message to the stored macros.
+
+The second arrangement of controls for generating and selecting
+Tx messages appears on *Tab 2* of the Message Control Panel:
+
+//.New Message Menu
+image::new-msg-box.png[align="center",alt="New Message Menu"]
+
+With this setup you normally follow a top-to-bottom sequence of
+transmissions from the left column if you are calling CQ, or the right
+column if answering a CQ.  
+
+* Clicking a button puts the appropriate message in the *Gen Msg* box.
+If you are already transmitting, the Tx message is changed
+immediately.
+
+* You can enter and transmit anything (up to 13 characters, including
+spaces) in the *Free Msg* box.
+
+* Click on the pull-down arrow in the *Free Msg* box to select a
+pre-stored macro.  Pressing *Enter* on a modified message here
+automatically adds that message to the table of stored macros.
+
+IMPORTANT: During a transmission the actual message being sent always
+appears in the first box of the status bar (bottom left of the main
+screen).

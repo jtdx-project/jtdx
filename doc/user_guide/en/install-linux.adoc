@@ -1,0 +1,65 @@
+// Status=review
+
+Debian, Ubuntu, and other Debian-based systems:
+
+* 32-bit: {debian32}
+- To install:
++
+[example]
+sudo dpkg -i wsjtx_{VERSION}_i386.deb
+
+- Uninstall:
++
+[example]
+sudo dpkg -P wsjtx
+
+* 64-bit: {debian64}
+- To install:
++
+[example]
+sudo dpkg -i wsjtx_{VERSION}_amd64.deb
+
+- Uninstall:
++
+[example]
+sudo dpkg -P wsjtx
+
+You may also need to execute the following commands in a terminal:
+
+[example]
+sudo apt-get install libqt5multimedia5-plugins libqt5serialport5 
+sudo apt-get install libfftw3-single3
+
+For Ubuntu 15.04 and similar systems, the above and also
+
+[example]
+sudo apt-get install libqt5opengl5 
+
+Fedora, Red Hat, and other rpm-based systems:
+
+* 32-bit: {fedora32}
+- To install:
++
+[example]
+sudo rpm -i wsjtx-{VERSION}-i686.rpm
+
+- Uninstall:
++
+[example]
+sudo rpm -e wsjtx
+
+* 64-bit: {fedora64}
+- To install:
++
+[example]
+sudo rpm -i wsjtx-{VERSION}-x86_64.rpm
+
+- Uninstall:
++
+[example]
+sudo rpm -e wsjtx
+
+You may also need to execute the following commands in a terminal:
+
+[example]
+sudo yum install fftw-libs-single qt5-qtmultimedia qt5-qtserialport 

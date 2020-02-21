@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# jt65 end-to-end simulator. Run enough cases to get a given
+# number of successful decodes or a given number of errors
+# For better performance, copy this script and jt65, jt65sim
+# executables to a ramdisk and run from there.
+
+nruns=0
+ndecodes=0
+ngood=0
+nbad=0
+snr=-26.0
+
+#while [ $[ $nruns - $ngood ] -lt 200 ] 
+#while [ $ngood -lt 200 ] 
+while [ $nruns -lt 20000 ] 
+
+do
+  rm 000000_0001.wav
+  ./jt65sim -n 1 -d 0.0 -s \\$snr > /dev/null
+  rm decoded.txt
+  ./jt65 -a 10 -f 1500 -n 10 -s 000000_0001.wav > decoded.txt
+  if [ -e decoded.txt ]; then
+    nd=$( wc -l < decoded.txt )
+    ng=$( grep "K1ABC" decoded.txt | wc -l )
+    nb=$[$nd-$ng]
+    ndecodes=$[$ndecodes + $nd]
+    ngood=$[$ngood + $ng]
+    nbad=$[$nbad + $nb]
+  fi
+  nruns=$[$nruns + 1]
+  nmissed=$[$nruns-$ngood]
+  pe=$( echo "scale=5; $nmissed/$nruns" | bc -l )
+  ps=$( echo "scale=5; $ngood/$nruns" | bc -l )
+  echo -en snr: $snr nruns: $nruns ndecodes: $ndecodes ngood: $ngood nbad: $nbad nmissed: $nmissed wer: $pe success: $ps"\r"
+done
+echo snr: $snr nruns: $nruns ndecodes: $ndecodes ngood: $ngood nbad: $nbad nmissed: $nmissed wer: $pe success: $ps
+

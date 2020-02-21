@@ -1,0 +1,46 @@
+A basic logging facility in _WSJT-X_ saves QSO information to files
+named +wsjtx.log+ (in comma-separated text format) and +wsjtx_log.adi+
+(in standard ADIF format).  These files can be imported directly into
+other programs, for example spreadsheets and popular logging programs.
+As described in the <<INSTALL,Installation>> and <<PLATFORM,Platform
+Dependencies>> sections, different operating systems may place your
+local log files in different locations.  You can always navigate to
+them directly by selecting *Open log directory* from the *File* menu.
+
+More elaborate logging capabilities are supported by third party
+applications like {jtalert}, which can log QSOs automatically to other
+applications including {hrd}, {dxlsuite}, and {log4om}.  
+
+The program option *Show DXCC entity and worked before status*
+(selectable on the *Settings | General* tab) is intended mostly for
+use on non-Windows platforms, where {jtalert} is not available.  When
+this option is checked _WSJT-X_ appends some additional information to
+all CQ messages displayed in the _Band Activity_ window.  The name of
+the DXCC entity is shown, abbreviated if necessary.  Your "`worked
+before`" status for this callsign (according to log file
++wsjtx_log.adi+) is flagged with a single character and a change of
+background color, as follows:
+
+[horizontal]
+!::  default color bright purple: -- New DXCC entity
+~::  light pink: -- You have already worked this DXCC entity but not 
+this station
+ ::  green: -- You have previously worked the calling station
+
+In this respect the program does not distinguish between modes, but it
+does differentiate between bands.
+
+_WSJT-X_ includes a built-in +cty.dat+ file containing DXCC prefix 
+information.  Updated files can be downloaded from {cty_dat} when 
+required.  If an updated +cty.dat+ is present in the logs folder 
+and readable, it will be used in preference to the built-in one.
+
+The log file +wsjtx_log.adi+ is updated whenever you log a QSO from
+_WSJT-X_.  (Keep in mind that if you erase this file you will lose all
+"`worked before`" information.)  You can append or overwrite the
++wsjtx_log.adi+ file by exporting your QSO history as an ADIF file
+from another logging program.  Turning *Show DXCC entity and worked
+before status* off and then on again will cause _WSJT-X_ to re-read
+the log file.  Very large log files may cause _WSJT-X_ to slow down
+when searching for calls.
+

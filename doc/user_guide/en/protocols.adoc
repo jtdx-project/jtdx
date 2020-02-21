@@ -1,0 +1,137 @@
+[[JT65PRO]]
+=== JT65
+
+JT65 was designed for making minimal QSOs via EME ("`moon-bounce`") on
+the VHF and UHF bands. A detailed description of the protocol and its
+implementation in program _WSJT_ was published in {jt65protocol} for
+September-October, 2005. Briefly stated, JT65 uses 60 s T/R sequences
+and carefully structured messages. Standard messages are compressed so
+that two callsigns and a grid locator can be transmitted in just 71
+information bits.  A 72^nd^ bit serves as a flag to indicate that a
+message consists of arbitrary text (up to 13 characters) instead of
+callsigns and a grid locator.  Special formats allow other information
+such as add-on callsign prefixes (e.g., ZA/K1ABC) or numerical signal
+reports (in dB) to be substituted for the grid locator. The basic aim
+is to compress the most common messages used for minimally valid QSOs
+into a minimum fixed number of bits. After compression, a Reed Solomon
+(63,12) error-control code converts 72-bit user messages into
+sequences of 63 six-bit channel symbols.
+
+JT65 requires tight synchronization of time and frequency between
+transmitting and receiving stations. Each transmission is divided into
+126 contiguous tone intervals or "`symbols`" of length 4096/11025 =
+0.372 s. Within each interval the waveform is a constant-amplitude
+sinusoid at one of 65 pre-defined frequencies. Frequency steps between
+intervals are accomplished in a phase-continuous manner. Half of the
+channel symbols are devoted to a pseudo-random synchronizing vector
+interleaved with the encoded information symbols. The sync vector
+allows calibration of time and frequency offsets between transmitter
+and receiver. A transmission nominally begins at t = 1 s after the
+start of a UTC minute and finishes at t = 47.8 seconds. The
+synchronizing tone is at 11025 × 472/4096 = 1270.46 Hz, and is
+normally sent in each interval having a “1” in the following
+pseudo-random sequence:
+
+ 100110001111110101000101100100011100111101101111000110101011001
+ 101010100100000011000000011010010110101010011001001000011111111
+
+Encoded user information is transmitted during the 63 intervals not
+used for the sync tone. Each channel symbol generates a tone at
+frequency 11025 × 472/4096 + 11025/4096 × (N+2) × m, where N is the
+value of the six-bit symbol, 0 ≤ N ≤ 63, and m is 1, 2, or 4 for JT65
+sub-modes A, B, or C.  Sub-mode JT65A is always used at HF.
+
+For EME (but, conventionally, not on the HF bands) the signal report
+OOO is sometimes used instead of numerical signal reports. It is
+conveyed by reversing sync and data positions in the transmitted
+sequence.  Shorthand messages for RO, RRR, and 73 dispense with the
+sync vector entirely and use time intervals of 16384/11025 = 1.486 s
+for pairs of alternating tones. The lower frequency is always 1270.46
+Hz, the same as that of the sync tone, and the frequency separation is
+110250/4096 = 26.92 Hz multiplied by n × m, with n = 2, 3, 4 for the
+messages RO, RRR, and 73.
+
+[[JT4PRO]]
+=== JT4
+
+JT4 uses 72-bit structured messages nearly identical to those in
+JT65. Error control coding (ECC) uses a strong convolutional code with
+constraint length K=32, rate r=1/2, and a zero tail, leading to an
+encoded message length of (72+31) x 2 = 206 information-carrying
+bits. Modulation is 4-tone frequency-shift keying at 11025 / 2520 =
+4.375 baud.  Each symbol carries one information bit (the most
+significant bit) and ony synchronizing bit (the least signicifant
+bit).  The pseudo-random sync vector is the following sequence:
+
+ 000011000110110010100000001100000000000010110110101111101000
+ 100100111110001010001111011001000110101010101111101010110101
+ 011100101101111000011011000111011101110010001101100100011111
+ 10011000011000101101111010
+
+[[JT9PRO]]
+=== JT9
+
+JT9 is designed for making minimally valid QSOs at LF, MF, and HF. It
+uses 72-bit structured messages nearly identical (at the user level)
+to those in JT65. Error control coding (ECC) uses a strong
+convolutional code with constraint length K=32, rate r=1/2, and a zero
+tail, leading to an encoded message length of (72+31) × 2 = 206
+information-carrying bits. Modulation is nine-tone frequency-shift
+keying, 9-FSK.  Eight tones are used for data, one for
+synchronization. Eight data tones means that three data bits are
+conveyed by each transmitted information symbol. Sixteen symbol
+intervals are devoted to synchronization, so a transmission requires a
+total of 206 / 3 + 16 = 85 (rounded up) channel symbols. The sync
+symbols are those numbered 1, 2, 5, 10, 16, 23, 33, 35, 51, 52, 55,
+60, 66, 73, 83, and 85 in the transmitted sequence.  Each symbol lasts
+for 6912 sample intervals at 12000 samples per second, or about 0.576
+seconds. Tone spacing of the 9-FSK modulation is 12000/6912 = 1.736
+Hz, the inverse of the symbol duration. The total occupied bandwidth
+is 9 × 1.736 = 15.6 Hz.
+
+[[PROTOCOL_SUMMARY]]
+=== Summary
+
+Frequency spacing between tones, total occupied bandwidth, and
+approximate decoding thresholds are given for the various submodes of
+JT4, JT9, and JT65 in the following table:
+
+ Submode Spacing   BW    S/N
+           (Hz)   (Hz)    dB
+ ----------------------------
+ JT4A     4.375   17.5   -23
+ JT4B     8.75    35.0   -22
+ JT4C    17.5     70.0   -21
+ JT4D    39.375  157.5   -20
+ JT4E    78.75   315.0   -19
+ JT4F    157.5   630.0   -18
+ JT4G    315.0  1260.0   -17
+
+ JT9    1.7361  15.625   -27
+
+ JT65A  2.6917   177.6   -25
+ JT65B  5.3833   355.3   -24
+ JT65C  10.767   710.6   -23
+
+
+Transmissions in all three modes are essentially the same length, and
+all use 72 bits to carry message information. At user level the modes
+support nearly identical message structures.
+
+JT4 and JT65 signal reports are constrained to the range –1 to –30
+dB. This range is more than adequate for EME purposes, but not enough
+for optimum use at HF. S/N values displayed by the JT4 and JT65
+decoders are clamped at an upper limit –1 dB, and the S/N scale is
+nonlinear above –10 dB.
+
+By comparison, JT9 allows for signal reports in the range –50 to +49
+dB. It manages this by taking over a small portion of "`message
+space`" that would otherwise be used for grid locators within 1 degree
+of the south pole. The S/N scale of the present JT9 decoder is
+reasonably linear (although it's not intended to be a precision
+measurement tool).  
+
+JT9 is an order of magnitude better than JT65 in spectral
+efficiency. On a busy HF band, the conventional 2-kHz-wide JT65
+sub-band is often filled with overlapping signals. Ten times as many
+JT9 signals can fit into the same frequency range, without collisions.

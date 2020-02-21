@@ -1,0 +1,3289 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass paper
+\begin_preamble
+\usepackage{ragged2e}
+\exhyphenpenalty=10000\hyphenpenalty=10000
+
+\fancyhf{}
+\fancyhead[L]{Franke \& Taylor: {\it Open Source Soft-Decision Decoder \ldots}}
+\fancyhead[R]{\thepage}
+\makeatletter
+\let\ps@plain\ps@fancy   % Plain page style = fancy page style
+\makeatother
+
+\usepackage{nomencl}
+\usepackage{overcite}
+
+\renewcommand{\nomname}{Sidebar: Glossary of Specialized Terms}
+\end_preamble
+\use_default_options true
+\begin_modules
+boxedfloat
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Open Source Soft-Decision Decoder for the JT65 (63,12) Reed-Solomon Code
+\end_layout
+
+\begin_layout SubTitle
+
+\emph on
+Under-the-hood description of the JT65 decoding procedure, including a wholly
+ new algorithm for its powerful error-correcting code.
+\end_layout
+
+\begin_layout Author
+Steven J.
+ Franke, K9AN and Joseph H.
+ Taylor, K1JT
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction-and-Motivation"
+
+\end_inset
+
+Background and Motivation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+RaggedRight
+\end_layout
+
+\end_inset
+
+ The JT65 protocol has revolutionized amateur-radio weak-signal communication
+ by enabling operators with small or compromise antennas and relatively
+ low-power transmitters to communicate over propagation paths not usable
+ with traditional technologies.
+ The protocol was developed in 2003 for Earth-Moon-Earth (EME, or 
+\begin_inset Quotes eld
+\end_inset
+
+moonbounce
+\begin_inset Quotes erd
+\end_inset
+
+) communication 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jt65_protocol"
+
+\end_inset
+
+, where the scattered return signals are always weak.
+ It was soon found that JT65 also enables worldwide communication on the
+ HF bands with low power, modest antennas, and efficient spectral usage.
+ Thousands of amateurs now use JT65 on a regular basis, making contacts
+ on all bands from 160 meters through microwaves.
+\end_layout
+
+\begin_layout Standard
+JT65 uses timed transmitting and receiving sequences one minute long.
+ Messages are short and structured so as to streamline minimal exchanges
+ between two amateur operators over potentially difficult radio paths.
+ Most messages contain two callsigns and a grid locator, signal report,
+ acknowledgment, or sign-off; one of the tokens CQ, QRZ, or DE may be substitute
+d for the first callsign.
+ Alternatively, a message may contain up to 13 Latin characters of arbitrary
+ text.
+ All messages are efficiently compressed into exactly 72 bits of digital
+ information.
+ It should be obvious that the JT65 protocol is intended for the basic purpose
+ of completing legitimate, documented two-way contacts, but not for extended
+ conversations.
+ Full details of the message structure and encoding procedure were presented
+ in an earlier publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jt65_protocol"
+
+\end_inset
+
+.
+ For a concise description of the overall process of transmitting and receiving
+ a JT65 message, see the accompanying sidebar 
+\series bold
+JT65 Message Processing
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+A major reason for the success and popularity of JT65 is its use of a strong
+ error-correction code.
+ Before transmission, each 72-bit message is divided into 12 six-bit 
+\emph on
+symbols
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Symbol: }"
+description "The information carried in one signalling interval, usually an integral number of bits.  JT65 uses 6-bit symbols."
+
+\end_inset
+
+
+\emph default
+ and augmented with 51 additional symbols of error-correcting information.
+ These 51 
+\emph on
+parity symbols
+\emph default
+ are computed according to information-theory rules that maximize the probabilit
+y of correctly decoding the message, even if many symbols are received incorrect
+ly.
+ The JT65 code is properly described as a short block-length, low-rate Reed-Solo
+mon code based on a 64-symbol 
+\emph on
+alphabet.
+
+\emph default
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Alphabet: }"
+description "A sequence of possible symbol values used for signaling.  JT65 uses a 64-character alphabet, values in the range 0 to 63."
+
+\end_inset
+
+ Characters in this alphabet are mapped onto 64 different frequencies for
+ transmission.
+ 
+\end_layout
+
+\begin_layout Standard
+Reed Solomon codes are widely used to ensure reliability in data transmission
+ and storage.
+ In hardware implementations, decoding is generally accomplished with a
+ procedure such as the Berlekamp-Massey (BM) algorithm, based on 
+\emph on
+hard decisions
+\emph default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Hard decision: }"
+description "Received symbols are assigned definite values by the demodulator."
+
+\end_inset
+
+ for each of the symbol values received.
+ 
+\emph on
+Soft decisions
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Soft decision: }"
+description "Received symbols are assigned tentative values (most probable, second most probable, etc.) and quality indicators."
+
+\end_inset
+
+
+\emph default
+ are potentially more powerful, however.
+ For each received JT65 symbol we can estimate not only the value most likely
+ to be correct, but also the second, third, etc., most likely.
+ Most importantly, we can also estimate the probability that each of those
+ possible values is the correct one.
+ Decoders that make use of such information are called 
+\emph on
+soft-decision decoders.
+\end_layout
+
+\begin_layout Standard
+Until now, nearly all programs implementing JT65 have used the patented
+ Kötter-Vardy (KV) algebraic soft-decision decoder 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kv2001"
+
+\end_inset
+
+, licensed to and implemented by K1JT as a closed-source executable for
+ use only in amateur radio applications.
+ Since 2001 the KV decoder has been considered the best available soft-decision
+ decoder for Reed Solomon codes.
+\end_layout
+
+\begin_layout Standard
+We describe here a new open-source alternative called the Franke-Taylor
+ (FT, or K9AN-K1JT) soft-decision decoding algorithm.
+ It is conceptually simple, built on top of the BM hard-decision decoder,
+ and in this application it performs even better than the KV decoder.
+ The FT algorithm is implemented in the popular programs 
+\emph on
+WSJT
+\emph default
+, 
+\emph on
+MAP65
+\emph default
+, and 
+\emph on
+WSJT-X
+\emph default
+, widely used for amateur weak-signal communication using JT65 and other
+ specialized digital protocols.
+ These programs are open-source, freely available 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wsjt"
+
+\end_inset
+
+, and licensed under the GNU General Public License.
+\end_layout
+
+\begin_layout Standard
+The JT65 protocol specifies transmissions that start one second into a UTC
+ minute and last for 46.8 seconds.
+ Receiving software therefore has as much as ten seconds to decode a message
+ before the start of the next minute, when the operator will send a reply.
+ With today's personal computers, this relatively long time encourages experimen
+tation with decoders of high computational complexity.
+ With time to spare, the FT algorithm lowers the decoding threshold on a
+ typical fading channel by many dB over the hard-decision BM decoder, and
+ by a meaningful amount over the KV decoder.
+ In addition to its excellent performance, the new algorithm has other desirable
+ properties, not least of which is its conceptual simplicity.
+ Decoding performance and computational complexity scale in a convenient
+ way, providing steadily increasing soft-decision decoding gain as a tunable
+ parameter is increased over more than five orders of magnitude.
+ Appreciable gain is available from our decoder even on very simple (and
+ relatively slow) computers.
+ On the other hand, because the algorithm benefits from a large number of
+ independent decoding trials, further performance gains should be achievable
+ through parallelization on high-performance computers.
+\end_layout
+
+\begin_layout Standard
+The remainder of this paper is organized as follows.
+ Section 2 presents a brief overview of the nature of Reed Solomon codes
+ and their error-correcting capabilities.
+ Section 3 provides statistical motivation for the FT algorithm, and Section
+ 4 describes the algorithm in full detail.
+ Material in these two sections is important because it documents our approach
+ and underlines its fundamental technical contributions.
+ These sections are heavier in formal mathematics than common in 
+\emph on
+QEX
+\emph default
+; for this reason, some readers may choose to skip or skim them and proceed
+ more quickly to the results.
+ Most readers will benefit by reviewing the original paper on the JT65 protocol
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jt65_protocol"
+
+\end_inset
+
+.
+ A procedure for 
+\emph on
+hinted decoding 
+\emph default
+--- determining which one, if any, of a list of likely messages matches
+ the one that was received --- is outlined in Section 5.
+ Finally, in Section 6 we present performance measurements of the FT and
+ hinted decoding algorithms and make explicit comparisons to the BM and
+ KV decoders familiar to users of older versions of 
+\emph on
+WSJT
+\emph default
+, 
+\emph on
+MAP65
+\emph default
+ and 
+\emph on
+WSJT-X
+\emph default
+.
+ Section 7 summarizes some on-the-air experiences with the new decoder.
+ Refer to the sidebar 
+\series bold
+Glossary of Specialized Terms
+\series default
+ for brief definitions of some potentially unfamiliar language.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:JT65-messages-and"
+
+\end_inset
+
+JT65 Messages and Reed Solomon Codes
+\end_layout
+
+\begin_layout Standard
+The JT65 message frame consists of a short, compressed 72-bit message encoded
+ for transmission with a Reed-Solomon code.
+ Reed-Solomon codes are 
+\emph on
+block codes
+\emph default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Block code: }"
+description "An error-correcting code that treats data in blocks of fixed size."
+
+\end_inset
+
+ characterized by 
+\begin_inset Formula $n$
+\end_inset
+
+, the length of their 
+\emph on
+codewords
+\emph default
+;
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Codeword:}"
+description "For the JT65 code, a vector of 63 symbol values each in the range 0 to 63."
+
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+, the number of message symbols conveyed by the codeword; and the transmission
+ alphabet, or number of possible values for each symbol in a codeword.
+ The codeword length and the number of message symbols are specified with
+ the notation 
+\begin_inset Formula $(n,k)$
+\end_inset
+
+.
+ JT65 uses a (63,12) Reed-Solomon code with an alphabet of 64 possible values
+ for each symbol.
+ Each of the 12 message symbols represents 
+\begin_inset Formula $\log_{2}64=6$
+\end_inset
+
+ message bits.
+ The source-encoded
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Source encoding: }"
+description "Compression of a message to use a minimum number or bits.  JT65 source-encodes all messages to 72 bits."
+
+\end_inset
+
+ message conveyed by a 63-symbol JT65 frame thus consists of 72 information
+ bits.
+ The JT65 code is 
+\emph on
+systematic
+\emph default
+, which means that the 12 message symbols are embedded in the codeword without
+ modification and another 51 parity symbols derived from the message symbols
+ are added to form a codeword of 63 symbols.
+ 
+\end_layout
+
+\begin_layout Standard
+In coding theory the concept of 
+\emph on
+Hamming distance
+\emph default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Hamming distance: }"
+description "The Hamming distance between two codewords, or between a received word and a codeword, is equal to the number of symbol positions in which they differ."
+
+\end_inset
+
+ is used as a measure of disagreement between different codewords, or between
+ a received word
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Received word: }"
+description "A vector of symbol values, possibly accompanied by soft information on individual reliabilities."
+
+\end_inset
+
+ and a codeword.
+ Hamming distance is the number of code symbols that differ in two words
+ being compared.
+ Reed-Solomon codes have guaranteed minimum Hamming distance 
+\begin_inset Formula $d$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+d=n-k+1.\label{eq:minimum_distance}
+\end{equation}
+
+\end_inset
+
+With 
+\begin_inset Formula $n=63$
+\end_inset
+
+ and 
+\begin_inset Formula $k=12$
+\end_inset
+
+ the minimum Hamming distance of the JT65 code is 
+\begin_inset Formula $d=52$
+\end_inset
+
+.
+ With 72 information bits in each message, JT65 can transmit any one of
+ 
+\begin_inset Formula $2^{72}\approx4.7\times10^{21}$
+\end_inset
+
+ possible messages.
+ The codeword for any message differs from every other codeword in at least
+ 52 of the 63 symbol positions.
+\end_layout
+
+\begin_layout Standard
+A received word containing some 
+\emph on
+errors
+\emph default
+ (incorrect symbols) can be decoded into the correct codeword using a determinis
+tic, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Deterministic algorithm: }"
+description "A series of computational steps that for the same input always produces the same output."
+
+\end_inset
+
+ algebraic algorithm provided that no more than 
+\begin_inset Formula $t$
+\end_inset
+
+ symbols were received incorrectly, where
+\begin_inset Formula 
+\begin{equation}
+t=\left\lfloor \frac{n-k}{2}\right\rfloor .\label{eq:t}
+\end{equation}
+
+\end_inset
+
+For the JT65 code 
+\begin_inset Formula $t=25$
+\end_inset
+
+, so it is always possible to decode a received word having 25 or fewer
+ symbol errors.
+ Any one of several well-known algebraic algorithms, such as the BM algorithm,
+ can carry out this hard-decision decoding.
+ Two steps are necessarily involved in this process.
+ We must (1) determine which symbols were received incorrectly, and (2)
+ find the correct value of the incorrect symbols.
+ If we somehow know that certain symbols are incorrect, that information
+ can be used to reduce the work involved in step 1 and allow step 2 to correct
+ more than 
+\begin_inset Formula $t$
+\end_inset
+
+ errors.
+ In the unlikely event that the location of every error is known, and if
+ no correct symbols are accidentally labeled as errors, the BM algorithm
+ can correct up to 
+\begin_inset Formula $d-1=n-k$
+\end_inset
+
+ errors.
+ 
+\end_layout
+
+\begin_layout Standard
+The FT algorithm creates lists of symbols suspected of being incorrect and
+ sends them to the BM decoder.
+ Symbols flagged in this way are called 
+\emph on
+erasures
+\emph default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Erasure: }"
+description "A received symbol may be ``erased'' when confidence in its value is so low that it is unlikely to provide useful information. "
+
+\end_inset
+
+.
+ With perfect erasure information up to 
+\begin_inset Formula $n-k=51$
+\end_inset
+
+ incorrect symbols can be corrected for the JT65 code.
+ Imperfect erasure information means that some erased symbols may be correct,
+ and some other symbols in error.
+ If 
+\begin_inset Formula $s$
+\end_inset
+
+ symbols are erased and the remaining 
+\begin_inset Formula $n-s$
+\end_inset
+
+ symbols contain 
+\begin_inset Formula $e$
+\end_inset
+
+ errors, the BM algorithm can find the correct codeword as long as 
+\begin_inset Formula 
+\begin{equation}
+s+2e\le d-1.\label{eq:erasures_and_errors}
+\end{equation}
+
+\end_inset
+
+If 
+\begin_inset Formula $s=0$
+\end_inset
+
+, the decoder is said to be an 
+\emph on
+errors-only
+\emph default
+ decoder.
+ If 
+\begin_inset Formula $0<s\le d-1$
+\end_inset
+
+, the decoder is called an 
+\emph on
+errors-and-erasures
+\emph default
+ decoder.
+ The possibility of doing errors-and-erasures decoding lies at the heart
+ of the FT algorithm.
+ On that foundation we have built a capability for using soft information
+ on the reliability of individual symbol values, thereby producing a soft-decisi
+on decoder.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Statistical Framework"
+
+\end_inset
+
+Statistical Framework
+\end_layout
+
+\begin_layout Standard
+The FT algorithm uses the estimated quality of received symbols to generate
+ lists of symbols considered likely to be in error, thus enabling decoding
+ of received words with more than 25 errors.
+ Algorithms of this type are generally called 
+\emph on
+reliability-based
+\emph default
+ or 
+\emph on
+probabilistic
+\emph default
+ decoding methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lc2004"
+
+\end_inset
+
+.
+ Such algorithms involve some amount of educating guessing about which received
+ symbols are in error or, alternatively, about which received symbols are
+ correct.
+ The guesses are informed by quality metrics associated with the received
+ symbols.
+ To illustrate why it is absolutely essential to use such soft-symbol informatio
+n in these algorithms it helps to consider what would happen if we tried
+ to use completely random guesses, ignoring any available soft-symbol informatio
+n.
+\end_layout
+
+\begin_layout Standard
+As a specific example, consider a received JT65 word with 23 correct symbols
+ and 40 errors.
+ We do not know which symbols are in error.
+ Suppose that the decoder randomly selects 
+\begin_inset Formula $s=40$
+\end_inset
+
+ symbols for erasure, leaving 23 unerased symbols.
+ According to Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:erasures_and_errors"
+
+\end_inset
+
+), the BM decoder can successfully decode this word as long as 
+\begin_inset Formula $e$
+\end_inset
+
+, the number of errors present in the 23 unerased symbols, is 5 or less.
+ The number of errors captured in the set of 40 erased symbols must therefore
+ be at least 35.
+ 
+\end_layout
+
+\begin_layout Standard
+The probability of selecting some particular number of incorrect symbols
+ in a randomly selected subset of received symbols is governed by the hypergeome
+tric probability distribution.
+ Let us define 
+\begin_inset Formula $N$
+\end_inset
+
+ as the number of symbols from which erasures will be selected, 
+\begin_inset Formula $X$
+\end_inset
+
+ as the number of incorrect symbols in the set of 
+\begin_inset Formula $N$
+\end_inset
+
+ symbols, and 
+\begin_inset Formula $x$
+\end_inset
+
+ as the number of errors in the symbols actually erased.
+ In an ensemble of many received words 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ will be random variables, but for this example we will assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ is known and that only 
+\begin_inset Formula $x$
+\end_inset
+
+ is random.
+ The conditional probability mass function for 
+\begin_inset Formula $x$
+\end_inset
+
+ with stated values of 
+\begin_inset Formula $N$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+, and 
+\begin_inset Formula $s$
+\end_inset
+
+ may be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(x=\epsilon|N,X,s)=\frac{\binom{X}{\epsilon}\binom{N-X}{s-\epsilon}}{\binom{N}{s}}\label{eq:hypergeometric_pdf}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\binom{n}{k}=\frac{n!}{k!(n-k)!}$
+\end_inset
+
+ is the binomial coefficient.
+ The binomial coefficient can be calculated using the function 
+\family typewriter
+nchoosek(n,k)
+\family default
+ in the numerical computing language 
+\emph on
+GNU Octave
+\emph default
+, or with one of many free online calculators.
+ The hypergeometric probability mass function defined in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hypergeometric_pdf"
+
+\end_inset
+
+) is available in 
+\emph on
+GNU Octave
+\emph default
+ as function 
+\family typewriter
+hygepdf(x,N,X,s)
+\family default
+.
+ The cumulative probability that at least 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ errors are captured in a subset of 
+\begin_inset Formula $s$
+\end_inset
+
+ erased symbols selected from a group of 
+\begin_inset Formula $N$
+\end_inset
+
+ symbols containing 
+\begin_inset Formula $X$
+\end_inset
+
+ errors is
+\begin_inset Formula 
+\begin{equation}
+P(x\ge\epsilon|N,X,s)=\sum_{j=\epsilon}^{s}P(x=j|N,X,s).\label{eq:cumulative_prob}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Example 1:
+\end_layout
+
+\begin_layout Standard
+Suppose a received word contains 
+\begin_inset Formula $X=40$
+\end_inset
+
+ incorrect symbols.
+ In an attempt to decode using an errors-and-erasures decoder, 
+\begin_inset Formula $s=40$
+\end_inset
+
+ symbols are randomly selected for erasure from the full set of 
+\begin_inset Formula $N=n=63$
+\end_inset
+
+ symbols.
+ The probability that 
+\begin_inset Formula $x=35$
+\end_inset
+
+ of the erased symbols are actually incorrect is then
+\begin_inset Formula 
+\[
+P(x=35)=\frac{\binom{40}{35}\binom{63-40}{40-35}}{\binom{63}{40}}\simeq2.4\times10^{-7}.
+\]
+
+\end_inset
+
+Similarly, the probability that 
+\begin_inset Formula $x=36$
+\end_inset
+
+ of the erased symbols are incorrect is
+\begin_inset Formula 
+\[
+P(x=36)\simeq8.6\times10^{-9}.
+\]
+
+\end_inset
+
+Since the probability of erasing 36 errors is so much smaller than that
+ for erasing 35 errors, we may safely conclude that the probability of randomly
+ choosing an erasure vector that can decode the received word is approximately
+ 
+\begin_inset Formula $P(x=35)\simeq2.4\times10^{-7}$
+\end_inset
+
+.
+ The odds of producing a valid codeword on the first try are very poor,
+ about 1 in 4 million.
+\end_layout
+
+\begin_layout Paragraph
+Example 2:
+\end_layout
+
+\begin_layout Standard
+How might we best choose the number of symbols to erase, in order to maximize
+ the probability of successful decoding? By exhaustive search over all possible
+ values up to 
+\begin_inset Formula $s=51$
+\end_inset
+
+, it turns out that for 
+\begin_inset Formula $X=40$
+\end_inset
+
+ the best strategy is to erase 
+\begin_inset Formula $s=45$
+\end_inset
+
+ symbols.
+ According to equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:erasures_and_errors"
+
+\end_inset
+
+, with 
+\begin_inset Formula $s=45$
+\end_inset
+
+ and 
+\begin_inset Formula $d=52$
+\end_inset
+
+ then 
+\begin_inset Formula $e$
+\end_inset
+
+ must be 3 or less.
+ Decoding will be assured if the set of erased symbols contains at least
+ 
+\begin_inset Formula $40-3=37$
+\end_inset
+
+ errors.
+ With 
+\begin_inset Formula $N=63$
+\end_inset
+
+, 
+\begin_inset Formula $X=40$
+\end_inset
+
+, and 
+\begin_inset Formula $s=45$
+\end_inset
+
+, the probability of successful decode in a single try is 
+\begin_inset Formula 
+\[
+P(x\ge37)\simeq1.9\times10^{-6}.
+\]
+
+\end_inset
+
+This probability is about 8 times higher than the probability of success
+ when only 40 symbols were erased.
+ Nevertheless, the odds of successfully decoding on the first try are still
+ only about 1 in 500,000.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Example 3:
+\end_layout
+
+\begin_layout Standard
+Examples 1 and 2 show that a random strategy for selecting symbols to erase
+ is unlikely to be successful unless we are prepared to wait a long time
+ for an answer.
+ So let's modify the strategy to tip the odds in our favor.
+ Let the received word contain 
+\begin_inset Formula $X=40$
+\end_inset
+
+ incorrect symbols, as before, but suppose we know that 10 received symbols
+ are significantly more reliable than the other 53.
+ We might therefore protect the 10 most reliable symbols and select erasures
+ from the smaller set of 
+\begin_inset Formula $N=53$
+\end_inset
+
+ less reliable ones.
+ If 
+\begin_inset Formula $s=45$
+\end_inset
+
+ symbols are chosen randomly for erasure in this way, it is still necessary
+ for the erased symbols to include at least 37 errors, as in Example 2.
+ However, the probabilities are now much more favorable: with 
+\begin_inset Formula $N=53$
+\end_inset
+
+, 
+\begin_inset Formula $X=40$
+\end_inset
+
+, and 
+\begin_inset Formula $s=45$
+\end_inset
+
+, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cumulative_prob"
+
+\end_inset
+
+) yields
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linebreak
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mbox{\ensuremath{P(x\geq37)=0.016.}}$
+\end_inset
+
+ Even better odds are obtained by choosing 
+\begin_inset Formula $s=47$
+\end_inset
+
+, which requires 
+\begin_inset Formula $x\ge38$
+\end_inset
+
+.
+ With 
+\begin_inset Formula $N=53$
+\end_inset
+
+, 
+\begin_inset Formula $X=40$
+\end_inset
+
+, and 
+\begin_inset Formula $s=47$
+\end_inset
+
+, 
+\begin_inset Formula $P(x\ge38)=0.027$
+\end_inset
+
+.
+ The odds for producing a codeword on the first try are now about 1 in 38.
+ A few hundred independently randomized tries would be enough to all-but-guarant
+ee production of a valid codeword by the BM decoder.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-decoding-algorithm"
+
+\end_inset
+
+The Franke-Taylor Decoding Algorithm
+\end_layout
+
+\begin_layout Standard
+Example 3 shows how statistical information about symbol quality should
+ make it possible to decode received frames having a large number of errors.
+ In practice the number of errors in the received word is unknown, so our
+ algorithm simply assigns a high erasure probability to low-quality symbols
+ and relatively low probability to high-quality symbols.
+ As illustrated by Example 3, a good choice of erasure probabilities can
+ increase the chance of producing a codeword by many orders of magnitude.
+ Once erasure probabilities have been assigned to each of the 63 received
+ symbols, the FT algorithm uses a random number generator to decide whether
+ or not to erase each symbol, according to its assigned erasure probability.
+ The list of erased symbols is then submitted to the BM decoder, which produces
+ either a codeword or a flag indicating failure to decode.
+ 
+\end_layout
+
+\begin_layout Standard
+The process of selecting the list of symbols to erase and calling the BM
+ decoder comprises one cycle of the FT algorithm.
+ The next cycle proceeds with a new selection of erased symbols.
+ At this stage we must treat any codeword obtained by errors-and-erasures
+ decoding as no more than a 
+\emph on
+candidate
+\emph default
+.
+ Our next task is to find a metric that can reliably select one of many
+ proffered candidates as the codeword that was actually transmitted.
+ 
+\end_layout
+
+\begin_layout Standard
+The FT algorithm uses quality indices made available by a noncoherent 64-FSK
+ demodulator (see the sidebar 
+\series bold
+JT65 Message Processing
+\series default
+).
+ The demodulator computes binned power spectra for each signaling interval;
+ the result is a two-dimensional array 
+\begin_inset Formula $S(i,j)$
+\end_inset
+
+, where the frequency index 
+\begin_inset Formula $i$
+\end_inset
+
+ assumes values 0 to 63 and the symbol index 
+\begin_inset Formula $j$
+\end_inset
+
+ has values 1 to 63.
+ The most likely value for each symbol is taken as the frequency bin with
+ largest signal-plus-noise power over all values of 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The fractions of total power in the two bins containing the largest and
+ second-largest powers, denoted respectively by 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+, are computed for each symbol and passed from demodulator to decoder as
+ soft-symbol information.
+ The FT decoder derives two metrics from 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+, namely 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+-rank (the rank 
+\begin_inset Formula $\{1,2,\ldots,63\}$
+\end_inset
+
+ of the symbol's fractional power 
+\begin_inset Formula $p_{1,\, j}$
+\end_inset
+
+ in a sorted list of 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ values) and the ratio 
+\begin_inset Formula $p_{2}/p_{1}$
+\end_inset
+
+.
+ High ranking symbols have larger signal-to-noise ratio than those with
+ lower rank.
+ When 
+\begin_inset Formula $p_{2}/p_{1}$
+\end_inset
+
+ is close to 1, the most likely symbol value is only slightly more reliable
+ than the second most likely one.
+\end_layout
+
+\begin_layout Standard
+We use 3-bit quantization of the metrics 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+-rank and 
+\begin_inset Formula $p_{2}/p_{1}$
+\end_inset
+
+ to index the entries in an 
+\begin_inset Formula $8\times8$
+\end_inset
+
+ table of symbol error probabilities.
+ The probabilities were derived empirically from a large data set of received
+ words that were successfully decoded.
+ The table provides an estimate of the 
+\emph on
+a priori
+\emph default
+ probability of symbol error based on the metrics 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+-rank and 
+\begin_inset Formula $p_{2}/p_{1}$
+\end_inset
+
+.
+ This table is a key element of the algorithm, as it determines which symbols
+ are effectively protected from erasure.
+ The 
+\emph on
+a priori
+\emph default
+ symbol error probabilities are close to 1 for low-quality symbols and close
+ to 0 for high-quality symbols.
+ Recall from Examples 2 and 3 that candidate codewords are produced with
+ higher probability when the number of erased symbols is larger than the
+ number of incorrect symbols.
+ Correspondingly, the FT algorithm works best when the probability of erasing
+ a symbol is somewhat larger than the probability that the symbol is incorrect.
+ For the JT65 code we found empirically that good decoding performance is
+ obtained when the symbol erasure probability is about 1.3 times the symbol
+ error probability.
+\end_layout
+
+\begin_layout Standard
+The FT algorithm tries successively to decode the received word using independen
+t educated guesses to select symbols for erasure.
+ For each iteration a stochastic erasure vector is generated based on the
+ symbol erasure probabilities.
+ The erasure vector is sent to the BM decoder along with the full set of
+ 63 hard-decision symbol values.
+ When the BM decoder finds a candidate codeword it is assigned a quality
+ metric 
+\begin_inset Formula $d_{s}$
+\end_inset
+
+, the 
+\emph on
+soft distance
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Soft distance: }"
+description "The soft distance between a received word and a codeword is a measure of how greatly they differ, taking into account available soft information on symbol values."
+
+\end_inset
+
+
+\emph default
+ between the received word and the codeword: 
+\begin_inset Formula 
+\begin{equation}
+d_{s}=\sum_{j=1}^{n}\alpha_{j}\,(1+p_{1,\, j}).\label{eq:soft_distance}
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\alpha_{j}=0$
+\end_inset
+
+ if received symbol 
+\begin_inset Formula $j$
+\end_inset
+
+ is the same as the corresponding symbol in the codeword, 
+\begin_inset Formula $\alpha_{j}=1$
+\end_inset
+
+ if the received symbol and codeword symbol are different, and 
+\begin_inset Formula $p_{1,\, j}$
+\end_inset
+
+ is the fractional power associated with received symbol 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Think of the soft distance as made up of two terms: the first is the Hamming
+ distance between the received word and the codeword, and the second ensures
+ that if two candidate codewords have the same Hamming distance from the
+ received word, a smaller soft distance will be assigned to the one where
+ differences occur in symbols of lower estimated reliability.
+ 
+\end_layout
+
+\begin_layout Standard
+In practice we find that 
+\begin_inset Formula $d_{s}$
+\end_inset
+
+ can reliably identify the correct codeword if the signal-to-noise ratio
+ for individual symbols is greater than about 4 in linear power units.
+ We also find that significantly weaker signals can be decoded by using
+ soft-symbol information beyond that contained in 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+.
+ To this end we define an additional metric 
+\begin_inset Formula $u$
+\end_inset
+
+, the average signal-plus-noise power in all received symbols according
+ to a candidate codeword's symbol values:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u=\frac{1}{n}\sum_{j=1}^{n}S(c_{j},\, j).\label{eq:u-metric}
+\end{equation}
+
+\end_inset
+
+Here the 
+\begin_inset Formula $c_{j}$
+\end_inset
+
+'s are the symbol values for the candidate codeword being tested.
+ 
+\end_layout
+
+\begin_layout Standard
+The correct JT65 codeword produces a value for 
+\begin_inset Formula $u$
+\end_inset
+
+ equal to the average of 
+\begin_inset Formula $n=63$
+\end_inset
+
+ bins containing both signal and noise power.
+ Incorrect codewords have at most 
+\begin_inset Formula $k-1=11$
+\end_inset
+
+ such bins and at least 
+\begin_inset Formula $n-k+1=52$
+\end_inset
+
+ bins containing noise only.
+ Thus, if the spectral array 
+\begin_inset Formula $S(i,\, j)$
+\end_inset
+
+ has been normalized so that the average value of the noise-only bins is
+ unity, 
+\begin_inset Formula $u$
+\end_inset
+
+ for the correct codeword has expectation value (average over many random
+ realizations) given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{u}_{c}=1+y,\label{eq:u1-exp}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y$
+\end_inset
+
+ is the signal-to-noise ratio in linear power units.
+ If we assume Gaussian statistics and a large number of trials, the standard
+ deviation of measured values of 
+\begin_inset Formula $u$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{c}=\left(\frac{1+2y}{n}\right)^{1/2}.\label{eq:sigma1}
+\end{equation}
+
+\end_inset
+
+In contrast, the expected value and standard deviation of the 
+\begin_inset Formula $u$
+\end_inset
+
+-metric for an incorrect codeword (randomly selected from a population of
+ all 
+\begin_inset Quotes eld
+\end_inset
+
+worst case
+\begin_inset Quotes erd
+\end_inset
+
+ codewords, 
+\emph on
+i.e.
+\emph default
+, those with 
+\begin_inset Formula $k-1$
+\end_inset
+
+ symbols identical to corresponding ones in the correct word) are given
+ by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{u}_{i}=1+\left(\frac{k-1}{n}\right)y,\label{eq:u2-exp}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{i}=\frac{1}{n}\left[n+2y(k-1)\right]^{1/2},\label{eq:sigma2}
+\end{equation}
+
+\end_inset
+
+where the subscript 
+\begin_inset Formula $i$
+\end_inset
+
+ is an abbreviation for 
+\begin_inset Quotes eld
+\end_inset
+
+incorrect
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is evaluated for a large number of candidate codewords, one of which is
+ correct, we should expect the largest value 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ to be drawn from a population with statistics described by 
+\begin_inset Formula $\bar{u}_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}.$
+\end_inset
+
+ If no tested codeword is correct, 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ is likely to come from the 
+\begin_inset Formula $(\bar{u}_{i},\,\sigma_{i})$
+\end_inset
+
+ population and to be several standard deviations above the mean.
+ In either case the second-largest value, 
+\begin_inset Formula $u_{2},$
+\end_inset
+
+ will likely come from the 
+\begin_inset Formula $(\bar{u}_{i},\,\sigma_{i})$
+\end_inset
+
+ population, again several standard deviations above the mean.
+ If the signal-to-noise ratio 
+\begin_inset Formula $y$
+\end_inset
+
+ is too small for decoding to be possible or the correct codeword is never
+ presented as a candidate, the ratio 
+\begin_inset Formula $r=u_{2}/u_{1}$
+\end_inset
+
+ will likely be close to 1.
+ On the other hand, correctly identified codewords will produce 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ significantly larger than 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ and thus smaller values of 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ We therefore apply a ratio threshold test, say 
+\begin_inset Formula $r<R_{1}$
+\end_inset
+
+, to identify codewords with high probability of being correct.
+ As described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Theory,-Simulation,-and"
+
+\end_inset
+
+, we use simulations to set an empirical acceptance threshold 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ that maximizes the probability of correct decodes while ensuring a low
+ rate of false positives.
+\end_layout
+
+\begin_layout Standard
+As with all decoding algorithms that generate a list of possible codewords,
+ a stopping criterion is necessary.
+ FT accepts a codeword unconditionally if the Hamming distance 
+\begin_inset Formula $X$
+\end_inset
+
+ and soft distance 
+\begin_inset Formula $d_{s}$
+\end_inset
+
+ obey specified criteria 
+\begin_inset Formula $X<X_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{s}<D_{0}$
+\end_inset
+
+.
+ Secondary acceptance criteria 
+\begin_inset Formula $d_{s}<D_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r<R_{1}$
+\end_inset
+
+ are used to validate additional codewords that fail the first test.
+ A timeout is used to limit execution time if no acceptable codeword is
+ found in a reasonable number of trials, 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Today's personal computers are fast enough that 
+\begin_inset Formula $T$
+\end_inset
+
+ can be set as large as 
+\begin_inset Formula $10^{5},$
+\end_inset
+
+ or even higher.
+ Pseudo-code for the FT algorithm is presented in an accompanying box, 
+\series bold
+Algorithm 1
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pseudo-code for the FT algorithm.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each received symbol, define the erasure probability as 1.3 times the
+ 
+\emph on
+a priori
+\emph default
+ symbol-error probability determined from soft-symbol information 
+\begin_inset Formula $\{p_{1}\textrm{-rank},\, p_{2}/p_{1}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Make independent stochastic
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "{\\bf Stochastic algorithm: }"
+description "An algorithm involving chance or probability in determining the series of computational steps to be taken."
+
+\end_inset
+
+ decisions about whether to erase each symbol by using the symbol's erasure
+ probability, allowing a maximum of 51 erasures.
+\end_layout
+
+\begin_layout Enumerate
+Attempt errors-and-erasures decoding using the BM algorithm and the set
+ of erasures determined in step 2.
+ If the BM decoder produces a candidate codeword, go to step 5.
+\end_layout
+
+\begin_layout Enumerate
+If BM decoding was not successful, go to step 2.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the hard-decision Hamming distance 
+\begin_inset Formula $X$
+\end_inset
+
+ between the candidate codeword and the received symbols, along with the
+ corresponding soft distance 
+\begin_inset Formula $d_{s}$
+\end_inset
+
+ and the quality metric 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is the largest one encountered so far, preserve any previous value of 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ by setting 
+\begin_inset Formula $u_{2}=u_{1}.$
+\end_inset
+
+ Then set 
+\begin_inset Formula $u_{1}=u,$
+\end_inset
+
+ 
+\begin_inset Formula $d_{1}=d_{s},$
+\end_inset
+
+ 
+\begin_inset Formula $X_{1}=X,$
+\end_inset
+
+ and save the codeword.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $X_{1}<X_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{1}<D_{0}$
+\end_inset
+
+, go to step 11.
+\end_layout
+
+\begin_layout Enumerate
+If the number of trials is less than the timeout limit 
+\begin_inset Formula $T,$
+\end_inset
+
+ go to 2.
+ 
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $d_{1}<D_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r=u_{2}/u_{1}<R_{1},$
+\end_inset
+
+ go to step 11.
+\end_layout
+
+\begin_layout Enumerate
+Otherwise, declare decoding failure and exit.
+\end_layout
+
+\begin_layout Enumerate
+An acceptable codeword has been found.
+ Declare a successful decode and return the saved codeword.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inspiration for the FT decoding algorithm came from a number of sources.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lc2004"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsuperscript{,}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lhmg2010"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsuperscript{,}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lk2008"
+
+\end_inset
+
+ After developing this algorithm, we became aware that our approach is conceptua
+lly similar to a stochastic, erasures-only list decoding algorithm described
+ in another reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ls2009"
+
+\end_inset
+
+.
+ That algorithm is applied to higher-rate Reed-Solomon codes on a symmetric
+ channel using binary phase-shift keying (BPSK).
+ Our 64-ary input channel with 64-FSK modulation required us to develop
+ unique methods for assigning erasure probabilities and for defining acceptance
+ criteria to select the best codeword from the list of tested candidates.
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Hinted-Decoding"
+
+\end_inset
+
+Hinted Decoding
+\end_layout
+
+\begin_layout Standard
+The FT algorithm is completely general.
+ With equal sensitivity it can recover any one of the 
+\begin_inset Formula $2^{72}\approx4.7\times10^{21}$
+\end_inset
+
+ different messages that can be transmitted with the JT65 protocol.
+ In some circumstances it's easy to imagine a 
+\emph on
+much
+\emph default
+ smaller list of messages (say, a few thousand messages or less) that would
+ be among the most likely ones to be received.
+ One such favorable situation exists when making short ham-radio contacts
+ that exchange minimal information including callsigns, signal reports,
+ perhaps Maidenhead locators, and acknowledgments.
+ On the EME path or a VHF or UHF band with limited geographical coverage,
+ the most common received messages frequently originate from callsigns that
+ have been decoded before.
+ Saving a list of previously decoded callsigns and associated locators makes
+ it easy to generate a list of hypothetical messages and their corresponding
+ codewords at very little computational expense.
+ The resulting candidate codewords can be tested in almost the same way
+ as those generated by the probabilistic method described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-decoding-algorithm"
+
+\end_inset
+
+.
+ We call this approach 
+\begin_inset Quotes eld
+\end_inset
+
+hinted decoding;
+\begin_inset Quotes erd
+\end_inset
+
+ it is sometimes referred to as the 
+\emph on
+Deep Search
+\emph default
+ algorithm.
+ In certain limited situations it can provide enhanced sensitivity for the
+ principal task of any decoder, namely to determine precisely what message
+ was sent.
+\end_layout
+
+\begin_layout Standard
+For hinted decoding we again invoke a ratio threshold test, but in this
+ case we use it to answer a more limited question.
+ Over the full list of messages considered likely, we want to know whether
+ a suitable metric can distinguish with confidence between the one correct
+ codeword and all others in the generated list --- or, alternatively, to
+ determine that the correct codeword is 
+\emph on
+not
+\emph default
+ contained in the list.
+ We again find that the most effective metric involves a comparison of 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2},$
+\end_inset
+
+ the largest and second-largest values of total signal-plus-noise power
+ among all the tested codewords.
+ The criterion for comparison is chosen empirically to maximize the number
+ of correct decodes while ensuring that false decodes are rare.
+ Because tested candidate codewords are drawn from a list typically no longer
+ than a few thousand entries, rather than 
+\begin_inset Formula $2^{72},$
+\end_inset
+
+ the limit can can be more relaxed than that used in the FT algorithm.
+ Thus, for the limited subset of messages suggested by previous experience
+ to be likely, hinted decodes can be obtained at lower signal levels than
+ required for the full universe of 
+\begin_inset Formula $2^{72}$
+\end_inset
+
+ possible messages.
+ Pseudo-code for the hinted-decoding algorithm is presented as 
+\series bold
+Algorithm 2
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pseudo-code for hinted decoding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Generate a list of 
+\begin_inset Formula $L$
+\end_inset
+
+ codewords considered likely to be received.
+ Set a pointer to the start of this list.
+\end_layout
+
+\begin_layout Enumerate
+Fetch the next candidate codeword and calculate its metric 
+\begin_inset Formula $u.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is the largest metric encountered so far, preserve any previous value of
+ 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ by setting 
+\begin_inset Formula $u_{2}=u_{1}.$
+\end_inset
+
+ Then set 
+\begin_inset Formula $u_{1}=u$
+\end_inset
+
+ and save the codeword.
+\end_layout
+
+\begin_layout Enumerate
+If the number of tested codewords is less than 
+\begin_inset Formula $L,$
+\end_inset
+
+ go to step 2.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $r=u_{2}/u_{1}<R_{2},$
+\end_inset
+
+ go to step 7.
+\end_layout
+
+\begin_layout Enumerate
+Otherwise, declare decoding failure and exit.
+\end_layout
+
+\begin_layout Enumerate
+An acceptable codeword has been found.
+ Declare a successful result and return the codeword and the value 
+\begin_inset Formula $q=100\,(u_{1}-bu_{2})$
+\end_inset
+
+ as a confidence indicator.
+ (By default we use the value 
+\begin_inset Formula $b=1.12$
+\end_inset
+
+ for submode JT65A.)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Theory,-Simulation,-and"
+
+\end_inset
+
+Decoder Performance Evaluation
+\end_layout
+
+\begin_layout Standard
+Comparisons of decoding performance are usually presented in the professional
+ literature as plots of word error rate versus 
+\begin_inset Formula $E_{b}/N_{0}$
+\end_inset
+
+, the ratio of the energy collected per information bit to the one-sided
+ noise power spectral density.
+ For weak-signal amateur radio work, performance is more usefully presented
+ as the probability of successfully decoding a received word plotted against
+ 
+\begin_inset Formula $\mathrm{SNR}{}_{2500}$
+\end_inset
+
+, the signal-to-noise ratio in a 2500 Hz reference bandwidth.
+ The relationship between 
+\begin_inset Formula $E_{b}/N_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{SNR}{}_{2500}$
+\end_inset
+
+ is described in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Appendix:SNR"
+
+\end_inset
+
+.
+ Examples of both types of plot are included in the following discussion,
+ where we describe simulations carried out to compare performance of the
+ FT algorithm and hinted decoding with other algorithms and with theoretical
+ expectations.
+ We have also used simulations to establish suitable default values for
+ the acceptance parameters 
+\begin_inset Formula $X_{0},$
+\end_inset
+
+ 
+\begin_inset Formula $D_{0},$
+\end_inset
+
+ 
+\begin_inset Formula $D_{1},$
+\end_inset
+
+ 
+\begin_inset Formula $R_{1},$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simulated results on the AWGN channel
+\end_layout
+
+\begin_layout Standard
+Results of simulations using the BM, KV, and FT decoding algorithms on the
+ JT65 code are presented in terms of word error rate versus 
+\begin_inset Formula $E_{b}/N_{0}$
+\end_inset
+
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bodide"
+
+\end_inset
+
+.
+ For these tests we generated at least 1000 signals at each signal-to-noise
+ ratio, assuming the additive white gaussian noise (AWGN) channel, and we
+ processed the data using each algorithm.
+ For word error rates less than 0.1 it was necessary to process 10,000 or
+ even 100,000 simulated signals in order to capture enough errors to make
+ the measurements statistically meaningful.
+ As a test of the fidelity of our numerical simulations, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bodide"
+
+\end_inset
+
+ also shows results calculated from theoretical probability distributions
+ for comparison with the BM results.
+ The simulated BM results agree with theory to within about 0.1 dB.
+ The differences are caused by small errors in the estimates of time and
+ frequency offset of the received signal in the simulated data.
+ Such 
+\begin_inset Quotes eld
+\end_inset
+
+sync losses
+\begin_inset Quotes erd
+\end_inset
+
+ are not accounted for in the idealized theoretical results.
+ 
+\end_layout
+
+\begin_layout Standard
+As expected, on the AWGN channel the soft-decision algorithms FT and KV
+ are about 2 dB better than the hard-decision BM algorithm.
+ In addition, FT has an edge over KV that increases from about 0.2 dB at
+ higher SNRs to nearly 0.5 dB at low SNR.
+ With timeout parameter 
+\begin_inset Formula $T=10^{5}$
+\end_inset
+
+ execution time for FT is longer than that for the KV algorithm, but still
+ small enough to be fully practical on today's home computers.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_bodide.pdf
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bodide"
+
+\end_inset
+
+Word error rates as a function of 
+\begin_inset Formula $E_{b}/N_{0},$
+\end_inset
+
+ the signal-to-noise ratio per information bit.
+ The curve labeled 
+\emph on
+Theory
+\emph default
+ shows a theoretical prediction for the hard-decision BM decoder.
+ Remaining curves represent simulation results on an AWGN channel for the
+ BM, KV, and FT decoders.
+ The KV algorithm was executed with complexity coefficient 
+\begin_inset Formula $\lambda=15$
+\end_inset
+
+, the most aggressive setting historically used in the 
+\emph on
+WSJT
+\emph default
+ programs.
+ The FT algorithm used timeout setting 
+\begin_inset Formula $T=10^{5}.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Error-free transmission is important in commercial applications, so plots
+ like Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bodide"
+
+\end_inset
+
+ are often extended downward to error rates of 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ or even less.
+ The circumstances for minimal amateur-radio contacts are very different,
+ however.
+ Decoding failure rates of order 0.1 or higher may be perfectly acceptable:
+ they simply require repeat transmissions.
+ In such circumstances the essential information is more usefully presented
+ in a plot showing the percentage of transmissions copied correctly as a
+ function of signal-to-noise ratio.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:WER2"
+
+\end_inset
+
+ shows the FT and KV results from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bodide"
+
+\end_inset
+
+ in this format, along with additional FT results for 
+\begin_inset Formula $T=10^{4},\:10^{3},\:10^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ It's easy to see that the FT decoder produces more decodes than KV when
+ 
+\begin_inset Formula $T\gtrsim3000$
+\end_inset
+
+.
+ As already noted in connection with Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bodide"
+
+\end_inset
+
+, FT with 
+\begin_inset Formula $T=10^{5}$
+\end_inset
+
+ has approximately 
+\begin_inset Formula $0.5$
+\end_inset
+
+ dB gain over KV at low SNR.
+ It also provides very significant gains over the hard-decision BM decoder,
+ even when limited to very small 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_wer2.pdf
+	lyxscale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:WER2"
+
+\end_inset
+
+Percent of JT65 messages copied as a function of 
+\begin_inset Formula $\mathrm{SNR}{}_{2500},$
+\end_inset
+
+ assuming additive white gaussian noise and no fading.
+ Numbers adjacent to curves specify values of timeout parameter 
+\begin_inset Formula $T$
+\end_inset
+
+ for the FT decoder.
+ Open circles and dotted line show results for the KV decoder with complexity
+ coefficient 
+\begin_inset Formula $\lambda=15$
+\end_inset
+
+.
+ Results for the BM algorithm are plotted with crosses and dashed line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parameter 
+\begin_inset Formula $T$
+\end_inset
+
+ in the FT algorithm is the maximum number of symbol-erasure trials allowed
+ for a particular attempt at decoding a received word.
+ Most successful decodes take only a small fraction of the maximum allowed
+ number of trials.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:N_vs_X"
+
+\end_inset
+
+ shows the number of stochastic erasure trials required to find the correct
+ codeword plotted as a function of 
+\begin_inset Formula $X,$
+\end_inset
+
+ the number of hard-decision errors in the received word.
+ This test run used 1000 simulated transmissions at 
+\begin_inset Formula $\mathrm{SNR_{2500}}=-24$
+\end_inset
+
+ dB, just slightly above the decoding threshold, with timeout parameter
+ 
+\begin_inset Formula $T=10^{5}.$
+\end_inset
+
+ No points are shown for 
+\begin_inset Formula $X\le25$
+\end_inset
+
+ because all such words are successfully decoded by a single run of the
+ errors-only BM algorithm.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:N_vs_X"
+
+\end_inset
+
+ shows that the FT algorithm decodes received words with as many as 
+\begin_inset Formula $X=43$
+\end_inset
+
+ symbol errors.
+ It also shows that the average number of trials increases with the number
+ of errors in the received word.
+ The variability of decoding time also increases dramatically with the number
+ of errors in the received word.
+ These results provide insight into the mean and variance of execution time
+ for the FT algorithm, since execution time is roughly proportional to the
+ number of required erasure trials.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_ntrials_vs_nhard.pdf
+	lyxscale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:N_vs_X"
+
+\end_inset
+
+Number of trials needed to decode a received word 
+\emph on
+vs.
+
+\emph default
+ Hamming distance 
+\begin_inset Formula $X$
+\end_inset
+
+ between received word and decoded codeword.
+ We used 1000 simulated transmissions on an AWGN channel with no fading.
+ The signal-to-noise ratio was 
+\begin_inset Formula $\mathrm{SNR}{}_{2500}=-24$
+\end_inset
+
+ dB, or 
+\begin_inset Formula $E_{b}/N_{o}=5.1$
+\end_inset
+
+ dB.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simulated results for Rayleigh fading and hinted decoding
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Psuccess"
+
+\end_inset
+
+ presents the results of simulations for signal-to-noise ratios ranging
+ from 
+\begin_inset Formula $-18$
+\end_inset
+
+ to 
+\begin_inset Formula $-30$
+\end_inset
+
+ dB, again using 1000 simulated signals for each plotted point.
+ We include three curves for each decoding algorithm: one for the AWGN channel
+ and no fading, and two more for simulated Doppler spreads of 0.2 and 1.0
+ Hz.
+ These simulated Doppler spreads are comparable to those encountered on
+ HF ionospheric paths and also for EME at VHF and the lower UHF bands.
+ For comparison we note that the JT65 symbol rate is about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linebreak
+\end_layout
+
+\end_inset
+
+ 2.7 Hz.
+ It is interesting to note that while Rayleigh fading severely degrades
+ the success rate of the BM decoder, the penalties are much smaller with
+ both FT and Deep Search (DS) decoding.
+ Simulated Doppler spreads of 0.2 Hz actually increased the FT decoding rate
+ slightly at SNRs close to the decoding threshold, presumably because with
+ the low-rate JT65 code, signal peaks provide the information needed for
+ good copy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_psuccess.pdf
+	lyxscale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Psuccess"
+
+\end_inset
+
+Percentage of JT65 messages successfully decoded as a function of 
+\begin_inset Formula $\mathrm{SNR}{}_{2500}$
+\end_inset
+
+.
+ Results are shown for the hard-decision Berlekamp-Massey (BM) and soft-decision
+ Franke-Taylor (FT) decoding algorithms.
+ Curves labeled DS correspond to the hinted-decode (Deep Search) algorithm
+ with a codeword list of length 
+\begin_inset Formula $L\,$
+\end_inset
+
+= 5850.
+ Numbers adjacent to the curves are simulated Doppler spreads in Hz.
+ In the current version of 
+\emph on
+WSJT-X
+\emph default
+ the performance of the DS algorithm is limited by synchronization failures
+ when 
+\begin_inset Formula $SNR\lesssim-28\,\textrm{dB}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+On-the-air Experience
+\end_layout
+
+\begin_layout Standard
+The JT65 protocol has proven remarkably versatile.
+ Today the mode is used by thousands of amateurs around the world, communicating
+ over terrestrial paths on the MF and HF bands and over terrestrial as well
+ as EME paths from 50 MHz through 10 GHz.
+ Three 
+\emph on
+submodes
+\emph default
+ are in use, together accommodating a wide range of Doppler spreads and
+ potential instrumental instabilities.
+ All three submodes transmit the 63 data symbols interspersed with 63 synchroniz
+ation symbols at keying rate 11025/4096 = 2.69 baud.
+ Submode JT65A uses tone spacing equal to the symbol rate; its total occupied
+ bandwidth is 
+\begin_inset Formula $66\times2.69=177.6$
+\end_inset
+
+ Hz.
+ Submodes B and C have tone spacings and occupied bandwidths 2 and 4 times
+ larger.
+ In practice JT65A is generally used at 50 MHz and below, JT65B on 144 through
+ 432 MHz, and JT65C at 1296 MHz and above.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JT65B_EME"
+
+\end_inset
+
+ shows portions of the main window and spectrogram displays from program
+ 
+\emph on
+WSJT-X,
+\emph default
+ illustrating replies to a CQ from K1JT on 144.118 MHz using submode JT65B
+ on the EME path.
+ Speckled vertical lines on the waterfall at 1494 and 1515 Hz are the synchroniz
+ing tones of signals from DL7UAE and SP6GWB.
+ Other visible speckles (barely above the noise) up to about 1870 Hz are
+ some of the data tones from these two stations.
+ Two lines of decoded text show that the estimated average signal strengths
+ were 
+\begin_inset Formula $\mathrm{SNR}{}_{2500}=-23$
+\end_inset
+
+ and 
+\begin_inset Formula $-24$
+\end_inset
+
+ dB, respectively, just one or two dB above decoding threshold for the FT
+ decoder.
+ Note that the two signals overlap throughout more than 90% of their occupied
+ bandwidths, yet both are decoded cleanly and without errors.
+ Such behavior is typical of the JT65 protocol.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename JT65B_EME.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JT65B_EME"
+
+\end_inset
+
+ Examples of JT65B EME signals recorded at K1JT.
+ Numbers above the spectrogram are audio frequencies in Hz, and the spectrogram'
+s vertical span is one minute of time.
+ The horizontal green bar on the frequency axis indicates the bandwidth
+ occupied by the second decoded signal, a reply from SP6GWB.
+ See text for additional details.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As another example, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:spectrogram"
+
+\end_inset
+
+ shows activity in submode JT65A during a single minute on the 20 m amateur
+ band.
+ At this time the band was crowded with overlapping signals.
+ With care you can count at least 19 distinct synchronizing tones (the speckled
+ vertical lines in the figure), and can see as many as four signals overlapping
+ in some places.
+ After signal processing to demodulate the signals and produce soft-symbol
+ data for the FT decoder, program 
+\emph on
+WSJT-X
+\emph default
+ extracts and decodes 21 error-free messages from this recorded data segment.
+ This result is achieved with a relatively small timeout parameter, 
+\begin_inset Formula $T=1000.$
+\end_inset
+
+ For these results the decoder uses two successive sweeps over the spectrum.
+ The strongest signals (12 in this example) are sequentially decoded and
+ subtracted from the raw data after the first pass.
+ Another 9 signals are decoded in the second pass.
+ For comparison, the hard-decision BM decoder decodes only 12 messages from
+ this recording (9 in the first pass and 3 more in a second).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_waterfall.png
+	scale 60
+	BoundingBox 0bp 0bp 1124bp 200bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:spectrogram"
+
+\end_inset
+
+ Spectrogram from 
+\emph on
+WSJT-X
+\emph default
+ showing one minute of data collected under crowded band conditions on the
+ 20 m band.
+ Numbers on the scale are frequencies (in Hz) above 14.076 MHz.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our implementation of the FT decoder, written in a combination of FORTRAN
+ and C, is freely available as open-source code 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wsjt_sourceforge"
+
+\end_inset
+
+.
+ For the Berlekamp-Massey part of the algorithm we use routines written
+ by Phil Karn, KA9Q 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "karn"
+
+\end_inset
+
+, modified slightly so that the Reed-Solomon syndromes are computed only
+ once in our most time-consuming loop (steps 2 through 8, 
+\series bold
+Algorithm 1
+\series default
+).
+ The FT algorithm has become an integral part of programs 
+\emph on
+WSJT,
+\emph default
+ 
+\emph on
+MAP65, 
+\emph default
+and 
+\emph on
+WSJT-X
+\emph default
+.
+ Improvement in sensitivity over the Kötter-Vardy decoder is small, only
+ a few tenths of a dB, but especially on the EME path such small advantages
+ are sometimes very important.
+ Perhaps even more essential, programs in the 
+\emph on
+WSJT 
+\emph default
+family are now entirely open source.
+ We no longer need to use the patented KV algorithm or the specially licensed
+ executable program 
+\family typewriter
+kvasd[.exe]
+\family default
+.
+\end_layout
+
+\begin_layout Section
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+We thank G3WDG, G4WJS, KD9DSW, PY2SDR, SM5BSZ, VK7MO, and W3SZ for helpful
+ comments on an earlier version of this paper.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "jt65_protocol"
+
+\end_inset
+
+“The JT65 Communications Protocol”, J.
+ Taylor, K1JT, 
+\emph on
+QEX
+\emph default
+, September-October 2005, pp.
+ 3-12.
+ Available also at http://physics.princeton.edu/pulsar/K1JT/JT65.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "kv2001"
+
+\end_inset
+
+“Algebraic soft-decision decoding of Reed-Solomon codes,” R.
+ Kötter and A.
+ Vardy, 
+\emph on
+IEEE Transactions on Information Theory
+\emph default
+, Vol.
+ 49, pp.
+ 2809-2825, 2003.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "wsjt"
+
+\end_inset
+
+
+\emph on
+WSJT Home Page
+\emph default
+: http://www.physics.princeton.edu/pulsar/K1JT/.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "4"
+key "lc2004"
+
+\end_inset
+
+
+\emph on
+Error Control Coding, 2nd Edition
+\emph default
+, Shu Lin and Daniel J.
+ Costello, Pearson-Prentice Hall, 2004.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "5"
+key "lhmg2010"
+
+\end_inset
+
+``Stochastic Chase Decoding of Reed-Solomon Codes'', Camille Leroux, Saied
+ Hemati, Shie Mannor, Warren J.
+ Gross, 
+\emph on
+IEEE Communications Letters
+\emph default
+, Vol.
+ 14, No.
+ 9, pp.
+ 863-865, 2010.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "6"
+key "lk2008"
+
+\end_inset
+
+``Soft-Decision Decoding of Reed-Solomon Codes Using Successive Error-and-Erasur
+e Decoding,'' Soo-Woong Lee and B.
+ V.
+ K.
+ Vijaya Kumar, 
+\emph on
+IEEE 
+\begin_inset Quotes eld
+\end_inset
+
+GLOBECOM
+\begin_inset Quotes erd
+\end_inset
+
+ Proceedings, 
+\emph default
+2008
+\emph on
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "7"
+key "ls2009"
+
+\end_inset
+
+``Stochastic Erasure-Only List Decoding Algorithms for Reed-Solomon Codes,
+\begin_inset Quotes erd
+\end_inset
+
+ Chang-Ming Lee and Yu T.
+ Su, 
+\emph on
+IEEE Signal Processing Letters,
+\emph default
+ Vol.
+ 16, pp.
+ 691-694, 2009.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "8"
+key "wsjt_sourceforge"
+
+\end_inset
+
+Source code for all programs in the 
+\emph on
+WSJT
+\emph default
+ project is stored in a Subversion repository at Sourceforge: https://sourceforg
+e.net/projects/wsjt/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "9"
+key "karn"
+
+\end_inset
+
+Errors-and erasures decoder for the Berlekamp-Massey algorithm written by
+ Phil Karn, KA9Q: http://www.ka9q.net/code/fec/ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Appendix:SNR"
+
+\end_inset
+
+Appendix: Signal to Noise Ratios
+\end_layout
+
+\begin_layout Standard
+The signal to noise ratio in a bandwidth, 
+\begin_inset Formula $B$
+\end_inset
+
+, that is at least as large as the bandwidth occupied by the signal is:
+\begin_inset Formula 
+\begin{equation}
+\mathrm{SNR}_{B}=\frac{P_{s}}{N_{0}B}\label{eq:SNR}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{s}$
+\end_inset
+
+ is the average signal power (W), 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ is one-sided noise power spectral density (W/Hz), and 
+\begin_inset Formula $B$
+\end_inset
+
+ is the bandwidth in Hz.
+ In amateur radio applications, digital modes are often compared based on
+ the SNR defined in a 2.5 kHz reference bandwidth, 
+\begin_inset Formula $\mathrm{SNR}_{2500}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In the professional literature, decoder performance is characterized in
+ terms of 
+\begin_inset Formula $E_{b}/N_{0}$
+\end_inset
+
+, the ratio of the energy collected per information bit, 
+\begin_inset Formula $E_{b}$
+\end_inset
+
+, to the one-sided noise power spectral density, 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+.
+ Denote the duration of a channel symbol by 
+\begin_inset Formula $\tau_{s}$
+\end_inset
+
+ (for JT65, 
+\begin_inset Formula $\tau_{s}=0.3715\,\mathrm{s}$
+\end_inset
+
+).
+ JT65 signals have constant envelope, so the average signal power is related
+ to the energy per symbol, 
+\begin_inset Formula $E_{s}$
+\end_inset
+
+, by 
+\begin_inset Formula 
+\begin{equation}
+P_{s}=E_{s}/\tau_{s}.\label{eq:signal_power}
+\end{equation}
+
+\end_inset
+
+The total energy in a received JT65 message consisting of 
+\begin_inset Formula $n=63$
+\end_inset
+
+ channel symbols is 
+\begin_inset Formula $63E_{s}$
+\end_inset
+
+.
+ The energy collected for each of the 72 bits of information conveyed by
+ the message is then
+\begin_inset Formula 
+\begin{equation}
+E_{b}=\frac{63E_{s}}{72}=0.875E_{s.}\label{eq:Eb_Es}
+\end{equation}
+
+\end_inset
+
+Using equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SNR"
+
+\end_inset
+
+)-(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Eb_Es"
+
+\end_inset
+
+), 
+\begin_inset Formula $\mathrm{SNR}_{2500}$
+\end_inset
+
+ can be written in terms of 
+\begin_inset Formula $E_{b}/N_{o}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\mathrm{SNR}_{2500}=1.23\times10^{-3}\frac{E_{b}}{N_{0}}.\label{eq:SNR2500}
+\end{equation}
+
+\end_inset
+
+If all quantities are expressed in dB, then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{SNR}_{2500}=(E_{b}/N_{0})_{\mathrm{dB}}-29.1\,\mathrm{dB}=(E_{s}/N_{0})_{\mathrm{dB}}-29.7\,\mathrm{dB}.\label{eq:SNR_all_types}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Paragraph
+
+\size large
+Sidebar: JT65 Message Processing
+\end_layout
+
+\begin_layout Enumerate
+User A enters or selects message consistent with formatting rules of JT65.
+\end_layout
+
+\begin_layout Enumerate
+Transmitting software at A: compress message into 12 six-bit symbols, then
+ add 51 six-bit parity symbols.
+\end_layout
+
+\begin_layout Enumerate
+Intersperse 63 synchronizing symbols among the 63 information-carrying symbols.
+\end_layout
+
+\begin_layout Enumerate
+Start transmission 1 s into a UTC minute.
+ Transmit each symbol value at a distinct frequency.
+\end_layout
+
+\begin_layout Enumerate
+Signal propagates from A to B, arriving much weaker and corrupted by noise,
+ fading, and Doppler spread.
+\end_layout
+
+\begin_layout Enumerate
+Receiving software at B: remove impulsive noise; detect synchronizing signal,
+ measure its frequency and time offset.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Shift spectrum to put sync tone at zero frequency, correcting for any measured
+ drift.
+\end_layout
+
+\begin_layout Enumerate
+Compute binned power spectra 
+\begin_inset Formula $S(i,j)$
+\end_inset
+
+ for all information symbols.
+ (Index 
+\begin_inset Formula $i$
+\end_inset
+
+ runs over 64 possible symbol values, index 
+\begin_inset Formula $j$
+\end_inset
+
+ over 63 symbol numbers.)
+\end_layout
+
+\begin_layout Enumerate
+Remove any possible spurs (signal appearing at same 
+\begin_inset Formula $i$
+\end_inset
+
+ for all 
+\begin_inset Formula $j$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Apply Algorithm 1, the FT algorithm.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Optional: if FT decoding was unsuccessful apply Algorithm 2, hinted decoding.
+\end_layout
+
+\begin_layout Enumerate
+Display decoded message for User B.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

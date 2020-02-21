@@ -1,0 +1,20 @@
+// Status=review
+// Note to developers. The URL http://developer.berlios.de/projects/wsjt/. is
+// to a very old src version of WSJT 5.7 or so. WSJTX is not listed at all.
+// Also, all the Qt4 stuff is now obsolete, and needs to be updated.
+
+// Web Links
+// Source File is: dev-guide/source/wsjtx-dev/wsjtx-dev.adoc
+// At some point, compiling_wsjtx_linux.html needs a name change to: wsjtx-dev.html
+// These files can only be built on Linux, due to source-highlight being removed
+// From the windows build batch file.
+:dev-guide: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjt-dev-guide.html[WSJT Developers Guide]
+
+// mail-to links
+
+A Developer's Guide for WSJT and its sister programs is itself under
+development.  The present draft contains full instructions for
+compiling _WSJT-X_ in Linux, and an outline of steps required in
+Windows.  
+
+{dev-guide}

@@ -1,0 +1,223 @@
+// This is a comment line, anything with // is ignored at process time.
+= WSJT-X User Guide
+Joseph H Taylor, Jr, K1JT
+:revnumber: {VERSION}
+// For web-pages, adding :badges: is ok, but is a security issue for
+// package building .deb, .rpm, etc as it exposes the IP address and the images
+// are non-free, so can't be included as part of the Debian package.
+// :badges:
+:docinfo1:
+:imagesdir: images
+:icons: font
+:numbered:
+:keywords: amateur radio weak signal communication K1JT WSJT JT65 JT9
+:description: Software for Amateur Radio Weak-Signal Communication
+:prog: WSJT-X
+
+// use global link file
+include::../../common/links.adoc[]
+
+// These [[xxxx]] labels are HTML anchors, and can be used to
+// navigate though the document easily: <<INTRO,See Introduction>> will
+// place a hyper-link in your text to take you too the anchored section.
+// All major sections or points of interest should have one.
+
+// == is level (2), section 1.0, === would mean section 1.1, === would
+// be section 1.1.1. This method is used throughout the document.
+
+[[INTRO]]
+== Introduction
+include::introduction.adoc[]
+
+[[NEW_FEATURES]]
+include::new_features.adoc[]
+
+[[SYSREQ]]
+== System Requirements
+include::system-requirements.adoc[]
+
+[[INSTALL]]
+== Installation
+
+Installation packages for Windows, Linux, and OS X are found on the
+the {homepage}. Click on the _WSJT-X_ link at the left margin, and
+then select the appropriate package for your operating system.
+
+[[INSTALL_WIN]]
+=== Windows
+include::install-windows.adoc[]
+
+[[INSTALL_LINUX]]
+=== Linux
+include::install-linux.adoc[]
+
+[[INSTALL_OSX]]
+=== Macintosh OS X
+include::install-mac.adoc[]
+
+////
+[[SRC_CODE]]
+=== Source Code
+include::install-from-source.adoc[]
+////
+
+[[CONFIG]] 
+== Settings
+
+Select *Settings* from the *File* menu or by typing *F2*.  (On
+Macintosh select *Preferences* from the _WSJT-X_ menu, or use the
+keyboard shortcut *Cmd+,*).  The following sections describe setup
+options available on each of seven tabs selectable near the top of the
+window.
+
+[[GENERAL]]
+=== General
+include::settings-general.adoc[]
+
+[[RADIO]]
+=== Radio
+include::settings-radio.adoc[]
+
+[[AUDIO]]
+=== Audio
+include::settings-audio.adoc[]
+
+[[TXMACROS]]
+=== Tx Macros
+include::settings-txmacros.adoc[]
+
+[[REPORTING]]
+=== Reporting
+include::settings-reporting.adoc[]
+
+[[BAND_SETTINGS]]
+=== Frequencies
+include::settings-frequencies.adoc[]
+
+[[COLORS]]
+=== Colors
+include::settings-colors.adoc[]
+
+[[TRANSCEIVER]]
+== Transceiver Setup
+include::transceiver-setup.adoc[]
+
+[[TUTORIAL]]
+== Basic Operating Tutorial
+
+<<TUT_MAIN,Sections 6.1>> through <<TUT_EX2,6.4>> cover basic
+operation for making two-way QSOs with modes JT9 and JT65 on the HF
+bands.  <<WSPR,Section 7>> covers WSPR mode, and 
+<<VHF_AND_UP,Section 8>> covers VHF+ features.  If you are a new 
+user of _WSJT-X_ we suggest that you go through the full HF-oriented 
+tutorial while at your radio.  It should take no more than 20 minutes.
+If your main interests are WSPR of VHF+, you may then proceed to 
+Sections 7 and 8.
+
+[[TUT_MAIN]]
+=== Main Window Settings
+include::tutorial-main-window.adoc[]
+
+[[TUT_WIDE_GRAPH]]
+=== Wide Graph Settings
+include::tutorial-wide-graph-settings.adoc[]
+
+[[TUT_EX1]]
+=== JT9
+include::tutorial-example1.adoc[]
+
+[[TUT_EX2]]
+=== JT9+JT65
+include::tutorial-example2.adoc[]
+
+[[WSPR]]
+== WSPR Mode
+include::wspr.adoc[]
+
+[[VHF_AND_UP]]
+== VHF+ Features
+include::vhf-features.adoc[]
+
+[[MAKE_QSOS]]
+== Making QSOs
+include::make-qso.adoc[]
+
+[[COMMAND_REF]]
+== On-Screen Controls
+
+[[CONTROLS_WIDE]]
+=== Wide Graph
+include::controls-functions-wide-graph.adoc[]
+
+[[CONTROLS_MAIN]]
+=== Main Window
+include::controls-functions-main-window.adoc[]
+
+[[CONTROLS_LEFT]]
+=== Controls Left
+include::controls-functions-left.adoc[]
+
+[[CONTROLS_CENTER]]
+=== Controls Center
+include::controls-functions-center.adoc[]
+
+[[CONTROLS_MSGS]]
+=== Tx Messages
+include::controls-functions-messages.adoc[]
+
+[[STATUS_BAR]]
+=== Status Bar
+include::controls-functions-status-bar.adoc[]
+
+[[MENUS]]
+=== Menus
+include::controls-functions-menus.adoc[]
+
+[[LOGGING]]
+== Logging
+include::logging.adoc[]
+
+[[COOP_PGMS]]
+== Cooperating Programs
+include::cooperating-programs.adoc[]
+
+[[PLATFORM]]
+== Platform Dependencies
+include::platform-dependencies.adoc[]
+
+
+[[FAQ]]
+== Frequently Asked Questions
+include::faq.adoc[]
+
+[[PROTOCOLS]]
+== Protocol Specifications
+include::protocols.adoc[]
+
+
+[[TXRX]]
+== Implementation Details
+include::implementation.adoc[]
+
+////
+[[TROUBLE_SHOOTING]]
+== Troubleshooting
+To be added (?) ...
+////
+
+[[UTIL]]
+== Utility Programs
+include::utilities.adoc[]
+
+[[SUPPORT]]
+== Support
+include::support.adoc[]
+
+[[ACK]]
+== Acknowledgements
+include::acknowledgements.adoc[]
+
+[[LICENSE]]
+== License
+include::../../common/license.adoc[]
+

@@ -1,0 +1,72 @@
+- Select *WSPR-2* from the *Mode* menu.  The main window will
+reconfigure itself to the WSPR interface, removing some controls not
+used in WSPR mode.
+
+- Configure the Wide Graph as suggested in the screen shot below.
+
+image::WSPR.png[align="center",alt="WSPR mode"]
+
+- Use the mouse to set the width and height of the main window as
+desired.
+
+- Select an active WSPR frequency (for example, 10.1387 MHz).
+
+- Click *Monitor* to start a WSPR receiving period.
+
+- If you will be transmitting as well as receiving, select a suitable
+value for *Tx Pct* (average percentage of 2-minute sequences devoted to
+transmitting) and activate the *Enable Tx* button.
+
+- Select your Tx power (in dBm) from the drop-down list.
+
+=== Band Hopping
+WSPR mode allows those with CAT-controlled radios to investigate
+propagation on many bands without user intervention.  Coordinated
+hopping enables a sizable group of stations around the world to move
+together from band to band, thereby maximizing the chances of
+identifying open propagation paths.
+
+- To enable automatic band-hopping, check the *Band Hopping* box on
+the main window.
+
+- Click *Schedule* to open the *WSPR Band Hopping* window, and select
+the bands you wish to use at each time of day.
+
+image::band_hopping.png[align="center",alt="Band Hopping"]
+
+- Band-switching occurs after each 2-minute interval.  Preferred bands
+are identified with time slots in a repeating 20-minute cycle,
+according to the following table:
+
+[width="80%",align="center",cols=">20,10*>8",options="header"]
+|===
+|Band:            |160|80|60|40|30|20|17|15|12|10
+.3+|*UTC minute:* | 00|02|04|06|08|10|12|14|16|18
+                 >| 20|22|24|26|28|30|32|34|36|38
+                 >| 40|42|44|46|48|50|52|54|56|58
+|===
+
+- If the preferred band is not active according to your band-hopping
+schedule, a band will be selected at random from among the active
+bands.
+
+- If the box labeled *Tune* is checked for a particular band, _WSJT-X_
+transmits an unmodulated carrier for several seconds just after
+switching to that band and before the normal Rx or Tx period
+starts. This feature can be used to activate an automatic antenna
+tuner (ATU) to tune a multi-band antenna to the newly selected band.
+
+- Depending on your station and antenna setup, band changes might
+require other switching besides retuning your radio. To make this
+possible in an automated way, whenever _WSJT-X_ executes a successful
+band-change command to a CAT-controlled radio, it looks for a file
+named +user_hardware.bat+, +user_hardware.cmd+, +user_hardware.exe+,
+or +user_hardware+ in the working directory. If one of these is found,
+_WSJT-X_ tries to execute the command
+
+ user_hardware nnn 
+
+- In the above command +nnn+ is the band-designation wavelength in
+meters. You will need to write your own program, script, or batch file
+to do the necessary switching at your station.
+

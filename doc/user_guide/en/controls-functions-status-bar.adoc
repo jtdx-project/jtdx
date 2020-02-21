@@ -1,0 +1,17 @@
+// Status=review
+
+A *Status Bar* at the bottom edge of the main window provides
+information about operating conditions.  
+
+//.Status Bar
+image::status-bar-a.png[align="left",alt="Status Bar"]
+
+Labels on the *Status Bar* display such information as the program's
+current operating state, operating mode, the content of your most
+recent transmitted message, and whether *Double-click on call sets Tx
+enable* has been selected on the *Settings | General* tab. The first
+label (operating state) can be Receiving, Tx (for Transmitting), Tune,
+or the name of file opened from the *File* menu; this label is
+highlighted in green for Receiving, yellow for Tx, and red for Tune.
+When transmitting, the Tx message is displayed exactly as it will be
+decoded by receiving stations.

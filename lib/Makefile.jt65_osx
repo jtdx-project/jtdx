@@ -1,0 +1,74 @@
+# Set paths
+EXE_DIR = ../../wsjtx_install
+
+CC = clang 
+CXX = g++
+FC = gfortran
+AR = ar cr
+MKDIR = mkdir -p
+CP = cp
+RANLIB = ranlib
+RM = rm -f
+
+FFLAGS = -I/opt/local/include -Wall -Wno-conversion -fno-second-underscore -DUNIX
+CFLAGS = -I. -fbounds-check -fPIE
+
+# Default rules
+%.o: %.c
+	${CC} ${CFLAGS} -c $<
+%.o: %.f
+	${FC} ${FFLAGS} -c $<
+%.o: %.F
+	${FC} ${FFLAGS} -c $<
+%.o: %.f90
+	${FC} ${FFLAGS} -c $<
+%.o: %.F90
+	${FC} ${FFLAGS} -c $<
+
+all:    libjt9.a jt65 jt65sim 
+
+OBJS1 = astrosub.o astro0.o astro.o sun.o coord.o tmoonsub.o \
+        fmtmsg.o deg2grid.o\
+        prog_args.o options.o pctile.o graycode.o sort.o chkmsg.o \
+	igray.o fftw3mod.o packjt.o\
+	four2a.o grid2deg.o wisdom.o \
+	symspec.o db.o \
+	encode232.o interleave9.o\
+	entail.o fano232.o sgran.o gran.o sync9.o decjt9.o \
+	fil3.o decoder.o timer.o exp_decode65.o fqso_first.o\
+	twkfreq.o symspec2.o shell.o sync65.o peakup.o slope.o xcor.o\
+	fillcom.o chkss2.o zplot9.o flat1.o flat2.o \
+	jt65a.o symspec65.o flat65.o ccf65.o decode65a.o \
+	filbig.o fil6521.o afc65b.o decode65b.o setup65.o \
+	extract.o fchisq65.o demod64a.o chkhist.o interleave63.o ccf2.o \
+	move.o graycode65.o twkfreq65.o smo.o \
+	wrapkarn.o init_rs.o encode_rs.o decode_rs.o gen65.o fil4.o \
+	flat4.o determ.o baddata.o subtract65.o
+
+libjt9.a: $(OBJS1)
+	$(AR) libjt9.a $(OBJS1) 
+	$(RANLIB) libjt9.a
+
+OBJS7 = jt65.o
+jt65: $(OBJS7) libjt9.a libftrsd.a
+	$(FC) -o jt65 $(OBJS7) -L. -L/opt/local/lib -L./ftrsd -ljt9 -lftrsd -lfftw3f_threads -lfftw3f 
+	$(CP) jt65 $(EXE_DIR)
+
+OBJS2 = jt65sim.o wavhdr.o
+jt65sim:    $(OBJS2) libjt9.a
+	$(FC) -o jt65sim $(OBJS2) -L. -L/opt/local/lib -ljt9 -lfftw3f
+	$(CP) jt65sim $(EXE_DIR)
+
+init_rs.o: init_rs.c
+	$(CC) -c -DBIGSYM=1 -o init_rs.o init_rs.c
+
+encode_rs.o: encode_rs.c
+	$(CC) -c -DBIGSYM=1 -o encode_rs.o encode_rs.c
+
+decode_rs.o: decode_rs.c
+	$(CC) -c -DBIGSYM=1 -o decode_rs.o decode_rs.c
+
+.PHONY : clean
+
+clean:
+	$(RM) *.o libjt9.a jt65

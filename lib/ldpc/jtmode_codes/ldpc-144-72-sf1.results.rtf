@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww21500\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs30 \cf0 \CocoaLigature0 Stevens-MacBook-Air:LDPC-codes-master sfranke$ ldpc-144-72\
+\
+#make-ldpc ldpc-144-72.pchk 80 160 12 evenboth 6x3/4x4 no4cycle\
+#make-ldpc ldpc-144-72.pchk 72 144 33 evenboth 6x3/4x4 no4cycle\
+#make-ldpc ldpc-144-72.pchk 72 144 8 evenboth 3 no4cycle\
+cp ldpc-144-72-6x3-4x4-sf1.pchk ldpc-144-72.pchk\
+make-gen  ldpc-144-72.pchk ldpc-144-72.gen dense\
+Number of 1s per check in Inv(A) X B is 29.4\
+rand-src  ldpc-144-72.src 1 72x1000000\
+encode    ldpc-144-72.pchk ldpc-144-72.gen ldpc-144-72.src \\\
+          ldpc-144-72.enc\
+Encoded 1000000 blocks, source block size 72, encoded block size 144\
+\
+# NOISE STANDARD DEVIATION 0.75, Eb/N0 = 2.50 dB\
+\
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.75\
+Transmitted 144000000 bits\
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.75\\\
+         prprp 250\
+Decoded 1000000 blocks, 912331 valid.  Average 28.0 iterations, 9% bit changes\
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \\\
+         ldpc-144-72.src \
+Block counts: tot 1000000, with chk errs 87669, with src errs 87561, both 87506\
+Total good frames: 912276  Total undetected errors: 55\
+Bit error rate (on message bits only): 8.969e-03\
+\
+# NOISE STANDARD DEVIATION 0.80, Eb/N0 = 1.94 dB\
+\
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.80\
+Transmitted 144000000 bits\
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.80\\\
+         prprp 250\
+Decoded 1000000 blocks, 747691 valid.  Average 69.4 iterations, 10% bit changes\
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \\\
+         ldpc-144-72.src \
+Block counts: tot 1000000, with chk errs 252309, with src errs 251953, both 251862\
+Total good frames: 747600  Total undetected errors: 91\
+Bit error rate (on message bits only): 2.627e-02\
+\
+# NOISE STANDARD DEVIATION 0.85, Eb/N0 = 1.41 dB\
+\
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.85\
+Transmitted 144000000 bits\
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.85\\\
+         prprp 250\
+Decoded 1000000 blocks, 513359 valid.  Average 126.8 iterations, 10% bit changes\
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \\\
+         ldpc-144-72.src \
+Block counts: tot 1000000, with chk errs 486641, with src errs 485965, both 485838\
+Total good frames: 513232  Total undetected errors: 127\
+Bit error rate (on message bits only): 5.295e-02\
+\
+# NOISE STANDARD DEVIATION 0.90, Eb/N0 = 0.92 dB\
+\
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.90\
+Transmitted 144000000 bits\
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.90\\\
+         prprp 250\
+Decoded 1000000 blocks, 287970 valid.  Average 181.4 iterations, 9% bit changes\
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \\\
+         ldpc-144-72.src \
+Block counts: tot 1000000, with chk errs 712030, with src errs 711238, both 711123\
+Total good frames: 287855  Total undetected errors: 115\
+Bit error rate (on message bits only): 8.316e-02\
+\
+# NOISE STANDARD DEVIATION 0.95, Eb/N0 = 0.45 dB\
+\
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.95\
+Transmitted 144000000 bits\
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.95\\\
+         prprp 250\
+Decoded 1000000 blocks, 130537 valid.  Average 219.2 iterations, 8% bit changes\
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \\\
+         ldpc-144-72.src\
+Block counts: tot 1000000, with chk errs 869463, with src errs 868761, both 868683\
+Total good frames: 130459  Total undetected errors: 78\
+Bit error rate (on message bits only): 1.110e-01\
+Stevens-MacBook-Air:LDPC-codes-master sfranke$ \
+}

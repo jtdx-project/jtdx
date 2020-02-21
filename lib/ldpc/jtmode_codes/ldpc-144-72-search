@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Example of a (144,72) LDPC code with 3 checks per bit and 6 bits per 
+# check, tested on Additive White Gaussian Noise channels with noise standard 
+# deviations varying from 0.80 to 0.95.
+#
+# Testing is done by transmitting random messages, which is safer (though 
+# slower) than using only zero messages.  Decoding is done using a maximum 
+# of 250 iterations of probability propagation.
+
+set -e  # Stop if an error occurs
+set -v  # Echo commands as they are read
+
+rand-src  ldpc-144-72.src 2 72x100000
+
+for i in `seq 3000 4000`;
+do
+  seed=$i
+  echo seed $seed
+make-ldpc ldpc-144-72.pchk 72 144 $seed evenboth 2x3/8x4 no4cycle
+make-gen  ldpc-144-72.pchk ldpc-144-72.gen dense
+encode    ldpc-144-72.pchk ldpc-144-72.gen ldpc-144-72.src \
+          ldpc-144-72.enc
+
+
+# NOISE STANDARD DEVIATION 0.80, Eb/N0 = 1.94 dB
+
+transmit ldpc-144-72.enc ldpc-144-72.rec 1 awgn 0.80
+decode   ldpc-144-72.pchk ldpc-144-72.rec ldpc-144-72.dec awgn 0.80\
+         prprp 50
+verify   ldpc-144-72.pchk ldpc-144-72.dec ldpc-144-72.gen \
+         ldpc-144-72.src 
+
+
+done

@@ -1,0 +1,63 @@
+// Status=review
+.Receiver Noise Level
+
+- If it is not already highlighted in green, click the *Monitor*
+button to start normal receive operation.  
+
+- Be sure your transceiver is set to *USB* (or *USB Data*) mode.
+
+- Use the receiver gain controls and/or the computer's audio mixer
+controls to set the background noise level (scale at lower left of
+main window) to around 30 dB when no signals are present.  It is
+usually best to turn AGC off or reduce the RF gain control to minimize
+AGC action.  If necessary you can also adjust the slider next to the
+dB scale, but note that the overall dynamic range will be best with
+this slider not too far from its mid-point.
+
+.Bandwidth and Frequency Setting
+
+- If your transceiver offers more than one bandwidth setting in USB
+mode, you should normally choose the widest one possible, up to about
+5 kHz.  This choice has the desirable effect of allowing the *Wide
+Graph* (waterfall and 2D spectrum) to display the conventional JT65
+and JT9 sub-bands simultaneously on most HF bands.  Further details
+are provided in the <<TUTORIAL,Basic Operating Tutorial>>.  A wider
+displayed bandwidth may also be helpful at VHF and above, where JT4
+and JT65 signals are found over much wider ranges of frequencies.
+
+- If you have only a standard SSB filter you won’t be able to display
+more than about 2.7 kHz bandwidth.  Depending on the exact dial
+frequency setting, on HF bands you can display the full sub-band
+generally used for one mode (JT65 or JT9) and part of the sub-band for
+the other mode.
+
+- Of course, you might prefer to concentrate on one mode at a time,
+setting your dial frequency to (say) 14.076 for JT65 or 14.078 for
+JT9.  Present conventions have the nominal JT9 dial frequency 2 kHz
+higher than the JT65 dial frequency.  
+
+.Transmitter Audio Level
+
+* Click the *Tune* button on the main screen to switch the
+radio into transmit mode and generate a steady audio tone. 
+
+* Listen to the generated audio tone using your radio’s *Monitor*
+facility. The transmitted tone should be perfectly smooth, with no
+clicks or glitches.
+
+* Open the computer's audio mixer controls for output ("`Playback`")
+devices and adjust the volume slider downward from its maximum until
+the RF output from your transmitter falls by around ten percent.  This
+will be a good level for audio drive.
+
+* Alternatively, you can make the Tx audio level adjustment using the
+digital slider labeled *Pwr* at the right edge of the main window.
+
+* Toggle the *Tune* button once more to stop your test transmission. 
+
+IMPORTANT: Windows Vista and later incorrectly configure audio devices
+using the Texas Instruments PCM2900 series CODEC for microphone input
+rather line input.  (This chip is used in many radios with built-in
+USB CODECs, as well as various other audio interfaces.)  If you are
+using such a device, be sure to set the mic level in the Recording
+Device Properties to 0 dB.

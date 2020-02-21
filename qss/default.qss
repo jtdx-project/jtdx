@@ -1,0 +1,9 @@
+/* default stylesheet for the message aggregator application */
+
+[transmitting="true"] {
+       background-color: yellow
+}
+
+[decoding="true"] {
+       background-color: cyan
+}

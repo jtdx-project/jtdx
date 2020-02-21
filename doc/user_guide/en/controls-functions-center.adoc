@@ -1,0 +1,37 @@
+// Status=review
+
+At the center of the main window are a number of controls used when
+making QSOs:
+
+//.Misc Controls Center
+image::misc-controls-center.png[align="center",alt="Misc Controls Center"]
+
+* Check *Tx even* to transmit in even-numbered UTC minutes.  Uncheck
+this box to transmit in the odd minutes.  This selection is made
+automatically when you double-click on a decoded text line, as
+described in the <<TUTORIAL,Basic Operating Tutorial>>.
+
+* The Tx and Rx audio frequencies are usually set automatically by
+double-clicking on decoded text or a signal in the waterfall.  They 
+can also be adjusted with spinner controls. 
+
+* You can force Tx frequency to the current Rx frequency by clicking
+the *Tx<Rx* button, and vice-versa for *Rx<Tx*.  Check the box *Lock
+Tx=Rx* to make the frequencies always track one another.  The
+on-the-air frequency of your lowest JT9 or JT65 tone is the sum of
+dial frequency and audio Tx frequency.
+
+IMPORTANT: In general we do not recommend using *Lock Tx=Rx* since it
+encourages poor radio etiquette when running a frequency.  With *Lock
+Tx=Rx* checked, your own Tx frequency will move around following your
+callers.
+
+* The *Report* control lets you change a signal report that has been
+inserted automatically. Most reports will fall in the range –26 to +10
+dB.  Remember that JT65 reports saturate at an upper limit of -1
+dB.
+
+IMPORTANT: Consider reducing power if your QSO partner reports your
+signal above -5 dB.  The WSJT modes are supposed to be weak signal
+modes!
+

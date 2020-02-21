@@ -1,0 +1,94 @@
+// Status=review
+
+The _WSJT-X_ packages include program *+rigctl-wsjtx[.exe]+*, which
+can be used to send CAT sequences to a rig from the command line, or
+from a batch file or shell script; and program *+rigctld-wsjtx[.exe]+*,
+which allows other compatible applications to share a CAT connection
+to a rig.  These program versions include the latest Hamlib rig
+drivers -- the same ones used by _WSJT-X_ itself.
+
+Additional utility programs *+jt4code+*, *+jt9code+*, and *+jt65code+*
+let you explore the conversion of user-level messages into channel
+symbols or "`tone numbers,`" and back again.  These programs can be
+useful to someone designing a beacon generator, for understanding the
+permissible structure of transmitted messages, and for studying
+behavior of the error-control codes.
+
+Channel-symbol values for JT4 run from 0 to 3.  The total number of
+symbols in a transmitted message is 206.  To run +jt4code+, enter the
+program name followed by a JT4 message enclosed in quotes.  In Windows
+the command and program output might look like this:
+
+ C:\WSJTX> jt4code "G0XYZ K1ABC FN42"
+      Message                 Decoded                Err? Type
+ -------------------------------------------------------------------
+  1.  G0XYZ K1ABC FN42        G0XYZ K1ABC FN42            1: Std Msg
+
+ Channel symbols
+  2 0 0 1 3 2 0 2 3 1 0 3 3 2 2 1 2 1 0 0 0 2 0 0 2 1 1 2 0 0
+  2 0 2 0 2 0 2 0 2 3 0 3 1 0 3 1 0 3 0 1 1 1 1 1 0 1 0 0 2 3
+  2 2 3 0 2 1 3 3 3 3 2 0 2 1 2 3 0 0 2 3 1 1 1 0 3 1 2 0 3 2
+  0 2 3 3 0 1 2 1 2 1 0 1 0 1 1 1 1 3 0 3 0 3 2 3 3 0 3 0 1 0
+  3 3 3 0 0 3 2 1 3 2 3 1 3 3 2 2 0 2 3 3 2 1 1 0 2 2 3 3 1 2
+  3 1 1 2 1 1 1 0 2 1 2 0 2 3 1 2 3 1 2 2 1 2 0 0 3 3 1 1 1 1
+  2 0 3 3 0 2 2 2 3 3 0 0 0 1 2 3 3 2 1 1 1 3 2 3 0 3
+
+Channel-symbol values for JT9 run from 0 to 8, with 0 representing the
+sync tone.  The total number of symbols in a transmitted message is
+85.  Enter the program name followed by a JT9 message enclosed in
+quotes:
+
+ C:\WSJTX> jt9code "G0XYZ K1ABC FN42"
+      Message                 Decoded                Err? Type
+ -------------------------------------------------------------------
+  1.  G0XYZ K1ABC FN42        G0XYZ K1ABC FN42            1: Std Msg
+
+ Channel symbols
+  0 0 7 3 0 3 2 5 4 0 1 7 7 7 8 0 4 8 8 2 2 1 0 1 1 3 5 4 5 6
+  8 7 0 6 0 1 8 3 3 7 8 1 1 2 4 5 8 1 5 2 0 0 8 6 0 5 8 5 1 0
+  5 8 7 7 2 0 4 6 6 6 7 6 0 1 8 8 5 7 2 5 1 5 0 4 0
+
+For the corresponding program *+jt65code+* only the
+information-carrying channel symbols are shown, and the symbol values
+range from 0 to 63.  Sync symbols lie two tone intervals below data
+tone 0, and the sequential locations of sync symbols are described in
+the <<JT65PRO,JT65 Protocol>> section of this Guide.
+
+A typical execution of +jt65code+ is shown below.  The program
+displays the packed message of 72 bits, shown here as 12 six-bit
+symbol values, followed by the channel symbols:
+
+ C:\WSJTX> jt65code "G0XYZ K1ABC FN42"
+      Message                 Decoded                Err? Type
+ ----------------------------------------------------------------------
+  1.  G0XYZ K1ABC FN42        G0XYZ K1ABC FN42            1:    Std Msg
+
+ Packed message, 6-bit symbols  61 36 45 30  3 55  3  2 14  5 33 40
+
+ Information-carrying channel symbols
+    56 40  8 40 51 47 50 34 44 53 22 53 28 31 13 60 46  2 14 58 43
+    41 58 35  8 35  3 24  1 21 41 43  0 25 54  9 41 54  7 25 21  9
+    62 59  7 43 31 21 57 13 59 41 17 49 19 54 21 39 33 42 18  2 60
+
+For an illustration of the power of the strong error-control coding in
+JT9 and JT65, try looking at the channel symbols after changing a
+single character in the message.  For example, change the grid locator
+from +FN42+ to +FN43+ in the JT65 message:
+
+ C:\Users\joe\wsjt\wsjtx_install>jt65code "G0XYZ K1ABC FN43"
+      Message                 Decoded                Err? Type
+ ----------------------------------------------------------------------
+  1.  G0XYZ K1ABC FN43        G0XYZ K1ABC FN43            1:    Std Msg
+
+ Packed message, 6-bit symbols  61 36 45 30  3 55  3  2 14  5 33 41
+
+ Information-carrying channel symbols
+    25 35 47  8 13  9 61 40 44  9 51  6  8 40 38 34  8  2 21 23 30
+    51 32 56 39 35  3 50 48 30  8  5 40 18 54  9 24 30 26 61 23 11
+     3 59  7  7 39  1 25 24  4 50 17 49 52 19 34  7  4 34 61  2 61
+
+You will discover that every possible JT65 message differs from every
+other possible JT65 message in at least 52 of the 63
+information-carrying channel symbols.
+
+

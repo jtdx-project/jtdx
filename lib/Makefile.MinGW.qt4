@@ -1,0 +1,122 @@
+# Makefile for MinGW on Windows
+# Windows re-direct:
+#   C> make > junk1 2>&1
+
+# Set paths
+EXE_DIR = ../../wsjtx_install
+INCPATH = -I'c:/QtSDK/Desktop/Qt/4.7.4/mingw/include/QtCore' \
+	 -I'c:/QtSDK/Desktop/Qt/4.7.4/mingw/include' \
+	 -I'c:/QtSDK/Desktop/Qt/4.7.4/mingw/include/ActiveQt' \
+	 -I'release' -I'.' -I'c:/QtSDK/Desktop/Qt/4.7.4/mingw/mkspecs/win32-g++'
+
+# Compilers
+CC = gcc
+CXX = g++
+FC = g95
+
+FFLAGS = -O2 -fbounds-check -Wall -Wno-precision-loss -fno-second-underscore
+CFLAGS = -I. -fbounds-check -mno-stack-arg-probe
+
+# Default rules
+%.o: %.c
+	${CC} ${CFLAGS} -c $<
+%.o: %.f
+	${FC} ${FFLAGS} -c $<
+%.o: %.F
+	${FC} ${FFLAGS} -c $<
+%.o: %.f90
+	${FC} ${FFLAGS} -c $<
+%.o: %.F90
+	${FC} ${FFLAGS} -c $<
+
+all:    libjt9.a jt9sim.exe jt9.exe jt9code.exe jt65.exe
+
+OBJS1 = pctile.o graycode.o sort.o ssort.o \
+	unpackmsg.o igray.o unpackcall.o unpackgrid.o \
+	grid2k.o unpacktext.o getpfx2.o packmsg.o deg2grid.o \
+	packtext.o getpfx1.o packcall.o k2grid.o packgrid.o \
+	nchar.o four2a.o grid2deg.o pfxdump.o f77_wisdom.o \
+	symspec.o db.o genjt9.o \
+	packbits.o unpackbits.o encode232.o interleave9.o \
+	entail.o fano232.o gran.o sync9.o decode9.o \
+	fil3.o decoder.o grid2n.o n2grid.o timer.o \
+	softsym.o getlags.o afc9.o fchisq.o twkfreq.o downsam9.o \
+	peakdt9.o symspec2.o stdmsg.o morse.o azdist.o geodist.o \
+	fillcom.o chkss2.o zplot9.o flat2.o \
+	jt65a.o symspec65.o flat65.o ccf65.o decode65a.o \
+	filbig.o fil6521.o afc65b.o decode65b.o setup65.o \
+	extract.o fchisq65.o demod64a.o chkhist.o interleave63.o ccf2.o \
+	move.o graycode65.o twkfreq65.o \
+	wrapkarn.o init_rs.o encode_rs.o decode_rs.o gen65.o
+
+libjt9.a: $(OBJS1)
+	ar cr libjt9.a $(OBJS1) 
+	ranlib libjt9.a
+
+OBJS2 = jt9.o jt9a.o jt9b.o jt9c.o ipcomm.o sec_midn.o usleep.o
+LIBS2 = -L'c:/QtSDK/Desktop/Qt/4.7.4/mingw/lib' -lQtCore4
+jt9.exe: $(OBJS2) libjt9.a
+	$(CXX) -o jt9.exe $(OBJS2) $(LIBS2) libjt9.a ../libfftw3f_win.a \
+	c:/MinGW/lib/libf95.a
+	mkdir -p $(EXE_DIR)
+	cp jt9.exe $(EXE_DIR)
+
+OBJS3 = jt9sim.o 
+jt9sim.exe: $(OBJS3) libjt9.a
+	$(FC) -o jt9sim.exe $(OBJS3) libjt9.a
+
+OBJS4 = jt9code.o 
+jt9code.exe: $(OBJS4) libjt9.a
+	$(FC) -o jt9code.exe $(OBJS4) libjt9.a
+
+OBJS5 = jt65.o 
+jt65.exe: $(OBJS5) libjt9.a 
+	$(FC) -o jt65.exe $(OBJS5) libjt9.a ../libfftw3f_win.a
+
+sync9.o: sync9.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c sync9.f90
+
+spec9.o: spec9.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c spec9.f90
+
+peakdt9.o: peakdt9.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c peakdt9.f90
+
+jt9sim.o: jt9sim.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c jt9sim.f90
+
+genjt9.o: genjt9.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c genjt9.f90
+
+redsync.o: redsync.f90 jt9sync.f90
+	$(FC) $(FFLAGS) -c redsync.f90
+
+unpackmsg.o: unpackmsg.f90
+	$(FC) -c -O0 -fbounds-check -Wall -Wno-precision-loss unpackmsg.f90
+
+ipcomm.o: ipcomm.cpp
+	$(CXX) -c $(INCPATH) ipcomm.cpp
+
+sec_midn.o: sec_midn.f90
+	$(FC) -c -fno-second-underscore sec_midn.f90
+
+#rig_control.o: rig_control.c
+#	$(CC) -c -Wall -I..\..\..\hamlib-1.2.15.3\include rig_control.c
+
+tstrig.o: tstrig.c
+	$(CC) -c -Wall -I..\..\..\hamlib-1.2.15.3\include tstrig.c
+
+init_rs.o: init_rs.c
+	$(CC) -c -DBIGSYM=1 -o init_rs.o init_rs.c
+
+encode_rs.o: encode_rs.c
+	$(CC) -c -DBIGSYM=1 -o encode_rs.o encode_rs.c
+
+decode_rs.o: decode_rs.c
+	$(CC) -c -DBIGSYM=1 -o decode_rs.o decode_rs.c
+
+
+.PHONY : clean
+
+clean:
+	rm -f *.o libjt9.a wsjtx.exe jt9sim.exe jt9.exe jt65.exe

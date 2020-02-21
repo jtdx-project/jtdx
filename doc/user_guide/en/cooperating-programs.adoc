@@ -1,0 +1,28 @@
+_WSJT-X_ is programmed to cooperate closely with several other useful
+programs.  
+
+* {dxlsuite} and {hrd} were described in the section on <<RADIO,rig control>>.
+
+* {pskreporter}, by Philip Gladstone, is a web server that gathers
+reception reports sent by various other programs, including _WSJT-X_.
+The information is made available in near real time on a world map,
+and also as statistical summaries of various kinds.  A number of
+options are available to the user; for example, you can request a map
+showing world-wide JT65 activity on all amateur bands over over the
+past hour.  Such a map might look like this, where different colors
+represent different bands:
+
+image::psk-reporter.png[align="left",alt="PSK Reporter"]
+
+* {jtalert}, by VK3AMA, is available only for Windows.  It provides
+many operating aids including automatic logging to several third-party
+logging programs, audio and visual alerts following a number of
+optional alert conditions (decoding of a new DXCC, new state, etc.),
+and convenient direct access to web services such as callsign lookup.
+
+image::jtalert.png[align="left",alt="JTAlert-X image"]
+
+* {alarmejt}, by F5JMH, is available only for Linux.  The program keeps
+its own logbook.  It fetches contact information from _WSJT-X_ and
+provides visual alerts for new DXCC entities and grid squares on the
+current band, as well as other options.

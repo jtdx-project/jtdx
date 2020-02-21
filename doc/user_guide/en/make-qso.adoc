@@ -1,0 +1,164 @@
+// Status=review
+=== Standard Exchange
+By longstanding tradition, a minimally valid QSO requires the exchange
+of callsigns, a signal report or some other information, and
+acknowledgments.  _WSJT-X_ is designed to facilitate making such
+minimal QSOs using short, structured messages. The process works best
+if you use these formats and follow standard operating practices. The
+recommended basic QSO goes something like this:
+
+ CQ K1ABC FN42                          #K1ABC calls CQ
+                   K1ABC G0XYZ IO91     #G0XYZ answers
+ G0XYZ K1ABC –19                        #K1ABC sends report
+                   K1ABC G0XYZ R–22     #G0XYZ sends R+report
+ G0XYZ K1ABC RRR                        #K1ABC sends RRR
+                   K1ABC G0XYZ 73       #G0XYZ sends 73
+
+*Standard messages* consist of two callsigns (or CQ, QRZ, or DE and
+one callsign) followed by the transmitting station’s grid locator, a
+signal report, R plus a signal report, or the final acknowledgements
+RRR or 73.  These messages are compressed and encoded in a highly
+efficient and reliable way.  In uncompressed form (as displayed
+on-screen) they may contain as many as 22 characters.
+
+*Signal reports* are specified as signal-to-noise ratio (S/N) in dB,
+using a standard reference noise bandwidth of 2500 Hz.  Thus, in
+example message at UTC 0003 above, K1ABC is telling G0XYZ that his
+signal is 19 dB below the noise power in bandwidth 2500 Hz.  In the
+message at 0004, G0XYZ acknowledges receipt of that report and
+responds with a –22 dB signal report.  JT65 reports are constrained to
+lie in the range –30 to –1 dB, and values are significantly compressed
+above about -10 dB.  JT9 supports the extended range –50 to +49 dB and
+assigns more reliable numbers to relatively strong signals.
+
+IMPORTANT: Signals become visible on the waterfall around S/N = –26 dB
+and audible (to someone with very good hearing) around –15
+dB. Thresholds for decodability are around -23 dB for JT4, –24 dB for
+JT65, –26 dB for JT9.
+
+=== Free Text Messages
+
+Users often add some friendly chit-chat at the end of a QSO.
+Free-format messages such as "`TNX ROBERT 73`" or "`5W VERT 73 GL`"
+are supported, up to a maximum of 13 characters, including spaces.  In
+general you should avoid the character / in free-text messages, as the
+program may then try to interpret your construction as part of a
+compound callsign.  It should be obvious that the JT4, JT9, and JT65
+protocols are not designed or well suited for extensive conversations
+or rag-chewing.
+
+[[COMP-CALL]] 
+=== Compound Callsigns
+
+Compound callsigns such as xx/K1ABC or K1ABC/x are handled in
+one of two possible ways:
+
+.Messages containing Type 1 compound callsigns
+
+A list of about 350 of the most common prefixes and suffixes can be
+displayed from the *Help* menu.  A single compound callsign involving
+one item from this list can be used in place of the standard third
+word of a message (normally a locator, signal report, RRR, or 73).
+The following examples are all acceptable messages containing *Type 1*
+compound callsigns:
+
+ CQ ZA/K1ABC
+ CQ K1ABC/4
+ ZA/K1ABC G0XYZ
+ G0XYZ K1ABC/4
+
+The following messages are _not_ valid, because a third word is not
+permitted in any message containing a *Type 1* compound callsign:
+
+ ZA/K1ABC G0XYZ -22        #These messages are invalid; each would 
+ G0XYZ K1ABC/4 73          # be sent without its third "word"
+
+A QSO between two stations using *Type 1* compound-callsign messages
+might look like this:
+
+ CQ ZA/K1ABC
+                     ZA/K1ABC G0XYZ
+ G0XYZ K1ABC –19
+                     K1ABC G0XYZ R–22
+ G0XYZ K1ABC RRR
+                     K1ABC G0XYZ 73
+
+Notice that the full compound callsign is sent and received in the
+first two transmissions.  After that, the operators omit the add-on
+prefix or suffix and use the standard structured messages.
+
+.Type 2 Compound-Callsign Messages
+
+Prefixes and suffixes _not_ found in the displayable short list are
+handled by using *Type 2* compound callsigns.  In this case the
+compound callsign must be the second word in a two- or three-word
+message, and the first word must be CQ, DE, or QRZ.  Prefixes can be 1
+to 4 characters, suffixes 1 to 3 characters.  A third word conveying a
+locator, report, RRR, or 73 is permitted.  The following are valid 
+messages containing *Type 2* compound callsigns:
+
+ CQ W4/G0XYZ FM07
+ QRZ K1ABC/VE6 DO33
+ DE W4/G0XYZ FM18
+ DE W4/G0XYZ -22
+ DE W4/G0XYZ R-22
+ DE W4/G0XYZ RRR
+ DE W4/G0XYZ 73
+
+In each case, the compound callsign is treated as *Type 2* because the
+add-on prefix or suffix is _not_ one of those in the fixed list.  Note
+that a second callsign is never permissible in these messages.
+
+IMPORTANT: Remember that during a transmission your transmitted message is
+always displayed in the first label on the *Status Bar*, highlighted
+in yellow.  It is displayed there exactly as another station will
+receive it.  Be sure to check that you are actually transmitting the
+message you wish to send!
+
+QSOs involving *Type 2* compound callsigns might look like either
+of the following sequences
+
+ CQ K1ABC/VE1 FN75
+                     K1ABC G0XYZ IO91
+ G0XYZ K1ABC –19
+                     K1ABC G0XYZ R–22
+ G0XYZ K1ABC RRR
+                     K1ABC/VE1 73
+
+
+ CQ K1ABC FN42
+                     DE G0XYZ/W4 FM18
+ G0XYZ K1ABC –19
+                     K1ABC G0XYZ R–22
+ G0XYZ K1ABC RRR
+                     DE G0XYZ/W4 73
+
+Operators with a compound callsign use its full form when calling CQ
+and possibly also in a 73 transmission, as may be required by
+licensing authorities.  Other transmissions during a QSO may use the
+standard structured messages without callsign prefix or suffix. 
+
+IMPORTANT: If you are using a compound callsign, you may want to
+experiment with the option *Message generation for type 2 compound
+callsign holders* on the *Settings | General* tab, so that messages
+will be generated that best suit your needs.
+
+=== Pre-QSO Checklist
+
+Before attempting your first QSO with one of the WSJT modes, be sure
+to go through the <<TUTORIAL,Basic Operating Tutorial>> above as well
+as the following checklist:
+
+- Your callsign and grid locator set to correct values
+
+- PTT and CAT control (if used) properly configured and tested
+
+- Computer clock properly synchronized to UTC within ±1 s
+
+- Radio set to *USB* (upper sideband) mode
+
+- Radio filters centered and set to widest available passband (up to 5 kHz).
+
+IMPORTANT: Remember that JT4, JT9, J65, and WSPR generally do not
+require high power. Under most HF propagation conditions, QRP is the
+norm.

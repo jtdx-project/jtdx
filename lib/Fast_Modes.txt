@@ -1,0 +1,395 @@
+			Fast Modes in WSJT-X
+			--------------------
+
+#######################################################################
+
+IMPORTANT - IMPORTANT - IMPORTANT - IMPORTANT - IMPORTANT - IMPORTANT 
+
+Third-party individuals (i.e., others not part of the WSJT development
+team) have been compiling WSJT-X from the open source code and making
+unauthorized "releases" of their builds.  I do NOT reccommend use of
+unauthorized builds on the air.  If a program revision has been released
+in an official way, you will see it listed here.
+
+If you operate with an unauthorized "rXXXX" code revisions in our
+experimental code branch you have no idea what you've got.  Quite
+possibly, the program was built from an intermediate temporary "save"
+of various files, and was not even supposed to produce a usable
+program.  Your observetions about what works or does not work are then
+worse than useless -- they waste your time and ours.
+
+So please, PLEASE, *PLEASE*: use *authorized*, "released* revisions
+of this still-in-development software, like the revisions described here.
+
+*ALSO:* If you choose to try an experimental release of JTMSK, please
+accept the responsibility of reporting on your results.  You can send
+reports to the "wsjtgroup" reflector, wsjtgroup@yahoogroups.com, or
+email them directly to me.  All suggestions for improvements are
+welcome!
+
+Bug reports should include details on how to reproduce the undesirable
+program behavior.  Reports on decoding performance are especially
+useful when accompanied by example *.wav files with signals that
+you think should have decoded, but did not.
+
+#######################################################################
+
+September 18, 2015
+-----------------
+
+New alpha release of experimental WSJT-X v1.6.1, r5910
+------------------------------------------------------
+Changes since revision 5889 include the following:
+
+1. Improved behavior for auto-QSY with "CQ nnn ..." feature.  (May not
+be exactly correct, yet, for all radios.  Please report if you find
+problems with your rig.)
+
+2. Allow optional use of Wide Graph in fast modes.
+
+3. Add UTC labels to Fast Graph spectrograms.
+
+4. Display correct DXCC entiry for "CQ nnn ..." messages.
+
+5. Implement "Save Decoded" for fast modes.
+
+6. Select Tx6 when "CQ Rx nnn" is enabled.
+
+7. Fix bug in setting of TRperiod after switch to ISCAT mode.
+
+8. Display proper symbol '&' in Tx messages in JTMSK mode.
+
+
+To download this alpha release for Windows, paste the following link
+into your browser:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5910-win32.exe
+
+    -- 73, Joe, K1JT
+
+#######################################################################
+
+September 12, 2015
+-----------------
+
+New alpha release of experimental WSJT-X v1.6.1, r5889
+------------------------------------------------------
+
+A principal new feature in this release is designed to promote the use
+of an agreed "calling frequency" for transmissions of the form
+
+  CQ 265 K1ABC FN42
+
+signifying that K1ABC will listen for replies on 50.265 (or 144.265,
+or whatever) and will complete the QSO there.  The feature uses the
+rig-control features of WSJT-X to handle the necessary frequency
+switching.
+
+##########################################################################
+Changes since revision 5865 include the following:
+
+1. New features that allow automatic rig control when you transmit or
+respond to messages of the form "CQ 265 K1ABC FN42" on an agreed
+calling frequency.  This feature should be especially useful for
+meteor scatter.
+
+2. Yellow-highlighted "Tx" messages in the right text window are now
+properly labeled with 6-digit UTC (hhmmss) in all fast modes.
+
+3. Fixed a bug (introduced in r5865) that inhibited transmitting in
+JT4 mode.
+
+4. Fixed a bug that caused Wide Graph to continue issuing green
+separator lines at short (e.g. 15 s) intervals after you have switched
+to a slow mode.
+
+5. Fixed several more GUI appearance bugs associated with changing
+modes or submodes.
+
+6. Fixed a bug in which double-clicking on the Fast Graph could cause
+program crashes.
+
+7. Fixed a bug that sometimes caused "high tones" to be emitted in
+JTMSK mode.
+
+#######################################################################
+Here's a brief description of how to use the "CQ nnn ..." features.
+
+1. On program startup, go to the Settings | General tab and tick the
+box labeled 'Rx frequency offset with "CQ nnn ..."'
+
+2. Select JTMSK mode and 50.280 (or your some other agreed calling
+frequency) from the drop-down band menu.  Remember that this menu is
+not pre-populated with preferred frequencies for all modes on all
+bands. Use Settings | Frequencies to add your desired modes and
+frequencies to the list.
+
+3. Tick the unlabeled checkbox just under the "Report: spinner to
+activate the "CQ Rx nnn" spinner.  Set this control to your desired
+QSO frequency in kHz above the nominal band edge.  On 6 meters, for
+example, "265" means "50.265".
+
+4. Your transceiver dial frequency should now show 50.265.  Changes to
+the "CQ Rx nnn" spinner value should be reflected immediately in the
+transceiver dial frequency, the displayed value on the WSJT-X main
+screen, and in Tx message #6, the "CQ nnn... " message.
+
+5. When you transmit the Tx6 message, the Tx frequency will be set at
+the calling frequency.  Otherwise (when receiving, or when
+transmitting any of the messages Tx1 through Tx5) the offset frequency
+(50.265 in my example) will be used.
+
+6. If you double-click on a received "CQ nnn ..." message on the
+calling frequency, your rig will QSY to specified response frequency,
+e.g. 50.265, for both Rx and Tx.
+
+7. To go back to listening on the calling frequency, uncheck the box
+that activated the "CQ Rx nnn" spinner.
+
+#######################################################################
+
+Fair warning: I have not yet tested all possible combinations of
+"Split Operation" configuration (i.e., "None", "Rig", and "Fake it").
+If you normally use Split operation, that should be OK for the "CQ
+nnn ..." feature.
+
+
+As always, please report any bugs that you find in r5889, including
+pertinent details on your settings and the exact series of steps
+required to reproduce the bug.
+
+
+To download this alpha release for Windows, paste the following link
+into your browser:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5889-win32.exe
+
+
+    -- 73, Joe, K1JT
+
+#######################################################################
+
+New alpha release of experimental WSJT-X v1.6.1, r5865
+------------------------------------------------------
+
+This alpha release of WSJT-X includes major improvements to the JTMSK
+decoder.  Changes since revision 5823 include the following:
+
+1. On-screen controls labeled "Rx nnnn Hz" and "F Tol" (Rx frequency
+and tolerance) now function as expected in JTMSK mode.  The frequency
+search range can be up to 500 Hz, but note that sensitivity is
+necessarily reduced for signals off frequency by more than about 250
+Hz.  Normally you should leave Rx Freq set at 1500 Hz; suitable values
+for F Tol are 100 to 500 Hz.
+
+2. The JTMSK decoder now makes good use of strong, short pings (as
+short as 0.1 s) as well as weak pings several times longer.
+
+3. Improved calculation of S/N and frequency of decoded signals.
+
+4. Unified appearance of window titles on all non-modal windows.
+
+5. CW ID is disabled (for now, at least) when operating in any of the
+WSJT fast modes.
+
+6. In WSPR mode, display of "Receiving ... <band>" messages is
+disabled when band-hopping is not in use.
+
+7. Fixed several bugs affecting status and visibility of certain
+on-screen controls after changes in operating mode.
+
+8. Fixed a bug allowing display of duplicate decodes for the same
+signal.
+
+9. Fixed a bug preventing compilation on 64-bit systems, and cleaned
+up some harmless compiler warnings.
+
+#######################################################################
+		Summary Description of JTMSK Protocol
+
+JTMSK uses the same standard message structure as slow modes JT4, JT9,
+and JT65.  User information is "source encoded" to 72 bits. A 15-bit
+CRC is appended and a convolutional code with constraint length K=13
+and rate r=1/2 is applied, making a total of (72+15+12)*2 = 198
+information bits.  Three copies of the "Barker-11" code and three
+even-parity bits are added for synchronization, making a total of
+198+33+3 = 234 channel symbols.  Modulation uses a constant-envelope,
+continuous-phase "minimum-shift keying" (MSK) waveform, with tone
+frequencies of 1000 and 2000 Hz.
+
+#######################################################################
+
+To download this alpha release for Windows, paste the following link
+into your browser:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5865-win32.exe
+
+	-- 73, Joe, K1JT
+
+August 28, 2015
+---------------
+
+New release of experimental WSJT-X v1.6.1, r5823
+------------------------------------------------
+
+To download for Windows, paste the following link into your browser:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5823-win32.exe
+
+This experimental version of WSJT-X introduces a new fast mode called
+JTMSK.  The letters MS, of course, imply meteor scatter; the three
+letters MSK mean "Minimum Shift Keying", the modulation scheme used in
+this mode.
+
+Revision 5823 also includes a number of (mostly minor) bug fixes
+relative to r5789.
+
+IMPORTANT: If you choose to try JTMSK, please accept the
+responsibility of reporting on your results.  You can send reports to
+the "wsjtgroup" reflector, wsjtgroup@yahoogroups.com or email them
+directly to me.  All suggestions for improvements are welcome!  Bug
+reports should include details on how to reproduce the undesirable
+program behavior.
+
+The present JTMSK decoder has been optimized for short pings.  It does
+not yet do a wide search for proper frequency alignment; you and your
+QSO partner need to be "on frequency" to within +/- 100 Hz or better.
+The decoder does not (yet) attempt to make optimal use of weak, slowly
+varying signals.  These and other characteristics may be improved in
+coming revisions.
+
+KNOWN BUG: At present you should use T/R sequence lengths 15 s in
+JTMSK mode.  If you have a program crash, open Windows Task Manager,
+select the "Processes" tab, right-click on wsjtx.exe, and select "End
+Process Tree".  Then restart the program.
+
+I view JTMSK as a candidate for replacing both FSK441 and JTMS for all
+meteor scatter work.  JTMSK has the major advantage of including
+strong forward error correction (FEC), similar in usage to the schemes
+used for many years in JT4, JT9, and JT65.  The structure of user
+messages and the format of minimal QSOs is also identical to those
+other modes.  But JTMSK is very fast, transmitting its full encoded
+message content in 0.117 s, in a 2 kHz bandwidth.  JTMSK therefore
+makes much better use of short pings than (for example) JT9H can do.
+
+The Tx waveform of JTMSK has been carefully designed to have a number
+of desirable features.  All messages are exactly the same length: 72
+bits of user information are followed by a 15-bit CRC and encoded into
+198 channel bits with a convolutional code (constraint length K=13,
+rate r=1/2).  Three sequences of the "Barker-11" code are added, along
+with three parity bits, making a total of 234 channel bits in each
+message.  The MSK symbols for these bits are transmitted at 2000 baud,
+and the full encoded message is repeated every 117 ms.
+
+A summary description of modulation parameters for all WSJT(-X) modes
+is shown in a table posted here:
+http://physics.princeton.edu/pulsar/K1JT/wsjt_modes.txt and
+illustrated graphically here:
+http://physics.princeton.edu/pulsar/K1JT/wsjt_modes.pdf
+
+	-- 73, Joe, K1jT
+			 
+August 15, 2015
+---------------
+
+New release of experimental WSJT-X v1.6.1, r5789
+
+Changes since WSJT-X v1.6.1, revision 5779:
+
+1.  Major speedup (5x) of fast-JT9 decoder.
+2.  Corrected logic for Auto-Sequencing operation.
+3.  Stop after sending 73 five times in auto-sequence mode.
+4.  Add an "Auto-Level" control to Fast Graph window.
+5.  Send fast-mode decodes to PSKreporter web site.
+6.  Support automatic logging via JTAlert-X.
+7.  Send fast-mode output to file ALL.TXT.
+8.  Better definition of dB levels for fast-JT9 signals.
+9.  Rationalize the GUI behavior when changing mode, submode, fast/slow
+    status, and T/R period.
+10. Correct a flaw in the display of multiple decodes in a single 
+    fast-JT9 sequence.
+11. Fix minor bugs reported by G3WDG, ND0B, OZ1PIF, and others.
+
+To download for Windows, paste the following link into your browser:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5789-win32.exe
+
+Please keep in mind that this is an experimental version of WSJT-X.
+Bug reports and other feedback will be much appreciated, and will help
+to make the program better!  
+
+    -- 73, Joe, K1JT
+
+
+August 11, 2015
+---------------
+
+Since its origin in the dark ages (ca. 2001) WSJT has supported "fast"
+modes (designed for meteor scatter, etc.) and "slow" modes (optimized
+for EME and other weak-signal propagation types).  The most recent new
+mode, JT9, now has *both* fast and slow submodes.  
+
+JT9A (the "original" JT9) is like JT65 and JT4: its T/R sequences are
+one minute long, and its primary goal is best possible sensitivity for
+very weak, approximately steady signals.  The new experimental JT9
+submodes use the same message structure, encoding, and modulation type
+(9-tone FSK) as JT9A, but wider tone spacing and (optionally) faster
+keying rates.
+
+You can download an experimental version of WSJT-X (v1.6.1, r5779) here:
+http://physics.princeton.edu/pulsar/K1JT/wsjtx-1.6.1-r5779-win32.exe
+
+The fast submodes currently being tested, JT9E - JT9H, have been found
+highly effective for meteors and ionoscatter propagation on 6 and 10
+meters.  Sensitivity is similar to ISCAT, or slightly better.
+Decoding is much more reliable, because the JT9 protocol includes
+strong forward error correction.  Decoding results are like those for
+all the WSJT "slow" modes: you should see messages exactly as they
+were transmitted, or nothing at all.  A potential side benefit is
+automatic reporting of decodes to PSKreporter.
+
+For details on the modulation parameters of the JT9 submodes, see the
+table posted at
+http://physics.princeton.edu/pulsar/K1JT/wsjt_modes.txt.
+
+WSJT-X v1.6.1 r5779 has the following changes from r5769:
+
+1. Numerous bug fixes
+2. Double-click on decoded message now behaves properly
+3. Faster decoding (further optimization still to come)
+4. Decoded text is highlighted as in WSJT-X slow modes
+5. Optional auto-sequencing
+
+Fair warning: auto-sequencing is basically functional, but scarcely
+tested.  Please watch what it is doing, and tell us how you think it
+should be improved!
+
+If you use WSJT-X also for other modes and other purposes, you may
+want to save several different sets of configuration settings.  In
+that case it's convenient to use the "-r xxx" option and start the
+program from a command-prompt window.  For example:
+
+C:\Users\joe> cd \wsjt\wsjtx\bin
+C:\WSJT\wsjtx\bin> wsjtx -r xxx
+
+... where "xxx" can be anything you like, for example "ISCAT",
+"FAST9", etc.
+
+Proper configuration for the JT9 fast modes includes the following
+settings:
+
+On the Settings | General tab:
+
+ - check "Enable VHF/UHF/Microwave features"
+
+Main window settings:
+
+ - Mode JT9
+ - Tx 700 Hz
+ - Rx 700 Hz
+ - Sync 0
+ - Submode G  ... or E, F, and H (H not legal in US on 10m)
+ - Tick "Fast"
+ - T/R 30 s     (also 5, 10, 15 s)
+ - FTol 500
+
+Please keep in mind that this is an experimental version of WSJT-X.
+It still has some rough edges, and no doubt some bugs.  Your feedback
+will be much appreciated, and will help to make the program better!
+
+    -- 73, Joe, K1JT

@@ -1,0 +1,41 @@
+// Status=review
+
+Controls related to frequency selection, received audio level, the
+station being called, and date and time are found at lower left of the
+main window:
+
+//.Misc Controls Left
+image::misc-main-ui.png[align="center",alt="Misc Menu Items"]
+
+* A drop-down list of frequencies and bands at upper left lets you
+select the operating band and sets dial frequency to a value taken
+from the *Frequencies* tab on the *Settings* window.  If CAT control
+is active the radio's dial frequency will be set accordingly; if not,
+you must tune the radio manually.
+
+* Alternatively, you can enter a frequency (in MHz) or band name in
+recognized ADIF format, for example 630m, 20m, or 70cm.  The band-name
+format works only if a working frequency has been set up on that band,
+in which case the first working frequency on that band is
+selected. 
+
+* If you are using CAT control, a small colored circle appears in
+green if the CAT control is activated and functional.  The green
+circle contains the character S if the rig is detected to be in
+*Split* mode.  The circle becomes red if you have requested CAT
+control but communication with the radio has been lost.
+
+IMPORTANT: Many Icom rigs cannot be queried for split status, current
+VFO or split transmit frequency.  Consequently you should not change
+the current VFO, split status or frequency using controls on the radio
+when using _WSJT-X_ with an Icom radio.
+
+* If *DX Grid* contains a valid Maidenhead locator, the corresponding
+great-circle azimuth and distance from your location are displayed.
+
+* The program can maintain a database of callsigns and locators for
+future reference.  Click *Add* to insert the present call and locator
+in the database; click *Lookup* to retrieve the locator for a
+previously stored call.  This feature is mainly useful for situations
+in which the number of active stations is modest and reasonably
+stable, such as EME (Earth-Moon-Earth) communication.

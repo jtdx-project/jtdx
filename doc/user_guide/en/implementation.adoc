@@ -1,0 +1,87 @@
+// Status=review
+.Transmitting
+
+Immediately before the start of a transmission _WSJT-X_ encodes a
+user's message and computes the sequence of tones to be sent.  The
+audio waveform is computed on-the-fly, with 16-bit integer samples
+sent to the audio output device at a 48000 Hz rate.  Generated signals
+have continuous phase and constant amplitude, and there are no key
+clicks.  The transmitter's power amplifier need not be highly linear.
+
+.Receiving
+
+_WSJT-X_ acquires 16-bit integer samples from the audio input device
+at a 48000 Hz rate and immediately downsamples the stream to 12000 Hz.
+Spectra from overlapping segments are computed for the waterfall
+display and saved for the decoder at intervals of 3456/12000 = 0.288
+s, half the JT9 symbol length.
+
+.Decoding
+
+At the end of a reception sequence, about 50 seconds into the UTC
+minute, received data samples are forwarded to the decoder.  In JT9
+and JT65 modes the decoder goes through its full procedure twice:
+first at the selected Rx frequency, and then over the full displayed
+frequency range.  Each decoding pass can be described as a sequence of
+discrete blocks.  Details of the functional blocks are different for
+each mode.  In dual-mode JT9+JT65 operation on computers with more
+than one CPU, decoding computations for the two modes are done in
+parallel.
+
+The basic decoding algorithm for JT65 mode is described in the 2005
+{jt65protocol} paper.  The following list summarizes the corresponding
+algorithm for JT9 mode. Blocks are labeled here with the names of
+functional procedures in the code.
+
+[horizontal]
++sync9+::    Use sync symbols to find candidate JT9 signals 
+            in the specified frequency range
+
+Then, at the frequency of each plausible candidate:
+
+[horizontal]
++downsam9+::  Mix, filter and downsample to 16 complex 
+            samples/symbol
+
++peakdt9+::   Using sync symbols, time-align to start of JT9 symbol 
+            sequence
+
++afc9+::    Measure frequency offset and possible drift
+
++twkfreq+::   Remove frequency offset and drift
+
++symspec2+::  Compute 8-bin spectra for 69 information-carrying
+            symbols, using the time- and frequency-aligned data;
+            transform to yield 206 single-bit soft symbols
+
++interleave9+:: Remove single-bit interleaving imposed at the
+	    transmitter
+
++decode9+::   Retrieve a 72-bit user message using the sequential
+            Fano algorithm 
+
+
++unpackmsg+:: Unpack a human-readable message from the 72-bit 
+            compressed format
+
+Decoding of clean JT9 signals in a white-noise background starts to
+fail below signal-to-noise ratio -25 dB and reaches 50% copy at -26
+dB.
+
+With marginal or unrecognizable signals the sequential Fano algorithm
+can take exponentially long times.  If the +sync9+ step in the above
+sequence finds many seemingly worthy candidate signals and many of
+them turn out to be undecodable, the decoding loop can take an
+inconveniently long time.  For this reason the step labeled +decode9+
+is programmed to "`time out`" and report failure for a given signal if
+it takes too long.  The choices *Fast | Normal | Deepest* on the
+*Decode* menu provide the user with a three-step adjustment of the
+timeout limit.
+
+Decoding in JT4 and WSPR modes is basically similar to that for JT9.
+The same K=32, r=1/2 sequential Fano algorithm is used for all three
+modes.  Other details such as tone numbers, symbol lengths,
+synchronizing scheme, and subroutine names are distinct for each mode.
+The WSPR decoder now uses a two-pass algorithm.  Decoded signals are
+reconstructed and subtracted from the received waveform, after which a
+second decoding pass takes place.

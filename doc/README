@@ -1,0 +1,40 @@
+This folder  contains the sources  of WSJT-X documentation.   To build
+these you will need the asciidoctor tool installed.
+
+If you do not wish to build  the documentation, it is possible to skip
+this  directory  in the  WSJT-X  build  by  setting the  CMake  option
+WSJT_GENERATE_DOCS to OFF in your build tree.
+
+
+On Linux
+========
+
+You will probably have these installed already if you are building the
+WSJT-X  manpages,  if you  are  not  you  will  just need  to  install
+asciidoc:
+
+ sudo apt-get install asciidoctor
+
+or
+
+ sudo yum install asciidoctor
+
+or whatever your distribution and package management requires.
+
+
+On Mac OS X
+===========
+
+I recommend MacPorts:
+
+ sudo port install rb-rubygems
+ sudo gem install asciidoctor
+
+
+On Windows
+==========
+
+The asciidoctor  tool is a  Ruby script so you  will need to  install a
+version of Ruby. The gem tool is a good way to install asciidoctor:
+
+   gem install asciidoctor

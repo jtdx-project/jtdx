@@ -1,0 +1,34 @@
+<table cellspacing=1>
+  <tr><td><b>F1       </b></td><td>Online User's Guide</td></tr>
+  <tr><td><b>Ctrl+F1  </b></td><td>About WSJT-X</td></tr>
+  <tr><td><b>F2       </b></td><td>Open configuration window</td></tr>
+  <tr><td><b>F3       </b></td><td>Display keyboard shortcuts</td></tr>
+  <tr><td><b>F4       </b></td><td>Clear DX Call, DX Grid, Tx messages 1-5</td></tr>
+  <tr><td><b>Alt+F4   </b></td><td>Exit program</td></tr>
+  <tr><td><b>F5       </b></td><td>Display special mouse commands</td></tr>
+  <tr><td><b>F6       </b></td><td>Open next file in directory</td></tr>
+  <tr><td><b>F7       </b></td><td>Open log by assigned in the operating system viewer</td></tr>
+  <tr><td><b>Shift+F6 </b></td><td>Decode all remaining files in directrory</td></tr>
+  <tr><td><b>F11      </b></td><td>Move Rx frequency down 1 Hz</td></tr>
+  <tr><td><b>Ctrl+F11 </b></td><td>Move Rx and Tx frequencies down 1 Hz</td></tr>
+  <tr><td><b>F12      </b></td><td>Move Rx frequency up 1 Hz</td></tr>
+  <tr><td><b>Ctrl+F12 </b></td><td>Move Rx and Tx frequencies up 1 Hz</td></tr>
+  <tr><td><b>Alt+1-6  </b></td><td>Set now transmission to this number on Tab 1</td></tr>
+  <tr><td><b>Ctl+1-6  </b></td><td>Set next transmission to this number on Tab 1</td></tr>
+  <tr><td><b>Alt+D    </b></td><td>Decode again at QSO frequency</td></tr>
+  <tr><td><b>Shift+D  </b></td><td>Full decode (both windows)</td></tr>
+  <tr><td><b>Alt+E    </b></td><td>Erase</td></tr>
+  <tr><td><b>Alt+F    </b></td><td>Toggle bypass all text filters</td></tr>
+  <tr><td><b>Ctrl+F   </b></td><td>Edit the free text message box</td></tr>
+  <tr><td><b>Alt+G    </b></td><td>Generate standard messages</td></tr>
+  <tr><td><b>Alt+H    </b></td><td>Halt Tx</td></tr>
+  <tr><td><b>Ctrl+L   </b></td><td>Lookup callsign in database, generate standard messages</td></tr>
+  <tr><td><b>Alt+M    </b></td><td>Monitor</td></tr>
+  <tr><td><b>Alt+N    </b></td><td>Enable Tx</td></tr>
+  <tr><td><b>Alt+Q    </b></td><td>Log QSO</td></tr>
+  <tr><td><b>Alt+S    </b></td><td>Stop monitoring</td></tr>
+  <tr><td><b>Alt+T    </b></td><td>Tune</td></tr>
+  <tr><td><b>Alt+V    </b></td><td>Save the most recently completed *.wav file</td></tr>
+  <tr><td><b>Alt+Z    </b></td><td>Filter, this shortcut is being supported in main UI and widegraph UI</td></tr>
+  <tr><td><b>Alt+Ctrl+A    </b></td><td>Clear wanted callsign list</td></tr>
+</table>

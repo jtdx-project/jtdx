@@ -1,0 +1,40 @@
+CC = gcc
+FC = gfortran
+
+FFLAGS = -O2 -Wall -Wno-conversion
+CFLAGS= -I/JTSDK/fftw3f -Wall -Wno-missing-braces -O2
+#LDFLAGS = -L/JTSDK/fftw3f -Wl,--stack,4000000
+LDFLAGS = -L/JTSDK/fftw3f 
+LIBS = c:/JTSDK/fftw3f/libfftw3-3.dll -lm
+
+# Default rules
+%.o: %.c $(DEPS)
+	${CC} ${CFLAGS} -c $<
+%.o: %.f
+	${FC} ${FFLAGS} -c $<
+%.o: %.F
+	${FC} ${FFLAGS} -c $<
+%.o: %.f90
+	${FC} ${FFLAGS} -c $<
+%.o: %.F90
+	${FC} ${FFLAGS} -c $<
+
+all:    wsprd.exe wsprsim.exe wsprd_exp.exe
+
+DEPS =  wsprsim_utils.h wsprd_utils.h fano.h jelinek.h nhash.h
+
+OBJS1 = wsprd.o wsprsim_utils.o wsprd_utils.o tab.o fano.o jelinek.o nhash.o
+wsprd.exe: $(OBJS1)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
+
+OBJS2 = wsprsim.o wsprsim_utils.o wsprd_utils.o tab.o fano.o nhash.o 
+wsprsim.exe: $(OBJS2) 
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
+
+OBJS3 = wsprd_exp.o wsprsim_utils.o wsprd_utils.o tab.o fano.o jelinek.o \
+      nhash.o 
+wsprd_exp.exe: $(OBJS3)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
+
+clean:
+	rm *.o wsprd.exe wsprsim.exe wsprd_exp.exe

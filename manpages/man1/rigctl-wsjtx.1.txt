@@ -1,0 +1,29 @@
+:doctype: manpage
+:man source: AsciiDoc
+:man version: {revnumber}
+:man manual: WSJT-X Manual
+= rigctl-wsjtx(1)
+
+== NAME
+
+rigctl-wsjtx - Hamlib 3 rigctld server.
+
+== SYNOPSIS
+
+*rigctl-wsjtx* [OPTIONS]
+
+== DESCRIPTION
+
+*wsjtx* uses a version of the *hamlib* CAT control library.  This
+ library is heavily modified over the current release version of
+ *hamlib*. If a *wsjtx* user wishes to use the *hamlib* network rig
+ server *rigctld* to remotely control their transceiver; then this
+ special version of the *rigctl* client should be used since that too
+ has the modified *hamlib* code embedded with it.
+
+WSJT-X home page:: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx.html
+
+WSJT-X User's Guide:: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-toc2.html
+
+== OPTIONS
+Refer to the *hamlib* documentation.

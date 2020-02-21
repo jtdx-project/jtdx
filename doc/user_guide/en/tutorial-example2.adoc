@@ -1,0 +1,117 @@
+// Status=review
+.Main Window:
+- Select *JT9+JT65* on the *Mode* menu.
+- Toggle the *Tx mode* button to read *Tx JT65*, and set the Tx and Rx
+frequencies to 1718 Hz.
+- Double-click on *Erase* to clear both text windows.
+
+.Wide Graph Settings:
+
+- Set *Bins/Pixel* = 7
+- Adjust the width of the Wide Graph window so that the upper
+frequency limit is approximately 4000 Hz.
+
+.Open a Wave File:
+
+- Select *File | Open* and navigate to +...\save\samples\130610_2343.wav+.  
+The waterfall should look like this:
+
+//.130610_2343.wav Decode
+[[X14]]
+image::130610_2343-wav-80.png[align="left",alt="Wide Graph Decode 130610_2343"]
+
+IMPORTANT: Notice the [blue]*BLUE* marker on the waterfall scale, here
+set at 2500 Hz.  Its position is set by the spinner control *JT65 nnnn
+JT9*, where nnnn is a frequency in Hz. In *JT9+JT65* mode the program
+will automatically decode JT9 signals only above this frequency.
+
+JT9 signals appear in the *Cumulative* spectrum as nearly rectangular
+shapes about 16 Hz wide.  They have no clearly visible sync tone like
+the one at the low-frequency edge of all JT65 signals.  By convention
+the nominal frequency of both JT9 and JT65 signals is taken to be that
+of the lowest tone, at the left edge of its spectrum.
+
+This sample file contains 17 decodable signals — nine in JT65 mode
+(flagged with the character # in the decoded text windows), and eight
+in JT9 mode (flagged with @).  On multi-core computers the decoders
+for JT9 and JT65 modes run simultaneously, so their results will be
+interspersed.  The *Band Activity* window contains all decodes (you
+might need to scroll back in the window to see some of them).  A
+signal at the frequency specified by the green marker is given
+decoding priority, and its message is displayed also in the *Rx
+Frequency* window.
+
+[[FigDecodes]]
+image::decodes.png[align="center"]
+
+- Confirm that mouse-click behavior is similar to that described
+earlier, in <<TUT_EX1,Example 1>>.  _WSJT-X_ automatically determines
+the mode of each JT9 or JT65 message.
+
+IMPORTANT: When you double-click on a signal in the waterfall it will be
+properly decoded even if on the "`wrong`" side of the *JT65 nnnn JT9*
+marker.  The Tx mode automatically switches to that of the decoded
+signal and the Rx and Tx frequency markers on the waterfall scale
+resize themselves accordingly. When selecting a JT65 signal, click on
+the sync tone at its left edge.
+
+- Double-click on the waterfall near 815 Hz: a JT65 message
+originating from W7VP will be decoded and appear in the *Rx Frequency*
+window.  Between the *UTC* and *Freq* columns on the decoded text line
+you will find *dB*, the measured signal-to-noise ratio, and *DT*, the
+signal's time offset in seconds relative to your computer clock.
+
+[width="80%",align="center",cols="^10,2*^8,2*^10,54",options="header"]
+|===
+|UTC|dB|DT|Freq|Mode|Message
+|+2343+|+-7+|+0.3+|+815+|+#+|+KK4DSD W7VP -16+
+|===
+
+- Double-click on the waterfall at 3196 Hz.  The program will decode a
+JT9 message from IZ0MIT:
+
+[width="80%",align="center",cols="^10,2*^8,2*^10,54",options="header"]
+|===
+|UTC|dB|DT|Freq|Mode|Message
+|+2343+|+-7+|+0.3+|+3196+|+@+|+WB8QPG IZ0MIT -11+
+|===
+
+- Scroll back in the *Band Activity* window and double-click on the
+message +CQ DL7ACA JO40+. The program will set *Tx mode* to JT65 and Tx
+and Rx frequencies to that of DL7ACA, 975 Hz.  If you had checked
+*Double-click on call sets Tx Enable* on the *Setup* menu, the program
+would configure itself to start a QSO with DL7ACA.
+
+- Double-click on the decoded JT65 message +CQ TA4A KM37+.  The program
+will set Tx mode to JT9 and the Rx and Tx frequencies to 3567 Hz.  The
+program is now configured properly for a JT9 QSO with TA4A.
+
+.Reopen the First Sample File:
+- Select *File | Open* and navigate to +...\save\samples\130418_1742.wav+.
+
+Taking full advantage of the wide-band, dual-mode capability of
+_WSJT-X_ requires a receiver bandwidth of at least 4 kHz.  These
+data were recorded with a much narrower Rx bandwidth, roughly 200 to
+2400 Hz. If you have no Rx filter wider than about 2.7 kHz, you will
+be using data like this. For best viewing, adjust *Bins/Pixel* and the
+width of the Wide Graph so that only the active part of the spectrum
+shows, say 200 to 2400 Hz.  Re-open the example file after any change of
+*Bins/Pixel* or Wide Graph width, to refresh the waterfall.
+
+The signals in this file are all JT9 signals.  To decode them
+automatically in *JT9+JT65* mode you’ll need to move the *JT65 nnnn JT9*
+delimiter down to 1000 Hz or less.
+
+.Waterfall Controls
+
+Now is a good time to experiment with the *Start* control and the
+sliders controlling gain and zero-point of the waterfall and spectrum
+plots.  *Start* determines the frequency displayed at the left side of
+the waterfall scale.  Sliders set the baseline level and gain for the
+waterfall and the several types of spectra.  Good starting values
+should be close to mid-scale.  You might want to uncheck *Flatten*
+when adjusting the sliders.  Re-open the wave file after each change,
+to see the new results.
+
+IMPORTANT: When finished with this Tutorial, don’t forget to re-enter
+your own callsign as *My Call* on the *Settings | General* tab.

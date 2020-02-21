@@ -1,0 +1,5 @@
+A UI for downloading sample files from a web server.
+
+Works in concert with  samples/CMakeLists.txt which generates the JSON
+contents description file  and has a build  target upload-samples that
+uploads the samples and content file to the project files server.

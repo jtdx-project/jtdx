@@ -1,0 +1,36 @@
+=== New in Version 1.6
+
+For quick reference, here's a short list of features and capabilities
+added to _WSJT-X_ since Version 1.5.0:
+
+- *WSPR* mode, including coordinated automatic band-hopping and a
+new two-pass decoder that can decode overlapping signals.
+
+- EME-motivated features including *JT4* (submodes *A-G*), *Echo*
+mode, and automatic *Doppler tracking*.  The JT4 decoder is more
+sensitive than that in the latest WSJT, and message averaging is fully
+automated.  (Note that submodes *JT65B* and *JT65C* are also present
+in Version 1.6, but the high-sensitivity decoder required for EME with
+JT65 is not yet included.)
+
+- Tools for accurate *frequency calibration* of your radio, so you can
+be always on-frequency to within about 1 Hz.
+
+- Mode-specific standard working frequencies accessible from the
+drop-down band selector.
+
+- A number of corrections to the Hamlib library, fixing balky
+rig-control features.  A few unreliable features peculiar to
+particular radios have been removed.
+
+=== Future releases
+
+Much work has already been done on Version 1.7 of _WSJT-X_.  (Up to
+now this branch has been called v1.6.1.)  More than 100 people have
+been building this version for themselves as development progresses,
+and reporting on their experiences.  The next release will offer
+several "`fast modes`" intended for meteor and ionospheric scatter,
+including a new FEC-enhanced mode called *JTMSK*.  It will also have a
+significantly improved JT65 decoder, especially advantageous when used
+in crowded HF bands.  Starting with Version 1.7, _WSJT-X_ will no
+longer use the patented, closed-source Koetter-Vardy algorithm.

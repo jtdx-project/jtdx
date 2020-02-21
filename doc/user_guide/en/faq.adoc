@@ -1,0 +1,69 @@
+////
+Questions:
+ Should be short one liners ending with ?::
+ If your question is too long for one line, consider multiple questions or rephrase
+
+Answers:
+ Can be bullet or paragraphs. Bullets make for easier reading.
+
+Bullet Usage:
+ *  = a circle bullet single intent
+ ** = circle bullet double indent
+ .  = should be avoided as the questions are numbered
+ .. = bullet a, b, c, and so on, double indent
+
+Alternatives: Use a * Bullet, followed by .. for example, then have
+a multi-section answer using the * as the section header
+ 
+ * Section Header 1
+ .. Possible Answer a
+ .. Possible Answer b
+ * Section Header 2
+ .. Possible Answer a
+ .. Possible Answer b
+ 
+Link Usage:
+ Use the common/links.adoc for href links to maintain consistency. Try to avoid
+ apostrophes ` or ' as it breaks AsciiDoc syntax without special escaping 
+ and they do not translate into other languages well.
+
+////
+[qanda]
+My displayed spectrum is flatter when I do not check the *Flatten* box. What's wrong?::
+
+_WSJT-X_ does not expect a steep filter edge within the displayed
+passband. Use a wider IF filter or reduce the displayed passband by
+decreasing *Bins/Pixel*, increasing *Start*, or reducing the width of
+the *Wide Graph*.  You might also choose to re-center the filter
+passband, if such control is available.
+
+How should I configure _WSJT-X_ to run multiple instances?::
+
+Start _WSJT-X_ from a command-prompt window, passing each instance a
+unique identifier as in the following two-instance example.  This
+procedure will isolate the *Settings* file and the writable file
+location for each instance of _WSJT-X_.
+
+ wsjtx --rig-name=TS2000
+ wsjtx --rig-name=FT847
+
+When setting up rig control through _OmniRig_, something goes wrong when I click *Test CAT*.  What can I do about it?::
+
+_OmniRig_ apparently has a bug that appears when you click *Test CAT*.
+Forget using *Test CAT* and just click *OK*.  _OmniRig_ then behaves
+normally.
+
+I am using _WSJT-X_ with _Ham Radio Deluxe_.  All seems well until I start HRD Logbook or DM780 running in parallel; then CAT control becomes unreliable.::
+
+You may see delays up to 20 seconds or so in frequency changes or
+other radio commands, due to a bug in HRD.  HRD folks are aware of the
+problem, and are working to resolve it.
+
+I am running _WSJT-X_ under Ubuntu 14.04.  The program starts, but menu bar is missing from the top of the main window and the hot-keys don't work.::
+
+Ubuntu's new "`Unity`" desktop puts the menu for the currently active
+window at the top of the primary display screen.  You can restore menu
+bars to their traditional locations by typing the following in a
+command-prompt window:
+
+ sudo apt-get remove appmenu-qt5

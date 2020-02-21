@@ -1,0 +1,55 @@
+// Status=review
+
+_WSJT-X_ is a computer program designed to facilitate basic amateur
+radio communication using very weak signals. The first four letters in
+the program name stand for "`Weak Signal communication by K1JT,`" while
+the suffix "`-X`" indicates that _WSJT-X_ started as an extended (and
+experimental) branch of the program _WSJT_.
+
+_WSJT-X_ Version 1.6 offers five protocols or "`modes`": JT4, JT9, JT65
+WSPR, and Echo.  The first three are designed for making reliable 
+QSOs under extreme weak-signal conditions. They use nearly identical
+message structure and source encoding.  JT65 was designed for EME
+("`moonbounce`") on the VHF/UHF bands and has also proven very effective
+for worldwide QRP communication on the HF bands.  JT9 is optimized for
+the LF, MF, and lower HF bands.  It is 2 dB more sensitive than
+JT65 while using less than 10% of the bandwidth.  JT4 offers a wide
+variety of tone spacings and has proved very effective for EME on
+microwave bands up to 24 GHz.  All three of these modes use one-minute
+timed sequences of alternating transmission and reception, so a
+minimal QSO takes four to six minutes — two or three transmissions by
+each station, one sending in odd UTC minutes and the other even. On
+the HF bands, world-wide QSOs are possible using power levels of a few
+watts and compromise antennas.  On VHF bands and higher, QSOs are
+possible (by EME and other propagation types) at signal levels 10 to
+15 dB below those required for CW.
+
+WSPR (pronounced "`whisper`") stands for Weak Signal Propagation
+Reporter.  The WSPR protocol was designed for probing potential
+propagation paths using low-power transmissions. WSPR messages
+normally carry the transmitting station’s callsign, grid locator, and
+transmitter power in dBm, and they can be decoded at signal-to-noise
+ratios as low as -28 dB in a 2500 Hz bandwidth.  WSPR users with
+internet access can automatically upload their reception reports to a
+central database called {wsprnet} that provides a mapping facility,
+archival storage, and many other features.
+
+Echo mode allows you to detect and measure your own lunar echoes,
+even if they are far below the audible threshold.
+
+_WSJT-X_ provides spectral displays for passbands up to 5 kHz,
+flexible rig control for nearly all modern radios used by amateurs,
+and a wide variety of special aids such as automatic Doppler tracking
+for EME QSOs and Echo testing.  The program runs equally well on
+Windows, Macintosh, and Linux systems, and installation packages are
+available for all three platforms.
+
+_WSJT-X_ is an open-source project released under the {gnu_gpl}
+(GPL). If you have programming or documentation skills or would like
+to contribute to the project in other ways, please make your interests
+known to the development team.  The project’s source-code repository
+can be found at {devsvn}, and most communication among the developers
+takes place on the email reflector {devmail}.  User-level questions
+and answers, and general communication among users is found on the
+{wsjt_yahoo_group} email reflector.
+

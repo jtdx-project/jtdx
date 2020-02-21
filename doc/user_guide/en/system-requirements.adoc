@@ -1,0 +1,13 @@
+// Status=review
+
+- SSB transceiver and antenna 
+- Computer running Windows (XP or later), Linux, or OS X
+- 1.5 GHz or faster CPU and 200 MB of available memory
+- Monitor with at least 1024 x 780 resolution
+- Computer-to-radio interface using a serial port or equivalent USB 
+  device for T/R switching, or CAT control, or VOX, as required for 
+  your radio-to-computer connections
+- Audio input and output devices supported by the operating system and 
+  configured for sample rate 48000 Hz.
+- Audio or equivalent USB connections between transceiver and computer  
+- A means for synchronizing the computer clock to UTC within ±1 second

@@ -1,0 +1,27 @@
+// Status=review
+
+image::settings-audio.png[align="center",alt="WSJT-X Audio Configuration Screen"]
+
+Select the *Audio* tab to configure your sound system.
+
+- _Soundcard_: Select the audio devices to be used for *Input* and
+*Output*.  Usually the *Mono* settings will suffice, but in special
+cases you can choose *Left*, *Right*, or *Both* stereo channels.
+
+IMPORTANT: If you select the audio output device that is also your
+computer's default audio device, be sure to turn off all system sounds
+to prevent transmitting them over the air.
+
+IMPORTANT: Be sure that your audio device in configured to sample at
+48000 Hz, 16 bits.
+
+- _Save Directory_: _WSJT-X_ can save its received audio sequences as
++.wav+ files.  A default directory for these files is provided; you
+can select another location if desired.
+
+- _AzEl Directory_: A file named +azel.dat+ will appear in the
+specified directory.  The file contains information usable by another
+program for automatic tracking of the Sun or Moon, as well as
+calculated Doppler shift for the specified EME path.  The file is
+updated once per second.
+

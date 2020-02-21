@@ -1,0 +1,65 @@
+JT9 is a mode designed for amateur QSOs at MF and LF.  The mode uses
+the same 72-bit structured messages as JT65.  Error control coding
+(ECC) uses a strong convolutional code with constraint length K=32,
+rate r=1/2, and a zero tail, leading to an encoded message length of
+(72+31)*2 = 206 information-carrying bits.  Modulation is 9-FSK: 8
+tones for data, one for synchronization.  Sixteen symbol intervals are
+used for synchronization, so a transmission requires a total of 207/3
++ 16 = 85 channel symbols.  Symbol durations tsym are approximately
+(TRperiod-8)/85, where TRperiod is the T/R sequence length in seconds.
+Exact symbol lengths are chosen so that nsps, the number of samples
+per symbol (at 12000 samples per second) is a number with no prime
+factor greater than 7.  This choice makes for efficient FFTs.  Tone
+spacing of the 9-FSK modulation is df=1/tsym=12000/nsps, equal to the
+keying rate.  The total occupied bandwidth is 9*df.  The generated
+signal has continuous phase, and there are no key clicks.
+
+Parameters of five JT9 sub-modes are summarized in the following
+table, along with S/N thresholds measured by simulation on an AWGN
+channel.  Numbers following "JT9-" in the sub-mode names specify the
+T/R sequence length in minutes.
+
+--------------------------------------------------------------------------
+Mode     nsps nsps2  df    tsym  BW   S/N*   Tdec Tfree Factors 
+        12000  1500 (Hz)   (s)  (Hz)  (dB)   (s)   (s)  of nsps      nfft3
+--------------------------------------------------------------------------
+JT9-1    6912   864 1.736  0.58 15.6 -26.9   52.5  7.5 2^8 3^3        2048
+JT9-2   15360  1920 0.781  1.28  7.0 -30.2  112.3  7.7 2^10 3 5       2048
+JT9-5   40960  5120 0.293  3.41  2.6 -34.4  293.6  6.4 2^13 5         6144
+JT9-10  82944 10368 0.145  6.91  1.3 -37.5  591.0  9.0 2^10 3^4      12288
+JT9-30 252000 31500 0.048 21.00  0.4 -42.3 1788.5 11.5 2^5 3^2 5^3 7 32768
+--------------------------------------------------------------------------
+* Noise power measured in a 2500 Hz bandwidth.
+NB: nfft3 might be doubled and used with a sin^2 window.
+
+Transmitting
+------------
+1. Source encode the structured message to 72 bits
+2. Apply convolutional ECC (K=32, r=1/2) to yield (72+31)*2 = 206 bits
+3. Interleave to scramble the bit order
+4. Assemble 3-bit groups to make (206+1)/3 = 69 symbols
+5. Gray-code the symbol values
+6. Insert 16 sync symbols ==> 69+16=85 channel symbols, values 0-8
+
+
+Receiving
+---------
+1.  Apply noise blanking with the timf2 method
+2.  Filter to 1000 Hz bandwidth and downsample (1/8) to 1500 Hz, saving
+    complex data to array c0(2,700,000).
+3.  Compute spectra at half-symbol steps.  Use for waterfall display 
+    s(22000) and save in ss(184,22000) and savg(22000) for detecting 
+    sync vectors.
+4.  At time Tdec, find sync vectors in ss(); get approx DF or list of DFs
+5.  Do full-length FFT, NFFT1=96*nsps2, zero-padded as required.
+6.  For each candidate signal, do inverse FFT of length 1536 (or 3072?).  
+    This yields 16 complex samples per symbol; sync tone should be 
+    close to zero frequency.
+7.  Use afc65b method to get improved values of DF, DT.
+8.  Tweak freq and time offset to 0.
+9.  Compute 8-bin spectra of 69 data symbols: ssym(0:7,69).  Re-order the
+    bins to remove Gray code.
+10. Compute soft symbols for 206 bits (bit 207 is always 0).
+11. Remove interleaving
+12. Pack bits into bytes, send to Fano decoder
+13. If Fano succeeds, remove source encoding and display user message.

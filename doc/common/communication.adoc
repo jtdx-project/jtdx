@@ -1,0 +1,17 @@
+The following are established communication channels for the WSJT Group.
+For updates and other information on the continuing development of _WSJT_,
+_MAP65_, _WSPR_, _WSPR-X_, and _WSJT-X_ you are invited to subscribe to the
+{dev_mail_list}. 
+
+.General Information
+* Main Site: {homepage}
+* Development Site: {projsummary}
+
+.Development Related
+* Project Manager, email: {joe_taylor}
+* Development Email: {devmail1}
+* Development Mailing List (join): {dev_mail_list}
+* Repository Updates, (join): {dev_mail_svn}
+
+.Community Related
+* Discussion Board: {wsjt_yahoo_group}
