@@ -1,4 +1,4 @@
-! last time modified by Igor UA3DJY on 20200202
+! last time modified by Igor UA3DJY on 20200221
 
 subroutine wspr_downsample(id2,k)
 
@@ -16,7 +16,7 @@ subroutine wspr_downsample(id2,k)
   parameter (MAXFFT3=32768)
   real*4 w3(MAXFFT3)
   real*4 x0(NFFT1)
-  integer*2 id2(NMAX)
+  integer id2(NMAX)
   complex c0
   common/c0com/c0(NDMAX)
 !  data rms/999.0/,k0/99999999/,nfft3z/0/,nsps/8192/,nbfo/1500/

@@ -1,4 +1,4 @@
-// last time modified by Igor UA3DJY on 20200128
+// last time modified by Igor UA3DJY on 20200221
 
 // Simple bargraph meter
 // Implemented by Edson Pereira PY2SDR
@@ -54,7 +54,7 @@ void MeterWidget::paintEvent (QPaintEvent * event)
   p.setPen (Qt::NoPen);
 
   auto const& target = contentsRect ();
-  QRect r {QPoint {target.left (), static_cast<int> (target.top () + target.height () - m_signal / 190. * target.height ())}
+  QRect r {QPoint {target.left (), static_cast<int> (target.top () + target.height () - m_signal/200. * target.height ())}
     , QPoint {target.right (), target.bottom ()}};
   p.setBrush (QColor {255, 180, 0});
   if (m_signal > 185 || m_signal < 30) {p.setBrush(QColor {255, 150, 150});}
