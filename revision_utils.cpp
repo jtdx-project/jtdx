@@ -8,7 +8,7 @@
 #include <QCoreApplication>
 #include <QRegularExpression>
 
-#include "svnversion.h"
+#include "scs_version.h"
 
 namespace
 {

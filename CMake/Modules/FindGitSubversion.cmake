@@ -43,14 +43,14 @@ if(GIT_FOUND)
     set(_Subversion_SAVED_LC_ALL "$ENV{LC_ALL}")
     set(ENV{LC_ALL} C)
 
-    execute_process(COMMAND ${GIT_EXECUTABLE} --git-dir=${dir}/.git --work-tree=${dir} svn info
+    execute_process(COMMAND ${GIT_EXECUTABLE} --git-dir=${dir}/.git svn info
       OUTPUT_VARIABLE ${prefix}_WC_INFO
       ERROR_VARIABLE Git_git_svn_info_error
       RESULT_VARIABLE Git_git_svn_info_result
       OUTPUT_STRIP_TRAILING_WHITESPACE)
 
     if(NOT ${Git_git_svn_info_result} EQUAL 0)
-      message(SEND_ERROR "Command \"${GIT_EXECUTABLE} --git-dir=${dir}/.git --work-tree=${dir} svn info\" failed with output:\n${Git_git_svn_info_error}")
+      message(SEND_ERROR "Command \"${GIT_EXECUTABLE} --git-dir=${dir}/.git svn info\" failed with output:\n${Git_git_svn_info_error}")
     else()
 
       string(REGEX REPLACE "^(.*\n)?URL: ([^\n]+).*"
