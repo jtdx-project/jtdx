@@ -1,4 +1,4 @@
-//last time modified by Igor UA3DJY on 20191203
+//last time modified by Igor UA3DJY on 20200130
 /*
  This file is part of program wsprd, a detector/demodulator/decoder
  for the Weak Signal Propagation Reporter (WSPR) mode.
@@ -133,7 +133,7 @@ unsigned long readwavfile(char *ptr_to_infile, int ntrmin, float *idat, float *q
     fftwf_complex *fftin, *fftout;
     
     FILE *fp;
-    short int *buf2;
+    int *buf2;
     
     fp = fopen(ptr_to_infile,"rb");
     if (fp == NULL) {
@@ -141,9 +141,9 @@ unsigned long readwavfile(char *ptr_to_infile, int ntrmin, float *idat, float *q
         return 1;
     }
 
-    buf2 = calloc(npoints,sizeof(short int));
+    buf2 = calloc(npoints,sizeof(int));
     fread(buf2,2,22,fp);      //Read and ignore header
-    fread(buf2,2,npoints,fp); //Read raw data
+    fread(buf2,4,npoints,fp); //Read raw data
     fclose(fp);
     
     realin=(float*) fftwf_malloc(sizeof(float)*nfft1);
@@ -784,10 +784,10 @@ int main(int argc, char *argv[])
 #include "./metric_tables.c"
     
     int mettab[2][256];
-    
+
     idat=calloc(maxpts,sizeof(float));
     qdat=calloc(maxpts,sizeof(float));
-    
+  
     while ( (c = getopt(argc, argv, "a:BcC:de:f:HJmo:qstwvz:")) !=-1 ) {
         switch (c) {
             case 'a':
@@ -899,7 +899,7 @@ int main(int argc, char *argv[])
        fclose(ftimer);
     }
     ftimer=fopen(timer_fname,"w");
-    
+
     if( strstr(ptr_to_infile,".wav") ) {
         ptr_to_infile_suffix=strstr(ptr_to_infile,".wav");
         

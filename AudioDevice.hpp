@@ -1,3 +1,5 @@
+// last time modified by Igor UA3DJY on 20200125
+
 #ifndef AUDIODEVICE_HPP__
 #define AUDIODEVICE_HPP__
 
@@ -28,7 +30,7 @@ public:
 
   bool isSequential () const override {return true;}
 
-  size_t bytesPerFrame () const {return sizeof (qint16) * (Mono == m_channel ? 1 : 2);}
+  size_t bytesPerFrame () const {return sizeof (qint32) * (Mono == m_channel ? 1 : 2);}
 
   Channel channel () const {return m_channel;}
 
@@ -38,10 +40,10 @@ protected:
   {
   }
 
-  void store (char const * source, size_t numFrames, qint16 * dest)
+  void store (char const * source, size_t numFrames, qint32 * dest)
   {
-    qint16 const * begin (reinterpret_cast<qint16 const *> (source));
-    for ( qint16 const * i = begin; i != begin + numFrames * (bytesPerFrame () / sizeof (qint16)); i += bytesPerFrame () / sizeof (qint16))
+    qint32 const * begin (reinterpret_cast<qint32 const *> (source));
+    for ( qint32 const * i = begin; i != begin + numFrames * (bytesPerFrame () / sizeof (qint32)); i += bytesPerFrame () / sizeof (qint32))
       {
 	switch (m_channel)
 	  {
@@ -63,7 +65,7 @@ protected:
       }
   }
 
-  qint16 * load (qint16 const sample, qint16 * dest)
+  qint32 * load (qint32 const sample, qint32 * dest)
   {
     switch (m_channel)
       {

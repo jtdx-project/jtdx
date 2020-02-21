@@ -1,5 +1,4 @@
-! This source code file was last time modified by Igor UA3DJY on 20190420
-! All changes are shown in the patch file coming together with the full JTDX source code.
+! last time modified by Igor UA3DJY on 20200128
 
 subroutine symspec(shared_data,k,ntrperiod,nsps,pxdb,s,df3,ihsym,npts8)
 
@@ -71,7 +70,8 @@ subroutine symspec(shared_data,k,ntrperiod,nsps,pxdb,s,df3,ihsym,npts8)
   enddo
   pxdb=0.
   if(speak.gt.0.0) pxdb=20.0*log10(speak)
-  if(pxdb.gt.90.0) pxdb=90.0
+!  if(pxdb.gt.90.0) pxdb=90.0
+  if(pxdb.gt.186.6) pxdb=186.6
 
   k0=k
   ja=ja+jstep                         !Index of first sample

@@ -1,13 +1,12 @@
-! This source code file was last time modified by Igor UA3DJY on May 31st, 2018
-! All changes are shown in the patch file coming together with the full JTDX source code.
+! time modified by Igor UA3DJY on 20200124
 
 subroutine fil4(id1,n1,id2,n2,dd2)
 
   !$ use omp_lib
   parameter (NTAPS=15)
   parameter (NDOWN=4)             !Downsample ratio
-  integer*2 id1(n1)
-  integer*2 id2(*)
+  integer id1(n1)
+  integer id2(*)
   real dd2(*)
   real t(NTAPS)
   data t/NTAPS*0.0/

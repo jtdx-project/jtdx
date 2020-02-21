@@ -1,5 +1,5 @@
-// This source code file was last time modified by Igor UA3DJY on 20190927
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200124
+
 
 #ifndef DETECTOR_HPP__
 #define DETECTOR_HPP__
@@ -52,7 +52,7 @@ private:
   qint32 m_samplesPerFFT;	// after any down sampling
   qint32 m_ns;
   static size_t const max_buffer_size {7 * 512};
-  QScopedArrayPointer<short> m_buffer; // de-interleaved sample buffer
+  QScopedArrayPointer<int> m_buffer; // de-interleaved sample buffer
   // big enough for all the
   // samples for one increment of
   // data (a signals worth) at

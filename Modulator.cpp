@@ -1,4 +1,4 @@
-// last time modified by Igor UA3DJY on 20191209
+// last time modified by Igor UA3DJY on 20200128
 
 #include "Modulator.hpp"
 #include <limits>
@@ -13,7 +13,8 @@
 
 extern float gran();		// Noise generator (for tests only)
 
-#define RAMP_INCREMENT 64  // MUST be an integral factor of 2^16
+//#define RAMP_INCREMENT 64  // MUST be an integral factor of 2^16
+#define RAMP_INCREMENT 65536  // MUST be an integral factor of 2^16
 
 #if defined (WSJT_SOFT_KEYING)
 # define SOFT_KEYING WSJT_SOFT_KEYING
@@ -58,7 +59,7 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
   m_addNoise = dBSNR < 0.;
   m_nsps = framesPerSymbol;
   m_frequency = frequency;
-  m_amp = std::numeric_limits<qint16>::max ();
+  m_amp = std::numeric_limits<qint32>::max ();
   m_toneSpacing = toneSpacing;
   m_TRperiod=TRperiod;
   unsigned delay_ms=1000;
@@ -122,8 +123,8 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
   Q_ASSERT (isOpen ());
 
   qint64 numFrames (maxSize / bytesPerFrame ());
-  qint16 * samples (reinterpret_cast<qint16 *> (data));
-  qint16 * end (samples + numFrames * (bytesPerFrame () / sizeof (qint16)));
+  qint32 * samples (reinterpret_cast<qint32 *> (data));
+  qint32 * end (samples + numFrames * (bytesPerFrame () / sizeof (qint32)));
   qint64 framesGenerated (0);
 
   switch (m_state)
@@ -147,7 +148,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
     case Active:
       {
         unsigned int isym=0;
-        qint16 sample=0;
+        qint32 sample=0;
         if(!m_tuning) isym=m_ic/(4.0*m_nsps);            // Actual fsample=48000
 		bool slowCwId=((isym >= m_symbolsLength) && (icw[0] > 0));
         m_nspd=2560;                 // 22.5 WPM
@@ -163,13 +164,13 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
             m_phi += m_dphi;
             if (m_phi > m_twoPi) m_phi -= m_twoPi;
             sample=0;
-            float amp=32767.0;
+            float amp=2147483647.0;
             float x=0.0;
             if(m_ramp!=0) {
               x=qSin(float(m_phi));
               if(SOFT_KEYING) {
                 amp=qAbs(qint32(m_ramp));
-                if(amp>32767.0) amp=32767.0;
+                if(amp>2147483647.0) amp=2147483647.0;
               }
               sample=round(amp*x);
             }
@@ -183,7 +184,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
             }
 
             // adjust ramp
-            if ((m_ramp != 0 && m_ramp != std::numeric_limits<qint16>::min ()) || level != m_cwLevel) {
+            if ((m_ramp != 0 && m_ramp != std::numeric_limits<qint32>::min ()) || level != m_cwLevel) {
               // either ramp has terminated at max/min or direction has changed
               m_ramp += RAMP_INCREMENT; // ramp
             }
@@ -242,7 +243,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
             sample=qRound(m_amp*qSin(m_phi));
           }
           //transmit from a precomputed FT8 wave[] array:
-          if(!m_tuning and (m_toneSpacing < 0.0)) { m_amp=32767.0; sample=qRound(m_amp*foxcom_.wave[m_ic]); }
+          if(!m_tuning and (m_toneSpacing < 0.0)) { m_amp=2147483647.0; sample=qRound(m_amp*foxcom_.wave[m_ic]); }
           samples = load (postProcessSample (sample), samples);
           ++framesGenerated; ++m_ic;
         }
@@ -274,15 +275,15 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
   return 0;
 }
 
-qint16 Modulator::postProcessSample (qint16 sample) const
+qint32 Modulator::postProcessSample (qint32 sample) const
 {
   if (m_addNoise) {  // Test frame, we'll add noise
     qint32 s = m_fac * (gran () + sample * m_snr / 32768.0);
-    if (s > std::numeric_limits<qint16>::max ()) {
-      s = std::numeric_limits<qint16>::max ();
+    if (s > std::numeric_limits<qint32>::max ()) {
+      s = std::numeric_limits<qint32>::max ();
     }
-    if (s < std::numeric_limits<qint16>::min ()) {
-      s = std::numeric_limits<qint16>::min ();
+    if (s < std::numeric_limits<qint32>::min ()) {
+      s = std::numeric_limits<qint32>::min ();
     }
     sample = s;
   }

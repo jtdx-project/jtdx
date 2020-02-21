@@ -81,7 +81,7 @@
   type, bind(C) :: dec_data
      real(c_float) :: ss(184,NSMAX)
      real(c_float) :: savg(NSMAX)
-     integer(c_short) :: id2(NMAX)
+     integer(c_int) :: id2(NMAX)
      real(c_float) :: dd2(NMAX)
      type(params_block) :: params
   end type dec_data

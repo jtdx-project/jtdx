@@ -1,5 +1,4 @@
-! This source code file was last time modified by Igor Chernikov UA3DJY on August 22nd, 2016.
-! All changes are shown in the patch file coming together with the full JTDX source code.
+! last time modified by Igor UA3DJY on 20200124
 
 subroutine wav12(d2,d1,npts,nbitsam2)
 
@@ -14,14 +13,14 @@ subroutine wav12(d2,d1,npts,nbitsam2)
 
   parameter (NZ11=60*11025,NZ12=60*12000)
   parameter (NFFT1=64*11025,NFFT2=64*12000)
-  integer*1 d1(NZ11)
-  integer*1 d1a(NZ11)
-  integer*1 i1
-  integer*2 i2
-  integer*2 d2(NZ12)
+  integer   d1(NZ11)
+  integer   d1a(NZ11)
+  integer   i1
+  integer   i2
+  integer   d2(NZ12)
   real x(NFFT2)
   complex cx(0:NFFT2/2)
-  integer*2 nbitsam2
+  integer nbitsam2
   equivalence (x,cx),(i1,i2)
 
   jz=min(NZ11,npts)

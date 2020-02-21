@@ -1,3 +1,5 @@
+// last time modified by Igor UA3DJY on 20200130
+
 #include "getfile.h"
 #include <QDir>
 #include <stdlib.h>
@@ -33,7 +35,7 @@ void getfile(QString fname, int ntrperiod)
     int nsamrate;
     int nbytesec;
     short nbytesam2;
-    short nbitsam2;
+    int nbitsam2;
     char adata[4];
     int ndata;
   } hdr;
@@ -75,7 +77,7 @@ void getfile(QString fname, int ntrperiod)
       uint32_t nsamrate;
       uint32_t nbytesec;
       uint16_t nbytesam2;
-      uint16_t nbitsam2;
+      uint32_t nbitsam2;
     } fmt;
 
     // read header
@@ -96,7 +98,7 @@ void getfile(QString fname, int ntrperiod)
 // Read (and ignore) a 44-byte WAV header; then read data
 //    int n=fread(&hdr,1,44,fp);
     int n=fread(dec_data.d2,2,npts,fp);
-    if(hdr.nsamrate==11025) wav12_(dec_data.d2,dec_data.d2,&n,(short*)&fmt.nbitsam2);
+    if(hdr.nsamrate==11025) wav12_(dec_data.d2,dec_data.d2,&n,(int*)&fmt.nbitsam2);
     fclose(fp);
     dec_data.params.newdat=1;
     dec_data.params.kin=n;
@@ -116,7 +118,7 @@ void savewav(QString fname, int ntrperiod)
     int nsamrate;          //SampleRate: 12000
     int nbytesec;          //ByteRate: SampleRate*NumChannels*BitsPerSample/8
     short int nbytesam2;   //BlockAlign: NumChannels*BitsPerSample/8
-    short int nbitsam2;    //BitsPerSample: 16
+    short int nbitsam2;          //BitsPerSample: 16
     char adata[4];         //Subchunk2ID: "data"
     int ndata;             //Subchunk2Size: numSamples*NumChannels*BitsPerSample/8
   } hdr;
@@ -149,7 +151,7 @@ void savewav(QString fname, int ntrperiod)
     hdr.nsamrate=12000;
     hdr.nbytesec=2*12000;
     hdr.nbytesam2=2;
-    hdr.nbitsam2=16;
+    hdr.nbitsam2=32;
     hdr.adata[0]='d';
     hdr.adata[1]='a';
     hdr.adata[2]='t';

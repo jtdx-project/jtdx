@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on March 12th, 2017
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200128
 
 // Simple bargraph dB meter
 // Implemented by Edson Pereira PY2SDR
@@ -68,8 +67,10 @@ private:
 //  static int const text_indent {2};
   static int const text_indent {1};
   static int const line_spacing {0};
-  static int const range {9};
-  static int const scale {10};
+//  static int const range {9};
+//  static int const scale {10};
+  static int const range {10};
+  static int const scale {20};
 };
 
 SignalMeter::SignalMeter (QWidget * parent)
@@ -104,6 +105,6 @@ void SignalMeter::setValue(float value)
   m_meter->setValue(int(value));
   QString t;
 //  t.sprintf("%4.1f dB",value);
-  t.sprintf("%2.0fdB",value);
+  t.sprintf("%3.0fdB",value);
   m_reading->setText(t);
 }

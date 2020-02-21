@@ -3,7 +3,7 @@
 subroutine wspr_downsample(id2,k)
 
 ! Input:
-!  id2       raw 16-bit integer data, 12000 Hz sample rate
+!  id2       raw 32-bit integer data, 12000 Hz sample rate
 !  k         pointer to the most recent new data
 
 ! Output (in common/c0com)

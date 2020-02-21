@@ -751,7 +751,7 @@ private:
   void WSPR_history(Frequency dialFreq, int ndecodes);
   QString WSPR_hhmm(int n);
   QString save_wave_file (QString const& name
-                          , short const * data
+                          , int const * data
                           , int seconds
                           , QString const& my_callsign
                           , QString const& my_grid

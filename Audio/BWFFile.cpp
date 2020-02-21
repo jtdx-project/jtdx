@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor Chernikov UA3DJY on August 18th, 2016
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200130
 
 #include "BWFFile.hpp"
 

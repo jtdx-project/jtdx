@@ -11,7 +11,7 @@
 #include "moc_Detector.cpp"
 
 extern "C" {
-  void   fil4_(qint16*, qint32*, qint16*, qint32*, float*);
+  void   fil4_(qint32*, qint32*, qint32*, qint32*, float*);
 }
 
 Detector::Detector (unsigned frameRate, double periodLengthInSeconds,
@@ -23,7 +23,7 @@ Detector::Detector (unsigned frameRate, double periodLengthInSeconds,
   , m_samplesPerFFT {max_buffer_size}
   , m_ns (999)
   , m_buffer ((downSampleFactor > 1) ?
-              new short [max_buffer_size * downSampleFactor] : nullptr)
+              new int [max_buffer_size * downSampleFactor] : nullptr)
   , m_bufferPos (0)
 {
   (void)m_frameRate;            // quell compiler warning

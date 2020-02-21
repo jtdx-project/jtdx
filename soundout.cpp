@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on 20190723
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200124
 
 #include "soundout.h"
 
@@ -45,7 +44,7 @@ void SoundOutput::setFormat (QAudioDeviceInfo const& device, unsigned channels, 
   format.setCodec ("audio/pcm");
   format.setSampleRate (48000);
   format.setSampleType (QAudioFormat::SignedInt);
-  format.setSampleSize (16);
+  format.setSampleSize (32);
   format.setByteOrder (QAudioFormat::Endian (QSysInfo::ByteOrder));
   if(!format.isValid ()) Q_EMIT error (tr ("Requested output audio format is not valid."));
   if(!device.isFormatSupported (format)) Q_EMIT error (tr ("Requested output audio format is not supported on device."));

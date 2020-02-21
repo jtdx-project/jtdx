@@ -95,10 +95,10 @@ extern "C" {
 
   int ptt_(int nport, int ntx, int* iptt, int* nopen);
 
-  void wspr_downsample_(short int d2[], int* k);
+  void wspr_downsample_(int d2[], int* k);
   int savec2_(char* fname, int* TR_seconds, double* dial_freq, int len1);
 
-  void wav12_(short d2[], short d1[], int* nbytes, short* nbitsam2);
+  void wav12_(int d2[], int d1[], int* nbytes, int* nbitsam2);
 
   void foxgen_();
 }
@@ -1771,7 +1771,7 @@ void MainWindow::dataSink(qint64 frames)
   }
 }
 
-QString MainWindow::save_wave_file (QString const& name, short const * data, int samples,
+QString MainWindow::save_wave_file (QString const& name, int const * data, int samples,
         QString const& my_callsign, QString const& my_grid, QString const& mode,
         Frequency frequency, QString const& his_call, QString const& his_grid) const
 {
@@ -1784,7 +1784,7 @@ QString MainWindow::save_wave_file (QString const& name, short const * data, int
   format.setCodec ("audio/pcm");
   format.setSampleRate (12000);
   format.setChannelCount (1);
-  format.setSampleSize (16);
+  format.setSampleSize (32);
   format.setSampleType (QAudioFormat::SignedInt);
   auto source = QString {"%1, %2"}.arg (my_callsign).arg (my_grid);
   auto comment = QString {"Mode=%1%2, Freq=%3%4"}
@@ -1806,7 +1806,7 @@ QString MainWindow::save_wave_file (QString const& name, short const * data, int
   BWFFile wav {format, name + ".wav", list_info};
   if (!wav.open (BWFFile::WriteOnly)
       || 0 > wav.write (reinterpret_cast<char const *> (data)
-                        , sizeof (short) * samples))
+                        , sizeof (int) * samples))
     {
       return wav.errorString ();
     }
@@ -2619,7 +2619,7 @@ void MainWindow::read_wav_file (QString const& fname)
     // zero unfilled remaining sample space
     std::memset (&dec_data.d2[0] + n, 0, max_bytes - n);
     if (11025 == file.format ().sampleRate ()) {
-      short sample_size = file.format ().sampleSize ();
+      int sample_size = file.format ().sampleSize ();
       wav12_ (dec_data.d2, dec_data.d2, &frames_read, &sample_size);
     }
     dec_data.params.kin = frames_read;

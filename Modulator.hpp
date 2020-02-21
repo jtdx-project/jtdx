@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on 20190716
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200128
 
 #ifndef MODULATOR_HPP__
 #define MODULATOR_HPP__
@@ -54,7 +53,7 @@ protected:
   }
 
 private:
-  qint16 postProcessSample (qint16 sample) const;
+  qint32 postProcessSample (qint32 sample) const;
 
   QPointer<SoundOutput> m_stream;
   bool m_quickClose;
@@ -79,7 +78,7 @@ private:
 
   qint64 m_silentFrames;
   qint64 m_ms0;
-  qint16 m_ramp;
+  qint32 m_ramp;
 
   unsigned m_frameRate;
   ModulatorState volatile m_state;

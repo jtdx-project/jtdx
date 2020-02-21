@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on 20190226
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200124
 
 #include "soundin.h"
 
@@ -58,7 +57,7 @@ void SoundInput::start(QAudioDeviceInfo const& device, int framesPerBuffer, Audi
   format.setCodec ("audio/pcm");
   format.setSampleRate (12000 * downSampleFactor);
   format.setSampleType (QAudioFormat::SignedInt);
-  format.setSampleSize (16);
+  format.setSampleSize (32);
   format.setByteOrder (QAudioFormat::Endian (QSysInfo::ByteOrder));
   if (!format.isValid ())
     {
