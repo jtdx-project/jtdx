@@ -7064,9 +7064,9 @@ void MainWindow::networkError (QString const& e)
 
 void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
 {
-  QString t1;
   while(p1.canReadLine()) {
     QString t(p1.readLine());
+    QString t1;
     if(t.indexOf("<DecodeFinished>") >= 0) {
       m_bDecoded = m_nWSPRdecodes > 0;
       if(!m_diskData) {
@@ -7135,7 +7135,6 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
         azdist_(const_cast <char *> (m_config.my_grid ().toLatin1().constData()),
                 const_cast <char *> (grid.toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,6,6);
-        QString t1;
         if(m_config.miles()) {
           t1.sprintf("%7d",nDmiles);
         } else {
