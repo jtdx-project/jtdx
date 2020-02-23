@@ -7065,7 +7065,7 @@ void MainWindow::networkError (QString const& e)
 void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
 {
   while(p1.canReadLine()) {
-    QString t(p1.readLine());
+    QString t = QString(p1.readLine());
     QString t1;
     if(t.indexOf("<DecodeFinished>") >= 0) {
       m_bDecoded = m_nWSPRdecodes > 0;
