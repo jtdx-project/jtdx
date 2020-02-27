@@ -355,12 +355,10 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                   }
                   if (status == t.stx_c) t.count += 1;
                   else {
-                    printf ("reset count %d to 1 %d,%d,%d\n",t.count,t.stx_c,status,t.direction); 
                     t.count = 1;
                   }
                   _CQ.count = 0;
               } else if (status > RCQ && status != t.srx_c) {
-                printf ("reset count %d to 0 %d,%d,%d\n",t.count,t.srx_c,status,t.direction); 
                 t.count = 0;
               }
             }
