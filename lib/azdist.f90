@@ -1,7 +1,7 @@
 subroutine azdist(MyGrid,HisGrid,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
 
   character(len=*) :: MyGrid,HisGrid
-  character*6 mygrid0,hisgrid0
+  character*8 mygrid0,hisgrid0
   real*8 utch,utch0
   logical HotABetter,IamEast
   real eltab(22),daztab(22)
@@ -9,7 +9,7 @@ subroutine azdist(MyGrid,HisGrid,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
        2.,1.5,1.,0.8,0.6,0.4,0.2,0.0,0.0/
   data daztab/21.,18.,16.,15.,14.,13.,12.,11.,10.7,10.3,10.,    &
        10.,10.,10.,10.,10.,10.,9.,9.,9.,8.,8./
-  data mygrid0/"      "/,hisgrid0/"      "/,utch0/-999.d0/
+  data mygrid0/"        "/,hisgrid0/"        "/,utch0/-999.d0/
   save
 
   if(MyGrid.eq.HisGrid) then
@@ -29,10 +29,14 @@ subroutine azdist(MyGrid,HisGrid,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
   hisgrid0=hisgrid
   utchours=utch
 
-  if(MyGrid(5:5).eq.' ') MyGrid(5:5)='m'
-  if(MyGrid(6:6).eq.' ') MyGrid(6:6)='m'
-  if(HisGrid(5:5).eq.' ') HisGrid(5:5)='m'
-  if(HisGrid(6:6).eq.' ') HisGrid(6:6)='m'
+  if(MyGrid(5:5).eq.' ') MyGrid(5:5)='l'
+  if(MyGrid(6:6).eq.' ') MyGrid(6:6)='l'
+  if(HisGrid(5:5).eq.' ') HisGrid(5:5)='l'
+  if(HisGrid(6:6).eq.' ') HisGrid(6:6)='l'
+  if(MyGrid(7:7).eq.' ') MyGrid(7:7)='5'
+  if(MyGrid(8:8).eq.' ') MyGrid(8:8)='5'
+  if(HisGrid(7:7).eq.' ') HisGrid(7:7)='5'
+  if(HisGrid(8:8).eq.' ') HisGrid(8:8)='5'
 
   if(MyGrid.eq.HisGrid) then
      Az=0.

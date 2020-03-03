@@ -341,7 +341,7 @@ subroutine packbits(dbits,nsymd,m0,sym)
    if(text) go to 900
 
  ! OK, we have a properly formatted grid locator
- 40 call grid2deg(grid//'mm',dlong,dlat)
+ 40 call grid2deg(grid//'ll55',dlong,dlat)
    long=int(dlong)
    lat=int(dlat+ 90.0)
    ng=((long+180)/2)*180 + lat
@@ -879,7 +879,7 @@ subroutine packbits(dbits,nsymd,m0,sym)
 
    character*6 grid
 
-   call grid2deg(grid,xlong,xlat)
+   call grid2deg(grid//'55',xlong,xlat)
    nlong=nint(xlong)
    nlat=nint(xlat)
    k=0
