@@ -1,4 +1,4 @@
-! last time modified by Igor UA3DJY on 20200218
+! last time modified by Igor UA3DJY on 20200302
 
 subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
@@ -777,7 +777,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 !print *,qual,msg37
     rxdt=xdt-0.5
-    if(qual.lt.0.39 .or. xsnr.lt.-22.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9) then
+    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9) then
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
       else; call chkfalse8(msg37,i3,n3,nbadcrc,iaptype); endif
       if(nbadcrc.eq.1) then; msg37=''; return; endif

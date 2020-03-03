@@ -16,6 +16,7 @@ subroutine searchcalls(callsign1,callsign2,lfound)
   ncycles=2; if(callsign2.eq."            ") ncycles=1
   do j=1,ncycles
     if(j.eq.1) then; callsign0=callsign1; else; callsign0=callsign2; endif
+    if(callsign0.eq."TU;") cycle
     if(callsign0(1:1).lt."N") then
       if(callsign0(1:1).lt."I") then
         if(callsign0(1:1).lt."E") then

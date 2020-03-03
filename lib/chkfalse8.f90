@@ -1,11 +1,11 @@
-! last time modified by Igor UA3DJY on 20191202
+! last time modified by Igor UA3DJY on 20200302
 
 subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 
   use ft8_mod1, only : mycall,hiscall
   character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12
   integer, intent(in) :: i3,n3
-  logical(1) falsedec
+  logical(1) falsedec,lchkgrid
 
   call_a='            '; call_b='            '
 ! iaptype=0 non-AP decoder
@@ -55,7 +55,37 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
         callsign=msg37(ispc1+1:ispc2-1)
         grid=msg37(ispc2+1:ispc3-1)
         include 'callsign_q.f90'
-        if(grid(1:2).eq.'GC' .or. grid(1:2).eq.'RH') then
+lchkgrid=.false.
+if(grid(1:1).ge.'A' .and. grid(1:1).ge.'I') then
+  if((grid(1:1).eq.'A' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'N') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'B' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'J') .or. grid(2:2).eq.'N' .or. grid(2:2).eq.'M' .or. &
+       grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'C' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'L') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'D' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'J') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'E' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'H') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'F' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'C') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'G' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'E') .or. (grid(2:2).ge.'K' .and. grid(2:2).le.'M') .or. &
+       grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'H' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'G') .or. (grid(2:2).ge.'J' .and. grid(2:2).le.'O') .or. & 
+       grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'I' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'I') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R'))) &
+    lchkgrid=.true.
+else  if(grid(1:1).ge.'J' .and. grid(1:1).ge.'R') then
+  if((grid(1:1).eq.'J' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'E'))) .or. &
+     (grid(1:1).eq.'K' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'E'))) .or. &
+     (grid(1:1).eq.'L' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'F') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'M' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'I') .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'N' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'H') .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'O' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'E') .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'P' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'E') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'Q' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'D') .or. grid(2:2).eq.'Q' .or. grid(2:2).eq.'R')) .or. &
+     (grid(1:1).eq.'R' .and. ((grid(2:2).ge.'A' .and. grid(2:2).le.'D') .or. (grid(2:2).ge.'I' .and. grid(2:2).le.'N') .or. &
+       grid(2:2).eq.'Q' .or. grid(2:2).eq.'R'))) lchkgrid=.true.
+else if (grid(1:1).ge.'0' .and. grid(1:1).ge.'9') then
+  lchkgrid=.true.
+endif
+!        if(grid(1:2).eq.'GC' .or. grid(1:2).eq.'RH') then
+        if(lchkgrid) then
           falsedec=.false.
           call chkflscall('CQ          ',callsign,falsedec)
           if(falsedec) then; nbadcrc=1; &

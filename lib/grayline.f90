@@ -1,6 +1,6 @@
 subroutine grayline(nyear,month,nday,uth,mygrid,nduration,isun)
 
-  character*6 mygrid
+  character*8 mygrid
   real LST
   real lat,lon
 
