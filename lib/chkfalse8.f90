@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200303
-
 subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 
   use ft8_mod1, only : mycall,hiscall
@@ -90,13 +88,44 @@ if(.not.lchkcall) then
   if((callsign(1:1).eq.'A' .and. callsign(2:2).gt.'@' .and. callsign(2:2).lt.'M') .or. callsign(1:1).eq.'K' .or. &
      callsign(1:1).eq.'N' .or. callsign(1:1).eq.'W') then
     if((grid(1:1).gt.'B' .and. grid(1:1).lt.'G' .and. (grid(1:1).eq.'M' .or. grid(1:1).eq.'N')) .or. grid(1:2).eq.'DL' .or. &
-       grid(1:2).eq.'EL' .or. grid(1:2).eq.'BP' .or. grid(1:2).eq.'AP' .or. grid(1:2).eq.'BL' .or. grid(1:2).eq.'BK') then
+       grid(1:2).eq.'EL' .or. grid(1:2).eq.'BP' .or. grid(1:2).eq.'AP' .or. grid(1:2).eq.'BL' .or. grid(1:2).eq.'BK') &
       lvalid=.true.
-    endif
+
+! Japan
+  else if(callsign(1:2).eq.'JA' .or. (callsign(1:1).eq.'J' .and. callsign(2:2).gt.'D' .and. callsign(2:2).lt.'T') .or. &
+         (callsign(1:1).eq.'7' .and. callsign(2:2).gt.'I' .and. callsign(2:2).lt.'O')) then
+    if(grid(1:2).eq.'PM' .or. grid(1:2).eq.'QM' .or. grid(1:2).eq.'QN' .or. grid(1:2).eq.'PN' .or. grid(1:2).eq.'PL') &
+      lvalid=.true.
+
+! Fed. Rep. of Germany
+  else if((callsign(1:1).eq.'D' .and. callsign(2:2).gt.'@' .and. callsign(2:2).lt.'S') .or. &
+          (callsign(1:1).eq.'Y' .and. callsign(2:2).gt.'1' .and. callsign(2:2).lt.':')) then
+    if((grid(1:2).eq.'JO' .and. grid(3:3).gt.'1' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5') .or. &
+       (grid(1:2).eq.'JN' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'7' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':')) &
+      lvalid=.true.
+
+! Italy
+  else if(callsign(1:1).eq.'I') then
+    if(grid(1:2).eq.'JN' .or. grid(1:2).eq.'JM') lvalid=.true.
+
+! UK
+  else if(callsign(1:1).eq.'G' .or. callsign(1:1).eq.'M' .or. callsign(1:1).eq.'2') then
+    if(grid(1:2).eq.'IO' .or. grid(1:2).eq.'JO' .or. grid(1:4).eq.'IP90' .or. grid(1:4).eq.'IN69' .or. grid(1:4).eq.'IN89') &
+      lvalid=.true.
+
+! France
+  else if(callsign(1:1).eq.'F' .and. callsign(2:2).gt.'/' .and. callsign(2:2).lt.':') then
+    if(grid(1:2).eq.'IN' .or. grid(1:2).eq.'JN' .or. grid(1:2).eq.'JO') lvalid=.true.
+
 ! Spain
   else if((callsign(1:1).eq.'A' .and. callsign(2:2).gt.'L' .and. callsign(2:2).lt.'P') .or. (callsign(1:1).eq.'E' .and. &
           callsign(2:2).gt.'@' .and. callsign(2:2).lt.'I')) then
-    if(grid(1:2).eq.'IN' .or. grid(1:2).eq.'IM' .or. grid(1:2).eq.'JN' .or. grid(1:2).eq.'JM') lvalid=.true.
+    if((grid(1:2).eq.'IN' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4') .or. &
+       (grid(1:2).eq.'IM' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or. &
+       (grid(1:2).eq.'JN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2') .or. &
+       (grid(1:2).eq.'JM' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'7' .and. grid(4:4).lt.':') .or. &
+       (grid(1:2).eq.'IL' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':') .or. &
+       grid(1:4).eq.'IM12' .or. grid(1:4).eq.'IM13') lvalid=.true.
 ! Pakistan
   else if((callsign(1:1).eq.'A' .and. callsign(2:2).gt.'O' .and. callsign(2:2).lt.'T') .or. (callsign(1:1).eq.'6' .and. &
           callsign(2:2).gt.'O' .and. callsign(2:2).lt.'T')) then
@@ -176,7 +205,7 @@ if(.not.lchkcall) then
 ! Portugal and Madeira
   else if(callsign(1:1).eq.'C' .and. callsign(2:2).gt.'P' .and. callsign(2:2).lt.'U') then
     if(grid(1:3).eq.'IN5' .or. grid(1:3).eq.'IN6' .or. grid(1:3).eq.'IM5' .or. grid(1:3).eq.'IM6' .or. &
-	grid(1:4).eq.'IM12' .or. grid(1:4).eq.'IM13') lvalid=.true.
+       grid(1:4).eq.'IM12' .or. grid(1:4).eq.'IM13') lvalid=.true.
 ! Azores
   else if(callsign(1:2).eq.'CU') then
     if(grid(1:2).eq.'HM' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8') lvalid=.true.
@@ -188,6 +217,41 @@ if(.not.lchkcall) then
     if((grid(1:2).eq.'JI' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':') .or. &
        (grid(1:2).eq.'JH' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.':') .or. &
         grid(1:3).eq.'KH0' .or. grid(1:3).eq.'KH1') lvalid=.true.
+! Cape Verde
+  else if(callsign(1:2).eq.'D4' .and. ((grid(1:3).eq.'HK7' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'8') .or. &
+    (grid(1:3).eq.'HK8' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'7'))) then
+    lvalid=.true.
+! Liberia
+  else if(callsign(1:2).eq.'D5' .or. callsign(1:2).eq.'5L' .or. callsign(1:2).eq.'5M' .or. callsign(1:2).eq.'6Z' .or. &
+     callsign(1:2).eq.'A8' .or. callsign(1:2).eq.'EL') then
+    if(grid(1:2).eq.'IJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'7' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'9') &
+      lvalid=.true.
+! Comoros
+  else if(callsign(1:2).eq.'D6' .and. grid(1:2).eq.'LH' .and. (grid(3:4).eq.'17' .or. grid(3:4).eq.'18' .or. &
+    grid(3:4).eq.'27')) then
+    lvalid=.true.
+! Republic of Korea
+  else if((callsign(1:1).eq.'D' .and. callsign(2:2).gt.'6' .and. callsign(2:2).lt.':') .or. &
+          (callsign(1:1).eq.'6' .and. callsign(2:2).gt.'J' .and. callsign(2:2).lt.'O') .or. &
+          callsign(1:2).eq.'DS' .or. callsign(1:2).eq.'DT' .or. callsign(1:2).eq.'HL') then
+    if(grid(1:2).eq.'PM' .and. (grid(3:3).eq.'3' .or. grid(3:3).eq.'4' .or. grid(3:4).eq.'24' .or. grid(3:4).eq.'57') .and. &
+      grid(4:4).gt.'2' .and. grid(4:4).lt.'9') lvalid=.true.
+! Philippines
+  else if((callsign(1:1).eq.'D' .and. callsign(2:2).gt.'T' .and. callsign(2:2).lt.'[') .or. &
+          (callsign(1:1).eq.'4' .and. callsign(2:2).gt.'C' .and. callsign(2:2).lt.'J')) then
+    if((grid(1:2).eq.'PK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3') .or. &
+       (grid(1:2).eq.'PJ' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':')) &
+      lvalid=.true.
+
+! add other
+
+! Ogasawara and Minami Torishima
+  else if(callsign(1:3).eq.'JD1') then
+    if(grid(1:4).eq.'QL04' .or. grid(1:4).eq.'QL05' .or. grid(1:4).eq.'QL16' .or. grid(1:4).eq.'QL17') lvalid=.true.
+
+  else if(callsign(1:2).eq.'JB' .or. callsign(1:2).eq.'JC' .or. &
+   (callsign(1:2).eq.'JD' .and. callsign(3:3).gt.'1' .and. callsign(3:3).lt.':')) then
+    nbadcrc=1; msg37='                                     '; return
 
 ! add other
   endif
