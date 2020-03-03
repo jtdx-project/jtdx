@@ -4191,10 +4191,10 @@ void MainWindow::guiUpdate()
 void MainWindow::set_scheduler(QString const& setto,bool mixed)
 {
   QString newband;
-  int frq = 0;
+  Frequency frq = 0;
 
-  if (setto.contains(",")) { frq = setto.left(setto.indexOf(" ")).replace(",","").toInt(); }
-  else { frq = setto.left(setto.indexOf(" ")).replace(".","").toInt(); }
+  if (setto.contains(",")) { frq = setto.left(setto.indexOf(" ")).replace("*","").replace(",","").toInt(); }
+  else { frq = setto.left(setto.indexOf(" ")).replace("*","").replace(".","").toInt(); }
 
   if (mixed) {
     newband="JT9+JT65";
