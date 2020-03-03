@@ -1,10 +1,7 @@
-! This source code file was last time modified by Igor UA3DJY on January 18th, 2018
-! All changes are shown in the patch file coming together with the full JTDX source code.
+subroutine azdist(MyGrid,HisGrid,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
 
-subroutine azdist(grid1,grid2,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
-
-  character*(*) grid1,grid2
-  character*6 MyGrid,HisGrid,mygrid0,hisgrid0
+  character(len=*) :: MyGrid,HisGrid
+  character*6 mygrid0,hisgrid0
   real*8 utch,utch0
   logical HotABetter,IamEast
   real eltab(22),daztab(22)
@@ -14,11 +11,6 @@ subroutine azdist(grid1,grid2,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
        10.,10.,10.,10.,10.,10.,9.,9.,9.,8.,8./
   data mygrid0/"      "/,hisgrid0/"      "/,utch0/-999.d0/
   save
-
-  MyGrid=grid1//'  '
-  HisGrid=grid2//'  '
-  if(ichar(MyGrid(5:5)).eq.0)  MyGrid(5:6)='  '
-  if(ichar(HisGrid(5:5)).eq.0) HisGrid(5:6)='  '
 
   if(MyGrid.eq.HisGrid) then
      naz=0
