@@ -674,7 +674,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
     });
 
 //  setWindowTitle (program_title ());
-  setWindowTitle (QApplication::applicationName () + tr ("  by HF community                                         v") + QCoreApplication::applicationVersion () + tr (", derivative work based on WSJT-X by K1JT"));
+  setWindowTitle (program_title ());
 
   createStatusBar();
 
@@ -6894,7 +6894,7 @@ void MainWindow::pskSetLocal ()
   QString antenna_description;
   if (!matches.isEmpty ()) antenna_description = stations->index (matches.first ().row (), StationList::description_column).data ().toString ();
   // qDebug() << "To PSKreporter: local station details";
-  psk_Reporter->setLocalStation(m_config.my_callsign (), m_config.my_grid (), antenna_description, "JTDX v" + QCoreApplication::applicationVersion ());
+  psk_Reporter->setLocalStation(m_config.my_callsign (), m_config.my_grid (), antenna_description, QString {"JTDX v" + version() + " " + revision()}.simplified ());
 }
 
 void MainWindow::transmitDisplay (bool transmitting)
