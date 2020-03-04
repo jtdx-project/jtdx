@@ -4030,7 +4030,7 @@ void MainWindow::guiUpdate()
         QTextStream out(&f);
         if(m_config.write_decoded_debug()) {
           out << QDateTime::currentDateTimeUtc().toString("yyyyMMdd_hhmmss.zzz")
-              << "  JTDX v" << QCoreApplication::applicationVersion () << " Transmitting " << qSetRealNumberPrecision (12)
+              << "  JTDX v" << QCoreApplication::applicationVersion () << revision () <<" Transmitting " << qSetRealNumberPrecision (12)
               << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage << endl << "                   "
               << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
               << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
@@ -6645,7 +6645,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
                   QTextStream out(&f2);
                   out << QDateTime::currentDateTimeUtc().toString("yyyyMMdd_hhmmss")
                       << "  " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz  "
-                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << endl;
+                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << revision () << endl;
                   f2.close();
                 } else {
                   MessageBox::warning_message (this, tr ("File Open Error")
