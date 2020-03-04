@@ -1,22 +1,22 @@
 
- __       __   ______      _____  ________      __    __ 
-|  \  _  |  \ /      \    |     \|        \    |  \  |  \
-| $$ / \ | $$|  $$$$$$\    \$$$$$ \$$$$$$$$    | $$  | $$
-| $$/  $\| $$| $$___\$$      | $$   | $$ ______ \$$\/  $$
-| $$  $$$\ $$ \$$    \  __   | $$   | $$|      \ >$$  $$ 
-| $$ $$\$$\$$ _\$$$$$$\|  \  | $$   | $$ \$$$$$$/  $$$$\ 
-| $$$$  \$$$$|  \__| $$| $$__| $$   | $$       |  $$ \$$\
-| $$$    \$$$ \$$    $$ \$$    $$   | $$       | $$  | $$
- \$$      \$$  \$$$$$$   \$$$$$$     \$$        \$$   \$$
+    _____  ________  _______    __    __ 
+   |     \|        \|       \  |  \  |  \
+    \$$$$$ \$$$$$$$$| $$$$$$$\ | $$  | $$
+      | $$   | $$   | $$  | $$  \$$\/  $$
+ __   | $$   | $$   | $$  | $$   >$$  $$ 
+|  \  | $$   | $$   | $$  | $$  /  $$$$\ 
+| $$__| $$   | $$   | $$__/ $$ |  $$ \$$\
+ \$$    $$   | $$   | $$    $$ | $$  | $$
+  \$$$$$$     \$$    \$$$$$$$   \$$   \$$
                                                          
                                                          
                                                          
-Installing WSJT-X
+Installing JTDX
 =================
 
-Binary packages of WSJT-X are available from the project web site:
+Binary packages of JTDX are available from the project web site:
 
-       http://www.physics.princeton.edu/pulsar/K1JT/wsjtx.html
+       https://jtdx.eu
 
 
 Building from Source
@@ -28,7 +28,7 @@ For MS  Windows see the section  "Building from Source on  MS Windows"
 below. For  Apple Mac see the  section "Building from Source  on Apple
 Mac".
 
-Qt v5, preferably v5.1 or later is required to build WSJT-X.
+Qt v5, preferably v5.9 or later is required to build JTDX
 
 Qt v5 multimedia  support and serial port is necessary  as well as the
 core  Qt   v5  components,  normally  installing   the  Qt  multimedia
@@ -50,17 +50,16 @@ require this so normally you  can choose not to install libusb-1.0-dev
 but if you have  a SoftRock USB or similar SDR that  uses a custom USB
 interface then it is required.
 
-The Hamlib  library is  required. Currently WSJT-X  needs to  be built
+The Hamlib  library is  required. Currently JTX  needs to  be built
 using a  forked version of the  Hamlib git master. This  fork contains
 patches  not yet  accepted by  the Hamlib  development team  which are
-essential for  correct operation of  WSJT-X. To build the  Hamlib fork
+essential for  correct operation of  JTDX. To build the  Hamlib fork
 from sources something like the following recipe should suffice:
 
 $ mkdir ~/hamlib-prefix
 $ cd ~/hamlib-prefix
-$ git clone git://git.code.sf.net/u/bsomervi/hamlib src
+$ git clone git://github.com/jtdx-project/jtdxhamlib src
 $ cd src
-$ git checkout integration
 $ ./bootstrap
 $ mkdir ../build
 $ cd ../build
@@ -74,23 +73,22 @@ $ make install-strip
 
 This will build a binary  hamlib package located at ~/hamlib-prefix so
 you will need  to add that to your CMAKE_PREFIX_PATH  variable in your
-WSJT-X build.  On Linux  that is  probably the only  path you  have on
+JTDX build.  On Linux  that is  probably the only  path you  have on
 CMAKE_PREFIX_PATH  unless  you  are   using  a  locally  installed  Qt
 installation.
 
 To get the  sources either download and extract a  source tarball from
 the project web site or preferably fetch the sources directly from the
-project's  subversion repository.  The  project svn  repository has  a
-non-standard layout  in that the WSJT-X  project is not on  the trunk,
-instead the main code line is in a branch at ^/branches/wsjtx
+project's git repository.
 
-$ mkdir -p ~/wsjtx-prefix/build
-$ cd ~/wsjtx-prefix
-$ svn checkout svn://svn.code.sf.net/p/wsjt/wsjt/branches/wsjtx src
+$ mkdir -p ~/jtdx-prefix/build
+$ cd ~/jtdx-prefix
+$ git clone git://github.com/jtdx-project/jtdx src
 
-To build WSJT-X you will need CMake and asciidoc installed.
 
-$ cd ~/wsjtx-prefix/build
+To build JTDX you will need CMake and asciidoc installed.
+
+$ cd ~/jtdx-prefix/build
 $ cmake -D CMAKE_PREFIX_PATH=~/hamlib-prefix ../src
 $ cmake --build .
 $ cmake --build . --target install
@@ -99,13 +97,13 @@ The recipe  above will install  into /usr by  default, if you  wish to
 install  in  you own  directory  you  can  add  a prefix-path  to  the
 configure step like:
 
-$ cd ~/wsjtx-prefix/build
+$ cd ~/jtdx-prefix/build
 $ cmake -D CMAKE_PREFIX_PATH=~/hamlib-prefix \
-   -D CMAKE_INSTALL_PREFIX=~/wsjtx-prefix ../src
+   -D CMAKE_INSTALL_PREFIX=~/jtdx-prefix ../src
 $ cmake --build .
 $ cmake --build . --target install
 
-this will install WSJT-X at ~/wsjtx-prefix.
+this will install JTDX at ~/jtdx-prefix.
 
 
 Building from Source on MS Windows
@@ -113,7 +111,7 @@ Building from Source on MS Windows
 
 Because  building on  MS  Windows  is quite  complicated  there is  an
 Software Development Kit available  that provides all the prerequisite
-libraries and tools for building  WSJT-X. This SDK is called JT-SDK-QT
+libraries and tools for building  JTDX. This SDK is called JT-SDK-QT
 which is documented here:
 
 http://physics.princeton.edu/pulsar/K1JT/wsjtx-doc/dev-guide-main.html
@@ -131,12 +129,12 @@ http://libusb.info/,  install   it  in  a  convenient   location  like
 C:\Tools.
 
 On Windows there is a complication in that the compilers used to build
-Qt  and WSJT-X  are the  MinGW ones  bundled with  the Qt  package but
+Qt  and JTDX  are the  MinGW ones  bundled with  the Qt  package but
 Hamlib needs to be build from an MSYS shell with the tools required to
 build  an autotools  project. This  means that  you need  to tell  the
 Hamlib configuration  to use  the Qt bundled  MinGW compilers  (if you
 don't  then  the  thread  support   library  use  by  Hamlib  will  be
-incompatible  with that  used by  Qt and  WSJT-X). So  on Windows  the
+incompatible  with that  used by  Qt and  JTDX). So  on Windows  the
 Hamlib build recipe is something like:
 
 In an MSYS shell:-
@@ -178,14 +176,6 @@ Hamlib binary location as one of the paths in CMAKE_PREFIX_PATH.
 Building from Source on Apple Mac
 =================================
 
-These instructions are adapted from my Evernote page at:
-
-    https://www.evernote.com/pub/bsomervi/wsjt-xmacbuilds
-
-There are several  ways to get the required GNU  and other open source
-tools and libraries installed, my preference is MacPorts because it is
-easy to use and does everything we need.
-
 You  will need  Xcode, MacPorts,  CMake  and, Qt.   The Xcode  install
 instructions are included in the MacPorts documentation.
 
@@ -206,18 +196,18 @@ automake
 libtool
 pkgconfig
 texinfo
-gcc5
-fftw-3-single +gcc5
+gcc9
+fftw-3-single +gcc9
 asciidoc
 libusb-devel
 
 These are installed by typing:
 
 $ sudo port install autoconf automake \
-   libtool pkgconfig texinfo gcc5 asciidoc \
-   fftw-3-single +gcc5 libusb-devel
+   libtool pkgconfig texinfo gcc9 asciidoc \
+   fftw-3-single +gcc9 libusb-devel
 
-Once complete you should have all the tools required to build WSJT-X.
+Once complete you should have all the tools required to build JTDX.
 
 Uninstalling MacPorts
 ---------------------
@@ -233,13 +223,9 @@ First fetch hamlib from the repository, in this case my fork of Hamlib
 
 $ mkdir -p ~/hamlib-prefix/build
 $ cd ~/hamlib-prefix
-$ git clone git://git.code.sf.net/u/bsomervi/hamlib src
+$ git clone git://github.com/jtdx-project/jtdxhamlib src
 $ cd src
-$ git checkout integration
 $ ./bootstrap
-
-The integration  branch is my system  testing branch which has  all my
-latest published changes.
 
 To build:
 
@@ -249,7 +235,7 @@ $ ../src/configure \
    --disable-shared \
    --disable-winradio \
    --prefix=$HOME/hamlib-prefix \
-   CFLAGS="-g -O2 -mmacosx-version-min=10.7 -I/opt/local/include" \
+   CFLAGS="-g -O2 -mmacosx-version-min=10.13 -I/opt/local/include" \
    LIBUSB_LIBS="-L/opt/local/lib -lusb-1.0"
 $ make
 $ make install-strip
@@ -260,6 +246,9 @@ The   above  commands   will  build   hamlib  and   install  it   into
 
 Qt
 --
+Preferable is install qt from macports.
+sudo port install qt5
+
 
 NOTE: As of Qt  v5.4 building Qt from source on Mac OS  X is no longer
 necessary since the  Qt team have switched to using  the modern libc++
@@ -271,7 +260,7 @@ X 64-bit. The binary installer is here:
 
 The    binary   Qt    distributions    prior   to    Qt   v5.4    from
 http://www.qt.io/download unfortunately are built to use the libstdc++
-C++ support  library, WSJT-X uses  a less geriatric C++  dialect which
+C++ support  library, JTDX uses  a less geriatric C++  dialect which
 uses the  libc++ C++  support library.   This means  that you  need to
 build Qt from sources. This is not difficult but does take some time.
 
@@ -330,35 +319,35 @@ $ sudo chgrp wheel /usr/local/bin
 and then retry the install command.
 
 
-WSJT-X
+JTDX
 ------
 First fetch the source from the repository:
 
-$ mkdir -p ~/wsjtx-prefix/build
-$ cd ~/wsjtx-prefix
-$ svn checkout svn://svn.code.sf.net/p/wsjt/wsjt/branches/wsjtx src
+$ mkdir -p ~/jtdx-prefix/build
+$ cd ~/jtdx-prefix
+$ git clone git://github.com/jtdx-project/jtdx src
 
-this links to the Subversion repository in a read-only fashion, if you
+this links to the Git repository in a read-only fashion, if you
 intend to  contribute to the project  then you probably want  to get a
 developer login  and use a read-write  checkout. Even if you  don't it
 can be upgraded at a later date.
 
-The checkout  is of  the latest  code on the  project trunk,  i.e. the
+The checkout  is of  the latest  code on the  project master,  i.e. the
 development  branch. You  can easily  switch the  checkout to  another
 branch  or  even  a  tag  if  you want  to  build  a  prior  published
 generation. For now  we will build the latest  development sources. To
 configure:
 
-$ cd ~/wsjtx-prefix/build
-$ FC=gfortran-mp-5 \
+$ cd ~/jtdx-prefix/build
+$ FC=gfortran-mp-9 \
    cmake \
-   -D CMAKE_PREFIX_PATH="~/Qt/5.7/clang_64;~/hamlib-prefix;/opt/local" \
-   -D CMAKE_INSTALL_PREFIX=~/wsjtx-prefix \
-   -D CMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk \
-   ~/wsjtx-prefix/src
+   -D CMAKE_PREFIX_PATH="/opt/local/libexec/qt5;~/hamlib-prefix;/opt/local" \
+   -D CMAKE_INSTALL_PREFIX=~/jtdx-prefix \
+   -D CMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk \
+   ~/jtddx-prefix/src
 
 Substitute the  Mac OS X SDK  version you have installed  in the above
-command if you have a different version from 10.11.
+command if you have a different version from 10.15.
 
 The CMAKE_PREFIX_PATH variable specifies where CMake should look first
 for other packages, the two  elements may be different depending where
@@ -370,7 +359,7 @@ option above in the Hamlib section).
 If you already have the fftw3-dev  package installed on your system it
 may well get selected in preference to  the one you built above in the
 MacPorts installation.  It is  unlikely that  a prior  installation of
-libfftw3f is  correctly configured  for use in  a WSJT-X  package, the
+libfftw3f is  correctly configured  for use in  a JTDX  package, the
 CMAKE_PREFIX_PATH above  is augmented  with the  MacPorts installation
 location  (/opt/local)  to  ensure  the  correct  libfftw3f.dylib  and
 headers are located.
@@ -380,7 +369,7 @@ To build:
 $ cmake --build .
 $ cmake --build . --target install
 
-which installs the WSJT-X application bundle into ~/wsjtx-prefix
+which installs the JTDX application bundle into ~/jtdx-prefix
 
 
 Updating and Rebuilding Hamlib
@@ -399,18 +388,16 @@ $ make
 $ make install-strip
 
 
-Updating and Rebuilding WSJT-X
+Updating and Rebuilding JTDX
 ==============================
 
 To update to the latest sources type:
 
-$ cd ~/wsjtx-prefix/src
-$ svn update
-$ cd ~/wsjtx-prefix/build
+$ cd ~/jtdx-prefix/src
+$ git pull
+$ cd ~/jtdx-prefix/build
 $ cmake --build .
 $ cmake --build . --target install
 
 
 73
-Bill
-G4WJS.
