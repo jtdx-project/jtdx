@@ -16,13 +16,15 @@ set (hamlib_LIBRARY_DIRS)
 
 # pkg-config?
 find_path (__hamlib_pc_path NAMES hamlib.pc
-  PATH_SUFFIXES lib/pkgconfig
+  PATH_SUFFIXES lib/pkgconfig lib64/pkgconfig
   )
 if (__hamlib_pc_path)
-  set (ENV{PKG_CONFIG_PATH} "${__hamlib_pc_path}" "$ENV{PKG_CONFIG_PATH}")
-  unset (__hamlib_pc_path CACHE)
+  set (__pc_path $ENV{PKG_CONFIG_PATH})
+  list (APPEND __pc_path "${__hamlib_pc_path}")
+  set (ENV{PKG_CONFIG_PATH} "${__pc_path}")
+  unset (__pc_path CACHE)
 endif ()
-message (STATUS "ENV{PKG_CONFIG_PATH} $ENV{PKG_CONFIG_PATH}")
+unset (__hamlib_pc_path CACHE)
 
 # Use pkg-config to get hints about paths, libs and, flags
 unset (__pkg_config_checked_hamlib CACHE)
@@ -48,7 +50,11 @@ if (NOT PC_HAMLIB_FOUND)
 
   # libusb-1.0 has no pkg-config file on Windows so we have to find it
   # ourselves
-  find_library (LIBUSB NAMES usb-1.0 PATH_SUFFIXES MinGW32/dll)
+  if (CMAKE_SIZEOF_VOID_P MATCHES "8")
+    find_library (LIBUSB NAMES usb-1.0 PATH_SUFFIXES MinGW64/dll)
+  else ()
+    find_library (LIBUSB NAMES usb-1.0 PATH_SUFFIXES MinGW32/dll)
+  endif ()
   if (LIBUSB)
     set (hamlib_EXTRA_LIBRARIES ${LIBUSB} ${hamlib_EXTRA_LIBRARIES})
     get_filename_component (hamlib_libusb_path ${LIBUSB} PATH)
