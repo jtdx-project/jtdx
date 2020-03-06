@@ -314,14 +314,11 @@ if(.not.lchkcall) then
        (grid(1:2).eq.'FD' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':')) &
       lgvalid=.true.
 
-! some not valid callsigns
+! not valid callsigns
   else if((callsign(1:1).eq.'C' .and. (callsign(2:2).eq.'0' .or. callsign(2:2).eq.'1' .or. callsign(2:2).eq.'7')) .or. &
           (callsign(1:1).eq.'2' .and. ((callsign(2:2).gt.'M' .and. callsign(2:2).lt.'U') .or. callsign(2:2).eq.'V' .or. &
           (callsign(2:2).gt.'W' .and. callsign(2:2).lt.'['))) .or. &
-          callsign(1:2).eq.'E1' .or. callsign(1:2).eq.'H1' .or. &
-          (callsign(1:1).eq.'J' .and. (callsign(2:2).eq.'B' .or. callsign(2:2).eq.'C' .or. callsign(2:2).eq.'9' .or. &
-           callsign(2:2).eq.'Z')) .or. &
-          (callsign(1:2).eq.'JD' .and. callsign(3:3).gt.'1' .and. callsign(3:3).lt.':')) then
+          callsign(1:2).eq.'E1' .or. callsign(1:2).eq.'H1') then
     nbadcrc=1; msg37='                                     '; return
 
 ! Nauru, Andorra
@@ -592,7 +589,13 @@ if(.not.lchkcall) then
       if((grid(1:2).eq.'KM' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4').or. &
          (grid(1:2).eq.'KL' .and. (grid(3:4).eq.'79' .or. grid(3:4).eq.'89'))) lgvalid=.true.
 
-    endif
+! not valid callsigns
+    else if((callsign(1:1).eq.'J' .and. (callsign(2:2).eq.'B' .or. callsign(2:2).eq.'C' .or. callsign(2:2).eq.'1' .or. &
+            callsign(2:2).eq.'9' .or. callsign(2:2).eq.'Z')) .or. &
+            (callsign(1:2).eq.'JD' .and. callsign(3:3).gt.'1' .and. callsign(3:3).lt.':')) then
+      nbadcrc=1; msg37='                                     '; return
+
+    endif ! 'J'
 
   else if(callsign(1:1).eq.'L') then
 ! Luxemburg
@@ -674,9 +677,19 @@ if(.not.lchkcall) then
     else if(callsign(1:2).eq.'PZ') then
       if(grid(1:2).eq.'GJ' .and. grid(3:3).gt.'0' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.'6') &
         lgvalid=.true.
-    endif
+
+! not valid callsigns
+    else if(callsign(1:2).eq.'P1') then
+      nbadcrc=1; msg37='                                     '; return
+
+    endif ! 'P'
 
   else if(callsign(1:1).eq.'S') then
+
+! Slovenia
+    else if(callsign(1:2).eq.'S5') then
+      if(grid(1:2).eq.'JN' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'7') &
+        lgvalid=.true.
 
 ! Western Sahara
     if(callsign(1:2).eq.'S0') then
@@ -686,11 +699,6 @@ if(.not.lchkcall) then
 ! Bangladesh
     else if(callsign(1:2).eq.'S2' .or. callsign(1:2).eq.'S3') then
       if(grid(1:2).eq.'NL' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'7' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'7') &
-        lgvalid=.true.
-
-! Slovenia
-    else if(callsign(1:2).eq.'S5') then
-      if(grid(1:2).eq.'JN' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'7') &
         lgvalid=.true.
 
 ! Seychelles
@@ -703,7 +711,11 @@ if(.not.lchkcall) then
     else if(callsign(1:2).eq.'S9' .and. (grid(1:4).eq.'JJ30' .or. grid(1:4).eq.'JJ31')) then
       lgvalid=.true.
 
-    endif
+! not valid callsigns
+    else if(callsign(1:2).eq.'S1') then
+      nbadcrc=1; msg37='                                     '; return
+
+    endif ! 'S'
 
 ! Sudan
   else if(callsign(1:2).eq.'ST' .or. (callsign(1:1).eq.'6' .and. (callsign(2:2).eq.'T' .or. callsign(2:2).eq.'U'))) then
@@ -711,8 +723,128 @@ if(.not.lchkcall) then
        (grid(1:2).eq.'KL' .and. grid(3:3).gt.'1' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2') .or. &
        grid(1:4).eq.'KJ79') lgvalid=.true.
 
-! add other
+
+! Turkey
+  else if((callsign(1:1).eq.'T' .and. callsign(2:2).gt.'@' .and. callsign(2:2).lt.'D') .or. callsign(1:2).eq.'YM') then
+    if((grid(1:2).eq.'KM' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':') .or. &
+       (grid(1:2).eq.'KN' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'3') .or. &
+       (grid(1:2).eq.'LN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2') .or. &
+       (grid(1:2).eq.'LM' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':')) &
+      lgvalid=.true.  
+
+  else if(callsign(1:1).eq.'T') then
+! Tuvalu
+    if(callsign(1:2).eq.'T2') then
+      if((grid(1:2).eq.'RI' .and. (grid(3:4).eq.'91' .or. grid(3:4).eq.'92' .or. grid(3:4).eq.'82' .or.grid(3:4).eq.'83'.or. &
+         grid(3:4).eq.'84'))  .or. grid(1:4).eq.'RH99') lgvalid=.true.
+
+! Kiribati, Banana Island
+    else if(callsign(1:2).eq.'T3') then
+      if(grid(1:1).eq.'R') then
+        if((grid(1:3).eq.'RJ6' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4') .or. &
+           (grid(1:3).eq.'RI7' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':') .or. &
+           grid(1:4).eq.'RI49' .or. grid(1:4).eq.'RI87' .or. grid(1:4).eq.'RI88') lgvalid=.true.
+      else if(grid(1:1).eq.'A') then
+        if((grid(1:2).eq.'AI' .and. grid(3:3).gt.'1' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'4' .and. &
+            grid(4:4).lt.'8') .or. grid(1:4).eq.'AJ94') lgvalid=.true.
+      else if(grid(1:1).eq.'B') then
+        if(grid(1:4).eq.'BJ03' .or. grid(1:4).eq.'BJ11' .or. grid(1:4).eq.'BJ12' .or. &
+           (grid(1:3).eq.'BI2' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'7') .or. &
+           grid(1:4).eq.'BH48' .or. grid(1:4).eq.'BH49' .or. grid(1:4).eq.'BI40') lgvalid=.true.
+      endif
+
+! San Marino
+    else if(callsign(1:2).eq.'T7' .and. grid(1:4).eq.'JN63') then
+      lgvalid=.true.
+
+! Palau
+    else if(callsign(1:2).eq.'T8') then
+      if(grid(1:2).eq.'PJ' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.'9') &
+        lgvalid=.true.
+
+! Iceland
+    else if(callsign(1:2).eq.'TF') then
+      if((grid(1:2).eq.'HP' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'7').or. &
+         (grid(1:2).eq.'IP' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'7')) &
+        lgvalid=.true.
+
+! Guatemala
+    else if(callsign(1:2).eq.'TG' .or. callsign(1:2).eq.'TD') then
+      if(grid(1:2).eq.'EK' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'6' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'8') &
+        lgvalid=.true.
+
+! Costa Rica, Cocos Island
+    else if(callsign(1:2).eq.'TI' .or. callsign(1:2).eq.'TE') then
+      if((grid(1:2).eq.'EK' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2').or. &
+         (grid(1:2).eq.'EJ' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'7' .and. grid(4:4).lt.':').or. &
+         grid(1:4).eq.'EJ65') lgvalid=.true.
+
+! Cameroon
+    else if(callsign(1:2).eq.'TJ') then
+      if((grid(1:2).eq.'JJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'JK' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4')) &
+        lgvalid=.true.
+
+! Corsica
+    else if(callsign(1:2).eq.'TK') then
+      if(grid(1:3).eq.'JN4' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'4') lgvalid=.true.
+
+! Central African Republic
+    else if(callsign(1:2).eq.'TL') then
+      if((grid(1:2).eq.'JJ' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'KJ' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'KK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).eq.'0')) lgvalid=.true.
+
+! Republic of the Congo
+    else if(callsign(1:2).eq.'TN') then
+      if((grid(1:2).eq.'JI' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'JJ' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4')) &
+        lgvalid=.true.
+
+! Gabon
+    else if(callsign(1:2).eq.'TR') then
+      if(callsign(1:5).eq.'TR8CA' .or. &
+         (grid(1:2).eq.'JJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'3').or. &
+         (grid(1:2).eq.'JI' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':')) &
+        lgvalid=.true.
+
+! Chad
+    else if(callsign(1:2).eq.'TT') then
+      if((grid(1:2).eq.'JK' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':') .or. &
+         (grid(1:2).eq.'JJ' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':').or. &
+         grid(1:4).eq.'KJ09' .or. &
+         (grid(1:2).eq.'KK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2') .or. &
+         (grid(1:2).eq.'JL' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'4').or. &
+         (grid(1:2).eq.'KL' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2')) &
+        lgvalid=.true.
+
+! Cote d'Ivoire:
+    else if(callsign(1:2).eq.'TU') then
+      if((grid(1:2).eq.'IJ' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'IK' .and. (grid(3:4).eq.'60' .or. grid(3:4).eq.'70' .or. grid(3:4).eq.'50'))) lgvalid=.true.
+
+! Benin:
+    else if(callsign(1:2).eq.'TY') then
+      if((grid(1:2).eq.'JJ' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'1' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'JK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'1' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'3')) &
+        lgvalid=.true.
+
+! Mali:
+    else if(callsign(1:2).eq.'TZ') then
+      if((grid(1:2).eq.'IK' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.':') .or. &
+         (grid(1:2).eq.'JK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'IL' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5').or. &
+         (grid(1:2).eq.'JL' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2')) &
+        lgvalid=.true.
+
+! not valid callsigns
+    else if(callsign(1:2).eq.'T1') then
+      nbadcrc=1; msg37='                                     '; return
+
+    endif ! 'T'
   endif
+! add other
+
 endif
 
         if(lchkcall .or. .not.lgvalid) then
