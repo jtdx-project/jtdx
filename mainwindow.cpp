@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200209
-
 //-------------------------------------------------------- MainWindow
 
 #include "mainwindow.h"
@@ -2204,6 +2202,9 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
         ui->filterButton->click();
         return;
       }
+      break;
+    case Qt::Key_Escape:
+      haltTx("TX halted via Escape button ");
       break;
     }
 
