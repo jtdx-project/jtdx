@@ -160,7 +160,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
-        <translation type="finished">Töösageduste lähtestamine</translation>
+        <translation>Töösageduste lähtestamine</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
@@ -2610,17 +2610,17 @@ UDP server %2:%3</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="184"/>
+        <location filename="../main.cpp" line="206"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="209"/>
+        <location filename="../main.cpp" line="231"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="292"/>
+        <location filename="../main.cpp" line="314"/>
         <source>Unexpected error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5489,17 +5489,37 @@ soundcard changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="147"/>
+        <location filename="../main.cpp" line="159"/>
+        <source>&lt;style&gt; can be Fusion (default) or Windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="160"/>
+        <source>style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="164"/>
+        <source>Where &lt;locale&gt; can be en_US et_EE or ru_RU</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="165"/>
+        <source>locale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="169"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="148"/>
+        <location filename="../main.cpp" line="170"/>
         <source>rig-name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="152"/>
+        <location filename="../main.cpp" line="174"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation type="unfinished"></translation>
     </message>
