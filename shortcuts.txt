@@ -31,4 +31,5 @@
   <tr><td><b>Alt+V    </b></td><td>Save the most recently completed *.wav file</td></tr>
   <tr><td><b>Alt+Z    </b></td><td>Filter, this shortcut is being supported in main UI and widegraph UI</td></tr>
   <tr><td><b>Alt+Ctrl+A    </b></td><td>Clear wanted callsign list</td></tr>
+  <tr><td><b>Esc    </b></td><td>Halt Tx</td></tr>
 </table>
