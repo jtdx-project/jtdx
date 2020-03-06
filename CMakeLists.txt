@@ -1,16 +1,9 @@
-# last time modified by Igor UA3DJY on 20200217
-
 cmake_minimum_required (VERSION 2.8.10 FATAL_ERROR)
 
 if (APPLE)
   #
   # The following variables define the portability and compatability attributes of the Mac OS X build
-  # they are choosen with care and should not be changed without good cause. Note that they preclude
-  # doing a default build on OS X 10.7 since there is no 10.9 SDK available for Mac OS X 10.7. This doesn't
-  # preclude builds on newer versions of OS X being installed on Mac OS X 10.7, in fact it is exacty these
-  # options that ensure offcial build run on 10.7 and newer versions of Mac OS X. At some point it may
-  # be that some new version cannot be supported as well as 10.7, at that point the deployment target below
-  # must be moved on to 10.8 and we can no longer support Mac OS X 10.7.
+  # they are choosen with care and should not be changed without good cause.
   #
   # Among other things these options are chosen to match the portability and compatability options of the
   # Qt framework dylibs which can be checked as follows:
@@ -113,6 +106,15 @@ endif ()
 #
 include (CMakeDependentOption)
 
+# Allow the developer to select if Dynamic or Static libraries are built
+OPTION (BUILD_SHARED_LIBS "Build Shared Libraries" OFF)
+# Set the LIB_TYPE variable to STATIC
+SET (LIB_TYPE STATIC)
+if (BUILD_SHARED_LIBS)
+  # User wants to build Dynamic Libraries, so change the LIB_TYPE variable to CMake keyword 'SHARED'
+  set (LIB_TYPE SHARED)
+endif (BUILD_SHARED_LIBS)
+
 option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts
 files (WARNING: make clean will delete the source .ts files! Danger!)")
 option (WSJT_SHARED_RUNTIME "Debugging option that allows running from a shared Cloud directory.")
@@ -124,6 +126,8 @@ option (WSJT_SOFT_KEYING "Apply a ramp to CW keying envelope to reduce transient
 option (WSJT_SKIP_MANPAGES "Skip *nix manpage generation.")
 option (WSJT_GENERATE_DOCS "Generate documentation files." ON)
 option (WSJT_RIG_NONE_CAN_SPLIT "Allow split operation with \"None\" as rig.")
+option (WSJT_TRACE_UDP "Debugging option that turns on UDP message protocol diagnostics.")
+option (WSJT_BUILD_UTILS "Build simulators and code demonstrators." ON)
 
 CMAKE_DEPENDENT_OPTION (WSJT_HAMLIB_VERBOSE_TRACE "Debugging option that turns on full Hamlib internal diagnostics." OFF WSJT_HAMLIB_TRACE OFF)
 CMAKE_DEPENDENT_OPTION (WSJT_QDEBUG_IN_RELEASE "Leave Qt debugging statements in Release configuration." OFF
@@ -138,15 +142,14 @@ If you just want to see the debug output from the application then the easiest w
 attach a debugger which will then receive the console output inside its console." ON
   "WIN32" OFF)
 
-
-if (CMAKE_SIZEOF_VOID_P MATCHES 8)
-  set (PROJECT_ARCHITECTURE "x64")
-else ()
-  set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
-endif ()
+set (PROJECT_ARCHITECTURE "${CMAKE_SYSTEM_PROCESSOR}")
 if (NOT PROJECT_ARCHITECTURE)
   # This is supposed to happen already on Windows
-  set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
+  if (CMAKE_SIZEOF_VOID_P MATCHES 8)
+    set (PROJECT_ARCHITECTURE "x64")
+  else ()
+    set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
+  endif ()
 endif (NOT PROJECT_ARCHITECTURE)
 message (STATUS "******************************************************")
 message (STATUS "Building for for: ${CMAKE_SYSTEM_NAME}-${PROJECT_ARCHITECTURE}")
@@ -882,7 +885,7 @@ endif (NOT APPLE)
 #
 
 include (FortranCInterface)
-FortranCInterface_VERIFY (CXX QUIET)
+FortranCInterface_VERIFY (CXX)
 FortranCInterface_HEADER (FC.h MACRO_NAMESPACE "FC_" SYMBOL_NAMESPACE "FC_"
   SYMBOLS
   grayline
