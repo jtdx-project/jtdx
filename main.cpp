@@ -9,6 +9,7 @@
 
 #include <QDateTime>
 #include <QApplication>
+#include <QTranslator>
 #include <QNetworkAccessManager>
 #include <QRegularExpression>
 #include <QObject>
@@ -45,6 +46,38 @@ namespace
       qsrand (seed);            // this is good for rand() as well
     }
   } seeding;
+
+  // We  can't use  the GUI  after QApplication::exit()  is called  so
+  // uncaught exceptions can  get lost on Windows  systems where there
+  // is    no    console    terminal,     so    here    we    override
+  // QApplication::notify() and  wrap the base  class call with  a try
+  // block to catch and display exceptions in a message box.
+  class ExceptionCatchingApplication final
+    : public QApplication
+  {
+  public:
+    explicit ExceptionCatchingApplication (int& argc, char * * argv)
+      : QApplication {argc, argv}
+    {
+    }
+    bool notify (QObject * receiver, QEvent * e) override
+    {
+      try
+        {
+          return QApplication::notify (receiver, e);
+        }
+      catch (std::exception const& e)
+        {
+          MessageBox::critical_message (nullptr, translate ("main", "Fatal error"), e.what ());
+          throw;
+        }
+      catch (...)
+        {
+          MessageBox::critical_message (nullptr, translate ("main", "Unexpected fatal error"));
+          throw;
+        }
+    }
+  };
 }
 
 int main(int argc, char *argv[])
@@ -60,10 +93,50 @@ int main(int argc, char *argv[])
   // Multiple instances:
   QSharedMemory mem_jtdxjt9;
 
-  QApplication a(argc, argv);
+  ExceptionCatchingApplication a(argc, argv);
   if (has_style) a.setStyle("Fusion");
   try
     {
+      //
+      // Enable i18n
+      //
+      QLocale localeUsedToDeterminateTranslators = QLocale::system();
+      Q_FOREACH(QString ab, a.arguments()) {
+          if (ab.startsWith("--locale=")) {
+             localeUsedToDeterminateTranslators = QLocale (ab.mid(9));
+             break;
+          }
+      }
+      
+      QTranslator translator_from_resources;
+      // Default translations for releases  use translations stored in
+      // the   resources   file    system   under   the   Translations
+      // directory. These are built by the CMake build system from .ts
+      // files in the translations source directory. New languages are
+      // added by  enabling the  UPDATE_TRANSLATIONS CMake  option and
+      // building with the  new language added to  the LANGUAGES CMake
+      // list  variable.  UPDATE_TRANSLATIONS  will preserve  existing
+      // translations  but   should  only  be  set   when  adding  new
+      // languages.  The  resulting .ts  files should be  checked info
+      // source control for translators to access and update.
+      has_style = translator_from_resources.load (localeUsedToDeterminateTranslators, "jtdx", "_", ":/Translations");
+      if (has_style) {
+          a.installTranslator (&translator_from_resources);
+      } 
+
+      QTranslator translator_from_files;
+      // Load  any matching  translation  from  the current  directory
+      // using the locale name. This allows translators to easily test
+      // their translations  by releasing  (lrelease) a .qm  file into
+      // the    current    directory     with    a    suitable    name
+      // (e.g.  wsjtx_en_GB.qm),  then  running   wsjtx  to  view  the
+      // results. Either the system  locale setting or the environment
+      // variable LANG can be used to select the target language.
+      has_style = translator_from_files.load (QString {"jtdx_"} + localeUsedToDeterminateTranslators.name ());
+      if (has_style) {
+          a.installTranslator (&translator_from_files);
+      }
+
       setlocale (LC_NUMERIC, "C"); // ensure number forms are in
                                    // consistent format, do this after
                                    // instantiating QApplication so
@@ -82,6 +155,16 @@ int main(int argc, char *argv[])
       auto version_option = parser.addVersionOption ();
 
       // support for multiple instances running from a single installation
+      QCommandLineOption style_option (QString {"style"}
+                                     , a.translate ("main", "<style> can be Fusion (default) or Windows")
+                                     , a.translate ("main" , "style"));
+      parser.addOption (style_option);
+
+      QCommandLineOption locale_option (QString {"locale"}
+                                     , a.translate ("main", "Where <locale> can be en_US et_EE or ru_RU")
+                                     , a.translate ("main" , "locale"));
+      parser.addOption (locale_option);
+
       QCommandLineOption rig_option (QStringList {} << "r" << "rig-name"
                                      , a.translate ("main", "Where <rig-name> is for multi-instance support.")
                                      , a.translate ("main", "rig-name"));

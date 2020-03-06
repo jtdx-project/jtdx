@@ -773,6 +773,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 # Widgets finds its own dependencies.
 find_package (Qt5Widgets 5 REQUIRED)
 find_package (Qt5Multimedia 5 REQUIRED)
+find_package (Qt5LinguistTools 5 REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -963,11 +964,41 @@ add_custom_target (ctags COMMAND ${CTAGS} -o ${CMAKE_SOURCE_DIR}/tags -R ${sourc
 add_custom_target (etags COMMAND ${ETAGS} -o ${CMAKE_SOURCE_DIR}/TAGS -R ${sources})
 
 
+# Qt i18n
+set (LANGUAGES
+  ru_RU
+  et_EE
+  )
+foreach (lang_ ${LANGUAGES})
+  file (TO_NATIVE_PATH translations/jtdx_${lang_}.ts ts_)
+  list (APPEND TS_FILES ${ts_})
+endforeach ()  
+if (UPDATE_TRANSLATIONS)
+  message (STATUS "UPDATE_TRANSLATIONS option is set.")
+  qt5_create_translation (
+    QM_FILES ${wsjt_qt_UISRCS} ${wsjtx_UISRCS} ${wsjt_qt_CXXSRCS} ${wsjtx_CXXSRCS}
+    ${TS_FILES}
+    )
+else ()
+  qt5_add_translation (QM_FILES ${TS_FILES})
+endif ()
+add_custom_target (translations DEPENDS ${QM_FILES})
+set_property (DIRECTORY PROPERTY CLEAN_NO_CUSTOM TRUE)
+# do this after i18n to stop lupdate walking the boost tree which it
+# chokes on
+if (Boost_FOUND)
+  include_directories (${Boost_INCLUDE_DIRS})
+endif ()
+
 # embedded resources
 function (add_resources resources path)
   foreach (resource_file_ ${ARGN})
     get_filename_component (name_ ${resource_file_} NAME)
-    file (TO_NATIVE_PATH ${CMAKE_SOURCE_DIR}/${resource_file_} source_)
+    if (IS_ABSOLUTE "${resource_file_}")
+      file (TO_NATIVE_PATH ${resource_file_} source_)
+    else ()
+      file (TO_NATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/${resource_file_} source_)
+    endif ()
     file (TO_NATIVE_PATH ${path}/${name_} dest_)
     set (resources_ "${resources_}\n    <file alias=\"${dest_}\">${source_}</file>")
     set (${resources} ${${resources}}${resources_} PARENT_SCOPE)
@@ -976,6 +1007,7 @@ endfunction (add_resources resources path)
 
 add_resources (wsjtx_RESOURCES "" ${TOP_LEVEL_RESOURCES})
 add_resources (wsjtx_RESOURCES /Palettes ${PALETTE_FILES})
+add_resources (wsjtx_RESOURCES /Translations ${QM_FILES})
 
 configure_file (wsjtx.qrc.in wsjtx.qrc @ONLY)
 
