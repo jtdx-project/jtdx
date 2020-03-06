@@ -1046,13 +1046,47 @@ bool Configuration::valid_udp2 () const
   return(!(server_name.trimmed().isEmpty() || port_number == 0));
 }
 
+namespace
+{
+#if defined (Q_OS_MAC)
+  char const * app_root = "/../../../";
+#else
+  char const * app_root = "/../";
+#endif
+  QString doc_path ()
+  {
+#if CMAKE_BUILD
+    if (QDir::isRelativePath (CMAKE_INSTALL_DOCDIR))
+      {
+        return QApplication::applicationDirPath () + app_root + CMAKE_INSTALL_DOCDIR;
+      }
+    return CMAKE_INSTALL_DOCDIR;
+#else
+    return QApplication::applicationDirPath ();
+#endif
+  }
+
+  QString data_path ()
+  {
+#if CMAKE_BUILD
+    if (QDir::isRelativePath (CMAKE_INSTALL_DATADIR))
+      {
+        return QApplication::applicationDirPath () + app_root + CMAKE_INSTALL_DATADIR + QChar {'/'} + CMAKE_PROJECT_NAME;
+      }
+    return CMAKE_INSTALL_DATADIR;
+#else
+    return QApplication::applicationDirPath ();
+#endif
+  }
+}
+
 Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget * parent)
   : QDialog {parent}
   , self_ {self}
   , ui_ {new Ui::configuration_dialog}
   , settings_ {settings}
-  , doc_dir_ {QApplication::applicationDirPath ()}
-  , data_dir_ {QApplication::applicationDirPath ()}
+  , doc_dir_ {doc_path ()}
+  , data_dir_ {data_path ()}
   , restart_sound_input_device_ {false}
   , restart_sound_output_device_ {false}
   , frequencies_ {&bands_}
@@ -1074,49 +1108,6 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   , default_audio_output_device_selected_ {false}
 {
   ui_->setupUi (this);
-
-#if !defined (CMAKE_BUILD)
-#define WSJT_SHARE_DESTINATION "."
-#define WSJT_DOC_DESTINATION "."
-#define WSJT_DATA_DESTINATION "."
-#endif
-
-#if !defined (Q_OS_WIN) || QT_VERSION >= 0x050300
-  auto doc_path = QStandardPaths::locate (QStandardPaths::DataLocation, WSJT_DOC_DESTINATION, QStandardPaths::LocateDirectory);
-  if (doc_path.isEmpty ())
-    {
-      doc_dir_.cdUp ();
-#if defined (Q_OS_MAC)
-      doc_dir_.cdUp ();
-      doc_dir_.cdUp ();
-#endif
-      doc_dir_.cd (WSJT_SHARE_DESTINATION);
-      doc_dir_.cd (WSJT_DOC_DESTINATION);
-    }
-  else
-    {
-      doc_dir_.cd (doc_path);
-    }
-
-  auto data_path = QStandardPaths::locate (QStandardPaths::DataLocation, WSJT_DATA_DESTINATION, QStandardPaths::LocateDirectory);
-  if (data_path.isEmpty ())
-    {
-      data_dir_.cdUp ();
-#if defined (Q_OS_MAC)
-      data_dir_.cdUp ();
-      data_dir_.cdUp ();
-#endif
-      data_dir_.cd (WSJT_SHARE_DESTINATION);
-      data_dir_.cd (WSJT_DATA_DESTINATION);
-    }
-  else
-    {
-      data_dir_.cd (data_path);
-    }
-#else
-  doc_dir_.cd (WSJT_DOC_DESTINATION);
-  data_dir_.cd (WSJT_DATA_DESTINATION);
-#endif
 
   {
     // Create a temporary directory in a suitable location

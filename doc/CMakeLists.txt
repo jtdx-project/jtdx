@@ -203,7 +203,7 @@ foreach (_html ${htmls})
   string (REGEX REPLACE "_en$" "" _nwe ${_nwe})
   install (FILES
     ${_html}
-    DESTINATION ${WSJT_SHARE_DESTINATION}/${WSJT_DOC_DESTINATION}
+    DESTINATION ${CMAKE_INSTALL_DOCDIR}
     RENAME ${_nwe}-${wsjtx_VERSION}${_ext}
     #COMPONENT runtime
     )
