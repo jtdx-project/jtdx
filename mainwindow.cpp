@@ -207,7 +207,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_acceptUDP {1},
   m_lastCallingFreq {1500},
   m_saveWav {0},
-  m_lang {"et_EE"},
+  m_lang {"en_US"},
   m_callMode {2},
   m_ft8Sensitivity {0},
   m_position {0},
