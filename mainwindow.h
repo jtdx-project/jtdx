@@ -8,6 +8,7 @@
 #else
 #include <QtGui>
 #endif
+//#include <QTranslator>
 #include <QThread>
 #include <QTimer>
 #include <QDateTime>
@@ -162,6 +163,9 @@ private slots:
   void on_actionOpen_log_directory_triggered ();
   void on_actionNone_triggered();
   void on_actionSave_all_triggered();
+  void on_actionEnglish_triggered();
+  void on_actionEstonian_triggered();
+  void on_actionRussian_triggered();
   void on_actionCallNone_toggled(bool checked);
   void on_actionCallFirst_toggled(bool checked);
   void on_actionCallMid_toggled(bool checked);
@@ -283,6 +287,7 @@ private slots:
   void on_freeTextMsg_currentIndexChanged(int index);
   void on_rptSpinBox_valueChanged(int n);
   void killFile();
+  void set_language(QString const& lang);
   void on_tuneButton_clicked (bool);
   void on_pbR2T_clicked();
   void on_pbT2R_clicked();
@@ -377,6 +382,11 @@ private:
   QSettings * m_settings;
 
   QScopedPointer<Ui::MainWindow> ui;
+
+//  bool m_olek;
+//  bool m_olek2;
+//  QTranslator m_translator_from_resources;
+//  QTranslator m_translator_from_files;
 
   // other windows
   Configuration m_config;
@@ -655,6 +665,7 @@ private:
   QString m_fileToKill;
   QString m_fileToSave;
   QString m_calls;
+  QString m_lang;
 
   QSet<QString> m_pfx;
   QSet<QString> m_sfx;

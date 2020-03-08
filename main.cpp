@@ -97,45 +97,6 @@ int main(int argc, char *argv[])
   if (has_style) a.setStyle("Fusion");
   try
     {
-      //
-      // Enable i18n
-      //
-      QLocale localeUsedToDeterminateTranslators = QLocale::system();
-      Q_FOREACH(QString ab, a.arguments()) {
-          if (ab.startsWith("--locale=")) {
-             localeUsedToDeterminateTranslators = QLocale (ab.mid(9));
-             break;
-          }
-      }
-      
-      QTranslator translator_from_resources;
-      // Default translations for releases  use translations stored in
-      // the   resources   file    system   under   the   Translations
-      // directory. These are built by the CMake build system from .ts
-      // files in the translations source directory. New languages are
-      // added by  enabling the  UPDATE_TRANSLATIONS CMake  option and
-      // building with the  new language added to  the LANGUAGES CMake
-      // list  variable.  UPDATE_TRANSLATIONS  will preserve  existing
-      // translations  but   should  only  be  set   when  adding  new
-      // languages.  The  resulting .ts  files should be  checked info
-      // source control for translators to access and update.
-      has_style = translator_from_resources.load (localeUsedToDeterminateTranslators, "jtdx", "_", ":/Translations");
-      if (has_style) {
-          a.installTranslator (&translator_from_resources);
-      } 
-
-      QTranslator translator_from_files;
-      // Load  any matching  translation  from  the current  directory
-      // using the locale name. This allows translators to easily test
-      // their translations  by releasing  (lrelease) a .qm  file into
-      // the    current    directory     with    a    suitable    name
-      // (e.g.  wsjtx_en_GB.qm),  then  running   wsjtx  to  view  the
-      // results. Either the system  locale setting or the environment
-      // variable LANG can be used to select the target language.
-      has_style = translator_from_files.load (QString {"jtdx_"} + localeUsedToDeterminateTranslators.name ());
-      if (has_style) {
-          a.installTranslator (&translator_from_files);
-      }
 
       setlocale (LC_NUMERIC, "C"); // ensure number forms are in
                                    // consistent format, do this after
@@ -159,11 +120,6 @@ int main(int argc, char *argv[])
                                      , a.translate ("main", "<style> can be Fusion (default) or Windows")
                                      , a.translate ("main" , "style"));
       parser.addOption (style_option);
-
-      QCommandLineOption locale_option (QString {"locale"}
-                                     , a.translate ("main", "Where <locale> can be en_US et_EE or ru_RU")
-                                     , a.translate ("main" , "locale"));
-      parser.addOption (locale_option);
 
       QCommandLineOption rig_option (QStringList {} << "r" << "rig-name"
                                      , a.translate ("main", "Where <rig-name> is for multi-instance support.")
@@ -269,8 +225,47 @@ int main(int argc, char *argv[])
       qDebug () << program_title (revision ()) + " - Program startup";
 #endif
 
+      QString lang;
+      settings.beginGroup("Common");
+      lang = settings.value ("Language","en_US").toString();
+      settings.endGroup();
+      //
+      // Enable i18n
+      //
+      QLocale localeUsedToDeterminateTranslators = QLocale (lang);
+      
+      QTranslator translator_from_resources;
+      // Default translations for releases  use translations stored in
+      // the   resources   file    system   under   the   Translations
+      // directory. These are built by the CMake build system from .ts
+      // files in the translations source directory. New languages are
+      // added by  enabling the  UPDATE_TRANSLATIONS CMake  option and
+      // building with the  new language added to  the LANGUAGES CMake
+      // list  variable.  UPDATE_TRANSLATIONS  will preserve  existing
+      // translations  but   should  only  be  set   when  adding  new
+      // languages.  The  resulting .ts  files should be  checked info
+      // source control for translators to access and update.
+      has_style = translator_from_resources.load (localeUsedToDeterminateTranslators, "jtdx", "_", ":/Translations");
+      if (has_style) {
+          a.installTranslator (&translator_from_resources);
+      } 
+
+      QTranslator translator_from_files;
+      // Load  any matching  translation  from  the current  directory
+      // using the locale name. This allows translators to easily test
+      // their translations  by releasing  (lrelease) a .qm  file into
+      // the    current    directory     with    a    suitable    name
+      // (e.g.  jtdx_et_EE.qm),  then  running   wsjtx  to  view  the
+      // results. Either the system  locale setting or the environment
+      // variable LANG can be used to select the target language.
+      has_style = translator_from_files.load (QString {"jtdx_"} + localeUsedToDeterminateTranslators.name ());
+      if (has_style) {
+          a.installTranslator (&translator_from_files);
+      }
+
       // Create and initialize shared memory segment
       // Multiple instances: use rig_name as shared memory key
+
       mem_jtdxjt9.setKey(a.applicationName ());
 
       if(!mem_jtdxjt9.attach()) {

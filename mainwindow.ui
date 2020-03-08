@@ -4455,6 +4455,14 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionSave_decoded"/>
     <addaction name="actionSave_all"/>
    </widget>
+   <widget class="QMenu" name="menuLang">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionEnglish"/>
+    <addaction name="actionEstonian"/>
+    <addaction name="actionRussian"/>
+   </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
@@ -4559,6 +4567,7 @@ list. The list can be maintained in Settings (F2).</string>
    <addaction name="menuAutoSeq"/>
    <addaction name="menuDXpedition"/>
    <addaction name="menuMisc"/>
+   <addaction name="menuLang"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -4654,6 +4663,30 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Save all</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionEstonian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Eesti</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Русский</string>
    </property>
   </action>
   <action name="actionJTDX_Web_Site">

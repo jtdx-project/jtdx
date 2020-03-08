@@ -151,6 +151,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_multiple {multiple},
   m_settings {settings},
   ui(new Ui::MainWindow),
+//  m_olek {false},
+//  m_olek2 {false},
   m_config {settings, this},
   m_WSPR_band_hopping {settings, &m_config, this},
   m_WSPR_tx_next {false},
@@ -205,6 +207,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_acceptUDP {1},
   m_lastCallingFreq {1500},
   m_saveWav {0},
+  m_lang {"et_EE"},
   m_callMode {2},
   m_ft8Sensitivity {0},
   m_position {0},
@@ -575,6 +578,11 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionT10->setActionGroup(modeGroup);
   ui->actionWSPR_2->setActionGroup(modeGroup);
 
+  QActionGroup* languageGroup = new QActionGroup(this);
+  ui->actionEnglish->setActionGroup(languageGroup);
+  ui->actionEstonian->setActionGroup(languageGroup);
+  ui->actionRussian->setActionGroup(languageGroup);
+
   QActionGroup* saveGroup = new QActionGroup(this);
   ui->actionNone->setActionGroup(saveGroup);
   ui->actionSave_decoded->setActionGroup(saveGroup);
@@ -861,6 +869,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
     ui->TxPowerComboBox->addItem(t);
   }
 
+
   ui->labAz->setStyleSheet("border: 0px;");
   ui->labDist->setStyleSheet("border: 0px;");
 
@@ -1141,6 +1150,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("Mode",m_mode);
   m_settings->setValue("ModeTx",m_modeTx);
   m_settings->setValue("SaveWav",m_saveWav);
+  m_settings->setValue("Language",m_lang);
   m_settings->setValue("CallMode",m_callMode);
   m_settings->setValue("CallPriorityCQ",ui->actionCallPriorityAndSearchCQ->isChecked());
   m_settings->setValue("MaxDistance",ui->actionMaxDistance->isChecked());
@@ -1294,6 +1304,12 @@ void MainWindow::readSettings()
   else if(m_saveWav==1) ui->actionSave_decoded->setChecked(true);
   else if(m_saveWav==2) ui->actionSave_all->setChecked(true);
 
+  m_lang=m_settings->value("Language","en_US").toString();
+  if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
+  else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
+  else ui->actionEnglish->setChecked(true);
+//  if (m_lang!="en_US") set_language(m_lang);
+  
   m_callMode=m_settings->value("CallMode",2).toInt();
   if(!(m_callMode>=0 && m_callMode<=3)) m_callMode=2; 
   if(m_callMode==0) ui->actionCallNone->setChecked(true);
@@ -2692,6 +2708,10 @@ void MainWindow::on_actionNone_triggered() { m_saveWav=0; ui->actionNone->setChe
 void MainWindow::on_actionSave_decoded_triggered() { m_saveWav=1; ui->actionSave_decoded->setChecked(true); }
 void MainWindow::on_actionSave_all_triggered() { m_saveWav=2; ui->actionSave_all->setChecked(true); }
 
+void MainWindow::on_actionEnglish_triggered() { ui->actionEnglish->setChecked(true); set_language("en_US"); }
+void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(true); set_language("et_EE"); }
+void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
+
 void MainWindow::on_actionCallNone_toggled(bool checked)
 {
   m_callMode=0;
@@ -3655,6 +3675,45 @@ void MainWindow::killFile ()
       QFile f2 {m_fnameWE + ".c2"};
       if(f2.exists()) f2.remove();
     }
+  }
+}
+
+void MainWindow::set_language (QString const& lang)
+{
+  if (m_lang != lang) {
+    if (QMessageBox::Yes == QMessageBox::warning(this, "Confirm change Language",
+            "Are You sure to change UI Language, JTDX needs restart?", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
+            m_lang = lang;
+            QMainWindow::close();
+    }
+/**    if (m_olek) {
+      m_olek = QCoreApplication::removeTranslator(&m_translator_from_resources);
+      if (m_olek) printf("resource translator removed\n");
+      else printf("resource translator removed failed\n");
+      m_olek = false;
+    }
+    if (m_olek2) {
+      m_olek2 = QCoreApplication::removeTranslator(&m_translator_from_files);
+      if (m_olek2) printf("file translator removed\n");
+      else printf("file translator removed failed\n");
+      m_olek2 = false;
+    }
+    if (m_lang != "en_US") {
+      QLocale wanted = QLocale (m_lang);
+      m_olek = m_translator_from_resources.load (wanted, "jtdx", "_", ":/Translations");
+      if (m_olek) {
+        QCoreApplication::installTranslator (&m_translator_from_resources);
+        printf ("resource translator %s loaded\n",wanted.name().toStdString().c_str());
+      }
+      else printf ("resource translator %s not loaded\n",wanted.name().toStdString().c_str());
+      m_olek2 = m_translator_from_files.load (QString {"jtdx_"} + m_lang);
+      if (m_olek2) {
+        QCoreApplication::installTranslator (&m_translator_from_files);
+        printf ("file translator %s loaded\n",m_lang.toStdString().c_str());
+      }
+      else printf ("file translator %s not loaded\n",m_lang.toStdString().c_str());
+    }
+    ui->retranslateUi(this); **/
   }
 }
 
