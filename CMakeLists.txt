@@ -304,6 +304,7 @@ set (wsjt_FSRCS
   lib/chkfalse8.f90
   lib/chkflscall.f90
   lib/chkftrsd.f90
+  lib/chkgrid.f90
   lib/chkhist.f90
   lib/chklong8.f90
   lib/chkmsg.f90
