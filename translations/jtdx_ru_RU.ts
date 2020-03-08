@@ -791,7 +791,7 @@ Error: %2 - %3</source>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
-        <source>WSJT-X   by K1JT</source>
+        <source>JTDX  by HF community</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

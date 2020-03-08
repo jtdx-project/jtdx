@@ -806,8 +806,8 @@ Viga: %2 - %3</translation>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
-        <source>WSJT-X   by K1JT</source>
-        <translation>WSJT-X   by K1JT</translation>
+        <source>JTDX  by HF community</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -868,7 +868,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>info:</source>
-        <translation type="unfinished">info</translation>
+        <translation>info:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
