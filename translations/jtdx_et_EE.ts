@@ -44,7 +44,7 @@
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -99,7 +99,7 @@ Teine rakendus võib olla kataloogi lukustanud</translation>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
         <source>Serial Port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
@@ -294,12 +294,12 @@ Vormingud:
     <message>
         <location filename="../WFPalette.cpp" line="198"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Sisesta ...</translation>
+        <translation>&amp;Lisa ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation>Sisesta &amp;hiljem ...</translation>
+        <translation>Lisa &amp;järgmiseks ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
@@ -323,7 +323,7 @@ Vormingud:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Varju tsoon</translation>
+        <translation>Varju aeg:</translation>
     </message>
 </context>
 <context>
@@ -339,7 +339,8 @@ Vormingud:
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation>Vigane URL</translation>
+        <translation>Vigane URL:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="130"/>
@@ -397,7 +398,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation>Sisukataloogid peavad olema suhtelised ja piires</translation>
+        <translation>Sisukataloogid peavad olema suhtelised ja piires &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -423,7 +424,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="218"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation>&amp;Sagedus (MHz)</translation>
+        <translation>&amp;Sagedus (MHz):</translation>
     </message>
 </context>
 <context>
@@ -460,7 +461,8 @@ Viga: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="147"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation>Ühendus Ham Radio Deluxega häiritud</translation>
+        <translation>Ühendus Ham Radio Deluxega häiritud
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="156"/>
@@ -507,7 +509,8 @@ Viga: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="1046"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation>Ham Radio Deluxe saatmiskäsk &quot;%1&quot; luhtunud %2</translation>
+        <translation>Ham Radio Deluxe saatmiskäsk &quot;%1&quot; luhtunud %2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1059"/>
@@ -524,7 +527,8 @@ Viga: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="1143"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe ei õnnestu käsklusele vastata &quot;%1&quot; %2</translation>
+        <translation>Ham Radio Deluxe ei õnnestu käsklusele vastata &quot;%1&quot; %2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1153"/>
@@ -708,7 +712,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1149"/>
         <source>setting a configuration item</source>
-        <translation type="unfinished">konfiguratsiooni sätted</translation>
+        <translation>konfiguratsiooni seadmine</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1159"/>
@@ -721,7 +725,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>QSO kinnitamiseks klõpsa nuppu OK</translation>
+        <translation>QSO kinnitamiseks klõpsa nuppu OK:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -757,12 +761,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Rpt Sent</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation type="unfinished">Rpt Rcvd</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -3170,268 +3174,269 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="26"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seaded</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali seadete leht.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Põhilinw&amp;l</translatorcomment>
+        <translation>Ü&amp;ldine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
         <source>General station details and settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaama andmed ja seaded.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaama andmed</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished"></translation>
+        <translation>Minu k&amp;utsung:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaama kutsung.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>M&amp;inu lokaator:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokaator ( ainult neljakohaline on nõutud.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 liit kutsungid on need mille ees- või tagaliited ei ole lubatud liidete nimistus (Vaata Abi-&amp;gt;Ees- ja tagaliidete nimistu).&lt;/p&gt;&lt;p&gt;See valik määrab milline sõnum sisaldab täispikka kutsungit mitte baaskutsungit. See valik mõjub ainult siis, kui sul on type 2 liitkutsung.&lt;/p&gt;&lt;p&gt;See valik mõjutab CQ vastussõnumite genereerimist. Sõnumid 6 (CQ) and 5 (73) sisaldavad alati täiskutsungit. JT65 and JT9 protokollid lubavad mõned sõnumite juures kasutada täiskutsungit CQ suuna ja lokaatori arvelt.&lt;/p&gt;&lt;p&gt;Valides sõnimi 1 jäetakse sõnumist välja vastaspoole kutsung, mis võib olla probleemiks CQ-le vastamisel. Valides sõnumi 3 jäetakse ka vastaspoole kutsung ja paljud programmid ei suuda leida sõnumist raportit. Valides mittekumbki tähendab et sinu täiskutsung saadetakse ainult sõnumiga 5 (73) ehk sinu QSO partner võib logida vale kutsungi.&lt;/p&gt;&lt;p&gt;Ükski nendes võimalustest pole perfrektne, sõnum 3 on parim, aga sinu QSO partner võib mitte logida raportit mille saatsid.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>Full call in Tx1</source>
-        <translation type="unfinished"></translation>
+        <translation>Täiskutsung Tx1-s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="140"/>
         <source>Full call in Tx3</source>
-        <translation type="unfinished"></translation>
+        <translation>Täiskutsung Tx3-s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>Full call in Tx5 only</source>
-        <translation type="unfinished"></translation>
+        <translation>Täiskutsung ainult Tx5-s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="153"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sõnumite genereerimine type 2 liitkutsungite omanikele:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="175"/>
         <source>Logbook filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>Logiraamatu filtreerimine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="203"/>
         <source>Use current callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta aktuaalset kutsungit</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation type="unfinished"></translation>
+        <translation>KAsuta aktuaalset lokaatorit</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ainult QSO-d alates.(AAAAKKPPTTMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali fondi võimalused Bändi aktiivsuse ha Rx-Sageduse alades.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
         <source>Decoded Text Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodeeritud teksit Font...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="326"/>
         <source>Set the font characteristics for the application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali fondi võimalused programmile.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="329"/>
         <source>Application Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmi Font...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita vahemaad miilides mitte kilomeetrites.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva vahe&amp;maa miilides</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaherida perioodide vahel bandi aktiivsuse aknas.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaherida dekodeerimisperioodide vahel</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="369"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa DXCC nimi dekodeeritud sõnumitele.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="372"/>
         <source>Show &amp;DXCC names</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva &amp;DXCC nimed</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="379"/>
         <source>Append prefix instead of name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa preefix nime asemel.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="382"/>
         <source>Show &amp;prefix not name</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva &amp;prefix mitte nimi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui TX sõnum muutus siis eelmist ei näidata, kui saatmine kestis vähem kui 2 sekundit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="392"/>
         <source>Hide partially transmitted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Peida poolikult saadetud sõnumid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva saadetud sõnumid Rx sageduse aknas.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tx sõnumid Rx sageduse aknasse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="420"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Käitumine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="446"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära alusta dekodeerimist enne, kui Monitor nupp on aktiivne.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="449"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Mon&amp;itor väljas käivitumisel</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx watchdog taimer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of minutes before unattended transmissions are aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minutite arv millal sekkumata saatmised lõpetatakse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="488"/>
         <location filename="../Configuration.ui" line="535"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Keelatud</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="491"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translation> minutit</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodeeri 52-l sekundil</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Häälestuse taimer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sekundite arv Häälestuse kestvuseks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="538"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> sekundit</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mõned jaamad ei suuda protsessida CAT käske saatel olles. See tähendab et seda valikut ei saa kasutada split  puhul.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba Tx sageduse vahetus saatel olles</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="569"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali see, kui soovid tagasi pöörduda viimati kasutatud sagedusele kui Monitor on aktiivne, jäta valimata kui ei soovi rigi sagedust muuta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="572"/>
         <source>Monitor returns to last used frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor taastav viimati kasutatud sageduse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada CW ID iga 73 või vaba teksti sõnumi järel.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation type="unfinished"></translation>
+        <translation>CW ID &amp;peale 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation type="unfinished"></translation>
+        <translation>CW-ID inter&amp;valli periood:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="626"/>
@@ -3439,7 +3444,10 @@ Error(%2): %3</source>
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
 quiet period when decoding is done.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada CW ID mõne minutilise perioodiga.
+See võib olla nõutud teie riigi litsentsireeglitega.
+See ei sega teisi kasutajaid, sest saadetakse
+vaiksel perioodil peale dekodeerimise lõppu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="655"/>
