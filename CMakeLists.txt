@@ -631,6 +631,7 @@ set (PALETTE_FILES
   Palettes/Cyan2.pal
   Palettes/Cyan3.pal
   Palettes/Default.pal
+  Palettes/Default16.pal
   Palettes/Digipan.pal
   Palettes/Fldigi.pal
   Palettes/Gray1.pal

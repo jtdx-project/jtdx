@@ -484,6 +484,7 @@ void WideGraph::on_adjust_palette_push_button_clicked (bool)   //Adjust Palette
 {
   try
     {
+      if (user_defined != m_waterfallPalette) m_userPalette = WFPalette {m_palettes_path.absoluteFilePath (m_waterfallPalette + ".pal")} ;
       if (m_userPalette.design ())
         {
           m_waterfallPalette = user_defined;

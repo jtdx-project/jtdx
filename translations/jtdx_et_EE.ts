@@ -2970,7 +2970,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ootamatu rigi viga</translation>
     </message>
 </context>
 <context>
@@ -2978,17 +2978,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialoog</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüü</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Compression factor for frequency scale</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
@@ -5516,37 +5516,37 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fataalne viga</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ootamatu fataalne viga</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="120"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;style&gt; võib olla Fusion (vaikimisi) või Windows</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
         <source>style</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="125"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kus &lt;rig-name&gt; on mitme instance toeks.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="126"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="130"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjutatavad failid testimise asukohas.  Kasuta ettevaatlikult ainult testimiseks.</translation>
     </message>
 </context>
 <context>
@@ -5554,12 +5554,12 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialoog</translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Topeltklõps värvil tema muutmiseks.&lt;/p&gt;&lt;p&gt;Parem klõps värvide lisamiseks või muutmiseks.&lt;/p&gt;&lt;p&gt;Värvid ülevalpoole näitavad nõregemaid signaales&lt;/p&gt;&lt;p&gt;ja värvid allpool näitavad tugevaid&lt;/p&gt;&lt;p&gt;signaale. Valida on kuni 256 värvi vahel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
