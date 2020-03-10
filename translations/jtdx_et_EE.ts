@@ -811,7 +811,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX  by HF community</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -842,12 +842,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>14.078 000</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="689"/>
         <source>Menu</source>
-        <translation type="unfinished">Menüü</translation>
+        <translation>Menüü</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
@@ -857,7 +857,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Spt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
@@ -3255,7 +3255,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation>KAsuta aktuaalset lokaatorit</translation>
+        <translation>Kasuta aktuaalset lokaatorit</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
@@ -3452,272 +3452,279 @@ vaiksel perioodil peale dekodeerimise lõppu.</translation>
     <message>
         <location filename="../Configuration.ui" line="655"/>
         <source>&amp;Radio</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Raadio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="658"/>
         <source>Radio interface configuration settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Raadio liidese sätted.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rigi:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrolli periood:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rigi oleku kontrolli periood. Suurem periood tähendab,et kõik muutused võtavad kauem aega.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="699"/>
         <location filename="../Configuration.ui" line="1581"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="722"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Küsida jaamast S meetri näitu: CAT peab kasutama Hamlib-i.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="725"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translation>S meeter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="754"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Küsida jaamast väljundvõimsust: CAT peab kasutama Hamlib-i.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="757"/>
         <source>Output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Väljundvõimsus</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="785"/>
         <source>Settings that control your CAT interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>CAT liidese seaded.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="788"/>
         <source>CAT Control</source>
-        <translation type="unfinished"></translation>
+        <translation>CAT seaded</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="799"/>
         <location filename="../Configuration.ui" line="1284"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="815"/>
         <source>Serial port used for CAT control.</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial port mis ühendatud rigi CAT-ga.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="839"/>
         <source>Serial Port Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial Pordi seaded</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="856"/>
         <source>Baud Rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirus:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="872"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seerial pordi kiirus mis peab kokku langema rigis seatuga.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="879"/>
         <source>1200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="884"/>
         <source>2400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="889"/>
         <source>4800</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="894"/>
         <source>9600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="899"/>
         <source>19200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="904"/>
         <source>38400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="909"/>
         <source>57600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="914"/>
         <source>115200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="924"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutatud andmebittide arv (tavaliselt kaheksa).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="927"/>
         <source>Data Bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Bittide arv</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="939"/>
         <location filename="../Configuration.ui" line="996"/>
         <location filename="../Configuration.ui" line="1063"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikeväärtus</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="952"/>
         <source>Se&amp;ven</source>
-        <translation type="unfinished"></translation>
+        <translation>Se&amp;itse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="965"/>
         <source>E&amp;ight</source>
-        <translation type="unfinished"></translation>
+        <translation>Kah&amp;eksa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutatus stopbittide arv&lt;/p&gt;&lt;p&gt;(vaata rigi manuaali täpsustusteks).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="984"/>
         <source>Stop Bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopp bitte</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>On&amp;e</source>
-        <translation type="unfinished"></translation>
+        <translation>Ük&amp;s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1019"/>
         <source>T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>Ka&amp;ks</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1035"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Andmevoo juhtimine arvuti ja rigi CAT vahel (tavaliselt &amp;quot;None&amp;quot; aga mõnikord on vaja &amp;quot;Riistvaraline&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>Handshake</source>
-        <translation type="unfinished"></translation>
+        <translation>Andmevoo juhtimine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1050"/>
         <source>&amp;None</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkvaraline (harva CAT liideses).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1079"/>
         <source>XON/XOFF</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1089"/>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Andvevoo kontroll kasutades RTS CTS RS-232 signaale.
+Ei kasutata sageli, aga mõned rigid oskavad 
+ja mõned Kenwoodid lausa nõuavad.</translatorcomment>
+        <translation>Flow control using the RTS and CTS RS-232 control lines
+not often used but some radios have it as an option and 
+a few, particularly some Kenwood rigs, require it).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Riistvaraline</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
         <source>Special control of CAT port control lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial pordi juhtbittide kontroll.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1110"/>
         <source>Force Control Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõuga juhtimine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
         <source>DTR:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1143"/>
         <location filename="../Configuration.ui" line="1176"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõrge</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1148"/>
         <location filename="../Configuration.ui" line="1181"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Madal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1160"/>
         <source>RTS:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1213"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuidas programm aktiveerib raadio PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
         <source>PTT Method</source>
-        <translation type="unfinished"></translation>
+        <translation>PTT Meetod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1222"/>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõned jaamad toetavad PTT üle CAT-i.
+Kasuta seda kui su jaam seda toetab ja sul 
+pole riistvaralist ühendust PTT-le.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1227"/>
         <source>C&amp;AT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1240"/>
