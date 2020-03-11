@@ -1484,7 +1484,7 @@ void MainWindow::readSettings()
   m_settings->endGroup();
   
   if(m_config.do_snr()) ui->S_meter_label->setText("dBm");
-  else ui->S_meter_label->setText("S meter");
+  else ui->S_meter_label->setText(tr("S meter"));
   ui->S_meter_label->setEnabled(m_config.do_snr());
   dec_data.params.nstophint=1;
   m_nlasttx=0;
@@ -1595,14 +1595,14 @@ void MainWindow::setMinButton()
 		if(m_mode=="FT8") ui->TxMinuteButton->setText("TX 00/30");
 		else ui->TxMinuteButton->setText("TX 00");
       }
-      else ui->TxMinuteButton->setText("TX Even");
+      else ui->TxMinuteButton->setText(tr("TX Even"));
       ui->TxMinuteButton->setStyleSheet("background-color: rgb(110,255,255);");
     } else {
 	  if(m_mode.startsWith("FT")) {
 		if(m_mode=="FT8") ui->TxMinuteButton->setText("TX 15/45");
         else ui->TxMinuteButton->setText("TX 7.5");
       } 
-      else ui->TxMinuteButton->setText("TX Odd");
+      else ui->TxMinuteButton->setText(tr("TX Odd"));
       ui->TxMinuteButton->setStyleSheet("background-color: rgb(255,255,150);");
     }
   } 
@@ -1916,9 +1916,9 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
          if(m_config.spot_to_dxsummit() ) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
          else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
       }
-      if(!m_config.do_snr()) ui->S_meter_label->setText("S meter");
+      if(!m_config.do_snr()) ui->S_meter_label->setText(tr("S meter"));
       ui->S_meter_label->setEnabled(m_config.do_snr());
-      if(!m_config.do_pwr()) ui->PWRlabel->setText("Pwr");
+      if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
   }
 }
@@ -2534,14 +2534,14 @@ void MainWindow::on_pbSpotDXCall_clicked ()
 //      printf("Failure : %s\n",reply->errorString().toStdString().c_str());
 //    }
       ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4ffc4;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}");
-      ui->pbSpotDXCall->setText("Spotted");
+      ui->pbSpotDXCall->setText(tr("Spotted"));
       m_spotDXsummit=true;
     } else {
    // timeout
      QObject::disconnect(reply, SIGNAL(finished()), &eventLoop, SLOT(quit()));
 
      reply->abort();
-     QMessageBox::critical(0, "Critical", "Can not establish/complete connection to dxsummit server");
+     QMessageBox::critical(0, "Critical", tr("Can not establish/complete connection to dxsummit server"));
     }
     delete reply;
   }
@@ -2721,7 +2721,7 @@ void MainWindow::on_actionCallNone_toggled(bool checked)
       m_callPrioCQ=false;
     }
     ui->actionCallPriorityAndSearchCQ->setEnabled(false);
-    ui->AutoSeqButton->setText("AutoSeq0");
+    ui->AutoSeqButton->setText(tr("AutoSeq0"));
   }
 }
 
@@ -2734,7 +2734,7 @@ void MainWindow::on_actionCallFirst_toggled(bool checked)
       m_callPrioCQ=false;
     }
     ui->actionCallPriorityAndSearchCQ->setEnabled(false);
-    ui->AutoSeqButton->setText("AutoSeq1");
+    ui->AutoSeqButton->setText(tr("AutoSeq1"));
   }
 }
 
@@ -2743,8 +2743,8 @@ void MainWindow::on_actionCallMid_toggled(bool checked)
   m_callMode=2;
   if (checked) {
     ui->actionCallPriorityAndSearchCQ->setEnabled(true);
-	if (!m_callPrioCQ) ui->AutoSeqButton->setText("AutoSeq2");
-	else ui->AutoSeqButton->setText("AutoSeq6");
+	if (!m_callPrioCQ) ui->AutoSeqButton->setText(tr("AutoSeq2"));
+	else ui->AutoSeqButton->setText(tr("AutoSeq6"));
   }  
 }
 
@@ -2753,8 +2753,8 @@ void MainWindow::on_actionCallEnd_toggled(bool checked)
   m_callMode=3;
   if (checked) {
     ui->actionCallPriorityAndSearchCQ->setEnabled(true);
-	if (!m_callPrioCQ) ui->AutoSeqButton->setText("AutoSeq3");
-	else ui->AutoSeqButton->setText("AutoSeq7");
+	if (!m_callPrioCQ) ui->AutoSeqButton->setText(tr("AutoSeq3"));
+	else ui->AutoSeqButton->setText(tr("AutoSeq7"));
   }
 }
 
@@ -2765,12 +2765,12 @@ void MainWindow::on_actionCallEnd_toggled(bool checked)
      ui->actionAutoFilter->setChecked(false);
      ui->actionAutoFilter->setEnabled(false);
      m_autofilter=false;
-     if (m_callMode==2) ui->AutoSeqButton->setText("AutoSeq6");
-     else ui->AutoSeqButton->setText("AutoSeq7");
+     if (m_callMode==2) ui->AutoSeqButton->setText(tr("AutoSeq6"));
+     else ui->AutoSeqButton->setText(tr("AutoSeq7"));
    } else {
       ui->actionAutoFilter->setEnabled(true);
-      if (m_callMode==2) ui->AutoSeqButton->setText("AutoSeq2");
-      else ui->AutoSeqButton->setText("AutoSeq3");
+      if (m_callMode==2) ui->AutoSeqButton->setText(tr("AutoSeq2"));
+      else ui->AutoSeqButton->setText(tr("AutoSeq3"));
    }
  }
 
@@ -2862,7 +2862,7 @@ void MainWindow::on_actionUse_TX_frequency_jumps_toggled(bool checked)
     }
   }
   m_houndTXfreqJumps=checked;
-  if(m_houndTXfreqJumps) ui->HoundButton->setText("HoundFC"); else ui->HoundButton->setText("Hound");
+  if(m_houndTXfreqJumps) ui->HoundButton->setText(tr("HoundFC")); else ui->HoundButton->setText(tr("Hound"));
 }
 
 void MainWindow::on_actionMTAuto_triggered() { m_ft8threads=0; }
@@ -3380,15 +3380,15 @@ void MainWindow::readFromStdout()                             //readFromStdout
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
           else if(navexdt>150) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
-          if(navexdt>75) ui->label_6->setText("check time");
-          else  ui->label_6->setText("Band Activity");
+          if(navexdt>75) ui->label_6->setText(tr("check time"));
+          else  ui->label_6->setText(tr("Band Activity"));
         }
         else if (m_mode=="FT4") {
           if(navexdt<41) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>40 && navexdt<81) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
           else if(navexdt>80) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
-          if(navexdt>40) ui->label_6->setText("check time");
-          else  ui->label_6->setText("Band Activity");
+          if(navexdt>40) ui->label_6->setText(tr("check time"));
+          else  ui->label_6->setText(tr("Band Activity"));
         }
       }
       dec_data.params.nagain=0; dec_data.params.nagainfil=0; dec_data.params.ndiskdat=0;
@@ -3956,8 +3956,8 @@ void MainWindow::guiUpdate()
     m_curMsgTx = QString::fromLatin1 (msgsent);
     if(m_mode.startsWith("FT")) { m_curMsgTx.remove (QChar {'<'}); m_curMsgTx.remove (QChar {'>'}); }
     m_currentMessage = m_curMsgTx;
-    if(m_tune) { m_currentMessage = "TUNE"; m_currentMessageType = -1; m_nlasttx=0; }
-    last_tx_label->setText("LastTx: " + m_currentMessage.trimmed());
+    if(m_tune) { m_currentMessage = tr("TUNE"); m_currentMessageType = -1; m_nlasttx=0; }
+    last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
     dec_data.params.nlasttx=m_nlasttx;
 	
     if(m_restart && !haltedEmpty) {
@@ -4171,13 +4171,13 @@ void MainWindow::guiUpdate()
 
     if(m_transmitting) {
       tx_status_label->setStyleSheet("QLabel{background-color: #ffff33}");
-      if(m_tune) tx_status_label->setText("Tx: TUNE");
-      else tx_status_label->setText("Tx: " + m_curMsgTx.trimmed());
+      if(m_tune) tx_status_label->setText(tr("Tx: TUNE"));
+      else tx_status_label->setText(tr("Tx: ") + m_curMsgTx.trimmed());
 	  progressBar->setStyleSheet(cssTransmit);
     } else if(m_monitoring) {
 	  if (!m_txwatchdog) {
 		tx_status_label->setStyleSheet("QLabel{background-color: #00ff00}");
-		QString t="Receiving ";
+		QString t=tr("Receiving ");
 		tx_status_label->setText(t);
 	  }
       transmitDisplay(false);
@@ -4230,7 +4230,7 @@ void MainWindow::guiUpdate()
         ui->S_meter_label->setText(QString {"%1 dBm"}.arg (m_rigState.level()-73));
     }
     if(m_config.do_pwr()) {
-        ui->PWRlabel->setText(QString {"Pwr<br>%1 W"}.arg (round(m_rigState.power()/1000.)));
+        ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(m_rigState.power()/1000.)));
     }    
     if (m_geometry_restored > 0) { m_geometry_restored -=1; if (m_geometry_restored == 0) restoreGeometry (m_geometry);}
 //workaround to recover decoding in case if .lock deletion event is not received by proc_jtdxjt9, Decode button hung up issue
@@ -4386,7 +4386,7 @@ void MainWindow::stopTx2()
     WSPR_scheduling ();
     m_ntr=0;
   }
-  last_tx_label->setText("Last Tx: " + m_currentMessage.trimmed());
+  last_tx_label->setText(tr("Last Tx: ") + m_currentMessage.trimmed());
 }
 
 void MainWindow::RxQSY()
@@ -4501,7 +4501,7 @@ void MainWindow::on_txb6_clicked()                                //txb6
 //
   if(!m_autoseq && m_wasAutoSeq) { m_wasAutoSeq=false; on_AutoSeqButton_clicked(true); }
   if (m_spotDXsummit){
-     ui->pbSpotDXCall->setText("DX Call");
+     ui->pbSpotDXCall->setText(tr("DX Call"));
      if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
      else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
      m_spotDXsummit=false;
@@ -5166,7 +5166,7 @@ void MainWindow::clearDX (QString reason)
   m_QSOProgress = CALLING;
   m_nlasttx=6;
   if (m_spotDXsummit) {
-     ui->pbSpotDXCall->setText("DX Call");
+     ui->pbSpotDXCall->setText(tr("DX Call"));
      m_spotDXsummit=false;
   }    
   if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
@@ -5581,7 +5581,7 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
       ui->tx5->setModel(model2);
       ui->freeTextMsg->setModel(model2);
       if (m_spotDXsummit){
-         ui->pbSpotDXCall->setText("DX Call");
+         ui->pbSpotDXCall->setText(tr("DX Call"));
          m_spotDXsummit=false;
       }
       if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
@@ -5825,7 +5825,7 @@ void MainWindow::on_actionWSPR_2_triggered()
   m_wideGraph->setMode(m_mode);
   m_wideGraph->setModeTx(m_modeTx);
   ui->TxFreqSpinBox->setValue(ui->WSPRfreqSpinBox->value());
-  ui->pbTxMode->setText("Tx WSPR");
+  ui->pbTxMode->setText(tr("Tx WSPR"));
   ui->pbTxMode->setEnabled(false);
   setMinButton();
   ui->TxMinuteButton->setEnabled(false);
@@ -5869,13 +5869,13 @@ void MainWindow::commonActions ()
   mode_label->setText(m_mode);
   ui->decodedTextLabel->setText("UTC   dB   DT Freq   Message");
   ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-  ui->label_6->setText("Band Activity");
+  ui->label_6->setText(tr("Band Activity"));
   ui->decodedTextLabel2->setText("UTC   dB   DT Freq   Message");
   m_wideGraph->setPeriod(m_TRperiod,m_nsps);
   m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
   m_detector->setPeriod(m_TRperiod);  // TODO - not thread safe
-  ui->label_6->setText("Band Activity");
-  ui->label_7->setText("Rx Frequency");
+  ui->label_6->setText(tr("Band Activity"));
+  ui->label_7->setText(tr("Rx Frequency"));
   ui->TxMinuteButton->setEnabled(true);
   setMinButton();
   setClockStyle(true);
@@ -5914,7 +5914,7 @@ void MainWindow::WSPR_config(bool b)
   if(b) {
     ui->decodedTextLabel->setText("UTC    dB   DT     Freq     Drift  Call          Grid    dBm   Dist");
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-    ui->label_6->setText("Band Activity");
+    ui->label_6->setText(tr("Band Activity"));
     if (m_config.is_transceiver_online ()) {
       Q_EMIT m_config.transceiver_tx_frequency (0); // turn off split
     }
@@ -5922,7 +5922,7 @@ void MainWindow::WSPR_config(bool b)
   } else {
     ui->decodedTextLabel->setText("UTC   dB   DT Freq   Message");
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-    ui->label_6->setText("Band Activity");
+    ui->label_6->setText(tr("Band Activity"));
     m_bSimplex = false;
   }
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
@@ -6453,7 +6453,7 @@ void MainWindow::stop_tuning ()
   if(StopTuneTimer.isActive()) StopTuneTimer.stop();
   on_tuneButton_clicked(false);
   ui->tuneButton->setChecked (false);
-  ui->tuneButton->setText("Tune");
+  ui->tuneButton->setText(tr("Tune"));
   m_bTxTime=false;
   m_tune=false;
 }
@@ -6626,12 +6626,12 @@ void MainWindow::on_pbTxLock_clicked(bool checked)
 {
   m_lockTxFreq=checked;
   if(checked) {
-     ui->pbTxLock->setText("Lockd Tx=Rx");
-	 ui->pbTxLock->setToolTip("<html><head/><body><p>Push button to allow Tx/Rx AF frequencies split operation.</p></body></html>");
+     ui->pbTxLock->setText(tr("Lockd Tx=Rx"));
+	 ui->pbTxLock->setToolTip(tr("<html><head/><body><p>Push button to allow Tx/Rx AF frequencies split operation.</p></body></html>"));
      ui->pbTxLock->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
   } else {
-  	 ui->pbTxLock->setText("Tx/Rx Split");
-     ui->pbTxLock->setToolTip("<html><head/><body><p>Push button to lock Tx frequency to the Rx AF frequency.</p></body></html>");
+  	 ui->pbTxLock->setText(tr("Tx/Rx Split"));
+     ui->pbTxLock->setToolTip(tr("<html><head/><body><p>Push button to lock Tx frequency to the Rx AF frequency.</p></body></html>"));
      ui->pbTxLock->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
   }
   m_wideGraph->setLockTxFreq(m_lockTxFreq);
@@ -6886,8 +6886,8 @@ void MainWindow::setHoundAppearance(bool hound)
 
 void MainWindow::setLastLogdLabel()
 {
-  if(m_lastloggedcall.isEmpty()) { lastlogged_label->setText("Logd "); lastlogged_label->setStyleSheet("QLabel{background-color: #ffffff}"); }
-  else { lastlogged_label->setText("Logd " + m_lastloggedcall); lastlogged_label->setStyleSheet("QLabel{background-color: #7fff7f}"); }
+  if(m_lastloggedcall.isEmpty()) { lastlogged_label->setText(tr("Logd ")); lastlogged_label->setStyleSheet("QLabel{background-color: #ffffff}"); }
+  else { lastlogged_label->setText(tr("Logd ") + m_lastloggedcall); lastlogged_label->setStyleSheet("QLabel{background-color: #7fff7f}"); }
 }
 
 void MainWindow::writeToALLTXT(QString const& text)
@@ -7456,7 +7456,7 @@ void MainWindow::txwatchdog (bool triggered)
       m_bTxTime=false;
       if (m_enableTx) enableTx_mode (false);
       tx_status_label->setStyleSheet ("QLabel{background-color: #ff8080}");
-      tx_status_label->setText ("Tx watchdog expired");
+      tx_status_label->setText (tr("Tx watchdog expired"));
     }
   else
     {
@@ -7470,7 +7470,7 @@ void MainWindow::update_watchdog_label ()
 {
   if (m_config.watchdog () && !m_mode.startsWith ("WSPR"))
     {
-      txwatchdog_label->setText (QString {"WD %1m"}.arg (m_config.watchdog () - m_idleMinutes));
+      txwatchdog_label->setText (QString {tr("WD %1m")}.arg (m_config.watchdog () - m_idleMinutes));
       txwatchdog_label->setVisible (true);
     }
   else

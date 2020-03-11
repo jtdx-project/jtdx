@@ -821,6 +821,12 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
+        <location filename="../mainwindow.cpp" line="3384"/>
+        <location filename="../mainwindow.cpp" line="3391"/>
+        <location filename="../mainwindow.cpp" line="5872"/>
+        <location filename="../mainwindow.cpp" line="5877"/>
+        <location filename="../mainwindow.cpp" line="5917"/>
+        <location filename="../mainwindow.cpp" line="5925"/>
         <source>Band Activity</source>
         <translation>Bändi aktiivsus</translation>
     </message>
@@ -938,6 +944,9 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
+        <location filename="../mainwindow.cpp" line="4504"/>
+        <location filename="../mainwindow.cpp" line="5169"/>
+        <location filename="../mainwindow.cpp" line="5584"/>
         <source>DX Call</source>
         <translation>DX Kutsung</translation>
     </message>
@@ -990,6 +999,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
+        <location filename="../mainwindow.cpp" line="2865"/>
         <source>Hound</source>
         <translation>Koer</translation>
     </message>
@@ -1021,6 +1031,8 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
+        <location filename="../mainwindow.cpp" line="1487"/>
+        <location filename="../mainwindow.cpp" line="1919"/>
         <source>S meter</source>
         <translation>S meeter</translation>
     </message>
@@ -1176,6 +1188,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
+        <location filename="../mainwindow.cpp" line="5878"/>
         <source>Rx Frequency</source>
         <translation>Rx sagedus</translation>
     </message>
@@ -2464,6 +2477,16 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="1598"/>
+        <source>TX Even</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1605"/>
+        <source>TX Odd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="1650"/>
         <location filename="../mainwindow.cpp" line="2327"/>
         <location filename="../mainwindow.cpp" line="3413"/>
@@ -2504,6 +2527,11 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="1921"/>
+        <source>Pwr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="2438"/>
         <source>Subprocess Error</source>
         <translation type="unfinished"></translation>
@@ -2526,6 +2554,16 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="2537"/>
+        <source>Spotted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2544"/>
+        <source>Can not establish/complete connection to dxsummit server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="2568"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation type="unfinished"></translation>
@@ -2533,6 +2571,40 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2689"/>
         <source>No data read from disk. Wrong file format?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2724"/>
+        <source>AutoSeq0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2737"/>
+        <source>AutoSeq1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2746"/>
+        <location filename="../mainwindow.cpp" line="2772"/>
+        <source>AutoSeq2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2747"/>
+        <location filename="../mainwindow.cpp" line="2768"/>
+        <source>AutoSeq6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2756"/>
+        <location filename="../mainwindow.cpp" line="2773"/>
+        <source>AutoSeq3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2757"/>
+        <location filename="../mainwindow.cpp" line="2769"/>
+        <source>AutoSeq7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2556,6 +2628,11 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="2865"/>
+        <source>HoundFC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="2926"/>
         <source>Keyboard Shortcuts</source>
         <translation type="unfinished"></translation>
@@ -2563,6 +2640,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2937"/>
         <source>Special Mouse Commands</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3383"/>
+        <location filename="../mainwindow.cpp" line="3390"/>
+        <source>check time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2574,6 +2657,41 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="3838"/>
         <location filename="../mainwindow.cpp" line="3841"/>
         <source>WSPR Guard Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3959"/>
+        <source>TUNE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3960"/>
+        <source>LastTx: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4174"/>
+        <source>Tx: TUNE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4175"/>
+        <source>Tx: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4180"/>
+        <source>Receiving </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4233"/>
+        <source>Pwr&lt;br&gt;%1 W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4389"/>
+        <source>Last Tx: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2616,6 +2734,36 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="5828"/>
+        <source>Tx WSPR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6456"/>
+        <source>Tune</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6629"/>
+        <source>Lockd Tx=Rx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6630"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6633"/>
+        <source>Tx/Rx Split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6634"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="6820"/>
         <source>Tune digital gain</source>
         <translation type="unfinished"></translation>
@@ -2628,6 +2776,12 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6840"/>
         <source>Prefixes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6889"/>
+        <location filename="../mainwindow.cpp" line="6890"/>
+        <source>Logd </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2646,6 +2800,16 @@ UDP server %2:%3</source>
         <source>File Error</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7459"/>
+        <source>Tx watchdog expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7473"/>
+        <source>WD %1m</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Modes</name>
@@ -2661,7 +2825,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ootamatu rigi viga</translation>
     </message>
 </context>
 <context>
