@@ -163,16 +163,6 @@ Vormingud:
         <translation>ValePTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3046"/>
-        <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="3047"/>
-        <source>CQ in message</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX dekodeeritud teksti fondi valija</translation>
@@ -894,7 +884,7 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spoti redigeeriminet: mode teabeväljal, mida märgatakse automaatselt, saab kasutaja teabeväljale lisada oma tekstisõnumi. Saadaolevad makrod: #D on vahemaa jaoks, #G on &quot;1. ruut &lt;&gt; ruudus 2&quot;, # R on raporti väärtuse jaoks. Teabevälja eelvaade on saadaval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -1655,7 +1645,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose bändid ja kellaajad bändi vahetuseks.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
@@ -2187,314 +2177,314 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5109"/>
         <source>FT8 call first</source>
-        <translation>FT8 vali esimene</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5120"/>
         <source>Call priority and search CQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Kutse prioriteet ja CQ otsing</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5123"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali CQ-le vastuse otsimine automaatselt koos prioriteetidega, kui nurjus, siis otsi kõrgema prioriteediga&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5131"/>
         <source>FT8 call last</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5139"/>
         <source>FT8 manual call</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 manuaalne kutse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5147"/>
         <source>0  Call None</source>
-        <translation type="unfinished"></translation>
+        <translation>0  ei ole kutset</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5155"/>
         <source>1  Call first</source>
-        <translation type="unfinished"></translation>
+        <translation>1 Kutse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5163"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation type="unfinished"></translation>
+        <translation>4+ Kutsed ja CQ-sõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5171"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Kutsed dekodeeritud kuni TX-perioodi alguseni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5179"/>
         <source>3  Call based on end of decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>3  Kutsed dekodeerimise lõpuni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5187"/>
         <source>Single shot QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Üksik QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5195"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustutage Bändi aktiivsuse aken dekodeerimise alguses</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5203"/>
         <source>Answer worked B4 calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasta töötatud kutsngitele</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5214"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5241"/>
         <source>4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5249"/>
         <source>8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5257"/>
         <source>12</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5265"/>
         <source>Erase both message windows at band change</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta mõlemad teateaknad bandi vahetamisel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5303"/>
         <source>deep with 4 passes</source>
-        <translation type="unfinished"></translation>
+        <translation>sügav 4 astmega</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5311"/>
         <source>Max distance instead of best SNR</source>
-        <translation type="unfinished"></translation>
+        <translation>Parima SNR asemel maksimaalne vahemaa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5319"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>Sõnumid, mis on otsitud side RX sageduse aknas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5327"/>
         <source>use low thresholds</source>
-        <translation type="unfinished"></translation>
+        <translation>kasuta madalat taset</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5362"/>
         <source>use subpass</source>
-        <translation type="unfinished"></translation>
+        <translation>kasuta subpass</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5373"/>
         <source>minimum</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5381"/>
         <source>late start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>dekoodri hiline start</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5389"/>
         <source>Call worked B4 callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Töötatud B4 kutsungid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5408"/>
         <source>CQ and 73</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ ja 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5416"/>
         <source>any messages</source>
-        <translation type="unfinished"></translation>
+        <translation>iga sõnum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5424"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5432"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülita filter välja saadad 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5440"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation type="unfinished"></translation>
+        <translation>lülita filter välja, kui saad 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5448"/>
         <source>Hide FT8 dupe messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Peida FT8 dubleerimissõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5456"/>
         <source>Display output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva väljundvõimsus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5464"/>
         <source>Report message priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Teade sõnumi prioriteedist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5472"/>
         <source>Enable hound mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba hound mode</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5483"/>
         <source>Use hound TX frequency control</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutage hound TX sageduse kontrolli</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5491"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Keela TX pärast käsitsi režiimis RRR / RR73 / 73 saatmist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5502"/>
         <source>Show tooltips in main window</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita peaaknas tööriistavihjeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5510"/>
         <source>Color Tx message buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx-teate vävilised nupud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5518"/>
         <location filename="../mainwindow.ui" line="5695"/>
         <location filename="../mainwindow.ui" line="5719"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5526"/>
         <source>6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5534"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5542"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5550"/>
         <source>7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5558"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5566"/>
         <source>11</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5574"/>
         <source>low</source>
-        <translation type="unfinished"></translation>
+        <translation>madal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5593"/>
         <source>high</source>
-        <translation type="unfinished"></translation>
+        <translation>kõrge</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5601"/>
         <source>Hide FT contest messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Peida FT võistlussõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5609"/>
         <source>FT4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5644"/>
         <source>wideband DX Call search</source>
-        <translation type="unfinished"></translation>
+        <translation>lairiba DX-side otsing</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5652"/>
         <source>6 pass SWL mode</source>
-        <translation type="unfinished"></translation>
+        <translation>6 pass SWL-režiim</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5663"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation type="unfinished"></translation>
+        <translation>Kutsung lõikelauale topeltklõpsuga | autoselect</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5671"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation type="unfinished"></translation>
+        <translation>Crossband 160m tööks Jaapaniga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="440"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kas soovite modemit uuesti konfigureerida?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="722"/>
         <source>Error Writing WAV File</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga WAV-faili kirjutamisel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="899"/>
         <source>Error Killing jtdxjt9.exe Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jtdxjt9.exe protsessi hävitamisel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="900"/>
         <source>KillByName return code: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>KillByName tgastas koodi:%1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>Error removing &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga eemaldamisel &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>Click OK to retry</source>
-        <translation type="unfinished"></translation>
+        <translation>Klõpsa OK nuppu uuel katsel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1598"/>
         <source>TX Even</source>
-        <translation type="unfinished"></translation>
+        <translation>TX veel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1605"/>
         <source>TX Odd</source>
-        <translation type="unfinished"></translation>
+        <translation>TX imelik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1650"/>
@@ -2506,7 +2496,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="6711"/>
         <location filename="../mainwindow.cpp" line="6907"/>
         <source>File Open Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili avamise viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1651"/>
@@ -2519,190 +2509,191 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="6908"/>
         <location filename="../mainwindow.cpp" line="7249"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished">Ei avane &quot;%1&quot; lisamiseks: %2</translation>
+        <translation>Ei avane &quot;%1&quot; lisamiseks: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1755"/>
         <source>Error saving c2 file</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga c2-faili salvestamisel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1831"/>
         <source>Error in SoundInput</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga heli sisendis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1835"/>
         <source>Error in SoundOutput</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga heli väljundis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1921"/>
         <source>Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2438"/>
         <source>Subprocess Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Alamprotsessi viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2439"/>
         <source>Subprocess failed with exit code %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Alamprotsess nurjus väljumiskoodiga%1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2441"/>
         <location filename="../mainwindow.cpp" line="2460"/>
         <source>Running: %1
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Jookseb: %1
+%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2459"/>
         <source>Subprocess error</source>
-        <translation type="unfinished"></translation>
+        <translation>Alamprotsessi viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2537"/>
         <source>Spotted</source>
-        <translation type="unfinished"></translation>
+        <translation>Spotti</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2544"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation type="unfinished"></translation>
+        <translation>Dxsummit-serveriga ühendust ei saa luua / lõpule viia</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2568"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2689"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kettalt ei loeta andmeid. Vale failivorming?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2724"/>
         <source>AutoSeq0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2737"/>
         <source>AutoSeq1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2746"/>
         <location filename="../mainwindow.cpp" line="2772"/>
         <source>AutoSeq2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
         <location filename="../mainwindow.cpp" line="2768"/>
         <source>AutoSeq6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2756"/>
         <location filename="../mainwindow.cpp" line="2773"/>
         <source>AutoSeq3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2757"/>
         <location filename="../mainwindow.cpp" line="2769"/>
         <source>AutoSeq7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2841"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2849"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound mode TX sageduse juhtimiseks on vaja * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio *)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2852"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud ja see nõuab * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail¹Seaded | Raadio*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2860"/>
         <source>Hound TX frequency control warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound TX sageduse juhtimise hoiatus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2865"/>
         <source>HoundFC</source>
-        <translation type="unfinished"></translation>
+        <translation>HoundFC</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2926"/>
         <source>Keyboard Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuuri otseteed</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2937"/>
         <source>Special Mouse Commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiire spetsiaalsed käsud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3383"/>
         <location filename="../mainwindow.cpp" line="3390"/>
         <source>check time</source>
-        <translation type="unfinished"></translation>
+        <translation>kontrolli aega</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3833"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valige teine Tx sagedus. JTDX ei edasta WSPR alamribas 30m bandis teadlikult muud režiimi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3838"/>
         <location filename="../mainwindow.cpp" line="3841"/>
         <source>WSPR Guard Band</source>
-        <translation type="unfinished"></translation>
+        <translation>WSPR bänd</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3959"/>
         <source>TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3960"/>
         <source>LastTx: </source>
-        <translation type="unfinished"></translation>
+        <translation>ViimaneTX: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4174"/>
         <source>Tx: TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4175"/>
         <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4180"/>
         <source>Receiving </source>
-        <translation type="unfinished"></translation>
+        <translation>Vastuvõtt </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4233"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4389"/>
         <source>Last Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Viimane Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5270"/>
@@ -2710,115 +2701,116 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="5295"/>
         <location filename="../mainwindow.cpp" line="5321"/>
         <source>Add to CALL3.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa CALL3.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5271"/>
         <source>Please enter a valid grid locator</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisesta kehtiv lokaator</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5283"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei saa avad &quot;%1&quot; for lugemiseks/kirkutamiseks: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5296"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei saa avada &quot;%1&quot; kirjutamiseks:%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5319"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 on juba rakenduses CALL3.TXT, kas soovite selle asendada?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5682"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga QSO ADIF-i andmete saatmisel sekundaarsele UDP-serverile</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5682"/>
         <source>Write returned &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjutage uuesti &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5828"/>
         <source>Tx WSPR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6456"/>
         <source>Tune</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6629"/>
         <source>Lockd Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu et lubada Tx / Rx AF sageduste splitis töötamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6633"/>
         <source>Tx/Rx Split</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6634"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu, et lukustada Tx sagedus Rx AF sagedusele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6820"/>
         <source>Tune digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Häälesta digitaalne võimendus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6821"/>
         <source>Transmit digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada digitaalne võimendus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6840"/>
         <source>Prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Eesliited</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6889"/>
         <location filename="../mainwindow.cpp" line="6890"/>
         <source>Logd </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7113"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Võrgu viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7114"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga: %1
+UDP server %2:%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7248"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7459"/>
         <source>Tx watchdog expired</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx valvekoer aegus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7473"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2827,7 +2819,7 @@ UDP server %2:%3</source>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation type="unfinished">Mode</translation>
+        <translation>Mode</translation>
     </message>
 </context>
 <context>
@@ -2835,7 +2827,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished">Ootamatu rigi viga</translation>
+        <translation>Ootamatu rigi viga</translation>
     </message>
 </context>
 <context>
@@ -2843,57 +2835,57 @@ UDP server %2:%3</source>
     <message>
         <location filename="../main.cpp" line="162"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vale rigi nimi - \ &amp; / pole lubatud</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="187"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Võib juhtuda, et mõni muu eksemplar proovib vananenud lukufaili eemaldada?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="309"/>
         <source>Unexpected error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ootamatu viga</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
         <source>User Defined</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutaja määratletud</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletis on palju värve.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jugapaleti faili &quot;%1:%2&quot; lugemisel liiga palju värve.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jugapaleti failis &quot;%1:%2&quot; kehtetu kolmiku lugemisel.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jugapaleti failis &quot;%1:%2&quot; ebaõige värvi lugemisel.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jugapaleti faili avamisel: &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="250"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga jugapaleti faili kirjutamisel &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -2906,7 +2898,7 @@ UDP server %2:%3</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation type="unfinished">Failisüsteemi tõrge</translation>
+        <translation>Failisüsteemi tõrge</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -2914,56 +2906,56 @@ UDP server %2:%3</source>
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili ei saa ümber nimetada:&quot;%1&quot;kuni: &quot;%2&quot;On Viga(%3): %4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili ei saa kustutada:&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="172"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Võrgu viga</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Liiga palju ümbersuunamisi: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
         <source>Redirect not followed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Suunamist ei järgitud: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei saa muudatusi teha:&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="245"/>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>ei saa faili avada:&quot;%1&quot;Viga(%2):%3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Teed ei saa luua:&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="263"/>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili ei saa kirjutada:&quot;%1&quot;Viga(%2): %3</translation>
     </message>
 </context>
 <context>
@@ -2971,7 +2963,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../SampleDownloader.cpp" line="98"/>
         <source>Download Samples</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadige näidised alla</translation>
     </message>
 </context>
 <context>
