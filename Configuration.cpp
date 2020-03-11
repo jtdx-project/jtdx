@@ -3043,8 +3043,8 @@ void Configuration::impl::on_otherMessagesMarker_check_box_clicked(bool checked)
 
 void Configuration::impl::on_RR73_marker_check_box_clicked(bool checked)
 {
-   if(checked) ui_->pbCQmsg->setText("CQ/73 in message");
-   else ui_->pbCQmsg->setText("CQ in message");
+   if(checked) ui_->pbCQmsg->setText(tr("CQ/73 in message"));
+   else ui_->pbCQmsg->setText(tr("CQ in message"));
 }
 
 void Configuration::impl::on_redMarker_check_box_clicked(bool checked)

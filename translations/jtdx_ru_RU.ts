@@ -153,6 +153,16 @@ Format:
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Configuration.cpp" line="3046"/>
+        <source>CQ/73 in message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="3047"/>
+        <source>CQ in message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation type="unfinished"></translation>
