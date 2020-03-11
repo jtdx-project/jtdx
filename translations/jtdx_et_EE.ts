@@ -817,12 +817,12 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="178"/>
         <location filename="../mainwindow.ui" line="2114"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation>UTC           dB            DT           Freq          Dr </translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>Band Activity</source>
-        <translation>Bänd aktiivne</translation>
+        <translation>Bändi aktiivsus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -832,7 +832,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>?</source>
-        <translation>?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
@@ -872,7 +872,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>info:</source>
-        <translation>info:</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
@@ -883,23 +883,23 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation>redigeeri</translation>
+        <translation>paranda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
         <location filename="../mainwindow.ui" line="814"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of the propagation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Levi tüüp.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="807"/>
         <source>prop</source>
-        <translation type="unfinished"></translation>
+        <translation>levi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="965"/>
         <source>DX Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Ruut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
@@ -919,7 +919,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation>Vaata üle</translation>
+        <translation>&amp;Vaata üle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
@@ -934,22 +934,22 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klõpsake hiire vasaku nupuga, et suunata DX-side dxsummit-isse.fi (suunamine peab olema lubatud sätete vahekaardil Aruandlus).Klõpsake hiire parema nupuga, et lisada kutsung filtrisse „Peida sõnumid kutsungitest“.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
         <source>DX Call</source>
-        <translation>DX kutsung</translation>
+        <translation>DX Kutsung</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lülita TX-korraks sisse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
@@ -966,27 +966,27 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1548"/>
         <location filename="../mainwindow.ui" line="4162"/>
         <source>  Hz</source>
-        <translation>Hz</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1416"/>
         <source>Rx  </source>
-        <translation>Rx</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1447"/>
         <source>Toggle Tx mode</source>
-        <translation>Lülitab Tx-režiimi sisse</translation>
+        <translation>Lülitab Tx-režiimi sisse/välja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1450"/>
         <source>Tx JT9 @</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba FT8 DXpedition Hound režiim. Hiire parem klõps lubab TX sageduse kontrolli&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
@@ -996,12 +996,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1505"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signaali raport (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1508"/>
         <source>Report </source>
-        <translation>raport</translation>
+        <translation>Raport </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1542"/>
@@ -1012,27 +1012,27 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1551"/>
         <location filename="../mainwindow.ui" line="4165"/>
         <source>Tx  </source>
-        <translation>TX</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT tuleb seadistada Hamlibi kaudu, Hamlib toetab mõne rigi jaoks S-meetri andmete saamist.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translation>S meeter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage erinevaid Rx / Tx sagedusi või seadke Tx sagedus võrdseks Rx sagedusega.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>Split Tx/Rx</source>
-        <translation type="unfinished"></translation>
+        <translation>Split Rx/Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1644"/>
@@ -1042,28 +1042,28 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1647"/>
         <source>Rx=Tx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba poolautomaatne sõnumite järjestamine.CQ operatsiooni kutsumisel valige vaikimisi vastus kõrgeima prioriteediga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
         <location filename="../mainwindow.ui" line="4529"/>
         <source>AutoSeq</source>
-        <translation>AutoSeq</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Topeltklõpsake kutsungil  lubab TX-i&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
         <source>AutoTX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
@@ -1073,12 +1073,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
         <source>Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1751"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selle juhtnupuga saate kuvada või peita soovitud kutsungi / prefiksi redigeerimise read&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
@@ -1088,50 +1088,50 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT tuleb seadistada Hamlibi kaudu, Hamlib toetab mõnede rigide väljundvõimsuse andmete saamist&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
         <source>Adjust Tx audio level</source>
-        <translation type="unfinished"></translation>
+        <translation>Reguleeri Tx helitaset</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1870"/>
         <location filename="../mainwindow.ui" line="1886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Komadega eraldatud loend otsitud kutsungitest.Automaatvalimine AutoSeq 1..7 all töötleb otsitud kutsungit vastavalt valitud  prioriteetidele,seda funktsiooni AutoSeq0 ei toeta. Ainult režiimid FT8: liitkutsungite puhul kasutatakse loendis põhikutsungit, mõnikord kopeeritakse põhikutsung dekodeeritud sõnumist:logides peab olema võimalus selline kutsung vajadusel muuta liitühendiks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
         <source>callsign:</source>
-        <translation type="unfinished"></translation>
+        <translation>kutsung:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1906"/>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Otsitud eesliidete komaga eraldatud loend. Automaatvalimine AutoSeq 1..7 all töötleb soovitud prefiksi vastavalt valitud prioriteetidele,seda funktsiooni AutoSeq0 ei toeta.Liitkutsungite korral tuvastatakse eesliide kutsungi alguses. Automaatne valik töötleb soovitud kutsungit vastavalt valitud prioriteetidele.Ainult FT8 režiimid: mõnikord kopeeritakse põhikutsung dekodeeritud sõnumist:logides peab olema võimalus selline kutsung vajadusel muuta liitühendiks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
         <source>prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1939"/>
         <location filename="../mainwindow.ui" line="1955"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Komadega eraldatud loend otsitud ruutudest, kus toetatakse ainult nelja ruudu sümbolit. Automaatvalimine AutoSeq 1..7 all töötleb otsitud ruutu vastavalt valitud prioriteetidele, seda funktsiooni AutoSeq0 ei toetata.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1942"/>
         <source>grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>ruut:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1968"/>
@@ -1152,177 +1152,192 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Soovitud riikide komaga eraldatud loend: selles loendis kasutatakse peamist riigi eesliidet.Liitkutsungite korral tuvastatakse eesliide kutsungi alguses.Automaatvalimine AutoSeq 1..7 all töötleb otsitud riiki vastavalt valitud prioriteetidele. Seda funktsiooni ei toeta. AutoSeq0. Ainult mitte FT8 režiimid: mõnikord kopeeritakse põhikutsung dekodeeritud sõnumist: logides peab olema võimalus selline kutsung vajadusel muuta liitühendiks. Riigi peamiste eesliidete loetelu: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
+5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
+9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
+CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
+EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
+FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
+HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
+JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
+KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
+PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
+SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
+UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
+VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
+XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
+ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1986"/>
         <source>country:</source>
-        <translation type="unfinished"></translation>
+        <translation>riik:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
         <source>Rx Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Rx sagedus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edastage puhas toon. Taimerit saab häälestada sätete Üldine vahekaardi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Häälesta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
         <source>Start monitoring</source>
-        <translation type="unfinished"></translation>
+        <translation>Stardi monitooring</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
         <source>&amp;Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kõigist tekstifiltritest mööda liikumine, dubleerib toimingu vahekaardil Muu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation type="unfinished"></translation>
+        <translation>Ümbersõit</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Üks QSO AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2411"/>
         <source>1 QSO</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vasta ennem töötatud AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2456"/>
         <source>AnsB4</source>
-        <translation type="unfinished"></translation>
+        <translation>VastaB4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lõpetage signaali jälgimine ja lõpetage audio-wav-failide paki dekodeerimine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2487"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Stopp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekodeerige uuesti viimati kuvatud Rx-periood või viimati dekodeeritud wav-helifail kõigi Vihje / Filtri / SWL-režiimi nuppude jaoks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
         <source>Toggle Tx Enable On/Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülita Luba TX sisse/välja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation type="unfinished"></translation>
+        <translation>L&amp;uba Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation type="unfinished"></translation>
+        <translation>Katkesta saatmine koheselt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Katkesta Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisesta see QSO ADIF logisse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Logi &amp;QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: vasaku akna teksti kustutamine. Hiire parem nupp: parema akna teksti kustutamine. Topelt klõps mõlema akna jaoks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kustuta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Increase number of decoding attempts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suurendage dekodeerimiskatsete arvu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2708"/>
         <source>S&amp;WL mode</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib dekoodrite rühma, mis põhineb sobitatud filtritel, FT8 režiimis aktiveerib FT8AP funktsionaalsuse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Vihje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ribalaius, FT8 150Hz, FT8 kübararežiim 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signaalid: 580Hz dekodeerimine, 300 Hz teadete kuvamiseks. Filter on tsentreeritud RX signaali spektrini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib AGC kompensatsioonifunktsioonid. Dekodeerimise tõhususe suurendamine, kui AGC on rigis sisse lülitatud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2846"/>
         <source>AGCc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: andmete kustutamine DX Kutsung ja DX Ruut akendest. Hiire parem nupp: andmete kustutamine DX Kutsung, DX Ruut akendest, QSO ajaloost ja mustast nimekirjast. CTRL + hiire parem nupp: lisage DX-kutsung aknast kutsungi musta nimekirja, kustutage andmed DX-kutsung, DX-ruut akendest ja QSO-ajaloost..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation type="unfinished"></translation>
+        <translation>Puhasta D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -1330,58 +1345,58 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="5679"/>
         <location filename="../mainwindow.ui" line="5703"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta minimaalse QSO jaoks standardsõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>GenMsgs</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta Sõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
         <location filename="../mainwindow.ui" line="5400"/>
         <source>CQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3088"/>
         <location filename="../mainwindow.ui" line="3656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suunatud CQ, vahemikus AA kuni ZZ, on toetatud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3091"/>
         <location filename="../mainwindow.ui" line="3659"/>
         <source>DX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Märgi &apos;RRR&apos; sõnumi koostamiseks, tühjenda märk &apos;RR73&apos; koostamiseks</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
         <location filename="../mainwindow.ui" line="3694"/>
         <source>RRR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3123"/>
         <location filename="../mainwindow.ui" line="3742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edasta sõnum ilma QTH Ruudu sümboliteta&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
         <source>SkipTx1</source>
-        <translation type="unfinished"></translation>
+        <translation>IlmaTx1ta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3162"/>
@@ -1391,12 +1406,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3442"/>
         <location filename="../mainwindow.ui" line="3509"/>
         <source>Send this message in next Tx interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada see teade järgmise Tx perioodiga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3168"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3193"/>
@@ -1406,62 +1421,62 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3470"/>
         <location filename="../mainwindow.ui" line="3540"/>
         <source>Switch to this Tx message NOW</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülitu sellele Tx-teatele NÜÜD</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3199"/>
         <source>Tx &amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3202"/>
         <source>Alt+1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3238"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3263"/>
         <source>Tx &amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3266"/>
         <source>Alt+2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3302"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3327"/>
         <source>Tx &amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3330"/>
         <source>Alt+3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3366"/>
         <source>Ctrl+4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3391"/>
         <source>Tx &amp;4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3394"/>
         <source>Alt+4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3420"/>
@@ -1470,37 +1485,40 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisestage vaba tekstsõnum (maksimaalselt 13 tähemärki)
+või valige rippmenüüst eelmääratud makro.
+Vajutage sisestusklahvi (ENTER), et lisada aktiivne tekst eelmääratud makro
+loendist. Loendit saab hoida seadetes (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
         <source>Ctrl+5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3473"/>
         <source>Tx &amp;5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3476"/>
         <source>Alt+5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3515"/>
         <source>Ctrl+6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3543"/>
         <source>Tx &amp;6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3546"/>
         <source>Alt+6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
@@ -1509,107 +1527,107 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5687"/>
         <location filename="../mainwindow.ui" line="5711"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3618"/>
         <source>CQ </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3726"/>
         <source>AnsCQ </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3748"/>
         <source>SkpGrid</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koosta CQ või suunav CQ-vastus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
         <source>CQ/CQ DX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta vastus CQ-le vastamiseks</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta vastus koos raportiga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
         <source>dB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta vastus koos R+raportiga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
         <source>R+dB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koosta vastus RR73-ga, kui RRR on märkimata, koosta RRR-vastus, kui RRR on märgitud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
         <source>RRR/RR73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3915"/>
         <source>Generate message with 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Koosta vastus 73-ga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3918"/>
         <source>73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3966"/>
         <source>Send this standard (generated) message</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada see standard (koostatud) vastus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
         <source>Gen msg</source>
-        <translation type="unfinished"></translation>
+        <translation>koosta vastus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
         <source>Send this free-text message (max 13 characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada see vaba vastus (max 13 sümbolit)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4037"/>
         <source>Free msg</source>
-        <translation type="unfinished"></translation>
+        <translation>vaba vastus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4114"/>
         <source>Band Hopping</source>
-        <translation type="unfinished"></translation>
+        <translation>Band Hopping</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
@@ -1619,223 +1637,223 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
         <source>Schedule ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kava ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4149"/>
         <source>Upload decoded messages to WPRnet.org.</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadi dekodeeritud sõnumid üles WPRnet.org lehele.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4152"/>
         <source>Upload spots</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadi spot üles</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4181"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada järgmise 2-min. perioodi ajal.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4195"/>
         <source>Tx Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx Järgmine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4205"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seadke WSPR-teate osana Tx võimsus dBm (dB üle 1 mW).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4225"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Protsent 2-minutilistest jadadele pühendatud jadadest.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4231"/>
         <source>  %</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4234"/>
         <source>Tx Pct </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4317"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4335"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4342"/>
         <source>Decode</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
         <source>FT8 threads</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 niidid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
         <source>JT9 WSPR decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>JT9 WSPR dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4372"/>
         <source>FT8 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4376"/>
         <source>wideband decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>lairiba dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4384"/>
         <source>narrow Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>kitsas Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation type="unfinished"></translation>
+        <translation>dekooderi tundlikus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
         <source>QSO RX freq sensitivity</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO RX sageduse tundlikus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation type="unfinished"></translation>
+        <translation>dekodeerimise tsükkeleid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation type="unfinished"></translation>
+        <translation>SWL dekodeerimise tsükkeleid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
         <source>FT4 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>FT4 dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4460"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4468"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Abi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4484"/>
         <source>Mode</source>
-        <translation type="unfinished">Mode</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4496"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Muu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4500"/>
         <source>Accept UDP Reply messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Nõustu UDP sõnumitega</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4533"/>
         <source>Auto RX frequency Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne RX sageduse filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4557"/>
         <source>DXpedition</source>
-        <translation type="unfinished"></translation>
+        <translation>DXekspeditsioon</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4576"/>
         <source>Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Välju</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4579"/>
         <source>Alt+F4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4590"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Seadistus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4593"/>
         <location filename="../mainwindow.ui" line="4943"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4598"/>
         <source>About JTDX</source>
-        <translation type="unfinished">JTDX kohta</translation>
+        <translation>JTDX kohta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4601"/>
         <source>Ctrl+F1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4606"/>
         <source>Waterfall</source>
-        <translation type="unfinished"></translation>
+        <translation>Juga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4611"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4614"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4619"/>
         <source>Open next in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava järgmine kataloog</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4622"/>
         <source>F6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4627"/>
         <source>Decode remaining files in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodeeri ülejäänud failid kataloogis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4630"/>
         <source>Shift+F6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4635"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta kõik *.wav &amp;&amp; *.c2 failid  Save kataloogis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4646"/>
@@ -1843,72 +1861,72 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5335"/>
         <location filename="../mainwindow.ui" line="5617"/>
         <source>fast</source>
-        <translation type="unfinished"></translation>
+        <translation>kiire</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4657"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Puudub</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4665"/>
         <source>Save all</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta kõik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4673"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4681"/>
         <source>Eesti</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4689"/>
         <source>Русский</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4694"/>
         <source>JTDX Web site</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX Veebileht</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4697"/>
         <source>F1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4702"/>
         <source>Keyboard shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuuri otsetee</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4705"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4710"/>
         <source>Special mouse commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Spetsiaalsed hiirekäsud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4713"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4724"/>
         <source>JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4735"/>
         <source>Save decoded</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta dekoodeeritud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4746"/>
@@ -1917,7 +1935,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5585"/>
         <location filename="../mainwindow.ui" line="5625"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>keskmine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4757"/>
@@ -1925,228 +1943,228 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5354"/>
         <location filename="../mainwindow.ui" line="5636"/>
         <source>deep</source>
-        <translation type="unfinished"></translation>
+        <translation>sügav</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4765"/>
         <source>Monitor OFF at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor lülitatakse käivitamisel välja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4770"/>
         <source>Erase ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustutatakse ALL.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4775"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta QSO LOG-fail wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4780"/>
         <source>Open wsjtx_log.adi</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4783"/>
         <location filename="../mainwindow.ui" line="4967"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4791"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Logimisel muutke mode RTTY-ks</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4799"/>
         <source>Log dB reports to Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Logi dB raportid kommentaaridesse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4807"/>
         <source>Prompt me to log QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Paku QSO logisse salvestamist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4815"/>
         <source>Blank line between decoding periods</source>
-        <translation type="unfinished"></translation>
+        <translation>Tühi rida perioodide vahel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4823"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Pärast logimist tühjendage DX-kutsung ja -ruut aknad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4831"/>
         <source>Display distance in miles</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva vahemaa miilides</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4839"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Topeltklõpsake kutsungil aktiveerib Luba Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4847"/>
         <source>Tx disabled after sending 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Pärast 73 saatmist Tx keelatud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4855"/>
         <source>Runaway Tx watchdog</source>
-        <translation type="unfinished"></translation>
+        <translation>Eemaloleku Tx valvekoer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4863"/>
         <source>Allow multiple instances</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba mitut JTDX-i korraga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4871"/>
         <source>Tx freq locked to Rx freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx sagedus lukustatud Rx sagedusele</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4879"/>
         <source>Skip Tx 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Jäta Tx 1 vahele</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4887"/>
         <source>JT65</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4898"/>
         <source>JT9+JT65</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4906"/>
         <source>Tx messages to Rx Frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx-sõnum Rx Sageduse aknasse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4914"/>
         <source>Gray1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4922"/>
         <source>Show DXCC entity and worked B4 status</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva DXCC olek ja töötatud B4 olek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4930"/>
         <source>Astronomical data</source>
-        <translation type="unfinished"></translation>
+        <translation>Astronoomilised andmed</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4935"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisanimede ja järelliidete lühike loend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4940"/>
         <source>Settings...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seaded...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4951"/>
         <source>JTDX forum</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX foorum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4956"/>
         <source>Open log directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava log kataloog</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4964"/>
         <source>Message averaging</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskmine sõnum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4981"/>
         <source>Include averaging</source>
-        <translation type="unfinished"></translation>
+        <translation>keskmiselt kaasaarvatud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4995"/>
         <source>JT65 hinted decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>JT65 vihjega dekodeerimine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5006"/>
         <source>WSPR-2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5011"/>
         <source>Save reference spectrum</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvestage referentsspekter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5016"/>
         <source>&amp;Download Samples ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Laadi näited alla ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5019"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Laadi alla eri režiime tutvustavad helifailide näited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5027"/>
         <source>T10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5038"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>RX-sagedusel tekstifiltritest mööda minek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5049"/>
         <source>Bypass all text filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõigist tekstifiltritest möödumine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5052"/>
         <source>Alt+F</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5060"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva JT65 dekodeeritud harmoonilistest sõnumid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5071"/>
         <source>Enable main window popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba peaakna hüpikud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5082"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation type="unfinished"></translation>
+        <translation>Minu kutsungiga sõnumid RX-sageduse aknas </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5087"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation type="unfinished"></translation>
+        <translation>WSJT arendusrühma autoriõiguse teatis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5101"/>
         <source>FT8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5109"/>
         <source>FT8 call first</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 vali esimene</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5120"/>
@@ -3724,127 +3742,129 @@ pole riistvaralist ühendust PTT-le.</translation>
     <message>
         <location filename="../Configuration.ui" line="1237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta RS-232 DTR signaali raadio PTT juhtimiseks, vajab selle signaali riistvaralist ühendamist.&lt;/p&gt;&lt;p&gt;Mõned turustatavad seadmed kasutavad seda meetodit.&lt;/p&gt;&lt;p&gt;CAT serial pordi või mõne teise serial pordi DTR signaali saab kasutada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1240"/>
         <source>&amp;DTR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1253"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pole PTT aktiveerimist programmist,kasutatakse raadio VOX funktsiooni.&lt;/p&gt;&lt;p&gt;Kasuta seda, kui sul pole riistvaralist ühendust raadioga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1256"/>
         <source>VO&amp;X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta RS-232 RTS signaali raadio PTT juhtimiseks, vajab selle signaali riistvaralist ühendamist.&lt;/p&gt;&lt;p&gt;Mõned turustatavad seadmed kasutavad seda meetodit.&lt;/p&gt;&lt;p&gt;CAT serial pordi või mõne teise serial pordi RTS signaali saab kasutada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
         <source>R&amp;TS</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali serial port mida kasutatakse PTT juhtimiseks, vee valik on saadaval, kui DTR või RTS on valitud eelnevalt PTT meetodiks.&lt;/p&gt;&lt;p&gt;See võib olla sama port mida kasutatakse CAT juhtimiseksl.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1331"/>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõned raadiod lubavad valida heli sisendit CAT käskude abil,
+See säte lubab valida millist audio sisendit kasutada
+(kui lubatud, siis on Rear/Data valik parim).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Saate Heli allikas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
         <source>Rear&amp;/Data</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
         <source>&amp;Front/Mic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1375"/>
         <source>Modulation mode selected on radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Raadio Modulatsiooni valik.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1378"/>
         <source>Mode</source>
-        <translation type="unfinished">Mode</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1384"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB on tavaliselt õige valik,&lt;/p&gt;&lt;p&gt;seni kuni raadioö pole spetsiaalset data või packet režiimi valikut&lt;/p&gt;&lt;p&gt;AFSK-ga töötamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1387"/>
         <source>US&amp;B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1400"/>
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui see valik on saadaval, siis on see õige valik programmile.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
         <source>Data/P&amp;kt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
         <source>Split Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Splitis töötamine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
         <source>Fake It</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Katse luua ühendus raadioga kasutades neid sätteid.&lt;/p&gt;&lt;p&gt;Nupp muutub roheliseks kui ühendus töötab või punaseks kui esineb mingi probleem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
         <source>Test CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>Testi CAT-i</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1523"/>
@@ -3853,38 +3873,39 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Katse aktiveerida saade.
+Teistkorne vajutus deaktiveerib saate.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
         <source>Test PTT</source>
-        <translation type="unfinished"></translation>
+        <translation>Testi PTT-d</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1568"/>
         <location filename="../Configuration.ui" line="1578"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimalne viide PTT aktiveerimise ja Tx heli alguse vahel.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1571"/>
         <source>Tx delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx viide:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1628"/>
         <source>A&amp;udio</source>
-        <translation type="unfinished"></translation>
+        <translation>H&amp;eli</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1631"/>
         <source>Audio interface settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Heli liidestuse sätted</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1637"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Helikaart</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1649"/>
@@ -3893,7 +3914,11 @@ If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
 you will broadcast any systems sounds generated during
 transmitting periods.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Select the audio CODEC to use for transmitting.
+If this is your default device for system sounds then
+ensure that all system sounds are disabled otherwise
+you will broadcast any systems sounds generated during
+transmitting periods.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1666"/>
