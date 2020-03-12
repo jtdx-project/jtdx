@@ -166,6 +166,8 @@ private slots:
   void on_actionEnglish_triggered();
   void on_actionEstonian_triggered();
   void on_actionRussian_triggered();
+  void on_actionChinese_simplified_triggered();
+  void on_actionChinese_traditional_triggered();
   void on_actionCallNone_toggled(bool checked);
   void on_actionCallFirst_toggled(bool checked);
   void on_actionCallMid_toggled(bool checked);

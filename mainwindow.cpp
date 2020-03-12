@@ -582,6 +582,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionEnglish->setActionGroup(languageGroup);
   ui->actionEstonian->setActionGroup(languageGroup);
   ui->actionRussian->setActionGroup(languageGroup);
+  ui->actionChinese_simplified->setActionGroup(languageGroup);
+  ui->actionChinese_traditional->setActionGroup(languageGroup);
 
   QActionGroup* saveGroup = new QActionGroup(this);
   ui->actionNone->setActionGroup(saveGroup);
@@ -1307,6 +1309,8 @@ void MainWindow::readSettings()
   m_lang=m_settings->value("Language","en_US").toString();
   if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
   else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
+  else if(m_lang=="zh-CN") ui->actionChinese_simplified->setChecked(true);
+  else if(m_lang=="zh-HK") ui->actionChinese_traditional->setChecked(true);
   else ui->actionEnglish->setChecked(true);
 //  if (m_lang!="en_US") set_language(m_lang);
   
@@ -2711,6 +2715,8 @@ void MainWindow::on_actionSave_all_triggered() { m_saveWav=2; ui->actionSave_all
 void MainWindow::on_actionEnglish_triggered() { ui->actionEnglish->setChecked(true); set_language("en_US"); }
 void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(true); set_language("et_EE"); }
 void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
+void MainWindow::on_actionChinese_simplified_triggered() { ui->actionChinese_simplified->setChecked(true); set_language("zh-CN"); }
+void MainWindow::on_actionChinese_traditional_triggered() { ui->actionChinese_traditional->setChecked(true); set_language("zh-HK"); }
 
 void MainWindow::on_actionCallNone_toggled(bool checked)
 {
