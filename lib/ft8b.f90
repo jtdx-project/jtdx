@@ -776,7 +776,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 !print *,qual,msg37
     rxdt=xdt-0.5
-    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9) then
+    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. (iaptype.eq.1 .and. xsnr.lt.-18.5)) then
       if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
          (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
