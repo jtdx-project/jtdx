@@ -875,11 +875,14 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->labAz->setStyleSheet("border: 0px;");
   ui->labDist->setStyleSheet("border: 0px;");
 
-  auto t = "UTC   dB   DT Freq   Message";
-  ui->decodedTextLabel->setText(t);
-  ui->decodedTextLabel2->setText(t);
 
   readSettings();		         //Restore user's setup params
+
+  QString t;
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
+  else t = "UTC   dB   DT Freq   Message";
+  ui->decodedTextLabel->setText(t);
+  ui->decodedTextLabel2->setText(t);
 
   ui->tuneButton->setMaximumSize(80,45);
   ui->monitorButton->setMaximumSize(80,45);
@@ -3381,7 +3384,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC  dB  DT " + avexdt + " Freq   Message");
+        ui->decodedTextLabel->setText("UTC     dB  DT  Freq   Message Avg=" + avexdt);
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -5873,10 +5876,13 @@ void MainWindow::commonActions ()
   m_wideGraph->setModeTx(m_modeTx);
   m_wideGraph->show();
   mode_label->setText(m_mode);
-  ui->decodedTextLabel->setText("UTC   dB   DT Freq   Message");
+  QString t;
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
+  else t = "UTC   dB   DT Freq   Message";
+  ui->decodedTextLabel->setText(t);
   ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
   ui->label_6->setText(tr("Band Activity"));
-  ui->decodedTextLabel2->setText("UTC   dB   DT Freq   Message");
+  ui->decodedTextLabel2->setText(t);
   m_wideGraph->setPeriod(m_TRperiod,m_nsps);
   m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
   m_detector->setPeriod(m_TRperiod);  // TODO - not thread safe
@@ -5926,7 +5932,10 @@ void MainWindow::WSPR_config(bool b)
     }
     m_bSimplex = true;
   } else {
-    ui->decodedTextLabel->setText("UTC   dB   DT Freq   Message");
+    QString t;
+    if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
+    else t = "UTC   dB   DT Freq   Message";
+    ui->decodedTextLabel->setText(t);
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
     ui->label_6->setText(tr("Band Activity"));
     m_bSimplex = false;

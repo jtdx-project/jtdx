@@ -98,13 +98,13 @@
             <property name="minimumSize">
              <size>
               <width>225</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="palette">
@@ -196,13 +196,13 @@
             <property name="minimumSize">
              <size>
               <width>70</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>500</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="palette">
@@ -271,7 +271,7 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>8</pointsize>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -4696,7 +4696,7 @@ list. The list can be maintained in Settings (F2).</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>中文</string>
+    <string>简体中文</string>
    </property>
   </action>
   <action name="actionChinese_traditional">
@@ -4704,7 +4704,7 @@ list. The list can be maintained in Settings (F2).</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>中文(台灣)</string>
+    <string>繁體中文</string>
    </property>
   </action>
   <action name="actionJTDX_Web_Site">
