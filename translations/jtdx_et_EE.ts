@@ -39,12 +39,12 @@
     <message>
         <location filename="../about.ui" line="23"/>
         <source>About JTDX</source>
-        <translation>JTDX kohta</translation>
+        <translation>JTDX info</translation>
     </message>
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -74,14 +74,14 @@ Teine rakendus võib olla kataloogi lukustanud</translation>
     <message>
         <location filename="../Configuration.cpp" line="1150"/>
         <source>Create data directory error: </source>
-        <translation>Andmekataloogi loovise viga: </translation>
+        <translation>Andmekataloogi loomise viga: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1159"/>
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Ei saa luua kataloogi &quot;</translation>
+        <translation>Kataloogi ei saa luua &quot;</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
@@ -99,12 +99,12 @@ Teine rakendus võib olla kataloogi lukustanud</translation>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
         <source>Serial Port:</source>
-        <translation></translation>
+        <translation>Jadaport:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
         <source>Serial port used for CAT control</source>
-        <translation>CAT kontrolli serial port</translation>
+        <translation>CAT-kontrolli jadaport</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2501"/>
@@ -120,7 +120,7 @@ Formats:
 	IPv4-address:port
 	[IPv6-address]:port</source>
         <translation>Valikuline hostinimi ja võrguteenuse port.
-Jäta vaikimisi tühjaks sellesse arvutisse.
+Jäta tühjaks selle arvuti vaikeväärtuste kasutamiseks.
 Vormingud:
 	hostinimi:port
 	IPv4-aadress:port
@@ -138,19 +138,19 @@ Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
         <translation>Seadme valikuline identifitseerimine.
-Jätke tühjaks rigi vaikeseade jaoks.
-Vormingud:
+Raadio vaikeseadete jaoks jätke tühjaks.
+Vorming:
 	[VID[:PID[:TARNIJA[:TOODE]]]]</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
-        <translation>Vale helisisendi seade</translation>
+        <translation>Vale helisisend</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
-        <translation>Vale heliväljundi seade</translation>
+        <translation>Vale heliväljund</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2563"/>
@@ -160,7 +160,7 @@ Vormingud:
     <message>
         <location filename="../Configuration.cpp" line="2573"/>
         <source>Invalid PTT port</source>
-        <translation>ValePTT-port</translation>
+        <translation>Vale PTT-port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
@@ -175,7 +175,7 @@ Vormingud:
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>JTDX dekodeeritud teksti fondi valija</translation>
+        <translation>JTDX dekodeeritud teksti fondi valik</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
@@ -185,7 +185,7 @@ Vormingud:
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>&gt;Kas soovite kindlasti loobuda oma praegustest töösagedustest ja asendada need vaikesagedustega?</translation>
+        <translation>Kas soovite tõesti loobuda oma praegustest töösagedustest ja asendada need vaikesagedustega?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
@@ -195,12 +195,12 @@ Vormingud:
     <message>
         <location filename="../Configuration.cpp" line="4661"/>
         <source>Failed to open connection to rig</source>
-        <translation>Rigiga ühenduse loomine ebaõnnestus</translation>
+        <translation>Raadioga ühenduse loomine ebaõnnestus</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
-        <translation>Rigi tõrkeviga</translation>
+        <translation>Raadio viga</translation>
     </message>
 </context>
 <context>
@@ -209,84 +209,84 @@ Vormingud:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
-        <translation>DX Lab Suite Commanderiga ühenduse loomine ebaõnnestus
+        <translation>DX Lab Suite Commanderiga ei õnnestunud ühendust luua
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation>DX Lab Suite Commander ei vastanud lugemissagedusele õigesti: </translation>
+        <translation>DX Lab Suite Commander ei vastanud sageduse küsimisele õigesti: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX Lab Suite Commander saatis tuvastamata TX oleku: </translation>
+        <translation>DX Lab Suite Commander saatis tuvastamata TX-oleku: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>DX Lab Suite Commander ei vastanud õigesti küsitluse saatmise olekule: </translation>
+        <translation>DX Lab Suite Commander ei vastanud TX-oleku küsimisele õigesti: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>DX Lab Suite Commanderi rigi ei vastanud PTT-le: </translation>
+        <translation>DX Lab Suite Commanderi raadioi ei reageerinud PTT-le: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation>DX Lab Suite Commander ei vastanud küsitlussagedusele õigesti: </translation>
+        <translation>DX Lab Suite Commander ei vastanud sageduse küsimisele õigesti: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation>DX Lab Suite Commander ei vastanud õigesti sageduse küsitlusele: </translation>
+        <translation>DX Lab Suite Commander ei vastanud õigesti saatesageduse küsimisele: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX Lab Suite Commander saatis tundmatu spliti oleku: </translation>
+        <translation>DX Lab Suite Commander saatis tundmatu split-oleku: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation>DX Lab Suite Commander ei vastanud õigesti spliti jagamise olekule: </translation>
+        <translation>DX Lab Suite Commander ei vastanud split-oleku küsimisele õigesti: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>DX Lab Suite Commander saatis tuvastamata režiimi: &quot;</translation>
+        <translation>DX Lab Suite Commander saatis tuvastamata töörežiimi: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation>DX Lab Suite Commander ei vastanud küsitlusrežiimile õigesti: </translation>
+        <translation>DX Lab Suite Commander ei vastanud töörežiimi küsimisele õigesti: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
         <source>DX Lab Suite Commander send command failed
 </source>
-        <translation>DX Lab Suite Commanderi saatmiskäsk ebaõnnestus
+        <translation>DX Lab Suite Commanderile käsu saatmisne ebaõnnestus
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation>DX Lab Suite Commander ei saatnud käsku &quot;%1&quot;: %2
+        <translation>DX Lab Suite Commanderil ei õnnestunud saata käsku &quot;%1&quot;: %2
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation>DX Lab Suite Commander saadab käsu &quot;%1&quot; vastuse lugemine ebaõnnestus: &quot;%2&quot;
+        <translation>DX Lab Suite Commander saadetud käsu &quot;%1&quot; vastuse lugemine ebaõnnestus: &quot;%2&quot;
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation>DX Lab Suite Commander proovib ammendatud saatmiskäsku &quot;%1&quot;</translation>
+        <translation>DX Lab Suite Commanderile käsu saatmise kordused ammendatud &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
@@ -309,6 +309,7 @@ Vormingud:
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
+        <translatorcomment>Siia oleks vaja paremat tõlget</translatorcomment>
         <translation>Lisa &amp;järgmiseks ...</translation>
     </message>
     <message>
@@ -366,12 +367,14 @@ Vormingud:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
+        <translatorcomment>Tõlge võib vajada sisulist analüüsi</translatorcomment>
         <translation>Sisufaili süntaksiviga %1 parameetri nihe %2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation>Sisufaili ülatase peab olema JSON-vahemikus</translation>
+        <translatorcomment>Pakuks sellist varianti</translatorcomment>
+        <translation>Sisufaili peab algama JSON-objektiga</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
@@ -388,17 +391,17 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation>Sisu kanded peavad olema JSON-i vahemikus</translation>
+        <translation>Sisu kanded peavad olema JSON-objektid</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation>Sisu kannetel peab olema kehtiv tüüp</translation>
+        <translation>Sisu kanded peavad olema õiget tüüpi</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation>Sisu kannetel peab olema kehtiv nimi</translation>
+        <translation>Sisu kanded peavad olema õige nimega</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
@@ -408,7 +411,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation>Sisukataloogid peavad olema suhtelised ja piires &quot;%1&quot;</translation>
+        <translation>Sisukataloogid peavad olema suhtelised ja &quot;%1&quot; piires</translation>
     </message>
 </context>
 <context>
@@ -416,7 +419,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="46"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation>Emuleeritud split režiim eeldab, et rigi peab olema simpleksrežiimis</translation>
+        <translation>Emuleeritud split-režiim eeldab, et raadio peab olema simpleksrežiimis</translation>
     </message>
 </context>
 <context>
@@ -429,7 +432,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Mode:</source>
-        <translation>&amp;Mode:</translation>
+        <translation>&amp;Tööliik:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="218"/>
@@ -443,7 +446,7 @@ Viga: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="431"/>
         <location filename="../FrequencyList.cpp" line="587"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Tööliik</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="463"/>
@@ -461,7 +464,7 @@ Viga: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="518"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode Frequency</source>
-        <translation>Mode Sagedus</translation>
+        <translation>Tööliigi sagedus</translation>
     </message>
 </context>
 <context>
@@ -471,34 +474,36 @@ Viga: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="147"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation>Ühendus Ham Radio Deluxega häiritud
+        <translation>Ham Radio Deluxega ei õnnestu ühenduda
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="156"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
-        <translation>Faili avamine häiritud &quot;%1&quot;: %2.</translation>
+        <translation>Faili &quot;%1&quot; avamine ebaõnnestus: %2.</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="171"/>
         <location filename="../HRDTransceiver.cpp" line="195"/>
         <source>Ham Radio Deluxe: no rig found</source>
-        <translation>Ham Radio Deluxe: rigi ei leitud</translation>
+        <translation>Ham Radio Deluxe: raadiot ei leitud</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="419"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
-        <translation>Ham Radio Deluxe: rigi doesn&apos;t toetus</translation>
+        <translation>Ham Radio Deluxe: raadio ei toeta seda töörežiimi</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="438"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation>Ham Radio Deluxe: saatis tundmatu mode</translation>
+        <translatorcomment>-režiim vs -liik (a&apos;la SSB vs USB vs Phone), vajab konteksti analüüsi</translatorcomment>
+        <translation>Ham Radio Deluxe: saatis tundmatu töörežiimi</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="473"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
-        <translation>Ham Radio Deluxe: üksust ei leitud %1 rippmenüüs</translation>
+        <translatorcomment>või: rippmenüü %1 üksust ei leitud</translatorcomment>
+        <translation>Ham Radio Deluxe: %1 rippmenüü üksust ei leitud</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="517"/>
@@ -508,18 +513,18 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="883"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation>Ham Radio Deluxe didn&apos;t reageerib ootuspäraselt</translation>
+        <translation>Ham Radio Deluxe ei vastanud ootuspäraselt</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1031"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
-        <translation>Ham Radio Deluxe: rigi on kadunud või muudetud</translation>
+        <translation>Ham Radio Deluxe: raadio on kadunud või muutunud</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1046"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation>Ham Radio Deluxe saatmiskäsk &quot;%1&quot; luhtunud %2
+        <translation>Ham Radio Deluxe saatmiskäsk &quot;%1&quot; ebaõnnestus %2
 </translation>
     </message>
     <message>
@@ -537,18 +542,18 @@ Viga: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="1143"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe ei õnnestu käsklusele vastata &quot;%1&quot; %2
+        <translation>Ham Radio Deluxe-l ei õnnestu käsule vastata &quot;%1&quot; %2
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1153"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe korda saatmiskäsku uuesti &quot;%1&quot;</translation>
+        <translation>Ham Radio Deluxe käsu saatmise kordused ammendatud &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1166"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
-        <translation>Ham Radio Deluxe didn&apos;t vasta käsule &quot;%1&quot; ootuspäraselt</translation>
+        <translation>Ham Radio Deluxe ei vastanud käsule &quot;%1&quot; ootuspäraselt</translation>
     </message>
 </context>
 <context>
@@ -562,12 +567,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="293"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation>Hamlib seade faili viga: %1 seade nihkes %2</translation>
+        <translation>Hamlib seadete faili viga: %1 seade nihkes %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="299"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
-        <translation>Hamlib seade faili viga: ülemine tase peab olema JSON-objekt</translation>
+        <translation>Hamlib seadete faili viga: ülemine tase peab olema JSON-objekt</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="311"/>
@@ -582,152 +587,155 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="424"/>
         <source>Hamlib error: %1 while %2</source>
+        <translatorcomment>Vajab analüüsi</translatorcomment>
         <translation>Hamlibi viga: %1 while %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="434"/>
         <source>opening connection to rig</source>
-        <translation>ühenduse avamine rigile</translation>
+        <translation>ühendumine raadioga</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="483"/>
+        <location filename="../HamlibTransceiver.cpp" line="484"/>
         <source>getting current frequency</source>
-        <translation>praeguse sageduse saamine</translation>
+        <translation>praeguse sageduse küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="487"/>
+        <location filename="../HamlibTransceiver.cpp" line="488"/>
         <source>getting current mode</source>
-        <translation>praeguse režiimi kuvamine</translation>
+        <translation>praeguse töörežiimi küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="516"/>
-        <location filename="../HamlibTransceiver.cpp" line="536"/>
+        <location filename="../HamlibTransceiver.cpp" line="517"/>
+        <location filename="../HamlibTransceiver.cpp" line="537"/>
         <source>exchanging VFOs</source>
-        <translation>VFOde vahetamine</translation>
+        <translation>VFO-de vahetamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="524"/>
-        <location filename="../HamlibTransceiver.cpp" line="1001"/>
+        <location filename="../HamlibTransceiver.cpp" line="525"/>
+        <location filename="../HamlibTransceiver.cpp" line="1002"/>
         <source>getting other VFO frequency</source>
-        <translation>muu VFO sageduse kuvamine</translation>
+        <translation>teise VFO sageduse küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="528"/>
+        <location filename="../HamlibTransceiver.cpp" line="529"/>
         <source>getting other VFO mode</source>
-        <translation>muude VFO-režiimide kuvamine</translation>
+        <translation>teise VFO töörežiimide küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="541"/>
+        <location filename="../HamlibTransceiver.cpp" line="542"/>
         <source>setting current VFO</source>
-        <translation>praeguse VFO seaded</translation>
+        <translatorcomment>või aktiivse VFO?</translatorcomment>
+        <translation>praeguse VFO seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="550"/>
+        <location filename="../HamlibTransceiver.cpp" line="551"/>
         <source>getting frequency</source>
-        <translation>sageduse kuvamine</translation>
+        <translation>sageduse küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="554"/>
+        <location filename="../HamlibTransceiver.cpp" line="555"/>
         <source>getting mode</source>
-        <translation>mode kuvamine</translation>
+        <translation>töörežiimi küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="571"/>
-        <location filename="../HamlibTransceiver.cpp" line="936"/>
+        <location filename="../HamlibTransceiver.cpp" line="572"/>
+        <location filename="../HamlibTransceiver.cpp" line="937"/>
         <source>getting current VFO</source>
-        <translation>praeguse VFO kuvamine</translation>
+        <translatorcomment>aktiivse VFO?</translatorcomment>
+        <translation>praeguse VFO küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="615"/>
-        <location filename="../HamlibTransceiver.cpp" line="623"/>
-        <location filename="../HamlibTransceiver.cpp" line="637"/>
-        <location filename="../HamlibTransceiver.cpp" line="979"/>
+        <location filename="../HamlibTransceiver.cpp" line="616"/>
+        <location filename="../HamlibTransceiver.cpp" line="624"/>
+        <location filename="../HamlibTransceiver.cpp" line="638"/>
+        <location filename="../HamlibTransceiver.cpp" line="980"/>
         <source>getting current VFO frequency</source>
-        <translation>praeguse VFO sageduse kuvamine</translation>
+        <translation>praeguse VFO sageduse küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="621"/>
-        <location filename="../HamlibTransceiver.cpp" line="636"/>
-        <location filename="../HamlibTransceiver.cpp" line="643"/>
-        <location filename="../HamlibTransceiver.cpp" line="722"/>
-        <location filename="../HamlibTransceiver.cpp" line="740"/>
-        <location filename="../HamlibTransceiver.cpp" line="801"/>
+        <location filename="../HamlibTransceiver.cpp" line="622"/>
+        <location filename="../HamlibTransceiver.cpp" line="637"/>
+        <location filename="../HamlibTransceiver.cpp" line="644"/>
+        <location filename="../HamlibTransceiver.cpp" line="723"/>
+        <location filename="../HamlibTransceiver.cpp" line="741"/>
+        <location filename="../HamlibTransceiver.cpp" line="802"/>
         <source>setting frequency</source>
         <translation>sageduse seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="730"/>
-        <location filename="../HamlibTransceiver.cpp" line="808"/>
-        <location filename="../HamlibTransceiver.cpp" line="880"/>
-        <location filename="../HamlibTransceiver.cpp" line="893"/>
+        <location filename="../HamlibTransceiver.cpp" line="731"/>
+        <location filename="../HamlibTransceiver.cpp" line="809"/>
+        <location filename="../HamlibTransceiver.cpp" line="881"/>
+        <location filename="../HamlibTransceiver.cpp" line="894"/>
         <source>getting current VFO mode</source>
-        <translation>praeguse VFO mode kuvamine</translation>
+        <translation>praeguse VFO töörežiimi küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="736"/>
-        <location filename="../HamlibTransceiver.cpp" line="745"/>
-        <location filename="../HamlibTransceiver.cpp" line="814"/>
-        <location filename="../HamlibTransceiver.cpp" line="886"/>
-        <location filename="../HamlibTransceiver.cpp" line="899"/>
+        <location filename="../HamlibTransceiver.cpp" line="737"/>
+        <location filename="../HamlibTransceiver.cpp" line="746"/>
+        <location filename="../HamlibTransceiver.cpp" line="815"/>
+        <location filename="../HamlibTransceiver.cpp" line="887"/>
+        <location filename="../HamlibTransceiver.cpp" line="900"/>
         <source>setting current VFO mode</source>
-        <translation>praeguse VFO mode sätted</translation>
+        <translation>praeguse VFO töörežiimi seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="788"/>
-        <location filename="../HamlibTransceiver.cpp" line="857"/>
+        <location filename="../HamlibTransceiver.cpp" line="789"/>
+        <location filename="../HamlibTransceiver.cpp" line="858"/>
         <source>setting/unsetting split mode</source>
-        <translation>jagamisrežiimi sätestamine/tühistamine</translation>
+        <translation>split-režiimi seadmine/tühistamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="799"/>
-        <location filename="../HamlibTransceiver.cpp" line="839"/>
+        <location filename="../HamlibTransceiver.cpp" line="800"/>
+        <location filename="../HamlibTransceiver.cpp" line="840"/>
         <source>setting split mode</source>
         <translation>split mode sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="827"/>
+        <location filename="../HamlibTransceiver.cpp" line="828"/>
         <source>setting split TX frequency and mode</source>
-        <translation>spli TX sageduse ja mode sätted</translation>
+        <translation>seatakse split TX sagedus ja töörežiim</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="832"/>
+        <location filename="../HamlibTransceiver.cpp" line="833"/>
         <source>setting split TX frequency</source>
-        <translation>split TX sageduse sätted</translation>
+        <translation>seatakse split TX sagedus</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="904"/>
+        <location filename="../HamlibTransceiver.cpp" line="905"/>
         <source>getting split TX VFO mode</source>
-        <translation>split TX VFO mode kuvamine</translation>
+        <translation>split TX VFO mode küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="911"/>
+        <location filename="../HamlibTransceiver.cpp" line="912"/>
         <source>setting split TX VFO mode</source>
-        <translation>split TX VFO mode sätted</translation>
+        <translation>seatakse split TX VFO töörežiim</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1095"/>
+        <location filename="../HamlibTransceiver.cpp" line="1096"/>
         <source>getting PTT state</source>
-        <translation>PTT oleku kuvamine</translation>
+        <translation>PTT oleku küsimine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1128"/>
+        <location filename="../HamlibTransceiver.cpp" line="1129"/>
         <source>setting PTT on</source>
-        <translation>PTT on sätted</translation>
+        <translation>Lülitatakse PTT sisse</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1136"/>
+        <location filename="../HamlibTransceiver.cpp" line="1137"/>
         <source>setting PTT off</source>
-        <translation>PTToff sätted</translation>
+        <translation>Lülitatakse PTT välja</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1148"/>
+        <location filename="../HamlibTransceiver.cpp" line="1149"/>
         <source>setting a configuration item</source>
         <translation>konfiguratsiooni seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1158"/>
+        <location filename="../HamlibTransceiver.cpp" line="1159"/>
         <source>getting a configuration item</source>
-        <translation>konfiguratsiooni kuvamine</translation>
+        <translation>konfiguratsiooni küsimine</translation>
     </message>
 </context>
 <context>
@@ -761,12 +769,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="134"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Töörežiim</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation>Band</translation>
+        <translation>Laineala</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
@@ -781,7 +789,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="250"/>
         <source>Grid</source>
-        <translation></translation>
+        <translation>Ruut</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="282"/>
@@ -791,7 +799,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation>Tx power</translation>
+        <translation>Tx võimsus</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
@@ -838,12 +846,12 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5929"/>
         <location filename="../mainwindow.cpp" line="5940"/>
         <source>Band Activity</source>
-        <translation>Bändi aktiivsus</translation>
+        <translation>Laineala aktiivsus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui on oranž või punane, seadme töö tõrge, klõpsake sageduse valimise ja lugemise nuppu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui nupp on oranž või punane, siis on tegu raadio kontrolli tõrkega, ühenduse lähtestamiseks ja raadio sageduse lugemiseks klõpsake nuppu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
@@ -853,7 +861,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>USB dial frequency</source>
-        <translation>USB-valiku sagedus</translation>
+        <translation>USB sagedus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
@@ -868,7 +876,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage seda elementi kohapealse muutmise kuvamiseks või peitmiseks line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage seda valikut spoti kohapealse muutmise kuvamiseks või peitmiseks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
@@ -878,12 +886,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>Valige tööala või sagedus MHz</translation>
+        <translation>Valige töötamise laineala või sagedus MHz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit kohateabe välja eelvaade.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spoti info eelvaade.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
@@ -894,12 +902,12 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spoti redigeeriminet: mode teabeväljal, mida märgatakse automaatselt, saab kasutaja teabeväljale lisada oma tekstisõnumi. Saadaolevad makrod: #D on vahemaa jaoks, #G on &quot;1. ruut &lt;&gt; ruudus 2&quot;, # R on raporti väärtuse jaoks. Teabevälja eelvaade on saadaval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spoti muutmine: töörežiimi info spotitakse automaatselt, kasutaja saab teabeväljale lisada oma tekstisõnumi. Saadaolevad makrod: #D on vahemaa jaoks, #G on &quot;Ruut 1&lt;&gt; Ruut 2&quot;, # R on raporti väärtuse jaoks. Teabevälja eelvaade on saadaval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation>paranda</translation>
+        <translation>muuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
@@ -920,12 +928,12 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
         <source>Locator of station to be worked</source>
-        <translation>Töötava jaama lokaator</translation>
+        <translation>Töötatava jaama lokaator</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1006"/>
         <source>Callsign of station to be worked</source>
-        <translation>Töötava jaama kutsung</translation>
+        <translation>Töötatava jaama kutsung</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1025"/>
@@ -935,7 +943,8 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Vaata üle</translation>
+        <translatorcomment>Oli vaata üle, aga see peaks ju a&apos;la QRZ vms olema?</translatorcomment>
+        <translation>&amp;Otsi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
@@ -978,7 +987,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1407"/>
         <source>Audio Rx frequency</source>
-        <translation>Audio Rx sagedus</translation>
+        <translation>Vastuvõtu helisagedus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1413"/>
@@ -1005,7 +1014,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba FT8 DXpedition Hound režiim. Hiire parem klõps lubab TX sageduse kontrolli&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba FT8 DXpedition Hound režiim. Hiire parem klõps lubab hound TX-sageduse kontrolli&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
@@ -1026,7 +1035,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1542"/>
         <source>Audio Tx frequency</source>
-        <translation>Audio TX sagedus</translation>
+        <translation>Saate helisagedus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1551"/>
@@ -1044,12 +1053,12 @@ Viga: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="1494"/>
         <location filename="../mainwindow.cpp" line="1926"/>
         <source>S meter</source>
-        <translation>S meeter</translation>
+        <translation>S-meeter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage erinevaid Rx / Tx sagedusi või seadke Tx sagedus võrdseks Rx sagedusega.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage erinevaid Rx/Tx helisagedusi või seadke Tx sagedus võrdseks Rx helisagedusega.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
@@ -1069,7 +1078,8 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba poolautomaatne sõnumite järjestamine.CQ operatsiooni kutsumisel valige vaikimisi vastus kõrgeima prioriteediga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translatorcomment>Sõnastust saaks selgemaks muuta.</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba poolautomaatne sõnumite järjestamine.CQ kutsumisel valitakse vaikimisi kõrgeima prioriteediga vastus.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
@@ -1080,7 +1090,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Topeltklõpsake kutsungil  lubab TX-i&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Topeltklõps kutsungil lubab TX-i&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
@@ -1115,7 +1125,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation></translation>
+        <translation> Võimsus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
@@ -1205,7 +1215,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edastage puhas toon. Taimerit saab häälestada sätete Üldine vahekaardi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edastage puhas toon. Taimerit saab häälestada Seadete vahekaardil Üldine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
@@ -1215,7 +1225,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
         <source>Start monitoring</source>
-        <translation>Stardi monitooring</translation>
+        <translation>Alusta monitoorimist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
@@ -1230,12 +1240,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation>Ümbersõit</translation>
+        <translation>Möödaminek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Üks QSO AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ühe QSO AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2411"/>
@@ -1265,12 +1275,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekodeerige uuesti viimati kuvatud Rx-periood või viimati dekodeeritud wav-helifail kõigi Vihje / Filtri / SWL-režiimi nuppude jaoks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekodeerige uuesti viimane Rx-periood või viimati dekodeeritud wav-helifail kõigi Vihje / Filtri / SWL-režiimi nuppude kombinatsioonide korral&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation></translation>
+        <translation>Dec&amp;odeeri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -1295,7 +1305,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Sisesta see QSO ADIF logisse</translation>
+        <translation>Sisesta see QSO ADIF-logisse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
@@ -1305,7 +1315,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: vasaku akna teksti kustutamine. Hiire parem nupp: parema akna teksti kustutamine. Topelt klõps mõlema akna jaoks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: dekodeeritud teksti (vasaku) akna  puhastamine. Hiire parem nupp: QSO sageduse (parema) akna puhastamine. Topeltklõps mõlema akna puhastamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
@@ -1320,7 +1330,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2708"/>
         <source>S&amp;WL mode</source>
-        <translation></translation>
+        <translation>S&amp;WL režiim</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
@@ -1355,7 +1365,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: andmete kustutamine DX Kutsung ja DX Ruut akendest. Hiire parem nupp: andmete kustutamine DX Kutsung, DX Ruut akendest, QSO ajaloost ja mustast nimekirjast. CTRL + hiire parem nupp: lisage DX-kutsung aknast kutsungi musta nimekirja, kustutage andmed DX-kutsung, DX-ruut akendest ja QSO-ajaloost..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: andmete kustutamine akendest DX Kutsung ja DX Ruut. Hiire parem nupp: andmete kustutamine akendest DX Kutsung, DX Ruut; QSO ajaloost ja mustast nimekirjast. CTRL + hiire parem nupp: lisage DX-kutsung aknas olev kutsung kutsungite musta nimekirja, kustutage andmed akendest DX-kutsung, DX-ruut ja QSO-ajaloos..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -1378,7 +1388,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>GenMsgs</source>
-        <translation>Koosta Sõnumid</translation>
+        <translation>TeeSõnum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
@@ -1390,7 +1400,8 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3088"/>
         <location filename="../mainwindow.ui" line="3656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suunatud CQ, vahemikus AA kuni ZZ, on toetatud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translatorcomment>Seda võiks täpsustada (mis on suunatud CQ)</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suunatud CQ, toetatud on vahemik AA kuni ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3091"/>
@@ -1414,7 +1425,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3123"/>
         <location filename="../mainwindow.ui" line="3742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edasta sõnum ilma QTH Ruudu sümboliteta&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edasta sõnum ilma QTH lokaatorita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
@@ -1429,7 +1440,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3442"/>
         <location filename="../mainwindow.ui" line="3509"/>
         <source>Send this message in next Tx interval</source>
-        <translation>Saada see teade järgmise Tx perioodiga</translation>
+        <translation>Saada see teade järgmisel Tx perioodil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3168"/>
@@ -1510,8 +1521,8 @@ Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
         <translation>Sisestage vaba tekstsõnum (maksimaalselt 13 tähemärki)
 või valige rippmenüüst eelmääratud makro.
-Vajutage sisestusklahvi (ENTER), et lisada aktiivne tekst eelmääratud makro
-loendist. Loendit saab hoida seadetes (F2).</translation>
+Praeguse teksti lisamiseks eelmääratud makrode loendisse
+vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
@@ -1560,7 +1571,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3726"/>
         <source>AnsCQ </source>
-        <translation></translation>
+        <translation>VastaCQ </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3748"/>
@@ -1610,7 +1621,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koosta vastus RR73-ga, kui RRR on märkimata, koosta RRR-vastus, kui RRR on märgitud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui RRR valikukast on märkimata, koosta vastus RR73-ga; kui RRR valikukast on märgitud, koosta RRR-vastus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
@@ -1635,27 +1646,28 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
         <source>Gen msg</source>
-        <translation>koosta vastus</translation>
+        <translation>Koosta vastus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
         <source>Send this free-text message (max 13 characters)</source>
-        <translation>Saada see vaba vastus (max 13 sümbolit)</translation>
+        <translation>Saada see vabas formaadis sõnum (max 13 sümbolit)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4037"/>
         <source>Free msg</source>
-        <translation>vaba vastus</translation>
+        <translation>Vaba vastus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4114"/>
         <source>Band Hopping</source>
-        <translation>Band Hopping</translation>
+        <translation>Laineala vahetus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation>Choose bändid ja kellaajad bändi vahetuseks.</translation>
+        <translatorcomment>Vajab võib-olla analüüsi</translatorcomment>
+        <translation>Vali  lainealade automaatse vahetuse lainealad ja kellaajad.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
@@ -1665,12 +1677,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4149"/>
         <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Laadi dekodeeritud sõnumid üles WPRnet.org lehele.</translation>
+        <translation>Lae dekodeeritud sõnumid WPRnet.org lehele.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4152"/>
         <source>Upload spots</source>
-        <translation>Laadi spot üles</translation>
+        <translation>Saada spotid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4181"/>
@@ -1690,7 +1702,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4225"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation>Protsent 2-minutilistest jadadele pühendatud jadadest.</translation>
+        <translation>Saatmisele kasutatavate 2-minutiliste perioodide protsent.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4231"/>
@@ -1720,7 +1732,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
         <source>FT8 threads</source>
-        <translation>FT8 niidid</translation>
+        <translation>FT8 lõimed</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
@@ -1745,7 +1757,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation>dekooderi tundlikus</translation>
+        <translation>dekoodri tundlikus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
@@ -1760,7 +1772,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation>SWL dekodeerimise tsükkleid</translation>
+        <translation>SWL-dekodeerimise tsüklid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
@@ -1800,7 +1812,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4535"/>
         <source>Auto RX frequency Filter</source>
-        <translation>Automaatne RX sageduse filter</translation>
+        <translation>Automaatne RX-sageduse filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4559"/>
@@ -1831,7 +1843,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4600"/>
         <source>About JTDX</source>
-        <translation>JTDX kohta</translation>
+        <translation>JTDX info</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4603"/>
@@ -1856,7 +1868,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4621"/>
         <source>Open next in directory</source>
-        <translation>Ava järgmine kataloog</translation>
+        <translation>Ava järgmine kataloogis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4624"/>
@@ -1934,7 +1946,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4720"/>
         <source>Keyboard shortcuts</source>
-        <translation>Klaviatuuri otsetee</translation>
+        <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4723"/>
@@ -1944,7 +1956,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4728"/>
         <source>Special mouse commands</source>
-        <translation>Spetsiaalsed hiirekäsud</translation>
+        <translation>Hiire erikäsud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4731"/>
@@ -2022,7 +2034,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4833"/>
         <source>Blank line between decoding periods</source>
-        <translation>Tühi rida perioodide vahel</translation>
+        <translation>Tühi rida dekodeerimisperioodide vahel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4841"/>
@@ -2032,12 +2044,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4849"/>
         <source>Display distance in miles</source>
-        <translation>Kuva vahemaa miilides</translation>
+        <translation>Kuva kaugust miilides</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4857"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>Topeltklõpsake kutsungil aktiveerib Luba Tx</translation>
+        <translation>Topeltklõps kutsungil aktiveerib Luba Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4865"/>
@@ -2087,7 +2099,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4940"/>
         <source>Show DXCC entity and worked B4 status</source>
-        <translation>Kuva DXCC olek ja töötatud B4 olek</translation>
+        <translation>Kuva DXCC maa ja töötatud B4 olek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4948"/>
@@ -2097,7 +2109,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4953"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation>Lisanimede ja järelliidete lühike loend</translation>
+        <translation>Lisatavate ees- ja järelliidete lühike loend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4958"/>
@@ -2122,7 +2134,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4999"/>
         <source>Include averaging</source>
-        <translation>keskmiselt kaasaarvatud</translation>
+        <translation>Lisa keskmistamine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5013"/>
@@ -2142,12 +2154,13 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5034"/>
         <source>&amp;Download Samples ...</source>
+        <translatorcomment>Vajab analüüsi</translatorcomment>
         <translation>&amp;Laadi näited alla ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5037"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Laadi alla eri režiime tutvustavad helifailide näited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lae alla eri töörežiime tutvustavate helifailide näited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5045"/>
@@ -2162,7 +2175,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5067"/>
         <source>Bypass all text filters</source>
-        <translation>Kõigist tekstifiltritest möödumine</translation>
+        <translation>Kõigist tekstifiltritest mööda minek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5070"/>
@@ -2172,22 +2185,23 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5078"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation>Kuva JT65 dekodeeritud harmoonilistest sõnumid</translation>
+        <translation>Näita JT65 harmoonilistest dekodeeritud sõnumeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5089"/>
         <source>Enable main window popup</source>
+        <translatorcomment>Vajab kooskõlastamist</translatorcomment>
         <translation>Luba peaakna hüpikud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5100"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>Minu kutsungiga sõnumid RX-sageduse aknas </translation>
+        <translation>Minu kutsungiga sõnumid RX-sageduse aknasse </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5105"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation>WSJT arendusrühma autoriõiguse teatis</translation>
+        <translation>WSJT arendusrühma autoriõiguse teade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5119"/>
@@ -2202,7 +2216,8 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5138"/>
         <source>Call priority and search CQ</source>
-        <translation>Kutse prioriteet ja CQ otsing</translation>
+        <translatorcomment>Vajab selgitamist</translatorcomment>
+        <translation>Side prioriteet ja CQ otsing</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5141"/>
@@ -2232,6 +2247,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5181"/>
         <source>4+ Call and search through CQ messages</source>
+        <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>4+ Kutsed ja CQ-sõnumid</translation>
     </message>
     <message>
@@ -2242,6 +2258,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5197"/>
         <source>3  Call based on end of decoding</source>
+        <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>3  Kutsed dekodeerimise lõpuni</translation>
     </message>
     <message>
@@ -2252,7 +2269,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5213"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>Kustutage Bändi aktiivsuse aken dekodeerimise alguses</translation>
+        <translation>Tühjenda laineala aktiivsuse aken dekodeerimise alguses</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5221"/>
@@ -2282,7 +2299,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5283"/>
         <source>Erase both message windows at band change</source>
-        <translation>Kustuta mõlemad teateaknad bandi vahetamisel</translation>
+        <translation>Laineala vahetamisel tühjenda mõlemad teateaknad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5321"/>
@@ -2297,7 +2314,8 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5337"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>Sõnumid, mis on otsitud side RX sageduse aknas</translation>
+        <translatorcomment>Vajab täpsustamist</translatorcomment>
+        <translation>Otsitud kutsungitega sõnumid RX-sageduse aknasse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5345"/>
@@ -2312,7 +2330,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5391"/>
         <source>minimum</source>
-        <translation></translation>
+        <translation>miinimum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5399"/>
@@ -2322,7 +2340,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5407"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Töötatud B4 kutsungid</translation>
+        <translation>Kutsu &apos;töötatud B4&apos; kutsungeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5426"/>
@@ -2342,12 +2360,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5450"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Lülita filter välja saadad 73</translation>
+        <translation>Lülita filter välja kui saadad 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5458"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>lülita filter välja, kui saad 73</translation>
+        <translation>Lülita filter välja, kui saad 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5466"/>
@@ -2362,6 +2380,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5482"/>
         <source>Report message priority</source>
+        <translatorcomment>Võib vajada sisulist analüüsi</translatorcomment>
         <translation>Raportiga sõnumi prioriteet</translation>
     </message>
     <message>
@@ -2372,12 +2391,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5501"/>
         <source>Use hound TX frequency control</source>
-        <translation>Kasutage hound TX sageduse kontrolli</translation>
+        <translation>Kasuta hound TX sageduse kontrolli</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5509"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>Keela TX pärast käsitsi režiimis RRR / RR73 / 73 saatmist</translation>
+        <translation>Keela TX pärast käsitsirežiimis RRR/RR73/73 saatmist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5520"/>
@@ -2387,7 +2406,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5528"/>
         <source>Color Tx message buttons</source>
-        <translation>Tx-teate vävilised nupud</translation>
+        <translation>Tx-teate värvilised nupud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5536"/>
@@ -2459,6 +2478,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5681"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
+        <translatorcomment>Vajab ülevaatamist</translatorcomment>
         <translation>Kutsung lõikelauale topeltklõpsuga | autoselect</translation>
     </message>
     <message>
@@ -2469,7 +2489,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="440"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation>Kas soovite modemit uuesti konfigureerida?</translation>
+        <translation>Kas soovite raadio liidest uuesti seadistada?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="724"/>
@@ -2489,22 +2509,22 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>Error removing &quot;%1&quot;</source>
-        <translation>Viga eemaldamisel &quot;%1&quot;</translation>
+        <translation>Viga &quot;%1&quot; eemaldamisel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="923"/>
         <source>Click OK to retry</source>
-        <translation>Klõpsa OK nuppu uuel katsel</translation>
+        <translation>Uueks katseks klõpsa OK nuppu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1605"/>
         <source>TX Even</source>
-        <translation>TX veel</translation>
+        <translation>TX Paaris</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1612"/>
         <source>TX Odd</source>
-        <translation>TX imelik</translation>
+        <translation>TX Paaritu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1657"/>
@@ -2529,7 +2549,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="6923"/>
         <location filename="../mainwindow.cpp" line="7264"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation>Ei avane &quot;%1&quot; lisamiseks: %2</translation>
+        <translation>&quot;%1&quot; ei saa lisamiseks avada: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1762"/>
@@ -2539,12 +2559,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1838"/>
         <source>Error in SoundInput</source>
-        <translation>Viga heli sisendis</translation>
+        <translation>Viga helisisendis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1842"/>
         <source>Error in SoundOutput</source>
-        <translation>Viga heli väljundis</translation>
+        <translation>Viga heliväljundis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1928"/>
@@ -2566,7 +2586,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="2467"/>
         <source>Running: %1
 %2</source>
-        <translation>Jookseb: %1
+        <translation>Töötab: %1
 %2</translation>
     </message>
     <message>
@@ -2577,12 +2597,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2544"/>
         <source>Spotted</source>
-        <translation>Spotti</translation>
+        <translation>Spotitud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2551"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation>Dxsummit-serveriga ühendust ei saa luua / lõpule viia</translation>
+        <translation>Dxsummit-serveriga ei saa ühendust luua / lõpule viia</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2575"/>
@@ -2592,7 +2612,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2696"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation>Kettalt ei loeta andmeid. Vale failivorming?</translation>
+        <translation>Kettalt ei loetud andmeid. Vale failivorming?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2733"/>
@@ -2641,7 +2661,8 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2861"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud ja see nõuab * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail¹Seaded | Raadio*)</translation>
+        <translatorcomment>vajab kohendamist koos lisaanalüüsiga</translatorcomment>
+        <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud ja see nõuab * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2869"/>
@@ -2656,12 +2677,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2935"/>
         <source>Keyboard Shortcuts</source>
-        <translation>Klaviatuuri otseteed</translation>
+        <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2946"/>
         <source>Special Mouse Commands</source>
-        <translation>Hiire spetsiaalsed käsud</translation>
+        <translation>Hiire erikäsud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3392"/>
@@ -2672,7 +2693,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3842"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
-        <translation>Valige teine Tx sagedus. JTDX ei edasta WSPR alamribas 30m bandis teadlikult muud režiimi.</translation>
+        <translation>Valige teine Tx sagedus. JTDX ei saada 30m lainealal WSPR sagedustel teadlikult muus töörežiimis.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3847"/>
@@ -2683,12 +2704,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3968"/>
         <source>TUNE</source>
-        <translation></translation>
+        <translation>Häälesta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3969"/>
         <source>LastTx: </source>
-        <translation>ViimaneTX: </translation>
+        <translation>ViimaneTx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4183"/>
@@ -2721,7 +2742,7 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
         <location filename="../mainwindow.cpp" line="5304"/>
         <location filename="../mainwindow.cpp" line="5330"/>
         <source>Add to CALL3.TXT</source>
-        <translation>Lisa CALL3.TXT</translation>
+        <translation>Lisa faili CALL3.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5280"/>
@@ -2731,12 +2752,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5292"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
-        <translation>Ei saa avad &quot;%1&quot; for lugemiseks/kirkutamiseks: %2</translation>
+        <translation>&quot;%1&quot; ei saa lugemiseks/kirjutamiseks avada: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5305"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
-        <translation>Ei saa avada &quot;%1&quot; kirjutamiseks:%2</translation>
+        <translation>&quot;%1&quot; ei saa kirjutamiseks avada:%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5328"/>
@@ -2762,7 +2783,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6471"/>
         <source>Tune</source>
-        <translation></translation>
+        <translation>Häälesta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6644"/>
@@ -2787,12 +2808,12 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6835"/>
         <source>Tune digital gain</source>
-        <translation>Häälesta digitaalne võimendus</translation>
+        <translation>Häälesta digitaalset võimendust</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6836"/>
         <source>Transmit digital gain</source>
-        <translation>Saada digitaalne võimendus</translation>
+        <translation>Saate digitaalne võimendus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6855"/>
@@ -2825,6 +2846,7 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7474"/>
         <source>Tx watchdog expired</source>
+        <translatorcomment>võib-olla: TX-taimer aegus?</translatorcomment>
         <translation>Tx valvekoer aegus</translation>
     </message>
     <message>
@@ -4280,7 +4302,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
         <source>Tx &amp;Macros</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx &amp;Makrod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
@@ -4320,7 +4342,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
         <source>Logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Logimine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2305"/>
