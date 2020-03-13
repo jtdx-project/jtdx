@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200102
-
 #include "about.h"
 
 #include <QCoreApplication>
@@ -31,7 +29,7 @@ CAboutDlg::CAboutDlg(QWidget *parent) :
                          "It is created with contributions from DK7UY, DO1IP, <br>"
 						 "ES4RLH, G7OED, JA2BQX, JP1LRT, LU9DO, MM0HVU, N6ML, NL9222,  <br>"
 						 "OE1MWW, R3BB, RK3AOL, RA4UDC, RW4O, R0JF, SP2L, SV1IYF, <br>"
-                         "UA3ALE, US-E-12, VE3NEA, VK3AMA, VK6KXW, VK7YUM <br>"
+                         "UA3ALE, US-E-12, VE3NEA, VK3AMA, VK6KXW, VK7YUM, VR2UPU <br>"
                          "and LY3BG family: Vytas and Rimas Kudelis. <br><br>"
 						 "<br><br>"
 						 "JTDX is licensed under the terms of Version3<br>"
