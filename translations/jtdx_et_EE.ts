@@ -165,12 +165,12 @@ Vormingud:
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ/73 sõnumis</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ sõnumis</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
@@ -590,142 +590,142 @@ Viga: %2 - %3</translation>
         <translation>ühenduse avamine rigile</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="484"/>
+        <location filename="../HamlibTransceiver.cpp" line="483"/>
         <source>getting current frequency</source>
         <translation>praeguse sageduse saamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="488"/>
+        <location filename="../HamlibTransceiver.cpp" line="487"/>
         <source>getting current mode</source>
         <translation>praeguse režiimi kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="517"/>
-        <location filename="../HamlibTransceiver.cpp" line="537"/>
+        <location filename="../HamlibTransceiver.cpp" line="516"/>
+        <location filename="../HamlibTransceiver.cpp" line="536"/>
         <source>exchanging VFOs</source>
         <translation>VFOde vahetamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="525"/>
-        <location filename="../HamlibTransceiver.cpp" line="1002"/>
+        <location filename="../HamlibTransceiver.cpp" line="524"/>
+        <location filename="../HamlibTransceiver.cpp" line="1001"/>
         <source>getting other VFO frequency</source>
         <translation>muu VFO sageduse kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="529"/>
+        <location filename="../HamlibTransceiver.cpp" line="528"/>
         <source>getting other VFO mode</source>
         <translation>muude VFO-režiimide kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="542"/>
+        <location filename="../HamlibTransceiver.cpp" line="541"/>
         <source>setting current VFO</source>
         <translation>praeguse VFO seaded</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="551"/>
+        <location filename="../HamlibTransceiver.cpp" line="550"/>
         <source>getting frequency</source>
         <translation>sageduse kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="555"/>
+        <location filename="../HamlibTransceiver.cpp" line="554"/>
         <source>getting mode</source>
         <translation>mode kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="572"/>
-        <location filename="../HamlibTransceiver.cpp" line="937"/>
+        <location filename="../HamlibTransceiver.cpp" line="571"/>
+        <location filename="../HamlibTransceiver.cpp" line="936"/>
         <source>getting current VFO</source>
         <translation>praeguse VFO kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="616"/>
-        <location filename="../HamlibTransceiver.cpp" line="624"/>
-        <location filename="../HamlibTransceiver.cpp" line="638"/>
-        <location filename="../HamlibTransceiver.cpp" line="980"/>
+        <location filename="../HamlibTransceiver.cpp" line="615"/>
+        <location filename="../HamlibTransceiver.cpp" line="623"/>
+        <location filename="../HamlibTransceiver.cpp" line="637"/>
+        <location filename="../HamlibTransceiver.cpp" line="979"/>
         <source>getting current VFO frequency</source>
         <translation>praeguse VFO sageduse kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="622"/>
-        <location filename="../HamlibTransceiver.cpp" line="637"/>
-        <location filename="../HamlibTransceiver.cpp" line="644"/>
-        <location filename="../HamlibTransceiver.cpp" line="723"/>
-        <location filename="../HamlibTransceiver.cpp" line="741"/>
-        <location filename="../HamlibTransceiver.cpp" line="802"/>
+        <location filename="../HamlibTransceiver.cpp" line="621"/>
+        <location filename="../HamlibTransceiver.cpp" line="636"/>
+        <location filename="../HamlibTransceiver.cpp" line="643"/>
+        <location filename="../HamlibTransceiver.cpp" line="722"/>
+        <location filename="../HamlibTransceiver.cpp" line="740"/>
+        <location filename="../HamlibTransceiver.cpp" line="801"/>
         <source>setting frequency</source>
         <translation>sageduse seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="731"/>
-        <location filename="../HamlibTransceiver.cpp" line="809"/>
-        <location filename="../HamlibTransceiver.cpp" line="881"/>
-        <location filename="../HamlibTransceiver.cpp" line="894"/>
+        <location filename="../HamlibTransceiver.cpp" line="730"/>
+        <location filename="../HamlibTransceiver.cpp" line="808"/>
+        <location filename="../HamlibTransceiver.cpp" line="880"/>
+        <location filename="../HamlibTransceiver.cpp" line="893"/>
         <source>getting current VFO mode</source>
         <translation>praeguse VFO mode kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="737"/>
-        <location filename="../HamlibTransceiver.cpp" line="746"/>
-        <location filename="../HamlibTransceiver.cpp" line="815"/>
-        <location filename="../HamlibTransceiver.cpp" line="887"/>
-        <location filename="../HamlibTransceiver.cpp" line="900"/>
+        <location filename="../HamlibTransceiver.cpp" line="736"/>
+        <location filename="../HamlibTransceiver.cpp" line="745"/>
+        <location filename="../HamlibTransceiver.cpp" line="814"/>
+        <location filename="../HamlibTransceiver.cpp" line="886"/>
+        <location filename="../HamlibTransceiver.cpp" line="899"/>
         <source>setting current VFO mode</source>
         <translation>praeguse VFO mode sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="789"/>
-        <location filename="../HamlibTransceiver.cpp" line="858"/>
+        <location filename="../HamlibTransceiver.cpp" line="788"/>
+        <location filename="../HamlibTransceiver.cpp" line="857"/>
         <source>setting/unsetting split mode</source>
         <translation>jagamisrežiimi sätestamine/tühistamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="800"/>
-        <location filename="../HamlibTransceiver.cpp" line="840"/>
+        <location filename="../HamlibTransceiver.cpp" line="799"/>
+        <location filename="../HamlibTransceiver.cpp" line="839"/>
         <source>setting split mode</source>
         <translation>split mode sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="828"/>
+        <location filename="../HamlibTransceiver.cpp" line="827"/>
         <source>setting split TX frequency and mode</source>
         <translation>spli TX sageduse ja mode sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="833"/>
+        <location filename="../HamlibTransceiver.cpp" line="832"/>
         <source>setting split TX frequency</source>
         <translation>split TX sageduse sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="905"/>
+        <location filename="../HamlibTransceiver.cpp" line="904"/>
         <source>getting split TX VFO mode</source>
         <translation>split TX VFO mode kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="912"/>
+        <location filename="../HamlibTransceiver.cpp" line="911"/>
         <source>setting split TX VFO mode</source>
         <translation>split TX VFO mode sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1096"/>
+        <location filename="../HamlibTransceiver.cpp" line="1095"/>
         <source>getting PTT state</source>
         <translation>PTT oleku kuvamine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1129"/>
+        <location filename="../HamlibTransceiver.cpp" line="1128"/>
         <source>setting PTT on</source>
         <translation>PTT on sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1137"/>
+        <location filename="../HamlibTransceiver.cpp" line="1136"/>
         <source>setting PTT off</source>
         <translation>PTToff sätted</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1149"/>
+        <location filename="../HamlibTransceiver.cpp" line="1148"/>
         <source>setting a configuration item</source>
         <translation>konfiguratsiooni seadmine</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1159"/>
+        <location filename="../HamlibTransceiver.cpp" line="1158"/>
         <source>getting a configuration item</source>
         <translation>konfiguratsiooni kuvamine</translation>
     </message>
@@ -1914,12 +1914,12 @@ loendist. Loendit saab hoida seadetes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4699"/>
         <source>简体中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4707"/>
         <source>繁體中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4712"/>
