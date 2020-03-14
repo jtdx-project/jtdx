@@ -4277,27 +4277,27 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2071"/>
         <source>sent report answering to incoming report</source>
-        <translation type="unfinished"></translation>
+        <translation>vasta saadule raportiga</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seda suvandit kasutatakse kattuva spektri stsenaariumi korral. Tx peatub, kui spektritel on ühised sagedused, ilma et seda seadet arvestataks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation type="unfinished"></translation>
+        <translation>Peata TX, kui operaator, keda ma kutsusin, vastas teisele operaatorile</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vaikimisi automaatse valimisega, ignoreerides CQ vastuvõetud / edastatud suunda, kui dekodeeritakse kehtiv „uus DXCC” teade, kas sissetulev kõne või valik dekodeeritud CQ / 73 sõnumitest.See suvand välistab uue DXCC erandi automaatse valimise korral suunatud CQ töötlemiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
         <source>Strict directional CQ operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranged CQ-toimingud</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
@@ -4307,37 +4307,37 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
         <source>Canned free text messages setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Kinniste tasuta tekstsõnumite seadistamine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lisama</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimaalselt 13 sümbolit tasuta sõnumi jaoks&lt;br&gt;&lt;br&gt;Maksimaalselt 17 sümboliti suunatava CQ-standardteate jaoks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Kustuta</translation>
+        <translation>&amp;Kustuta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lohistage üksusi järjekorra ümberkorraldamiseks. Üksusespetsiifiliste toimingute tegemiseks paremklõps.Üksuste valimiseks klõpsa, SHIFT + klõpsa ja, CRTL + Klõpsa. @ sümbol asendatakse DX-kkutsungiga ja sümbol kasutaja kutsungiga, # sümbol edastatava raportiga, ^ logist saadav korrespondendi nimega sümbol, kus nimi ei tohi ületada 7 tähemärki.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
         <source>Reportin&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapor&amp;t</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2266"/>
         <source>Reporting and logging settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Raporti ja logimise seaded</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
@@ -4350,171 +4350,171 @@ both here.</source>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõned logimisprogrammid ei aktsepteeri selle programmi salvestatud aruannete tüüpi. Valige see suvand, et salvestada saadetud ja vastuvõetud aruanded kommentaaride väljale.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>d&amp;B raport kommentaaridsse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali see suvand, et tühjendada väljad DX Call ja DX Grid, kui saadetakse 73 või vaba tekstsõnum.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Pärast logimist kustuta &amp;DX kutsung ja ruut</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Märgi see suvand, et JTDX-ist väljudes tühjendada väljad DX Call ja DX Grid. See funktsioon on mõeldud UR5EQF logiraamatutarkvara kasutajatele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta DX kutsung ja ruut väljumisel</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõned logimisprogrammid ei aktsepteeri JT-65 või JT9 tunnustatud modena.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation type="unfinished"></translation>
+        <translation>Muu&amp;da mode RTTY-sse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui saadad 73 või vaba tekstisõnumi, ilmub programm osaliselt lõpetatud logi QSO dialoogi.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2352"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Pal&amp;u mul QSO sisse logida.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba QSO automaatne logimine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ühendus välise logi programmiga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2392"/>
         <source>Send logged QSO ADIF data</source>
-        <translation type="unfinished"></translation>
+        <translation>Saada logitud QSO ADIFF-i</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2426"/>
         <location filename="../Configuration.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP-serveri nimi või aadress&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2429"/>
         <source>TCP server:</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP server:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2449"/>
         <location filename="../Configuration.ui" line="2459"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP serveri pordi number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2452"/>
         <source>TCP port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2474"/>
         <source>Enable sending to TCP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba TCP serverisse saatmine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2499"/>
         <source>2nd UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2513"/>
         <location filename="../Configuration.ui" line="2523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;teine UDP serveri pordi number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
         <source>UDP port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2532"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba teise UDP-serverisse saatmine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Võimaldab konfigureerida andmeid faili ALL.TXT salvestamiseks. TX-teadete salvestamist ei saa välja lülitada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
         <source>Recording to ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvestamine ALL.TXT faili</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2590"/>
         <source>decoded messages</source>
-        <translation type="unfinished"></translation>
+        <translation>dekodeeritud sõnumid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2597"/>
         <source>decoded and debug messages</source>
-        <translation type="unfinished"></translation>
+        <translation>dekodeeritud ja valeteated</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2639"/>
         <source>Network Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Võrguteenused</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2660"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Programm võib saata logitud QSO teabe veebisaidile http://www.eqsl.cc.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2663"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba &amp;eQSL saatmine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2683"/>
         <source>EQSL Username.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL kasutajanimi.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2690"/>
         <source>U&amp;sername:</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;asutajanimi:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
         <source>P&amp;assword:</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;arool:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2710"/>
         <source>EQSL Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL Parool.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2720"/>
@@ -4522,82 +4522,82 @@ and DX Grid fields when a 73 or free text message is sent.</source>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Programm võib saata teie jaama üksikasjad ja kõik dekodeeritud signaalid veebisaidile http://pskreporter.info. Seda kasutatakse majaka vastupidiseks analüüsiks, mis on väga kasulik leviku ja süsteemi jõudluse hindamiseks.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2726"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation type="unfinished"></translation>
+        <translation>Luba &amp;PSK Reporteri Spoting</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2733"/>
         <source>EQSL OTH Nickname.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL OTH Nickname.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>Enable DXSummit Spotting </source>
-        <translation type="unfinished"></translation>
+        <translation>Luba DXSummit Spottimine </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>QTH N&amp;ickname:</source>
-        <translation type="unfinished"></translation>
+        <translation>QTH N&amp;ickname:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP-ühendus välise tarkvaraga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2763"/>
         <source>Primary UDP Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Esmane UDP-server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2793"/>
         <source>UDP Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP Server:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2809"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekoodide vastuvõtmiseks võrguteenuse valikuline hostinimi.&lt;/p&gt;&lt;p&gt;Vorming:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Selle välja tühjendamine keelab UDP värskenduste edastamise.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2819"/>
         <source>UDP Server port number:</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP Serveri pordi number:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that WSJT-X should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sisestage UDP-serveri pordi number, millele WSJT-X peaks värskendusi saatma. Kui see on null, siis uuendusi ei edastata.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled WSJT-X will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selle aktiveerimise korral võtab WSJT-X vastu dekodeerimissõnumid vastuvõtvalt UDP-serverilt teatud taotlusega.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
         <source>Accept UDP requests</source>
-        <translation type="unfinished"></translation>
+        <translation>Nõustu UDP taotlustega</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Märkige saabuva UDP päringu aktsepteerimine. Selle valiku mõju sõltub operatsioonisüsteemist ja haldurist. Selle eesmärk on teavitada saabuva UDP päringu aktsepteerimisest, isegi kui see rakendus on viidud miinimumini või peidetud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2859"/>
         <source>Notify on accepted UDP request</source>
-        <translation type="unfinished"></translation>
+        <translation>Teatage aktsepteeritud UDP taotlusest</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2866"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui UDP taotlus aktsepteeritakse, taastage aken minimeeritud kujul.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2869"/>
