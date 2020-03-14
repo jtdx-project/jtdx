@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200302
-
 subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
                 nthr,lFreeText,imainpass,filter,lft8subpass,lspecial,                       &
@@ -10,7 +8,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,twopi,graymap, &
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
-                       ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73
+                       ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
+                       mybcall,hisbcall
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12
@@ -777,7 +776,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 !print *,qual,msg37
     rxdt=xdt-0.5
-    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9) then
+    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. (iaptype.eq.1 .and. xsnr.lt.-18.5)) then
+      if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
+         (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
       else; call chkfalse8(msg37,i3,n3,nbadcrc,iaptype); endif
       if(nbadcrc.eq.1) then; msg37=''; return; endif
@@ -786,7 +787,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 ! i3=2 'JC6OFB VF3BXC/P R GQ99'
 !print *,i3,n3,msg37
 !print *,iaptype,msg37
-    if(i3.ge.1 .and. i3.le.3 .and. (qual.lt.0.6 .or. xsnr.lt.-22.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0) .and. &
+256 if(i3.ge.1 .and. i3.le.3 .and. (qual.lt.0.6 .or. xsnr.lt.-22.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0) .and. &
        index(msg37,' R ').gt.0) then
 !print *,msg37
       islash1=index(msg37,'/')

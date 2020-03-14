@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200102
-
 #include "about.h"
 
 #include <QCoreApplication>
@@ -27,11 +25,12 @@ CAboutDlg::CAboutDlg(QWidget *parent) :
                          "JTDX supports FT8, FT4, JT9, T10 and JT65A digital modes for HF <br>"
                          "amateur radio communication, focused on DXing <br>"
                          "and being shaped by community of DXers. <br>"
-						 "&copy; 2016-2020 by Igor Chernikov UA3DJY and Arvo Järve ES1JA. <br>"
+                         "&copy; 2016-2020 by Igor Chernikov UA3DJY and Arvo Järve ES1JA. <br>"
                          "It is created with contributions from DK7UY, DO1IP, <br>"
-						 "ES4RLH, G7OED, JA2BQX, JP1LRT, LU9DO, MM0HVU, N6ML, NL9222,  <br>"
-						 "OE1MWW, R3BB, RK3AOL, RA4UDC, RW4O, R0JF, SP2L, SV1IYF, <br>"
-                         "UA3ALE, US-E-12, VE3NEA, VK3AMA, VK6KXW, VK7YUM <br>"
+                         "ES4RLH, G7OED, JA2BQX, JP1LRT, LU9DO, MM0HVU, N6ML, NL9222,  <br>"
+                         "OE1MWW, R3BB, RK3AOL, RA4UDC, RW4O, R0JF, SP2L, SV1IYF, <br>"
+                         "UA3ALE, US-E-12, VE3NEA, VK3AMA, VK6KXW, VK7YUM  <br>"
+                         "VR2UPU ES2HV ES5TF<br>"
                          "and LY3BG family: Vytas and Rimas Kudelis. <br><br>"
 						 "<br><br>"
 						 "JTDX is licensed under the terms of Version3<br>"

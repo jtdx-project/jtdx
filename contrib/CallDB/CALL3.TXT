@@ -1,7 +1,7 @@
 // HF + 6m band JT65/JT9 callsign+grid square database for JTDX software
 // being used by decoders based on the matched filter(button Hint)
 // and for filtering out some false FTRSD decodes. 
-// Contains 34328 unique callsigns.
+// Contains 34323 unique callsigns.
 //
 // It is based on JT65/JT9 spots data made by JTAlert software 
 // http://hamapps.com
@@ -2495,7 +2495,6 @@ DB2MWA,JN58,,,
 DB2OM,JO52,,,
 DB2PG,JO30,,,
 DB2RUA,JO72,,,
-DB2SEV,IO57,,,
 DB2TK,JO52,,,
 DB2WF,JO30,,,
 DB2WH,JO30,,,
@@ -17855,7 +17854,6 @@ KP4TG,FK68,,,
 KP4VP,FK78,,,
 KP4WK,EL87,,,
 KP4XI,FK68,,,
-KP6ENA,DL41,,,
 KQ0J,EN11,,,
 KQ1M,FN42,,,
 KQ3K,EL89,,,
@@ -22451,7 +22449,6 @@ OK8EYJ,JN89,,,
 OK8LEO,JN79,,,
 OK8WW,JN79,,,
 OL5MS,JN69,,,
-OL9I,PL72,,,
 OM0AB,KN08,,,
 OM0AS,KN18,,,
 OM0ASA,KN09,,,
@@ -26453,7 +26450,6 @@ SA7LAK,JO65,,,
 SA7LOO,JO65,,,
 SA7TOR,JO65,,,
 SA7ZZZ,JO65,,,
-SA8JOT,JO27,,,
 SB7W,JO65,,,
 SC3DX,JP82,,,
 SC7C,JO86,,,
@@ -32789,7 +32785,6 @@ WB8WOJ,EN91,,,
 WB8WWD,EI63,,,
 WB8YFE,EM71,,,
 WB8YXF,FM16,,,
-WB8YYX,FC15,,,
 WB9AMI,EM69,,,
 WB9AYD,EL87,,,
 WB9BJQ,EN43,,,

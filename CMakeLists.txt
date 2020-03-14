@@ -1,16 +1,9 @@
-# last time modified by Igor UA3DJY on 20200217
-
 cmake_minimum_required (VERSION 2.8.10 FATAL_ERROR)
 
 if (APPLE)
   #
   # The following variables define the portability and compatability attributes of the Mac OS X build
-  # they are choosen with care and should not be changed without good cause. Note that they preclude
-  # doing a default build on OS X 10.7 since there is no 10.9 SDK available for Mac OS X 10.7. This doesn't
-  # preclude builds on newer versions of OS X being installed on Mac OS X 10.7, in fact it is exacty these
-  # options that ensure offcial build run on 10.7 and newer versions of Mac OS X. At some point it may
-  # be that some new version cannot be supported as well as 10.7, at that point the deployment target below
-  # must be moved on to 10.8 and we can no longer support Mac OS X 10.7.
+  # they are choosen with care and should not be changed without good cause.
   #
   # Among other things these options are chosen to match the portability and compatability options of the
   # Qt framework dylibs which can be checked as follows:
@@ -113,6 +106,15 @@ endif ()
 #
 include (CMakeDependentOption)
 
+# Allow the developer to select if Dynamic or Static libraries are built
+OPTION (BUILD_SHARED_LIBS "Build Shared Libraries" OFF)
+# Set the LIB_TYPE variable to STATIC
+SET (LIB_TYPE STATIC)
+if (BUILD_SHARED_LIBS)
+  # User wants to build Dynamic Libraries, so change the LIB_TYPE variable to CMake keyword 'SHARED'
+  set (LIB_TYPE SHARED)
+endif (BUILD_SHARED_LIBS)
+
 option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts
 files (WARNING: make clean will delete the source .ts files! Danger!)")
 option (WSJT_SHARED_RUNTIME "Debugging option that allows running from a shared Cloud directory.")
@@ -124,6 +126,8 @@ option (WSJT_SOFT_KEYING "Apply a ramp to CW keying envelope to reduce transient
 option (WSJT_SKIP_MANPAGES "Skip *nix manpage generation.")
 option (WSJT_GENERATE_DOCS "Generate documentation files." ON)
 option (WSJT_RIG_NONE_CAN_SPLIT "Allow split operation with \"None\" as rig.")
+option (WSJT_TRACE_UDP "Debugging option that turns on UDP message protocol diagnostics.")
+option (WSJT_BUILD_UTILS "Build simulators and code demonstrators." ON)
 
 CMAKE_DEPENDENT_OPTION (WSJT_HAMLIB_VERBOSE_TRACE "Debugging option that turns on full Hamlib internal diagnostics." OFF WSJT_HAMLIB_TRACE OFF)
 CMAKE_DEPENDENT_OPTION (WSJT_QDEBUG_IN_RELEASE "Leave Qt debugging statements in Release configuration." OFF
@@ -138,15 +142,14 @@ If you just want to see the debug output from the application then the easiest w
 attach a debugger which will then receive the console output inside its console." ON
   "WIN32" OFF)
 
-
-if (CMAKE_SIZEOF_VOID_P MATCHES 8)
-  set (PROJECT_ARCHITECTURE "x64")
-else ()
-  set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
-endif ()
+set (PROJECT_ARCHITECTURE "${CMAKE_SYSTEM_PROCESSOR}")
 if (NOT PROJECT_ARCHITECTURE)
   # This is supposed to happen already on Windows
-  set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
+  if (CMAKE_SIZEOF_VOID_P MATCHES 8)
+    set (PROJECT_ARCHITECTURE "x64")
+  else ()
+    set (PROJECT_ARCHITECTURE "$ENV{PROCESSOR_ARCHITECTURE}")
+  endif ()
 endif (NOT PROJECT_ARCHITECTURE)
 message (STATUS "******************************************************")
 message (STATUS "Building for for: ${CMAKE_SYSTEM_NAME}-${PROJECT_ARCHITECTURE}")
@@ -156,40 +159,26 @@ message (STATUS "******************************************************")
 #
 # install locations
 #
-set (BIN_DESTINATION bin)
-set (LIB_DESTINATION lib)
-set (SHARE_DESTINATION share)
-set (DOC_DESTINATION doc/${CMAKE_PROJECT_NAME})
-set (DATA_DESTINATION ${CMAKE_PROJECT_NAME})
-set (MANPAGE_DESTINATION ${SHARE_DESTINATION})
-set (PLUGIN_DESTINATION lib/plugins)
-set (QT_CONF_DESTINATION bin)
-
-if (WIN32)
-  set (SHARE_DESTINATION bin)
-  set (DOC_DESTINATION doc)
-  set (DATA_DESTINATION data)
-  set (PLUGIN_DESTINATION plugins)
-endif (WIN32)
 
 if (APPLE)
-  set (BIN_DESTINATION ${CMAKE_PROJECT_NAME}.app/Contents/MacOS)
-  set (SHARE_DESTINATION ${CMAKE_PROJECT_NAME}.app/Contents/Resources)
-  set (MANPAGE_DESTINATION ${CMAKE_PROJECT_NAME}.app/Contents/Resources)
-  set (DOC_DESTINATION doc)
-  set (DATA_DESTINATION data)
-  set (PLUGIN_DESTINATION ${CMAKE_PROJECT_NAME}.app/Contents/PlugIns)
-  set (QT_CONF_DESTINATION ${CMAKE_PROJECT_NAME}.app/Contents/Resources)
-endif (APPLE)
+  set (CMAKE_INSTALL_BINDIR ${CMAKE_PROJECT_NAME}.app/Contents/MacOS)
+  set (CMAKE_INSTALL_DATAROOTDIR ${CMAKE_PROJECT_NAME}.app/Contents/Resources)
+endif ()
 
-set (WSJT_BIN_DESTINATION ${BIN_DESTINATION} CACHE PATH "Path for executables")
-set (WSJT_LIB_DESTINATION ${LIB_DESTINATION} CACHE PATH "Path for libraries")
-set (WSJT_SHARE_DESTINATION ${SHARE_DESTINATION} CACHE PATH "Path for shared content")
-set (WSJT_DOC_DESTINATION ${DOC_DESTINATION} CACHE PATH "Path for documentation")
-set (WSJT_DATA_DESTINATION ${DATA_DESTINATION} CACHE PATH "Path for shared RO data")
-set (WSJT_MANPAGE_DESTINATION ${MANPAGE_DESTINATION} CACHE PATH "Path for manpages")
+include (GNUInstallDirs)
+
+set (PLUGIN_DESTINATION ${CMAKE_INSTALL_LIBDIR}/plugins)
+set (QT_CONF_DESTINATION ${CMAKE_INSTALL_BINDIR})
+if (WIN32)
+  set (PLUGIN_DESTINATION plugins)
+elseif (APPLE)
+  set (PLUGIN_DESTINATION ${CMAKE_INSTALL_BINDIR}/../PlugIns)
+  set (QT_CONF_DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
+endif ()
+
 set (WSJT_PLUGIN_DESTINATION ${PLUGIN_DESTINATION} CACHE PATH "Path for plugins")
 set (WSJT_QT_CONF_DESTINATION ${QT_CONF_DESTINATION} CACHE PATH "Path for the qt.conf file")
+
 
 #
 # Project sources
@@ -315,6 +304,7 @@ set (wsjt_FSRCS
   lib/chkfalse8.f90
   lib/chkflscall.f90
   lib/chkftrsd.f90
+  lib/chkgrid.f90
   lib/chkhist.f90
   lib/chklong8.f90
   lib/chkmsg.f90
@@ -641,6 +631,7 @@ set (PALETTE_FILES
   Palettes/Cyan2.pal
   Palettes/Cyan3.pal
   Palettes/Default.pal
+  Palettes/Default16.pal
   Palettes/Digipan.pal
   Palettes/Fldigi.pal
   Palettes/Gray1.pal
@@ -784,6 +775,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 # Widgets finds its own dependencies.
 find_package (Qt5Widgets 5 REQUIRED)
 find_package (Qt5Multimedia 5 REQUIRED)
+find_package (Qt5LinguistTools 5 REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -882,7 +874,7 @@ endif (NOT APPLE)
 #
 
 include (FortranCInterface)
-FortranCInterface_VERIFY (CXX QUIET)
+FortranCInterface_VERIFY (CXX)
 FortranCInterface_HEADER (FC.h MACRO_NAMESPACE "FC_" SYMBOL_NAMESPACE "FC_"
   SYMBOLS
   grayline
@@ -906,7 +898,7 @@ set (CMAKE_SKIP_BUILD_RPATH FALSE)
 # later on in the install phase
 set (CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
 
-# set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${WSJT_LIB_DESTINATION}")
+# set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
 
 # add the automaticaly determined parts of the RPATH which point to
 # directories outside of the build tree to the install RPATH
@@ -914,9 +906,9 @@ set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 # the RPATH to be used when installing, but only if it's not a system
 # directory
-# list (FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/${WSJT_LIB_DESTINATION}" isSystemDir)
+# list (FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}" isSystemDir)
 # if ("${isSystemDir}" STREQUAL "-1")
-#   set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${WSJT_LIB_DESTINATION}")
+#   set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
 # endif ("${isSystemDir}" STREQUAL "-1")
 
 set (QT_NEED_RPATH FALSE)
@@ -974,11 +966,43 @@ add_custom_target (ctags COMMAND ${CTAGS} -o ${CMAKE_SOURCE_DIR}/tags -R ${sourc
 add_custom_target (etags COMMAND ${ETAGS} -o ${CMAKE_SOURCE_DIR}/TAGS -R ${sources})
 
 
+# Qt i18n
+set (LANGUAGES
+  ru_RU
+  et_EE
+  zh_HK
+  zh_CN
+  )
+foreach (lang_ ${LANGUAGES})
+  file (TO_NATIVE_PATH translations/jtdx_${lang_}.ts ts_)
+  list (APPEND TS_FILES ${ts_})
+endforeach ()  
+if (UPDATE_TRANSLATIONS)
+  message (STATUS "UPDATE_TRANSLATIONS option is set.")
+  qt5_create_translation (
+    QM_FILES ${wsjt_qt_UISRCS} ${wsjtx_UISRCS} ${wsjt_qt_CXXSRCS} ${wsjtx_CXXSRCS}
+    ${TS_FILES}
+    )
+else ()
+  qt5_add_translation (QM_FILES ${TS_FILES})
+endif ()
+add_custom_target (translations DEPENDS ${QM_FILES})
+set_property (DIRECTORY PROPERTY CLEAN_NO_CUSTOM TRUE)
+# do this after i18n to stop lupdate walking the boost tree which it
+# chokes on
+if (Boost_FOUND)
+  include_directories (${Boost_INCLUDE_DIRS})
+endif ()
+
 # embedded resources
 function (add_resources resources path)
   foreach (resource_file_ ${ARGN})
     get_filename_component (name_ ${resource_file_} NAME)
-    file (TO_NATIVE_PATH ${CMAKE_SOURCE_DIR}/${resource_file_} source_)
+    if (IS_ABSOLUTE "${resource_file_}")
+      file (TO_NATIVE_PATH ${resource_file_} source_)
+    else ()
+      file (TO_NATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/${resource_file_} source_)
+    endif ()
     file (TO_NATIVE_PATH ${path}/${name_} dest_)
     set (resources_ "${resources_}\n    <file alias=\"${dest_}\">${source_}</file>")
     set (${resources} ${${resources}}${resources_} PARENT_SCOPE)
@@ -987,6 +1011,7 @@ endfunction (add_resources resources path)
 
 add_resources (wsjtx_RESOURCES "" ${TOP_LEVEL_RESOURCES})
 add_resources (wsjtx_RESOURCES /Palettes ${PALETTE_FILES})
+add_resources (wsjtx_RESOURCES /Translations ${QM_FILES})
 
 configure_file (wsjtx.qrc.in wsjtx.qrc @ONLY)
 
@@ -1207,25 +1232,25 @@ endif (UNIX)
 # installation
 #
 install (TARGETS jtdx
-  RUNTIME DESTINATION ${WSJT_BIN_DESTINATION} COMPONENT runtime
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   BUNDLE DESTINATION . COMPONENT runtime
   )
 
 install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
-  RUNTIME DESTINATION ${WSJT_BIN_DESTINATION} COMPONENT runtime
-  BUNDLE DESTINATION ${WSJT_BIN_DESTINATION} COMPONENT runtime
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
+  BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   )
 
 install (PROGRAMS
   ${RIGCTL_EXE}
-  DESTINATION ${WSJT_BIN_DESTINATION}
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
   #COMPONENT runtime
   RENAME rigctl-jtdx${CMAKE_EXECUTABLE_SUFFIX}
   )
 
 install (PROGRAMS
   ${RIGCTLD_EXE}
-  DESTINATION ${WSJT_BIN_DESTINATION}
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
   #COMPONENT runtime
   RENAME rigctld-jtdx${CMAKE_EXECUTABLE_SUFFIX}
   )
@@ -1238,7 +1263,7 @@ install (FILES
   NEWS
   INSTALL
   BUGS
-  DESTINATION ${WSJT_SHARE_DESTINATION}/${WSJT_DOC_DESTINATION}
+  DESTINATION ${CMAKE_INSTALL_DOCDIR}
   #COMPONENT runtime
   )
 
@@ -1246,7 +1271,7 @@ install (FILES
   contrib/Ephemeris/JPLEPH
   contrib/CallDB/ALLCALL7.TXT
   contrib/CallDB/CALL3.TXT
-  DESTINATION ${WSJT_SHARE_DESTINATION}/${WSJT_DATA_DESTINATION}
+  DESTINATION ${CMAKE_INSTALL_DATADIR}/${CMAKE_PROJECT_NAME}
   #COMPONENT runtime
   )
 
@@ -1346,7 +1371,7 @@ if (NOT is_debug_build)
       )
 
     # if a system Qt is used (e.g. installed in /usr/lib/), it will not be included in the installation
-    set (fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${WSJT_BIN_DESTINATION}/${CMAKE_PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
+    set (fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${CMAKE_PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
 
     #get_filename_component (hamlib_lib_dir ${hamlib_LIBRARIES} PATH)
 

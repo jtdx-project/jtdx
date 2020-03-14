@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>WSJT-X   by K1JT</string>
+   <string>JTDX  by HF community</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -98,13 +98,13 @@
             <property name="minimumSize">
              <size>
               <width>225</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="palette">
@@ -196,13 +196,13 @@
             <property name="minimumSize">
              <size>
               <width>70</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>500</width>
-              <height>14</height>
+              <height>16</height>
              </size>
             </property>
             <property name="palette">
@@ -271,7 +271,7 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>8</pointsize>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -4455,6 +4455,16 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionSave_decoded"/>
     <addaction name="actionSave_all"/>
    </widget>
+   <widget class="QMenu" name="menuLang">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionEnglish"/>
+    <addaction name="actionEstonian"/>
+    <addaction name="actionRussian"/>
+    <addaction name="actionChinese_simplified"/>
+    <addaction name="actionChinese_traditional"/>
+   </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
@@ -4559,6 +4569,7 @@ list. The list can be maintained in Settings (F2).</string>
    <addaction name="menuAutoSeq"/>
    <addaction name="menuDXpedition"/>
    <addaction name="menuMisc"/>
+   <addaction name="menuLang"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -4654,6 +4665,46 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Save all</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionEstonian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Eesti</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Русский</string>
+   </property>
+  </action>
+  <action name="actionChinese_simplified">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>简体中文</string>
+   </property>
+  </action>
+  <action name="actionChinese_traditional">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>繁體中文</string>
    </property>
   </action>
   <action name="actionJTDX_Web_Site">
