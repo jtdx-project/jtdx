@@ -185,7 +185,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>您確定要放棄您當前的工作頻率並用默認值頻率替換它們嗎？</translation>
+        <translation>您確定要放棄您當前的工作頻率并用默認值頻率替換它們嗎?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
@@ -280,7 +280,7 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation>DX Lab Suite Commander 發送命令 &quot;%1&quot; 閱讀回覆失敗: %2
+        <translation>DX Lab Suite Commander 發送命令 &quot;%1&quot; 閱讀回復失敗: %2
 </translation>
     </message>
     <message>
@@ -309,7 +309,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation>插入之後&amp;a...</translation>
+        <translation>插入之后&amp;a...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
@@ -408,7 +408,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation>目錄內容必須是相對的並且在 &quot;%1&quot;</translation>
+        <translation>目錄內容必須是相對的并且在 &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -531,13 +531,13 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1089"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe 對我們的命令發出了無效的回覆 &quot;%1&quot;</translation>
+        <translation>Ham Radio Deluxe 對我們的命令發出了無效的回復 &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1143"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe 無法回覆命令 &quot;%1&quot; %2
+        <translation>Ham Radio Deluxe 無法回復命令 &quot;%1&quot; %2
 </translation>
     </message>
     <message>
@@ -803,7 +803,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation>註釋</translation>
+        <translation>注釋</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
@@ -838,12 +838,12 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5929"/>
         <location filename="../mainwindow.cpp" line="5940"/>
         <source>Band Activity</source>
-        <translation>波段活動區</translation>
+        <translation>波段活動</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果橙色或紅色有無線電設備控制故障，請單擊以重置並讀取撥號頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果橙色或紅色有無線電設備控制故障，請單擊以重置并讀取撥號頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
@@ -883,7 +883,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit 信息字段預覽.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot 信息預覽.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
@@ -894,7 +894,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit點線編輯:模式在信息字段中自動被發現,用戶可以在信息字段中添加自己的文本信息.可用宏:#D表示距離,#G表示網格1 網格2,#R表示報表值.信息字段預覽可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot 編輯: 模式在信息字段中自動被發現,用戶可以在信息字段中添加自己的文本信息.可用宏:#D表示距離,#G表示網格1 網格2,#R表示報表值.信息字段預覽可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -1005,7 +1005,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用 FT8 DXpedition 獵犬模式.鼠標右鍵單擊啟用獵犬 TX 頻率控制.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用 FT8 DXpedition 獵犬模式.鼠標右鍵單擊啟用獵犬發射頻率控制.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
@@ -1049,7 +1049,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用不同的 Rx/Tx 音頻頻率或將 Tx 頻率設置為等於 Rx 音頻頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用不同的 接收/發射 音頻頻率或將發射頻率設置為等於接收音頻頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
@@ -1080,17 +1080,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;雙擊呼號 TX 啟用&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;雙擊呼號 啟用發射&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
         <source>AutoTX</source>
-        <translation>自動TX</translation>
+        <translation>自動發射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>將 Tx 頻率設置為 Rx 頻率</translation>
+        <translation>將發射頻率設置為接收頻率</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
@@ -1126,7 +1126,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1870"/>
         <location filename="../mainwindow.ui" line="1886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的通緝呼號列表.自動處理 1..7下的自動選擇..7將根據所選擇的通知/優先級處理所需的呼號，此功能在 自動處理0 不受支持.僅適用於非FT8模式:對於覆合呼號，列表中應使用基本呼號，有時基本呼號將從解碼的信息中覆制:當登錄時，這種通聯用戶將不得不更改相應的如果需要的話，用呼號表示覆合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的通緝呼號列表.自動處理 1..7下的自動選擇..7將根據所選擇的通知/優先級處理所需的呼號，此功能在 自動處理0 不受支持.僅適用於非FT8模式:對於復合呼號，列表中應使用基本呼號，有時基本呼號將從解碼的信息中復制:當登錄時，這種通聯用戶將不得不更改相應的如果需要的話，用呼號表示復合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -1137,7 +1137,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1906"/>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;.自動處理 1..7下的自動選擇將根據選擇的通知/優先級處理想要的前綴，自動處理0 不支持此功能.對於覆合呼號，在呼號的開頭識別前綴.自動選擇將根據選擇的通知/優先級處理想要的呼號.僅非FT8模式:有時基本呼號將從解碼的信息中覆制；當記錄此類通聯時，如果需要，用戶將不得不將聯系人呼號更改為覆合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;.自動處理 1..7下的自動選擇將根據選擇的通知/優先級處理想要的前綴，自動處理0 不支持此功能.對於復合呼號，在呼號的開頭識別前綴.自動選擇將根據選擇的通知/優先級處理想要的呼號.僅非FT8模式:有時基本呼號將從解碼的信息中復制；當記錄此類通聯時，如果需要，用戶將不得不將聯系人呼號更改為復合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
@@ -1148,7 +1148,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1939"/>
         <location filename="../mainwindow.ui" line="1955"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的所需網格方塊列表，其中僅支持四個字符網格.自動處理 1..7下的自動選擇將根據選擇的通知/優先級處理所需的網格，此功能在自動請求下不受支持 自動處理0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的所需網格方塊列表，其中僅支持四個字符網格.自動處理 1..7下的自動選擇將根據選擇的通知/優先級處理所需的網格，此功能在自動請求下不受支持 AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1942"/>
@@ -1174,7 +1174,7 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;被渴望國家的逗號分隔名單: 應在此列表中使用主要國家前綴.對於覆合呼號前綴, 在呼號的開頭被識別.自動選擇下的自動選擇 1. 7 將根據選擇通知優先級處理所需的國家/, 在 AutoSeq0 下不支持此功能.非 FT8 模式: 有時基本的呼號將從解碼的信息覆制: 在記錄這樣的通聯用戶將改變代理的呼號覆合一個, 如果需要.主要國家前綴列表: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;被渴望國家的逗號分隔名單: 應在此列表中使用主要國家前綴.對於復合呼號前綴, 在呼號的開頭被識別.自動選擇下的自動選擇 1. 7 將根據選擇通知優先級處理所需的國家/, 在 AutoSeq0 下不支持此功能.非 FT8 模式: 有時基本的呼號將從解碼的信息復制: 在記錄這樣的通聯用戶將改變代理的呼號復合一個, 如果需要.主要國家前綴列表: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -1200,7 +1200,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="2192"/>
         <location filename="../mainwindow.cpp" line="5890"/>
         <source>Rx Frequency</source>
-        <translation>Rx 信息</translation>
+        <translation>接收信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
@@ -1265,7 +1265,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再次解碼, 最新的 RX 期間或最後播放的 wav 音頻文件, 或對於任何 自動增益/多次解碼/窄頻解碼 模式按鈕組合再次解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再次解碼, 最新的接收期間或最后播放的 wav 音頻文件, 或對於任何 自動增益/多次解碼/窄頻解碼 模式按鈕組合再次解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
@@ -1285,7 +1285,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation>立即停止發射</translation>
+        <translation>立即終止發射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
@@ -1295,7 +1295,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>記錄此次通聯入日志中</translation>
+        <translation>此次通聯記錄存入日志</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
@@ -1305,12 +1305,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除波段活動區(左) 窗口.鼠標右鍵: 擦除接收信息窗口(右)窗口.雙擊這兩個窗口.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除波段活動(左) 窗口.鼠標右鍵: 擦除接收信息窗口(右)窗口.雙擊這兩個窗口.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>清除窗口&amp;E</translation>
+        <translation>擦除窗口&amp;E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -1335,7 +1335,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;帶寬, JT65 信號: 580hz 解碼, 300 hz 用於顯示信息, FT8:150hz, FT8 獵犬模式: 580hz, JT9:115hz, t10:25hz. 濾波器以頻譜的 RX 信號為中心.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;帶寬, FT8 150hz, FT8 獵犬模式 580hz,FT4 190Hz,  JT9 115hz,  T10: 225Hz. JT65 信號: 580hz 解碼, 300 hz 用於顯示信息. 濾波器以頻譜的接收信號為中心.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -1345,7 +1345,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果在接收器中打開AGC, 激活 AGC 補償功能並且則提高解碼效率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果在接收器中打開AGC, 激活 AGC 補償功能并且則提高解碼效率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2846"/>
@@ -1355,7 +1355,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除 dx 調用和 dx 網格窗口中的數據.鼠標右鍵: 擦除 dx 調用、dx 網格窗口通聯歷史記錄和黑名單中的數據.ctrl + 鼠標右鍵: 從 dx 調用窗口添加呼號到黑名單, 擦除DX Call窗口及DX 網格窗口, 和通聯歷史記錄中的數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除 DX呼號 和 DX網格 窗口中的數據. 鼠標右鍵: 擦除 DX呼號, DX網格窗口通聯曆史記錄和黑名單中的數據. CTRL+鼠標右鍵: 從 DX呼號 窗口添加呼號到黑名單, 擦除DX呼號 和 DX網格窗口, 和通聯曆史記錄中的數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -1373,7 +1373,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>為此通聯生成標準信息</translation>
+        <translation>為此通聯生成標准信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
@@ -1390,7 +1390,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3088"/>
         <location filename="../mainwindow.ui" line="3656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;支持CQ 指定範圍從 AA 到ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;支持CQ 指定范圍從 AA 到ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3091"/>
@@ -1402,7 +1402,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation>選擇以生成 &apos;RRR&apos; 信息，取消選擇以生成 &apos;RR73&apos;</translation>
+        <translation>選擇生成 &apos;RRR&apos; 信息，取消選擇以生成 &apos;RR73&apos;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
@@ -1570,7 +1570,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成CQ 或定向 CQ信息;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成CQ 或定向 CQ信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
@@ -1580,7 +1580,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>生成回覆CQ的信息</translation>
+        <translation>生成回復CQ的信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
@@ -1610,7 +1610,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果未選中 RRR 覆選框, 則使用 RR73 生成信息, 如果選中 RRR 覆選框, 則生成 RRR 信息;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果未選中 RRR 復選框, 則使用 RR73 生成信息, 如果選中 RRR 復選框, 則生成 RRR 信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
@@ -1630,7 +1630,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3966"/>
         <source>Send this standard (generated) message</source>
-        <translation>發送此標準(生成)信息</translation>
+        <translation>發送此標准(生成)信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
@@ -1805,7 +1805,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4559"/>
         <source>DXpedition</source>
-        <translation>DX遠征</translation>
+        <translation>DX遠徵</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4578"/>
@@ -1934,7 +1934,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4720"/>
         <source>Keyboard shortcuts</source>
-        <translation>鍵盤快捷鍵</translation>
+        <translation>鍵槃快捷鍵</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4723"/>
@@ -2007,12 +2007,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4809"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>將日志記錄模式轉換為 RTTY</translation>
+        <translation>將日志記錄 模式轉換為RTTY</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4817"/>
         <source>Log dB reports to Comments</source>
-        <translation>將 dB 報告記錄到註釋</translation>
+        <translation>將 dB 報告記錄到注釋</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4825"/>
@@ -2027,22 +2027,22 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4841"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>日志記錄後清除 DX 呼號和網格</translation>
+        <translation>日志記錄后清除 DX 呼號和網格</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4849"/>
         <source>Display distance in miles</source>
-        <translation>顯示距離以英裏為單位</translation>
+        <translation>顯示距離以英里為單位</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4857"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>雙擊呼號啟用準備發射</translation>
+        <translation>雙擊呼號啟用發射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4865"/>
         <source>Tx disabled after sending 73</source>
-        <translation>發送 73 後停止發射</translation>
+        <translation>發送 73 后停止發射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4873"/>
@@ -2097,7 +2097,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4953"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation>附加前綴和後綴的簡短列表</translation>
+        <translation>附加前綴和后綴的簡短列表</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4958"/>
@@ -2177,7 +2177,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5089"/>
         <source>Enable main window popup</source>
-        <translation>主窗口每次解碼後都跳到桌面前</translation>
+        <translation>主窗口每次解碼后都跳到桌面前</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5100"/>
@@ -2212,7 +2212,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5149"/>
         <source>FT8 call last</source>
-        <translation>FT8 呼叫最後</translation>
+        <translation>FT8 呼叫最后</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5157"/>
@@ -2342,17 +2342,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5450"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>發送73後關閉窄帶過濾</translation>
+        <translation>發送73后關閉窄帶過濾</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5458"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>接收73後關閉窄帶過濾</translation>
+        <translation>接收73后關閉窄帶過濾</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5466"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>隱藏 FT8 重覆信息</translation>
+        <translation>隱藏 FT8 重復信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5474"/>
@@ -2377,7 +2377,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5509"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>在手動模式下發送 RRR/RR73/73 後停止發射</translation>
+        <translation>在手動模式下發送 RRR/RR73/73 后停止發射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5520"/>
@@ -2459,7 +2459,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5681"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>雙擊|自動選擇時調用剪貼板</translation>
+        <translation>雙擊|自動選擇 時調用剪貼板</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5689"/>
@@ -2529,12 +2529,12 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="6923"/>
         <location filename="../mainwindow.cpp" line="7264"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation>無法打開 &quot;%1&quot; 用於追加: %2</translation>
+        <translation>無法打開 &quot;%1&quot; 用於附加: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1762"/>
         <source>Error saving c2 file</source>
-        <translation>保存c2文件時出錯</translation>
+        <translation>保存c2文件出錯</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1838"/>
@@ -2587,12 +2587,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2575"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>WSJT-X和相關程序的算法、源代碼、外觀和感覺，以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的協議規範是由以下一個或多個作者版權所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和世界科學技術峰會發展小組的其他成員.</translation>
+        <translation>WSJT-X 和相關程序的算法、源代碼、外觀和感覺，以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的協議規范是由以下一個或多個作者版權所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和 WSJT 發展小組的其他成員.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2696"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation>沒有從磁盤讀取數據.文件格式錯誤?</translation>
+        <translation>沒有從磁槃讀取數據. 文件格式錯誤?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2733"/>
@@ -2636,17 +2636,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2858"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>獵犬模式 發射頻率控制要求 *設置 | 電台頁* 把機器控制在 *異頻* (要麽選擇 *電台* 或 *虛假*)</translation>
+        <translation>獵犬模式 發射頻率控制要求 *設置 | 電台頁* 把機器控制在 *異頻* (要么選擇 *電台* 或 *虛假*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2861"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>標準FT8子波段不允許 獵犬 發送頻率控制要求 *設置 | 電台頁* 把機器控制在 *異頻* (要麽選擇 *電台* 或 *虛假*)</translation>
+        <translation>標准FT8子波段不允許 獵犬 發送頻率控制要求 *設置 | 電台頁* 把機器控制在 *異頻* (要么選擇 *電台* 或 *虛假*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2869"/>
         <source>Hound TX frequency control warning</source>
-        <translation>獵犬 TX 頻率控制警告</translation>
+        <translation>獵犬 發射頻率控制警告</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2874"/>
@@ -2656,7 +2656,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2935"/>
         <source>Keyboard Shortcuts</source>
-        <translation>鍵盤快捷鍵</translation>
+        <translation>鍵槃快捷鍵</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2946"/>
@@ -2688,7 +2688,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="3969"/>
         <source>LastTx: </source>
-        <translation>最後Tx： </translation>
+        <translation>最后Tx： </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4183"/>
@@ -2713,7 +2713,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4398"/>
         <source>Last Tx: </source>
-        <translation>最後 Tx： </translation>
+        <translation>最后Tx： </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5279"/>
@@ -2742,7 +2742,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="5328"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation>%1 已經在 CALL3.TXT，你想替換它嗎？</translation>
+        <translation>%1 已經在 CALL3.TXT，你想替換它嗎?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5691"/>
@@ -2772,7 +2772,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6645"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>允許 發射/接收 自動頻率異頻操作的按鈕</translation>
+        <translation>允許 發射/接收 音頻頻率異頻操作的按鈕</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6648"/>
@@ -2860,7 +2860,7 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../main.cpp" line="187"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation>另一個JTDX可能正在運行，是否嘗試刪除過時的鎖定文件？</translation>
+        <translation>另一個JTDX可能正在運行，是否嘗試刪除過時的鎖定文件?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="309"/>
@@ -3016,7 +3016,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation>不可恢覆的錯誤, 音頻輸入設備此時不可用.</translation>
+        <translation>不可恢復的錯誤, 音頻輸入設備此時不可用.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
@@ -3084,7 +3084,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="31"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation>不可恢覆錯誤, 音頻輸出設備此時不可用.</translation>
+        <translation>不可恢復錯誤, 音頻輸出設備此時不可用.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
@@ -3196,7 +3196,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation>對話框</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
@@ -3302,7 +3302,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;按中值劃分的比例.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;按中值划分的比例.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="434"/>
@@ -3312,7 +3312,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在完整顯示的間隔內平展光譜基線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在完整顯示的間隔內平展頻譜基線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
@@ -3380,7 +3380,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation>寬圖</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3434,7 +3434,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;覆合呼號類型2是那些前綴或後綴不包括在允許的決選名單中 (請參閱幫助-&amp; gt; 加載項前綴和後綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2覆合呼號, 而不是基本呼號.它僅適用於類型為2的覆合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 cq 調用的信息的生成方式.生成的信息 6 (cq) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標準信息, 而犧牲了另一條信息, 如 dx 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 dx 呼號, 這在答覆 cq 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味著你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 夥伴我的日志是錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請註意, 您的 qso 合作夥伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;復合呼號類型2是那些前綴或后綴不包括在允許的決選名單中 (請參閱幫助-&amp; gt; 加載項前綴和后綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2復合呼號, 而不是基本呼號.它僅適用於類型為2的復合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 cq 調用的信息的生成方式.生成的信息 6 (cq) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標准信息, 而犧牲了另一條信息, 如 dx 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 dx 呼號, 這在答復 cq 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味着你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日志是錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請注意, 您的 qso 合作伙伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -3454,7 +3454,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="153"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation>第2類覆合呼號持有者的信息生成:</translation>
+        <translation>第2類復合呼號持有者的信息生成:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="175"/>
@@ -3484,7 +3484,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation>設置波段活動區和接收頻率區的字體.</translation>
+        <translation>設置波段活動和接收信息窗口的字體.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
@@ -3504,17 +3504,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation>顯示DX電台的距離 (以英裏為英裏而不是以公裏為計).</translation>
+        <translation>顯示DX電台的距離 (以英里為英里而不是以公里為計).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation>顯示距離為英裏&amp;n</translation>
+        <translation>顯示距離為英里&amp;n</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>在波段活動區窗口中加入時間分隔線.</translation>
+        <translation>在波段活動窗口中加入時間分隔線.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -3554,7 +3554,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation>在接收信息窗口窗口中顯示已發射的信息.</translation>
+        <translation>在接收信息窗口中顯示已發射的信息.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
@@ -3620,7 +3620,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;某些電台機器在發射時無法處理CAT 命令.這意味著, 如果您在異頻模式下運行, 則可能必須取消選中此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;某些電台機器在發射時無法處理CAT 命令.這意味着, 如果您在異頻模式下運行, 則可能必須取消選中此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
@@ -3630,7 +3630,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="569"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您希望在啟用監聽時自動返回到最後一個監聽頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您希望在啟用監聽時自動返回到最后一個監聽頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="572"/>
@@ -3640,12 +3640,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>73或自定義信息發出後用CW模式發放你呼號.</translation>
+        <translation>73或自定義信息發出后用CW模式發放你呼號.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation>73發出後用CW模式發放你呼號&amp;f</translation>
+        <translation>73發出后用CW模式發放你呼號&amp;f</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
@@ -3658,10 +3658,10 @@ Error(%2): %3</source>
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
 quiet period when decoding is done.</source>
-        <translation>每隔幾分鐘定期發送 CW ID.
+        <translation>每隔几分鐘定期發送 CW ID.
 這可能是必需根據您所在的國家/地區的執照規定.
-它不會幹擾其他用戶,因為它總是
-在解碼完成後的安靜期間發送.</translation>
+它不會干擾其他用戶,因為它總是
+在解碼完成后的安靜期間發送.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="655"/>
@@ -3686,7 +3686,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為軟件與無線電裝備溝通的時間間隔.時間間隔較長,意味著對無線電裝備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為軟件與無線電裝備溝通的時間間隔.時間間隔較長,意味着對無線電裝備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="699"/>
@@ -3868,13 +3868,13 @@ quiet period when decoding is done.</source>
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
         <translation>&gt;使用 RTS 和 CTS RS-232 控制線控制
- 不經常使用但有些電台有它作為一個選項並且
+ 不經常使用但有些電台有它作為一個選項并且
   很少,特別是一些 健伍無線電裝備,需要它).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation>&amp;硬件</translation>
+        <translation>硬件&amp;H</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
@@ -3955,7 +3955,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電裝備的 PTT，需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業接口單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 串行端口的 RTS 控制線可用於此，也可以使用其他串行端口上的 RTS 控制線.請註意，使用硬件流控制時，此選項在 CAT 串行端口上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電裝備的 PTT，需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業接口單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 串行端口的 RTS 控制線可用於此，也可以使用其他串行端口上的 RTS 控制線.請注意，使用硬件流控制時，此選項在 CAT 串行端口上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
@@ -3974,7 +3974,7 @@ this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
         <translation>一些無線電裝備可以使用 CAT 命令選擇音頻輸入,
 此設置允許您選擇將使用的音頻輸入
-(如果可用,則通常 後方/數據 選項是最佳選擇).</translation>
+(如果可用,則通常 后方/數據 選項是最佳選擇).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
@@ -3984,7 +3984,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1342"/>
         <source>Rear&amp;/Data</source>
-        <translation>後方&amp;/數據口</translation>
+        <translation>后方&amp;/數據口</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
@@ -4029,7 +4029,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation>如果這是可用的那麽它通常是這個程序的正確模式.</translation>
+        <translation>如果這是可用的那么它通常是這個程序的正確模式.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
@@ -4072,7 +4072,7 @@ radio interface behave as expected.</source>
 再次單擊以停用.通常沒有功率輸出
 因為此時沒有音頻生成.檢查無線電裝備
 和/或您的無線電裝備接口上
-的任何TX指示是否如預期的那樣.</translation>
+的任何發射指示是否如預期的那樣.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
@@ -4114,7 +4114,7 @@ you will broadcast any systems sounds generated during
 transmitting periods.</source>
         <translation>選擇要用於發射的音頻信號.
 如果這是您的默認值設備的系統聲音
-然後確保所有系統聲音被禁用
+然后確保所有系統聲音被禁用
 否則您將任何系統生成的聲音
 向外發射輸出.</translation>
     </message>
@@ -4165,7 +4165,7 @@ channels; then you will usually want to select mono or
 both here.</source>
         <translation>選擇用於發射的音頻通道.
 除非您在不同無線電裝備連接多個到不同的
-通道; 那麽你通常會想要選擇單聲道或
+通道; 那么你通常會想要選擇單聲道或
 雙聲道.</translation>
     </message>
     <message>
@@ -4241,7 +4241,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 1..3: 呼叫CQ當到達計數器時. 自動程序 6/7: 通過解碼的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此類信息. 如果在 &quot;自動程序&quot; 選項標簽中啟用了 &quot;1次qso&quot; 選項,則停止tx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 1..3: 呼叫CQ當到達計數器時. 自動程序 6/7: 通過解碼的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此類信息. 如果在 &quot;自動程序&quot; 選項標簽中啟用了 &quot;1次qso&quot; 選項,則停止發射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
@@ -4259,7 +4259,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1957"/>
         <source>called CQ,  received a call and answered</source>
-        <translation>主呼叫CQ，接收別台多次重覆回應</translation>
+        <translation>主呼叫CQ，接收別台多次重復回應</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
@@ -4279,7 +4279,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;該選項用於非重疊光譜場景. 如果頻譜具有與此設置無關的公共頻率, 發射將被停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;該選項用於非重疊頻譜場景. 如果頻譜具有與此設置無關的公共頻率, 發射將被停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
@@ -4289,7 +4289,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默認情況下，如果存在有效的，則自動選擇忽略CQ的接收/傳輸方向新DXCC消息解碼，來電或從解碼的CQ/73消息中選擇。此選項消除了新DXCC定向CQ處理的自動選擇異常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默認情況下，如果存在有效的，則自動選擇忽略CQ的接收/傳輸方向新DXCC消息解碼，來電或從解碼的 CQ/73 消息中選擇. 此選項消除了新DXCC定向CQ處理的自動選擇異常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
@@ -4314,7 +4314,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;文字宏最多13個字符,定向CQ標準信息最多17個字符.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;文字宏最多13個字符,定向CQ標准信息最多17個字符.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
@@ -4324,7 +4324,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;拖放項目以重新排列順序.右鍵單擊項目特定操作.點擊,shift + 點擊和,crtl + 點擊選擇項目.@ 符號被 dx 調用所取代,符號用用戶的基本呼號、# 符號和要發射的報告.這些簡化符號用於將QSO為特殊的標註.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;拖放項目以重新排列順序.右鍵單擊項目特定操作.點擊,shift + 點擊和,crtl + 點擊選擇項目.@ 符號被 dx 調用所取代,符號用用戶的基本呼號、# 符號和要發射的報告.這些簡化符號用於將QSO為特殊的標注.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
@@ -4350,12 +4350,12 @@ comments field.</source>
         <translation>一些日志程序不接受這種類型的報告
 由該程序保存.
 選中此選項可將發送和接收的報告保存在
-註釋字段.</translation>
+注釋字段.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation>把d&amp;B報告寫入註釋欄</translation>
+        <translation>把d&amp;B報告寫入注釋欄</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
@@ -4367,7 +4367,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>記錄完成後清除&amp;DX呼號及網格</translation>
+        <translation>記錄完成后清除&amp;DX呼號及網格</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
@@ -4465,7 +4465,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允許設置要的數據記錄到ALL.txt 文件中.無法關閉TX信息的記錄&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允許設置要的數據記錄到ALL.txt 文件中.無法關閉發射信息的記錄&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
@@ -4536,7 +4536,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2733"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>EQSL OTH 昵稱.</translation>
+        <translation>EQSL OTH 暱稱.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
@@ -4546,7 +4546,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH 昵稱&amp;i:</translation>
+        <translation>QTH 暱稱&amp;i:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2760"/>
@@ -4581,7 +4581,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled WSJT-X will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用此功能後,WSJT-X 將接受來自接收解碼信息的 UDP 服務器的某些請求&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用此功能后,WSJT-X 將接受來自接收解碼信息的 UDP 服務器的某些請求&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
@@ -4667,7 +4667,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
         <source>Frequency Calibration</source>
-        <translation>頻率校準</translation>
+        <translation>頻率校准</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
@@ -4720,7 +4720,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new DXCC</source>
-        <translation>檢查並突出顯示新DXCC</translation>
+        <translation>檢查并突出顯示新DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
@@ -4772,7 +4772,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>Check and highlight new grids</source>
-        <translation>檢查並突出顯示新網格</translation>
+        <translation>檢查并突出顯示新網格</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3257"/>
@@ -4792,7 +4792,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>Check and highlight new prefixes</source>
-        <translation>檢查並突出顯示新前綴</translation>
+        <translation>檢查并突出顯示新前綴</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3297"/>
@@ -4812,7 +4812,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>Check and highlight new calls</source>
-        <translation>檢查並突出顯示新通聯電台</translation>
+        <translation>檢查并突出顯示新通聯電台</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
@@ -4852,12 +4852,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3390"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾經通聯的DXCC網格、呼叫的信息將帶有下劃線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾經通聯的DXCC網格、呼叫的信息將帶有下划線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3393"/>
         <source>underline it</source>
-        <translation>下劃線</translation>
+        <translation>下划線</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
@@ -4882,17 +4882,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默認值情況下,只檢查 &quot;cq&quot; 和 &quot;mycall&quot; 信息,此設置還允許檢查其他接收到的新 dxcc、網格、調用的標準信息.通知中使用的 &quot;其他標準信息&quot; 顏色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默認值情況下,只檢查 &quot;cq&quot; 和 &quot;mycall&quot; 信息,此設置還允許檢查其他接收到的新 dxcc、網格、調用的標准信息.通知中使用的 &quot;其他標准信息&quot; 顏色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3423"/>
         <source>Highlight other standard messages</source>
-        <translation>突出顯示其他標準消息</translation>
+        <translation>突出顯示其他標准消息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在RX間隔內解碼第一條信息後,立即使用系統聲音進行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在接收間隔內解碼第一條信息后,立即使用系統聲音進行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
@@ -4942,12 +4942,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3548"/>
         <source>Other standard messages</source>
-        <translation>其他標準信息</translation>
+        <translation>其他標准信息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3591"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在預覽窗格的頂部有正在檢查某些條件的信息類型,為每種類型的信息選擇文本顏色.&lt;br&gt;&lt;br&gt;左側按層次結構順序分配了條件,並為每個條件的信息選擇了背景色.&lt;br&gt;&lt;br&gt;&quot;曾經通聯&quot; 通知功能基於剩余原則,如果不符合所有激活的 &quot;新&quot; 標準或條件,則觸發.&lt;br&gt;&lt;br&gt;如果用戶希望通過某些特定的背景顏色突出顯示CQ和 &quot;我的呼號&quot; 信息,則可以使用 &quot;反向顏色&quot;.&lt;br&gt;&lt;br&gt;對於開始,可以選擇一個標準,對於新的波段/模式通知,可以使用不同飽和度水平的類似顏色,以後可以增加所需的標準的數量.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在預覽窗格的頂部有正在檢查某些條件的信息類型,為每種類型的信息選擇文本顏色.&lt;br&gt;&lt;br&gt;左側按層次結搆順序分配了條件,并為每個條件的信息選擇了背景色.&lt;br&gt;&lt;br&gt;&quot;曾經通聯&quot; 通知功能基於剩余原則,如果不符合所有激活的 &quot;新&quot; 標准或條件,則觸發.&lt;br&gt;&lt;br&gt;如果用戶希望通過某些特定的背景顏色突出顯示CQ和 &quot;我的呼號&quot; 信息,則可以使用 &quot;反向顏色&quot;.&lt;br&gt;&lt;br&gt;對於開始,可以選擇一個標准,對於新的波段/模式通知,可以使用不同飽和度水平的類似顏色,以后可以增加所需的標准的數量.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3594"/>
@@ -5018,12 +5018,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為非 (&quot;CQ&quot; 和 &quot;MyCall&quot;) 標準郵件設置文本顏色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為非 (&quot;CQ&quot; 和 &quot;MyCall&quot;) 標准郵件設置文本顏色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3722"/>
         <source>Other standard message</source>
-        <translation>其他標準信息</translation>
+        <translation>其他標准信息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3801"/>
@@ -5162,7 +5162,7 @@ VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,X
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;基於cty.dat文件的以逗號分隔的國家前綴列表.&lt;br&gt;
-間隙是不允許的。可接受的值有: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+間隙是不允許的. 可接受的值有: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -5203,7 +5203,7 @@ used for compound callsigns, for instance:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的呼號列表,
 間隙是不允許的,基本呼號應為
-用於覆合呼號,例如:
+用於復合呼號,例如:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -5219,7 +5219,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4679"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;清除呼號列表&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;將內容相關的自定義文字信息傳遞到接收信息窗口&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4682"/>
@@ -5261,7 +5261,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隱藏位於 RX 頻率外解碼的自定義文字信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隱藏位於接收頻率外解碼的自定義文字信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
@@ -5276,12 +5276,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4817"/>
         <source>Scheduler</source>
-        <translation>計劃程序</translation>
+        <translation>計划程序</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4825"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根據預定義的計劃自動波段切換&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根據預定義的計划自動波段切換&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
@@ -5311,7 +5311,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5899"/>
         <location filename="../Configuration.ui" line="6156"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果選擇了 JT65 頻率，計劃程序將設置 JT65+JT9 模式.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果選擇了 JT65 頻率，計划程序將設置 JT65+JT9 模式.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4871"/>
@@ -5648,12 +5648,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6186"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;激活波段計劃程序&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;激活波段計划程序&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6189"/>
         <source>Use band scheduler</source>
-        <translation>使用波段計劃程序</translation>
+        <translation>使用波段計划程序</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6212"/>
@@ -5697,7 +5697,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6325"/>
         <location filename="../Configuration.ui" line="6338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義 RX 頻率解碼次數解碼嘗試次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義 接收頻率解碼次數解碼嘗試次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6328"/>
@@ -5710,17 +5710,17 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6377"/>
         <location filename="../Configuration.ui" line="6535"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此 DT 窗口僅用於基於接收頻率 CALL3 數據的提示解碼，專註於 CQ 和&quot;我的呼叫他調用他網格&quot;信息.值越高，假解碼數就越多.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此 DT 窗口僅用於基於接收頻率 CALL3 數據的提示解碼，專注於 CQ 和&quot;我的呼叫他調用他網格&quot;信息.值越高，假解碼數就越多.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6367"/>
         <source>Hinted decoding DT range:</source>
-        <translation>提示解碼時差範圍:</translation>
+        <translation>提示解碼時差范圍:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;針對過度擁擠的頻段條件，激活兩個額外的頻率屏蔽JT65解碼通道。如果頻帶上的信號很少，則自動激活該解碼過程。僅將此設置用於快速CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;針對過度擁擠的頻段條件，激活兩個額外的頻率屏蔽JT65解碼通道. 如果頻帶上的信號很少，則自動激活該解碼過程. 僅將此設置用於快速CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6404"/>
@@ -5742,7 +5742,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6452"/>
         <location filename="../Configuration.ui" line="6465"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RX 或 TX 路徑中的信號失真會產生 JT65A 信號（JT65B、JT65C 等）的諧波通過解碼信號的減法，解碼JT65A信號諧波可以提高整體解碼效率.解碼深度與所需的 CPU 資源成正比，將其設置為 1 以表示 CPU 速度較慢.更高的深度值將允許解碼更多的諧波.支持 JT65B 和 JT65C 解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或發射路徑中的信號失真會產生 JT65A 信號（JT65B、JT65C 等）的諧波通過解碼信號的減法，解碼JT65A信號諧波可以提高整體解碼效率.解碼深度與所需的 CPU 資源成正比，將其設置為 1 以表示 CPU 速度較慢.更高的深度值將允許解碼更多的諧波.支持 JT65B 和 JT65C 解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6455"/>
@@ -5752,7 +5752,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設置取決於 CPU 功率，嘗試對過度擁擠的HF頻段使用最大解碼通道數.&lt;br&gt;&lt;br&gt;對於低稠密的HF/VHF頻帶，解碼遍數可以減少，而解碼嘗試次數的增加可以為那裏的弱信號帶來更好的解碼效率.&lt;br&gt;&lt;br&gt;影響低信噪比信號解碼效率的解碼嘗試次數:寬帶或接收頻率.&lt;br&gt;&lt;br&gt;解碼遍數影響可以在相同頻率上解碼的信號的最大數量，或者在頻譜重疊很大的情況下彼此接近，如果解碼遍數設置為4，則可以在相同頻率上解碼多達4個信號，在RX頻率上解碼多達7個信號.&lt;br&gt;&lt;br&gt;將解碼嘗試次數增加到允許解碼完成的值，直到接收分鐘間隔結束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設置取決於 CPU 功率，嘗試對過度擁擠的HF頻段使用最大解碼通道數.&lt;br&gt;&lt;br&gt;對於低稠密的HF/VHF頻帶，解碼遍數可以減少，而解碼嘗試次數的增加可以為那里的弱信號帶來更好的解碼效率.&lt;br&gt;&lt;br&gt;影響低信噪比信號解碼效率的解碼嘗試次數:寬帶或接收頻率.&lt;br&gt;&lt;br&gt;解碼遍數影響可以在相同頻率上解碼的信號的最大數量，或者在頻譜重疊很大的情況下彼此接近，如果解碼遍數設置為4，則可以在相同頻率上解碼多達4個信號，在接收頻率上解碼多達7個信號.&lt;br&gt;&lt;br&gt;將解碼嘗試次數增加到允許解碼完成的值，直到接收分鐘間隔結束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
@@ -5777,7 +5777,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 resetting the radio interface and applying any
 soundcard changes</source>
         <translation>放棄或應用設置更改，包括
-重置無線電接口並應用任何
+重置無線電接口并應用任何
 聲卡更改</translation>
     </message>
 </context>
@@ -5816,7 +5816,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="130"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation>測試位置中的可寫文件。小心使用，僅用於測試.</translation>
+        <translation>測試位置中的可寫文件. 小心使用，僅用於測試.</translation>
     </message>
 </context>
 <context>
@@ -5829,7 +5829,7 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;雙擊一種顏色進行編輯.&lt;/p&gt;&lt;p&gt;右鍵單擊可插入或刪除顏色.&lt;/p&gt;&lt;p&gt;頂部的顏色代表微弱的信號&lt;/p&gt;&lt;p&gt;底部的顏色代表強烈&lt;/p&gt;&lt;p&gt;信號。您最多可以有256種顏色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;雙擊一種顏色進行編輯.&lt;/p&gt;&lt;p&gt;右鍵單擊可插入或刪除顏色.&lt;/p&gt;&lt;p&gt;頂部的顏色代表微弱的信號&lt;/p&gt;&lt;p&gt;底部的顏色代表強烈&lt;/p&gt;&lt;p&gt;信號. 您最多可以有256種顏色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>

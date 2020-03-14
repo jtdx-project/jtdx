@@ -81,7 +81,7 @@ Another application may be locking the directory</source>
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>创建临时目录错误</translation>
+        <translation>创建临时目录错误 &quot;</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
@@ -185,7 +185,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>您确定要放弃您当前的工作频率并用默认值频率替换它们吗？</translation>
+        <translation>您确定要放弃您当前的工作频率并用默认值频率替换它们吗?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
@@ -838,7 +838,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5929"/>
         <location filename="../mainwindow.cpp" line="5940"/>
         <source>Band Activity</source>
-        <translation>波段活动区</translation>
+        <translation>波段活动</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -883,7 +883,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit 信息字段预览.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot 信息预览.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
@@ -894,7 +894,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit点线编辑:模式在信息字段中自动被发现,用户可以在信息字段中添加自己的文本信息.可用宏:#D表示距离,#G表示网格1 网格2,#R表示报表值.信息字段预览可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot 编辑: 模式在信息字段中自动被发现,用户可以在信息字段中添加自己的文本信息.可用宏:#D表示距离,#G表示网格1 网格2,#R表示报表值.信息字段预览可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -1005,7 +1005,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用 FT8 DXpedition 猎犬模式.鼠标右键单击启用猎犬 TX 频率控制.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用 FT8 DXpedition 猎犬模式.鼠标右键单击启用猎犬发射频率控制.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
@@ -1049,7 +1049,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用不同的 Rx/Tx 音频频率或将 Tx 频率设置为等于 Rx 音频频率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用不同的 接收/发射 音频频率或将发射频率设置为等于接收音频频率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
@@ -1080,17 +1080,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;双击呼号 TX 启用&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;双击呼号 启用發射&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
         <source>AutoTX</source>
-        <translation>自动TX</translation>
+        <translation>自动发射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>将 Tx 频率设置为 Rx 频率</translation>
+        <translation>将发射频率设置为接收频率</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
@@ -1131,7 +1131,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
         <source>callsign:</source>
-        <translation>呼號:</translation>
+        <translation>呼号:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1906"/>
@@ -1148,7 +1148,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1939"/>
         <location filename="../mainwindow.ui" line="1955"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗号分隔的所需网格方块列表，其中仅支持四个字符网格.自动处理 1..7下的自动选择将根据选择的通知/优先级处理所需的网格，此功能在自动请求下不受支持 自动处理0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗号分隔的所需网格方块列表，其中仅支持四个字符网格.自动处理 1..7下的自动选择将根据选择的通知/优先级处理所需的网格，此功能在自动请求下不受支持 AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1942"/>
@@ -1200,7 +1200,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="2192"/>
         <location filename="../mainwindow.cpp" line="5890"/>
         <source>Rx Frequency</source>
-        <translation>Rx 信息</translation>
+        <translation>接收信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
@@ -1265,7 +1265,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再次解码, 最新的 RX 期间或最后播放的 wav 音频文件, 或对于任何 自动增益/多次解码/窄频解码 模式按钮组合再次解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再次解码, 最新的接收期间或最后播放的 wav 音频文件, 或对于任何 自动增益/多次解码/窄频解码 模式按钮组合再次解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
@@ -1285,7 +1285,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation>立即停止发射</translation>
+        <translation>立即终止发射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
@@ -1295,7 +1295,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>记录此次通联入日志中</translation>
+        <translation>此次通联记录存入日志</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
@@ -1305,12 +1305,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠标左键: 擦除波段活动区(左) 窗口.鼠标右键: 擦除接收信息窗口(右)窗口.双击这两个窗口.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠标左键: 擦除波段活动(左) 窗口.鼠标右键: 擦除接收信息窗口(右)窗口.双击这两个窗口.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>清除窗口&amp;E</translation>
+        <translation>擦除窗口&amp;E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -1335,7 +1335,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;带宽, JT65 信号: 580hz 解码, 300 hz 用于显示信息, FT8:150hz, FT8 猎犬模式: 580hz, JT9:115hz, t10:25hz. 滤波器以频谱的 RX 信号为中心.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;带宽, FT8 150hz, FT8 猎犬模式 580hz,FT4 190Hz,  JT9 115hz,  T10: 225Hz. JT65 信号: 580hz 解码, 300 hz 用于显示信息. 滤波器以频谱的接收信号为中心.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -1355,7 +1355,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠标左键: 擦除 dx 调用和 dx 网格窗口中的数据.鼠标右键: 擦除 dx 调用、dx 网格窗口通联历史记录和黑名单中的数据.ctrl + 鼠标右键: 从 dx 调用窗口添加呼号到黑名单, 擦除DX Call窗口及DX 网格窗口, 和通联历史记录中的数据.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠标左键: 擦除 DX呼号 和 DX网格 窗口中的数据. 鼠标右键: 擦除 DX呼号, DX网格窗口通联历史记录和黑名单中的数据. CTRL+鼠标右键: 从 DX呼号 窗口添加呼号到黑名单, 擦除DX呼号 和 DX网格窗口, 和通联历史记录中的数据.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -1402,7 +1402,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation>选择以生成 &apos;RRR&apos; 信息，取消选择以生成 &apos;RR73&apos;</translation>
+        <translation>选择生成 &apos;RRR&apos; 信息，取消选择以生成 &apos;RR73&apos;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
@@ -1570,7 +1570,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成CQ 或定向 CQ信息;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成CQ 或定向 CQ信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
@@ -1610,7 +1610,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果未选中 RRR 复选框, 则使用 RR73 生成信息, 如果选中 RRR 复选框, 则生成 RRR 信息;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果未选中 RRR 复选框, 则使用 RR73 生成信息, 如果选中 RRR 复选框, 则生成 RRR 信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
@@ -2007,7 +2007,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4809"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>将日志记录模式转换为 RTTY</translation>
+        <translation>将日志记录 模式转换为RTTY</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4817"/>
@@ -2037,7 +2037,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4857"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>双击呼号启用准备发射</translation>
+        <translation>双击呼号启用发射</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4865"/>
@@ -2459,7 +2459,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5681"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>双击|自动选择时调用剪贴板</translation>
+        <translation>双击|自动选择 时调用剪贴板</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5689"/>
@@ -2529,12 +2529,12 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="6923"/>
         <location filename="../mainwindow.cpp" line="7264"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation>无法打开 &quot;%1&quot; 用于追加: %2</translation>
+        <translation>无法打开 &quot;%1&quot; 用于附加: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1762"/>
         <source>Error saving c2 file</source>
-        <translation>保存c2文件时出错</translation>
+        <translation>保存c2文件出错</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1838"/>
@@ -2587,12 +2587,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2575"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>WSJT-X和相关程序的算法、源代码、外观和感觉，以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的协议规范是由以下一个或多个作者版权所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和世界科学技术峰会发展小组的其他成员.</translation>
+        <translation>WSJT-X 和相关程序的算法、源代码、外观和感觉，以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的协议规范是由以下一个或多个作者版权所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和 WSJT 发展小组的其他成员.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2696"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation>没有从磁盘读取数据.文件格式错误?</translation>
+        <translation>没有从磁盘读取数据. 文件格式错误?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2733"/>
@@ -2646,7 +2646,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2869"/>
         <source>Hound TX frequency control warning</source>
-        <translation>猎犬 TX 频率控制警告</translation>
+        <translation>猎犬 发射频率控制警告</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2874"/>
@@ -2713,7 +2713,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4398"/>
         <source>Last Tx: </source>
-        <translation>最后 Tx： </translation>
+        <translation>最后Tx： </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5279"/>
@@ -2742,7 +2742,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="5328"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation>%1 已经在 CALL3.TXT，你想替换它吗？</translation>
+        <translation>%1 已经在 CALL3.TXT，你想替换它吗?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5691"/>
@@ -2772,7 +2772,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6645"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>允许 发射/接收 自动频率异频操作的按钮</translation>
+        <translation>允许 发射/接收 音频频率异频操作的按钮</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6648"/>
@@ -2860,7 +2860,7 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../main.cpp" line="187"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation>另一个JTDX可能正在运行，是否尝试删除过时的锁定文件？</translation>
+        <translation>另一个JTDX可能正在运行，是否尝试删除过时的锁定文件?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="309"/>
@@ -3196,7 +3196,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation>对话框</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
@@ -3237,7 +3237,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation>時間戳</translation>
+        <translation>时间戳</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
@@ -3312,7 +3312,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在完整显示的间隔内平展光谱基线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在完整显示的间隔内平展频谱基线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
@@ -3380,7 +3380,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation>宽图</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3484,7 +3484,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation>设置波段活动区和接收频率区的字体.</translation>
+        <translation>设置波段活动和接收信息窗口的字体.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
@@ -3514,7 +3514,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>在波段活动区窗口中加入时间分隔线.</translation>
+        <translation>在波段活动窗口中加入时间分隔线.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -3554,7 +3554,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation>在接收信息窗口窗口中显示已发射的信息.</translation>
+        <translation>在接收信息窗口中显示已发射的信息.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
@@ -3874,7 +3874,7 @@ a few, particularly some Kenwood rigs, require it).</source>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation>&amp;硬件</translation>
+        <translation>硬件&amp;H</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
@@ -4072,7 +4072,7 @@ radio interface behave as expected.</source>
 再次单击以停用.通常没有功率输出
 因为此时没有音频生成.检查无线电装备
 和/或您的无线电装备接口上
-的任何TX指示是否如预期的那样.</translation>
+的任何发射指示是否如预期的那样.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
@@ -4241,7 +4241,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 1..3: 呼叫CQ当到达计数器时. 自动程序 6/7: 通过解码的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此类信息. 如果在 &quot;自动程序&quot; 选项标签中启用了 &quot;1次qso&quot; 选项,则停止tx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 1..3: 呼叫CQ当到达计数器时. 自动程序 6/7: 通过解码的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此类信息. 如果在 &quot;自动程序&quot; 选项标签中启用了 &quot;1次qso&quot; 选项,则停止发射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
@@ -4279,7 +4279,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该选项用于非重叠光谱场景. 如果频谱具有与此设置无关的公共频率, 发射将被停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该选项用于非重叠频谱场景. 如果频谱具有与此设置无关的公共频率, 发射将被停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
@@ -4289,7 +4289,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认情况下，如果存在有效的，则自动选择忽略CQ的接收/传输方向新DXCC消息解码，来电或从解码的CQ/73消息中选择。此选项消除了新DXCC定向CQ处理的自动选择异常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认情况下，如果存在有效的，则自动选择忽略CQ的接收/传输方向新DXCC消息解码，来电或从解码的 CQ/73 消息中选择. 此选项消除了新DXCC定向CQ处理的自动选择异常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
@@ -4465,7 +4465,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许设置要的数据记录到ALL.txt 文件中.无法关闭TX信息的记录&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许设置要的数据记录到ALL.txt 文件中.无法关闭发射信息的记录&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
@@ -4892,7 +4892,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在RX间隔内解码第一条信息后,立即使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在接收间隔内解码第一条信息后,立即使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
@@ -5162,7 +5162,7 @@ VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,X
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;基于cty.dat文件的以逗号分隔的国家前缀列表.&lt;br&gt;
-间隙是不允许的。可接受的值有: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+间隙是不允许的. 可接受的值有: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -5219,7 +5219,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4679"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;清除呼号列表&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将内容相关的自定义文字信息传递到接收信息窗口&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4682"/>
@@ -5261,7 +5261,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隐藏位于 RX 频率外解码的自定义文字信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隐藏位于接收频率外解码的自定义文字信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
@@ -5697,7 +5697,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6325"/>
         <location filename="../Configuration.ui" line="6338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义 RX 频率解码次数解码尝试次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义 接收频率解码次数解码尝试次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6328"/>
@@ -5720,7 +5720,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;针对过度拥挤的频段条件，激活两个额外的频率屏蔽JT65解码通道。如果频带上的信号很少，则自动激活该解码过程。仅将此设置用于快速CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;针对过度拥挤的频段条件，激活两个额外的频率屏蔽JT65解码通道. 如果频带上的信号很少，则自动激活该解码过程. 仅将此设置用于快速CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6404"/>
@@ -5742,7 +5742,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6452"/>
         <location filename="../Configuration.ui" line="6465"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RX 或 TX 路径中的信号失真会产生 JT65A 信号（JT65B、JT65C 等）的谐波通过解码信号的减法，解码JT65A信号谐波可以提高整体解码效率.解码深度与所需的 CPU 资源成正比，将其设置为 1 以表示 CPU 速度较慢.更高的深度值将允许解码更多的谐波.支持 JT65B 和 JT65C 解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或发射路径中的信号失真会产生 JT65A 信号（JT65B、JT65C 等）的谐波通过解码信号的减法，解码JT65A信号谐波可以提高整体解码效率.解码深度与所需的 CPU 资源成正比，将其设置为 1 以表示 CPU 速度较慢.更高的深度值将允许解码更多的谐波.支持 JT65B 和 JT65C 解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6455"/>
@@ -5752,7 +5752,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置取决于 CPU 功率，尝试对过度拥挤的HF频段使用最大解码通道数.&lt;br&gt;&lt;br&gt;对于低稠密的HF/VHF频带，解码遍数可以减少，而解码尝试次数的增加可以为那里的弱信号带来更好的解码效率.&lt;br&gt;&lt;br&gt;影响低信噪比信号解码效率的解码尝试次数:宽带或接收频率.&lt;br&gt;&lt;br&gt;解码遍数影响可以在相同频率上解码的信号的最大数量，或者在频谱重叠很大的情况下彼此接近，如果解码遍数设置为4，则可以在相同频率上解码多达4个信号，在RX频率上解码多达7个信号.&lt;br&gt;&lt;br&gt;将解码尝试次数增加到允许解码完成的值，直到接收分钟间隔结束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置取决于 CPU 功率，尝试对过度拥挤的HF频段使用最大解码通道数.&lt;br&gt;&lt;br&gt;对于低稠密的HF/VHF频带，解码遍数可以减少，而解码尝试次数的增加可以为那里的弱信号带来更好的解码效率.&lt;br&gt;&lt;br&gt;影响低信噪比信号解码效率的解码尝试次数:宽带或接收频率.&lt;br&gt;&lt;br&gt;解码遍数影响可以在相同频率上解码的信号的最大数量，或者在频谱重叠很大的情况下彼此接近，如果解码遍数设置为4，则可以在相同频率上解码多达4个信号，在接收频率上解码多达7个信号.&lt;br&gt;&lt;br&gt;将解码尝试次数增加到允许解码完成的值，直到接收分钟间隔结束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
@@ -5816,7 +5816,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="130"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation>测试位置中的可写文件。小心使用，仅用于测试.</translation>
+        <translation>测试位置中的可写文件. 小心使用，仅用于测试.</translation>
     </message>
 </context>
 <context>
@@ -5829,7 +5829,7 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;双击一种颜色进行编辑.&lt;/p&gt;&lt;p&gt;右键单击可插入或删除颜色.&lt;/p&gt;&lt;p&gt;顶部的颜色代表微弱的信号&lt;/p&gt;&lt;p&gt;底部的颜色代表强烈&lt;/p&gt;&lt;p&gt;信号。您最多可以有256种颜色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;双击一种颜色进行编辑.&lt;/p&gt;&lt;p&gt;右键单击可插入或删除颜色.&lt;/p&gt;&lt;p&gt;顶部的颜色代表微弱的信号&lt;/p&gt;&lt;p&gt;底部的颜色代表强烈&lt;/p&gt;&lt;p&gt;信号. 您最多可以有256种颜色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
