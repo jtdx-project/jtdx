@@ -24,7 +24,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth,lhighsens
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -776,7 +776,15 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 !print *,qual,msg37
     rxdt=xdt-0.5
-    if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. (iaptype.eq.1 .and. xsnr.lt.-18.5)) then
+    if(iaptype.gt.34) then ! DX Call searching false iaptype 35,36: 'CS7CYU/R FO5QB 73', 'T57KWP/R FO5QB RR73'
+      ispc1=index(msg37,' ')
+      if(ispc1.gt.5 .and. msg37((ispc1-2):(ispc1-1)).eq.'/R') then
+        call_a=''; call_a=msg37(1:(ispc1-3))
+        lfound=.false.
+        call searchcalls(call_a,"            ",lfound)
+        if(.not.lfound) then; nbadcrc=1; msg37=''; return; endif
+      endif
+    else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. (iaptype.eq.1 .and. xsnr.lt.-18.5)) then
       if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
          (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
