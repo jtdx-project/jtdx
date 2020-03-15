@@ -968,6 +968,7 @@ add_custom_target (etags COMMAND ${ETAGS} -o ${CMAKE_SOURCE_DIR}/TAGS -R ${sourc
 
 # Qt i18n
 set (LANGUAGES
+  en_US
   ru_RU
   et_EE
   zh_HK
