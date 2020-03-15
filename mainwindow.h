@@ -572,6 +572,7 @@ private:
   bool m_hisCallCompound;
   bool m_callToClipboard;
   bool m_rigOk;
+  QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
   QString m_lastMode;
@@ -667,7 +668,6 @@ private:
   QString m_fileToKill;
   QString m_fileToSave;
   QString m_calls;
-  QString m_lang;
 
   QSet<QString> m_pfx;
   QSet<QString> m_sfx;
