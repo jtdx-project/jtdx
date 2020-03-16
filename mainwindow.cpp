@@ -175,6 +175,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_lastDisplayFreq {0},
   m_mslastTX {0},
 //  m_msDecoderStarted {0},
+  m_exitCode {0},
   m_waterfallAvg {1},
   m_ntx {1},
   m_addtx {0},
@@ -1315,7 +1316,6 @@ void MainWindow::readSettings()
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
   else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
   else ui->actionEnglish->setChecked(true);
-//  if (m_lang!="en_US") set_language(m_lang);
   
   m_callMode=m_settings->value("CallMode",2).toInt();
   if(!(m_callMode>=0 && m_callMode<=3)) m_callMode=2; 
@@ -2496,7 +2496,8 @@ void MainWindow::closeEvent(QCloseEvent * e)
   if(!b) proc_jtdxjt9.close();
   quitFile.remove();
 
-  Q_EMIT finished ();
+  if (m_exitCode == 1337) qApp->exit(1337);
+  else Q_EMIT finished ();
 
   QMainWindow::closeEvent (e);
 }
@@ -3143,7 +3144,6 @@ void MainWindow::process_Auto()
     if (m_houndMode ) { //WSJT-X Fox will drop QSO if R+Report from Hound is not decoded after three attempts 
       if (m_status == QsoHistory::SREPORT || m_status == QsoHistory::RREPORT) {
         if(count > 3) {
-//          printf("QsoHistory::SREPORT Hound count reached going to NONE\n");
           haltTx("DXpQSO failed after three TX of R+REPORT message ");
           count = m_qsoHistory.reset_count(hisCall,QsoHistory::RCQ);
           ui->TxFreqSpinBox->setValue (m_lastCallingFreq);
@@ -3160,14 +3160,12 @@ void MainWindow::process_Auto()
       }
     } else if ((m_status == QsoHistory::SRR73 || m_status >= QsoHistory::S73) && !m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall && !m_lockTxFreq &&
         (direction == 1 || abs(rx - ui->TxFreqSpinBox->value ()) > m_nguardfreq)) { 
-//      printf("QSO finished search next\n");
       clearDX (" cleared, AutoSeq QSO finished");
       hisCall = m_hisCall;
       grid = m_hisGrid;
       m_status = QsoHistory::NONE;
     } else if ((m_status == QsoHistory::RCQ || m_status == QsoHistory::SCALL || (m_status == QsoHistory::SREPORT && m_skipTx1 && !m_houndMode)) && m_config.answerCQCount() &&
         ((prio > 4 && prio < 17) || prio < 2 || m_strictdirCQ) && ((!m_transmitting && m_config.nAnswerCQCounter() <= count) || (m_transmitting && m_config.nAnswerCQCounter() < count) || m_reply_other)) {
-//      printf("QsoHistory::RCQ/SCALL/SREPORT (first transmitted message) count reached search next\n");
       clearDX (" cleared, RCQ/SCALL/SREPORT count reached");
       if (m_reply_other)
           counters2 = false;
@@ -3181,7 +3179,6 @@ void MainWindow::process_Auto()
         counters = false;
     } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && direction == 1)) && m_config.answerInCallCount() && 
         ((!m_transmitting && m_config.nAnswerInCallCounter() <= count) || (m_transmitting && m_config.nAnswerInCallCounter() < count)  || m_reply_other)) {
-//      printf("QsoHistory::RCALL/SREPORT count reached search next\n");
       clearDX (" cleared, RCALL/SREPORT count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
@@ -3192,7 +3189,6 @@ void MainWindow::process_Auto()
         counters = false;
     } else if ((m_status == QsoHistory::RREPORT || m_status == QsoHistory::SREPORT) && m_config.sentRReportCount() && 
         ((!m_transmitting && m_config.nSentRReportCounter() <= count) || (m_transmitting && m_config.nSentRReportCounter() < count))) {
-//      printf("QsoHistory::RREPORT count reached search next\n");
       clearDX (" cleared, RREPORT count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
@@ -3203,7 +3199,6 @@ void MainWindow::process_Auto()
         counters = false;
     } else if ((m_status == QsoHistory::RRR || m_status == QsoHistory::RRR73 || m_status == QsoHistory::R73 || m_status == QsoHistory::SRR73 || m_status == QsoHistory::S73) && 
         m_config.sentRR7373Count() && ((!m_transmitting && m_config.nSentRR7373Counter() <= count) || (m_transmitting && m_config.nSentRR7373Counter() < count))) {
-//      printf("QsoHistory::RRR|RR73|R73 count reached search next\n");
       clearDX (" cleared, RRR|RR73|R73 count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
@@ -3504,7 +3499,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
                 else writeToALLTXT("Wanted callsign to DX Call: " + deCall + ", EnableTx is off");
               }
 //            }
-            if(m_enableTx) haltTx("TX halted: wanted callsign/prefix found after CQ message transmission ");
+//            if(m_enableTx) haltTx("TX halted: wanted callsign/prefix found after CQ message transmission ");
             ui->dxCallEntry->setText(deCall);  
             if (logClearDXTimer.isActive()) logClearDXTimer.stop();
             QString rpt = decodedtext.report();
@@ -3693,36 +3688,9 @@ void MainWindow::set_language (QString const& lang)
     if (QMessageBox::Yes == QMessageBox::warning(this, "Confirm change Language",
             "Are You sure to change UI Language, JTDX needs restart?", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
             m_lang = lang;
+            m_exitCode = 1337;
             QMainWindow::close();
     }
-/**    if (m_olek) {
-      m_olek = QCoreApplication::removeTranslator(&m_translator_from_resources);
-      if (m_olek) printf("resource translator removed\n");
-      else printf("resource translator removed failed\n");
-      m_olek = false;
-    }
-    if (m_olek2) {
-      m_olek2 = QCoreApplication::removeTranslator(&m_translator_from_files);
-      if (m_olek2) printf("file translator removed\n");
-      else printf("file translator removed failed\n");
-      m_olek2 = false;
-    }
-    if (m_lang != "en_US") {
-      QLocale wanted = QLocale (m_lang);
-      m_olek = m_translator_from_resources.load (wanted, "jtdx", "_", ":/Translations");
-      if (m_olek) {
-        QCoreApplication::installTranslator (&m_translator_from_resources);
-        printf ("resource translator %s loaded\n",wanted.name().toStdString().c_str());
-      }
-      else printf ("resource translator %s not loaded\n",wanted.name().toStdString().c_str());
-      m_olek2 = m_translator_from_files.load (QString {"jtdx_"} + m_lang);
-      if (m_olek2) {
-        QCoreApplication::installTranslator (&m_translator_from_files);
-        printf ("file translator %s loaded\n",m_lang.toStdString().c_str());
-      }
-      else printf ("file translator %s not loaded\n",m_lang.toStdString().c_str());
-    }
-    ui->retranslateUi(this); **/
   }
 }
 
@@ -7388,7 +7356,7 @@ void MainWindow::on_the_minute ()
     auto const& ms_error = ms_minute_error ();
     // keep drift within +-1s
     if (qAbs (ms_error) > 1000) { minuteTimer.setSingleShot (true); minuteTimer.start (ms_error + 60 * 1000); }
-  }
+    }
   if(m_config.watchdog () && !m_mode.startsWith ("WSPR")) {
     qint64 deltasec=(QDateTime::currentMSecsSinceEpoch()/1000) - m_secTxStopped;
     bool update=true;

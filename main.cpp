@@ -83,7 +83,8 @@ namespace
 int main(int argc, char *argv[])
 {
   bool has_style = true;
-  
+  int result = 0;
+    
   for (auto i = 0; i < argc; i++) if (std::string(argv[i]).find("-style") != std::string::npos ) has_style = false;
 
   init_random_seed ();
@@ -224,80 +225,89 @@ int main(int argc, char *argv[])
       // announce to trace file
       qDebug () << program_title (revision ()) + " - Program startup";
 #endif
-
       QString lang;
-      settings.beginGroup("Common");
-      lang = settings.value ("Language","en_US").toString();
-      settings.endGroup();
-      //
-      // Enable i18n
-      //
-      QLocale localeUsedToDeterminateTranslators = QLocale (lang);
-      
+      QLocale localeUsedToDeterminateTranslators;
       QTranslator translator_from_resources;
-      // Default translations for releases  use translations stored in
-      // the   resources   file    system   under   the   Translations
-      // directory. These are built by the CMake build system from .ts
-      // files in the translations source directory. New languages are
-      // added by  enabling the  UPDATE_TRANSLATIONS CMake  option and
-      // building with the  new language added to  the LANGUAGES CMake
-      // list  variable.  UPDATE_TRANSLATIONS  will preserve  existing
-      // translations  but   should  only  be  set   when  adding  new
-      // languages.  The  resulting .ts  files should be  checked info
-      // source control for translators to access and update.
-      has_style = translator_from_resources.load (localeUsedToDeterminateTranslators, "jtdx", "_", ":/Translations");
-      if (has_style) {
-          a.installTranslator (&translator_from_resources);
-      } 
-
       QTranslator translator_from_files;
-      // Load  any matching  translation  from  the current  directory
-      // using the locale name. This allows translators to easily test
-      // their translations  by releasing  (lrelease) a .qm  file into
-      // the    current    directory     with    a    suitable    name
-      // (e.g.  jtdx_et_EE.qm),  then  running   wsjtx  to  view  the
-      // results. Either the system  locale setting or the environment
-      // variable LANG can be used to select the target language.
-      has_style = translator_from_files.load (QString {"jtdx_"} + localeUsedToDeterminateTranslators.name ());
-      if (has_style) {
-          a.installTranslator (&translator_from_files);
-      }
+      bool resources_OK = false;
+      bool files_OK = false;
+      do {
+        settings.beginGroup("Common");
+        lang = settings.value ("Language","en_US").toString();
+        settings.endGroup();
+        if (files_OK) has_style = a.removeTranslator (&translator_from_files);
+        if (resources_OK) has_style = a.removeTranslator (&translator_from_resources);
+        if (lang != "en_US") {
+          //
+          // Enable i18n
+          //
+          localeUsedToDeterminateTranslators = QLocale (lang);
+          
+          // Default translations for releases  use translations stored in
+          // the   resources   file    system   under   the   Translations
+          // directory. These are built by the CMake build system from .ts
+          // files in the translations source directory. New languages are
+          // added by  enabling the  UPDATE_TRANSLATIONS CMake  option and
+          // building with the  new language added to  the LANGUAGES CMake
+          // list  variable.  UPDATE_TRANSLATIONS  will preserve  existing
+          // translations  but   should  only  be  set   when  adding  new
+          // languages.  The  resulting .ts  files should be  checked info
+          // source control for translators to access and update.
+          has_style = translator_from_resources.load (localeUsedToDeterminateTranslators, "jtdx", "_", ":/Translations");
+          if (has_style) {
+              resources_OK = a.installTranslator (&translator_from_resources);
+          } 
 
-      // Create and initialize shared memory segment
-      // Multiple instances: use rig_name as shared memory key
-
-      mem_jtdxjt9.setKey(a.applicationName ());
-
-      if(!mem_jtdxjt9.attach()) {
-        if (!mem_jtdxjt9.create(sizeof(struct dec_data))) {
-          QMessageBox::critical (nullptr, "Error", "Unable to create shared memory segment.");
-          exit(1);
+          // Load  any matching  translation  from  the current  directory
+          // using the locale name. This allows translators to easily test
+          // their translations  by releasing  (lrelease) a .qm  file into
+          // the    current    directory     with    a    suitable    name
+          // (e.g.  jtdx_et_EE.qm),  then  running   wsjtx  to  view  the
+          // results. Either the system  locale setting or the environment
+          // variable LANG can be used to select the target language.
+          has_style = translator_from_files.load (QString {"jtdx_"} + localeUsedToDeterminateTranslators.name ());
+          if (has_style) {
+              files_OK = a.installTranslator (&translator_from_files);
+          }
         }
+        // Create and initialize shared memory segment
+        // Multiple instances: use rig_name as shared memory key
+
+        mem_jtdxjt9.setKey(a.applicationName ());
+
+        if(!mem_jtdxjt9.attach()) {
+          if (!mem_jtdxjt9.create(sizeof(struct dec_data))) {
+            QMessageBox::critical (nullptr, "Error", "Unable to create shared memory segment.");
+            exit(1);
+          }
+        }
+        memset(mem_jtdxjt9.data(),0,sizeof(struct dec_data)); //Zero all decoding params in shared memory
+
+        unsigned downSampleFactor;
+        {
+          SettingsGroup {&settings, "Tune"};
+
+          // deal with Windows Vista and earlier input audio rate
+          // converter problems
+          downSampleFactor = settings.value ("Audio/DisableInputResampling",
+  #if defined (Q_OS_WIN)
+                                             // default to true for
+                                             // Windows Vista and older
+                                             QSysInfo::WV_VISTA >= QSysInfo::WindowsVersion ? true : false
+  #else
+                                             false
+  #endif
+                                             ).toBool () ? 1u : 4u;
+        }
+
+        MainWindow w(multiple, &settings, &mem_jtdxjt9, downSampleFactor, new QNetworkAccessManager {&a});
+        w.show();
+
+        QObject::connect (&a, SIGNAL (lastWindowClosed()), &a, SLOT (quit()));
+        result = a.exec();
       }
-      memset(mem_jtdxjt9.data(),0,sizeof(struct dec_data)); //Zero all decoding params in shared memory
-
-      unsigned downSampleFactor;
-      {
-        SettingsGroup {&settings, "Tune"};
-
-        // deal with Windows Vista and earlier input audio rate
-        // converter problems
-        downSampleFactor = settings.value ("Audio/DisableInputResampling",
-#if defined (Q_OS_WIN)
-                                           // default to true for
-                                           // Windows Vista and older
-                                           QSysInfo::WV_VISTA >= QSysInfo::WindowsVersion ? true : false
-#else
-                                           false
-#endif
-                                           ).toBool () ? 1u : 4u;
-      }
-
-      MainWindow w(multiple, &settings, &mem_jtdxjt9, downSampleFactor, new QNetworkAccessManager {&a});
-      w.show();
-
-      QObject::connect (&a, SIGNAL (lastWindowClosed()), &a, SLOT (quit()));
-      return a.exec();
+      while(result==1337);
+      return result;
     }
   catch (std::exception const& e)
     {
