@@ -585,6 +585,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionRussian->setActionGroup(languageGroup);
   ui->actionChinese_simplified->setActionGroup(languageGroup);
   ui->actionChinese_traditional->setActionGroup(languageGroup);
+  ui->actionJapanese->setActionGroup(languageGroup);
 
   QActionGroup* saveGroup = new QActionGroup(this);
   ui->actionNone->setActionGroup(saveGroup);
@@ -1315,6 +1316,7 @@ void MainWindow::readSettings()
   else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
   else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
+  else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
   else ui->actionEnglish->setChecked(true);
   
   m_callMode=m_settings->value("CallMode",2).toInt();
@@ -2721,6 +2723,7 @@ void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(
 void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
 void MainWindow::on_actionChinese_simplified_triggered() { ui->actionChinese_simplified->setChecked(true); set_language("zh_CN"); }
 void MainWindow::on_actionChinese_traditional_triggered() { ui->actionChinese_traditional->setChecked(true); set_language("zh_HK"); }
+void MainWindow::on_actionJapanese_triggered() { ui->actionJapanese->setChecked(true); set_language("ja_JP"); }
 
 void MainWindow::on_actionCallNone_toggled(bool checked)
 {
@@ -3685,7 +3688,7 @@ void MainWindow::killFile ()
 void MainWindow::set_language (QString const& lang)
 {
   if (m_lang != lang) {
-    if (QMessageBox::Yes == QMessageBox::warning(this, "Confirm change Language",
+    if (QMessageBox::Yes == QMessageBox::question(this, "Confirm change Language",
             "Are You sure to change UI Language, JTDX needs restart?", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
             m_lang = lang;
             m_exitCode = 1337;
