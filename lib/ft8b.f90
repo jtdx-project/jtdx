@@ -298,7 +298,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 
     nweak=1
-    if((lft8subpass .or. swl) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3 .or. &
+    if((lft8subpass .or. swl .or. dfqso.lt.2.0) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3 .or. &
        imainpass.eq.4 .or. imainpass.eq.6 .or. imainpass.eq.7 .or. imainpass.eq.9)) nweak=2
 ! a bit better efficiency on the overcrowded bands, with subpass 7935 without subpass 7948 decodes
 !    if((lft8subpass) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3)) nweak=2
