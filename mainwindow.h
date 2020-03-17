@@ -8,7 +8,7 @@
 #else
 #include <QtGui>
 #endif
-//#include <QTranslator>
+#include <QTranslator>
 #include <QThread>
 #include <QTimer>
 #include <QDateTime>
@@ -168,6 +168,7 @@ private slots:
   void on_actionRussian_triggered();
   void on_actionChinese_simplified_triggered();
   void on_actionChinese_traditional_triggered();
+  void on_actionJapanese_triggered();
   void on_actionCallNone_toggled(bool checked);
   void on_actionCallFirst_toggled(bool checked);
   void on_actionCallMid_toggled(bool checked);
@@ -428,6 +429,7 @@ private:
   quint64  m_mslastTX;
 //  quint64  m_msDecoderStarted;
 
+  qint32  m_exitCode;
   qint32  m_waterfallAvg;
   qint32  m_ntx;
   qint32  m_addtx;
@@ -572,6 +574,7 @@ private:
   bool m_hisCallCompound;
   bool m_callToClipboard;
   bool m_rigOk;
+  QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
   QString m_lastMode;
@@ -667,7 +670,6 @@ private:
   QString m_fileToKill;
   QString m_fileToSave;
   QString m_calls;
-  QString m_lang;
 
   QSet<QString> m_pfx;
   QSet<QString> m_sfx;

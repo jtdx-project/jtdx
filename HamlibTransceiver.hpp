@@ -13,7 +13,7 @@
 
 extern "C"
 {
-  typedef struct rig RIG;
+  typedef struct s_rig RIG;
   struct rig_caps;
   typedef unsigned int vfo_t;
 }

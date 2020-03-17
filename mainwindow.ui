@@ -4464,6 +4464,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionRussian"/>
     <addaction name="actionChinese_simplified"/>
     <addaction name="actionChinese_traditional"/>
+    <addaction name="actionJapanese"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -4705,6 +4706,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>繁體中文</string>
+   </property>
+  </action>
+  <action name="actionJapanese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>日本語</string>
    </property>
   </action>
   <action name="actionJTDX_Web_Site">
