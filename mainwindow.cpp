@@ -3636,7 +3636,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
          }
       } else if (!deCall.isEmpty() && Radio::base_callsign (deCall) == Radio::base_callsign (m_hisCall) && decodedtextmsg.left(3) != "CQ " && decodedtextmsg.left(3) != "DE " && decodedtextmsg.left(4) != "QRZ " && !decodedtextmsg.contains(" 73") && !decodedtextmsg.contains(" RR73") && !decodedtextmsg.contains(" RRR")) {
         m_used_freq = decodedtext.frequencyOffset();
-         if (m_enableTx && !m_houndMode && (abs(m_used_freq - ui->TxFreqSpinBox->value ()) < m_nguardfreq || m_config.halttxreplyother ())) { 
+         if (m_enableTx && !m_reply_me && !m_houndMode && (abs(m_used_freq - ui->TxFreqSpinBox->value ()) < m_nguardfreq || m_config.halttxreplyother ())) { 
            haltTx("readFromStdout, not owner of the frequency or reply to other ");/* if(m_skipTx1) m_qsoHistory.remove(m_hisCall); */
          }
       }
