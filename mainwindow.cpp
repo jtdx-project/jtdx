@@ -1312,12 +1312,7 @@ void MainWindow::readSettings()
   else if(m_saveWav==2) ui->actionSave_all->setChecked(true);
 
   m_lang=m_settings->value("Language","en_US").toString();
-  if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
-  else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
-  else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
-  else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
-  else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
-  else ui->actionEnglish->setChecked(true);
+  set_language (m_lang);
   
   m_callMode=m_settings->value("CallMode",2).toInt();
   if(!(m_callMode>=0 && m_callMode<=3)) m_callMode=2; 
@@ -3695,6 +3690,12 @@ void MainWindow::set_language (QString const& lang)
             QMainWindow::close();
     }
   }
+  if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
+  else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
+  else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
+  else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
+  else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
+  else ui->actionEnglish->setChecked(true);
 }
 
 void MainWindow::on_EraseButton_clicked()                          //Erase
