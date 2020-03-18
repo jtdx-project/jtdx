@@ -24,7 +24,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth,lhighsens
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -297,9 +297,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       lsdone=.true.; nbadcrc=1; cycle
     endif
 
+    lsubptxfreq=.false.
+    if(lapon .and. lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
+      (nlasttx.eq.1 .or. nlasttx.eq.2)) lsubptxfreq=.true.
+
     nweak=1
-    if((lft8subpass .or. swl .or. dfqso.lt.2.0) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3 .or. &
-       imainpass.eq.4 .or. imainpass.eq.6 .or. imainpass.eq.7 .or. imainpass.eq.9)) nweak=2
+    if((lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. &
+       imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.6 .or. imainpass.eq.7 .or. imainpass.eq.9)) nweak=2
 ! a bit better efficiency on the overcrowded bands, with subpass 7935 without subpass 7948 decodes
 !    if((lft8subpass) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3)) nweak=2
     do k1=1,nweak
