@@ -104,6 +104,7 @@ extern struct dec_data {
     bool lenabledxcsearch;
     bool lwidedxcsearch;
     bool lmultinst;
+    bool lskiptx1;
     } params;
 } dec_data;
 
