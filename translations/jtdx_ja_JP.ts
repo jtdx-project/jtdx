@@ -62,7 +62,7 @@
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>ディレクトリを作成しなさい</translation>
+        <translation>ディレクトリを作成</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
-        <translation>一時的なディレクトリエラーを作成しなさい： </translation>
+        <translation>一時的なディレクトリエラーを作成： </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1133"/>
@@ -112,7 +112,7 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="1150"/>
         <source>Create data directory error: </source>
-        <translation>データディレクトリエラーを作成しなさい： </translation>
+        <translation>データディレクトリエラーを作成： </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2502"/>
@@ -165,22 +165,22 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>JTDX &#x3000;デコードされたテキストフォント選択者</translation>
+        <translation>JTDX デコードされたテキストフォント選択者</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
-        <translation>リセットを作動させている頻度</translation>
+        <translation>リセットを作動させている 周波数</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>あなたは、あなたが、あなたの現在の労働頻度を捨てて、それらをデフォルト1と取り替えたいと確信しているか？</translation>
+        <translation>あなたは、あなたが、あなたの現在の使用 周波数を捨てて、それらをデフォルト1と取り替えたいと確信しているか？</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
         <source>Save Directory</source>
-        <translation>ディレクトリを保存しなさい</translation>
+        <translation>ディレクトリを保存</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4661"/>
@@ -190,7 +190,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
-        <translation>失敗に装着しなさい</translation>
+        <translation>リグエラー</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>DX &#x3000;ラボスイート司令官は、未認識であるモードを送った：chr（34）</translation>
+        <translation>DX ラボスイート司令官は、未認識であるモードを送った：chr（34）</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
@@ -209,47 +209,47 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しく読んでいる頻度 ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しく読んでいる 周波数 ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX &#x3000;ラボスイート司令官は、未認識であるTX状態を送った： </translation>
+        <translation>DX ラボスイート司令官は、未認識であるTX状態を送った： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しい投票TXステータス ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しい投票TXステータス ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>DX &#x3000;ラボスイート司令官装備はPTTに反応しなかった： </translation>
+        <translation>DX ラボスイート司令官装備はPTTに反応しなかった： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しい投票頻度 ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しい投票 周波数 ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しい投票TX頻度 ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しい投票TX 周波数 ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX &#x3000;ラボスイート司令官は、未認識である分割状態を送った： </translation>
+        <translation>DX ラボスイート司令官は、未認識である分割状態を送った： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しい投票分割ステータス ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しい投票分割ステータス ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation>DX &#x3000;ラボスイート司令官は反応しなかった 正しい投票モード ： </translation>
+        <translation>DX ラボスイート司令官は反応しなかった 正しい投票モード ： </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
@@ -272,12 +272,12 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation>DX &#x3000;ラボスイート司令官リトライは発送コマンドchr（34）（34）%1chrを使い果たした</translation>
+        <translation>DX ラボスイート司令官リトライは発送コマンドchr（34）（34）%1chrを使い果たした</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation>DX &#x3000;ラボスイート司令官は認められない頻度を送った</translation>
+        <translation>DX ラボスイート司令官は認められない 周波数を送った</translation>
     </message>
 </context>
 <context>
@@ -295,7 +295,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation>&amp;afterを挿入しなさい…</translation>
+        <translation>&amp;afterを挿入…</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
@@ -339,7 +339,7 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation>JSON &#x3000;エラー</translation>
+        <translation>JSON エラー</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
@@ -408,7 +408,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="213"/>
         <source>Add Frequency</source>
-        <translation>頻度を追加しなさい</translation>
+        <translation>周波数を追加</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
@@ -433,19 +433,19 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="463"/>
         <location filename="../FrequencyList.cpp" line="588"/>
         <source>Frequency</source>
-        <translation>頻度</translation>
+        <translation>周波数</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="495"/>
         <location filename="../FrequencyList.cpp" line="589"/>
         <source>Frequency (MHz)</source>
-        <translation>頻度（MHz）</translation>
+        <translation>周波数（MHz）</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="518"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode Frequency</source>
-        <translation>モード頻度</translation>
+        <translation>モード 周波数</translation>
     </message>
 </context>
 <context>
@@ -573,7 +573,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="483"/>
         <source>getting current frequency</source>
-        <translation>現在の頻度を得る</translation>
+        <translation>現在の 周波数を得る</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="487"/>
@@ -590,7 +590,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="524"/>
         <location filename="../HamlibTransceiver.cpp" line="1001"/>
         <source>getting other VFO frequency</source>
-        <translation>他のVFO頻度を得る</translation>
+        <translation>他のVFO 周波数を得る</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="528"/>
@@ -605,7 +605,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="550"/>
         <source>getting frequency</source>
-        <translation>得頻度</translation>
+        <translation>得 周波数</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="554"/>
@@ -624,7 +624,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="637"/>
         <location filename="../HamlibTransceiver.cpp" line="979"/>
         <source>getting current VFO frequency</source>
-        <translation>現在のVFO頻度を得る</translation>
+        <translation>現在のVFO 周波数を得る</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="621"/>
@@ -634,7 +634,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="740"/>
         <location filename="../HamlibTransceiver.cpp" line="801"/>
         <source>setting frequency</source>
-        <translation>設定頻度</translation>
+        <translation>設定 周波数</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="730"/>
@@ -668,12 +668,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="827"/>
         <source>setting split TX frequency and mode</source>
-        <translation>設定分割TX頻度とモード</translation>
+        <translation>設定分割TX 周波数とモード</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="832"/>
         <source>setting split TX frequency</source>
-        <translation>設定分割TX頻度</translation>
+        <translation>設定分割TX 周波数</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="904"/>
@@ -716,17 +716,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>以下のQSOを確認するために、OKをクリックしなさい：</translation>
+        <translation>以下のQSOを確認するために、OKをクリック：</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
         <source>Call</source>
-        <translation>呼び出し</translation>
+        <translation>コールサイン</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="66"/>
         <source>Start</source>
-        <translation>開始</translation>
+        <translation>開始時刻</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="82"/>
@@ -737,7 +737,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation>終わり</translation>
+        <translation>終了時刻</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
@@ -752,7 +752,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Rpt &#x3000;送られる</translation>
+        <translation>Rpt 送られる</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
@@ -779,7 +779,7 @@ Error: %2 - %3</source>
         <location filename="../logqso.ui" line="348"/>
         <location filename="../logqso.ui" line="381"/>
         <source>Retain</source>
-        <translation>保有しなさい</translation>
+        <translation>保有</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="334"/>
@@ -808,7 +808,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5929"/>
         <location filename="../mainwindow.cpp" line="5940"/>
         <source>Band Activity</source>
-        <translation>バンド活動</translation>
+        <translation>Band Activity</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -823,7 +823,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>USB dial frequency</source>
-        <translation>USBダイヤル頻度</translation>
+        <translation>USBダイヤル 周波数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
@@ -848,7 +848,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>MHzの操作バンドまたは頻度を選びなさい</translation>
+        <translation>MHzの操作バンドまたは 周波数を選びなさい</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -869,7 +869,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation>は編集する</translation>
+        <translation>編集</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
@@ -880,42 +880,42 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="807"/>
         <source>prop</source>
-        <translation>支柱</translation>
+        <translation>prop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="965"/>
         <source>DX Grid</source>
-        <translation>DX &#x3000;グリッド</translation>
+        <translation>DX グリッド</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
         <source>Locator of station to be worked</source>
-        <translation>作動させられるステーションのロケータ</translation>
+        <translation>交信する局のロケータ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1006"/>
         <source>Callsign of station to be worked</source>
-        <translation>作動させられるステーションのCallsign</translation>
+        <translation>交信する局のCallsign</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1025"/>
         <source>Search for callsign in database</source>
-        <translation>データベースのcallsignを検索しなさい</translation>
+        <translation>データベースのcallsignを検索</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Lookup</translation>
+        <translation>&amp;検索</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
         <source>Add callsign and locator to database</source>
-        <translation>callsignとロケータをデータベースに追加しなさい</translation>
+        <translation>callsignとロケータをデータベースに追加</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1044"/>
         <source>Add</source>
-        <translation>追加しなさい</translation>
+        <translation>追加</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
@@ -928,7 +928,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5178"/>
         <location filename="../mainwindow.cpp" line="5593"/>
         <source>DX Call</source>
-        <translation>DX &#x3000;呼び出し</translation>
+        <translation>DX Call</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
@@ -938,12 +938,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
         <source>TX minute</source>
-        <translation>TX分</translation>
+        <translation>TX 分</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1407"/>
         <source>Audio Rx frequency</source>
-        <translation>オーディオRx頻度</translation>
+        <translation>オーディオRx 周波数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1447"/>
@@ -958,13 +958,13 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可能化FT8 DXpedition猟犬モード。右のマウスボタンクリック可能化猟犬TX頻度control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可能化FT8 DXpedition&#x3000;Houndモード。右のマウスボタンクリック可能化 hound TX 周波数control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
         <location filename="../mainwindow.cpp" line="2875"/>
         <source>Hound</source>
-        <translation>猟犬</translation>
+        <translation>Hound</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1505"/>
@@ -974,7 +974,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1542"/>
         <source>Audio Tx frequency</source>
-        <translation>オーディオTx頻度</translation>
+        <translation>オーディオTx 周波数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1579"/>
@@ -986,22 +986,22 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="1492"/>
         <location filename="../mainwindow.cpp" line="1924"/>
         <source>S meter</source>
-        <translation>Sメートル</translation>
+        <translation>Sメーター</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;が種々のRx/Tx AF頻度を使うか、またはTx頻度をRx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;が種々のRx/Tx AF 周波数を使うか、またはTx 周波数をRx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>Split Tx/Rx</source>
-        <translation>分割Tx/Rx</translation>
+        <translation>分割 Tx/Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1644"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Tx頻度へのセットRx頻度</translation>
+        <translation>Tx 周波数へのセットRx 周波数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1647"/>
@@ -1032,7 +1032,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Rx頻度へのセットTx頻度</translation>
+        <translation>Rx 周波数へのセットTx 周波数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
@@ -1047,7 +1047,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>探される</translation>
+        <translation>Wanted</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -1062,7 +1062,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
         <source>Adjust Tx audio level</source>
-        <translation>Tx低周波レベルを調整しなさい</translation>
+        <translation>Tx低周波レベルを調整</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1870"/>
@@ -1073,7 +1073,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
         <source>callsign:</source>
-        <translation>callsign：</translation>
+        <translation>コールサイン：</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1906"/>
@@ -1084,7 +1084,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
         <source>prefix:</source>
-        <translation>接頭辞：</translation>
+        <translation>プレフィックス：</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1942"/>
@@ -1171,27 +1171,27 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="2192"/>
         <location filename="../mainwindow.cpp" line="5890"/>
         <source>Rx Frequency</source>
-        <translation>Rx &#x3000;頻度</translation>
+        <translation>Rx  Frequency</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;が純粋なトーンを送る。曲タイマーは、.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;が純粋なトーンを送る。局タイマーは、.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Tune</translation>
+        <translation>&amp;調整</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
         <source>Start monitoring</source>
-        <translation>監視し始めなさい</translation>
+        <translation>モニター開始</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Monitor</translation>
+        <translation>&amp;モニター</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
@@ -1231,7 +1231,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2487"/>
         <source>&amp;Stop</source>
-        <translation>&amp;Stop</translation>
+        <translation>&amp;停止</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
@@ -1241,7 +1241,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation>年12月&amp;ode</translation>
+        <translation>デ&amp;コード</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -1251,22 +1251,22 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation>E&amp;nable Tx</translation>
+        <translation>自&amp;動送信</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation>直ちに電波で通信するのをやめなさい</translation>
+        <translation>直に送信を停止</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation>&amp;Halt Tx</translation>
+        <translation>&amp;送信停止</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>このQSOをADIFログに入力しなさい</translation>
+        <translation>このQSOをADIFログに入力</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
@@ -1276,12 +1276,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;左マウスボタン：デコードされたテキスト（左）ウィンドウを消去しなさい。右のマウスボタン：QSO頻度ウィンドウを消去しなさい。両方のwindows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;左マウスボタン：デコードされたテキスト（左）ウィンドウを消去しなさい。右のマウスボタン：QSO 周波数ウィンドウを消去しなさい。両方のwindows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Erase</translation>
+        <translation>&amp;消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -1311,7 +1311,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation>フィルタ</translation>
+        <translation>フィルター</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
@@ -1331,7 +1331,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation>空所D&amp;X</translation>
+        <translation>クリアーD&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -1344,12 +1344,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>最小のQSOのための標準のメッセージを生成しなさい</translation>
+        <translation>最小のQSOのための標準のメッセージを生成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>GenMsgs</source>
-        <translation>GenMsgs</translation>
+        <translation>定型文作成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
@@ -1400,7 +1400,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3442"/>
         <location filename="../mainwindow.ui" line="3509"/>
         <source>Send this message in next Tx interval</source>
-        <translation>次のTx間隔にこのメッセージを送りなさい</translation>
+        <translation>次のTx間隔でこのメッセージを送る</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3168"/>
@@ -1504,42 +1504,42 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4693"/>
         <source>Русский</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4709"/>
         <source>简体中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4717"/>
         <source>繁體中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5118"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>私のcallsignからRXまで頻度ウィンドウのメッセージ </translation>
+        <translation>私のcallsignからRXまで 周波数ウィンドウのメッセージ </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5183"/>
         <source>0  Call None</source>
-        <translation>0 &#x3000;呼び出し誰も</translation>
+        <translation>0 呼び出し無し</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5191"/>
         <source>1  Call first</source>
-        <translation>1 &#x3000; 1番目に電話しなさい</translation>
+        <translation>1  最初にコールする</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5207"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 &#x3000; TX間隔の開始までデコードされて、電話しなさい</translation>
+        <translation>2  TX間隔の開始までデコードされてからコールする</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5215"/>
         <source>3  Call based on end of decoding</source>
-        <translation>3 &#x3000;デコードの終わりに基づき、電話しなさい</translation>
+        <translation>3 デコードの終わってからコールする</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
@@ -1598,7 +1598,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>CQに答えるためのメッセージを生成しなさい</translation>
+        <translation>CQに答えるためのメッセージを生成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
@@ -1608,7 +1608,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation>リポートのメッセージを生成しなさい</translation>
+        <translation>リポートのメッセージを生成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
@@ -1618,7 +1618,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation>R+reportのメッセージを生成しなさい</translation>
+        <translation>R+reportのメッセージを生成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
@@ -1638,7 +1638,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3915"/>
         <source>Generate message with 73</source>
-        <translation>73のメッセージを生成しなさい</translation>
+        <translation>73のメッセージを生成</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3918"/>
@@ -1648,17 +1648,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3966"/>
         <source>Send this standard (generated) message</source>
-        <translation>この標準（生成）メッセージを送りなさい</translation>
+        <translation>この標準（生成）メッセージを送す</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
         <source>Gen msg</source>
-        <translation>将軍msg</translation>
+        <translation>定型文</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
         <source>Send this free-text message (max 13 characters)</source>
-        <translation>このフリーテキストメッセージを送りなさい（最高13文字）</translation>
+        <translation>このフリーテキストメッセージを送す（最高13文字）</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4037"/>
@@ -1688,17 +1688,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4152"/>
         <source>Upload spots</source>
-        <translation>アップロードはしみになる</translation>
+        <translation>スポットをアップロード</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4181"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation>次の2分連続の間に電波で通信しなさい。</translation>
+        <translation>次の2分連続の間に電波で送信.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4195"/>
         <source>Tx Next</source>
-        <translation>Tx &#x3000;次に</translation>
+        <translation>次に送信</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4205"/>
@@ -1723,7 +1723,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4342"/>
         <source>Decode</source>
-        <translation>デコードしなさい</translation>
+        <translation>デコード</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
@@ -1763,12 +1763,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation>のデコードサイクル</translation>
+        <translation>デコード周期</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation>SWLデコードサイクル</translation>
+        <translation>SWLデコード周期</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
@@ -1778,12 +1778,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
         <source>Save</source>
-        <translation>保存しなさい</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4460"/>
         <source>Language</source>
-        <translation>L¾Lê</translation>
+        <translation>言語選択</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4472"/>
@@ -1798,17 +1798,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4500"/>
         <source>Misc</source>
-        <translation>misc</translation>
+        <translation>その他</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4504"/>
         <source>Accept UDP Reply messages</source>
-        <translation>UDP返答メッセージを受け入れなさい</translation>
+        <translation>UDP返答メッセージを受け入れ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4537"/>
         <source>Auto RX frequency Filter</source>
-        <translation>オートRX頻度フィルタ</translation>
+        <translation>オートRX 周波数フィルタ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4561"/>
@@ -1818,7 +1818,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4580"/>
         <source>Exit</source>
-        <translation>出口</translation>
+        <translation>終了</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4583"/>
@@ -1849,12 +1849,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4610"/>
         <source>Waterfall</source>
-        <translation>滝</translation>
+        <translation>ウオーターフォール</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4615"/>
         <source>Open</source>
-        <translation>開きなさい</translation>
+        <translation>開く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4618"/>
@@ -1864,7 +1864,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4623"/>
         <source>Open next in directory</source>
-        <translation>次に、ディレクトリにおいて開きなさい</translation>
+        <translation>次のディレクトリを開く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4626"/>
@@ -1874,7 +1874,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4631"/>
         <source>Decode remaining files in directory</source>
-        <translation>ディレクトリの残留ファイルをデコードしなさい</translation>
+        <translation>ディレクトリの残留ファイルをデコード</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4634"/>
@@ -1884,7 +1884,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4639"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>SaveDirのすべての*.wav &amp;&amp; *.c2ファイルを削除しなさい</translation>
+        <translation>Save ディレクトリの全ての*.wav ， *.c2 ファイルを削除</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4650"/>
@@ -1897,12 +1897,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4661"/>
         <source>None</source>
-        <translation>誰も</translation>
+        <translation>無し</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4669"/>
         <source>Save all</source>
-        <translation>すべて保存しなさい</translation>
+        <translation>すべて保存</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4677"/>
@@ -1912,22 +1912,22 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4685"/>
         <source>Eesti</source>
-        <translation>Eesti</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4701"/>
         <source>Hrvatski</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4725"/>
         <source>日本語</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4730"/>
         <source>JTDX Web site</source>
-        <translation>JTDX &#x3000;ウェブサイト</translation>
+        <translation>JTDX ウェブサイト</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4733"/>
@@ -1962,7 +1962,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4771"/>
         <source>Save decoded</source>
-        <translation>デコードされて、保存しなさい</translation>
+        <translation>デコード済を保存</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4782"/>
@@ -1979,27 +1979,27 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5390"/>
         <location filename="../mainwindow.ui" line="5672"/>
         <source>deep</source>
-        <translation>深み</translation>
+        <translation>深く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4801"/>
         <source>Monitor OFF at startup</source>
-        <translation>スタートアップでオフを監視しなさい</translation>
+        <translation>スタートアップ時はモニターをオフ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4806"/>
         <source>Erase ALL.TXT</source>
-        <translation>ALL.TXTを消去しなさい</translation>
+        <translation>ALL.TXT を消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4811"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>QSO LOGファイルwsjtx_log.adiを消去しなさい</translation>
+        <translation>QSO LOGファイル wsjtx_log.adi を消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4816"/>
         <source>Open wsjtx_log.adi</source>
-        <translation>開いているwsjtx_log.adi</translation>
+        <translation>wsjtx_log.adi を開く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4819"/>
@@ -2010,7 +2010,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4827"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>モードを木の伐採のためのRTTYに変換しなさい</translation>
+        <translation>ロギング用にモードをRTTYに変換</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4835"/>
@@ -2020,7 +2020,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4843"/>
         <source>Prompt me to log QSO</source>
-        <translation>QSOを記録するために、私を促しなさい</translation>
+        <translation>Log ウインドウを表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4851"/>
@@ -2035,12 +2035,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4867"/>
         <source>Display distance in miles</source>
-        <translation>マイルの距離を表示しなさい</translation>
+        <translation>マイルの距離を表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4875"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>呼び出しセットTx可能化をダブルクリックしなさい</translation>
+        <translation>呼び出しセットTx可能化をダブルクリック</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4883"/>
@@ -2050,12 +2050,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4891"/>
         <source>Runaway Tx watchdog</source>
-        <translation>逃亡者Tx番犬</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4899"/>
         <source>Allow multiple instances</source>
-        <translation>複数の例を許しなさい</translation>
+        <translation>複数の例を許可</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4907"/>
@@ -2080,7 +2080,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4942"/>
         <source>Tx messages to Rx Frequency window</source>
-        <translation>Rx頻度ウィンドウへのTxメッセージ</translation>
+        <translation>Rx 周波数ウィンドウへのTxメッセージ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4950"/>
@@ -2115,7 +2115,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4992"/>
         <source>Open log directory</source>
-        <translation>開いているログディレクトリ</translation>
+        <translation>ログディレクトリを開く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5000"/>
@@ -2140,7 +2140,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5047"/>
         <source>Save reference spectrum</source>
-        <translation>参照範囲を節約しなさい</translation>
+        <translation>参照範囲を節約</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5052"/>
@@ -2160,12 +2160,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5074"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>RX頻度のテキストフィルタを迂回しなさい</translation>
+        <translation>RX 周波数のテキストフィルタを迂回</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5085"/>
         <source>Bypass all text filters</source>
-        <translation>すべてのテキストフィルタを迂回しなさい</translation>
+        <translation>すべてのテキストフィルタを迂回</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5088"/>
@@ -2175,12 +2175,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5096"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation>JT65高調波からデコードされたメッセージを示しなさい</translation>
+        <translation>JT65高調波からデコードされたメッセージを表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5107"/>
         <source>Enable main window popup</source>
-        <translation>主要なウィンドウポップアップを使用可能にしなさい</translation>
+        <translation>主要なウィンドウポップアップを使用可能</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5123"/>
@@ -2220,7 +2220,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5199"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+ &#x3000; CQメッセージによる呼び出しと検索</translation>
+        <translation>4+  CQメッセージによる呼び出しと検索</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5223"/>
@@ -2230,12 +2230,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5231"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>デコードの開始の時にバンド活動ウィンドウを消去しなさい</translation>
+        <translation>デコードの開始の時にバンド活動ウィンドウを消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5239"/>
         <source>Answer worked B4 calls</source>
-        <translation>答えはB4呼び出しを作動させた</translation>
+        <translation>交信済に応答</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5250"/>
@@ -2260,12 +2260,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5301"/>
         <source>Erase both message windows at band change</source>
-        <translation>バンド変化の時に両方のメッセージウィンドウを消去しなさい</translation>
+        <translation>バンド変化の時に両方のメッセージウィンドウを消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5339"/>
         <source>deep with 4 passes</source>
-        <translation>4つのパスを持つ深み</translation>
+        <translation>4つのパスで深く</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5347"/>
@@ -2275,17 +2275,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5355"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>RX頻度ウィンドウへの探される呼び出しのメッセージ</translation>
+        <translation>RX 周波数ウィンドウへの探される呼び出しのメッセージ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5363"/>
         <source>use low thresholds</source>
-        <translation>の使用低入り口</translation>
+        <translation>低いしきいを使用</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5398"/>
         <source>use subpass</source>
-        <translation>使用サブパス</translation>
+        <translation>サブパスを使用</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5409"/>
@@ -2295,12 +2295,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5417"/>
         <source>late start of decoder</source>
-        <translation>デコーダの前の開始</translation>
+        <translation>デコーダの遅い開始</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5425"/>
         <source>Call worked B4 callsigns</source>
-        <translation>呼び出しによりB4 callsignsは作動させられた</translation>
+        <translation>交信済局を呼ぶ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5444"/>
@@ -2315,22 +2315,22 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5460"/>
         <source>Enable</source>
-        <translation>可能にしなさい</translation>
+        <translation>可能</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5468"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>73を送る時に、フィルタオフを切り替えなさい</translation>
+        <translation>73を送る時に、フィルタオフを切り替え</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5476"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>73を得る時に、フィルタオフを切り替えなさい</translation>
+        <translation>73を得る時に、フィルタオフを切り替え</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5484"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>FT8お人よしメッセージを隠しなさい</translation>
+        <translation>FT8 dupe メッセージを隠す</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5492"/>
@@ -2340,32 +2340,32 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5500"/>
         <source>Report message priority</source>
-        <translation>メッセージプライオリティを報告しなさい</translation>
+        <translation>メッセージプライオリティを報告</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5508"/>
         <source>Enable hound mode</source>
-        <translation>猟犬モードを可能にしなさい</translation>
+        <translation>Hound モードを可能</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5519"/>
         <source>Use hound TX frequency control</source>
-        <translation>猟犬TX頻度コントロールを使いなさい</translation>
+        <translation>hound TX 周波数コントロールを使う</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5527"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>マニュアルのモードのRRR/RR73/73を送った後に、TXを使用不可にしなさい</translation>
+        <translation>マニュアルのモードのRRR/RR73/73を送った後に、TXを使用不可</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5538"/>
         <source>Show tooltips in main window</source>
-        <translation>主要なウィンドウのショーtooltips</translation>
+        <translation>メインウィンドウのツールチップを表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5546"/>
         <source>Color Tx message buttons</source>
-        <translation>色Txメッセージボタン</translation>
+        <translation>Tx メッセージボタンの色</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5554"/>
@@ -2417,7 +2417,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5637"/>
         <source>Hide FT contest messages</source>
-        <translation>FTコンテストメッセージを隠しなさい</translation>
+        <translation>FTコンテストメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5645"/>
@@ -2472,17 +2472,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="926"/>
         <source>Click OK to retry</source>
-        <translation>リトライするために、OKをクリックしなさい</translation>
+        <translation>リトライするために、OKをクリック</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1603"/>
         <source>TX Even</source>
-        <translation>TX &#x3000; Even</translation>
+        <translation>TX 偶数</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1610"/>
         <source>TX Odd</source>
-        <translation>TX &#x3000;異常</translation>
+        <translation>TX 奇数</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1655"/>
@@ -2527,7 +2527,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2443"/>
         <source>Subprocess Error</source>
-        <translation>エラーをサブ処理しなさい</translation>
+        <translation>エラーをサブ処理</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2444"/>
@@ -2554,7 +2554,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2550"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation>設立できなく／、dxsummitサーバーとの接続を完遂しなさい</translation>
+        <translation>設立できない／、dxsummitサーバーとの接続を完遂</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2574"/>
@@ -2603,22 +2603,22 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2851"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation>猟犬TX頻度コントロールは標準のFT8副帯において許されない。</translation>
+        <translation>Hound TX 周波数コントロールは標準のFT8副帯において許されない。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2859"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>猟犬モードTX頻度コントロールは*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
+        <translation>Hound モード TX 周波数コントロールは*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2862"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>猟犬TX頻度コントロールは標準のFT8副帯において許されず、*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
+        <translation>Hound TX 周波数コントロールは標準のFT8副帯において許されず、*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2870"/>
         <source>Hound TX frequency control warning</source>
-        <translation>猟犬TX頻度コントロール警告</translation>
+        <translation>Hound TX 周波数コントロール警告</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2875"/>
@@ -2648,65 +2648,6 @@ list. The list can be maintained in Settings (F2).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3842"/>
-        <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
-        <translation>どうぞ、別のTx頻度を選んでください。JTDXは、30mのWSPR副帯の別のモードを故意に送らない。</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3847"/>
-        <location filename="../mainwindow.cpp" line="3850"/>
-        <source>WSPR Guard Band</source>
-        <translation>WSPR &#x3000;ガードバンド</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3968"/>
-        <source>TUNE</source>
-        <translation>曲</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3969"/>
-        <source>LastTx: </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4184"/>
-        <source>Tx: </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4189"/>
-        <source>Receiving </source>
-        <translation>受け取る </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4398"/>
-        <source>Last Tx: </source>
-        <translation>最後のTx： </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5328"/>
-        <source>%1
-is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6904"/>
-        <location filename="../mainwindow.cpp" line="6905"/>
-        <source>Logd </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="7129"/>
-        <source>Error: %1
-UDP server %2:%3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4183"/>
-        <source>Tx: TUNE</source>
-        <translation>Tx：曲</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="3695"/>
         <location filename="../mainwindow.cpp" line="3704"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
@@ -2725,6 +2666,65 @@ UDP server %2:%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3842"/>
+        <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
+        <translation>どうぞ、別のTx 周波数を選んでください。JTDXは、30mのWSPR副帯の別のモードを故意に送らない。</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3847"/>
+        <location filename="../mainwindow.cpp" line="3850"/>
+        <source>WSPR Guard Band</source>
+        <translation>WSPR ガードバンド</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3968"/>
+        <source>TUNE</source>
+        <translation>調整</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3969"/>
+        <source>LastTx: </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4184"/>
+        <source>Tx: </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4189"/>
+        <source>Receiving </source>
+        <translation>受信 </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4398"/>
+        <source>Last Tx: </source>
+        <translation>最後のTx： </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5328"/>
+        <source>%1
+is already in CALL3.TXT, do you wish to replace it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6904"/>
+        <location filename="../mainwindow.cpp" line="6905"/>
+        <source>Logd </source>
+        <translation>ログ </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7129"/>
+        <source>Error: %1
+UDP server %2:%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4183"/>
+        <source>Tx: TUNE</source>
+        <translation>Tx：調整</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="4242"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1W</translation>
@@ -2735,7 +2735,7 @@ UDP server %2:%3</source>
         <location filename="../mainwindow.cpp" line="5304"/>
         <location filename="../mainwindow.cpp" line="5330"/>
         <source>Add to CALL3.TXT</source>
-        <translation>CALL3.TXTに追加しなさい</translation>
+        <translation>CALL3.TXTに追加</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5280"/>
@@ -2770,12 +2770,12 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="6471"/>
         <source>Tune</source>
-        <translation>曲</translation>
+        <translation>調整</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6644"/>
         <source>Lockd Tx=Rx</source>
-        <translation>Lockd Tx=Rx</translation>
+        <translation>ロック Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6645"/>
@@ -2785,7 +2785,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="6648"/>
         <source>Tx/Rx Split</source>
-        <translation>Tx/Rx &#x3000;分割</translation>
+        <translation>Tx/Rx 分割</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6649"/>
@@ -2795,17 +2795,17 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="6835"/>
         <source>Tune digital gain</source>
-        <translation>デジタルの利益を調整しなさい</translation>
+        <translation>デジタルのゲインを調整</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6836"/>
         <source>Transmit digital gain</source>
-        <translation>デジタルの利益を送りなさい</translation>
+        <translation>デジタルのゲインを送信</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6855"/>
         <source>Prefixes</source>
-        <translation>接頭辞</translation>
+        <translation>プレフィックス</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7128"/>
@@ -2820,7 +2820,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="7474"/>
         <source>Tx watchdog expired</source>
-        <translation>Tx番犬は期限切れになった</translation>
+        <translation>Tx ウオッチドッグは時間切れ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7488"/>
@@ -2880,27 +2880,27 @@ UDP server %2:%3</source>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation>エラーを読んでいる滝パレットファイル&quot;%1:%2&quot; 非常に多くの色 。</translation>
+        <translation>エラーを読んでいるウオーターフォールパレットファイル&quot;%1:%2&quot; 非常に多くの色 。</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation>エラーを読んでいる滝パレットファイル&quot;%1:%2&quot;無効三つ組。</translation>
+        <translation>エラーを読んでいるウオーターフォールパレットファイル&quot;%1:%2&quot;無効三つ組。</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation>エラーを読んでいる滝パレットファイル&quot;%1:%2&quot;無効色。</translation>
+        <translation>エラーを読んでいるウオーターフォールパレットファイル&quot;%1:%2&quot;無効色。</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>エラーを開く滝パレットファイル&quot;%1&quot;: %2.</translation>
+        <translation>エラーを開くウオーターフォールパレットファイル&quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="250"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>エラー書き込み滝パレットファイル%1&quot;: %2.</translation>
+        <translation>エラー書き込みウオーターフォールパレットファイル%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -3021,7 +3021,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="129"/>
         <source>Idle</source>
-        <translation>怠けて過ごしなさい</translation>
+        <translation>アイドリング</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="133"/>
@@ -3031,12 +3031,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="137"/>
         <source>Suspended</source>
-        <translation>中断される</translation>
+        <translation>中断</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="142"/>
         <source>Interrupted</source>
-        <translation>中断される</translation>
+        <translation>中断</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="149"/>
@@ -3046,7 +3046,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="153"/>
         <source>Stopped</source>
-        <translation>止められる</translation>
+        <translation>停止</translation>
     </message>
 </context>
 <context>
@@ -3084,7 +3084,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Idle</source>
-        <translation>怠けて過ごしなさい</translation>
+        <translation>アイドリング</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
@@ -3094,12 +3094,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="116"/>
         <source>Suspended</source>
-        <translation>中断される</translation>
+        <translation>中断</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="118"/>
         <source>Interrupted</source>
-        <translation>中断される</translation>
+        <translation>中断</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
@@ -3109,7 +3109,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Stopped</source>
-        <translation>止められる</translation>
+        <translation>停止</translation>
     </message>
 </context>
 <context>
@@ -3117,22 +3117,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="252"/>
         <source>Add Station</source>
-        <translation>ステーションを追加しなさい</translation>
+        <translation>ステーションを追加</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Band:</source>
-        <translation>&amp;Band：</translation>
+        <translation>&amp;バンド：</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="258"/>
         <source>&amp;Offset (MHz):</source>
-        <translation>&amp;Offset（MHz）：</translation>
+        <translation>&amp;オフセット（MHz）：</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Antenna:</source>
-        <translation>&amp;Antenna：</translation>
+        <translation>&amp;アンテナ：</translation>
     </message>
 </context>
 <context>
@@ -3140,12 +3140,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation>名前を縛りなさい</translation>
+        <translation>バンド名</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
         <source>Frequency offset</source>
-        <translation>頻度はオフセットした</translation>
+        <translation>周波数はオフセットした</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="339"/>
@@ -3191,7 +3191,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation>頻度スケールのための圧縮ファクター</translation>
+        <translation>周波数スケールのための圧縮ファクター</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="233"/>
@@ -3222,7 +3222,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation>FFTsの数は平均した（コントロール滝スクロールレート）</translation>
+        <translation>FFTsの数は平均した（コントロールウオーターフォールスクロールレート）</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
@@ -3282,7 +3282,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="401"/>
         <source>Select waterfall palette</source>
-        <translation>滝パレットを選びなさい</translation>
+        <translation>ウオーターフォールパレットを選びなさい</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="431"/>
@@ -3302,7 +3302,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation>平坦化しなさい</translation>
+        <translation>平坦化</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
@@ -3337,12 +3337,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="556"/>
         <source>Waterfall gain</source>
-        <translation>滝利益</translation>
+        <translation>ウオーターフォールゲイン</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="593"/>
         <source>Spectrum gain</source>
-        <translation>スペクトル利益</translation>
+        <translation>スペクトルゲイン</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="616"/>
@@ -3355,7 +3355,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="658"/>
         <source>Waterfall zero</source>
-        <translation>滝0</translation>
+        <translation>ウオーターフォール0</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="695"/>
@@ -3398,17 +3398,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation>私のC&amp;all：</translation>
+        <translation>&amp;自分のコールサイン：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation>ステーションcallsign。</translation>
+        <translation>運用局のコールサイン.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation>M&amp;y &#x3000;グリッド：</translation>
+        <translation>自&amp;分のグリッドロケータ：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
@@ -3443,22 +3443,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="175"/>
         <source>Logbook filtering</source>
-        <translation>航海日誌濾過</translation>
+        <translation>交信記録フィルタリング</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="203"/>
         <source>Use current callsign</source>
-        <translation>現在のcallsignを使いなさい</translation>
+        <translation>現在のコールサインを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation>現在のグリッドを使いなさい</translation>
+        <translation>現在のグリッドを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation>日付／時間（YYYYMMDDHHMMSS）から始まる航海日誌を濾過しなさい</translation>
+        <translation>日付／時間（YYYYMMDDHHMMSS）から始まる交信記録を濾過</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
@@ -3468,7 +3468,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation>フォント特徴をバンド活動とRx頻度エリアに課しなさい。</translation>
+        <translation>フォント特徴をバンド活動とRx 周波数エリアに設定。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
@@ -3478,7 +3478,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="326"/>
         <source>Set the font characteristics for the application.</source>
-        <translation>フォント特徴をアプリケーションに課しなさい。</translation>
+        <translation>フォント特徴をアプリケーションに設定。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="329"/>
@@ -3488,17 +3488,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation>数キロメートルというよりもマイルのDXステーションに距離を示しなさい。</translation>
+        <translation>ＤＸ局を Ｋｍ よりもマイルで距離を表示。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation>マイルのディスプレイdista&amp;nce</translation>
+        <translation>距離をマイル&amp;で表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>期間の間のセパレータラインをバンド活動ウィンドウに含めなさい。</translation>
+        <translation>期間の間のセパレータラインをバンド活動ウィンドウに含める。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -3508,22 +3508,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="369"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>DXCC名を、デコードされたメッセージに付加しなさい。</translation>
+        <translation>DXCC名を、デコードされたメッセージに付加。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="372"/>
         <source>Show &amp;DXCC names</source>
-        <translation>ショー&amp;DXCC名</translation>
+        <translation>&amp;DXCC名を表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="379"/>
         <source>Append prefix instead of name.</source>
-        <translation>名前の代わりに接頭辞を付加しなさい。</translation>
+        <translation>DXCC名の代わりにプレフィックスを付加。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="382"/>
         <source>Show &amp;prefix not name</source>
-        <translation>notの&amp;prefixに名前を示しなさい</translation>
+        <translation>D&amp;XCC名では無くてプレフィックスを表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
@@ -3533,17 +3533,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="392"/>
         <source>Hide partially transmitted messages</source>
-        <translation>部分的に送られたメッセージを隠しなさい</translation>
+        <translation>部分的に送られたメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation>ショー発信によりRx頻度ウィンドウのメッセージが送られた。</translation>
+        <translation>ショー発信によりRx 周波数ウィンドウのメッセージを表示。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>Rx頻度ウィンドウへの&amp;Txメッセージ</translation>
+        <translation>Rx 周波数ウィンドウへの&amp;Txメッセージ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="420"/>
@@ -3558,12 +3558,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="449"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>スタートアップにオフのMon&amp;itor</translation>
+        <translation>&amp;スタートアップにモニターはオフ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation>Tx番犬タイマー</translation>
+        <translation>Txのウオッチドッグタイマー</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
@@ -3574,32 +3574,32 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="488"/>
         <location filename="../Configuration.ui" line="535"/>
         <source>Disabled</source>
-        <translation>使用不可にされる</translation>
+        <translation>使用不可</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation>t = 52 sでデコードしなさい</translation>
+        <translation>t = 52 sでデコード</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation>タイマーを調整しなさい</translation>
+        <translation>タイマーを調整</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation>電波で通信する間、Tx頻度変化を許しなさい</translation>
+        <translation>送信中のTx 周波数変更を許可</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="572"/>
         <source>Monitor returns to last used frequency</source>
-        <translation>モニタは、使われた頻度続くように戻る</translation>
+        <translation>最後に使われた周波数に戻ってモニターする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>すべての73または自由なテキストメッセージの後に、CW IDを送りなさい。</translation>
+        <translation>７３または自由なテキストメッセージの後に、CW IDを送る.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
@@ -3609,7 +3609,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>周期的なCW ID Inter&amp;val：</translation>
+        <translation>周期的なCW ID インター&amp;バル：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="655"/>
@@ -3624,17 +3624,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation>装備：</translation>
+        <translation>リグ：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation>投票間隔：</translation>
+        <translation>ポール間隔：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="725"/>
         <source>S meter</source>
-        <translation>Sメートル</translation>
+        <translation>Sメーター</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="757"/>
@@ -3649,7 +3649,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="788"/>
         <source>CAT Control</source>
-        <translation>猫コントロール</translation>
+        <translation>CATコントロール</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="799"/>
@@ -3732,12 +3732,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="952"/>
         <source>Se&amp;ven</source>
-        <translation>Se&amp;ven</translation>
+        <translation>&amp;７</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="965"/>
         <source>E&amp;ight</source>
-        <translation>E&amp;ight</translation>
+        <translation>&amp;８</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="984"/>
@@ -3747,17 +3747,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>On&amp;e</source>
-        <translation>On&amp;e</translation>
+        <translation>&amp;１</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1019"/>
         <source>T&amp;wo</source>
-        <translation>T&amp;wo</translation>
+        <translation>&amp;２</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>Handshake</source>
-        <translation>握手</translation>
+        <translation>ハンドシェーク</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1050"/>
@@ -3819,7 +3819,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
         <source>PTT Method</source>
-        <translation>PTT &#x3000;方法</translation>
+        <translation>PTT 方法</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1227"/>
@@ -3864,7 +3864,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation>オーディオソースを送りなさい</translation>
+        <translation>オーディオソースを送す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
@@ -3895,7 +3895,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation>誰も</translation>
+        <translation>無し</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
@@ -3915,22 +3915,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
         <source>Fake It</source>
-        <translation>偽物それ</translation>
+        <translation>だます</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
         <source>Rig</source>
-        <translation>装備</translation>
+        <translation>リグ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
         <source>Test CAT</source>
-        <translation>テスト猫</translation>
+        <translation>ＣＡＴテスト</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
         <source>Test PTT</source>
-        <translation>テストPTT</translation>
+        <translation>ＰＴＴテスト</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1568"/>
@@ -4005,27 +4005,27 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation>バンドとモードによってパワー設定を覚えなさい</translation>
+        <translation>バンドとモードによるパワー設定を記憶する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
         <source>Enable power memory during transmit</source>
-        <translation>送る間に、パワーメモリーを可能にしなさい</translation>
+        <translation>送る間に、パワーメモリーを可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1770"/>
         <source>Transmit</source>
-        <translation>電波で通信しなさい</translation>
+        <translation>送信</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1777"/>
         <source>Enable power memory during tuning</source>
-        <translation>調整の間にパワーメモリーを可能にしなさい</translation>
+        <translation>調整の間にパワーメモリーを可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation>曲</translation>
+        <translation>調整</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -4035,7 +4035,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
         <source>Loc&amp;ation:</source>
-        <translation>Loc&amp;ation：</translation>
+        <translation>ロケ&amp;ーション：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
@@ -4050,12 +4050,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1843"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation>.WAV filesのために、違う保存ディレクトリを選ぶためにクリックしなさい。</translation>
+        <translation>.WAV filesのために、違う保存ディレクトリを選ぶためにクリック。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1846"/>
         <source>S&amp;elect</source>
-        <translation>S&amp;elect</translation>
+        <translation>選&amp;択</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1877"/>
@@ -4075,7 +4075,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>カウンター。デコードされたメッセージ、呼び出しCQ、または停車場Tx ならば に捜しなさい：</translation>
+        <translation>カウンター。デコードされたメッセージ、呼び出しCQ、または停車場Tx ならば に捜す：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -4083,17 +4083,17 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="2009"/>
         <location filename="../Configuration.ui" line="2045"/>
         <source>times</source>
-        <translation>回</translation>
+        <translation>回数</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>は、RR73（73）を、受信RRR（RR73）と一致するようにした</translation>
+        <translation>RR73（73）を、受信したらRRR（RR73）を送る</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2058"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation>はどの反応なしで誰かのCQに責任を負わなかった</translation>
+        <translation>誰も応答しないＣＱに応答する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2071"/>
@@ -4103,7 +4103,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>もし他のオペレータへの私が呼んだオペレータの責任を負い停止TX</translation>
+        <translation>他局から応答があった局への送信を停止</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
@@ -4113,7 +4113,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
         <source>Tx &amp;Macros</source>
-        <translation>Tx &amp;Macros</translation>
+        <translation>Tx &amp;マクロ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
@@ -4123,42 +4123,42 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation>&amp;Add</translation>
+        <translation>&amp;追加</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Delete</translation>
+        <translation>&amp;削除</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
         <source>Reportin&amp;g</source>
-        <translation>Reportin&amp;g</translation>
+        <translation>リポーティン&amp;グ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2266"/>
         <source>Reporting and logging settings</source>
-        <translation>報告および記録設定</translation>
+        <translation>リポートおよびログ設定</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
         <source>Logging</source>
-        <translation>木を伐採する</translation>
+        <translation>交信記録</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation>コメントへの d&amp;Bリポート</translation>
+        <translation>コ&amp;メントへの dB リポート</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>記録の後のクリアな&amp;DX呼び出しとグリッド</translation>
+        <translation>&amp;記録の後にコールサインとグリッドをクリアする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>出口の空所DX呼び出しとグリッド</translation>
+        <translation>ＤＸコールサインとグリッドをクリアして終了</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
@@ -4168,7 +4168,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>RTTYへのCon&amp;vertモード</translation>
+        <translation>RTTY&amp;へモードを変更</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
@@ -4178,17 +4178,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2352"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>QSOを記録するPromp&amp;t私</translation>
+        <translation>Log QSO &amp;ウインドウを表示する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>QSOの自動的な記録を可能にしなさい</translation>
+        <translation>QSOの自動的な記録を可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2392"/>
         <source>Send logged QSO ADIF data</source>
-        <translation>記録されたQSO ADIFデータを送りなさい</translation>
+        <translation>記録されたQSO ADIFデータを送る</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2426"/>
@@ -4215,7 +4215,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2474"/>
         <source>Enable sending to TCP server</source>
-        <translation>TCPサーバーに送ることを可能にしなさい</translation>
+        <translation>TCPサーバーに送ることを可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2499"/>
@@ -4236,7 +4236,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2532"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>第2のUDPサーバーに送ることを可能にしなさい</translation>
+        <translation>第2のUDPサーバーに送ることを可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
@@ -4246,12 +4246,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2590"/>
         <source>decoded messages</source>
-        <translation>はメッセージをデコードした</translation>
+        <translation>デコードしたメッセージ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2597"/>
         <source>decoded and debug messages</source>
-        <translation>がデコードしたこととデバッグメッセージ</translation>
+        <translation>デコード済とデバッグメッセージ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2639"/>
@@ -4266,42 +4266,42 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2663"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation>&amp;eQSL送信を可能にしなさい</translation>
+        <translation>&amp;eQSL送信を可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2683"/>
         <source>EQSL Username.</source>
-        <translation>EQSL &#x3000;ユーザーネーム。</translation>
+        <translation>EQSL ユーザーネーム。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2690"/>
         <source>U&amp;sername:</source>
-        <translation>U&amp;sername：</translation>
+        <translation>ユ&amp;ーザーネーム：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
         <source>P&amp;assword:</source>
-        <translation>P&amp;assword：</translation>
+        <translation>パ&amp;スワード：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2710"/>
         <source>EQSL Password.</source>
-        <translation>EQSL &#x3000;パスワード。</translation>
+        <translation>EQSL パスワード。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2726"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation>&amp;PSK レポーター配置 を可能にしなさい</translation>
+        <translation>&amp;PSK レポーター発信を可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2733"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>EQSL OTH &#x3000;ニックネーム。</translation>
+        <translation>EQSL OTH ニックネーム。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH N&amp;ickname：</translation>
+        <translation>QTH &amp;ニックネーム：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2763"/>
@@ -4311,12 +4311,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2793"/>
         <source>UDP Server:</source>
-        <translation>UDP &#x3000;サーバー：</translation>
+        <translation>UDP サーバー：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2819"/>
         <source>UDP Server port number:</source>
-        <translation>UDP &#x3000;サーバーポート数：</translation>
+        <translation>UDP サーバーポート数：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2829"/>
@@ -4326,12 +4326,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
         <source>Accept UDP requests</source>
-        <translation>UDP要求を受け入れなさい</translation>
+        <translation>UDP要求を受け入れ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2859"/>
         <source>Notify on accepted UDP request</source>
-        <translation>受け入れられたUDP要求において通知しなさい</translation>
+        <translation>受け入れられたUDP要求において通知</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2869"/>
@@ -4341,37 +4341,37 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2880"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation>記録されたQSO ADIFデータを送ることを可能にしなさい</translation>
+        <translation>記録されたQSO ADIFデータを送ることを可能にする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2893"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
-        <translation>メッセージにしみをUDPを経た未確認のcallsignsでつけることを防止しなさい</translation>
+        <translation>メッセージにしみをUDPを経た未確認のcallsignsでつけることを防止</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2903"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation>テキストフィルタをUDPメッセージのトランスミッションに適用しなさい</translation>
+        <translation>テキストフィルタをUDPメッセージのトランスミッションに適用</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2938"/>
         <source>Frequencies</source>
-        <translation>頻度</translation>
+        <translation>周波数</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2941"/>
         <source>Default frequencies and band specific station details setup</source>
-        <translation>デフォルト頻度とバンド具体的ステーションは、セットアップを詳説する</translation>
+        <translation>デフォルト 周波数とバンド具体的ステーションは、セットアップを詳説する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
         <source>Working Frequencies</source>
-        <translation>頻度を作動させる</translation>
+        <translation>使用周波数</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2962"/>
         <source>Right click to add or delete frequencies.</source>
-        <translation>頻度を追加するか、または削除する右のクリック。</translation>
+        <translation>周波数を追加するか、または削除する右のクリック。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2991"/>
@@ -4387,12 +4387,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
         <source>Frequency Calibration</source>
-        <translation>頻度目盛り</translation>
+        <translation>周波数目盛り</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation>妨害しなさい：</translation>
+        <translation>妨害：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
@@ -4407,7 +4407,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3173"/>
         <source>Notifications</source>
-        <translation>通知書</translation>
+        <translation>通知・色付け</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3181"/>
@@ -4449,7 +4449,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
         <source>Beep as well</source>
-        <translation>その上ビーッという音を発しなさい</translation>
+        <translation>その上ビーッという音を出す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -4519,17 +4519,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3423"/>
         <source>Highlight other standard messages</source>
-        <translation>他の標準のメッセージを強調しなさい</translation>
+        <translation>他の標準のメッセージを強調</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
         <source>Beep on 1st decoded message</source>
-        <translation>1番目のデコードされたメッセージにビーッという音を発しなさい</translation>
+        <translation>1番目のデコードされたメッセージにビーッという音を出す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3456"/>
         <source>Beep on my call</source>
-        <translation>私の呼び出しにビーッという音を発しなさい</translation>
+        <translation>私の呼び出しにビーッという音を出す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
@@ -4664,7 +4664,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="4472"/>
         <source>Hide messages from continents</source>
-        <translation>大陸からメッセージを隠しなさい</translation>
+        <translation>大陸からメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4484"/>
@@ -4704,7 +4704,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="4539"/>
         <source>Hide messages from countries</source>
-        <translation>国からメッセージを隠しなさい</translation>
+        <translation>国からメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4559"/>
@@ -4716,7 +4716,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="4562"/>
         <location filename="../Configuration.ui" line="4627"/>
         <source>Hide</source>
-        <translation>隠れなさい</translation>
+        <translation>隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4592"/>
@@ -4727,12 +4727,12 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="4595"/>
         <location filename="../Configuration.ui" line="4650"/>
         <source>Clear</source>
-        <translation>澄みなさい</translation>
+        <translation>クリアー</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4607"/>
         <source>Hide messages from callsigns</source>
-        <translation>callsignsからメッセージを隠しなさい</translation>
+        <translation>callsignsからメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4647"/>
@@ -4937,7 +4937,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>Enable DXSummit Spotting </source>
-        <translation>DXSummit見分けを可能にしなさい </translation>
+        <translation>DXSummit にスポットを可能 </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2760"/>
@@ -5159,7 +5159,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4682"/>
         <source>Enable</source>
-        <translation>可能にしなさい</translation>
+        <translation>可能</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4689"/>
@@ -5201,12 +5201,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
         <source>Hide decoded free messages</source>
-        <translation>デコードされた自由なメッセージを隠しなさい</translation>
+        <translation>デコードされた自由なメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4794"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
-        <translation>関連せず、メッセージ と を隠しなさい 2番目のcallsignのためのハッシュ</translation>
+        <translation>２番目のcallsignのための関連しないハッシュメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4817"/>
@@ -5221,7 +5221,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
         <source>Band scheduler configuration</source>
-        <translation>スケジューラコンフィギュレーションを縛りなさい</translation>
+        <translation>バンド・スケジューラコンフィギュレーション</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4838"/>
@@ -5588,12 +5588,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6189"/>
         <source>Use band scheduler</source>
-        <translation>バンドスケジューラを使いなさい</translation>
+        <translation>バンドスケジューラを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6212"/>
         <source>Advanced</source>
-        <translation>進められる</translation>
+        <translation>高度設定</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6222"/>
@@ -5631,7 +5631,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6419"/>
         <source>Top decoding frequency: </source>
-        <translation>一番上のデコード頻度： </translation>
+        <translation>一番上のデコード 周波数： </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6452"/>
@@ -5650,13 +5650,13 @@ soundcard changes</source>
         <location filename="../Configuration.ui" line="6325"/>
         <location filename="../Configuration.ui" line="6338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;がRX頻度デコードパス&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;がRX 周波数デコードパス&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6328"/>
         <location filename="../Configuration.ui" line="6644"/>
         <source>RX frequency decoding attempts:</source>
-        <translation>RX頻度デコード試み：</translation>
+        <translation>RX 周波数デコード試み：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6364"/>
@@ -5678,7 +5678,7 @@ soundcard changes</source>
     <message>
         <location filename="../Configuration.ui" line="6404"/>
         <source>Use frequency mask decoding</source>
-        <translation>頻度マスクデコードを使いなさい</translation>
+        <translation>周波数マスクデコードを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6416"/>
@@ -5694,7 +5694,7 @@ soundcard changes</source>
     <message>
         <location filename="../Configuration.ui" line="6491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設定がCPUパワーに依存する デコードパスの超満員のHF bands.&lt;br&gt;&lt;br&gt;数のためのデコードパスの最大の数を使おうとする することができる そこでデコード試みの数の増加が弱いシグナルのためのデコード効率をよりよくもたらすかもしれない間、低い住んでいるHF/VHFバンドのために減少しなさい。&lt;br&gt;&lt;br&gt;数デコードすることにより低いSNRシグナルの影響デコード効率が試みられる：デコードパスのワイドバンド、またはRX頻度one.&lt;br&gt;&lt;br&gt;数 近くで、同じ頻度または突き止めにおいて、主として重複したスペクトルによってお互いにデコードできるシグナルの最大の数に影響する 、同じ頻度の最高4つのシグナルにデコードすることが可能であることとアップRX頻度の7つのシグナルに、もしデコードパスの数が4.&lt;br&gt;&lt;br&gt;にセットされるならば、RX緻密.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設定がCPUパワーに依存する デコードパスの超満員のHF bands.&lt;br&gt;&lt;br&gt;数のためのデコードパスの最大の数を使おうとする することができる そこでデコード試みの数の増加が弱いシグナルのためのデコード効率をよりよくもたらすかもしれない間、低い住んでいるHF/VHFバンドのために減少しなさい。&lt;br&gt;&lt;br&gt;数デコードすることにより低いSNRシグナルの影響デコード効率が試みられる：デコードパスのワイドバンド、またはRX 周波数one.&lt;br&gt;&lt;br&gt;数 近くで、同じ 周波数または突き止めにおいて、主として重複したスペクトルによってお互いにデコードできるシグナルの最大の数に影響する 、同じ 周波数の最高4つのシグナルにデコードすることが可能であることとアップRX 周波数の7つのシグナルに、もしデコードパスの数が4.&lt;br&gt;&lt;br&gt;にセットされるならば、RX緻密.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
@@ -5711,7 +5711,7 @@ soundcard changes</source>
         <location filename="../Configuration.ui" line="6641"/>
         <location filename="../Configuration.ui" line="6654"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;がRX頻度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;がRX 周波数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
