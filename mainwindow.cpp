@@ -3030,6 +3030,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lapmyc=m_lapmyc;
   dec_data.params.lmodechanged=m_modeChanged ? 1 : 0; m_modeChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
+  dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;
