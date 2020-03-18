@@ -9,7 +9,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall
+                       mybcall,hisbcall,lskiptx1
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12
@@ -299,7 +299,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
     lsubptxfreq=.false.
     if(lapon .and. lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
-      (nlasttx.eq.1 .or. nlasttx.eq.2)) lsubptxfreq=.true.
+      ((.not.lskiptx1 .and. nlasttx.eq.1) .or. (lskiptx1 .and. nlasttx.eq.2))) lsubptxfreq=.true.
 
     nweak=1
     if((lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. &
