@@ -118,7 +118,7 @@ namespace
   QRegularExpression messagespec_alphabet {"[- @A-Za-z0-9+./?#<>;]*"};
   QRegularExpression wcall_alphabet {"[A-Za-z0-9/,]*"};
   QRegularExpression wgrid_alphabet {"([a-r]{2,2}[0-9]{2,2}[,]{1,1})*",QRegularExpression::CaseInsensitiveOption};
-  QRegularExpression cqdir_alphabet {"(?!de)[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
+  QRegularExpression cqdir_alphabet {"[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression dxCall_alphabet {"[A-Za-z0-9/]*"};
   QRegularExpression dxGrid_alphabet {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}"};
   QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{2}|\d{3}))|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
