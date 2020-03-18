@@ -3683,8 +3683,33 @@ void MainWindow::killFile ()
 void MainWindow::set_language (QString const& lang)
 {
   if (m_lang != lang) {
-    if (QMessageBox::Yes == QMessageBox::question(this, "Confirm change Language",
-            "Are You sure to change UI Language, JTDX needs restart?", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
+    bool olek;
+    QString tolge;
+    QTranslator translator;
+    olek = translator.load (QString {"jtdx_"} + lang);    
+    QMessageBox msgbox;
+    msgbox.setWindowTitle(tr("Confirm change Language"));
+    msgbox.setIcon(QMessageBox::Question);
+    msgbox.setText(tr("Are You sure to change UI Language to English, JTDX will restart?"));
+    msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgbox.setDefaultButton(QMessageBox::No);
+    msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
+    msgbox.button(QMessageBox::No)->setText(tr("&No"));
+    if (olek) {
+      tolge = translator.translate("MainWindow","Confirm change Language");
+      if (!tolge.isEmpty()) msgbox.setWindowTitle(tolge);
+      else msgbox.setWindowTitle("Confirm change Language");
+      tolge = translator.translate("MainWindow","Are You sure to change UI Language to English, JTDX will restart?");
+      if (!tolge.isEmpty()) msgbox.setText(tolge);
+      else msgbox.setText("Are You sure to change UI Language to English, JTDX will restart?");
+      tolge = translator.translate("MainWindow","&Yes");
+      if (!tolge.isEmpty()) msgbox.button(QMessageBox::Yes)->setText(tolge);
+      else msgbox.button(QMessageBox::Yes)->setText("&Yes");
+      tolge = translator.translate("MainWindow","&No");
+      if (!tolge.isEmpty()) msgbox.button(QMessageBox::No)->setText(tolge);
+      else msgbox.button(QMessageBox::No)->setText("&No");
+    }
+    if(msgbox.exec() == QMessageBox::Yes) {
             m_lang = lang;
             m_exitCode = 1337;
             QMainWindow::close();
