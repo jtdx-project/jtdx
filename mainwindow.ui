@@ -4463,6 +4463,8 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionEstonian"/>
     <addaction name="actionRussian"/>
     <addaction name="actionCroatian"/>
+    <addaction name="actionPolish"/>
+    <addaction name="actionPortuguese"/>
     <addaction name="actionChinese_simplified"/>
     <addaction name="actionChinese_traditional"/>
     <addaction name="actionJapanese"/>
@@ -4699,6 +4701,22 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Hrvatski</string>
+   </property>
+  </action>
+  <action name="actionPolish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Polski</string>
+   </property>
+  </action>
+  <action name="actionPortuguese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Português</string>
    </property>
   </action>
   <action name="actionChinese_simplified">

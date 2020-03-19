@@ -6,32 +6,32 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime Opsega</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
         <source>Lower frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Donja granična frekvencija</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Upper frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Gornja granična frekvencija</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="199"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Opseg</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Donji Limit</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Godnji Limit</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../about.ui" line="23"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>O JTDX</translation>
     </message>
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Potvrdi</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../GetUserId.cpp" line="29"/>
         <source>Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Znak</translation>
     </message>
 </context>
 <context>
@@ -60,54 +60,56 @@
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Stvaranje privremene mape došlo je do greške: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška u stvaranju privremenog direktorija::
+%1
+Drugi program možda koristi direktorij</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1150"/>
         <source>Create data directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška u direktoriju podataka: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1159"/>
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Napravi Mapu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
         <location filename="../Configuration.cpp" line="1346"/>
         <location filename="../Configuration.cpp" line="1382"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Briši</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1350"/>
         <location filename="../Configuration.cpp" line="1386"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ubaci ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
         <source>Serial Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serijski Port:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
         <source>Serial port used for CAT control</source>
-        <translation type="unfinished"></translation>
+        <translation>Serijski port koji se koristi za CAT kontrolu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2501"/>
         <source>Network Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mrežni Server:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2502"/>
@@ -117,12 +119,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2514"/>
         <source>USB Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>USB uređaj:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2515"/>
@@ -130,67 +132,67 @@ Formats:
 Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevažeći ulazni ulazni uređaj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevažeći izlazni audio uređaj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid PTT method</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevažeća PTT metoda</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2573"/>
         <source>Invalid PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevažeći PTT priključak</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ/73 u poruci</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ u poruci</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX odabir fontova dekodiranog teksta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Reset Radnih Frekvencija</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite odbaciti trenutne radne frekvencije i zamijeniti ih zadanim?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
         <source>Save Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremi Mapu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4661"/>
         <source>Failed to open connection to rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvaranje veze s uređajem nije uspjelo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška uređaja</translation>
     </message>
 </context>
 <context>
@@ -199,7 +201,8 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Nije uspjelo povezivanje s DX Lab Suite Commanderom
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
@@ -277,7 +280,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DX Lab Suite Commander poslao je nepoznatu frekvenciju</translation>
     </message>
 </context>
 <context>
@@ -285,33 +288,33 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="189"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obriši</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="198"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ubaci...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubaci &amp;nakon ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <source>Import Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Uvezi Paletu</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Palettes (*.pal)</source>
-        <translation type="unfinished"></translation>
+        <translation>Paleta (*.pal)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Export Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvezi paletu</translation>
     </message>
 </context>
 <context>
@@ -319,7 +322,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrijeme sive zone:</translation>
     </message>
 </context>
 <context>
@@ -328,7 +331,7 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation type="unfinished"></translation>
+        <translation>URL greška</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
@@ -361,7 +364,7 @@ Format:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pogreška datotečnog sustava</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
@@ -392,7 +395,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sadržaja mapa mora biti relativni i unutar njih&quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -400,7 +403,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="46"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulacija split moda zahtjeva da je uređaj u simpleks modu</translation>
     </message>
 </context>
 <context>
@@ -408,17 +411,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="213"/>
         <source>Add Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj Frekvenciju</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modulacija:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="218"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Frekvencija (MHz):</translation>
     </message>
 </context>
 <context>
@@ -427,25 +430,25 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="431"/>
         <location filename="../FrequencyList.cpp" line="587"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulacija</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="463"/>
         <location filename="../FrequencyList.cpp" line="588"/>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekvencija</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="495"/>
         <location filename="../FrequencyList.cpp" line="589"/>
         <source>Frequency (MHz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekvencija (MHz)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="518"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulacija Frekvencija</translation>
     </message>
 </context>
 <context>
@@ -716,85 +719,85 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation type="unfinished"></translation>
+        <translation>Klikni OK za potvrdu veze:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
         <source>Call</source>
-        <translation type="unfinished"></translation>
+        <translation>Znak</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="66"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Početak QSO</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Kraj</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Opseg</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokator</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="282"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation type="unfinished"></translation>
+        <translation>TX snaga</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
         <location filename="../logqso.ui" line="348"/>
         <location filename="../logqso.ui" line="381"/>
         <source>Retain</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapamti</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentar</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL poruka</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
 </context>
 <context>
@@ -802,306 +805,306 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX  by HF community</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
         <location filename="../mainwindow.ui" line="2114"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3389"/>
-        <location filename="../mainwindow.cpp" line="3396"/>
-        <location filename="../mainwindow.cpp" line="5885"/>
-        <location filename="../mainwindow.cpp" line="5890"/>
-        <location filename="../mainwindow.cpp" line="5930"/>
-        <location filename="../mainwindow.cpp" line="5941"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="3400"/>
+        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5896"/>
+        <location filename="../mainwindow.cpp" line="5936"/>
+        <location filename="../mainwindow.cpp" line="5947"/>
         <source>Band Activity</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ako je naranđasto ili crveno onda postoji problem sa uređajem, klikni za  reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>?</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>USB dial frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>USB odabrana frekvencija</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>14.078 000</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="689"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Meni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristi ovu kontrolu da bi sakrio ili prikazao prozor za spotiranje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Spt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi opseg ili frekvenciju u MHz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>DXSummit spot pregled polja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>info:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit uređivanje spotanja: vrsta rada se u informacijskom polju automatski upisuje, korisnik u informacijsko polje može dodati vlastitu tekstualnu poruku. Dostupne makronaredbe: #D je za udaljenost, #G je za &quot;Grid1 &lt;&gt; Grid2&quot;, #R je jačina signala. Dostupan je pregled informacijskog polja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation type="unfinished"></translation>
+        <translation>uredi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
         <location filename="../mainwindow.ui" line="814"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of the propagation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vrsta propagacije.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="807"/>
         <source>prop</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="965"/>
         <source>DX Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lokator</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
         <source>Locator of station to be worked</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokator stanice koju radimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1006"/>
         <source>Callsign of station to be worked</source>
-        <translation type="unfinished"></translation>
+        <translation>Znak stanice koju radimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1025"/>
         <source>Search for callsign in database</source>
-        <translation type="unfinished"></translation>
+        <translation>Potraži znak u bazi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Potraži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
         <source>Add callsign and locator to database</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj znak i lokator u bazu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1044"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknite lijevom tipkom miša da pošaljete spot DXa na dxsummit.fi (spotanje je omogućeno na kartici Reporting postavki). Kliknite desnim gumbom miša da biste dodali pozivni znak u filter &quot;Sakrij poruke od dotičnog pozivnog znaka&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4514"/>
-        <location filename="../mainwindow.cpp" line="5179"/>
-        <location filename="../mainwindow.cpp" line="5594"/>
+        <location filename="../mainwindow.cpp" line="4520"/>
+        <location filename="../mainwindow.cpp" line="5185"/>
+        <location filename="../mainwindow.cpp" line="5600"/>
         <source>DX Call</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Znak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prebaci minute TX sekvence&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
         <source>TX minute</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1407"/>
         <source>Audio Rx frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio Rx frekvencija</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1413"/>
         <location filename="../mainwindow.ui" line="1548"/>
         <location filename="../mainwindow.ui" line="4162"/>
         <source>  Hz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1416"/>
         <source>Rx  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1447"/>
         <source>Toggle Tx mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Prebaci način rada na TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1450"/>
         <source>Tx JT9 @</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Omogućite FT8 DXpedition Hound način. Klikom desne tipke miša omogućite kontrolu frekvencije hound TX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2879"/>
         <source>Hound</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1505"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal raport (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1508"/>
         <source>Report </source>
-        <translation type="unfinished"></translation>
+        <translation>Raport </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1542"/>
         <source>Audio Tx frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio Tx frekvencija</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1551"/>
         <location filename="../mainwindow.ui" line="4165"/>
         <source>Tx  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT mora biti postavljen putem Hamliba, Hamlib podržava dobivanje podataka S metra za neke primopredajnike.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1492"/>
-        <location filename="../mainwindow.cpp" line="1924"/>
+        <location filename="../mainwindow.cpp" line="1494"/>
+        <location filename="../mainwindow.cpp" line="1926"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translation>S metar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite različite Rx / Tx AF frekvencije ili postavite Tx frekvenciju jednaku Rx AF frekvenciji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>Split Tx/Rx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1644"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Stavi Rx Frekvenciju na Tx Frekvenciju</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1647"/>
         <source>Rx=Tx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Omogući poluautomatsko sekvenciranje poruka. Prilikom odabira CQ automatskog odabira po zadanom traženju odgovora s najvišim prioritetom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
-        <location filename="../mainwindow.ui" line="4533"/>
+        <location filename="../mainwindow.ui" line="4535"/>
         <source>AutoSeq</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dvaput klik stavlja TX na predaju&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
         <source>AutoTX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavi TX frekvenciju na RX frekvenciju</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
         <source>Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1751"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Upotrijebite ovu kontrolu za prikaz ili sakrivanje traženih znakova ili / prefiksa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation type="unfinished"></translation>
+        <translation>Traženo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT se postavlja putem Hamliba, Hamlib podržava dobivanje podataka o izlaznoj snazi ​​za neke primopredajnike.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
         <source>Adjust Tx audio level</source>
-        <translation type="unfinished"></translation>
+        <translation>Podesi Tx audio nivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1870"/>
@@ -1112,7 +1115,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
         <source>callsign:</source>
-        <translation type="unfinished"></translation>
+        <translation>znak:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1906"/>
@@ -1123,7 +1126,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
         <source>prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>prefiks:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1939"/>
@@ -1134,7 +1137,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1942"/>
         <source>grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>lokator:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1968"/>
@@ -1160,13 +1163,13 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="1986"/>
         <source>country:</source>
-        <translation type="unfinished"></translation>
+        <translation>zemlja:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5897"/>
         <source>Rx Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>RX Frekvencija</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
@@ -1176,12 +1179,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
         <source>Start monitoring</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokreni monitoriranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
@@ -1196,7 +1199,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaobiđi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
@@ -1206,17 +1209,17 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2411"/>
         <source>1 QSO</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ogovori/radi već rađene B4 veze Autoseq opcija&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2456"/>
         <source>AnsB4</source>
-        <translation type="unfinished"></translation>
+        <translation>Odgovori B4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2484"/>
@@ -1226,7 +1229,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2487"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
@@ -1236,37 +1239,37 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation type="unfinished"></translation>
+        <translation>Dek&amp;odiraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
         <source>Toggle Tx Enable On/Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Prebaci Tx Omogući On / Off</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;mogući Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation type="unfinished"></translation>
+        <translation>Prestanite odmah emitirati</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zaustavi TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation type="unfinished"></translation>
+        <translation>Unesite ovu vezu u ADIF log</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
@@ -1276,7 +1279,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obriši</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -1286,7 +1289,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2708"/>
         <source>S&amp;WL mode</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;WL mod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
@@ -1296,7 +1299,8 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>nagađanje</translatorcomment>
+        <translation>Nagovještaj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
@@ -1306,7 +1310,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
@@ -1316,7 +1320,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2846"/>
         <source>AGCc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
@@ -1326,31 +1330,31 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation type="unfinished"></translation>
+        <translation>Obriši D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
-        <location filename="../mainwindow.ui" line="5258"/>
-        <location filename="../mainwindow.ui" line="5715"/>
-        <location filename="../mainwindow.ui" line="5739"/>
+        <location filename="../mainwindow.ui" line="5276"/>
+        <location filename="../mainwindow.ui" line="5733"/>
+        <location filename="../mainwindow.ui" line="5757"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Stvorite standardne poruke za minimalni QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>GenMsgs</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5436"/>
+        <location filename="../mainwindow.ui" line="5454"/>
         <source>CQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3088"/>
@@ -1362,19 +1366,19 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3091"/>
         <location filename="../mainwindow.ui" line="3659"/>
         <source>DX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Označite za generiranje poruke &quot;RRR&quot;, poništite odabir da biste generirali &apos;RR73&apos;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
         <location filename="../mainwindow.ui" line="3694"/>
         <source>RRR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3123"/>
@@ -1385,7 +1389,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
         <source>SkipTx1</source>
-        <translation type="unfinished"></translation>
+        <translation>PreskočiTX1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3162"/>
@@ -1395,12 +1399,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3442"/>
         <location filename="../mainwindow.ui" line="3509"/>
         <source>Send this message in next Tx interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošaljite ovu poruku u sljedećem Tx intervalu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3168"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3193"/>
@@ -1410,62 +1414,62 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3470"/>
         <location filename="../mainwindow.ui" line="3540"/>
         <source>Switch to this Tx message NOW</source>
-        <translation type="unfinished"></translation>
+        <translation>Prebacite se na ovu Tx poruku SADA</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3199"/>
         <source>Tx &amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3202"/>
         <source>Alt+1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3238"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3263"/>
         <source>Tx &amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3266"/>
         <source>Alt+2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3302"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3327"/>
         <source>Tx &amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3330"/>
         <source>Alt+3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3366"/>
         <source>Ctrl+4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3391"/>
         <source>Tx &amp;4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3394"/>
         <source>Alt+4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3420"/>
@@ -1474,61 +1478,64 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation type="unfinished"></translation>
+        <translation>Unesite tekstualnu poruku (maksimalno 13 znakova)
+ili odaberite unaprijed definirani makronaredbu s padajućeg popisa.
+Pritisnite ENTER da biste dodali trenutni tekst unaprijed definiranom
+popis. Popis se može održavati u Postavkama (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
         <source>Ctrl+5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3473"/>
         <source>Tx &amp;5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3476"/>
         <source>Alt+5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3515"/>
         <source>Ctrl+6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3543"/>
         <source>Tx &amp;6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3546"/>
         <source>Alt+6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
-        <location filename="../mainwindow.ui" line="5266"/>
-        <location filename="../mainwindow.ui" line="5269"/>
-        <location filename="../mainwindow.ui" line="5723"/>
-        <location filename="../mainwindow.ui" line="5747"/>
+        <location filename="../mainwindow.ui" line="5284"/>
+        <location filename="../mainwindow.ui" line="5287"/>
+        <location filename="../mainwindow.ui" line="5741"/>
+        <location filename="../mainwindow.ui" line="5765"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3618"/>
         <source>CQ </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3726"/>
         <source>AnsCQ </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3748"/>
         <source>SkpGrid</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
@@ -1538,37 +1545,37 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
         <source>CQ/CQ DX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiranje poruke za odgovor na CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiranje poruke s raportom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
         <source>dB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiranje poruke s R+ raportom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
         <source>R+dB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
@@ -1578,27 +1585,27 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
         <source>RRR/RR73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3915"/>
         <source>Generate message with 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiranje poruke sa 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3918"/>
         <source>73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3966"/>
         <source>Send this standard (generated) message</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošaljite ovu standardnu ​​(generiranu) poruku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
         <source>Gen msg</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
@@ -1608,47 +1615,47 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4037"/>
         <source>Free msg</source>
-        <translation type="unfinished"></translation>
+        <translation>Slobodna poruka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4114"/>
         <source>Band Hopping</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite pojaseve i doba dana za skakanje po opsezima.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
         <source>Schedule ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Raspored ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4149"/>
         <source>Upload decoded messages to WPRnet.org.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošaljite dekodirane poruke na WPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4152"/>
         <source>Upload spots</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload spotova</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4181"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odašilji tijekom sljedeće 2-minutne  sekvence.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4195"/>
         <source>Tx Next</source>
-        <translation type="unfinished"></translation>
+        <translation>TX slijedeći</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4205"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavite Tx snagu u dBm (dB iznad 1 mW) kao dio vaše WSPR poruke.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4225"/>
@@ -1658,1174 +1665,1186 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4231"/>
         <source>  %</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4234"/>
         <source>Tx Pct </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4317"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4335"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogled</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4342"/>
         <source>Decode</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodiranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
         <source>FT8 threads</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 CPU niti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
         <source>JT9 WSPR decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>JT9 WSPR dekodiranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4372"/>
         <source>FT8 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 dekodiranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4376"/>
         <source>wideband decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Širokopojasno dekodiranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4384"/>
         <source>narrow Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>uskopojasni Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation type="unfinished"></translation>
+        <translation>osjetljivost dekodera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
         <source>QSO RX freq sensitivity</source>
-        <translation type="unfinished"></translation>
+        <translation>Osjetljivosti na RX frekv</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation type="unfinished"></translation>
+        <translation>ciklusi dekodiranja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation type="unfinished"></translation>
+        <translation>SWL ciklusi dekodiranja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
         <source>FT4 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>FT4 dekodiranje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremanje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4460"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Jezik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4472"/>
+        <location filename="../mainwindow.ui" line="4474"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomoć</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4488"/>
+        <location filename="../mainwindow.ui" line="4490"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4500"/>
+        <location filename="../mainwindow.ui" line="4502"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Razno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4504"/>
+        <location filename="../mainwindow.ui" line="4506"/>
         <source>Accept UDP Reply messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Prihvatite UDP odgovore na poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4537"/>
+        <location filename="../mainwindow.ui" line="4539"/>
         <source>Auto RX frequency Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatski filtar RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4561"/>
+        <location filename="../mainwindow.ui" line="4563"/>
         <source>DXpedition</source>
-        <translation type="unfinished"></translation>
+        <translation>Dxpedicije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4580"/>
+        <location filename="../mainwindow.ui" line="4582"/>
         <source>Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Izlaz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4583"/>
+        <location filename="../mainwindow.ui" line="4585"/>
         <source>Alt+F4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4594"/>
+        <location filename="../mainwindow.ui" line="4596"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4597"/>
-        <location filename="../mainwindow.ui" line="4979"/>
+        <location filename="../mainwindow.ui" line="4599"/>
+        <location filename="../mainwindow.ui" line="4997"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4602"/>
+        <location filename="../mainwindow.ui" line="4604"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>O JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4605"/>
+        <location filename="../mainwindow.ui" line="4607"/>
         <source>Ctrl+F1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4610"/>
+        <location filename="../mainwindow.ui" line="4612"/>
         <source>Waterfall</source>
-        <translation type="unfinished"></translation>
+        <translation>Vodopad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4615"/>
+        <location filename="../mainwindow.ui" line="4617"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvori</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4618"/>
+        <location filename="../mainwindow.ui" line="4620"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4623"/>
+        <location filename="../mainwindow.ui" line="4625"/>
         <source>Open next in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvori slijedeći u mapi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4626"/>
+        <location filename="../mainwindow.ui" line="4628"/>
         <source>F6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4631"/>
+        <location filename="../mainwindow.ui" line="4633"/>
         <source>Decode remaining files in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodirajte preostale datoteke u direktoriju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4634"/>
+        <location filename="../mainwindow.ui" line="4636"/>
         <source>Shift+F6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4639"/>
+        <location filename="../mainwindow.ui" line="4641"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrišite sve datoteke * .wav &amp;&amp; * .c2 u SaveDiru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4650"/>
-        <location filename="../mainwindow.ui" line="5309"/>
-        <location filename="../mainwindow.ui" line="5371"/>
-        <location filename="../mainwindow.ui" line="5653"/>
+        <location filename="../mainwindow.ui" line="4652"/>
+        <location filename="../mainwindow.ui" line="5327"/>
+        <location filename="../mainwindow.ui" line="5389"/>
+        <location filename="../mainwindow.ui" line="5671"/>
         <source>fast</source>
-        <translation type="unfinished"></translation>
+        <translation>brzo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4661"/>
+        <location filename="../mainwindow.ui" line="4663"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ništa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4669"/>
+        <location filename="../mainwindow.ui" line="4671"/>
         <source>Save all</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremi sve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4677"/>
+        <location filename="../mainwindow.ui" line="4679"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4685"/>
+        <location filename="../mainwindow.ui" line="4687"/>
         <source>Eesti</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4693"/>
+        <location filename="../mainwindow.ui" line="4695"/>
         <source>Русский</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4701"/>
+        <location filename="../mainwindow.ui" line="4703"/>
         <source>Hrvatski</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4709"/>
+        <location filename="../mainwindow.ui" line="4711"/>
+        <source>Polski</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4719"/>
+        <source>Português</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4727"/>
         <source>简体中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4717"/>
+        <location filename="../mainwindow.ui" line="4735"/>
         <source>繁體中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4725"/>
+        <location filename="../mainwindow.ui" line="4743"/>
         <source>日本語</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4730"/>
+        <location filename="../mainwindow.ui" line="4748"/>
         <source>JTDX Web site</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX Web stranica</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4733"/>
+        <location filename="../mainwindow.ui" line="4751"/>
         <source>F1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4738"/>
+        <location filename="../mainwindow.ui" line="4756"/>
         <source>Keyboard shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Prečaci na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4741"/>
+        <location filename="../mainwindow.ui" line="4759"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4746"/>
+        <location filename="../mainwindow.ui" line="4764"/>
         <source>Special mouse commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Posebne naredbe miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4749"/>
+        <location filename="../mainwindow.ui" line="4767"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4760"/>
+        <location filename="../mainwindow.ui" line="4778"/>
         <source>JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4771"/>
+        <location filename="../mainwindow.ui" line="4789"/>
         <source>Save decoded</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremi dekodirano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4782"/>
-        <location filename="../mainwindow.ui" line="5317"/>
-        <location filename="../mainwindow.ui" line="5379"/>
-        <location filename="../mainwindow.ui" line="5621"/>
-        <location filename="../mainwindow.ui" line="5661"/>
+        <location filename="../mainwindow.ui" line="4800"/>
+        <location filename="../mainwindow.ui" line="5335"/>
+        <location filename="../mainwindow.ui" line="5397"/>
+        <location filename="../mainwindow.ui" line="5639"/>
+        <location filename="../mainwindow.ui" line="5679"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4793"/>
-        <location filename="../mainwindow.ui" line="5328"/>
-        <location filename="../mainwindow.ui" line="5390"/>
-        <location filename="../mainwindow.ui" line="5672"/>
-        <source>deep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4801"/>
-        <source>Monitor OFF at startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4806"/>
-        <source>Erase ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>srednje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4811"/>
-        <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4816"/>
-        <source>Open wsjtx_log.adi</source>
-        <translation type="unfinished"></translation>
+        <location filename="../mainwindow.ui" line="5346"/>
+        <location filename="../mainwindow.ui" line="5408"/>
+        <location filename="../mainwindow.ui" line="5690"/>
+        <source>deep</source>
+        <translation>duboko</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4819"/>
-        <location filename="../mainwindow.ui" line="5003"/>
+        <source>Monitor OFF at startup</source>
+        <translation>Monitor isključen pri pokretanju</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4824"/>
+        <source>Erase ALL.TXT</source>
+        <translation>Izbriši ALL.TXT</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4829"/>
+        <source>Erase QSO LOG file wsjtx_log.adi</source>
+        <translation>Izbriši LOG file wsjtx_log.adi</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4834"/>
+        <source>Open wsjtx_log.adi</source>
+        <translation>Otvori wsjtx_log.adi</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4837"/>
+        <location filename="../mainwindow.ui" line="5021"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4827"/>
+        <location filename="../mainwindow.ui" line="4845"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretvorite način rada u RTTY za logiranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4835"/>
+        <location filename="../mainwindow.ui" line="4853"/>
         <source>Log dB reports to Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Logiranje dB raporta u komentare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4843"/>
+        <location filename="../mainwindow.ui" line="4861"/>
         <source>Prompt me to log QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatraži me da logiram QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4851"/>
+        <location filename="../mainwindow.ui" line="4869"/>
         <source>Blank line between decoding periods</source>
-        <translation type="unfinished"></translation>
+        <translation>Prazne linije između perioda dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4859"/>
+        <location filename="../mainwindow.ui" line="4877"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Očistite DX znak i Lokator nakon logiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4867"/>
+        <location filename="../mainwindow.ui" line="4885"/>
         <source>Display distance in miles</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži udaljenost u miljama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4875"/>
+        <location filename="../mainwindow.ui" line="4893"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvaput kliknite na znak aktivira Tx Enable</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4883"/>
+        <location filename="../mainwindow.ui" line="4901"/>
         <source>Tx disabled after sending 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Onemogući TX nakon slanja 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4891"/>
+        <location filename="../mainwindow.ui" line="4909"/>
         <source>Runaway Tx watchdog</source>
-        <translation type="unfinished"></translation>
+        <translation>Čuvar isteka TX predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4899"/>
+        <location filename="../mainwindow.ui" line="4917"/>
         <source>Allow multiple instances</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući višestruke instance</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4907"/>
+        <location filename="../mainwindow.ui" line="4925"/>
         <source>Tx freq locked to Rx freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx frekv zaključan na Rx frekv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4915"/>
+        <location filename="../mainwindow.ui" line="4933"/>
         <source>Skip Tx 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Preskoči TX1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4923"/>
+        <location filename="../mainwindow.ui" line="4941"/>
         <source>JT65</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4934"/>
+        <location filename="../mainwindow.ui" line="4952"/>
         <source>JT9+JT65</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4942"/>
+        <location filename="../mainwindow.ui" line="4960"/>
         <source>Tx messages to Rx Frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx poruke u prozoru Rx Frekvencija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4950"/>
+        <location filename="../mainwindow.ui" line="4968"/>
         <source>Gray1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4958"/>
+        <location filename="../mainwindow.ui" line="4976"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4966"/>
+        <location filename="../mainwindow.ui" line="4984"/>
         <source>Astronomical data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4971"/>
+        <location filename="../mainwindow.ui" line="4989"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kratki popis dodataka i prefiksa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4976"/>
+        <location filename="../mainwindow.ui" line="4994"/>
         <source>Settings...</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4987"/>
+        <location filename="../mainwindow.ui" line="5005"/>
         <source>JTDX forum</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4992"/>
+        <location filename="../mainwindow.ui" line="5010"/>
         <source>Open log directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvori log direktorij</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5000"/>
+        <location filename="../mainwindow.ui" line="5018"/>
         <source>Message averaging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5017"/>
+        <location filename="../mainwindow.ui" line="5035"/>
         <source>Include averaging</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj nagovještanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5031"/>
+        <location filename="../mainwindow.ui" line="5049"/>
         <source>JT65 hinted decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>JT65 nagovještanje dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5042"/>
+        <location filename="../mainwindow.ui" line="5060"/>
         <source>WSPR-2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5047"/>
+        <location filename="../mainwindow.ui" line="5065"/>
         <source>Save reference spectrum</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremite referentni spektar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5052"/>
+        <location filename="../mainwindow.ui" line="5070"/>
         <source>&amp;Download Samples ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Preuzmi Primjere ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5055"/>
+        <location filename="../mainwindow.ui" line="5073"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5063"/>
+        <location filename="../mainwindow.ui" line="5081"/>
         <source>T10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5074"/>
+        <location filename="../mainwindow.ui" line="5092"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Izostavi tekst filtere na RX frekvenciji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5085"/>
+        <location filename="../mainwindow.ui" line="5103"/>
         <source>Bypass all text filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Izostavi sve tekst filtere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5088"/>
+        <location filename="../mainwindow.ui" line="5106"/>
         <source>Alt+F</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5096"/>
+        <location filename="../mainwindow.ui" line="5114"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikažite poruke dekodirane iz JT65 harmonika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5107"/>
+        <location filename="../mainwindow.ui" line="5125"/>
         <source>Enable main window popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući skočni prozor glavnog prozora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5118"/>
+        <location filename="../mainwindow.ui" line="5136"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation type="unfinished"></translation>
+        <translation>Poruke s mojim znakom u prozor frekvencije RX </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5123"/>
+        <location filename="../mainwindow.ui" line="5141"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Obavijest o autorskim pravima WSJT Development Grupe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5137"/>
+        <location filename="../mainwindow.ui" line="5155"/>
         <source>FT8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5145"/>
+        <location filename="../mainwindow.ui" line="5163"/>
         <source>FT8 call first</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 odgovori prvome</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5156"/>
+        <location filename="../mainwindow.ui" line="5174"/>
         <source>Call priority and search CQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Prioritetni znak i potražite CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5159"/>
+        <location filename="../mainwindow.ui" line="5177"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5167"/>
+        <location filename="../mainwindow.ui" line="5185"/>
         <source>FT8 call last</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 ogovorii zadnjem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5175"/>
+        <location filename="../mainwindow.ui" line="5193"/>
         <source>FT8 manual call</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 ručni odgovor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5183"/>
+        <location filename="../mainwindow.ui" line="5201"/>
         <source>0  Call None</source>
-        <translation type="unfinished"></translation>
+        <translation>0 Ručni odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5191"/>
+        <location filename="../mainwindow.ui" line="5209"/>
         <source>1  Call first</source>
-        <translation type="unfinished"></translation>
+        <translation>1  Odaberi prvog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5199"/>
+        <location filename="../mainwindow.ui" line="5217"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation type="unfinished"></translation>
+        <translation>4+ Pozivanje i pretraživanje CQ poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5207"/>
+        <location filename="../mainwindow.ui" line="5225"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation type="unfinished"></translation>
+        <translation>2 pozovi dekodiranog do početka TX intervala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5215"/>
+        <location filename="../mainwindow.ui" line="5233"/>
         <source>3  Call based on end of decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>3  Poziv na temelju kraja dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5223"/>
+        <location filename="../mainwindow.ui" line="5241"/>
         <source>Single shot QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Jedan QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5231"/>
+        <location filename="../mainwindow.ui" line="5249"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbriši prozor aktivnosti pri svakom dekodiranju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5239"/>
+        <location filename="../mainwindow.ui" line="5257"/>
         <source>Answer worked B4 calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Odgovaranje na B4 pozive</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5250"/>
+        <location filename="../mainwindow.ui" line="5268"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5277"/>
+        <location filename="../mainwindow.ui" line="5295"/>
         <source>4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5285"/>
+        <location filename="../mainwindow.ui" line="5303"/>
         <source>8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5293"/>
+        <location filename="../mainwindow.ui" line="5311"/>
         <source>12</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5301"/>
+        <location filename="../mainwindow.ui" line="5319"/>
         <source>Erase both message windows at band change</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbriši oba prozora sa porukama pri promjeni opsega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5339"/>
+        <location filename="../mainwindow.ui" line="5357"/>
         <source>deep with 4 passes</source>
-        <translation type="unfinished"></translation>
+        <translation>Duboko sa 4 prolaza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5347"/>
+        <location filename="../mainwindow.ui" line="5365"/>
         <source>Max distance instead of best SNR</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimalna udaljenost umjesto najboljeg SNR-a</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5355"/>
+        <location filename="../mainwindow.ui" line="5373"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>Poruke s traženim znakom u prozor RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5363"/>
+        <location filename="../mainwindow.ui" line="5381"/>
         <source>use low thresholds</source>
-        <translation type="unfinished"></translation>
+        <translation>niski prag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5398"/>
+        <location filename="../mainwindow.ui" line="5416"/>
         <source>use subpass</source>
-        <translation type="unfinished"></translation>
+        <translation>koristi subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5409"/>
+        <location filename="../mainwindow.ui" line="5427"/>
         <source>minimum</source>
-        <translation type="unfinished"></translation>
+        <translation>minimalno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5417"/>
+        <location filename="../mainwindow.ui" line="5435"/>
         <source>late start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>kasni početak dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5425"/>
+        <location filename="../mainwindow.ui" line="5443"/>
         <source>Call worked B4 callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Zovi rađene B4 stanice</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5444"/>
+        <location filename="../mainwindow.ui" line="5462"/>
         <source>CQ and 73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5452"/>
+        <location filename="../mainwindow.ui" line="5470"/>
         <source>any messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5460"/>
+        <location filename="../mainwindow.ui" line="5478"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5468"/>
+        <location filename="../mainwindow.ui" line="5486"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Isključite filter kad pošaljete 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5476"/>
+        <location filename="../mainwindow.ui" line="5494"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Isključite filter kad primite 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5484"/>
+        <location filename="../mainwindow.ui" line="5502"/>
         <source>Hide FT8 dupe messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij FT8 duple poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5492"/>
+        <location filename="../mainwindow.ui" line="5510"/>
         <source>Display output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz izazne snage</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5500"/>
+        <location filename="../mainwindow.ui" line="5518"/>
         <source>Report message priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Raport kao prioritet poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5508"/>
+        <location filename="../mainwindow.ui" line="5526"/>
         <source>Enable hound mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući hound mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5519"/>
+        <location filename="../mainwindow.ui" line="5537"/>
         <source>Use hound TX frequency control</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound TX kontrola frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5527"/>
+        <location filename="../mainwindow.ui" line="5545"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Onemogući TX nakon slanja RRR / RR73 / 73 u ručnom načinu rada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5538"/>
+        <location filename="../mainwindow.ui" line="5556"/>
         <source>Show tooltips in main window</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikazivanje savjeta u glavnom prozoru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5546"/>
+        <location filename="../mainwindow.ui" line="5564"/>
         <source>Color Tx message buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Gumbi Tx  poruka u boji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5554"/>
-        <location filename="../mainwindow.ui" line="5731"/>
-        <location filename="../mainwindow.ui" line="5755"/>
+        <location filename="../mainwindow.ui" line="5572"/>
+        <location filename="../mainwindow.ui" line="5749"/>
+        <location filename="../mainwindow.ui" line="5773"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5562"/>
+        <location filename="../mainwindow.ui" line="5580"/>
         <source>6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5570"/>
+        <location filename="../mainwindow.ui" line="5588"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5578"/>
+        <location filename="../mainwindow.ui" line="5596"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5586"/>
+        <location filename="../mainwindow.ui" line="5604"/>
         <source>7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5594"/>
+        <location filename="../mainwindow.ui" line="5612"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5602"/>
+        <location filename="../mainwindow.ui" line="5620"/>
         <source>11</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5610"/>
+        <location filename="../mainwindow.ui" line="5628"/>
         <source>low</source>
-        <translation type="unfinished"></translation>
+        <translation>nisko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5629"/>
+        <location filename="../mainwindow.ui" line="5647"/>
         <source>high</source>
-        <translation type="unfinished"></translation>
+        <translation>visoko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5637"/>
+        <location filename="../mainwindow.ui" line="5655"/>
         <source>Hide FT contest messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij FT kontest poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5645"/>
+        <location filename="../mainwindow.ui" line="5663"/>
         <source>FT4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5680"/>
+        <location filename="../mainwindow.ui" line="5698"/>
         <source>wideband DX Call search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraživanje traženog DX znaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5688"/>
+        <location filename="../mainwindow.ui" line="5706"/>
         <source>6 pass SWL mode</source>
-        <translation type="unfinished"></translation>
+        <translation>6 prolaza SWL mod</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5699"/>
+        <location filename="../mainwindow.ui" line="5717"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozivni znak u međuspremnik dvoklik | automatski odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5707"/>
+        <location filename="../mainwindow.ui" line="5725"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation type="unfinished"></translation>
+        <translation>Crossband rad na 160m sa Japanom</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="441"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation type="unfinished"></translation>
+        <translation>Želite li ponovno konfigurirati radijsko sučelje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="727"/>
+        <location filename="../mainwindow.cpp" line="729"/>
         <source>Error Writing WAV File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="907"/>
+        <location filename="../mainwindow.cpp" line="909"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="908"/>
+        <location filename="../mainwindow.cpp" line="910"/>
         <source>KillByName return code: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="925"/>
+        <location filename="../mainwindow.cpp" line="927"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="928"/>
         <source>Click OK to retry</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknite OK za ponovni pokušaj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1603"/>
+        <location filename="../mainwindow.cpp" line="1605"/>
         <source>TX Even</source>
-        <translation type="unfinished"></translation>
+        <translation>TX Parne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1610"/>
+        <location filename="../mainwindow.cpp" line="1612"/>
         <source>TX Odd</source>
-        <translation type="unfinished"></translation>
+        <translation>TX neparne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1655"/>
-        <location filename="../mainwindow.cpp" line="2332"/>
-        <location filename="../mainwindow.cpp" line="3418"/>
-        <location filename="../mainwindow.cpp" line="3993"/>
-        <location filename="../mainwindow.cpp" line="4116"/>
-        <location filename="../mainwindow.cpp" line="4348"/>
-        <location filename="../mainwindow.cpp" line="6727"/>
-        <location filename="../mainwindow.cpp" line="6923"/>
+        <location filename="../mainwindow.cpp" line="1657"/>
+        <location filename="../mainwindow.cpp" line="2334"/>
+        <location filename="../mainwindow.cpp" line="3422"/>
+        <location filename="../mainwindow.cpp" line="3999"/>
+        <location filename="../mainwindow.cpp" line="4122"/>
+        <location filename="../mainwindow.cpp" line="4354"/>
+        <location filename="../mainwindow.cpp" line="6733"/>
+        <location filename="../mainwindow.cpp" line="6929"/>
         <source>File Open Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška otvaranja datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1656"/>
-        <location filename="../mainwindow.cpp" line="2333"/>
-        <location filename="../mainwindow.cpp" line="3419"/>
-        <location filename="../mainwindow.cpp" line="3994"/>
-        <location filename="../mainwindow.cpp" line="4117"/>
-        <location filename="../mainwindow.cpp" line="4349"/>
-        <location filename="../mainwindow.cpp" line="6728"/>
-        <location filename="../mainwindow.cpp" line="6924"/>
-        <location filename="../mainwindow.cpp" line="7265"/>
+        <location filename="../mainwindow.cpp" line="1658"/>
+        <location filename="../mainwindow.cpp" line="2335"/>
+        <location filename="../mainwindow.cpp" line="3423"/>
+        <location filename="../mainwindow.cpp" line="4000"/>
+        <location filename="../mainwindow.cpp" line="4123"/>
+        <location filename="../mainwindow.cpp" line="4355"/>
+        <location filename="../mainwindow.cpp" line="6734"/>
+        <location filename="../mainwindow.cpp" line="6930"/>
+        <location filename="../mainwindow.cpp" line="7271"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1760"/>
+        <location filename="../mainwindow.cpp" line="1762"/>
         <source>Error saving c2 file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1836"/>
+        <location filename="../mainwindow.cpp" line="1838"/>
         <source>Error in SoundInput</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1840"/>
+        <location filename="../mainwindow.cpp" line="1842"/>
         <source>Error in SoundOutput</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška SoundOutput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1926"/>
+        <location filename="../mainwindow.cpp" line="1928"/>
         <source>Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2443"/>
+        <location filename="../mainwindow.cpp" line="2445"/>
         <source>Subprocess Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2444"/>
+        <location filename="../mainwindow.cpp" line="2446"/>
         <source>Subprocess failed with exit code %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2446"/>
-        <location filename="../mainwindow.cpp" line="2465"/>
+        <location filename="../mainwindow.cpp" line="2448"/>
+        <location filename="../mainwindow.cpp" line="2467"/>
         <source>Running: %1
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2464"/>
+        <location filename="../mainwindow.cpp" line="2466"/>
         <source>Subprocess error</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2543"/>
+        <location filename="../mainwindow.cpp" line="2545"/>
         <source>Spotted</source>
-        <translation type="unfinished"></translation>
+        <translation>Spotiran</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2550"/>
+        <location filename="../mainwindow.cpp" line="2552"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemoguće uspostaviti vezu sa dxsummit serverom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2574"/>
+        <location filename="../mainwindow.cpp" line="2576"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>Algoritmi, izvorni kôd, look-and-feel WSJT-X i srodnih programa i specifikacije protokola za načine FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 su Copyright (C) 2001 -2018. Jedan ili više sljedećih autora: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; i ostali članovi razvojne skupine WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2695"/>
+        <location filename="../mainwindow.cpp" line="2697"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation type="unfinished"></translation>
+        <translation>Nema podataka za čitanje s diska. Pogrešan format datoteke?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2734"/>
+        <location filename="../mainwindow.cpp" line="2738"/>
         <source>AutoSeq0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2747"/>
+        <location filename="../mainwindow.cpp" line="2751"/>
         <source>AutoSeq1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2756"/>
-        <location filename="../mainwindow.cpp" line="2782"/>
+        <location filename="../mainwindow.cpp" line="2760"/>
+        <location filename="../mainwindow.cpp" line="2786"/>
         <source>AutoSeq2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2757"/>
-        <location filename="../mainwindow.cpp" line="2778"/>
+        <location filename="../mainwindow.cpp" line="2761"/>
+        <location filename="../mainwindow.cpp" line="2782"/>
         <source>AutoSeq6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2766"/>
-        <location filename="../mainwindow.cpp" line="2783"/>
+        <location filename="../mainwindow.cpp" line="2770"/>
+        <location filename="../mainwindow.cpp" line="2787"/>
         <source>AutoSeq3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2767"/>
-        <location filename="../mainwindow.cpp" line="2779"/>
+        <location filename="../mainwindow.cpp" line="2771"/>
+        <location filename="../mainwindow.cpp" line="2783"/>
         <source>AutoSeq7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2851"/>
+        <location filename="../mainwindow.cpp" line="2855"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola Hound TX frekvencije  nije dopuštena u standardnim FT8 podpojasima.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2859"/>
+        <location filename="../mainwindow.cpp" line="2863"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound - Za reguliranje frekvencije TX-a potreban je * Split * za  rig kontrolu (bilo * Rig * ili * Fake It * na kartici * Settings | Radio *.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2862"/>
+        <location filename="../mainwindow.cpp" line="2866"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2870"/>
+        <location filename="../mainwindow.cpp" line="2874"/>
         <source>Hound TX frequency control warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound TX upozorenje kontrole frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2879"/>
         <source>HoundFC</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2936"/>
+        <location filename="../mainwindow.cpp" line="2940"/>
         <source>Keyboard Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Prečice na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2947"/>
+        <location filename="../mainwindow.cpp" line="2951"/>
         <source>Special Mouse Commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Posebne naredbe za miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3388"/>
-        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3392"/>
+        <location filename="../mainwindow.cpp" line="3399"/>
         <source>check time</source>
-        <translation type="unfinished"></translation>
+        <translation>provjeri sat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3694"/>
-        <location filename="../mainwindow.cpp" line="3702"/>
+        <location filename="../mainwindow.cpp" line="3698"/>
+        <location filename="../mainwindow.cpp" line="3706"/>
         <source>Confirm change Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3696"/>
-        <location filename="../mainwindow.cpp" line="3705"/>
+        <location filename="../mainwindow.cpp" line="3700"/>
+        <location filename="../mainwindow.cpp" line="3709"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3699"/>
-        <location filename="../mainwindow.cpp" line="3708"/>
+        <location filename="../mainwindow.cpp" line="3703"/>
+        <location filename="../mainwindow.cpp" line="3712"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3700"/>
-        <location filename="../mainwindow.cpp" line="3711"/>
+        <location filename="../mainwindow.cpp" line="3704"/>
+        <location filename="../mainwindow.cpp" line="3715"/>
         <source>&amp;No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3843"/>
+        <location filename="../mainwindow.cpp" line="3849"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite drugu Tx frekvenciju. JTDX neće svjesno odašiljati drugi mod u WSPR podopsegu na 30m.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3848"/>
-        <location filename="../mainwindow.cpp" line="3851"/>
+        <location filename="../mainwindow.cpp" line="3854"/>
+        <location filename="../mainwindow.cpp" line="3857"/>
         <source>WSPR Guard Band</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3969"/>
+        <location filename="../mainwindow.cpp" line="3975"/>
         <source>TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3970"/>
+        <location filename="../mainwindow.cpp" line="3976"/>
         <source>LastTx: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4184"/>
-        <source>Tx: TUNE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4185"/>
-        <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>ZadnjiTx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4190"/>
+        <source>Tx: TUNE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4191"/>
+        <source>Tx: </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4196"/>
         <source>Receiving </source>
-        <translation type="unfinished"></translation>
+        <translation>Primam </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4243"/>
+        <location filename="../mainwindow.cpp" line="4249"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4399"/>
+        <location filename="../mainwindow.cpp" line="4405"/>
         <source>Last Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5280"/>
-        <location filename="../mainwindow.cpp" line="5292"/>
-        <location filename="../mainwindow.cpp" line="5305"/>
-        <location filename="../mainwindow.cpp" line="5331"/>
+        <location filename="../mainwindow.cpp" line="5286"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
+        <location filename="../mainwindow.cpp" line="5311"/>
+        <location filename="../mainwindow.cpp" line="5337"/>
         <source>Add to CALL3.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj u CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5281"/>
+        <location filename="../mainwindow.cpp" line="5287"/>
         <source>Please enter a valid grid locator</source>
-        <translation type="unfinished"></translation>
+        <translation>Upiši valjani lokator polje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5293"/>
+        <location filename="../mainwindow.cpp" line="5299"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5306"/>
+        <location filename="../mainwindow.cpp" line="5312"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5329"/>
+        <location filename="../mainwindow.cpp" line="5335"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5692"/>
+        <location filename="../mainwindow.cpp" line="5698"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška prilikom slanja QSO ADIF na drugi UDP server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5692"/>
+        <location filename="../mainwindow.cpp" line="5698"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5838"/>
+        <location filename="../mainwindow.cpp" line="5844"/>
         <source>Tx WSPR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6472"/>
+        <location filename="../mainwindow.cpp" line="6478"/>
         <source>Tune</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6645"/>
+        <location filename="../mainwindow.cpp" line="6651"/>
         <source>Lockd Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6646"/>
+        <location filename="../mainwindow.cpp" line="6652"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6649"/>
+        <location filename="../mainwindow.cpp" line="6655"/>
         <source>Tx/Rx Split</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6650"/>
+        <location filename="../mainwindow.cpp" line="6656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za zaključavanje Tx frekvencije na Rx AF frekvenciji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6836"/>
+        <location filename="../mainwindow.cpp" line="6842"/>
         <source>Tune digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Jačina Tune Tona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6837"/>
+        <location filename="../mainwindow.cpp" line="6843"/>
         <source>Transmit digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Jačina audio predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6856"/>
+        <location filename="../mainwindow.cpp" line="6862"/>
         <source>Prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Prefiksi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6905"/>
-        <location filename="../mainwindow.cpp" line="6906"/>
+        <location filename="../mainwindow.cpp" line="6911"/>
+        <location filename="../mainwindow.cpp" line="6912"/>
         <source>Logd </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7129"/>
+        <location filename="../mainwindow.cpp" line="7135"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška Mreže</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7130"/>
+        <location filename="../mainwindow.cpp" line="7136"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška: %1
+UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7264"/>
+        <location filename="../mainwindow.cpp" line="7270"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7475"/>
+        <location filename="../mainwindow.cpp" line="7481"/>
         <source>Tx watchdog expired</source>
-        <translation type="unfinished"></translation>
+        <translation>TX Watchdog je istekao</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7489"/>
+        <location filename="../mainwindow.cpp" line="7495"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2834,7 +2853,7 @@ UDP server %2:%3</source>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mod rada</translation>
     </message>
 </context>
 <context>
@@ -2842,7 +2861,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Neočekivana greška uređaja</translation>
     </message>
 </context>
 <context>
@@ -2850,32 +2869,32 @@ UDP server %2:%3</source>
     <message>
         <location filename="../main.cpp" line="163"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogrešan rig name - \ &amp; / nije dozvoljeno</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="188"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Možda se pokreće druga instanca, pokušajte ukloniti ustajalu datoteku zaključavanja?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="319"/>
         <source>Unexpected error</source>
-        <translation type="unfinished"></translation>
+        <translation>Neočekivana greška</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
         <source>User Defined</source>
-        <translation type="unfinished"></translation>
+        <translation>Korisnik definiran</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation type="unfinished"></translation>
+        <translation>Previše boja u paleti.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
@@ -2900,7 +2919,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../WFPalette.cpp" line="250"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška pri pisanju datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -2913,7 +2932,7 @@ UDP server %2:%3</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška datotečnog sustava</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -2934,12 +2953,12 @@ Error(%3): %4</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Greška Mreže</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Previše preusmjeravanja: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
@@ -2978,7 +2997,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../SampleDownloader.cpp" line="98"/>
         <source>Download Samples</source>
-        <translation type="unfinished"></translation>
+        <translation>Skidanje primjera</translation>
     </message>
 </context>
 <context>
@@ -2986,67 +3005,67 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translation>Došlo je do pogreške prilikom otvaranja audio ulaznog uređaja.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Došlo je do pogreške tijekom čitanja s audio ulaznog uređaja.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio podaci ne dolaze na audio ulazni uređaj dovoljno brzo.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška koja se ne može povratiti, uređaj za unos zvuka trenutno nije upotrebljiv.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatraženi ulazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicijalizacija uređaja nije uspjela</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="129"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Čekam</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="133"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translation>Prijem</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="137"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendiran</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="142"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekinut</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="149"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="153"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaustavljen</translation>
     </message>
 </context>
 <context>
@@ -3074,42 +3093,42 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="50"/>
         <source>Requested output audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="51"/>
         <source>Requested output audio format is not supported on device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatraženi izlazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Čekanje</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Slanje</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="116"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendiran</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="118"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekid</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaustavljen</translation>
     </message>
 </context>
 <context>
@@ -3117,22 +3136,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="252"/>
         <source>Add Station</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj stanicu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Band:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Opseg:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="258"/>
         <source>&amp;Offset (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ofset (MHz):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Antenna:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Antena:</translation>
     </message>
 </context>
 <context>
@@ -3140,32 +3159,32 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translation>Opseg</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
         <source>Frequency offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Ofset frekvencija</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="339"/>
         <source>Antenna description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis antenskog sustava</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Opseg</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="362"/>
         <source>Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Ofset</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="363"/>
         <source>Antenna Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis antenskog sustava</translation>
     </message>
 </context>
 <context>
@@ -3173,7 +3192,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Neočekivana pogreška uređaja</translation>
     </message>
 </context>
 <context>
@@ -3181,168 +3200,168 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrole</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor kompresije za frekvencijsku ljestvicu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
         <source>Bins/Pixel  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekodiraj JT9 osamo iznad ove frekvencije&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="200"/>
         <source>  JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="203"/>
         <source>JT65  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="233"/>
         <location filename="../widegraph.ui" line="243"/>
         <source>Position of timestamp above each interval line</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija vremenske oznake iznad svakog intervala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekvenca</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Isključi</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="252"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijevo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="257"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frekvencija  lijevog ruba vodopada&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="292"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="295"/>
         <source>Start </source>
-        <translation type="unfinished"></translation>
+        <translation>Start </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="323"/>
         <source>N Avg </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="361"/>
         <source>  Palette </source>
-        <translation type="unfinished"></translation>
+        <translation>  Paleta </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Unesite definiciju za novu paletu boja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="380"/>
         <source>Adjust...</source>
-        <translation type="unfinished"></translation>
+        <translation>Podesi...</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="401"/>
         <source>Select waterfall palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi paletu boja vodopada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spektar skale prema srednjoj vrijednosti.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="434"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Izravnajte spektralnu bazu preko cijelog prikazanog intervala.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation type="unfinished"></translation>
+        <translation>Poravnato</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odaberite podatke za spektralni prikaz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation type="unfinished"></translation>
+        <translation>Trenutno</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation type="unfinished"></translation>
+        <translation>Kumulativno</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U ovom prozoru postavite frakcijsku veličinu spektra.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="502"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="505"/>
         <source>Spec </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="556"/>
         <source>Waterfall gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Vodopad pojačanje</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="593"/>
         <source>Spectrum gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Spektar pojačanje</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="616"/>
@@ -3350,22 +3369,22 @@ Error(%2): %3</source>
         <location filename="../widegraph.ui" line="718"/>
         <location filename="../widegraph.ui" line="725"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="658"/>
         <source>Waterfall zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Vodopad nula</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="695"/>
         <source>Spectrum zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectrum nula</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation type="unfinished"></translation>
+        <translation>Vodopad</translation>
     </message>
 </context>
 <context>
@@ -3373,47 +3392,47 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="26"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi tab za promjenu konfiguracijskih parametara.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translation>Općenit&amp;o</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
         <source>General station details and settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Opći detalji postaje i postavke.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Opći detalji postaje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished"></translation>
+        <translation>Moj Zn&amp;ak:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozivna oznaka.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mo&amp;j Lokator:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokator Maidenhead (potrebna su samo prva četiri znaka).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="128"/>
@@ -3423,77 +3442,77 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>Full call in Tx1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="140"/>
         <source>Full call in Tx3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>Full call in Tx5 only</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="153"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiranje poruka za nositelje složenih pozivnih znakova tipa 2:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="175"/>
         <source>Logbook filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>Log filter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="203"/>
         <source>Use current callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Upotrijebi trenutni pozivni znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristite trenutni lokator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrirajte dnevnik rada počevši od datuma / vremena (YYYYMMDDHHMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>prikaz</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation type="unfinished"></translation>
+        <translation>Podesite karakteristike fonta za područje rada i Rx Frekvenciju.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
         <source>Decoded Text Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Font dekodiranog teksta...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="326"/>
         <source>Set the font characteristics for the application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavite font aplikacije.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="329"/>
         <source>Application Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Font aplikacije...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokažite udaljenost od DX stanice u miljama, a ne kilometrima.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži udalje&amp;nost u miljama</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
@@ -3503,27 +3522,27 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="349"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prazan redak između razdoblja dekodiranja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="369"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodajte DXCC imena dekodiranim porukama.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="372"/>
         <source>Show &amp;DXCC names</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz imena &amp;DXCCa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="379"/>
         <source>Append prefix instead of name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodajte prefiks umjesto imena.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="382"/>
         <source>Show &amp;prefix not name</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži &amp;prefix, ne ime</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
@@ -3533,37 +3552,37 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="392"/>
         <source>Hide partially transmitted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrijte djelomično poslane poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikažite odlazne poslane poruke u prozoru frekvencije Rx.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tx poruke u prozoru frekvencije Rx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="420"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponašanje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="446"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne započinjte s dekodiranjem dok ne pritisnete gumb za monitor.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="449"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Isklj&amp;uči monitor pri pokretanju</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Čuvar isteka TX predaje WD</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
@@ -3574,22 +3593,22 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="488"/>
         <location filename="../Configuration.ui" line="535"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="491"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodirajte pri t = 52 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
@@ -3599,7 +3618,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="538"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> sekunde</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="559"/>
@@ -3609,7 +3628,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="562"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation type="unfinished"></translation>
+        <translation>Dopustite izmjenu frekvencije Tx tijekom prijenosa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="569"/>
@@ -3619,22 +3638,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="572"/>
         <source>Monitor returns to last used frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor se vraća na zadnju korištenu frekvenciju</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošaljite CW ID nakon svakih 73 ili slobodnom porukom.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation type="unfinished"></translation>
+        <translation>CW ID na&amp;kon 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodični CW ID Inter&amp;val:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="626"/>
@@ -3642,27 +3661,30 @@ Error(%2): %3</source>
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
 quiet period when decoding is done.</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodično pošaljite CW ID svakih nekoliko minuta.
+Ovo bi moglo biti potrebno u skladu s propisima o licenci vaše zemlje.
+Neće ometati druge korisnike jer se uvijek šalje u
+mirnom periodu kada se vrši dekodiranje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="655"/>
         <source>&amp;Radio</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="658"/>
         <source>Radio interface configuration settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke konfiguracije radio sučelja.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="696"/>
@@ -3673,7 +3695,7 @@ quiet period when decoding is done.</source>
         <location filename="../Configuration.ui" line="699"/>
         <location filename="../Configuration.ui" line="1581"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="722"/>
@@ -3683,7 +3705,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="725"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translation>S metar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="754"/>
@@ -3693,83 +3715,83 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="757"/>
         <source>Output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Izlazna snaga</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="785"/>
         <source>Settings that control your CAT interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke koje upravljaju vašim CAT sučeljem.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="788"/>
         <source>CAT Control</source>
-        <translation type="unfinished"></translation>
+        <translation>CAT kontrola</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="799"/>
         <location filename="../Configuration.ui" line="1284"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="815"/>
         <source>Serial port used for CAT control.</source>
-        <translation type="unfinished"></translation>
+        <translation>Serijski port koji se koristi za CAT kontrolu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="839"/>
         <source>Serial Port Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Serijski Port Parametri</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="856"/>
         <source>Baud Rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Brzina prijenosa:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="872"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Brzina podataka za serijski port koja mora odgovarati postavkama vašeg radija.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="879"/>
         <source>1200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="884"/>
         <source>2400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="889"/>
         <source>4800</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="894"/>
         <source>9600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="899"/>
         <source>19200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="904"/>
         <source>38400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="909"/>
         <source>57600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="914"/>
         <source>115200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="924"/>
@@ -3779,24 +3801,24 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="927"/>
         <source>Data Bits</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="939"/>
         <location filename="../Configuration.ui" line="996"/>
         <location filename="../Configuration.ui" line="1063"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadano</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="952"/>
         <source>Se&amp;ven</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="965"/>
         <source>E&amp;ight</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="981"/>
@@ -3806,17 +3828,17 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="984"/>
         <source>Stop Bits</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>On&amp;e</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1019"/>
         <source>T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1035"/>
@@ -3826,88 +3848,92 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>Handshake</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1050"/>
         <source>&amp;None</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ništa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation type="unfinished"></translation>
+        <translation>Softverski nadzor protoka flow ctrl (vrlo rijetko na CAT sučeljima).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1079"/>
         <source>XON/XOFF</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1089"/>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation type="unfinished"></translation>
+        <translation>Regulacija protoka pomoću upravljačkih linija RTS i CTS RS-232
+ne koristi se često, ali neka radija imaju kao opciju i
+ posebno neki Kenwoodovi uređaji je zahtijevaju).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
         <source>Special control of CAT port control lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Posebna kontrola CAT priključnih linija.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1110"/>
         <source>Force Control Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Forsiraj Control Lines</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
         <source>DTR:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1143"/>
         <location filename="../Configuration.ui" line="1176"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1148"/>
         <location filename="../Configuration.ui" line="1181"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1160"/>
         <source>RTS:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1213"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation type="unfinished"></translation>
+        <translation>Kako ovaj program aktivira PTT na vašem radiju</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
         <source>PTT Method</source>
-        <translation type="unfinished"></translation>
+        <translation>PTT Metoda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1222"/>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neka radija podržavaju PTT putem CAT naredbi,
+iskoristite ovu opciju ako vas radio podržava, a nemate
+ostalo hardversko sučelje za PTT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1227"/>
         <source>C&amp;AT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1237"/>
@@ -3917,7 +3943,7 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1240"/>
         <source>&amp;DTR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1253"/>
@@ -3927,7 +3953,7 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1256"/>
         <source>VO&amp;X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
@@ -3937,7 +3963,7 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
         <source>R&amp;TS</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
@@ -3954,27 +3980,27 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Predajni Audio Izvor</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
         <source>Rear&amp;/Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Stražnji&amp;/Data</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
         <source>&amp;Front/Mic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prednji/Mic</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1375"/>
         <source>Modulation mode selected on radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulacija odabrana na radiju.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1378"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1384"/>
@@ -3984,45 +4010,47 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1387"/>
         <source>US&amp;B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1400"/>
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne dopustite programu da postavi način rada radija
+(ne preporučuje se, ali koristite ako je pogrešan način rada
+ili je odabrana širina pojasa).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ako je ovo dostupno, onda je to u pravilu način rada za ovaj program.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
         <source>Data/P&amp;kt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
         <source>Split Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Split operacija</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
         <source>Fake It</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1497"/>
@@ -4032,7 +4060,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
         <source>Test CAT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1523"/>
@@ -4041,38 +4069,42 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokušaj aktiviranja odašiljača.
+Kliknite ponovo da je deaktivirate. Obično nikakva snaga ne bi trebala biti
+na izlazu jer se trenutno ne generira zvuk.
+Provjerite ima li Tx pokazatelja na vašem radiju i / ili vašem
+radijskom sučelju i  da li se  ponaša se kako se očekuje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
         <source>Test PTT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1568"/>
         <location filename="../Configuration.ui" line="1578"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimalno kašnjenje između tvrdnje o PTT i pokretanja Tx zvuka.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1571"/>
         <source>Tx delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>TX kašnjenje:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1628"/>
         <source>A&amp;udio</source>
-        <translation type="unfinished"></translation>
+        <translation>Zv&amp;uk</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1631"/>
         <source>Audio interface settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke audio sučelja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1637"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvučna kartica</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1649"/>
@@ -4091,12 +4123,12 @@ transmitting periods.</source>
     <message>
         <location filename="../Configuration.ui" line="1673"/>
         <source>&amp;Input:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ulaz:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1683"/>
         <source>Select the channel to use for receiving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite kanal koji ćete koristiti za prijem.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1687"/>
@@ -4108,19 +4140,19 @@ transmitting periods.</source>
         <location filename="../Configuration.ui" line="1692"/>
         <location filename="../Configuration.ui" line="1722"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijevi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1697"/>
         <location filename="../Configuration.ui" line="1727"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1702"/>
         <location filename="../Configuration.ui" line="1732"/>
         <source>Both</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1710"/>
@@ -4133,37 +4165,37 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1740"/>
         <source>Ou&amp;tput:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izl&amp;az:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjetite se postavke snage prema opsegu i načinu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
         <source>Enable power memory during transmit</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući memoriranje snage predaje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1770"/>
         <source>Transmit</source>
-        <translation type="unfinished"></translation>
+        <translation>Predaje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1777"/>
         <source>Enable power memory during tuning</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući memoriranje Tjunanja predaje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
         <source>Audio files save directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokacija snimanja audio datoteka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
@@ -4173,32 +4205,32 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Putanja spremanja .WAV datoteke.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1836"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1843"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknite za odabir drugog direktorija za spremanje .WAV datoteka.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1846"/>
         <source>S&amp;elect</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;daberi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1877"/>
         <source>Sequencing</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekvence</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1901"/>
         <source>Message sequencing short scenarios</source>
-        <translation type="unfinished"></translation>
+        <translation>Redoslijed kratkih scenarija</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
@@ -4208,7 +4240,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation type="unfinished"></translation>
+        <translation>Brojači. Pretražujte kroz dekodirane poruke, nazovite CQ ili Zaustavite Tx ako:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -4216,27 +4248,27 @@ both here.</source>
         <location filename="../Configuration.ui" line="2009"/>
         <location filename="../Configuration.ui" line="2045"/>
         <source>times</source>
-        <translation type="unfinished"></translation>
+        <translation>puta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1957"/>
         <source>called CQ,  received a call and answered</source>
-        <translation type="unfinished"></translation>
+        <translation>nazvao CQ, primio poziv i odgovorio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation type="unfinished"></translation>
+        <translation>poslano RR73 (73) odgovara na dolazni RRR (RR73)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2058"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation type="unfinished"></translation>
+        <translation>odgovorio na nečiji CQ ali bez odgovora</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2071"/>
         <source>sent report answering to incoming report</source>
-        <translation type="unfinished"></translation>
+        <translation>poslani raport koje odgovara na dolazni raport</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
@@ -4246,7 +4278,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaustavi TX, ako sam zvao korespondenta, on je odgovorio je drugom korespondentu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
@@ -4256,22 +4288,22 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
         <source>Strict directional CQ operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Striktni CQ rad</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
         <source>Tx &amp;Macros</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx &amp;Macroi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
         <source>Canned free text messages setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavljanje osobnih tekstualnih poruka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dod&amp;aj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
@@ -4281,7 +4313,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obriši</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
@@ -4291,12 +4323,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
         <source>Reportin&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvješta&amp;ji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2266"/>
         <source>Reporting and logging settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke izvještavanja i evidentiranja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
@@ -4314,18 +4346,19 @@ comments field.</source>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>d&amp;B reporti u komentare</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Označite ovu mogućnost da biste primorali čišćenje DX znaka
+i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Obriši &amp;DX znak i lokator nakon logiranja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
@@ -4335,7 +4368,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Obriši DX znak i lokator prilikom izlaza</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
@@ -4345,22 +4378,22 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation type="unfinished"></translation>
+        <translation>Kon&amp;vertiraj mod u RTTY</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program će prikazati djelomično završen dijaloški okvir  Log-a kada pošaljete 73 ili besplatnu tekstualnu poruku.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2352"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Pitaj me za u&amp;pis veze</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući automatsko logiranje QSOa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
@@ -4370,7 +4403,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2392"/>
         <source>Send logged QSO ADIF data</source>
-        <translation type="unfinished"></translation>
+        <translation>Slanje logiranih QSO ADIF podataka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2426"/>
@@ -4381,7 +4414,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2429"/>
         <source>TCP server:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2449"/>
@@ -4392,17 +4425,17 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2452"/>
         <source>TCP port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2474"/>
         <source>Enable sending to TCP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući slanje na TCP serveru</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2499"/>
         <source>2nd UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>2. UDP server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2513"/>
@@ -4413,12 +4446,12 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
         <source>UDP port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2532"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući slanje na drugi UDP server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2565"/>
@@ -4428,52 +4461,52 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
         <source>Recording to ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisivanje u ALL.TXT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2590"/>
         <source>decoded messages</source>
-        <translation type="unfinished"></translation>
+        <translation>dekodirane poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2597"/>
         <source>decoded and debug messages</source>
-        <translation type="unfinished"></translation>
+        <translation>dekodirane i ispravljene poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2639"/>
         <source>Network Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Mrežni Servisi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2660"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program može poslati  podatke o vezi na http://www.eqsl.cc web mjesto.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2663"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući &amp;eQSL slanje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2683"/>
         <source>EQSL Username.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL Korisničko ime.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2690"/>
         <source>U&amp;sername:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kori&amp;snik:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
         <source>P&amp;assword:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lozink&amp;a:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2710"/>
         <source>EQSL Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL Lozinka.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2720"/>
@@ -4481,27 +4514,30 @@ and DX Grid fields when a 73 or free text message is sent.</source>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program može poslati podatke o vašoj stanici i sve
+dekodirane signale kao web http://pskreporter.info.
+Koristi se za analizu povratnih signala, što je vrlo korisno
+za procjenu rasprostiranja i performansi sustava.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2726"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući &amp;PSK Reporter Spotiranje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2733"/>
         <source>EQSL OTH Nickname.</source>
-        <translation type="unfinished"></translation>
+        <translation>EQSL OTH Nadimak.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>Enable DXSummit Spotting </source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući DXSummit Spotiranje </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>QTH N&amp;ickname:</source>
-        <translation type="unfinished"></translation>
+        <translation>QTH Nad&amp;imak:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2760"/>
@@ -4511,12 +4547,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2763"/>
         <source>Primary UDP Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Primarni UDP Server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2793"/>
         <source>UDP Server:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2809"/>
@@ -4526,7 +4562,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2819"/>
         <source>UDP Server port number:</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP Server broj porta:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2829"/>
@@ -4541,7 +4577,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
         <source>Accept UDP requests</source>
-        <translation type="unfinished"></translation>
+        <translation>Prihvatite UDP zahtjeve</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2856"/>
@@ -4551,7 +4587,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2859"/>
         <source>Notify on accepted UDP request</source>
-        <translation type="unfinished"></translation>
+        <translation>Obavijesti o prihvaćenom UDP zahtjevu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2866"/>
@@ -4561,12 +4597,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2869"/>
         <source>Accepted UDP request restores window</source>
-        <translation type="unfinished"></translation>
+        <translation>Prihvaćen UDP zahtjev vraća prozor</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2880"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući slanje logirane veze u ADIF format</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2890"/>
@@ -4576,7 +4612,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2893"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
-        <translation type="unfinished"></translation>
+        <translation>Spriječite spotiranje nepotvrđenih pozivnim znakovima putem UDP-a</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2900"/>
@@ -4586,43 +4622,43 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2903"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Primijenite tekstualne filtre za prijenos UDP poruka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2938"/>
         <source>Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekvencije</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2941"/>
         <source>Default frequencies and band specific station details setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavljanje zadanih frekvencija i pojedinosti postaje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
         <source>Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Radne frekvencije</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2962"/>
         <source>Right click to add or delete frequencies.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desnim klikom dodajte ili izbrišite frekvencije.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2991"/>
         <location filename="../Configuration.ui" line="4699"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3013"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogledajte dokumentaciju o WSPR dodatku C za detalje kako odrediti faktore za svoj radio.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
         <source>Frequency Calibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalibriranje Frekvencije</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
@@ -4633,7 +4669,7 @@ for assessing propagation and system performance.</source>
         <location filename="../Configuration.ui" line="3038"/>
         <location filename="../Configuration.ui" line="6429"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
@@ -4643,12 +4679,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3070"/>
         <source> ppm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3113"/>
         <source>Station Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacije o postaji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3125"/>
@@ -4659,12 +4695,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3173"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Obavijesti</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3181"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Obavijesti o statusu „nove“ i „rađene B4“</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3207"/>
@@ -4674,7 +4710,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Provjerite i istaknite nove DXCCe</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
@@ -4687,7 +4723,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3300"/>
         <location filename="../Configuration.ui" line="3340"/>
         <source>per band</source>
-        <translation type="unfinished"></translation>
+        <translation>po bandu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
@@ -4700,7 +4736,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3310"/>
         <location filename="../Configuration.ui" line="3350"/>
         <source>per mode</source>
-        <translation type="unfinished"></translation>
+        <translation>po modu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3237"/>
@@ -4708,7 +4744,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3317"/>
         <location filename="../Configuration.ui" line="3357"/>
         <source>Use also system sound for the notification.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za obavijesti koristite zvuk sustava.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
@@ -4716,7 +4752,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
         <source>Beep as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvučni signal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3247"/>
@@ -4726,7 +4762,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>Check and highlight new grids</source>
-        <translation type="unfinished"></translation>
+        <translation>Provjerite i istaknite nove lokatore</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3257"/>
@@ -4746,7 +4782,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>Check and highlight new prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Provjerite i istaknite nove prefikse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3297"/>
@@ -4766,7 +4802,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>Check and highlight new calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Provjerite i istaknite nove znakove</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
@@ -4786,7 +4822,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>Highlight worked ones</source>
-        <translation type="unfinished"></translation>
+        <translation>Označi već rađene</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
@@ -4801,7 +4837,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3383"/>
         <source>strike it</source>
-        <translation type="unfinished"></translation>
+        <translation>precrtaj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3390"/>
@@ -4811,7 +4847,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3393"/>
         <source>underline it</source>
-        <translation type="unfinished"></translation>
+        <translation>podcrtaj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
@@ -4821,7 +4857,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>don&apos;t show it</source>
-        <translation type="unfinished"></translation>
+        <translation>ne prikazuj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
@@ -4841,7 +4877,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3423"/>
         <source>Highlight other standard messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Označite ostale standardne poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
@@ -4851,7 +4887,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
         <source>Beep on 1st decoded message</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvoni na prvu dekodiranu poruku</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3453"/>
@@ -4861,12 +4897,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3456"/>
         <source>Beep on my call</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvoni na moj znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
         <source>Markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Označi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
@@ -4876,7 +4912,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3496"/>
         <source>blue / my call at QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>plava / moj poziv na QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3532"/>
@@ -4886,7 +4922,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3535"/>
         <source>red / my call in message</source>
-        <translation type="unfinished"></translation>
+        <translation>crveno / moj poziv u poruci</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3545"/>
@@ -4896,7 +4932,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3548"/>
         <source>Other standard messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostale standardne poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3591"/>
@@ -4907,12 +4943,12 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3594"/>
         <location filename="../Configuration.ui" line="6494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Savjeti za konfiguraciju&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3642"/>
         <source>Transmitted message</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenesena poruka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3658"/>
@@ -4957,17 +4993,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3680"/>
         <source>RR73/73           </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ/73 u poruci</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3706"/>
         <source>My Call in message</source>
-        <translation type="unfinished"></translation>
+        <translation>Moj Znak u poruci</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3719"/>
@@ -4977,12 +5013,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3722"/>
         <source>Other standard message</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostale standardne poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3801"/>
         <source>New DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3871"/>
@@ -4992,27 +5028,27 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3941"/>
         <source>New Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi Lokator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4011"/>
         <source>New Grid on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi Lokator Band/Mode</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4081"/>
         <source>New Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi prefix</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4151"/>
         <source>New Prefix on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi Prefix na Bandu/Modu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4221"/>
         <source>New Call</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi Znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4291"/>
@@ -5022,57 +5058,57 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4361"/>
         <source>Being used for CQ and MyCall messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristi se samo za CQ i Moj Znak poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>Worked one</source>
-        <translation type="unfinished"></translation>
+        <translation>Već rađen</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4461"/>
         <source>Filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Filteri</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4472"/>
         <source>Hide messages from continents</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij poruke od kontinenata</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4484"/>
         <source>Africa</source>
-        <translation type="unfinished"></translation>
+        <translation>Afrika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4491"/>
         <source>Antarctica</source>
-        <translation type="unfinished"></translation>
+        <translation>Antarktika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4498"/>
         <source>Asia</source>
-        <translation type="unfinished"></translation>
+        <translation>Azija</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4505"/>
         <source>Europe</source>
-        <translation type="unfinished"></translation>
+        <translation>Europa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4512"/>
         <source>Oceania</source>
-        <translation type="unfinished"></translation>
+        <translation>Oceanija</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4519"/>
         <source>North America</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjeverna Amerika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4526"/>
         <source>South America</source>
-        <translation type="unfinished"></translation>
+        <translation>Južna Amerika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4536"/>
@@ -5082,7 +5118,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4539"/>
         <source>Hide messages from countries</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij poruke iz zemalja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4559"/>
@@ -5094,7 +5130,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="4562"/>
         <location filename="../Configuration.ui" line="4627"/>
         <source>Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4569"/>
@@ -5126,12 +5162,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../Configuration.ui" line="4595"/>
         <location filename="../Configuration.ui" line="4650"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Obriši</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4607"/>
         <source>Hide messages from callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij poruke od znakova</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4634"/>
@@ -5149,7 +5185,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4662"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation type="unfinished"></translation>
+        <translation>Prikažite poruke oređenog sadržaja u prozoru RX frekvencije </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4679"/>
@@ -5159,7 +5195,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4682"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4689"/>
@@ -5181,17 +5217,17 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4716"/>
         <source>Show CQ messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži samo CQ poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4739"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži samo CQ / RRR / RR73 / 73 poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4762"/>
         <source>Show CQ/RR73/73 messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži samo CQ / RR73 / 73 poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
@@ -5201,17 +5237,17 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
         <source>Hide decoded free messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij dekodirane slobodne poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4794"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrijte poruke sa ne pridruženom hash oznakom za 2. pozivni znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4817"/>
         <source>Scheduler</source>
-        <translation type="unfinished"></translation>
+        <translation>Raspored</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4825"/>
@@ -5221,12 +5257,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
         <source>Band scheduler configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracija Band planera</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4838"/>
         <source>hh</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4848"/>
@@ -5236,7 +5272,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Opseg</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>
@@ -5279,7 +5315,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5924"/>
         <location filename="../Configuration.ui" line="6062"/>
         <source>00</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4901"/>
@@ -5288,7 +5324,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5672"/>
         <location filename="../Configuration.ui" line="5929"/>
         <source>01</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4906"/>
@@ -5297,7 +5333,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5677"/>
         <location filename="../Configuration.ui" line="5934"/>
         <source>02</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4911"/>
@@ -5306,7 +5342,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5682"/>
         <location filename="../Configuration.ui" line="5939"/>
         <source>03</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4916"/>
@@ -5315,7 +5351,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5687"/>
         <location filename="../Configuration.ui" line="5944"/>
         <source>04</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4921"/>
@@ -5329,7 +5365,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5949"/>
         <location filename="../Configuration.ui" line="6067"/>
         <source>05</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4926"/>
@@ -5338,7 +5374,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5697"/>
         <location filename="../Configuration.ui" line="5954"/>
         <source>06</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4931"/>
@@ -5347,7 +5383,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5702"/>
         <location filename="../Configuration.ui" line="5959"/>
         <source>07</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4936"/>
@@ -5356,7 +5392,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5707"/>
         <location filename="../Configuration.ui" line="5964"/>
         <source>08</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4941"/>
@@ -5365,7 +5401,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5712"/>
         <location filename="../Configuration.ui" line="5969"/>
         <source>09</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4946"/>
@@ -5379,7 +5415,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5974"/>
         <location filename="../Configuration.ui" line="6072"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4951"/>
@@ -5388,7 +5424,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5722"/>
         <location filename="../Configuration.ui" line="5979"/>
         <source>11</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4956"/>
@@ -5397,7 +5433,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5727"/>
         <location filename="../Configuration.ui" line="5984"/>
         <source>12</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4961"/>
@@ -5406,7 +5442,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5732"/>
         <location filename="../Configuration.ui" line="5989"/>
         <source>13</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4966"/>
@@ -5415,7 +5451,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5737"/>
         <location filename="../Configuration.ui" line="5994"/>
         <source>14</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4971"/>
@@ -5429,7 +5465,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5999"/>
         <location filename="../Configuration.ui" line="6077"/>
         <source>15</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4976"/>
@@ -5438,7 +5474,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5747"/>
         <location filename="../Configuration.ui" line="6004"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4981"/>
@@ -5447,7 +5483,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5752"/>
         <location filename="../Configuration.ui" line="6009"/>
         <source>17</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4986"/>
@@ -5456,7 +5492,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5757"/>
         <location filename="../Configuration.ui" line="6014"/>
         <source>18</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4991"/>
@@ -5465,7 +5501,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5762"/>
         <location filename="../Configuration.ui" line="6019"/>
         <source>19</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4996"/>
@@ -5479,7 +5515,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6024"/>
         <location filename="../Configuration.ui" line="6082"/>
         <source>20</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5001"/>
@@ -5488,7 +5524,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5772"/>
         <location filename="../Configuration.ui" line="6029"/>
         <source>21</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5006"/>
@@ -5497,7 +5533,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5777"/>
         <location filename="../Configuration.ui" line="6034"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5011"/>
@@ -5506,7 +5542,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5782"/>
         <location filename="../Configuration.ui" line="6039"/>
         <source>23</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5059"/>
@@ -5515,7 +5551,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5830"/>
         <location filename="../Configuration.ui" line="6087"/>
         <source>25</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5064"/>
@@ -5524,7 +5560,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5835"/>
         <location filename="../Configuration.ui" line="6092"/>
         <source>30</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5069"/>
@@ -5533,7 +5569,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5840"/>
         <location filename="../Configuration.ui" line="6097"/>
         <source>35</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5074"/>
@@ -5542,7 +5578,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5845"/>
         <location filename="../Configuration.ui" line="6102"/>
         <source>40</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5079"/>
@@ -5551,7 +5587,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5850"/>
         <location filename="../Configuration.ui" line="6107"/>
         <source>45</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5084"/>
@@ -5560,7 +5596,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5855"/>
         <location filename="../Configuration.ui" line="6112"/>
         <source>50</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5089"/>
@@ -5569,7 +5605,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5860"/>
         <location filename="../Configuration.ui" line="6117"/>
         <source>55</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5109"/>
@@ -5588,12 +5624,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6189"/>
         <source>Use band scheduler</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristite planer rasporeda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6212"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Napredno</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6222"/>
@@ -5615,7 +5651,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6256"/>
         <location filename="../Configuration.ui" line="6608"/>
         <source>Number of decoding attempts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj pokušaja dekodiranja:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6292"/>
@@ -5626,7 +5662,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6295"/>
         <source>Number of decoding  passes: </source>
-        <translation type="unfinished"></translation>
+        <translation>Broj prolaza dekodiranja: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6325"/>
@@ -5638,7 +5674,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6328"/>
         <location filename="../Configuration.ui" line="6644"/>
         <source>RX frequency decoding attempts:</source>
-        <translation type="unfinished"></translation>
+        <translation>RX frekvencija broj pokušaja dekodiranja:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6364"/>
@@ -5650,7 +5686,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6367"/>
         <source>Hinted decoding DT range:</source>
-        <translation type="unfinished"></translation>
+        <translation>Savjeti za  dekodiranje DT raspona:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6398"/>
@@ -5660,7 +5696,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6404"/>
         <source>Use frequency mask decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristite maskiranje dekodiranja frekvencije</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6416"/>
@@ -5671,7 +5707,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6419"/>
         <source>Top decoding frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>Vršna frekvencija dekodiranja: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6452"/>
@@ -5682,7 +5718,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6455"/>
         <source>Harmonics decoding depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubina dekodiranja harmonika:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6491"/>
@@ -5692,7 +5728,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
         <source>T10 decoding parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>T10 parametri dekodiranja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6605"/>
@@ -5711,7 +5747,9 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Odbacite ili primijenite promjene konfiguracije, uključujući
+resetiranje radio sučelja i primjena 
+promjena zvučne kartice</translation>
     </message>
 </context>
 <context>
@@ -5719,37 +5757,37 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Neočekivana greška</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Neočekivana greška uređaja</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="122"/>
         <source>style</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="126"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gdje je &lt;rig-name&gt; za podršku za više instanci.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="127"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteke koje se mogu pisati na testnoj lokaciji. Koristite s oprezom samo za testiranje.</translation>
     </message>
 </context>
 <context>
@@ -5757,12 +5795,12 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dvaput kliknite boju da biste je uredili. &lt;/p&gt; &lt;p&gt; Desnim klikom umetnite ili obrišite boje. &lt;/p&gt; &lt;p&gt; Boje na vrhu predstavljaju slabe signale &lt;/p&gt; &lt;p&gt; a boje na dnu predstavljaju jake signale&lt;/p&gt;&lt;p&gt; signali. Možete imati do 256 boja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
