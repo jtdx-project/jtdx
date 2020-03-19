@@ -6,32 +6,33 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Nombre de la Banda</translatorcomment>
+        <translation>Banda Nombre</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
         <source>Lower frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite Frecuencia Abajo</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Upper frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite Frecuancia Arriba</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="199"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite Abajo</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite Arriba</translation>
     </message>
 </context>
 <context>
@@ -39,12 +40,12 @@
     <message>
         <location filename="../about.ui" line="23"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de JTDX</translation>
     </message>
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>
@@ -52,7 +53,7 @@
     <message>
         <location filename="../GetUserId.cpp" line="29"/>
         <source>Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicativo</translation>
     </message>
 </context>
 <context>
@@ -60,54 +61,65 @@
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Creao un directorio temporal para errores</translatorcomment>
+        <translation>Crea directorio temporal error: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Crea un directorio temporal para errores Otra aplicacion tiene bloqueado el directorio</translatorcomment>
+        <translation>Crea directorio temporal de error Otra aplicacion tiene bloqueado el directorio:
+%1
+Crea un directorio temporal para errores Otra aplicacion tiene bloqueado el directorio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1150"/>
         <source>Create data directory error: </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Crea un directorio de datos de errores</translatorcomment>
+        <translation>Crea directorio de datos errores: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1159"/>
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Crea un directorio</translatorcomment>
+        <translation>Crea Directorio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
         <location filename="../Configuration.cpp" line="1346"/>
         <location filename="../Configuration.cpp" line="1382"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Borrar</translatorcomment>
+        <translation>&amp;Borrar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1350"/>
         <location filename="../Configuration.cpp" line="1386"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Insertar</translatorcomment>
+        <translation>&amp;Insertar ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
         <source>Serial Port:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Puerto serial de comunicacion</translatorcomment>
+        <translation>Puerto Serial:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
         <source>Serial port used for CAT control</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Puerto serial para el uso de control del CAT</translatorcomment>
+        <translation>Puerto serial usado para control del CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2501"/>
         <source>Network Server:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Servidor de Red</translatorcomment>
+        <translation>Servidor de red:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2502"/>
@@ -117,12 +129,14 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Opcional Nombre del Host y puerto del servicio de servidor.Dejar en blanco por defecto en la maquina. Formatos : nombre host: Puerto IPv4-direccion:puerto [IPv6-direccion]:puerto</translatorcomment>
+        <translation>Opcional Nombre del Host y puerto del servicio de servidor.Dejar en blanco por defecto en la maquina. Formatos : nombre host: Puerto IPv4-direccion:puerto [IPv6-direccion]:puerto</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2514"/>
         <source>USB Device:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Dispositibo USB</translatorcomment>
+        <translation>Dispositibo USB:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2515"/>
@@ -130,67 +144,78 @@ Formats:
 Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
-        <translation type="unfinished"></translation>
+        <translation>Identificacion opcial del periferico. Dejar en blanco para el defecto del equipo. Fomato [VID[:PID:VENDEDOR[:PRODUCTO]]]]</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Invalido la entrda del dispositivo de Audio</translatorcomment>
+        <translation>Invalido entrada dispositivo Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
-        <translation type="unfinished"></translation>
+        <translation>Invalido salida dispositivo Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid PTT method</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Invalo metodo PTT</translatorcomment>
+        <translation>Invalido metodo PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2573"/>
         <source>Invalid PTT port</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Invalido puerto PTT</translatorcomment>
+        <translation>Invalido puerto PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>CQ/73 en mensage</translatorcomment>
+        <translation>CQ/73 en mensage</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>CQ en mensage</translatorcomment>
+        <translation>CQ en mensage</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Selector de texto para la decodificacion en JTDX</translatorcomment>
+        <translation>Selector de texto para decodificacion en JTDX</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Resetea las frecuencias de trabajo</translatorcomment>
+        <translation>Resetea frecuencias de trabajo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Selector de fuente de texto para JTDX seleccionado</translatorcomment>
+        <translation>Selector de fuente de texto seleccionado en JTDX?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
         <source>Save Directory</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Grabar Directorio</translatorcomment>
+        <translation>Grabar Directorio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4661"/>
         <source>Failed to open connection to rig</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Falla de apertura de conección con el equipo</translatorcomment>
+        <translation>Falla de apertura de coneccion con equipo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Fracaso el equipo</translatorcomment>
+        <translation>Fracaso el equipo</translation>
     </message>
 </context>
 <context>
@@ -285,33 +310,39 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="189"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Borrar</translatorcomment>
+        <translation>&amp;Borrar</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="198"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Insertar</translatorcomment>
+        <translation>&amp;Insertar ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Insertar &amp; despues</translatorcomment>
+        <translation>Insertar &amp;despues ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <source>Import Palette</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Importar Paleta</translatorcomment>
+        <translation>Importar Paleta</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Palettes (*.pal)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Paleta (*.pal)</translatorcomment>
+        <translation>Paleta (*.pal)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Export Palette</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Exportar Paleta</translatorcomment>
+        <translation>Exportar Paleta</translation>
     </message>
 </context>
 <context>
@@ -319,7 +350,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea Oscura:</translation>
     </message>
 </context>
 <context>
@@ -328,14 +359,17 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error URL</translatorcomment>
+        <translation>Error URL</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Invalido URL:</translatorcomment>
+        <translation>Invalido URL:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="130"/>
@@ -346,53 +380,63 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error JSON</translatorcomment>
+        <translation>Error JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo contiene errores de sintaxi e%1 n caracteres de %2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Contiene archivos altos niveles  se debe a JSON  formacion</translatorcomment>
+        <translation>Contiene archivos altos niveles  se debe a JSON  formacion</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error archivo de sistema</translatorcomment>
+        <translation>Error archivo de sistema</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Falla para abrir &quot;%1&quot; Error</translatorcomment>
+        <translation>Falla para abrir &quot;%1&quot;
+Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Entrada deben contener JSON </translatorcomment>
+        <translation>Entrada deben contener JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Entradas contienen tipos validos</translatorcomment>
+        <translation>Entradas contienen tipos validos</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Entradas contienen nombres validos</translatorcomment>
+        <translation>Entradas contienen nombres validos</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
         <source>Contents entries must be JSON objects</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Entradas contienen Objetos JSON</translatorcomment>
+        <translation>Entradas contienen Objetos JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Directorios contienen relativos y dentro &quot;%1&quot;</translatorcomment>
+        <translation>Directorios contienen relativos y dentro &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -400,7 +444,8 @@ Error: %2 - %3</source>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="46"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Este modo simple requiere emulacion en modo split</translatorcomment>
+        <translation>Este modo simple requiere emulacion en modo split</translation>
     </message>
 </context>
 <context>
@@ -408,17 +453,20 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="213"/>
         <source>Add Frequency</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ingresa Frecuencia</translatorcomment>
+        <translation>Ingresa Frecuencia</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Mode:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Modo</translatorcomment>
+        <translation>&amp;Modo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="218"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Frecuencia en MHz</translatorcomment>
+        <translation>&amp;Frecuencia (MHz):</translation>
     </message>
 </context>
 <context>
@@ -427,25 +475,29 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="431"/>
         <location filename="../FrequencyList.cpp" line="587"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Modo</translatorcomment>
+        <translation>Modo</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="463"/>
         <location filename="../FrequencyList.cpp" line="588"/>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Frecuencia</translatorcomment>
+        <translation>Frecuencia</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="495"/>
         <location filename="../FrequencyList.cpp" line="589"/>
         <source>Frequency (MHz)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Frecuencia (MHz)</translatorcomment>
+        <translation>Frecuencia (MHz)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="518"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Modo de la Frecuencia</translatorcomment>
+        <translation>Modo Frecuencia</translation>
     </message>
 </context>
 <context>
@@ -742,12 +794,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="134"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modo</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Banda</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
@@ -1025,7 +1077,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="1497"/>
         <location filename="../mainwindow.cpp" line="1929"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">S meter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
@@ -1748,7 +1800,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4493"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4505"/>
@@ -1794,7 +1846,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4607"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Acerca de JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4610"/>
@@ -2829,7 +2881,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7145"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Error en la Red</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7146"/>
@@ -2859,7 +2911,8 @@ UDP server %2:%3</source>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Modo</translatorcomment>
+        <translation>Modo</translation>
     </message>
 </context>
 <context>
@@ -2867,7 +2920,8 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error Inesperado del equipo</translatorcomment>
+        <translation>Error Inesperado equipo</translation>
     </message>
 </context>
 <context>
@@ -2875,57 +2929,68 @@ UDP server %2:%3</source>
     <message>
         <location filename="../main.cpp" line="163"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Invalido nombre equipo-\ &amp; / no permitido</translatorcomment>
+        <translation>Invalido nombre equipo-\ &amp; / no permitido</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="188"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Otra instancias posiblemente este corriendo, pruebe para remover el archivo cerrado</translatorcomment>
+        <translation>Otra instancias posiblemente este corriendo, pruebe para remover el archivo cerrado?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="319"/>
         <source>Unexpected error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error inesperado</translatorcomment>
+        <translation>Error inesperado</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
         <source>User Defined</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Definida por el usuario</translatorcomment>
+        <translation>Definida por el usuario</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>OOB</translatorcomment>
+        <translation>OOB</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Demaciados colores en la paleta</translatorcomment>
+        <translation>Demaciados colores en la paleta.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; demaciados colores</translatorcomment>
+        <translation>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; demaciados colores.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; invalido triplete</translatorcomment>
+        <translation>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; invalido triplete.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; color invalido</translatorcomment>
+        <translation>Error en la lectura de la paleta de la cascada&quot;%1:%2&quot; color invalido.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error en la apertura de la cascada&quot;%1&quot;:%2.</translatorcomment>
+        <translation>Error en la apertura de la cascada&quot;%1&quot;:%2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="250"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error en la escritura de la paleta cascada&quot;%1&quot;:%2.</translatorcomment>
+        <translation>Error en la escritura de la paleta cascada&quot;%1&quot;:%2.</translation>
     </message>
 </context>
 <context>
@@ -2938,7 +3003,8 @@ UDP server %2:%3</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error sistema archivo</translatorcomment>
+        <translation>Error sistema archivo</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -2946,56 +3012,72 @@ UDP server %2:%3</source>
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede renombrer el archivo:
+&quot;%1&quot;
+to: &quot;%2&quot;
+Error(%3): %4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede borrar el archivo:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="172"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error en la Red</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Demaciadas redicciones</translatorcomment>
+        <translation>Demaciadas redicciones:%1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
         <source>Redirect not followed: %1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Redicciones no seguidas</translatorcomment>
+        <translation>Redicciones no seguidas: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>No se pueden comprometar cambios para</translatorcomment>
+        <translation>No se pueden comprometar cambios para:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="245"/>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>No se puede abrir archivo</translatorcomment>
+        <translation>No se puede abrir archivo:
+&quot;%1&quot;
+Error(%2): %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>No se puede crear el camino</translatorcomment>
+        <translation>No se puede crear el camino:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="263"/>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>No se puede escribir el archivo</translatorcomment>
+        <translation>No se puede escribir el archivo;
+&quot;%1&quot;
+Error(%2): %3</translation>
     </message>
 </context>
 <context>
@@ -3003,7 +3085,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../SampleDownloader.cpp" line="98"/>
         <source>Download Samples</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Bajar muestras</translatorcomment>
+        <translation>Bajar muestras</translation>
     </message>
 </context>
 <context>
@@ -3011,67 +3094,80 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A ocurrido un error en la entrada de audio del dispositivo</translatorcomment>
+        <translation>A ocurrido un error en la entrada de audio del dispositivo.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A ocurrido un error durante la lectura del dispositivo de audio</translatorcomment>
+        <translation>A ocurrido un error durante la lectura del dispositivo de audio.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Los datos de audio no se envian al dipositivo de entrada de forma rapida</translatorcomment>
+        <translation>Los datos de audio no se envian al dipositivo de entrada de forma rapida.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error no recuperable, dispositibo de entrada de audio no utilizable por el momento</translatorcomment>
+        <translation>Error no recuperable, dispositibo de entrada de audio no utilizable por el momento.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>El formato de audio de entrada no es valido</translatorcomment>
+        <translation>El formato de audio de entrada no es valido.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>El formato de audio de entrada no es soportado</translatorcomment>
+        <translation>El formato de audio de entrada no es soportado.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error al iniciar el dispositivo receotor de audio</translatorcomment>
+        <translation>Error al iniciar el dispositivo receotor de audio</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="129"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Desocupado</translatorcomment>
+        <translation>Desocupado</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="133"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Recepcion</translatorcomment>
+        <translation>Recepcion</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="137"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Suspendido</translatorcomment>
+        <translation>Suspendido</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="142"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Interrumpido</translatorcomment>
+        <translation>Interrumpido</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="149"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error</translatorcomment>
+        <translation>Error</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="153"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Detenido</translatorcomment>
+        <translation>Detenido</translation>
     </message>
 </context>
 <context>
@@ -3079,12 +3175,14 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ha ocurrido un error en la apertura del dispositivo de audio</translatorcomment>
+        <translation>Ha ocurrido un error en la apertura del dispositivo de audio.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ha ocurrido un error durante la escritura del dispositivo de audio en la salida</translatorcomment>
+        <translation>Ha ocurrido un error durante la escritura del dispositivo de audio en la salida.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
@@ -3109,32 +3207,37 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desocupado</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Sending</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Enviado</translatorcomment>
+        <translation>Enviado</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="116"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Suspendido</translatorcomment>
+        <translation>Suspendido</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="118"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Interrumpido</translatorcomment>
+        <translation>Interrumpido</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error</translatorcomment>
+        <translation>Error</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Detenido</translatorcomment>
+        <translation>Detenido</translation>
     </message>
 </context>
 <context>
@@ -3142,22 +3245,26 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="252"/>
         <source>Add Station</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ingresa estacion</translatorcomment>
+        <translation>Ingresa Estacion</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Band:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Banda</translatorcomment>
+        <translation>&amp;Banda:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="258"/>
         <source>&amp;Offset (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Salto (MHz)</translatorcomment>
+        <translation>&amp;Salto (MHz):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Antenna:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Antena</translatorcomment>
+        <translation>&amp;Antena:</translation>
     </message>
 </context>
 <context>
@@ -3165,32 +3272,38 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Nombre de la Banda</translatorcomment>
+        <translation>Nombre Banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
         <source>Frequency offset</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Salto de la frecuencia</translatorcomment>
+        <translation>Salto frecuencia</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="339"/>
         <source>Antenna description</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Descripcion de la antena</translatorcomment>
+        <translation>Descripcion Antena</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Banda</translatorcomment>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="362"/>
         <source>Offset</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Salto</translatorcomment>
+        <translation>Salto</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="363"/>
         <source>Antenna Description</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Descripcion de la Antena</translatorcomment>
+        <translation>Descripcion Antena</translation>
     </message>
 </context>
 <context>
@@ -3198,7 +3311,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Inesperado error del equipo</translatorcomment>
+        <translation>Inesperado error del equipo</translation>
     </message>
 </context>
 <context>
@@ -3206,168 +3320,199 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Dialogo</translatorcomment>
+        <translation>Dialogo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Controles</translatorcomment>
+        <translation>Controles</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Compresion del factor de escala en la frecuencia</translatorcomment>
+        <translation>Compresion del factor de escala en la frecuencia</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
         <source>Bins/Pixel  </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Bins/Pixel</translatorcomment>
+        <translation>Bins/Pixel  </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Decodifica JT9 solamente en esta frecuencia</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decodifica JT9 solamente en esta frecuencia&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="200"/>
         <source>  JT9</source>
-        <translation type="unfinished"></translation>
+        <translation>  JT9</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="203"/>
         <source>JT65  </source>
-        <translation type="unfinished"></translation>
+        <translation>JT65  </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="233"/>
         <location filename="../widegraph.ui" line="243"/>
         <source>Position of timestamp above each interval line</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Posicion del tiempo por encina de la linea de intervalo</translatorcomment>
+        <translation>Posicion del tiempo por encina de la linea de intervalo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Tiempo impreso</translatorcomment>
+        <translation>Tiempo impreso</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Apagado</translatorcomment>
+        <translation>Apagado</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="252"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A la Izquierda</translatorcomment>
+        <translation>Izquierda</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="257"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A la derecha</translatorcomment>
+        <translation>Derecha</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Frecuencia al lado izquierdo de la cascada</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frecuencia al borde izquierdo de la cascada &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="292"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Hz</translatorcomment>
+        <translation> Hz</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="295"/>
         <source>Start </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Comienzo</translatorcomment>
+        <translation>Comienzo </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Numero de FFTs promediado (control cascada velocidad desplazamiento)</translatorcomment>
+        <translation>Numero de FFTs promediado (control cascada velocidad desplazamiento)</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="323"/>
         <source>N Avg </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>N Avg</translatorcomment>
+        <translation>N Avg </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="361"/>
         <source>  Palette </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Paleta</translatorcomment>
+        <translation>  Paleta </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ingresa definición de nuevos colores en la paleta</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ingrese definición de nuevos colores en la paleta&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="380"/>
         <source>Adjust...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Adjuste...</translatorcomment>
+        <translation>Adjuste...</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="401"/>
         <source>Select waterfall palette</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Seleccion paleta de la cascada</translatorcomment>
+        <translation>Seleccion paleta de la cascada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Escala cascada por valores medianos</translatorcomment>
+        <translation>Escala cascada por valores medianos</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="434"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Escala</translatorcomment>
+        <translation>Escala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Aplanar espector baselinea terminada el intervalo lleno desplegada</translatorcomment>
+        <translation>Aplanar espector baselinea terminada el intervalo lleno desplegada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Aplanar</translatorcomment>
+        <translation>Aplanar</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Seleccion datos para  el monitordel espectro</translatorcomment>
+        <translation>Seleccion datos para  el monitordel espectro</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Actual</translatorcomment>
+        <translation>Actual</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Acumulada</translatorcomment>
+        <translation>Acumulada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Conjunto fraccional del tamaño del espectro en la ventana</translatorcomment>
+        <translation>Conjunto fraccional del tamaño del espectro en la ventana</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="502"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Porcentaje %</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="505"/>
         <source>Spec </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Spec</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="556"/>
         <source>Waterfall gain</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ganacia Cascada</translatorcomment>
+        <translation>Ganacia Cascada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="593"/>
         <source>Spectrum gain</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ganancia Espectro</translatorcomment>
+        <translation>Ganacia Espectro</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="616"/>
@@ -3375,22 +3520,26 @@ Error(%2): %3</source>
         <location filename="../widegraph.ui" line="718"/>
         <location filename="../widegraph.ui" line="725"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Etiqueta del texto</translatorcomment>
+        <translation>Etiqueta extro</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="658"/>
         <source>Waterfall zero</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Cero Cascada</translatorcomment>
+        <translation>Cero Cascada</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="695"/>
         <source>Spectrum zero</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Cero Espectro</translatorcomment>
+        <translation>Cero Espectro</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Grafico Amplio</translatorcomment>
+        <translation>Grafico Amplio</translation>
     </message>
 </context>
 <context>
@@ -3398,47 +3547,56 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="26"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Configuracion</translatorcomment>
+        <translation>Configuracion</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Seleccione Tabulador para cambiar los parametros de configuracion</translatorcomment>
+        <translation>Seleccione Tabulador para cambiar los parametros de configuracion.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>General</translatorcomment>
+        <translation>Genera&amp;l</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
         <source>General station details and settings.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Configuracion general de la estación y detalles</translatorcomment>
+        <translation>Configuracion general de la estación y detalles.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Detalles Estacion</translatorcomment>
+        <translation>Detalles Estacion</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Mi Indicativo</translatorcomment>
+        <translation>Mi I&amp;ndicativo:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Indicativo de la Estacion</translatorcomment>
+        <translation>Indicativo de la Estacion.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Mi Grilla</translatorcomment>
+        <translation>M&amp;i Grilla:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Localizacion (solamente los primeros 4 caracteres requeridos)</translatorcomment>
+        <translation>Localizacion (solamente los primeros 4 caracteres requeridos).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="128"/>
@@ -3448,67 +3606,80 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>Full call in Tx1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>LLamada Completa en Tx1</translatorcomment>
+        <translation>LLamada Completa en Tx1</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="140"/>
         <source>Full call in Tx3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Llamada completa en Tx3</translatorcomment>
+        <translation>Llamada completa en Tx3</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>Full call in Tx5 only</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Llamada completa en Tx5 solamente</translatorcomment>
+        <translation>Llamada completa en Tx5 solamente</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="153"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Generacion de mensajes de llamada compuesta del tipo 2</translatorcomment>
+        <translation>Generacion de mensajes de llamada compuesta del tipo 2:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="175"/>
         <source>Logbook filtering</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Filtro Libro de guardia</translatorcomment>
+        <translation>Filtro Libro de guardia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="203"/>
         <source>Use current callsign</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Use actual indicativo</translatorcomment>
+        <translation>Use actual indicativo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Use actual grilla</translatorcomment>
+        <translation>Use actual grilla</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Filtro libro de guardia desde Fecha/tiempo (YYYYMMDDHHMMSS)</translatorcomment>
+        <translation>Filtro libro de guardia desde Fecha/tiempo (YYYYMMDDHHMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Monitor</translatorcomment>
+        <translation>Monitor</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Establesca las caracteristicas de fuente para la actividad de la banda y las areas de frecuancia RX</translatorcomment>
+        <translation>Establesca las caracteristicas de fuente para la actividad de la banda y las areas de frecuancia RX.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
         <source>Decoded Text Font...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Decodificar fuente de texto</translatorcomment>
+        <translation>Decodificar fuente de texto...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="326"/>
         <source>Set the font characteristics for the application.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Establecer las caracteristicas de la fuente para la aplicacion</translatorcomment>
+        <translation>Establecer las caracteristicas de la fuente para la aplicacion.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="329"/>
         <source>Application Font...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Fuente de la aplicacion</translatorcomment>
+        <translation>Fuente de la aplicacion...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="336"/>
@@ -3518,7 +3689,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Mostrar distancia en millas</translatorcomment>
+        <translation>Mostrar dista&amp;ncia en millas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
@@ -3538,7 +3710,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="372"/>
         <source>Show &amp;DXCC names</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Mostrar nombres DXCC</translatorcomment>
+        <translation>Mostrar nombres DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="379"/>
@@ -3548,7 +3721,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="382"/>
         <source>Show &amp;prefix not name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Mostrar Prefijos no nombres</translatorcomment>
+        <translation>Mostrar Prefijos no nombres</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
@@ -3588,7 +3762,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Tiempo del TX </translatorcomment>
+        <translation>Tiempo del TX </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
@@ -3604,7 +3779,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="491"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>minutos</translatorcomment>
+        <translation>minutos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
@@ -3614,7 +3790,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Tiempo Tune</translatorcomment>
+        <translation>Tiempo Tune</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
@@ -3624,7 +3801,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="538"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>segundos</translatorcomment>
+        <translation>segundos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="559"/>
@@ -3654,7 +3832,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>ID CW despues del 73</translatorcomment>
+        <translation>ID CW despues del 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
@@ -3672,22 +3851,26 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="655"/>
         <source>&amp;Radio</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Radio</translatorcomment>
+        <translation>Radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="658"/>
         <source>Radio interface configuration settings.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Configuracion interfase de la radio</translatorcomment>
+        <translation>Configuracion interfase de la radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Radio:</translatorcomment>
+        <translation>Radio:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Intervalo de la encuesta</translatorcomment>
+        <translation>Intervalo de la encuesta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="696"/>
@@ -3698,7 +3881,8 @@ quiet period when decoding is done.</source>
         <location filename="../Configuration.ui" line="699"/>
         <location filename="../Configuration.ui" line="1581"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>s</translatorcomment>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="722"/>
@@ -3708,7 +3892,8 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="725"/>
         <source>S meter</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>S meter</translatorcomment>
+        <translation>S meter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="754"/>
@@ -3718,7 +3903,8 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="757"/>
         <source>Output power</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Poder de salida</translatorcomment>
+        <translation>Poder de salida</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="785"/>
@@ -3728,28 +3914,33 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="788"/>
         <source>CAT Control</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Control CaT</translatorcomment>
+        <translation>Control CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="799"/>
         <location filename="../Configuration.ui" line="1284"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Puerto:</translatorcomment>
+        <translation>Puerto:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="815"/>
         <source>Serial port used for CAT control.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Puerto Serial usado para Contol del CAT</translatorcomment>
+        <translation>Puerto Serial usado para Contol del CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="839"/>
         <source>Serial Port Parameters</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Puerto serial paralelo</translatorcomment>
+        <translation>Puerto serial paralelo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="856"/>
         <source>Baud Rate:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Velocidad Baudidos</translatorcomment>
+        <translation>Velocidad Baudidos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="872"/>
@@ -3999,7 +4190,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1378"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1384"/>
@@ -4133,13 +4324,13 @@ transmitting periods.</source>
         <location filename="../Configuration.ui" line="1692"/>
         <location filename="../Configuration.ui" line="1722"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izquierda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1697"/>
         <location filename="../Configuration.ui" line="1727"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Derecha</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1702"/>
@@ -4203,7 +4394,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1836"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiqueta extro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1843"/>
@@ -4306,7 +4497,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Borrar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
@@ -4658,7 +4849,7 @@ for assessing propagation and system performance.</source>
         <location filename="../Configuration.ui" line="3038"/>
         <location filename="../Configuration.ui" line="6429"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Hz</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
@@ -4987,7 +5178,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CQ/73 en mensage</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3706"/>
@@ -5261,7 +5452,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Banda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>
@@ -5744,37 +5935,43 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error Fatal</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Error Faltal</translatorcomment>
+        <translation>ErrorFatal inesperado</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Estilo por defecto Fusion o windows</translatorcomment>
+        <translation>&lt;estilo&gt; puede ser Fusion (por defecto) o Windows</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="122"/>
         <source>style</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Estilo</translatorcomment>
+        <translation>Estilo</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="126"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Soporte para multiple instancias.-</translatorcomment>
+        <translation>Donde &lt;nombre-equipo&gt; soporte para multi-intancias.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="127"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Nombre de tu Equipo</translatorcomment>
+        <translation>Nombre Equipo</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Escritura de archivos en testeo localizaciones. Usar con precaución solamente para testeo</translatorcomment>
+        <translation>Escritura de archivos en testeo localizaciones. Usar con precaución solamente para testeo.</translation>
     </message>
 </context>
 <context>
@@ -5782,12 +5979,12 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogo</translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Doble click para editar el color&lt;/p&gt;&lt;p&gt;Boton derecho para insertar o borrar colores/p&gt;&lt;p&gt;Colores en la parte superior representan señales debiles&lt;/p&gt;&lt;p&gt;y colores en el fondo representan fuertes&lt;/p&gt;&lt;p&gt;La Señal. Puede tener hasta 256 colores&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
