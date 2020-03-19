@@ -4463,6 +4463,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionEstonian"/>
     <addaction name="actionRussian"/>
     <addaction name="actionCroatian"/>
+    <addaction name="actionSpanish"/>
     <addaction name="actionFrench"/>
     <addaction name="actionItalian"/>
     <addaction name="actionPolish"/>
@@ -4703,6 +4704,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Hrvatski</string>
+   </property>
+  </action>
+  <action name="actionSpanish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>España</string>
    </property>
   </action>
   <action name="actionFrench">
