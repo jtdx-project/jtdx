@@ -333,7 +333,7 @@ Formato:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Grazy time:</translation>
+        <translation>Ora grigia:</translation>
     </message>
 </context>
 <context>
@@ -342,14 +342,15 @@ Formato:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore URL</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>URL non valido:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="130"/>
@@ -360,53 +361,54 @@ Formato:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore di sintassi del file di contenuti%1 all&apos;offset del carattere%2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file di livello superiore deve essere un array JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel File System</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire &quot;%1&quot;
+Errore: %2 - %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation>Le voci di contenuto devono essere una matrice JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation type="unfinished"></translation>
+        <translation>Le voci di contenuto devono avere un tipo valido</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation type="unfinished"></translation>
+        <translation>Le voci di contenuto devono avere un tipo valido</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
         <source>Contents entries must be JSON objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Le voci del contenuto devono essere oggetti JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Le cartelle dei contenuti devono essere relative e entro &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -414,7 +416,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="46"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation type="unfinished"></translation>
+        <translation>La modalità emulazione split richiede che l&apos;RTX sia in modalità simplex</translation>
     </message>
 </context>
 <context>
@@ -422,17 +424,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="213"/>
         <source>Add Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Add frequenza</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="218"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Frequenza (MHz):</translation>
     </message>
 </context>
 <context>
@@ -441,25 +443,25 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="431"/>
         <location filename="../FrequencyList.cpp" line="587"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="463"/>
         <location filename="../FrequencyList.cpp" line="588"/>
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequenza</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="495"/>
         <location filename="../FrequencyList.cpp" line="589"/>
         <source>Frequency (MHz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequenza (MHz)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="518"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo frequenza</translation>
     </message>
 </context>
 <context>
@@ -469,81 +471,84 @@ Error: %2 - %3</source>
         <location filename="../HRDTransceiver.cpp" line="147"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile connettersi a Ham Radio Deluxe
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="156"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire il file &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="171"/>
         <location filename="../HRDTransceiver.cpp" line="195"/>
         <source>Ham Radio Deluxe: no rig found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: RTX non trovato</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="419"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: l&apos;RTX modo non supportato</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="438"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: indica modo non riconosciuto</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="473"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: elemento non trovato nell&apos;elenco a discesa%1</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="517"/>
         <source>Ham Radio Deluxe: button not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: bottone non disponibile</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="883"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: risposta inaspettata</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1031"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: l&apos;RTX scomparso o cambiato</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1046"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: invio comando &quot;%1&quot; non riuscito%2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1059"/>
         <location filename="../HRDTransceiver.cpp" line="1072"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: impossibile scrivere il comando &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1089"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe ha inviato una risposta non valida al nostro comando &quot;%1</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1143"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe non ha risposto al comando &quot;%1&quot;%2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1153"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe impossibile ritentare il comando di invio &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1166"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe non ha risposto al comando &quot;%1&quot; come previsto</translation>
     </message>
 </context>
 <context>
@@ -552,85 +557,85 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="209"/>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Hamlib initialisation error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nella inizializzazione di Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="293"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore del file delle impostazioni di Hamlib:%1 all&apos;offset del carattere%2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="299"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore del file delle impostazioni di Hamlib: il livello principale deve essere un oggetto JSON</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="311"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore del file delle impostazioni di Hamlib: il livello principale deve essere un oggetto JSON</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="373"/>
         <source>Unsupported CAT type</source>
-        <translation type="unfinished"></translation>
+        <translation>tipo di CAT non supportato</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="424"/>
         <source>Hamlib error: %1 while %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore Hamlib: %1 mentre%2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="434"/>
         <source>opening connection to rig</source>
-        <translation type="unfinished"></translation>
+        <translation>apertura del collegamento all&apos;RTX</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="483"/>
         <source>getting current frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="487"/>
         <source>getting current mode</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo il modo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="516"/>
         <location filename="../HamlibTransceiver.cpp" line="536"/>
         <source>exchanging VFOs</source>
-        <translation type="unfinished"></translation>
+        <translation>sto cambiando i VFOs</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="524"/>
         <location filename="../HamlibTransceiver.cpp" line="1001"/>
         <source>getting other VFO frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la frequenza dell&apos;altro VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="528"/>
         <source>getting other VFO mode</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la il modo dell&apos;altro VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="541"/>
         <source>setting current VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio del VFO icorrente</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="550"/>
         <source>getting frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="554"/>
         <source>getting mode</source>
-        <translation type="unfinished"></translation>
+        <translation>sto onnenedo il modo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="571"/>
         <location filename="../HamlibTransceiver.cpp" line="936"/>
         <source>getting current VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo il VFO corrente</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="615"/>
@@ -638,7 +643,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="637"/>
         <location filename="../HamlibTransceiver.cpp" line="979"/>
         <source>getting current VFO frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la frequenza del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="621"/>
@@ -648,7 +653,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="740"/>
         <location filename="../HamlibTransceiver.cpp" line="801"/>
         <source>setting frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio della frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="730"/>
@@ -656,7 +661,7 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="880"/>
         <location filename="../HamlibTransceiver.cpp" line="893"/>
         <source>getting current VFO mode</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo il modo del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="736"/>
@@ -665,64 +670,64 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="886"/>
         <location filename="../HamlibTransceiver.cpp" line="899"/>
         <source>setting current VFO mode</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio del  modo del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="788"/>
         <location filename="../HamlibTransceiver.cpp" line="857"/>
         <source>setting/unsetting split mode</source>
-        <translation type="unfinished"></translation>
+        <translation>settare/non settare lo split</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="799"/>
         <location filename="../HamlibTransceiver.cpp" line="839"/>
         <source>setting split mode</source>
-        <translation type="unfinished"></translation>
+        <translation>settagio modo dello split</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="827"/>
         <source>setting split TX frequency and mode</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio dello split TX per modo e frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="832"/>
         <source>setting split TX frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio della frequenza di split</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="904"/>
         <source>getting split TX VFO mode</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottendendo la frequenza split TX VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="911"/>
         <source>setting split TX VFO mode</source>
-        <translation type="unfinished"></translation>
+        <translation>settaggio del modo split TX VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1095"/>
         <source>getting PTT state</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo lo stato del PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1128"/>
         <source>setting PTT on</source>
-        <translation type="unfinished"></translation>
+        <translation>impostazione del PTT in on</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1136"/>
         <source>setting PTT off</source>
-        <translation type="unfinished"></translation>
+        <translation>impostazione del PTT in off</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1148"/>
         <source>setting a configuration item</source>
-        <translation type="unfinished"></translation>
+        <translation>impostazione configurazione dell&apos;elemento</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1158"/>
         <source>getting a configuration item</source>
-        <translation type="unfinished"></translation>
+        <translation>sto ottenendo la configurazione dell&apos;elemento</translation>
     </message>
 </context>
 <context>
@@ -730,7 +735,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation type="unfinished"></translation>
+        <translation>Clicca OK per confermare il seguente QSO:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -740,53 +745,53 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="66"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Avvio</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>gg/MM/aaaa HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Fine</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation type="unfinished">Banda</translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation type="unfinished"></translation>
+        <translation>RPTinviato</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation>RPTRcvd</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Griglia</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="282"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation type="unfinished"></translation>
+        <translation>potenza TX</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
@@ -798,17 +803,17 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Commenti</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
-        <translation type="unfinished"></translation>
+        <translation>msg EQSL</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire &quot;%1&quot; per appendere: %2</translation>
     </message>
 </context>
 <context>
@@ -1562,7 +1567,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Griglia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
@@ -1762,7 +1767,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4492"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4504"/>
@@ -1808,7 +1813,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4606"/>
         <source>About JTDX</source>
-        <translation type="unfinished">Circa JTDX</translation>
+        <translation>Circa JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4609"/>
@@ -1906,12 +1911,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4729"/>
         <source>Polski</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4737"/>
         <source>Português</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4745"/>
@@ -2536,7 +2541,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="6937"/>
         <location filename="../mainwindow.cpp" line="7278"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire &quot;%1&quot; per appendere: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1764"/>
@@ -2868,7 +2873,7 @@ UDP server %2:%3</source>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo</translation>
     </message>
 </context>
 <context>
@@ -2947,7 +2952,7 @@ UDP server %2:%3</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel File System</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -3174,7 +3179,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation type="unfinished">Nome banda</translation>
+        <translation>Nome banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
@@ -3189,7 +3194,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
-        <translation type="unfinished">Banda</translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="362"/>
@@ -4008,7 +4013,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1378"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1384"/>
@@ -4315,7 +4320,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Cancella</translation>
+        <translation>&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
@@ -4996,7 +5001,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished">messaggio CQ/73</translation>
+        <translation>messaggio CQ/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3706"/>
@@ -5270,7 +5275,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation type="unfinished">Banda</translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>
