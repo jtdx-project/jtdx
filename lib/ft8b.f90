@@ -9,12 +9,12 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12
   character*37 msgsrcvd(130)
-  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7)
+  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymb0(32)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21)
   real bmeta(174),bmetb(174),bmetc(174)
   real llra(174),llrb(174),llrc(174),llrd(174)
@@ -24,7 +24,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth,lhighsens
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -188,6 +188,21 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 !    plev=plev/61.0
 !    do k=0,3199; xx=plev*gran(); yy=plev*gran(); cd0(k)=cd0(k) + complex(xx,yy); enddo
 
+    lreverse=.false.
+    if(.not.swl) then
+      if(nft8cycles.lt.2) then 
+        if(imainpass.eq.2) lreverse=.true.
+      else
+        if(imainpass.eq.5 .or. imainpass.eq.7) lreverse=.true.
+      endif
+    else ! swl
+      if(nft8swlcycles.lt.2) then 
+        if(imainpass.eq.2) lreverse=.true.
+      else
+        if(imainpass.eq.5 .or. imainpass.eq.7) lreverse=.true.
+      endif
+    endif
+
     do k=1,79
       i1=ibest+(k-1)*32
       csymb=cmplx(0.0,0.0)
@@ -196,6 +211,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         csymb(1)=csymb(1)*1.9; csymb(32)=csymb(32)*1.9
         scr=SQRT(abs(csymb(1)))/SQRT(abs(csymb(32)))
         if(scr.gt.1.0) then; csymb(32)=csymb(32)*scr; else; if(scr.gt.1.E-16) csymb(1)=csymb(1)/scr; endif
+      endif
+      if(lreverse) then
+        do i=1,32; csymb0(i)=cmplx(real(csymb(33-i)),-aimag(csymb(33-i))); enddo
+        csymb=csymb0
       endif
       call four2a(csymb,32,1,-1,1)
       cs(0:7,k)=csymb(1:8)/1e3
