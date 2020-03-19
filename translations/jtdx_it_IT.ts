@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="it_IT">
 <context>
     <name>Bands</name>
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome banda</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
         <source>Lower frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite più basso di frequenza</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Upper frequency limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite più alto di frequenza</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="199"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite basso</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite alto</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../about.ui" line="23"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>Circa JTDX</translation>
     </message>
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../GetUserId.cpp" line="29"/>
         <source>Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -60,54 +60,56 @@
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Errore creazione cartella temporanea: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore creazione cartella temporanea:
+%1
+Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1150"/>
         <source>Create data directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Errore creazione cartella dati: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1159"/>
         <location filename="../Configuration.cpp" line="1170"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Crea cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1324"/>
         <location filename="../Configuration.cpp" line="1346"/>
         <location filename="../Configuration.cpp" line="1382"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1350"/>
         <location filename="../Configuration.cpp" line="1386"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Inserisci ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
         <source>Serial Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Porta serale:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
         <source>Serial port used for CAT control</source>
-        <translation type="unfinished"></translation>
+        <translation>Porta seriale da usare il controllo del CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2501"/>
         <source>Network Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Server di Rete:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2502"/>
@@ -117,12 +119,17 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome host e porta per la rete opzionale.
+Lasciare bianco per il valori di default.
+Formati:
+	hostname:port
+	IPv4-address:port
+	[IPv6-address]:port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2514"/>
         <source>USB Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Device USB:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2515"/>
@@ -130,67 +137,70 @@ Formats:
 Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
-        <translation type="unfinished"></translation>
+        <translation>Identificazione del dispositivo opzionale.
+Lasciare bianco per il dispossitivo di default.
+Formato:
+	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo ingresso errato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo di uscita errato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid PTT method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metodo invalito per il PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2573"/>
         <source>Invalid PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>porta del PTT non valida</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation>messaggio CQ/73</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
-        <translation type="unfinished"></translation>
+        <translation>messaggio di CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX Selezione il font del testo decodificato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetta le frequenze di lavoro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sei sicuro di voler cancellare le tue attuali frequenze di lavoro e sostituirle con quelle predefinite?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4645"/>
         <source>Save Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4661"/>
         <source>Failed to open connection to rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nella connessione con l&apos;apparato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore dell&apos;apparecchio</translation>
     </message>
 </context>
 <context>
@@ -199,85 +209,89 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile connettersi a DX Lab Suite  Commander
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente alla frequenza di lettura: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander ha inviato uno stato TX non riconosciuto: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente al polling dello stato TX: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander rig non ha risposto a PTT: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente alla frequenza di polling: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente alla frequenza di polling TX: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander ha inviato uno stato di split non riconosciuto: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente allo split del polling: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander ha inviato una modalità non riconosciuta: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander non ha risposto correttamente alla modalità polling: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
         <source>DX Lab Suite Commander send command failed
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Comando di invio del comando DX Lab Suite non riuscito
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Comando di invio del comando DX Lab Suite non riuscito %1 :%2
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Comando di invio DX Lab Suite Comando &quot;%1&quot; lettura risposta non riuscita:%2
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander ripete il comando di invio esaurito &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander ha inviato una frequenza non riconosciuta</translation>
     </message>
 </context>
 <context>
@@ -285,33 +299,33 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="189"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="198"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Inserisci ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci &amp;dopo ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <source>Import Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa palette colori</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Palettes (*.pal)</source>
-        <translation type="unfinished"></translation>
+        <translation>Palette (*.pal)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Export Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta palette colori</translation>
     </message>
 </context>
 <context>
@@ -319,7 +333,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Grazy time:</translation>
     </message>
 </context>
 <context>
@@ -747,7 +761,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Banda</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
@@ -1794,7 +1808,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4605"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Circa JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4608"/>
@@ -1862,27 +1876,27 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4680"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4688"/>
         <source>Eesti</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4696"/>
         <source>Русский</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4704"/>
         <source>Hrvatski</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4712"/>
         <source>Italiano</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4720"/>
@@ -1897,17 +1911,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4736"/>
         <source>简体中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4744"/>
         <source>繁體中文</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4752"/>
         <source>日本語</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4757"/>
@@ -3155,7 +3169,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
@@ -3170,7 +3184,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="362"/>
@@ -4296,7 +4310,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
@@ -4977,7 +4991,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">messaggio CQ/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3706"/>
@@ -5251,7 +5265,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Banda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>

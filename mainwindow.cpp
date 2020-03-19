@@ -584,6 +584,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionEstonian->setActionGroup(languageGroup);
   ui->actionRussian->setActionGroup(languageGroup);
   ui->actionCroatian->setActionGroup(languageGroup);
+  ui->actionItalian->setActionGroup(languageGroup);
   ui->actionPolish->setActionGroup(languageGroup);
   ui->actionPortuguese->setActionGroup(languageGroup);
   ui->actionChinese_simplified->setActionGroup(languageGroup);
@@ -2720,6 +2721,7 @@ void MainWindow::on_actionEnglish_triggered() { ui->actionEnglish->setChecked(tr
 void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(true); set_language("et_EE"); }
 void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
+void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
 void MainWindow::on_actionPolish_triggered() { ui->actionPolish->setChecked(true); set_language("pl_PL"); }
 void MainWindow::on_actionPortuguese_triggered() { ui->actionPortuguese->setChecked(true); set_language("pt_PT"); }
 void MainWindow::on_actionChinese_simplified_triggered() { ui->actionChinese_simplified->setChecked(true); set_language("zh_CN"); }
@@ -3725,6 +3727,7 @@ void MainWindow::set_language (QString const& lang)
   if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
   else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
   else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
+  else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
   else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);
   else if(m_lang=="pt_PT") ui->actionPortuguese->setChecked(true);
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);

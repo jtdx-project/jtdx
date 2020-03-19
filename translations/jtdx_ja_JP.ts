@@ -801,12 +801,12 @@ Error: %2 - %3</source>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3400"/>
-        <location filename="../mainwindow.cpp" line="5891"/>
-        <location filename="../mainwindow.cpp" line="5896"/>
-        <location filename="../mainwindow.cpp" line="5936"/>
-        <location filename="../mainwindow.cpp" line="5947"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3402"/>
+        <location filename="../mainwindow.cpp" line="5894"/>
+        <location filename="../mainwindow.cpp" line="5899"/>
+        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5950"/>
         <source>Band Activity</source>
         <translation>Band Activity</translation>
     </message>
@@ -924,9 +924,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4520"/>
-        <location filename="../mainwindow.cpp" line="5185"/>
-        <location filename="../mainwindow.cpp" line="5600"/>
+        <location filename="../mainwindow.cpp" line="4523"/>
+        <location filename="../mainwindow.cpp" line="5188"/>
+        <location filename="../mainwindow.cpp" line="5603"/>
         <source>DX Call</source>
         <translation>DX Call</translation>
     </message>
@@ -962,7 +962,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2879"/>
+        <location filename="../mainwindow.cpp" line="2881"/>
         <source>Hound</source>
         <translation>Hound</translation>
     </message>
@@ -983,8 +983,8 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1494"/>
-        <location filename="../mainwindow.cpp" line="1926"/>
+        <location filename="../mainwindow.cpp" line="1495"/>
+        <location filename="../mainwindow.cpp" line="1927"/>
         <source>S meter</source>
         <translation>Sメーター</translation>
     </message>
@@ -1015,7 +1015,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
-        <location filename="../mainwindow.ui" line="4535"/>
+        <location filename="../mainwindow.ui" line="4536"/>
         <source>AutoSeq</source>
         <translation>AutoSeq</translation>
     </message>
@@ -1055,7 +1055,7 @@ Error: %2 - %3</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CATがHamlibを経てセットアップされることとし、Hamlibは、いくつかの&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1928"/>
+        <location filename="../mainwindow.cpp" line="1929"/>
         <source>Pwr</source>
         <translation>Pwr</translation>
     </message>
@@ -1169,7 +1169,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5900"/>
         <source>Rx Frequency</source>
         <translation>Rx  Frequency</translation>
     </message>
@@ -1335,9 +1335,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
-        <location filename="../mainwindow.ui" line="5276"/>
-        <location filename="../mainwindow.ui" line="5733"/>
-        <location filename="../mainwindow.ui" line="5757"/>
+        <location filename="../mainwindow.ui" line="5285"/>
+        <location filename="../mainwindow.ui" line="5742"/>
+        <location filename="../mainwindow.ui" line="5766"/>
         <source>1</source>
         <translation>1</translation>
     </message>
@@ -1353,7 +1353,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5454"/>
+        <location filename="../mainwindow.ui" line="5463"/>
         <source>CQ</source>
         <translation>CQ</translation>
     </message>
@@ -1502,42 +1502,42 @@ list. The list can be maintained in Settings (F2).</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4695"/>
+        <location filename="../mainwindow.ui" line="4696"/>
         <source>Русский</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4727"/>
+        <location filename="../mainwindow.ui" line="4736"/>
         <source>简体中文</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4735"/>
+        <location filename="../mainwindow.ui" line="4744"/>
         <source>繁體中文</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5136"/>
+        <location filename="../mainwindow.ui" line="5145"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>私のcallsignからRXまで 周波数ウィンドウのメッセージ </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5201"/>
+        <location filename="../mainwindow.ui" line="5210"/>
         <source>0  Call None</source>
         <translation>0 呼び出し無し</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5209"/>
+        <location filename="../mainwindow.ui" line="5218"/>
         <source>1  Call first</source>
         <translation>1  最初にコールする</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5225"/>
+        <location filename="../mainwindow.ui" line="5234"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2  TX間隔の開始までデコードされてからコールする</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5233"/>
+        <location filename="../mainwindow.ui" line="5242"/>
         <source>3  Call based on end of decoding</source>
         <translation>3 デコードの終わってからコールする</translation>
     </message>
@@ -1573,10 +1573,10 @@ list. The list can be maintained in Settings (F2).</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
-        <location filename="../mainwindow.ui" line="5284"/>
-        <location filename="../mainwindow.ui" line="5287"/>
-        <location filename="../mainwindow.ui" line="5741"/>
-        <location filename="../mainwindow.ui" line="5765"/>
+        <location filename="../mainwindow.ui" line="5293"/>
+        <location filename="../mainwindow.ui" line="5296"/>
+        <location filename="../mainwindow.ui" line="5750"/>
+        <location filename="../mainwindow.ui" line="5774"/>
         <source>2</source>
         <translation>2</translation>
     </message>
@@ -1786,671 +1786,676 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>言語選択</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4474"/>
+        <location filename="../mainwindow.ui" line="4475"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4490"/>
+        <location filename="../mainwindow.ui" line="4491"/>
         <source>Mode</source>
         <translation>モード</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4502"/>
+        <location filename="../mainwindow.ui" line="4503"/>
         <source>Misc</source>
         <translation>その他</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4506"/>
+        <location filename="../mainwindow.ui" line="4507"/>
         <source>Accept UDP Reply messages</source>
         <translation>UDP返答メッセージを受け入れ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4539"/>
+        <location filename="../mainwindow.ui" line="4540"/>
         <source>Auto RX frequency Filter</source>
         <translation>オートRX 周波数フィルタ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4563"/>
+        <location filename="../mainwindow.ui" line="4564"/>
         <source>DXpedition</source>
         <translation>DXpedition</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4582"/>
+        <location filename="../mainwindow.ui" line="4583"/>
         <source>Exit</source>
         <translation>終了</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4585"/>
+        <location filename="../mainwindow.ui" line="4586"/>
         <source>Alt+F4</source>
         <translation>Alt+F4</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4596"/>
+        <location filename="../mainwindow.ui" line="4597"/>
         <source>Configuration</source>
         <translation>コンフィギュレーション</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4599"/>
-        <location filename="../mainwindow.ui" line="4997"/>
+        <location filename="../mainwindow.ui" line="4600"/>
+        <location filename="../mainwindow.ui" line="5006"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4604"/>
+        <location filename="../mainwindow.ui" line="4605"/>
         <source>About JTDX</source>
         <translation>JTDXについて</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4607"/>
+        <location filename="../mainwindow.ui" line="4608"/>
         <source>Ctrl+F1</source>
         <translation>Ctrl+F1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4612"/>
+        <location filename="../mainwindow.ui" line="4613"/>
         <source>Waterfall</source>
         <translation>ウオーターフォール</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4617"/>
+        <location filename="../mainwindow.ui" line="4618"/>
         <source>Open</source>
         <translation>開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4620"/>
+        <location filename="../mainwindow.ui" line="4621"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4625"/>
+        <location filename="../mainwindow.ui" line="4626"/>
         <source>Open next in directory</source>
         <translation>次のディレクトリを開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4628"/>
+        <location filename="../mainwindow.ui" line="4629"/>
         <source>F6</source>
         <translation>F6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4633"/>
+        <location filename="../mainwindow.ui" line="4634"/>
         <source>Decode remaining files in directory</source>
         <translation>ディレクトリの残留ファイルをデコード</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4636"/>
+        <location filename="../mainwindow.ui" line="4637"/>
         <source>Shift+F6</source>
         <translation>Shift+F6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4641"/>
+        <location filename="../mainwindow.ui" line="4642"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>Save ディレクトリの全ての*.wav ， *.c2 ファイルを削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4652"/>
-        <location filename="../mainwindow.ui" line="5327"/>
-        <location filename="../mainwindow.ui" line="5389"/>
-        <location filename="../mainwindow.ui" line="5671"/>
+        <location filename="../mainwindow.ui" line="4653"/>
+        <location filename="../mainwindow.ui" line="5336"/>
+        <location filename="../mainwindow.ui" line="5398"/>
+        <location filename="../mainwindow.ui" line="5680"/>
         <source>fast</source>
         <translation>速い</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4663"/>
+        <location filename="../mainwindow.ui" line="4664"/>
         <source>None</source>
         <translation>無し</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4671"/>
+        <location filename="../mainwindow.ui" line="4672"/>
         <source>Save all</source>
         <translation>すべて保存</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4679"/>
+        <location filename="../mainwindow.ui" line="4680"/>
         <source>English</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4687"/>
+        <location filename="../mainwindow.ui" line="4688"/>
         <source>Eesti</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4703"/>
+        <location filename="../mainwindow.ui" line="4704"/>
         <source>Hrvatski</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4711"/>
+        <location filename="../mainwindow.ui" line="4712"/>
+        <source>Italiano</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4720"/>
         <source>Polski</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4719"/>
+        <location filename="../mainwindow.ui" line="4728"/>
         <source>Português</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4743"/>
+        <location filename="../mainwindow.ui" line="4752"/>
         <source>日本語</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4748"/>
+        <location filename="../mainwindow.ui" line="4757"/>
         <source>JTDX Web site</source>
         <translation>JTDX ウェブサイト</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4751"/>
+        <location filename="../mainwindow.ui" line="4760"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4756"/>
+        <location filename="../mainwindow.ui" line="4765"/>
         <source>Keyboard shortcuts</source>
         <translation>キーボードショートカット</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4759"/>
+        <location filename="../mainwindow.ui" line="4768"/>
         <source>F3</source>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4764"/>
+        <location filename="../mainwindow.ui" line="4773"/>
         <source>Special mouse commands</source>
         <translation>特別なマウスは集める</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4767"/>
+        <location filename="../mainwindow.ui" line="4776"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4778"/>
+        <location filename="../mainwindow.ui" line="4787"/>
         <source>JT9</source>
         <translation>JT9</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4789"/>
+        <location filename="../mainwindow.ui" line="4798"/>
         <source>Save decoded</source>
         <translation>デコード済を保存</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4800"/>
-        <location filename="../mainwindow.ui" line="5335"/>
-        <location filename="../mainwindow.ui" line="5397"/>
-        <location filename="../mainwindow.ui" line="5639"/>
-        <location filename="../mainwindow.ui" line="5679"/>
+        <location filename="../mainwindow.ui" line="4809"/>
+        <location filename="../mainwindow.ui" line="5344"/>
+        <location filename="../mainwindow.ui" line="5406"/>
+        <location filename="../mainwindow.ui" line="5648"/>
+        <location filename="../mainwindow.ui" line="5688"/>
         <source>medium</source>
         <translation>メディア</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4811"/>
-        <location filename="../mainwindow.ui" line="5346"/>
-        <location filename="../mainwindow.ui" line="5408"/>
-        <location filename="../mainwindow.ui" line="5690"/>
+        <location filename="../mainwindow.ui" line="4820"/>
+        <location filename="../mainwindow.ui" line="5355"/>
+        <location filename="../mainwindow.ui" line="5417"/>
+        <location filename="../mainwindow.ui" line="5699"/>
         <source>deep</source>
         <translation>深く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4819"/>
+        <location filename="../mainwindow.ui" line="4828"/>
         <source>Monitor OFF at startup</source>
         <translation>スタートアップ時はモニターをオフ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4824"/>
+        <location filename="../mainwindow.ui" line="4833"/>
         <source>Erase ALL.TXT</source>
         <translation>ALL.TXT を消去</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4829"/>
+        <location filename="../mainwindow.ui" line="4838"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>QSO LOGファイル wsjtx_log.adi を消去</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4834"/>
+        <location filename="../mainwindow.ui" line="4843"/>
         <source>Open wsjtx_log.adi</source>
         <translation>wsjtx_log.adi を開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4837"/>
-        <location filename="../mainwindow.ui" line="5021"/>
+        <location filename="../mainwindow.ui" line="4846"/>
+        <location filename="../mainwindow.ui" line="5030"/>
         <source>F7</source>
         <translation>F7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4845"/>
+        <location filename="../mainwindow.ui" line="4854"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>ロギング用にモードをRTTYに変換</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4853"/>
+        <location filename="../mainwindow.ui" line="4862"/>
         <source>Log dB reports to Comments</source>
         <translation>コメントへのログdBリポート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4861"/>
+        <location filename="../mainwindow.ui" line="4870"/>
         <source>Prompt me to log QSO</source>
         <translation>Log ウインドウを表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4869"/>
+        <location filename="../mainwindow.ui" line="4878"/>
         <source>Blank line between decoding periods</source>
         <translation>デコード期間の間のブランクのライン</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4877"/>
+        <location filename="../mainwindow.ui" line="4886"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>記録の後の空所DX呼び出しとグリッド</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4885"/>
+        <location filename="../mainwindow.ui" line="4894"/>
         <source>Display distance in miles</source>
         <translation>マイルの距離を表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4893"/>
+        <location filename="../mainwindow.ui" line="4902"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>呼び出しセットTx可能化をダブルクリック</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4901"/>
+        <location filename="../mainwindow.ui" line="4910"/>
         <source>Tx disabled after sending 73</source>
         <translation>73を送った後に使用不可にされたTx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4909"/>
+        <location filename="../mainwindow.ui" line="4918"/>
         <source>Runaway Tx watchdog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4917"/>
+        <location filename="../mainwindow.ui" line="4926"/>
         <source>Allow multiple instances</source>
         <translation>複数の例を許可</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4925"/>
+        <location filename="../mainwindow.ui" line="4934"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx freqはRx freqにロックした</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4933"/>
+        <location filename="../mainwindow.ui" line="4942"/>
         <source>Skip Tx 1</source>
         <translation>スキップTx 1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4941"/>
+        <location filename="../mainwindow.ui" line="4950"/>
         <source>JT65</source>
         <translation>JT65</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4952"/>
+        <location filename="../mainwindow.ui" line="4961"/>
         <source>JT9+JT65</source>
         <translation>JT9+JT65</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4960"/>
+        <location filename="../mainwindow.ui" line="4969"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Rx 周波数ウィンドウへのTxメッセージ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4968"/>
+        <location filename="../mainwindow.ui" line="4977"/>
         <source>Gray1</source>
         <translation>Gray1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4976"/>
+        <location filename="../mainwindow.ui" line="4985"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation>ショーDXCCエンティティおよびB4ステータスを作動させた</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4984"/>
+        <location filename="../mainwindow.ui" line="4993"/>
         <source>Astronomical data</source>
         <translation>天文学のデータ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4989"/>
+        <location filename="../mainwindow.ui" line="4998"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>アドオンの接頭辞と接尾辞の最終候補リスト</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4994"/>
+        <location filename="../mainwindow.ui" line="5003"/>
         <source>Settings...</source>
         <translation>設定…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5005"/>
+        <location filename="../mainwindow.ui" line="5014"/>
         <source>JTDX forum</source>
         <translation>JTDXフォーラム</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5010"/>
+        <location filename="../mainwindow.ui" line="5019"/>
         <source>Open log directory</source>
         <translation>ログディレクトリを開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5018"/>
+        <location filename="../mainwindow.ui" line="5027"/>
         <source>Message averaging</source>
         <translation>メッセージ平均</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5035"/>
+        <location filename="../mainwindow.ui" line="5044"/>
         <source>Include averaging</source>
         <translation>平均することを含みなさい</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5049"/>
+        <location filename="../mainwindow.ui" line="5058"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65はデコードをほのめかした</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5060"/>
+        <location filename="../mainwindow.ui" line="5069"/>
         <source>WSPR-2</source>
         <translation>WSPR-2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5065"/>
+        <location filename="../mainwindow.ui" line="5074"/>
         <source>Save reference spectrum</source>
         <translation>参照範囲を節約</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5070"/>
+        <location filename="../mainwindow.ui" line="5079"/>
         <source>&amp;Download Samples ...</source>
         <translation>&amp;Downloadサンプル…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5073"/>
+        <location filename="../mainwindow.ui" line="5082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ダウンロードサンプルオーディオが、様々な.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5081"/>
+        <location filename="../mainwindow.ui" line="5090"/>
         <source>T10</source>
         <translation>T10</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5092"/>
+        <location filename="../mainwindow.ui" line="5101"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>RX 周波数のテキストフィルタを迂回</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5103"/>
+        <location filename="../mainwindow.ui" line="5112"/>
         <source>Bypass all text filters</source>
         <translation>すべてのテキストフィルタを迂回</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5106"/>
+        <location filename="../mainwindow.ui" line="5115"/>
         <source>Alt+F</source>
         <translation>Alt+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5114"/>
+        <location filename="../mainwindow.ui" line="5123"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>JT65高調波からデコードされたメッセージを表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5125"/>
+        <location filename="../mainwindow.ui" line="5134"/>
         <source>Enable main window popup</source>
         <translation>主要なウィンドウポップアップを使用可能</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5141"/>
+        <location filename="../mainwindow.ui" line="5150"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>WSJT開発グループからの著作権通知</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5155"/>
+        <location filename="../mainwindow.ui" line="5164"/>
         <source>FT8</source>
         <translation>Ft8</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5163"/>
+        <location filename="../mainwindow.ui" line="5172"/>
         <source>FT8 call first</source>
         <translation>FT8は最初に呼びかける</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5174"/>
+        <location filename="../mainwindow.ui" line="5183"/>
         <source>Call priority and search CQ</source>
         <translation>プライオリティと検索CQを呼びなさい</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5177"/>
+        <location filename="../mainwindow.ui" line="5186"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5185"/>
+        <location filename="../mainwindow.ui" line="5194"/>
         <source>FT8 call last</source>
         <translation>FT8はこの前呼びかける</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5193"/>
+        <location filename="../mainwindow.ui" line="5202"/>
         <source>FT8 manual call</source>
         <translation>FT8マニュアルの呼び出し</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5217"/>
+        <location filename="../mainwindow.ui" line="5226"/>
         <source>4+ Call and search through CQ messages</source>
         <translation>4+  CQメッセージによる呼び出しと検索</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5241"/>
+        <location filename="../mainwindow.ui" line="5250"/>
         <source>Single shot QSO</source>
         <translation>単一のショットQSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5249"/>
+        <location filename="../mainwindow.ui" line="5258"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>デコードの開始の時にバンド活動ウィンドウを消去</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5257"/>
+        <location filename="../mainwindow.ui" line="5266"/>
         <source>Answer worked B4 calls</source>
         <translation>交信済に応答</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5268"/>
+        <location filename="../mainwindow.ui" line="5277"/>
         <source>Auto</source>
         <translation>オート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5295"/>
+        <location filename="../mainwindow.ui" line="5304"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5303"/>
+        <location filename="../mainwindow.ui" line="5312"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5311"/>
+        <location filename="../mainwindow.ui" line="5320"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5319"/>
+        <location filename="../mainwindow.ui" line="5328"/>
         <source>Erase both message windows at band change</source>
         <translation>バンド変化の時に両方のメッセージウィンドウを消去</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5357"/>
+        <location filename="../mainwindow.ui" line="5366"/>
         <source>deep with 4 passes</source>
         <translation>4つのパスで深く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5365"/>
+        <location filename="../mainwindow.ui" line="5374"/>
         <source>Max distance instead of best SNR</source>
         <translation>最もよいSNR最高の距離</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5373"/>
+        <location filename="../mainwindow.ui" line="5382"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>RX 周波数ウィンドウへの探される呼び出しのメッセージ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5381"/>
+        <location filename="../mainwindow.ui" line="5390"/>
         <source>use low thresholds</source>
         <translation>低いしきいを使用</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5416"/>
+        <location filename="../mainwindow.ui" line="5425"/>
         <source>use subpass</source>
         <translation>サブパスを使用</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5427"/>
+        <location filename="../mainwindow.ui" line="5436"/>
         <source>minimum</source>
         <translation>最小</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5435"/>
+        <location filename="../mainwindow.ui" line="5444"/>
         <source>late start of decoder</source>
         <translation>デコーダの遅い開始</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5443"/>
+        <location filename="../mainwindow.ui" line="5452"/>
         <source>Call worked B4 callsigns</source>
         <translation>交信済局を呼ぶ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5462"/>
+        <location filename="../mainwindow.ui" line="5471"/>
         <source>CQ and 73</source>
         <translation>CQおよび73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5470"/>
+        <location filename="../mainwindow.ui" line="5479"/>
         <source>any messages</source>
         <translation>どのようなメッセージでも</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5478"/>
+        <location filename="../mainwindow.ui" line="5487"/>
         <source>Enable</source>
         <translation>可能</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5486"/>
+        <location filename="../mainwindow.ui" line="5495"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>73を送る時に、フィルタオフを切り替え</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5494"/>
+        <location filename="../mainwindow.ui" line="5503"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>73を得る時に、フィルタオフを切り替え</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5502"/>
+        <location filename="../mainwindow.ui" line="5511"/>
         <source>Hide FT8 dupe messages</source>
         <translation>FT8 dupe メッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5510"/>
+        <location filename="../mainwindow.ui" line="5519"/>
         <source>Display output power</source>
         <translation>ディスプレイアウトプットパワー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5518"/>
+        <location filename="../mainwindow.ui" line="5527"/>
         <source>Report message priority</source>
         <translation>メッセージプライオリティを報告</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5526"/>
+        <location filename="../mainwindow.ui" line="5535"/>
         <source>Enable hound mode</source>
         <translation>Hound モードを可能</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5537"/>
+        <location filename="../mainwindow.ui" line="5546"/>
         <source>Use hound TX frequency control</source>
         <translation>hound TX 周波数コントロールを使う</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5545"/>
+        <location filename="../mainwindow.ui" line="5554"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>マニュアルのモードのRRR/RR73/73を送った後に、TXを使用不可</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5556"/>
+        <location filename="../mainwindow.ui" line="5565"/>
         <source>Show tooltips in main window</source>
         <translation>メインウィンドウのツールチップを表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5564"/>
+        <location filename="../mainwindow.ui" line="5573"/>
         <source>Color Tx message buttons</source>
         <translation>Tx メッセージボタンの色</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5572"/>
-        <location filename="../mainwindow.ui" line="5749"/>
-        <location filename="../mainwindow.ui" line="5773"/>
+        <location filename="../mainwindow.ui" line="5581"/>
+        <location filename="../mainwindow.ui" line="5758"/>
+        <location filename="../mainwindow.ui" line="5782"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5580"/>
+        <location filename="../mainwindow.ui" line="5589"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5588"/>
+        <location filename="../mainwindow.ui" line="5597"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5596"/>
+        <location filename="../mainwindow.ui" line="5605"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5604"/>
+        <location filename="../mainwindow.ui" line="5613"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5612"/>
+        <location filename="../mainwindow.ui" line="5621"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5620"/>
+        <location filename="../mainwindow.ui" line="5629"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5628"/>
+        <location filename="../mainwindow.ui" line="5637"/>
         <source>low</source>
         <translation>低い</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5647"/>
+        <location filename="../mainwindow.ui" line="5656"/>
         <source>high</source>
         <translation>高い</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5655"/>
+        <location filename="../mainwindow.ui" line="5664"/>
         <source>Hide FT contest messages</source>
         <translation>FTコンテストメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5663"/>
+        <location filename="../mainwindow.ui" line="5672"/>
         <source>FT4</source>
         <translation>Ft4</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5698"/>
+        <location filename="../mainwindow.ui" line="5707"/>
         <source>wideband DX Call search</source>
         <translation>ワイドバンドDX呼び出し検索</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5706"/>
+        <location filename="../mainwindow.ui" line="5715"/>
         <source>6 pass SWL mode</source>
         <translation>6はSWLモードを通過する</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5717"/>
+        <location filename="../mainwindow.ui" line="5726"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translation>ダブルクリックのクリップボードへのCallsign|オートで選びなさい</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5725"/>
+        <location filename="../mainwindow.ui" line="5734"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>日本との横縞160m操作</translation>
     </message>
@@ -2460,380 +2465,380 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>あなたは無線インターフェイスを再設定したいか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="729"/>
+        <location filename="../mainwindow.cpp" line="730"/>
         <source>Error Writing WAV File</source>
         <translation>エラーライティングWAVファイル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="909"/>
+        <location filename="../mainwindow.cpp" line="910"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>エラー殺害jtdxjt9.exeプロセス</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="910"/>
+        <location filename="../mainwindow.cpp" line="911"/>
         <source>KillByName return code: %1</source>
         <translation>KillByNameリターンコード：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="927"/>
+        <location filename="../mainwindow.cpp" line="928"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>エラー除去chr（34）%1chr（34）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="928"/>
+        <location filename="../mainwindow.cpp" line="929"/>
         <source>Click OK to retry</source>
         <translation>リトライするために、OKをクリック</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1605"/>
+        <location filename="../mainwindow.cpp" line="1606"/>
         <source>TX Even</source>
         <translation>TX 偶数</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1612"/>
+        <location filename="../mainwindow.cpp" line="1613"/>
         <source>TX Odd</source>
         <translation>TX 奇数</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1657"/>
-        <location filename="../mainwindow.cpp" line="2334"/>
-        <location filename="../mainwindow.cpp" line="3422"/>
-        <location filename="../mainwindow.cpp" line="3999"/>
-        <location filename="../mainwindow.cpp" line="4122"/>
-        <location filename="../mainwindow.cpp" line="4354"/>
-        <location filename="../mainwindow.cpp" line="6733"/>
-        <location filename="../mainwindow.cpp" line="6929"/>
+        <location filename="../mainwindow.cpp" line="1658"/>
+        <location filename="../mainwindow.cpp" line="2335"/>
+        <location filename="../mainwindow.cpp" line="3424"/>
+        <location filename="../mainwindow.cpp" line="4002"/>
+        <location filename="../mainwindow.cpp" line="4125"/>
+        <location filename="../mainwindow.cpp" line="4357"/>
+        <location filename="../mainwindow.cpp" line="6736"/>
+        <location filename="../mainwindow.cpp" line="6932"/>
         <source>File Open Error</source>
         <translation>ファイル、開いているエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1658"/>
-        <location filename="../mainwindow.cpp" line="2335"/>
-        <location filename="../mainwindow.cpp" line="3423"/>
-        <location filename="../mainwindow.cpp" line="4000"/>
-        <location filename="../mainwindow.cpp" line="4123"/>
-        <location filename="../mainwindow.cpp" line="4355"/>
-        <location filename="../mainwindow.cpp" line="6734"/>
-        <location filename="../mainwindow.cpp" line="6930"/>
-        <location filename="../mainwindow.cpp" line="7271"/>
+        <location filename="../mainwindow.cpp" line="1659"/>
+        <location filename="../mainwindow.cpp" line="2336"/>
+        <location filename="../mainwindow.cpp" line="3425"/>
+        <location filename="../mainwindow.cpp" line="4003"/>
+        <location filename="../mainwindow.cpp" line="4126"/>
+        <location filename="../mainwindow.cpp" line="4358"/>
+        <location filename="../mainwindow.cpp" line="6737"/>
+        <location filename="../mainwindow.cpp" line="6933"/>
+        <location filename="../mainwindow.cpp" line="7274"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>付加のために&quot;%1&quot;を開くことができない：%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1762"/>
+        <location filename="../mainwindow.cpp" line="1763"/>
         <source>Error saving c2 file</source>
         <translation>エラー保存c2ファイル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1838"/>
+        <location filename="../mainwindow.cpp" line="1839"/>
         <source>Error in SoundInput</source>
         <translation>SoundInputのエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1842"/>
+        <location filename="../mainwindow.cpp" line="1843"/>
         <source>Error in SoundOutput</source>
         <translation>SoundOutputのエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2445"/>
+        <location filename="../mainwindow.cpp" line="2446"/>
         <source>Subprocess Error</source>
         <translation>エラーをサブ処理</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2446"/>
+        <location filename="../mainwindow.cpp" line="2447"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>サブプロセスは出口コード%1によって失敗した</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2448"/>
-        <location filename="../mainwindow.cpp" line="2467"/>
+        <location filename="../mainwindow.cpp" line="2449"/>
+        <location filename="../mainwindow.cpp" line="2468"/>
         <source>Running: %1
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2466"/>
+        <location filename="../mainwindow.cpp" line="2467"/>
         <source>Subprocess error</source>
         <translation>サブプロセスエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="2546"/>
         <source>Spotted</source>
         <translation>見分けられる</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2552"/>
+        <location filename="../mainwindow.cpp" line="2553"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>設立できない／、dxsummitサーバーとの接続を完遂</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2576"/>
+        <location filename="../mainwindow.cpp" line="2577"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>アルゴリズムソースコードWSJT-Xおよびプログラムを関連させたことのルック・アンド・フィールおよびモードFSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144のためのプロトコル仕様書は、以下の作者のうちの1人以上までに著作権（C）2001-2018である：ジョセフテーラー、K1JT；ビルサマビル、G4WJS；スティーブンフランケ、K9AN；ニコパレルモ、IV3NWV；グレッグビーム、KI7MT；マイケルブラック、W9MDB；エドソンペレイラ、PY2SDR；フィリップKarn、KA9Q；そして、WSJT開発グループの他のメンバー。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2697"/>
+        <location filename="../mainwindow.cpp" line="2698"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>どのデータもディスクから読まない。間違いのファイル形式？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2738"/>
+        <location filename="../mainwindow.cpp" line="2740"/>
         <source>AutoSeq0</source>
         <translation>AutoSeq0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2751"/>
+        <location filename="../mainwindow.cpp" line="2753"/>
         <source>AutoSeq1</source>
         <translation>AutoSeq1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2760"/>
-        <location filename="../mainwindow.cpp" line="2786"/>
+        <location filename="../mainwindow.cpp" line="2762"/>
+        <location filename="../mainwindow.cpp" line="2788"/>
         <source>AutoSeq2</source>
         <translation>AutoSeq2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2761"/>
-        <location filename="../mainwindow.cpp" line="2782"/>
+        <location filename="../mainwindow.cpp" line="2763"/>
+        <location filename="../mainwindow.cpp" line="2784"/>
         <source>AutoSeq6</source>
         <translation>AutoSeq6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2770"/>
-        <location filename="../mainwindow.cpp" line="2787"/>
+        <location filename="../mainwindow.cpp" line="2772"/>
+        <location filename="../mainwindow.cpp" line="2789"/>
         <source>AutoSeq3</source>
         <translation>AutoSeq3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2771"/>
-        <location filename="../mainwindow.cpp" line="2783"/>
+        <location filename="../mainwindow.cpp" line="2773"/>
+        <location filename="../mainwindow.cpp" line="2785"/>
         <source>AutoSeq7</source>
         <translation>AutoSeq7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2855"/>
+        <location filename="../mainwindow.cpp" line="2857"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Hound TX 周波数コントロールは標準のFT8副帯において許されない。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2863"/>
+        <location filename="../mainwindow.cpp" line="2865"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound モード TX 周波数コントロールは*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2866"/>
+        <location filename="../mainwindow.cpp" line="2868"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound TX 周波数コントロールは標準のFT8副帯において許されず、*Split*装備コントロールを必要とする（*Settingsの*Rig*または*Fake It*|Radio*タブ。）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2874"/>
+        <location filename="../mainwindow.cpp" line="2876"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX 周波数コントロール警告</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2879"/>
+        <location filename="../mainwindow.cpp" line="2881"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2940"/>
+        <location filename="../mainwindow.cpp" line="2942"/>
         <source>Keyboard Shortcuts</source>
         <translation>キーボードショートカット</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2951"/>
+        <location filename="../mainwindow.cpp" line="2953"/>
         <source>Special Mouse Commands</source>
         <translation>特別なマウスコマンド</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3392"/>
-        <location filename="../mainwindow.cpp" line="3399"/>
+        <location filename="../mainwindow.cpp" line="3394"/>
+        <location filename="../mainwindow.cpp" line="3401"/>
         <source>check time</source>
         <translation>は時間をチェックする</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3698"/>
-        <location filename="../mainwindow.cpp" line="3706"/>
+        <location filename="../mainwindow.cpp" line="3700"/>
+        <location filename="../mainwindow.cpp" line="3708"/>
         <source>Confirm change Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3700"/>
-        <location filename="../mainwindow.cpp" line="3709"/>
+        <location filename="../mainwindow.cpp" line="3702"/>
+        <location filename="../mainwindow.cpp" line="3711"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3703"/>
-        <location filename="../mainwindow.cpp" line="3712"/>
+        <location filename="../mainwindow.cpp" line="3705"/>
+        <location filename="../mainwindow.cpp" line="3714"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3704"/>
-        <location filename="../mainwindow.cpp" line="3715"/>
+        <location filename="../mainwindow.cpp" line="3706"/>
+        <location filename="../mainwindow.cpp" line="3717"/>
         <source>&amp;No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3849"/>
+        <location filename="../mainwindow.cpp" line="3852"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
         <translation>どうぞ、別のTx 周波数を選んでください。JTDXは、30mのWSPR副帯の別のモードを故意に送らない。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3854"/>
         <location filename="../mainwindow.cpp" line="3857"/>
+        <location filename="../mainwindow.cpp" line="3860"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR ガードバンド</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3975"/>
+        <location filename="../mainwindow.cpp" line="3978"/>
         <source>TUNE</source>
         <translation>調整</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3976"/>
+        <location filename="../mainwindow.cpp" line="3979"/>
         <source>LastTx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4191"/>
+        <location filename="../mainwindow.cpp" line="4194"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4196"/>
+        <location filename="../mainwindow.cpp" line="4199"/>
         <source>Receiving </source>
         <translation>受信 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4405"/>
+        <location filename="../mainwindow.cpp" line="4408"/>
         <source>Last Tx: </source>
         <translation>最後のTx： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5335"/>
+        <location filename="../mainwindow.cpp" line="5338"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6911"/>
-        <location filename="../mainwindow.cpp" line="6912"/>
+        <location filename="../mainwindow.cpp" line="6914"/>
+        <location filename="../mainwindow.cpp" line="6915"/>
         <source>Logd </source>
         <translation>ログ </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7136"/>
+        <location filename="../mainwindow.cpp" line="7139"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4190"/>
+        <location filename="../mainwindow.cpp" line="4193"/>
         <source>Tx: TUNE</source>
         <translation>Tx：調整</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4249"/>
+        <location filename="../mainwindow.cpp" line="4252"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5286"/>
-        <location filename="../mainwindow.cpp" line="5298"/>
-        <location filename="../mainwindow.cpp" line="5311"/>
-        <location filename="../mainwindow.cpp" line="5337"/>
+        <location filename="../mainwindow.cpp" line="5289"/>
+        <location filename="../mainwindow.cpp" line="5301"/>
+        <location filename="../mainwindow.cpp" line="5314"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
         <source>Add to CALL3.TXT</source>
         <translation>CALL3.TXTに追加</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5287"/>
+        <location filename="../mainwindow.cpp" line="5290"/>
         <source>Please enter a valid grid locator</source>
         <translation>どうぞ、有効なグリッドロケータに入ってください</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5299"/>
+        <location filename="../mainwindow.cpp" line="5302"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>読み／書き込みのために&quot;%1&quot;を開くことができない：%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5312"/>
+        <location filename="../mainwindow.cpp" line="5315"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>ライティングのために&quot;%1&quot;を開くことができない：%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5701"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>第2のUDPサーバーへのエラー発送QSO ADIFデータ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5701"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>戻されたchr（34）%1chr（34）を書きなさい</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5844"/>
+        <location filename="../mainwindow.cpp" line="5847"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6478"/>
+        <location filename="../mainwindow.cpp" line="6481"/>
         <source>Tune</source>
         <translation>調整</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6651"/>
+        <location filename="../mainwindow.cpp" line="6654"/>
         <source>Lockd Tx=Rx</source>
         <translation>ロック Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6652"/>
+        <location filename="../mainwindow.cpp" line="6655"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6655"/>
+        <location filename="../mainwindow.cpp" line="6658"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx 分割</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6656"/>
+        <location filename="../mainwindow.cpp" line="6659"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6842"/>
+        <location filename="../mainwindow.cpp" line="6845"/>
         <source>Tune digital gain</source>
         <translation>デジタルのゲインを調整</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6843"/>
+        <location filename="../mainwindow.cpp" line="6846"/>
         <source>Transmit digital gain</source>
         <translation>デジタルのゲインを送信</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6862"/>
+        <location filename="../mainwindow.cpp" line="6865"/>
         <source>Prefixes</source>
         <translation>プレフィックス</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7135"/>
+        <location filename="../mainwindow.cpp" line="7138"/>
         <source>Network Error</source>
         <translation>ネットワークエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7270"/>
+        <location filename="../mainwindow.cpp" line="7273"/>
         <source>File Error</source>
         <translation>ファイルエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7481"/>
+        <location filename="../mainwindow.cpp" line="7484"/>
         <source>Tx watchdog expired</source>
         <translation>Tx ウオッチドッグは時間切れ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7495"/>
+        <location filename="../mainwindow.cpp" line="7498"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
