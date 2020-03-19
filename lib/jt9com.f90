@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200209
-
   use, intrinsic :: iso_c_binding, only: c_int, c_short, c_float, c_char, c_bool
   include 'constants.f90'
 
@@ -76,6 +74,7 @@
      logical(c_bool) :: lenabledxcsearch
      logical(c_bool) :: lwidedxcsearch
      logical(c_bool) :: lmultinst
+     logical(c_bool) :: lskiptx1
  end type params_block
 
   type, bind(C) :: dec_data

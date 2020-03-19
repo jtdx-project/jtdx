@@ -4462,6 +4462,12 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionEnglish"/>
     <addaction name="actionEstonian"/>
     <addaction name="actionRussian"/>
+    <addaction name="actionCroatian"/>
+    <addaction name="actionSpanish"/>
+    <addaction name="actionFrench"/>
+    <addaction name="actionItalian"/>
+    <addaction name="actionPolish"/>
+    <addaction name="actionPortuguese"/>
     <addaction name="actionChinese_simplified"/>
     <addaction name="actionChinese_traditional"/>
     <addaction name="actionJapanese"/>
@@ -4690,6 +4696,54 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Русский</string>
+   </property>
+  </action>
+  <action name="actionCroatian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hrvatski</string>
+   </property>
+  </action>
+  <action name="actionSpanish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>España</string>
+   </property>
+  </action>
+  <action name="actionFrench">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionItalian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Italiano</string>
+   </property>
+  </action>
+  <action name="actionPolish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Polski</string>
+   </property>
+  </action>
+  <action name="actionPortuguese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Português</string>
    </property>
   </action>
   <action name="actionChinese_simplified">

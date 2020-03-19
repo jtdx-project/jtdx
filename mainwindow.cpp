@@ -118,7 +118,7 @@ namespace
   QRegularExpression messagespec_alphabet {"[- @A-Za-z0-9+./?#<>;]*"};
   QRegularExpression wcall_alphabet {"[A-Za-z0-9/,]*"};
   QRegularExpression wgrid_alphabet {"([a-r]{2,2}[0-9]{2,2}[,]{1,1})*",QRegularExpression::CaseInsensitiveOption};
-  QRegularExpression cqdir_alphabet {"(?!de)[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
+  QRegularExpression cqdir_alphabet {"[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression dxCall_alphabet {"[A-Za-z0-9/]*"};
   QRegularExpression dxGrid_alphabet {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}"};
   QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{2}|\d{3}))|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
@@ -583,6 +583,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionEnglish->setActionGroup(languageGroup);
   ui->actionEstonian->setActionGroup(languageGroup);
   ui->actionRussian->setActionGroup(languageGroup);
+  ui->actionCroatian->setActionGroup(languageGroup);
+  ui->actionSpanish->setActionGroup(languageGroup);
+  ui->actionFrench->setActionGroup(languageGroup);
+  ui->actionItalian->setActionGroup(languageGroup);
+  ui->actionPolish->setActionGroup(languageGroup);
+  ui->actionPortuguese->setActionGroup(languageGroup);
   ui->actionChinese_simplified->setActionGroup(languageGroup);
   ui->actionChinese_traditional->setActionGroup(languageGroup);
   ui->actionJapanese->setActionGroup(languageGroup);
@@ -1312,12 +1318,7 @@ void MainWindow::readSettings()
   else if(m_saveWav==2) ui->actionSave_all->setChecked(true);
 
   m_lang=m_settings->value("Language","en_US").toString();
-  if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
-  else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
-  else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
-  else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
-  else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
-  else ui->actionEnglish->setChecked(true);
+  set_language (m_lang);
   
   m_callMode=m_settings->value("CallMode",2).toInt();
   if(!(m_callMode>=0 && m_callMode<=3)) m_callMode=2; 
@@ -2721,6 +2722,12 @@ void MainWindow::on_actionSave_all_triggered() { m_saveWav=2; ui->actionSave_all
 void MainWindow::on_actionEnglish_triggered() { ui->actionEnglish->setChecked(true); set_language("en_US"); }
 void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(true); set_language("et_EE"); }
 void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
+void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
+void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
+void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
+void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
+void MainWindow::on_actionPolish_triggered() { ui->actionPolish->setChecked(true); set_language("pl_PL"); }
+void MainWindow::on_actionPortuguese_triggered() { ui->actionPortuguese->setChecked(true); set_language("pt_PT"); }
 void MainWindow::on_actionChinese_simplified_triggered() { ui->actionChinese_simplified->setChecked(true); set_language("zh_CN"); }
 void MainWindow::on_actionChinese_traditional_triggered() { ui->actionChinese_traditional->setChecked(true); set_language("zh_HK"); }
 void MainWindow::on_actionJapanese_triggered() { ui->actionJapanese->setChecked(true); set_language("ja_JP"); }
@@ -3033,6 +3040,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lapmyc=m_lapmyc;
   dec_data.params.lmodechanged=m_modeChanged ? 1 : 0; m_modeChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
+  dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;
@@ -3636,7 +3644,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
          }
       } else if (!deCall.isEmpty() && Radio::base_callsign (deCall) == Radio::base_callsign (m_hisCall) && decodedtextmsg.left(3) != "CQ " && decodedtextmsg.left(3) != "DE " && decodedtextmsg.left(4) != "QRZ " && !decodedtextmsg.contains(" 73") && !decodedtextmsg.contains(" RR73") && !decodedtextmsg.contains(" RRR")) {
         m_used_freq = decodedtext.frequencyOffset();
-         if (m_enableTx && !m_houndMode && (abs(m_used_freq - ui->TxFreqSpinBox->value ()) < m_nguardfreq || m_config.halttxreplyother ())) { 
+         if (m_enableTx && !m_reply_me && !m_houndMode && (abs(m_used_freq - ui->TxFreqSpinBox->value ()) < m_nguardfreq || m_config.halttxreplyother ())) { 
            haltTx("readFromStdout, not owner of the frequency or reply to other ");/* if(m_skipTx1) m_qsoHistory.remove(m_hisCall); */
          }
       }
@@ -3688,13 +3696,51 @@ void MainWindow::killFile ()
 void MainWindow::set_language (QString const& lang)
 {
   if (m_lang != lang) {
-    if (QMessageBox::Yes == QMessageBox::question(this, "Confirm change Language",
-            "Are You sure to change UI Language, JTDX needs restart?", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
+    bool olek;
+    QString tolge;
+    QTranslator translator;
+    olek = translator.load (QLocale(lang),"jtdx","_",":/Translations");
+    if (!olek) olek = translator.load (QString {"jtdx_"} + lang);
+    QMessageBox msgbox;
+    msgbox.setWindowTitle(tr("Confirm change Language"));
+    msgbox.setIcon(QMessageBox::Question);
+    msgbox.setText(tr("Are You sure to change UI Language to English, JTDX will restart?"));
+    msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgbox.setDefaultButton(QMessageBox::No);
+    msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
+    msgbox.button(QMessageBox::No)->setText(tr("&No"));
+    if (olek) {
+      tolge = translator.translate("MainWindow","Confirm change Language");
+      if (!tolge.isEmpty()) msgbox.setWindowTitle(tolge);
+      else msgbox.setWindowTitle("Confirm change Language");
+      tolge = translator.translate("MainWindow","Are You sure to change UI Language to English, JTDX will restart?");
+      if (!tolge.isEmpty()) msgbox.setText(tolge);
+      else msgbox.setText("Are You sure to change UI Language to English, JTDX will restart?");
+      tolge = translator.translate("MainWindow","&Yes");
+      if (!tolge.isEmpty()) msgbox.button(QMessageBox::Yes)->setText(tolge);
+      else msgbox.button(QMessageBox::Yes)->setText("&Yes");
+      tolge = translator.translate("MainWindow","&No");
+      if (!tolge.isEmpty()) msgbox.button(QMessageBox::No)->setText(tolge);
+      else msgbox.button(QMessageBox::No)->setText("&No");
+    }
+    if(msgbox.exec() == QMessageBox::Yes) {
             m_lang = lang;
             m_exitCode = 1337;
             QMainWindow::close();
     }
   }
+  if(m_lang=="et_EE") ui->actionEstonian->setChecked(true);
+  else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
+  else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
+  else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
+  else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
+  else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
+  else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);
+  else if(m_lang=="pt_PT") ui->actionPortuguese->setChecked(true);
+  else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
+  else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
+  else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
+  else ui->actionEnglish->setChecked(true);
 }
 
 void MainWindow::on_EraseButton_clicked()                          //Erase

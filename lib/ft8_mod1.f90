@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200209
-
 module ft8_mod1
 
   parameter (NPS=180000,NPS1=184320,NFR=151680) !NFRAME=1920*79
@@ -18,7 +16,7 @@ module ft8_mod1
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles
   logical one(0:511,0:8),lqsomsgdcd
-  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst
+  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
   data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
   data     m73/0,1,1,1,1,1,1,0,1,0,0,1,0,1,0,0,0,0,1/

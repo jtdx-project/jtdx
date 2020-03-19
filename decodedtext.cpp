@@ -55,7 +55,7 @@ QString DecodedText::CQersCall(QString& grid,QString& tyyp)
   auto const& match = callsign_re.match (message_);
   grid = match.captured ("grid");
   tyyp = match.captured ("tyyp");
-  if (tyyp == "DE" || tyyp == "CQ") tyyp = "";
+  if (tyyp == "CQ") tyyp = "";
   else if (tyyp == "908") tyyp = "JA";
   return match.captured ("callsign");
 }
