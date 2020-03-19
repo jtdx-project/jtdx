@@ -2697,25 +2697,25 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3698"/>
         <location filename="../mainwindow.cpp" line="3706"/>
         <source>Confirm change Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Подтверждение изменения языка</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3700"/>
         <location filename="../mainwindow.cpp" line="3709"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation type="unfinished"></translation>
+        <translation>Программа будет автоматически перезапущена, Вы уверены что желаете сменить язык на русский?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3703"/>
         <location filename="../mainwindow.cpp" line="3712"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Да</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3704"/>
         <location filename="../mainwindow.cpp" line="3715"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Нет</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3849"/>
