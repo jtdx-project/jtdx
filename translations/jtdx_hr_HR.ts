@@ -1089,7 +1089,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Traženo</translation>
+        <translation type="unfinished">Traženi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -2669,19 +2669,19 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="3700"/>
         <location filename="../mainwindow.cpp" line="3709"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Are You sure to change UI Language to Hrvatski, JTDX will restart?</translation>
+        <translation>Jeste li sigurni da želite promijeniti jezik sučelja na Hrvatski, JTDX će se ponovo pokrenuti?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3703"/>
         <location filename="../mainwindow.cpp" line="3712"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Da</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3704"/>
         <location filename="../mainwindow.cpp" line="3715"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3849"/>
