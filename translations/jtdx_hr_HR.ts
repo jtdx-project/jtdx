@@ -280,7 +280,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation type="unfinished">DX Lab Suite Commander poslao je nepoznatu frekvenciju</translation>
+        <translation>DX Lab Suite Commander poslao je nepoznatu frekvenciju</translation>
     </message>
 </context>
 <context>
@@ -364,7 +364,7 @@ Format:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation type="unfinished">Pogreška datotečnog sustava</translation>
+        <translation>Pogreška datotečnog sustava</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
@@ -1089,7 +1089,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Traženo</translation>
+        <translation>Traženi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -1325,7 +1325,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lijeva tipka miša: Brisanje podataka iz prozora DXZnak i DX Lokator. Desna tipka miša: obrišite podatke s DX Znak, prozora DX Lokator, povijesti QSOai i crne liste. CTRL + Desna tipka miša: dodajte pozivni znak iz prozora DX Znak na crnu listu, obrišite podatke iz DX Znak, DX Lokator prozora i povijesti povezanosti.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -1360,7 +1360,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3088"/>
         <location filename="../mainwindow.ui" line="3656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podržan je usmjereni CQ, raspon poruka od AA do ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3091"/>
@@ -1384,7 +1384,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="3123"/>
         <location filename="../mainwindow.ui" line="3742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preskočite odašiljanje QTH lokatora&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
@@ -1540,7 +1540,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generiranje usmjerene CQ ili obične CQ poruke&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
@@ -1580,7 +1580,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generiranje poruke s RR73 ako nije potvrđen RRR potvrdni okvir, generirajte RRR poruku ako je potvrdni okvir RRR potvrđen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
@@ -1610,7 +1610,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
         <source>Send this free-text message (max 13 characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pošaljite ovu tekstualnu poruku (najviše 13 znakova)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4037"/>
@@ -1660,7 +1660,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4225"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postotak dvominutnih sekvenci posvećenih prenošenju.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4231"/>
@@ -1710,12 +1710,12 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4384"/>
         <source>narrow Filter</source>
-        <translation>uskopojasni Filter</translation>
+        <translation>Uskopojasni Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation>osjetljivost dekodera</translation>
+        <translation>Osjetljivost dekodera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
@@ -1725,7 +1725,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation>ciklusi dekodiranja</translation>
+        <translation>Ciklusi dekodiranja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
@@ -1770,7 +1770,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4542"/>
         <source>Auto RX frequency Filter</source>
-        <translation>Automatski filtar RX frekvencije</translation>
+        <translation>Automatski filter RX frekvencije</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4566"/>
@@ -2152,7 +2152,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preuzmite primjere audio datoteka koje prikazuju različite vrste rada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5108"/>
@@ -2212,7 +2212,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5204"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odaberite odabir pretraživanja odgovora na CQ s prioritetima, ako to nije uspjelo, onda tražite CQ poruke s većim prioritetom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5212"/>
@@ -2242,7 +2242,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5252"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 pozovi dekodiranog do početka TX intervala</translation>
+        <translation>2 Pozovi dekodiranog do početka TX intervala</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5260"/>
@@ -2267,7 +2267,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5295"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5322"/>
@@ -2322,7 +2322,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5462"/>
         <source>late start of decoder</source>
-        <translation>kasni početak dekodiranja</translation>
+        <translation>Kašnjenje početka dekodiranja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5470"/>
@@ -2464,7 +2464,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5744"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation type="unfinished">Pozivni znak u međuspremnik dvoklik | automatski odabir</translation>
+        <translation>Pozivni znak u međuspremnik dvoklik | automatski odabir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5752"/>
@@ -2479,12 +2479,12 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="732"/>
         <source>Error Writing WAV File</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška pri zapisivanju u WAV datoteku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="912"/>
         <source>Error Killing jtdxjt9.exe Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška Zatvaram jtdxjt9.exe Process</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="913"/>
@@ -2534,12 +2534,12 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="6940"/>
         <location filename="../mainwindow.cpp" line="7281"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished">Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
+        <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1765"/>
         <source>Error saving c2 file</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška snimanja c2 datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1841"/>
@@ -2645,7 +2645,8 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2872"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Hound TX frekvencija nije dopuštena u standardnim FT8 podpojasima i zahtijeva * Split * rig control (ili * Rig * ili * Fake It * na kartici * Postavke | Radio *.)</translatorcomment>
+        <translation>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2880"/>
@@ -2677,25 +2678,25 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="3705"/>
         <location filename="../mainwindow.cpp" line="3713"/>
         <source>Confirm change Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Potvrdi promjenu jezika</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3707"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite promijeniti jezik sučelja na Hrvatski, JTDX će se ponovo pokrenuti?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>
         <location filename="../mainwindow.cpp" line="3719"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Da</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3711"/>
         <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3859"/>
@@ -2801,7 +2802,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6662"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za omogućavanje rada u Tx / Rx Split načinu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6665"/>
@@ -2968,7 +2969,7 @@ Error(%3): %4</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished">Greška Mreže</translation>
+        <translation>Greška Mreže</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
@@ -4149,7 +4150,7 @@ transmitting periods.</source>
         <location filename="../Configuration.ui" line="1687"/>
         <location filename="../Configuration.ui" line="1717"/>
         <source>Mono</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1692"/>
@@ -4185,7 +4186,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation>Sjetite se postavke snage prema opsegu i načinu</translation>
+        <translation>Zapamti postavke snage prema opsegu i načinu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
@@ -4205,7 +4206,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation>T</translation>
+        <translation>Tune</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -4215,7 +4216,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
         <source>Loc&amp;ation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo&amp;kacija:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
@@ -4255,7 +4256,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Brojači. Pretražujte kroz dekodirane poruke, nazovite CQ ili Zaustavite Tx ako:</translation>
+        <translation>Brojači. Pretražujte kroz dekodirane poruke, nazovite CQ ili zaustavite Tx ako:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -4293,7 +4294,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Zaustavi TX, ako sam zvao korespondenta, on je odgovorio je drugom korespondentu</translation>
+        <translation>Zaustavi TX, ako sam zvao korespondenta, on je odgovorio drugom korespondentu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
@@ -4408,7 +4409,7 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Omogući automatsko logiranje QSOa</translation>
+        <translation>Automatsko logiranje QSOa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
@@ -5302,7 +5303,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4871"/>
         <source>JT65+JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4887"/>
