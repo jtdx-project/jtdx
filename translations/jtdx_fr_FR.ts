@@ -802,6 +802,16 @@ Error: %2 - %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../logqso.cpp" line="25"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logqso.cpp" line="26"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation type="unfinished"></translation>

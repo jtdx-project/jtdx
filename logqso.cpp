@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200216
-
 #include "logqso.h"
 
 #include <QTcpSocket>
@@ -24,6 +22,8 @@ LogQSO::LogQSO(QSettings * settings, Configuration const * config, QWidget *pare
   , m_config {config}
 {
   ui->setupUi(this);
+  ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&OK"));
+  ui->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
 //  setWindowTitle("JTDX " + versnumber.simplified () + " - Log QSO");
   setWindowTitle(QCoreApplication::applicationName () + " v" + QCoreApplication::applicationVersion () + " - Log QSO");
 

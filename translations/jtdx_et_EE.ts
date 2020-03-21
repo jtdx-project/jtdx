@@ -753,7 +753,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>QSO kinnitamiseks klõpsa nuppu OK:</translation>
+        <translation>QSO kinnitamiseks klõpsa nuppu Kinnita:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -827,6 +827,16 @@ Viga: %2 - %3</translation>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
         <translation>EQSL MSG</translation>
+    </message>
+    <message>
+        <location filename="../logqso.cpp" line="25"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Kinnita</translation>
+    </message>
+    <message>
+        <location filename="../logqso.cpp" line="26"/>
+        <source>&amp;Cancel</source>
+        <translation>Tü&amp;hista</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>

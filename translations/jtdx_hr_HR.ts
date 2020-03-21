@@ -805,6 +805,16 @@ Error: %2 - %3</source>
         <translation>EQSL poruka</translation>
     </message>
     <message>
+        <location filename="../logqso.cpp" line="25"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logqso.cpp" line="26"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
