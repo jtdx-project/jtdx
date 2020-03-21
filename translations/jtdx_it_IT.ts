@@ -52,7 +52,7 @@
     <message>
         <location filename="../GetUserId.cpp" line="29"/>
         <source>Callsign</source>
-        <translation></translation>
+        <translation>Nominativo</translation>
     </message>
 </context>
 <context>
@@ -94,7 +94,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
         <location filename="../Configuration.cpp" line="1350"/>
         <location filename="../Configuration.cpp" line="1386"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Inserisci ...</translation>
+        <translation>&amp;Inserisci...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2493"/>
@@ -104,7 +104,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     <message>
         <location filename="../Configuration.cpp" line="2494"/>
         <source>Serial port used for CAT control</source>
-        <translation>Porta seriale da usare il controllo del CAT</translation>
+        <translation>Porta seriale da usare il controllo CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2501"/>
@@ -129,7 +129,7 @@ Formati:
     <message>
         <location filename="../Configuration.cpp" line="2514"/>
         <source>USB Device:</source>
-        <translation>Device USB:</translation>
+        <translation>Periferica USB:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2515"/>
@@ -145,17 +145,17 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
-        <translation>Dispositivo ingresso errato</translation>
+        <translation>Dispositivo ingresso audio errato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
-        <translation>Dispositivo di uscita errato</translation>
+        <translation>Dispositivo di uscita audio errato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid PTT method</source>
-        <translation>Metodo invalito per il PTT</translation>
+        <translation>Metodo invalido per il PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2573"/>
@@ -165,12 +165,12 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
-        <translation>messaggio CQ/73</translation>
+        <translation>CQ/73 nel messaggio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
-        <translation>messaggio di CQ</translation>
+        <translation>CQ nel messaggio</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4014"/>
@@ -304,28 +304,28 @@ Formato:
     <message>
         <location filename="../WFPalette.cpp" line="198"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Inserisci ...</translation>
+        <translation>&amp;Inserisci...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="206"/>
         <source>Insert &amp;after ...</source>
-        <translation>Inserisci &amp;dopo ...</translation>
+        <translation>Inserisci &amp;dopo...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <source>Import Palette</source>
-        <translation>Importa palette colori</translation>
+        <translation>Importa tavolozza colori</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="221"/>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Palettes (*.pal)</source>
-        <translation>Palette (*.pal)</translation>
+        <translation>Tavolozza colori(*.pal)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="232"/>
         <source>Export Palette</source>
-        <translation>Esporta palette colori</translation>
+        <translation>Esporta tavolozza colori</translation>
     </message>
 </context>
 <context>
@@ -424,7 +424,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="213"/>
         <source>Add Frequency</source>
-        <translation>Add frequenza</translation>
+        <translation>Ag.gi frequenza</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="217"/>
@@ -3344,7 +3344,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="361"/>
         <source>  Palette </source>
-        <translation>  Tavolozza </translation>
+        <translation>  Tavolozza colori </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="377"/>
@@ -3359,7 +3359,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="401"/>
         <source>Select waterfall palette</source>
-        <translation>Seleziona la tavolozza della cascata</translation>
+        <translation>Seleziona la tavolozza colori della cascata</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="431"/>

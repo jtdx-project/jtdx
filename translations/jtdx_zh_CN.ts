@@ -508,7 +508,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HRDTransceiver.cpp" line="883"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation>Ham Radio Deluxe: 没有如预期的那样响应</translation>
+        <translation>Ham Radio Deluxe 没有如预期的那样响应</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1031"/>
@@ -587,7 +587,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="434"/>
         <source>opening connection to rig</source>
-        <translation>打开到的连接无线电设备</translation>
+        <translation>打开连接无线电设备</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="483"/>
@@ -1205,12 +1205,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;传送一个固定的音调. 可以在一般设置选项中设置 调试计时器.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;传送一个固定的音调. 可以在一般设置选项中设置 调谐计时器.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation>调试&amp;T</translation>
+        <translation>调谐&amp;T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -2714,7 +2714,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3707"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>是否一定要将用戶语言介面更改为英语，JTDX 将重新启动?</translation>
+        <translation>是否一定要将用戶语言介面更改为英语, JTDX 将重新启动?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>
@@ -2731,7 +2731,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="3881"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>请选择另一个发射频率. JTDX不会故意在米的 WSPR 子波段中发射另一种模式.</translation>
+        <translation>请选择另一个发射频率. JTDX不会故意在 WSPR 子波段中发射另一种模式.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3886"/>
@@ -4249,12 +4249,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1777"/>
         <source>Enable power memory during tuning</source>
-        <translation>启用保存在调试功率数值</translation>
+        <translation>启用保存在调谐功率数值</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation>调试</translation>
+        <translation>调谐</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -4796,7 +4796,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据 wsjtx_og.adi 日志文件中的数据,突出显示 DXCC 国家/地区的信息,这些邮件在模式中是新的.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据 wsjtx_og.adi 日志文件中的数据,突出显示 DXCC 国家/地区的信息,这些信息在模式中是新的.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -5076,7 +5076,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为非 (&quot;CQ&quot; 和 &quot;MyCall&quot;) 标准邮件设置文本颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为非 (&quot;CQ&quot; 和 &quot;MyCall&quot;) 标准信息设置文本颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3722"/>
