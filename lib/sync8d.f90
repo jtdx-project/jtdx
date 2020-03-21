@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200208
-
 subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd)
 
 ! Compute sync power for a complex, downsampled FT8 signal.
@@ -18,7 +16,7 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd)
 
 ! Set some constants and compute the csync array.  
 
-  sync=0; ctmp=cmplx(0.0,0.0)
+  sync=0.; ctmp=cmplx(0.0,0.0)
   do i=0,6                              !Sum over 7 Costas frequencies and
     i1=i0+i*32                         !three Costas arrays
     i2=i1+36*32

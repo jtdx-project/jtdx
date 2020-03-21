@@ -669,8 +669,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         endif
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
-        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (sync.lt.2.0 .and. nharderrors.gt.35) &
-          .or. (ipass.gt.2 .and. nharderrors.gt.39)) then
+        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then
 
           if(.not.lapon .or. k1.eq.2) cycle
 
