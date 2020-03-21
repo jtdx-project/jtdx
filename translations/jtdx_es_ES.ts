@@ -822,7 +822,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX  by HF community</source>
-        <translation>JTDX por la comunidad de HF</translation>
+        <translation>JTDX para la comunidad de HF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -951,7 +951,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Haga clic con el botón izquierdo del mouse para anunciar la llamada DX a dxsummit.fi (la detección se habilitará en la pestaña Informes de la configuración). Haga clic con el botón derecho del mouse para agregar indicativo al filtro &apos;Ocultar mensajes de indicativos&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Haga clic con el botón izquierdo del ratón para anunciar la llamada DX a dxsummit.fi (la detección se habilitará en la pestaña Informes de la configuración). Haga clic con el botón derecho del ratón para agregar indicativo al filtro &apos;Ocultar mensajes de indicativos&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -1006,7 +1006,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Habilita el modo FT8 DXpedition Hound. Haga clic con el botón derecho del mouse para habilitar el control de frecuencia TX del sabueso. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Habilita el modo FT8 DXpedition Hound. Haga clic con el botón derecho del ratón para habilitar el control de frecuencia TX HoundFC. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
@@ -1081,7 +1081,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hacer doble clic sobre un indicativo activa TX &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
@@ -1091,7 +1091,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Establezca la frecuencia de transmisión en Frecuencia de transmisión</translation>
+        <translation>Establece la frecuencia de transmisión en Frecuencia de recpción</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
@@ -1878,7 +1878,7 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     <message>
         <location filename="../mainwindow.ui" line="4644"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Eliminar todos los archivos * .wav &amp;&amp;* .c2 en SaveDir</translation>
+        <translation>Borrar todos los archivos * .wav y * .c2 en  directorio Save</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4655"/>
@@ -1920,7 +1920,7 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
-        <source>España</source>
+        <source>Español</source>
         <translation></translation>
     </message>
     <message>
@@ -2028,7 +2028,7 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     <message>
         <location filename="../mainwindow.ui" line="4856"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>Borrar el archivo QSO LOG wsjtx_log.adi</translation>
+        <translation>Borrar el archivo de LOG wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4861"/>
@@ -2409,7 +2409,7 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     <message>
         <location filename="../mainwindow.ui" line="5564"/>
         <source>Use hound TX frequency control</source>
-        <translation>Utilice el control de frecuencia TX del sabueso (Hound)</translation>
+        <translation>Utilice el control de frecuencia TX  HoundFC</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5572"/>

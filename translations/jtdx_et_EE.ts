@@ -1930,7 +1930,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
-        <source>España</source>
+        <source>Español</source>
         <translation></translation>
     </message>
     <message>

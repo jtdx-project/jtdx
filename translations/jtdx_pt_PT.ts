@@ -1887,7 +1887,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4682"/>
         <source>English</source>
-        <translation>Inglês</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4690"/>
@@ -1906,7 +1906,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
-        <source>España</source>
+        <source>Español</source>
         <translation></translation>
     </message>
     <message>

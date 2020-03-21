@@ -1892,7 +1892,7 @@ list. The list can be maintained in Settings (F2).</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
-        <source>España</source>
+        <source>Español</source>
         <translation></translation>
     </message>
     <message>
