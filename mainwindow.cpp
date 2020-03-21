@@ -2499,7 +2499,7 @@ void MainWindow::closeEvent(QCloseEvent * e)
   if(!b) proc_jtdxjt9.close();
   quitFile.remove();
 
-  if (m_exitCode == 1337) qApp->exit(1337);
+  if (m_exitCode == 1337) {m_wideGraph->saveSettings(); qApp->exit(1337);}
   else Q_EMIT finished ();
 
   QMainWindow::closeEvent (e);
@@ -3850,7 +3850,29 @@ void MainWindow::guiUpdate()
 
 // Don't transmit another mode in the 30 m WSPR sub-band
     Frequency onAirFreq = m_freqNominal + ui->TxFreqSpinBox->value();
-    if ((onAirFreq > 10139900 and onAirFreq < 10140320) and m_mode.left(4)!="WSPR") {
+    auto mhz = onAirFreq / 1000000;
+    Frequency f_from = 0;
+    Frequency f_to = 0;
+    switch (mhz)
+    {
+        case 1: {f_from = 1837930; f_to = 1838220; break;}
+        case 3: {f_from = 3569930; f_to = 3570220; break;}
+        case 5: {f_from = 5288530; f_to = 5288820; break;}
+        case 7: {f_from = 7039930; f_to = 7040220; break;}
+        case 10: {
+            if (m_mode.contains("JT65")) f_from = 10139900; else f_from = 10140030;
+            f_to = 10140320;
+            break;}
+        case 14: {f_from = 14096930; f_to = 14097220; break;}
+        case 18: {f_from = 18105930; f_to = 18106220; break;}
+        case 21: {f_from = 21095930; f_to = 21096220; break;}
+        case 24: {f_from = 24925930; f_to = 24926220; break;}
+        case 28: {f_from = 28125930; f_to = 28126220; break;}
+        case 50: {f_from = 50294370; f_to = 50294620; break;}
+        case 70: {f_from = 70092370; f_to = 70092620; break;}
+        default: {f_from = 0;  f_to = 0; break;}
+    }
+    if (f_from >0 and (onAirFreq > f_from and onAirFreq < f_to) and m_mode.left(4)!="WSPR") {
       m_bTxTime=false;
 //      if (m_tune) stop_tuning ();
       if (m_enableTx) enableTx_mode (false);
@@ -3858,7 +3880,7 @@ void MainWindow::guiUpdate()
         onAirFreq0=onAirFreq;
         auto const& message1 = tr ("Please choose another Tx frequency."
                                   " JTDX will not knowingly transmit another"
-                                  " mode in the WSPR sub-band on 30m.");
+                                  " mode in the WSPR sub-band.");
 #if QT_VERSION >= 0x050400
         QTimer::singleShot (0, [=] { // don't block guiUpdate
             MessageBox::warning_message (this, tr ("WSPR Guard Band"), message1);

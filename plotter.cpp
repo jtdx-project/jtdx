@@ -379,9 +379,21 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
     if((m_mode=="JT9+JT65" && m_topJT65 != m_fMin) || m_mode=="JT65") painter0.drawLine(x1,8,x1,28);
 	if(m_mode=="JT9+JT65" && m_topJT65 == m_fMin) painter0.drawLine(x1,20,x1,28);
   }
-
-  if(m_dialFreq>10.13 and m_dialFreq< 10.15) {
-    float f1=1.0e6*(10.1401 - m_dialFreq);
+  float f_quard = 0;
+  if(m_dialFreq>1.83 and m_dialFreq< 1.84) f_quard = 1.838;
+  else if(m_dialFreq>3.56 and m_dialFreq< 3.57) f_quard = 3.57;
+  else if(m_dialFreq>5.28 and m_dialFreq< 5.29) f_quard = 5.2886;
+  else if(m_dialFreq>7.03 and m_dialFreq< 7.05) f_quard = 7.04;
+  else if(m_dialFreq>10.13 and m_dialFreq< 10.15) f_quard = 10.1401;
+  else if(m_dialFreq>14.09 and m_dialFreq< 14.1) f_quard = 14.097;
+  else if(m_dialFreq>18.1 and m_dialFreq< 18.11) f_quard = 18.106;
+  else if(m_dialFreq>21.09 and m_dialFreq< 21.1) f_quard = 21.096;
+  else if(m_dialFreq>24.92 and m_dialFreq< 24.93) f_quard = 24.926;
+  else if(m_dialFreq>28.12 and m_dialFreq< 28.13) f_quard = 28.126;
+  else if(m_dialFreq>50.28 and m_dialFreq< 50.3) f_quard = 50.2944;
+  else if(m_dialFreq>70.08 and m_dialFreq< 70.1) f_quard = 70.0924;
+  if (f_quard >0) {
+    float f1=1.0e6*(f_quard - m_dialFreq);
     float f2=f1+200.0;
     x1=XfromFreq(f1); x2=XfromFreq(f2);
     if(x1<=m_w and x2>=0) {
