@@ -935,7 +935,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Consultare</translation>
+        <translation>&amp;Consulta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
@@ -1075,7 +1075,7 @@ Errore:%2 -%3</translation>
         <location filename="../mainwindow.ui" line="1677"/>
         <location filename="../mainwindow.ui" line="4538"/>
         <source>AutoSeq</source>
-        <translation>SeqAuto</translation>
+        <translation>AutoSeq</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
@@ -1220,7 +1220,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Monitoraggio</translation>
+        <translation>&amp;Monitora</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
@@ -1290,7 +1290,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation>&amp;ferma Tx</translation>
+        <translation>&amp;Ferma Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
@@ -1300,7 +1300,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation>Logga il &amp;QSO</translation>
+        <translation>&amp;QSO a Log</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
@@ -1330,7 +1330,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translation>Suggerimento</translation>
+        <translation>Dritta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
@@ -1360,7 +1360,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation>Cancella D&amp;X</translation>
+        <translation>Canc D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -2257,12 +2257,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5228"/>
         <source>0  Call None</source>
-        <translation>0  No Nom</translation>
+        <translation>0 Senza Nominativo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5236"/>
         <source>1  Call first</source>
-        <translation>1 Prima Nom</translation>
+        <translation>1 Primo Nominativo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5244"/>
@@ -2272,7 +2272,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5252"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation></translation>
+        <translation>2 Nominato codificato fino all&apos;inizio dell&apos;intervallo TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5260"/>
@@ -2292,7 +2292,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5284"/>
         <source>Answer worked B4 calls</source>
-        <translation>Rispondi a nominativi già LAVORATI</translation>
+        <translation>Rispondi a Nominativi già LAVORATI</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5295"/>
@@ -2327,7 +2327,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5392"/>
         <source>Max distance instead of best SNR</source>
-        <translation>Distanza massima invece del miglior SNR</translation>
+        <translation>Distanza massima invece del miglior Segnale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5400"/>
@@ -2715,7 +2715,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <location filename="../mainwindow.cpp" line="3707"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Sei sicuro di cambiare la lingua dall&apos;Italiano (JTDX sarà riavviato)?</translation>
+        <translation>Sei sicuro di cambiare la lingua dall&apos;Inglese (JTDX sarà riavviato)?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>
@@ -2763,7 +2763,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4228"/>
         <source>Receiving </source>
-        <translation>Ricevente </translation>
+        <translation>Sto ricevendo </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4281"/>
