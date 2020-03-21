@@ -58,6 +58,16 @@
 <context>
     <name>Configuration::impl</name>
     <message>
+        <location filename="../Configuration.cpp" line="1111"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Kinnita</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1112"/>
+        <source>&amp;Cancel</source>
+        <translation>Tü&amp;hista</translation>
+    </message>
+    <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
         <translation>Ajutise kataloogi loomise viga: </translation>
@@ -425,17 +435,17 @@ Viga: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="213"/>
+        <location filename="../Configuration.cpp" line="211"/>
         <source>Add Frequency</source>
         <translation>Lisage sagedus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="217"/>
+        <location filename="../Configuration.cpp" line="215"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Tööliik:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="218"/>
+        <location filename="../Configuration.cpp" line="216"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Sagedus (MHz):</translation>
     </message>
@@ -3201,22 +3211,22 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="252"/>
+        <location filename="../Configuration.cpp" line="250"/>
         <source>Add Station</source>
         <translation>Lisage jaam</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="257"/>
+        <location filename="../Configuration.cpp" line="255"/>
         <source>&amp;Band:</source>
         <translation>&amp;Band:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="258"/>
+        <location filename="../Configuration.cpp" line="256"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Nihe (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="259"/>
+        <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenn:</translation>
     </message>

@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200207
-
 #include "Configuration.hpp"
 
 //
@@ -1110,6 +1108,8 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   ui_->setupUi (this);
 
   {
+    ui_->configuration_dialog_button_box->button(QDialogButtonBox::Ok)->setText(tr("&OK"));
+    ui_->configuration_dialog_button_box->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
     // Create a temporary directory in a suitable location
     QString temp_location {QStandardPaths::writableLocation (QStandardPaths::TempLocation)};
     if (!temp_location.isEmpty ())

@@ -58,6 +58,16 @@
 <context>
     <name>Configuration::impl</name>
     <message>
+        <location filename="../Configuration.cpp" line="1111"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1112"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Configuration.cpp" line="1127"/>
         <source>Create temporary directory error: </source>
         <translation>Ошибка создания временной папки: </translation>
@@ -422,17 +432,17 @@ Error: %2 - %3</source>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="213"/>
+        <location filename="../Configuration.cpp" line="211"/>
         <source>Add Frequency</source>
         <translation>Добавить частоту</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="217"/>
+        <location filename="../Configuration.cpp" line="215"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Вид:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="218"/>
+        <location filename="../Configuration.cpp" line="216"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Частота (mHz):</translation>
     </message>
@@ -3194,22 +3204,22 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="252"/>
+        <location filename="../Configuration.cpp" line="250"/>
         <source>Add Station</source>
         <translation>Добавить станцию</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="257"/>
+        <location filename="../Configuration.cpp" line="255"/>
         <source>&amp;Band:</source>
         <translation>&amp;Диапазон:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="258"/>
+        <location filename="../Configuration.cpp" line="256"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Смещение (мГц):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="259"/>
+        <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Антенна:</translation>
     </message>
