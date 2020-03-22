@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1111"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1112"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
@@ -299,12 +299,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -343,7 +343,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Tempo cinza:</translation>
+        <translation>Hora da Gray:</translation>
     </message>
 </context>
 <context>
@@ -821,12 +821,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="25"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="26"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -968,7 +968,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar activa no separador Reportes das configurações).Clique com botão direito do rato para adicionar indicativos á função de filtros &apos;Esconder mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar activa na aba Reportes das configurações).Clique com botão direito do rato para adicionar indicativos á função de filtros &apos;Esconder mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -1223,7 +1223,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmite um tom puro. O tempo de sintonia pode ser definido no separador Geral das configurações&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmite um tom puro. O tempo de sintonia pode ser definido na aba Geral das configurações&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
@@ -1243,7 +1243,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ignorar a opção de todos os filtros de texto, duplica a acção no separador Misc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ignorar a opção de todos os filtros de texto, duplica a acção na aba Misc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
@@ -3471,7 +3471,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>Seleccione o separador para modificar os parâmetros da configuração.</translation>
+        <translation>Seleccione a aba para modificar os parâmetros da configuração.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -4318,7 +4318,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSeq 1..3: chama CQ quando o contador for atingido. AutoSeq 6/7: procura nas mensagens descodificadas por qualquer mensagem &apos;CQ&apos; ou &apos;73&apos; válida, chama CQ se não houver nenhuma dessas mensagens encontradas. Interrompe o Tx se a opção QSO de captura única estiver ativada no separador AutoSeq. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSeq 1..3: chama CQ quando o contador for atingido. AutoSeq 6/7: procura nas mensagens descodificadas por qualquer mensagem &apos;CQ&apos; ou &apos;73&apos; válida, chama CQ se não houver nenhuma dessas mensagens encontradas. Interrompe o Tx se a opção QSO de captura única estiver ativada na aba AutoSeq. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
