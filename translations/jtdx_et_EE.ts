@@ -307,34 +307,44 @@ Vorming:
 <context>
     <name>Designer</name>
     <message>
-        <location filename="../WFPalette.cpp" line="189"/>
+        <location filename="../WFPalette.cpp" line="122"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Kinnita</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="123"/>
+        <source>&amp;Cancel</source>
+        <translation>Tü&amp;hista</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kustuta</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="198"/>
+        <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Lisa ...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="206"/>
+        <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
         <translatorcomment>Siia oleks vaja paremat tõlget</translatorcomment>
         <translation>Lisa &amp;järgmiseks ...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
+        <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
         <translation>Impordi värvid</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="223"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
         <translation>Värvid (*.pal)</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
         <translation>Ekspordi värvid</translation>
     </message>
@@ -3004,7 +3014,7 @@ UDP server %2:%3</translation>
         <translation>Viga jugapaleti faili avamisel: &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="250"/>
+        <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Viga jugapaleti faili kirjutamisel &quot;%1&quot;: %2.</translation>
     </message>

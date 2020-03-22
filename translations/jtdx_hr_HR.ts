@@ -296,33 +296,43 @@ Format:
 <context>
     <name>Designer</name>
     <message>
-        <location filename="../WFPalette.cpp" line="189"/>
+        <location filename="../WFPalette.cpp" line="122"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="123"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
         <translation>&amp;Obriši</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="198"/>
+        <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Ubaci...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="206"/>
+        <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
         <translation>Ubaci &amp;nakon ...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
+        <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
         <translation>Uvezi Paletu</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="223"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
         <translation>Paleta (*.pal)</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
         <translation>Izvezi paletu</translation>
     </message>
@@ -2953,7 +2963,7 @@ UDP server %2:%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="250"/>
+        <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Pogreška pri pisanju datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>

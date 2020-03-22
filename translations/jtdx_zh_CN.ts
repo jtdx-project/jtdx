@@ -307,33 +307,43 @@ Format:
 <context>
     <name>Designer</name>
     <message>
-        <location filename="../WFPalette.cpp" line="189"/>
+        <location filename="../WFPalette.cpp" line="122"/>
+        <source>&amp;OK</source>
+        <translation>确定&amp;O</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="123"/>
+        <source>&amp;Cancel</source>
+        <translation>取消&amp;C</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
         <translation>删除&amp;D</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="198"/>
+        <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
         <translation>插入&amp;I...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="206"/>
+        <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
         <translation>插入之后&amp;a...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
+        <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
         <translation>导入调色板</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="223"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
         <translation>调色板 (*.pal)</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
         <translation>导出调色板</translation>
     </message>
@@ -2982,7 +2992,7 @@ UDP 服务器 %2:%3</translation>
         <translation>读取瀑布调色板文件时出错 &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="250"/>
+        <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>读取瀑布调色板文件时出错 &quot;%1&quot;: %2.</translation>
     </message>

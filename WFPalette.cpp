@@ -119,6 +119,8 @@ namespace
       , colours_ {current}
     {
       ui_.setupUi (this);
+      ui_.button_box->button(QDialogButtonBox::Ok)->setText(tr("&OK"));
+      ui_.button_box->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
 
       // context menu actions
       auto import_button = ui_.button_box->addButton ("&Import...", QDialogButtonBox::ActionRole);
