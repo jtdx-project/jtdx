@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1111"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>确定&amp;O</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1112"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
@@ -823,12 +823,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="25"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>确定&amp;O</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="26"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>

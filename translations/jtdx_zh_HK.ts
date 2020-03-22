@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1111"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>確定&amp;O</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1112"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
@@ -823,12 +823,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="25"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>確定&amp;O</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="26"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -2734,7 +2734,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3707"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>是否一定要將用戶語言介面更改為英語, JTDX 將重新開機?</translation>
+        <translation>是否一定要將用戶語言介面更改為英語, JTDX 將重新啟動?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>
