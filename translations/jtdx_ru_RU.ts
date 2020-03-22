@@ -4399,7 +4399,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
         <source>Canned free text messages setup</source>
-        <translation>Настрока макросов</translation>
+        <translation>Настройка макросов</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
