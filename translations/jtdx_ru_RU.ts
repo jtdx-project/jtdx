@@ -65,7 +65,7 @@
     <message>
         <location filename="../Configuration.cpp" line="1112"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1127"/>
@@ -408,7 +408,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation type="unfinished"></translation>
+        <translation>Содержание записей должно иметь правильное имя</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
@@ -828,7 +828,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="26"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -1300,7 +1300,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation>Р&amp;азре. Tx</translation>
+        <translation>Р&amp;азреш. Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
@@ -4389,12 +4389,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
         <source>Canned free text messages setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Настрока макросов</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Добавить</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
