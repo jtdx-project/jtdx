@@ -1163,9 +1163,10 @@ if(.not.lchkcall) then
 ! Gabon TR
     else if(callsign(1:2).eq.'TR') then
       if(callsign(1:5).eq.'TR8CA' .or. &
-         (grid(1:2).eq.'JJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'3').or. &
-         (grid(1:2).eq.'JI' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':')) &
-        lgvalid=.true.
+         (grid(1:2).eq.'JJ' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2').or. &
+          grid(3:4).eq.'52' .or. grid(3:4).eq.'62')) .or. &
+         (grid(1:2).eq.'JI' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':') .or. &
+          grid(3:4).eq.'56'))) lgvalid=.true.
 
 ! Tunisia 3V,TS
     else if(callsign(1:2).eq.'TS') then
