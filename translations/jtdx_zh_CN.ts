@@ -755,7 +755,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>单击 “确定” 确认以下通联:</translation>
+        <translation>单击 确定 确认以下通联:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -2744,7 +2744,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3707"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>是否一定要将用戶语言介面更改为英语, JTDX 将重新启动?</translation>
+        <translation>是否一定要将用戶语言介面更改为简体中文, JTDX 将重新启动?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>

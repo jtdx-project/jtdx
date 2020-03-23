@@ -6,7 +6,7 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation>Laineala</translation>
+        <translation>Laineala nimetus</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
@@ -1827,7 +1827,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4493"/>
         <source>Mode</source>
-        <translation></translation>
+        <translation>Tööliik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4505"/>
@@ -2788,7 +2788,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
         <location filename="../mainwindow.cpp" line="3886"/>
         <location filename="../mainwindow.cpp" line="3889"/>
         <source>WSPR Guard Band</source>
-        <translation>WSPR bänd</translation>
+        <translation>WSPR laineala valvur</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4007"/>
@@ -2950,7 +2950,7 @@ UDP server %2:%3</translation>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Tööliik</translation>
     </message>
 </context>
 <context>
@@ -3238,7 +3238,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="255"/>
         <source>&amp;Band:</source>
-        <translation>&amp;Band:</translation>
+        <translation>&amp;Laineala:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="256"/>
@@ -3256,7 +3256,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
-        <translation>Laineala</translation>
+        <translation>Laineala nimetus</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="317"/>
@@ -3271,7 +3271,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
-        <translation>Band</translation>
+        <translation>Laineala</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="362"/>
@@ -3615,7 +3615,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>Vaherida perioodide vahel bandi aktiivsuse aknas.</translation>
+        <translation>Vaherida perioodide vahel laineala aktiivsuse aknas.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -4268,7 +4268,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation>Pea meeles toitesätteid riba ja režiimi järgi</translation>
+        <translation>Pea meeles väljundvõimsusesätteid riba ja režiimi järgi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
@@ -4726,7 +4726,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2941"/>
         <source>Default frequencies and band specific station details setup</source>
-        <translation>Vaikesagedused ja spetsiifilised rigide seadistused</translation>
+        <translation>Vaikesagedused ja laineala spetsiifilised rigide seadistused</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
@@ -4817,7 +4817,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3300"/>
         <location filename="../Configuration.ui" line="3340"/>
         <source>per band</source>
-        <translation>bändi kohta</translation>
+        <translation>laineala kohta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
@@ -4830,7 +4830,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3310"/>
         <location filename="../Configuration.ui" line="3350"/>
         <source>per mode</source>
-        <translation>mode kohta</translation>
+        <translation>tööliigi kohta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3237"/>
@@ -4901,7 +4901,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile kutsungitega sõnumid, mis on vastavalt logifaili wsjtx_log.adi andmetele uued.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile kutsungitega sõnumid, mis on vastavalt logifaili wsjtx_log.adi andmetele uued laineala järgi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3347"/>
@@ -4931,7 +4931,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3383"/>
         <source>strike it</source>
-        <translation>kustuta</translation>
+        <translation>joon läbi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3390"/>
@@ -5117,7 +5117,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3871"/>
         <source>New DXCC on Band/Mode</source>
-        <translation>Uus DXCC bandis/ modes</translation>
+        <translation>Uus DXCC lainealas/tööliigis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3941"/>
@@ -5127,7 +5127,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4011"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Uus ruut Bandis/Modes</translation>
+        <translation>Uus ruut lainealas/tööliigis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4081"/>
@@ -5137,7 +5137,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4151"/>
         <source>New Prefix on Band/Mode</source>
-        <translation>Uus Prefix on Bandis/Modes</translation>
+        <translation>Uus Prefix lainealas/tööliigis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4221"/>
@@ -5147,7 +5147,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4291"/>
         <source>New Call on Band/Mode</source>
-        <translation>Uus kutsung Bandis/Modes</translation>
+        <translation>Uus kutsung lainealas/tööliigis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4361"/>
@@ -5362,12 +5362,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4825"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automaatne bandi vahetus vastavalt määratletud ajakavale&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automaatne laineala vahetus vastavalt määratletud ajakavale&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
         <source>Band scheduler configuration</source>
-        <translation>Bändi planeerija konfiguratsioon</translation>
+        <translation>Laineala planeerija konfiguratsioon</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4838"/>
@@ -5382,7 +5382,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation></translation>
+        <translation>Laineala</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>
@@ -5724,17 +5724,17 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5880"/>
         <location filename="../Configuration.ui" line="6137"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali laineala&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6186"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bändi ajakava aktiveerimine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Laineala ajakava aktiveerimine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6189"/>
         <source>Use band scheduler</source>
-        <translation>Kasutage ribaplaneerijat</translation>
+        <translation>Kasutage laineala planeerijat</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6212"/>
