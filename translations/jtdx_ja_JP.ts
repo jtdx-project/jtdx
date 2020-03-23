@@ -2543,6 +2543,17 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>jtdxjt9.exeプロセスの強制終了エラー</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="890"/>
+        <location filename="../mainwindow.cpp" line="891"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="5919"/>
+        <location filename="../mainwindow.cpp" line="5920"/>
+        <location filename="../mainwindow.cpp" line="5975"/>
+        <location filename="../mainwindow.cpp" line="5976"/>
+        <source>Freq   Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="913"/>
         <source>KillByName return code: %1</source>
         <translation>KillByNameリターンコード：%1</translation>
@@ -2720,6 +2731,11 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>特別なマウスコマンド</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <source>Avg=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3398"/>
         <location filename="../mainwindow.cpp" line="3405"/>
         <source>check time</source>
@@ -2850,6 +2866,11 @@ UDP server %2:%3</source>
         <location filename="../mainwindow.cpp" line="5876"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5966"/>
+        <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6510"/>

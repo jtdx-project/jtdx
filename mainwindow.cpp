@@ -887,8 +887,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   readSettings();		         //Restore user's setup params
 
   QString t;
-  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-  else t = "UTC   dB   DT Freq   Message";
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+  else t = "UTC   dB   DT "+tr("Freq   Message");
   ui->decodedTextLabel->setText(t);
   ui->decodedTextLabel2->setText(t);
 
@@ -3390,7 +3390,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB  DT  Freq   Message Avg=" + avexdt);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq   Message")+" "+tr("Avg=") + avexdt);
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -5916,8 +5916,8 @@ void MainWindow::commonActions ()
   m_wideGraph->show();
   mode_label->setText(m_mode);
   QString t;
-  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-  else t = "UTC   dB   DT Freq   Message";
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+  else t = "UTC   dB   DT "+tr("Freq   Message");
   ui->decodedTextLabel->setText(t);
   ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
   ui->label_6->setText(tr("Band Activity"));
@@ -5963,7 +5963,7 @@ void MainWindow::WSPR_config(bool b)
   ui->AutoTxButton->setEnabled(!b);
   ui->AutoSeqButton->setEnabled(!b);
   if(b) {
-    ui->decodedTextLabel->setText("UTC    dB   DT     Freq     Drift  Call          Grid    dBm   Dist");
+    ui->decodedTextLabel->setText("UTC    dB   DT "+tr("    Freq     Drift  Call          Grid    dBm   Dist"));
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
     ui->label_6->setText(tr("Band Activity"));
     if (m_config.is_transceiver_online ()) {
@@ -5972,8 +5972,8 @@ void MainWindow::WSPR_config(bool b)
     m_bSimplex = true;
   } else {
     QString t;
-    if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-    else t = "UTC   dB   DT Freq   Message";
+    if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+    else t = "UTC   dB   DT "+tr("Freq   Message");
     ui->decodedTextLabel->setText(t);
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
     ui->label_6->setText(tr("Band Activity"));
