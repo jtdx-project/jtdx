@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1111"/>
+        <location filename="../Configuration.cpp" line="1117"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1112"/>
+        <location filename="../Configuration.cpp" line="1118"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1127"/>
+        <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error: </source>
         <translation>Ajutise kataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1133"/>
+        <location filename="../Configuration.cpp" line="1139"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,47 +82,47 @@ Another application may be locking the directory</source>
 Teine rakendus võib olla kataloogi lukustanud</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1150"/>
+        <location filename="../Configuration.cpp" line="1156"/>
         <source>Create data directory error: </source>
         <translation>Andmekataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1159"/>
-        <location filename="../Configuration.cpp" line="1170"/>
+        <location filename="../Configuration.cpp" line="1165"/>
+        <location filename="../Configuration.cpp" line="1176"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Kataloogi ei saa luua &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1324"/>
-        <location filename="../Configuration.cpp" line="1346"/>
-        <location filename="../Configuration.cpp" line="1382"/>
+        <location filename="../Configuration.cpp" line="1330"/>
+        <location filename="../Configuration.cpp" line="1352"/>
+        <location filename="../Configuration.cpp" line="1388"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kustuta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1350"/>
-        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1356"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Lisa ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2493"/>
+        <location filename="../Configuration.cpp" line="2499"/>
         <source>Serial Port:</source>
         <translation>Jadaport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2494"/>
+        <location filename="../Configuration.cpp" line="2500"/>
         <source>Serial port used for CAT control</source>
         <translation>CAT-kontrolli jadaport</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2501"/>
+        <location filename="../Configuration.cpp" line="2507"/>
         <source>Network Server:</source>
         <translation>Võrguserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2502"/>
+        <location filename="../Configuration.cpp" line="2508"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -137,12 +137,12 @@ Vormingud:
 	[IPv6-aadress]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2514"/>
+        <location filename="../Configuration.cpp" line="2520"/>
         <source>USB Device:</source>
         <translation>USB-seade:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2515"/>
+        <location filename="../Configuration.cpp" line="2521"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -153,62 +153,62 @@ Vorming:
 	[VID[:PID[:TARNIJA[:TOODE]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2550"/>
+        <location filename="../Configuration.cpp" line="2556"/>
         <source>Invalid audio input device</source>
         <translation>Vale helisisend</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2557"/>
+        <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid audio output device</source>
         <translation>Vale heliväljund</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2563"/>
+        <location filename="../Configuration.cpp" line="2569"/>
         <source>Invalid PTT method</source>
         <translation>Vale PTT- meetod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2573"/>
+        <location filename="../Configuration.cpp" line="2579"/>
         <source>Invalid PTT port</source>
         <translation>Vale PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3046"/>
+        <location filename="../Configuration.cpp" line="3052"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3047"/>
+        <location filename="../Configuration.cpp" line="3053"/>
         <source>CQ in message</source>
         <translation>CQ sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4014"/>
+        <location filename="../Configuration.cpp" line="4020"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX dekodeeritud teksti fondi valik</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4589"/>
+        <location filename="../Configuration.cpp" line="4595"/>
         <source>Reset Working Frequencies</source>
         <translation>Töösageduste lähtestamine</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4590"/>
+        <location filename="../Configuration.cpp" line="4596"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Kas soovite tõesti loobuda oma praegustest töösagedustest ja asendada need vaikesagedustega?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4645"/>
+        <location filename="../Configuration.cpp" line="4651"/>
         <source>Save Directory</source>
         <translation>Salvesta kataloogi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4661"/>
+        <location filename="../Configuration.cpp" line="4667"/>
         <source>Failed to open connection to rig</source>
         <translation>Raadioga ühenduse loomine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4873"/>
+        <location filename="../Configuration.cpp" line="4879"/>
         <source>Rig failure</source>
         <translation>Raadio viga</translation>
     </message>
@@ -445,44 +445,54 @@ Viga: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="211"/>
+        <location filename="../Configuration.cpp" line="212"/>
         <source>Add Frequency</source>
         <translation>Lisage sagedus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="215"/>
+        <location filename="../Configuration.cpp" line="216"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Tööliik:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="216"/>
+        <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Sagedus (MHz):</translation>
     </message>
+    <message>
+        <location filename="../Configuration.cpp" line="223"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Kinnita</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="224"/>
+        <source>&amp;Cancel</source>
+        <translation>Tü&amp;hista</translation>
+    </message>
 </context>
 <context>
-    <name>FrequencyList</name>
+    <name>FrequencyList::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="431"/>
-        <location filename="../FrequencyList.cpp" line="587"/>
+        <location filename="../FrequencyList.cpp" line="434"/>
+        <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode</source>
         <translation>Tööliik</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="463"/>
-        <location filename="../FrequencyList.cpp" line="588"/>
+        <location filename="../FrequencyList.cpp" line="466"/>
+        <location filename="../FrequencyList.cpp" line="591"/>
         <source>Frequency</source>
         <translation>Sagedus</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="495"/>
-        <location filename="../FrequencyList.cpp" line="589"/>
+        <location filename="../FrequencyList.cpp" line="498"/>
+        <location filename="../FrequencyList.cpp" line="592"/>
         <source>Frequency (MHz)</source>
         <translation>Sagedus (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="518"/>
-        <location filename="../FrequencyList.cpp" line="590"/>
+        <location filename="../FrequencyList.cpp" line="521"/>
+        <location filename="../FrequencyList.cpp" line="593"/>
         <source>Mode Frequency</source>
         <translation>Tööliigi sagedus</translation>
     </message>
@@ -3231,55 +3241,65 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="250"/>
+        <location filename="../Configuration.cpp" line="254"/>
         <source>Add Station</source>
         <translation>Lisage jaam</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="255"/>
+        <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Band:</source>
         <translation>&amp;Laineala:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="256"/>
+        <location filename="../Configuration.cpp" line="260"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Nihe (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="257"/>
+        <location filename="../Configuration.cpp" line="261"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenn:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="267"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Kinnita</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="268"/>
+        <source>&amp;Cancel</source>
+        <translation>Tü&amp;hista</translation>
     </message>
 </context>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="291"/>
+        <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
         <translation>Laineala nimetus</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="317"/>
+        <location filename="../StationList.cpp" line="322"/>
         <source>Frequency offset</source>
         <translation>Sageduse nihe</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="339"/>
+        <location filename="../StationList.cpp" line="344"/>
         <source>Antenna description</source>
         <translation>Antenni kirjeldus</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="361"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
         <translation>Laineala</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="362"/>
+        <location filename="../StationList.cpp" line="367"/>
         <source>Offset</source>
         <translation>Nihe</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="363"/>
+        <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
         <translation>Antenni kirjeldus</translation>
     </message>
@@ -5157,7 +5177,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>Worked one</source>
-        <translation>Töötas üks</translation>
+        <translation>Töötatud</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4461"/>

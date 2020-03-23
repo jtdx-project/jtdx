@@ -49,6 +49,8 @@ QDataStream& operator >> (QDataStream& is, StationList::Station& station)
 class StationList::impl final
   : public QAbstractTableModel
 {
+  Q_OBJECT
+
 public:
   impl (Bands const * bands, Stations stations, QObject * parent)
     : QAbstractTableModel {parent}
@@ -93,6 +95,9 @@ public:
   Bands const * bands_;
   Stations stations_;
 };
+
+#include "StationList.moc"
+#include "moc_StationList.cpp"
 
 StationList::StationList (Bands const * bands, QObject * parent)
   : StationList {bands, {}, parent}

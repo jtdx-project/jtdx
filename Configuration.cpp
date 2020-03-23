@@ -201,6 +201,7 @@ namespace
 class FrequencyDialog final
   : public QDialog
 {
+  Q_OBJECT
 public:
   using Item = FrequencyList::Item;
 
@@ -219,6 +220,8 @@ public:
     main_layout->addLayout (form_layout);
 
     auto button_box = new QDialogButtonBox {QDialogButtonBox::Ok | QDialogButtonBox::Cancel};
+    button_box->button(QDialogButtonBox::Ok)->setText(tr("&OK"));
+    button_box->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
     main_layout->addWidget (button_box);
 
     connect (button_box, &QDialogButtonBox::accepted, this, &FrequencyDialog::accept);
@@ -242,6 +245,7 @@ private:
 class StationDialog final
   : public QDialog
 {
+  Q_OBJECT
 public:
   explicit StationDialog (StationList const * stations, Bands * bands, QWidget * parent = nullptr)
     : QDialog {parent}
@@ -260,6 +264,8 @@ public:
     main_layout->addLayout (form_layout);
 
     auto button_box = new QDialogButtonBox {QDialogButtonBox::Ok | QDialogButtonBox::Cancel};
+    button_box->button(QDialogButtonBox::Ok)->setText(tr("&OK"));
+    button_box->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
     main_layout->addWidget (button_box);
 
     connect (button_box, &QDialogButtonBox::accepted, this, &StationDialog::accept);

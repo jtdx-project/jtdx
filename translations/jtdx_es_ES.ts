@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1111"/>
+        <location filename="../Configuration.cpp" line="1117"/>
         <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1112"/>
+        <location filename="../Configuration.cpp" line="1118"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1127"/>
+        <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error: </source>
         <translation>Error crear directorio temporal: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1133"/>
+        <location filename="../Configuration.cpp" line="1139"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,48 +82,48 @@ Another application may be locking the directory</source>
 Otra aplicación puede estar bloqueando el directorio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1150"/>
+        <location filename="../Configuration.cpp" line="1156"/>
         <source>Create data directory error: </source>
         <translation>Error creando directorio de datos: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1159"/>
-        <location filename="../Configuration.cpp" line="1170"/>
+        <location filename="../Configuration.cpp" line="1165"/>
+        <location filename="../Configuration.cpp" line="1176"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translatorcomment>No se puede crear el directorio &quot;</translatorcomment>
         <translation>Crear directorio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1324"/>
-        <location filename="../Configuration.cpp" line="1346"/>
-        <location filename="../Configuration.cpp" line="1382"/>
+        <location filename="../Configuration.cpp" line="1330"/>
+        <location filename="../Configuration.cpp" line="1352"/>
+        <location filename="../Configuration.cpp" line="1388"/>
         <source>&amp;Delete</source>
         <translation>&amp;Eliminar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1350"/>
-        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1356"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Insertar ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2493"/>
+        <location filename="../Configuration.cpp" line="2499"/>
         <source>Serial Port:</source>
         <translation>Puerto serie:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2494"/>
+        <location filename="../Configuration.cpp" line="2500"/>
         <source>Serial port used for CAT control</source>
         <translation>Puerto serie utilizado para control CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2501"/>
+        <location filename="../Configuration.cpp" line="2507"/>
         <source>Network Server:</source>
         <translation>Servidor de red:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2502"/>
+        <location filename="../Configuration.cpp" line="2508"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -138,12 +138,12 @@ Dirección IPv4: puerto
 [Dirección IPv6]: puerto</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2514"/>
+        <location filename="../Configuration.cpp" line="2520"/>
         <source>USB Device:</source>
         <translation>Dispositivo USB:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2515"/>
+        <location filename="../Configuration.cpp" line="2521"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -154,62 +154,62 @@ Formato:
 [VID [: PID [: VENDEDOR [: PRODUCTO]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2550"/>
+        <location filename="../Configuration.cpp" line="2556"/>
         <source>Invalid audio input device</source>
         <translation>Dispositivo de entrada de audio no válido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2557"/>
+        <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid audio output device</source>
         <translation>Dispositivo de salida de audio no válido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2563"/>
+        <location filename="../Configuration.cpp" line="2569"/>
         <source>Invalid PTT method</source>
         <translation>Método de PTT no válido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2573"/>
+        <location filename="../Configuration.cpp" line="2579"/>
         <source>Invalid PTT port</source>
         <translation>Puerto PTT no válido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3046"/>
+        <location filename="../Configuration.cpp" line="3052"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 en mensaje</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3047"/>
+        <location filename="../Configuration.cpp" line="3053"/>
         <source>CQ in message</source>
         <translation>CQ en mensaje</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4014"/>
+        <location filename="../Configuration.cpp" line="4020"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>Selector de fuentes de texto decodificado JTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4589"/>
+        <location filename="../Configuration.cpp" line="4595"/>
         <source>Reset Working Frequencies</source>
         <translation>Restablecer frecuencias de trabajo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4590"/>
+        <location filename="../Configuration.cpp" line="4596"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>¿Está seguro de que desea descartar sus frecuencias de trabajo actuales y reemplazarlas con las predeterminadas?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4645"/>
+        <location filename="../Configuration.cpp" line="4651"/>
         <source>Save Directory</source>
         <translation>Guardar directorio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4661"/>
+        <location filename="../Configuration.cpp" line="4667"/>
         <source>Failed to open connection to rig</source>
         <translation>Error al abrir la conexión con el equipo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4873"/>
+        <location filename="../Configuration.cpp" line="4879"/>
         <source>Rig failure</source>
         <translation>Fallo del equipo</translation>
     </message>
@@ -443,44 +443,54 @@ Error: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="211"/>
+        <location filename="../Configuration.cpp" line="212"/>
         <source>Add Frequency</source>
         <translation>Agregar frecuencia</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="215"/>
+        <location filename="../Configuration.cpp" line="216"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Modo:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="216"/>
+        <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Frecuencia (MHz):</translation>
     </message>
+    <message>
+        <location filename="../Configuration.cpp" line="223"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="224"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
-    <name>FrequencyList</name>
+    <name>FrequencyList::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="431"/>
-        <location filename="../FrequencyList.cpp" line="587"/>
+        <location filename="../FrequencyList.cpp" line="434"/>
+        <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="463"/>
-        <location filename="../FrequencyList.cpp" line="588"/>
+        <location filename="../FrequencyList.cpp" line="466"/>
+        <location filename="../FrequencyList.cpp" line="591"/>
         <source>Frequency</source>
         <translation>Frecuencia</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="495"/>
-        <location filename="../FrequencyList.cpp" line="589"/>
+        <location filename="../FrequencyList.cpp" line="498"/>
+        <location filename="../FrequencyList.cpp" line="592"/>
         <source>Frequency (MHz)</source>
         <translation>Frecuencia (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="518"/>
-        <location filename="../FrequencyList.cpp" line="590"/>
+        <location filename="../FrequencyList.cpp" line="521"/>
+        <location filename="../FrequencyList.cpp" line="593"/>
         <source>Mode Frequency</source>
         <translation>Frecuencia de modo</translation>
     </message>
@@ -3225,55 +3235,65 @@ Error (%2): %3</translation>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="250"/>
+        <location filename="../Configuration.cpp" line="254"/>
         <source>Add Station</source>
         <translation>Agregar estación</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="255"/>
+        <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Band:</source>
         <translation>&amp;Banda:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="256"/>
+        <location filename="../Configuration.cpp" line="260"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Offset (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="257"/>
+        <location filename="../Configuration.cpp" line="261"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antena:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="267"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="268"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="291"/>
+        <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
         <translation>Nombre de banda</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="317"/>
+        <location filename="../StationList.cpp" line="322"/>
         <source>Frequency offset</source>
         <translation>Frecuencia offset</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="339"/>
+        <location filename="../StationList.cpp" line="344"/>
         <source>Antenna description</source>
         <translation>Descripcion de antena</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="361"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
         <translation>Banda</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="362"/>
+        <location filename="../StationList.cpp" line="367"/>
         <source>Offset</source>
         <translation>Offset</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="363"/>
+        <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
         <translation>Descripción de antena</translation>
     </message>

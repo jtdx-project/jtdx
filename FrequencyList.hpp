@@ -38,7 +38,7 @@ class Bands;
 class FrequencyList final
   : public QSortFilterProxyModel
 {
-  Q_OBJECT;
+  Q_OBJECT
 
 public:
   using Frequency = Radio::Frequency;

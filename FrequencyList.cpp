@@ -14,7 +14,6 @@
 #include <QByteArray>
 #include "Bands.hpp"
 #include "pimpl_impl.hpp"
-#include "moc_FrequencyList.cpp"
 
 namespace
 {
@@ -177,6 +176,7 @@ QDataStream& operator >> (QDataStream& is, FrequencyList::Item& item)
 class FrequencyList::impl final
   : public QAbstractTableModel
 {
+  Q_OBJECT
 public:
   impl (Bands const * bands, QObject * parent)
     : QAbstractTableModel {parent}
@@ -207,6 +207,9 @@ public:
   FrequencyItems frequency_list_;
   Mode mode_filter_;
 };
+
+#include "FrequencyList.moc"
+#include "moc_FrequencyList.cpp"
 
 FrequencyList::FrequencyList (Bands const * bands, QObject * parent)
   : QSortFilterProxyModel {parent}
