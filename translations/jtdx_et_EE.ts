@@ -2888,7 +2888,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Otsitav</translation>
+        <translation>Nõutud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -3013,7 +3013,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation>Lairiba</translation>
+        <translation>Möödaminek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
@@ -3053,7 +3053,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation>Dec&amp;odeeri</translation>
+        <translation>Dek&amp;odeeri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -3108,7 +3108,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib dekoodrite rühma, mis põhineb sobitatud filtritel, FT8 režiimis aktiveerib FT8AP funktsionaalsuse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib dekooderite rühma, mis põhineb sobitatud filtritel, FT8 režiimis aktiveerib FT8AP funktsionaalsuse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
@@ -3530,7 +3530,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation>dekoodri tundlikus</translation>
+        <translation>dekooderi tundlikus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
@@ -3545,7 +3545,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation>SWL-dekodeerimise tsüklid</translation>
+        <translation>SWL-dekodeerimise tsükkleid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
@@ -3674,7 +3674,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4666"/>
         <source>None</source>
-        <translation>Puudub</translation>
+        <translation>Välja lülitatud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4674"/>
@@ -4050,7 +4050,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5236"/>
         <source>1  Call first</source>
-        <translation>1 Kutse</translation>
+        <translation>1 Esimene kutse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5244"/>
@@ -4122,8 +4122,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5400"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translatorcomment>Vajab täpsustamist</translatorcomment>
-        <translation>Otsitud kutsungitega sõnumid RX-sageduse aknasse</translation>
+        <translation>Nõutud kutsungitega sõnumid RX-sageduse aknasse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5408"/>
@@ -4143,12 +4142,12 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5462"/>
         <source>late start of decoder</source>
-        <translation>dekoodri hiline start</translation>
+        <translation>dekooderi hiline start</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5470"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Kutsu &apos;töötatud B4&apos; kutsungeid</translation>
+        <translation>Kutsu töötatud kutsungeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5489"/>
@@ -4209,12 +4208,12 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5583"/>
         <source>Show tooltips in main window</source>
-        <translation>Näita peaaknas tööriistavihjeid</translation>
+        <translation>Näita peaaknas vihjeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5591"/>
         <source>Color Tx message buttons</source>
-        <translation>Tx-teate värvilised nupud</translation>
+        <translation>Värvi Tx-teate nupud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5599"/>
@@ -7565,7 +7564,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6377"/>
         <location filename="../Configuration.ui" line="6535"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seda DT-akent kasutatakse ainult RX-sagedusega CALL3 andmepõhiste vihjedekoodrite jaoks, mis on keskendunud CQ ja &apos;mycall hiscall hisgrid&apos; teadetele. Kõrgemad väärtused võivad suurendada valedekodeerimiste arvu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seda DT-akent kasutatakse ainult RX-sagedusega CALL3 andmepõhiste vihjedekooderite jaoks, mis on keskendunud CQ ja &apos;mycall hiscall hisgrid&apos; teadetele. Kõrgemad väärtused võivad suurendada valedekodeerimiste arvu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6367"/>
