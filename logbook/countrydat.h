@@ -11,7 +11,7 @@
 #ifndef __COUNTRYDAT_H
 #define __COUNTRYDAT_H
 
-
+#include <QCoreApplication>
 #include <QString>
 #include <QStringList>
 #include <QHash>
@@ -20,6 +20,8 @@
 class CountryDat
 {
 public:
+  static inline QString tr(const char *sourceText, const char *disambiguation = Q_NULLPTR, int n = -1) \
+        { return QCoreApplication::translate("CountryDat", sourceText, disambiguation, n); }
   void init(const QString filename,const QString filename2);
   void load();
   QString find(const QString prefix); // return country name or ""
@@ -35,6 +37,7 @@ private:
   QString _filename,_filename2;
   QHash<QString, QString> _data;
   QHash<QString, QString> _data2;
+  QHash<QString, QString> _name;
 };
 
 #endif
