@@ -5931,7 +5931,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>カウンター。デコードされたメッセージを探し、設定回数を超えればCQを探すか送信を停止します:</translation>
+        <translation>リトライ用カウンター。デコードされたメッセージを探し、設定回数を超えればCQを探すか送信を停止します:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -5944,7 +5944,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>RRR（RR73）の受信に対してRR73(73)を送る</translation>
+        <translation>RRR（RR73）の受信に対してRR73(73)を送る回数</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2058"/>
@@ -6731,7 +6731,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1957"/>
         <source>called CQ,  received a call and answered</source>
-        <translation>CQを出して呼び出しを受けそれに応答します</translation>
+        <translation>CQを出して呼び出しを受けそれに応答する回数</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2105"/>

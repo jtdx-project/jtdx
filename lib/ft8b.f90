@@ -234,7 +234,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     if(iqso.eq.4) go to 32
 
     nsyncscorew=0; scoreratiowa=0.; rrxdt=xdt-0.5
-    if(rrdxt.gt.-0.5 .and. rrxdt.lt.1.5) then
+    if(rrxdt.gt.-0.5 .and. rrxdt.lt.1.5) then
       do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k)+s8(icos7(k-1),k+36)+s8(icos7(k-1),k+72); enddo
       do k=1,7; sumkw(k)=(sum(s8(k-1,:))-syncw(k))/25.333; enddo ! (79-3)/3
     else if(rrxdt.le.-0.5) then
