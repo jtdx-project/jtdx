@@ -695,7 +695,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
@@ -705,7 +705,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
@@ -714,7 +714,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
             subProcessFailed (&p1, exitCode, status);
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p3, error);
           });
