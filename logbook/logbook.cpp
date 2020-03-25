@@ -71,7 +71,7 @@ void LogBook::matchDXCC(/*in*/const QString call,
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
         }
-        if (!countryName.isEmpty () && countryName != "  ,?,where?") { //  is there, do checks
+        if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
             WorkedBefore = _log.matchCountry(countryName, "", "");
             if (!WorkedBefore) {
                 WorkedBeforeBandMode = false;
@@ -79,7 +79,6 @@ void LogBook::matchDXCC(/*in*/const QString call,
                 WorkedBeforeBandMode = _log.matchCountry(countryName, band, mode);   
             }
         } else {
-            countryName = "  ,?,where?"; //error: prefix not found
             WorkedBefore = true;
             WorkedBeforeBandMode = true;
         }
@@ -125,9 +124,9 @@ void LogBook::matchPX(/*in*/const QString call,
         }
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-            if (countryName.isEmpty ()) {
-              countryName = "  ,'?,where?"; //error: prefix not found
-            }
+//            if (countryName.isEmpty ()) {
+//              countryName = "  ,'?,where?"; //error: prefix not found
+//            }
         }
         
 //        printf("logbook resultPX %s|%s|%s -> %s %s %s\n",call.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
@@ -153,9 +152,9 @@ void LogBook::matchCall(/*in*/const QString call,
         }
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-            if (countryName.isEmpty ()) {
-              countryName = "  ,'?,where?"; //error: prefix not found
-            }
+//            if (countryName.isEmpty ()) {
+//              countryName = "  ,'?,where?"; //error: prefix not found
+//            }
         }
         
         // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;
@@ -169,9 +168,9 @@ void LogBook::getDXCC(/*in*/const QString call,
 //        printf("logbook getDXCC %s|%s\n",call.toStdString().c_str(),countryName.toStdString().c_str());
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-            if (countryName.isEmpty ()) {
-              countryName = "  ,?,where?"; //error: prefix not found
-            }
+//            if (countryName.isEmpty ()) {
+//              countryName = "  ,?,where?"; //error: prefix not found
+//            }
         }
 //        printf("logbook resultgetDXCC %s -> %s\n",call.toStdString().c_str(),countryName.toStdString().c_str());
         // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;

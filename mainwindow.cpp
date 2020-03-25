@@ -887,8 +887,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   readSettings();		         //Restore user's setup params
 
   QString t;
-  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-  else t = "UTC   dB   DT Freq   Message";
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+  else t = "UTC   dB   DT "+tr("Freq   Message");
   ui->decodedTextLabel->setText(t);
   ui->decodedTextLabel2->setText(t);
 
@@ -2499,7 +2499,7 @@ void MainWindow::closeEvent(QCloseEvent * e)
   if(!b) proc_jtdxjt9.close();
   quitFile.remove();
 
-  if (m_exitCode == 1337) qApp->exit(1337);
+  if (m_exitCode == 1337) {m_wideGraph->saveSettings(); qApp->exit(1337);}
   else Q_EMIT finished ();
 
   QMainWindow::closeEvent (e);
@@ -3390,7 +3390,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB  DT  Freq   Message Avg=" + avexdt);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq   Message")+" "+tr("Avg=") + avexdt);
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -3850,7 +3850,29 @@ void MainWindow::guiUpdate()
 
 // Don't transmit another mode in the 30 m WSPR sub-band
     Frequency onAirFreq = m_freqNominal + ui->TxFreqSpinBox->value();
-    if ((onAirFreq > 10139900 and onAirFreq < 10140320) and m_mode.left(4)!="WSPR") {
+    auto mhz = onAirFreq / 1000000;
+    Frequency f_from = 0;
+    Frequency f_to = 0;
+    switch (mhz)
+    {
+        case 1: {f_from = 1837930; f_to = 1838220; break;}
+        case 3: {f_from = 3569930; f_to = 3570220; break;}
+        case 5: {f_from = 5288530; f_to = 5288820; break;}
+        case 7: {f_from = 7039930; f_to = 7040220; break;}
+        case 10: {
+            if (m_mode.contains("JT65")) f_from = 10139900; else f_from = 10140030;
+            f_to = 10140320;
+            break;}
+        case 14: {f_from = 14096930; f_to = 14097220; break;}
+        case 18: {f_from = 18105930; f_to = 18106220; break;}
+        case 21: {f_from = 21095930; f_to = 21096220; break;}
+        case 24: {f_from = 24925930; f_to = 24926220; break;}
+        case 28: {f_from = 28125930; f_to = 28126220; break;}
+        case 50: {f_from = 50294370; f_to = 50294620; break;}
+        case 70: {f_from = 70092370; f_to = 70092620; break;}
+        default: {f_from = 0;  f_to = 0; break;}
+    }
+    if (f_from >0 and (onAirFreq > f_from and onAirFreq < f_to) and m_mode.left(4)!="WSPR") {
       m_bTxTime=false;
 //      if (m_tune) stop_tuning ();
       if (m_enableTx) enableTx_mode (false);
@@ -3858,7 +3880,7 @@ void MainWindow::guiUpdate()
         onAirFreq0=onAirFreq;
         auto const& message1 = tr ("Please choose another Tx frequency."
                                   " JTDX will not knowingly transmit another"
-                                  " mode in the WSPR sub-band on 30m.");
+                                  " mode in the WSPR sub-band.");
 #if QT_VERSION >= 0x050400
         QTimer::singleShot (0, [=] { // don't block guiUpdate
             MessageBox::warning_message (this, tr ("WSPR Guard Band"), message1);
@@ -5894,8 +5916,8 @@ void MainWindow::commonActions ()
   m_wideGraph->show();
   mode_label->setText(m_mode);
   QString t;
-  if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-  else t = "UTC   dB   DT Freq   Message";
+  if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+  else t = "UTC   dB   DT "+tr("Freq   Message");
   ui->decodedTextLabel->setText(t);
   ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
   ui->label_6->setText(tr("Band Activity"));
@@ -5941,7 +5963,7 @@ void MainWindow::WSPR_config(bool b)
   ui->AutoTxButton->setEnabled(!b);
   ui->AutoSeqButton->setEnabled(!b);
   if(b) {
-    ui->decodedTextLabel->setText("UTC    dB   DT     Freq     Drift  Call          Grid    dBm   Dist");
+    ui->decodedTextLabel->setText("UTC    dB   DT "+tr("    Freq     Drift  Call          Grid    dBm   Dist"));
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
     ui->label_6->setText(tr("Band Activity"));
     if (m_config.is_transceiver_online ()) {
@@ -5950,8 +5972,8 @@ void MainWindow::WSPR_config(bool b)
     m_bSimplex = true;
   } else {
     QString t;
-    if (m_mode.startsWith("FT")) t = "UTC     dB   DT Freq   Message";
-    else t = "UTC   dB   DT Freq   Message";
+    if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
+    else t = "UTC   dB   DT "+tr("Freq   Message");
     ui->decodedTextLabel->setText(t);
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
     ui->label_6->setText(tr("Band Activity"));

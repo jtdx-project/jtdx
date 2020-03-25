@@ -990,6 +990,7 @@ if (UPDATE_TRANSLATIONS)
   qt5_create_translation (
     QM_FILES ${wsjt_qt_UISRCS} ${wsjtx_UISRCS} ${wsjt_qt_CXXSRCS} ${wsjtx_CXXSRCS}
     ${TS_FILES}
+    OPTIONS -source-language en_US
     )
 else ()
   qt5_add_translation (QM_FILES ${TS_FILES})

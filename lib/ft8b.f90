@@ -15,7 +15,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12
   character*37 msgsrcvd(130)
   complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymb0(32)
-  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21)
+  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174)
   real llra(174),llrb(174),llrc(174),llrd(174)
   integer*1 message77(77),apmask(174),cw(174)
@@ -26,7 +26,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse
 
-  max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.
+  max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
   ldeepsync=.false.; if(lft8lowth .or. lft8subpass .or. swl) ldeepsync=.true.
   lcallsstd=.true.; if(.not.lmycallstd .or. .not.lhiscallstd) lcallsstd=.false.
@@ -233,6 +233,20 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     if(iqso.gt.1 .and. iqso.lt.4) then; s82=SQRT(s8); go to 8; endif
     if(iqso.eq.4) go to 32
 
+    nsyncscorew=0; scoreratiowa=0.; rrxdt=xdt-0.5
+    if(rrdxt.gt.-0.5 .and. rrxdt.lt.1.5) then
+      do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k)+s8(icos7(k-1),k+36)+s8(icos7(k-1),k+72); enddo
+      do k=1,7; sumkw(k)=(sum(s8(k-1,:))-syncw(k))/25.333; enddo ! (79-3)/3
+    else if(rrxdt.le.-0.5) then
+      do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k+36)+s8(icos7(k-1),k+72); enddo
+      do k=1,7; sumkw(k)=(sum(s8(k-1,26:79))-syncw(k))/26.; enddo ! (54-2)/2
+    else if(rrxdt.ge.1.5) then
+      do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k)+s8(icos7(k-1),k+36); enddo
+      do k=1,7; sumkw(k)=(sum(s8(k-1,1:54))-syncw(k))/26.; enddo ! (54-2)/2
+    endif
+    do k=1,7; if(syncw(k).gt.sumkw(k)) nsyncscorew=nsyncscorew+1; scoreratiow(k)=syncw(k)/sumkw(k); enddo
+    scoreratiowa=sum(scoreratiow)/7.
+
 ! sync quality check
     is1=0; is2=0; is3=0; nsyncscore=0; scoreratio=0.
     do k=1,7
@@ -249,6 +263,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       synck=s8(icos7(k-1),k+72); sumk=(sum(s8(:,k+72))-synck)/7.0
       if(synck.gt.sumk) then; nsyncscore=nsyncscore+1; scoreratio=scoreratio+synck/sumk; endif
     enddo
+
 ! hard sync sum - max is 21
     nsync=is1+is2+is3
 ! bail out
@@ -256,6 +271,17 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     scoreratio=scoreratio/nsyncscore
     if(dfqso.ge.2.0 .or. (dfqso.lt.2.0 .and. stophint)) then
       if(nsyncscore.lt.8 .or. (nsyncscore.lt.12 .and. scoreratio.lt.2.3)) then; nbadcrc=1; return; endif
+      if(scoreratiowa.lt.2.0 .and. nsyncscorew.lt.5) then
+        if(rrxdt.gt.-0.5 .and. rrxdt.lt.1.5) then
+          if(nsyncscore.eq.18 .and. scoreratio.lt.2.99) then; nbadcrc=1; return
+          else if(nsyncscore.eq.17 .and. scoreratio.lt.3.75) then; nbadcrc=1; return
+          else if(nsyncscore.eq.16 .and. scoreratio.lt.4.57) then; nbadcrc=1; return
+          else if(nsyncscore.lt.16 .and. scoreratio.lt.5.2) then; nbadcrc=1; return
+          endif
+        else if(nsyncscore.lt.12 .and. scoreratio.lt.3.34) then; nbadcrc=1; return
+        else if(nsyncscore.ge.12 .and. nsyncscore.lt.17 .and. scoreratio.lt.3.52) then; nbadcrc=1; return
+        endif
+      endif
     endif
 
 32  if(lsd) then
@@ -669,8 +695,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         endif
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
-        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (sync.lt.2.0 .and. nharderrors.gt.35) &
-          .or. (ipass.gt.2 .and. nharderrors.gt.39)) then
+        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then
 
           if(.not.lapon .or. k1.eq.2) cycle
 

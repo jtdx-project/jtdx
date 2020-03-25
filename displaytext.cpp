@@ -659,25 +659,6 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
             } else {
                 // do some obvious abbreviations, don't care if we using just prefixes here, not big deal to run some replace's
                 cntry = items[2];
-                cntry.replace ("Islands", "Is.");
-                cntry.replace ("Island", "Is.");
-                cntry.replace ("North ", "N. ");
-                cntry.replace ("Northern ", "N. ");
-                cntry.replace ("South ", "S. ");
-                cntry.replace ("East ", "E. ");
-                cntry.replace ("Eastern ", "E. ");
-                cntry.replace ("West ", "W. ");
-                cntry.replace ("Western ", "W. ");
-                cntry.replace ("Central ", "C. ");
-                cntry.replace (" and ", " & ");
-                cntry.replace ("Republic", "Rep.");
-                cntry.replace ("United States", "U.S.A.");
-                cntry.replace ("Fed. Rep. of ", "");
-                cntry.replace ("French ", "Fr.");
-                cntry.replace ("Asiatic", "AS");
-                cntry.replace ("European", "EU");
-                cntry.replace ("African", "AF");
-    //            messageText += countryName.trimmed();
             }
         }
         if (!bwantedCall && !bwantedPrefix && !bwantedGrid && !bwantedCountry) {
