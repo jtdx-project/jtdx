@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr_HR" sourcelanguage="en_US">
 <context>
     <name>Bands</name>
     <message>
@@ -58,12 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1127"/>
+        <location filename="../Configuration.cpp" line="1117"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1118"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Prekid</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1133"/>
         <source>Create temporary directory error: </source>
         <translation>Stvaranje privremene mape došlo je do greške: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1133"/>
+        <location filename="../Configuration.cpp" line="1139"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -72,47 +82,47 @@ Another application may be locking the directory</source>
 Drugi program možda koristi direktorij</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1150"/>
+        <location filename="../Configuration.cpp" line="1156"/>
         <source>Create data directory error: </source>
         <translation>Pogreška u direktoriju podataka: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1159"/>
-        <location filename="../Configuration.cpp" line="1170"/>
+        <location filename="../Configuration.cpp" line="1165"/>
+        <location filename="../Configuration.cpp" line="1176"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Napravi Mapu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1324"/>
-        <location filename="../Configuration.cpp" line="1346"/>
-        <location filename="../Configuration.cpp" line="1382"/>
+        <location filename="../Configuration.cpp" line="1330"/>
+        <location filename="../Configuration.cpp" line="1352"/>
+        <location filename="../Configuration.cpp" line="1388"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Briši</translation>
+        <translation>&amp;Obriši</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1350"/>
-        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1356"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Ubaci ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2493"/>
+        <location filename="../Configuration.cpp" line="2499"/>
         <source>Serial Port:</source>
         <translation>Serijski Port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2494"/>
+        <location filename="../Configuration.cpp" line="2500"/>
         <source>Serial port used for CAT control</source>
         <translation>Serijski port koji se koristi za CAT kontrolu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2501"/>
+        <location filename="../Configuration.cpp" line="2507"/>
         <source>Network Server:</source>
         <translation>Mrežni Server:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2502"/>
+        <location filename="../Configuration.cpp" line="2508"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -122,12 +132,12 @@ Formats:
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2514"/>
+        <location filename="../Configuration.cpp" line="2520"/>
         <source>USB Device:</source>
         <translation>USB uređaj:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2515"/>
+        <location filename="../Configuration.cpp" line="2521"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -135,64 +145,1802 @@ Format:
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2550"/>
+        <location filename="../Configuration.cpp" line="2556"/>
         <source>Invalid audio input device</source>
         <translation>Nevažeći ulazni ulazni uređaj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2557"/>
+        <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid audio output device</source>
         <translation>Nevažeći izlazni audio uređaj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2563"/>
+        <location filename="../Configuration.cpp" line="2569"/>
         <source>Invalid PTT method</source>
         <translation>Nevažeća PTT metoda</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2573"/>
+        <location filename="../Configuration.cpp" line="2579"/>
         <source>Invalid PTT port</source>
         <translation>Nevažeći PTT priključak</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3046"/>
+        <location filename="../Configuration.cpp" line="3052"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 u poruci</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3047"/>
+        <location filename="../Configuration.cpp" line="3053"/>
         <source>CQ in message</source>
         <translation>CQ u poruci</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4014"/>
+        <location filename="../Configuration.cpp" line="4020"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX odabir fontova dekodiranog teksta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4589"/>
+        <location filename="../Configuration.cpp" line="4595"/>
         <source>Reset Working Frequencies</source>
         <translation>Reset Radnih Frekvencija</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4590"/>
+        <location filename="../Configuration.cpp" line="4596"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Jeste li sigurni da želite odbaciti trenutne radne frekvencije i zamijeniti ih zadanim?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4645"/>
+        <location filename="../Configuration.cpp" line="4651"/>
         <source>Save Directory</source>
         <translation>Spremi Mapu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4661"/>
+        <location filename="../Configuration.cpp" line="4667"/>
         <source>Failed to open connection to rig</source>
         <translation>Otvaranje veze s uređajem nije uspjelo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4873"/>
+        <location filename="../Configuration.cpp" line="4879"/>
         <source>Rig failure</source>
         <translation>Greška uređaja</translation>
+    </message>
+</context>
+<context>
+    <name>CountryDat</name>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="33"/>
+        <source>where?</source>
+        <translation>gdje?</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="34"/>
+        <source>Sov Mil Order of Malta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="35"/>
+        <source>Spratly Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="36"/>
+        <source>Monaco</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="37"/>
+        <source>Agalega &amp; St. Brandon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="38"/>
+        <source>Mauritius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="39"/>
+        <source>Rodriguez Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="40"/>
+        <source>Equatorial Guinea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="41"/>
+        <source>Annobon Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="42"/>
+        <source>Fiji</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="43"/>
+        <source>Conway Reef</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="44"/>
+        <source>Rotuma Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="45"/>
+        <source>Kingdom of eSwatini</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="46"/>
+        <source>Tunisia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="47"/>
+        <source>Vietnam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="48"/>
+        <source>Guinea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="49"/>
+        <source>Bouvet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="50"/>
+        <source>Peter 1 Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="51"/>
+        <source>Azerbaijan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="52"/>
+        <source>Georgia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="53"/>
+        <source>Montenegro</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="54"/>
+        <source>Sri Lanka</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="55"/>
+        <source>ITU HQ</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="56"/>
+        <source>United Nations HQ</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="57"/>
+        <source>Vienna Intl Ctr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="58"/>
+        <source>Timor - Leste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="59"/>
+        <source>Israel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="60"/>
+        <source>Libya</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="61"/>
+        <source>Cyprus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="62"/>
+        <source>Tanzania</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="63"/>
+        <source>Nigeria</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="64"/>
+        <source>Madagascar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="65"/>
+        <source>Mauritania</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="66"/>
+        <source>Niger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="67"/>
+        <source>Togo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="68"/>
+        <source>Samoa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="69"/>
+        <source>Uganda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="70"/>
+        <source>Kenya</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="71"/>
+        <source>Senegal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="72"/>
+        <source>Jamaica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="73"/>
+        <source>Yemen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="74"/>
+        <source>Lesotho</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="75"/>
+        <source>Malawi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="76"/>
+        <source>Algeria</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="77"/>
+        <source>Barbados</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="78"/>
+        <source>Maldives</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="79"/>
+        <source>Guyana</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="80"/>
+        <source>Croatia</source>
+        <translation>Hrvatska</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="81"/>
+        <source>Ghana</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="82"/>
+        <source>Malta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="83"/>
+        <source>Zambia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="84"/>
+        <source>Kuwait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="85"/>
+        <source>Sierra Leone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="86"/>
+        <source>W. Malaysia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="87"/>
+        <source>E. Malaysia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="88"/>
+        <source>Nepal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="89"/>
+        <source>Dem. Rep. of the Congo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="90"/>
+        <source>Burundi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="91"/>
+        <source>Singapore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="92"/>
+        <source>Rwanda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="93"/>
+        <source>Trinidad &amp; Tobago</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="94"/>
+        <source>Botswana</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="95"/>
+        <source>Tonga</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="96"/>
+        <source>Oman</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="97"/>
+        <source>Bhutan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="98"/>
+        <source>United Arab Emirates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="99"/>
+        <source>Qatar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="100"/>
+        <source>Bahrain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="101"/>
+        <source>Pakistan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="102"/>
+        <source>Scarborough Reef</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="103"/>
+        <source>Taiwan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="104"/>
+        <source>Pratas Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="105"/>
+        <source>China</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="106"/>
+        <source>Nauru</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="107"/>
+        <source>Andorra</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="108"/>
+        <source>The Gambia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="109"/>
+        <source>Bahamas</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="110"/>
+        <source>Mozambique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="111"/>
+        <source>Chile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="112"/>
+        <source>San Felix &amp; San Ambrosio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="113"/>
+        <source>Easter Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="114"/>
+        <source>Juan Fernandez Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="115"/>
+        <source>Antarctica</source>
+        <translation>Antarktika</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="116"/>
+        <source>Cuba</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="117"/>
+        <source>Morocco</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="118"/>
+        <source>Bolivia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="119"/>
+        <source>Portugal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="120"/>
+        <source>Madeira Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="121"/>
+        <source>Azores</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="122"/>
+        <source>Uruguay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="123"/>
+        <source>Sable Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="124"/>
+        <source>St. Paul Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="125"/>
+        <source>Angola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="126"/>
+        <source>Cape Verde</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="127"/>
+        <source>Comoros</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="128"/>
+        <source>Germany</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="129"/>
+        <source>Philippines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="130"/>
+        <source>Eritrea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="131"/>
+        <source>Palestine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="132"/>
+        <source>N. Cook Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="133"/>
+        <source>S. Cook Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="134"/>
+        <source>Niue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="135"/>
+        <source>Bosnia-Herzegovina</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="136"/>
+        <source>Spain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="137"/>
+        <source>Balearic Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="138"/>
+        <source>Canary Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="139"/>
+        <source>Ceuta &amp; Melilla</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="140"/>
+        <source>Ireland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="141"/>
+        <source>Armenia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="142"/>
+        <source>Liberia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="143"/>
+        <source>Iran</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="144"/>
+        <source>Moldova</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="145"/>
+        <source>Estonia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="146"/>
+        <source>Ethiopia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="147"/>
+        <source>Belarus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="148"/>
+        <source>Kyrgyzstan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="149"/>
+        <source>Tajikistan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="150"/>
+        <source>Turkmenistan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="151"/>
+        <source>France</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="152"/>
+        <source>Guadeloupe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="153"/>
+        <source>Mayotte</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="154"/>
+        <source>St. Barthelemy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="155"/>
+        <source>New Caledonia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="156"/>
+        <source>Chesterfield Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="157"/>
+        <source>Martinique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="158"/>
+        <source>Fr. Polynesia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="159"/>
+        <source>Austral Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="160"/>
+        <source>Clipperton Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="161"/>
+        <source>Marquesas Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="162"/>
+        <source>St. Pierre &amp; Miquelo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="163"/>
+        <source>Reunion Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="164"/>
+        <source>St. Martin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="165"/>
+        <source>Glorioso Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="166"/>
+        <source>Juan de Nova, Europa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="167"/>
+        <source>Tromelin Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="168"/>
+        <source>Crozet Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="169"/>
+        <source>Kerguelen Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="170"/>
+        <source>Amsterdam &amp; St. Paul Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="171"/>
+        <source>Wallis &amp; Futuna Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="172"/>
+        <source>Fr. Guiana</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="173"/>
+        <source>England</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="174"/>
+        <source>Isle of Man</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="175"/>
+        <source>N. Ireland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="176"/>
+        <source>Jersey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="177"/>
+        <source>Shetland Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="178"/>
+        <source>Scotland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="179"/>
+        <source>Guernsey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="180"/>
+        <source>Wales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="181"/>
+        <source>Solomon Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="182"/>
+        <source>Temotu Province</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="183"/>
+        <source>Hungary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="184"/>
+        <source>Switzerland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="185"/>
+        <source>Liechtenstein</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="186"/>
+        <source>Ecuador</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="187"/>
+        <source>Galapagos Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="188"/>
+        <source>Haiti</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="189"/>
+        <source>Dominican Rep.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="190"/>
+        <source>Colombia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="191"/>
+        <source>San Andres &amp; Providencia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="192"/>
+        <source>Malpelo Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="193"/>
+        <source>Rep. of Korea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="194"/>
+        <source>Panama</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="195"/>
+        <source>Honduras</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="196"/>
+        <source>Thailand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="197"/>
+        <source>Vatican City</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="198"/>
+        <source>Saudi Arabia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="199"/>
+        <source>Italy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="200"/>
+        <source>AF Italy</source>
+        <translation>AF Italy</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="201"/>
+        <source>Sardinia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="202"/>
+        <source>Sicily</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="203"/>
+        <source>Djibouti</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="204"/>
+        <source>Grenada</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="205"/>
+        <source>Guinea-Bissau</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="206"/>
+        <source>St. Lucia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="207"/>
+        <source>Dominica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="208"/>
+        <source>St. Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="209"/>
+        <source>Japan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="210"/>
+        <source>Minami Torishima</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="211"/>
+        <source>Ogasawara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="212"/>
+        <source>Mongolia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="213"/>
+        <source>Svalbard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="214"/>
+        <source>Bear Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="215"/>
+        <source>Jan Mayen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="216"/>
+        <source>Jordan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="217"/>
+        <source>U.S.A.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="218"/>
+        <source>Guantanamo Bay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="219"/>
+        <source>Mariana Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="220"/>
+        <source>Baker &amp; Howland Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="221"/>
+        <source>Guam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="222"/>
+        <source>Johnston Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="223"/>
+        <source>Midway Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="224"/>
+        <source>Palmyra &amp; Jarvis Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="225"/>
+        <source>Hawaii</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="226"/>
+        <source>Kure Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="227"/>
+        <source>American Samoa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="228"/>
+        <source>Swains Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="229"/>
+        <source>Wake Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="230"/>
+        <source>Alaska</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="231"/>
+        <source>Navassa Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="232"/>
+        <source>US Virgin Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="233"/>
+        <source>Puerto Rico</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="234"/>
+        <source>Desecheo Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="235"/>
+        <source>Norway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="236"/>
+        <source>Argentina</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="237"/>
+        <source>Luxembourg</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="238"/>
+        <source>Lithuania</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="239"/>
+        <source>Bulgaria</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="240"/>
+        <source>Peru</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="241"/>
+        <source>Lebanon</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="242"/>
+        <source>Austria</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="243"/>
+        <source>Finland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="244"/>
+        <source>Aland Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="245"/>
+        <source>Market Reef</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="246"/>
+        <source>Czech Rep.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="247"/>
+        <source>Slovak Rep.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="248"/>
+        <source>Belgium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="249"/>
+        <source>Greenland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="250"/>
+        <source>Faroe Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="251"/>
+        <source>Denmark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="252"/>
+        <source>Papua New Guinea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="253"/>
+        <source>Aruba</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="254"/>
+        <source>DPR of Korea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="255"/>
+        <source>Netherlands</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="256"/>
+        <source>Curacao</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="257"/>
+        <source>Bonaire</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="258"/>
+        <source>Saba &amp; St. Eustatius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="259"/>
+        <source>Sint Maarten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="260"/>
+        <source>Brazil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="261"/>
+        <source>Fernando de Noronha</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="262"/>
+        <source>St. Peter &amp; St. Paul</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="263"/>
+        <source>Trindade &amp; Martim Vaz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="264"/>
+        <source>Suriname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="265"/>
+        <source>Franz Josef Land</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="266"/>
+        <source>Western Sahara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="267"/>
+        <source>Bangladesh</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="268"/>
+        <source>Slovenia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="269"/>
+        <source>Seychelles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="270"/>
+        <source>Sao Tome &amp; Principe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="271"/>
+        <source>Sweden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="272"/>
+        <source>Poland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="273"/>
+        <source>Sudan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="274"/>
+        <source>Egypt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="275"/>
+        <source>Greece</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="276"/>
+        <source>Mount Athos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="277"/>
+        <source>Dodecanese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="278"/>
+        <source>Crete</source>
+        <translation>Kreta</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="279"/>
+        <source>Tuvalu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="280"/>
+        <source>W. Kiribati</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="281"/>
+        <source>C. Kiribati</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="282"/>
+        <source>E. Kiribati</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="283"/>
+        <source>Banaba Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="284"/>
+        <source>Somalia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="285"/>
+        <source>San Marino</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="286"/>
+        <source>Palau</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="287"/>
+        <source>AS Turkey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="288"/>
+        <source>EU Turkey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="289"/>
+        <source>Iceland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="290"/>
+        <source>Guatemala</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="291"/>
+        <source>Costa Rica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="292"/>
+        <source>Cocos Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="293"/>
+        <source>Cameroon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="294"/>
+        <source>Corsica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="295"/>
+        <source>C. African Rep.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="296"/>
+        <source>Rep. of the Congo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="297"/>
+        <source>Gabon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="298"/>
+        <source>Chad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="299"/>
+        <source>Cote d&apos;Ivoire</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="300"/>
+        <source>Benin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="301"/>
+        <source>Mali</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="302"/>
+        <source>EU Russia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="303"/>
+        <source>Kaliningrad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="304"/>
+        <source>AS Russia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="305"/>
+        <source>Uzbekistan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="306"/>
+        <source>Kazakhstan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="307"/>
+        <source>Ukraine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="308"/>
+        <source>Antigua &amp; Barbuda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="309"/>
+        <source>Belize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="310"/>
+        <source>St. Kitts &amp; Nevis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="311"/>
+        <source>Namibia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="312"/>
+        <source>Micronesia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="313"/>
+        <source>Marshall Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="314"/>
+        <source>Brunei Darussalam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="315"/>
+        <source>Canada</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="316"/>
+        <source>Australia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="317"/>
+        <source>Heard Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="318"/>
+        <source>Macquarie Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="319"/>
+        <source>Cocos (Keeling) Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="320"/>
+        <source>Lord Howe Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="321"/>
+        <source>Mellish Reef</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="322"/>
+        <source>Norfolk Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="323"/>
+        <source>Willis Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="324"/>
+        <source>Christmas Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="325"/>
+        <source>Anguilla</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="326"/>
+        <source>Montserrat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="327"/>
+        <source>British Virgin Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="328"/>
+        <source>Turks &amp; Caicos Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="329"/>
+        <source>Pitcairn Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="330"/>
+        <source>Ducie Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="331"/>
+        <source>Falkland Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="332"/>
+        <source>S. Georgia Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="333"/>
+        <source>S. Shetland Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="334"/>
+        <source>S. Orkney Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="335"/>
+        <source>S. Sandwich Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="336"/>
+        <source>Bermuda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="337"/>
+        <source>Chagos Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="338"/>
+        <source>Hong Kong</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="339"/>
+        <source>India</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="340"/>
+        <source>Andaman &amp; Nicobar Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="341"/>
+        <source>Lakshadweep Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="342"/>
+        <source>Mexico</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="343"/>
+        <source>Revillagigedo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="344"/>
+        <source>Burkina Faso</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="345"/>
+        <source>Cambodia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="346"/>
+        <source>Laos</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="347"/>
+        <source>Macao</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="348"/>
+        <source>Myanmar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="349"/>
+        <source>Afghanistan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="350"/>
+        <source>Indonesia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="351"/>
+        <source>Iraq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="352"/>
+        <source>Vanuatu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="353"/>
+        <source>Syria</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="354"/>
+        <source>Latvia</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="355"/>
+        <source>Nicaragua</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="356"/>
+        <source>Romania</source>
+        <translation>Rumunjska</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="357"/>
+        <source>El Salvador</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="358"/>
+        <source>Serbia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="359"/>
+        <source>Venezuela</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="360"/>
+        <source>Aves Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="361"/>
+        <source>Zimbabwe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="362"/>
+        <source>N. Macedonia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="363"/>
+        <source>Rep. of Kosovo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="364"/>
+        <source>Rep. of S. Sudan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="365"/>
+        <source>Albania</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="366"/>
+        <source>Gibraltar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="367"/>
+        <source>UK Base Areas on Cyprus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="368"/>
+        <source>St. Helena</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="369"/>
+        <source>Ascension Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="370"/>
+        <source>Tristan da Cunha &amp; Gough</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="371"/>
+        <source>Cayman Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="372"/>
+        <source>Tokelau Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="373"/>
+        <source>New Zealand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="374"/>
+        <source>Chatham Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="375"/>
+        <source>Kermadec Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="376"/>
+        <source>N.Z. Subantarctic Is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="377"/>
+        <source>Paraguay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="378"/>
+        <source>S. Africa</source>
+        <translation>J.Afrika</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="379"/>
+        <source>Pr. Edward &amp; Marion Is.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -286,33 +2034,43 @@ Format:
 <context>
     <name>Designer</name>
     <message>
-        <location filename="../WFPalette.cpp" line="189"/>
+        <location filename="../WFPalette.cpp" line="122"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="123"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Odustani</translation>
+    </message>
+    <message>
+        <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
         <translation>&amp;Obriši</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="198"/>
+        <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Ubaci...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="206"/>
+        <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
         <translation>Ubaci &amp;nakon ...</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
+        <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
         <translation>Uvezi Paletu</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="221"/>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="223"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
         <translation>Paleta (*.pal)</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="232"/>
+        <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
         <translation>Izvezi paletu</translation>
     </message>
@@ -338,7 +2096,8 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Neispravna poveznica:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="130"/>
@@ -349,7 +2108,7 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation type="unfinished"></translation>
+        <translation>JSON Greška</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
@@ -370,7 +2129,8 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvaranje nije uspjelo &quot;%1&quot;
+Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
@@ -409,44 +2169,54 @@ Error: %2 - %3</source>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="213"/>
+        <location filename="../Configuration.cpp" line="212"/>
         <source>Add Frequency</source>
         <translation>Dodaj Frekvenciju</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="217"/>
+        <location filename="../Configuration.cpp" line="216"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Modulacija:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="218"/>
+        <location filename="../Configuration.cpp" line="217"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Frekvencija (MHz):</translation>
     </message>
-</context>
-<context>
-    <name>FrequencyList</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="431"/>
-        <location filename="../FrequencyList.cpp" line="587"/>
-        <source>Mode</source>
-        <translation>Modulacija</translation>
+        <location filename="../Configuration.cpp" line="223"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="463"/>
-        <location filename="../FrequencyList.cpp" line="588"/>
+        <location filename="../Configuration.cpp" line="224"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Prekid</translation>
+    </message>
+</context>
+<context>
+    <name>FrequencyList::impl</name>
+    <message>
+        <location filename="../FrequencyList.cpp" line="434"/>
+        <location filename="../FrequencyList.cpp" line="590"/>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FrequencyList.cpp" line="466"/>
+        <location filename="../FrequencyList.cpp" line="591"/>
         <source>Frequency</source>
         <translation>Frekvencija</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="495"/>
-        <location filename="../FrequencyList.cpp" line="589"/>
+        <location filename="../FrequencyList.cpp" line="498"/>
+        <location filename="../FrequencyList.cpp" line="592"/>
         <source>Frequency (MHz)</source>
         <translation>Frekvencija (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="518"/>
-        <location filename="../FrequencyList.cpp" line="590"/>
+        <location filename="../FrequencyList.cpp" line="521"/>
+        <location filename="../FrequencyList.cpp" line="593"/>
         <source>Mode Frequency</source>
         <translation>Modulacija Frekvencija</translation>
     </message>
@@ -795,6 +2565,16 @@ Error: %2 - %3</source>
         <translation>EQSL poruka</translation>
     </message>
     <message>
+        <location filename="../logqso.cpp" line="25"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location filename="../logqso.cpp" line="26"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Odustani</translation>
+    </message>
+    <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
@@ -815,12 +2595,12 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3400"/>
-        <location filename="../mainwindow.cpp" line="5891"/>
-        <location filename="../mainwindow.cpp" line="5896"/>
-        <location filename="../mainwindow.cpp" line="5936"/>
-        <location filename="../mainwindow.cpp" line="5947"/>
+        <location filename="../mainwindow.cpp" line="3399"/>
+        <location filename="../mainwindow.cpp" line="3406"/>
+        <location filename="../mainwindow.cpp" line="5923"/>
+        <location filename="../mainwindow.cpp" line="5928"/>
+        <location filename="../mainwindow.cpp" line="5968"/>
+        <location filename="../mainwindow.cpp" line="5979"/>
         <source>Band Activity</source>
         <translation>Aktivni</translation>
     </message>
@@ -938,9 +2718,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4520"/>
-        <location filename="../mainwindow.cpp" line="5185"/>
-        <location filename="../mainwindow.cpp" line="5600"/>
+        <location filename="../mainwindow.cpp" line="4552"/>
+        <location filename="../mainwindow.cpp" line="5217"/>
+        <location filename="../mainwindow.cpp" line="5632"/>
         <source>DX Call</source>
         <translation>DX Znak</translation>
     </message>
@@ -993,7 +2773,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2879"/>
+        <location filename="../mainwindow.cpp" line="2885"/>
         <source>Hound</source>
         <translation></translation>
     </message>
@@ -1025,8 +2805,8 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1494"/>
-        <location filename="../mainwindow.cpp" line="1926"/>
+        <location filename="../mainwindow.cpp" line="1497"/>
+        <location filename="../mainwindow.cpp" line="1929"/>
         <source>S meter</source>
         <translation>S metar</translation>
     </message>
@@ -1057,7 +2837,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
-        <location filename="../mainwindow.ui" line="4535"/>
+        <location filename="../mainwindow.ui" line="4538"/>
         <source>AutoSeq</source>
         <translation></translation>
     </message>
@@ -1089,7 +2869,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation type="unfinished">Traženi</translation>
+        <translation>Traženi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -1110,7 +2890,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1870"/>
         <location filename="../mainwindow.ui" line="1886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis traženih pozivnih znakova razdvojen zarezima. Automatski odabirAutoseq 1..7 obrađuje traženi pozivni znak u skladu s odabranim obavijestima / prioritetima, ova funkcija nije podržana u programu AutoSeq0. Svi modovi osim FT8: za složene pozivne znakove osnovni pozivni znak upotrebljavat će se na popisu, ponekad će se osnovni pozivni znak kopirati iz dekodirane poruke: prilikomlogiranja takvog QSOa veze korisnik će morati promijeniti pozivni znak dopisnika u složeni ako je potrebno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -1158,7 +2938,22 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zarezom odvojeni popis zemalja: prefiks glavne zemlje koristi se na ovom popisu. Za složene pozivne znakove prefiks se prepoznaje na početku pozivne znake. Automatski odabir pod automatskim odabirom 1..7 obrađuje željenu zemlju prema odabranim obavijestima / prioritetima, ova funkcija nije podržana u programu AutoSeq0. Samo non FT8 modusi: ponekad će osnovni pozivni znak kopirati iz dekodirane poruke: prilikom evidentiranja takvog QSOa korisnik će morati promijeniti pozivni znak korespondenta u složeni, ako je potrebno. Popis glavnih prefiksa države: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
+5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
+9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
+CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
+EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
+FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
+HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
+JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
+KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
+PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
+SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
+UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
+VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
+XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
+ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1986"/>
@@ -1167,7 +2962,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5929"/>
         <source>Rx Frequency</source>
         <translation>RX Frekvencija</translation>
     </message>
@@ -1179,7 +2974,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation></translation>
+        <translation>&amp;Tune</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -1189,12 +2984,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
         <source>&amp;Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Monitoriraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opcija zaobilaženja svih tekst filtera, duplicira radnju na kartici Razno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
@@ -1224,7 +3019,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zaustavite nadzor nad ulaznim signalom, prestanite s reprodukcijom audio wav datoteka&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2487"/>
@@ -1234,12 +3029,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2526"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ponovo dekodirajte najnovije razdoblje Rx ili posljednju reproduciranu wav audio datoteku za bilo koju kombinaciju gumba Savjet / Filter / SWL način&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation>Dek&amp;odiraj</translation>
+        <translation type="unfinished">&amp;Dekodiraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -1249,7 +3044,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation>O&amp;mogući Tx</translation>
+        <translation>Po&amp;kreni Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
@@ -1269,12 +3064,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation></translation>
+        <translation>Log &amp;QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lijeva tipka miša: Brisanje dekodiranog prozora teksta (lijevo). Desna tipka miša: Prozor brisanja frekvencije veze Dvaput kliknite za oba prozora.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
@@ -1284,43 +3079,43 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Increase number of decoding attempts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Povećajte broj pokušaja dekodiranja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2708"/>
         <source>S&amp;WL mode</source>
-        <translation>S&amp;WL mod</translation>
+        <translation>S&amp;WL način</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktivira skupinu dekodera na temelju podudarnih filtera, u načinu FT8 aktivira FT8AP funkcionalnost&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translatorcomment>nagađanje</translatorcomment>
-        <translation>Nagovještaj</translation>
+        <translatorcomment>nagađanje sugestija</translatorcomment>
+        <translation>Savjet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Širina pojasa, FT8 150Hz, FT8 hound način rada 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signali: 580Hz dekodiranje, 300 Hz za prikaz poruka. Filter je centriran u spektru RX signala.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation></translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktivira funkcionalnost kompenzacije AGC. Povećavanje učinkovitosti dekodiranja ako je AGC uključen u prijemniku&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2846"/>
         <source>AGCc</source>
-        <translation></translation>
+        <translation>AGCc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
@@ -1334,9 +3129,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
-        <location filename="../mainwindow.ui" line="5276"/>
-        <location filename="../mainwindow.ui" line="5733"/>
-        <location filename="../mainwindow.ui" line="5757"/>
+        <location filename="../mainwindow.ui" line="5303"/>
+        <location filename="../mainwindow.ui" line="5760"/>
+        <location filename="../mainwindow.ui" line="5784"/>
         <source>1</source>
         <translation></translation>
     </message>
@@ -1352,7 +3147,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5454"/>
+        <location filename="../mainwindow.ui" line="5481"/>
         <source>CQ</source>
         <translation></translation>
     </message>
@@ -1419,7 +3214,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="3199"/>
         <source>Tx &amp;1</source>
-        <translation></translation>
+        <translation>Tx &amp;1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3202"/>
@@ -1434,7 +3229,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="3263"/>
         <source>Tx &amp;2</source>
-        <translation></translation>
+        <translation>Tx &amp;2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3266"/>
@@ -1515,10 +3310,10 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
-        <location filename="../mainwindow.ui" line="5284"/>
-        <location filename="../mainwindow.ui" line="5287"/>
-        <location filename="../mainwindow.ui" line="5741"/>
-        <location filename="../mainwindow.ui" line="5765"/>
+        <location filename="../mainwindow.ui" line="5311"/>
+        <location filename="../mainwindow.ui" line="5314"/>
+        <location filename="../mainwindow.ui" line="5768"/>
+        <location filename="../mainwindow.ui" line="5792"/>
         <source>2</source>
         <translation></translation>
     </message>
@@ -1710,12 +3505,12 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4384"/>
         <source>narrow Filter</source>
-        <translation type="unfinished">Uskopojasni Filter</translation>
+        <translation>Uskopojasni Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation type="unfinished">Osjetljivost dekodera</translation>
+        <translation>Osjetljivost dekodera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
@@ -1725,7 +3520,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation type="unfinished">Ciklusi dekodiranja</translation>
+        <translation>Ciklusi dekodiranja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
@@ -1748,711 +3543,726 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Jezik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4474"/>
+        <location filename="../mainwindow.ui" line="4477"/>
         <source>Help</source>
         <translation>Pomoć</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4490"/>
+        <location filename="../mainwindow.ui" line="4493"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4502"/>
+        <location filename="../mainwindow.ui" line="4505"/>
         <source>Misc</source>
         <translation>Razno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4506"/>
+        <location filename="../mainwindow.ui" line="4509"/>
         <source>Accept UDP Reply messages</source>
         <translation>Prihvatite UDP odgovore na poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4539"/>
+        <location filename="../mainwindow.ui" line="4542"/>
         <source>Auto RX frequency Filter</source>
         <translation>Automatski filter RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4563"/>
+        <location filename="../mainwindow.ui" line="4566"/>
         <source>DXpedition</source>
         <translation>Dxpedicije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4582"/>
+        <location filename="../mainwindow.ui" line="4585"/>
         <source>Exit</source>
         <translation>Izlaz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4585"/>
+        <location filename="../mainwindow.ui" line="4588"/>
         <source>Alt+F4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4596"/>
+        <location filename="../mainwindow.ui" line="4599"/>
         <source>Configuration</source>
         <translation>Konfiguracija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4599"/>
-        <location filename="../mainwindow.ui" line="4997"/>
+        <location filename="../mainwindow.ui" line="4602"/>
+        <location filename="../mainwindow.ui" line="5024"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4604"/>
+        <location filename="../mainwindow.ui" line="4607"/>
         <source>About JTDX</source>
         <translation>O JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4607"/>
+        <location filename="../mainwindow.ui" line="4610"/>
         <source>Ctrl+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4612"/>
+        <location filename="../mainwindow.ui" line="4615"/>
         <source>Waterfall</source>
         <translation>Vodopad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4617"/>
+        <location filename="../mainwindow.ui" line="4620"/>
         <source>Open</source>
         <translation>Otvori</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4620"/>
+        <location filename="../mainwindow.ui" line="4623"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4625"/>
+        <location filename="../mainwindow.ui" line="4628"/>
         <source>Open next in directory</source>
         <translation>Otvori slijedeći u mapi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4628"/>
+        <location filename="../mainwindow.ui" line="4631"/>
         <source>F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4633"/>
+        <location filename="../mainwindow.ui" line="4636"/>
         <source>Decode remaining files in directory</source>
         <translation>Dekodirajte preostale datoteke u direktoriju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4636"/>
+        <location filename="../mainwindow.ui" line="4639"/>
         <source>Shift+F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4641"/>
+        <location filename="../mainwindow.ui" line="4644"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>Izbrišite sve datoteke * .wav &amp;&amp; * .c2 u SaveDiru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4652"/>
-        <location filename="../mainwindow.ui" line="5327"/>
-        <location filename="../mainwindow.ui" line="5389"/>
-        <location filename="../mainwindow.ui" line="5671"/>
+        <location filename="../mainwindow.ui" line="4655"/>
+        <location filename="../mainwindow.ui" line="5354"/>
+        <location filename="../mainwindow.ui" line="5416"/>
+        <location filename="../mainwindow.ui" line="5698"/>
         <source>fast</source>
         <translation>brzo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4663"/>
+        <location filename="../mainwindow.ui" line="4666"/>
         <source>None</source>
         <translation>Ništa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4671"/>
+        <location filename="../mainwindow.ui" line="4674"/>
         <source>Save all</source>
         <translation>Spremi sve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4679"/>
+        <location filename="../mainwindow.ui" line="4682"/>
         <source>English</source>
-        <translation></translation>
+        <translation>Engleski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4687"/>
+        <location filename="../mainwindow.ui" line="4690"/>
         <source>Eesti</source>
-        <translation></translation>
+        <translation>Estonski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4695"/>
+        <location filename="../mainwindow.ui" line="4698"/>
         <source>Русский</source>
-        <translation></translation>
+        <translation>Ruski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4703"/>
+        <location filename="../mainwindow.ui" line="4706"/>
         <source>Hrvatski</source>
-        <translation></translation>
+        <translation>Hrvatski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4711"/>
+        <location filename="../mainwindow.ui" line="4714"/>
+        <source>Español</source>
+        <translation>Španjolski</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4722"/>
+        <source>Français</source>
+        <translation>Francuski</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4730"/>
+        <source>Italiano</source>
+        <translation>Talijanski</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4738"/>
         <source>Polski</source>
-        <translation></translation>
+        <translation>Poljski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4719"/>
+        <location filename="../mainwindow.ui" line="4746"/>
         <source>Português</source>
-        <translation></translation>
+        <translation>Portugalski</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4727"/>
+        <location filename="../mainwindow.ui" line="4754"/>
         <source>简体中文</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4735"/>
+        <location filename="../mainwindow.ui" line="4762"/>
         <source>繁體中文</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4743"/>
+        <location filename="../mainwindow.ui" line="4770"/>
         <source>日本語</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4748"/>
+        <location filename="../mainwindow.ui" line="4775"/>
         <source>JTDX Web site</source>
         <translation>JTDX Web stranica</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4751"/>
+        <location filename="../mainwindow.ui" line="4778"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4756"/>
+        <location filename="../mainwindow.ui" line="4783"/>
         <source>Keyboard shortcuts</source>
         <translation>Prečaci na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4759"/>
+        <location filename="../mainwindow.ui" line="4786"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4764"/>
+        <location filename="../mainwindow.ui" line="4791"/>
         <source>Special mouse commands</source>
         <translation>Posebne naredbe miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4767"/>
+        <location filename="../mainwindow.ui" line="4794"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4778"/>
+        <location filename="../mainwindow.ui" line="4805"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4789"/>
+        <location filename="../mainwindow.ui" line="4816"/>
         <source>Save decoded</source>
         <translation>Spremi dekodirano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4800"/>
-        <location filename="../mainwindow.ui" line="5335"/>
-        <location filename="../mainwindow.ui" line="5397"/>
-        <location filename="../mainwindow.ui" line="5639"/>
-        <location filename="../mainwindow.ui" line="5679"/>
+        <location filename="../mainwindow.ui" line="4827"/>
+        <location filename="../mainwindow.ui" line="5362"/>
+        <location filename="../mainwindow.ui" line="5424"/>
+        <location filename="../mainwindow.ui" line="5666"/>
+        <location filename="../mainwindow.ui" line="5706"/>
         <source>medium</source>
         <translation>srednje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4811"/>
-        <location filename="../mainwindow.ui" line="5346"/>
-        <location filename="../mainwindow.ui" line="5408"/>
-        <location filename="../mainwindow.ui" line="5690"/>
+        <location filename="../mainwindow.ui" line="4838"/>
+        <location filename="../mainwindow.ui" line="5373"/>
+        <location filename="../mainwindow.ui" line="5435"/>
+        <location filename="../mainwindow.ui" line="5717"/>
         <source>deep</source>
         <translation>duboko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4819"/>
+        <location filename="../mainwindow.ui" line="4846"/>
         <source>Monitor OFF at startup</source>
         <translation>Monitor isključen pri pokretanju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4824"/>
+        <location filename="../mainwindow.ui" line="4851"/>
         <source>Erase ALL.TXT</source>
         <translation>Izbriši ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4829"/>
+        <location filename="../mainwindow.ui" line="4856"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>Izbriši LOG file wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4834"/>
+        <location filename="../mainwindow.ui" line="4861"/>
         <source>Open wsjtx_log.adi</source>
         <translation>Otvori wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4837"/>
-        <location filename="../mainwindow.ui" line="5021"/>
+        <location filename="../mainwindow.ui" line="4864"/>
+        <location filename="../mainwindow.ui" line="5048"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4845"/>
+        <location filename="../mainwindow.ui" line="4872"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>Pretvorite način rada u RTTY za logiranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4853"/>
+        <location filename="../mainwindow.ui" line="4880"/>
         <source>Log dB reports to Comments</source>
         <translation>Logiranje dB raporta u komentare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4861"/>
+        <location filename="../mainwindow.ui" line="4888"/>
         <source>Prompt me to log QSO</source>
         <translation>Zatraži me da logiram QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4869"/>
+        <location filename="../mainwindow.ui" line="4896"/>
         <source>Blank line between decoding periods</source>
         <translation>Prazne linije između perioda dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4877"/>
+        <location filename="../mainwindow.ui" line="4904"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>Očistite DX znak i Lokator nakon logiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4885"/>
+        <location filename="../mainwindow.ui" line="4912"/>
         <source>Display distance in miles</source>
         <translation>Prikaži udaljenost u miljama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4893"/>
+        <location filename="../mainwindow.ui" line="4920"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>Dvaput kliknite na znak aktivira Tx Enable</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4901"/>
+        <location filename="../mainwindow.ui" line="4928"/>
         <source>Tx disabled after sending 73</source>
         <translation>Onemogući TX nakon slanja 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4909"/>
+        <location filename="../mainwindow.ui" line="4936"/>
         <source>Runaway Tx watchdog</source>
-        <translation>Čuvar isteka TX predaje</translation>
+        <translation>Vrijeme isteka TX predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4917"/>
+        <location filename="../mainwindow.ui" line="4944"/>
         <source>Allow multiple instances</source>
         <translation>Omogući višestruke instance</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4925"/>
+        <location filename="../mainwindow.ui" line="4952"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx frekv zaključan na Rx frekv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4933"/>
+        <location filename="../mainwindow.ui" line="4960"/>
         <source>Skip Tx 1</source>
         <translation>Preskoči TX1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4941"/>
+        <location filename="../mainwindow.ui" line="4968"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4952"/>
+        <location filename="../mainwindow.ui" line="4979"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4960"/>
+        <location filename="../mainwindow.ui" line="4987"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Tx poruke u prozoru Rx Frekvencija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4968"/>
+        <location filename="../mainwindow.ui" line="4995"/>
         <source>Gray1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4976"/>
+        <location filename="../mainwindow.ui" line="5003"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4984"/>
+        <location filename="../mainwindow.ui" line="5011"/>
         <source>Astronomical data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4989"/>
+        <location filename="../mainwindow.ui" line="5016"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>Kratki popis dodataka i prefiksa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4994"/>
+        <location filename="../mainwindow.ui" line="5021"/>
         <source>Settings...</source>
         <translation>Postavke ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5005"/>
+        <location filename="../mainwindow.ui" line="5032"/>
         <source>JTDX forum</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5010"/>
+        <location filename="../mainwindow.ui" line="5037"/>
         <source>Open log directory</source>
         <translation>Otvori log direktorij</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5018"/>
+        <location filename="../mainwindow.ui" line="5045"/>
         <source>Message averaging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5035"/>
+        <location filename="../mainwindow.ui" line="5062"/>
         <source>Include averaging</source>
         <translation>Dodaj nagovještanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5049"/>
+        <location filename="../mainwindow.ui" line="5076"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 nagovještanje dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5060"/>
+        <location filename="../mainwindow.ui" line="5087"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5065"/>
+        <location filename="../mainwindow.ui" line="5092"/>
         <source>Save reference spectrum</source>
         <translation>Spremite referentni spektar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5070"/>
+        <location filename="../mainwindow.ui" line="5097"/>
         <source>&amp;Download Samples ...</source>
         <translation>&amp;Preuzmi Primjere ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5073"/>
+        <location filename="../mainwindow.ui" line="5100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preuzmite primjere audio datoteka koje prikazuju različite vrste rada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5081"/>
+        <location filename="../mainwindow.ui" line="5108"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5092"/>
+        <location filename="../mainwindow.ui" line="5119"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>Izostavi tekst filtere na RX frekvenciji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5103"/>
+        <location filename="../mainwindow.ui" line="5130"/>
         <source>Bypass all text filters</source>
         <translation>Izostavi sve tekst filtere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5106"/>
+        <location filename="../mainwindow.ui" line="5133"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5114"/>
+        <location filename="../mainwindow.ui" line="5141"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>Prikažite poruke dekodirane iz JT65 harmonika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5125"/>
+        <location filename="../mainwindow.ui" line="5152"/>
         <source>Enable main window popup</source>
         <translation>Omogući skočni prozor glavnog prozora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5136"/>
+        <location filename="../mainwindow.ui" line="5163"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>Poruke s mojim znakom u prozor frekvencije RX </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5141"/>
+        <location filename="../mainwindow.ui" line="5168"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>Obavijest o autorskim pravima WSJT Development Grupe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5155"/>
+        <location filename="../mainwindow.ui" line="5182"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5163"/>
+        <location filename="../mainwindow.ui" line="5190"/>
         <source>FT8 call first</source>
         <translation>FT8 odgovori prvome</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5174"/>
+        <location filename="../mainwindow.ui" line="5201"/>
         <source>Call priority and search CQ</source>
         <translation>Prioritetni znak i potražite CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5177"/>
+        <location filename="../mainwindow.ui" line="5204"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odaberite odabir pretraživanja odgovora na CQ s prioritetima, ako to nije uspjelo, onda tražite CQ poruke s većim prioritetom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5185"/>
+        <location filename="../mainwindow.ui" line="5212"/>
         <source>FT8 call last</source>
         <translation>FT8 ogovorii zadnjem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5193"/>
+        <location filename="../mainwindow.ui" line="5220"/>
         <source>FT8 manual call</source>
         <translation>FT8 ručni odgovor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5201"/>
+        <location filename="../mainwindow.ui" line="5228"/>
         <source>0  Call None</source>
         <translation>0 Ručni odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5209"/>
+        <location filename="../mainwindow.ui" line="5236"/>
         <source>1  Call first</source>
         <translation>1  Odaberi prvog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5217"/>
+        <location filename="../mainwindow.ui" line="5244"/>
         <source>4+ Call and search through CQ messages</source>
         <translation>4+ Pozivanje i pretraživanje CQ poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5225"/>
+        <location filename="../mainwindow.ui" line="5252"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation type="unfinished">2 Pozovi dekodiranog do početka TX intervala</translation>
+        <translation>2 Pozovi dekodiranog do početka TX intervala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5233"/>
+        <location filename="../mainwindow.ui" line="5260"/>
         <source>3  Call based on end of decoding</source>
         <translation>3  Poziv na temelju kraja dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5241"/>
+        <location filename="../mainwindow.ui" line="5268"/>
         <source>Single shot QSO</source>
         <translation>Jedan QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5249"/>
+        <location filename="../mainwindow.ui" line="5276"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>Izbriši prozor aktivnosti pri svakom dekodiranju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5257"/>
+        <location filename="../mainwindow.ui" line="5284"/>
         <source>Answer worked B4 calls</source>
         <translation>Odgovaranje na B4 pozive</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5268"/>
+        <location filename="../mainwindow.ui" line="5295"/>
         <source>Auto</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5295"/>
+        <location filename="../mainwindow.ui" line="5322"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5303"/>
+        <location filename="../mainwindow.ui" line="5330"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5311"/>
+        <location filename="../mainwindow.ui" line="5338"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5319"/>
+        <location filename="../mainwindow.ui" line="5346"/>
         <source>Erase both message windows at band change</source>
         <translation>Izbriši oba prozora sa porukama pri promjeni opsega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5357"/>
+        <location filename="../mainwindow.ui" line="5384"/>
         <source>deep with 4 passes</source>
         <translation>Duboko sa 4 prolaza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5365"/>
+        <location filename="../mainwindow.ui" line="5392"/>
         <source>Max distance instead of best SNR</source>
         <translation>Maksimalna udaljenost umjesto najboljeg SNR-a</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5373"/>
+        <location filename="../mainwindow.ui" line="5400"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>Poruke s traženim znakom u prozor RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5381"/>
+        <location filename="../mainwindow.ui" line="5408"/>
         <source>use low thresholds</source>
         <translation>niski prag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5416"/>
+        <location filename="../mainwindow.ui" line="5443"/>
         <source>use subpass</source>
         <translation>koristi subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5427"/>
+        <location filename="../mainwindow.ui" line="5454"/>
         <source>minimum</source>
         <translation>minimalno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5435"/>
+        <location filename="../mainwindow.ui" line="5462"/>
         <source>late start of decoder</source>
-        <translation type="unfinished">Kašnjenje početka dekodiranja</translation>
+        <translation>Kašnjenje početka dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5443"/>
+        <location filename="../mainwindow.ui" line="5470"/>
         <source>Call worked B4 callsigns</source>
         <translation>Zovi rađene B4 stanice</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5462"/>
+        <location filename="../mainwindow.ui" line="5489"/>
         <source>CQ and 73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5470"/>
+        <location filename="../mainwindow.ui" line="5497"/>
         <source>any messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5478"/>
+        <location filename="../mainwindow.ui" line="5505"/>
         <source>Enable</source>
         <translation>Omogući</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5486"/>
+        <location filename="../mainwindow.ui" line="5513"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>Isključite filter kad pošaljete 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5494"/>
+        <location filename="../mainwindow.ui" line="5521"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>Isključite filter kad primite 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5502"/>
+        <location filename="../mainwindow.ui" line="5529"/>
         <source>Hide FT8 dupe messages</source>
         <translation>Sakrij FT8 duple poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5510"/>
+        <location filename="../mainwindow.ui" line="5537"/>
         <source>Display output power</source>
         <translation>Prikaz izazne snage</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5518"/>
+        <location filename="../mainwindow.ui" line="5545"/>
         <source>Report message priority</source>
         <translation>Raport kao prioritet poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5526"/>
+        <location filename="../mainwindow.ui" line="5553"/>
         <source>Enable hound mode</source>
         <translation>Omogući hound mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5537"/>
+        <location filename="../mainwindow.ui" line="5564"/>
         <source>Use hound TX frequency control</source>
         <translation>Hound TX kontrola frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5545"/>
+        <location filename="../mainwindow.ui" line="5572"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>Onemogući TX nakon slanja RRR / RR73 / 73 u ručnom načinu rada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5556"/>
+        <location filename="../mainwindow.ui" line="5583"/>
         <source>Show tooltips in main window</source>
         <translation>Prikazivanje savjeta u glavnom prozoru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5564"/>
+        <location filename="../mainwindow.ui" line="5591"/>
         <source>Color Tx message buttons</source>
         <translation>Gumbi Tx  poruka u boji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5572"/>
-        <location filename="../mainwindow.ui" line="5749"/>
-        <location filename="../mainwindow.ui" line="5773"/>
+        <location filename="../mainwindow.ui" line="5599"/>
+        <location filename="../mainwindow.ui" line="5776"/>
+        <location filename="../mainwindow.ui" line="5800"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5580"/>
+        <location filename="../mainwindow.ui" line="5607"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5588"/>
+        <location filename="../mainwindow.ui" line="5615"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5596"/>
+        <location filename="../mainwindow.ui" line="5623"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5604"/>
+        <location filename="../mainwindow.ui" line="5631"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5612"/>
+        <location filename="../mainwindow.ui" line="5639"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5620"/>
+        <location filename="../mainwindow.ui" line="5647"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5628"/>
+        <location filename="../mainwindow.ui" line="5655"/>
         <source>low</source>
         <translation>nisko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5647"/>
+        <location filename="../mainwindow.ui" line="5674"/>
         <source>high</source>
         <translation>visoko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5655"/>
+        <location filename="../mainwindow.ui" line="5682"/>
         <source>Hide FT contest messages</source>
         <translation>Sakrij FT kontest poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5663"/>
+        <location filename="../mainwindow.ui" line="5690"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5698"/>
+        <location filename="../mainwindow.ui" line="5725"/>
         <source>wideband DX Call search</source>
         <translation>Pretraživanje traženog DX znaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5706"/>
+        <location filename="../mainwindow.ui" line="5733"/>
         <source>6 pass SWL mode</source>
         <translation>6 prolaza SWL mod</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5717"/>
+        <location filename="../mainwindow.ui" line="5744"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translation>Pozivni znak u međuspremnik dvoklik | automatski odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5725"/>
+        <location filename="../mainwindow.ui" line="5752"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>Crossband rad na 160m sa Japanom</translation>
     </message>
@@ -2462,388 +4272,409 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Želite li ponovno konfigurirati radijsko sučelje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="729"/>
+        <location filename="../mainwindow.cpp" line="732"/>
         <source>Error Writing WAV File</source>
         <translation>Greška pri zapisivanju u WAV datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="909"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Greška Zatvaram jtdxjt9.exe Process</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="910"/>
+        <location filename="../mainwindow.cpp" line="890"/>
+        <location filename="../mainwindow.cpp" line="891"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="5919"/>
+        <location filename="../mainwindow.cpp" line="5920"/>
+        <location filename="../mainwindow.cpp" line="5975"/>
+        <location filename="../mainwindow.cpp" line="5976"/>
+        <source>Freq   Message</source>
+        <translation>Freq   Poruka</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="913"/>
         <source>KillByName return code: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="927"/>
+        <location filename="../mainwindow.cpp" line="930"/>
         <source>Error removing &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška prilikom uklanjanja &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="928"/>
+        <location filename="../mainwindow.cpp" line="931"/>
         <source>Click OK to retry</source>
         <translation>Kliknite OK za ponovni pokušaj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1605"/>
+        <location filename="../mainwindow.cpp" line="1608"/>
         <source>TX Even</source>
         <translation>TX Parne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1612"/>
+        <location filename="../mainwindow.cpp" line="1615"/>
         <source>TX Odd</source>
         <translation>TX neparne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1657"/>
-        <location filename="../mainwindow.cpp" line="2334"/>
-        <location filename="../mainwindow.cpp" line="3422"/>
-        <location filename="../mainwindow.cpp" line="3999"/>
-        <location filename="../mainwindow.cpp" line="4122"/>
-        <location filename="../mainwindow.cpp" line="4354"/>
-        <location filename="../mainwindow.cpp" line="6733"/>
-        <location filename="../mainwindow.cpp" line="6929"/>
+        <location filename="../mainwindow.cpp" line="1660"/>
+        <location filename="../mainwindow.cpp" line="2337"/>
+        <location filename="../mainwindow.cpp" line="3428"/>
+        <location filename="../mainwindow.cpp" line="4031"/>
+        <location filename="../mainwindow.cpp" line="4154"/>
+        <location filename="../mainwindow.cpp" line="4386"/>
+        <location filename="../mainwindow.cpp" line="6765"/>
+        <location filename="../mainwindow.cpp" line="6961"/>
         <source>File Open Error</source>
         <translation>Greška otvaranja datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1658"/>
-        <location filename="../mainwindow.cpp" line="2335"/>
-        <location filename="../mainwindow.cpp" line="3423"/>
-        <location filename="../mainwindow.cpp" line="4000"/>
-        <location filename="../mainwindow.cpp" line="4123"/>
-        <location filename="../mainwindow.cpp" line="4355"/>
-        <location filename="../mainwindow.cpp" line="6734"/>
-        <location filename="../mainwindow.cpp" line="6930"/>
-        <location filename="../mainwindow.cpp" line="7271"/>
+        <location filename="../mainwindow.cpp" line="1661"/>
+        <location filename="../mainwindow.cpp" line="2338"/>
+        <location filename="../mainwindow.cpp" line="3429"/>
+        <location filename="../mainwindow.cpp" line="4032"/>
+        <location filename="../mainwindow.cpp" line="4155"/>
+        <location filename="../mainwindow.cpp" line="4387"/>
+        <location filename="../mainwindow.cpp" line="6766"/>
+        <location filename="../mainwindow.cpp" line="6962"/>
+        <location filename="../mainwindow.cpp" line="7303"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished">Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
+        <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1762"/>
+        <location filename="../mainwindow.cpp" line="1765"/>
         <source>Error saving c2 file</source>
         <translation>Greška snimanja c2 datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1838"/>
+        <location filename="../mainwindow.cpp" line="1841"/>
         <source>Error in SoundInput</source>
         <translation>Greška SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1842"/>
+        <location filename="../mainwindow.cpp" line="1845"/>
         <source>Error in SoundOutput</source>
         <translation>Greška SoundOutput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1928"/>
+        <location filename="../mainwindow.cpp" line="1931"/>
         <source>Pwr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2445"/>
+        <location filename="../mainwindow.cpp" line="2448"/>
         <source>Subprocess Error</source>
         <translation>Pogreška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2446"/>
+        <location filename="../mainwindow.cpp" line="2449"/>
         <source>Subprocess failed with exit code %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2448"/>
-        <location filename="../mainwindow.cpp" line="2467"/>
+        <location filename="../mainwindow.cpp" line="2451"/>
+        <location filename="../mainwindow.cpp" line="2470"/>
         <source>Running: %1
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2466"/>
+        <location filename="../mainwindow.cpp" line="2469"/>
         <source>Subprocess error</source>
         <translation>Pogreška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="2548"/>
         <source>Spotted</source>
         <translation>Spotiran</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2552"/>
+        <location filename="../mainwindow.cpp" line="2555"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Nemoguće uspostaviti vezu sa dxsummit serverom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2576"/>
+        <location filename="../mainwindow.cpp" line="2579"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>Algoritmi, izvorni kôd, look-and-feel WSJT-X i srodnih programa i specifikacije protokola za načine FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 su Copyright (C) 2001 -2018. Jedan ili više sljedećih autora: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; i ostali članovi razvojne skupine WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2697"/>
+        <location filename="../mainwindow.cpp" line="2700"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Nema podataka za čitanje s diska. Pogrešan format datoteke?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2738"/>
+        <location filename="../mainwindow.cpp" line="2744"/>
         <source>AutoSeq0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2751"/>
+        <location filename="../mainwindow.cpp" line="2757"/>
         <source>AutoSeq1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2760"/>
-        <location filename="../mainwindow.cpp" line="2786"/>
+        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
         <source>AutoSeq2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2761"/>
-        <location filename="../mainwindow.cpp" line="2782"/>
+        <location filename="../mainwindow.cpp" line="2767"/>
+        <location filename="../mainwindow.cpp" line="2788"/>
         <source>AutoSeq6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2770"/>
-        <location filename="../mainwindow.cpp" line="2787"/>
+        <location filename="../mainwindow.cpp" line="2776"/>
+        <location filename="../mainwindow.cpp" line="2793"/>
         <source>AutoSeq3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2771"/>
-        <location filename="../mainwindow.cpp" line="2783"/>
+        <location filename="../mainwindow.cpp" line="2777"/>
+        <location filename="../mainwindow.cpp" line="2789"/>
         <source>AutoSeq7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2855"/>
+        <location filename="../mainwindow.cpp" line="2861"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Kontrola Hound TX frekvencije  nije dopuštena u standardnim FT8 podpojasima.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2863"/>
+        <location filename="../mainwindow.cpp" line="2869"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound - Za reguliranje frekvencije TX-a potreban je * Split * za  rig kontrolu (bilo * Rig * ili * Fake It * na kartici * Settings | Radio *.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2866"/>
+        <location filename="../mainwindow.cpp" line="2872"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translatorcomment>Hound TX frekvencija nije dopuštena u standardnim FT8 podpojasima i zahtijeva * Split * rig control (ili * Rig * ili * Fake It * na kartici * Postavke | Radio *.)</translatorcomment>
         <translation>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2874"/>
+        <location filename="../mainwindow.cpp" line="2880"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX upozorenje kontrole frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2879"/>
+        <location filename="../mainwindow.cpp" line="2885"/>
         <source>HoundFC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2940"/>
+        <location filename="../mainwindow.cpp" line="2946"/>
         <source>Keyboard Shortcuts</source>
         <translation>Prečice na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2951"/>
+        <location filename="../mainwindow.cpp" line="2957"/>
         <source>Special Mouse Commands</source>
         <translation>Posebne naredbe za miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3392"/>
-        <location filename="../mainwindow.cpp" line="3399"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <source>Avg=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3398"/>
+        <location filename="../mainwindow.cpp" line="3405"/>
         <source>check time</source>
         <translation>provjeri sat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3698"/>
-        <location filename="../mainwindow.cpp" line="3706"/>
+        <location filename="../mainwindow.cpp" line="3705"/>
+        <location filename="../mainwindow.cpp" line="3713"/>
         <source>Confirm change Language</source>
         <translation>Potvrdi promjenu jezika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3700"/>
-        <location filename="../mainwindow.cpp" line="3709"/>
+        <location filename="../mainwindow.cpp" line="3707"/>
+        <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Jeste li sigurni da želite promijeniti jezik sučelja na Hrvatski, JTDX će se ponovo pokrenuti?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3703"/>
-        <location filename="../mainwindow.cpp" line="3712"/>
+        <location filename="../mainwindow.cpp" line="3710"/>
+        <location filename="../mainwindow.cpp" line="3719"/>
         <source>&amp;Yes</source>
         <translation>&amp;Da</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3704"/>
-        <location filename="../mainwindow.cpp" line="3715"/>
+        <location filename="../mainwindow.cpp" line="3711"/>
+        <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;No</source>
         <translation>&amp;Ne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3849"/>
-        <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band on 30m.</source>
-        <translation>Odaberite drugu Tx frekvenciju. JTDX neće svjesno odašiljati drugi mod u WSPR podopsegu na 30m.</translation>
+        <location filename="../mainwindow.cpp" line="3881"/>
+        <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
+        <translation>Odaberite drugu Tx frekvenciju. JTDX neće svjesno odašiljati drugi mod u WSPR podopsegu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3854"/>
-        <location filename="../mainwindow.cpp" line="3857"/>
+        <location filename="../mainwindow.cpp" line="3886"/>
+        <location filename="../mainwindow.cpp" line="3889"/>
         <source>WSPR Guard Band</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3975"/>
+        <location filename="../mainwindow.cpp" line="4007"/>
         <source>TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3976"/>
+        <location filename="../mainwindow.cpp" line="4008"/>
         <source>LastTx: </source>
         <translation>ZadnjiTx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4190"/>
+        <location filename="../mainwindow.cpp" line="4222"/>
         <source>Tx: TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4191"/>
+        <location filename="../mainwindow.cpp" line="4223"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4196"/>
+        <location filename="../mainwindow.cpp" line="4228"/>
         <source>Receiving </source>
         <translation>Primam </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4249"/>
+        <location filename="../mainwindow.cpp" line="4281"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4405"/>
+        <location filename="../mainwindow.cpp" line="4437"/>
         <source>Last Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5286"/>
-        <location filename="../mainwindow.cpp" line="5298"/>
-        <location filename="../mainwindow.cpp" line="5311"/>
-        <location filename="../mainwindow.cpp" line="5337"/>
+        <location filename="../mainwindow.cpp" line="5318"/>
+        <location filename="../mainwindow.cpp" line="5330"/>
+        <location filename="../mainwindow.cpp" line="5343"/>
+        <location filename="../mainwindow.cpp" line="5369"/>
         <source>Add to CALL3.TXT</source>
         <translation>Dodaj u CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5287"/>
+        <location filename="../mainwindow.cpp" line="5319"/>
         <source>Please enter a valid grid locator</source>
         <translation>Upiši valjani lokator polje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5299"/>
+        <location filename="../mainwindow.cpp" line="5331"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5312"/>
+        <location filename="../mainwindow.cpp" line="5344"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5335"/>
+        <location filename="../mainwindow.cpp" line="5367"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5730"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Greška prilikom slanja QSO ADIF na drugi UDP server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5730"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5844"/>
+        <location filename="../mainwindow.cpp" line="5876"/>
         <source>Tx WSPR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6478"/>
+        <location filename="../mainwindow.cpp" line="5966"/>
+        <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
+        <translation>    Freq     Drift  Znak          Grid    dBm   Dist</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6510"/>
         <source>Tune</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6651"/>
+        <location filename="../mainwindow.cpp" line="6683"/>
         <source>Lockd Tx=Rx</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6652"/>
+        <location filename="../mainwindow.cpp" line="6684"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za omogućavanje rada u Tx / Rx Split načinu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6655"/>
+        <location filename="../mainwindow.cpp" line="6687"/>
         <source>Tx/Rx Split</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6656"/>
+        <location filename="../mainwindow.cpp" line="6688"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za zaključavanje Tx frekvencije na Rx AF frekvenciji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6842"/>
+        <location filename="../mainwindow.cpp" line="6874"/>
         <source>Tune digital gain</source>
         <translation>Jačina Tune Tona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6843"/>
+        <location filename="../mainwindow.cpp" line="6875"/>
         <source>Transmit digital gain</source>
         <translation>Jačina audio predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6862"/>
+        <location filename="../mainwindow.cpp" line="6894"/>
         <source>Prefixes</source>
         <translation>Prefiksi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6911"/>
-        <location filename="../mainwindow.cpp" line="6912"/>
+        <location filename="../mainwindow.cpp" line="6943"/>
+        <location filename="../mainwindow.cpp" line="6944"/>
         <source>Logd </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7135"/>
+        <location filename="../mainwindow.cpp" line="7167"/>
         <source>Network Error</source>
         <translation>Greška Mreže</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7136"/>
+        <location filename="../mainwindow.cpp" line="7168"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Greška: %1
 UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7270"/>
+        <location filename="../mainwindow.cpp" line="7302"/>
         <source>File Error</source>
         <translation>Greška datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7481"/>
+        <location filename="../mainwindow.cpp" line="7513"/>
         <source>Tx watchdog expired</source>
         <translation>TX Watchdog je istekao</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7495"/>
+        <location filename="../mainwindow.cpp" line="7527"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>
@@ -2900,25 +4731,25 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška pri čitanju datoteke palete vodopada &quot;%1:%2&quot; previše boja.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška pri čitanju datoteke palete vodopada &quot;%1:%2&quot; nevažeća trojka.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška pri čitanju datoteke palete vodopada &quot;%1:%2&quot; nevaljana boja.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška prilikom otvaranja datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="250"/>
+        <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Pogreška pri pisanju datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>
@@ -2941,20 +4772,24 @@ UDP server %2:%3</translation>
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije moguće preimenovati datoteku:
+&quot;%1&quot;
+u: &quot;%2&quot;
+Greška(%3): %4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije moguće izbrisati datoteku:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="172"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished">Greška Mreže</translation>
+        <translation>Greška Mreže</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
@@ -2964,33 +4799,39 @@ Error(%3): %4</source>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
         <source>Redirect not followed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Preusmjeravanje nije uslijedilo: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne mogu izvršiti promjene na:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="245"/>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka se ne može otvoriti:
+&quot;%1&quot;
+Greška(%2): %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>N mogu napraviti :
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="263"/>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije moguće zapisati u datoteku:
+&quot;%1&quot;
+Greška(%2): %3</translation>
     </message>
 </context>
 <context>
@@ -3074,22 +4915,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translation>Došlo je do pogreške prilikom otvaranja audio izlaznog uređaja.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Došlo je do pogreške tijekom pisanja na izlazni audio uređaj.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio podaci se ne isporučuju na izlazni audio uređaj dovoljno brzo.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="31"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška koja se ne može popraviti, uređaj za izlaz zvuka trenutačno nije upotrebljiv.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
@@ -3135,55 +4976,65 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="252"/>
+        <location filename="../Configuration.cpp" line="254"/>
         <source>Add Station</source>
         <translation>Dodaj stanicu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="257"/>
+        <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Band:</source>
         <translation>&amp;Opseg:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="258"/>
+        <location filename="../Configuration.cpp" line="260"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Ofset (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="259"/>
+        <location filename="../Configuration.cpp" line="261"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antena:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="267"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="268"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Prekid</translation>
     </message>
 </context>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="291"/>
+        <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
         <translation>Opseg</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="317"/>
+        <location filename="../StationList.cpp" line="322"/>
         <source>Frequency offset</source>
         <translation>Ofset frekvencija</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="339"/>
+        <location filename="../StationList.cpp" line="344"/>
         <source>Antenna description</source>
         <translation>Opis antenskog sustava</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="361"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
         <translation>Opseg</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="362"/>
+        <location filename="../StationList.cpp" line="367"/>
         <source>Offset</source>
         <translation>Ofset</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="363"/>
+        <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
         <translation>Opis antenskog sustava</translation>
     </message>
@@ -3438,7 +5289,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sastavni pozivni znakovi tipa 2 su oni s prefiksima ili sufiksima koji nisu uključeni u dopušteni uži popis (Pogledajte Pomoć-&gt; Prefiksi i sufiksi dodataka). &lt;/p&gt; &lt;p&gt; Ova opcija određuje koje generirane poruke trebaju sadržavati vaš potpuni spoj tipa 2 pozivni znak, a ne osnovni pozivni znak. Primjenjuje se samo ako imate složeni pozivni znak tipa 2. &lt;/p&gt; &lt;p&gt; Ova opcija kontrolira način na koji se generiraju poruke koje se koriste za odgovaranje na CQ pozive. Generirane poruke 6 (CQ) i 5 (73) uvijek će sadržavati vaš puni pozivni znak. JT65 i JT9 protokoli omogućuju neke standardne poruke uz vaš potpuni poziv na štetu drugog podatka, poput DX poziva ili vašeg lokatora. &lt;/p&gt; &lt;p&gt; Odabir poruke 1 izostavlja DX pozivni znak što može predstavljati problem prilikom odgovaranja na pozive CQ-a. Odabirom poruke 3 također se odbija DX pozivna oznaka i mnoge verzije ovog i drugog softvera neće izvući raport. Ako ne odaberete, niti jedan puni pozivni znak ne smije biti u vašoj poruci 5 (73), pa vaš partner za vezu prijavi pogrešan pozivni znak. &lt;/p&gt; &lt;p&gt; Nijedna od ovih opcija nije savršena, poruka 3 je najbolja, ali budite svjesni da QSO partner za vezu ne može zabilježiti raport koji mu pošaljete.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -3518,7 +5369,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation type="unfinished"></translation>
+        <translation>U prozor za aktivnost pojasa uključite liniju razdvajanja između preioda.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -3548,7 +5399,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kad se TX poruka promijeni, prethodna se poruka neće prikazati ako je poslana kraće od 2 sekunde.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="392"/>
@@ -3583,12 +5434,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation>Čuvar isteka TX predaje WD</translation>
+        <translation>Vrijeme isteka TX predaje WD</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of minutes before unattended transmissions are aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Broj minuta prije prekida prijenosa bez nadzora&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="488"/>
@@ -3599,7 +5450,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="491"/>
         <source> minutes</source>
-        <translation></translation>
+        <translation> minuta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
@@ -3609,22 +5460,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation></translation>
+        <translation>Tune brojač</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Broj sekundi Tune intervala&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="538"/>
         <source> seconds</source>
-        <translation> sekunde</translation>
+        <translation> sekundi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Neki uređaji ne mogu obrađivati ​​CAT naredbe tijekom prijenosa. To znači da ako želite raditi u Split načinu rada, možda ćete morati poništiti ovu opciju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
@@ -3634,7 +5485,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="569"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite to ako se želite automatski vratiti na zadnju nadziranu frekvenciju kada je monitor omogućen, ostavite neoznačeno ako želite da se održava trenutna frekvencija radija.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="572"/>
@@ -3690,7 +5541,7 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval slanja upita o statusa uređaju. Dulji intervali znače da će promjene na uređaju trajati duže prije nego što se otkriju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="699"/>
@@ -3814,12 +5665,12 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="952"/>
         <source>Se&amp;ven</source>
-        <translation></translation>
+        <translation>Se&amp;dam</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="965"/>
         <source>E&amp;ight</source>
-        <translation></translation>
+        <translation>O&amp;sam</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="981"/>
@@ -3834,17 +5685,17 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>On&amp;e</source>
-        <translation></translation>
+        <translation>J&amp;edan</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1019"/>
         <source>T&amp;wo</source>
-        <translation></translation>
+        <translation>D&amp;va</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1035"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Protokol kontrole protoka koji se koristi između ovog računala i CAT sučelja vašeg radija(obično &amp;quot;Ništa&amp;quot; ali neki zahtijevaju &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
@@ -3959,7 +5810,7 @@ ostalo hardversko sučelje za PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Upotrijebite RS-232 RTS kontrolnu liniju za prebacivanje PTT radija, potreban je hardver za povezivanje linije. &lt;/p&gt; &lt;p&gt; Neki komercijalni PTTi zvučni adapteri također koriste ovu metodu. &lt;/p&gt; &lt;p&gt; Kontrolna linija RTS-a se može koristiti sa CAT serijskog ulaza ili se može koristiti RTS linija na drugom serijskom priključku. Imajte na umu da ova opcija nije dostupna na CAT serijskom priključku kada se koristi hardverski nadzor protoka.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
@@ -3976,12 +5827,14 @@ ostalo hardversko sučelje za PTT.</translation>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
-        <translation type="unfinished"></translation>
+        <translation>Neki radio uređaji mogu odabrati audio ulaz pomoću CAT naredbe,
+ova postavka omogućava vam odabir audio ulaza
+(ako je dostupan, općenito je najbolja opcija Stražnji / Data).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation>Predajni Audio Izvor</translation>
+        <translation>Predajni Audio Izlaz</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
@@ -4056,12 +5909,12 @@ ili je odabrana širina pojasa).</translation>
     <message>
         <location filename="../Configuration.ui" line="1497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pokušajte spojiti se na radio s ovim postavkama. &lt;/p&gt; &lt;p&gt; Gumb će postati zeleni ako je veza uspješna ili crveni ako postoji problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
         <source>Test CAT</source>
-        <translation></translation>
+        <translation>Isprobaj CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1523"/>
@@ -4079,7 +5932,7 @@ radijskom sučelju i  da li se  ponaša se kako se očekuje.</translation>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
         <source>Test PTT</source>
-        <translation></translation>
+        <translation>Isprobaj PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1568"/>
@@ -4114,12 +5967,16 @@ If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
 you will broadcast any systems sounds generated during
 transmitting periods.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite audio CODEC koji ćete koristiti za prijenos.
+Ako vam je to zadani uređaj za zvukove sustava
+pobrinite se da svi zvukovi sustava budu onemogućeni, inače
+ćete emitirati sve zvukove sustava nastale tijekom
+razdoblja odašiljanja.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1666"/>
         <source>Select the audio CODEC to use for receiving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite zvučni CODEC koji ćete koristiti za primanje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1673"/>
@@ -4161,7 +6018,10 @@ transmitting periods.</source>
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite audio kanal koji se koristi za prijenos.
+Ako nemate više radija na različitim
+kanalima; tada ćete obično htjeti odabrati mono ili
+oboje ovdje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1740"/>
@@ -4171,7 +6031,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation type="unfinished">Zapamti postavke snage prema opsegu i načinu</translation>
+        <translation>Zapamti postavke snage prema opsegu i načinu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
@@ -4191,7 +6051,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation type="unfinished">Tune</translation>
+        <translation>Tune</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -4201,7 +6061,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
         <source>Loc&amp;ation:</source>
-        <translation type="unfinished">Lo&amp;kacija:</translation>
+        <translation>Lo&amp;kacija:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
@@ -4236,12 +6096,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: nazovite CQ do kada se dosegne brojač. AutoSeq 6/7: pretražite dekodirane poruke za bilo koju valjanu poruku &apos;CQ&apos; ili &apos;73&apos;, nazovite CQ ako takve poruke nisu pronađene. Zaustavi Tx ako je opcija Single Shot QSO omogućena na kartici AutoSeq.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation type="unfinished">Brojači. Pretražujte kroz dekodirane poruke, nazovite CQ ili zaustavite Tx ako:</translation>
+        <translation>Brojači. Pretražujte kroz dekodirane poruke, nazovite CQ ili zaustavite Tx ako:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -4274,17 +6134,17 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ova se opcija koristi za scenarij ne preklapajućeg spektra. Tx će se zaustaviti ako vi i korespondent imate zajedničku TX frekvenciju bez obzira na ovu postavku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation type="unfinished">Zaustavi TX, ako sam zvao korespondenta, on je odgovorio drugom korespondentu</translation>
+        <translation>Zaustavi TX, ako sam zvao korespondenta, on je odgovorio drugom korespondentu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prema zadanim postavkama automatska selekcija ignorira primljeni / poslani smjer CQ-a ako je valjana &quot;nova DXCC&quot; poruka dekodirana, bilo dolazni poziv ili odabir iz dekodirane CQ / 73 poruke. Ova opcija eliminira iznimku &apos;novi DXCC&apos; u automatskom odabiru za usmjerenu CQ obradu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
@@ -4309,7 +6169,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimalno 13 znakova je podržano za slobodnu poruku&lt;br&gt;&lt;br&gt;Maksimalno 17 znakovaje podržano za CQ usmjerenu standardnu ​​poruku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
@@ -4319,7 +6179,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Povucite i ispustite stavke da biste preuredili redoslijed. Kliknite desnom tipkom za određene stavke. Kliknite, SHIFT + Kliknite i, CRTL + Kliknite za odabir stavki. @ simbol se zamjenjuje s DX pozivom, &amp; simbol s osnovnom pozivom korisnika, # simbol s izvješćem koje se šalje, ^ simbol s imenom dopisnika preuzet iz dnevnika u kojem ime ne smije biti veće od 7 znakova.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
@@ -4334,7 +6194,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
         <source>Logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Logiranje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2305"/>
@@ -4342,7 +6202,10 @@ both here.</source>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neki programi za logiranje neće prihvatiti ovu vrstu raporta koju je
+spremio ovaj program.
+Označite ovu opciju da biste spremili raporte u mapu
+polje komentara.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
@@ -4364,7 +6227,7 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite ovu opciju za prinudno brisanje polja DX Znakl i DX Lokator pri izlasku iz JTDX. Ova je funkcionalnost namijenjena korisnicima UR5EQF dnevnika softvera.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
@@ -4374,7 +6237,7 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neki programi logiranje neće prihvatiti JT-65 ili JT9 kao prepoznati način rada.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
@@ -4394,12 +6257,12 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation type="unfinished">Automatsko logiranje QSOa</translation>
+        <translation>Automatsko logiranje QSOa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spajanje na vanjski softver dnevnika rada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2392"/>
@@ -4410,12 +6273,12 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
         <location filename="../Configuration.ui" line="2426"/>
         <location filename="../Configuration.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server ime ili adresa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2429"/>
         <source>TCP server:</source>
-        <translation></translation>
+        <translation>TCP server:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2449"/>
@@ -4426,7 +6289,7 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
     <message>
         <location filename="../Configuration.ui" line="2452"/>
         <source>TCP port:</source>
-        <translation></translation>
+        <translation>TCP port:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2474"/>
@@ -4568,12 +6431,12 @@ za procjenu rasprostiranja i performansi sustava.</translation>
     <message>
         <location filename="../Configuration.ui" line="2829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that WSJT-X should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Unesite broj uslužnog porta UDP poslužitelja na koji JTDX treba poslati ažuriranja. Ako je vrijednost nula, neće se emitirati ažuriranja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled WSJT-X will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uz ovo omogućeno JTDX će prihvatiti određene zahtjeve od UDP poslužitelja koji prima dekodirane poruke.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
@@ -4664,7 +6527,7 @@ za procjenu rasprostiranja i performansi sustava.</translation>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3038"/>
@@ -4675,7 +6538,7 @@ za procjenu rasprostiranja i performansi sustava.</translation>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
         <source>Slope:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slope:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3070"/>
@@ -4691,7 +6554,8 @@ za procjenu rasprostiranja i performansi sustava.</translation>
         <location filename="../Configuration.ui" line="3125"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stavke se mogu uređivati.
+Kliknite desnom tipkom miša za umetanje i brisanje opcija.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3173"/>
@@ -4716,7 +6580,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite poruke DXCC zemalja koje su nove na opsegu prema podacima iz datoteke wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3220"/>
@@ -4729,7 +6593,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite poruke DXCC zemalja koje su nove u načinu rada prema podacima iz datoteke zapisa wsjtx_log.adi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -4798,7 +6662,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite poruke pozivnih znakova koji ne postoje u datoteci dnevnika wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -4808,17 +6672,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite poruke pozivnih znakova koji su una opsegu nove prema podacima iz datoteke zapisa wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3347"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Označite poruke pozivnih znakov koje su nove u načinu rada prema podacima iz datoteke dnevnika wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite obavijest u boji za poruke sa već rađenim DXCC, lokatorom,znakom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -4868,12 +6732,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3413"/>
         <source>Inverse text/background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrnuta boja teksta i pozadine</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prema zadanim postavkama &quot;CQ&quot; i &quot;Moj Znak&quot; poruke koje se samo provjeravaju, ova postavka omogućava provjeru i drugih primljenih standardnih poruka za nove DXCC, Grid, Call. Boja &quot;ostale standardne poruke&quot; koja se koristi za obavijestn&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3423"/>
@@ -4883,7 +6747,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite zvuk sustava za obavijest čim se prva poruka dekodira u RX intervalu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
@@ -4893,7 +6757,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3453"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite zvuk sustava za obavijest ako u primljenoj poruci postoji moj Znak &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3456"/>
@@ -4918,7 +6782,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Upotrijebite crveni marker za obavještavanje da li je u dekodiranoj poruci moj pozivni znak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3535"/>
@@ -4928,7 +6792,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3545"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite marker na kraju poruke umjesto pozadinske boje za ostale standardne obavijesti o poruci.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3548"/>
@@ -4984,7 +6848,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="4399"/>
         <location filename="../Configuration.ui" line="4418"/>
         <source>K1ABC</source>
-        <translation type="unfinished"></translation>
+        <translation>K1ABC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3674"/>
@@ -4994,7 +6858,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3680"/>
         <source>RR73/73           </source>
-        <translation></translation>
+        <translation>RR73/73           </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
@@ -5024,7 +6888,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3871"/>
         <source>New DXCC on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi DXCC na Opsegu/Modu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3941"/>
@@ -5054,7 +6918,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4291"/>
         <source>New Call on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi DXCC na Opsegu/Modu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4361"/>
@@ -5125,7 +6989,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="4559"/>
         <location filename="../Configuration.ui" line="4624"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Omogući opciju&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4562"/>
@@ -5152,12 +7016,28 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis prefiksa zemalja odvojen zarezom na temelju datoteke cty.dat.&lt;br&gt;
+Praznine nisu dopuštene. Prihvatljive vrijednosti su: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
+5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
+9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
+CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
+EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
+FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
+HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
+JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
+KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
+PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
+SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
+UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
+VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
+XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
+ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Očistite popis zemalja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4595"/>
@@ -5176,17 +7056,21 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis pozivnih znakova odvojen zarezom,
+praznine nisu dopuštene, osnovni pozivni znak
+koristiti će se, na primjer, za složene pozivne znakove:
+AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4647"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Očisti popis pozivnih znakova&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4662"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation>Prikažite poruke oređenog sadržaja u prozoru RX frekvencije </translation>
+        <translatorcomment>Prikažite poruke posebnog sadržaja u prozoru RX frekvencije </translatorcomment>
+        <translation>Prikažite poruke određenog sadržaja u prozoru RX frekvencije </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4679"/>
@@ -5201,7 +7085,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis određenog sadržaja je odvojen zarezom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4696"/>
@@ -5213,7 +7097,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="4736"/>
         <location filename="../Configuration.ui" line="4759"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter će se primijeniti izvan RX frekvencije.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4716"/>
@@ -5233,7 +7117,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sakrij dekodirane slobodne poruke smještene izvan RX frekvencije.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
@@ -5253,7 +7137,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4825"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatsko prebacivanje pojasa prema unaprijed zadanom rasporedu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
@@ -5263,12 +7147,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="4838"/>
         <source>hh</source>
-        <translation></translation>
+        <translation>hh</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4848"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation>mm</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
@@ -5635,18 +7519,18 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="6222"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Korisnički odabrani parametri za JT65 dekodiranje.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6225"/>
         <source>JT65 decoding parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>JT65 parametri dekodiranja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6253"/>
         <location filename="../Configuration.ui" line="6266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definira broj pokušaja dekodiranja širokopojasnih prolaza za dekodiranje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6256"/>
@@ -5669,7 +7553,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6325"/>
         <location filename="../Configuration.ui" line="6338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definira broj pokušaja dekodiranja na RX frekvenciji&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6328"/>
@@ -5703,7 +7587,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6416"/>
         <location filename="../Configuration.ui" line="6426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definira gornju granicu za dekodiranje JT65a signala, zadana vrijednost je 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6419"/>
@@ -5735,13 +7619,13 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6605"/>
         <location filename="../Configuration.ui" line="6615"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definira broj pokušaja dekodiranja za širokopojasno T10 dekodiranje.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6641"/>
         <location filename="../Configuration.ui" line="6654"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definira broj T10 pokušaja dekodiranja na RX frekvenciji&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6745"/>
