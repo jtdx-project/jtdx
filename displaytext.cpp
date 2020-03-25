@@ -754,7 +754,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
         next_ws = t.indexOf(' ',1);
         t =  t.left(next_ws) + t2 + t.mid(next_ws,32);
     }
-    t2.asprintf("%4d",txFreq);
+    t2 = QString::asprintf("%4d",txFreq);
     if(modeTx=="FT8") t1=" ~ ";
     else if(modeTx=="FT4") t1=" : ";
     else if(modeTx=="JT65") t1=" # ";

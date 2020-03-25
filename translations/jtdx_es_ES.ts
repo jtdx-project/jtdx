@@ -3679,22 +3679,22 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     <message>
         <location filename="../mainwindow.ui" line="4682"/>
         <source>English</source>
-        <translation>English</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4690"/>
         <source>Eesti</source>
-        <translation>Eesti</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4698"/>
         <source>Русский</source>
-        <translation>Русский</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4706"/>
         <source>Hrvatski</source>
-        <translation>Hrvatski</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
@@ -3724,17 +3724,17 @@ lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
     <message>
         <location filename="../mainwindow.ui" line="4754"/>
         <source>简体中文</source>
-        <translation>简体中文</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4762"/>
         <source>繁體中文</source>
-        <translation>繁體中文</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4770"/>
         <source>日本語</source>
-        <translation>日本語</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4775"/>
