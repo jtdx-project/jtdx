@@ -2883,7 +2883,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Ricercato</translation>
+        <translation>Ricerca</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -2988,7 +2988,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Tune</translation>
+        <translation>&amp;Accorda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -3578,12 +3578,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4542"/>
         <source>Auto RX frequency Filter</source>
-        <translation>Auto filtro freq  RX</translation>
+        <translation>Filtro auto freq  RX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4566"/>
         <source>DXpedition</source>
-        <translation>DXpedition</translation>
+        <translation>Spedizione DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4585"/>
@@ -3619,12 +3619,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4615"/>
         <source>Waterfall</source>
-        <translation>Cascata</translation>
+        <translation>Spettro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4620"/>
         <source>Open</source>
-        <translation>Aperto</translation>
+        <translation>Apri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4623"/>
@@ -3696,7 +3696,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
-        <source>Español</source>
+        <source>España</source>
         <translation></translation>
     </message>
     <message>
@@ -4180,17 +4180,17 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5553"/>
         <source>Enable hound mode</source>
-        <translation>Abilita modo HOUND</translation>
+        <translation>Abilita il modo HOUND</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5564"/>
         <source>Use hound TX frequency control</source>
-        <translation>Utilizzare il controllo di frequenza TX hound</translation>
+        <translation>Utilizzare il controllo di frequenza TX in HOUND</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5572"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>Disabilitare TX dopo aver inviato RRR / RR73 / 73 in modalità manuale</translation>
+        <translation>Disabilita il TX dopo aver inviato RRR / RR73 / 73 in modalità manuale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5583"/>
@@ -4456,7 +4456,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2861"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation>Il controllo di frequenza Hound TX non è consentito nelle sottobande FT8 standard.</translation>
+        <translation>Il controllo della frequenza in TX nel modo Hound TX non è consentito nelle sottobande standard FT8.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2869"/>
@@ -4471,7 +4471,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2880"/>
         <source>Hound TX frequency control warning</source>
-        <translation>Avviso di controllo frequenza Hound TX</translation>
+        <translation>Avviso per il controllo TX Hound</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2885"/>
@@ -5251,7 +5251,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation>Grafico ampio</translation>
+        <translation>Spettro</translation>
     </message>
 </context>
 <context>
@@ -5720,7 +5720,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="1050"/>
         <source>&amp;None</source>
-        <translation>&amp;Nessuna</translation>
+        <translation>&amp;Niente</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
@@ -5730,7 +5730,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="1079"/>
         <source>XON/XOFF</source>
-        <translation>ACCESO/SPENTO</translation>
+        <translation>XON/XOFF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1089"/>
@@ -5786,7 +5786,7 @@ alcuni, in particolare alcuni rig Kenwood, lo richiedono).</translation>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
         <source>PTT Method</source>
-        <translation>Metodo PTT</translation>
+        <translation>Metodo per PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1222"/>
@@ -5849,22 +5849,22 @@ questa impostazione consente di selezionare quale ingresso audio verrà utilizza
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation>Trasmettere la sorgente audio</translation>
+        <translation>Sorgente audio per trasmissione</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
         <source>Rear&amp;/Data</source>
-        <translation>Rear&amp;/Data</translation>
+        <translation>&amp;Presa dati  posteriore</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
         <source>&amp;Front/Mic</source>
-        <translation>Mic/&amp;Front</translation>
+        <translation>Micro &amp;Frontale</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1375"/>
         <source>Modulation mode selected on radio.</source>
-        <translation>Modalità di modulazione selezionata alla radio.</translation>
+        <translation>Modalità di modulazione selezionata della radio.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1378"/>
@@ -5894,7 +5894,7 @@ o la larghezza di banda è selezionata).</translation>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation>Nessuna</translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
@@ -5904,7 +5904,7 @@ o la larghezza di banda è selezionata).</translation>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
         <source>Data/P&amp;kt</source>
-        <translation>Data/P&amp;kt</translation>
+        <translation>P&amp;kt/Data</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
@@ -6105,7 +6105,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1901"/>
         <source>Message sequencing short scenarios</source>
-        <translation>Sequenza di messaggi scenari brevi</translation>
+        <translation>Sequenza di messaggi per gli scenari brevi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
@@ -6115,7 +6115,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Contatori. Cerca tra i messaggi decodificati, chiama CQ o Halt Tx se:</translation>
+        <translation>Contatori. Cerca tra i messaggi decodificati, chiama CQ o Ferma il Tx se:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -6128,17 +6128,17 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1957"/>
         <source>called CQ,  received a call and answered</source>
-        <translation>chiamato CQ, ha ricevuto una chiamata e ha risposto</translation>
+        <translation>chiamata CQ, ricevi una chiamata e rispondi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>inviato RR73 (73) rispondendo a RRR in arrivo (RR73)</translation>
+        <translation>invia RR73 (73) in risposta a RRR (RR73)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2058"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation>risposto al CQ di qualcuno senza risposta</translation>
+        <translation>risposta al CQ di una chiamata senza risposta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2071"/>
@@ -6153,7 +6153,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Fermare il TX  se l&apos;operatore che ho chiamato ha risposto ad un altro</translation>
+        <translation>Ferma il TX  se l&apos;operatore che stai chiamando ha risposto ad un altro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
@@ -6168,7 +6168,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
         <source>Tx &amp;Macros</source>
-        <translation>Tx &amp;Macro</translation>
+        <translation>&amp;Macro TX</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
@@ -6198,7 +6198,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
         <source>Reportin&amp;g</source>
-        <translation>&amp;Segnalazione</translation>
+        <translation>&amp;Segnalazioni</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2266"/>
@@ -6224,7 +6224,7 @@ campo commenti.</translation>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation>rapporto d&amp;B come commento</translation>
+        <translation>inserisci il rapporto d&amp;B nel commento</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
@@ -6256,7 +6256,7 @@ e DX Grid field quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>Con&amp;vertire il modo in RTTY</translation>
+        <translation>Con&amp;verti il modo in RTTY</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
@@ -6505,7 +6505,7 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2938"/>
         <source>Frequencies</source>
-        <translation>Frequencies</translation>
+        <translation>Frequenze</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2941"/>
@@ -6541,7 +6541,7 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation>Intercettare:</translation>
+        <translation>Differenza:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3038"/>
@@ -6552,7 +6552,7 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
         <source>Slope:</source>
-        <translation>Slope:</translation>
+        <translation>Spettro:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3070"/>
@@ -6589,7 +6589,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Controlla ed evidenzia il DXCC.nuovo</translation>
+        <translation>Controlla ed evidenzia il nuovo DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
@@ -6631,7 +6631,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
         <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
         <source>Beep as well</source>
-        <translation>Anche con Beep</translation>
+        <translation>anche con Beep</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3247"/>
@@ -6701,7 +6701,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>Highlight worked ones</source>
-        <translation>Evidenzia quelli lavorati</translation>
+        <translation>Evidenzia già lavorati</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
@@ -6756,7 +6756,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3423"/>
         <source>Highlight other standard messages</source>
-        <translation>Evidenzia gli altri messaggi standard</translation>
+        <translation>Evidenzia altri messaggi standard</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
@@ -6791,7 +6791,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3496"/>
         <source>blue / my call at QSO</source>
-        <translation>il mio Nom è blu nel QSO</translation>
+        <translation>blu/il mio Nom è nel QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3532"/>
@@ -6912,7 +6912,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4011"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Nuova Griglio di Banda/Modo</translation>
+        <translation>Nuova Griglia di Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4081"/>
@@ -6927,7 +6927,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4221"/>
         <source>New Call</source>
-        <translation>Nuovo Nom</translation>
+        <translation>Nuovo Nominativo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4291"/>
@@ -6942,7 +6942,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>Worked one</source>
-        <translation>Uno lavorato</translation>
+        <translation>Già lavorato</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4461"/>
@@ -7537,7 +7537,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6225"/>
         <source>JT65 decoding parameters</source>
-        <translation>parametri di decodifica JT65</translation>
+        <translation>Parametri di decodifica JT65</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6253"/>

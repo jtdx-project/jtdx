@@ -3511,7 +3511,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4392"/>
         <source>decoder sensitivity</source>
-        <translation>sensibilidade de descodificação</translation>
+        <translation>Sensibilidade de descodificação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
@@ -3521,17 +3521,17 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation>ciclos de descodificação</translation>
+        <translation>Ciclos de descodificação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation>ciclos de descodificação SWL</translation>
+        <translation>Ciclos de descodificação SWL</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
         <source>FT4 decoding</source>
-        <translation>descodificação FT4</translation>
+        <translation>Descodificação FT4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
@@ -3612,7 +3612,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4620"/>
         <source>Open</source>
-        <translation>Abiri</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4623"/>
@@ -3650,7 +3650,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
         <location filename="../mainwindow.ui" line="5416"/>
         <location filename="../mainwindow.ui" line="5698"/>
         <source>fast</source>
-        <translation>rápido</translation>
+        <translation>Rápido</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4666"/>
@@ -3769,7 +3769,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
         <location filename="../mainwindow.ui" line="5666"/>
         <location filename="../mainwindow.ui" line="5706"/>
         <source>medium</source>
-        <translation>médio</translation>
+        <translation>Médio</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4838"/>
@@ -3777,7 +3777,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
         <location filename="../mainwindow.ui" line="5435"/>
         <location filename="../mainwindow.ui" line="5717"/>
         <source>deep</source>
-        <translation>fundo</translation>
+        <translation>Profundo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4846"/>
@@ -4028,7 +4028,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5236"/>
         <source>1  Call first</source>
-        <translation>1 Cahmar o primeiro</translation>
+        <translation>1 Chamar o primeiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5244"/>
@@ -4058,7 +4058,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5284"/>
         <source>Answer worked B4 calls</source>
-        <translation>Atender chamadas trabalhadas B4</translation>
+        <translation>Atender chamadas trabalhadas antes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5295"/>
@@ -4118,7 +4118,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5462"/>
         <source>late start of decoder</source>
-        <translation>início tardio do descodificador</translation>
+        <translation>Início tardio do descodificador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5470"/>
@@ -4168,7 +4168,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5553"/>
         <source>Enable hound mode</source>
-        <translation>Ativar modo hound</translation>
+        <translation>Ativar modo Hound</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5564"/>
@@ -4250,7 +4250,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5725"/>
         <source>wideband DX Call search</source>
-        <translation>pesquisa de chamadas DX de banda larga</translation>
+        <translation>Pesquisa de chamadas DX de banda larga</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5733"/>
@@ -5456,7 +5456,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation>Descodificar em t=52 s</translation>
+        <translation>Descodificar em t = 52 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
@@ -6211,7 +6211,7 @@ campo de comentários.</translation>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation>reports d&amp;B nos comentários</translation>
+        <translation>Reportes d&amp;B nos comentários</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
@@ -6223,7 +6223,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Limpar indicativo &amp;DX e Grif depois de registar o QSO</translation>
+        <translation>Limpar indicat. &amp;DX e Grid depois de registar QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
@@ -6331,12 +6331,12 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2590"/>
         <source>decoded messages</source>
-        <translation>mensagens descodificadas</translation>
+        <translation>Mensagens descodificadas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2597"/>
         <source>decoded and debug messages</source>
-        <translation>mensagens decodificadas e de depuração</translation>
+        <translation>Mensagens decodificadas e de depuração</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2639"/>
