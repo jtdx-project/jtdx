@@ -23,7 +23,7 @@ class Configuration;
 
 class LogQSO : public QDialog
 {
-  Q_OBJECT
+  Q_OBJECT;
 
 public:
   explicit LogQSO(QSettings *, Configuration const *, QWidget *parent = 0);

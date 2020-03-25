@@ -36,12 +36,11 @@ namespace
   QList<QString> const coordinated_bands = {"160m", "80m", "60m", "40m", "30m", "20m", "17m", "15m", "12m", "10m"};
 }
 
-//
 // Dialog - maintenance of band hopping options
-//
 class Dialog
   : public QDialog
 {
+  Q_OBJECT;
 public:
   using BandList = QList<QString>;
 
@@ -66,6 +65,7 @@ private:
   QPointer<QSpinBox> gray_line_width_spin_box_;
   static int const band_index_role {Qt::UserRole};
 };
+#include "WSPRBandHopping.moc"
 
 Dialog::Dialog (QSettings * settings, Configuration const * configuration, BandList const * WSPR_bands
                 , QBitArray * bands, int * gray_line_duration, QWidget * parent)

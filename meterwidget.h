@@ -7,7 +7,7 @@
 
 class MeterWidget : public QWidget
 {
-  Q_OBJECT
+  Q_OBJECT;
   Q_PROPERTY (int value READ value WRITE setValue)
 
 public:

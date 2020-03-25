@@ -23,7 +23,7 @@ namespace
   class token
     : public QObject
   {
-    Q_OBJECT
+    Q_OBJECT;
   public:
     token (QUrl const& url, QString const& lang, QString const& name_we, QObject * parent = nullptr)
       : QObject {parent}
@@ -42,7 +42,7 @@ namespace
 class DisplayManual::impl final
   : public QObject
 {
-  Q_OBJECT
+  Q_OBJECT;
 public:
   impl (QNetworkAccessManager * qnam)
     : qnam_ {qnam}

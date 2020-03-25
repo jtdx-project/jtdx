@@ -11,7 +11,7 @@ class QString;
 class LettersSpinBox final
   : public QSpinBox
 {
-  Q_OBJECT
+  Q_OBJECT;
   Q_PROPERTY (bool lowercase MEMBER lowercase_)
 
 public:
