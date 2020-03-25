@@ -30,6 +30,7 @@ void CountryDat::init(const QString filename,const QString filename2)
     _filename2 = filename2;
     _data2.clear();
     _name.clear();
+    _name.insert("where?",tr("where?"));
     _name.insert("Sov Mil Order of Malta",tr("Sov Mil Order of Malta"));
     _name.insert("Spratly Islands",tr("Spratly Is."));
     _name.insert("Monaco",tr("Monaco"));
@@ -539,7 +540,7 @@ QString CountryDat::find(const QString prefix)
 	
        pf = pf.left(pf.length()-1);
 	 }
-	 return "";
+	 return "  ,?,"+_name.value("where?","where?");
 }	   
 // return last lotw date else ""
 QString CountryDat::find2(const QString call)
