@@ -874,7 +874,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
     if(dbm<0) ndbm=int(dbm-0.5);
     if(dbm>=0) ndbm=int(dbm+0.5);
     QString t;
-    t.sprintf("%d dBm  ",ndbm);
+    t.asprintf("%d dBm  ",ndbm);
     t+=t1[i];
     ui->TxPowerComboBox->addItem(t);
   }
@@ -1691,7 +1691,7 @@ void MainWindow::dataSink(qint64 frames)
 	  return;
   }
   QString t;
-  t.sprintf(" Rx noise: %5.1f ",px);
+  t.asprintf(" Rx noise: %5.1f ",px);
   ui->signal_meter_widget->setValue(px); // Update thermometer
   if(m_monitoring || m_diskData) {
     m_wideGraph->dataSink2(s,df3,ihsym,m_diskData);
@@ -1770,7 +1770,7 @@ void MainWindow::dataSink(qint64 frames)
       m_decoderBusy = true;
       QString t2,cmnd,depth_string;
       double f0m1500=m_dialFreqRxWSPR/1000000.0;   // + 0.000001*(m_BFO - 1500);
-      t2.sprintf(" -f %.6f ",f0m1500);
+      t2.asprintf(" -f %.6f ",f0m1500);
       if(m_ndepth==1) depth_string=" -qB "; //2 pass w subtract, no Block detection, no shift jittering
       if(m_ndepth==2) depth_string=" -B ";  //2 pass w subtract, no Block detection
       if(m_ndepth==3) depth_string=" -C 5000 -o 4";   //2 pass w subtract, Block detection and OSD.
@@ -3932,7 +3932,7 @@ void MainWindow::guiUpdate()
 
     if(m_mode.left(4)=="WSPR") {
       QString sdBm,msg0,msg1,msg2;
-      sdBm.sprintf(" %d",m_dBm);
+      sdBm.asprintf(" %d",m_dBm);
       m_tx=1-m_tx;
       int i2=m_config.my_callsign().indexOf("/");
       if(i2>0 or m_grid6) {
@@ -4204,7 +4204,7 @@ void MainWindow::guiUpdate()
     }
     if(m_tune && m_config.tunetimer() && !m_tuneup) { //shall not count at WSPR band hopping
       QString remtime;
-      remtime.sprintf("%.0f s",StopTuneTimer.remainingTime()/1000.0);
+      remtime.asprintf("%.0f s",StopTuneTimer.remainingTime()/1000.0);
       ui->tuneButton->setText(remtime);
     }
     if(m_monitoring or m_transmitting) {
@@ -5029,14 +5029,14 @@ void MainWindow::genStdMsgs(QString rpt)                       //genStdMsgs()
     if(!m_bMyCallStd) t=t0a;
     msgtype(t, ui->tx1);
     int n=rpt.toInt();
-    rpt.sprintf("%+2.2d",n);
+    rpt.asprintf("%+2.2d",n);
     QString t2,t3;
     QString sent=rpt;
     QString rs,rst;
     int nn=(n+36)/6;
     if(nn<2) nn=2;
     if(nn>9) nn=9;
-    rst.sprintf("5%1d9 ",nn);
+    rst.asprintf("5%1d9 ",nn);
     rs=rst.mid(0,2);
     t=t0;
     if(!mixedPR) {
@@ -5108,7 +5108,7 @@ void MainWindow::genStdMsgs(QString rpt)                       //genStdMsgs()
 //end of VHF functionality
   } else {
     int n=rpt.toInt();
-    rpt.sprintf("%+2.2d",n);
+    rpt.asprintf("%+2.2d",n);
     t=t0 + rpt;
     msgtype(t, ui->tx2);
     t=t0 + "R" + rpt;
@@ -5663,10 +5663,10 @@ void MainWindow::on_dxGridEntry_textChanged(const QString &t) //dxGrid changed
                 const_cast <char *> ((m_hisGrid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         QString t;
-        t.sprintf("Az: %d",nAz);
+        t.asprintf("Az: %d",nAz);
         ui->labAz->setText(t);
-        if (m_config.miles ()) { t.sprintf ("%d mi", nDmiles); }
-        else { t.sprintf ("%d km", nDkm); }
+        if (m_config.miles ()) { t.asprintf ("%d mi", nDmiles); }
+        else { t.asprintf ("%d km", nDkm); }
         ui->labDist->setText(t);
   }
   if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());
@@ -7250,9 +7250,9 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
                 const_cast <char *> ((grid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         if(m_config.miles()) {
-          t1.sprintf("%7d",nDmiles);
+          t1.asprintf("%7d",nDmiles);
         } else {
-          t1.sprintf("%7d",nDkm);
+          t1.asprintf("%7d",nDkm);
         }
         rxLine += t1;
       }
@@ -7275,7 +7275,7 @@ QString MainWindow::WSPR_hhmm(int n)
   QDateTime t=QDateTime::currentDateTimeUtc().addSecs(n);
   int m=t.toString("hhmm").toInt()/2;
   QString t1;
-  t1.sprintf("%04d",2*m);
+  t1.asprintf("%04d",2*m);
   return t1;
 }
 
@@ -7285,12 +7285,12 @@ void MainWindow::WSPR_history(Frequency dialFreq, int ndecodes)
   QString t1=t.toString("yyMMdd");
   QString t2=WSPR_hhmm(-60);
   QString t3;
-  t3.sprintf("%13.6f",0.000001*dialFreq);
+  t3.asprintf("%13.6f",0.000001*dialFreq);
   if(ndecodes<0) {
     t1=t1 + " " + t2 + t3 + "  T";
   } else {
     QString t4;
-    t4.sprintf("%4d",ndecodes);
+    t4.asprintf("%4d",ndecodes);
     t1=t1 + " " + t2 + t3 + "  R" + t4;
   }
   QFile f {m_dataDir.absoluteFilePath ("WSPR_history.txt")};

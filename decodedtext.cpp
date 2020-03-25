@@ -261,7 +261,7 @@ QString DecodedText::report()  // returns a string of the SNR field with a leadi
             sr = 49;
 
     QString rpt;
-    rpt.sprintf("%d",qAbs(sr));
+    rpt.asprintf("%d",qAbs(sr));
     if (sr > 9)
         rpt = "+" + rpt;
     else

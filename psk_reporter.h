@@ -14,7 +14,7 @@ class QHostInfo;
 
 class PSK_Reporter : public QObject
 {
-    Q_OBJECT
+    Q_OBJECT;
 public:
   explicit PSK_Reporter(MessageClient *, QObject *parent = nullptr);
     void setLocalStation(QString call, QString grid, QString antenna, QString programInfo);
