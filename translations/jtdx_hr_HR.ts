@@ -215,12 +215,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation type="unfinished"></translation>
+        <translation>Sov Mil Order of Malta</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spratly Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -255,7 +255,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
         <source>Fiji</source>
-        <translation type="unfinished"></translation>
+        <translation>Fiji</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="43"/>
@@ -275,12 +275,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
         <source>Tunisia</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="47"/>
         <source>Vietnam</source>
-        <translation type="unfinished"></translation>
+        <translation>Vijetnam</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="48"/>
@@ -305,17 +305,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="52"/>
         <source>Georgia</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruzija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="53"/>
         <source>Montenegro</source>
-        <translation type="unfinished"></translation>
+        <translation>CrnaGora</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="54"/>
         <source>Sri Lanka</source>
-        <translation type="unfinished"></translation>
+        <translation>Sri Lanka</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="55"/>
@@ -325,17 +325,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>United Nations HQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Ujedinjeni Narodi HQ</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="57"/>
         <source>Vienna Intl Ctr</source>
-        <translation type="unfinished"></translation>
+        <translation>Vienna Intl Ctr</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="58"/>
         <source>Timor - Leste</source>
-        <translation type="unfinished"></translation>
+        <translation>Timor - Leste</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="59"/>
@@ -350,17 +350,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="61"/>
         <source>Cyprus</source>
-        <translation type="unfinished"></translation>
+        <translation>Cipar</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="62"/>
         <source>Tanzania</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tanzanija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="63"/>
         <source>Nigeria</source>
-        <translation type="unfinished"></translation>
+        <translation>Nigerija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="64"/>
@@ -375,12 +375,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="66"/>
         <source>Niger</source>
-        <translation type="unfinished"></translation>
+        <translation>Niger</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="67"/>
         <source>Togo</source>
-        <translation type="unfinished"></translation>
+        <translation>Togo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="68"/>
@@ -390,7 +390,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="69"/>
         <source>Uganda</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="70"/>
@@ -410,7 +410,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="73"/>
         <source>Yemen</source>
-        <translation type="unfinished"></translation>
+        <translation>Jemen</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="74"/>
@@ -450,7 +450,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="81"/>
         <source>Ghana</source>
-        <translation type="unfinished"></translation>
+        <translation>Gana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="82"/>
@@ -460,7 +460,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="83"/>
         <source>Zambia</source>
-        <translation type="unfinished"></translation>
+        <translation>Zambija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="84"/>
@@ -470,27 +470,27 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Sierra Leone</source>
-        <translation type="unfinished"></translation>
+        <translation>Sierra Leone</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
         <source>W. Malaysia</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapadna Malezija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="87"/>
         <source>E. Malaysia</source>
-        <translation type="unfinished"></translation>
+        <translation>Istočna Malezija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="88"/>
         <source>Nepal</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepal</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation>Dem. Rep. of the Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
@@ -500,7 +500,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="91"/>
         <source>Singapore</source>
-        <translation type="unfinished"></translation>
+        <translation>Singapur</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="92"/>
@@ -520,12 +520,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="95"/>
         <source>Tonga</source>
-        <translation type="unfinished"></translation>
+        <translation>Tonga</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="96"/>
         <source>Oman</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oman</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="97"/>
@@ -535,7 +535,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="98"/>
         <source>United Arab Emirates</source>
-        <translation type="unfinished"></translation>
+        <translation>Ujedinjeni Arapski Emirati</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="99"/>
@@ -550,7 +550,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="101"/>
         <source>Pakistan</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="102"/>
@@ -575,7 +575,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="106"/>
         <source>Nauru</source>
-        <translation type="unfinished"></translation>
+        <translation>Nauru</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="107"/>
@@ -610,7 +610,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uskršnji otoci.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
@@ -625,17 +625,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="116"/>
         <source>Cuba</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuba</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="117"/>
         <source>Morocco</source>
-        <translation type="unfinished"></translation>
+        <translation>Maroko</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="118"/>
         <source>Bolivia</source>
-        <translation type="unfinished"></translation>
+        <translation>Bolivija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="119"/>
@@ -655,7 +655,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
         <source>Uruguay</source>
-        <translation type="unfinished"></translation>
+        <translation>Urugvaj</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
@@ -665,12 +665,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Paul Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
         <source>Angola</source>
-        <translation type="unfinished"></translation>
+        <translation>Angola</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="126"/>
@@ -680,12 +680,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="127"/>
         <source>Comoros</source>
-        <translation type="unfinished"></translation>
+        <translation>Komori</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="128"/>
         <source>Germany</source>
-        <translation type="unfinished"></translation>
+        <translation>Njemačka</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="129"/>
@@ -700,12 +700,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="131"/>
         <source>Palestine</source>
-        <translation type="unfinished"></translation>
+        <translation>Palestina</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>N. Cook Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
@@ -715,7 +715,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
         <source>Niue</source>
-        <translation type="unfinished"></translation>
+        <translation>Niue</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="135"/>
@@ -725,7 +725,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="136"/>
         <source>Spain</source>
-        <translation type="unfinished"></translation>
+        <translation>Španjolska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
@@ -765,12 +765,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="144"/>
         <source>Moldova</source>
-        <translation type="unfinished"></translation>
+        <translation>Moldavija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="145"/>
         <source>Estonia</source>
-        <translation type="unfinished"></translation>
+        <translation>Estonija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="146"/>
@@ -795,12 +795,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="150"/>
         <source>Turkmenistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="151"/>
         <source>France</source>
-        <translation type="unfinished"></translation>
+        <translation>Francuska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="152"/>
@@ -815,12 +815,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Barthelemy</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
         <source>New Caledonia</source>
-        <translation type="unfinished"></translation>
+        <translation>Nova Kaledonija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
@@ -855,7 +855,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Pierre &amp; Miquelo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
@@ -865,7 +865,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
         <source>St. Martin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Martin</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
@@ -880,7 +880,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
@@ -900,7 +900,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wallis &amp; Futuna Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
@@ -910,7 +910,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="173"/>
         <source>England</source>
-        <translation type="unfinished"></translation>
+        <translation>Engleska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="174"/>
@@ -920,7 +920,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="175"/>
         <source>N. Ireland</source>
-        <translation type="unfinished"></translation>
+        <translation>Sj. Irska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="176"/>
@@ -945,12 +945,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
         <source>Wales</source>
-        <translation type="unfinished"></translation>
+        <translation>Wales</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Solomonski oto.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
@@ -995,7 +995,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="190"/>
         <source>Colombia</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolumbija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
@@ -1015,7 +1015,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="194"/>
         <source>Panama</source>
-        <translation type="unfinished"></translation>
+        <translation>Panama</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="195"/>
@@ -1030,7 +1030,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="197"/>
         <source>Vatican City</source>
-        <translation type="unfinished"></translation>
+        <translation>Grad Vatikan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="198"/>
@@ -1045,7 +1045,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation>AF Italy</translation>
+        <translation>AF Italija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
@@ -1055,7 +1055,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="202"/>
         <source>Sicily</source>
-        <translation type="unfinished"></translation>
+        <translation>Sicilija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="203"/>
@@ -1075,7 +1075,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="206"/>
         <source>St. Lucia</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Lucia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="207"/>
@@ -1085,7 +1085,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="208"/>
         <source>St. Vincent</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Vincent</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="209"/>
@@ -1100,7 +1100,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="211"/>
         <source>Ogasawara</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogasawara</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="212"/>
@@ -1130,7 +1130,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="217"/>
         <source>U.S.A.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="218"/>
@@ -1165,7 +1165,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Palmyra &amp; Jarvis Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
@@ -1190,7 +1190,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>Wake Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wake Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
@@ -1200,12 +1200,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Navassa Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Navassa Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>US Virgin Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1220,7 +1220,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
         <source>Norway</source>
-        <translation type="unfinished"></translation>
+        <translation>Norveška</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="236"/>
@@ -1260,7 +1260,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="243"/>
         <source>Finland</source>
-        <translation type="unfinished"></translation>
+        <translation>Finska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="244"/>
@@ -1280,7 +1280,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovačka Rep.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1295,12 +1295,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Farski otoci.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
         <source>Denmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Danska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="252"/>
@@ -1320,7 +1320,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="255"/>
         <source>Netherlands</source>
-        <translation type="unfinished"></translation>
+        <translation>Nizozemska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="256"/>
@@ -1340,22 +1340,22 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
         <source>Sint Maarten</source>
-        <translation type="unfinished"></translation>
+        <translation>Sint Maarten</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="260"/>
         <source>Brazil</source>
-        <translation type="unfinished"></translation>
+        <translation>Brazil</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation type="unfinished"></translation>
+        <translation>Fernando de Noronha</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>St. Peter &amp; St. Paul</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Peter &amp; St. Paul</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
@@ -1365,7 +1365,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
         <source>Suriname</source>
-        <translation type="unfinished"></translation>
+        <translation>Surinam</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="265"/>
@@ -1375,7 +1375,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="266"/>
         <source>Western Sahara</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapadna Sahara</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="267"/>
@@ -1385,7 +1385,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="268"/>
         <source>Slovenia</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovenija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="269"/>
@@ -1410,12 +1410,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="273"/>
         <source>Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation>Sudan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="274"/>
         <source>Egypt</source>
-        <translation type="unfinished"></translation>
+        <translation>Egipat</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="275"/>
@@ -1440,12 +1440,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="279"/>
         <source>Tuvalu</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapad. Kiribati</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
@@ -1465,7 +1465,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
         <source>Somalia</source>
-        <translation type="unfinished"></translation>
+        <translation>Somalija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="285"/>
@@ -1475,17 +1475,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
         <source>Palau</source>
-        <translation type="unfinished"></translation>
+        <translation>Palau</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="287"/>
         <source>AS Turkey</source>
-        <translation type="unfinished"></translation>
+        <translation>AS Turska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="288"/>
         <source>EU Turkey</source>
-        <translation type="unfinished"></translation>
+        <translation>EU Turska</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="289"/>
@@ -1515,7 +1515,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="294"/>
         <source>Corsica</source>
-        <translation type="unfinished"></translation>
+        <translation>Korzika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
@@ -1530,7 +1530,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
         <source>Gabon</source>
-        <translation type="unfinished"></translation>
+        <translation>Gabon</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="298"/>
@@ -1555,7 +1555,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>EU Russia</source>
-        <translation type="unfinished"></translation>
+        <translation>EU Rusija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="303"/>
@@ -1565,12 +1565,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="304"/>
         <source>AS Russia</source>
-        <translation type="unfinished"></translation>
+        <translation>AS Rusija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="305"/>
         <source>Uzbekistan</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzbekistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="306"/>
@@ -1580,12 +1580,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="307"/>
         <source>Ukraine</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukraina</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation type="unfinished"></translation>
+        <translation>Antigua &amp; Barbuda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
@@ -1595,12 +1595,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>St. Kitts &amp; Nevis</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Kitts &amp; Nevis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="311"/>
         <source>Namibia</source>
-        <translation type="unfinished"></translation>
+        <translation>Namibija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="312"/>
@@ -1655,12 +1655,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Norfolk Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Norfolk Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Willis Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
@@ -1685,7 +1685,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="329"/>
@@ -1700,7 +1700,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Falkland Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
@@ -1785,7 +1785,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="348"/>
         <source>Myanmar</source>
-        <translation type="unfinished"></translation>
+        <translation>Myanmar</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="349"/>
@@ -1805,7 +1805,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="352"/>
         <source>Vanuatu</source>
-        <translation type="unfinished"></translation>
+        <translation>Vanuatu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="353"/>
@@ -1820,7 +1820,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="355"/>
         <source>Nicaragua</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikaragva</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="356"/>
@@ -1840,7 +1840,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="359"/>
         <source>Venezuela</source>
-        <translation type="unfinished"></translation>
+        <translation>Venecuela</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="360"/>
@@ -1850,12 +1850,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
         <source>Zimbabwe</source>
-        <translation type="unfinished"></translation>
+        <translation>Zimbabve</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
-        <translation type="unfinished"></translation>
+        <translation>Sj. Makedonija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
@@ -1875,17 +1875,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="366"/>
         <source>Gibraltar</source>
-        <translation type="unfinished"></translation>
+        <translation>Gibraltar</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation type="unfinished"></translation>
+        <translation>UK Bazna područja na Cipru</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
         <source>St. Helena</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Helena</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
@@ -1905,12 +1905,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tokelau Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tokelau Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
         <source>New Zealand</source>
-        <translation type="unfinished"></translation>
+        <translation>Novi Zeland</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
@@ -1925,7 +1925,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>N.Z. Subantarctic Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>N.Z. Subantarctic Is.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="377"/>
@@ -1955,7 +1955,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno registrirao očitanje frekvencije: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
@@ -1965,7 +1965,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno registrirao status TXa: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
@@ -1975,12 +1975,12 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno registrirao na prozvanu frekvenciju: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno reagistrirao TX frekvenciju: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
@@ -1990,7 +1990,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno registrirao Split rad: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
@@ -2000,7 +2000,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije ispravno reagstrirao prozvanu vrstu rada: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
@@ -2012,7 +2012,8 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>DX Lab Suite Commander nije uspio poslati naredbu &quot;%1&quot;: %2
+</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
@@ -2113,12 +2114,12 @@ Format:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogreška sintakse datoteke %1 odstupanje kod znaka %2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation>Najviša razina datoteke sadržaja mora biti JSON niz</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
@@ -2135,22 +2136,22 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation>Unosi u sadržaju moraju biti JSON niz</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation type="unfinished"></translation>
+        <translation>Uneseni sadržaj mora biti valjane vrste</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation type="unfinished"></translation>
+        <translation>Unosi u sadržaju moraju imati valjano ime</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
         <source>Contents entries must be JSON objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Unosi u sadržaju moraju biti JSON objekti</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
@@ -2200,7 +2201,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="434"/>
         <location filename="../FrequencyList.cpp" line="590"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="466"/>
@@ -2228,81 +2229,84 @@ Pogreška: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="147"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Nije uspjelo spajanje na Ham Radio Deluxe
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="156"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvaranje datoteke nije uspjelo &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="171"/>
         <location filename="../HRDTransceiver.cpp" line="195"/>
         <source>Ham Radio Deluxe: no rig found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: nije pronađen niti jedan uređaj</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="419"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: oprema ne podržava mod</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="438"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: poslao je nepriznati način rada</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="473"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: predmet nije pronađen na %1 padajućem popisu</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="517"/>
         <source>Ham Radio Deluxe: button not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: gumb nije dostupan</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="883"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe nije reagirao kako se očekivalo</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1031"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: oprema je nestala ili promijenjena</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1046"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe je poslao naredbu &quot;%1&quot; nije uspio%2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1059"/>
         <location filename="../HRDTransceiver.cpp" line="1072"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe: nije uspio napisati naredbu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1089"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe poslao je nevažeći odgovor na našu naredbu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1143"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe nije odgovorio na naredbu &quot;%1&quot; %2
+</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1153"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe pokušava iscrpno slanje naredbe &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1166"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Radio Deluxe nije odgovorio na naredbu &quot;%1&quot; kako se očekivalo</translation>
     </message>
 </context>
 <context>
@@ -5552,7 +5556,7 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="722"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zatražite podatke sa S metra primopredajnika: CAT se postavlja putem Hamliba, Hamlib podržava dobivanje podataka S metra za neke primopredajnike.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="725"/>
@@ -6305,7 +6309,7 @@ i DX Lokatora kad je poslan 73 ili slobodna tekstualna poruka.</translation>
         <location filename="../Configuration.ui" line="2513"/>
         <location filename="../Configuration.ui" line="2523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;broj porta sekundarnog UDP poslužitelja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
@@ -7090,7 +7094,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="4696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vratite popis naziva sadržaja na zadanu vrijednost.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4713"/>
@@ -7167,7 +7171,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5899"/>
         <location filename="../Configuration.ui" line="6156"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Planer će postaviti način JT65 + JT9 ako je odabrana frekvencija JT65.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4871"/>
