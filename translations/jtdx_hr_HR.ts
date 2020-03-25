@@ -2331,7 +2331,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="373"/>
         <source>Unsupported CAT type</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodržani CAT tip</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="424"/>
@@ -2430,7 +2430,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="788"/>
         <location filename="../HamlibTransceiver.cpp" line="857"/>
         <source>setting/unsetting split mode</source>
-        <translation type="unfinished"></translation>
+        <translation>podešavanje / isključivanje Split načina rada</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="799"/>
@@ -2602,7 +2602,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5968"/>
         <location filename="../mainwindow.cpp" line="5979"/>
         <source>Band Activity</source>
-        <translation>Aktivni</translation>
+        <translation type="unfinished">Aktivnost na Opsegu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -3034,7 +3034,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation type="unfinished">&amp;Dekodiraj</translation>
+        <translation>&amp;Dekodiraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
