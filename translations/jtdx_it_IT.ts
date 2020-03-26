@@ -4010,7 +4010,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5168"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation>Dichiarazione di Copyright del WSJT Development Group</translation>
+        <translation>Dichiarazione di Copyright del Gruppo di Sviluppo di WSJT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5182"/>
@@ -5250,12 +5250,12 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>Corrente</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>Cumulativo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>

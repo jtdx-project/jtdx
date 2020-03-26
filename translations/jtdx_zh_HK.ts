@@ -483,12 +483,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
         <source>W. Malaysia</source>
-        <translation>西 馬來西亞</translation>
+        <translation>西.馬來西亞</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="87"/>
         <source>E. Malaysia</source>
-        <translation>東 馬來西亞</translation>
+        <translation>東.馬來西亞</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="88"/>
@@ -2057,12 +2057,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>導入&amp;I...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>導出&amp;E...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -4318,17 +4318,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="444"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">確定&amp;O</translation>
+        <translation>確定&amp;O</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">取消&amp;C</translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>重試&amp;R</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
@@ -4446,13 +4446,14 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2710"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>確認刪除</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2711"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>是否確實要刪除所有 *.wav 和 *.c2 檔在
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
@@ -4657,17 +4658,17 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <location filename="../mainwindow.cpp" line="6068"/>
         <location filename="../mainwindow.cpp" line="6080"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>確認擦除</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6069"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否確實要擦除 ALL.TXT ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否確實要擦除 通聯日誌?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6513"/>
@@ -5247,12 +5248,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>當前</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>累積</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
