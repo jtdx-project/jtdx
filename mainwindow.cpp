@@ -441,6 +441,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_rigErrorMessageBox.setInformativeText (tr ("Do you want to reconfigure the radio interface?"));
   m_rigErrorMessageBox.setStandardButtons (QMessageBox::Cancel | QMessageBox::Ok | QMessageBox::Retry);
   m_rigErrorMessageBox.setDefaultButton (QMessageBox::Ok);
+  m_rigErrorMessageBox.button(QMessageBox::Ok)->setText(tr("&OK"));
+  m_rigErrorMessageBox.button(QMessageBox::Cancel)->setText(tr("&Cancel"));
+  m_rigErrorMessageBox.button(QMessageBox::Retry)->setText(tr("&Retry"));
   m_rigErrorMessageBox.setIcon (QMessageBox::Critical);
 
   // start audio thread and hook up slots & signals for shutdown management
@@ -2704,8 +2707,8 @@ void MainWindow::diskDat()                                   //diskDat()
 //Delete ../save/*.wav
 void MainWindow::on_actionDelete_all_wav_files_in_SaveDir_triggered()
 {
-  if (QMessageBox::Yes == QMessageBox::warning(this, "Confirm Delete",
-                                              "Are you sure you want to delete all *.wav and *.c2 files in\n" +
+  if (QMessageBox::Yes == QMessageBox::warning(this, tr("Confirm Delete"),
+                                              tr("Are you sure you want to delete all *.wav and *.c2 files in\n") +
                                               QDir::toNativeSeparators(m_config.save_directory ().absolutePath ()) + " ?",
                                                QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
     Q_FOREACH (auto const& file
@@ -6062,8 +6065,8 @@ void MainWindow::on_actionSwitch_Filter_OFF_at_getting_73_triggered(bool checked
 
 void MainWindow::on_actionErase_ALL_TXT_triggered()          //Erase ALL.TXT
 {
-  int ret = QMessageBox::warning(this, "Confirm Erase",
-                                 "Are you sure you want to erase file ALL.TXT ?",
+  int ret = QMessageBox::warning(this, tr("Confirm Erase"),
+                                 tr("Are you sure you want to erase file ALL.TXT ?"),
                                  QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
   if(ret==QMessageBox::Yes) {
     QFile f {m_dataDir.absoluteFilePath (QDateTime::currentDateTimeUtc().toString("yyyyMM_")+"ALL.TXT")};
@@ -6074,8 +6077,8 @@ void MainWindow::on_actionErase_ALL_TXT_triggered()          //Erase ALL.TXT
 
 void MainWindow::on_actionErase_wsjtx_log_adi_triggered()
 {
-  int ret = QMessageBox::warning(this, "Confirm Erase",
-                                 "Are you sure you want to erase your QSO LOG?",
+  int ret = QMessageBox::warning(this, tr("Confirm Erase"),
+                                 tr("Are you sure you want to erase your QSO LOG?"),
                                  QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
   if(ret==QMessageBox::Yes) {
     QFile f {m_dataDir.absoluteFilePath ("wsjtx_log.adi")};
