@@ -153,1802 +153,64 @@ Formato:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2556"/>
+        <location filename="../Configuration.cpp" line="2550"/>
         <source>Invalid audio input device</source>
         <translation>Dispositivo ingresso audio errato</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2563"/>
+        <location filename="../Configuration.cpp" line="2557"/>
         <source>Invalid audio output device</source>
         <translation>Dispositivo di uscita audio errato</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2569"/>
+        <location filename="../Configuration.cpp" line="2563"/>
         <source>Invalid PTT method</source>
         <translation>Metodo invalido per il PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2579"/>
+        <location filename="../Configuration.cpp" line="2573"/>
         <source>Invalid PTT port</source>
         <translation>porta del PTT non valida</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3052"/>
+        <location filename="../Configuration.cpp" line="3046"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 nel messaggio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3053"/>
+        <location filename="../Configuration.cpp" line="3047"/>
         <source>CQ in message</source>
         <translation>CQ nel messaggio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4020"/>
+        <location filename="../Configuration.cpp" line="4014"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX Selezione il font del testo decodificato</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4595"/>
+        <location filename="../Configuration.cpp" line="4589"/>
         <source>Reset Working Frequencies</source>
         <translation>Resetta le frequenze di lavoro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4596"/>
+        <location filename="../Configuration.cpp" line="4590"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>Sei sicuro di voler cancellare le tue attuali frequenze di lavoro e sostituirle con quelle predefinite?</translation>
+        <translation>Sei sicuro di voler cancellare le attuali frequenze di lavoro e sostituirle con quelle predefinite?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4651"/>
+        <location filename="../Configuration.cpp" line="4645"/>
         <source>Save Directory</source>
         <translation>Salva cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4667"/>
+        <location filename="../Configuration.cpp" line="4661"/>
         <source>Failed to open connection to rig</source>
         <translation>Errore nella connessione con l&apos;apparato</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4879"/>
+        <location filename="../Configuration.cpp" line="4873"/>
         <source>Rig failure</source>
         <translation>Errore dell&apos;apparecchio</translation>
-    </message>
-</context>
-<context>
-    <name>CountryDat</name>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="33"/>
-        <source>where?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="34"/>
-        <source>Sov Mil Order of Malta</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="35"/>
-        <source>Spratly Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="36"/>
-        <source>Monaco</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="37"/>
-        <source>Agalega &amp; St. Brandon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="38"/>
-        <source>Mauritius</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="39"/>
-        <source>Rodriguez Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="40"/>
-        <source>Equatorial Guinea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="41"/>
-        <source>Annobon Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="42"/>
-        <source>Fiji</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="43"/>
-        <source>Conway Reef</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="44"/>
-        <source>Rotuma Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="45"/>
-        <source>Kingdom of eSwatini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="46"/>
-        <source>Tunisia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="47"/>
-        <source>Vietnam</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="48"/>
-        <source>Guinea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="49"/>
-        <source>Bouvet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="50"/>
-        <source>Peter 1 Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="51"/>
-        <source>Azerbaijan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="52"/>
-        <source>Georgia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="53"/>
-        <source>Montenegro</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="54"/>
-        <source>Sri Lanka</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="55"/>
-        <source>ITU HQ</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="56"/>
-        <source>United Nations HQ</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="57"/>
-        <source>Vienna Intl Ctr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="58"/>
-        <source>Timor - Leste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="59"/>
-        <source>Israel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="60"/>
-        <source>Libya</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="61"/>
-        <source>Cyprus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="62"/>
-        <source>Tanzania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="63"/>
-        <source>Nigeria</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="64"/>
-        <source>Madagascar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="65"/>
-        <source>Mauritania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="66"/>
-        <source>Niger</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="67"/>
-        <source>Togo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="68"/>
-        <source>Samoa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="69"/>
-        <source>Uganda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="70"/>
-        <source>Kenya</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="71"/>
-        <source>Senegal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="72"/>
-        <source>Jamaica</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="73"/>
-        <source>Yemen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="74"/>
-        <source>Lesotho</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="75"/>
-        <source>Malawi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="76"/>
-        <source>Algeria</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="77"/>
-        <source>Barbados</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="78"/>
-        <source>Maldives</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="79"/>
-        <source>Guyana</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="80"/>
-        <source>Croatia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="81"/>
-        <source>Ghana</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="82"/>
-        <source>Malta</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="83"/>
-        <source>Zambia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="84"/>
-        <source>Kuwait</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="85"/>
-        <source>Sierra Leone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="86"/>
-        <source>W. Malaysia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="87"/>
-        <source>E. Malaysia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="88"/>
-        <source>Nepal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="89"/>
-        <source>Dem. Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="90"/>
-        <source>Burundi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="91"/>
-        <source>Singapore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="92"/>
-        <source>Rwanda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="93"/>
-        <source>Trinidad &amp; Tobago</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="94"/>
-        <source>Botswana</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="95"/>
-        <source>Tonga</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="96"/>
-        <source>Oman</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="97"/>
-        <source>Bhutan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="98"/>
-        <source>United Arab Emirates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="99"/>
-        <source>Qatar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="100"/>
-        <source>Bahrain</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="101"/>
-        <source>Pakistan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="102"/>
-        <source>Scarborough Reef</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="103"/>
-        <source>Taiwan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="104"/>
-        <source>Pratas Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="105"/>
-        <source>China</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="106"/>
-        <source>Nauru</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="107"/>
-        <source>Andorra</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="108"/>
-        <source>The Gambia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="109"/>
-        <source>Bahamas</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="110"/>
-        <source>Mozambique</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="111"/>
-        <source>Chile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="112"/>
-        <source>San Felix &amp; San Ambrosio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="113"/>
-        <source>Easter Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="114"/>
-        <source>Juan Fernandez Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="115"/>
-        <source>Antarctica</source>
-        <translation type="unfinished">Antarctica</translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="116"/>
-        <source>Cuba</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="117"/>
-        <source>Morocco</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="118"/>
-        <source>Bolivia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="119"/>
-        <source>Portugal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="120"/>
-        <source>Madeira Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="121"/>
-        <source>Azores</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="122"/>
-        <source>Uruguay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="123"/>
-        <source>Sable Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="124"/>
-        <source>St. Paul Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="125"/>
-        <source>Angola</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="126"/>
-        <source>Cape Verde</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="127"/>
-        <source>Comoros</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="128"/>
-        <source>Germany</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="129"/>
-        <source>Philippines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="130"/>
-        <source>Eritrea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="131"/>
-        <source>Palestine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="132"/>
-        <source>N. Cook Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="133"/>
-        <source>S. Cook Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="134"/>
-        <source>Niue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="135"/>
-        <source>Bosnia-Herzegovina</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="136"/>
-        <source>Spain</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="137"/>
-        <source>Balearic Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="138"/>
-        <source>Canary Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="139"/>
-        <source>Ceuta &amp; Melilla</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="140"/>
-        <source>Ireland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="141"/>
-        <source>Armenia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="142"/>
-        <source>Liberia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="143"/>
-        <source>Iran</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="144"/>
-        <source>Moldova</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="145"/>
-        <source>Estonia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="146"/>
-        <source>Ethiopia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="147"/>
-        <source>Belarus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="148"/>
-        <source>Kyrgyzstan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="149"/>
-        <source>Tajikistan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="150"/>
-        <source>Turkmenistan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="151"/>
-        <source>France</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="152"/>
-        <source>Guadeloupe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="153"/>
-        <source>Mayotte</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="154"/>
-        <source>St. Barthelemy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="155"/>
-        <source>New Caledonia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="156"/>
-        <source>Chesterfield Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="157"/>
-        <source>Martinique</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="158"/>
-        <source>Fr. Polynesia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="159"/>
-        <source>Austral Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="160"/>
-        <source>Clipperton Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="161"/>
-        <source>Marquesas Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="162"/>
-        <source>St. Pierre &amp; Miquelo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="163"/>
-        <source>Reunion Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="164"/>
-        <source>St. Martin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="165"/>
-        <source>Glorioso Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="166"/>
-        <source>Juan de Nova, Europa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="167"/>
-        <source>Tromelin Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="168"/>
-        <source>Crozet Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="169"/>
-        <source>Kerguelen Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="170"/>
-        <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="171"/>
-        <source>Wallis &amp; Futuna Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="172"/>
-        <source>Fr. Guiana</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="173"/>
-        <source>England</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="174"/>
-        <source>Isle of Man</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="175"/>
-        <source>N. Ireland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="176"/>
-        <source>Jersey</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="177"/>
-        <source>Shetland Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="178"/>
-        <source>Scotland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="179"/>
-        <source>Guernsey</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="180"/>
-        <source>Wales</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="181"/>
-        <source>Solomon Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="182"/>
-        <source>Temotu Province</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="183"/>
-        <source>Hungary</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="184"/>
-        <source>Switzerland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="185"/>
-        <source>Liechtenstein</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="186"/>
-        <source>Ecuador</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="187"/>
-        <source>Galapagos Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="188"/>
-        <source>Haiti</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="189"/>
-        <source>Dominican Rep.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="190"/>
-        <source>Colombia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="191"/>
-        <source>San Andres &amp; Providencia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="192"/>
-        <source>Malpelo Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="193"/>
-        <source>Rep. of Korea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="194"/>
-        <source>Panama</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="195"/>
-        <source>Honduras</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="196"/>
-        <source>Thailand</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="197"/>
-        <source>Vatican City</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="198"/>
-        <source>Saudi Arabia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="199"/>
-        <source>Italy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="200"/>
-        <source>AF Italy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="201"/>
-        <source>Sardinia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="202"/>
-        <source>Sicily</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="203"/>
-        <source>Djibouti</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="204"/>
-        <source>Grenada</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="205"/>
-        <source>Guinea-Bissau</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="206"/>
-        <source>St. Lucia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="207"/>
-        <source>Dominica</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="208"/>
-        <source>St. Vincent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="209"/>
-        <source>Japan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="210"/>
-        <source>Minami Torishima</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="211"/>
-        <source>Ogasawara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="212"/>
-        <source>Mongolia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="213"/>
-        <source>Svalbard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="214"/>
-        <source>Bear Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="215"/>
-        <source>Jan Mayen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="216"/>
-        <source>Jordan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="217"/>
-        <source>U.S.A.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="218"/>
-        <source>Guantanamo Bay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="219"/>
-        <source>Mariana Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="220"/>
-        <source>Baker &amp; Howland Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="221"/>
-        <source>Guam</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="222"/>
-        <source>Johnston Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="223"/>
-        <source>Midway Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="224"/>
-        <source>Palmyra &amp; Jarvis Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="225"/>
-        <source>Hawaii</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="226"/>
-        <source>Kure Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="227"/>
-        <source>American Samoa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="228"/>
-        <source>Swains Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="229"/>
-        <source>Wake Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="230"/>
-        <source>Alaska</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="231"/>
-        <source>Navassa Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="232"/>
-        <source>US Virgin Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="233"/>
-        <source>Puerto Rico</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="234"/>
-        <source>Desecheo Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="235"/>
-        <source>Norway</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="236"/>
-        <source>Argentina</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="237"/>
-        <source>Luxembourg</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="238"/>
-        <source>Lithuania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="239"/>
-        <source>Bulgaria</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="240"/>
-        <source>Peru</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="241"/>
-        <source>Lebanon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="242"/>
-        <source>Austria</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="243"/>
-        <source>Finland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="244"/>
-        <source>Aland Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="245"/>
-        <source>Market Reef</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="246"/>
-        <source>Czech Rep.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="247"/>
-        <source>Slovak Rep.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="248"/>
-        <source>Belgium</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="249"/>
-        <source>Greenland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="250"/>
-        <source>Faroe Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="251"/>
-        <source>Denmark</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="252"/>
-        <source>Papua New Guinea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="253"/>
-        <source>Aruba</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="254"/>
-        <source>DPR of Korea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="255"/>
-        <source>Netherlands</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="256"/>
-        <source>Curacao</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="257"/>
-        <source>Bonaire</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="258"/>
-        <source>Saba &amp; St. Eustatius</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="259"/>
-        <source>Sint Maarten</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="260"/>
-        <source>Brazil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="261"/>
-        <source>Fernando de Noronha</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="262"/>
-        <source>St. Peter &amp; St. Paul</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="263"/>
-        <source>Trindade &amp; Martim Vaz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="264"/>
-        <source>Suriname</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="265"/>
-        <source>Franz Josef Land</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="266"/>
-        <source>Western Sahara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="267"/>
-        <source>Bangladesh</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="268"/>
-        <source>Slovenia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="269"/>
-        <source>Seychelles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="270"/>
-        <source>Sao Tome &amp; Principe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="271"/>
-        <source>Sweden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="272"/>
-        <source>Poland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="273"/>
-        <source>Sudan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="274"/>
-        <source>Egypt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="275"/>
-        <source>Greece</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="276"/>
-        <source>Mount Athos</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="277"/>
-        <source>Dodecanese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="278"/>
-        <source>Crete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="279"/>
-        <source>Tuvalu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="280"/>
-        <source>W. Kiribati</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="281"/>
-        <source>C. Kiribati</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="282"/>
-        <source>E. Kiribati</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="283"/>
-        <source>Banaba Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="284"/>
-        <source>Somalia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="285"/>
-        <source>San Marino</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="286"/>
-        <source>Palau</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="287"/>
-        <source>AS Turkey</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="288"/>
-        <source>EU Turkey</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="289"/>
-        <source>Iceland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="290"/>
-        <source>Guatemala</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="291"/>
-        <source>Costa Rica</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="292"/>
-        <source>Cocos Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="293"/>
-        <source>Cameroon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="294"/>
-        <source>Corsica</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="295"/>
-        <source>C. African Rep.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="296"/>
-        <source>Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="297"/>
-        <source>Gabon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="298"/>
-        <source>Chad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="299"/>
-        <source>Cote d&apos;Ivoire</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="300"/>
-        <source>Benin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="301"/>
-        <source>Mali</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="302"/>
-        <source>EU Russia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="303"/>
-        <source>Kaliningrad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="304"/>
-        <source>AS Russia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="305"/>
-        <source>Uzbekistan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="306"/>
-        <source>Kazakhstan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="307"/>
-        <source>Ukraine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="308"/>
-        <source>Antigua &amp; Barbuda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="309"/>
-        <source>Belize</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="310"/>
-        <source>St. Kitts &amp; Nevis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="311"/>
-        <source>Namibia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="312"/>
-        <source>Micronesia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="313"/>
-        <source>Marshall Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="314"/>
-        <source>Brunei Darussalam</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="315"/>
-        <source>Canada</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="316"/>
-        <source>Australia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="317"/>
-        <source>Heard Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="318"/>
-        <source>Macquarie Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="319"/>
-        <source>Cocos (Keeling) Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="320"/>
-        <source>Lord Howe Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="321"/>
-        <source>Mellish Reef</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="322"/>
-        <source>Norfolk Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="323"/>
-        <source>Willis Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="324"/>
-        <source>Christmas Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="325"/>
-        <source>Anguilla</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="326"/>
-        <source>Montserrat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="327"/>
-        <source>British Virgin Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="328"/>
-        <source>Turks &amp; Caicos Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="329"/>
-        <source>Pitcairn Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="330"/>
-        <source>Ducie Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="331"/>
-        <source>Falkland Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="332"/>
-        <source>S. Georgia Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="333"/>
-        <source>S. Shetland Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="334"/>
-        <source>S. Orkney Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="335"/>
-        <source>S. Sandwich Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="336"/>
-        <source>Bermuda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="337"/>
-        <source>Chagos Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="338"/>
-        <source>Hong Kong</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="339"/>
-        <source>India</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="340"/>
-        <source>Andaman &amp; Nicobar Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="341"/>
-        <source>Lakshadweep Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="342"/>
-        <source>Mexico</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="343"/>
-        <source>Revillagigedo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="344"/>
-        <source>Burkina Faso</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="345"/>
-        <source>Cambodia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="346"/>
-        <source>Laos</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="347"/>
-        <source>Macao</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="348"/>
-        <source>Myanmar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="349"/>
-        <source>Afghanistan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="350"/>
-        <source>Indonesia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="351"/>
-        <source>Iraq</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="352"/>
-        <source>Vanuatu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="353"/>
-        <source>Syria</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="354"/>
-        <source>Latvia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="355"/>
-        <source>Nicaragua</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="356"/>
-        <source>Romania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="357"/>
-        <source>El Salvador</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="358"/>
-        <source>Serbia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="359"/>
-        <source>Venezuela</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="360"/>
-        <source>Aves Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="361"/>
-        <source>Zimbabwe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="362"/>
-        <source>N. Macedonia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="363"/>
-        <source>Rep. of Kosovo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="364"/>
-        <source>Rep. of S. Sudan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="365"/>
-        <source>Albania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="366"/>
-        <source>Gibraltar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="367"/>
-        <source>UK Base Areas on Cyprus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="368"/>
-        <source>St. Helena</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="369"/>
-        <source>Ascension Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="370"/>
-        <source>Tristan da Cunha &amp; Gough</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="371"/>
-        <source>Cayman Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="372"/>
-        <source>Tokelau Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="373"/>
-        <source>New Zealand</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="374"/>
-        <source>Chatham Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="375"/>
-        <source>Kermadec Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="376"/>
-        <source>N.Z. Subantarctic Is.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="377"/>
-        <source>Paraguay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="378"/>
-        <source>S. Africa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="379"/>
-        <source>Pr. Edward &amp; Marion Is.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3508,17 +1770,17 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
         <source>FT8 threads</source>
-        <translation>FT8 gruppo</translation>
+        <translation>gruppo FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
         <source>JT9 WSPR decoding</source>
-        <translation>Decodifica WSPR JT9</translation>
+        <translation>decodifica WSPR JT9</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4372"/>
         <source>FT8 decoding</source>
-        <translation>sto decodificando FT8</translation>
+        <translation>decodifica FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4376"/>
@@ -3538,22 +1800,22 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4400"/>
         <source>QSO RX freq sensitivity</source>
-        <translation>Sensibilità QSO RX freq</translation>
+        <translation>sensibilità freq  RX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation>cicli di decodificazione</translation>
+        <translation>cicli di decodifica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
         <source>SWL decoding cycles</source>
-        <translation>Cicli di decodifica SWL</translation>
+        <translation>cicli di decodifica SWL</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4436"/>
         <source>FT4 decoding</source>
-        <translation>sto decodificando FT4</translation>
+        <translation>decodifica FT4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
@@ -3747,7 +2009,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4775"/>
         <source>JTDX Web site</source>
-        <translation>sito Web JTDX</translation>
+        <translation>Sito Web JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4778"/>
@@ -3799,7 +2061,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.ui" line="5435"/>
         <location filename="../mainwindow.ui" line="5717"/>
         <source>deep</source>
-        <translation>deep</translation>
+        <translation>accentuato</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4846"/>
@@ -3930,7 +2192,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5032"/>
         <source>JTDX forum</source>
-        <translation>forum JTDX</translation>
+        <translation>Forum JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5037"/>
@@ -4110,7 +2372,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5384"/>
         <source>deep with 4 passes</source>
-        <translation>deep con 4 passaggi</translation>
+        <translation>accentuato con 4 passaggi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5392"/>
@@ -4295,452 +2557,389 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <translation>Vuoi riconfigurare l&apos;interfaccia radio?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="735"/>
+        <location filename="../mainwindow.cpp" line="732"/>
         <source>Error Writing WAV File</source>
         <translation>Errore durante la scrittura del file WAV</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Errore durante la chiusura di jtdxjt9.exe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="893"/>
-        <location filename="../mainwindow.cpp" line="894"/>
-        <location filename="../mainwindow.cpp" line="3396"/>
-        <location filename="../mainwindow.cpp" line="5922"/>
-        <location filename="../mainwindow.cpp" line="5923"/>
-        <location filename="../mainwindow.cpp" line="5978"/>
-        <location filename="../mainwindow.cpp" line="5979"/>
-        <source>Freq   Message</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="444"/>
-        <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="445"/>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="446"/>
-        <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="916"/>
+        <location filename="../mainwindow.cpp" line="913"/>
         <source>KillByName return code: %1</source>
         <translation>Codice di ritorno KillByName:%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="933"/>
+        <location filename="../mainwindow.cpp" line="930"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Errore durante la rimozione &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="931"/>
         <source>Click OK to retry</source>
         <translation>Clicca su OK per tornare indietro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1611"/>
+        <location filename="../mainwindow.cpp" line="1608"/>
         <source>TX Even</source>
         <translation>TX min pari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1618"/>
+        <location filename="../mainwindow.cpp" line="1615"/>
         <source>TX Odd</source>
         <translation>TX min dispari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1663"/>
-        <location filename="../mainwindow.cpp" line="2340"/>
-        <location filename="../mainwindow.cpp" line="3431"/>
-        <location filename="../mainwindow.cpp" line="4034"/>
-        <location filename="../mainwindow.cpp" line="4157"/>
-        <location filename="../mainwindow.cpp" line="4389"/>
-        <location filename="../mainwindow.cpp" line="6768"/>
-        <location filename="../mainwindow.cpp" line="6964"/>
+        <location filename="../mainwindow.cpp" line="1660"/>
+        <location filename="../mainwindow.cpp" line="2337"/>
+        <location filename="../mainwindow.cpp" line="3428"/>
+        <location filename="../mainwindow.cpp" line="4031"/>
+        <location filename="../mainwindow.cpp" line="4154"/>
+        <location filename="../mainwindow.cpp" line="4386"/>
+        <location filename="../mainwindow.cpp" line="6765"/>
+        <location filename="../mainwindow.cpp" line="6961"/>
         <source>File Open Error</source>
         <translation>Errore Apertura File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1664"/>
-        <location filename="../mainwindow.cpp" line="2341"/>
-        <location filename="../mainwindow.cpp" line="3432"/>
-        <location filename="../mainwindow.cpp" line="4035"/>
-        <location filename="../mainwindow.cpp" line="4158"/>
-        <location filename="../mainwindow.cpp" line="4390"/>
-        <location filename="../mainwindow.cpp" line="6769"/>
-        <location filename="../mainwindow.cpp" line="6965"/>
-        <location filename="../mainwindow.cpp" line="7306"/>
+        <location filename="../mainwindow.cpp" line="1661"/>
+        <location filename="../mainwindow.cpp" line="2338"/>
+        <location filename="../mainwindow.cpp" line="3429"/>
+        <location filename="../mainwindow.cpp" line="4032"/>
+        <location filename="../mainwindow.cpp" line="4155"/>
+        <location filename="../mainwindow.cpp" line="4387"/>
+        <location filename="../mainwindow.cpp" line="6766"/>
+        <location filename="../mainwindow.cpp" line="6962"/>
+        <location filename="../mainwindow.cpp" line="7303"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Impossibile aprire &quot;%1 per appendere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1768"/>
+        <location filename="../mainwindow.cpp" line="1765"/>
         <source>Error saving c2 file</source>
         <translation>Errore durante il salvataggio del file c2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1844"/>
+        <location filename="../mainwindow.cpp" line="1841"/>
         <source>Error in SoundInput</source>
         <translation>Errore ingresso scheda Sonora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1848"/>
+        <location filename="../mainwindow.cpp" line="1845"/>
         <source>Error in SoundOutput</source>
         <translation>Errore uscita scheda Sonora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1934"/>
+        <location filename="../mainwindow.cpp" line="1931"/>
         <source>Pwr</source>
         <translation>Pwr</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2451"/>
+        <location filename="../mainwindow.cpp" line="2448"/>
         <source>Subprocess Error</source>
         <translation>Subprocess error</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2452"/>
+        <location filename="../mainwindow.cpp" line="2449"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Il sottoprocesso non è riuscito con il codice di uscita%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2454"/>
-        <location filename="../mainwindow.cpp" line="2473"/>
+        <location filename="../mainwindow.cpp" line="2451"/>
+        <location filename="../mainwindow.cpp" line="2470"/>
         <source>Running: %1
 %2</source>
         <translation>In esecuzione: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2472"/>
+        <location filename="../mainwindow.cpp" line="2469"/>
         <source>Subprocess error</source>
         <translation>Errore di sottoprocesso</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2551"/>
+        <location filename="../mainwindow.cpp" line="2548"/>
         <source>Spotted</source>
         <translation>Spottato</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2558"/>
+        <location filename="../mainwindow.cpp" line="2555"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Impossibile stabilire/completare la connessione al server dxsummit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2582"/>
+        <location filename="../mainwindow.cpp" line="2579"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>Gli algoritmi, il codice sorgente, l&apos;aspetto di WSJT-X e dei relativi programmi e le specifiche del protocollo per le modalità FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 sono Copyright (C) 2001 -2018 di uno o più dei seguenti autori: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; e altri membri del WSJT Development Group.</translation>
+        <translation>Gli algoritmi, il codice sorgente, l&apos;aspetto di WSJT-X e dei relativi programmi e le specifiche del protocollo per le modalità FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 sono Copyright (C) 2001 -2018 di uno o più dei seguenti autori: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; e altri membri del Gruppo di Sviluppo di WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2703"/>
+        <location filename="../mainwindow.cpp" line="2700"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>42/5000
 Nessun dato letto dal disco. Formato file errato?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2710"/>
-        <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2711"/>
-        <source>Are you sure you want to delete all *.wav and *.c2 files in
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2747"/>
+        <location filename="../mainwindow.cpp" line="2744"/>
         <source>AutoSeq0</source>
         <translation>AutoSeq0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2760"/>
+        <location filename="../mainwindow.cpp" line="2757"/>
         <source>AutoSeq1</source>
         <translation>AutoSeq1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2769"/>
-        <location filename="../mainwindow.cpp" line="2795"/>
+        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
         <source>AutoSeq2</source>
         <translation>AutoSeq2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2770"/>
-        <location filename="../mainwindow.cpp" line="2791"/>
+        <location filename="../mainwindow.cpp" line="2767"/>
+        <location filename="../mainwindow.cpp" line="2788"/>
         <source>AutoSeq6</source>
         <translation>AutoSeq6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2779"/>
-        <location filename="../mainwindow.cpp" line="2796"/>
+        <location filename="../mainwindow.cpp" line="2776"/>
+        <location filename="../mainwindow.cpp" line="2793"/>
         <source>AutoSeq3</source>
         <translation>AutoSeq3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2780"/>
-        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2777"/>
+        <location filename="../mainwindow.cpp" line="2789"/>
         <source>AutoSeq7</source>
         <translation>AutoSeq7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2864"/>
+        <location filename="../mainwindow.cpp" line="2861"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Il controllo della frequenza in TX nel modo Hound TX non è consentito nelle sottobande standard FT8.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2872"/>
+        <location filename="../mainwindow.cpp" line="2869"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Il controllo della frequenza TX in modalità Hound richiede il controllo * Split * rig (o * Rig * o * Fake It * nella scheda * Impostazioni | Radio* tab.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2872"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Il controllo di frequenza Hound TX non è consentito nelle sottobande FT8 standard e richiede il controllo rig * Split * (* Rig * o * Fake It * nella scheda * Impostazioni | Radio*.tab)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2883"/>
+        <location filename="../mainwindow.cpp" line="2880"/>
         <source>Hound TX frequency control warning</source>
         <translation>Avviso per il controllo TX Hound</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2888"/>
+        <location filename="../mainwindow.cpp" line="2885"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2949"/>
+        <location filename="../mainwindow.cpp" line="2946"/>
         <source>Keyboard Shortcuts</source>
         <translation>Scorciatoie della tastiera</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2960"/>
+        <location filename="../mainwindow.cpp" line="2957"/>
         <source>Special Mouse Commands</source>
         <translation>Special mouse commands</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3396"/>
-        <source>Avg=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3401"/>
-        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="3398"/>
+        <location filename="../mainwindow.cpp" line="3405"/>
         <source>check time</source>
         <translation>controlla orario</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3708"/>
-        <location filename="../mainwindow.cpp" line="3716"/>
+        <location filename="../mainwindow.cpp" line="3705"/>
+        <location filename="../mainwindow.cpp" line="3713"/>
         <source>Confirm change Language</source>
         <translation>Conferma per cambiare Lingua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3710"/>
-        <location filename="../mainwindow.cpp" line="3719"/>
+        <location filename="../mainwindow.cpp" line="3707"/>
+        <location filename="../mainwindow.cpp" line="3716"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Sei sicuro di cambiare la lingua dall&apos;Inglese (JTDX sarà riavviato)?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3713"/>
-        <location filename="../mainwindow.cpp" line="3722"/>
+        <location filename="../mainwindow.cpp" line="3710"/>
+        <location filename="../mainwindow.cpp" line="3719"/>
         <source>&amp;Yes</source>
         <translation>&amp;Si</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3714"/>
-        <location filename="../mainwindow.cpp" line="3725"/>
+        <location filename="../mainwindow.cpp" line="3711"/>
+        <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;No</source>
         <translation>&amp;No</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3884"/>
+        <location filename="../mainwindow.cpp" line="3881"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Scegli un&apos;altra frequenza Tx. JTDX non trasmetterà consapevolmente un&apos;altra modalità nella sottobanda WSPR.</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3886"/>
         <location filename="../mainwindow.cpp" line="3889"/>
-        <location filename="../mainwindow.cpp" line="3892"/>
         <source>WSPR Guard Band</source>
-        <translation>WSPR Guard Band</translation>
+        <translation>Banda di Guardia WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4010"/>
+        <location filename="../mainwindow.cpp" line="4007"/>
         <source>TUNE</source>
         <translation>SINTONIZZA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4011"/>
+        <location filename="../mainwindow.cpp" line="4008"/>
         <source>LastTx: </source>
         <translation>Ultimo Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4225"/>
+        <location filename="../mainwindow.cpp" line="4222"/>
         <source>Tx: TUNE</source>
         <translation>Tx: SINTONIZZA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4226"/>
+        <location filename="../mainwindow.cpp" line="4223"/>
         <source>Tx: </source>
         <translation>Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4231"/>
+        <location filename="../mainwindow.cpp" line="4228"/>
         <source>Receiving </source>
         <translation>Sto ricevendo </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4284"/>
+        <location filename="../mainwindow.cpp" line="4281"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4440"/>
+        <location filename="../mainwindow.cpp" line="4437"/>
         <source>Last Tx: </source>
         <translation>Ultimo Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5321"/>
-        <location filename="../mainwindow.cpp" line="5333"/>
-        <location filename="../mainwindow.cpp" line="5346"/>
-        <location filename="../mainwindow.cpp" line="5372"/>
+        <location filename="../mainwindow.cpp" line="5318"/>
+        <location filename="../mainwindow.cpp" line="5330"/>
+        <location filename="../mainwindow.cpp" line="5343"/>
+        <location filename="../mainwindow.cpp" line="5369"/>
         <source>Add to CALL3.TXT</source>
         <translation>Aggiungi a CALL3TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5322"/>
+        <location filename="../mainwindow.cpp" line="5319"/>
         <source>Please enter a valid grid locator</source>
         <translation>Inserisci un grid locator valido</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5334"/>
+        <location filename="../mainwindow.cpp" line="5331"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Impossibile aprire &quot;%1 per leggere/scrivere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5347"/>
+        <location filename="../mainwindow.cpp" line="5344"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Impossibile aprire &quot;%1 per scrivere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5370"/>
+        <location filename="../mainwindow.cpp" line="5367"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 è già in CALL3.TXT, desideri sostituirlo?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5733"/>
+        <location filename="../mainwindow.cpp" line="5730"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Errore durante l&apos;invio dei dati QSO ADIF al server UDP secondario</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5733"/>
+        <location filename="../mainwindow.cpp" line="5730"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Scrivi il restituito &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5879"/>
+        <location filename="../mainwindow.cpp" line="5876"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5969"/>
-        <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6068"/>
-        <location filename="../mainwindow.cpp" line="6080"/>
-        <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6069"/>
-        <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6081"/>
-        <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6513"/>
+        <location filename="../mainwindow.cpp" line="6510"/>
         <source>Tune</source>
         <translation>Sintonizza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6686"/>
+        <location filename="../mainwindow.cpp" line="6683"/>
         <source>Lockd Tx=Rx</source>
         <translation>Blocca Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6687"/>
+        <location filename="../mainwindow.cpp" line="6684"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Pulsante per consentire lo delle frequenze AF Tx / Rx. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6690"/>
+        <location filename="../mainwindow.cpp" line="6687"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx Split</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6691"/>
+        <location filename="../mainwindow.cpp" line="6688"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Pulsante per bloccare la frequenza Tx sulla frequenza Rx AF. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6877"/>
+        <location filename="../mainwindow.cpp" line="6874"/>
         <source>Tune digital gain</source>
         <translation>Ottimizza il guadagno digitale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6878"/>
+        <location filename="../mainwindow.cpp" line="6875"/>
         <source>Transmit digital gain</source>
         <translation>Trasmettere il guadagno digitale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6897"/>
+        <location filename="../mainwindow.cpp" line="6894"/>
         <source>Prefixes</source>
         <translation>Prefissi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6946"/>
-        <location filename="../mainwindow.cpp" line="6947"/>
+        <location filename="../mainwindow.cpp" line="6943"/>
+        <location filename="../mainwindow.cpp" line="6944"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7170"/>
+        <location filename="../mainwindow.cpp" line="7167"/>
         <source>Network Error</source>
         <translation>Errore di Rete</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7171"/>
+        <location filename="../mainwindow.cpp" line="7168"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Error: %1
 server DP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7305"/>
+        <location filename="../mainwindow.cpp" line="7302"/>
         <source>File Error</source>
         <translation>Errore File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7516"/>
+        <location filename="../mainwindow.cpp" line="7513"/>
         <source>Tx watchdog expired</source>
         <translation>Tx  scaduto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7530"/>
+        <location filename="../mainwindow.cpp" line="7527"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -4815,7 +3014,7 @@ server DP %2:%3</translation>
         <translation>Errore nell&apos;apertura della tavolozza del waterfall &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="252"/>
+        <location filename="../WFPalette.cpp" line="250"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Errore nella scrittura della tavolozza del waterfall &quot;%1&quot;: %2.</translation>
     </message>
@@ -5043,65 +3242,55 @@ Errore (%2):%3</translation>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="254"/>
+        <location filename="../Configuration.cpp" line="252"/>
         <source>Add Station</source>
         <translation>Aggiungi Stazione</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="259"/>
+        <location filename="../Configuration.cpp" line="257"/>
         <source>&amp;Band:</source>
         <translation>&amp;Banda:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="260"/>
+        <location filename="../Configuration.cpp" line="258"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Diff RTX (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="261"/>
+        <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenna:</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="267"/>
-        <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="268"/>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="296"/>
+        <location filename="../StationList.cpp" line="291"/>
         <source>Band name</source>
         <translation>Nome banda</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="322"/>
+        <location filename="../StationList.cpp" line="317"/>
         <source>Frequency offset</source>
         <translation>Differenza di Freq</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="344"/>
+        <location filename="../StationList.cpp" line="339"/>
         <source>Antenna description</source>
         <translation>Tipo di antenna</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="366"/>
+        <location filename="../StationList.cpp" line="361"/>
         <source>Band</source>
         <translation>Banda</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="367"/>
+        <location filename="../StationList.cpp" line="362"/>
         <source>Offset</source>
         <translation>Differenza</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="368"/>
+        <location filename="../StationList.cpp" line="363"/>
         <source>Antenna Description</source>
         <translation>Tipo di antenna</translation>
     </message>
