@@ -234,13 +234,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     if(iqso.eq.4) go to 32
 
     nsyncscorew=0; scoreratiowa=0.; rrxdt=xdt-0.5
-    if(rrxdt.gt.-0.5 .and. rrxdt.lt.1.5) then
+    if(rrxdt.ge.-0.5 .and. rrxdt.le.2.13) then
       do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k)+s8(icos7(k-1),k+36)+s8(icos7(k-1),k+72); enddo
       do k=1,7; sumkw(k)=(sum(s8(k-1,:))-syncw(k))/25.333; enddo ! (79-3)/3
-    else if(rrxdt.le.-0.5) then
+    else if(rrxdt.lt.-0.5) then
       do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k+36)+s8(icos7(k-1),k+72); enddo
       do k=1,7; sumkw(k)=(sum(s8(k-1,26:79))-syncw(k))/26.; enddo ! (54-2)/2
-    else if(rrxdt.ge.1.5) then
+    else if(rrxdt.gt.2.13) then
       do k=1,7; syncw(icos7(k-1)+1)=s8(icos7(k-1),k)+s8(icos7(k-1),k+36); enddo
       do k=1,7; sumkw(k)=(sum(s8(k-1,1:54))-syncw(k))/26.; enddo ! (54-2)/2
     endif
@@ -248,7 +248,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     scoreratiowa=sum(scoreratiow)/7.
 
 ! sync quality check
-    is1=0; is2=0; is3=0; nsyncscore=0; scoreratio=0.
+    is1=0; is2=0; is3=0; nsyncscore=0; nsyncscore1=0; nsyncscore2=0; nsyncscore3=0
+    scoreratio=0.; scoreratio1=0.; scoreratio2=0.; scoreratio3=0.
     do k=1,7
       ip=maxloc(s8(:,k))
       if(icos7(k-1).eq.(ip(1)-1)) is1=is1+1
@@ -256,32 +257,112 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       if(icos7(k-1).eq.(ip(1)-1)) is2=is2+1
       ip=maxloc(s8(:,k+72))
       if(icos7(k-1).eq.(ip(1)-1)) is3=is3+1
-      synck=s8(icos7(k-1),k); sumk=(sum(s8(:,k))-synck)/7.0
-      if(synck.gt.sumk) then; nsyncscore=nsyncscore+1; scoreratio=scoreratio+synck/sumk; endif
+      if(rrxdt.ge.-0.5) then
+        synck=s8(icos7(k-1),k); sumk=(sum(s8(:,k))-synck)/7.0
+        if(synck.gt.sumk) then; nsyncscore1=nsyncscore1+1; scoreratio1=scoreratio1+synck/sumk; endif
+      endif
       synck=s8(icos7(k-1),k+36); sumk=(sum(s8(:,k+36))-synck)/7.0
-      if(synck.gt.sumk) then; nsyncscore=nsyncscore+1; scoreratio=scoreratio+synck/sumk; endif
-      synck=s8(icos7(k-1),k+72); sumk=(sum(s8(:,k+72))-synck)/7.0
-      if(synck.gt.sumk) then; nsyncscore=nsyncscore+1; scoreratio=scoreratio+synck/sumk; endif
+      if(synck.gt.sumk) then; nsyncscore2=nsyncscore2+1; scoreratio2=scoreratio2+synck/sumk; endif
+      if(rrxdt.le.2.13) then
+        synck=s8(icos7(k-1),k+72); sumk=(sum(s8(:,k+72))-synck)/7.0
+        if(synck.gt.sumk) then; nsyncscore3=nsyncscore3+1; scoreratio3=scoreratio3+synck/sumk; endif
+      endif
     enddo
-
+    nsyncscore=nsyncscore1+nsyncscore2+nsyncscore3; scoreratio=scoreratio1+scoreratio2+scoreratio3
 ! hard sync sum - max is 21
     nsync=is1+is2+is3
 ! bail out
     if(nsync.le.6) then; nbadcrc=1; return; endif
-    scoreratio=scoreratio/nsyncscore
+    if(nsyncscore.gt.0) then; scoreratio=scoreratio/nsyncscore; else; scoreratio=0.; endif 
+    if(nsyncscore1.gt.0) then; scoreratio1=scoreratio1/nsyncscore1; else; scoreratio1=0.; endif 
+    if(nsyncscore3.gt.0) then; scoreratio3=scoreratio3/nsyncscore3; else; scoreratio3=0.; endif
     if(dfqso.ge.2.0 .or. (dfqso.lt.2.0 .and. stophint)) then
-      if(nsyncscore.lt.8 .or. (nsyncscore.lt.12 .and. scoreratio.lt.2.3)) then; nbadcrc=1; return; endif
-      if(scoreratiowa.lt.2.0 .and. nsyncscorew.lt.5) then
-        if(rrxdt.gt.-0.5 .and. rrxdt.lt.1.5) then
-          if(nsyncscore.eq.18 .and. scoreratio.lt.2.99) then; nbadcrc=1; return
-          else if(nsyncscore.eq.17 .and. scoreratio.lt.3.75) then; nbadcrc=1; return
-          else if(nsyncscore.eq.16 .and. scoreratio.lt.4.57) then; nbadcrc=1; return
-          else if(nsyncscore.lt.16 .and. scoreratio.lt.5.2) then; nbadcrc=1; return
+      if(rrxdt.ge.-0.5 .and. rrxdt.le.2.13) then
+        if(nsyncscore.lt.8 .or. (nsyncscore.lt.10 .and. scoreratio.lt.5.5) .or. (nsyncscore.lt.11 .and. &
+           scoreratio.lt.3.63)) then
+          nbadcrc=1; return ! 377 out of 20709
+        else if(nsyncscore.eq.11 .and. scoreratio.lt.5.37) then
+          if(nsyncscore1.lt.5 .and. nsyncscore3.lt.5 .and. scoreratio1.lt.4.2 .and. scoreratio3.lt.4.2) then
+            nbadcrc=1; return ! 261
           endif
-        else if(nsyncscore.lt.12 .and. scoreratio.lt.3.34) then; nbadcrc=1; return
-        else if(nsyncscore.ge.12 .and. nsyncscore.lt.17 .and. scoreratio.lt.3.52) then; nbadcrc=1; return
+        else if(nsyncscore.eq.12 .and. scoreratio.lt.4.6) then
+          if(nsyncscore1.lt.5 .and. nsyncscore3.lt.5 .and. scoreratio1.lt.4.0 .and. scoreratio3.lt.4.0) then
+            nbadcrc=1; return ! 222
+          endif
+        else if(nsyncscore.eq.13 .and. scoreratio.lt.4.4) then
+          if(nsyncscore1.lt.5 .and. nsyncscore2.lt.6 .and. nsyncscore3.lt.5 .and. scoreratio1.lt.4.4 .and. &
+             scoreratio3.lt.4.4) then
+            nbadcrc=1; return ! 98
+          endif
+        else if(nsyncscorew.lt.3) then
+          if((nsyncscore1.gt.5 .and. scoreratio1.gt.13.8) .or. (nsyncscore2.gt.5 .and. scoreratio2.gt.13.8) .or. &
+             (nsyncscore3.gt.5 .and. scoreratio3.gt.13.8)) go to 32
+          nbadcrc=1; return ! 75
+        else if(nsyncscorew.eq.3) then
+          if(scoreratio1.gt.15. .or. scoreratio2.gt.15. .or. scoreratio3.gt.15.) go to 32
+          nbadcrc=1; return ! 125
+        else if(nsyncscorew.eq.4) then
+          if(nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. nsyncscore3.eq.7 .or. scoreratio1.gt.10. .or. &
+             scoreratio2.gt.10. .or. scoreratio3.gt.10.) go to 32
+          nbadcrc=1; return ! 94
+        else if(nsyncscorew.eq.5) then
+          if(nsyncscore.gt.17 .or. nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. nsyncscore3.eq.7 .or. scoreratio1.gt.10. .or. &
+             scoreratio2.gt.10. .or. scoreratio3.gt.10.) go to 32
+            nbadcrc=1; return ! 131
         endif
-      endif
+      else if(rrxdt.lt.-0.5) then
+        if(nsyncscore.lt.6 .or. (nsyncscore.gt.5 .and. nsyncscore.lt.8 .and. nsyncscorew.lt.6 .and. &
+           scoreratio2.lt.5.5 .and. scoreratio3.lt.5.5)) then
+          nbadcrc=1; return ! 46
+        else if(nsyncscore.eq.8) then
+          if(nsyncscore2.lt.6 .and. nsyncscore3.lt.6 .and. scoreratio2.lt.6.6 .and. scoreratio3.lt.6.6) then
+            nbadcrc=1; return ! 20 
+          endif
+        else if(nsyncscore.eq.9 .and. scoreratio.lt.6.0) then
+          if(nsyncscore2.lt.6 .and. nsyncscore3.lt.6 .and. scoreratio2.lt.6.6 .and. scoreratio3.lt.6.5) then
+            nbadcrc=1; return ! 5 
+          endif
+        else if(nsyncscorew.lt.3) then
+          if((nsyncscore2.gt.5 .and. scoreratio2.gt.13.8) .or. (nsyncscore3.gt.5 .and. scoreratio3.gt.13.8)) go to 32
+          nbadcrc=1; return ! 22
+        else if(nsyncscorew.eq.3) then
+          if(scoreratio2.gt.15. .or. nsyncscore3.gt.15) go to 32
+          nbadcrc=1; return ! 31
+        else if(nsyncscorew.eq.4) then
+          if(nsyncscore2.eq.7 .or. nsyncscore3.eq.7 .or. scoreratio2.gt.10. .or. nsyncscore3.gt.10) go to 32
+          nbadcrc=1; return ! 34
+        else if(nsyncscorew.eq.5) then
+          if(nsyncscore.gt.11 .or. nsyncscore2.eq.7 .or. nsyncscore3.eq.7 .or. scoreratio2.gt.10. .or. &
+             scoreratio3.gt.10.) go to 32
+            nbadcrc=1; return ! 35
+        endif
+      else if(rrxdt.gt.2.13) then
+        if(nsyncscore.lt.6 .or. (nsyncscore.gt.5 .and. nsyncscore.lt.8 .and. nsyncscorew.lt.6 .and. &
+           scoreratio1.lt.5.5 .and. scoreratio2.lt.5.5)) then
+          nbadcrc=1; return ! 4
+        else if(nsyncscore.eq.8) then
+          if(nsyncscore1.lt.6 .and. nsyncscore2.lt.6 .and. scoreratio1.lt.6.6 .and. scoreratio2.lt.6.6) then
+            nbadcrc=1; return ! 8
+          endif
+        else if(nsyncscore.eq.9 .and. scoreratio.lt.6.0) then
+          if(nsyncscore1.lt.6 .and. nsyncscore2.lt.6 .and. scoreratio2.lt.6.6 .and. scoreratio1.lt.6.5) then
+            nbadcrc=1; return ! 2
+          endif
+        else if(nsyncscorew.lt.3) then
+          if((nsyncscore1.gt.5 .and. scoreratio1.gt.13.8) .or. (nsyncscore2.gt.5 .and. scoreratio2.gt.13.8)) go to 32
+          nbadcrc=1; return ! 12
+        else if(nsyncscorew.eq.3) then
+          if(scoreratio1.gt.15. .or. scoreratio2.gt.15.) go to 32
+          nbadcrc=1; return ! 32
+        else if(nsyncscorew.eq.4) then
+          if(nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. scoreratio1.gt.10. .or. nsyncscore2.gt.10) go to 32
+          nbadcrc=1; return ! 103
+        endif
+        else if(nsyncscorew.eq.5) then
+          if(nsyncscore.gt.11 .or. nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. scoreratio1.gt.10. .or. &
+             scoreratio2.gt.10.) go to 32
+            nbadcrc=1; return ! 0
+        endif
     endif
 
 32  if(lsd) then

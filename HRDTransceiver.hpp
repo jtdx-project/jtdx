@@ -16,7 +16,6 @@ class QRegExp;
 class QTcpSocket;
 class QByteArray;
 
-//
 // Ham Radio Deluxe Transceiver Interface
 //
 // Implemented as a Transceiver decorator  because we may want the PTT
@@ -27,6 +26,7 @@ class QByteArray;
 class HRDTransceiver final
   : public PollingTransceiver
 {
+Q_OBJECT;
 public:
   static void register_transceivers (TransceiverFactory::Transceivers *, int id);
 

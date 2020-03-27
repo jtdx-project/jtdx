@@ -123,10 +123,10 @@ namespace
       ui_.button_box->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
 
       // context menu actions
-      auto import_button = ui_.button_box->addButton ("&Import...", QDialogButtonBox::ActionRole);
+      auto import_button = ui_.button_box->addButton (tr("&Import..."), QDialogButtonBox::ActionRole);
       connect (import_button, &QPushButton::clicked, this, &Designer::import_palette);
 
-      auto export_button = ui_.button_box->addButton ("&Export...", QDialogButtonBox::ActionRole);
+      auto export_button = ui_.button_box->addButton (tr("&Export..."), QDialogButtonBox::ActionRole);
       connect (export_button, &QPushButton::clicked, this, &Designer::export_palette);
 
       // hookup the context menu handler

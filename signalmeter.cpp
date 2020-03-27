@@ -100,7 +100,7 @@ void SignalMeter::setValue(float value)
   m_meter->setContentsMargins (0, font_metrics.ascent () / 2, 0, font_metrics.ascent () / 2 + font_metrics.descent ());
   m_meter->setValue(int(value));
   QString t;
-//  t.sprintf("%4.1f dB",value);
-  t.sprintf("%3.0fdB",value);
+//  t = QString::asprintf("%4.1f dB",value);
+  t = QString::asprintf("%3.0fdB",value);
   m_reading->setText(t);
 }

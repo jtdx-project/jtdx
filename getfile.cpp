@@ -212,7 +212,7 @@ int ptt(int nport, int ntx, int* iptt, int* nopen)
                      FILE_ATTRIBUTE_NORMAL,NULL);
     if(hFile==INVALID_HANDLE_VALUE) {
       QString t;
-      t.sprintf("Cannot open COM port %d for PTT\n",nport);
+      t = QString::asprintf("Cannot open COM port %d for PTT\n",nport);
       return 1;
     }
     *nopen=1;

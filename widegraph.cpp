@@ -362,12 +362,12 @@ void WideGraph::setModeTx(QString modeTx)                          //setModeTx
   ui->widePlot->update();
 }
                                                         //Current-Cumulative-Yellow
-void WideGraph::on_spec2dComboBox_currentIndexChanged(const QString &arg1)
+void WideGraph::on_spec2dComboBox_currentIndexChanged(int n)
 {
   ui->widePlot->setCurrent(false);
   ui->widePlot->setCumulative(false);
-  if(arg1=="Current") ui->widePlot->setCurrent(true);
-  if(arg1=="Cumulative") ui->widePlot->setCumulative(true);
+  if(n==0) ui->widePlot->setCurrent(true);
+  if(n==1) ui->widePlot->setCumulative(true);
   if(ui->widePlot->m_bScaleOK) ui->widePlot->draw(swide,false);
 }
 

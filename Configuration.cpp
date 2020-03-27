@@ -201,7 +201,7 @@ namespace
 class FrequencyDialog final
   : public QDialog
 {
-  Q_OBJECT
+  Q_OBJECT;
 public:
   using Item = FrequencyList::Item;
 
@@ -245,7 +245,7 @@ private:
 class StationDialog final
   : public QDialog
 {
-  Q_OBJECT
+  Q_OBJECT;
 public:
   explicit StationDialog (StationList const * stations, Bands * bands, QWidget * parent = nullptr)
     : QDialog {parent}

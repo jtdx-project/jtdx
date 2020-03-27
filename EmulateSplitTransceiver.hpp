@@ -5,7 +5,6 @@
 
 #include "Transceiver.hpp"
 
-//
 // Emulate Split Transceiver
 //
 // Helper decorator class that encapsulates  the emulation of split TX
@@ -27,6 +26,7 @@
 class EmulateSplitTransceiver final
   : public Transceiver
 {
+Q_OBJECT;
 public:
   // takes ownership of wrapped Transceiver
   explicit EmulateSplitTransceiver (std::unique_ptr<Transceiver> wrapped,

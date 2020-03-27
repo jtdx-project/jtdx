@@ -14,7 +14,7 @@ class Configuration;
 
 class DisplayText : public QTextEdit
 {
-    Q_OBJECT
+    Q_OBJECT;
 public:
     explicit DisplayText(QWidget *parent = 0);
     void setConfiguration(Configuration const *);
