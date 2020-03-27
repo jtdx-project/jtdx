@@ -2903,7 +2903,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Nõutud</translation>
+        <translation>Soovitud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -3028,7 +3028,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation>Möödaminek</translation>
+        <translation>Filtriteta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
@@ -3103,12 +3103,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: dekodeeritud teksti (vasaku) akna  puhastamine. Hiire parem nupp: QSO sageduse (parema) akna puhastamine. Topeltklõps mõlema akna puhastamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: Laineala aktiivsuse (vasaku) akna  tühjendamine. Hiire parem nupp: Rx sageduse (parema) akna tühjendamine. Topeltklõps mõlema akna tühjendamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Kustuta</translation>
+        <translation>&amp;Tühjenda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -3128,7 +3128,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translation>Vihje</translation>
+        <translation>Vihjed</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
@@ -3138,7 +3138,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation></translation>
+        <translation>Ribafilter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
@@ -3158,7 +3158,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation>Puhasta D&amp;X</translation>
+        <translation>Kustuta D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -5259,12 +5259,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>Praegune</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>Kuhjunud</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
@@ -7103,7 +7103,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../Configuration.ui" line="4595"/>
         <location filename="../Configuration.ui" line="4650"/>
         <source>Clear</source>
-        <translation>Puhas</translation>
+        <translation>Puhasta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4607"/>
