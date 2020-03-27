@@ -2998,6 +2998,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>&amp;Tune</source>
         <translation>&amp;Tune HF</translation>
     </message>
@@ -4668,11 +4669,6 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6513"/>
-        <source>Tune</source>
-        <translation>Tune</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6686"/>

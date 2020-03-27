@@ -2997,6 +2997,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>&amp;Tune</source>
         <translation>&amp;Strojenie</translation>
     </message>
@@ -4672,11 +4673,6 @@ jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
         <translation>Czy jesteś pewien, że chcesz usunąć twój LOG QSO?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6513"/>
-        <source>Tune</source>
-        <translation>Strojenie</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="6686"/>
         <source>Lockd Tx=Rx</source>
         <translation>Częstotliwość Tx=Rx</translation>
@@ -5069,7 +5065,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="268"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Anuluj</translation>
     </message>
 </context>
 <context>
@@ -6062,13 +6058,13 @@ transmitting periods.</source>
         <location filename="../Configuration.ui" line="1692"/>
         <location filename="../Configuration.ui" line="1722"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z lewej</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1697"/>
         <location filename="../Configuration.ui" line="1727"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z prawej</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1702"/>
@@ -6112,7 +6108,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Strojenie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -6132,7 +6128,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1836"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etykieta tekstu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1843"/>

@@ -2986,6 +2986,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>&amp;Tune</source>
         <translation>&amp;チューン</translation>
     </message>
@@ -4661,11 +4662,6 @@ UDP server %2:%3</source>
         <location filename="../mainwindow.cpp" line="5969"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6513"/>
-        <source>Tune</source>
-        <translation>チューン(調整)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6686"/>
