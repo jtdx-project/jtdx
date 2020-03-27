@@ -658,7 +658,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
         <source>Azores</source>
-        <translation>Азорские острова</translation>
+        <translation>Азорские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
@@ -713,12 +713,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation>Северная группа островов Кука</translation>
+        <translation>С. ост. Кука</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation>Южная группа островов Кука</translation>
+        <translation>Ю. ост. Кука</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
@@ -738,12 +738,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Болеарские острова</translation>
+        <translation>Болеарские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation>Канарские острова</translation>
+        <translation>Канарские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
@@ -833,7 +833,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>Chesterfield Is.</source>
-        <translation>Архипелаг Честерфилд</translation>
+        <translation>Apx. Честерфилд</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
@@ -858,7 +858,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Marquesas Is.</source>
-        <translation>Маркизские острова</translation>
+        <translation>Маркизские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
@@ -903,7 +903,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>Архипелаг островов Амстердам и Сен-Поль</translation>
+        <translation>Apx. ост. Амстердам и Сен-Поль</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
@@ -938,7 +938,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation>Шетландские острова</translation>
+        <translation>Шетландские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
@@ -958,7 +958,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation>Соломоновы острова</translation>
+        <translation>Соломоновы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
@@ -988,7 +988,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation>Галапагоские острова</translation>
+        <translation>Галапагоские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
@@ -1148,7 +1148,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation>Марианские острова</translation>
+        <translation>Марианские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
@@ -1273,7 +1273,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="244"/>
         <source>Aland Is.</source>
-        <translation>Аландские острова</translation>
+        <translation>Аландские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="245"/>
@@ -1303,7 +1303,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation>Фарерские острова</translation>
+        <translation>Фарерские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1323,7 +1323,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="254"/>
         <source>DPR of Korea</source>
-        <translation>Корейская Народно-Демократическая Республика</translation>
+        <translation>КНДР</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="255"/>
@@ -1513,7 +1513,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="292"/>
         <source>Cocos Is.</source>
-        <translation>Кокосовы острова</translation>
+        <translation>Кокосовы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="293"/>
@@ -1618,7 +1618,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation>Маршалловы острова</translation>
+        <translation>Маршалловы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
@@ -1648,7 +1648,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Cocos (Keeling) Is.</source>
-        <translation>Кокосовые (Килинг) острова</translation>
+        <translation>Кокосовые (Килинг) ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
@@ -1708,7 +1708,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation>Фалклендские острова</translation>
+        <translation>Фалклендские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
@@ -1718,17 +1718,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation>Ю.Шетландские острова</translation>
+        <translation>Ю.Шетландские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation>Ю. Оркнейские острова</translation>
+        <translation>Ю. Оркнейские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation>Ю. Сандвичевы острова</translation>
+        <translation>Ю. Сандвичевы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
@@ -1753,7 +1753,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation>Андаманские &amp; Никобарские острова</translation>
+        <translation>Андаманские &amp; Никобарские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="341"/>
@@ -2057,12 +2057,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Импорт</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Экспорт</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -4327,12 +4327,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Отменить</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Повторить</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
@@ -4435,7 +4435,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2558"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удается установить / завершить соединение с сервером dxsummit</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2582"/>
@@ -4450,13 +4450,14 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2710"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Подтвердите удаление</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2711"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите удалить все файлы * .wav и * .c2 в
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
@@ -4662,22 +4663,22 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <location filename="../mainwindow.cpp" line="6068"/>
         <location filename="../mainwindow.cpp" line="6080"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>Подтвердите удаление</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6069"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите удалить файл ALL.TXT?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите стереть свой QSO LOG?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6513"/>
         <source>Tune</source>
-        <translation></translation>
+        <translation>Настройка</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6686"/>
@@ -4740,7 +4741,7 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7516"/>
         <source>Tx watchdog expired</source>
-        <translation type="unfinished"></translation>
+        <translation>Передача завершена по срабатыванию сторожевого таймера</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7530"/>
@@ -5252,12 +5253,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>Текущий</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>Накопительный</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>

@@ -218,7 +218,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation type="unfinished"></translation>
+        <translation>gdzie?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2057,12 +2057,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2591,7 +2591,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../logqso.cpp" line="25"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="26"/>
@@ -2998,7 +2998,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
         <source>&amp;Tune</source>
-        <translation>Strojenie</translation>
+        <translation>&amp;Strojenie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -3190,7 +3190,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznaczyć aby generować wiadomość &apos;RRR&apos;, odznaczyć aby generować wiadomość &apos;RR73&apos;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
@@ -3299,7 +3299,7 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>Wprowadż dowolny tekst (maksimum 13 znaków)
 lub wybierz predefiniowane makro z rozwijanej listy.
 Naciśnij ENTER aby dodać bieżący tekst do predefiniowanej
-list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
+list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
@@ -3578,7 +3578,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="4505"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4509"/>
@@ -3682,7 +3682,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="4674"/>
         <source>Save all</source>
-        <translation>Zapisuj wszystko</translation>
+        <translation>Zapisz wszystko</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4682"/>
@@ -4297,17 +4297,17 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="444"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Anuluj</translation>
+        <translation>&amp;Anuluj</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ponownie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="735"/>
@@ -4415,193 +4415,195 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
         <location filename="../mainwindow.cpp" line="2473"/>
         <source>Running: %1
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Wykonywanie: %1
+%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2472"/>
         <source>Subprocess error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd podprocesu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2551"/>
         <source>Spotted</source>
-        <translation type="unfinished"></translation>
+        <translation>Zauważone</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2558"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można nawiązać/zestawić połączenia do serwera dxsummit</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2582"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>Algorytmy, kod źródłowy, wygląd i działanie WSJT-X i powiązanych programów, oraz specyfifikacje protokołu dla modulacji FSK41, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 są zastrzeżone prawami autorskim (C) 2001-2018 przez jednego lub wielu z następujących autorów: Joseph Taylor, K1JT; K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; oraz innych członków Grupy Developerskiej WSJT.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2703"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odczytano danych z dysku. Błędny format pliku?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2710"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Potwierdzić usunięcie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2711"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien, że chcesz usunąć wszystkie pliki *.wav oraz *.c2 w
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
         <source>AutoSeq0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2760"/>
         <source>AutoSeq1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2769"/>
         <location filename="../mainwindow.cpp" line="2795"/>
         <source>AutoSeq2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2770"/>
         <location filename="../mainwindow.cpp" line="2791"/>
         <source>AutoSeq6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2779"/>
         <location filename="../mainwindow.cpp" line="2796"/>
         <source>AutoSeq3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2780"/>
         <location filename="../mainwindow.cpp" line="2792"/>
         <source>AutoSeq7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2864"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola częstotliwości hound TX nie jest dozwolona w standardowych podpasmach FT8.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2872"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sterowanie częstotliwością hound TX wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2875"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2883"/>
         <source>Hound TX frequency control warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostrzeżenie - sterowanie częstotliwością hound TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2888"/>
         <source>HoundFC</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2949"/>
         <source>Keyboard Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skróty klawiaturowe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2960"/>
         <source>Special Mouse Commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Specjalne polecenia myszy</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3396"/>
         <source>Avg=</source>
-        <translation type="unfinished"></translation>
+        <translation>Uśrednione</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3401"/>
         <location filename="../mainwindow.cpp" line="3408"/>
         <source>check time</source>
-        <translation type="unfinished"></translation>
+        <translation>sprawdzić czas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3708"/>
         <location filename="../mainwindow.cpp" line="3716"/>
         <source>Confirm change Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Potwierdzenie zmiany języka</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3710"/>
         <location filename="../mainwindow.cpp" line="3719"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien zmiany języka interfejsu użytkownika na Polski, i że JTDX zostanie zrestartowamy?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3713"/>
         <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3714"/>
         <location filename="../mainwindow.cpp" line="3725"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3884"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosze wybrać inną częstotliwość TX. JTDX będzie nieświadomie nadawał inną modulacją w podpasmie WSPR.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3889"/>
         <location filename="../mainwindow.cpp" line="3892"/>
         <source>WSPR Guard Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasmo ochronne WSPR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4010"/>
         <source>TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation>STROJENIE</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4011"/>
         <source>LastTx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatnio nadane: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4225"/>
         <source>Tx: TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx: Strojenie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4226"/>
         <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4231"/>
         <source>Receiving </source>
-        <translation type="unfinished"></translation>
+        <translation>Odbiór </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4284"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4440"/>
         <source>Last Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5321"/>
@@ -4609,136 +4611,138 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).&gt;</translation>
         <location filename="../mainwindow.cpp" line="5346"/>
         <location filename="../mainwindow.cpp" line="5372"/>
         <source>Add to CALL3.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj do pliku CALL3.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5322"/>
         <source>Please enter a valid grid locator</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wprowadzić prawidłowy QTH lokator</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5334"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można otworzyć &quot;%1&quot; do odczytu/zapisu: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5347"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można otworzyć &quot;%1&quot; do zapisu: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5370"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5733"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd przesyłania danych QSO ADIF do drugiego servera UDP</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5733"/>
         <source>Write returned &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapis zwrócił &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5879"/>
         <source>Tx WSPR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5969"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6068"/>
         <location filename="../mainwindow.cpp" line="6080"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>Potwierdzić usuwanie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6069"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien, że chcesz usunąć plik ALL.TXT ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien, że chcesz usunąć twój LOG QSO?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6513"/>
         <source>Tune</source>
-        <translation type="unfinished"></translation>
+        <translation>Strojenie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6686"/>
         <source>Lockd Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nacisnąć przycisk aby umożliwić pracę split (różne częst. Tx i Rx).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6690"/>
         <source>Tx/Rx Split</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6691"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nacisnąć przycisk aby ustawić częst. Tx taką samą jak częst. audio Rx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6877"/>
         <source>Tune digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Cyfrowe wzmocnienie przy strojeniu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6878"/>
         <source>Transmit digital gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Cyfrowe wzmocnienie przy nadawaniu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6897"/>
         <source>Prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Prefiksy</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6946"/>
         <location filename="../mainwindow.cpp" line="6947"/>
         <source>Logd </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7170"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd sieci</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7171"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd: %1
+srever UDP %2:%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7305"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd pliku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7516"/>
         <source>Tx watchdog expired</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7530"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4747,7 +4751,7 @@ UDP server %2:%3</source>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation type="unfinished">Modulacja</translation>
+        <translation>Modulacja</translation>
     </message>
 </context>
 <context>
@@ -4755,7 +4759,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Niespodziewany błąd TRCVRa</translation>
     </message>
 </context>
 <context>
@@ -4763,57 +4767,57 @@ UDP server %2:%3</source>
     <message>
         <location filename="../main.cpp" line="163"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepoprawna nazwa TRCVRa - niedozwolone znaki \ &amp; /</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="188"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Może działać drugi program, spróbować usunąć stary plik lock?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="319"/>
         <source>Unexpected error</source>
-        <translation type="unfinished"></translation>
+        <translation>Niespodziewany błąd</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
         <source>User Defined</source>
-        <translation type="unfinished"></translation>
+        <translation>Definiowane przez użytkownika</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbyt wiele kolorów w palecie.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd odczytu pliku palety wodospadu &quot;%1:%2&quot; zbyt wiele kolorów.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd odczytu pliku palety wodospadu &quot;%1:%2&quot; nieprawidłowa trójka.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd odczytu pliku palety wodospadu &quot;%1:%2&quot; nieprawdiłowy kolor.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd otwarcia pliku palety wodospadu &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd zapisu pliku palety wodospadu &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -4826,7 +4830,7 @@ UDP server %2:%3</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation type="unfinished">Błąd systemu plików</translation>
+        <translation>Błąd systemu plików</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -4834,56 +4838,66 @@ UDP server %2:%3</source>
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można zmienić nazwy pliku:
+&quot;%1&quot;
+na: &quot;%2&quot;
+Błąd(%3): %4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można usunać pliku:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="172"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd sieci</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbyt wiele przeadresowań: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
         <source>Redirect not followed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeadresowanie nie nastąpiło: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można przesłać zmian do:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="245"/>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można otworzyć pliku:
+&quot;%1&quot;
+Error(%2): %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można utworzyć ścieżki:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="263"/>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można zapisać do pliku:
+&quot;%1&quot;
+Error(%2): %3</translation>
     </message>
 </context>
 <context>
@@ -4891,7 +4905,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../SampleDownloader.cpp" line="98"/>
         <source>Download Samples</source>
-        <translation type="unfinished"></translation>
+        <translation>Pobieranie próbek</translation>
     </message>
 </context>
 <context>
@@ -4899,67 +4913,67 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd otwierania wejścia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błą podczas odczytu z wejścia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dane audio przesłane zbyt wolno do wejścia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieodzyskiwalny błąd, wejście audio urządzenia niedostępne w tym momencie.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Żądany format wejścia audio jest nieprawidłowy.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Żądany format wejścia audio nie jest obsługiwany przez urządzenie.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepowodzenie inicjowania urządzenia zbiorczego audio</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="129"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepracujący</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="133"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translation>Odbiór</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="137"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation>Zawieszono</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="142"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>Przerwano</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="149"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="153"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatrzymano</translation>
     </message>
 </context>
 <context>
@@ -4967,62 +4981,62 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd otwarcia wyjścia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd podczas zapisu do wyjscia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dane audio przesłane zbyt wolno do wyjścia audio urządzenia.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="31"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieodzyskiwalny błąd, wyjście audio urządzenia niedostępne w tym momencie.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
         <source>Requested output audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Żądany format wyjścia audio jest nieprawidłowy.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="51"/>
         <source>Requested output audio format is not supported on device.</source>
-        <translation type="unfinished"></translation>
+        <translation>Żądany format wyjścia audio nie jest obsługiwany przez urządzenie.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepracujący</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Nadawanie</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="116"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation>Zawieszony</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="118"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>Przerwany</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatrzymany</translation>
     </message>
 </context>
 <context>
@@ -5030,7 +5044,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="254"/>
         <source>Add Station</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodać stację</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="259"/>
@@ -5040,22 +5054,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="260"/>
         <source>&amp;Offset (MHz):</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="261"/>
         <source>&amp;Antenna:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Antena:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="267"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="268"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Anuluj</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5063,32 +5077,32 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
-        <translation type="unfinished">Nazwa pasma</translation>
+        <translation>Nazwa pasma</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="322"/>
         <source>Frequency offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset częstotliwości</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="344"/>
         <source>Antenna description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis anteny</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
-        <translation type="unfinished">Pasmo</translation>
+        <translation>Pasmo</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="367"/>
         <source>Offset</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis anteny</translation>
     </message>
 </context>
 <context>
@@ -5096,7 +5110,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Niespodziewany błąd TRCVRa</translation>
     </message>
 </context>
 <context>
@@ -5104,133 +5118,133 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Sterowanie</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Współczynnik kompresji dla skali częstotliwości</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
         <source>Bins/Pixel  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekoduj JT9 tylko powyżej tej częstotliwości&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="200"/>
         <source>  JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="203"/>
         <source>JT65  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="233"/>
         <location filename="../widegraph.ui" line="243"/>
         <source>Position of timestamp above each interval line</source>
-        <translation type="unfinished"></translation>
+        <translation>Położenie znacznika czasu powyżej każdej liniki interwału</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Znacznik czasu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłączony</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="252"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Z lewej</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="257"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Z prawej</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Częstotliwość na lewym krańcu wodospadu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="292"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="295"/>
         <source>Start </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość uśrednionych FFTs (określa szybkość przewijania wodospadu)</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="323"/>
         <source>N Avg </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="361"/>
         <source>  Palette </source>
-        <translation type="unfinished"></translation>
+        <translation>  Paleta </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wprowadź definicje dla nowej palety kolorów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="380"/>
         <source>Adjust...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dostosuj...</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="401"/>
         <source>Select waterfall palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz paletę wodospadu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wyskaluj spektrum na środkową wartość.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="434"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spłaszcz linię odniesiena widma nad całym widocznym interwałem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation type="unfinished"></translation>
+        <translation>Spłaszcz</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz dane do wyświetlania widma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="471"/>
@@ -5245,27 +5259,27 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="496"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ustaw nieznaczną wielkość spektrum w tym oknie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="502"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="505"/>
         <source>Spec </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="556"/>
         <source>Waterfall gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzmocnienie wodospadu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="593"/>
         <source>Spectrum gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzmocnienie spektrum</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="616"/>
@@ -5273,22 +5287,22 @@ Error(%2): %3</source>
         <location filename="../widegraph.ui" line="718"/>
         <location filename="../widegraph.ui" line="725"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta tekstu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="658"/>
         <source>Waterfall zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Zero wodospadu</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="695"/>
         <source>Spectrum zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Zero spektrum</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation type="unfinished"></translation>
+        <translation>Wodospad</translation>
     </message>
 </context>
 <context>
@@ -5296,12 +5310,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="26"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz zakładkę aby zmienić parametry konfiguracji.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -5311,12 +5325,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="45"/>
         <source>General station details and settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne dane stacji i ustawienia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczegóły stacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
@@ -5326,7 +5340,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation>Znak wywoławczy stacji.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
@@ -5336,82 +5350,82 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation type="unfinished"></translation>
+        <translation>QTH lokator (tylko cztery pierwsze znaki są potrzebne).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znaki złożone typ 2 zawierają prefiksy lub sufiksy nie znajdujące sie na dozwolonej krótkiej liście (Patrz Pomoc-&amp;gt;Dodatkowe prefiksy i sufiksy).&lt;/p&gt;&lt;p&gt;Ta opcja określa, które generowane wiadomości powinny raczej zawierać twój pełny znak złożony typu 2 niż twój bazowy znak wywoławczy. Stosuje się  tylko gdy posiadasz złożony znak wywoławczy typu 2.&lt;/p&gt;&lt;p&gt;Ta opcja kontroluje sposób w jaki generowane są wiadomości używane do odpowiadania na CQ. Generowane wiadomości 6 (CQ) i 5 (73) będą zawsze zawierały twój pełny znak wywoławczy. Protokoły JT65 i JT9 dopuszczają niektóre standardowe wiadomości z pełnymi znakami wywoławczymi kosztem innych części informacji takich jak znak DX lub twój lokator.&lt;/p&gt;&lt;p&gt;Wybranie wiadomości 1 pomija znak wywoławczy DX co może być problemem przy odpowiadaniu na wołania CQ. Wybranie wiadomości 3 takżę pomija znak wywoławczy DX i wiele wersji tego i innych programów nie odczytaja raportu. Nie wybranie żadnej z nich oznacza, że twój pełen znak wywoławczy znajdzie sie tylko w wiadomości 5 (73) a więc twój partnej może zalogować zły znak wywoławczy.&lt;/p&gt;&lt;p&gt;Żadna z tych opcji nie jest doskonała, wiadomość 3 jest najlepsza ale miej świadomość, iż twój QSO partner może nie zalogować raporty wysłanego do niego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>Full call in Tx1</source>
-        <translation type="unfinished"></translation>
+        <translation>Pełny znak w Tx1</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="140"/>
         <source>Full call in Tx3</source>
-        <translation type="unfinished"></translation>
+        <translation>Pełny znak w Tx3</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>Full call in Tx5 only</source>
-        <translation type="unfinished"></translation>
+        <translation>Pełny znak tylko w Tx5</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="153"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Generowanie wiadomości dla posiadaczy znaków złożonych typu 2:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="175"/>
         <source>Logbook filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrowanie logbooka</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="203"/>
         <source>Use current callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Używaj aktualnego znaku</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="223"/>
         <source>Use current grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Używaj aktualnego lokatora</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrowanie logbooka od daty/czasu (RRRRMMDDGGMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetl</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="316"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw fonty charakterystyczne obszarów Aktywność Pasma i Częstotliwość Rx.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="319"/>
         <source>Decoded Text Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Font dekodowanych wiadomości...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="326"/>
         <source>Set the font characteristics for the application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw font charakterystyczny dla aplikacji.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="329"/>
         <source>Application Font...</source>
-        <translation type="unfinished"></translation>
+        <translation>Font aplikacji...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj odległość do stacji w milach zamiast w kilometrach.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="339"/>
@@ -5421,7 +5435,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Umieść linijkę separującą pomiędzy okresami dekodowania w oknie Aktywność Pasma.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -5431,7 +5445,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="369"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodawaj nazwy DXCC do dekodowanej wiadomości.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="372"/>
@@ -5441,7 +5455,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="379"/>
         <source>Append prefix instead of name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodawaj prefiks zamiast nazwy państwa.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="382"/>
@@ -5451,17 +5465,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gdy zmieni się wiadomość TX poprzednia wiadomość nie zostanie pokazana jeżeli była nadawana krócej niż 2 sekundy.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="392"/>
         <source>Hide partially transmitted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj wiadomości częsciowo nadane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj nadane wychodzące wiadomości w oknie Częstotliwość Rx.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="405"/>
@@ -5471,7 +5485,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="420"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposób działania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="446"/>
@@ -5486,68 +5500,68 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="475"/>
         <source>Tx watchdog timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogranicznik czasu nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of minutes before unattended transmissions are aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość minut po jakiej nienadzorowane nadawania zostaną zatrzymane&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="488"/>
         <location filename="../Configuration.ui" line="535"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektywny</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="491"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translation> minut</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodowanie przy  t = 52 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogranicznik czasu strojenia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość sekund po której stronienie zostanie zatrzymane&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="538"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> sekund</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niektóre TRCVry nie są w stanie przetwarzać poleceń CAT podczas nadawania. Oznacza to, że jeżeli pracujesz w trybie split możesz potrzebować odznaczyć tą opcję.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation type="unfinished"></translation>
+        <translation>Zezwól na zmianę częstotliwości podczas nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="569"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zaznacz to jeżeli chcesz automatycznie powrócić do ostatnio monitorowanej częstotliwości gdy monitorowanie jest aktywne, pozostaw niezaznaczone jeżeli chcesz utrzymać obecną częstotliwość urządzenia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="572"/>
         <source>Monitor returns to last used frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor powraca do ostatnio używanej częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wysyłaj CW ID po każdym 73 lub wiadomości z dowolnym tekstem.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
@@ -5565,7 +5579,10 @@ Error(%2): %3</source>
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
 quiet period when decoding is done.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wysyłaj CW ID okresowo co kilka minut.
+Może to być wymagane uregulowaniami licencyjnymi twojego kraju.
+Nie będzie to kolidowało z innymi uzytkownikami poniewać nadawane
+jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="655"/>
@@ -5575,33 +5592,33 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="658"/>
         <source>Radio interface configuration settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia konfiguracyjne interfejsu radia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation type="unfinished"></translation>
+        <translation>TRCVR:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interwał pobierania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interwał pobierania statusu TRCVRa. Dłuższe interwały będa oznaczały, że dłużej będzie trwało wykrywanie zmian ustawień TRCVRa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="699"/>
         <location filename="../Configuration.ui" line="1581"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="722"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Żądaj danych S-metra z transceivera: CAT powinno być ustawione przez Hamlib, Hamblib obsługuhe pobieranie danych S-metra dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="725"/>
@@ -5611,105 +5628,105 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="754"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Żądaj danych mocy wyjściowej z transceivera: CAT powinno być ustawione przez Hamlib, Hamlib obsługuje Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib obsługuje pobieranie danych mocy wyjściowej dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="757"/>
         <source>Output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Moc wyjściowa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="785"/>
         <source>Settings that control your CAT interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia sterujące twój interfejs CAT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="788"/>
         <source>CAT Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Sterowanie CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="799"/>
         <location filename="../Configuration.ui" line="1284"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="815"/>
         <source>Serial port used for CAT control.</source>
-        <translation type="unfinished"></translation>
+        <translation>Port szeregowy używany do sterowania CAT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="839"/>
         <source>Serial Port Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Parametry portu szeregowego</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="856"/>
         <source>Baud Rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Szybkość w Bodach:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="872"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dane portu szeregowego, które muszą być zgone z  ustawieniami twojego radia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="879"/>
         <source>1200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="884"/>
         <source>2400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="889"/>
         <source>4800</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="894"/>
         <source>9600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="899"/>
         <source>19200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="904"/>
         <source>38400</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="909"/>
         <source>57600</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="914"/>
         <source>115200</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="924"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów danych uzywanych do komunikacji z wejściem CAT twojego interfejsu (zazwyczaj osiem).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="927"/>
         <source>Data Bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość bitów</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="939"/>
         <location filename="../Configuration.ui" line="996"/>
         <location filename="../Configuration.ui" line="1063"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślnie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="952"/>
@@ -5724,12 +5741,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów stop używanych do komunikacji z interfejsem CAT twojego radia&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="984"/>
         <source>Stop Bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość bitów stop</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
@@ -5759,73 +5776,78 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation type="unfinished"></translation>
+        <translation>Programowa kontrola przepływu danych (bardzo rzadko przy interfejsach CAT).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1079"/>
         <source>XON/XOFF</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1089"/>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontola przepływu danych za pomocą sygnałów
+RTS i CTS interfejsu RS-232; niezbyt często używane ale niektóre
+urządzenia mają to jako opcję a niewiele, praktycznie niektóre
+urządzenia Kenwood, ich wymagają).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprzęt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
         <source>Special control of CAT port control lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Specjalne sterowanie linii kontrolnych CAT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1110"/>
         <source>Force Control Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Wymuś linie sterujące</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
         <source>DTR:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1143"/>
         <location filename="../Configuration.ui" line="1176"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Wysoki</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1148"/>
         <location filename="../Configuration.ui" line="1181"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Niski</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1160"/>
         <source>RTS:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1213"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposób w jaki program aktywuje PTT twojego radia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
         <source>PTT Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1222"/>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre urządzenia obsługują PTT poprzez
+polecenia CAT, używać tego jeżeli twoje radio to obsługuje
+i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1227"/>
@@ -5845,7 +5867,7 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1253"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nie ma aktywacji PTT, zamiast tego automatyczny VOX twojego radia jest uzywany do kluczowania nadajnika.&lt;/p&gt;&lt;p&gt;Używać tego jeżeli nie ma sprzętowego interfejsu radia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1256"/>
@@ -5865,19 +5887,22 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz port szeregowy RS-232 używany do sterowania PTT, ta opcja jest dostępna jeżeli wybrano DTR lub RTS powyżej jako metodę nadawania.&lt;/p&gt;&lt;p&gt;Ten port może być tym samych który jest używany do sterowania CAT.&lt;/p&gt;&lt;p&gt;Dla niekórych typów interfejsów może zostać wybrana specjalna wartość CAT, jest to używane dla interfejsów CAT innych niż szeregowe, które mogą strować liniami kontrolnymi portu szeregowego zdalnie (na przykład OmniRig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1331"/>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre TRCVRy mogą wybrać wejście audio używając
+poleceń CAT, takie ustawienie pozwala tobie wybrać które wejście audio
+będzie zastosowane (jeżeli jest dostępne, wtedy njczęściej
+opcja Tył/Dane będzie najlepsza).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Żródło audio dla nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
@@ -5892,7 +5917,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1375"/>
         <source>Modulation mode selected on radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ modulacji ustwiony w radiu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1378"/>
@@ -5902,7 +5927,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1384"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB jest zazwyczaj prawidłowym trybem  modulacji,&lt;/p&gt;&lt;p&gt;czyba, że radio ma specjalne ustawienie trybu danych lub packet&lt;/p&gt;&lt;p&gt;dla pracy AFSK.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1387"/>
@@ -5914,7 +5939,9 @@ this setting allows you to select which audio input will be used
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie pozwalaj programowi ustawiać trybu modulacji
+(niezalecane ale używać w przypadku wybrania
+złej modulacji lub szerokości pasma).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1405"/>
@@ -5925,7 +5952,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeżeli to jest dostępne, zazwyczaj będzie to prawidłowa modulacja dla tego programu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
@@ -5935,27 +5962,27 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
         <source>Split Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Praca split</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
         <source>Fake It</source>
-        <translation type="unfinished"></translation>
+        <translation>Udawane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation>TRCVR</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Próba połączenia z radiem z tymi ustawieniami.&lt;/p&gt;&lt;p&gt;Kolor przycisku zmieni się na zielony jeżeli połączenie jest prawidłowe lub na czerwony jeżeli jest jakiś problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
         <source>Test CAT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1523"/>
@@ -5964,23 +5991,27 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Próba aktywowania nadajnika.
+Kliknij ponownie aby zdeaktywować. Normalnie nie powinno być żadnej
+mocy wyjściowej ponieważ w tym czasie nie jest generowany sygnał audio.
+Sprawdzić czy wskaźniki na twoim radiu i interfejsie
+działają w oczekiwany sposób</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
         <source>Test PTT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1568"/>
         <location filename="../Configuration.ui" line="1578"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimalne opóźnienie między uruchomieniem PTT i startem audio TX.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1571"/>
         <source>Tx delay:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1628"/>
@@ -5990,12 +6021,12 @@ radio interface behave as expected.</source>
     <message>
         <location filename="../Configuration.ui" line="1631"/>
         <source>Audio interface settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia interfejsu audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1637"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Karta dźwiekowa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1649"/>
