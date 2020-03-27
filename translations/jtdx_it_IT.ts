@@ -2756,7 +2756,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva/Disattiva minuto TX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scegli il periodo di TX (trasmissione)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
@@ -2847,7 +2847,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1644"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Setta freq. Rx uguale alla freq TX</translation>
+        <translation>Setta la freq di RX uguale alla freq di Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1647"/>
@@ -2857,7 +2857,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Abilita la sequenza semi-automatica dei messaggi. Quando si chiama facciamo CQ, selezionare automaticamente per impostazione predefinita la ricerca della risposta con la priorità più alta. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Abilita la sequenza semi-automatica. Quando si chiama CQ selezionare come impostazione predefinita la risposta automatica con la priorità più alta. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
@@ -2868,7 +2868,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Fai doppio clic sui set di chiamate Abilita TX &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Abilita doppio clic sulla chiamata per andare direttamente in TX (trasmissione)&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1707"/>
@@ -2878,7 +2878,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1735"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Sttala freq TX uguale alla freq Rx</translation>
+        <translation>Setta la freq di TX uguale alla freq di Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1738"/>
@@ -2993,13 +2993,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Trasmette un tono puro. Il timer di sintonizzazione può essere impostato nella scheda Generale delle impostazioni. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Trasmette un tono puro. Il tempo dell&apos;accordo può essere impostato nella scheda Generale delle impostazioni. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
-        <location filename="../mainwindow.cpp" line="6513"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Accorda</translation>
+        <translation>Sin&amp;tonizza</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -3014,22 +3013,22 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ignora l&apos;opzione di tutti i filtri di testo, duplica l&apos;azione nella scheda Varie. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ignora tutti i filtri di testo, duplica l&apos;azione nella scheda Varie. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
         <source>Bypass</source>
-        <translation>Byapassa</translation>
+        <translation>Bypassa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Opzione QSO AutoSeq singolo &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Opzione Auto Sequenza per singolo QSO&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2411"/>
         <source>1 QSO</source>
-        <translation>1QSO</translation>
+        <translation>1 QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2442"/>
@@ -3074,7 +3073,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation>Fermma immediatamente la trasmissione</translation>
+        <translation>Ferma IMMEDIATAMENTE la trasmissione</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
@@ -3119,7 +3118,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2753"/>
         <source>Hint</source>
-        <translation>Dritta</translation>
+        <translation>Dritto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
@@ -3191,7 +3190,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation>Seleziona per generare il messaggio &apos;RRR&apos;, deseleziona per generare &apos;RR73&apos;</translation>
+        <translation>Seleziona per inviare &apos;RRR&apos; o deseleziona per iviare &apos;RR73&apos;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
@@ -3233,7 +3232,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3470"/>
         <location filename="../mainwindow.ui" line="3540"/>
         <source>Switch to this Tx message NOW</source>
-        <translation>Passa ORA a questo messaggio Tx</translation>
+        <translation>Passa a questo messaggio Tx IMMEDIATAMENTE</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3199"/>
@@ -3369,7 +3368,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>Generare un messaggio per rispondere a un CQ</translation>
+        <translation>Genera un messaggio per rispondere a un CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
@@ -3379,7 +3378,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation>Generare un messaggio con rapporto</translation>
+        <translation>Genera un messaggio con rapporto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
@@ -3389,7 +3388,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation>Generare un messaggio con R+ rapporto</translation>
+        <translation>Genera un messaggio con R+ rapporto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
@@ -3409,7 +3408,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="3915"/>
         <source>Generate message with 73</source>
-        <translation>Generare un messaggio con 73</translation>
+        <translation>Genera un messaggio con 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3918"/>
@@ -4399,7 +4398,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.cpp" line="1934"/>
         <source>Pwr</source>
-        <translation>Pwr</translation>
+        <translation>PWR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2451"/>
@@ -4437,7 +4436,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.cpp" line="2582"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>Gli algoritmi, il codice sorgente, l&apos;aspetto di WSJT-X e dei relativi programmi e le specifiche del protocollo per le modalità FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 sono Copyright (C) 2001 -2018 di uno o più dei seguenti autori: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; e altri membri del Gruppo di Sviluppo di WSJT. Traduzione in italiano di IZ5ILJ - Lenio Panci.</translation>
+        <translation>Gli algoritmi, il codice sorgente, l&apos;aspetto di WSJT-X e dei relativi programmi e le specifiche del protocollo per le modalità FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 sono Copyright (C) 2001 -2018 di uno o più dei seguenti autori: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; e altri membri del Gruppo di Sviluppo di WSJT.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2703"/>
@@ -4575,7 +4574,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4010"/>
         <source>TUNE</source>
-        <translation>SINTONIZZA</translation>
+        <translation>ACCORDA</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4011"/>
@@ -4585,7 +4584,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4225"/>
         <source>Tx: TUNE</source>
-        <translation>Tx: SINTONIZZA</translation>
+        <translation>Tx: ACCORDA</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4226"/>
@@ -5232,7 +5231,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Appiattisce la linea di base dellol spettro sull&apos;intero intervallo visualizzato. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Visualizza in basso allo spettro sull&apos;intero intervallo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
@@ -5524,12 +5523,12 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="525"/>
         <source>Tune timer</source>
-        <translation>Regola l&apos;orologio</translation>
+        <translation>Regola l&apos;orario</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Numero di secondi prima che venga interrotta la trasmissione &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Numero di secondi prima di interrompere l&apos;accordo&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="538"/>
@@ -6109,12 +6108,12 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1777"/>
         <source>Enable power memory during tuning</source>
-        <translation>Abilita la memoria per la potenza per la sintonizzazione</translation>
+        <translation>Abilita la memoria della potenza per l&apos;accordo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation>Sintonizza</translation>
+        <translation>Accordo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
@@ -6911,7 +6910,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
         <location filename="../Configuration.ui" line="4399"/>
         <location filename="../Configuration.ui" line="4418"/>
         <source>K1ABC</source>
-        <translation>IZ5ILJ</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3674"/>
