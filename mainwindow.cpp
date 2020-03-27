@@ -6510,7 +6510,7 @@ void MainWindow::stop_tuning ()
   if(StopTuneTimer.isActive()) StopTuneTimer.stop();
   on_tuneButton_clicked(false);
   ui->tuneButton->setChecked (false);
-  ui->tuneButton->setText(tr("Tune"));
+  ui->tuneButton->setText(tr("&Tune"));
   m_bTxTime=false;
   m_tune=false;
 }
