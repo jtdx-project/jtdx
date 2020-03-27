@@ -2997,6 +2997,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>&amp;Tune</source>
         <translation>Sin&amp;tonizza</translation>
     </message>

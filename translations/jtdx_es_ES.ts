@@ -2059,12 +2059,12 @@ Formato:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importar...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Exportar...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2678,13 +2678,13 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>info:</source>
-        <translation>info:</translation>
+        <translation>Informe DXSummit:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; DXSummit editar línea de puntos: modo en el campo de información que se detecta automáticamente, el usuario puede agregar su propio mensaje de texto en el campo de información. Macros disponibles: #D es para la distancia, #G es para &quot;Locator1 &lt;&gt; Locator2&quot;, #R es para el valor del informe. La vista previa del campo de información está disponible. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Editar la línea de anuncio a DXSummit: el modo se detecta automáticamente, el usuario puede agregar su propio mensaje de texto en el campo de información. Macros disponibles: #D es para la distancia, #G es para &quot;Locator1 &lt;&gt; Locator2&quot;, #R es para el valor de la señal recibida. La vista previa del campo de información está disponible. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -2705,7 +2705,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="965"/>
         <source>DX Grid</source>
-        <translation>locator DX</translation>
+        <translation>Locator DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
@@ -2740,7 +2740,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Haga clic con el botón izquierdo del ratón para anunciar el indicativo DX a dxsummit.fi (la opción se habilitará en la pestaña Informes de la configuración). Haga clic con el botón derecho del ratón para agregar el indicativo al filtro &apos;Ocultar mensajes de indicativos&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Haga clic con el botón izquierdo del ratón para anunciar el indicativo DX a dxsummit.fi (la opción se habilitará en Ajustes... pestaña Informes ). Haga clic con el botón derecho del ratón para agregar el indicativo al filtro &apos;Ocultar mensajes de indicativos&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -2748,7 +2748,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5220"/>
         <location filename="../mainwindow.cpp" line="5635"/>
         <source>DX Call</source>
-        <translation>Indicativo DX</translation>
+        <translation>Llamada DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
@@ -2758,12 +2758,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Alternar minuto TX &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Alternar minuto TX Par/Impar &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
         <source>TX minute</source>
-        <translation>minuto TX</translation>
+        <translation>Minuto TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1407"/>
@@ -2839,7 +2839,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use diferentes frecuencias Rx / Tx AF o configure la frecuencia Tx igual a la frecuencia Rx AF. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilizar diferentes frecuencias AF de Rx/Tx o establecer la frecuencia  AF de Tx igual a la frecuencia de Rx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
@@ -2859,7 +2859,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Habilita la secuencia de mensajes semiautomática. Al llamar a la operación CQ, la selección automática selecciona de forma predeterminada la respuesta con la máxima prioridad. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Habilita la secuencia de mensajes semiautomática. Al operar llamando CQ,se selecciona automáticamente por defecto la búsqueda de la respuesta con la mayor prioridad.. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
@@ -3027,7 +3027,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2397"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Opción de disparo único QSO AutoSeq &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Opción de ejecutar AutoSeq un solo QSO&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2411"/>
@@ -3147,7 +3147,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Botón izquierdo del ratón: Borrar datos de las ventanas DX Call y DX Grid. Botón derecho del ratón: borre datos de DX Call, DX Grid windows, QSO history y blacklist CTRL + Botón derecho del ratón: agregue indicativo de llamada desde la ventana DX Call a la lista negra, borre datos de DX Call, ventanas DX Grid e historial de QSO. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Botón izquierdo del ratón: Borra los datos de las ventanas de la Llamada DX y Locator DX. Botón derecho del ratón: Borra los datos de las ventanas de la Llamada DX, Locator DX, el historial de QSO y la lista negra. CTRL+botón derecho del ratón: añadir el indicativo de la ventana Llamada DX a la lista negra, borrar los datos de las ventanas Llamada DX, Locator DX y el historial de QSO.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -3681,7 +3681,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
         <location filename="../mainwindow.ui" line="5416"/>
         <location filename="../mainwindow.ui" line="5698"/>
         <source>fast</source>
-        <translation>Rápido</translation>
+        <translation>rápido</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4666"/>
@@ -3859,7 +3859,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4904"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Borrar Indicativo DX y Locator después de iniciar sesión</translation>
+        <translation>Borrar Llamada DX y Locator DX después de iniciar sesión</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4912"/>
@@ -4054,12 +4054,12 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5228"/>
         <source>0  Call None</source>
-        <translation>0 Llamar a ninguno</translation>
+        <translation>0 Ninguna llamada - solo manual</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5236"/>
         <source>1  Call first</source>
-        <translation>1 Llame primero</translation>
+        <translation>1 Llamada primera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5244"/>
@@ -4079,7 +4079,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5268"/>
         <source>Single shot QSO</source>
-        <translation>Disparo único QSO</translation>
+        <translation>Ejecutar QSO único</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5276"/>
@@ -4327,17 +4327,17 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="444"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;Aceptar</translation>
+        <translation>&amp;Aceptar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Cancelar</translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Repetir</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
@@ -4455,13 +4455,14 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2710"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmar Borrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2711"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres borrar todos los archivos? *.wav y *.c2
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
@@ -4505,12 +4506,12 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2872"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>El control de frecuencia TX del modo Hound requiere * Split * control de equipo (ya sea * Rig * o * Fake It * en la pestaña * Configuración | Radio *)</translation>
+        <translation>El control de frecuencia TX del modo Hound requiere control * Split * de equipo (ya sea * Rig * o * Fake It * en la pestaña * Configuración | Radio *)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2875"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>El control de frecuencia Hound TX no está permitido en las sub-bandas FT8 estándar y requiere * Split * control de equipo (ya sea * Rig * o * Fake It * en la pestaña * Configuración | Radio *)</translation>
+        <translation>El control de frecuencia Hound TX no está permitido en las sub-bandas estándar de FT8 y requiere un control * Split * de equipo (ya sea * Rig * o * Fake It * en la pestaña * Configuración | Radio *)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2883"/>
@@ -4668,17 +4669,17 @@ ya está en CALL3.TXT, ¿desea reemplazarlo?</translation>
         <location filename="../mainwindow.cpp" line="6068"/>
         <location filename="../mainwindow.cpp" line="6080"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmar Borrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6069"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres borrar el archivo ALL.TXT?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres borrar tu registro de QSO?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6686"/>
@@ -6306,7 +6307,7 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>Borrar indicativo DX y locator al salir</translation>
+        <translation>Borrar Llamada DX y Locator DX al salir</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
