@@ -618,62 +618,62 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isola di Pasqua</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isola Madeira</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Baleari</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Canarie</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isola della Riunione</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Scetland</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="189"/>
         <source>Dominican Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation>Repubblica Dominicana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovacchia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Faroe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Vergini Britanniche</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Flakland</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Isole Cayman</translation>
     </message>
     <message>
         <source>Easter Is</source>
@@ -1336,7 +1336,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation>Rep. Ceca</translation>
+        <translation>Repubblica Ceca</translation>
     </message>
     <message>
         <source>Slovak Rep</source>
@@ -2956,7 +2956,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation>PWR</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
