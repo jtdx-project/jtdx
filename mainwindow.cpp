@@ -1321,6 +1321,18 @@ void MainWindow::readSettings()
   else if(m_saveWav==2) ui->actionSave_all->setChecked(true);
 
   m_lang=m_settings->value("Language","en_US").toString();
+  ui->actionEnglish->setText("English");
+  ui->actionEstonian->setText("Eesti");
+  ui->actionRussian->setText("Русский");
+  ui->actionCroatian->setText("Hrvatski");
+  ui->actionSpanish->setText("Español");
+  ui->actionFrench->setText("Français");
+  ui->actionItalian->setText("Italiano");
+  ui->actionPolish->setText("Polski");
+  ui->actionPortuguese->setText("Português");
+  ui->actionChinese_simplified->setText("简体中文");
+  ui->actionChinese_traditional->setText("繁體中文");
+  ui->actionJapanese->setText("日本語");
   set_language (m_lang);
   
   m_callMode=m_settings->value("CallMode",2).toInt();
