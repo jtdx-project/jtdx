@@ -2057,12 +2057,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -4022,7 +4022,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5182"/>
         <source>FT8</source>
-        <translation>Ft8</translation>
+        <translation>FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5190"/>
@@ -4254,7 +4254,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5690"/>
         <source>FT4</source>
-        <translation>Ft4</translation>
+        <translation>FT4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5725"/>
@@ -4305,17 +4305,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="444"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
@@ -4428,13 +4428,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2710"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>削除してよろしいですね</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2711"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ディレクトリ内の全ての*.wav ， *.c2 ファイルを削除してもいいですか</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2747"/>
@@ -4581,17 +4581,17 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <location filename="../mainwindow.cpp" line="6068"/>
         <location filename="../mainwindow.cpp" line="6080"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>消去してよろしいですね</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6069"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALL.TXTを削除してよろしいですね?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO LOGを消去してよろしいですね?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6946"/>
