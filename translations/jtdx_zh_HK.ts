@@ -4293,7 +4293,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="441"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation>是否要重新配置無線電台接口?</translation>
+        <translation>是否要重新配置無線電設備接口?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="735"/>
@@ -4754,7 +4754,7 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation>無線電裝備意外錯誤</translation>
+        <translation>無線電設備意外錯誤</translation>
     </message>
 </context>
 <context>
@@ -4762,7 +4762,7 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../main.cpp" line="163"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation>無效的無線電裝備名稱 - \ &amp; / 不允許</translation>
+        <translation>無效的無線電設備名稱 - \ &amp; / 不允許</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="188"/>
@@ -5105,7 +5105,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation>無線電裝備意外錯誤</translation>
+        <translation>無線電設備意外錯誤</translation>
     </message>
 </context>
 <context>
@@ -5390,7 +5390,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="247"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation>日誌從日期開始的篩選 (YYYYMMDDHHMMSS)</translation>
+        <translation>從日期/時間開始篩選通聯日誌 (YYYYMMDDHHMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="287"/>
@@ -5430,7 +5430,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>在波段活動窗口中加入時間分隔線.</translation>
+        <translation>在波段活動窗口中加入時間分隔行.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="349"/>
@@ -5516,7 +5516,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="505"/>
         <source>Decode at t = 52 s</source>
-        <translation>接收至52秒才解碼</translation>
+        <translation>接收至52秒才開始解碼</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="525"/>
@@ -5536,7 +5536,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;某些無線電裝備在發射時無法處理CAT 命令.這意味着, 如果您在異頻模式下運行, 則可能必須取消選中此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;某些無線電設備在發射時無法處理CAT 命令.這意味着, 如果您在異頻模式下運行, 則可能必須取消選中此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="562"/>
@@ -5556,7 +5556,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="581"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>73或自定義信息發出後用CW模式發放你呼號.</translation>
+        <translation>73或自定義信息發出後用CW模式發放你的呼號.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="584"/>
@@ -5587,12 +5587,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="658"/>
         <source>Radio interface configuration settings.</source>
-        <translation>設置無線電接口設置.</translation>
+        <translation>設置無線電設備接口設置.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="666"/>
         <source>Rig:</source>
-        <translation>無線電裝備:</translation>
+        <translation>無線電設備:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
@@ -5602,7 +5602,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為軟件與無線電裝備溝通的時間間隔.時間間隔較長,意味着對無線電裝備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為軟件與無線電設備溝通的時間間隔.時間間隔較長,意味着對無線電設備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="699"/>
@@ -5709,7 +5709,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="924"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用於與無線電 CAT 接口通信的數據位數 (通常為 8 ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用於與無線電設備 CAT 接口通信的數據位數 (通常為 8 ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="927"/>
@@ -5736,7 +5736,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;與無線電 CAT 接口通信時使用的停止位數&lt;/p&gt;&lt;p&gt;(詳情請參閱無線電裝備手冊).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;與無線電設備 CAT 接口通信時使用的停止位數&lt;/p&gt;&lt;p&gt;(詳情請參閱無線電設備手冊).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="984"/>
@@ -5756,7 +5756,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1035"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;電腦和無線電裝備 CAT 接口 (通常是 &quot;None&quot;) 之間使用的流量控制協議 (通常是 &quot;無&quot;,但有些要求硬件).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;電腦和無線電設備 CAT 接口 (通常是 &quot;None&quot;) 之間使用的流量控制協議 (通常是 &quot;無&quot;,但有些要求硬件).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
@@ -5784,8 +5784,8 @@ quiet period when decoding is done.</source>
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
         <translation>使用 RTS 和 CTS RS-232 控制線控制
- 不經常使用但有些電台有它作為一個選項並且
-  很少,特別是一些 健伍無線電裝備,需要它).</translation>
+ 不經常使用但有些無線電設備有它作為一個選項並且
+  很少,特別是一些 健伍無線電設備,需要它).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
@@ -5827,7 +5827,7 @@ a few, particularly some Kenwood rigs, require it).</source>
     <message>
         <location filename="../Configuration.ui" line="1213"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation>此程序如何激活無線電電台上的 PTT</translation>
+        <translation>此程序如何激活無線電設備上的 PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1216"/>
@@ -5839,8 +5839,8 @@ a few, particularly some Kenwood rigs, require it).</source>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation>一些無線電裝備通過CAT命令支持 PTT, 
-如果您的無線電裝備支持此選項請使用此選項而且您沒有
+        <translation>一些無線電設備通過CAT命令支持 PTT, 
+如果您的無線電設備支持此選項請使用此選項而且您沒有
 PTT的其它硬件接口.</translation>
     </message>
     <message>
@@ -5851,7 +5851,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用RS-232 DTR 控制線切換無線電裝備的PTT.一些商用接口單元也使用此方法.CAT串行端口的DTR控制線可用於此控制線,也可用於不同串行端口上的DTR控制線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用RS-232 DTR 控制線切換無線電設備的PTT.一些商用接口單元也使用此方法.CAT串行端口的DTR控制線可用於此控制線,也可用於不同串行端口上的DTR控制線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1240"/>
@@ -5861,7 +5861,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1253"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您沒有無線電裝備接口硬件,沒法PTT而是使用無線電台的自動聲控來發射,請使用此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您沒有無線電設備接口硬件,沒法PTT而是使用無線電設備的自動聲控來發射,請使用此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1256"/>
@@ -5871,7 +5871,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電裝備的 PTT, 需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業接口單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 串行端口的 RTS 控制線可用於此, 也可以使用其他串行端口上的 RTS 控制線.請注意, 使用硬件流控制時, 此選項在 CAT 串行端口上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電設備的 PTT, 需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業接口單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 串行端口的 RTS 控制線可用於此, 也可以使用其他串行端口上的 RTS 控制線.請注意, 使用硬件流控制時, 此選項在 CAT 串行端口上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
@@ -5888,14 +5888,14 @@ PTT的其它硬件接口.</translation>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
-        <translation>一些無線電裝備可以使用 CAT 命令選擇音頻輸入,
+        <translation>一些無線電設備可以使用 CAT 命令選擇音頻輸入,
 此設置允許您選擇將使用的音頻輸入
 (如果可用,則通常 後方/數據 選項是最佳選擇).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation>無線電裝備音頻源</translation>
+        <translation>無線電設備音頻源</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
@@ -5910,7 +5910,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1375"/>
         <source>Modulation mode selected on radio.</source>
-        <translation>在無線電裝備上選擇的調制模式.</translation>
+        <translation>在無線電設備上選擇的調制模式.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1378"/>
@@ -5920,7 +5920,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1384"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;上邊帶通常是正確的調制模式,除非無線電裝備具有用於AFSK操作的特殊數據或數據包模式設置.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;上邊帶通常是正確的調制模式,除非無線電設備具有用於AFSK操作的特殊數據或數據包模式設置.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1387"/>
@@ -5965,12 +5965,12 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
         <source>Rig</source>
-        <translation>無線電裝備</translation>
+        <translation>無線電設備</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;嘗試使用這些設置連接到無線電裝備.如果連接成功,該按鈕將變為綠色; 如果有問題,則為紅色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;嘗試使用這些設置連接到無線電設備.如果連接成功,該按鈕將變為綠色; 如果有問題,則為紅色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1500"/>
@@ -5984,10 +5984,10 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation>嘗試激活無線電裝備.
+        <translation>嘗試激活無線電設備.
 再次單擊以停用.通常沒有功率輸出
-因為此時沒有音頻生成.檢查無線電裝備
-和/或您的無線電裝備接口上
+因為此時沒有音頻生成.檢查無線電設備
+和/或您的無線電設備接口上
 的任何發射指示是否如預期的那樣.</translation>
     </message>
     <message>
@@ -6080,7 +6080,7 @@ Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
         <translation>選擇用於發射的音頻通道.
-除非您在不同無線電裝備連接多個到不同的
+除非您在不同無線電設備連接多個到不同的
 通道; 那麼你通常會想要選擇單聲道或
 雙聲道.</translation>
     </message>
@@ -6578,7 +6578,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3013"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
-        <translation>有關如何為您的無線電裝備確定這些因素的詳細信息,請參閱 WSPR 文檔附錄C.</translation>
+        <translation>有關如何為您的無線電設備確定這些因素的詳細信息,請參閱 WSPR 文檔附錄C.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
@@ -7693,7 +7693,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 resetting the radio interface and applying any
 soundcard changes</source>
         <translation>放棄或應用設置更改, 包括
-重置無線電接口並應用任何
+重置無線電設備接口並應用任何
 聲卡更改</translation>
     </message>
 </context>

@@ -2227,7 +2227,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="521"/>
         <location filename="../FrequencyList.cpp" line="593"/>
         <source>Mode Frequency</source>
-        <translation>Modo Frequência</translation>
+        <translation>Frequência Modo</translation>
     </message>
 </context>
 <context>
@@ -3608,7 +3608,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4607"/>
         <source>About JTDX</source>
-        <translation>Sobre JTDX</translation>
+        <translation>Sobre o JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4610"/>
@@ -5142,22 +5142,22 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation>Data e hora</translation>
+        <translation>Data/Hora</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
         <source>Off</source>
-        <translation></translation>
+        <translation>Desligado</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="252"/>
         <source>Left</source>
-        <translation>Esquerdo</translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="257"/>
         <source>Right</source>
-        <translation>Direito</translation>
+        <translation>Direita</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="289"/>
@@ -5222,7 +5222,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation>Achatado</translation>
+        <translation>Plano</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
@@ -5232,12 +5232,12 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="471"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>Actual</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="476"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>Cumulativo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
@@ -5478,7 +5478,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="449"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>Mon&amp;itor off no arraqnue</translation>
+        <translation>Mon&amp;itor desligado no arranque</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="475"/>
@@ -6271,7 +6271,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Limpar indicat. &amp;DX e Grid depois de registar QSO</translation>
+        <translation>Limpar indicat. &amp;DX e Grid ao registar QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
