@@ -2616,7 +2616,7 @@ Erreur : %2 - %3</translation>
         <location filename="../mainwindow.ui" line="178"/>
         <location filename="../mainwindow.ui" line="2114"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation>Hutc           dB            DT           Freq          Dr </translation>
+        <translation>Hutc           dB            DT           Freq          Message </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
@@ -4702,7 +4702,7 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../main.cpp" line="163"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation>Nom de l&apos;installation non valide - \ &amp; / non autorisé</translation>
+        <translation>Nom du Trx non valide</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="188"/>

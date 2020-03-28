@@ -2617,7 +2617,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -3888,7 +3888,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5001"/>
         <source>Open log directory</source>
-        <translation>Ava log kataloog</translation>
+        <translation>Ava andmete kataloog</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5009"/>
@@ -6524,7 +6524,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation>Pealtkuulamine:</translation>
+        <translation>Nihe:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3038"/>
@@ -6535,6 +6535,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
         <source>Slope:</source>
+        <translatorcomment>Korrigeeri:</translatorcomment>
         <translation>Kalduolek:</translation>
     </message>
     <message>
