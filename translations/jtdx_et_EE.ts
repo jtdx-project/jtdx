@@ -6228,7 +6228,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation>&amp;Lisama</translation>
+        <translation>&amp;Lisa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
