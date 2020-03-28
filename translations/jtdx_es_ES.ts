@@ -2611,7 +2611,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX  by HF community</source>
-        <translation>JTDX  by HF community</translation>
+        <translation>JTDX para la comunidad de HF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -2689,7 +2689,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation>edit</translation>
+        <translation>editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
