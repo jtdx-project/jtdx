@@ -1059,14 +1059,16 @@ if(.not.lchkcall) then
     if(grid(1:2).eq.'KO' .or. grid(1:2).eq.'LO' .or. &
        (grid(1:2).eq.'LN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'5') .or. grid(1:2).eq.'MO' .or. grid(1:2).eq.'NO' .or. &
        (grid(1:2).eq.'KN' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':') .or. &
-       (grid(1:2).eq.'KP' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':') .or. grid(1:4).eq.'KP30')) .or. grid(1:2).eq.'NP' &
+       (grid(1:2).eq.'KP' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':') .or. grid(3:4).eq.'30')) .or. grid(1:2).eq.'NP' &
        .or. grid(1:2).eq.'OO' .or. grid(1:2).eq.'PO' .or. grid(1:2).eq.'LP' .or. grid(1:2).eq.'MP' .or. &
-       (grid(1:2).eq.'PN' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.':') .or. &
-       grid(1:4).eq.'PN39' .or. grid(1:4).eq.'PN52' .or. grid(1:4).eq.'PN62' .or. &
-       (grid(1:2).eq.'QN' .and. grid(3:3).gt.'0' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':') .or. &
-       grid(1:3).eq.'QO0' .or. grid(1:3).eq.'QO8' .or. grid(1:3).eq.'QO9' .or. grid(1:3).eq.'QN0' .or. grid(1:3).eq.'QN1' &
-       .or. grid(1:2).eq.'OP' .or. grid(1:2).eq.'PP' .or. grid(1:4).eq.'QO49' .or. grid(1:4).eq.'QO59' .or. &
-       grid(1:4).eq.'NQ03' .or. grid(1:4).eq.'RP59' .or. grid(1:4).eq.'RP84' .or. grid(1:4).eq.'JB59') lgvalid=.true.
+       (grid(1:2).eq.'PN' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.':').or. &
+        grid(3:4).eq.'39' .or. grid(3:4).eq.'52' .or. grid(3:4).eq.'62')) .or. grid(1:4).eq.'MQ60' .or. &
+       (grid(1:2).eq.'QN' .and. ((grid(3:3).gt.'0' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':').or. &
+        grid(3:3).eq.'0' .or. grid(3:3).eq.'1')) .or. &
+       (grid(1:2).eq.'QO' .and. (grid(3:3).eq.'0' .or. grid(3:3).eq.'8' .or. grid(3:3).eq.'9' .or. grid(3:4).eq.'49' .or. &
+        grid(3:4).eq.'59')) .or. &
+       grid(1:2).eq.'OP' .or. grid(1:2).eq.'PP' .or. grid(1:4).eq.'JB59' .or. grid(1:4).eq.'NQ03' .or. &
+       (grid(1:2).eq.'RP' .and. (grid(3:4).eq.'59' .or. grid(3:4).eq.'84'))) lgvalid=.true.
 
   else if(callsign(1:1).eq.'S') then
 
@@ -1314,14 +1316,16 @@ if(.not.lchkcall) then
       if(grid(1:2).eq.'KO' .or. grid(1:2).eq.'LO' .or. &
          (grid(1:2).eq.'LN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'5') .or. grid(1:2).eq.'MO' .or. grid(1:2).eq.'NO'.or. &
          (grid(1:2).eq.'KN' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':') .or. &
-         (grid(1:2).eq.'KP' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':') .or. grid(1:4).eq.'KP30')).or.grid(1:2).eq.'NP' &
+         (grid(1:2).eq.'KP' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':') .or. grid(3:4).eq.'30')) .or. grid(1:2).eq.'NP' &
          .or. grid(1:2).eq.'OO' .or. grid(1:2).eq.'PO' .or. grid(1:2).eq.'LP' .or. grid(1:2).eq.'MP' .or. &
-         (grid(1:2).eq.'PN' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.':').or. &
-          grid(1:4).eq.'PN39' .or. grid(1:4).eq.'PN52' .or. grid(1:4).eq.'PN62' .or. &
-         (grid(1:2).eq.'QN' .and. grid(3:3).gt.'0' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':').or. &
-         grid(1:3).eq.'QO0' .or. grid(1:3).eq.'QO8' .or. grid(1:3).eq.'QO9' .or. grid(1:3).eq.'QN0' .or. grid(1:3).eq.'QN1' &
-         .or. grid(1:2).eq.'OP' .or. grid(1:2).eq.'PP' .or. grid(1:4).eq.'QO49' .or. grid(1:4).eq.'QO59' .or. &
-         grid(1:4).eq.'NQ03' .or. grid(1:4).eq.'RP59' .or. grid(1:4).eq.'RP84' .or. grid(1:4).eq.'JB59') lgvalid=.true.
+         (grid(1:2).eq.'PN' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'2'.and.grid(4:4).lt.':').or. &
+          grid(3:4).eq.'39' .or. grid(3:4).eq.'52' .or. grid(3:4).eq.'62')) .or. grid(1:4).eq.'MQ60' .or. &
+         (grid(1:2).eq.'QN' .and. ((grid(3:3).gt.'0' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'5'.and.grid(4:4).lt.':').or. &
+          grid(3:3).eq.'0' .or. grid(3:3).eq.'1')) .or. &
+         (grid(1:2).eq.'QO' .and. (grid(3:3).eq.'0' .or. grid(3:3).eq.'8' .or. grid(3:3).eq.'9' .or. grid(3:4).eq.'49' .or. &
+          grid(3:4).eq.'59')) .or. &
+         grid(1:2).eq.'OP' .or. grid(1:2).eq.'PP' .or. grid(1:4).eq.'JB59' .or. grid(1:4).eq.'NQ03' .or. &
+         (grid(1:2).eq.'RP' .and. (grid(3:4).eq.'59' .or. grid(3:4).eq.'84'))) lgvalid=.true.
 
 ! Ukraine EM..EO,UR..UZ
     else if(callsign(2:2).gt.'Q' .and. callsign(2:2).lt.'[') then
