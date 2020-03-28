@@ -628,7 +628,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
         <source>Antarctica</source>
-        <translation type="unfinished">Antartique</translation>
+        <translation>Antartique</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="116"/>
@@ -2057,12 +2057,12 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importer...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Exporter...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2610,7 +2610,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -4253,7 +4253,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="5990"/>
         <location filename="../mainwindow.cpp" line="5991"/>
         <source>Freq   Message</source>
-        <translation>Message de la Foire aux questions</translation>
+        <translation>Freq   Messages</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="444"/>
@@ -4263,12 +4263,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Annuler</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Réessayer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
@@ -4386,13 +4386,14 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2722"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmer Effacer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2723"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir supprimer tous les fichiers *.wav et *.c2 dans
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2759"/>
@@ -4598,17 +4599,17 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
         <location filename="../mainwindow.cpp" line="6080"/>
         <location filename="../mainwindow.cpp" line="6092"/>
         <source>Confirm Erase</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmer effacer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6081"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir effacer le fichier ALL.TXT ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6093"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir effacer votre LOG QSO ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6698"/>

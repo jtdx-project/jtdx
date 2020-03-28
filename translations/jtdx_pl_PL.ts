@@ -2609,7 +2609,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -2746,7 +2746,7 @@ Błąd: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5232"/>
         <location filename="../mainwindow.cpp" line="5647"/>
         <source>DX Call</source>
-        <translation>Znak wywoławczy DX&apos;a</translation>
+        <translation>Znak wyw. DX&apos;a</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
@@ -3009,7 +3009,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Monitorowanie</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
@@ -3059,7 +3059,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation>Dek&amp;odowanie</translation>
+        <translation>Dek&amp;oduj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -3069,7 +3069,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation>Uaktyw&amp;nić Tx</translation>
+        <translation>Aktyw&amp;uj Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
@@ -3089,7 +3089,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation>Logowanie &amp;QSO</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
@@ -3099,7 +3099,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Usuwanie</translation>
+        <translation>&amp;Usuń</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -3149,7 +3149,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation>Czyszczenie D&amp;X</translation>
+        <translation>Czyszcz. D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -4443,7 +4443,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2887"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)&gt;</translation>
+        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2895"/>
@@ -4492,7 +4492,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="3725"/>
         <location filename="../mainwindow.cpp" line="3734"/>
         <source>&amp;Yes</source>
-        <translation></translation>
+        <translation>&amp;Tak</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3726"/>
@@ -4615,7 +4615,7 @@ jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6698"/>
         <source>Lockd Tx=Rx</source>
-        <translation>Częstotliwość Tx=Rx</translation>
+        <translation>Częst. Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6699"/>
@@ -4985,7 +4985,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="259"/>
         <source>&amp;Band:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pasmo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="260"/>
@@ -5005,7 +5005,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="268"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Anuluj</translation>
+        <translation>&amp;Anuluj</translation>
     </message>
 </context>
 <context>
@@ -5256,7 +5256,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ogólne</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -5271,7 +5271,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mój &amp;Znak:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
@@ -5281,7 +5281,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mój &amp;Lokator:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
@@ -5291,7 +5291,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znaki złożone typ 2 zawierają prefiksy lub sufiksy nie znajdujące sie na dozwolonej krótkiej liście (Patrz Pomoc-&amp;gt;Dodatkowe prefiksy i sufiksy).&lt;/p&gt;&lt;p&gt;Ta opcja określa, które generowane wiadomości powinny raczej zawierać twój pełny znak złożony typu 2 niż twój bazowy znak wywoławczy. Stosuje się  tylko gdy posiadasz złożony znak wywoławczy typu 2.&lt;/p&gt;&lt;p&gt;Ta opcja kontroluje sposób w jaki generowane są wiadomości używane do odpowiadania na CQ. Generowane wiadomości 6 (CQ) i 5 (73) będą zawsze zawierały twój pełny znak wywoławczy. Protokoły JT65 i JT9 dopuszczają niektóre standardowe wiadomości z pełnymi znakami wywoławczymi kosztem innych części informacji takich jak znak DX lub twój lokator.&lt;/p&gt;&lt;p&gt;Wybranie wiadomości 1 pomija znak wywoławczy DX co może być problemem przy odpowiadaniu na wołania CQ. Wybranie wiadomości 3 takżę pomija znak wywoławczy DX i wiele wersji tego i innych programów nie odczytaja raportu. Nie wybranie żadnej z nich oznacza, że twój pełen znak wywoławczy znajdzie sie tylko w wiadomości 5 (73) a więc twój partnej może zalogować zły znak wywoławczy.&lt;/p&gt;&lt;p&gt;Żadna z tych opcji nie jest doskonała, wiadomość 3 jest najlepsza ale miej świadomość, iż twój QSO partner może nie zalogować raporty wysłanego do niego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znaki złożone typu 2 zawierają prefiksy lub sufiksy nie znajdujące sie na dozwolonej krótkiej liście (Patrz Pomoc-&amp;gt;Dodatkowe prefiksy i sufiksy).&lt;/p&gt;&lt;p&gt;Ta opcja określa, które generowane wiadomości powinny raczej zawierać twój pełny znak złożony typu 2 niż twój bazowy znak wywoławczy. Stosuje się  tylko gdy posiadasz złożony znak wywoławczy typu 2.&lt;/p&gt;&lt;p&gt;Ta opcja kontroluje sposób w jaki generowane są wiadomości używane do odpowiadania na CQ. Generowane wiadomości 6 (CQ) i 5 (73) będą zawsze zawierały twój pełny znak wywoławczy. Protokoły JT65 i JT9 dopuszczają niektóre standardowe wiadomości z pełnymi znakami wywoławczymi kosztem innych części informacji takich jak znak DX lub twój lokator.&lt;/p&gt;&lt;p&gt;Wybranie wiadomości 1 pomija znak wywoławczy DX co może być problemem przy odpowiadaniu na wołania CQ. Wybranie wiadomości 3 takżę pomija znak wywoławczy DX i wiele wersji tego i innych programów nie odczytaja raportu. Nie wybranie żadnej z nich oznacza, że twój pełen znak wywoławczy znajdzie sie tylko w wiadomości 5 (73) a więc twój partnej może zalogować zły znak wywoławczy.&lt;/p&gt;&lt;p&gt;Żadna z tych opcji nie jest doskonała, wiadomość 3 jest najlepsza ale miej świadomość, iż twój QSO partner może nie zalogować raporty wysłanego do niego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -5366,7 +5366,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="339"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj odległość w &amp;milach</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
@@ -5376,7 +5376,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="349"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pusta linijka pomiędzy okresami dekodowania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="369"/>
@@ -5386,7 +5386,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="372"/>
         <source>Show &amp;DXCC names</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj nazwy &amp;DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="379"/>
@@ -5396,7 +5396,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="382"/>
         <source>Show &amp;prefix not name</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj &amp;prefix zamiast imienia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
@@ -5416,7 +5416,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="405"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiadomość &amp;Tx do okna częstotliwości Rx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="420"/>
@@ -5426,12 +5426,12 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="446"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie rozpoczynaj dekodowania dopóki nie zostanie naciśnięty przycisk Monitor.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="449"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Mon&amp;itor wyłączony przy uruchamianiu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="475"/>
@@ -5502,12 +5502,12 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation type="unfinished"></translation>
+        <translation>CW ID &amp;po 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Interwał nadawania CW ID:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="626"/>
@@ -5523,7 +5523,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="655"/>
         <source>&amp;Radio</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="658"/>
@@ -5538,7 +5538,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Poll Interval:</source>
-        <translation>Interwał pobierania</translation>
+        <translation>Interwał pobierania:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="696"/>
@@ -5667,12 +5667,12 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="952"/>
         <source>Se&amp;ven</source>
-        <translation type="unfinished"></translation>
+        <translation>Siede&amp;m</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="965"/>
         <source>E&amp;ight</source>
-        <translation type="unfinished"></translation>
+        <translation>Os&amp;iem</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="981"/>
@@ -5687,27 +5687,27 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>On&amp;e</source>
-        <translation type="unfinished"></translation>
+        <translation>Jed&amp;en</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1019"/>
         <source>T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>D&amp;wa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1035"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kontrola przepływu danych między tym komputerem a interfejsem CAT twojego radia (zwykle &amp;quot;Brak&amp;quot; ale niektóre wymagają &amp;quot;Sprzętowa&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>Handshake</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzgadnianie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1050"/>
         <source>&amp;None</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Brak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
@@ -5732,7 +5732,7 @@ urządzenia Kenwood, ich wymagają).</translation>
     <message>
         <location filename="../Configuration.ui" line="1094"/>
         <source>&amp;Hardware</source>
-        <translation>Sprzęt</translation>
+        <translation>&amp;Sprzętowa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
@@ -5782,23 +5782,23 @@ urządzenia Kenwood, ich wymagają).</translation>
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
         <translation>Niektóre urządzenia obsługują PTT poprzez
-polecenia CAT, używać tego jeżeli twoje radio to obsługuje
+polecenia CAT, używać tego jeżeli twoje radio to umożliwia
 i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1227"/>
         <source>C&amp;AT</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Używać linii kontrolnej DTR RS-232 do przełączania PTT twojego radia, wymaga sprzętu do obsługi linii.&lt;/p&gt;&lt;p&gt;Niektóre komercyjne interfejsy także używają tej metody.&lt;/p&gt;&lt;p&gt;W tym celu należy użyć linii kontrolnej DTR szeregowego portu CAT lub linii kontrolnej DTR innego portu szeregowego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1240"/>
         <source>&amp;DTR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1253"/>
@@ -5808,17 +5808,17 @@ i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1256"/>
         <source>VO&amp;X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Używać linii kontrolnej DTR RS-232 do przełączania PTT twojego radia, wymaga sprzętu do obsługi linii./p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
         <source>R&amp;TS</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
@@ -5838,17 +5838,17 @@ opcja Tył/Dane będzie najlepsza).</translation>
     <message>
         <location filename="../Configuration.ui" line="1336"/>
         <source>Transmit Audio Source</source>
-        <translation>Żródło audio dla nadawania</translation>
+        <translation>Źródło audio dla nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
         <source>Rear&amp;/Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Tył&amp;/Dane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
         <source>&amp;Front/Mic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Przód/Mic</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1375"/>
@@ -5868,7 +5868,7 @@ opcja Tył/Dane będzie najlepsza).</translation>
     <message>
         <location filename="../Configuration.ui" line="1387"/>
         <source>US&amp;B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1400"/>
@@ -5883,7 +5883,7 @@ złej modulacji lub szerokości pasma).</translation>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation type="unfinished">Nic</translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
@@ -5893,7 +5893,7 @@ złej modulacji lub szerokości pasma).</translation>
     <message>
         <location filename="../Configuration.ui" line="1418"/>
         <source>Data/P&amp;kt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
@@ -5903,7 +5903,7 @@ złej modulacji lub szerokości pasma).</translation>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
         <source>Fake It</source>
-        <translation>Udawane</translation>
+        <translation>Sztuczne</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1454"/>
@@ -5931,7 +5931,7 @@ radio interface behave as expected.</source>
 Kliknij ponownie aby zdeaktywować. Normalnie nie powinno być żadnej
 mocy wyjściowej ponieważ w tym czasie nie jest generowany sygnał audio.
 Sprawdzić czy wskaźniki na twoim radiu i interfejsie
-działają w oczekiwany sposób</translation>
+działają w oczekiwany sposób.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1541"/>
@@ -5952,7 +5952,7 @@ działają w oczekiwany sposób</translation>
     <message>
         <location filename="../Configuration.ui" line="1628"/>
         <source>A&amp;udio</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1631"/>
@@ -5971,46 +5971,50 @@ If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
 you will broadcast any systems sounds generated during
 transmitting periods.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybrać KODEK audio używany do nadawania.
+Jeżeli jest to twoje domyślne urządzenie dźwięku systemowego
+wtedy upewnij się, że wszystkie dźwięki systemowe są wyłączone
+bo w przeciwnym przypadku będą nadawane wszystkie dźwięki generowane
+w czasie okresów nadawania.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1666"/>
         <source>Select the audio CODEC to use for receiving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybrać KODEK audio dla odbierania.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1673"/>
         <source>&amp;Input:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Wejście:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1683"/>
         <source>Select the channel to use for receiving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybrać kanał do używania dla odbioru.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1687"/>
         <location filename="../Configuration.ui" line="1717"/>
         <source>Mono</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1692"/>
         <location filename="../Configuration.ui" line="1722"/>
         <source>Left</source>
-        <translation type="unfinished">Z lewej</translation>
+        <translation>Lewy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1697"/>
         <location filename="../Configuration.ui" line="1727"/>
         <source>Right</source>
-        <translation type="unfinished">Z prawej</translation>
+        <translation>Prawy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1702"/>
         <location filename="../Configuration.ui" line="1732"/>
         <source>Both</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1710"/>
@@ -6018,87 +6022,89 @@ transmitting periods.</source>
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybrać kanał audio dla nadawania.
+Czyba że masz wiele TRCVR-ów podłączonych do różnych kanałów;
+wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1740"/>
         <source>Ou&amp;tput:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wy&amp;jście:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <source>Remember power settings by band and mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Pamiętaj ustawienia mocy dla pasma i modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
         <source>Enable power memory during transmit</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj zapis mocy podczas nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1770"/>
         <source>Transmit</source>
-        <translation type="unfinished"></translation>
+        <translation>Nadawanie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1777"/>
         <source>Enable power memory during tuning</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj zapis mocy podczas strojenia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1780"/>
         <source>Tune</source>
-        <translation type="unfinished">Strojenie</translation>
+        <translation>Strojenie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
         <source>Audio files save directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalog do zapisu plików audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
         <source>Loc&amp;ation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lok&amp;alizacja:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ścieżka do której pliki .WAV są zapisywane.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1836"/>
         <source>TextLabel</source>
-        <translation type="unfinished">Etykieta tekstu</translation>
+        <translation>Etykieta tekstów</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1843"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknąć aby wybrać inny katalog do zapisu plików .WAV.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1846"/>
         <source>S&amp;elect</source>
-        <translation type="unfinished"></translation>
+        <translation>W&amp;ybrać</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1877"/>
         <source>Sequencing</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekwencjonowanie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1901"/>
         <source>Message sequencing short scenarios</source>
-        <translation type="unfinished"></translation>
+        <translation>Krótki scenariusz sekwencjonowania wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: wołaj CQ jeżeli osiągnięto stan licznika. AutoSeq 6/7: przeszukuj zdekodowane wiadomości aby znaleźć jakąś prawidłową wiadomość &apos;CQ&apos; lub &apos;73&apos;, wołaj CQ jeżeli nie znaleziono takiej wiadomości. Wtrzymaj Tx jeżeli w zakladce AutoSeq aktywna jest opcja Pojedyncze QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1912"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liczniki. Przeszukuj zdekodowane wiadomości, wołaj CQ lub wstrzymaj Tx jeżeli:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1944"/>
@@ -6106,92 +6112,92 @@ both here.</source>
         <location filename="../Configuration.ui" line="2009"/>
         <location filename="../Configuration.ui" line="2045"/>
         <source>times</source>
-        <translation type="unfinished"></translation>
+        <translation>czasy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1957"/>
         <source>called CQ,  received a call and answered</source>
-        <translation type="unfinished"></translation>
+        <translation>wołano CQ,  odebrano znak i odpowiedziano</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2019"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation type="unfinished"></translation>
+        <translation>nadano RR73(73) odpowidając na przychodzące RRR(RR73)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2058"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation type="unfinished"></translation>
+        <translation>odpowiedziano na czyjeś wołanie CQ bez reakcji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2071"/>
         <source>sent report answering to incoming report</source>
-        <translation type="unfinished"></translation>
+        <translation>wysłano raport odpowiadając na przychodzący raport</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ta opcja jest używana w sytuacji nienakładających się spektrów. Tx zostanie wstrzymany jeżeli spektra mają taką samą częstotliwość nie respektując tego ustawienia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2108"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation type="unfinished"></translation>
+        <translation>Wstrzymaj Tx jeżeli wołany operator odpowiedział innemu operatorowi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Domyślnie autosekwencja ignoruje kierunek odebrane/nadawane jeżeli znajdzie się prawidłowa zdekodowana wiadomość &apos;nowy DXCC&apos;, albo przychodzące wołanie lub wybrane ze zdekodowanej wiadomości CQ/73. Ta opcja eliminuje wyjątek &apos;nowy DXCC&apos; w autoselekcji dla przetwarzania kierunkowego CQ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
         <source>Strict directional CQ operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Praca ze ścisłym kierunkowym CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2176"/>
         <source>Tx &amp;Macros</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Makra Tx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2179"/>
         <source>Canned free text messages setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawianie gotowców wiadomości z dowolnymm tekstem</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dodawanie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimum 13 znaków wiadomości z dowolnym tekstem&lt;br&gt;&lt;br&gt;Maksimum 17 znaków dla standardowej wiadomości kierunkowego CQ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kasuj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Złap i upuść aby zmienić kolejność. Prawoklik aby wykonać specyficzną akcję tego elementu. Kliknąć, SHIFT+Klik oraz, CRTL+Klik aby wybrać element. symbol @ jest zastępowany znakiem DX, symbol &amp; znakiem bazowym użytkownika, symbol # raportem do nadania, symbol ^ imieniem korespondenta uzyskanym z logu, gdzie imię nie powinno przekraczać 7 znaków.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2263"/>
         <source>Reportin&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>Raportowani&amp;e</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2266"/>
         <source>Reporting and logging settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia raportowania i logowania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2279"/>
         <source>Logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Logowanie</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2305"/>
@@ -6199,171 +6205,175 @@ both here.</source>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre programy logujące nie będą akceptowały
+typu raportu zapisanego przez ten program.
+Zaznaczyć ta opcję w polu komentarzy aby zapisywać
+nadane i odebrane raporty.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
         <source>d&amp;B reports to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>raporty d&amp;B do komentarzy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2318"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznaczyć tą opcję aby wymuszać czyszczenie pól
+Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2322"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation type="unfinished"></translation>
+        <translation>wyczyść znak &amp;DX i Lokator po zalogowaniu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zaznaczyć tą opcję aby wymusić czyszczenie pól Znak DX i Lokator DX przy zamykaniu JTDX. Ta fukcjonalność jest przeznaczona dla użytkowników programu logującego UR5EQF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Czyszczenie pól Znak DX i Lokator DX przy zamykaniu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre programy logujące nie zaakceptują JT-65 lub JT9 jako znanych modulacji.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2342"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zmień modulację na RTTY</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program otworzy okno dialogowe logowania dla częściowo zakończonego QSO gdy wyślesz 73 lub wiadomość z dowolnym tekstem.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2352"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Suge&amp;ruj mi logowanie QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Enable automatic logging of QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj automatyczne logowanie QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Połączenie do zewnętrznego programu logującego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2392"/>
         <source>Send logged QSO ADIF data</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyślij dane ADIF zalogowanego QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2426"/>
         <location filename="../Configuration.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nazwa serwera TCP i adres&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2429"/>
         <source>TCP server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serwer TCP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2449"/>
         <location filename="../Configuration.ui" line="2459"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numer portu serwera TCP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2452"/>
         <source>TCP port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Port TCP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2474"/>
         <source>Enable sending to TCP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj wysyłanie do serwera TCP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2499"/>
         <source>2nd UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi serwer UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2513"/>
         <location filename="../Configuration.ui" line="2523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numer porty drugiego serwera UDP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
         <source>UDP port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Port UDP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2532"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj wysyłanie do drugiego serwera UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Umożliwia konfigurowanie danych do zapisania w pliku ALL.TXT. Zapisywanie wiadomości TX nie może być wyłączone.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2568"/>
         <source>Recording to ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisywanie do ALL.TXT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2590"/>
         <source>decoded messages</source>
-        <translation type="unfinished"></translation>
+        <translation>wiadomości zdekodowane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2597"/>
         <source>decoded and debug messages</source>
-        <translation type="unfinished"></translation>
+        <translation>wiadomości zdekodowane i debugowania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2639"/>
         <source>Network Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Usługi sieciowe</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2660"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program może wysyłać informacje o zalogowanym QSO do strony internetowej http://www.eqsl.cc.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2663"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj wysyłanie &amp;eQSL</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2683"/>
         <source>EQSL Username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa użytkownika EQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2690"/>
         <source>U&amp;sername:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uż&amp;ytkownik:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
         <source>P&amp;assword:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hasło:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2710"/>
         <source>EQSL Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hasło EQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2720"/>
@@ -6371,205 +6381,209 @@ and DX Grid fields when a 73 or free text message is sent.</source>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program może wysłać dane twojej stacji oraz
+zdekodowane sygnały jako spoty do strony http://pskreporter.info.
+Jest to używane dla potrzeb analizowania przez reverse beacon
+co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2726"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj spoty do &amp;PSK Reporter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2733"/>
         <source>EQSL OTH Nickname.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa EQSL QTH.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>Enable DXSummit Spotting </source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj przesyłanie spotów do DXSummit </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>QTH N&amp;ickname:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naz&amp;wa QTH:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Główne połączenie UDP do zewnętrznego programu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2763"/>
         <source>Primary UDP Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Główny serwer UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2793"/>
         <source>UDP Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serwer UDP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2809"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opcjonalna nazwa hosta usługi sieciwej do odbioru dekodowań.&lt;/p&gt;&lt;p&gt;Formaty:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;adres IPv4&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;adres IPv6&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;adres multicast IPv4 grupy&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;adres multicast IPv6 grupy&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Wyczyszczenie tego pola zdeaktywuje broadcast uaktualnień statusu UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2819"/>
         <source>UDP Server port number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Numer portu serwera UDP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that WSJT-X should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wprowadź numer portu serwisowego serwera UDP do którego WSJT-X powinien wysyłać uaktualnienia. Jeżeli będzie to 0 (zero) uaktualnienia nie będą rozsyłane.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled WSJT-X will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli ta opcja jest aktywna, WSJT-X będzie akceptował pewne żądania od serwera UDP który odbiera zdekodowane wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
         <source>Accept UDP requests</source>
-        <translation type="unfinished"></translation>
+        <translation>Akceptuj żądania UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Oznacza akceptowanie przychodzących żądań UDP. Efekt tej opcji zależy od systemu operacyjnego i zarządzania oknami, jej celem jest informowanie o akceptowaniu przychodzących żądań UDP nawet wtedy gdy aplikacja jest zminimalizowana lub ukryta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2859"/>
         <source>Notify on accepted UDP request</source>
-        <translation type="unfinished"></translation>
+        <translation>Informuj o akceptowaniu żądań UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2866"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Przywróć okno ze zminimalizowanego jeżeli zostalo zaakceptowane żądanie UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2869"/>
         <source>Accepted UDP request restores window</source>
-        <translation type="unfinished"></translation>
+        <translation>Przywrócenie okna po zaakceptowaniu żądania UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2880"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywuj wysyłanie danych ADIF zalogowanych QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2890"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wiadomość oznaczona znakiem zapytania nie będzie przekazana do JTAlert i innych programów opartych na UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2893"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie zezwalaj na wysyłanie przez UDP spotów z niepotwierdzonymi znakami wywoławczymi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2900"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybrane filtry tekstowe będą użyte aby zminimalizować nadawanie wiadomości UDP z JTDX, na przykład wiadomości z niektórych kontynentów mogą być zablokowane.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2903"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj filtrów tekstowych przy nadawaniu widomości UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2938"/>
         <source>Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2941"/>
         <source>Default frequencies and band specific station details setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia domyślnych częstotliwości i szczegółów stacji specyficznych dla pasma</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
         <source>Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2962"/>
         <source>Right click to add or delete frequencies.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawoklik aby dodać lub usunąć częstotliwości.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2991"/>
         <location filename="../Configuration.ui" line="4699"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3013"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrz dokumentacja WSPR, załącznik C na temat szczegółów jak określić te współczynniki dla twojego radia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
         <source>Frequency Calibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalibracja częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation type="unfinished"></translation>
+        <translation>Przechwyć:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3038"/>
         <location filename="../Configuration.ui" line="6429"/>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
         <source>Slope:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbocze:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3070"/>
         <source> ppm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3113"/>
         <source>Station Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacje o stacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3125"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozycje mogą być edytowane.
+Prawoklik aby wstawić lub usunąć opcje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3173"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiadomienia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3181"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiadomienia o statusie &apos;Nowych&apos; oraz &apos;zrobionych wcześniej (B4)&apos;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomośći z krajami DXCC wktóre nie istnieją w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź i podświetl nowe DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z krajami DXCC które są nowe na pasmie zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3220"/>
@@ -6577,12 +6591,12 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3300"/>
         <location filename="../Configuration.ui" line="3340"/>
         <source>per band</source>
-        <translation type="unfinished"></translation>
+        <translation>według pasma</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z krajami DXCC które sa nowe dla modulacji, zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -6590,7 +6604,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3310"/>
         <location filename="../Configuration.ui" line="3350"/>
         <source>per mode</source>
-        <translation type="unfinished"></translation>
+        <translation>według modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3237"/>
@@ -6598,7 +6612,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3317"/>
         <location filename="../Configuration.ui" line="3357"/>
         <source>Use also system sound for the notification.</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj także dźwięku dla powiadomienia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
@@ -6606,203 +6620,203 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
         <source>Beep as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Także Beep</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3247"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z lokatorami które nie istnieją w pliku the wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>Check and highlight new grids</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdż i podświetl nowe lokatory</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3257"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z lokatorami które są nowe na pasmie zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3267"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Poświetl wiadomości z lokatorami które są nowe dla modulacji zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z prefiksami które nie istnieją w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>Check and highlight new prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź i podświetl nowe prefiksy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z prefiksami które są nowe na pasmie zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z prefiksami które sa nowe dla modulacji zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości z nowymi znakami wywoławczymi które nie istnieją w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>Check and highlight new calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź i podświetl nowe znaki</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości ze znakami wywoławczymi które są nowe na pasmie zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3347"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podświetl wiadomości ze znakami wywoławczymi które są nowe dla modulacji zgodnie z danymi w pliku wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj kolorowych powiadomień ze zrobionymi krajami DXCC, Lokatorami, Znakami.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>Highlight worked ones</source>
-        <translation type="unfinished"></translation>
+        <translation>Podświetl zrobione</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wiadomości ze zrobionymi krajami DXCC, Lokatorami, Znakami będą przekreślone.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3380"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wiadomości ze zrobionymi Znakami będą przekreślone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3383"/>
         <source>strike it</source>
-        <translation type="unfinished"></translation>
+        <translation>przekreśl</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3390"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wiadomości ze zrobionymi krajami DXCC, Lokatorami, Znakami będą podkreślone.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3393"/>
         <source>underline it</source>
-        <translation type="unfinished"></translation>
+        <translation>podkreśl</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wiadomości ze zrobionymi krajami DXCC, Lokatorami, Znakami gdzie nie ma MojegoZnaku zostaną pominięte w oknie tesktowym zdekodowanych&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>don&apos;t show it</source>
-        <translation type="unfinished"></translation>
+        <translation>nie pokazuj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odwróć kolor tekstu&lt;-&gt;kolor tła dla wiadomości odebranych&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3413"/>
         <source>Inverse text/background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Odwróć lolor tekstu/tła</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Domyślnie sprawdzane są wiadomości &apos;CQ&apos; oraz &apos;MójZnak&apos;, to ustawienie pozwala sprawdzać także inne standardowe wiadomości dla nowych krajów DXCC, Lokatorów, Znaków. &apos;Dla innych standardowych wiadomości jest użyty kolor powiadomień&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3423"/>
         <source>Highlight other standard messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Podświetl inne standardowe wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Używaj dźwięku systemowego dla powiadomień gdy tylko pierwsza wiadomość zostanie zdekodowana w interwale RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3446"/>
         <source>Beep on 1st decoded message</source>
-        <translation type="unfinished"></translation>
+        <translation>Beep przy pierwszej zdekodowanej wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3453"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj dźwięku systemowego dla powiadomienia jeżeli MójZNak jest w odebranej wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3456"/>
         <source>Beep on my call</source>
-        <translation type="unfinished"></translation>
+        <translation>Beep przy moim znaku</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
         <source>Markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Znaczniki</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj niebieskiego markera jeżeli w zdekodowanej wiadomości związanej z trwającym QSO jest mój znak wywoławczy (znak wywoławczy korspondenta QSO jest w oknie Znak DXs), czerwony marker będzie za innymi przychodzącymi wołaniami z moim znakiem wywoławczym.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3496"/>
         <source>blue / my call at QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>niebieski / mój znak w QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj czerwonego markera jeżeli mój znak wywoławczy jest w zdekodowanej wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3535"/>
         <source>red / my call in message</source>
-        <translation type="unfinished"></translation>
+        <translation>czerwony / mój znak w wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3545"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj markera na końcu wiadomości zamiast koloru tła dla powiadomień innych standardowych wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3548"/>
         <source>Other standard messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Inne standardowe wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3591"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Na górze poprzedniego panelu znajdują się typy wiadomości sprawdzanych dla pewnych kryteriów, kolorowany tekst jest wybrany dla każdego typu wiadomości.&lt;br&gt;&lt;br&gt;Po lewej stronie znajdują się kryteria uporządkowane hierarchicznie, oraz kolor tła zostaje wybrany dla wiadomości dla każdego kryterium.&lt;br&gt;&lt;br&gt;Funkcjonalność powiadomienia &apos;Zrobiony&apos; jest oparta na wspierającej zasadzie, włączanej jeżeli wszystkie aktywowane &apos;New one&apos; kryteria lub kryterium nie sa spełnione.&lt;br&gt;&lt;br&gt;&apos;Odwrócenie koloru&apos; może zostac użyte jeżeli użytkownik chciałby podświetlić wiadomości CQ i &apos;MójZnak&apos; jakims specyficznym kolorem tła.&lt;br&gt;&lt;br&gt;Na początek jedno kryterium może zostac wybrane i dla powiadomienia o nowym pasmie/modulacji mozna uzyć podobnego koloru o innym poziomie nasycenia, póżniej ilość pożądanych kryteriów można zwiększyć.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3594"/>
         <location filename="../Configuration.ui" line="6494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rady konfiguracyjne&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3642"/>
         <source>Transmitted message</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiadomość nadana</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3658"/>
@@ -6837,87 +6851,87 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="4399"/>
         <location filename="../Configuration.ui" line="4418"/>
         <source>K1ABC</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3674"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Traktuj wiadomości RR73/73 w taki sam sposób jak wiadomości CQ dla autoselekcji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3680"/>
         <source>RR73/73           </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3693"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished">CQ/73 w wiadomości</translation>
+        <translation>CQ/73 w wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3706"/>
         <source>My Call in message</source>
-        <translation type="unfinished"></translation>
+        <translation>Mój Znak w wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ustaw kolor teksu dla standardowych wiadomości innych niż (&apos;CQ&apos; and &apos;MójZnak&apos;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3722"/>
         <source>Other standard message</source>
-        <translation type="unfinished"></translation>
+        <translation>Inne standardowe wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3801"/>
         <source>New DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3871"/>
         <source>New DXCC on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy DXCC dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3941"/>
         <source>New Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy Lokator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4011"/>
         <source>New Grid on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy Lokator dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4081"/>
         <source>New Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy Prefix</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4151"/>
         <source>New Prefix on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy Prefix dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4221"/>
         <source>New Call</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy Znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4291"/>
         <source>New Call on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Now Znak dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4361"/>
         <source>Being used for CQ and MyCall messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Jest używany tylko dla wiadomości CQ oraz MójZnak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>Worked one</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrobiony</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4461"/>
@@ -6947,44 +6961,44 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4505"/>
         <source>Europe</source>
-        <translation type="unfinished"></translation>
+        <translation>Europa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4512"/>
         <source>Oceania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4519"/>
         <source>North America</source>
-        <translation type="unfinished"></translation>
+        <translation>Ameryka północna</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4526"/>
         <source>South America</source>
-        <translation type="unfinished"></translation>
+        <translation>Ameryka południowa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4536"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Pokaż nazwę DXCC/prefix&apos; powinno zostać aktywowane w zakładce Ustawienia Ogólne albo jakieś powiadomienie &apos;Nowy&apos; aby ta funckjonalność działała.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4539"/>
         <source>Hide messages from countries</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj wiadomości z krajów</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4559"/>
         <location filename="../Configuration.ui" line="4624"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywuj opcję&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4562"/>
         <location filename="../Configuration.ui" line="4627"/>
         <source>Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4569"/>
@@ -7005,23 +7019,39 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista rozdzielonych przecinkami prefiksów państw oparta na pliku cty.dat.&lt;br&gt;
+Przerwy nie są dopuszalne. Akceptowane wartości to: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
+5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
+9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
+CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
+EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
+FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
+HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
+JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
+KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
+PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
+SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
+UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
+VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
+XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
+ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wyczyść listę krajów&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4595"/>
         <location filename="../Configuration.ui" line="4650"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Czyść</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4607"/>
         <source>Hide messages from callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj wiadomości od znaków wywoławczych</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4634"/>
@@ -7029,104 +7059,107 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista rozdzielonych przecinkami znaków wywoławczych,
+przerwy nie są dopuszczalne, dla znaku zożonego powinien być
+użyty bazowy znak wywoławczy, na przykład:
+AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4647"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wyczyść listę znaków&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4662"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż wiadomości merytoryczne w oknie częstotliwości RX </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4679"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Przepisz wiadomości merytoryczne z dowolnym tekstem do okna wiadomości częstotliwości RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4682"/>
         <source>Enable</source>
-        <translation type="unfinished">Uaktywnij</translation>
+        <translation>Aktywuj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista rozdzielonych przecinkami nazw zawartości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4696"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resetuj listę nazw zawartości do wartości domyślnej.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4713"/>
         <location filename="../Configuration.ui" line="4736"/>
         <location filename="../Configuration.ui" line="4759"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filtr zostanie dodany z częstotliwości RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4716"/>
         <source>Show CQ messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj wylko wiadomośći CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4739"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj tylko wiadomości CQ/RRR/RR73/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4762"/>
         <source>Show CQ/RR73/73 messages only</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazuj tylko wiadomości CQ/RR73/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukryj zdekodowane dowolne wiadomości znajdujące sie poza częstotliwością RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4787"/>
         <source>Hide decoded free messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj zdekodowane dowolne wiadomości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4794"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj wiadomości nie związane z hash-em drugiego znaku wywoławczego</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4817"/>
         <source>Scheduler</source>
-        <translation type="unfinished"></translation>
+        <translation>Harmonogram</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4825"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatyczne przełączanie pasm zgodnie z predefiniowanym harmonogramem&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4828"/>
         <source>Band scheduler configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracja harmonogramu pasm</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4838"/>
         <source>hh</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4848"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
         <source>Band</source>
-        <translation type="unfinished">Pasmo</translation>
+        <translation>Pasmo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4868"/>
@@ -7136,12 +7169,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5899"/>
         <location filename="../Configuration.ui" line="6156"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Harmonogram ustawi modulację JT65+JT9 jeżeli wybrana jest częstotliwość JT65.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4871"/>
         <source>JT65+JT9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4887"/>
@@ -7155,7 +7188,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5915"/>
         <location filename="../Configuration.ui" line="6053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz czas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4896"/>
@@ -7169,7 +7202,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5924"/>
         <location filename="../Configuration.ui" line="6062"/>
         <source>00</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4901"/>
@@ -7178,7 +7211,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5672"/>
         <location filename="../Configuration.ui" line="5929"/>
         <source>01</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4906"/>
@@ -7187,7 +7220,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5677"/>
         <location filename="../Configuration.ui" line="5934"/>
         <source>02</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4911"/>
@@ -7196,7 +7229,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5682"/>
         <location filename="../Configuration.ui" line="5939"/>
         <source>03</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4916"/>
@@ -7205,7 +7238,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5687"/>
         <location filename="../Configuration.ui" line="5944"/>
         <source>04</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4921"/>
@@ -7219,7 +7252,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5949"/>
         <location filename="../Configuration.ui" line="6067"/>
         <source>05</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4926"/>
@@ -7228,7 +7261,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5697"/>
         <location filename="../Configuration.ui" line="5954"/>
         <source>06</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4931"/>
@@ -7237,7 +7270,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5702"/>
         <location filename="../Configuration.ui" line="5959"/>
         <source>07</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4936"/>
@@ -7246,7 +7279,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5707"/>
         <location filename="../Configuration.ui" line="5964"/>
         <source>08</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4941"/>
@@ -7255,7 +7288,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5712"/>
         <location filename="../Configuration.ui" line="5969"/>
         <source>09</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4946"/>
@@ -7269,7 +7302,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5974"/>
         <location filename="../Configuration.ui" line="6072"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4951"/>
@@ -7278,7 +7311,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5722"/>
         <location filename="../Configuration.ui" line="5979"/>
         <source>11</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4956"/>
@@ -7287,7 +7320,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5727"/>
         <location filename="../Configuration.ui" line="5984"/>
         <source>12</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4961"/>
@@ -7296,7 +7329,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5732"/>
         <location filename="../Configuration.ui" line="5989"/>
         <source>13</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4966"/>
@@ -7305,7 +7338,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5737"/>
         <location filename="../Configuration.ui" line="5994"/>
         <source>14</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4971"/>
@@ -7319,7 +7352,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5999"/>
         <location filename="../Configuration.ui" line="6077"/>
         <source>15</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4976"/>
@@ -7328,7 +7361,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5747"/>
         <location filename="../Configuration.ui" line="6004"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4981"/>
@@ -7337,7 +7370,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5752"/>
         <location filename="../Configuration.ui" line="6009"/>
         <source>17</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4986"/>
@@ -7346,7 +7379,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5757"/>
         <location filename="../Configuration.ui" line="6014"/>
         <source>18</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4991"/>
@@ -7355,7 +7388,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5762"/>
         <location filename="../Configuration.ui" line="6019"/>
         <source>19</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4996"/>
@@ -7369,7 +7402,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="6024"/>
         <location filename="../Configuration.ui" line="6082"/>
         <source>20</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5001"/>
@@ -7378,7 +7411,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5772"/>
         <location filename="../Configuration.ui" line="6029"/>
         <source>21</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5006"/>
@@ -7387,7 +7420,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5777"/>
         <location filename="../Configuration.ui" line="6034"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5011"/>
@@ -7396,7 +7429,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5782"/>
         <location filename="../Configuration.ui" line="6039"/>
         <source>23</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5059"/>
@@ -7405,7 +7438,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5830"/>
         <location filename="../Configuration.ui" line="6087"/>
         <source>25</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5064"/>
@@ -7414,7 +7447,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5835"/>
         <location filename="../Configuration.ui" line="6092"/>
         <source>30</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5069"/>
@@ -7423,7 +7456,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5840"/>
         <location filename="../Configuration.ui" line="6097"/>
         <source>35</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5074"/>
@@ -7432,7 +7465,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5845"/>
         <location filename="../Configuration.ui" line="6102"/>
         <source>40</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5079"/>
@@ -7441,7 +7474,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5850"/>
         <location filename="../Configuration.ui" line="6107"/>
         <source>45</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5084"/>
@@ -7450,7 +7483,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5855"/>
         <location filename="../Configuration.ui" line="6112"/>
         <source>50</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5089"/>
@@ -7459,7 +7492,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5860"/>
         <location filename="../Configuration.ui" line="6117"/>
         <source>55</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5109"/>
@@ -7468,140 +7501,142 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../Configuration.ui" line="5880"/>
         <location filename="../Configuration.ui" line="6137"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz pasmo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6186"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywacja harmonogramu pasm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6189"/>
         <source>Use band scheduler</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj harmonogramu pasm</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6212"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaawansowane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6222"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Parametry dekodowania JT65 wybierane prze użytkownika.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6225"/>
         <source>JT65 decoding parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Parametry dekodowania JT65</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6253"/>
         <location filename="../Configuration.ui" line="6266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definiuje ilość prób dekodowania dla przebiegów dekodowania szerokopasmowego&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6256"/>
         <location filename="../Configuration.ui" line="6608"/>
         <source>Number of decoding attempts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość prób dekodowania:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6292"/>
         <location filename="../Configuration.ui" line="6305"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość przebiegów dekodowania dla dekodowania szerokopasmowego&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6295"/>
         <source>Number of decoding  passes: </source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość przebiegów dekodowania: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6325"/>
         <location filename="../Configuration.ui" line="6338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definiuje ilość prób dekodowania dla przebiegów dekodowania częstotliwości RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6328"/>
         <location filename="../Configuration.ui" line="6644"/>
         <source>RX frequency decoding attempts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilość prób dekodowania częstotliwości RX:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6364"/>
         <location filename="../Configuration.ui" line="6377"/>
         <location filename="../Configuration.ui" line="6535"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To okno DT używane jest tylko dla danych CALL3 częstotliwości RX opartych na dekoderach Hint nastawionych na wiadomości CQ oraz &apos;mójznak jegoznak jegolokator&apos;. Wyższe wartości mogą zwiększyć ilość fałszywych dekodowań.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6367"/>
         <source>Hinted decoding DT range:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakres DT dla dekodowania Hinted:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywuj dwie dodatkowe maski częstotliwości przebiegów dekodowania JT65 dla warunków zatłoczonego pasma. Te przebiegi dekodowania będą aktywowane automatycznie jeżeli jest mniej sygnałów na pasmie. Używać tych ustawień tylko dla szybkich CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6404"/>
         <source>Use frequency mask decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Używać dekodowania z maską częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6416"/>
         <location filename="../Configuration.ui" line="6426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa górny limit dla dekodowania sygnałów JT65a, domyślna wartość to 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6419"/>
         <source>Top decoding frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation>Najwyższa częstotliwość dekodowania: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6452"/>
         <location filename="../Configuration.ui" line="6465"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zniekształcenia sygnału w torze RX lub TX mogą wytwarzać harmoniczne sygnału JT65A (JT65B, JT65C etc.) Dekodowanie harmonicznych sygnału JT65A może poprawić ogólną efektywnośc dekodowania poprzez odejmowanie dekodowanych sygnałów. Głebokość dekodowania jest proporcjonalna do wymaganych zasobów CPU, ustaw to na 1 dla wolnych CPU. Większe wartości głębokości pozwolą dekodować więcej harmonicznych. Wspierane jest dekodowanie JT65B oraz JT65C.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6455"/>
         <source>Harmonics decoding depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Głębokość dekodowania harmonicznych:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ustawienia zależą od mocy CPU, próbować użyć maksymalnej liczby przebiegów dekodowania dla zatłoczonych pasm HF.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
         <source>T10 decoding parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Parametry dekodowania T10</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6605"/>
         <location filename="../Configuration.ui" line="6615"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa ilość prób dekodowania dla szerokopasmowego dekodowania T10.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6641"/>
         <location filename="../Configuration.ui" line="6654"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa ilość prób dekodowania T10 dla częstotliwości RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6745"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Odrzuć lub zastosuj zmiany konfiguracji włącznie
+z resetowaniem interfejsu radia oraz stosując wszelkie
+zmiany dla karty dźwiękowej</translation>
     </message>
 </context>
 <context>
@@ -7609,37 +7644,37 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd krytyczny</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Niespodziewany błąd krytyczny</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;styl&gt; może być Fusion (domyślny) lub Windows</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="122"/>
         <source>style</source>
-        <translation type="unfinished"></translation>
+        <translation>styl</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="126"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gdzie &lt;nazwa-TRCVRa&gt; jest dla obsługi multi-instance.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="127"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation>nazwa-TRCVRa</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisywalne pliki w lokalizacji testowej. Używać ostrożnie, wyłącznie do testowania.</translation>
     </message>
 </context>
 <context>
@@ -7647,12 +7682,12 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kliknąć dwa razy na kolorze aby go edytować.&lt;/p&gt;&lt;p&gt;Prawy klik aby wstawić lub skasowac kolory.&lt;/p&gt;&lt;p&gt;Kolory na górze reprezentują słabe sygnały&lt;/p&gt;&lt;p&gt; a kolory na dole reprezentują silne &lt;/p&gt;&lt;p&gt;sygnały. Można mieć do 256 kolorów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
