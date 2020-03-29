@@ -6,7 +6,7 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation>Nombre de Banda</translation>
+        <translation>Nombre de banda</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
