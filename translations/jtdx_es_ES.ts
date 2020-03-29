@@ -5058,7 +5058,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation>Error inesperado de la equipo</translation>
+        <translation>Error inesperado del equipo</translation>
     </message>
 </context>
 <context>
@@ -5071,7 +5071,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation>Control</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="160"/>
