@@ -26,7 +26,7 @@
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation>Límite superior</translation>
+        <translation>Límite inferior</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
@@ -219,7 +219,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translatorcomment>dónde?</translatorcomment>
+        <translatorcomment>¿dónde?</translatorcomment>
         <translation></translation>
     </message>
     <message>
@@ -945,7 +945,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
         <source>Scotland</source>
-        <translation></translation>
+        <translation>Escocia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="179"/>
@@ -2611,7 +2611,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -2678,7 +2678,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>info:</source>
-        <translation>Informe DXSummit:</translation>
+        <translation>Info:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
@@ -2689,7 +2689,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>edit</source>
-        <translation>editar</translation>
+        <translation>Editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
@@ -3072,7 +3072,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
         <source>E&amp;nable Tx</source>
-        <translation>&amp;Activa Tx</translation>
+        <translation>&amp;Activar Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
@@ -3097,12 +3097,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Botón izquierdo del ratón: limpia en ventana Activ banda  (izquierda) el texto decodificado. Botón derecho del ratón: limpia en ventana Frecuencia Rx (derecha) el texto del QSO. Haga doble clic para limpiar ambas ventanas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Botón izquierdo del ratón: borra en ventana Activ banda  (izquierda) el texto decodificado. Botón derecho del ratón: borra en ventana Frecuencia Rx (derecha) el texto del QSO. Haga doble clic para limpiar ambas ventanas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Limpiar</translation>
+        <translation>&amp;Borrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -3673,7 +3673,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4644"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Borrar todos los archivos * .wav y * .c2 en  directorio Save</translation>
+        <translation>Eliminarr todos los archivos * .wav y * .c2 en  directorio Save</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4655"/>
@@ -3859,7 +3859,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4967"/>
         <source>Show DXCC entity and worked B4 status</source>
-        <translation>Mostrar entidad DXCC y estado B4 trabajado</translation>
+        <translation>Mostrar entidad DXCC y estado trabajado B4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4975"/>
@@ -4395,13 +4395,13 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2722"/>
         <source>Confirm Delete</source>
-        <translation>Confirmar Borrar</translation>
+        <translation>Confirmar Eliminar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2723"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation>¿Estás seguro de que quieres borrar todos los archivos? *.wav y *.c2
+        <translation>¿Estás seguro de que quieres eliminar todos los archivos *.wav y *.c2
 </translation>
     </message>
     <message>
@@ -4494,7 +4494,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
         <location filename="../mainwindow.cpp" line="3722"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>¿Está seguro de cambiar el idioma de la interfaz de usuario a Español?, JTDX se reiniciará</translation>
+        <translation>¿Está seguro de cambiar el idioma de la interfaz de usuario a Español?, JTDX se reiniciará?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3725"/>
@@ -5830,7 +5830,7 @@ Otra interfaz de hardware para PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1269"/>
         <source>R&amp;TS</source>
-        <translation></translation>
+        <translation>R&amp;TS</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
@@ -6189,7 +6189,7 @@ Ambos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Limpiar</translation>
+        <translation>&amp;Eiminar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2212"/>
@@ -6247,7 +6247,7 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="2332"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>Borrar Llamada DX y Locator DX al salir</translation>
+        <translation>Limpiar Llamada DX y Locator DX al salir</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
