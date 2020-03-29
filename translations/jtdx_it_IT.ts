@@ -676,10 +676,6 @@ Formato:
         <translation>Isole Cayman</translation>
     </message>
     <message>
-        <source>Easter Is</source>
-        <translation type="vanished">Isola di Pasqua</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
         <translation></translation>
@@ -708,10 +704,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="119"/>
         <source>Portugal</source>
         <translation>Portogallo</translation>
-    </message>
-    <message>
-        <source>Madeira Is</source>
-        <translation type="vanished">Isola di Madeira</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
@@ -792,14 +784,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="136"/>
         <source>Spain</source>
         <translation>Spagna</translation>
-    </message>
-    <message>
-        <source>Balearic Is</source>
-        <translation type="vanished">Isole Baleari</translation>
-    </message>
-    <message>
-        <source>Canary Is</source>
-        <translation type="vanished">Isole Canarie</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
@@ -922,10 +906,6 @@ Formato:
         <translation></translation>
     </message>
     <message>
-        <source>Reunion Is</source>
-        <translation type="vanished">Isola della Riunione</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
         <source>St. Martin</source>
         <translation></translation>
@@ -991,10 +971,6 @@ Formato:
         <translation></translation>
     </message>
     <message>
-        <source>Shetland Is</source>
-        <translation type="vanished">Isole Scetland</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
         <source>Scotland</source>
         <translation>Scozia</translation>
@@ -1042,16 +1018,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation></translation>
+        <translation>Isole Galapagos</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
         <source>Haiti</source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Dominican Rep</source>
-        <translation type="vanished">Rep. Dominicana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="190"/>
@@ -1339,10 +1311,6 @@ Formato:
         <translation>Repubblica Ceca</translation>
     </message>
     <message>
-        <source>Slovak Rep</source>
-        <translation type="vanished">Slovacchia</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
         <source>Belgium</source>
         <translation>Belgio</translation>
@@ -1351,10 +1319,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="249"/>
         <source>Greenland</source>
         <translation>Groenlandia</translation>
-    </message>
-    <message>
-        <source>Faroe Is</source>
-        <translation type="vanished">Isole Faroe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1737,10 +1701,6 @@ Formato:
         <translation></translation>
     </message>
     <message>
-        <source>British Virgin Is</source>
-        <translation type="vanished">Isole Vergini Britanniche</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
         <translation></translation>
@@ -1754,10 +1714,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Ducie Is.</source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Falkland Is</source>
-        <translation type="vanished">Isole Falkland</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
@@ -1937,7 +1893,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation></translation>
+        <translation>Base UK a Cipro</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
@@ -1953,10 +1909,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="370"/>
         <source>Tristan da Cunha &amp; Gough</source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Cayman Is</source>
-        <translation type="vanished">Isole Caiman</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
