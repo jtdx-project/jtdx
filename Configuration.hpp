@@ -179,6 +179,12 @@ public:
   bool workedUnderlined () const;
   bool workedColor () const;
   bool workedDontShow () const;
+  bool newCQZ () const;
+  bool newCQZBand () const;
+  bool newCQZBandMode () const;
+  bool newITUZ () const;
+  bool newITUZBand () const;
+  bool newITUZBandMode () const;
   bool newDXCC () const;
   bool newDXCCBand () const;
   bool newDXCCBandMode () const;
@@ -203,6 +209,8 @@ public:
   bool split_mode () const;
   bool decode_at_52s () const;
   bool beepOnMyCall () const;
+  bool beepOnNewCQZ () const;
+  bool beepOnNewITUZ () const;
   bool beepOnNewDXCC () const;
   bool beepOnNewGrid () const;
   bool beepOnNewPx () const;
@@ -238,6 +246,10 @@ public:
   QColor color_CQ () const;
   QColor color_MyCall () const;
   QColor color_TxMsg () const;
+  QColor color_NewCQZ () const;
+  QColor color_NewCQZBand () const;
+  QColor color_NewITUZ () const;
+  QColor color_NewITUZBand () const;
   QColor color_NewDXCC () const;
   QColor color_NewDXCCBand () const;
   QColor color_NewCall () const;

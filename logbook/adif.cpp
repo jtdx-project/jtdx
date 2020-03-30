@@ -65,6 +65,8 @@ QString ADIF::_extractField(const QString line, const QString fieldName)
 void ADIF::load(const QString mycall,const QString mygrid,const QString mydate)
 {
     _data.clear();
+    _cqzWorked.clear();
+    _ituzWorked.clear();
     _countriesWorked.clear();
     _gridsWorked.clear();
     _pxsWorked.clear();
@@ -101,7 +103,10 @@ void ADIF::load(const QString mycall,const QString mygrid,const QString mydate)
                     _counts.insert(q.mode,_counts.value(q.mode,0)+1);
                     QString country = _countries.find(Radio::effective_prefix(q.call));
                     if (!country.isEmpty ()) { //  country was found
-                        _countriesWorked.insert(country, q);
+                        auto items = country.split(',');
+                        _countriesWorked.insert(items[0]+','+items[1]+','+items[2], q);
+                        _cqzWorked.insert(items[3],q);
+                        _ituzWorked.insert(items[4],q);
                     }
                     if (q.gridsquare.length() > 3) { // grid exists
                         _gridsWorked.insert(q.gridsquare.left(4).toUpper(),q);
@@ -128,7 +133,10 @@ void ADIF::add(const QString call, const QString band, const QString mode, const
     _counts.insert(q.mode,_counts.value(q.mode,0)+1);
     QString country = _countries.find(Radio::effective_prefix(q.call));
     if (!country.isEmpty ()) {
-        _countriesWorked.insert(country, q);
+        auto items = country.split(',');
+        _countriesWorked.insert(items[0]+','+items[1]+','+items[2], q);
+        _cqzWorked.insert(items[3],q);
+        _cqzWorked.insert(items[4],q);
     }
     if (q.gridsquare.length() > 3) {
         _gridsWorked.insert(q.gridsquare.left(4).toUpper(),q);
@@ -215,6 +223,58 @@ bool ADIF::getData(const QString call, QString &gridsquare, QString &name)
         }
         return true;
     }
+    return false;
+}    
+
+// return true if in the log same band and mode
+bool ADIF::matchCqz(const QString Cqz, const QString band, const QString mode)
+{
+    QList<QSO> qsos = _cqzWorked.values(Cqz);
+    if (qsos.size()>0)
+    {
+        QSO q;
+        foreach(q,qsos) {
+            if (     (band.compare(q.band,Qt::CaseInsensitive) == 0)
+                  || (band.isEmpty ())
+                  || (q.band.isEmpty ()))
+            {
+                if (       (mode.compare(q.mode,Qt::CaseInsensitive)==0)
+                        || (mode.isEmpty ())
+                        || (q.mode.isEmpty ())) {
+//                    printf("Match Cqz %d %s|%s|%s -> %s|%s|%s\n",qsos.size(),Cqz.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
+//                        q.call.toStdString().c_str(),q.band.toStdString().c_str(),q.mode.toStdString().c_str());
+                    return true;
+                }
+            }
+        }
+    }
+//    printf("Match Cqz %d %s|%s|%s ->\n",qsos.size(),Cqz.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str());
+    return false;
+}    
+
+// return true if in the log same band and mode
+bool ADIF::matchItuz(const QString Ituz, const QString band, const QString mode)
+{
+    QList<QSO> qsos = _ituzWorked.values(Ituz);
+    if (qsos.size()>0)
+    {
+        QSO q;
+        foreach(q,qsos) {
+            if (     (band.compare(q.band,Qt::CaseInsensitive) == 0)
+                  || (band.isEmpty ())
+                  || (q.band.isEmpty ()))
+            {
+                if (       (mode.compare(q.mode,Qt::CaseInsensitive)==0)
+                        || (mode.isEmpty ())
+                        || (q.mode.isEmpty ())) {
+//                    printf("Match Ituz %d %s|%s|%s -> %s|%s|%s\n",qsos.size(),Ituz.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
+//                        q.call.toStdString().c_str(),q.band.toStdString().c_str(),q.mode.toStdString().c_str());
+                    return true;
+                }
+            }
+        }
+    }
+//    printf("Match Ituz %d %s|%s|%s ->\n",qsos.size(),Ituz.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str());
     return false;
 }    
 

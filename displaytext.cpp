@@ -151,6 +151,12 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     bool displayCountryName = m_config->countryName();
     bool displayCountryPrefix = m_config->countryPrefix();
 
+    bool displayNewCQZ = m_config->newCQZ();
+    bool displayNewCQZBand = m_config->newCQZBand();
+    bool displayNewCQZBandMode = m_config->newCQZBandMode();
+    bool displayNewITUZ = m_config->newITUZ();
+    bool displayNewITUZBand = m_config->newITUZBand();
+    bool displayNewITUZBandMode = m_config->newITUZBandMode();
     bool displayNewDXCC = m_config->newDXCC();
     bool displayNewDXCCBand = m_config->newDXCCBand();
     bool displayNewDXCCBandMode = m_config->newDXCCBandMode();
@@ -169,6 +175,8 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     bool displayWorkedStriked = m_config->workedStriked();
     bool displayWorkedUnderlined = m_config->workedUnderlined();
     bool displayWorkedDontShow = m_config->workedDontShow();
+    bool beepOnNewCQZ = m_config->beepOnNewCQZ();
+    bool beepOnNewITUZ = m_config->beepOnNewITUZ();
     bool beepOnNewDXCC = m_config->beepOnNewDXCC();
     bool beepOnNewGrid = m_config->beepOnNewGrid();
     bool beepOnNewPx = m_config->beepOnNewPx();
@@ -347,9 +355,13 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     } else checkCall = "";
     if (!checkCall.isEmpty ()) {
 
+        bool cqzB4 = true;
+        bool ituzB4 = true;
         bool countryB4 = true;
         bool pxB4 = true;
         bool callB4 = true;
+        bool cqzB4BandMode = true;
+        bool ituzB4BandMode = true;
         bool countryB4BandMode = true;
         bool pxB4BandMode = true;
         bool callB4BandMode = true;
@@ -362,8 +374,8 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
         if (displayPotential && std_type == 3) {
             txtColor = m_config->color_StandardCall().name();
         }
-        if (!jt65bc && (displayCountryName || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx)) {
-            if (!displayNewDXCC && displayCountryName && !displayNewCall && !displayNewPx) {
+        if (!jt65bc && (displayCountryName || displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx)) {
+            if (!displayNewCQZ && !displayNewITUZ && !displayNewDXCC && displayCountryName && !displayNewCall && !displayNewPx) {
                         logBook.getDXCC(/*in*/ checkCall, /*out*/ countryName);
                     }
             if (app_mode == "JT9+JT65") {
@@ -374,6 +386,32 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 }
             } else {
                 checkMode = app_mode;
+            }
+            if (displayNewCQZ) {
+                if (displayNewCQZBand || displayNewCQZBandMode) {
+                    if (displayNewCQZBand && displayNewCQZBandMode) {
+                        logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/dialFreq,checkMode);
+                    } else if (displayNewCQZBand){
+                        logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/dialFreq);
+                    } else {
+                        logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/0,checkMode);
+                    }
+                } else {
+                    logBook.matchCQZ(/*in*/ checkCall, /*out*/ countryName, cqzB4 ,cqzB4BandMode);
+                }
+            }
+            if (displayNewITUZ) {
+                if (displayNewITUZBand || displayNewITUZBandMode) {
+                    if (displayNewITUZBand && displayNewITUZBandMode) {
+                        logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/dialFreq,checkMode);
+                    } else if (displayNewITUZBand){
+                        logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/dialFreq);
+                    } else {
+                        logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/0,checkMode);
+                    }
+                } else {
+                    logBook.matchITUZ(/*in*/ checkCall, /*out*/ countryName, ituzB4 ,ituzB4BandMode);
+                }
             }
             if (displayNewDXCC) {
                 if (displayNewDXCCBand || displayNewDXCCBandMode) {
@@ -428,7 +466,7 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 }
             }
 
-            if (displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx) {
+            if (displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx) {
 //Worked
                 if ((displayPotential && std_type == 3) || (std_type != 3)) {
                     if (displayWorkedColor) {
@@ -441,7 +479,83 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                     }
                 } else if (displayWorkedColor && m_config->otherMessagesMarker()) servis += m_config->color_WorkedCall().name();
 
-                if (displayNewDXCC && !countryB4) {
+                if (displayNewCQZ && !cqzB4) {
+                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                        forceBold = true;
+                        bgColor = m_config->color_NewCQZ().name();
+                        if (!lotw.isEmpty ()) priority = 31;
+                        else priority = 30;
+                        strikethrough = false;
+                        underlined = false;
+                        actwind = true;
+                        if (beepOnNewCQZ) {
+                            beep = true;
+                        }
+                    }
+                    else if (m_config->otherMessagesMarker ()) {
+                        servis = servis.left(1) + m_config->color_NewCQZ().name();
+                        if (!lotw.isEmpty ()) priority = 31;
+                        else priority = 30;
+                        new_marker = true;
+                    }
+                } else if ((displayNewCQZBand || displayNewCQZBandMode) && !cqzB4BandMode) {
+                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                        forceBold = true;
+                        bgColor = m_config->color_NewCQZBand().name();
+                        if (!lotw.isEmpty ()) priority = 29;
+                        else priority = 28;
+                        strikethrough = false;
+                        underlined = false;
+                        actwind = true;
+                        if (beepOnNewCQZ) {
+                            beep = true;
+                        }
+                    }
+                    else if (m_config->otherMessagesMarker ()) {
+                        servis = servis.left(1) + m_config->color_NewCQZBand().name();
+                        if (!lotw.isEmpty ()) priority = 29;
+                        else priority = 28;
+                        new_marker = true;
+                    }
+                } else if (displayNewITUZ && !ituzB4) {
+                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                        forceBold = true;
+                        bgColor = m_config->color_NewITUZ().name();
+                        if (!lotw.isEmpty ()) priority = 27;
+                        else priority = 26;
+                        strikethrough = false;
+                        underlined = false;
+                        actwind = true;
+                        if (beepOnNewITUZ) {
+                            beep = true;
+                        }
+                    }
+                    else if (m_config->otherMessagesMarker ()) {
+                        servis = servis.left(1) + m_config->color_NewITUZ().name();
+                        if (!lotw.isEmpty ()) priority = 27;
+                        else priority = 26;
+                        new_marker = true;
+                    }
+                } else if ((displayNewITUZBand || displayNewITUZBandMode) && !ituzB4BandMode) {
+                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                        forceBold = true;
+                        bgColor = m_config->color_NewITUZBand().name();
+                        if (!lotw.isEmpty ()) priority = 25;
+                        else priority = 24;
+                        strikethrough = false;
+                        underlined = false;
+                        actwind = true;
+                        if (beepOnNewITUZ) {
+                            beep = true;
+                        }
+                    }
+                    else if (m_config->otherMessagesMarker ()) {
+                        servis = servis.left(1) + m_config->color_NewITUZBand().name();
+                        if (!lotw.isEmpty ()) priority = 25;
+                        else priority = 24;
+                        new_marker = true;
+                    }
+                } else if (displayNewDXCC && !countryB4) {
                     if ((displayPotential && std_type == 3) || std_type != 3) {
                         forceBold = true;
                         bgColor = m_config->color_NewDXCC().name();
@@ -662,7 +776,7 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
             }
         }
         if (!bwantedCall && !bwantedPrefix && !bwantedGrid && !bwantedCountry) {
-            if (m_config->hideContinents().contains(countryName.left(2)) && std_type != 2 && !jt65bc) {
+            if (m_config->hideContinents().contains(items[0]) && std_type != 2 && !jt65bc) {
                 show_line = false;
             } else if (m_config->enableCountryFilter() && std_type != 2 && !jt65bc) {
                 auto countries = m_config->countries ().split(',');

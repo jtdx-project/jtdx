@@ -32,6 +32,8 @@ class ADIF
         bool match(const QString call, const QString band="", const QString mode="");
         bool matchPx(const QString call, const QString band="", const QString mode="");
         bool getData(const QString call, QString &gridsquare, QString &name);
+        bool matchCqz(const QString Cqz, const QString band="", const QString mode="");
+        bool matchItuz(const QString Ituz, const QString band="", const QString mode="");
         bool matchCountry(const QString countryName, const QString band="", const QString mode="");
         bool matchGrid(const QString gridsquare, const QString band="", const QString mode="");
         QList<QString> getCallList();
@@ -51,6 +53,8 @@ class ADIF
 
         QHash<QString, int> _counts;
         QMultiHash<QString, QSO> _data;
+        QMultiHash<QString, QSO> _cqzWorked;
+        QMultiHash<QString, QSO> _ituzWorked;
         QMultiHash<QString, QSO> _countriesWorked;
         QMultiHash<QString, QSO> _gridsWorked;
         QMultiHash<QString, QSO> _pxsWorked;

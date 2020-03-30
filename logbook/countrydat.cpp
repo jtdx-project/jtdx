@@ -422,26 +422,61 @@ QString CountryDat::_extractContinent(const QString line)
     return "";
 }
 
-void CountryDat::_removeBrackets(QString &line, const QString a, const QString b)
+QString CountryDat::_extractITUZ(const QString line)
 {
+    int s1;
+    s1 = line.indexOf(':');
+    if (s1>=0){
+        s1 = line.indexOf(':',s1+1);
+        if (s1>=0){
+            s1 = line.indexOf(':',s1+1);
+            if (s1>=0){
+                 QString cont = line.mid(s1-2, 2);
+                 if (cont.size() == 1) cont = " " + cont;
+                 return cont;
+            }
+        }
+    }
+    return "";
+}
+
+QString CountryDat::_extractCQZ(const QString line)
+{
+    int s1;
+    s1 = line.indexOf(':');
+    if (s1>=0){
+        s1 = line.indexOf(':',s1+1);
+        if (s1>=0){
+             QString cont = line.mid(s1-2, 2);
+             if (cont.size() == 1) cont = " " + cont;
+             return cont;
+        }
+    }
+    return "";
+}
+
+QString CountryDat::_removeBrackets(QString &line, const QString a, const QString b)
+{
+    QString res = "";
     int s1 = line.indexOf(a);
     while (s1 >= 0)
     {
       int s2 = line.indexOf(b);
+      res += line.mid(s1+1,s2-s1-1);
       line = line.left(s1) + line.mid(s2+1,-1);
       s1 = line.indexOf(a);
     }
+    return res;
 }    
 
 QStringList CountryDat::_extractPrefix(QString &line, bool &more)
 {
+    QString a;
     line = line.remove(" \n");
     line = line.replace(" ","");
 
-    _removeBrackets(line,"(",")");
-    _removeBrackets(line,"[","]");
-    _removeBrackets(line,"<",">");
-    _removeBrackets(line,"~","~");
+    a = _removeBrackets(line,"<",">");
+    a = _removeBrackets(line,"~","~");
 
     int s1 = line.indexOf(';');
     more = true;
@@ -472,8 +507,11 @@ void CountryDat::load()
           {
             QString line2 = in.readLine();
               
-            QString name;
-            name = _extractContinent(line1)+','+_extractMasterPrefix(line1).trimmed()+','+_extractName(line1).trimmed();
+            QString name,cqz,ituz,continent;
+            cqz = _extractCQZ(line1);
+            ituz = _extractITUZ(line1);
+            continent = _extractContinent(line1);
+            name = _extractMasterPrefix(line1).trimmed()+','+_extractName(line1).trimmed();
             if (!name.isEmpty ())
             {
                 bool more = true;
@@ -486,11 +524,18 @@ void CountryDat::load()
                         line2 = in.readLine();
                 }
 
-                QString p;
+                QString p,_cqz,_ituz,_continent;
                 foreach(p,prefixs)
                 {
-                    if (!p.isEmpty ())
-                        _data.insert(p,name);
+                    if (!p.isEmpty ()) {
+                        _cqz = _removeBrackets(p,"(",")");
+                        if (_cqz.isEmpty()) _cqz = cqz;
+                        _ituz = _removeBrackets(p,"[","]");
+                        if (_ituz.isEmpty()) _ituz = ituz;
+                        _continent = _removeBrackets(p,"{","}");
+                        if (_continent.isEmpty()) _continent = continent;                       
+                        _data.insert(p,_continent+','+name+','+_cqz+','+_ituz);
+                    }
                 }
             }
           }
@@ -540,7 +585,7 @@ QString CountryDat::find(const QString prefix)
 	
        pf = pf.left(pf.length()-1);
 	 }
-	 return "  ,?,"+_name.value("where?","where?");
+	 return "  ,?,"+_name.value("where?","where?")+",  ,  ";
 }	   
 // return last lotw date else ""
 QString CountryDat::find2(const QString call)

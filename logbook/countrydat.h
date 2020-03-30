@@ -31,7 +31,9 @@ private:
   QString _extractName(const QString line);
   QString _extractMasterPrefix(const QString line);
   QString _extractContinent(const QString line);
-  void _removeBrackets(QString &line, const QString a, const QString b);
+  QString _extractCQZ(const QString line);
+  QString _extractITUZ(const QString line);
+  QString _removeBrackets(QString &line, const QString a, const QString b);
   QStringList _extractPrefix(QString &line, bool &more);
 
   QString _filename,_filename2;
