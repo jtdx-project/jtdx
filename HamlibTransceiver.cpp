@@ -39,7 +39,7 @@ namespace
   {
     QString message;
     static char constexpr fmt[] = "Hamlib: %s";
-    message = message.vsprintf (format, ap).trimmed ();
+    message = message.vasprintf (format, ap).trimmed ();
 
     switch (level)
       {

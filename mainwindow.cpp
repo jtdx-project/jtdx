@@ -438,6 +438,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   connect (ui->actionExit, &QAction::triggered, this, &QMainWindow::close);
 
   // parts of the rig error message box that are fixed
+
   m_rigErrorMessageBox.setInformativeText (tr ("Do you want to reconfigure the radio interface?"));
   m_rigErrorMessageBox.setStandardButtons (QMessageBox::Cancel | QMessageBox::Ok | QMessageBox::Retry);
   m_rigErrorMessageBox.setDefaultButton (QMessageBox::Ok);
@@ -6812,7 +6813,7 @@ void MainWindow::handle_transceiver_failure (QString const& reason)
   m_rigOk=false;
   ui->readFreq->setEnabled (true);
   haltTx("Rig control error: " + reason + " ");
-  rigFailure ("Rig Control Error", reason);
+  rigFailure (tr("Rig Control Error"), reason);
 }
 
 void MainWindow::rigFailure (QString const& reason, QString const& detail)
@@ -6825,6 +6826,8 @@ void MainWindow::rigFailure (QString const& reason, QString const& detail)
   } else {
       m_rigErrorMessageBox.setText (reason);
       m_rigErrorMessageBox.setDetailedText (detail);
+      QMessageBox::tr("Show Details...");
+      QMessageBox::tr("Hide Details...");
 
       // don't call slot functions directly to avoid recursion
       switch (m_rigErrorMessageBox.exec ())
