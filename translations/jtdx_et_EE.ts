@@ -6710,7 +6710,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Uute eesliidete kontrollimine ja esiletõstmine</translation>
+        <translation>Kontrolli ja tõsta esile uued prefiksid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
@@ -6730,7 +6730,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
         <source>Check and highlight new calls</source>
-        <translation>Uute sidede kontrollimine ja esiletõstmine</translation>
+        <translation>Kontrolli ja tõsta esile uued kutsungid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3417"/>
@@ -6795,7 +6795,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
         <source>Inverse text/background color</source>
-        <translation>Teksti / tausta värv vastupidine</translation>
+        <translation>Vaheta teksti / tausta värv omavahel</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3500"/>
