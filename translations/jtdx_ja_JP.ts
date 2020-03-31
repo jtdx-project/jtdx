@@ -4626,7 +4626,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6816"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>リグコントロールエラー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6961"/>
@@ -4776,12 +4776,12 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="6829"/>
         <source>Show Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細を表示する...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6830"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細を隠す...</translation>
     </message>
 </context>
 <context>
