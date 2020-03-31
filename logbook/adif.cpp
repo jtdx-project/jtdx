@@ -136,7 +136,7 @@ void ADIF::add(const QString call, const QString band, const QString mode, const
         auto items = country.split(',');
         _countriesWorked.insert(items[0]+','+items[1]+','+items[2], q);
         _cqzWorked.insert(items[3],q);
-        _cqzWorked.insert(items[4],q);
+        _ituzWorked.insert(items[4],q);
     }
     if (q.gridsquare.length() > 3) {
         _gridsWorked.insert(q.gridsquare.left(4).toUpper(),q);
