@@ -70,28 +70,28 @@
     <message>
         <location filename="../Configuration.cpp" line="1177"/>
         <source>Create temporary directory error: </source>
-        <translation>創建臨時目錄錯誤: </translation>
+        <translation>創建臨時目錄出錯誤: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1183"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation>創建臨時目錄錯誤:
+        <translation>創建臨時目錄出錯誤:
 %1
 另一個應用程序可能正在鎖定目錄</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1200"/>
         <source>Create data directory error: </source>
-        <translation>創建數據目錄錯誤: </translation>
+        <translation>創建數據目錄出錯誤: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1209"/>
         <location filename="../Configuration.cpp" line="1220"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>創建目錄錯誤 &quot;</translation>
+        <translation>創建目錄出錯誤 &quot;</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1386"/>
@@ -218,7 +218,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>在那里?</translation>
+        <translation>不詳?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2110,7 +2110,7 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation>網址錯誤</translation>
+        <translation>網址出錯誤</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
@@ -2129,12 +2129,12 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation>JSON錯誤</translation>
+        <translation>JSON出錯誤</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation>內容文件語法錯誤 %1 字符偏移量 %2</translation>
+        <translation>內容文件語法出錯誤 %1 字符偏移量 %2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
@@ -2144,14 +2144,14 @@ Format:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation>文件系統錯誤</translation>
+        <translation>文件系統出錯誤</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
         <translation>未能打開 &quot;%1&quot;
-錯誤: %2 - %3</translation>
+出錯誤: %2 - %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
@@ -2335,112 +2335,112 @@ Error: %2 - %3</source>
         <location filename="../HamlibTransceiver.cpp" line="209"/>
         <location filename="../HamlibTransceiver.cpp" line="286"/>
         <source>Hamlib initialisation error</source>
-        <translation>Hamlib 初始化誤差</translation>
+        <translation>Hamlib 初始化出錯誤</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="249"/>
         <source>Command completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>命令成功完成</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="250"/>
         <source>Invalid parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>無效參數</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Invalid configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>配置無效</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Memory shortage</source>
-        <translation type="unfinished"></translation>
+        <translation>記憶體不足</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Feature not implemented</source>
-        <translation type="unfinished"></translation>
+        <translation>功能未實現</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Communication timed out</source>
-        <translation type="unfinished"></translation>
+        <translation>通信超時</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>IO 出錯誤</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Internal Hamlib error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hamlib 內部出錯誤</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>Protocol error</source>
-        <translation type="unfinished"></translation>
+        <translation>協定出錯誤</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Command rejected by the rig</source>
-        <translation type="unfinished"></translation>
+        <translation>被無線電設備拒絕的命令</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation type="unfinished"></translation>
+        <translation>命令已執行, 但 arg 截斷, 結果不能保證</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Feature not available</source>
-        <translation type="unfinished"></translation>
+        <translation>功能不可用</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Target VFO unaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>目標 VFO 無法訪問</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Communication bus error</source>
-        <translation type="unfinished"></translation>
+        <translation>通信匯流排出錯誤</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Communication bus collision</source>
-        <translation type="unfinished"></translation>
+        <translation>通信匯流排碰撞</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>空無線電設備控制碼或無效指標參數</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>不正確 VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Argument out of domain of func</source>
-        <translation type="unfinished"></translation>
+        <translation>參數功能範圍外</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="313"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation>Hamlib 設置文件錯誤: %1 字符偏移量 %2</translation>
+        <translation>Hamlib 設置文件出錯誤: %1 字符偏移量 %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="319"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
-        <translation>Hamlib 設置文件錯誤: 頂層必須是 JSON 對象</translation>
+        <translation>Hamlib 設置文件出錯誤: 頂層必須是 JSON 對象</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="331"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
-        <translation>Hamlib 設置文件錯誤: 配置必須是JSON對象</translation>
+        <translation>Hamlib 設置文件出錯誤: 配置必須是JSON對象</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="393"/>
@@ -2450,7 +2450,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="444"/>
         <source>Hamlib error: %1 while %2</source>
-        <translation>Hamlib 錯誤: %1 當 %2</translation>
+        <translation>Hamlib 出錯誤: %1 當 %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="454"/>
@@ -4328,12 +4328,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="736"/>
         <source>Error Writing WAV File</source>
-        <translation>寫入 WAV 文件時出錯</translation>
+        <translation>寫入 WAV 文件時出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
         <source>Error Killing jtdxjt9.exe Process</source>
-        <translation>結束 jtdxjt9.exe 過程出錯</translation>
+        <translation>結束 jtdxjt9.exe 過程出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="894"/>
@@ -4369,7 +4369,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="934"/>
         <source>Error removing &quot;%1&quot;</source>
-        <translation>刪除時出錯 &quot;%1&quot;</translation>
+        <translation>刪除時出錯誤 &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="935"/>
@@ -4396,7 +4396,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="6781"/>
         <location filename="../mainwindow.cpp" line="6979"/>
         <source>File Open Error</source>
-        <translation>文件打開錯誤</translation>
+        <translation>文件打開出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1677"/>
@@ -4414,17 +4414,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1781"/>
         <source>Error saving c2 file</source>
-        <translation>保存c2文件出錯</translation>
+        <translation>保存c2文件出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1857"/>
         <source>Error in SoundInput</source>
-        <translation>聲音輸入出錯</translation>
+        <translation>聲音輸入出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1861"/>
         <source>Error in SoundOutput</source>
-        <translation>聲音輸出錯誤</translation>
+        <translation>聲音輸出錯誤誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1947"/>
@@ -4434,7 +4434,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2464"/>
         <source>Subprocess Error</source>
-        <translation>子流程錯誤</translation>
+        <translation>子流程出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2465"/>
@@ -4452,7 +4452,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2485"/>
         <source>Subprocess error</source>
-        <translation>子進程錯誤</translation>
+        <translation>子進程出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2564"/>
@@ -4472,7 +4472,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2716"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation>沒有從磁盤讀取數據. 文件格式錯誤?</translation>
+        <translation>沒有從磁盤讀取數據. 文件格式出錯誤?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2723"/>
@@ -4668,7 +4668,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="5746"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation>將通聯 ADIF 數據發送到輔助 UDP 服務器時出錯</translation>
+        <translation>將通聯 ADIF 數據發送到輔助 UDP 服務器時出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5746"/>
@@ -4724,7 +4724,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6816"/>
         <source>Rig Control Error</source>
-        <translation>無線電設備控制錯誤</translation>
+        <translation>無線電設備控制出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6892"/>
@@ -4750,19 +4750,19 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7185"/>
         <source>Network Error</source>
-        <translation>網絡錯誤</translation>
+        <translation>網絡出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7186"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation>錯誤: %1
+        <translation>出錯誤: %1
 UDP 服務器 %2:%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7320"/>
         <source>File Error</source>
-        <translation>文件錯誤</translation>
+        <translation>文件出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7531"/>
@@ -4789,7 +4789,7 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
-        <translation>無線電設備意外錯誤</translation>
+        <translation>無線電設備意外出錯誤</translation>
     </message>
 </context>
 <context>
@@ -4820,7 +4820,7 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../main.cpp" line="319"/>
         <source>Unexpected error</source>
-        <translation>意外錯誤</translation>
+        <translation>意外出錯誤</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
@@ -4840,27 +4840,27 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation>讀取瀑布調色板文件時出錯 &quot;%1:%2&quot; 太多顏色.</translation>
+        <translation>讀取瀑布調色板文件時出錯誤 &quot;%1:%2&quot; 太多顏色.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation>讀取瀑布調色板文件時出錯 &quot;%1:%2&quot; 無效的三元組.</translation>
+        <translation>讀取瀑布調色板文件時出錯誤 &quot;%1:%2&quot; 無效的三元組.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation>讀取瀑布調色板文件時出錯 &quot;%1:%2&quot; 無效的顏色.</translation>
+        <translation>讀取瀑布調色板文件時出錯誤 &quot;%1:%2&quot; 無效的顏色.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>讀取瀑布調色板文件時出錯 &quot;%1&quot;: %2.</translation>
+        <translation>讀取瀑布調色板文件時出錯誤 &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>讀取瀑布調色板文件時出錯 &quot;%1&quot;: %2.</translation>
+        <translation>讀取瀑布調色板文件時出錯誤 &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -4873,7 +4873,7 @@ UDP 服務器 %2:%3</translation>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation>文件系統錯誤</translation>
+        <translation>文件系統出錯誤</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -4884,7 +4884,7 @@ Error(%3): %4</source>
         <translation>無法重命名文件:
 &quot;%1&quot;
 到: &quot;%2&quot;
-錯誤(%3): %4</translation>
+出錯誤(%3): %4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
@@ -4898,7 +4898,7 @@ Error(%3): %4</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation>網絡錯誤</translation>
+        <translation>網絡出錯誤</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
@@ -4924,7 +4924,7 @@ Error(%3): %4</source>
 Error(%2): %3</source>
         <translation>無法打開文件:
 &quot;%1&quot;
-錯誤(%2): %3</translation>
+出錯誤(%2): %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
@@ -4940,7 +4940,7 @@ Error(%2): %3</source>
 Error(%2): %3</source>
         <translation>無法寫入文件:
 &quot;%1&quot;
-錯誤(%2): %3</translation>
+出錯誤(%2): %3</translation>
     </message>
 </context>
 <context>
@@ -4956,12 +4956,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation>打開音頻輸入設備時出錯.</translation>
+        <translation>打開音頻輸入設備時出錯誤.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation>從音頻輸入設備讀取時出錯.</translation>
+        <translation>從音頻輸入設備讀取時出錯誤.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
@@ -4971,7 +4971,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation>不可恢復的錯誤, 音頻輸入設備此時不可用.</translation>
+        <translation>不可恢復的出錯誤, 音頻輸入設備此時不可用.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
@@ -5011,7 +5011,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="149"/>
         <source>Error</source>
-        <translation>錯誤</translation>
+        <translation>出錯誤</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="153"/>
@@ -5024,12 +5024,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation>打開音頻輸出設備時出錯.</translation>
+        <translation>打開音頻輸出設備時出錯誤.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation>寫入音頻輸出設備期間出錯.</translation>
+        <translation>寫入音頻輸出設備期間出錯誤.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
@@ -5039,7 +5039,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="31"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation>不可恢復錯誤, 音頻輸出設備此時不可用.</translation>
+        <translation>不可恢復出錯誤, 音頻輸出設備此時不可用.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
@@ -5074,7 +5074,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Error</source>
-        <translation>錯誤</translation>
+        <translation>出錯誤</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
@@ -5153,7 +5153,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
-        <translation>無線電設備意外錯誤</translation>
+        <translation>無線電設備意外出錯誤</translation>
     </message>
 </context>
 <context>
@@ -5398,7 +5398,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;復合呼號類型2是那些前綴或後綴不包括在允許的決選名單中 (請參閱幫助-&amp; gt; 加載項前綴和後綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2復合呼號, 而不是基本呼號.它僅適用於類型為2的復合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 CQ 調用的信息的生成方式.生成的信息 6 (CQ) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標准信息, 而犧牲了另一條信息, 如 dx 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 dx 呼號, 這在答復 CQ 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味着你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日誌是錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請注意, 您的 qso 合作伙伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;復合呼號類型2是那些前綴或後綴不包括在允許的決選名單中 (請參閱幫助-&amp; gt; 加載項前綴和後綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2復合呼號, 而不是基本呼號.它僅適用於類型為2的復合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 CQ 調用的信息的生成方式.生成的信息 6 (CQ) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標准信息, 而犧牲了另一條信息, 如 dx 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 dx 呼號, 這在答復 CQ 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味着你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日誌是出錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請注意, 您的 qso 合作伙伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -5981,7 +5981,7 @@ this setting allows you to select which audio input will be used
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
         <translation>不允許程序設置無線電設備模式
-(不建議使用但如果選擇了錯誤的模式
+(不建議使用但如果選擇了出錯誤的模式
 或帶寬).</translation>
     </message>
     <message>
@@ -7830,12 +7830,12 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation>嚴重錯誤</translation>
+        <translation>嚴重出錯誤</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation>意外的嚴重錯誤</translation>
+        <translation>意外的嚴重出錯誤</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
