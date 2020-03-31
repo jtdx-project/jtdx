@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1161"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1162"/>
         <source>&amp;Cancel</source>
-        <translation>Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1177"/>
@@ -2047,22 +2047,22 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation>&amp;Импорт</translation>
+        <translation>&amp;Импорт...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Экспорт</translation>
+        <translation>&amp;Экспорт...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2207,12 +2207,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="223"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="224"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
 </context>
 <context>
@@ -2333,94 +2333,94 @@ Error: %2 - %3</source>
     <name>HamlibTransceiver</name>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="209"/>
-        <location filename="../HamlibTransceiver.cpp" line="286"/>
+        <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Hamlib initialisation error</source>
         <translation>Ошибка инициализации Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="249"/>
         <source>Command completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда успешно выполнена</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="250"/>
         <source>Invalid parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверный параметр</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Invalid configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверная конфигурация</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Memory shortage</source>
-        <translation type="unfinished"></translation>
+        <translation>Нехватка памяти</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Feature not implemented</source>
-        <translation type="unfinished"></translation>
+        <translation>Функция не реализована</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Communication timed out</source>
-        <translation type="unfinished"></translation>
+        <translation>Время коннекта истекло</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка ввода/вывода</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Internal Hamlib error</source>
-        <translation type="unfinished"></translation>
+        <translation>Внутрення ошибка библиотеки Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>Protocol error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка протокола обмена</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Command rejected by the rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда отклонена трансивером</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда выполнена, но аргумент обрезан, результат не гарантирован</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Feature not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Функция недоступна</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Target VFO unaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Целевой VFO недоступен</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Communication bus error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка шины связи</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Communication bus collision</source>
-        <translation type="unfinished"></translation>
+        <translation>Коллизии при работ шины свсязи</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Нулевой дискриптор трансивера или неверный параметр указателя</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверный VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
@@ -2480,7 +2480,7 @@ Error: %2 - %3</source>
         <translation>получение частоты другого VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="548"/>
+        <location filename="../HamlibTransceiver.cpp" line="528"/>
         <source>getting other VFO mode</source>
         <translation>Получение режима другого VFO</translation>
     </message>
@@ -2681,12 +2681,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="25"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="26"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -2699,7 +2699,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -4353,12 +4353,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="447"/>
@@ -4729,7 +4729,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6816"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка управления трансивером</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6892"/>
@@ -4802,12 +4802,12 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6829"/>
         <source>Show Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать подробности...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6830"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрыть подробности...</translation>
     </message>
 </context>
 <context>
@@ -5112,12 +5112,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="267"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="268"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Отменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
 </context>
 <context>
@@ -5996,7 +5996,7 @@ or bandwidth is selected).</source>
         <location filename="../Configuration.ui" line="1405"/>
         <location filename="../Configuration.ui" line="1464"/>
         <source>None</source>
-        <translation type="unfinished">Не сохранять</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1415"/>
@@ -6735,7 +6735,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>Check and highlight new DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Новая DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>

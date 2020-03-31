@@ -4464,7 +4464,8 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="2724"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation>ディレクトリ内の全ての*.wav ， *.c2 ファイルを削除してもいいですか</translation>
+        <translation>ディレクトリ内の全ての*.wav ， *.c2 ファイルを削除してもいいですか
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2760"/>
