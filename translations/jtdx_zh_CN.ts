@@ -2333,177 +2333,267 @@ Error: %2 - %3</source>
     <name>HamlibTransceiver</name>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="209"/>
-        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <location filename="../HamlibTransceiver.cpp" line="286"/>
         <source>Hamlib initialisation error</source>
         <translation>Hamlib 初始化误差</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="293"/>
+        <location filename="../HamlibTransceiver.cpp" line="249"/>
+        <source>Command completed successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="250"/>
+        <source>Invalid parameter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="251"/>
+        <source>Invalid configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="252"/>
+        <source>Memory shortage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="253"/>
+        <source>Feature not implemented</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="254"/>
+        <source>Communication timed out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="255"/>
+        <source>IO error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="256"/>
+        <source>Internal Hamlib error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="257"/>
+        <source>Protocol error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="258"/>
+        <source>Command rejected by the rig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="259"/>
+        <source>Command performed, but arg truncated, result not guaranteed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="260"/>
+        <source>Feature not available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="261"/>
+        <source>Target VFO unaccessible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="262"/>
+        <source>Communication bus error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="263"/>
+        <source>Communication bus collision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="264"/>
+        <source>NULL RIG handle or invalid pointer parameter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="265"/>
+        <source>Invalid VFO</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <source>Argument out of domain of func</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="313"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
         <translation>Hamlib 设置文件错误: %1 字符偏移量 %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="299"/>
+        <location filename="../HamlibTransceiver.cpp" line="319"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
         <translation>Hamlib 设置文件错误: 顶层必须是 JSON 对象</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="311"/>
+        <location filename="../HamlibTransceiver.cpp" line="331"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
         <translation>Hamlib 设置文件错误: 配置必须是JSON对象</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="373"/>
+        <location filename="../HamlibTransceiver.cpp" line="393"/>
         <source>Unsupported CAT type</source>
         <translation>不支持 CAT 类型</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="424"/>
+        <location filename="../HamlibTransceiver.cpp" line="444"/>
         <source>Hamlib error: %1 while %2</source>
         <translation>Hamlib 错误: %1 当 %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="434"/>
+        <location filename="../HamlibTransceiver.cpp" line="454"/>
         <source>opening connection to rig</source>
         <translation>打开连接无线电设备</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="483"/>
+        <location filename="../HamlibTransceiver.cpp" line="503"/>
         <source>getting current frequency</source>
         <translation>获取当前频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="487"/>
+        <location filename="../HamlibTransceiver.cpp" line="507"/>
         <source>getting current mode</source>
         <translation>获取当前模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="516"/>
         <location filename="../HamlibTransceiver.cpp" line="536"/>
+        <location filename="../HamlibTransceiver.cpp" line="556"/>
         <source>exchanging VFOs</source>
         <translation>在 VFOs 之间切换</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="524"/>
-        <location filename="../HamlibTransceiver.cpp" line="1001"/>
+        <location filename="../HamlibTransceiver.cpp" line="544"/>
+        <location filename="../HamlibTransceiver.cpp" line="1021"/>
         <source>getting other VFO frequency</source>
         <translation>获取其他 VFO 频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="528"/>
+        <location filename="../HamlibTransceiver.cpp" line="548"/>
         <source>getting other VFO mode</source>
         <translation>获取其他 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="541"/>
+        <location filename="../HamlibTransceiver.cpp" line="561"/>
         <source>setting current VFO</source>
         <translation>设置当前 VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="550"/>
+        <location filename="../HamlibTransceiver.cpp" line="570"/>
         <source>getting frequency</source>
         <translation>获取频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="554"/>
+        <location filename="../HamlibTransceiver.cpp" line="574"/>
         <source>getting mode</source>
         <translation>获取模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="571"/>
-        <location filename="../HamlibTransceiver.cpp" line="936"/>
+        <location filename="../HamlibTransceiver.cpp" line="591"/>
+        <location filename="../HamlibTransceiver.cpp" line="956"/>
         <source>getting current VFO</source>
         <translation>获取当前 VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="615"/>
-        <location filename="../HamlibTransceiver.cpp" line="623"/>
-        <location filename="../HamlibTransceiver.cpp" line="637"/>
-        <location filename="../HamlibTransceiver.cpp" line="979"/>
+        <location filename="../HamlibTransceiver.cpp" line="635"/>
+        <location filename="../HamlibTransceiver.cpp" line="643"/>
+        <location filename="../HamlibTransceiver.cpp" line="657"/>
+        <location filename="../HamlibTransceiver.cpp" line="999"/>
         <source>getting current VFO frequency</source>
         <translation>获取当前 VFO 频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="621"/>
-        <location filename="../HamlibTransceiver.cpp" line="636"/>
-        <location filename="../HamlibTransceiver.cpp" line="643"/>
-        <location filename="../HamlibTransceiver.cpp" line="722"/>
-        <location filename="../HamlibTransceiver.cpp" line="740"/>
-        <location filename="../HamlibTransceiver.cpp" line="801"/>
+        <location filename="../HamlibTransceiver.cpp" line="641"/>
+        <location filename="../HamlibTransceiver.cpp" line="656"/>
+        <location filename="../HamlibTransceiver.cpp" line="663"/>
+        <location filename="../HamlibTransceiver.cpp" line="742"/>
+        <location filename="../HamlibTransceiver.cpp" line="760"/>
+        <location filename="../HamlibTransceiver.cpp" line="821"/>
         <source>setting frequency</source>
         <translation>设置频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="730"/>
-        <location filename="../HamlibTransceiver.cpp" line="808"/>
-        <location filename="../HamlibTransceiver.cpp" line="880"/>
-        <location filename="../HamlibTransceiver.cpp" line="893"/>
+        <location filename="../HamlibTransceiver.cpp" line="750"/>
+        <location filename="../HamlibTransceiver.cpp" line="828"/>
+        <location filename="../HamlibTransceiver.cpp" line="900"/>
+        <location filename="../HamlibTransceiver.cpp" line="913"/>
         <source>getting current VFO mode</source>
         <translation>获取当前 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="736"/>
-        <location filename="../HamlibTransceiver.cpp" line="745"/>
-        <location filename="../HamlibTransceiver.cpp" line="814"/>
-        <location filename="../HamlibTransceiver.cpp" line="886"/>
-        <location filename="../HamlibTransceiver.cpp" line="899"/>
+        <location filename="../HamlibTransceiver.cpp" line="756"/>
+        <location filename="../HamlibTransceiver.cpp" line="765"/>
+        <location filename="../HamlibTransceiver.cpp" line="834"/>
+        <location filename="../HamlibTransceiver.cpp" line="906"/>
+        <location filename="../HamlibTransceiver.cpp" line="919"/>
         <source>setting current VFO mode</source>
         <translation>设置当前 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="788"/>
-        <location filename="../HamlibTransceiver.cpp" line="857"/>
+        <location filename="../HamlibTransceiver.cpp" line="808"/>
+        <location filename="../HamlibTransceiver.cpp" line="877"/>
         <source>setting/unsetting split mode</source>
         <translation>设置/取消 设置异频模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="799"/>
-        <location filename="../HamlibTransceiver.cpp" line="839"/>
+        <location filename="../HamlibTransceiver.cpp" line="819"/>
+        <location filename="../HamlibTransceiver.cpp" line="859"/>
         <source>setting split mode</source>
         <translation>设置异频模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="827"/>
+        <location filename="../HamlibTransceiver.cpp" line="847"/>
         <source>setting split TX frequency and mode</source>
         <translation>设置异频发射频率和模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="832"/>
+        <location filename="../HamlibTransceiver.cpp" line="852"/>
         <source>setting split TX frequency</source>
         <translation>设置异频发射频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="904"/>
+        <location filename="../HamlibTransceiver.cpp" line="924"/>
         <source>getting split TX VFO mode</source>
         <translation>获得异频发射 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="911"/>
+        <location filename="../HamlibTransceiver.cpp" line="931"/>
         <source>setting split TX VFO mode</source>
         <translation>设置异频发射 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1095"/>
+        <location filename="../HamlibTransceiver.cpp" line="1115"/>
         <source>getting PTT state</source>
         <translation>获取PTT 状态</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1128"/>
+        <location filename="../HamlibTransceiver.cpp" line="1148"/>
         <source>setting PTT on</source>
         <translation>设置PTT 开启</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1136"/>
+        <location filename="../HamlibTransceiver.cpp" line="1156"/>
         <source>setting PTT off</source>
         <translation>设置PTT 关闭</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1148"/>
+        <location filename="../HamlibTransceiver.cpp" line="1168"/>
         <source>setting a configuration item</source>
         <translation>设置配置项目</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1158"/>
+        <location filename="../HamlibTransceiver.cpp" line="1178"/>
         <source>getting a configuration item</source>
         <translation>获取配置项目</translation>
     </message>
@@ -2609,7 +2699,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="178"/>
@@ -2631,7 +2721,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果橙色或红色有无线电设备控制故障, 请单击以重置并读取拨号频率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果橙色或红色表示无线电设备控制故障, 请单击以重置并读取频率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
@@ -2656,7 +2746,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用此控件显示或隐藏点编辑线&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用此控件显示或隐藏Spot编辑行&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
@@ -2728,7 +2818,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
         <source>Add callsign and locator to database</source>
-        <translation>增加这呼号在数据库中的网格数据</translation>
+        <translation>增加这呼号及网格的数据在数据库中</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1044"/>
@@ -3635,7 +3725,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4620"/>
         <source>Open</source>
-        <translation>打开档案</translation>
+        <translation>打开文件</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4623"/>
@@ -3645,7 +3735,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4628"/>
         <source>Open next in directory</source>
-        <translation>打开下一个档案</translation>
+        <translation>打开下一个文件</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4631"/>
@@ -3655,7 +3745,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4636"/>
         <source>Decode remaining files in directory</source>
-        <translation>打开余下档案</translation>
+        <translation>打开余下文件</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4639"/>
@@ -3876,7 +3966,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5001"/>
         <source>Open log directory</source>
-        <translation>打开日志档目录</translation>
+        <translation>打开日志文件目录</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5009"/>
@@ -4634,7 +4724,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6816"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>无线电设备控制错误</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6892"/>
@@ -4707,12 +4797,12 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6829"/>
         <source>Show Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>显示详情...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6830"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏详情...</translation>
     </message>
 </context>
 <context>
@@ -5308,7 +5398,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;复合呼号类型2是那些前缀或后缀不包括在允许的决选名单中 (请参阅帮助-&amp; gt; 加载项前缀和后缀).&lt;p&gt;&lt;p&gt;此选项确定哪些生成的信息应包含完整类型2复合呼号, 而不是基本呼号.它仅适用于类型为2的复合呼号.&lt;/p&gt;&lt;p&gt;此选项控制用于应答 cq 调用的信息的生成方式.生成的信息 6 (cq) 和 5 (73) 将始终包含您的完整呼号.jt65 和 jt9 协议允许在您的完整呼叫中使用一些标准信息, 而牺牲了另一条信息, 如 dx 调用或您的定位器.&lt;/p&gt;&lt;p&gt;选择信息1省略 dx 呼号, 这在答复 cq 调用时可能是一个问题.选择信息3也会省略 dx 呼号, 此软件和其他软件的许多版本都不会提取报告.选择这两个都意味着你的完整呼号只会出现在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日志是错误的呼号.&lt;/p&gt;&lt;p&gt;这些选项都不是完美的, 信息3是最好的, 但请注意, 您的 qso 合作伙伴可能不会记录您发送的报告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;复合呼号类型2是那些前缀或后缀不包括在允许的决选名单中 (请参阅帮助-&amp; gt; 加载项前缀和后缀).&lt;p&gt;&lt;p&gt;此选项确定哪些生成的信息应包含完整类型2复合呼号, 而不是基本呼号.它仅适用于类型为2的复合呼号.&lt;/p&gt;&lt;p&gt;此选项控制用于应答 CQ 调用的信息的生成方式.生成的信息 6 (CQ) 和 5 (73) 将始终包含您的完整呼号.jt65 和 jt9 协议允许在您的完整呼叫中使用一些标准信息, 而牺牲了另一条信息, 如 dx 调用或您的定位器.&lt;/p&gt;&lt;p&gt;选择信息1省略 dx 呼号, 这在答复 cq 调用时可能是一个问题.选择信息3也会省略 dx 呼号, 此软件和其他软件的许多版本都不会提取报告.选择这两个都意味着你的完整呼号只会出现在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日志是错误的呼号.&lt;/p&gt;&lt;p&gt;这些选项都不是完美的, 信息3是最好的, 但请注意, 您的 qso 合作伙伴可能不会记录您发送的报告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -5398,7 +5488,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="369"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>将DXCC国家名称附加到解码的消息中.</translation>
+        <translation>将DXCC国家名称附加到解码的信息中.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="372"/>
@@ -5519,7 +5609,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="584"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation>73发出后用CW模式发放你呼号&amp;f</translation>
+        <translation>73发出后用CW模式发放你的呼号&amp;f</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
@@ -6075,7 +6165,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1805"/>
         <source>Audio files save directory</source>
-        <translation>声音档案储存目录</translation>
+        <translation>声音文件储存目录</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1811"/>
@@ -6163,7 +6253,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;预设情况下, 如果解码了有效的 &apos;新DXCC&apos; 消息, 别台回应我或解码的 CQ/73 信息的自动选择, 则忽略 CQ 的接收/定向CQ. 此选项消除了 定向CQ 处理自动选择中的 &apos;新 DXCC&apos; 异常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;预设情况下, 如果解码了有效的 &apos;新DXCC&apos; 信息, 别台回应我或解码的 CQ/73 信息的自动选择, 则忽略 CQ 的接收/定向CQ. 此选项消除了 定向CQ 处理自动选择中的 &apos;新 DXCC&apos; 异常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2118"/>
@@ -6536,7 +6626,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3013"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
-        <translation>有关如何为您的无线电设备确定这些因素的详细信息,请参阅 WSPR 文档附录C.</translation>
+        <translation>有关如何为您的无线电设备确定这些因素的详细信息,请参阅 WSPR 文件附录C.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3016"/>
@@ -6589,47 +6679,47 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>检查并突出显示新CQ区域</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3247"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>Check and highlight new ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>检查并突出显示新ITU区域</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3257"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3267"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示wsjtx_log.adi日志文件中不存在的 DXCC 国家/地区的消息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -6639,7 +6729,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.adi 日志文件的数据,突出显示与 DXCC 国家/地区的信息,这些信息在波段上是新的.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3220"/>
@@ -6654,7 +6744,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据 wsjtx_og.adi 日志文件中的数据,突出显示 DXCC 国家/地区的信息,这些信息在模式中是新的.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -6684,12 +6774,12 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3400"/>
         <location filename="../Configuration.ui" line="3440"/>
         <source>Beep as well</source>
-        <translation>发出Beep声</translation>
+        <translation>发出哔声</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 wsjtx_log.di 日志文件中不存在的网格突出显示信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -6699,17 +6789,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,使用波段上新的网格突出显示信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3347"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,使用在模式下是新的网格突出显示信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有 wsjtx_log.di 日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -6719,37 +6809,37 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,突出显示波段上新的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,突出显示波段上新的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示 wsjtx_log.di 日志文件中不存在的呼号的信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
         <source>Check and highlight new calls</source>
-        <translation>检查并突出显示新通联电台</translation>
+        <translation>检查并突出显示新呼号</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,使用波段上新的呼号突出显示信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据来自 wsjtx_log.di 日志文件的数据,使用模式中的新呼号突出显示信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用颜色通知信息中与曾经通联的DXCC,网格,呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用颜色显示曾经通联的 DXCC, 网格, 呼号的信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3450"/>
@@ -6759,7 +6849,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3457"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格、呼叫的信息将带有删除线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格, 呼叫的信息将带有删除线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3460"/>
@@ -6774,7 +6864,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格、呼叫的信息将带有下划线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格, 呼叫的信息将带有下划线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3473"/>
@@ -6784,7 +6874,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解码窗口中没有我呼号的信息, 并隐藏已曾经通联的DXCC、网格的信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解码窗口中没有我呼号的信息, 并隐藏已曾经通联的DXCC, 网格的信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
@@ -6804,22 +6894,22 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认值情况下,只检查 &quot;cq&quot; 和 &quot;mycall&quot; 信息,此设置还允许检查其他接收到的新 dxcc、网格、调用的标准信息.通知中使用的 &quot;其他标准信息&quot; 颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认值情况下只检查 &apos;CQ&apos; 和  &apos;我的呼号&apos; 信息, 此设置还允许检查其他接收到的新 DXCC, 网格, 调用的标准信息. 通知中使用的 &apos;其他标准信息&apos; 颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3503"/>
         <source>Highlight other standard messages</source>
-        <translation>突出显示其他标准消息</translation>
+        <translation>突出显示其他标准信息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在接收间隔内解码第一条信息后,立即使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在接收间隔内解码第一条信息后, 立即使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3526"/>
         <source>Beep on 1st decoded message</source>
-        <translation>第一解码信息发出Beep声</translation>
+        <translation>第一解码信息发出哔声</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3533"/>
@@ -6829,7 +6919,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3536"/>
         <source>Beep on my call</source>
-        <translation>有我呼号发出Beep声</translation>
+        <translation>有我呼号发出哔声</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3566"/>
@@ -6839,7 +6929,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3573"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用蓝色标记通知已解码的信息中是否有与正在进行的 qso 相关的呼号 (QSO的呼号在DX窗口中),带有我的呼号的其他传入呼叫将跟随红色标记.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用蓝色标记通知已解码的信息中是否有与正在进行通联的相关呼号 (通联的呼号在DX窗口中),带有我的呼号的其他传入呼叫将跟随红色标记.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3576"/>
@@ -6952,7 +7042,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3799"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为非 (&quot;CQ&quot; 和 &quot;MyCall&quot;) 标准信息设置文本颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为非 (&apos;CQ&apos; 和 &apos;我呼号&apos;) 标准信息设置文本颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3802"/>
@@ -6962,22 +7052,22 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3881"/>
         <source>New CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>新CQ区域</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3951"/>
         <source>New CQZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>新CQ区域 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4021"/>
         <source>New ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>新ITU地区</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4091"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>新ITU地区 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4161"/>
@@ -6987,7 +7077,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4231"/>
         <source>New DXCC on Band/Mode</source>
-        <translation>波段/模式 新DXCC</translation>
+        <translation>新DXCC 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4301"/>
@@ -6997,7 +7087,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4371"/>
         <source>New Grid on Band/Mode</source>
-        <translation>波段/模式 新网格</translation>
+        <translation>新网格 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4441"/>
@@ -7007,7 +7097,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4511"/>
         <source>New Prefix on Band/Mode</source>
-        <translation>波段/模式 新前缀</translation>
+        <translation>新前缀 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4581"/>
@@ -7017,7 +7107,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4651"/>
         <source>New Call on Band/Mode</source>
-        <translation>波段/模式 新呼号</translation>
+        <translation>新呼号 波段/模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4721"/>

@@ -5,7 +5,7 @@
 
 
 #include <QString>
-
+#include <QStringList>
 #include <hamlib/rig.h>
 
 #include "TransceiverFactory.hpp"
@@ -53,7 +53,7 @@ class HamlibTransceiver final
   struct RIGDeleter {static void cleanup (RIG *);};
   QScopedPointer<RIG, RIGDeleter> rig_;
 
-
+  QStringList errortable;
   bool back_ptt_port_;
   bool one_VFO_;
   bool is_dummy_;
