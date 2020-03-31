@@ -22,6 +22,18 @@ class LogBook
 {
 public:
     void init(const QString mycall,const QString mygrid,const QString mydate);
+    void matchCQZ(/*in*/ const QString call,
+              /*out*/ QString &countryName,
+                      bool &WorkedBefore,
+                      bool &WorkedBeforeBandMode,
+               /*in*/ double dialFreq=0,
+                      const QString mode="");
+    void matchITUZ(/*in*/ const QString call,
+              /*out*/ QString &countryName,
+                      bool &WorkedBefore,
+                      bool &WorkedBeforeBandMode,
+               /*in*/ double dialFreq=0,
+                      const QString mode="");
     void matchDXCC(/*in*/ const QString call,
               /*out*/ QString &countryName,
                       bool &WorkedBefore,

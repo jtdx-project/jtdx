@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1117"/>
+        <location filename="../Configuration.cpp" line="1161"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1118"/>
+        <location filename="../Configuration.cpp" line="1162"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1133"/>
+        <location filename="../Configuration.cpp" line="1177"/>
         <source>Create temporary directory error: </source>
         <translation>Ajutise kataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1139"/>
+        <location filename="../Configuration.cpp" line="1183"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,47 +82,47 @@ Another application may be locking the directory</source>
 Teine rakendus võib olla kataloogi lukustanud</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1156"/>
+        <location filename="../Configuration.cpp" line="1200"/>
         <source>Create data directory error: </source>
         <translation>Andmekataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1165"/>
-        <location filename="../Configuration.cpp" line="1176"/>
+        <location filename="../Configuration.cpp" line="1209"/>
+        <location filename="../Configuration.cpp" line="1220"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Kataloogi ei saa luua &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1330"/>
-        <location filename="../Configuration.cpp" line="1352"/>
-        <location filename="../Configuration.cpp" line="1388"/>
+        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1408"/>
+        <location filename="../Configuration.cpp" line="1444"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kustuta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1356"/>
-        <location filename="../Configuration.cpp" line="1392"/>
+        <location filename="../Configuration.cpp" line="1412"/>
+        <location filename="../Configuration.cpp" line="1448"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Lisa ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2499"/>
+        <location filename="../Configuration.cpp" line="2629"/>
         <source>Serial Port:</source>
         <translation>Jadaport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2500"/>
+        <location filename="../Configuration.cpp" line="2630"/>
         <source>Serial port used for CAT control</source>
         <translation>CAT-kontrolli jadaport</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2507"/>
+        <location filename="../Configuration.cpp" line="2637"/>
         <source>Network Server:</source>
         <translation>Võrguserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2508"/>
+        <location filename="../Configuration.cpp" line="2638"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -137,12 +137,12 @@ Vormingud:
 	[IPv6-aadress]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2520"/>
+        <location filename="../Configuration.cpp" line="2650"/>
         <source>USB Device:</source>
         <translation>USB-seade:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2521"/>
+        <location filename="../Configuration.cpp" line="2651"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -153,62 +153,62 @@ Vorming:
 	[VID[:PID[:TARNIJA[:TOODE]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2556"/>
+        <location filename="../Configuration.cpp" line="2686"/>
         <source>Invalid audio input device</source>
         <translation>Vale helisisend</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2563"/>
+        <location filename="../Configuration.cpp" line="2693"/>
         <source>Invalid audio output device</source>
         <translation>Vale heliväljund</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2569"/>
+        <location filename="../Configuration.cpp" line="2699"/>
         <source>Invalid PTT method</source>
         <translation>Vale PTT- meetod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2579"/>
+        <location filename="../Configuration.cpp" line="2709"/>
         <source>Invalid PTT port</source>
         <translation>Vale PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3052"/>
+        <location filename="../Configuration.cpp" line="3194"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3053"/>
+        <location filename="../Configuration.cpp" line="3195"/>
         <source>CQ in message</source>
         <translation>CQ sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4020"/>
+        <location filename="../Configuration.cpp" line="4378"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX dekodeeritud teksti fondi valik</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4595"/>
+        <location filename="../Configuration.cpp" line="4953"/>
         <source>Reset Working Frequencies</source>
         <translation>Töösageduste lähtestamine</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4596"/>
+        <location filename="../Configuration.cpp" line="4954"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Kas soovite tõesti loobuda oma praegustest töösagedustest ja asendada need vaikesagedustega?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4651"/>
+        <location filename="../Configuration.cpp" line="5009"/>
         <source>Save Directory</source>
         <translation>Salvesta kataloogi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4667"/>
+        <location filename="../Configuration.cpp" line="5025"/>
         <source>Failed to open connection to rig</source>
         <translation>Raadioga ühenduse loomine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4879"/>
+        <location filename="../Configuration.cpp" line="5237"/>
         <source>Rig failure</source>
         <translation>Raadio viga</translation>
     </message>
@@ -2338,182 +2338,272 @@ Viga: %2 - %3</translation>
     <name>HamlibTransceiver</name>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="209"/>
-        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <location filename="../HamlibTransceiver.cpp" line="286"/>
         <source>Hamlib initialisation error</source>
         <translation>Hamlibi lähtestamise viga</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="293"/>
+        <location filename="../HamlibTransceiver.cpp" line="249"/>
+        <source>Command completed successfully</source>
+        <translation>Käsk lõppes õnnestunult</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="250"/>
+        <source>Invalid parameter</source>
+        <translation>Vale/tundmatu parameeter</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="251"/>
+        <source>Invalid configuration</source>
+        <translation>Vale/tundmatu konfiguratsioon</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="252"/>
+        <source>Memory shortage</source>
+        <translation>Mälu otsas</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="253"/>
+        <source>Feature not implemented</source>
+        <translation>Featuur puudub</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="254"/>
+        <source>Communication timed out</source>
+        <translation>Ühendus aegus</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="255"/>
+        <source>IO error</source>
+        <translation>Sisendi/Väljundi viga</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="256"/>
+        <source>Internal Hamlib error</source>
+        <translation>Hamlib-i sisemine viga</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="257"/>
+        <source>Protocol error</source>
+        <translation>Protokolli viga</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="258"/>
+        <source>Command rejected by the rig</source>
+        <translation>Jaam keeldus käsust</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="259"/>
+        <source>Command performed, but arg truncated, result not guaranteed</source>
+        <translation>Käsk saadeti aga argument tühistati, tulemus võib olla miite oodatav</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="260"/>
+        <source>Feature not available</source>
+        <translation>Featuur pole saadaval</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="261"/>
+        <source>Target VFO unaccessible</source>
+        <translation>See VFO ei vasta</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="262"/>
+        <source>Communication bus error</source>
+        <translation>Ühendussiini viga</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="263"/>
+        <source>Communication bus collision</source>
+        <translation>Ühendussiinil konflikt</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="264"/>
+        <source>NULL RIG handle or invalid pointer parameter</source>
+        <translation>NULL Rigi driver või parameeter</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="265"/>
+        <source>Invalid VFO</source>
+        <translation>Vale/vigane VFO</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <source>Argument out of domain of func</source>
+        <translation>Argumenti pole selle funktsiooni parameetrites</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="313"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
         <translation>Hamlib seadete faili viga: %1 seade nihkes %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="299"/>
+        <location filename="../HamlibTransceiver.cpp" line="319"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
         <translation>Hamlib seadete faili viga: ülemine tase peab olema JSON-objekt</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="311"/>
+        <location filename="../HamlibTransceiver.cpp" line="331"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
         <translation>Hamlib seadete faili viga: config peab olema JSON-objekt</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="373"/>
+        <location filename="../HamlibTransceiver.cpp" line="393"/>
         <source>Unsupported CAT type</source>
         <translation>Toetamata CAT tüüpi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="424"/>
+        <location filename="../HamlibTransceiver.cpp" line="444"/>
         <source>Hamlib error: %1 while %2</source>
         <translatorcomment>Vajab analüüsi</translatorcomment>
-        <translation>Hamlibi viga: %1 while %2</translation>
+        <translation>Hamlibi viga: %1 kui %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="434"/>
+        <location filename="../HamlibTransceiver.cpp" line="454"/>
         <source>opening connection to rig</source>
-        <translation>ühendumine raadioga</translation>
+        <translation>avati ühendus raadioga</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="483"/>
+        <location filename="../HamlibTransceiver.cpp" line="503"/>
         <source>getting current frequency</source>
-        <translation>praeguse sageduse küsimine</translation>
+        <translation>küsiti praegust sagedust</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="487"/>
+        <location filename="../HamlibTransceiver.cpp" line="507"/>
         <source>getting current mode</source>
-        <translation>praeguse töörežiimi küsimine</translation>
+        <translation>küsiti praegust töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="516"/>
         <location filename="../HamlibTransceiver.cpp" line="536"/>
+        <location filename="../HamlibTransceiver.cpp" line="556"/>
         <source>exchanging VFOs</source>
-        <translation>VFO-de vahetamine</translation>
+        <translation>vahetati VFO-sid</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="524"/>
-        <location filename="../HamlibTransceiver.cpp" line="1001"/>
+        <location filename="../HamlibTransceiver.cpp" line="544"/>
+        <location filename="../HamlibTransceiver.cpp" line="1021"/>
         <source>getting other VFO frequency</source>
-        <translation>teise VFO sageduse küsimine</translation>
+        <translation>küsiti teise VFO sagedust</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="528"/>
+        <location filename="../HamlibTransceiver.cpp" line="548"/>
         <source>getting other VFO mode</source>
-        <translation>teise VFO töörežiimide küsimine</translation>
+        <translation>küsiti teise VFO töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="541"/>
+        <location filename="../HamlibTransceiver.cpp" line="561"/>
         <source>setting current VFO</source>
         <translatorcomment>või aktiivse VFO?</translatorcomment>
-        <translation>praeguse VFO seadmine</translation>
+        <translation>seati praegust VFO-d</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="550"/>
+        <location filename="../HamlibTransceiver.cpp" line="570"/>
         <source>getting frequency</source>
-        <translation>sageduse küsimine</translation>
+        <translation>küsiti sagedust</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="554"/>
+        <location filename="../HamlibTransceiver.cpp" line="574"/>
         <source>getting mode</source>
-        <translation>töörežiimi küsimine</translation>
+        <translation>küsiti töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="571"/>
-        <location filename="../HamlibTransceiver.cpp" line="936"/>
+        <location filename="../HamlibTransceiver.cpp" line="591"/>
+        <location filename="../HamlibTransceiver.cpp" line="956"/>
         <source>getting current VFO</source>
         <translatorcomment>aktiivse VFO?</translatorcomment>
-        <translation>praeguse VFO küsimine</translation>
+        <translation>küsiti praegust VFO-d</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="615"/>
-        <location filename="../HamlibTransceiver.cpp" line="623"/>
-        <location filename="../HamlibTransceiver.cpp" line="637"/>
-        <location filename="../HamlibTransceiver.cpp" line="979"/>
-        <source>getting current VFO frequency</source>
-        <translation>praeguse VFO sageduse küsimine</translation>
-    </message>
-    <message>
-        <location filename="../HamlibTransceiver.cpp" line="621"/>
-        <location filename="../HamlibTransceiver.cpp" line="636"/>
+        <location filename="../HamlibTransceiver.cpp" line="635"/>
         <location filename="../HamlibTransceiver.cpp" line="643"/>
-        <location filename="../HamlibTransceiver.cpp" line="722"/>
-        <location filename="../HamlibTransceiver.cpp" line="740"/>
-        <location filename="../HamlibTransceiver.cpp" line="801"/>
+        <location filename="../HamlibTransceiver.cpp" line="657"/>
+        <location filename="../HamlibTransceiver.cpp" line="999"/>
+        <source>getting current VFO frequency</source>
+        <translation>küsiti praeguse VFO sagedust</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="641"/>
+        <location filename="../HamlibTransceiver.cpp" line="656"/>
+        <location filename="../HamlibTransceiver.cpp" line="663"/>
+        <location filename="../HamlibTransceiver.cpp" line="742"/>
+        <location filename="../HamlibTransceiver.cpp" line="760"/>
+        <location filename="../HamlibTransceiver.cpp" line="821"/>
         <source>setting frequency</source>
-        <translation>sageduse seadmine</translation>
+        <translation>seati sagedust</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="730"/>
-        <location filename="../HamlibTransceiver.cpp" line="808"/>
-        <location filename="../HamlibTransceiver.cpp" line="880"/>
-        <location filename="../HamlibTransceiver.cpp" line="893"/>
+        <location filename="../HamlibTransceiver.cpp" line="750"/>
+        <location filename="../HamlibTransceiver.cpp" line="828"/>
+        <location filename="../HamlibTransceiver.cpp" line="900"/>
+        <location filename="../HamlibTransceiver.cpp" line="913"/>
         <source>getting current VFO mode</source>
-        <translation>praeguse VFO töörežiimi küsimine</translation>
+        <translation>küsiti praeguse VFO töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="736"/>
-        <location filename="../HamlibTransceiver.cpp" line="745"/>
-        <location filename="../HamlibTransceiver.cpp" line="814"/>
-        <location filename="../HamlibTransceiver.cpp" line="886"/>
-        <location filename="../HamlibTransceiver.cpp" line="899"/>
+        <location filename="../HamlibTransceiver.cpp" line="756"/>
+        <location filename="../HamlibTransceiver.cpp" line="765"/>
+        <location filename="../HamlibTransceiver.cpp" line="834"/>
+        <location filename="../HamlibTransceiver.cpp" line="906"/>
+        <location filename="../HamlibTransceiver.cpp" line="919"/>
         <source>setting current VFO mode</source>
-        <translation>praeguse VFO töörežiimi seadmine</translation>
+        <translation>seati praeguse VFO töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="788"/>
-        <location filename="../HamlibTransceiver.cpp" line="857"/>
+        <location filename="../HamlibTransceiver.cpp" line="808"/>
+        <location filename="../HamlibTransceiver.cpp" line="877"/>
         <source>setting/unsetting split mode</source>
-        <translation>split-režiimi seadmine/tühistamine</translation>
+        <translation>seati/tühistati split-režiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="799"/>
-        <location filename="../HamlibTransceiver.cpp" line="839"/>
+        <location filename="../HamlibTransceiver.cpp" line="819"/>
+        <location filename="../HamlibTransceiver.cpp" line="859"/>
         <source>setting split mode</source>
-        <translation>split mode sätted</translation>
+        <translation>seati split režiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="827"/>
+        <location filename="../HamlibTransceiver.cpp" line="847"/>
         <source>setting split TX frequency and mode</source>
-        <translation>seatakse split TX sagedus ja töörežiim</translation>
+        <translation>seatati split TX sagedust ja töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="832"/>
+        <location filename="../HamlibTransceiver.cpp" line="852"/>
         <source>setting split TX frequency</source>
-        <translation>seatakse split TX sagedus</translation>
+        <translation>seati split TX sagedust</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="904"/>
+        <location filename="../HamlibTransceiver.cpp" line="924"/>
         <source>getting split TX VFO mode</source>
-        <translation>split TX VFO mode küsimine</translation>
+        <translation>küsiti split TX VFO töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="911"/>
+        <location filename="../HamlibTransceiver.cpp" line="931"/>
         <source>setting split TX VFO mode</source>
-        <translation>seatakse split TX VFO töörežiim</translation>
+        <translation>seati split TX VFO töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1095"/>
+        <location filename="../HamlibTransceiver.cpp" line="1115"/>
         <source>getting PTT state</source>
-        <translation>PTT oleku küsimine</translation>
-    </message>
-    <message>
-        <location filename="../HamlibTransceiver.cpp" line="1128"/>
-        <source>setting PTT on</source>
-        <translation>Lülitatakse PTT sisse</translation>
-    </message>
-    <message>
-        <location filename="../HamlibTransceiver.cpp" line="1136"/>
-        <source>setting PTT off</source>
-        <translation>Lülitatakse PTT välja</translation>
+        <translation>küsiti PTT olekut</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1148"/>
-        <source>setting a configuration item</source>
-        <translation>konfiguratsiooni seadmine</translation>
+        <source>setting PTT on</source>
+        <translation>lülitatati PTT sisse</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1158"/>
+        <location filename="../HamlibTransceiver.cpp" line="1156"/>
+        <source>setting PTT off</source>
+        <translation>lülitatai PTT välja</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="1168"/>
+        <source>setting a configuration item</source>
+        <translation>seati konfiguratsiooni elementi</translation>
+    </message>
+    <message>
+        <location filename="../HamlibTransceiver.cpp" line="1178"/>
         <source>getting a configuration item</source>
-        <translation>konfiguratsiooni küsimine</translation>
+        <translation>küsiti konfiguratsiooni elementi</translation>
     </message>
 </context>
 <context>
@@ -2616,7 +2706,7 @@ Viga: %2 - %3</translation>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
-        <source>JTDX  by HF community</source>
+        <source>JTDX</source>
         <translation></translation>
     </message>
     <message>
@@ -2627,12 +2717,12 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3402"/>
-        <location filename="../mainwindow.cpp" line="3409"/>
-        <location filename="../mainwindow.cpp" line="5926"/>
-        <location filename="../mainwindow.cpp" line="5931"/>
-        <location filename="../mainwindow.cpp" line="5971"/>
-        <location filename="../mainwindow.cpp" line="5982"/>
+        <location filename="../mainwindow.cpp" line="3415"/>
+        <location filename="../mainwindow.cpp" line="3422"/>
+        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5984"/>
+        <location filename="../mainwindow.cpp" line="5995"/>
         <source>Band Activity</source>
         <translation>Laineala aktiivsus</translation>
     </message>
@@ -2751,9 +2841,9 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4555"/>
-        <location filename="../mainwindow.cpp" line="5220"/>
-        <location filename="../mainwindow.cpp" line="5635"/>
+        <location filename="../mainwindow.cpp" line="4568"/>
+        <location filename="../mainwindow.cpp" line="5233"/>
+        <location filename="../mainwindow.cpp" line="5648"/>
         <source>DX Call</source>
         <translation>DX Kutsung</translation>
     </message>
@@ -2806,7 +2896,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2888"/>
+        <location filename="../mainwindow.cpp" line="2901"/>
         <source>Hound</source>
         <translation></translation>
     </message>
@@ -2838,8 +2928,8 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1500"/>
-        <location filename="../mainwindow.cpp" line="1932"/>
+        <location filename="../mainwindow.cpp" line="1513"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
         <source>S meter</source>
         <translation>S-meeter</translation>
     </message>
@@ -2996,7 +3086,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5932"/>
+        <location filename="../mainwindow.cpp" line="5945"/>
         <source>Rx Frequency</source>
         <translation>Rx sagedus</translation>
     </message>
@@ -3007,7 +3097,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
-        <location filename="../mainwindow.cpp" line="6513"/>
+        <location filename="../mainwindow.cpp" line="6526"/>
         <source>&amp;Tune</source>
         <translation>&amp;Häälesta</translation>
     </message>
@@ -3163,9 +3253,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
-        <location filename="../mainwindow.ui" line="5303"/>
-        <location filename="../mainwindow.ui" line="5760"/>
-        <location filename="../mainwindow.ui" line="5784"/>
+        <location filename="../mainwindow.ui" line="5267"/>
+        <location filename="../mainwindow.ui" line="5724"/>
+        <location filename="../mainwindow.ui" line="5748"/>
         <source>1</source>
         <translation></translation>
     </message>
@@ -3181,7 +3271,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5481"/>
+        <location filename="../mainwindow.ui" line="5445"/>
         <source>CQ</source>
         <translation></translation>
     </message>
@@ -3345,10 +3435,10 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
-        <location filename="../mainwindow.ui" line="5311"/>
-        <location filename="../mainwindow.ui" line="5314"/>
-        <location filename="../mainwindow.ui" line="5768"/>
-        <location filename="../mainwindow.ui" line="5792"/>
+        <location filename="../mainwindow.ui" line="5275"/>
+        <location filename="../mainwindow.ui" line="5278"/>
+        <location filename="../mainwindow.ui" line="5732"/>
+        <location filename="../mainwindow.ui" line="5756"/>
         <source>2</source>
         <translation></translation>
     </message>
@@ -3625,7 +3715,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4602"/>
-        <location filename="../mainwindow.ui" line="5024"/>
+        <location filename="../mainwindow.ui" line="4988"/>
         <source>F2</source>
         <translation></translation>
     </message>
@@ -3681,9 +3771,9 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4655"/>
-        <location filename="../mainwindow.ui" line="5354"/>
-        <location filename="../mainwindow.ui" line="5416"/>
-        <location filename="../mainwindow.ui" line="5698"/>
+        <location filename="../mainwindow.ui" line="5318"/>
+        <location filename="../mainwindow.ui" line="5380"/>
+        <location filename="../mainwindow.ui" line="5662"/>
         <source>fast</source>
         <translation>kiire</translation>
     </message>
@@ -3698,1065 +3788,1010 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
         <translation>Salvesta kõik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4682"/>
-        <source>English</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4690"/>
-        <source>Eesti</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4698"/>
-        <source>Русский</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4706"/>
-        <source>Hrvatski</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4714"/>
-        <source>Español</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4722"/>
-        <source>Français</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4730"/>
-        <source>Italiano</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4738"/>
-        <source>Polski</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4746"/>
-        <source>Português</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4754"/>
-        <source>简体中文</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4762"/>
-        <source>繁體中文</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4770"/>
-        <source>日本語</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="4775"/>
+        <location filename="../mainwindow.ui" line="4739"/>
         <source>JTDX Web site</source>
         <translation>JTDX Veebileht</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4778"/>
+        <location filename="../mainwindow.ui" line="4742"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4783"/>
+        <location filename="../mainwindow.ui" line="4747"/>
         <source>Keyboard shortcuts</source>
         <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4786"/>
+        <location filename="../mainwindow.ui" line="4750"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4791"/>
+        <location filename="../mainwindow.ui" line="4755"/>
         <source>Special mouse commands</source>
         <translation>Hiire erikäsud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4794"/>
+        <location filename="../mainwindow.ui" line="4758"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4805"/>
+        <location filename="../mainwindow.ui" line="4769"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4816"/>
+        <location filename="../mainwindow.ui" line="4780"/>
         <source>Save decoded</source>
         <translation>Salvesta dekoodeeritud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4827"/>
-        <location filename="../mainwindow.ui" line="5362"/>
-        <location filename="../mainwindow.ui" line="5424"/>
-        <location filename="../mainwindow.ui" line="5666"/>
-        <location filename="../mainwindow.ui" line="5706"/>
+        <location filename="../mainwindow.ui" line="4791"/>
+        <location filename="../mainwindow.ui" line="5326"/>
+        <location filename="../mainwindow.ui" line="5388"/>
+        <location filename="../mainwindow.ui" line="5630"/>
+        <location filename="../mainwindow.ui" line="5670"/>
         <source>medium</source>
         <translation>keskmine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4838"/>
-        <location filename="../mainwindow.ui" line="5373"/>
-        <location filename="../mainwindow.ui" line="5435"/>
-        <location filename="../mainwindow.ui" line="5717"/>
+        <location filename="../mainwindow.ui" line="4802"/>
+        <location filename="../mainwindow.ui" line="5337"/>
+        <location filename="../mainwindow.ui" line="5399"/>
+        <location filename="../mainwindow.ui" line="5681"/>
         <source>deep</source>
         <translation>sügav</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4846"/>
+        <location filename="../mainwindow.ui" line="4810"/>
         <source>Monitor OFF at startup</source>
         <translation>Monitor lülitatakse käivitamisel välja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4851"/>
+        <location filename="../mainwindow.ui" line="4815"/>
         <source>Erase ALL.TXT</source>
         <translation>Kustutatakse ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4856"/>
+        <location filename="../mainwindow.ui" line="4820"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>Kustuta QSO LOG-fail wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4861"/>
+        <location filename="../mainwindow.ui" line="4825"/>
         <source>Open wsjtx_log.adi</source>
         <translation>Ava wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4864"/>
-        <location filename="../mainwindow.ui" line="5048"/>
+        <location filename="../mainwindow.ui" line="4828"/>
+        <location filename="../mainwindow.ui" line="5012"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4872"/>
+        <location filename="../mainwindow.ui" line="4836"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>Logimisel muutke mode RTTY-ks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4880"/>
+        <location filename="../mainwindow.ui" line="4844"/>
         <source>Log dB reports to Comments</source>
         <translation>Logi dB raportid kommentaaridesse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4888"/>
+        <location filename="../mainwindow.ui" line="4852"/>
         <source>Prompt me to log QSO</source>
         <translation>Paku QSO logisse salvestamist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4896"/>
+        <location filename="../mainwindow.ui" line="4860"/>
         <source>Blank line between decoding periods</source>
         <translation>Tühi rida dekodeerimisperioodide vahel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4904"/>
+        <location filename="../mainwindow.ui" line="4868"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>Pärast logimist tühjendage DX-kutsung ja -ruut aknad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4912"/>
+        <location filename="../mainwindow.ui" line="4876"/>
         <source>Display distance in miles</source>
         <translation>Kuva kaugust miilides</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4920"/>
+        <location filename="../mainwindow.ui" line="4884"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>Topeltklõps kutsungil aktiveerib Luba Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4928"/>
+        <location filename="../mainwindow.ui" line="4892"/>
         <source>Tx disabled after sending 73</source>
         <translation>Pärast 73 saatmist Tx keelatud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4936"/>
+        <location filename="../mainwindow.ui" line="4900"/>
         <source>Runaway Tx watchdog</source>
         <translation>Eemaloleku Tx valvekoer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4944"/>
+        <location filename="../mainwindow.ui" line="4908"/>
         <source>Allow multiple instances</source>
         <translation>Luba mitut JTDX-i korraga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4952"/>
+        <location filename="../mainwindow.ui" line="4916"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx sagedus lukustatud Rx sagedusele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4960"/>
+        <location filename="../mainwindow.ui" line="4924"/>
         <source>Skip Tx 1</source>
         <translation>Jäta Tx 1 vahele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4968"/>
+        <location filename="../mainwindow.ui" line="4932"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4979"/>
+        <location filename="../mainwindow.ui" line="4943"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4987"/>
+        <location filename="../mainwindow.ui" line="4951"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Tx-sõnum Rx Sageduse aknasse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4995"/>
+        <location filename="../mainwindow.ui" line="4959"/>
         <source>Gray1</source>
         <translation>Hall1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5003"/>
+        <location filename="../mainwindow.ui" line="4967"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation>Kuva DXCC maa ja töötatud B4 olek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5011"/>
+        <location filename="../mainwindow.ui" line="4975"/>
         <source>Astronomical data</source>
         <translation>Astronoomilised andmed</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5016"/>
+        <location filename="../mainwindow.ui" line="4980"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>Lisatavate ees- ja järelliidete lühike loend</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5021"/>
+        <location filename="../mainwindow.ui" line="4985"/>
         <source>Settings...</source>
         <translation>Seaded...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5032"/>
+        <location filename="../mainwindow.ui" line="4996"/>
         <source>JTDX forum</source>
         <translation>JTDX foorum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5037"/>
+        <location filename="../mainwindow.ui" line="5001"/>
         <source>Open log directory</source>
-        <translation>Ava log kataloog</translation>
+        <translation>Ava andmete kataloog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5045"/>
+        <location filename="../mainwindow.ui" line="5009"/>
         <source>Message averaging</source>
         <translation>Keskmine sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5062"/>
+        <location filename="../mainwindow.ui" line="5026"/>
         <source>Include averaging</source>
         <translation>Lisa keskmistamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5076"/>
+        <location filename="../mainwindow.ui" line="5040"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 vihjega dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5087"/>
+        <location filename="../mainwindow.ui" line="5051"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5092"/>
+        <location filename="../mainwindow.ui" line="5056"/>
         <source>Save reference spectrum</source>
         <translation>Salvestage referentsspekter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5097"/>
+        <location filename="../mainwindow.ui" line="5061"/>
         <source>&amp;Download Samples ...</source>
         <translatorcomment>Vajab analüüsi</translatorcomment>
         <translation>&amp;Laadi näited alla ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5100"/>
+        <location filename="../mainwindow.ui" line="5064"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lae alla eri töörežiime tutvustavate helifailide näited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5108"/>
+        <location filename="../mainwindow.ui" line="5072"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5119"/>
+        <location filename="../mainwindow.ui" line="5083"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>RX-sagedusel filtritest mööda minek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5130"/>
+        <location filename="../mainwindow.ui" line="5094"/>
         <source>Bypass all text filters</source>
         <translation>Kõigist filtritest mööda minek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5133"/>
+        <location filename="../mainwindow.ui" line="5097"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5141"/>
+        <location filename="../mainwindow.ui" line="5105"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>Näita JT65 harmoonilistest dekodeeritud sõnumeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5152"/>
+        <location filename="../mainwindow.ui" line="5116"/>
         <source>Enable main window popup</source>
         <translatorcomment>Vajab kooskõlastamist</translatorcomment>
         <translation>Luba peaakna hüpikud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5163"/>
+        <location filename="../mainwindow.ui" line="5127"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>Minu kutsungiga sõnumid RX-sageduse aknasse </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5168"/>
+        <location filename="../mainwindow.ui" line="5132"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>WSJT arendusrühma autoriõiguse teade</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5182"/>
+        <location filename="../mainwindow.ui" line="5146"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5190"/>
+        <location filename="../mainwindow.ui" line="5154"/>
         <source>FT8 call first</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5201"/>
+        <location filename="../mainwindow.ui" line="5165"/>
         <source>Call priority and search CQ</source>
         <translatorcomment>Vajab selgitamist</translatorcomment>
         <translation>Side prioriteet ja CQ otsing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5204"/>
+        <location filename="../mainwindow.ui" line="5168"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali CQ-le vastuse otsimine automaatselt koos prioriteetidega, kui nurjus, siis otsi kõrgema prioriteediga&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5212"/>
+        <location filename="../mainwindow.ui" line="5176"/>
         <source>FT8 call last</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5220"/>
+        <location filename="../mainwindow.ui" line="5184"/>
         <source>FT8 manual call</source>
         <translation>FT8 manuaalne kutse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5228"/>
+        <location filename="../mainwindow.ui" line="5192"/>
         <source>0  Call None</source>
         <translation>0  ei ole kutset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5236"/>
+        <location filename="../mainwindow.ui" line="5200"/>
         <source>1  Call first</source>
         <translation>1 Esimene kutse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5244"/>
+        <location filename="../mainwindow.ui" line="5208"/>
         <source>4+ Call and search through CQ messages</source>
         <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>4+ Kutsed ja CQ-sõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5252"/>
+        <location filename="../mainwindow.ui" line="5216"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2 Kutsed dekodeeritud kuni TX-perioodi alguseni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5260"/>
+        <location filename="../mainwindow.ui" line="5224"/>
         <source>3  Call based on end of decoding</source>
         <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>3  Kutsed dekodeerimise lõpuni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5268"/>
+        <location filename="../mainwindow.ui" line="5232"/>
         <source>Single shot QSO</source>
         <translation>Üksik QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5276"/>
+        <location filename="../mainwindow.ui" line="5240"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>Tühjenda laineala aktiivsuse aken dekodeerimise alguses</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5284"/>
+        <location filename="../mainwindow.ui" line="5248"/>
         <source>Answer worked B4 calls</source>
         <translation>Vasta töötatud kutsngitele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5295"/>
+        <location filename="../mainwindow.ui" line="5259"/>
         <source>Auto</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5322"/>
+        <location filename="../mainwindow.ui" line="5286"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5330"/>
+        <location filename="../mainwindow.ui" line="5294"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5338"/>
+        <location filename="../mainwindow.ui" line="5302"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5346"/>
+        <location filename="../mainwindow.ui" line="5310"/>
         <source>Erase both message windows at band change</source>
         <translation>Laineala vahetamisel tühjenda mõlemad teateaknad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5384"/>
+        <location filename="../mainwindow.ui" line="5348"/>
         <source>deep with 4 passes</source>
         <translation>sügav 4 astmega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5392"/>
+        <location filename="../mainwindow.ui" line="5356"/>
         <source>Max distance instead of best SNR</source>
         <translation>Parima SNR asemel maksimaalne vahemaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5400"/>
+        <location filename="../mainwindow.ui" line="5364"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>Nõutud kutsungitega sõnumid RX-sageduse aknasse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5408"/>
+        <location filename="../mainwindow.ui" line="5372"/>
         <source>use low thresholds</source>
         <translation>kasuta madalat taset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5443"/>
+        <location filename="../mainwindow.ui" line="5407"/>
         <source>use subpass</source>
         <translation>kasuta subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5454"/>
+        <location filename="../mainwindow.ui" line="5418"/>
         <source>minimum</source>
         <translation>miinimum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5462"/>
+        <location filename="../mainwindow.ui" line="5426"/>
         <source>late start of decoder</source>
         <translation>dekooderi hiline start</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5470"/>
+        <location filename="../mainwindow.ui" line="5434"/>
         <source>Call worked B4 callsigns</source>
         <translation>Kutsu töötatud kutsungeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5489"/>
+        <location filename="../mainwindow.ui" line="5453"/>
         <source>CQ and 73</source>
         <translation>CQ ja 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5497"/>
+        <location filename="../mainwindow.ui" line="5461"/>
         <source>any messages</source>
         <translation>iga sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5505"/>
+        <location filename="../mainwindow.ui" line="5469"/>
         <source>Enable</source>
         <translation>Luba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5513"/>
+        <location filename="../mainwindow.ui" line="5477"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>Lülita filter välja kui saadad 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5521"/>
+        <location filename="../mainwindow.ui" line="5485"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>Lülita filter välja, kui saad 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5529"/>
+        <location filename="../mainwindow.ui" line="5493"/>
         <source>Hide FT8 dupe messages</source>
         <translation>Peida FT8 dubleerimissõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5537"/>
+        <location filename="../mainwindow.ui" line="5501"/>
         <source>Display output power</source>
         <translation>Kuva väljundvõimsus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5545"/>
+        <location filename="../mainwindow.ui" line="5509"/>
         <source>Report message priority</source>
         <translatorcomment>Võib vajada sisulist analüüsi</translatorcomment>
         <translation>Raportiga sõnumi prioriteet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5553"/>
+        <location filename="../mainwindow.ui" line="5517"/>
         <source>Enable hound mode</source>
         <translation>Luba hound mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5564"/>
+        <location filename="../mainwindow.ui" line="5528"/>
         <source>Use hound TX frequency control</source>
         <translation>Kasuta hound TX sageduse kontrolli</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5572"/>
+        <location filename="../mainwindow.ui" line="5536"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>Keela TX pärast käsitsirežiimis RRR/RR73/73 saatmist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5583"/>
+        <location filename="../mainwindow.ui" line="5547"/>
         <source>Show tooltips in main window</source>
         <translation>Näita peaaknas vihjeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5591"/>
+        <location filename="../mainwindow.ui" line="5555"/>
         <source>Color Tx message buttons</source>
         <translation>Värvi Tx-teate nupud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5599"/>
-        <location filename="../mainwindow.ui" line="5776"/>
-        <location filename="../mainwindow.ui" line="5800"/>
+        <location filename="../mainwindow.ui" line="5563"/>
+        <location filename="../mainwindow.ui" line="5740"/>
+        <location filename="../mainwindow.ui" line="5764"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5607"/>
+        <location filename="../mainwindow.ui" line="5571"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5615"/>
+        <location filename="../mainwindow.ui" line="5579"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5623"/>
+        <location filename="../mainwindow.ui" line="5587"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5631"/>
+        <location filename="../mainwindow.ui" line="5595"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5639"/>
+        <location filename="../mainwindow.ui" line="5603"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5647"/>
+        <location filename="../mainwindow.ui" line="5611"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5655"/>
+        <location filename="../mainwindow.ui" line="5619"/>
         <source>low</source>
         <translation>madal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5674"/>
+        <location filename="../mainwindow.ui" line="5638"/>
         <source>high</source>
         <translation>kõrge</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5682"/>
+        <location filename="../mainwindow.ui" line="5646"/>
         <source>Hide FT contest messages</source>
         <translation>Peida FT võistlussõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5690"/>
+        <location filename="../mainwindow.ui" line="5654"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5725"/>
+        <location filename="../mainwindow.ui" line="5689"/>
         <source>wideband DX Call search</source>
         <translation>lairiba DX-side otsing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5733"/>
+        <location filename="../mainwindow.ui" line="5697"/>
         <source>6 pass SWL mode</source>
         <translation>6 pass SWL-režiim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5744"/>
+        <location filename="../mainwindow.ui" line="5708"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translatorcomment>Vajab ülevaatamist</translatorcomment>
         <translation>Kutsung lõikelauale topeltklõpsuga | autoselect</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5752"/>
+        <location filename="../mainwindow.ui" line="5716"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>Crossband 160m tööks Jaapaniga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="441"/>
+        <location filename="../mainwindow.cpp" line="442"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Kas soovite raadio liidest uuesti seadistada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="735"/>
+        <location filename="../mainwindow.cpp" line="736"/>
         <source>Error Writing WAV File</source>
         <translation>Viga WAV-faili kirjutamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="916"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Viga jtdxjt9.exe protsessi hävitamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="893"/>
         <location filename="../mainwindow.cpp" line="894"/>
-        <location filename="../mainwindow.cpp" line="3396"/>
-        <location filename="../mainwindow.cpp" line="5922"/>
-        <location filename="../mainwindow.cpp" line="5923"/>
-        <location filename="../mainwindow.cpp" line="5978"/>
-        <location filename="../mainwindow.cpp" line="5979"/>
+        <location filename="../mainwindow.cpp" line="895"/>
+        <location filename="../mainwindow.cpp" line="3409"/>
+        <location filename="../mainwindow.cpp" line="5935"/>
+        <location filename="../mainwindow.cpp" line="5936"/>
+        <location filename="../mainwindow.cpp" line="5991"/>
+        <location filename="../mainwindow.cpp" line="5992"/>
         <source>Freq   Message</source>
         <translation>Sag.   Sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="445"/>
+        <location filename="../mainwindow.cpp" line="446"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="447"/>
         <source>&amp;Retry</source>
         <translation>&amp;Korda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="916"/>
+        <location filename="../mainwindow.cpp" line="917"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName tgastas koodi:%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="933"/>
+        <location filename="../mainwindow.cpp" line="934"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Viga &quot;%1&quot; eemaldamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="935"/>
         <source>Click OK to retry</source>
         <translation>Uueks katseks klõpsa OK nuppu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1611"/>
+        <location filename="../mainwindow.cpp" line="1624"/>
         <source>TX Even</source>
         <translation>TX Paaris</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1618"/>
+        <location filename="../mainwindow.cpp" line="1631"/>
         <source>TX Odd</source>
         <translation>TX Paaritu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1663"/>
-        <location filename="../mainwindow.cpp" line="2340"/>
-        <location filename="../mainwindow.cpp" line="3431"/>
-        <location filename="../mainwindow.cpp" line="4034"/>
-        <location filename="../mainwindow.cpp" line="4157"/>
-        <location filename="../mainwindow.cpp" line="4389"/>
-        <location filename="../mainwindow.cpp" line="6768"/>
-        <location filename="../mainwindow.cpp" line="6964"/>
+        <location filename="../mainwindow.cpp" line="1676"/>
+        <location filename="../mainwindow.cpp" line="2353"/>
+        <location filename="../mainwindow.cpp" line="3444"/>
+        <location filename="../mainwindow.cpp" line="4047"/>
+        <location filename="../mainwindow.cpp" line="4170"/>
+        <location filename="../mainwindow.cpp" line="4402"/>
+        <location filename="../mainwindow.cpp" line="6781"/>
+        <location filename="../mainwindow.cpp" line="6979"/>
         <source>File Open Error</source>
         <translation>Faili avamise viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1664"/>
-        <location filename="../mainwindow.cpp" line="2341"/>
-        <location filename="../mainwindow.cpp" line="3432"/>
-        <location filename="../mainwindow.cpp" line="4035"/>
-        <location filename="../mainwindow.cpp" line="4158"/>
-        <location filename="../mainwindow.cpp" line="4390"/>
-        <location filename="../mainwindow.cpp" line="6769"/>
-        <location filename="../mainwindow.cpp" line="6965"/>
-        <location filename="../mainwindow.cpp" line="7306"/>
+        <location filename="../mainwindow.cpp" line="1677"/>
+        <location filename="../mainwindow.cpp" line="2354"/>
+        <location filename="../mainwindow.cpp" line="3445"/>
+        <location filename="../mainwindow.cpp" line="4048"/>
+        <location filename="../mainwindow.cpp" line="4171"/>
+        <location filename="../mainwindow.cpp" line="4403"/>
+        <location filename="../mainwindow.cpp" line="6782"/>
+        <location filename="../mainwindow.cpp" line="6980"/>
+        <location filename="../mainwindow.cpp" line="7321"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>&quot;%1&quot; ei saa lisamiseks avada: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1768"/>
+        <location filename="../mainwindow.cpp" line="1781"/>
         <source>Error saving c2 file</source>
         <translation>Viga c2-faili salvestamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1844"/>
+        <location filename="../mainwindow.cpp" line="1857"/>
         <source>Error in SoundInput</source>
         <translation>Viga helisisendis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1848"/>
+        <location filename="../mainwindow.cpp" line="1861"/>
         <source>Error in SoundOutput</source>
         <translation>Viga heliväljundis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1934"/>
+        <location filename="../mainwindow.cpp" line="1947"/>
         <source>Pwr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2451"/>
+        <location filename="../mainwindow.cpp" line="2464"/>
         <source>Subprocess Error</source>
         <translation>Alamprotsessi viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2452"/>
+        <location filename="../mainwindow.cpp" line="2465"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Alamprotsess nurjus väljumiskoodiga%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2454"/>
-        <location filename="../mainwindow.cpp" line="2473"/>
+        <location filename="../mainwindow.cpp" line="2467"/>
+        <location filename="../mainwindow.cpp" line="2486"/>
         <source>Running: %1
 %2</source>
         <translation>Töötab: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2472"/>
+        <location filename="../mainwindow.cpp" line="2485"/>
         <source>Subprocess error</source>
         <translation>Alamprotsessi viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2551"/>
+        <location filename="../mainwindow.cpp" line="2564"/>
         <source>Spotted</source>
         <translation>Spotitud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2558"/>
+        <location filename="../mainwindow.cpp" line="2571"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Dxsummit-serveriga ei saa ühendust luua / lõpule viia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2582"/>
+        <location filename="../mainwindow.cpp" line="2595"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2703"/>
+        <location filename="../mainwindow.cpp" line="2716"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Kettalt ei loetud andmeid. Vale failivorming?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2710"/>
+        <location filename="../mainwindow.cpp" line="2723"/>
         <source>Confirm Delete</source>
         <translation>Kinnita kustutamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2711"/>
+        <location filename="../mainwindow.cpp" line="2724"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Kas oled kindel, et tahad kustutada kõik *.wav ja *.c2 failid
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2747"/>
+        <location filename="../mainwindow.cpp" line="2760"/>
         <source>AutoSeq0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2760"/>
+        <location filename="../mainwindow.cpp" line="2773"/>
         <source>AutoSeq1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2769"/>
-        <location filename="../mainwindow.cpp" line="2795"/>
+        <location filename="../mainwindow.cpp" line="2782"/>
+        <location filename="../mainwindow.cpp" line="2808"/>
         <source>AutoSeq2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2770"/>
-        <location filename="../mainwindow.cpp" line="2791"/>
+        <location filename="../mainwindow.cpp" line="2783"/>
+        <location filename="../mainwindow.cpp" line="2804"/>
         <source>AutoSeq6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2779"/>
-        <location filename="../mainwindow.cpp" line="2796"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2809"/>
         <source>AutoSeq3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2780"/>
-        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2793"/>
+        <location filename="../mainwindow.cpp" line="2805"/>
         <source>AutoSeq7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2864"/>
+        <location filename="../mainwindow.cpp" line="2877"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2872"/>
+        <location filename="../mainwindow.cpp" line="2885"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound mode TX sageduse juhtimiseks on vaja * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2888"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translatorcomment>vajab kohendamist koos lisaanalüüsiga</translatorcomment>
         <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud ja see nõuab * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2883"/>
+        <location filename="../mainwindow.cpp" line="2896"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX sageduse juhtimise hoiatus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2888"/>
+        <location filename="../mainwindow.cpp" line="2901"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2949"/>
+        <location filename="../mainwindow.cpp" line="2962"/>
         <source>Keyboard Shortcuts</source>
         <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2960"/>
+        <location filename="../mainwindow.cpp" line="2973"/>
         <source>Special Mouse Commands</source>
         <translation>Hiire erikäsud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3396"/>
+        <location filename="../mainwindow.cpp" line="3409"/>
         <source>Avg=</source>
         <translation>Keskm.=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3401"/>
-        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="3414"/>
+        <location filename="../mainwindow.cpp" line="3421"/>
         <source>check time</source>
         <translation>kontrolli aega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3708"/>
-        <location filename="../mainwindow.cpp" line="3716"/>
+        <location filename="../mainwindow.cpp" line="3721"/>
+        <location filename="../mainwindow.cpp" line="3729"/>
         <source>Confirm change Language</source>
         <translation>Kinnita keelevahetus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3710"/>
-        <location filename="../mainwindow.cpp" line="3719"/>
+        <location filename="../mainwindow.cpp" line="3723"/>
+        <location filename="../mainwindow.cpp" line="3732"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Kas tahate vahetada kasutajaliidese keeleks Eesti, JTDX taaskäivitub?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3713"/>
-        <location filename="../mainwindow.cpp" line="3722"/>
+        <location filename="../mainwindow.cpp" line="3726"/>
+        <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;Yes</source>
         <translation>&amp;Jah</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3714"/>
-        <location filename="../mainwindow.cpp" line="3725"/>
+        <location filename="../mainwindow.cpp" line="3727"/>
+        <location filename="../mainwindow.cpp" line="3738"/>
         <source>&amp;No</source>
         <translation>&amp;Ei</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3884"/>
+        <location filename="../mainwindow.cpp" line="3897"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Valige teine Tx sagedus. JTDX ei saada 30m lainealal WSPR sagedustel teadlikult muus töörežiimis.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3889"/>
-        <location filename="../mainwindow.cpp" line="3892"/>
+        <location filename="../mainwindow.cpp" line="3902"/>
+        <location filename="../mainwindow.cpp" line="3905"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR laineala valvur</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4010"/>
+        <location filename="../mainwindow.cpp" line="4023"/>
         <source>TUNE</source>
         <translation>Häälesta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4011"/>
+        <location filename="../mainwindow.cpp" line="4024"/>
         <source>LastTx: </source>
         <translation>ViimaneTx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4225"/>
+        <location filename="../mainwindow.cpp" line="4238"/>
         <source>Tx: TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4226"/>
+        <location filename="../mainwindow.cpp" line="4239"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4231"/>
+        <location filename="../mainwindow.cpp" line="4244"/>
         <source>Receiving </source>
         <translation>Vastuvõtt </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4284"/>
+        <location filename="../mainwindow.cpp" line="4297"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4440"/>
+        <location filename="../mainwindow.cpp" line="4453"/>
         <source>Last Tx: </source>
         <translation>Viimane Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5321"/>
-        <location filename="../mainwindow.cpp" line="5333"/>
+        <location filename="../mainwindow.cpp" line="5334"/>
         <location filename="../mainwindow.cpp" line="5346"/>
-        <location filename="../mainwindow.cpp" line="5372"/>
+        <location filename="../mainwindow.cpp" line="5359"/>
+        <location filename="../mainwindow.cpp" line="5385"/>
         <source>Add to CALL3.TXT</source>
         <translation>Lisa faili CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5322"/>
+        <location filename="../mainwindow.cpp" line="5335"/>
         <source>Please enter a valid grid locator</source>
         <translation>Sisesta kehtiv lokaator</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5334"/>
+        <location filename="../mainwindow.cpp" line="5347"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>&quot;%1&quot; ei saa lugemiseks/kirjutamiseks avada: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5347"/>
+        <location filename="../mainwindow.cpp" line="5360"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>&quot;%1&quot; ei saa kirjutamiseks avada:%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5370"/>
+        <location filename="../mainwindow.cpp" line="5383"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1 on juba rakenduses CALL3.TXT, kas soovite selle asendada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5733"/>
+        <location filename="../mainwindow.cpp" line="5746"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Viga QSO ADIF-i andmete saatmisel sekundaarsele UDP-serverile</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5733"/>
+        <location filename="../mainwindow.cpp" line="5746"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Kirjutage uuesti &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5879"/>
+        <location filename="../mainwindow.cpp" line="5892"/>
         <source>Tx WSPR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5969"/>
+        <location filename="../mainwindow.cpp" line="5982"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Sagedus  Muutus Kutsung       Ruut    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6068"/>
-        <location filename="../mainwindow.cpp" line="6080"/>
+        <location filename="../mainwindow.cpp" line="6081"/>
+        <location filename="../mainwindow.cpp" line="6093"/>
         <source>Confirm Erase</source>
         <translation>Kinnita kustutamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6069"/>
+        <location filename="../mainwindow.cpp" line="6082"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Kas oled kindel , et soovid kustutada ALL.TXT faili.?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6081"/>
+        <location filename="../mainwindow.cpp" line="6094"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Kas oled kindel , et soovid kustutada enda QSO LOG faili ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6686"/>
+        <location filename="../mainwindow.cpp" line="6699"/>
         <source>Lockd Tx=Rx</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6687"/>
+        <location filename="../mainwindow.cpp" line="6700"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu et lubada Tx / Rx AF sageduste splitis töötamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6690"/>
+        <location filename="../mainwindow.cpp" line="6703"/>
         <source>Tx/Rx Split</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6691"/>
+        <location filename="../mainwindow.cpp" line="6704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu, et lukustada Tx sagedus Rx AF sagedusele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6877"/>
+        <location filename="../mainwindow.cpp" line="6816"/>
+        <source>Rig Control Error</source>
+        <translation>Jaama juhtimise viga</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6892"/>
         <source>Tune digital gain</source>
         <translation>Häälesta digitaalset võimendust</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6878"/>
+        <location filename="../mainwindow.cpp" line="6893"/>
         <source>Transmit digital gain</source>
         <translation>Saate digitaalne võimendus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6897"/>
+        <location filename="../mainwindow.cpp" line="6912"/>
         <source>Prefixes</source>
         <translation>Eesliited</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6946"/>
-        <location filename="../mainwindow.cpp" line="6947"/>
+        <location filename="../mainwindow.cpp" line="6961"/>
+        <location filename="../mainwindow.cpp" line="6962"/>
         <source>Logd </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7170"/>
+        <location filename="../mainwindow.cpp" line="7185"/>
         <source>Network Error</source>
         <translation>Võrgu viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7171"/>
+        <location filename="../mainwindow.cpp" line="7186"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Viga: %1
 UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7305"/>
+        <location filename="../mainwindow.cpp" line="7320"/>
         <source>File Error</source>
         <translation>Faili viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7516"/>
+        <location filename="../mainwindow.cpp" line="7531"/>
         <source>Tx watchdog expired</source>
         <translatorcomment>võib-olla: TX-taimer aegus?</translatorcomment>
         <translation>Tx valvekoer aegus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7530"/>
+        <location filename="../mainwindow.cpp" line="7545"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>
@@ -4776,6 +4811,19 @@ UDP server %2:%3</translation>
         <location filename="../PollingTransceiver.cpp" line="187"/>
         <source>Unexpected rig error</source>
         <translation>Ootamatu rigi viga</translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../mainwindow.cpp" line="6829"/>
+        <source>Show Details...</source>
+        <translation>Näita detaile...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6830"/>
+        <source>Hide Details...</source>
+        <translation>Peida detailid...</translation>
     </message>
 </context>
 <context>
@@ -6228,7 +6276,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2185"/>
         <source>&amp;Add</source>
-        <translation>&amp;Lisama</translation>
+        <translation>&amp;Lisa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2192"/>
@@ -6567,7 +6615,7 @@ for assessing propagation and system performance.</source>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2991"/>
-        <location filename="../Configuration.ui" line="4699"/>
+        <location filename="../Configuration.ui" line="5059"/>
         <source>Reset</source>
         <translation>Lähtesta</translation>
     </message>
@@ -6584,17 +6632,18 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3025"/>
         <source>Intercept:</source>
-        <translation>Pealtkuulamine:</translation>
+        <translation>Nihe:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3038"/>
-        <location filename="../Configuration.ui" line="6429"/>
+        <location filename="../Configuration.ui" line="6789"/>
         <source> Hz</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3057"/>
         <source>Slope:</source>
+        <translatorcomment>Korrigeeri:</translatorcomment>
         <translation>Kalduolek:</translation>
     </message>
     <message>
@@ -6625,16 +6674,56 @@ Right click for insert and delete options.</source>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3207"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid CQ tsoonidega, mida logifailis wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3210"/>
+        <source>Check and highlight new CQZ</source>
+        <translation>Kontrolli ja tõsta esile uus CQZ</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3217"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid CQ tsoonidega, mis on sagedusalas uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3227"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid CQ tsoonidega, mis on režiimis uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3247"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid ITU tsoonidega, mida logifailis wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3250"/>
+        <source>Check and highlight new ITUZ</source>
+        <translation>Kontrolli ja tõsta esile uus ITUZ</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3257"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid ITU tsoonidega, mis on sagedusalas uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3267"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid ITU tsoonidega, mis on režiimis uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid DXCC-riikidega, mida logifailis wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3210"/>
+        <location filename="../Configuration.ui" line="3290"/>
         <source>Check and highlight new DXCC</source>
         <translation>Kontrolli ja tõsta esile uus DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3217"/>
+        <location filename="../Configuration.ui" line="3297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid DXCC riikidega, mis on sagedusalas uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -6643,11 +6732,13 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3260"/>
         <location filename="../Configuration.ui" line="3300"/>
         <location filename="../Configuration.ui" line="3340"/>
+        <location filename="../Configuration.ui" line="3380"/>
+        <location filename="../Configuration.ui" line="3420"/>
         <source>per band</source>
         <translation>laineala kohta</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3227"/>
+        <location filename="../Configuration.ui" line="3307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile sõnumid DXCC riikidega, mis on režiimis uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -6656,6 +6747,8 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3270"/>
         <location filename="../Configuration.ui" line="3310"/>
         <location filename="../Configuration.ui" line="3350"/>
+        <location filename="../Configuration.ui" line="3390"/>
+        <location filename="../Configuration.ui" line="3430"/>
         <source>per mode</source>
         <translation>tööliigi kohta</translation>
     </message>
@@ -6664,6 +6757,8 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3277"/>
         <location filename="../Configuration.ui" line="3317"/>
         <location filename="../Configuration.ui" line="3357"/>
+        <location filename="../Configuration.ui" line="3397"/>
+        <location filename="../Configuration.ui" line="3437"/>
         <source>Use also system sound for the notification.</source>
         <translation>Kasuta teatise saamiseks ka süsteemi heli.</translation>
     </message>
@@ -6672,389 +6767,423 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3280"/>
         <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
+        <location filename="../Configuration.ui" line="3400"/>
+        <location filename="../Configuration.ui" line="3440"/>
         <source>Beep as well</source>
         <translation>Beep lubatud</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3247"/>
+        <location filename="../Configuration.ui" line="3327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile ruudud, mida logifailil wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3250"/>
+        <location filename="../Configuration.ui" line="3330"/>
         <source>Check and highlight new grids</source>
         <translation>Kontrolli ja tõsta esile uued ruudud</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3257"/>
+        <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile ruutudega sõnumid, mis on vastavalt logifaili wsjtx_log.adi andmetele uued..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3267"/>
+        <location filename="../Configuration.ui" line="3347"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile ruutudega sõnumid, mis on modes uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3287"/>
+        <location filename="../Configuration.ui" line="3367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile eesliidetega sõnumid, mida logifailis wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3290"/>
+        <location filename="../Configuration.ui" line="3370"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Uute eesliidete kontrollimine ja esiletõstmine</translation>
+        <translation>Kontrolli ja tõsta esile uued prefiksid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3297"/>
+        <location filename="../Configuration.ui" line="3377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3307"/>
+        <location filename="../Configuration.ui" line="3387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile eesliidetega sõnumid, mis on modes uued vastavalt logifaili wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3327"/>
+        <location filename="../Configuration.ui" line="3407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile kutsungitega sõnumid, mida logifailisl wsjtx_log.adi pole.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3330"/>
+        <location filename="../Configuration.ui" line="3410"/>
         <source>Check and highlight new calls</source>
-        <translation>Uute sidede kontrollimine ja esiletõstmine</translation>
+        <translation>Kontrolli ja tõsta esile uued kutsungid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3337"/>
+        <location filename="../Configuration.ui" line="3417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile kutsungitega sõnumid, mis on vastavalt logifaili wsjtx_log.adi andmetele uued laineala järgi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3347"/>
+        <location filename="../Configuration.ui" line="3427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tõsta esile kutsungitega sõnumid, mis on modes uued vastavalt wsjtx_log.adi andmetele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3367"/>
+        <location filename="../Configuration.ui" line="3447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta värviteavitust töötatud DXCC, ruutude, kutsungite kohta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3370"/>
+        <location filename="../Configuration.ui" line="3450"/>
         <source>Highlight worked ones</source>
         <translation>Tõsta esile töötatud</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3377"/>
+        <location filename="../Configuration.ui" line="3457"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Töötatud DXCC, ruudud, sided kustutatakse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3380"/>
+        <location filename="../Configuration.ui" line="3460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Töötatud sidede sõnumid kustutatakse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3383"/>
+        <location filename="../Configuration.ui" line="3463"/>
         <source>strike it</source>
         <translation>joon läbi</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3390"/>
+        <location filename="../Configuration.ui" line="3470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Töötatud DXCC, ruudud ja sided on alla joonitud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3393"/>
+        <location filename="../Configuration.ui" line="3473"/>
         <source>underline it</source>
         <translation>joon alla</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3400"/>
+        <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kodeeritud DXCC, ruutude ja sidede sõnumid, kus MyCalli pole, jäetakse dekodeeritud teksti aknasse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3403"/>
+        <location filename="../Configuration.ui" line="3483"/>
         <source>don&apos;t show it</source>
         <translation>ära näita seda</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3410"/>
+        <location filename="../Configuration.ui" line="3490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Inverteeri tekst&lt;-&gt;vastuvõetud sõnumite taustvärvi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3413"/>
+        <location filename="../Configuration.ui" line="3493"/>
         <source>Inverse text/background color</source>
-        <translation>Teksti / tausta värv vastupidine</translation>
+        <translation>Vaheta teksti / tausta värv omavahel</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3420"/>
+        <location filename="../Configuration.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vaikimisi kontrollitakse sõnumeid CQ ja MyCall, see säte võimaldab kontrollida ka muid vastuvõetud sõnumeid uute DXCC, ruutude ja sidede jaoks. Teavituse jaoks kasutatav värv &apos;muu standardsõnum&apos;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3423"/>
+        <location filename="../Configuration.ui" line="3503"/>
         <source>Highlight other standard messages</source>
         <translation>Tõsta esile muud standardsõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3443"/>
+        <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutage teavitamiseks süsteemi heli niipea, kui esimene teade dekodeeritakse RX-perioodil.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3446"/>
+        <location filename="../Configuration.ui" line="3526"/>
         <source>Beep on 1st decoded message</source>
         <translation>Beep 1. dekodeeritud teatel</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3453"/>
+        <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta teatise saamiseks süsteemi heli, kui vastuvõetud sõnumis on MyCall.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3456"/>
+        <location filename="../Configuration.ui" line="3536"/>
         <source>Beep on my call</source>
         <translation>Beep minu kutsungi peale</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3486"/>
+        <location filename="../Configuration.ui" line="3566"/>
         <source>Markers</source>
         <translation>Markerid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3493"/>
+        <location filename="../Configuration.ui" line="3573"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta sinist markerit, et teatada, kas dekodeeritud sõnumis on käimasoleva QSO-ga seotud minu kutsung (QSO-osapoole kutsung on DX-kõnede aknas), teistele minu kutsungiga saabuvatele kõnedele järgneb punane marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3496"/>
+        <location filename="../Configuration.ui" line="3576"/>
         <source>blue / my call at QSO</source>
         <translation>sinine / minu kutsung QSO-s</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3532"/>
+        <location filename="../Configuration.ui" line="3612"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasuta punast markerit, et teatada, kas dekodeeritud sõnumis on minu kutsung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3535"/>
+        <location filename="../Configuration.ui" line="3615"/>
         <source>red / my call in message</source>
         <translation>punane / minu kutsung sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3545"/>
+        <location filename="../Configuration.ui" line="3625"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Muude tavateadete jaoks kasuta taustvärvi asemel sõnumi lõpus markerit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3548"/>
+        <location filename="../Configuration.ui" line="3628"/>
         <source>Other standard messages</source>
         <translation>Muud standardsõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3591"/>
+        <location filename="../Configuration.ui" line="3671"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eelvaate paani ülaosas on teadetüübid, mida kontrollitakse mõne kriteeriumi suhtes, kusjuures iga tüüpi sõnumiteks valitakse teksti värv.&lt;br&gt;&lt;br&gt;Vasakul küljel on hierarhia järjekorras jaotatud kriteeriumid ja iga kriteeriumi jaoks on sõnumiteks valitud taustavärv.&lt;br&gt;&lt;br&gt;&apos;Töötatud teavituse funktsionaalsus põhineb jääkpõhimõttel, mis käivitatakse juhul, kui kõik aktiveeritud &quot;Uus&quot; kriteerium või kriteeriumid ei ole täidetud.&lt;br&gt;&lt;br&gt;&apos;Pöördvärvi&apos; võib kasutada juhul, kui kasutaja soovib CQ ja &apos;MyCall&apos; sõnumeid esile tõsta konkreetse taustavärvi järgi.&lt;br&gt;&lt;br&gt; Alustuseks saab valida ühe kriteeriumi uute lainealade- / modede jaoks võib kasutada sarnast värvi erineva küllastustasemega, hiljem võib vajalike kriteeriumide arvu suurendada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3594"/>
-        <location filename="../Configuration.ui" line="6494"/>
+        <location filename="../Configuration.ui" line="3674"/>
+        <location filename="../Configuration.ui" line="6854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfiguratsiooni tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3642"/>
+        <location filename="../Configuration.ui" line="3722"/>
         <source>Transmitted message</source>
         <translation>Saate sõnum</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3658"/>
-        <location filename="../Configuration.ui" line="3741"/>
-        <location filename="../Configuration.ui" line="3763"/>
-        <location filename="../Configuration.ui" line="3785"/>
-        <location filename="../Configuration.ui" line="3817"/>
-        <location filename="../Configuration.ui" line="3836"/>
-        <location filename="../Configuration.ui" line="3855"/>
-        <location filename="../Configuration.ui" line="3887"/>
-        <location filename="../Configuration.ui" line="3906"/>
-        <location filename="../Configuration.ui" line="3925"/>
-        <location filename="../Configuration.ui" line="3957"/>
-        <location filename="../Configuration.ui" line="3976"/>
-        <location filename="../Configuration.ui" line="3995"/>
-        <location filename="../Configuration.ui" line="4027"/>
-        <location filename="../Configuration.ui" line="4046"/>
-        <location filename="../Configuration.ui" line="4065"/>
-        <location filename="../Configuration.ui" line="4097"/>
-        <location filename="../Configuration.ui" line="4116"/>
-        <location filename="../Configuration.ui" line="4135"/>
-        <location filename="../Configuration.ui" line="4167"/>
-        <location filename="../Configuration.ui" line="4186"/>
-        <location filename="../Configuration.ui" line="4205"/>
-        <location filename="../Configuration.ui" line="4237"/>
-        <location filename="../Configuration.ui" line="4256"/>
-        <location filename="../Configuration.ui" line="4275"/>
-        <location filename="../Configuration.ui" line="4307"/>
-        <location filename="../Configuration.ui" line="4326"/>
-        <location filename="../Configuration.ui" line="4345"/>
-        <location filename="../Configuration.ui" line="4380"/>
-        <location filename="../Configuration.ui" line="4399"/>
-        <location filename="../Configuration.ui" line="4418"/>
+        <location filename="../Configuration.ui" line="3738"/>
+        <location filename="../Configuration.ui" line="3821"/>
+        <location filename="../Configuration.ui" line="3843"/>
+        <location filename="../Configuration.ui" line="3865"/>
+        <location filename="../Configuration.ui" line="3897"/>
+        <location filename="../Configuration.ui" line="3916"/>
+        <location filename="../Configuration.ui" line="3935"/>
+        <location filename="../Configuration.ui" line="3967"/>
+        <location filename="../Configuration.ui" line="3986"/>
+        <location filename="../Configuration.ui" line="4005"/>
+        <location filename="../Configuration.ui" line="4037"/>
+        <location filename="../Configuration.ui" line="4056"/>
+        <location filename="../Configuration.ui" line="4075"/>
+        <location filename="../Configuration.ui" line="4107"/>
+        <location filename="../Configuration.ui" line="4126"/>
+        <location filename="../Configuration.ui" line="4145"/>
+        <location filename="../Configuration.ui" line="4177"/>
+        <location filename="../Configuration.ui" line="4196"/>
+        <location filename="../Configuration.ui" line="4215"/>
+        <location filename="../Configuration.ui" line="4247"/>
+        <location filename="../Configuration.ui" line="4266"/>
+        <location filename="../Configuration.ui" line="4285"/>
+        <location filename="../Configuration.ui" line="4317"/>
+        <location filename="../Configuration.ui" line="4336"/>
+        <location filename="../Configuration.ui" line="4355"/>
+        <location filename="../Configuration.ui" line="4387"/>
+        <location filename="../Configuration.ui" line="4406"/>
+        <location filename="../Configuration.ui" line="4425"/>
+        <location filename="../Configuration.ui" line="4457"/>
+        <location filename="../Configuration.ui" line="4476"/>
+        <location filename="../Configuration.ui" line="4495"/>
+        <location filename="../Configuration.ui" line="4527"/>
+        <location filename="../Configuration.ui" line="4546"/>
+        <location filename="../Configuration.ui" line="4565"/>
+        <location filename="../Configuration.ui" line="4597"/>
+        <location filename="../Configuration.ui" line="4616"/>
+        <location filename="../Configuration.ui" line="4635"/>
+        <location filename="../Configuration.ui" line="4667"/>
+        <location filename="../Configuration.ui" line="4686"/>
+        <location filename="../Configuration.ui" line="4705"/>
+        <location filename="../Configuration.ui" line="4740"/>
+        <location filename="../Configuration.ui" line="4759"/>
+        <location filename="../Configuration.ui" line="4778"/>
         <source>K1ABC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3674"/>
+        <location filename="../Configuration.ui" line="3754"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Töötle RR73 / 73 sõnumeid samamoodi kui automaatse valimise CQ-teateid.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3680"/>
+        <location filename="../Configuration.ui" line="3760"/>
         <source>RR73/73           </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3693"/>
+        <location filename="../Configuration.ui" line="3773"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3706"/>
+        <location filename="../Configuration.ui" line="3786"/>
         <source>My Call in message</source>
         <translation>My Call sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3719"/>
+        <location filename="../Configuration.ui" line="3799"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määra mittevärviliste (&apos;CQ&apos; ja &apos;MyCall&apos;) tavateadete teksti värv&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3722"/>
+        <location filename="../Configuration.ui" line="3802"/>
         <source>Other standard message</source>
         <translation>Muu standardsõnum</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3801"/>
+        <location filename="../Configuration.ui" line="3881"/>
+        <source>New CQZ</source>
+        <translation>Uus CQZ</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3951"/>
+        <source>New CQZ on Band/Mode</source>
+        <translation>Uus CQZ lainealas/tööliigis</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="4021"/>
+        <source>New ITUZ</source>
+        <translation>Uus ITUZ</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="4091"/>
+        <source>New ITUZ on Band/Mode</source>
+        <translation>Uus ITUZ lainealas/tööliigis</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="4161"/>
         <source>New DXCC</source>
         <translation>Uus DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3871"/>
+        <location filename="../Configuration.ui" line="4231"/>
         <source>New DXCC on Band/Mode</source>
         <translation>Uus DXCC lainealas/tööliigis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3941"/>
+        <location filename="../Configuration.ui" line="4301"/>
         <source>New Grid</source>
         <translation>Uus ruut</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4011"/>
+        <location filename="../Configuration.ui" line="4371"/>
         <source>New Grid on Band/Mode</source>
         <translation>Uus ruut lainealas/tööliigis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4081"/>
+        <location filename="../Configuration.ui" line="4441"/>
         <source>New Prefix</source>
         <translation>Uus Prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4151"/>
+        <location filename="../Configuration.ui" line="4511"/>
         <source>New Prefix on Band/Mode</source>
         <translation>Uus Prefix lainealas/tööliigis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4221"/>
+        <location filename="../Configuration.ui" line="4581"/>
         <source>New Call</source>
         <translation>Uus kutsung</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4291"/>
+        <location filename="../Configuration.ui" line="4651"/>
         <source>New Call on Band/Mode</source>
         <translation>Uus kutsung lainealas/tööliigis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4361"/>
+        <location filename="../Configuration.ui" line="4721"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>Kasutatakse ainult CQ ja MyCall sõnumite jaoks</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4364"/>
+        <location filename="../Configuration.ui" line="4724"/>
         <source>Worked one</source>
         <translation>Töötatud</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4461"/>
+        <location filename="../Configuration.ui" line="4821"/>
         <source>Filters</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4472"/>
+        <location filename="../Configuration.ui" line="4832"/>
         <source>Hide messages from continents</source>
         <translation>Peida kontinentide nimed</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4484"/>
+        <location filename="../Configuration.ui" line="4844"/>
         <source>Africa</source>
         <translation>Aafrika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4491"/>
+        <location filename="../Configuration.ui" line="4851"/>
         <source>Antarctica</source>
         <translation>Antarktika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4498"/>
+        <location filename="../Configuration.ui" line="4858"/>
         <source>Asia</source>
         <translation>Aasia</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4505"/>
+        <location filename="../Configuration.ui" line="4865"/>
         <source>Europe</source>
         <translation>Euroopa</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4512"/>
+        <location filename="../Configuration.ui" line="4872"/>
         <source>Oceania</source>
         <translation>Okeaania</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4519"/>
+        <location filename="../Configuration.ui" line="4879"/>
         <source>North America</source>
         <translation>P-Ameerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4526"/>
+        <location filename="../Configuration.ui" line="4886"/>
         <source>South America</source>
         <translation>L-Ameerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4536"/>
+        <location filename="../Configuration.ui" line="4896"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Näita DXCC nime / eesliidet - aktiveeritakse sätete vahekaardil Üldine või suvalise uue teate saamiseks, et see funktsioon töötaks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4539"/>
+        <location filename="../Configuration.ui" line="4899"/>
         <source>Hide messages from countries</source>
         <translation>Peida riikide nimed</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4559"/>
-        <location filename="../Configuration.ui" line="4624"/>
+        <location filename="../Configuration.ui" line="4919"/>
+        <location filename="../Configuration.ui" line="4984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Luba valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4562"/>
-        <location filename="../Configuration.ui" line="4627"/>
+        <location filename="../Configuration.ui" line="4922"/>
+        <location filename="../Configuration.ui" line="4987"/>
         <source>Hide</source>
         <translation>Peida</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4569"/>
+        <location filename="../Configuration.ui" line="4929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -7091,23 +7220,23 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4592"/>
+        <location filename="../Configuration.ui" line="4952"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kustuta riikide nimekiri&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4595"/>
-        <location filename="../Configuration.ui" line="4650"/>
+        <location filename="../Configuration.ui" line="4955"/>
+        <location filename="../Configuration.ui" line="5010"/>
         <source>Clear</source>
         <translation>Puhasta</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4607"/>
+        <location filename="../Configuration.ui" line="4967"/>
         <source>Hide messages from callsigns</source>
         <translation>Peida kutsungite sõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4634"/>
+        <location filename="../Configuration.ui" line="4994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -7115,572 +7244,572 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Komaga eraldatud kutsungite loend, lüngad pole lubatud, liitkõnede puhul kasutatakse baaskõnet, näiteks: AA1AAA, BB1BB, CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4647"/>
+        <location filename="../Configuration.ui" line="5007"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kustuta kutsungiloend&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4662"/>
+        <location filename="../Configuration.ui" line="5022"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>Kuva sisuga seotud teateid RX sageduse aknas </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4679"/>
+        <location filename="../Configuration.ui" line="5039"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sisuga seotud tasuta sõnumite edastamine RX-sageduse aknasse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4682"/>
+        <location filename="../Configuration.ui" line="5042"/>
         <source>Enable</source>
         <translation>Luba</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4689"/>
+        <location filename="../Configuration.ui" line="5049"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Komadega eraldatud sisunimede loend.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4696"/>
+        <location filename="../Configuration.ui" line="5056"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lähtestage sisunimede loend vaikeväärtusele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4713"/>
-        <location filename="../Configuration.ui" line="4736"/>
-        <location filename="../Configuration.ui" line="4759"/>
+        <location filename="../Configuration.ui" line="5073"/>
+        <location filename="../Configuration.ui" line="5096"/>
+        <location filename="../Configuration.ui" line="5119"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filtrit rakendatakse RX sagedusest väljumisel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4716"/>
+        <location filename="../Configuration.ui" line="5076"/>
         <source>Show CQ messages only</source>
         <translation>Näita ainult CQ-sõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4739"/>
+        <location filename="../Configuration.ui" line="5099"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>Näita ainult CQ / RRR / RR73 / 73 sõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4762"/>
+        <location filename="../Configuration.ui" line="5122"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>Näita ainult CQ / RR73 / 73 sõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4784"/>
+        <location filename="../Configuration.ui" line="5144"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Peida dekodeeritud vabad sõnumid, mis asuvad väljaspool RX-sagedust.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4787"/>
+        <location filename="../Configuration.ui" line="5147"/>
         <source>Hide decoded free messages</source>
         <translation>Peita dekodeeritud vabad sõnumid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4794"/>
+        <location filename="../Configuration.ui" line="5154"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>2. kutsungi jaoks sõnumite peitmine, mis pole seotud hach-iga</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4817"/>
+        <location filename="../Configuration.ui" line="5177"/>
         <source>Scheduler</source>
         <translation>Planeerija</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4825"/>
+        <location filename="../Configuration.ui" line="5185"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automaatne laineala vahetus vastavalt määratletud ajakavale&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4828"/>
+        <location filename="../Configuration.ui" line="5188"/>
         <source>Band scheduler configuration</source>
         <translation>Laineala planeerija konfiguratsioon</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4838"/>
+        <location filename="../Configuration.ui" line="5198"/>
         <source>hh</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4848"/>
+        <location filename="../Configuration.ui" line="5208"/>
         <source>mm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4858"/>
+        <location filename="../Configuration.ui" line="5218"/>
         <source>Band</source>
         <translation>Laineala</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4868"/>
-        <location filename="../Configuration.ui" line="5128"/>
-        <location filename="../Configuration.ui" line="5385"/>
-        <location filename="../Configuration.ui" line="5642"/>
-        <location filename="../Configuration.ui" line="5899"/>
-        <location filename="../Configuration.ui" line="6156"/>
+        <location filename="../Configuration.ui" line="5228"/>
+        <location filename="../Configuration.ui" line="5488"/>
+        <location filename="../Configuration.ui" line="5745"/>
+        <location filename="../Configuration.ui" line="6002"/>
+        <location filename="../Configuration.ui" line="6259"/>
+        <location filename="../Configuration.ui" line="6516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Planeerija seab režiimi JT65 + JT9, kui valitud on JT65 sagedus.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4871"/>
+        <location filename="../Configuration.ui" line="5231"/>
         <source>JT65+JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4887"/>
-        <location filename="../Configuration.ui" line="5025"/>
-        <location filename="../Configuration.ui" line="5144"/>
-        <location filename="../Configuration.ui" line="5282"/>
-        <location filename="../Configuration.ui" line="5401"/>
-        <location filename="../Configuration.ui" line="5539"/>
-        <location filename="../Configuration.ui" line="5658"/>
-        <location filename="../Configuration.ui" line="5796"/>
-        <location filename="../Configuration.ui" line="5915"/>
-        <location filename="../Configuration.ui" line="6053"/>
+        <location filename="../Configuration.ui" line="5247"/>
+        <location filename="../Configuration.ui" line="5385"/>
+        <location filename="../Configuration.ui" line="5504"/>
+        <location filename="../Configuration.ui" line="5642"/>
+        <location filename="../Configuration.ui" line="5761"/>
+        <location filename="../Configuration.ui" line="5899"/>
+        <location filename="../Configuration.ui" line="6018"/>
+        <location filename="../Configuration.ui" line="6156"/>
+        <location filename="../Configuration.ui" line="6275"/>
+        <location filename="../Configuration.ui" line="6413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali kellaaeg&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4896"/>
-        <location filename="../Configuration.ui" line="5034"/>
-        <location filename="../Configuration.ui" line="5153"/>
-        <location filename="../Configuration.ui" line="5291"/>
-        <location filename="../Configuration.ui" line="5410"/>
-        <location filename="../Configuration.ui" line="5548"/>
-        <location filename="../Configuration.ui" line="5667"/>
-        <location filename="../Configuration.ui" line="5805"/>
-        <location filename="../Configuration.ui" line="5924"/>
-        <location filename="../Configuration.ui" line="6062"/>
+        <location filename="../Configuration.ui" line="5256"/>
+        <location filename="../Configuration.ui" line="5394"/>
+        <location filename="../Configuration.ui" line="5513"/>
+        <location filename="../Configuration.ui" line="5651"/>
+        <location filename="../Configuration.ui" line="5770"/>
+        <location filename="../Configuration.ui" line="5908"/>
+        <location filename="../Configuration.ui" line="6027"/>
+        <location filename="../Configuration.ui" line="6165"/>
+        <location filename="../Configuration.ui" line="6284"/>
+        <location filename="../Configuration.ui" line="6422"/>
         <source>00</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4901"/>
-        <location filename="../Configuration.ui" line="5158"/>
-        <location filename="../Configuration.ui" line="5415"/>
-        <location filename="../Configuration.ui" line="5672"/>
-        <location filename="../Configuration.ui" line="5929"/>
+        <location filename="../Configuration.ui" line="5261"/>
+        <location filename="../Configuration.ui" line="5518"/>
+        <location filename="../Configuration.ui" line="5775"/>
+        <location filename="../Configuration.ui" line="6032"/>
+        <location filename="../Configuration.ui" line="6289"/>
         <source>01</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4906"/>
-        <location filename="../Configuration.ui" line="5163"/>
-        <location filename="../Configuration.ui" line="5420"/>
-        <location filename="../Configuration.ui" line="5677"/>
-        <location filename="../Configuration.ui" line="5934"/>
+        <location filename="../Configuration.ui" line="5266"/>
+        <location filename="../Configuration.ui" line="5523"/>
+        <location filename="../Configuration.ui" line="5780"/>
+        <location filename="../Configuration.ui" line="6037"/>
+        <location filename="../Configuration.ui" line="6294"/>
         <source>02</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4911"/>
-        <location filename="../Configuration.ui" line="5168"/>
-        <location filename="../Configuration.ui" line="5425"/>
-        <location filename="../Configuration.ui" line="5682"/>
-        <location filename="../Configuration.ui" line="5939"/>
+        <location filename="../Configuration.ui" line="5271"/>
+        <location filename="../Configuration.ui" line="5528"/>
+        <location filename="../Configuration.ui" line="5785"/>
+        <location filename="../Configuration.ui" line="6042"/>
+        <location filename="../Configuration.ui" line="6299"/>
         <source>03</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4916"/>
-        <location filename="../Configuration.ui" line="5173"/>
-        <location filename="../Configuration.ui" line="5430"/>
-        <location filename="../Configuration.ui" line="5687"/>
-        <location filename="../Configuration.ui" line="5944"/>
+        <location filename="../Configuration.ui" line="5276"/>
+        <location filename="../Configuration.ui" line="5533"/>
+        <location filename="../Configuration.ui" line="5790"/>
+        <location filename="../Configuration.ui" line="6047"/>
+        <location filename="../Configuration.ui" line="6304"/>
         <source>04</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4921"/>
-        <location filename="../Configuration.ui" line="5039"/>
-        <location filename="../Configuration.ui" line="5178"/>
-        <location filename="../Configuration.ui" line="5296"/>
-        <location filename="../Configuration.ui" line="5435"/>
-        <location filename="../Configuration.ui" line="5553"/>
-        <location filename="../Configuration.ui" line="5692"/>
-        <location filename="../Configuration.ui" line="5810"/>
-        <location filename="../Configuration.ui" line="5949"/>
-        <location filename="../Configuration.ui" line="6067"/>
+        <location filename="../Configuration.ui" line="5281"/>
+        <location filename="../Configuration.ui" line="5399"/>
+        <location filename="../Configuration.ui" line="5538"/>
+        <location filename="../Configuration.ui" line="5656"/>
+        <location filename="../Configuration.ui" line="5795"/>
+        <location filename="../Configuration.ui" line="5913"/>
+        <location filename="../Configuration.ui" line="6052"/>
+        <location filename="../Configuration.ui" line="6170"/>
+        <location filename="../Configuration.ui" line="6309"/>
+        <location filename="../Configuration.ui" line="6427"/>
         <source>05</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4926"/>
-        <location filename="../Configuration.ui" line="5183"/>
-        <location filename="../Configuration.ui" line="5440"/>
-        <location filename="../Configuration.ui" line="5697"/>
-        <location filename="../Configuration.ui" line="5954"/>
+        <location filename="../Configuration.ui" line="5286"/>
+        <location filename="../Configuration.ui" line="5543"/>
+        <location filename="../Configuration.ui" line="5800"/>
+        <location filename="../Configuration.ui" line="6057"/>
+        <location filename="../Configuration.ui" line="6314"/>
         <source>06</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4931"/>
-        <location filename="../Configuration.ui" line="5188"/>
-        <location filename="../Configuration.ui" line="5445"/>
-        <location filename="../Configuration.ui" line="5702"/>
-        <location filename="../Configuration.ui" line="5959"/>
+        <location filename="../Configuration.ui" line="5291"/>
+        <location filename="../Configuration.ui" line="5548"/>
+        <location filename="../Configuration.ui" line="5805"/>
+        <location filename="../Configuration.ui" line="6062"/>
+        <location filename="../Configuration.ui" line="6319"/>
         <source>07</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4936"/>
-        <location filename="../Configuration.ui" line="5193"/>
-        <location filename="../Configuration.ui" line="5450"/>
-        <location filename="../Configuration.ui" line="5707"/>
-        <location filename="../Configuration.ui" line="5964"/>
+        <location filename="../Configuration.ui" line="5296"/>
+        <location filename="../Configuration.ui" line="5553"/>
+        <location filename="../Configuration.ui" line="5810"/>
+        <location filename="../Configuration.ui" line="6067"/>
+        <location filename="../Configuration.ui" line="6324"/>
         <source>08</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4941"/>
-        <location filename="../Configuration.ui" line="5198"/>
-        <location filename="../Configuration.ui" line="5455"/>
-        <location filename="../Configuration.ui" line="5712"/>
-        <location filename="../Configuration.ui" line="5969"/>
+        <location filename="../Configuration.ui" line="5301"/>
+        <location filename="../Configuration.ui" line="5558"/>
+        <location filename="../Configuration.ui" line="5815"/>
+        <location filename="../Configuration.ui" line="6072"/>
+        <location filename="../Configuration.ui" line="6329"/>
         <source>09</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4946"/>
-        <location filename="../Configuration.ui" line="5044"/>
-        <location filename="../Configuration.ui" line="5203"/>
-        <location filename="../Configuration.ui" line="5301"/>
-        <location filename="../Configuration.ui" line="5460"/>
-        <location filename="../Configuration.ui" line="5558"/>
-        <location filename="../Configuration.ui" line="5717"/>
-        <location filename="../Configuration.ui" line="5815"/>
-        <location filename="../Configuration.ui" line="5974"/>
-        <location filename="../Configuration.ui" line="6072"/>
+        <location filename="../Configuration.ui" line="5306"/>
+        <location filename="../Configuration.ui" line="5404"/>
+        <location filename="../Configuration.ui" line="5563"/>
+        <location filename="../Configuration.ui" line="5661"/>
+        <location filename="../Configuration.ui" line="5820"/>
+        <location filename="../Configuration.ui" line="5918"/>
+        <location filename="../Configuration.ui" line="6077"/>
+        <location filename="../Configuration.ui" line="6175"/>
+        <location filename="../Configuration.ui" line="6334"/>
+        <location filename="../Configuration.ui" line="6432"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4951"/>
-        <location filename="../Configuration.ui" line="5208"/>
-        <location filename="../Configuration.ui" line="5465"/>
-        <location filename="../Configuration.ui" line="5722"/>
-        <location filename="../Configuration.ui" line="5979"/>
+        <location filename="../Configuration.ui" line="5311"/>
+        <location filename="../Configuration.ui" line="5568"/>
+        <location filename="../Configuration.ui" line="5825"/>
+        <location filename="../Configuration.ui" line="6082"/>
+        <location filename="../Configuration.ui" line="6339"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4956"/>
-        <location filename="../Configuration.ui" line="5213"/>
-        <location filename="../Configuration.ui" line="5470"/>
-        <location filename="../Configuration.ui" line="5727"/>
-        <location filename="../Configuration.ui" line="5984"/>
-        <source>12</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4961"/>
-        <location filename="../Configuration.ui" line="5218"/>
-        <location filename="../Configuration.ui" line="5475"/>
-        <location filename="../Configuration.ui" line="5732"/>
-        <location filename="../Configuration.ui" line="5989"/>
-        <source>13</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4966"/>
-        <location filename="../Configuration.ui" line="5223"/>
-        <location filename="../Configuration.ui" line="5480"/>
-        <location filename="../Configuration.ui" line="5737"/>
-        <location filename="../Configuration.ui" line="5994"/>
-        <source>14</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4971"/>
-        <location filename="../Configuration.ui" line="5049"/>
-        <location filename="../Configuration.ui" line="5228"/>
-        <location filename="../Configuration.ui" line="5306"/>
-        <location filename="../Configuration.ui" line="5485"/>
-        <location filename="../Configuration.ui" line="5563"/>
-        <location filename="../Configuration.ui" line="5742"/>
-        <location filename="../Configuration.ui" line="5820"/>
-        <location filename="../Configuration.ui" line="5999"/>
-        <location filename="../Configuration.ui" line="6077"/>
-        <source>15</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4976"/>
-        <location filename="../Configuration.ui" line="5233"/>
-        <location filename="../Configuration.ui" line="5490"/>
-        <location filename="../Configuration.ui" line="5747"/>
-        <location filename="../Configuration.ui" line="6004"/>
-        <source>16</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4981"/>
-        <location filename="../Configuration.ui" line="5238"/>
-        <location filename="../Configuration.ui" line="5495"/>
-        <location filename="../Configuration.ui" line="5752"/>
-        <location filename="../Configuration.ui" line="6009"/>
-        <source>17</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4986"/>
-        <location filename="../Configuration.ui" line="5243"/>
-        <location filename="../Configuration.ui" line="5500"/>
-        <location filename="../Configuration.ui" line="5757"/>
-        <location filename="../Configuration.ui" line="6014"/>
-        <source>18</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4991"/>
-        <location filename="../Configuration.ui" line="5248"/>
-        <location filename="../Configuration.ui" line="5505"/>
-        <location filename="../Configuration.ui" line="5762"/>
-        <location filename="../Configuration.ui" line="6019"/>
-        <source>19</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="4996"/>
-        <location filename="../Configuration.ui" line="5054"/>
-        <location filename="../Configuration.ui" line="5253"/>
-        <location filename="../Configuration.ui" line="5311"/>
-        <location filename="../Configuration.ui" line="5510"/>
-        <location filename="../Configuration.ui" line="5568"/>
-        <location filename="../Configuration.ui" line="5767"/>
-        <location filename="../Configuration.ui" line="5825"/>
-        <location filename="../Configuration.ui" line="6024"/>
-        <location filename="../Configuration.ui" line="6082"/>
-        <source>20</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5001"/>
-        <location filename="../Configuration.ui" line="5258"/>
-        <location filename="../Configuration.ui" line="5515"/>
-        <location filename="../Configuration.ui" line="5772"/>
-        <location filename="../Configuration.ui" line="6029"/>
-        <source>21</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5006"/>
-        <location filename="../Configuration.ui" line="5263"/>
-        <location filename="../Configuration.ui" line="5520"/>
-        <location filename="../Configuration.ui" line="5777"/>
-        <location filename="../Configuration.ui" line="6034"/>
-        <source>22</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5011"/>
-        <location filename="../Configuration.ui" line="5268"/>
-        <location filename="../Configuration.ui" line="5525"/>
-        <location filename="../Configuration.ui" line="5782"/>
-        <location filename="../Configuration.ui" line="6039"/>
-        <source>23</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5059"/>
         <location filename="../Configuration.ui" line="5316"/>
         <location filename="../Configuration.ui" line="5573"/>
         <location filename="../Configuration.ui" line="5830"/>
         <location filename="../Configuration.ui" line="6087"/>
-        <source>25</source>
+        <location filename="../Configuration.ui" line="6344"/>
+        <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5064"/>
         <location filename="../Configuration.ui" line="5321"/>
         <location filename="../Configuration.ui" line="5578"/>
         <location filename="../Configuration.ui" line="5835"/>
         <location filename="../Configuration.ui" line="6092"/>
-        <source>30</source>
+        <location filename="../Configuration.ui" line="6349"/>
+        <source>13</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5069"/>
         <location filename="../Configuration.ui" line="5326"/>
         <location filename="../Configuration.ui" line="5583"/>
         <location filename="../Configuration.ui" line="5840"/>
         <location filename="../Configuration.ui" line="6097"/>
-        <source>35</source>
+        <location filename="../Configuration.ui" line="6354"/>
+        <source>14</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5074"/>
         <location filename="../Configuration.ui" line="5331"/>
+        <location filename="../Configuration.ui" line="5409"/>
         <location filename="../Configuration.ui" line="5588"/>
+        <location filename="../Configuration.ui" line="5666"/>
         <location filename="../Configuration.ui" line="5845"/>
+        <location filename="../Configuration.ui" line="5923"/>
         <location filename="../Configuration.ui" line="6102"/>
-        <source>40</source>
+        <location filename="../Configuration.ui" line="6180"/>
+        <location filename="../Configuration.ui" line="6359"/>
+        <location filename="../Configuration.ui" line="6437"/>
+        <source>15</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5079"/>
         <location filename="../Configuration.ui" line="5336"/>
         <location filename="../Configuration.ui" line="5593"/>
         <location filename="../Configuration.ui" line="5850"/>
         <location filename="../Configuration.ui" line="6107"/>
-        <source>45</source>
+        <location filename="../Configuration.ui" line="6364"/>
+        <source>16</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5084"/>
         <location filename="../Configuration.ui" line="5341"/>
         <location filename="../Configuration.ui" line="5598"/>
         <location filename="../Configuration.ui" line="5855"/>
         <location filename="../Configuration.ui" line="6112"/>
-        <source>50</source>
+        <location filename="../Configuration.ui" line="6369"/>
+        <source>17</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5089"/>
         <location filename="../Configuration.ui" line="5346"/>
         <location filename="../Configuration.ui" line="5603"/>
         <location filename="../Configuration.ui" line="5860"/>
         <location filename="../Configuration.ui" line="6117"/>
-        <source>55</source>
+        <location filename="../Configuration.ui" line="6374"/>
+        <source>18</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5109"/>
+        <location filename="../Configuration.ui" line="5351"/>
+        <location filename="../Configuration.ui" line="5608"/>
+        <location filename="../Configuration.ui" line="5865"/>
+        <location filename="../Configuration.ui" line="6122"/>
+        <location filename="../Configuration.ui" line="6379"/>
+        <source>19</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5356"/>
+        <location filename="../Configuration.ui" line="5414"/>
+        <location filename="../Configuration.ui" line="5613"/>
+        <location filename="../Configuration.ui" line="5671"/>
+        <location filename="../Configuration.ui" line="5870"/>
+        <location filename="../Configuration.ui" line="5928"/>
+        <location filename="../Configuration.ui" line="6127"/>
+        <location filename="../Configuration.ui" line="6185"/>
+        <location filename="../Configuration.ui" line="6384"/>
+        <location filename="../Configuration.ui" line="6442"/>
+        <source>20</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5361"/>
+        <location filename="../Configuration.ui" line="5618"/>
+        <location filename="../Configuration.ui" line="5875"/>
+        <location filename="../Configuration.ui" line="6132"/>
+        <location filename="../Configuration.ui" line="6389"/>
+        <source>21</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../Configuration.ui" line="5366"/>
         <location filename="../Configuration.ui" line="5623"/>
         <location filename="../Configuration.ui" line="5880"/>
         <location filename="../Configuration.ui" line="6137"/>
+        <location filename="../Configuration.ui" line="6394"/>
+        <source>22</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5371"/>
+        <location filename="../Configuration.ui" line="5628"/>
+        <location filename="../Configuration.ui" line="5885"/>
+        <location filename="../Configuration.ui" line="6142"/>
+        <location filename="../Configuration.ui" line="6399"/>
+        <source>23</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5419"/>
+        <location filename="../Configuration.ui" line="5676"/>
+        <location filename="../Configuration.ui" line="5933"/>
+        <location filename="../Configuration.ui" line="6190"/>
+        <location filename="../Configuration.ui" line="6447"/>
+        <source>25</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5424"/>
+        <location filename="../Configuration.ui" line="5681"/>
+        <location filename="../Configuration.ui" line="5938"/>
+        <location filename="../Configuration.ui" line="6195"/>
+        <location filename="../Configuration.ui" line="6452"/>
+        <source>30</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5429"/>
+        <location filename="../Configuration.ui" line="5686"/>
+        <location filename="../Configuration.ui" line="5943"/>
+        <location filename="../Configuration.ui" line="6200"/>
+        <location filename="../Configuration.ui" line="6457"/>
+        <source>35</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5434"/>
+        <location filename="../Configuration.ui" line="5691"/>
+        <location filename="../Configuration.ui" line="5948"/>
+        <location filename="../Configuration.ui" line="6205"/>
+        <location filename="../Configuration.ui" line="6462"/>
+        <source>40</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5439"/>
+        <location filename="../Configuration.ui" line="5696"/>
+        <location filename="../Configuration.ui" line="5953"/>
+        <location filename="../Configuration.ui" line="6210"/>
+        <location filename="../Configuration.ui" line="6467"/>
+        <source>45</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5444"/>
+        <location filename="../Configuration.ui" line="5701"/>
+        <location filename="../Configuration.ui" line="5958"/>
+        <location filename="../Configuration.ui" line="6215"/>
+        <location filename="../Configuration.ui" line="6472"/>
+        <source>50</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5449"/>
+        <location filename="../Configuration.ui" line="5706"/>
+        <location filename="../Configuration.ui" line="5963"/>
+        <location filename="../Configuration.ui" line="6220"/>
+        <location filename="../Configuration.ui" line="6477"/>
+        <source>55</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5469"/>
+        <location filename="../Configuration.ui" line="5726"/>
+        <location filename="../Configuration.ui" line="5983"/>
+        <location filename="../Configuration.ui" line="6240"/>
+        <location filename="../Configuration.ui" line="6497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali laineala&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6186"/>
+        <location filename="../Configuration.ui" line="6546"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Laineala ajakava aktiveerimine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6189"/>
+        <location filename="../Configuration.ui" line="6549"/>
         <source>Use band scheduler</source>
         <translation>Kasutage laineala planeerijat</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6212"/>
+        <location filename="../Configuration.ui" line="6572"/>
         <source>Advanced</source>
         <translation>Täpsemad</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6222"/>
+        <location filename="../Configuration.ui" line="6582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kasutaja valitavad parameetrid JT65 dekodeerimiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6225"/>
+        <location filename="../Configuration.ui" line="6585"/>
         <source>JT65 decoding parameters</source>
         <translation>JT65 dekodeerimise parameetrid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6253"/>
-        <location filename="../Configuration.ui" line="6266"/>
+        <location filename="../Configuration.ui" line="6613"/>
+        <location filename="../Configuration.ui" line="6626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määratleb lairiba dekodeerimise läbimisprotsesside dekodeerimiskatsete arvu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6256"/>
-        <location filename="../Configuration.ui" line="6608"/>
+        <location filename="../Configuration.ui" line="6616"/>
+        <location filename="../Configuration.ui" line="6968"/>
         <source>Number of decoding attempts:</source>
         <translation>Dekodeerimise katsete arv:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6292"/>
-        <location filename="../Configuration.ui" line="6305"/>
+        <location filename="../Configuration.ui" line="6652"/>
+        <location filename="../Configuration.ui" line="6665"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lairiba dekodeerimise käikude arv&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6295"/>
+        <location filename="../Configuration.ui" line="6655"/>
         <source>Number of decoding  passes: </source>
         <translation>Dekodeerimise käikude arv: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6325"/>
-        <location filename="../Configuration.ui" line="6338"/>
+        <location filename="../Configuration.ui" line="6685"/>
+        <location filename="../Configuration.ui" line="6698"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määratleb RX sageduse dekodeerimise käikude katsete arvu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6328"/>
-        <location filename="../Configuration.ui" line="6644"/>
+        <location filename="../Configuration.ui" line="6688"/>
+        <location filename="../Configuration.ui" line="7004"/>
         <source>RX frequency decoding attempts:</source>
         <translation>RX sageduse dekodeerimise katsed:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6364"/>
-        <location filename="../Configuration.ui" line="6377"/>
-        <location filename="../Configuration.ui" line="6535"/>
+        <location filename="../Configuration.ui" line="6724"/>
+        <location filename="../Configuration.ui" line="6737"/>
+        <location filename="../Configuration.ui" line="6895"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seda DT-akent kasutatakse ainult RX-sagedusega CALL3 andmepõhiste vihjedekooderite jaoks, mis on keskendunud CQ ja &apos;mycall hiscall hisgrid&apos; teadetele. Kõrgemad väärtused võivad suurendada valedekodeerimiste arvu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6367"/>
+        <location filename="../Configuration.ui" line="6727"/>
         <source>Hinted decoding DT range:</source>
         <translation>Vihje dekodeerimise DT vahemik:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6398"/>
+        <location filename="../Configuration.ui" line="6758"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveeri kaks täiendavat sagedusmaski JT65 dekodeerimiskäigu ülerahvastatud riba tingimustes. See dekodeerimine aktiveeritakse automaatselt, kui sagedusribal on vähe signaale. Kasutage seda sätet ainult kiire protsessori jaoks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6404"/>
+        <location filename="../Configuration.ui" line="6764"/>
         <source>Use frequency mask decoding</source>
         <translation>Kasutage sagedusmaski dekodeerimist</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6416"/>
-        <location filename="../Configuration.ui" line="6426"/>
+        <location filename="../Configuration.ui" line="6776"/>
+        <location filename="../Configuration.ui" line="6786"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määratleb JT65a signaalide dekodeerimise ülemmäära, vaikeväärtus on 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6419"/>
+        <location filename="../Configuration.ui" line="6779"/>
         <source>Top decoding frequency: </source>
         <translation>Suurim dekodeerimise sagedus: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6452"/>
-        <location filename="../Configuration.ui" line="6465"/>
+        <location filename="../Configuration.ui" line="6812"/>
+        <location filename="../Configuration.ui" line="6825"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signaali moonutamine RX- või TX-marsruudil võib tekitada JT65A signaali harmoonilisi (JT65B, JT65C jne). JT65A signaali harmooniliste dekodeerimine võib dekodeeritud signaalide lahutamise teel parandada üldist dekodeerimise efektiivsust. Dekodeerimise sügavus on võrdeline vajalike protsessoriressurssidega, aeglase CPU jaoks sea see väärtuseks 1. Suurem sügavuse väärtus võimaldab dekodeerida rohkem harmoonilisi. JT65B ja JT65C dekodeerimist toetatakse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6455"/>
+        <location filename="../Configuration.ui" line="6815"/>
         <source>Harmonics decoding depth:</source>
         <translation>Harmoonikute dekodeerimise sügavus:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6491"/>
+        <location filename="../Configuration.ui" line="6851"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seadistused sõltuvad CPU võimsusest, proovige kasutada ülerahvastatud HF ribade jaoks maksimaalset dekodeerimiskäikude arvu.&lt;br&gt;&lt;br&gt;Dekoodimiskäikude arvu võib madala asustusega HF / VHF sagedusribade puhul vähendada, samas kui dekodeerimiskatsete arvu suurendamine võib sealsetele nõrkadele signaalidele parema dekodeerimise tõhususe anda.&lt;br&gt;&lt;br&gt;Dekoodimiskatsete arv, mis mõjutavad madala SNR-i signaalide dekodeerimise efektiivsust: lairiba või RX sagedus.&lt;br&gt;&lt;br&gt;Dekoodimiskäikude arv, mis mõjutavad maksimaalset arvu signaale, mida saab dekodeerida samal sagedusel või paikneda üksteise lähedal suuresti kattuvate spektritega, on võimalik dekodeerida kuni 4 signaali samal sagedusel ja kuni 7 signaali RX-il sagedus, kui dekodeerimiskäikude arv on seatud väärtusele 4.&lt;br&gt;&lt;br&gt;Suurendage dekodeerimiskatsete arvu väärtuseni, mis võimaldab dekodeerimise lõpule viia kuni RX-minutilise perioodi lõpuni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6579"/>
+        <location filename="../Configuration.ui" line="6939"/>
         <source>T10 decoding parameters</source>
         <translation>T10 dekodeerimise parameetrid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6605"/>
-        <location filename="../Configuration.ui" line="6615"/>
+        <location filename="../Configuration.ui" line="6965"/>
+        <location filename="../Configuration.ui" line="6975"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määratleb lairiba T10 dekodeerimise katsete arvu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6641"/>
-        <location filename="../Configuration.ui" line="6654"/>
+        <location filename="../Configuration.ui" line="7001"/>
+        <location filename="../Configuration.ui" line="7014"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Määratleb TX dekodeerimiskatsete arvu RX sageduse jaoks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6745"/>
+        <location filename="../Configuration.ui" line="7105"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>

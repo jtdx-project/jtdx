@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200218
-
 module ft4_decode
 
   type :: ft4_decoder
@@ -335,12 +333,16 @@ contains
 ! check for false decodes
 ! i3=3 n3=4  TU; B69FWJ 8Z6IB 559 580  
 ! i3=3 n3=3  TU; FD9GRU HT1HHY R 529 11
-              if(nsnr.lt.-16 .and. i3.eq.3 .and. (n3.eq.3 .or. n3.eq.4) .and. message(1:3).eq.'TU;') then
+              if(message(1:3).eq.'TU;' .and. nsnr.lt.-15 .and. i3.eq.3 .and. (n3.eq.3 .or. n3.eq.4)) then
                 ispc1=index(message,' '); ispc2=index(message((ispc1+1):),' ')+ispc1 
                 ispc3=index(message((ispc2+1):),' ')+ispc2
                 call_a=''; call_b=''; call_a=message(ispc1+1:ispc2-1); call_b=message(ispc2+1:ispc3-1)
                 falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
                 if(falsedec) then; message=''; cycle; endif
+              endif
+              if(iaptype.eq.1 .and. xsnr.lt.-15.) then
+                nbadcrc=0; call chkfalse8(message,i3,n3,nbadcrc,iaptype)
+                if(nbadcrc.eq.1) then; message=''; cycle; endif
               endif
 !write(21,'(i6.6,i5,2x,f4.1,i6,2x,a37,2x,f4.1,3i3,f5.1,i4,i4,i4)') &
 !  nutc,nsnr,xdt,nint(f1),message,smax,iaptype,ipass,isp,dmin,nsync_qual,nharderror,iseg

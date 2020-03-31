@@ -39,7 +39,7 @@ namespace
   {
     QString message;
     static char constexpr fmt[] = "Hamlib: %s";
-    message = message.vsprintf (format, ap).trimmed ();
+    message = message.vasprintf (format, ap).trimmed ();
 
     switch (level)
       {
@@ -246,6 +246,26 @@ HamlibTransceiver::HamlibTransceiver (int model_number, TransceiverFactory::Para
                                       QObject * parent)
   : PollingTransceiver {params.poll_interval, parent}
   , rig_ {rig_init (model_number)}
+  , errortable {tr("Command completed successfully"),
+  tr("Invalid parameter"),
+  tr("Invalid configuration"),
+  tr("Memory shortage"),
+  tr("Feature not implemented"),
+  tr("Communication timed out"),
+  tr("IO error"),
+  tr("Internal Hamlib error"),
+  tr("Protocol error"),
+  tr("Command rejected by the rig"),
+  tr("Command performed, but arg truncated, result not guaranteed"),
+  tr("Feature not available"),
+  tr("Target VFO unaccessible"),
+  tr("Communication bus error"),
+  tr("Communication bus collision"),
+  tr("NULL RIG handle or invalid pointer parameter"),
+  tr("Invalid VFO"),
+  tr("Argument out of domain of func"),
+  "Added1",
+  "Added2" }
   , back_ptt_port_ {TransceiverFactory::TX_audio_source_rear == params.audio_source}
   , one_VFO_ {false}
   , is_dummy_ {RIG_MODEL_DUMMY == model_number}
@@ -421,7 +441,7 @@ void HamlibTransceiver::error_check (int ret_code, QString const& doing) const
   if (RIG_OK != ret_code)
     {
       TRACE_CAT_POLL ("HamlibTransceiver", "error:" << rigerror (ret_code));
-      throw error {tr ("Hamlib error: %1 while %2").arg (rigerror (ret_code)).arg (doing)};
+      throw error {tr ("Hamlib error: %1 while %2").arg (errortable.at (abs(ret_code))).arg (doing)};
     }
 }
 

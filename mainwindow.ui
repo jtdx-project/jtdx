@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>JTDX  by HF community</string>
+   <string>JTDX</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -4678,96 +4678,60 @@ list. The list can be maintained in Settings (F2).</string>
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>English</string>
-   </property>
   </action>
   <action name="actionEstonian">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Eesti</string>
    </property>
   </action>
   <action name="actionRussian">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>Русский</string>
-   </property>
   </action>
   <action name="actionCroatian">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Hrvatski</string>
    </property>
   </action>
   <action name="actionSpanish">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>Español</string>
-   </property>
   </action>
   <action name="actionFrench">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Français</string>
    </property>
   </action>
   <action name="actionItalian">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>Italiano</string>
-   </property>
   </action>
   <action name="actionPolish">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Polski</string>
    </property>
   </action>
   <action name="actionPortuguese">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>Português</string>
-   </property>
   </action>
   <action name="actionChinese_simplified">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>简体中文</string>
    </property>
   </action>
   <action name="actionChinese_traditional">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="text">
-    <string>繁體中文</string>
-   </property>
   </action>
   <action name="actionJapanese">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>日本語</string>
    </property>
   </action>
   <action name="actionJTDX_Web_Site">

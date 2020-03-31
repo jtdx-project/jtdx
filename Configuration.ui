@@ -3202,19 +3202,19 @@ Right click for insert and delete options.</string>
                <number>2</number>
               </property>
               <item row="0" column="0">
-               <widget class="QCheckBox" name="newDXCC_check_box">
+               <widget class="QCheckBox" name="newCQZ_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Check and highlight new DXCC</string>
+                 <string>Check and highlight new CQZ</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QCheckBox" name="newDXCCBand_check_box">
+               <widget class="QCheckBox" name="newCQZBand_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per band</string>
@@ -3222,9 +3222,9 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QCheckBox" name="newDXCCBandMode_check_box">
+               <widget class="QCheckBox" name="newCQZBandMode_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per mode</string>
@@ -3232,7 +3232,7 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="0" column="3">
-               <widget class="QCheckBox" name="beep_on_newDXCC_check_box">
+               <widget class="QCheckBox" name="beep_on_newCQZ_check_box">
                 <property name="toolTip">
                  <string>Use also system sound for the notification.</string>
                 </property>
@@ -3242,19 +3242,19 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QCheckBox" name="newGrid_check_box">
+               <widget class="QCheckBox" name="newITUZ_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Check and highlight new grids</string>
+                 <string>Check and highlight new ITUZ</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QCheckBox" name="newGridBand_check_box">
+               <widget class="QCheckBox" name="newITUZBand_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per band</string>
@@ -3262,9 +3262,9 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="1" column="2">
-               <widget class="QCheckBox" name="newGridBandMode_check_box">
+               <widget class="QCheckBox" name="newITUZBandMode_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per mode</string>
@@ -3272,7 +3272,7 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="1" column="3">
-               <widget class="QCheckBox" name="beep_on_newGrid_check_box">
+               <widget class="QCheckBox" name="beep_on_newITUZ_check_box">
                 <property name="toolTip">
                  <string>Use also system sound for the notification.</string>
                 </property>
@@ -3282,19 +3282,19 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QCheckBox" name="newPx_check_box">
+               <widget class="QCheckBox" name="newDXCC_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Check and highlight new prefixes</string>
+                 <string>Check and highlight new DXCC</string>
                 </property>
                </widget>
               </item>
               <item row="2" column="1">
-               <widget class="QCheckBox" name="newPxBand_check_box">
+               <widget class="QCheckBox" name="newDXCCBand_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per band</string>
@@ -3302,9 +3302,9 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="2" column="2">
-               <widget class="QCheckBox" name="newPxBandMode_check_box">
+               <widget class="QCheckBox" name="newDXCCBandMode_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per mode</string>
@@ -3312,7 +3312,7 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="2" column="3">
-               <widget class="QCheckBox" name="beep_on_newPx_check_box">
+               <widget class="QCheckBox" name="beep_on_newDXCC_check_box">
                 <property name="toolTip">
                  <string>Use also system sound for the notification.</string>
                 </property>
@@ -3322,19 +3322,19 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="3" column="0">
-               <widget class="QCheckBox" name="newCall_check_box">
+               <widget class="QCheckBox" name="newGrid_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Check and highlight new calls</string>
+                 <string>Check and highlight new grids</string>
                 </property>
                </widget>
               </item>
               <item row="3" column="1">
-               <widget class="QCheckBox" name="newCallBand_check_box">
+               <widget class="QCheckBox" name="newGridBand_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per band</string>
@@ -3342,9 +3342,9 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="3" column="2">
-               <widget class="QCheckBox" name="newCallBandMode_check_box">
+               <widget class="QCheckBox" name="newGridBandMode_check_box">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>per mode</string>
@@ -3352,7 +3352,7 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="3" column="3">
-               <widget class="QCheckBox" name="beep_on_newCall_check_box">
+               <widget class="QCheckBox" name="beep_on_newGrid_check_box">
                 <property name="toolTip">
                  <string>Use also system sound for the notification.</string>
                 </property>
@@ -3362,6 +3362,86 @@ Right click for insert and delete options.</string>
                </widget>
               </item>
               <item row="4" column="0">
+               <widget class="QCheckBox" name="newPx_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Check and highlight new prefixes</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="newPxBand_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>per band</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QCheckBox" name="newPxBandMode_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>per mode</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QCheckBox" name="beep_on_newPx_check_box">
+                <property name="toolTip">
+                 <string>Use also system sound for the notification.</string>
+                </property>
+                <property name="text">
+                 <string>Beep as well</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="newCall_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Check and highlight new calls</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="newCallBand_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>per band</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QCheckBox" name="newCallBandMode_check_box">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>per mode</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QCheckBox" name="beep_on_newCall_check_box">
+                <property name="toolTip">
+                 <string>Use also system sound for the notification.</string>
+                </property>
+                <property name="text">
+                 <string>Beep as well</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
                <widget class="QCheckBox" name="workedColor_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3371,7 +3451,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="6" column="1">
                <widget class="QCheckBox" name="workedStriked_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3384,7 +3464,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="2">
+              <item row="6" column="2">
                <widget class="QCheckBox" name="workedUnderlined_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3394,7 +3474,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="3">
+              <item row="6" column="3">
                <widget class="QCheckBox" name="workedDontShow_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3404,7 +3484,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="0">
+              <item row="7" column="0">
                <widget class="QCheckBox" name="txtColor_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3414,7 +3494,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="0">
+              <item row="8" column="0">
                <widget class="QCheckBox" name="newPotential_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default 'CQ' and 'MyCall' messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. 'Other standard message' color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3424,7 +3504,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="4">
+              <item row="8" column="4">
                <spacer name="horizontalSpacer_7">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -3437,7 +3517,7 @@ Right click for insert and delete options.</string>
                 </property>
                </spacer>
               </item>
-              <item row="7" column="3">
+              <item row="9" column="3">
                <widget class="QCheckBox" name="beep_on_firstMsg_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3447,7 +3527,7 @@ Right click for insert and delete options.</string>
                 </property>
                </widget>
               </item>
-              <item row="7" column="2">
+              <item row="9" column="2">
                <widget class="QCheckBox" name="beep_on_my_call_check_box">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3790,6 +3870,286 @@ Right click for insert and delete options.</string>
               </widget>
              </item>
              <item row="3" column="0">
+              <widget class="QPushButton" name="pbNewCQZ">
+               <property name="minimumSize">
+                <size>
+                 <width>155</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>New CQZ</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="labNewCQZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c08000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLabel" name="labNewMcCQZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c08000;color: #ff0000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLabel" name="labNewScCQZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c08000;color: #707070}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPushButton" name="pbNewCQZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>155</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>New CQZ on Band/Mode</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="labNewCQZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0a080}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QLabel" name="labNewMcCQZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0a080;color: #ff0000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QLabel" name="labNewScCQZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0a080;color: #707070}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QPushButton" name="pbNewITUZ">
+               <property name="minimumSize">
+                <size>
+                 <width>155</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>New ITUZ</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="labNewITUZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #90b000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLabel" name="labNewMcITUZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #90b000;color: #ff0000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QLabel" name="labNewScITUZ">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #90b000;color: #707070}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QPushButton" name="pbNewITUZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>155</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>New ITUZ on Band/Mode</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLabel" name="labNewITUZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0d0a0}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QLabel" name="labNewMcITUZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0d0a0;color: #ff0000}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3">
+              <widget class="QLabel" name="labNewScITUZBand">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c0d0a0;color: #707070}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
               <widget class="QPushButton" name="pbNewDXCC">
                <property name="minimumSize">
                 <size>
@@ -3802,27 +4162,8 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="1">
+             <item row="7" column="1">
               <widget class="QLabel" name="labNewDXCC">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #c000c0;color: #707070}</string>
-               </property>
-               <property name="text">
-                <string>K1ABC</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2">
-              <widget class="QLabel" name="labNewMcDXCC">
                <property name="minimumSize">
                 <size>
                  <width>80</width>
@@ -3840,8 +4181,8 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="3">
-              <widget class="QLabel" name="labNewScDXCC">
+             <item row="7" column="2">
+              <widget class="QLabel" name="labNewMcDXCC">
                <property name="minimumSize">
                 <size>
                  <width>80</width>
@@ -3859,7 +4200,26 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
+             <item row="7" column="3">
+              <widget class="QLabel" name="labNewScDXCC">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{font-weight: bold;background-color: #c000c0;color: #707070}</string>
+               </property>
+               <property name="text">
+                <string>K1ABC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
               <widget class="QPushButton" name="pbNewDXCCBand">
                <property name="minimumSize">
                 <size>
@@ -3872,7 +4232,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
+             <item row="8" column="1">
               <widget class="QLabel" name="labNewDXCCBand">
                <property name="minimumSize">
                 <size>
@@ -3881,7 +4241,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ff00ff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #d080d0}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3891,7 +4251,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="2">
+             <item row="8" column="2">
               <widget class="QLabel" name="labNewMcDXCCBand">
                <property name="minimumSize">
                 <size>
@@ -3900,7 +4260,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ff00ff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #d080d0;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3910,7 +4270,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="3">
+             <item row="8" column="3">
               <widget class="QLabel" name="labNewScDXCCBand">
                <property name="minimumSize">
                 <size>
@@ -3919,7 +4279,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ff00ff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #d080d0;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3929,7 +4289,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="0">
+             <item row="9" column="0">
               <widget class="QPushButton" name="pbNewGrid">
                <property name="minimumSize">
                 <size>
@@ -3942,7 +4302,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="1">
+             <item row="9" column="1">
               <widget class="QLabel" name="labNewGrid">
                <property name="minimumSize">
                 <size>
@@ -3951,7 +4311,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00c0c0}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a0a0}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3961,7 +4321,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="2">
+             <item row="9" column="2">
               <widget class="QLabel" name="labNewMcGrid">
                <property name="minimumSize">
                 <size>
@@ -3970,7 +4330,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00c0c0;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a0a0;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3980,7 +4340,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="3">
+             <item row="9" column="3">
               <widget class="QLabel" name="labNewScGrid">
                <property name="minimumSize">
                 <size>
@@ -3989,7 +4349,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00c0c0;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a0a0;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -3999,7 +4359,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="10" column="0">
               <widget class="QPushButton" name="pbNewGridBand">
                <property name="minimumSize">
                 <size>
@@ -4012,7 +4372,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="1">
+             <item row="10" column="1">
               <widget class="QLabel" name="labNewGridBand">
                <property name="minimumSize">
                 <size>
@@ -4021,7 +4381,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00ffff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #80d0d0}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4031,7 +4391,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="2">
+             <item row="10" column="2">
               <widget class="QLabel" name="labNewMcGridBand">
                <property name="minimumSize">
                 <size>
@@ -4040,7 +4400,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00ffff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #80d0d0;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4050,7 +4410,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="3">
+             <item row="10" column="3">
               <widget class="QLabel" name="labNewScGridBand">
                <property name="minimumSize">
                 <size>
@@ -4059,7 +4419,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #00ffff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #80d0d0;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4069,7 +4429,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="0">
+             <item row="11" column="0">
               <widget class="QPushButton" name="pbNewPx">
                <property name="minimumSize">
                 <size>
@@ -4082,7 +4442,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="1">
+             <item row="11" column="1">
               <widget class="QLabel" name="labNewPx">
                <property name="minimumSize">
                 <size>
@@ -4091,7 +4451,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a040}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4101,7 +4461,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="2">
+             <item row="11" column="2">
               <widget class="QLabel" name="labNewMcPx">
                <property name="minimumSize">
                 <size>
@@ -4110,7 +4470,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a040;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4120,7 +4480,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="3">
+             <item row="11" column="3">
               <widget class="QLabel" name="labNewScPx">
                <property name="minimumSize">
                 <size>
@@ -4129,7 +4489,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #00a040;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4139,7 +4499,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="0">
+             <item row="12" column="0">
               <widget class="QPushButton" name="pbNewPxBand">
                <property name="minimumSize">
                 <size>
@@ -4152,7 +4512,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="1">
+             <item row="12" column="1">
               <widget class="QLabel" name="labNewPxBand">
                <property name="minimumSize">
                 <size>
@@ -4161,7 +4521,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #50e090}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4171,7 +4531,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="2">
+             <item row="12" column="2">
               <widget class="QLabel" name="labNewMcPxBand">
                <property name="minimumSize">
                 <size>
@@ -4180,7 +4540,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #50e090;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4190,7 +4550,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="3">
+             <item row="12" column="3">
               <widget class="QLabel" name="labNewScPxBand">
                <property name="minimumSize">
                 <size>
@@ -4199,7 +4559,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #50e090;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4209,7 +4569,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="0">
+             <item row="13" column="0">
               <widget class="QPushButton" name="pbNewCall">
                <property name="minimumSize">
                 <size>
@@ -4222,7 +4582,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="1">
+             <item row="13" column="1">
               <widget class="QLabel" name="labNewCall">
                <property name="minimumSize">
                 <size>
@@ -4231,7 +4591,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #a0a030}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4241,7 +4601,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="2">
+             <item row="13" column="2">
               <widget class="QLabel" name="labNewMcCall">
                <property name="minimumSize">
                 <size>
@@ -4250,7 +4610,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #a0a030;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4260,7 +4620,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="3">
+             <item row="13" column="3">
               <widget class="QLabel" name="labNewScCall">
                <property name="minimumSize">
                 <size>
@@ -4269,7 +4629,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #ffaaff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #a0a030;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4279,7 +4639,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="10" column="0">
+             <item row="14" column="0">
               <widget class="QPushButton" name="pbNewCallBand">
                <property name="minimumSize">
                 <size>
@@ -4292,7 +4652,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="10" column="1">
+             <item row="14" column="1">
               <widget class="QLabel" name="labNewCallBand">
                <property name="minimumSize">
                 <size>
@@ -4301,7 +4661,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #e0e070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4311,7 +4671,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="10" column="2">
+             <item row="14" column="2">
               <widget class="QLabel" name="labNewMcCallBand">
                <property name="minimumSize">
                 <size>
@@ -4320,7 +4680,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff;color: #ff0000}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #e0e070;color: #ff0000}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4330,7 +4690,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="10" column="3">
+             <item row="14" column="3">
               <widget class="QLabel" name="labNewScCallBand">
                <property name="minimumSize">
                 <size>
@@ -4339,7 +4699,7 @@ Right click for insert and delete options.</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLabel{font-weight: bold;background-color: #aaffff;color: #707070}</string>
+                <string notr="true">QLabel{font-weight: bold;background-color: #e0e070;color: #707070}</string>
                </property>
                <property name="text">
                 <string>K1ABC</string>
@@ -4349,7 +4709,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="11" column="0">
+             <item row="15" column="0">
               <widget class="QPushButton" name="pbWorkedCall">
                <property name="minimumSize">
                 <size>
@@ -4365,7 +4725,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="11" column="1">
+             <item row="15" column="1">
               <widget class="QLabel" name="labWorkedCall">
                <property name="minimumSize">
                 <size>
@@ -4384,7 +4744,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="11" column="2">
+             <item row="15" column="2">
               <widget class="QLabel" name="labWorkedMcCall">
                <property name="minimumSize">
                 <size>
@@ -4403,7 +4763,7 @@ Right click for insert and delete options.</string>
                </property>
               </widget>
              </item>
-             <item row="11" column="3">
+             <item row="15" column="3">
               <widget class="QLabel" name="labWorkedScCall">
                <property name="minimumSize">
                 <size>

@@ -59,6 +59,70 @@ void LogBook::init(const QString mycall,const QString mygrid,const QString mydat
 
 }
 
+void LogBook::matchCQZ(/*in*/const QString call,
+                    /*out*/ QString &countryName,
+                    bool &WorkedBefore,
+                    bool &WorkedBeforeBandMode,
+                    /*in*/ double dialFreq,
+                    const QString mode)
+{
+    if (!call.isEmpty ()) {
+        QString band = ADIF::bandFromFrequency(dialFreq / 1.e6);
+//        printf("logbook matchCQZ %s|%s|%s|%s\n",call.toStdString().c_str(),countryName.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str());
+        if (countryName.isEmpty ()) {
+            countryName = _countries.find(Radio::effective_prefix(call));
+        }
+        if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
+            auto items = countryName.split(',');
+            WorkedBefore = _log.matchCqz(items[3], "", "");
+            if (!WorkedBefore) {
+                WorkedBeforeBandMode = false;
+            } else if (!band.isEmpty () || !mode.isEmpty ()) {
+                WorkedBeforeBandMode = _log.matchCqz(items[3], band, mode);   
+            }
+        } else {
+            WorkedBefore = true;
+            WorkedBeforeBandMode = true;
+        }
+        
+//        printf("logbook resultCQZ %s|%s|%s -> %s %s %s\n",call.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
+//        (WorkedBefore) ? "true" : "false",(WorkedBeforeBandMode) ? "true" : "false",countryName.toStdString().c_str());
+        // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;
+    }
+}
+
+void LogBook::matchITUZ(/*in*/const QString call,
+                    /*out*/ QString &countryName,
+                    bool &WorkedBefore,
+                    bool &WorkedBeforeBandMode,
+                    /*in*/ double dialFreq,
+                    const QString mode)
+{
+    if (!call.isEmpty ()) {
+        QString band = ADIF::bandFromFrequency(dialFreq / 1.e6);
+//        printf("logbook matchITUZ %s|%s|%s|%s\n",call.toStdString().c_str(),countryName.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str());
+        if (countryName.isEmpty ()) {
+            countryName = _countries.find(Radio::effective_prefix(call));
+        }
+        if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
+            auto items = countryName.split(',');
+            WorkedBefore = _log.matchItuz(items[4], "", "");
+            if (!WorkedBefore) {
+                WorkedBeforeBandMode = false;
+            } else if (!band.isEmpty () || !mode.isEmpty ()) {
+                WorkedBeforeBandMode = _log.matchItuz(items[4], band, mode);   
+            }
+        } else {
+            WorkedBefore = true;
+            WorkedBeforeBandMode = true;
+        }
+        
+//        printf("logbook resultITUZ %s|%s|%s -> %s %s %s\n",call.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
+//        (WorkedBefore) ? "true" : "false",(WorkedBeforeBandMode) ? "true" : "false",countryName.toStdString().c_str());
+        // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;
+    }
+}
+
 void LogBook::matchDXCC(/*in*/const QString call,
                     /*out*/ QString &countryName,
                     bool &WorkedBefore,
@@ -72,11 +136,13 @@ void LogBook::matchDXCC(/*in*/const QString call,
             countryName = _countries.find(Radio::effective_prefix(call));
         }
         if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
-            WorkedBefore = _log.matchCountry(countryName, "", "");
+            auto items = countryName.split(',');
+            QString country = items[0]+','+items[1]+','+items[2];
+            WorkedBefore = _log.matchCountry(country, "", "");
             if (!WorkedBefore) {
                 WorkedBeforeBandMode = false;
             } else if (!band.isEmpty () || !mode.isEmpty ()) {
-                WorkedBeforeBandMode = _log.matchCountry(countryName, band, mode);   
+                WorkedBeforeBandMode = _log.matchCountry(country, band, mode);   
             }
         } else {
             WorkedBefore = true;
@@ -124,9 +190,6 @@ void LogBook::matchPX(/*in*/const QString call,
         }
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-//            if (countryName.isEmpty ()) {
-//              countryName = "  ,'?,where?"; //error: prefix not found
-//            }
         }
         
 //        printf("logbook resultPX %s|%s|%s -> %s %s %s\n",call.toStdString().c_str(),band.toStdString().c_str(),mode.toStdString().c_str(),
@@ -152,9 +215,6 @@ void LogBook::matchCall(/*in*/const QString call,
         }
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-//            if (countryName.isEmpty ()) {
-//              countryName = "  ,'?,where?"; //error: prefix not found
-//            }
         }
         
         // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;
@@ -168,13 +228,10 @@ void LogBook::getDXCC(/*in*/const QString call,
 //        printf("logbook getDXCC %s|%s\n",call.toStdString().c_str(),countryName.toStdString().c_str());
         if (countryName.isEmpty ()) {
             countryName = _countries.find(Radio::effective_prefix(call));
-//            if (countryName.isEmpty ()) {
-//              countryName = "  ,?,where?"; //error: prefix not found
-//            }
         }
 //        printf("logbook resultgetDXCC %s -> %s\n",call.toStdString().c_str(),countryName.toStdString().c_str());
         // qDebug() << "Logbook:" << call << ":" << countryName << "Cty B4:" << countryWorkedBefore << "call B4:" << callWorkedBefore << "Freq B4:" << dialFreq << "Band B4:" << band << "Mode B4:" << mode;
-    }  else countryName = "  ,?,where?";
+    }  else countryName = "  ,?,where?,,";
 }
 
 void LogBook::getLOTW(/*in*/const QString call,
