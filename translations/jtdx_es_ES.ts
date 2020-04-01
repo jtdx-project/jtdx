@@ -2342,92 +2342,92 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="249"/>
         <source>Command completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando completado con éxito</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="250"/>
         <source>Invalid parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Parámetro no válido</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Invalid configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración no válida</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Memory shortage</source>
-        <translation type="unfinished"></translation>
+        <translation>Falta de memoria</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Feature not implemented</source>
-        <translation type="unfinished"></translation>
+        <translation>Característica no implementada</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Communication timed out</source>
-        <translation type="unfinished"></translation>
+        <translation>La comunicación se interrumpió</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error IO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Internal Hamlib error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error interno de Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>Protocol error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de protocolo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Command rejected by the rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando rechazado por el equipo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando realizado, pero argumento truncado, resultado no garantizado</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Feature not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Característica no disponible</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Target VFO unaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>VFO destino no accesible</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Communication bus error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error del bus de comunicación</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Communication bus collision</source>
-        <translation type="unfinished"></translation>
+        <translation>Colisión del bus de comunicaciones</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Manejo NULL RIG o parámetro de puntero inválido</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>VFO no válido</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Argument out of domain of func</source>
-        <translation type="unfinished"></translation>
+        <translation>Argumento fuera del dominio de la función</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="313"/>
