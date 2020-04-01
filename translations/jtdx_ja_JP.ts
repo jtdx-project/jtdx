@@ -7133,7 +7133,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3951"/>
         <source>New CQZ on Band/Mode</source>
-        <translation>新しいバンド/モードのCQ Zone</translation>
+        <translation>バンド/モード毎のNew CQ Zone</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4021"/>
@@ -7143,7 +7143,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4091"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation>新しいバンド/モードのITU Zone</translation>
+        <translation>バンド/モード毎のNew ITU Zone</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4896"/>
