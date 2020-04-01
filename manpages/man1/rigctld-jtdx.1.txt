@@ -1,0 +1,29 @@
+:doctype: manpage
+:man source: AsciiDoc
+:man version: {revnumber}
+:man manual: JTDX Manual
+= rigctld-jtdx(1)
+
+== NAME
+
+rigctld-jtdx - Hamlib 3 rigctld server.
+
+== SYNOPSIS
+
+*rigctld-jtdx* [OPTIONS]
+
+== DESCRIPTION
+
+*jtdx* uses a version of the *hamlib* CAT control library.  This
+ library is heavily modified over the current release version of
+ *hamlib*. If a *jtdx* user wishes to use the *hamlib* network rig
+ server *rigctld* to remotely control their transceiver; then this
+ special version of *rigctld* should be used since that too has the
+ modified *hamlib* code embedded with it.
+
+JTDX home page:: https://jtdx.tech/en/
+
+JTDX User's Guide:: https://jtdx.tech/en/videos-guides
+
+== OPTIONS
+Refer to the *hamlib* documentation.

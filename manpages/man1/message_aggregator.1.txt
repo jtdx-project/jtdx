@@ -1,8 +1,8 @@
 :doctype: manpage
 :man source: AsciiDoc
 :man version: {VERSION}
-:man manual: WSJT-X Manual
-= wsjtx(1)
+:man manual: JTDX Manual
+= jtdx(1)
 
 == NAME
 
@@ -15,11 +15,11 @@ message_aggregator - Reference example UDP server
 == DESCRIPTION
 
 *message_aggregator* does not serve any useful purpose other than to
- demonstrate the UDP message features of *WSJT-X*. It is a small GUI
- application that interacts with any running *WSJT-X* instances.
+ demonstrate the UDP message features of *JTDX*. It is a small GUI
+ application that interacts with any running *JTDX* instances.
 
 Developers writing add on applications may find the source code of
-message_aggregator contained in the *WSJT-X* code repository
+message_aggregator contained in the *JTDX* code repository
 useful. The files NetworkMessage.hpp, MessageServer.hpp,
 MessageClient.hpp and their associated implementations along with the
 application source MessageAggregator.cpp should cover all the required
@@ -30,7 +30,7 @@ https://sourceforge.net/p/wsjt/wsjt/HEAD/tree/branches/wsjtx/
 *message_aggregator* may also be used as a multi-cast UDP server which
 allows multiple instances of *message_aggregator* to be run
 concurrently, to do this simply use a suitable multi-cast group
-address in *message_aggregator* and in *WSJT-X* in the
+address in *message_aggregator* and in *JTDX* in the
 "*Settings->Reporting->UDP Server*" pane e.g. 239.255.0.1 or ff03::1
 for a local scope group.
 

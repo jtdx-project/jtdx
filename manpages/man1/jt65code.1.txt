@@ -1,7 +1,7 @@
 :doctype: manpage
 :man source: AsciiDoc
 :man version: {VERSION}
-:man manual: WSJT-X Manual
+:man manual: JTDX Manual
 = jt65code(1)
 
 == NAME
@@ -92,10 +92,9 @@ You will discover that every possible JT65 message differs from every
 other possible JT65 message in at least 52 of the 63
 information-carrying channel symbols.
 
-WSJT-X home page:: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx.html
+JTDX home page:: https://jtdx.tech/en/
 
-WSJT-X User's Guide::
-http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-{VERSION}.html
+JTDX User's Guide:: https://jtdx.tech/en/videos-guides
 
 == AUTHOR
 

@@ -4734,7 +4734,7 @@ ya está en CALL3.TXT, ¿desea reemplazarlo?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6816"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de control del equipo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6892"/>
@@ -4807,12 +4807,12 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6829"/>
         <source>Show Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver Detalles...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6830"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultarlos...</translation>
     </message>
 </context>
 <context>
@@ -6694,42 +6694,42 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas CQ que no existen en el archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>Check and highlight new CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Verifique y resalte nuevas zonas CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas CQ que son nuevos  en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas CQ que son nuevas en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3247"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas ITU que no existen en el archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>Check and highlight new ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Veriifique y resalte nuevas zonas ITU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3257"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas ITU que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3267"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte mensajes con zonas ITU que son nuevas en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3287"/>
@@ -6794,7 +6794,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con locator que no existen en el archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Resalte los mensajes con locator que no existen en el archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -6804,17 +6804,17 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con locator que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con locator que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3347"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con locator que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con locator que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con prefijos que no existen en el archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; &lt;head /&gt; &lt;body &gt; &lt;p&gt; Resalte los mensajes con locator que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con prefijos que no existen en el archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; &lt;head /&gt; &lt;body &gt; &lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -6824,17 +6824,17 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con prefijos que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con prefijos que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con prefijos que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con prefijos que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con indicativos que no existen en el archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con indicativos que no existen en el archivo de registro wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
@@ -6844,17 +6844,17 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con indicativos que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con indicativos que son nuevos en la banda de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Resalte los mensajes con indicativos que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resalte los mensajes con indicativos que son nuevos en el modo de acuerdo con los datos del archivo de registro wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use notificación de color para mensajes con DXCC, locator, indicativos trabajados. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use notificación de color para mensajes con DXCC, locator, indicativos trabajados. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3450"/>
@@ -6864,12 +6864,12 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3457"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativos se marcarán. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativos se marcarán. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Los mensajes con indicativo trabajado se marcarán &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Los mensajes con indicativo trabajado se marcarán &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3463"/>
@@ -6879,7 +6879,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativos estarán subrayados. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativos estarán subrayados. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3473"/>
@@ -6889,7 +6889,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativo donde no hay MyCall se omitirán en la ventana de texto decodificado &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Los mensajes con DXCC trabajado, locator, indicativo donde no hay MyCall se omitirán en la ventana de texto decodificado &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
@@ -6899,7 +6899,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Invertir texto &lt;-&gt; color de fondo para los mensajes recibidos &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Invertir texto &lt;-&gt; color de fondo para los mensajes recibidos &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
@@ -6909,7 +6909,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; De forma predeterminada, solo se verifican los mensajes &apos;CQ&apos; y &apos;MyCall&apos;, esta configuración permite verificar también otros mensajes estándar recibidos para nuevos DXCC, Grid, Call. El color &apos;Otro mensaje estándar&apos; se utiliza para la notificación &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; De forma predeterminada, solo se verifican los mensajes &apos;CQ&apos; y &apos;MyCall&apos;, esta configuración permite verificar también otros mensajes estándar recibidos para nuevos DXCC, Grid, Call. El color &apos;Otro mensaje estándar&apos; se utiliza para la notificación &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3503"/>
@@ -6919,7 +6919,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use el sonido del sistema para la notificación tan pronto como se decodifique el primer mensaje en el intervalo RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use el sonido del sistema para la notificación tan pronto como se decodifique el primer mensaje en el intervalo RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3526"/>
@@ -6929,7 +6929,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use el sonido del sistema para la notificación si hay MyCall en el mensaje recibido. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use el sonido del sistema para la notificación si hay MyCall en el mensaje recibido. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3536"/>
@@ -6944,7 +6944,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3573"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use un marcador azul para notificar si hay mi indicativo en el mensaje decodificado relacionado con el QSO en curso (el indicativo de la parte QSO está en la ventana de Llamada DX), otras llamadas entrantes con mi indicativo será seguido con el marcador rojo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use un marcador azul para notificar si hay mi indicativo en el mensaje decodificado relacionado con el QSO en curso (el indicativo de la parte QSO está en la ventana de Llamada DX), otras llamadas entrantes con mi indicativo será seguido con el marcador rojo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3576"/>
@@ -6954,7 +6954,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3612"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use un marcador rojo para notificar si hay mi indicativo en el mensaje decodificado. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use un marcador rojo para notificar si hay mi indicativo en el mensaje decodificado. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3615"/>
@@ -6964,7 +6964,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3625"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Use el marcador al final del mensaje en lugar del color de fondo para otra notificación de mensaje estándar. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use el marcador al final del mensaje en lugar del color de fondo para otra notificación de mensaje estándar. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3628"/>
@@ -6974,7 +6974,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3671"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; En la parte superior del panel de vista previa hay tipos de mensajes que se verifican por algún criterio, seleccionándose el color del texto para cada tipo de mensaje. &lt;br&gt; &lt;br&gt; En el lado izquierdo hay criterios asignados en el orden jerárquico y se selecciona el color de fondo para los mensajes para cada criterio. &lt;br&gt; &lt;br&gt; La funcionalidad de notificación &apos;Trabajó uno&apos; se basa en el principio residual, que se activa si todos los criterios o criterios &apos;Nuevo uno&apos; activados no se cumplen. &lt;br&gt; &lt;br&gt; Se puede usar &apos;Color inverso&apos; si el usuario desea resaltar los mensajes CQ y &apos;MyCall&apos; con algún color de fondo específico. &lt;br&gt; &lt;br&gt; Para comenzar, se puede elegir un criterio y para Se pueden usar notificaciones de banda / modo nuevas de un color similar con un nivel de saturación diferente, luego se puede aumentar el número de criterios requeridos. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; En la parte superior del panel de vista previa hay tipos de mensajes que se verifican por algún criterio, seleccionándose el color del texto para cada tipo de mensaje. &lt;br&gt; &lt;br&gt; En el lado izquierdo hay criterios asignados en el orden jerárquico y se selecciona el color de fondo para los mensajes para cada criterio. &lt;br&gt; &lt;br&gt; La funcionalidad de notificación &apos;Trabajó uno&apos; se basa en el principio residual, que se activa si todos los criterios o criterios &apos;Nuevo uno&apos; activados no se cumplen. &lt;br&gt; &lt;br&gt; Se puede usar &apos;Color inverso&apos; si el usuario desea resaltar los mensajes CQ y &apos;MyCall&apos; con algún color de fondo específico. &lt;br&gt; &lt;br&gt; Para comenzar, se puede elegir un criterio y para Se pueden usar notificaciones de banda / modo nuevas de un color similar con un nivel de saturación diferente, luego se puede aumentar el número de criterios requeridos. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3674"/>
@@ -7067,22 +7067,22 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="3881"/>
         <source>New CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva zona CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3951"/>
         <source>New CQZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva zona CQ en Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4021"/>
         <source>New ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva zona ITU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4091"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva zona ITU en Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4161"/>
