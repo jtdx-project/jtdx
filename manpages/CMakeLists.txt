@@ -1,9 +1,9 @@
 set (ASCIIDOC_MANS
-  man1/wsjtx.1.txt
+  man1/jtdx.1.txt
   man1/wsprd.1.txt
   man1/jt65code.1.txt
-  man1/rigctl-wsjtx.1.txt
-  man1/rigctld-wsjtx.1.txt
+  man1/rigctl-jtdx.1.txt
+  man1/rigctld-jtdx.1.txt
   man1/message_aggregator.1.txt
   man1/udp_daemon.1.txt
   )

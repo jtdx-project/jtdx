@@ -1,8 +1,8 @@
 :doctype: manpage
 :man source: AsciiDoc
 :man version: {VERSION}
-:man manual: WSJT-X Manual
-= wsjtx(1)
+:man manual: JTDX Manual
+= jtdx(1)
 
 == NAME
 
@@ -15,12 +15,12 @@ udp_daemon - Reference example UDP server
 == DESCRIPTION
 
 *udp_daemon*  does  not  serve  any   useful  purpose  other  than  to
- demonstrate  the UDP  message features  of  *WSJT-X*. It  is a  small
- command  line application  that interacts  with any  running *WSJT-X*
+ demonstrate  the UDP  message features  of  *JTDX*. It  is a  small
+ command  line application  that interacts  with any  running *JTDX*
  instances.
 
 Developers writing  add on  applications may find  the source  code of
-*udp_daemon*  contained in  the *WSJT-X*  code repository  useful. The
+*udp_daemon*  contained in  the *JTDX*  code repository  useful. The
 files  NetworkMessage.hpp,  MessageServer.hpp,  MessageClient.hpp  and
 their  associated implementations  along with  the application  source
 UDPDaemon.cpp should cover all the required areas. All these files can
@@ -31,7 +31,7 @@ https://sourceforge.net/p/wsjt/wsjt/HEAD/tree/branches/wsjtx/
 *udp_daemon* may also be used as  a multi-cast UDP server which allows
 multiple instances of *udp_daemon* to  be run concurrently, to do this
 simply pass a suitable multi-cast group address using the command line
-option and in *WSJT-X* in the "*Settings->Reporting->UDP Server*" pane
+option and in *JTDX* in the "*Settings->Reporting->UDP Server*" pane
 e.g. 239.255.0.1 or ff03::1 for a local scope group.
 
 Note  that  on some  systems  it  may be  necessary  to  add a  static
