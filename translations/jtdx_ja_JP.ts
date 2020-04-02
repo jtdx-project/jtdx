@@ -2975,7 +2975,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1906"/>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;コンマで探されるプリフィックスのリストを区切ります。AutoSeq 1..7の下のオート選択により、通知された選択／優先事項に従って、探されるプリフィックスを処理します。この機能はAutoSeq0の下でサポートされません。複合コールサインのプリフィックスは、コールサインの先頭部分で認識されます。オート選択により、通知された選択／優先事項に従って、探されるコールサインは処理されます。FT88モード以外：時々、基本のコールサインがデコードされたメッセージからコピーされる：そのようなQSOユーザーを記録する時は、ユーザーは必要ならば自ら訂正して記録しなければなりません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;コンマで探されるプリフィックスのリストを区切ります。AutoSeq 1..7の下のオート選択により、通知された選択／優先事項に従って、探されるプリフィックスを処理します。この機能はAutoSeq0の下でサポートされません。複合コールサインのプリフィックスは、コールサインの先頭部分で認識されます。オート選択により、通知された選択／優先事項に従って、探されるコールサインは処理されます。FT8モード以外：時々、基本のコールサインがデコードされたメッセージからコピーされる：そのようなQSOユーザーを記録する時は、ユーザーは必要ならば自ら訂正して記録しなければなりません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
@@ -3396,7 +3396,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5127"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>自分のコールサイン付きのメッセージを右側に表示 </translation>
+        <translation>自分のコールサイン付きのメッセージを右側、RX周波数ウィンドウに表示 </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5192"/>
@@ -4042,7 +4042,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5116"/>
         <source>Enable main window popup</source>
-        <translation>メインなウィンドウポップアップを使用可能</translation>
+        <translation>メインのウィンドウポップアップを使用可能</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5132"/>
@@ -4092,7 +4092,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5240"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>デコードの開始の時に Band activity ウィンドウを消去</translation>
+        <translation>デコード開始時に Band activity ウィンドウを消去</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5248"/>
@@ -4137,7 +4137,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5364"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>欲しい局に登録した局のメッセージをRX周波数ウィンドウに表示</translation>
+        <translation>欲しい局に登録した局のメッセージを右側、RX周波数ウィンドウに表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5372"/>
