@@ -145,6 +145,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
                        unsigned downSampleFactor, QNetworkAccessManager * network_manager,
                        QWidget *parent) :
   QMainWindow(parent),
+  m_exitCode {0},
   m_dataDir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)},
   m_valid {true},
   m_revision {revision ()},
@@ -175,7 +176,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_lastDisplayFreq {0},
   m_mslastTX {0},
 //  m_msDecoderStarted {0},
-  m_exitCode {0},
   m_waterfallAvg {1},
   m_ntx {1},
   m_addtx {0},
@@ -739,11 +739,11 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   // Hook up working frequencies.
   ui->bandComboBox->setModel (m_config.frequencies ());
-  ui->bandComboBox->setModelColumn (FrequencyList::frequency_mhz_column);
+  ui->bandComboBox->setModelColumn (FrequencyList_v2::frequency_mhz_column);
 
   // combo box drop down width defaults to the line edit + decorator width,
   // here we change that to the column width size hint of the model column
-  ui->bandComboBox->view ()->setMinimumWidth (ui->bandComboBox->view ()->sizeHintForColumn (FrequencyList::frequency_mhz_column));
+  ui->bandComboBox->view ()->setMinimumWidth (ui->bandComboBox->view ()->sizeHintForColumn (FrequencyList_v2::frequency_mhz_column));
 
   // Enable live band combo box entry validation and action.
   auto band_validator = new LiveFrequencyValidator {ui->bandComboBox
@@ -2514,10 +2514,7 @@ void MainWindow::closeEvent(QCloseEvent * e)
   bool b=proc_jtdxjt9.waitForFinished(1000);
   if(!b) proc_jtdxjt9.close();
   quitFile.remove();
-
-  if (m_exitCode == 1337) {m_wideGraph->saveSettings(); qApp->exit(1337);}
-  else Q_EMIT finished ();
-
+  Q_EMIT finished ();
   QMainWindow::closeEvent (e);
 }
 
@@ -5905,7 +5902,7 @@ void MainWindow::switch_mode (Mode mode)
 // m_lastMode value is deliberately not assigned in constructor to let qsohistory init at SW startup 
   if(m_lastMode!=m_mode) { m_qsoHistory.init(); m_lastMode=m_mode; if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");} 
   m_okToPost = false;
-  m_config.frequencies ()->filter (mode);
+  m_config.frequencies ()->filter (m_config.region (),mode);
   auto const& row = m_config.frequencies ()->best_working_frequency (m_freqNominal);
   if (row >= 0) {
     ui->bandComboBox->setCurrentIndex (row);
@@ -6157,7 +6154,7 @@ bool MainWindow::rReportRCVD(QStringList msg)
 void MainWindow::on_bandComboBox_currentIndexChanged (int index)
 {
   auto const& frequencies = m_config.frequencies ();
-  auto const& source_index = frequencies->mapToSource (frequencies->index (index, FrequencyList::frequency_column));
+  auto const& source_index = frequencies->mapToSource (frequencies->index (index, FrequencyList_v2::frequency_column));
   Frequency frequency {m_freqNominal};
   if (source_index.isValid ())
     {
@@ -6183,7 +6180,7 @@ void MainWindow::on_bandComboBox_currentIndexChanged (int index)
 void MainWindow::on_bandComboBox_activated (int index)
 {
   auto const& frequencies = m_config.frequencies ();
-  auto const& source_index = frequencies->mapToSource (frequencies->index (index, FrequencyList::frequency_column));
+  auto const& source_index = frequencies->mapToSource (frequencies->index (index, FrequencyList_v2::frequency_column));
   Frequency frequency {m_freqNominal};
   if (source_index.isValid ()) frequency = frequencies->frequency_list ()[source_index.row ()].frequency_;
   m_bandEdited = true;

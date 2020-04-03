@@ -190,11 +190,13 @@ set (wsjt_qt_CXXSRCS
   revision_utils.cpp
   WFPalette.cpp
   Radio.cpp
+  IARURegions.cpp
   Bands.cpp
   Modes.cpp
   FrequencyList.cpp
   StationList.cpp
   FrequencyLineEdit.cpp
+  FrequencyDeltaLineEdit.cpp
   CandidateKeyFilter.cpp
   ForeignKeyDelegate.cpp
   LiveFrequencyValidator.cpp
@@ -219,6 +221,8 @@ set (wsjt_qt_CXXSRCS
   SampleDownloader/FileNode.cpp
   SampleDownloader/RemoteFile.cpp
   DisplayManual.cpp
+  FrequencyDelegate.cpp
+  FrequencyDeltaDelegate.cpp
   )
 
 set (wsjt_qtmm_CXXSRCS

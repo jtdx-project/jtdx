@@ -89,6 +89,7 @@ public:
   using Frequency = Radio::Frequency;
   using FrequencyDelta = Radio::FrequencyDelta;
   using Mode = Modes::Mode;
+  qint32  m_exitCode;
 
   // Multiple instances: call MainWindow() with *thekey
   explicit MainWindow(bool multiple, QSettings *, QSharedMemory *shdmem,
@@ -435,7 +436,6 @@ private:
   quint64  m_mslastTX;
 //  quint64  m_msDecoderStarted;
 
-  qint32  m_exitCode;
   qint32  m_waterfallAvg;
   qint32  m_ntx;
   qint32  m_addtx;

@@ -7,6 +7,7 @@
 #include <QFont>
 
 #include "Radio.hpp"
+#include "IARURegions.hpp"
 #include "AudioDevice.hpp"
 #include "Transceiver.hpp"
 
@@ -18,7 +19,7 @@ class QAudioDeviceInfo;
 class QString;
 class QDir;
 class Bands;
-class FrequencyList;
+class FrequencyList_v2;
 class StationList;
 class QStringListModel;
 class QHostAddress;
@@ -234,8 +235,9 @@ public:
   bool udpWindowRestore () const;
   Bands * bands ();
   Bands const * bands () const;
-  FrequencyList * frequencies ();
-  FrequencyList const * frequencies () const;
+  IARURegions::Region region () const;
+  FrequencyList_v2 * frequencies ();
+  FrequencyList_v2 const * frequencies () const;
   StationList * stations ();
   StationList const * stations () const;
   QStringListModel * macros ();

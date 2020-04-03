@@ -238,10 +238,10 @@ WSPRBandHopping::WSPRBandHopping (QSettings * settings, Configuration const * co
   : m_ {settings, configuration, parent_widget}
 {
   // detect changes to the working frequencies model
-  m_->WSPR_bands_ = m_->configuration_->frequencies ()->all_bands (Modes::WSPR).values ();
+  m_->WSPR_bands_ = m_->configuration_->frequencies ()->all_bands (m_->configuration_->region (), Modes::WSPR).values ();
   connect (m_->configuration_->frequencies (), &QAbstractItemModel::layoutChanged
            , [this] () {
-             m_->WSPR_bands_ = m_->configuration_->frequencies ()->all_bands (Modes::WSPR).values ();
+             m_->WSPR_bands_ = m_->configuration_->frequencies ()->all_bands (m_->configuration_->region (), Modes::WSPR).values ();
            });
 
   // load settings
@@ -411,7 +411,7 @@ auto WSPRBandHopping::next_hop (bool tx_enabled) -> Hop
                                       // but to be safe
             {
               // we can use the random choice
-              // qDebug () << "random:" << frequencies->data (frequencies->index (frequencies_index, FrequencyList::frequency_column)).toString ();
+              // qDebug () << "random:" << frequencies->data (frequencies->index (frequencies_index, FrequencyList_v2::frequency_column)).toString ();
               band_index = bands->find (band_name);
               if (band_index < 0) // this shouldn't happen
                 {
@@ -424,7 +424,7 @@ auto WSPRBandHopping::next_hop (bool tx_enabled) -> Hop
   else
     {
       band_index += 3;
-      // qDebug () << "scheduled:" << frequencies->data (frequencies->index (frequencies_index, FrequencyList::frequency_column)).toString ();
+      // qDebug () << "scheduled:" << frequencies->data (frequencies->index (frequencies_index, FrequencyList_v2::frequency_column)).toString ();
       // remove from random permutations to stop the coordinated bands
       // getting too high a weighting - not perfect but surely helps
       m_->rx_permutation_.removeOne (band_name);

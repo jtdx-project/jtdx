@@ -514,7 +514,7 @@ bool StationList::impl::dropMimeData (QMimeData const * data, Qt::DropAction act
       QDataStream stream {&encoded_data, QIODevice::ReadOnly};
       while (!stream.atEnd ())
         {
-          FrequencyList::Item item;
+          FrequencyList_v2::Item item;
           stream >> item;
           auto const& band = bands_->find (item.frequency_);
           if (stations_.cend () == std::find_if (stations_.cbegin ()

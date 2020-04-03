@@ -227,8 +227,10 @@ int main(int argc, char *argv[])
 #endif
       QString lang;
       QLocale localeUsedToDeterminateTranslators;
+      QTranslator translator_from_qt;
       QTranslator translator_from_resources;
       QTranslator translator_from_files;
+      bool qt_OK = false;
       bool resources_OK = false;
       bool files_OK = false;
       do {
@@ -237,12 +239,19 @@ int main(int argc, char *argv[])
         settings.endGroup();
         if (files_OK) has_style = a.removeTranslator (&translator_from_files);
         if (resources_OK) has_style = a.removeTranslator (&translator_from_resources);
+        if (qt_OK) has_style = a.removeTranslator (&translator_from_qt);
         if (lang != "en_US") {
           //
           // Enable i18n
           //
           localeUsedToDeterminateTranslators = QLocale (lang);
           
+          /* load the system translations provided by Qt Currently None useable*/
+          has_style = translator_from_qt.load("qt_" + localeUsedToDeterminateTranslators.name(),QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+          if (has_style) {
+              qt_OK = a.installTranslator(&translator_from_qt);
+          }
+
           // Default translations for releases  use translations stored in
           // the   resources   file    system   under   the   Translations
           // directory. These are built by the CMake build system from .ts
@@ -305,6 +314,7 @@ int main(int argc, char *argv[])
 
         QObject::connect (&a, SIGNAL (lastWindowClosed()), &a, SLOT (quit()));
         result = a.exec();
+        if (w.m_exitCode == 1337) result = 1337;
       }
       while(result==1337);
       return result;
