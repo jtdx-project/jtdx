@@ -16,9 +16,9 @@ namespace
     "JT65",
     "JT9",
     "T10",
-	"FT8",
+    "FT8",
     "FT4",
-    "WSPR",
+    "WSPR"
   };
 }
 
@@ -39,7 +39,7 @@ auto Modes::value (QString const& s) -> Mode
                          , [&s] (char const * const name) {
                            return name == s;
                          });
-  return p != end ? static_cast<Mode> (p - mode_names) : NULL_MODE;
+  return p != end ? static_cast<Mode> (p - mode_names) : ALL;
 }
 
 QVariant Modes::data (QModelIndex const& index, int role) const

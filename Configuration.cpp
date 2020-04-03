@@ -167,15 +167,20 @@
 #include "MetaDataRegistry.hpp"
 #include "SettingsGroup.hpp"
 #include "FrequencyLineEdit.hpp"
+#include "FrequencyDeltaLineEdit.hpp"
 #include "CandidateKeyFilter.hpp"
 #include "ForeignKeyDelegate.hpp"
+#include "FrequencyDelegate.hpp"
+#include "FrequencyDeltaDelegate.hpp"
 #include "TransceiverFactory.hpp"
 #include "Transceiver.hpp"
 #include "Bands.hpp"
+#include "IARURegions.hpp"
 #include "Modes.hpp"
 #include "FrequencyList.hpp"
 #include "StationList.hpp"
 #include "NetworkServerLookup.hpp"
+#include "MessageBox.hpp"
 
 #include "pimpl_impl.hpp"
 
@@ -192,6 +197,10 @@ namespace
 
   QRegExp message_alphabet {"[- @A-Za-z0-9+./?#<>&^]*"};
 
+  // Magic numbers for file validation
+  constexpr quint32 qrg_magic {0xadbccbdb};
+  constexpr quint32 qrg_version {101}; // M.mm
+
 }
 
 
@@ -203,16 +212,17 @@ class FrequencyDialog final
 {
   Q_OBJECT;
 public:
-  using Item = FrequencyList::Item;
+  using Item = FrequencyList_v2::Item;
 
-  explicit FrequencyDialog (Modes * modes_model, QWidget * parent = nullptr)
+  explicit FrequencyDialog (IARURegions * regions_model, Modes * modes_model, QWidget * parent = nullptr)
     : QDialog {parent}
   {
     setWindowTitle (QApplication::applicationName () + " - " +
                     tr ("Add Frequency"));
     mode_combo_box_.setModel (modes_model);
-
+    region_combo_box_.setModel (regions_model);
     auto form_layout = new QFormLayout ();
+    form_layout->addRow (tr ("IARU &Region:"), &region_combo_box_);
     form_layout->addRow (tr ("&Mode:"), &mode_combo_box_);
     form_layout->addRow (tr ("&Frequency (MHz):"), &frequency_line_edit_);
 
@@ -230,10 +240,11 @@ public:
 
   Item item () const
   {
-    return {frequency_line_edit_.frequency (), Modes::value (mode_combo_box_.currentText ()),false};
+    return {frequency_line_edit_.frequency (), Modes::value (mode_combo_box_.currentText ()), IARURegions::value (region_combo_box_.currentText ()),false};
   }
 
 private:
+  QComboBox region_combo_box_;
   QComboBox mode_combo_box_;
   FrequencyLineEdit frequency_line_edit_;
 };
@@ -390,10 +401,21 @@ private:
   void enumerate_rigs ();
   void set_rig_invariants ();
   bool validate ();
-  void message_box (QString const& reason, QString const& detail = QString ());
+  void message_box_critical (QString const& reason, QString const& detail = QString ());
   void fill_port_combo_box (QComboBox *);
   Frequency apply_calibration (Frequency) const;
   Frequency remove_calibration (Frequency) const;
+
+  void delete_frequencies ();
+  void load_frequencies ();
+  void merge_frequencies ();
+  void save_frequencies ();
+  void reset_frequencies ();
+  void insert_frequency ();
+  FrequencyList_v2::FrequencyItems read_frequencies_file (QString const&);
+
+  void delete_stations ();
+  void insert_station ();
 
   Q_SLOT void on_font_push_button_clicked ();
   Q_SLOT void on_decoded_text_font_push_button_clicked ();
@@ -424,14 +446,9 @@ private:
   Q_SLOT void delete_macro ();
   void delete_selected_macros (QModelIndexList);
   Q_SLOT void on_save_path_select_push_button_clicked (bool);
-  Q_SLOT void delete_frequencies ();
-  Q_SLOT void on_reset_frequencies_push_button_clicked (bool);
   Q_SLOT void on_content_reset_push_button_clicked ();
   Q_SLOT void on_countries_clear_push_button_clicked ();
   Q_SLOT void on_callsigns_clear_push_button_clicked ();
-  Q_SLOT void insert_frequency ();
-  Q_SLOT void delete_stations ();
-  Q_SLOT void insert_station ();
   Q_SLOT void handle_transceiver_update (TransceiverState const&, unsigned sequence_number);
   Q_SLOT void handle_transceiver_failure (QString const& reason);
   Q_SLOT void on_countryName_check_box_clicked(bool checked);
@@ -548,9 +565,11 @@ private:
   QAction * macro_delete_action_;
 
   Bands bands_;
+  IARURegions regions_;
+  IARURegions::Region region_;
   Modes modes_;
-  FrequencyList frequencies_;
-  FrequencyList next_frequencies_;
+  FrequencyList_v2 frequencies_;
+  FrequencyList_v2 next_frequencies_;
   StationList stations_;
   StationList next_stations_;
   FrequencyDelta current_offset_;
@@ -558,6 +577,10 @@ private:
 
   QAction * frequency_delete_action_;
   QAction * frequency_insert_action_;
+  QAction * load_frequencies_action_;
+  QAction * save_frequencies_action_;
+  QAction * merge_frequencies_action_;
+  QAction * reset_frequencies_action_;
   FrequencyDialog * frequency_dialog_;
 
   QAction * station_delete_action_;
@@ -997,8 +1020,9 @@ Bands * Configuration::bands () {return &m_->bands_;}
 Bands const * Configuration::bands () const {return &m_->bands_;}
 StationList * Configuration::stations () {return &m_->stations_;}
 StationList const * Configuration::stations () const {return &m_->stations_;}
-FrequencyList * Configuration::frequencies () {return &m_->frequencies_;}
-FrequencyList const * Configuration::frequencies () const {return &m_->frequencies_;}
+IARURegions::Region Configuration::region () const {return m_->region_;}
+FrequencyList_v2 * Configuration::frequencies () {return &m_->frequencies_;}
+FrequencyList_v2 const * Configuration::frequencies () const {return &m_->frequencies_;}
 QStringListModel * Configuration::macros () {return &m_->macros_;}
 QStringListModel const * Configuration::macros () const {return &m_->macros_;}
 QDir Configuration::save_directory () const {return m_->save_directory_;}
@@ -1143,7 +1167,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   , next_stations_ {&bands_}
   , current_offset_ {0}
   , current_tx_offset_ {0}
-  , frequency_dialog_ {new FrequencyDialog {&modes_, this}}
+  , frequency_dialog_ {new FrequencyDialog {&regions_, &modes_, this}}
   , station_dialog_ {new StationDialog {&next_stations_, &bands_, this}}
   , last_port_type_ {TransceiverFactory::Capabilities::none}
   , rig_is_dummy_ {false}
@@ -1388,21 +1412,24 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   connect (macro_delete_action_, &QAction::triggered, this, &Configuration::impl::delete_macro);
 
 
+  // setup IARU region combo box model
+  ui_->region_combo_box->setModel (&regions_);
+
   //
   // setup working frequencies table model & view
   //
-  frequencies_.sort (FrequencyList::frequency_column);
+  frequencies_.sort (FrequencyList_v2::frequency_column);
 
   ui_->frequencies_table_view->setModel (&next_frequencies_);
-  ui_->frequencies_table_view->sortByColumn (FrequencyList::frequency_column, Qt::AscendingOrder);
-  ui_->frequencies_table_view->setColumnHidden (FrequencyList::frequency_mhz_column, true);
-  ui_->frequencies_table_view->setColumnHidden (FrequencyList::mode_frequency_mhz_column, true);
+  ui_->frequencies_table_view->horizontalHeader ()->setSectionResizeMode (QHeaderView::ResizeToContents);
+  ui_->frequencies_table_view->verticalHeader ()->setSectionResizeMode (QHeaderView::ResizeToContents);
+  ui_->frequencies_table_view->sortByColumn (FrequencyList_v2::frequency_column, Qt::AscendingOrder);
+  ui_->frequencies_table_view->setColumnHidden (FrequencyList_v2::frequency_mhz_column, true);
 
   // delegates
-  auto frequencies_item_delegate = new QStyledItemDelegate {this};
-  frequencies_item_delegate->setItemEditorFactory (item_editor_factory ());
-  ui_->frequencies_table_view->setItemDelegate (frequencies_item_delegate);
-  ui_->frequencies_table_view->setItemDelegateForColumn (FrequencyList::mode_column, new ForeignKeyDelegate {&modes_, 0, this});
+  ui_->frequencies_table_view->setItemDelegateForColumn (FrequencyList_v2::frequency_column, new FrequencyDelegate {this});
+  ui_->frequencies_table_view->setItemDelegateForColumn (FrequencyList_v2::region_column, new ForeignKeyDelegate {&regions_, 0, this});
+  ui_->frequencies_table_view->setItemDelegateForColumn (FrequencyList_v2::mode_column, new ForeignKeyDelegate {&modes_, 0, this});
 
   // actions
   frequency_delete_action_ = new QAction {tr ("&Delete"), ui_->frequencies_table_view};
@@ -1413,19 +1440,35 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   ui_->frequencies_table_view->insertAction (nullptr, frequency_insert_action_);
   connect (frequency_insert_action_, &QAction::triggered, this, &Configuration::impl::insert_frequency);
 
+  load_frequencies_action_ = new QAction {tr ("&Load ..."), ui_->frequencies_table_view};
+  ui_->frequencies_table_view->insertAction (nullptr, load_frequencies_action_);
+  connect (load_frequencies_action_, &QAction::triggered, this, &Configuration::impl::load_frequencies);
+
+  save_frequencies_action_ = new QAction {tr ("&Save as ..."), ui_->frequencies_table_view};
+  ui_->frequencies_table_view->insertAction (nullptr, save_frequencies_action_);
+  connect (save_frequencies_action_, &QAction::triggered, this, &Configuration::impl::save_frequencies);
+
+  merge_frequencies_action_ = new QAction {tr ("&Merge ..."), ui_->frequencies_table_view};
+  ui_->frequencies_table_view->insertAction (nullptr, merge_frequencies_action_);
+  connect (merge_frequencies_action_, &QAction::triggered, this, &Configuration::impl::merge_frequencies);
+
+  reset_frequencies_action_ = new QAction {tr ("&Reset"), ui_->frequencies_table_view};
+  ui_->frequencies_table_view->insertAction (nullptr, reset_frequencies_action_);
+  connect (reset_frequencies_action_, &QAction::triggered, this, &Configuration::impl::reset_frequencies);
+
 
   // Schedulers
   
   ui_->bandComboBox_1->setModel(&next_frequencies_);
-  ui_->bandComboBox_1->setModelColumn(FrequencyList::mode_frequency_mhz_column);
+  ui_->bandComboBox_1->setModelColumn(FrequencyList_v2::frequency_mhz_column);
   ui_->bandComboBox_2->setModel(&next_frequencies_);
-  ui_->bandComboBox_2->setModelColumn(FrequencyList::mode_frequency_mhz_column);
+  ui_->bandComboBox_2->setModelColumn(FrequencyList_v2::frequency_mhz_column);
   ui_->bandComboBox_3->setModel(&next_frequencies_);
-  ui_->bandComboBox_3->setModelColumn(FrequencyList::mode_frequency_mhz_column);
+  ui_->bandComboBox_3->setModelColumn(FrequencyList_v2::frequency_mhz_column);
   ui_->bandComboBox_4->setModel(&next_frequencies_);
-  ui_->bandComboBox_4->setModelColumn(FrequencyList::mode_frequency_mhz_column);
+  ui_->bandComboBox_4->setModelColumn(FrequencyList_v2::frequency_mhz_column);
   ui_->bandComboBox_5->setModel(&next_frequencies_);
-  ui_->bandComboBox_5->setModelColumn(FrequencyList::mode_frequency_mhz_column);
+  ui_->bandComboBox_5->setModelColumn(FrequencyList_v2::frequency_mhz_column);
   //
   // setup stations table model & view
   //
@@ -1890,7 +1933,7 @@ void Configuration::impl::initialize_models ()
     {
       ui_->PTT_port_combo_box->setCurrentText (rig_params_.ptt_port);
     }
-
+  ui_->region_combo_box->setCurrentIndex (region_);
   next_macros_.setStringList (macros_.stringList ());
   next_frequencies_.frequency_list (frequencies_.frequency_list ());
   next_stations_.station_list (stations_.station_list ());
@@ -2175,12 +2218,14 @@ void Configuration::impl::read_settings ()
 
   macros_.setStringList (settings_->value ("Macros", QStringList {"@ TNX 73","TU ^ 73","@ &","@ #","@ R#"}).toStringList ());
 
+  region_ = settings_->value ("Region", QVariant::fromValue (IARURegions::ALL)).value<IARURegions::Region> ();
+
   if (settings_->contains ("FrequenciesForModes"))
     {
       auto const& v = settings_->value ("FrequenciesForModes");
       if (v.isValid ())
         {
-          frequencies_.frequency_list (v.value<FrequencyList::FrequencyItems> ());
+          frequencies_.frequency_list (v.value<FrequencyList_v2::FrequencyItems> ());
         }
       else
         {
@@ -2536,7 +2581,8 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("CalibrationIntercept", frequency_calibration_intercept_);
   settings_->setValue ("CalibrationSlopePPM", frequency_calibration_slope_ppm_);
   settings_->setValue ("pwrBandTxMemory", pwrBandTxMemory_);
-  settings_->setValue ("pwrBandTuneMemory", pwrBandTuneMemory_);  
+  settings_->setValue ("pwrBandTuneMemory", pwrBandTuneMemory_);
+  settings_->setValue ("Region", QVariant::fromValue (region_));  
 }
 
 void Configuration::impl::set_rig_invariants ()
@@ -2683,20 +2729,20 @@ bool Configuration::impl::validate ()
   if (ui_->sound_input_combo_box->currentIndex () < 0
       && !QAudioDeviceInfo::availableDevices (QAudio::AudioInput).empty ())
     {
-      message_box (tr ("Invalid audio input device"));
+      message_box_critical (tr ("Invalid audio input device"));
       return false;
     }
 
   if (ui_->sound_output_combo_box->currentIndex () < 0
       && !QAudioDeviceInfo::availableDevices (QAudio::AudioOutput).empty ())
     {
-      message_box (tr ("Invalid audio output device"));
+      message_box_critical (tr ("Invalid audio output device"));
       return false;
     }
 
   if (!ui_->PTT_method_button_group->checkedButton ()->isEnabled ())
     {
-      message_box (tr ("Invalid PTT method"));
+      message_box_critical (tr ("Invalid PTT method"));
       return false;
     }
 
@@ -2706,7 +2752,7 @@ bool Configuration::impl::validate ()
       && (ptt_port.isEmpty ()
           || combo_box_item_disabled == ui_->PTT_port_combo_box->itemData (ui_->PTT_port_combo_box->findText (ptt_port), Qt::UserRole - 1)))
     {
-      message_box (tr ("Invalid PTT port"));
+      message_box_critical (tr ("Invalid PTT port"));
       return false;
     }
 
@@ -3096,10 +3142,12 @@ void Configuration::impl::accept ()
       macros_.setStringList (next_macros_.stringList ());
     }
 
+  region_ = IARURegions::value (ui_->region_combo_box->currentText ());
+
   if (frequencies_.frequency_list () != next_frequencies_.frequency_list ())
     {
       frequencies_.frequency_list (next_frequencies_.frequency_list ());
-      frequencies_.sort (FrequencyList::frequency_column);
+      frequencies_.sort (FrequencyList_v2::frequency_column);
     }
 
   if (stations_.station_list () != next_stations_.station_list ())
@@ -3135,7 +3183,7 @@ void Configuration::impl::reject ()
   QDialog::reject ();
 }
 
-void Configuration::impl::message_box (QString const& reason, QString const& detail)
+void Configuration::impl::message_box_critical (QString const& reason, QString const& detail)
 {
   QMessageBox mb;
   mb.setText (reason);
@@ -3146,6 +3194,7 @@ void Configuration::impl::message_box (QString const& reason, QString const& det
   mb.setStandardButtons (QMessageBox::Ok);
   mb.setDefaultButton (QMessageBox::Ok);
   mb.setIcon (QMessageBox::Critical);
+  mb.button(QMessageBox::Ok)->setText(tr("&OK"));
   mb.exec ();
 }
 
@@ -4945,15 +4994,127 @@ void Configuration::impl::delete_frequencies ()
   auto selection_model = ui_->frequencies_table_view->selectionModel ();
   selection_model->select (selection_model->selection (), QItemSelectionModel::SelectCurrent | QItemSelectionModel::Rows);
   next_frequencies_.removeDisjointRows (selection_model->selectedRows ());
-  ui_->frequencies_table_view->resizeColumnToContents (FrequencyList::mode_column);
+  ui_->frequencies_table_view->resizeColumnToContents (FrequencyList_v2::mode_column);
 }
 
-void Configuration::impl::on_reset_frequencies_push_button_clicked (bool /* checked */)
+void Configuration::impl::load_frequencies ()
 {
-  if (QMessageBox::Yes == QMessageBox::question (this, tr ("Reset Working Frequencies")
-                                                 , tr ("Are you sure you want to discard your current "
+  auto file_name = QFileDialog::getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
+  if (!file_name.isNull ())
+    {
+      auto const list = read_frequencies_file (file_name);
+      if (list.size ()
+          && (!next_frequencies_.frequency_list ().size ()
+              || MessageBox::Yes == MessageBox::query_message (this
+                                                               , tr ("Replace Working Frequencies")
+                                                               , tr ("Are you sure you want to discard your current "
+                                                                     "working frequencies and replace them with the "
+                                                                     "loaded ones?"))))
+        {
+          next_frequencies_.frequency_list (list); // update the model
+        }
+    }
+}
+
+void Configuration::impl::merge_frequencies ()
+{
+  auto file_name = QFileDialog::getOpenFileName (this, tr ("Merge Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
+  if (!file_name.isNull ())
+    {
+      next_frequencies_.frequency_list_merge (read_frequencies_file (file_name)); // update the model
+    }
+}
+
+FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QString const& file_name)
+{
+  QFile frequencies_file {file_name};
+  frequencies_file.open (QFile::ReadOnly);
+  QDataStream ids {&frequencies_file};
+  FrequencyList_v2::FrequencyItems list;
+  quint32 magic;
+  ids >> magic;
+  if (qrg_magic != magic)
+    {
+      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Incorrect file magic"));
+      return list;
+    }
+  quint32 version;
+  ids >> version;
+  // handle version checks and QDataStream version here if
+  // necessary
+  if (version > qrg_version)
+    {
+      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Version is too new"));
+      return list;
+    }
+
+  // de-serialize the data using version if necessary to
+  // handle old schemata
+  ids >> list;
+
+  if (ids.status () != QDataStream::Ok || !ids.atEnd ())
+    {
+      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Contents corrupt"));
+      list.clear ();
+      return list;
+    }
+
+  return list;
+}
+
+void Configuration::impl::save_frequencies ()
+{
+  auto file_name = QFileDialog::getSaveFileName (this, tr ("Save Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
+  if (!file_name.isNull ())
+    {
+      if (!file_name.endsWith(".qrg")) file_name += ".qrg";
+      QFile frequencies_file {file_name};
+      frequencies_file.open (QFile::WriteOnly);
+      QDataStream ods {&frequencies_file};
+      auto selection_model = ui_->frequencies_table_view->selectionModel ();
+      if (selection_model->hasSelection ()) {
+          QMessageBox msgbox;
+          msgbox.setWindowTitle(tr("Only Save Selected  Working Frequencies"));
+          msgbox.setIcon(QMessageBox::Question);
+          msgbox.setText(tr("Are you sure you want to save only the "
+                                                                 "working frequencies that are currently selected? "
+                                                                 "Click No to save all."));
+          msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+          msgbox.setDefaultButton(QMessageBox::No);
+          msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
+          msgbox.button(QMessageBox::No)->setText(tr("&No"));
+
+          if (QMessageBox::Yes == msgbox.exec())
+            {
+              selection_model->select (selection_model->selection (), QItemSelectionModel::SelectCurrent | QItemSelectionModel::Rows);
+              ods << qrg_magic << qrg_version << next_frequencies_.frequency_list (selection_model->selectedRows ());
+            }
+          else 
+            {
+              ods << qrg_magic << qrg_version << next_frequencies_.frequency_list ();
+            }
+        }
+      else
+        {
+          ods << qrg_magic << qrg_version << next_frequencies_.frequency_list ();
+        }
+    }
+}
+
+void Configuration::impl::reset_frequencies ()
+{
+  QMessageBox msgbox;
+  msgbox.setWindowTitle(tr("Reset Working Frequencies"));
+  msgbox.setIcon(QMessageBox::Question);
+  msgbox.setText(tr("Are you sure you want to discard your current "
                                                        "working frequencies and replace them with default "
-                                                       "ones?")))
+                                                       "ones?"));
+  msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+  msgbox.setDefaultButton(QMessageBox::No);
+  msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
+  msgbox.button(QMessageBox::No)->setText(tr("&No"));
+
+  if (QMessageBox::Yes == msgbox.exec())
     {
       next_frequencies_.reset_to_defaults ();
     }
@@ -4981,7 +5142,7 @@ void Configuration::impl::insert_frequency ()
   if (QDialog::Accepted == frequency_dialog_->exec ())
     {
       ui_->frequencies_table_view->setCurrentIndex (next_frequencies_.add (frequency_dialog_->item ()));
-      ui_->frequencies_table_view->resizeColumnToContents (FrequencyList::mode_column);
+      ui_->frequencies_table_view->resizeColumnToContents (FrequencyList_v2::mode_column);
     }
 }
 
@@ -5234,7 +5395,7 @@ void Configuration::impl::handle_transceiver_failure (QString const& reason)
 
   if (isVisible ())
     {
-      message_box (tr ("Rig failure"), reason);
+      message_box_critical (tr ("Rig failure"), reason);
     }
   else
     {

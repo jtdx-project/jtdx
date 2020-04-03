@@ -14,6 +14,8 @@
 #include "WFPalette.hpp"
 
 #include "FrequencyLineEdit.hpp"
+#include "FrequencyDeltaLineEdit.hpp"
+#include "IARURegions.hpp"
 
 QItemEditorFactory * item_editor_factory ()
 {
@@ -37,6 +39,12 @@ void register_types ()
   item_editor_factory ()->registerEditor (frequency_delta_type_id, new QStandardItemEditorCreator<FrequencyDeltaLineEdit> ());
 
   // Frequency list model
+  qRegisterMetaType<FrequencyList_v2::Item> ("Item_v2");
+  qRegisterMetaTypeStreamOperators<FrequencyList_v2::Item> ("Item_v2");
+  qRegisterMetaType<FrequencyList_v2::FrequencyItems> ("FrequencyItems_v2");
+  qRegisterMetaTypeStreamOperators<FrequencyList_v2::FrequencyItems> ("FrequencyItems_v2");
+
+  // defunct old versions
   qRegisterMetaType<FrequencyList::Item> ("Item");
   qRegisterMetaTypeStreamOperators<FrequencyList::Item> ("Item");
   qRegisterMetaType<FrequencyList::FrequencyItems> ("FrequencyItems");
@@ -77,4 +85,7 @@ void register_types ()
 
   // Waterfall palette
   qRegisterMetaTypeStreamOperators<WFPalette::Colours> ("Colours");
+
+ // IARURegions
+  qRegisterMetaTypeStreamOperators<IARURegions::Region> ("IARURegions::Region");
 }

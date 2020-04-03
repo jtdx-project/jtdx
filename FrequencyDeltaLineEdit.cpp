@@ -1,4 +1,4 @@
-#include "FrequencyLineEdit.hpp"
+#include "FrequencyDeltaLineEdit.hpp"
 
 #include <limits>
 
@@ -6,7 +6,7 @@
 #include <QString>
 #include <QLocale>
 
-#include "moc_FrequencyLineEdit.cpp"
+#include "moc_FrequencyDeltaLineEdit.cpp"
 
 namespace
 {
@@ -36,18 +36,19 @@ namespace
   };
 }
 
-FrequencyLineEdit::FrequencyLineEdit (QWidget * parent)
+FrequencyDeltaLineEdit::FrequencyDeltaLineEdit (QWidget * parent)
   : QLineEdit (parent)
 {
-  setValidator (new MHzValidator {0., std::numeric_limits<Radio::Frequency>::max () / 10.e6, this});
+  setValidator (new MHzValidator {-std::numeric_limits<FrequencyDelta>::max () / 10.e6,
+        std::numeric_limits<FrequencyDelta>::max () / 10.e6, this});
 }
 
-auto FrequencyLineEdit::frequency () const -> Frequency
+auto FrequencyDeltaLineEdit::frequency_delta () const -> FrequencyDelta
 {
-  return Radio::frequency (text (), 6);
+  return Radio::frequency_delta (text (), 6);
 }
 
-void FrequencyLineEdit::frequency (Frequency f)
+void FrequencyDeltaLineEdit::frequency_delta (FrequencyDelta d)
 {
-  setText (Radio::frequency_MHz_string (f));
+  setText (Radio::frequency_MHz_string (d));
 }
