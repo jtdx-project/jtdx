@@ -6617,7 +6617,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2750"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>EQSL OTH Nickname.</translation>
+        <translation>EQSL OTH Hüüdnimi.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2757"/>
