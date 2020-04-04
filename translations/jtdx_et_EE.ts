@@ -6627,7 +6627,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2764"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH N&amp;ickname:</translation>
+        <translation>QTH &amp;Hüüdnimi:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2777"/>
