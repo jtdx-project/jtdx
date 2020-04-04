@@ -981,6 +981,7 @@ set (LANGUAGES
   it_IT
   pl_PL
   pt_PT
+  pt_BR
   zh_HK
   zh_CN
   ja_JP

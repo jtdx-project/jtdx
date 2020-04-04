@@ -312,7 +312,7 @@ auto WSPRBandHopping::next_hop (bool tx_enabled) -> Hop
   int band_index;
   int tx_next;
 
-  my_grid = (my_grid + "      ").left (6); // hopping doesn't like
+  my_grid = (my_grid + "        ").left (8); // hopping doesn't like
                                            // short grids
 
   // look up the period for this time

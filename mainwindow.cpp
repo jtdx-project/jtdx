@@ -593,6 +593,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionItalian->setActionGroup(languageGroup);
   ui->actionPolish->setActionGroup(languageGroup);
   ui->actionPortuguese->setActionGroup(languageGroup);
+  ui->actionPortuguese_BR->setActionGroup(languageGroup);
   ui->actionChinese_simplified->setActionGroup(languageGroup);
   ui->actionChinese_traditional->setActionGroup(languageGroup);
   ui->actionJapanese->setActionGroup(languageGroup);
@@ -1331,6 +1332,7 @@ void MainWindow::readSettings()
   ui->actionItalian->setText("Italiano");
   ui->actionPolish->setText("Polski");
   ui->actionPortuguese->setText("Português");
+  ui->actionPortuguese_BR->setText("Português BR");
   ui->actionChinese_simplified->setText("简体中文");
   ui->actionChinese_traditional->setText("繁體中文");
   ui->actionJapanese->setText("日本語");
@@ -2741,6 +2743,7 @@ void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
 void MainWindow::on_actionPolish_triggered() { ui->actionPolish->setChecked(true); set_language("pl_PL"); }
 void MainWindow::on_actionPortuguese_triggered() { ui->actionPortuguese->setChecked(true); set_language("pt_PT"); }
+void MainWindow::on_actionPortuguese_BR_triggered() { ui->actionPortuguese_BR->setChecked(true); set_language("pt_BR"); }
 void MainWindow::on_actionChinese_simplified_triggered() { ui->actionChinese_simplified->setChecked(true); set_language("zh_CN"); }
 void MainWindow::on_actionChinese_traditional_triggered() { ui->actionChinese_traditional->setChecked(true); set_language("zh_HK"); }
 void MainWindow::on_actionJapanese_triggered() { ui->actionJapanese->setChecked(true); set_language("ja_JP"); }
@@ -3750,6 +3753,7 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
   else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);
   else if(m_lang=="pt_PT") ui->actionPortuguese->setChecked(true);
+  else if(m_lang=="pt_BR") ui->actionPortuguese_BR->setChecked(true);
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
   else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
   else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);

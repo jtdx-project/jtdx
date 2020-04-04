@@ -4468,6 +4468,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionItalian"/>
     <addaction name="actionPolish"/>
     <addaction name="actionPortuguese"/>
+    <addaction name="actionPortuguese_BR"/>
     <addaction name="actionChinese_simplified"/>
     <addaction name="actionChinese_traditional"/>
     <addaction name="actionJapanese"/>
@@ -4715,6 +4716,11 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
   </action>
   <action name="actionPortuguese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPortuguese_BR">
    <property name="checkable">
     <bool>true</bool>
    </property>
