@@ -111,22 +111,22 @@ Otra aplicación puede estar bloqueando el directorio</translation>
     <message>
         <location filename="../Configuration.cpp" line="1443"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cargar ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1447"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salvar como ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1451"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mezclar ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1455"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Reiniciar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2675"/>
@@ -212,66 +212,66 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5002"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5002"/>
         <location filename="../Configuration.cpp" line="5021"/>
         <location filename="../Configuration.cpp" line="5067"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos de frecuencias (*.qrg);;Todos los archivos (*.*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5009"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplazar las frecuencias de trabajo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5010"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres descartar tus frecuencias de trabajo actuales y sustituirlas por las cargadas?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5021"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Mezclar las frecuencias de trabajo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <location filename="../Configuration.cpp" line="5047"/>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>No es un archivo de frecuencias válido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magia de archivo incorrecto</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>La versión es demasiado nueva</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Contenido corrupto</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5067"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar las frecuencias de trabajo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5077"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar sólo algunas frecuencias de trabajo seleccionadas</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5079"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Está seguro de que quiere guardar sólo las frecuencias de trabajo que están seleccionadas actualmente? Haga clic en No para guardar todas.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
@@ -587,7 +587,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="87"/>
         <source>E. Malaysia</source>
-        <translation>Malasia Oriiental</translation>
+        <translation>Malasia Oriental</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="88"/>
@@ -2296,7 +2296,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Region IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
@@ -2325,7 +2325,7 @@ Error: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Región IARU</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2708,7 +2708,7 @@ Error: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Región IARU</translation>
     </message>
 </context>
 <context>
@@ -4180,7 +4180,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5180"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Seleccione automáticamente la búsqueda de respuesta a CQ con prioridades, si falla, busque mensajes CQ con mayor prioridad &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Autoselección buscando la respuesta a CQ con prioridades, si falla entonces buscando los mensajes CQ con mayor prioridad&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5188"/>
@@ -5523,12 +5523,12 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>Región IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seleccione su región IARU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -6345,7 +6345,7 @@ Ambos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="1929"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Contadores Busque entre mensajes decodificados, llame a CQ o Halt Tx si:</translation>
+        <translation>Contadores. Busca a través de los mensajes decodificados, llama a CQ o Detiene Tx si:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1961"/>
@@ -6889,7 +6889,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clic boton derecho para mantener la lista de frecuencias de trabajo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
