@@ -174,6 +174,7 @@ private slots:
   void on_actionSpanish_triggered();
   void on_actionFrench_triggered();
   void on_actionItalian_triggered();
+  void on_actionLatvian_triggered();
   void on_actionChinese_simplified_triggered();
   void on_actionChinese_traditional_triggered();
   void on_actionJapanese_triggered();
