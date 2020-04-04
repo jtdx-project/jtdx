@@ -3290,7 +3290,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3538,7 +3538,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lokātors</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
@@ -3738,7 +3738,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4495"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mode</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4507"/>
@@ -3784,7 +3784,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4609"/>
         <source>About JTDX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Par JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4612"/>
@@ -5135,7 +5135,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kūda</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="120"/>
@@ -5181,7 +5181,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diapazons</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="322"/>
@@ -5196,7 +5196,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diapazons</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="367"/>
@@ -6025,7 +6025,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1395"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mode</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1401"/>
@@ -7172,7 +7172,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4844"/>
         <source>Antarctica</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antarktīda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4851"/>
@@ -7366,7 +7366,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="5211"/>
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diapazons</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5221"/>
