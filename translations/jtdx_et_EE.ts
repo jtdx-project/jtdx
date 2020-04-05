@@ -58,23 +58,23 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1185"/>
-        <location filename="../Configuration.cpp" line="3197"/>
+        <location filename="../Configuration.cpp" line="1188"/>
+        <location filename="../Configuration.cpp" line="3219"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1186"/>
+        <location filename="../Configuration.cpp" line="1189"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1201"/>
+        <location filename="../Configuration.cpp" line="1204"/>
         <source>Create temporary directory error: </source>
         <translation>Ajutise kataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1207"/>
+        <location filename="../Configuration.cpp" line="1210"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -83,67 +83,67 @@ Another application may be locking the directory</source>
 Teine rakendus võib olla kataloogi lukustanud</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1224"/>
+        <location filename="../Configuration.cpp" line="1227"/>
         <source>Create data directory error: </source>
         <translation>Andmekataloogi loomise viga: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1233"/>
-        <location filename="../Configuration.cpp" line="1244"/>
+        <location filename="../Configuration.cpp" line="1236"/>
+        <location filename="../Configuration.cpp" line="1247"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Kataloogi ei saa luua &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1410"/>
-        <location filename="../Configuration.cpp" line="1435"/>
-        <location filename="../Configuration.cpp" line="1487"/>
+        <location filename="../Configuration.cpp" line="1413"/>
+        <location filename="../Configuration.cpp" line="1438"/>
+        <location filename="../Configuration.cpp" line="1490"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kustuta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1439"/>
-        <location filename="../Configuration.cpp" line="1491"/>
+        <location filename="../Configuration.cpp" line="1442"/>
+        <location filename="../Configuration.cpp" line="1494"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Lisa ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1443"/>
+        <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Lae ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1447"/>
+        <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Salvesta ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1451"/>
+        <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Liida ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1455"/>
+        <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
         <translation>&amp;Lähtesta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2675"/>
+        <location filename="../Configuration.cpp" line="2678"/>
         <source>Serial Port:</source>
         <translation>Jadaport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2676"/>
+        <location filename="../Configuration.cpp" line="2679"/>
         <source>Serial port used for CAT control</source>
         <translation>CAT-kontrolli jadaport</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2683"/>
+        <location filename="../Configuration.cpp" line="2686"/>
         <source>Network Server:</source>
         <translation>Võrguserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2684"/>
+        <location filename="../Configuration.cpp" line="2687"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -158,12 +158,12 @@ Vormingud:
 	[IPv6-aadress]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2696"/>
+        <location filename="../Configuration.cpp" line="2699"/>
         <source>USB Device:</source>
         <translation>USB-seade:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2700"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -174,138 +174,143 @@ Vorming:
 	[VID[:PID[:TARNIJA[:TOODE]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2732"/>
+        <location filename="../Configuration.cpp" line="2735"/>
         <source>Invalid audio input device</source>
         <translation>Vale helisisend</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2739"/>
+        <location filename="../Configuration.cpp" line="2742"/>
         <source>Invalid audio output device</source>
         <translation>Vale heliväljund</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2745"/>
+        <location filename="../Configuration.cpp" line="2748"/>
         <source>Invalid PTT method</source>
         <translation>Vale PTT- meetod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2755"/>
+        <location filename="../Configuration.cpp" line="2758"/>
         <source>Invalid PTT port</source>
         <translation>Vale PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3243"/>
+        <location filename="../Configuration.cpp" line="3265"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3244"/>
+        <location filename="../Configuration.cpp" line="3266"/>
         <source>CQ in message</source>
         <translation>CQ sõnumis</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4427"/>
+        <location filename="../Configuration.cpp" line="4449"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX dekodeeritud teksti fondi valik</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
+        <location filename="../Configuration.cpp" line="5072"/>
+        <source>Cancel</source>
+        <translation>Katkesta</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Load Working Frequencies</source>
         <translation>Lae töösagedused failist</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
-        <location filename="../Configuration.cpp" line="5021"/>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5100"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Töösageduste failid (*.qrg);;Kõik failid (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5009"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
         <translation>Asenda töösagedused failist</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5010"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Kas oled kindel, et tahad praegused töösagedused asendada failis olevatega?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5021"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
         <translation>Liida töösagedused</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
-        <location filename="../Configuration.cpp" line="5047"/>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
         <translation>Vale töösageduste fail</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
+        <location filename="../Configuration.cpp" line="5117"/>
         <source>Incorrect file magic</source>
         <translation>Vale faili tunnus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
         <translation>Versioon on liiga uus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
         <translation>Sisu on vale</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
         <translation>Salvesta töösagedused faili</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Salvesta ainult valitud sagedused</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Kas oled kindel, et tahad salvestada ainult valitud sagedused? Vajuta Ei et salvestada kõik.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5186"/>
         <source>Reset Working Frequencies</source>
         <translation>Töösageduste lähtestamine</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5188"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Kas soovite tõesti loobuda oma praegustest töösagedustest ja asendada need vaikesagedustega?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5163"/>
+        <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
         <translation>&amp;Jah</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5164"/>
+        <location filename="../Configuration.cpp" line="5194"/>
         <source>&amp;No</source>
         <translation>&amp;Ei</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5170"/>
+        <location filename="../Configuration.cpp" line="5249"/>
         <source>Save Directory</source>
         <translation>Salvesta kataloogi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5265"/>
         <source>Failed to open connection to rig</source>
         <translation>Raadioga ühenduse loomine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5477"/>
         <source>Rig failure</source>
         <translation>Raadio viga</translation>
     </message>
@@ -2290,32 +2295,32 @@ Viga: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="221"/>
+        <location filename="../Configuration.cpp" line="222"/>
         <source>Add Frequency</source>
         <translation>Lisage sagedus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="225"/>
+        <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
         <translation>IARU &amp;Regioon:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="226"/>
+        <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Tööliik:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="227"/>
+        <location filename="../Configuration.cpp" line="228"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Sagedus (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="233"/>
+        <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="234"/>
+        <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
@@ -4925,6 +4930,211 @@ UDP server %2:%3</translation>
     </message>
 </context>
 <context>
+    <name>QDialogButtonBox</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5024"/>
+        <source>OK</source>
+        <translation>Nõustun</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDialog</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5026"/>
+        <source>Directory:</source>
+        <translation>Kataloog:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5027"/>
+        <source>File &amp;name:</source>
+        <translation>Faili &amp;nimi:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5028"/>
+        <source>&amp;Open</source>
+        <translation>&amp;Ava</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5029"/>
+        <source>&amp;Choose</source>
+        <translation>&amp;Vali</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5030"/>
+        <source>&amp;Save</source>
+        <translation>&amp;Salvesta</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5032"/>
+        <source>All files (*)</source>
+        <translation>Kõik failid (*)</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5033"/>
+        <source>New Folder</source>
+        <translation>Uus Kataloog</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5034"/>
+        <source>Delete</source>
+        <translation>Kustuta</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5031"/>
+        <source>Cancel</source>
+        <translation>Katkesta</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5035"/>
+        <source>Look in:</source>
+        <translation>Vaata ktaloogis:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5036"/>
+        <source>Files of type:</source>
+        <translation>Failid laiendiga:</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5037"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation>%1&apos; on salvestamiseks keelatud.
+Kas tahad ikk kustutada?</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5038"/>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation>Kas oled kindel, et tahad kustutada &apos;%1&apos;?</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5039"/>
+        <source>Could not delete directory.</source>
+        <translation>Ei saa kustutada kataloogi.</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5040"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation>%1
+Kataloogi ei leitud.
+Palun kontrolli kataloogi nime.</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5042"/>
+        <source>Recent Places</source>
+        <translation>Viimatised</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5043"/>
+        <source>Back</source>
+        <translation>Tagasi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5044"/>
+        <source>Go back</source>
+        <translation>Mine tagasi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5045"/>
+        <source>Alt+Left</source>
+        <translation>Alt+Vasak</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5046"/>
+        <source>Forward</source>
+        <translation>Edasi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5047"/>
+        <source>Go forward</source>
+        <translation>Mine edasi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5048"/>
+        <source>Alt+Right</source>
+        <translation>Alt+Parem</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5049"/>
+        <source>Parent Directory</source>
+        <translation>Algkataloog</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5050"/>
+        <source>Go to the parent directory</source>
+        <translation>Mine ülakataloogi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5051"/>
+        <source>Alt+Up</source>
+        <translation>Alt+Üles</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5052"/>
+        <source>Create New Folder</source>
+        <translation>Loo uus kataloog</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5053"/>
+        <source>Create a New Folder</source>
+        <translation>Loo 1 uus kataloog</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5054"/>
+        <source>List View</source>
+        <translation>Lühivaade</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5055"/>
+        <source>Change to list view mode</source>
+        <translation>Vaheta lühivaatele</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5056"/>
+        <source>Detail View</source>
+        <translation>Detailne vaade</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5057"/>
+        <source>Change to detail view mode</source>
+        <translation>Vaheta Detailsele vaatele</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5058"/>
+        <source>Sidebar</source>
+        <translation>Niinutusriba</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5059"/>
+        <source>List of places and bookmarks</source>
+        <translation>Ajaloo nimekiri</translation>
+    </message>
+</context>
+<context>
+    <name>QFileSystemModel</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5061"/>
+        <source>Name</source>
+        <translation>Faili nimi</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5062"/>
+        <source>Size</source>
+        <translation>Suurus</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5063"/>
+        <source>Type</source>
+        <translation>Laiend</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5064"/>
+        <source>Date Modified</source>
+        <translation>Muutmise kuupäev</translation>
+    </message>
+</context>
+<context>
     <name>QMessageBox</name>
     <message>
         <location filename="../mainwindow.cpp" line="6834"/>
@@ -4993,6 +5203,81 @@ UDP server %2:%3</translation>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Viga jugapaleti faili kirjutamisel &quot;%1&quot;: %2.</translation>
+    </message>
+</context>
+<context>
+    <name>QPushButton</name>
+    <message>
+        <source>OK</source>
+        <translation type="vanished">Nõustun</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="vanished">Salvesta</translation>
+    </message>
+    <message>
+        <source>Save All</source>
+        <translation type="vanished">Salvesta kõik</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="vanished">Ava</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="vanished">&amp;Jah</translation>
+    </message>
+    <message>
+        <source>Yes to &amp;All</source>
+        <translation type="vanished">J&amp;ah kõigile</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="vanished">&amp;Ei</translation>
+    </message>
+    <message>
+        <source>N&amp;o to All</source>
+        <translation type="vanished">E&amp;i kõigile</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation type="vanished">Lõpeta</translation>
+    </message>
+    <message>
+        <source>Retry</source>
+        <translation type="vanished">Korda</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <translation type="vanished">Ignoreeri</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="vanished">Sulge</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="vanished">Katkesta</translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="vanished">Viska ära</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="vanished">Abi</translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="vanished">Kehtesta</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="vanished">Lähtesta</translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation type="vanished">Taasta vaikeseaded</translation>
     </message>
 </context>
 <context>
@@ -5207,32 +5492,32 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="265"/>
+        <location filename="../Configuration.cpp" line="266"/>
         <source>Add Station</source>
         <translation>Lisage jaam</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="270"/>
+        <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Band:</source>
         <translation>&amp;Laineala:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="271"/>
+        <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Nihe (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="272"/>
+        <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="278"/>
+        <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="279"/>
+        <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>

@@ -58,63 +58,63 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1233"/>
-        <location filename="../Configuration.cpp" line="1244"/>
+        <location filename="../Configuration.cpp" line="1236"/>
+        <location filename="../Configuration.cpp" line="1247"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>ディレクトリを作成</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1410"/>
-        <location filename="../Configuration.cpp" line="1435"/>
-        <location filename="../Configuration.cpp" line="1487"/>
+        <location filename="../Configuration.cpp" line="1413"/>
+        <location filename="../Configuration.cpp" line="1438"/>
+        <location filename="../Configuration.cpp" line="1490"/>
         <source>&amp;Delete</source>
         <translation>&amp;削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1439"/>
-        <location filename="../Configuration.cpp" line="1491"/>
+        <location filename="../Configuration.cpp" line="1442"/>
+        <location filename="../Configuration.cpp" line="1494"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;挿入…</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2675"/>
+        <location filename="../Configuration.cpp" line="2678"/>
         <source>Serial Port:</source>
         <translation>シリアルポート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2676"/>
+        <location filename="../Configuration.cpp" line="2679"/>
         <source>Serial port used for CAT control</source>
         <translation>CAT制御に使用されるシリアルポート</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2683"/>
+        <location filename="../Configuration.cpp" line="2686"/>
         <source>Network Server:</source>
         <translation>ネットワークサーバー：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2696"/>
+        <location filename="../Configuration.cpp" line="2699"/>
         <source>USB Device:</source>
         <translation>USB機器：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1201"/>
+        <location filename="../Configuration.cpp" line="1204"/>
         <source>Create temporary directory error: </source>
         <translation>一時ディレクトリの作成エラー： </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1185"/>
-        <location filename="../Configuration.cpp" line="3197"/>
+        <location filename="../Configuration.cpp" line="1188"/>
+        <location filename="../Configuration.cpp" line="3219"/>
         <source>&amp;OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1186"/>
+        <location filename="../Configuration.cpp" line="1189"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1207"/>
+        <location filename="../Configuration.cpp" line="1210"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -123,32 +123,32 @@ Another application may be locking the directory</source>
 別のアプリケーションがディレクトリをロックしている可能性があります</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1224"/>
+        <location filename="../Configuration.cpp" line="1227"/>
         <source>Create data directory error: </source>
         <translation>データディレクトリの作成エラー： </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1443"/>
+        <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1447"/>
+        <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1451"/>
+        <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1455"/>
+        <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2684"/>
+        <location filename="../Configuration.cpp" line="2687"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -163,7 +163,7 @@ IPv4-address：port
 [IPv6-address]：port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2700"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -174,138 +174,143 @@ Format:
 ：[VID [：PID [：VENDOR [：PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2732"/>
+        <location filename="../Configuration.cpp" line="2735"/>
         <source>Invalid audio input device</source>
         <translation>無効なオーディオ入力デバイス</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2739"/>
+        <location filename="../Configuration.cpp" line="2742"/>
         <source>Invalid audio output device</source>
         <translation>無効な音声出力機器</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2745"/>
+        <location filename="../Configuration.cpp" line="2748"/>
         <source>Invalid PTT method</source>
         <translation>無効なPTTメソッド</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2755"/>
+        <location filename="../Configuration.cpp" line="2758"/>
         <source>Invalid PTT port</source>
         <translation>無効なPTTポート</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3243"/>
+        <location filename="../Configuration.cpp" line="3265"/>
         <source>CQ/73 in message</source>
         <translation>メッセージのCQ / 73</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3244"/>
+        <location filename="../Configuration.cpp" line="3266"/>
         <source>CQ in message</source>
         <translation>メッセージのＣＱ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4427"/>
+        <location filename="../Configuration.cpp" line="4449"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDXデコードテキストフォントの選択</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
-        <source>Load Working Frequencies</source>
+        <location filename="../Configuration.cpp" line="5072"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
-        <location filename="../Configuration.cpp" line="5021"/>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5100"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5009"/>
+        <location filename="../Configuration.cpp" line="5068"/>
+        <source>Load Working Frequencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5010"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5021"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
-        <location filename="../Configuration.cpp" line="5047"/>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
+        <location filename="../Configuration.cpp" line="5117"/>
         <source>Incorrect file magic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5163"/>
+        <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
         <translation type="unfinished">&amp;はい</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5164"/>
+        <location filename="../Configuration.cpp" line="5194"/>
         <source>&amp;No</source>
         <translation type="unfinished">&amp;いいえ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5186"/>
         <source>Reset Working Frequencies</source>
         <translation>使用周波数のリセット</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5188"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>現在の周波数リストを破棄して、デフォルトの周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5170"/>
+        <location filename="../Configuration.cpp" line="5249"/>
         <source>Save Directory</source>
         <translation>ディレクトリを保存</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5265"/>
         <source>Failed to open connection to rig</source>
         <translation>リグへの接続を開けませんでした</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5477"/>
         <source>Rig failure</source>
         <translation>リグに障害あり</translation>
     </message>
@@ -2286,34 +2291,34 @@ Error: %2 - %3</source>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="221"/>
+        <location filename="../Configuration.cpp" line="222"/>
         <source>Add Frequency</source>
         <translation>周波数を追加</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="225"/>
+        <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="226"/>
+        <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
         <translation>&amp;モード：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="227"/>
+        <location filename="../Configuration.cpp" line="228"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;周波数（MHz）：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="233"/>
+        <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="234"/>
+        <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4884,6 +4889,212 @@ UDP server %2:%3</source>
     </message>
 </context>
 <context>
+    <name>QDialogButtonBox</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5024"/>
+        <source>OK</source>
+        <translation type="unfinished">OK</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDialog</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5026"/>
+        <source>Directory:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5027"/>
+        <source>File &amp;name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5028"/>
+        <source>&amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5029"/>
+        <source>&amp;Choose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5030"/>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5032"/>
+        <source>All files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5033"/>
+        <source>New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5034"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5031"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5035"/>
+        <source>Look in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5036"/>
+        <source>Files of type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5043"/>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5044"/>
+        <source>Go back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5045"/>
+        <source>Alt+Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5046"/>
+        <source>Forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5047"/>
+        <source>Go forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5048"/>
+        <source>Alt+Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5049"/>
+        <source>Parent Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5050"/>
+        <source>Go to the parent directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5051"/>
+        <source>Alt+Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5052"/>
+        <source>Create New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5053"/>
+        <source>Create a New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5054"/>
+        <source>List View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5055"/>
+        <source>Change to list view mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5056"/>
+        <source>Detail View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5057"/>
+        <source>Change to detail view mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5058"/>
+        <source>Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5059"/>
+        <source>List of places and bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="obsolete">名前</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5037"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5038"/>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5039"/>
+        <source>Could not delete directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5040"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5042"/>
+        <source>Recent Places</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QFileSystemModel</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5061"/>
+        <source>Name</source>
+        <translation type="unfinished">名前</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5062"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5063"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5064"/>
+        <source>Date Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QMessageBox</name>
     <message>
         <location filename="../mainwindow.cpp" line="6834"/>
@@ -4952,6 +5163,68 @@ UDP server %2:%3</source>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>ウォーターフォールパレットファイル &quot;%1&quot;の書き込みエラー：%2。</translation>
+    </message>
+</context>
+<context>
+    <name>QPlatformTheme</name>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">OK</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">保存</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="obsolete">開く</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="obsolete">&amp;はい</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="obsolete">&amp;いいえ</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="obsolete">ヘルプ</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="obsolete">リセット</translation>
+    </message>
+</context>
+<context>
+    <name>QPushButton</name>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">OK</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">保存</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="obsolete">開く</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="obsolete">&amp;はい</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="obsolete">&amp;いいえ</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="obsolete">ヘルプ</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="obsolete">リセット</translation>
     </message>
 </context>
 <context>
@@ -5166,34 +5439,34 @@ Error(%2): %3</source>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="265"/>
+        <location filename="../Configuration.cpp" line="266"/>
         <source>Add Station</source>
         <translation>ステーションを追加</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="270"/>
+        <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Band:</source>
         <translation>&amp;バンド:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="271"/>
+        <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;オフセット（MHz）：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="272"/>
+        <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;アンテナ：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="278"/>
+        <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="279"/>
+        <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

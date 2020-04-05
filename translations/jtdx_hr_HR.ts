@@ -58,23 +58,23 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1185"/>
-        <location filename="../Configuration.cpp" line="3197"/>
+        <location filename="../Configuration.cpp" line="1188"/>
+        <location filename="../Configuration.cpp" line="3219"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1186"/>
+        <location filename="../Configuration.cpp" line="1189"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Prekid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1201"/>
+        <location filename="../Configuration.cpp" line="1204"/>
         <source>Create temporary directory error: </source>
         <translation>Stvaranje privremene mape došlo je do greške: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1207"/>
+        <location filename="../Configuration.cpp" line="1210"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -83,67 +83,67 @@ Another application may be locking the directory</source>
 Drugi program možda koristi direktorij</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1224"/>
+        <location filename="../Configuration.cpp" line="1227"/>
         <source>Create data directory error: </source>
         <translation>Pogreška u direktoriju podataka: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1233"/>
-        <location filename="../Configuration.cpp" line="1244"/>
+        <location filename="../Configuration.cpp" line="1236"/>
+        <location filename="../Configuration.cpp" line="1247"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Napravi Mapu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1410"/>
-        <location filename="../Configuration.cpp" line="1435"/>
-        <location filename="../Configuration.cpp" line="1487"/>
+        <location filename="../Configuration.cpp" line="1413"/>
+        <location filename="../Configuration.cpp" line="1438"/>
+        <location filename="../Configuration.cpp" line="1490"/>
         <source>&amp;Delete</source>
         <translation>&amp;Obriši</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1439"/>
-        <location filename="../Configuration.cpp" line="1491"/>
+        <location filename="../Configuration.cpp" line="1442"/>
+        <location filename="../Configuration.cpp" line="1494"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Ubaci ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1443"/>
+        <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Učitaj ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1447"/>
+        <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spremi kao...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1451"/>
+        <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spoji ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1455"/>
+        <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Resetiraj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2675"/>
+        <location filename="../Configuration.cpp" line="2678"/>
         <source>Serial Port:</source>
         <translation>Serijski Port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2676"/>
+        <location filename="../Configuration.cpp" line="2679"/>
         <source>Serial port used for CAT control</source>
         <translation>Serijski port koji se koristi za CAT kontrolu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2683"/>
+        <location filename="../Configuration.cpp" line="2686"/>
         <source>Network Server:</source>
         <translation>Mrežni Server:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2684"/>
+        <location filename="../Configuration.cpp" line="2687"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -153,12 +153,12 @@ Formats:
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2696"/>
+        <location filename="../Configuration.cpp" line="2699"/>
         <source>USB Device:</source>
         <translation>USB uređaj:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2700"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -166,138 +166,143 @@ Format:
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2732"/>
+        <location filename="../Configuration.cpp" line="2735"/>
         <source>Invalid audio input device</source>
         <translation>Nevažeći ulazni ulazni uređaj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2739"/>
+        <location filename="../Configuration.cpp" line="2742"/>
         <source>Invalid audio output device</source>
         <translation>Nevažeći izlazni audio uređaj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2745"/>
+        <location filename="../Configuration.cpp" line="2748"/>
         <source>Invalid PTT method</source>
         <translation>Nevažeća PTT metoda</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2755"/>
+        <location filename="../Configuration.cpp" line="2758"/>
         <source>Invalid PTT port</source>
         <translation>Nevažeći PTT priključak</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3243"/>
+        <location filename="../Configuration.cpp" line="3265"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 u poruci</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3244"/>
+        <location filename="../Configuration.cpp" line="3266"/>
         <source>CQ in message</source>
         <translation>CQ u poruci</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4427"/>
+        <location filename="../Configuration.cpp" line="4449"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX odabir fontova dekodiranog teksta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Učitajte radne frekvencije</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5002"/>
-        <location filename="../Configuration.cpp" line="5021"/>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5100"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
+        <translation>Frekvencijske datoteke (*.qrg);;Sve datoteke (*.*)</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5072"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5009"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamijenite radne frekvencije</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5010"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite odbaciti trenutne radne frekvencije i zamijeniti ih s učitanim?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5021"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Spajanje radnih frekvencija</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
-        <location filename="../Configuration.cpp" line="5047"/>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije valjana datoteka o frekvencijama</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
+        <location filename="../Configuration.cpp" line="5117"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Neispravna datoteka magic</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzija je previše nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Sadržaj je korumpiran</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremite radne frekvencije</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremite samo odabrane Radne frekvencije</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite spremiti samo trenutno odabrane radne frekvencije? Kliknite Ne za spremanje svih.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5163"/>
+        <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Da</translation>
+        <translation>&amp;Da</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5164"/>
+        <location filename="../Configuration.cpp" line="5194"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Ne</translation>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5186"/>
         <source>Reset Working Frequencies</source>
         <translation>Reset Radnih Frekvencija</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5188"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Jeste li sigurni da želite odbaciti trenutne radne frekvencije i zamijeniti ih zadanim?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5170"/>
+        <location filename="../Configuration.cpp" line="5249"/>
         <source>Save Directory</source>
         <translation>Spremi Mapu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5265"/>
         <source>Failed to open connection to rig</source>
         <translation>Otvaranje veze s uređajem nije uspjelo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5477"/>
         <source>Rig failure</source>
         <translation>Greška uređaja</translation>
     </message>
@@ -2279,32 +2284,32 @@ Pogreška: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="221"/>
+        <location filename="../Configuration.cpp" line="222"/>
         <source>Add Frequency</source>
         <translation>Dodaj Frekvenciju</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="225"/>
+        <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU &amp;Regija:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="226"/>
+        <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Modulacija:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="227"/>
+        <location filename="../Configuration.cpp" line="228"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Frekvencija (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="233"/>
+        <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="234"/>
+        <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Prekid</translation>
     </message>
@@ -2315,7 +2320,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Regija</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2698,7 +2703,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Regija</translation>
     </message>
 </context>
 <context>
@@ -3319,7 +3324,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Širina pojasa, FT8 150Hz, FT8 hound način rada 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signali: 580Hz dekodiranje, 300 Hz za prikaz poruka. Filter je centriran u spektru RX signala. Funkcija filtra ne može poboljšati dekodiranje signala, posvećena je upotrebi s sporim CPU-ima kako bi dekoder dovršio obradu prije prijenosa signala i izbjegao promjenu poruke pri prijenosu. Svi dolazni pozivi izvan propusne širine filtra bit će izgubljeni, filtrirajte ih funkcionalno samo ako je stvarno potreban vašem CPU-u&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -4901,6 +4906,216 @@ UDP server %2:%3</translation>
     </message>
 </context>
 <context>
+    <name>QDialogButtonBox</name>
+    <message>
+        <source>&amp;OK</source>
+        <translation type="obsolete">&amp;OK</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5024"/>
+        <source>OK</source>
+        <translation type="unfinished">Potvrdi</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDialog</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5026"/>
+        <source>Directory:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5027"/>
+        <source>File &amp;name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5028"/>
+        <source>&amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5029"/>
+        <source>&amp;Choose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5030"/>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5032"/>
+        <source>All files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5033"/>
+        <source>New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5034"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5031"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5035"/>
+        <source>Look in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5036"/>
+        <source>Files of type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5043"/>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5044"/>
+        <source>Go back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5045"/>
+        <source>Alt+Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5046"/>
+        <source>Forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5047"/>
+        <source>Go forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5048"/>
+        <source>Alt+Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5049"/>
+        <source>Parent Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5050"/>
+        <source>Go to the parent directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5051"/>
+        <source>Alt+Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5052"/>
+        <source>Create New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5053"/>
+        <source>Create a New Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5054"/>
+        <source>List View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5055"/>
+        <source>Change to list view mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5056"/>
+        <source>Detail View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5057"/>
+        <source>Change to detail view mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5058"/>
+        <source>Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5059"/>
+        <source>List of places and bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="obsolete">Ime</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5037"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5038"/>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5039"/>
+        <source>Could not delete directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5040"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5042"/>
+        <source>Recent Places</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QFileSystemModel</name>
+    <message>
+        <location filename="../Configuration.cpp" line="5061"/>
+        <source>Name</source>
+        <translation type="unfinished">Ime</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5062"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5063"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5064"/>
+        <source>Date Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QMessageBox</name>
     <message>
         <location filename="../mainwindow.cpp" line="6834"/>
@@ -4969,6 +5184,60 @@ UDP server %2:%3</translation>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Pogreška pri pisanju datoteke palete vodopada &quot;%1&quot;: %2.</translation>
+    </message>
+</context>
+<context>
+    <name>QPlatformTheme</name>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">Potvrdi</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">Spremanje</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="obsolete">Otvori</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="obsolete">&amp;Da</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="obsolete">&amp;Ne</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="obsolete">Pomoć</translation>
+    </message>
+</context>
+<context>
+    <name>QPushButton</name>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">Potvrdi</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">Spremanje</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="obsolete">Otvori</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="obsolete">&amp;Da</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="obsolete">&amp;Ne</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="obsolete">Pomoć</translation>
     </message>
 </context>
 <context>
@@ -5193,32 +5462,32 @@ Greška(%2): %3</translation>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="265"/>
+        <location filename="../Configuration.cpp" line="266"/>
         <source>Add Station</source>
         <translation>Dodaj stanicu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="270"/>
+        <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Band:</source>
         <translation>&amp;Opseg:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="271"/>
+        <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Ofset (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="272"/>
+        <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antena:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="278"/>
+        <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="279"/>
+        <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Prekid</translation>
     </message>
@@ -5506,12 +5775,12 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Regija:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odaberite svoju IARU regiju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -6871,7 +7140,7 @@ Kliknite desnom tipkom miša za umetanje i brisanje opcija.</translation>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite Desnu tipku miša za održavanje popisa radnih frekvencija.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>

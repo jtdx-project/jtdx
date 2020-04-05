@@ -1331,7 +1331,7 @@ void MainWindow::readSettings()
   ui->actionSpanish->setText("Español");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
-  ui->actionLatvian->setText("Latvijas");
+  ui->actionLatvian->setText("Latviski");
   ui->actionPolish->setText("Polski");
   ui->actionPortuguese->setText("Português");
   ui->actionPortuguese_BR->setText("Português BR");

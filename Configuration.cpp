@@ -144,6 +144,7 @@
 #include <QMessageBox>
 #include <QAction>
 #include <QFileDialog>
+#include <QFileSystemModel>
 #include <QDir>
 #include <QTemporaryFile>
 #include <QFormLayout>
@@ -162,7 +163,7 @@
 #include <QSerialPortInfo>
 #include <QScopedPointer>
 #include <QDebug>
-
+#include <QtGui>
 #include "qt_helpers.hpp"
 #include "MetaDataRegistry.hpp"
 #include "SettingsGroup.hpp"
@@ -813,6 +814,8 @@ private:
   QAudioDeviceInfo audio_output_device_;
   bool default_audio_output_device_selected_;
   AudioDevice::Channel audio_output_channel_;
+  
+  
 
   friend class Configuration;
 };
@@ -3185,6 +3188,25 @@ void Configuration::impl::reject ()
 
 void Configuration::impl::message_box_critical (QString const& reason, QString const& detail)
 {
+/*  QPushButton::tr("OK");
+  QPushButton::tr("Save");
+  QPushButton::tr("Save All");
+  QPushButton::tr("Open");
+  QPushButton::tr("&Yes");
+  QPushButton::tr("Yes to &All");
+  QPushButton::tr("&No");
+  QPushButton::tr("N&o to All");
+  QPushButton::tr("Abort");
+  QPushButton::tr("Retry");
+  QPushButton::tr("Ignore");
+  QPushButton::tr("Close");
+  QPushButton::tr("Cancel");
+  QPushButton::tr("Discard");
+  QPushButton::tr("Help");
+  QPushButton::tr("Apply");
+  QPushButton::tr("Reset");
+  QPushButton::tr("Restore Defaults");*/
+
   QMessageBox mb;
   mb.setText (reason);
   if (!detail.isEmpty ())
@@ -4999,9 +5021,66 @@ void Configuration::impl::delete_frequencies ()
 
 void Configuration::impl::load_frequencies ()
 {
-  auto file_name = QFileDialog::getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
-  if (!file_name.isNull ())
+  QDialogButtonBox::tr("OK");
+  
+  QFileDialog::tr("Directory:");
+  QFileDialog::tr("File &name:");
+  QFileDialog::tr("&Open");
+  QFileDialog::tr("&Choose");
+  QFileDialog::tr("&Save");
+  QFileDialog::tr("Cancel");
+  QFileDialog::tr("All files (*)");
+  QFileDialog::tr("New Folder");
+  QFileDialog::tr("Delete");
+  QFileDialog::tr("Look in:");
+  QFileDialog::tr("Files of type:");
+  QFileDialog::tr("'%1' is write protected.\nDo you want to delete it anyway?");
+  QFileDialog::tr("Are you sure you want to delete '%1'?");
+  QFileDialog::tr("Could not delete directory.");
+  QFileDialog::tr("%1\nDirectory not found.\nPlease verify the "
+                                            "correct directory name was given.");
+  QFileDialog::tr("Recent Places");
+  QFileDialog::tr("Back");
+  QFileDialog::tr("Go back");
+  QFileDialog::tr("Alt+Left");
+  QFileDialog::tr("Forward");
+  QFileDialog::tr("Go forward");
+  QFileDialog::tr("Alt+Right");
+  QFileDialog::tr("Parent Directory");
+  QFileDialog::tr("Go to the parent directory");
+  QFileDialog::tr("Alt+Up");
+  QFileDialog::tr("Create New Folder");
+  QFileDialog::tr("Create a New Folder");
+  QFileDialog::tr("List View");
+  QFileDialog::tr("Change to list view mode");
+  QFileDialog::tr("Detail View");
+  QFileDialog::tr("Change to detail view mode");
+  QFileDialog::tr("Sidebar");
+  QFileDialog::tr("List of places and bookmarks");
+
+  QFileSystemModel::tr("Name");
+  QFileSystemModel::tr("Size");
+  QFileSystemModel::tr("Type");
+  QFileSystemModel::tr("Date Modified");
+
+  QFileDialog* fileDlg=new QFileDialog(this);
+  
+  fileDlg->setWindowTitle(tr ("Load Working Frequencies"));
+  fileDlg->setFileMode(QFileDialog::ExistingFile);
+  fileDlg->setNameFilter(tr ("Frequency files (*.qrg);;All files (*.*)"));
+  fileDlg->setDirectory(data_dir_.absolutePath ());
+  fileDlg->setLabelText(QFileDialog::Reject,tr("Cancel"));
+//  fileDlg->qFileDialogUi->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+  QString file_name = "";
+  if (fileDlg->exec()) {
+      file_name = fileDlg->selectedFiles()[0];
+  }   
+//  auto file_name = fileDlg->getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"),NULL,QFileDialog::DontUseNativeDialog);
+//  auto file_name = fileDlg->getOpenFileName ();
+  delete fileDlg;
+  if (!file_name.isEmpty ())
     {
+      
       auto const list = read_frequencies_file (file_name);
       if (list.size ()
           && (!next_frequencies_.frequency_list ().size ()
