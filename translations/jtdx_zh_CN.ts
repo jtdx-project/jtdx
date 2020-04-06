@@ -211,7 +211,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
@@ -3031,7 +3031,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT 将通过 Hamlib 建立, Hamlib 支持获取某些收发器的 S 表数据.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT 将通过 Hamlib 创建, Hamlib 支持获取某些收发器的 S 表数据.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
@@ -4578,7 +4578,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2572"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation>无法 建立/完全 连接到 Dxsummit 服务器</translation>
+        <translation>无法 创建/完全 连接到 Dxsummit 服务器</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2596"/>
@@ -4921,7 +4921,7 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5024"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>确定</translation>
     </message>
 </context>
 <context>
@@ -4929,142 +4929,142 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>目录:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件名称&amp;n:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>打开&amp;O</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>选择&amp;C</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>存储&amp;S</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>所有文件 (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>新建文件夹</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>查看:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件类型:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>返回</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>回去</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>向前</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>前进</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>父目录</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>转到父目录</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>创建新文件夹</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>创建新文件夹</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>列表查看</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>更改为列表查看模式</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>详细信息查看</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>更改为详细信息查看模式</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>侧栏</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>地点和书签列表</translation>
     </message>
     <message>
         <source>Name</source>
@@ -5074,29 +5074,32 @@ UDP 服务器 %2:%3</translation>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; 是写入保护.
+是否仍要将其删除?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否确实要删除 &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>无法删除目录.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+找不到目录.
+请验证已给出正确的目录名称.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>近期的地方</translation>
     </message>
 </context>
 <context>
@@ -5104,22 +5107,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Name</source>
-        <translation type="unfinished">姓名</translation>
+        <translation>姓名</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>类型</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>修改日期</translation>
     </message>
 </context>
 <context>
@@ -7080,7 +7083,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation>检查并突出显示新CQ区域</translation>
+        <translation>突出显示新CQ区域</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
@@ -7100,7 +7103,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation>检查并突出显示新ITU区域</translation>
+        <translation>突出显示新ITU区域</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -7120,7 +7123,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new DXCC</source>
-        <translation>检查并突出显示新DXCC</translation>
+        <translation>突出显示新DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -7185,7 +7188,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>检查并突出显示新网格</translation>
+        <translation>突出显示新网格</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -7205,7 +7208,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new prefixes</source>
-        <translation>检查并突出显示新前缀</translation>
+        <translation>突出显示新前缀</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -7225,7 +7228,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new calls</source>
-        <translation>检查并突出显示新呼号</translation>
+        <translation>突出显示新呼号</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
