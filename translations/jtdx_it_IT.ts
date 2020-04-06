@@ -61,7 +61,7 @@
         <location filename="../Configuration.cpp" line="1188"/>
         <location filename="../Configuration.cpp" line="3219"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation>C&amp;onferma</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1189"/>
@@ -211,7 +211,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
@@ -2149,7 +2149,7 @@ Formato:
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation>C&amp;onferma</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
@@ -2477,7 +2477,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>IO error</source>
-        <translation>Erroee IO</translation>
+        <translation>Errore IO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
@@ -3114,7 +3114,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation> PWR</translation>
+        <translation>PWR</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
@@ -3333,13 +3333,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <translation>Filtro dec.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezza di banda, FT8 150Hz, modalità hound (cacciatore) FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezza di banda, FT8 150Hz, modalità hound FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX. La funzionalità di filtro non può migliorare la decodifica del segnale, è dedicata all&apos;uso con CPU lente per consentire l&apos;elaborazione del decodificatore prima della trasmissione del segnale ed evitare la modifica del messaggio durante la trasmissione. Tutte le chiamate in entrata dalla larghezza di banda del filtro andranno perse, utilizzare il filtro in modo funzionale solo se è realmente necessario per la CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -3377,7 +3373,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>Genera messaggi standard per un QSO minimo</translation>
+        <translation>Genera messaggi predefiniti per un QSO minimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
@@ -3634,7 +3630,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="3966"/>
         <source>Send this standard (generated) message</source>
-        <translation>Invia questo messaggio standard (generato)</translation>
+        <translation>Invia questo messaggio predefinito (generato)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
@@ -4644,7 +4640,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2880"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation>Il controllo della frequenza in TX nel modo Hound (cacciatore) non è consentito nelle sottobande standard FT8.</translation>
+        <translation>Il controllo della frequenza in TX nel modo Hound (cacciatore) non è consentito nelle sottobande predefiniti in FT8.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2888"/>
@@ -4654,7 +4650,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2891"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Il controllo di frequenza Hound (cacciatore) TX non è consentito nelle sottobande FT8 standard e richiede il controllo rig * Split * (* Rig * o * Finto Split * nella scheda * Impostazioni | Radio*.tab)</translation>
+        <translation>Il controllo di frequenza Hound (cacciatore) TX non è consentito nelle sottobande FT8 predefinite e richiede il controllo rig * Split * (* Rig * o * Finto Split * nella scheda * Impostazioni | Radio*.tab)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2899"/>
@@ -4750,7 +4746,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4302"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation>Pwr&lt;br&gt;%1 W</translation>
+        <translation>PWR&lt;br&gt;%1 W</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4458"/>
@@ -4768,7 +4764,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5340"/>
         <source>Please enter a valid grid locator</source>
-        <translation>Inserisci un grid locator valido</translation>
+        <translation>Per favore inserisci un WW locator valido</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5352"/>
@@ -4923,7 +4919,7 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5024"/>
         <source>OK</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>
@@ -4931,142 +4927,142 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Directory:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nome file:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Apri:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;cegli</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salva</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i files (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova Cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gurada in:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo di file:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Indietro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai indietro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Sinistro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Indietro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai indietro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Atl+Destro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directory Principale</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai alla directory principale</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Su</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea Nuova Cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea Nuova Cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza Lista</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Passa alla modalità di visualizzazione elenco</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista Dettagliata</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Passa alla modalità di visualizzazione dettagli</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra laterale</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Elenco di luoghi e segnalibri</translation>
     </message>
     <message>
         <source>Name</source>
@@ -5076,29 +5072,32 @@ server DP %2:%3</translation>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;% 1&apos; è protetto da scrittura.
+Vuoi cancellarlo comunque?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sei sicuro di voler cancellare &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile cancellare la directory</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>1%
+Directory non trovata.
+Verificare che il nome della directory sia corretto.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Luoghi recenti</translation>
     </message>
 </context>
 <context>
@@ -5106,22 +5105,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Name</source>
-        <translation type="unfinished">Nome</translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dim.ne</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Data modifica</translation>
     </message>
 </context>
 <context>
@@ -5803,7 +5802,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;I nominativi composti di tipo 2 sono quelli con prefissi o suffissi non inclusi nell&apos;elenco ristretto consentito (vedere  Prefissi e suffissi del componente aggiuntivo della Guida). &lt;/p&gt;&lt;p&gt; Questa opzione determina quali messaggi generati devono contenere il segnale di chiamata composto completo di tipo 2 anziché il nominativo di base. Si applica solo se si dispone di un nominativo composto di tipo 2. &lt;/p&gt;&lt;p&gt; Questa opzione controlla il modo in cui vengono generati i messaggi utilizzati per rispondere alle chiamate CQ. I messaggi generati 6 (CQ) e 5 (73) conterranno sempre il tuo nominativo completo. I protocolli JT65 e JT9 consentono alcuni messaggi standard con la tua chiamata completa a spese di un&apos;altra informazione come la chiamata DX o il tuo localizzatore. &lt;/p&gt;&lt;p&gt; La scelta del messaggio 1 omette il nominativo DX che potrebbe essere un problema quando si risponde alle chiamate CQ. La scelta del messaggio 3 omette anche il nominativo DX e molte versioni di questo e di altri software non estrarranno il rapporto. Scegliere nessuno dei due significa che il tuo nominativo completo va inserito solo nel tuo messaggio 5 (73), quindi il tuo partner QSO registra il nominativo sbagliato. &lt;/p&gt;&lt;p&gt; Nessuna di queste opzioni è perfetta, il messaggio 3 è il migliore ma fai attenzione al tuo partner QSO potrebbe non essere possibile registrare il rapporto che gli viene inviato.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;I nominativi composti di tipo 2 sono quelli con prefissi o suffissi non inclusi nell&apos;elenco ristretto consentito (vedere  Prefissi e suffissi del componente aggiuntivo della Guida). &lt;/p&gt;&lt;p&gt; Questa opzione determina quali messaggi generati devono contenere il segnale di chiamata composto completo di tipo 2 anziché il nominativo di base. Si applica solo se si dispone di un nominativo composto di tipo 2. &lt;/p&gt;&lt;p&gt; Questa opzione controlla il modo in cui vengono generati i messaggi utilizzati per rispondere alle chiamate CQ. I messaggi generati 6 (CQ) e 5 (73) conterranno sempre il tuo nominativo completo. I protocolli JT65 e JT9 consentono alcuni messaggi predefiniti con la tua chiamata completa a spese di un&apos;altra informazione come la chiamata DX o il tuo localizzatore. &lt;/p&gt;&lt;p&gt; La scelta del messaggio 1 omette il nominativo DX che potrebbe essere un problema quando si risponde alle chiamate CQ. La scelta del messaggio 3 omette anche il nominativo DX e molte versioni di questo e di altri software non estrarranno il rapporto. Scegliere nessuno dei due significa che il tuo nominativo completo va inserito solo nel tuo messaggio 5 (73), quindi il tuo partner QSO registra il nominativo sbagliato. &lt;/p&gt;&lt;p&gt; Nessuna di queste opzioni è perfetta, il messaggio 3 è il migliore ma fai attenzione al tuo partner QSO potrebbe non essere possibile registrare il rapporto che gli viene inviato.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
@@ -5878,7 +5877,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation>Visualizza la dista&amp;nza in miglia invece che in Km</translation>
+        <translation>Dista&amp;nza in miglia invece che in Km</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="363"/>
@@ -5888,7 +5887,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>&amp;Riga vuota tra i vari periodi di decodifica</translation>
+        <translation>&amp;Riga vuota tra i  periodi di decodifica</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
@@ -5918,7 +5917,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Hide partially transmitted messages</source>
-        <translation>Nascondi i messaggi trasmessi parzialmente</translation>
+        <translation>Nascondi i msg non totalmente Tx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="419"/>
@@ -5928,7 +5927,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="422"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>Anche messaggi &amp;Tx nella finestra di Rx</translation>
+        <translation>Visualizza i tuoi msg &amp;Tx nella finestra di Rx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="437"/>
@@ -5948,7 +5947,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="492"/>
         <source>Tx watchdog timer</source>
-        <translation>Periodo vigilanza del Tx</translation>
+        <translation>Periodo vigilanza del Tx: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="502"/>
@@ -5974,7 +5973,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="542"/>
         <source>Tune timer</source>
-        <translation>Regola l&apos;orario ogni</translation>
+        <translation>Tempo dell&apos;accordo: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="549"/>
@@ -6019,7 +6018,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="627"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>Inter&amp;vallo ID CW periodico:</translation>
+        <translation>Inter&amp;vallo periodo ID CW: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="643"/>
@@ -6086,7 +6085,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="802"/>
         <source>Settings that control your CAT interface.</source>
-        <translation>Impostazioni che controllano l&apos;interfaccia CAT.</translation>
+        <translation>Impostazioni per controllare l&apos;interfaccia CAT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="805"/>
@@ -6677,12 +6676,12 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Add</source>
-        <translation>&amp;Add</translation>
+        <translation>&amp;Agg</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2209"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Massimo 13 caratteri per messaggio &lt;br&gt;&lt;br&gt; Massimo 17 caratteri per messaggio CQ standard. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Massimo 13 caratteri per messaggio &lt;br&gt;&lt;br&gt; Massimo 17 caratteri per messaggio CQ predefinito. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2219"/>
@@ -6770,7 +6769,7 @@ e DX Grid field quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="2376"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Abilita aumaticamente il log del QSO</translation>
+        <translation>Messa a log automatica del QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
@@ -6974,7 +6973,7 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2886"/>
         <source>Accepted UDP request restores window</source>
-        <translation>Ripristina la finestra delle ichieste accettate UDP</translation>
+        <translation>Finestra di ripristino richieste UDP accettate</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2897"/>
@@ -7082,7 +7081,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation>Controlla ed evidenzia un nuovo CQZ</translation>
+        <translation>Controlla nuova zona CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
@@ -7102,7 +7101,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation>Controlla ed evidenzia il nuovo ITUZ</translation>
+        <translation>Controlla nuova zona ITU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -7122,7 +7121,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Controlla ed evidenzia il nuovo DXCC</translation>
+        <translation>Controlla nuovo DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -7187,7 +7186,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Controlla ed evidenzia nuovi WW locator</translation>
+        <translation>Controlla nuovo WW locator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -7207,7 +7206,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Controlla ed evidenzia nuovi prefissi</translation>
+        <translation>Controlla nuovo prefisso</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -7227,7 +7226,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new calls</source>
-        <translation>Controlla ed evidenzia nuove chiamate</translation>
+        <translation>Controlla nuovi NOMINATIVI</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
@@ -7297,12 +7296,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Per impostazione predefinita, solo i messaggi &apos;CQ&apos; e &apos;MyCall&apos; vengono controllati, questa impostazione consente di controllare anche altri messaggi standard ricevuti per nuovi DXCC, Griglia, Nomin. Colore &quot;Altro messaggio standard&quot; utilizzato per la notifica &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Per impostazione predefinita, solo i messaggi &apos;CQ&apos; e &apos;MyCall&apos; vengono controllati, questa impostazione consente di controllare anche altri messaggi predefiniti ricevuti per nuovi DXCC, Griglia, Nomin. Colore &quot;Altro messaggio predefinito&quot; utilizzato per la notifica &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3496"/>
         <source>Highlight other standard messages</source>
-        <translation>Evidenzia altri messaggi standard</translation>
+        <translation>Evidenzia altri messaggi predefiniti</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3516"/>
@@ -7352,12 +7351,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Usa l&apos;indicatore alla fine del messaggio anziché il colore di sfondo per altre notifiche di messaggi standard. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Usa l&apos;indicatore alla fine del messaggio anziché il colore di sfondo per altre notifiche di messaggi predefiniti. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3621"/>
         <source>Other standard messages</source>
-        <translation>Altri messaggi standard</translation>
+        <translation>Altri messaggi predefiniti</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3664"/>
@@ -7445,7 +7444,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3792"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Imposta il colore del testo per i messaggi standard non &apos;CQ&apos; e &apos;Mio Nom&apos;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Imposta il colore del testo per i messaggi predefiniti non &apos;CQ&apos; e &apos;Mio Nom&apos;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3795"/>
@@ -7455,22 +7454,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3874"/>
         <source>New CQZ</source>
-        <translation>Nuovo CQZ</translation>
+        <translation>Nuova Z.CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3944"/>
         <source>New CQZ on Band/Mode</source>
-        <translation>Nuovo CQZ in Banda/Modo</translation>
+        <translation>Nuova Z.CQ di Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4014"/>
         <source>New ITUZ</source>
-        <translation>Nuovo ITUZ</translation>
+        <translation>Nuova Z.ITU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4084"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation>Nuovo ITUZ in Banda/Modo</translation>
+        <translation>Nuova Z.ITU di Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4154"/>
@@ -7485,12 +7484,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4294"/>
         <source>New Grid</source>
-        <translation>Nuova Griglia</translation>
+        <translation>Nuovo WW locator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Nuova Griglia di Banda/Modo</translation>
+        <translation>Nuovo WWl di Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4434"/>
@@ -8199,7 +8198,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6844"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Le impostazioni dipendono dalla potenza della CPU, prova a utilizzare il numero massimo di passaggi di decodifica per bande HF sovraffollate. &lt;br&gt;&lt;br&gt; Il numero di passaggi di decodifica può essere ridotto per HF a bassa popolazione HF/ VHF mentre un aumento del numero di tentativi di decodifica potrebbe portare una migliore efficienza di decodifica per i segnali deboli. &lt;br&gt;&lt;br&gt; Numero di tentativi di decodifica che incidono sull&apos;efficienza di decodifica dei segnali SNR bassi: banda larga o frequenza RX. &lt;Br &gt;&lt;br&gt; Numero di passaggi di decodifica che incidono sul numero massimo di segnali che possono essere decodificati sulla stessa frequenza o posizionati l&apos;uno vicino all&apos;altro con spettri ampiamente sovrapposti, è possibile decodificare fino a 4 segnali sulla stessa frequenza e fino a 7 segnali sulla frequenza RX se il numero di passaggi di decodifica è impostato su 4. &lt;br&gt;&lt;br&gt; Aumenta il numero di tentativi di decodifica sul valore consentendo di terminare la decodifica fino alla fine dell&apos;intervallo di minuti RX. &lt;/p&gt;&lt;/body&gt;&lt;/ html&gt;</translation>
+        <translation>ur&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Le impostazioni dipendono dalla potenza della CPU, prova a utilizzare il numero massimo di passaggi di decodifica per bande HF sovraffollate. &lt;br&gt;&lt;br&gt; Il numero di passaggi di decodifica può essere ridotto per HF a bassa popolazione HF/ VHF mentre un aumento del numero di tentativi di decodifica potrebbe portare una migliore efficienza di decodifica per i segnali deboli. &lt;br&gt;&lt;br&gt; Numero di tentativi di decodifica che incidono sull&apos;efficienza di decodifica dei segnali SNR bassi: banda larga o frequenza RX. &lt;Br &gt;&lt;br&gt; Numero di passaggi di decodifica che incidono sul numero massimo di segnali che possono essere decodificati sulla stessa frequenza o posizionati l&apos;uno vicino all&apos;altro con spettri ampiamente sovrapposti, è possibile decodificare fino a 4 segnali sulla stessa frequenza e fino a 7 segnali sulla frequenza RX se il numero di passaggi di decodifica è impostato su 4. &lt;br&gt;&lt;br&gt; Aumenta il numero di tentativi di decodifica sul valore consentendo di terminare la decodifica fino alla fine dell&apos;intervallo di minuti RX. &lt;/p&gt;&lt;/body&gt;&lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6932"/>

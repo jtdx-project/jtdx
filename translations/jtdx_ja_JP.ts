@@ -106,12 +106,12 @@
         <location filename="../Configuration.cpp" line="1188"/>
         <location filename="../Configuration.cpp" line="3219"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1189"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1210"/>
@@ -130,22 +130,22 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>読み込み...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>名前を付けて保存...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>結合する...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>リセット</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2687"/>
@@ -211,83 +211,83 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5070"/>
         <location filename="../Configuration.cpp" line="5100"/>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>周波数リストを読み込み</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>周波数リストを置き換え</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>現在の周波数リストを破棄して、ロードした周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>周波数リストを結合します</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
         <location filename="../Configuration.cpp" line="5126"/>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>有効な周波数リストではありません</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>バージョンが新しすぎます</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>内容が破損しています</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>周波数リストを保存します</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>選定した周波数だけ保存します</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>現在選択されている周波数のみを保存してもよろしいですか？すべて保存するには、[いいえ]をクリックします。</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;はい</translation>
+        <translation>&amp;はい</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5164"/>
         <location filename="../Configuration.cpp" line="5194"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;いいえ</translation>
+        <translation>&amp;いいえ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5186"/>
@@ -2298,7 +2298,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
@@ -2313,12 +2313,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
 </context>
 <context>
@@ -2327,7 +2327,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2710,7 +2710,7 @@ Error: %2 - %3</source>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3542,7 +3542,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;フィルター帯域幅、FT8 150Hz、FT8 F/Hモード 580Hz、FT4 190Hz、JT9 115Hz、T10 225Hz、JT65 580Hz。デコードされて表示されるメッセージは300Hz。フィルターは受信信号スペクトラムの中央に置かれます。フィルター機能は信号のデコード性能を向上させることはできません。低速のCPUで使用し、デコーダーが信号送信前に処理を完了できるようにし、送信時のメッセージの変更を回避します。 フィルター帯域幅からのすべての着信呼び出しは失われます。CPUに本当に必要な場合にのみ、フィルター機能を使用してください。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3473"/>
@@ -4893,7 +4893,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../Configuration.cpp" line="5024"/>
         <source>OK</source>
-        <translation type="unfinished">OK</translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -4901,142 +4901,142 @@ UDP server %2:%3</source>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>ディレクトリ:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル名:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>開く</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>選択する</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>すべてのファイル (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>新しいフォルダー</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>削除</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>中をのぞく:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルの形式:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>後ろ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>戻る</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>前</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>進む</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>親ディレクトリ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>親ディレクトリへ進む</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>リスト表示</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>リスト表示モードに変更</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細表示</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細表示モードに変更</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>サイドバー</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>場所とブックマークのリスト</translation>
     </message>
     <message>
         <source>Name</source>
@@ -5046,29 +5046,32 @@ UDP server %2:%3</source>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1 &apos;は書き込み保護されています。
+それを削除しますか？</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos;を削除していいですか?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>ディレクトリは削除できません。</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+ディレクトリが見つかりません。
+ディレクトリ名が正しいか確認してください。</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>最近の場所</translation>
     </message>
 </context>
 <context>
@@ -5076,22 +5079,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Name</source>
-        <translation type="unfinished">名前</translation>
+        <translation>名前</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>サイズ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>タイプ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>日付が変更されました</translation>
     </message>
 </context>
 <context>
@@ -5461,12 +5464,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
 </context>
 <context>
@@ -5754,12 +5757,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;あなたのIARU 地域を選定してください。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -5869,7 +5872,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>&amp;DXCC名では無くてプリフィックスを表示</translation>
+        <translation>&amp;DXCC名ではなくプリフィックスを表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -7378,7 +7381,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;右クリックして、周波数リストを維持します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3031"/>
