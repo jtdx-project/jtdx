@@ -110,22 +110,22 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Загрузить...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сохранить как ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Обьединить ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сброс</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2678"/>
@@ -176,12 +176,12 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="2735"/>
         <source>Invalid audio input device</source>
-        <translation>Некоhректный выбор звуковой карты для входа</translation>
+        <translation>Некорректный выбор звуковой карты для входа</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2742"/>
         <source>Invalid audio output device</source>
-        <translation>Некоhректный выбор звуковой карты для выхода</translation>
+        <translation>Некорректный выбор звуковой карты для выхода</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2748"/>
@@ -218,34 +218,34 @@ Format:
         <location filename="../Configuration.cpp" line="5100"/>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>>Файл частот (*.qrg);;All files (*.*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить рабочие частоты</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Заменить рабочие частоты</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите сбросить текущие рабочие частоты и заменить их загруженными?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Обьединить рабочие частоты</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
         <location filename="../Configuration.cpp" line="5126"/>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный файл частот</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
@@ -255,33 +255,33 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия в отработке</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Контент обрезан</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить рабочие частоты</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить только выбранные рабочие частоты</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите сохранить только рабочие частоты, которые выбраны в данный момент? Нажмите Нет, чтобы сохранить все.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Да</translation>
+        <translation>&amp;Да</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5164"/>
@@ -320,7 +320,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation type="unfinished"></translation>
+        <translation>каким образом?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -1665,7 +1665,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>EU Russia</source>
-        <translation>Евр.Россия</translation>
+        <translation>Европ.Россия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="303"/>
@@ -2299,7 +2299,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU &amp;Регион:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
@@ -2328,7 +2328,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Регион</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2711,7 +2711,7 @@ Error: %2 - %3</source>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Регион:</translation>
     </message>
 </context>
 <context>
@@ -3330,7 +3330,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Полоса пропускания, FT8: 150 Гц,FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Для JT65: ширина полосы пропускания  580 Гц, для отображения сообщения на экране - 300 Гц.Фильтрация происходит относительно центра спектра принимаемого сигнала.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -4930,47 +4930,47 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Папка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя файла</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Открыть</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выбор</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сохранить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Все файды (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Новая папка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
@@ -4980,17 +4980,17 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип файлов:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Назад</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Вернуться</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
@@ -5000,7 +5000,7 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Вперед</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
@@ -5015,12 +5015,12 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Родителькая папка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти в родительскую папку</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
@@ -5030,74 +5030,77 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать новую папку</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать новую папку</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Список просмотра</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти в режим просмотра списка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Детальный просмотр</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти в режим детального просмотра</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Боковая панель</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Список мест и закладок</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="obsolete">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; защищен от записи.
+Вы хотите удалить его в любом случае?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы уверены, что хотите удалить &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось удалить папку.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+Папка не найдена.
+Пожалуйста, убедитесь, что указано правильное имя папки.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Recent Places</translation>
     </message>
 </context>
 <context>
@@ -5105,22 +5108,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата изменения</translation>
     </message>
 </context>
 <context>
@@ -5783,12 +5786,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU Регион:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбирите ваш IARU Регион.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -7159,7 +7162,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щелкните правой кнопкой мыши, чтобы сохранить список рабочих частот.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
