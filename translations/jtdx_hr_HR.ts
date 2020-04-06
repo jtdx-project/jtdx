@@ -215,7 +215,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekid</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
@@ -4914,7 +4914,7 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5024"/>
         <source>OK</source>
-        <translation type="unfinished">Potvrdi</translation>
+        <translation>Potvrdi</translation>
     </message>
 </context>
 <context>
@@ -4922,142 +4922,142 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Direktorij:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Naziv datoteke:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otvori</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;daberi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spremi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sve datoteke (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nova mapa</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrisati</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekid</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogledaj u:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteke tipa:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Natrag</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Idi natrag</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Lijevo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Naprijed</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Idi naprijed</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Desno</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Početni direktorij</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Idite na početni direktorij</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Gore</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Stvori novu mapu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Stvorite novu mapu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregled Popisa</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Promijenite način pregleda popisa</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Detalji</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Promijenite način prikaza detalja</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bočna</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis mjesta i oznaka</translation>
     </message>
     <message>
         <source>Name</source>
@@ -5067,29 +5067,32 @@ UDP server %2:%3</translation>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos;je zaštićen od pisanja.
+Želite li je svejedno izbrisati?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite izbrisati &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne mogu se izbrisati direktorij.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+Imenik nije pronađen.
+Provjerite je li dato točno ime imenika.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedavna mjesta</translation>
     </message>
 </context>
 <context>
@@ -5097,22 +5100,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Name</source>
-        <translation type="unfinished">Ime</translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veličina</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum promjene</translation>
     </message>
 </context>
 <context>
