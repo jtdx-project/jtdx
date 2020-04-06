@@ -141,7 +141,6 @@
 #include <QAudioDeviceInfo>
 #include <QAudioInput>
 #include <QDialog>
-#include <QMessageBox>
 #include <QAction>
 #include <QFileDialog>
 #include <QFileSystemModel>
@@ -1201,15 +1200,15 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
         if (!temp_dir_.mkpath (unique_directory)
             || !temp_dir_.cd (unique_directory))
           {
-            QMessageBox::critical (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
+            MessageBox::critical_message (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
             throw std::runtime_error {"Failed to create a temporary directory"};
           }
         if (!temp_dir_.isReadable () || !(ok = QTemporaryFile {temp_dir_.absoluteFilePath ("test")}.open ()))
           {
-            if (QMessageBox::Cancel == QMessageBox::critical (this, "JTDX",
+            if (MessageBox::Cancel == MessageBox::critical_message (this, "JTDX",
                                                               tr ("Create temporary directory error:\n%1\n"
-                                                                  "Another application may be locking the directory").arg (temp_dir_.absolutePath ()),
-                                                              QMessageBox::Retry | QMessageBox::Cancel))
+                                                                  "Another application may be locking the directory").arg (temp_dir_.absolutePath ()),"","",
+                                                              MessageBox::Retry | MessageBox::Cancel))
               {
                 throw std::runtime_error {"Failed to create a usable temporary directory"};
               }
@@ -1224,7 +1223,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QDir data_dir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)};
     if (!data_dir.mkpath ("."))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
+        MessageBox::critical_message (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
         throw std::runtime_error {"Failed to create data directory"};
       }
 
@@ -1233,7 +1232,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     default_save_directory_ = data_dir;
     if (!default_save_directory_.mkpath (save_dir) || !default_save_directory_.cd (save_dir))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        MessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (save_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -1244,7 +1243,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QString samples_dir {"samples"};
     if (!default_save_directory_.mkpath (samples_dir))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        MessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (samples_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -3207,16 +3206,16 @@ void Configuration::impl::message_box_critical (QString const& reason, QString c
   QPushButton::tr("Reset");
   QPushButton::tr("Restore Defaults");*/
 
-  QMessageBox mb;
+  MessageBox mb;
   mb.setText (reason);
   if (!detail.isEmpty ())
     {
       mb.setDetailedText (detail);
     }
-  mb.setStandardButtons (QMessageBox::Ok);
-  mb.setDefaultButton (QMessageBox::Ok);
-  mb.setIcon (QMessageBox::Critical);
-  mb.button(QMessageBox::Ok)->setText(tr("&OK"));
+  mb.setStandardButtons (MessageBox::Ok);
+  mb.setDefaultButton (MessageBox::Ok);
+  mb.setIcon (MessageBox::Critical);
+  mb.translate_buttons();
   mb.exec ();
 }
 
@@ -5064,19 +5063,16 @@ void Configuration::impl::load_frequencies ()
   QFileSystemModel::tr("Date Modified");
 
   QFileDialog* fileDlg=new QFileDialog(this);
-  
-  fileDlg->setWindowTitle(tr ("Load Working Frequencies"));
+    fileDlg->setWindowTitle(tr ("Load Working Frequencies"));
   fileDlg->setFileMode(QFileDialog::ExistingFile);
   fileDlg->setNameFilter(tr ("Frequency files (*.qrg);;All files (*.*)"));
   fileDlg->setDirectory(data_dir_.absolutePath ());
   fileDlg->setLabelText(QFileDialog::Reject,tr("Cancel"));
-//  fileDlg->qFileDialogUi->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
   QString file_name = "";
   if (fileDlg->exec()) {
       file_name = fileDlg->selectedFiles()[0];
   }   
 //  auto file_name = fileDlg->getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"),NULL,QFileDialog::DontUseNativeDialog);
-//  auto file_name = fileDlg->getOpenFileName ();
   delete fileDlg;
   if (!file_name.isEmpty ())
     {
@@ -5097,8 +5093,19 @@ void Configuration::impl::load_frequencies ()
 
 void Configuration::impl::merge_frequencies ()
 {
-  auto file_name = QFileDialog::getOpenFileName (this, tr ("Merge Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
-  if (!file_name.isNull ())
+  QFileDialog* fileDlg=new QFileDialog(this);
+    fileDlg->setWindowTitle(tr ("Merge Working Frequencies"));
+  fileDlg->setFileMode(QFileDialog::ExistingFile);
+  fileDlg->setNameFilter(tr ("Frequency files (*.qrg);;All files (*.*)"));
+  fileDlg->setDirectory(data_dir_.absolutePath ());
+  fileDlg->setLabelText(QFileDialog::Reject,tr("Cancel"));
+  QString file_name = "";
+  if (fileDlg->exec()) {
+      file_name = fileDlg->selectedFiles()[0];
+  }   
+//  auto file_name = QFileDialog::getOpenFileName (this, tr ("Merge Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
+delete fileDlg;
+  if (!file_name.isEmpty ())
     {
       next_frequencies_.frequency_list_merge (read_frequencies_file (file_name)); // update the model
     }
@@ -5152,18 +5159,17 @@ void Configuration::impl::save_frequencies ()
       QDataStream ods {&frequencies_file};
       auto selection_model = ui_->frequencies_table_view->selectionModel ();
       if (selection_model->hasSelection ()) {
-          QMessageBox msgbox;
+          MessageBox msgbox;
           msgbox.setWindowTitle(tr("Only Save Selected  Working Frequencies"));
-          msgbox.setIcon(QMessageBox::Question);
+          msgbox.setIcon(MessageBox::Question);
           msgbox.setText(tr("Are you sure you want to save only the "
                                                                  "working frequencies that are currently selected? "
                                                                  "Click No to save all."));
-          msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-          msgbox.setDefaultButton(QMessageBox::No);
-          msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
-          msgbox.button(QMessageBox::No)->setText(tr("&No"));
-
-          if (QMessageBox::Yes == msgbox.exec())
+          msgbox.setStandardButtons(MessageBox::Yes | MessageBox::No);
+          msgbox.setDefaultButton(MessageBox::No);
+          msgbox.translate_buttons();
+          
+          if (MessageBox::Yes == msgbox.exec())
             {
               selection_model->select (selection_model->selection (), QItemSelectionModel::SelectCurrent | QItemSelectionModel::Rows);
               ods << qrg_magic << qrg_version << next_frequencies_.frequency_list (selection_model->selectedRows ());
@@ -5182,18 +5188,17 @@ void Configuration::impl::save_frequencies ()
 
 void Configuration::impl::reset_frequencies ()
 {
-  QMessageBox msgbox;
+  MessageBox msgbox;
   msgbox.setWindowTitle(tr("Reset Working Frequencies"));
-  msgbox.setIcon(QMessageBox::Question);
+  msgbox.setIcon(MessageBox::Question);
   msgbox.setText(tr("Are you sure you want to discard your current "
                                                        "working frequencies and replace them with default "
                                                        "ones?"));
-  msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-  msgbox.setDefaultButton(QMessageBox::No);
-  msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
-  msgbox.button(QMessageBox::No)->setText(tr("&No"));
+  msgbox.setStandardButtons(MessageBox::Yes | MessageBox::No);
+  msgbox.setDefaultButton(MessageBox::No);
+  msgbox.translate_buttons();
 
-  if (QMessageBox::Yes == msgbox.exec())
+  if (MessageBox::Yes == msgbox.exec())
     {
       next_frequencies_.reset_to_defaults ();
     }
@@ -5262,7 +5267,7 @@ bool Configuration::impl::have_rig ()
 {
   if (!open_rig ())
     {
-      QMessageBox::critical (this, "JTDX", tr ("Failed to open connection to rig"));
+      MessageBox::critical_message (this, "JTDX", tr ("Failed to open connection to rig"));
     }
   return rig_active_;
 }

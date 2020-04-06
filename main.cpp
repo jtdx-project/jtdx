@@ -19,7 +19,6 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QStringList>
-#include <QMessageBox>
 #include <QLockFile>
 
 #if QT_VERSION >= 0x050200
@@ -27,6 +26,7 @@
 #include <QCommandLineOption>
 #endif
 
+#include "MessageBox.hpp"
 #include "revision_utils.hpp"
 #include "MetaDataRegistry.hpp"
 #include "SettingsGroup.hpp"
@@ -68,12 +68,12 @@ namespace
         }
       catch (std::exception const& e)
         {
-          MessageBox::critical_message (nullptr, translate ("main", "Fatal error"), e.what ());
+          MessageBox::critical_message (nullptr, "", translate ("main", "Fatal error"), e.what ());
           throw;
         }
       catch (...)
         {
-          MessageBox::critical_message (nullptr, translate ("main", "Unexpected fatal error"));
+          MessageBox::critical_message (nullptr, "", translate ("main", "Unexpected fatal error"));
           throw;
         }
     }
@@ -133,19 +133,19 @@ int main(int argc, char *argv[])
 
       if (!parser.parse (a.arguments ()))
         {
-          QMessageBox::critical (nullptr, a.applicationName (), parser.errorText ());
+          MessageBox::critical_message (nullptr, a.applicationName (), parser.errorText ());
           return -1;
         }
       else
         {
           if (parser.isSet (help_option))
             {
-              QMessageBox::information (nullptr, a.applicationName (), parser.helpText ());
+              MessageBox::information_message (nullptr, a.applicationName (), parser.helpText ());
               return 0;
             }
           else if (parser.isSet (version_option))
             {
-              QMessageBox::information (nullptr, a.applicationName (), a.applicationVersion ());
+              MessageBox::information_message (nullptr, a.applicationName (), a.applicationVersion ());
               return 0;
             }
         }
@@ -183,18 +183,19 @@ int main(int argc, char *argv[])
         {
           if (QLockFile::LockFailedError == instance_lock.error ())
             {
-              auto button = QMessageBox::question (nullptr
+              auto button = MessageBox::query_message (nullptr
                                                    , QApplication::applicationName ()
                                                    , QObject::tr ("Another instance may be running, try to remove stale lock file?")
-                                                   , QMessageBox::Yes | QMessageBox::Retry | QMessageBox::No
-                                                   , QMessageBox::Yes);
+                                                   , "" ,""
+                                                   , MessageBox::Yes | MessageBox::Retry | MessageBox::No
+                                                   , MessageBox::Yes);
               switch (button)
                 {
-                case QMessageBox::Yes:
+                case MessageBox::Yes:
                   instance_lock.removeStaleLockFile ();
                   break;
 
-                case QMessageBox::Retry:
+                case MessageBox::Retry:
                   break;
 
                 default:
@@ -286,7 +287,7 @@ int main(int argc, char *argv[])
 
         if(!mem_jtdxjt9.attach()) {
           if (!mem_jtdxjt9.create(sizeof(struct dec_data))) {
-            QMessageBox::critical (nullptr, "Error", "Unable to create shared memory segment.");
+            MessageBox::critical_message (nullptr, "Error", "Unable to create shared memory segment.");
             exit(1);
           }
         }
@@ -321,12 +322,12 @@ int main(int argc, char *argv[])
     }
   catch (std::exception const& e)
     {
-      QMessageBox::critical (nullptr, a.applicationName (), e.what ());
+      MessageBox::critical_message (nullptr, a.applicationName (), e.what ());
       std::cerr << "Error: " << e.what () << '\n';
     }
   catch (...)
     {
-      QMessageBox::critical (nullptr, a.applicationName (), QObject::tr ("Unexpected error"));
+      MessageBox::critical_message (nullptr, a.applicationName (), QObject::tr ("Unexpected error"));
       std::cerr << "Unexpected error\n";
       throw;			// hoping the runtime might tell us more about the exception
     }
