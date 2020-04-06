@@ -108,22 +108,22 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="1446"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Carregando...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1450"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salvar como...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1454"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mesclar...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1458"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Reset</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2678"/>
@@ -199,85 +199,85 @@ Format:
         <translation>Selecionador de fonte do texto do decodificador JTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <location filename="../Configuration.cpp" line="5068"/>
+        <source>Load Working Frequencies</source>
+        <translation>Carregar Frequências de Trabalho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5070"/>
         <location filename="../Configuration.cpp" line="5100"/>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos de frequências (*.qrg);;Todos arquivos (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
-        <source>Load Working Frequencies</source>
+        <location filename="../Configuration.cpp" line="5072"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir Frequências de Trabalho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tem certeza que deseja descartar suas frequências de trabalho e substituí-las pelas novas carregadas?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5100"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Mesclar Frequências de Trabalho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
         <location filename="../Configuration.cpp" line="5126"/>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é um arquivo de frequências válido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5117"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo mágico incorreto</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5126"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão é muito nova</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Conteúdo corrompido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar Frequências de Trabalho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5156"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Somente Salvar Frequências de Trabalho Selecionadas</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5158"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tem certeza que deseja salvar somente as frequências de trabalho que foram selecionadas? Clique Não para salvar todas.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <location filename="../Configuration.cpp" line="5193"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Sim</translation>
+        <translation>&amp;Sim</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5164"/>
         <location filename="../Configuration.cpp" line="5194"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Não</translation>
+        <translation>&amp;Não</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5186"/>
@@ -2287,7 +2287,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Região IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
@@ -2316,7 +2316,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Região IARU</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2699,7 +2699,7 @@ Error: %2 - %3</source>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Região IARU</translation>
     </message>
 </context>
 <context>
@@ -2855,7 +2855,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Spt</source>
-        <translation>Spt</translation>
+        <translation>Spot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
@@ -2902,7 +2902,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
         <source>Locator of station to be worked</source>
-        <translation>Locator da estação trabalhada</translation>
+        <translation>Grid da estação trabalhada</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1006"/>
@@ -2932,7 +2932,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar ativa na aba Reportes das configurações).Clique com botão direito do mouse para adicionar indicativos á função de filtros &apos;Esconder mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar ativa na aba Reportes das configurações).Clique com botão direito do mouse para adicionar indicativos á função de filtros &apos;Ocultar mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -3097,7 +3097,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
         <source> Pwr</source>
-        <translation> Pwr</translation>
+        <translation> Pot.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1820"/>
@@ -3278,12 +3278,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Registar este QSO no log ADIF</translation>
+        <translation>Registrar este QSO no log ADIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation>Registar &amp;QSO</translation>
+        <translation>Regist. &amp;QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
@@ -3318,7 +3318,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Largura de Banda, FT8 150Hz, FT8 modo hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 sinais: 580Hz decodificando, 300 Hz para mostrar mensagens. Filtro está centrado para o sinal de RX no espectro. Filtro não pode melhorar a decodificação do sinal, ele é dedicado para o uso com CPUs lentas para fazer o decodificador terminar o processo antes do sinal de transmissão e evitar a troca de mensagem durante a transmissão. Todas as chamadas fora da largura do filtro serão perdidas, use o Filtro somente se for necessário para sua CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -3361,7 +3361,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>GenMsgs</source>
-        <translation>GenMsgs</translation>
+        <translation>GerMsgs</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
@@ -3548,7 +3548,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3748"/>
         <source>SkpGrid</source>
-        <translation>SkpGrid</translation>
+        <translation>IgnGrid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
@@ -4145,7 +4145,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5144"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation>Nota de direitos de autor do WSJT Development Group</translation>
+        <translation>Nota de direitos autorais do WSJT Development Group</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5158"/>
@@ -4260,22 +4260,22 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5384"/>
         <source>use low thresholds</source>
-        <translation>use limiares baixos</translation>
+        <translation>Usar limiares baixos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5419"/>
         <source>use subpass</source>
-        <translation>use subpass</translation>
+        <translation>Usar subpassar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5430"/>
         <source>minimum</source>
-        <translation>mínimo</translation>
+        <translation>Mínimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5438"/>
         <source>late start of decoder</source>
-        <translation>Início tardio do decodificador</translation>
+        <translation>Atrasar início do decodificador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5446"/>
@@ -4290,7 +4290,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5473"/>
         <source>any messages</source>
-        <translation>quaisquer mensagens</translation>
+        <translation>Quaisquer mensagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5481"/>
@@ -4310,7 +4310,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5505"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>Esconder mensagens duplicadas de FT8</translation>
+        <translation>Ocultar mensagens duplicadas de FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5513"/>
@@ -4387,12 +4387,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5631"/>
         <source>low</source>
-        <translation>baixo</translation>
+        <translation>Baixo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5650"/>
         <source>high</source>
-        <translation>alto</translation>
+        <translation>Alto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5658"/>
@@ -4533,7 +4533,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1951"/>
         <source>Pwr</source>
-        <translation>Pwr</translation>
+        <translation>Pot.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2468"/>
@@ -4733,7 +4733,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4302"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation>Pwr&lt;br&gt;%1 W</translation>
+        <translation>Pot.&lt;br&gt;%1 W</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4458"/>
@@ -4900,14 +4900,6 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <source>&amp;Cancel</source>
-        <translation type="obsolete">&amp;Cancelar</translation>
-    </message>
-    <message>
-        <source>&amp;OK</source>
-        <translation type="obsolete">&amp;OK</translation>
-    </message>
-    <message>
         <location filename="../Configuration.cpp" line="5024"/>
         <source>OK</source>
         <translation type="unfinished">OK</translation>
@@ -4941,6 +4933,11 @@ Servidor UDP %2:%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Configuration.cpp" line="5031"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>All files (*)</source>
         <translation type="unfinished"></translation>
@@ -4956,11 +4953,6 @@ Servidor UDP %2:%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5031"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Look in:</source>
         <translation type="unfinished"></translation>
@@ -4968,6 +4960,34 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Files of type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5037"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5038"/>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5039"/>
+        <source>Could not delete directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5040"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5042"/>
+        <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5053,38 +5073,6 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="obsolete">Nome</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5037"/>
-        <source>&apos;%1&apos; is write protected.
-Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5038"/>
-        <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5039"/>
-        <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5040"/>
-        <source>%1
-Directory not found.
-Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5042"/>
-        <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5180,68 +5168,6 @@ Please verify the correct directory name was given.</source>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Erro ao gravar o arquivo da paleta em cascata &quot;%1&quot;:%2.</translation>
-    </message>
-</context>
-<context>
-    <name>QPlatformTheme</name>
-    <message>
-        <source>OK</source>
-        <translation type="obsolete">OK</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Salvar</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation type="obsolete">Abrir</translation>
-    </message>
-    <message>
-        <source>&amp;Yes</source>
-        <translation type="obsolete">&amp;Sim</translation>
-    </message>
-    <message>
-        <source>&amp;No</source>
-        <translation type="obsolete">&amp;Não</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation type="obsolete">Ajuda</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation type="obsolete">Reset</translation>
-    </message>
-</context>
-<context>
-    <name>QPushButton</name>
-    <message>
-        <source>OK</source>
-        <translation type="obsolete">OK</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Salvar</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation type="obsolete">Abrir</translation>
-    </message>
-    <message>
-        <source>&amp;Yes</source>
-        <translation type="obsolete">&amp;Sim</translation>
-    </message>
-    <message>
-        <source>&amp;No</source>
-        <translation type="obsolete">&amp;Não</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation type="obsolete">Ajuda</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation type="obsolete">Reset</translation>
     </message>
 </context>
 <context>
@@ -5726,7 +5652,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.cpp" line="31"/>
         <source>Wide Graph</source>
-        <translation>Gráfico amplo</translation>
+        <translation>Gráfico Amplo</translation>
     </message>
 </context>
 <context>
@@ -5779,12 +5705,12 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>Região IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione sua região IARU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -5829,7 +5755,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="264"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation>Filtrar o logbook a partir da data/hora (AAAMMDDHHMMSS)</translation>
+        <translation>Filtrar o logbook a partir da data/tempo (AAAAMMDDHHMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="304"/>
@@ -5904,7 +5830,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Hide partially transmitted messages</source>
-        <translation>Esconder mensagens parcialmente emitidas</translation>
+        <translation>Ocultar mensagens parcialmente emitidas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="419"/>
@@ -6601,7 +6527,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="1929"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Contadores. Pesquisa mensagens decodificadas, ligue para CQ ou Halt Tx se:</translation>
+        <translation>Contadores. Pesquisa nas mensagens decodificadas,chama CQ ou para TX se:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1961"/>
@@ -6722,7 +6648,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Limpar indicat. &amp;DX e Grid ao registar QSO</translation>
+        <translation>Limpar indicat.&amp;DX e Grid ao registrar QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6767,7 +6693,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2409"/>
         <source>Send logged QSO ADIF data</source>
-        <translation>Enviar dados de QSOregistados em ADIF</translation>
+        <translation>Enviar dados de QSO registrados em ADIF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2443"/>
@@ -6815,7 +6741,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2549"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>Habilitar o envio para o servidor UDP secundário</translation>
+        <translation>Habilit.envio p/ serv. UDP secundário</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2582"/>
@@ -6835,7 +6761,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2614"/>
         <source>decoded and debug messages</source>
-        <translation>Mensagens decodificadas e de depuração</translation>
+        <translation>Mensagens decodific. e de depuração</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2656"/>
@@ -6865,12 +6791,12 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2717"/>
         <source>P&amp;assword:</source>
-        <translation>P&amp;assword:</translation>
+        <translation>S&amp;enha:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2727"/>
         <source>EQSL Password.</source>
-        <translation>Password EQSL.</translation>
+        <translation>Senha EQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2737"/>
@@ -7144,7 +7070,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique com a direita para manter a lista de frequências de trabalho.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -7269,7 +7195,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="3476"/>
         <source>don&apos;t show it</source>
-        <translation>não visualiza-lo</translation>
+        <translation>Não visualiza-lo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
@@ -7517,7 +7443,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="4825"/>
         <source>Hide messages from continents</source>
-        <translation>Esconder mensagens de continentes</translation>
+        <translation>Ocultar mensagens de continentes</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4837"/>
@@ -7562,7 +7488,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="4892"/>
         <source>Hide messages from countries</source>
-        <translation>Esconder mensagens de países</translation>
+        <translation>Ocultar mensagens de países</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4912"/>
@@ -7685,7 +7611,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/ html</translation>
     <message>
         <location filename="../Configuration.ui" line="5092"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation>Mostrar apenas mensagens CQ/RRR/RR73/73</translation>
+        <translation>Mostrar apenas msgs CQ/RRR/RR73/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5115"/>

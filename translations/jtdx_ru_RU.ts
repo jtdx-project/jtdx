@@ -211,14 +211,14 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Отменить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5070"/>
         <location filename="../Configuration.cpp" line="5100"/>
         <location filename="../Configuration.cpp" line="5146"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation>>Файл частот (*.qrg);;All files (*.*)</translation>
+        <translation>&gt;Файл частот (*.qrg);;All files (*.*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
@@ -5066,10 +5066,6 @@ UDP вервер %2:%3</translation>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>List of places and bookmarks</source>
         <translation>Список мест и закладок</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
