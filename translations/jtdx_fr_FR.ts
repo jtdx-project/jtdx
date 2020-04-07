@@ -109,7 +109,7 @@ Une autre application peut être le verrouillage du répertoire</translation>
     <message>
         <location filename="../Configuration.cpp" line="1445"/>
         <source>&amp;Load ...</source>
-        <translation>Charger ...</translation>
+        <translation>&amp;Charger ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1449"/>
@@ -223,7 +223,7 @@ Format:
         <location filename="../Configuration.cpp" line="5070"/>
         <location filename="../Configuration.cpp" line="5101"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
@@ -2288,7 +2288,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
         <source>IARU &amp;Region:</source>
-        <translation>&amp;Région IARU</translation>
+        <translation>&amp;Région IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
@@ -3319,7 +3319,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bande passante, FT8 150Hz, FT8 mode chien de chasse 580Hz, FT4 190Hz, JT9 115Hz, T10 : 225Hz. Signaux JT65 : décodage 580Hz, 300 Hz pour l&apos;affichage des messages. Le filtre est centré sur le spectre du signal RX. La fonctionnalité de filtre ne peut pas améliorer le décodage du signal, elle est dédiée à une utilisation avec des processeurs lents pour laisser le décodeur terminer le traitement avant la transmission du signal et éviter le changement de message à la transmission. Tous les appels entrants en dehors de la bande passante du filtre seront perdus, n&apos;utilisez la fonctionnalité de filtre que si elle est vraiment nécessaire pour votre CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -4857,94 +4857,94 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">Sauver</translation>
+        <translation>Sauver</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver tout</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">Ouvrir</translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Oui</translation>
+        <translation>&amp;Oui</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Oui pour &amp;Tout</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Non</translation>
+        <translation>&amp;Non</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;o à tout</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandonner</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">&amp;Réessayer</translation>
+        <translation>&amp;Réessayer</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorer</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Annuler</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeter</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">Aide</translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Appliquer</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">Réinitialiser</translation>
+        <translation>Réinitialiser</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurer les défauts</translation>
     </message>
 </context>
 <context>
@@ -4969,7 +4969,7 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5023"/>
         <source>OK</source>
-        <translation type="unfinished">OK</translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -4977,170 +4977,173 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5025"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Répertoire :</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier &amp;nom :</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ouvrir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Choisir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sauver</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tous les fichiers (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau dossier</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Regardez :</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers de type :</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Le &quot;%1&quot; est protégé en écriture.
+Voulez-vous quand même l&apos;effacer ?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir supprimer &quot;%1&quot; ?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de supprimer le répertoire.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+Répertoire non trouvé.
+Veuillez vérifier que le nom correct du répertoire a été donné.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5041"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Lieux récents</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Retour</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Revenir en arrière</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Gauche</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Transmettre</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuer</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Droit</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Répertoire des parents</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Allez dans le répertoire parent</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Haut</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un nouveau dossier</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un nouveau dossier</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la liste</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Passer au mode de visualisation de la liste</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vue détaillée</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Passer au mode de visualisation des détails</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Encadré</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste des lieux et des signets</translation>
     </message>
 </context>
 <context>
@@ -5148,22 +5151,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5060"/>
         <source>Name</source>
-        <translation type="unfinished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Date de modification</translation>
     </message>
 </context>
 <context>
@@ -5737,7 +5740,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>Général</translation>
+        <translation>Généra&amp;l</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -5772,7 +5775,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation>Region IARU</translation>
+        <translation>Region IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -7135,7 +7138,7 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="170"/>
         <source>Message generation for type 2 compound callsign holders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Génération de messages pour les titulaires d&apos;indicatifs d&apos;appel composés de type 2 :</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
