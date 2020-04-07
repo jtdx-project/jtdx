@@ -617,7 +617,7 @@ private:
   QLabel * lastlogged_label;
   QLabel * qso_count_label;
 
-  QMessageBox msgBox0;
+  MessageBox msgBox0;
 
   QFuture<void> m_wav_future;
   QFutureWatcher<void> m_wav_future_watcher;

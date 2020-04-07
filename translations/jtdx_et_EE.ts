@@ -4876,94 +4876,94 @@ UDP server %2:%3</translation>
 <context>
     <name>MessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="34"/>
+        <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
         <translation>&amp;Kinnita</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="35"/>
+        <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
         <translation>Salvesta</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="36"/>
+        <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
         <translation>Salvesta kõik</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="37"/>
+        <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
         <translation>Ava</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="38"/>
+        <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
         <translation>&amp;Jah</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="39"/>
+        <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
         <translation>J&amp;ah kõigile</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="40"/>
+        <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
         <translation>&amp;Ei</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="41"/>
+        <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
         <translation>E&amp;i kõigile</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="42"/>
+        <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
         <translation>Lõpeta</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="43"/>
+        <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
         <translation>&amp;Korda</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="46"/>
+        <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation>Tü&amp;hista</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="44"/>
+        <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
         <translation>Ignoreeri</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="45"/>
+        <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
         <translation>Sulge</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="47"/>
+        <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
         <translation>Viska ära</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="48"/>
+        <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
         <translation>Abi</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="49"/>
+        <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
         <translation>Kehtesta</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="50"/>
+        <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
         <translation>Lähtesta</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="51"/>
+        <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
         <translation>Taasta vaikeseaded</translation>
     </message>
@@ -5193,12 +5193,12 @@ Palun kontrolli kataloogi nime.</translation>
 <context>
     <name>QMessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="87"/>
+        <location filename="../MessageBox.cpp" line="85"/>
         <source>Show Details...</source>
         <translation>Näita detaile...</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="88"/>
+        <location filename="../MessageBox.cpp" line="86"/>
         <source>Hide Details...</source>
         <translation>Peida detailid...</translation>
     </message>

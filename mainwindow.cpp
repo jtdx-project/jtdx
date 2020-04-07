@@ -2573,7 +2573,7 @@ void MainWindow::on_pbSpotDXCall_clicked ()
   }
 }
 
-void MainWindow::msgBox(QString t) { msgBox0.setText(t); msgBox0.exec(); }
+void MainWindow::msgBox(QString t) { msgBox0.setText(t); msgBox0.translate_buttons(); msgBox0.exec(); }
 void MainWindow::on_actionJTDX_Web_Site_triggered() { m_manual.display_html_url (QUrl {PROJECT_MANUAL_DIRECTORY_URL}, PROJECT_MANUAL); }
 void MainWindow::on_actionJTDX_Forum_triggered() { m_manual.display_html_url (QUrl {"https://groups.io/g/JTDX/"}, ""); }
 

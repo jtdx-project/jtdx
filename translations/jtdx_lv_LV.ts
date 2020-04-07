@@ -4815,94 +4815,94 @@ UDP server %2:%3</source>
 <context>
     <name>MessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="34"/>
+        <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="35"/>
+        <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
         <translation type="unfinished">Saglabāt</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="36"/>
+        <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="37"/>
+        <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="38"/>
+        <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="39"/>
+        <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="40"/>
+        <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="41"/>
+        <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="42"/>
+        <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="43"/>
+        <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="44"/>
+        <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="45"/>
+        <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="46"/>
+        <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="47"/>
+        <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="48"/>
+        <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="49"/>
+        <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="50"/>
+        <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="51"/>
+        <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5129,12 +5129,12 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QMessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="87"/>
+        <location filename="../MessageBox.cpp" line="85"/>
         <source>Show Details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="88"/>
+        <location filename="../MessageBox.cpp" line="86"/>
         <source>Hide Details...</source>
         <translation type="unfinished"></translation>
     </message>

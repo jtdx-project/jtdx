@@ -4,7 +4,6 @@
 #include <QPushButton>
 
 #include "revision_utils.hpp"
-#include "MessageBox.moc"
 
 MessageBox::MessageBox (QWidget * parent)
   : QMessageBox {parent}
@@ -58,8 +57,7 @@ MessageBox::StandardButton MessageBox::show_it (QWidget * parent, MessageBox::Ic
                                        , QString const& informative
                                        , QString const& detail
                                        , MessageBox::StandardButtons buttons
-                                       , MessageBox::StandardButton default_button
-                                       , QString const& lang)
+                                       , MessageBox::StandardButton default_button)
   {
     MessageBox mb {icon, text, MessageBox::NoButton, parent};
     if (!title.isEmpty()) mb.setWindowTitle(title);
@@ -97,10 +95,9 @@ auto MessageBox::information_message (QWidget * parent, QString const& title
                                       , QString const& informative
                                       , QString const& detail
                                       , StandardButtons buttons
-                                      , StandardButton default_button
-                                      , QString const& lang) -> StandardButton
+                                      , StandardButton default_button) -> StandardButton
 {
-  return show_it (parent, Information, title, text, informative, detail, buttons, default_button, lang);
+  return show_it (parent, Information, title, text, informative, detail, buttons, default_button);
 }
 
 auto MessageBox::query_message (QWidget * parent, QString const& title
@@ -108,10 +105,9 @@ auto MessageBox::query_message (QWidget * parent, QString const& title
                                 , QString const& informative
                                 , QString const& detail
                                 , StandardButtons buttons
-                                , StandardButton default_button
-                                , QString const& lang) -> StandardButton
+                                , StandardButton default_button) -> StandardButton
 {
-  return show_it (parent, Question, title, text, informative, detail, buttons, default_button, lang);
+  return show_it (parent, Question, title, text, informative, detail, buttons, default_button);
 }
 
 auto MessageBox::warning_message (QWidget * parent, QString const& title
@@ -119,10 +115,9 @@ auto MessageBox::warning_message (QWidget * parent, QString const& title
                                   , QString const& informative
                                   , QString const& detail
                                   , StandardButtons buttons
-                                  , StandardButton default_button
-                                  , QString const& lang) -> StandardButton
+                                  , StandardButton default_button) -> StandardButton
 {
-  return show_it (parent, Warning, title, text, informative, detail, buttons, default_button, lang);
+  return show_it (parent, Warning, title, text, informative, detail, buttons, default_button);
 }
 
 auto MessageBox::critical_message (QWidget * parent, QString const& title
@@ -130,8 +125,7 @@ auto MessageBox::critical_message (QWidget * parent, QString const& title
                                    , QString const& informative
                                    , QString const& detail
                                    , StandardButtons buttons
-                                   , StandardButton default_button
-                                   , QString const& lang) -> StandardButton
+                                   , StandardButton default_button) -> StandardButton
 {
-  return show_it (parent, Critical, title, text, informative, detail, buttons, default_button, lang);
+  return show_it (parent, Critical, title, text, informative, detail, buttons, default_button);
 }

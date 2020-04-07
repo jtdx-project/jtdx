@@ -29,29 +29,25 @@ Q_OBJECT;
                                              , QString const& informative = QString {}
                                              , QString const& detail = QString {}
                                              , StandardButtons buttons = Ok
-                                             , StandardButton default_button = NoButton
-                                             , QString const& lang = QString {});
+                                             , StandardButton default_button = NoButton);
   static StandardButton query_message (QWidget * parent, QString const& title
                                        , QString const& text
                                        , QString const& informative = QString {}
                                        , QString const& detail = QString {}
                                        , StandardButtons buttons = Yes | No
-                                       , StandardButton default_button = NoButton
-                                       , QString const& lang = QString {});
+                                       , StandardButton default_button = NoButton);
   static StandardButton warning_message (QWidget * parent, QString const& title
                                          , QString const& text
                                          , QString const& informative = QString {}
                                          , QString const& detail = QString {}
                                          , StandardButtons buttons = Ok
-                                         , StandardButton default_button = NoButton
-                                         , QString const& lang = QString {});
+                                         , StandardButton default_button = NoButton);
   static StandardButton critical_message (QWidget * parent, QString const& title
                                           , QString const& text
                                           , QString const& informative = QString {}
                                           , QString const& detail = QString {}
                                           , StandardButtons buttons = Ok
-                                          , StandardButton default_button = NoButton
-                                          , QString const& lang = QString {});
+                                          , StandardButton default_button = NoButton);
 private:
 
   static StandardButton show_it (QWidget * parent, MessageBox::Icon icon
@@ -60,8 +56,7 @@ private:
                                        , QString const& informative
                                        , QString const& detail
                                        , MessageBox::StandardButtons buttons
-                                       , MessageBox::StandardButton default_button
-                                       , QString const& lang);
+                                       , MessageBox::StandardButton default_button);
  
   // hide the parent static functions so that users use our versions
   // above that are correctly branded and have better platform
