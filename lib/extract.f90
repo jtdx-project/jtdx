@@ -209,7 +209,7 @@ subroutine extract(s3b,s3c,ntrials,hint_on,mycall_12,hiscall_12,hisgrid,  &
        tmp(i)=correct(64-i)
      enddo
      correct(1:63)=tmp(1:63)
-     call interleave63(correct,63,1)
+     call interleave63(correct,1)
      call graycode65(correct,63,1)
      call unpackmsg(dat4,decoded)     !Unpack the user message
      if(decoded.ne.'                      ') then
