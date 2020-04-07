@@ -3753,7 +3753,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4452"/>
         <source>Save</source>
-        <translation>储存</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4460"/>
@@ -3859,7 +3859,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4646"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>删除所有在SaveDir目录内*.wav &amp;&amp; *.c2</translation>
+        <translation>删除所有在SaveDir目录内 *.wav &amp;&amp; *.c2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4657"/>
@@ -3877,7 +3877,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4676"/>
         <source>Save all</source>
-        <translation>储存所有</translation>
+        <translation>保存所有</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4751"/>
@@ -3917,7 +3917,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4792"/>
         <source>Save decoded</source>
-        <translation>储存解码</translation>
+        <translation>保存解码</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4803"/>
@@ -4857,94 +4857,94 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">确定&amp;O</translation>
+        <translation>确定&amp;O</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">储存</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>保存所有</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">打开文件</translation>
+        <translation>打开</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">确定&amp;Y</translation>
+        <translation>确定&amp;Y</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>确定所有&amp;A</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">否&amp;N</translation>
+        <translation>否&amp;N</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部否&amp;o</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">重试&amp;R</translation>
+        <translation>重试&amp;R</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>忽略</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">取消&amp;C</translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>丢弃</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">帮助</translation>
+        <translation>帮助</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>应用</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">重置</translation>
+        <translation>重置</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>还原默认值</translation>
     </message>
 </context>
 <context>
@@ -4997,7 +4997,7 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Save</source>
-        <translation>存储&amp;S</translation>
+        <translation>保存&amp;S</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
@@ -6552,7 +6552,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1822"/>
         <source>Audio files save directory</source>
-        <translation>声音文件储存目录</translation>
+        <translation>声音文件保存目录</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1828"/>

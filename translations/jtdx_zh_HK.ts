@@ -265,17 +265,17 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5153"/>
         <source>Save Working Frequencies</source>
-        <translation>保存工作頻率</translation>
+        <translation>儲存工作頻率</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation>僅保存選定的工作頻率</translation>
+        <translation>只儲存選取的工作頻率</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5165"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation>是否確實要僅保存當前選擇的工作頻率? 按一下 否 可保存所有.</translation>
+        <translation>是否要儲存目前選擇的工作頻率? 按一下 否 可儲存所有.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5192"/>
@@ -290,7 +290,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5254"/>
         <source>Save Directory</source>
-        <translation>保存目錄</translation>
+        <translation>儲存目錄</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5270"/>
@@ -3763,7 +3763,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4479"/>
         <source>Help</source>
-        <translation>幫助</translation>
+        <translation>說明</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4495"/>
@@ -3859,7 +3859,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4646"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>刪除所有在SaveDir目錄內*.wav &amp;&amp; *.c2</translation>
+        <translation>刪除所有在SaveDir目錄內 *.wav &amp;&amp; *.c2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4657"/>
@@ -4095,7 +4095,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5068"/>
         <source>Save reference spectrum</source>
-        <translation>保存參考頻譜</translation>
+        <translation>儲存參考頻譜</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5073"/>
@@ -4857,94 +4857,94 @@ UDP 服務器 %2:%3</translation>
     <message>
         <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">確定&amp;O</translation>
+        <translation>確定&amp;O</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">儲存</translation>
+        <translation>儲存</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>儲存所有</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">開啟檔案</translation>
+        <translation>開啟</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">確定&amp;Y</translation>
+        <translation>確定&amp;Y</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>確定所有&amp;A</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">否&amp;N</translation>
+        <translation>否&amp;N</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部否&amp;o</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">重試&amp;R</translation>
+        <translation>重試&amp;R</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>忽略</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">取消&amp;C</translation>
+        <translation>取消&amp;C</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>丟棄</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">幫助</translation>
+        <translation>說明</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>套用</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">重置</translation>
+        <translation>重置</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>回復預設值</translation>
     </message>
 </context>
 <context>
@@ -5785,7 +5785,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;復合呼號類型2是那些前綴或後綴不包括在允許的決選名單中 (請參閱幫助-&amp; gt; 加載項前綴和後綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2復合呼號, 而不是基本呼號.它僅適用於類型為2的復合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 CQ 調用的信息的生成方式.生成的信息 6 (CQ) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標准信息, 而犧牲了另一條信息, 如 dx 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 dx 呼號, 這在答復 CQ 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味着你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日誌是出錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請注意, 您的 qso 合作伙伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;復合呼號類型2是那些前綴或後綴不包括在允許的決選名單中 (請參閱說明-&amp; gt; 加載項前綴和後綴).&lt;p&gt;&lt;p&gt;此選項確定哪些生成的信息應包含完整類型2復合呼號, 而不是基本呼號.它僅適用於類型為2的復合呼號.&lt;/p&gt;&lt;p&gt;此選項控制用於應答 CQ 調用的信息的生成方式.生成的信息 6 (CQ) 和 5 (73) 將始終包含您的完整呼號.jt65 和 jt9 協議允許在您的完整呼叫中使用一些標准信息, 而犧牲了另一條信息, 如 DX 調用或您的定位器.&lt;/p&gt;&lt;p&gt;選擇信息1省略 DX 呼號, 這在答復 CQ 調用時可能是一個問題.選擇信息3也會省略 dx 呼號, 此軟件和其他軟件的許多版本都不會提取報告.選擇這兩個都意味着你的完整呼號只會出現在你的信息 5 (73) 中, 所以你的 qso 伙伴我的日誌是出錯誤的呼號.&lt;/p&gt;&lt;p&gt;這些選項都不是完美的, 信息3是最好的, 但請注意, 您的 qso 合作伙伴可能不會記錄您發送的報告.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
@@ -6562,7 +6562,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1844"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation>.WAV 檔案被保存到哪條路徑.</translation>
+        <translation>.WAV 檔案被儲存到哪條路徑.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1853"/>
@@ -6572,7 +6572,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1860"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation>單擊選擇不同的保存目錄 .WAV 檔案.</translation>
+        <translation>單擊選擇不同的儲存目錄 .WAV 檔案.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1863"/>
@@ -6699,8 +6699,8 @@ saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
         <translation>一些日誌程序不接受這種類型的報告
-由該程序保存.
-選中此選項可將發送和接收的報告保存在
+由該程序儲存.
+選中此選項可將發送和接收的報告儲存在
 注釋字段.</translation>
     </message>
     <message>
