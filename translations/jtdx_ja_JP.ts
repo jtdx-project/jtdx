@@ -4837,94 +4837,94 @@ UDP server %2:%3</source>
     <message>
         <location filename="../MessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">OK</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">保存</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>全て保存</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">開く</translation>
+        <translation>開く</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>はい</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>全てはい</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>いいえ</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>全ていいえ</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>再試行</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>無視</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>閉じる</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">キャンセル</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>廃棄</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">ヘルプ</translation>
+        <translation>ヘルプ</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>アプライ</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">リセット</translation>
+        <translation>リセット</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>初期状態に戻す</translation>
     </message>
 </context>
 <context>

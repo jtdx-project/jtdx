@@ -109,22 +109,22 @@ Une autre application peut être le verrouillage du répertoire</translation>
     <message>
         <location filename="../Configuration.cpp" line="1445"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Charger ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1449"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrez comme ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1453"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fusionner ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1457"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Réinitialiser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2677"/>
@@ -208,74 +208,74 @@ Format:
         <translation>Choix de la police de décodage</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5070"/>
-        <location filename="../Configuration.cpp" line="5101"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <location filename="../Configuration.cpp" line="5066"/>
+        <source>Load Working Frequencies</source>
+        <translation>Charger les fréquences de travail</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
         <location filename="../Configuration.cpp" line="5099"/>
         <location filename="../Configuration.cpp" line="5153"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers de fréquence (*.qrg);;Tous les fichiers (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
-        <source>Load Working Frequencies</source>
+        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5101"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer les fréquences de travail</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5085"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir vous débarrasser de vos fréquences de travail actuelles et les remplacer par celles qui sont chargées ?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5097"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Fusionner les fréquences de travail</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5124"/>
         <location filename="../Configuration.cpp" line="5133"/>
         <location filename="../Configuration.cpp" line="5143"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier de fréquences non valide</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5124"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier magique incorrect</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5133"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>La version est trop récente</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5143"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Contenu corrompu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5153"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver les fréquences de travail</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne conservez que certaines fréquences de travail</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5165"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de ne vouloir sauvegarder que les fréquences de travail qui sont actuellement sélectionnées ? Cliquez sur Non pour tout enregistrer.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5192"/>
@@ -2288,7 +2288,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Région IARU</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
@@ -2317,7 +2317,7 @@ Erreur : %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="500"/>
         <location filename="../FrequencyList.cpp" line="664"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Region IARU</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="521"/>
@@ -2436,92 +2436,92 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="249"/>
         <source>Command completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande terminée avec succès</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="250"/>
         <source>Invalid parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètre non valide</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Invalid configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration non valable</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Memory shortage</source>
-        <translation type="unfinished"></translation>
+        <translation>Pénurie de mémoire</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Feature not implemented</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonctionnalité non mise en œuvre</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Communication timed out</source>
-        <translation type="unfinished"></translation>
+        <translation>La communication a pris du retard</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;OI</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Internal Hamlib error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur interne de Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>Protocol error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de protocole</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Command rejected by the rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande rejetée par le Trx</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation type="unfinished"></translation>
+        <translation>Commandement effectué, mais arg tronqué, résultat non garanti</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Feature not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonctionnalité non disponible</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Target VFO unaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciblez le VFO inaccessible</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Communication bus error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de bus de communication</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Communication bus collision</source>
-        <translation type="unfinished"></translation>
+        <translation>Collision de bus de communication</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Manipulateur NULL Trx ou paramètre de pointeur invalide</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>VFO invalide</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Argument out of domain of func</source>
-        <translation type="unfinished"></translation>
+        <translation>Argument hors du domaine de la fonction</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="313"/>
@@ -2700,7 +2700,7 @@ Erreur : %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Region &amp; IARU</translation>
     </message>
 </context>
 <context>
@@ -3616,7 +3616,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3969"/>
         <source>Gen msg</source>
-        <translation>Mess. Gen</translation>
+        <translation>Message. Gen.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4034"/>
@@ -4801,7 +4801,7 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6815"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de contrôle Trx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6889"/>
@@ -5000,6 +5000,11 @@ Serveur UDP %2:%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Configuration.cpp" line="5030"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>All files (*)</source>
         <translation type="unfinished"></translation>
@@ -5015,11 +5020,6 @@ Serveur UDP %2:%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5030"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Look in:</source>
         <translation type="unfinished"></translation>
@@ -5027,6 +5027,34 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Files of type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5036"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5037"/>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5038"/>
+        <source>Could not delete directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5039"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5041"/>
+        <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5114,34 +5142,6 @@ Serveur UDP %2:%3</translation>
         <source>List of places and bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5036"/>
-        <source>&apos;%1&apos; is write protected.
-Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5037"/>
-        <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5038"/>
-        <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5039"/>
-        <source>%1
-Directory not found.
-Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5041"/>
-        <source>Recent Places</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>QFileSystemModel</name>
@@ -5171,12 +5171,12 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../MessageBox.cpp" line="85"/>
         <source>Show Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les détails...</translation>
     </message>
     <message>
         <location filename="../MessageBox.cpp" line="86"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cacher les détails...</translation>
     </message>
 </context>
 <context>
@@ -5737,7 +5737,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>Génération&amp;l</translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -5772,12 +5772,12 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>Region IARU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sélectionnez votre région IARU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
@@ -5798,11 +5798,6 @@ Erreur(%2) : %3</translation>
         <location filename="../Configuration.ui" line="162"/>
         <source>Full call in Tx5 only</source>
         <translation>Appel complet en Tx5 uniquement</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="170"/>
-        <source>Message generation for type 2 compound callsign holders:</source>
-        <translation>Génération de messages pour les titulaires d&apos;indicatifs d&apos;appel composés de type 2 :</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="192"/>
@@ -6016,7 +6011,7 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="672"/>
         <source>&amp;Radio</source>
-        <translation>&amp;Radio</translation>
+        <translation>&amp;Trx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="675"/>
@@ -7060,42 +7055,42 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="3200"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les zones CQ qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifiez et mettez en évidence les nouvelles CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les zones CQ qui sont nouvelles sur la bande selon les données du fichier journal de wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3220"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec les zones CQ qui sont nouvelles dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en évidence avec les zones UIT qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifiez et mettez en évidence la nouvelle ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en évidence avec les zones de l&apos;UIT qui sont nouvelles sur la bande selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3260"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec les zones UIT qui sont nouvelles dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3280"/>
@@ -7138,9 +7133,14 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
         <translation>par mode</translation>
     </message>
     <message>
+        <location filename="../Configuration.ui" line="170"/>
+        <source>Message generation for type 2 compound callsign holders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Configuration.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clic droit pour maintenir la liste des fréquences de travail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3230"/>
@@ -7438,22 +7438,22 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="3874"/>
         <source>New CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3944"/>
         <source>New CQZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau CQZ sur la bande/mode</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4014"/>
         <source>New ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4084"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle ITUZ sur la bande/mode</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4154"/>
