@@ -2270,6 +2270,16 @@ Error: %2 - %3</translation>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
         <translation>Los directorios de contenido deben ser relativos y estar dentro de &quot;%1&quot;</translation>
     </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Network Error</source>
+        <translation type="unfinished">Error de red</translation>
+    </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Authentication required</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EmulateSplitTransceiver</name>

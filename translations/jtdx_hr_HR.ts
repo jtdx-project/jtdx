@@ -2260,6 +2260,16 @@ Pogreška: %2 - %3</translation>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
         <translation>Sadržaja mapa mora biti relativni i unutar njih&quot;%1&quot;</translation>
     </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Network Error</source>
+        <translation type="unfinished">Greška Mreže</translation>
+    </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Authentication required</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EmulateSplitTransceiver</name>

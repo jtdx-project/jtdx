@@ -2271,6 +2271,16 @@ Viga: %2 - %3</translation>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
         <translation>Sisukataloogid peavad olema suhtelised ja &quot;%1&quot; piires</translation>
     </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Network Error</source>
+        <translation>Võrgu viga</translation>
+    </message>
+    <message>
+        <location filename="../SampleDownloader/Directory.cpp" line="298"/>
+        <source>Authentication required</source>
+        <translation>Peab autoriseerima</translation>
+    </message>
 </context>
 <context>
     <name>EmulateSplitTransceiver</name>
