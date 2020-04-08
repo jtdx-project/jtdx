@@ -9,7 +9,7 @@
 #include "commons.h"
 #include "Configuration.hpp"
 #include "moc_widegraph.cpp"
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 static float swide[MAX_SCREENSIZE];
 
 namespace
@@ -445,7 +445,7 @@ void WideGraph::readPalette ()                                   //readPalette
     }
   catch (std::exception const& e)
     {
-      MessageBox::critical_message (this, "WideGraph", e.what());
+      JTDXMessageBox::critical_message (this, "WideGraph", e.what());
     }
 }
 
@@ -492,7 +492,7 @@ void WideGraph::on_adjust_palette_push_button_clicked (bool)   //Adjust Palette
     }
   catch (std::exception const& e)
     {
-      MessageBox::critical_message (this, "WideGraph",e.what());
+      JTDXMessageBox::critical_message (this, "WideGraph",e.what());
     }
 }
 

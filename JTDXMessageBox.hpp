@@ -1,24 +1,19 @@
-#ifndef MESSAGE_BOX_HPP__
-#define MESSAGE_BOX_HPP__
+#ifndef JTDXMESSAGE_BOX_HPP__
+#define JTDXMESSAGE_BOX_HPP__
 
 #include <QObject>
 #include <QMessageBox>
 
-// get rid of the nasty MS define
-#ifdef MessageBox
-#undef MessageBox
-#endif
-
 //
-// MessageBox - wrap the Qt QMessageBox class to give a more platform
+// JTDXMessageBox - wrap the Qt QMessageBox class to give a more platform
 // 							neutral and functional interface
 //
-class MessageBox : public QMessageBox
+class JTDXMessageBox : public QMessageBox
 {
 Q_OBJECT;
  public:
-  explicit MessageBox (QWidget * parent = nullptr);
-  explicit MessageBox (Icon,  QString const& text, StandardButtons = NoButton
+  explicit JTDXMessageBox (QWidget * parent = nullptr);
+  explicit JTDXMessageBox (Icon,  QString const& text, StandardButtons = NoButton
                        , QWidget * parent = nullptr
                        , Qt::WindowFlags = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
          void translate_buttons();     
@@ -50,13 +45,13 @@ Q_OBJECT;
                                           , StandardButton default_button = NoButton);
 private:
 
-  static StandardButton show_it (QWidget * parent, MessageBox::Icon icon
+  static StandardButton show_it (QWidget * parent, JTDXMessageBox::Icon icon
                                        , QString const& title
                                        , QString const& text
                                        , QString const& informative
                                        , QString const& detail
-                                       , MessageBox::StandardButtons buttons
-                                       , MessageBox::StandardButton default_button);
+                                       , JTDXMessageBox::StandardButtons buttons
+                                       , JTDXMessageBox::StandardButton default_button);
  
   // hide the parent static functions so that users use our versions
   // above that are correctly branded and have better platform

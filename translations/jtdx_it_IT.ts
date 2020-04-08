@@ -2713,6 +2713,101 @@ Errore:%2 -%3</translation>
     </message>
 </context>
 <context>
+    <name>JTDXMessageBox</name>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="33"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished">C&amp;onferma</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="34"/>
+        <source>Save</source>
+        <translation type="unfinished">Salva</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="35"/>
+        <source>Save All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="36"/>
+        <source>Open</source>
+        <translation type="unfinished">Apri</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="37"/>
+        <location filename="../mainwindow.cpp" line="3732"/>
+        <source>&amp;Yes</source>
+        <translation type="unfinished">&amp;Si</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="38"/>
+        <source>Yes to &amp;All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="39"/>
+        <location filename="../mainwindow.cpp" line="3735"/>
+        <source>&amp;No</source>
+        <translation type="unfinished">&amp;No</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="40"/>
+        <source>N&amp;o to All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="41"/>
+        <source>Abort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="42"/>
+        <source>&amp;Retry</source>
+        <translation type="unfinished">Indiet&amp;ro</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="43"/>
+        <source>Ignore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="44"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="45"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished">&amp;Cancella</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="46"/>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="47"/>
+        <source>Help</source>
+        <translation type="unfinished">Aiuto</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="48"/>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="49"/>
+        <source>Reset</source>
+        <translation type="unfinished">Resetta</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="50"/>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LogQSO</name>
     <message>
         <location filename="../logqso.ui" line="28"/>
@@ -4865,101 +4960,6 @@ server DP %2:%3</translation>
     </message>
 </context>
 <context>
-    <name>MessageBox</name>
-    <message>
-        <location filename="../MessageBox.cpp" line="33"/>
-        <source>&amp;OK</source>
-        <translation type="unfinished">C&amp;onferma</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="34"/>
-        <source>Save</source>
-        <translation type="unfinished">Salva</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="35"/>
-        <source>Save All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="36"/>
-        <source>Open</source>
-        <translation type="unfinished">Apri</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="37"/>
-        <location filename="../mainwindow.cpp" line="3732"/>
-        <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Si</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="38"/>
-        <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="39"/>
-        <location filename="../mainwindow.cpp" line="3735"/>
-        <source>&amp;No</source>
-        <translation type="unfinished">&amp;No</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="40"/>
-        <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="41"/>
-        <source>Abort</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="42"/>
-        <source>&amp;Retry</source>
-        <translation type="unfinished">Indiet&amp;ro</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="43"/>
-        <source>Ignore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="44"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="45"/>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Cancella</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="46"/>
-        <source>Discard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="47"/>
-        <source>Help</source>
-        <translation type="unfinished">Aiuto</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="48"/>
-        <source>Apply</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="49"/>
-        <source>Reset</source>
-        <translation type="unfinished">Resetta</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="50"/>
-        <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Modes</name>
     <message>
         <location filename="../Modes.cpp" line="56"/>
@@ -5184,12 +5184,12 @@ Verificare che il nome della directory sia corretto.</translation>
 <context>
     <name>QMessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="85"/>
+        <location filename="../JTDXMessageBox.cpp" line="85"/>
         <source>Show Details...</source>
         <translation>Mostra Dettagli...</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="86"/>
+        <location filename="../JTDXMessageBox.cpp" line="86"/>
         <source>Hide Details...</source>
         <translation>Nascondi Dettagli...</translation>
     </message>

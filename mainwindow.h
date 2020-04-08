@@ -38,7 +38,7 @@
 #include "psk_reporter.h"
 #include "logbook/logbook.h"
 #include "decodedtext.h"
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 #include "qsohistory.h"
 
 #define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
@@ -404,7 +404,7 @@ private:
   Configuration m_config;
   WSPRBandHopping m_WSPR_band_hopping;
   bool m_WSPR_tx_next;
-  MessageBox m_rigErrorMessageBox;
+  JTDXMessageBox m_rigErrorMessageBox;
   QScopedPointer<SampleDownloader> m_sampleDownloader;
 
   QScopedPointer<WideGraph> m_wideGraph;
@@ -617,7 +617,7 @@ private:
   QLabel * lastlogged_label;
   QLabel * qso_count_label;
 
-  MessageBox msgBox0;
+  JTDXMessageBox msgBox0;
 
   QFuture<void> m_wav_future;
   QFutureWatcher<void> m_wav_future_watcher;

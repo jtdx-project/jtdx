@@ -180,7 +180,7 @@
 #include "FrequencyList.hpp"
 #include "StationList.hpp"
 #include "NetworkServerLookup.hpp"
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 
 #include "pimpl_impl.hpp"
 
@@ -1200,15 +1200,15 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
         if (!temp_dir_.mkpath (unique_directory)
             || !temp_dir_.cd (unique_directory))
           {
-            MessageBox::critical_message (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
+            JTDXMessageBox::critical_message (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
             throw std::runtime_error {"Failed to create a temporary directory"};
           }
         if (!temp_dir_.isReadable () || !(ok = QTemporaryFile {temp_dir_.absoluteFilePath ("test")}.open ()))
           {
-            if (MessageBox::Cancel == MessageBox::critical_message (this, "JTDX",
+            if (JTDXMessageBox::Cancel == JTDXMessageBox::critical_message (this, "JTDX",
                                                               tr ("Create temporary directory error:\n%1\n"
                                                                   "Another application may be locking the directory").arg (temp_dir_.absolutePath ()),"","",
-                                                              MessageBox::Retry | MessageBox::Cancel))
+                                                              JTDXMessageBox::Retry | JTDXMessageBox::Cancel))
               {
                 throw std::runtime_error {"Failed to create a usable temporary directory"};
               }
@@ -1223,7 +1223,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QDir data_dir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)};
     if (!data_dir.mkpath ("."))
       {
-        MessageBox::critical_message (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
         throw std::runtime_error {"Failed to create data directory"};
       }
 
@@ -1232,7 +1232,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     default_save_directory_ = data_dir;
     if (!default_save_directory_.mkpath (save_dir) || !default_save_directory_.cd (save_dir))
       {
-        MessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (save_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -1243,7 +1243,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QString samples_dir {"samples"};
     if (!default_save_directory_.mkpath (samples_dir))
       {
-        MessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (samples_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -3206,15 +3206,15 @@ void Configuration::impl::message_box_critical (QString const& reason, QString c
   QPushButton::tr("Reset");
   QPushButton::tr("Restore Defaults");*/
 
-  MessageBox mb;
+  JTDXMessageBox mb;
   mb.setText (reason);
   if (!detail.isEmpty ())
     {
       mb.setDetailedText (detail);
     }
-  mb.setStandardButtons (MessageBox::Ok);
-  mb.setDefaultButton (MessageBox::Ok);
-  mb.setIcon (MessageBox::Critical);
+  mb.setStandardButtons (JTDXMessageBox::Ok);
+  mb.setDefaultButton (JTDXMessageBox::Ok);
+  mb.setIcon (JTDXMessageBox::Critical);
   mb.translate_buttons();
   mb.exec ();
 }
@@ -5080,7 +5080,7 @@ void Configuration::impl::load_frequencies ()
       auto const list = read_frequencies_file (file_name);
       if (list.size ()
           && (!next_frequencies_.frequency_list ().size ()
-              || MessageBox::Yes == MessageBox::query_message (this
+              || JTDXMessageBox::Yes == JTDXMessageBox::query_message (this
                                                                , tr ("Replace Working Frequencies")
                                                                , tr ("Are you sure you want to discard your current "
                                                                      "working frequencies and replace them with the "
@@ -5121,7 +5121,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
   ids >> magic;
   if (qrg_magic != magic)
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Incorrect file magic"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Incorrect file magic"));
       return list;
     }
   quint32 version;
@@ -5130,7 +5130,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
   // necessary
   if (version > qrg_version)
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Version is too new"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Version is too new"));
       return list;
     }
 
@@ -5140,7 +5140,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
 
   if (ids.status () != QDataStream::Ok || !ids.atEnd ())
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Contents corrupt"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Contents corrupt"));
       list.clear ();
       return list;
     }
@@ -5159,17 +5159,17 @@ void Configuration::impl::save_frequencies ()
       QDataStream ods {&frequencies_file};
       auto selection_model = ui_->frequencies_table_view->selectionModel ();
       if (selection_model->hasSelection ()) {
-          MessageBox msgbox;
+          JTDXMessageBox msgbox;
           msgbox.setWindowTitle(tr("Only Save Selected  Working Frequencies"));
-          msgbox.setIcon(MessageBox::Question);
+          msgbox.setIcon(JTDXMessageBox::Question);
           msgbox.setText(tr("Are you sure you want to save only the "
                                                                  "working frequencies that are currently selected? "
                                                                  "Click No to save all."));
-          msgbox.setStandardButtons(MessageBox::Yes | MessageBox::No);
-          msgbox.setDefaultButton(MessageBox::No);
+          msgbox.setStandardButtons(JTDXMessageBox::Yes | JTDXMessageBox::No);
+          msgbox.setDefaultButton(JTDXMessageBox::No);
           msgbox.translate_buttons();
           
-          if (MessageBox::Yes == msgbox.exec())
+          if (JTDXMessageBox::Yes == msgbox.exec())
             {
               selection_model->select (selection_model->selection (), QItemSelectionModel::SelectCurrent | QItemSelectionModel::Rows);
               ods << qrg_magic << qrg_version << next_frequencies_.frequency_list (selection_model->selectedRows ());
@@ -5188,17 +5188,17 @@ void Configuration::impl::save_frequencies ()
 
 void Configuration::impl::reset_frequencies ()
 {
-  MessageBox msgbox;
+  JTDXMessageBox msgbox;
   msgbox.setWindowTitle(tr("Reset Working Frequencies"));
-  msgbox.setIcon(MessageBox::Question);
+  msgbox.setIcon(JTDXMessageBox::Question);
   msgbox.setText(tr("Are you sure you want to discard your current "
                                                        "working frequencies and replace them with default "
                                                        "ones?"));
-  msgbox.setStandardButtons(MessageBox::Yes | MessageBox::No);
-  msgbox.setDefaultButton(MessageBox::No);
+  msgbox.setStandardButtons(JTDXMessageBox::Yes | JTDXMessageBox::No);
+  msgbox.setDefaultButton(JTDXMessageBox::No);
   msgbox.translate_buttons();
 
-  if (MessageBox::Yes == msgbox.exec())
+  if (JTDXMessageBox::Yes == msgbox.exec())
     {
       next_frequencies_.reset_to_defaults ();
     }
@@ -5267,7 +5267,7 @@ bool Configuration::impl::have_rig ()
 {
   if (!open_rig ())
     {
-      MessageBox::critical_message (this, "JTDX", tr ("Failed to open connection to rig"));
+      JTDXMessageBox::critical_message (this, "JTDX", tr ("Failed to open connection to rig"));
     }
   return rig_active_;
 }

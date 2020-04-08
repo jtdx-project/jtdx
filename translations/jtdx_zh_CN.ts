@@ -2713,6 +2713,101 @@ Error: %2 - %3</source>
     </message>
 </context>
 <context>
+    <name>JTDXMessageBox</name>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="33"/>
+        <source>&amp;OK</source>
+        <translation>确定&amp;O</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="34"/>
+        <source>Save</source>
+        <translation>保存</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="35"/>
+        <source>Save All</source>
+        <translation>保存所有</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="36"/>
+        <source>Open</source>
+        <translation>打开</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="37"/>
+        <location filename="../mainwindow.cpp" line="3732"/>
+        <source>&amp;Yes</source>
+        <translation>确定&amp;Y</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="38"/>
+        <source>Yes to &amp;All</source>
+        <translation>确定所有&amp;A</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="39"/>
+        <location filename="../mainwindow.cpp" line="3735"/>
+        <source>&amp;No</source>
+        <translation>否&amp;N</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="40"/>
+        <source>N&amp;o to All</source>
+        <translation>全部否&amp;o</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="41"/>
+        <source>Abort</source>
+        <translation>中止</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="42"/>
+        <source>&amp;Retry</source>
+        <translation>重试&amp;R</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="43"/>
+        <source>Ignore</source>
+        <translation>忽略</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="44"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="45"/>
+        <source>&amp;Cancel</source>
+        <translation>取消&amp;C</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="46"/>
+        <source>Discard</source>
+        <translation>丢弃</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="47"/>
+        <source>Help</source>
+        <translation>帮助</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="48"/>
+        <source>Apply</source>
+        <translation>应用</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="49"/>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+    <message>
+        <location filename="../JTDXMessageBox.cpp" line="50"/>
+        <source>Restore Defaults</source>
+        <translation>还原默认值</translation>
+    </message>
+</context>
+<context>
     <name>LogQSO</name>
     <message>
         <location filename="../logqso.ui" line="28"/>
@@ -4863,101 +4958,6 @@ UDP 服务器 %2:%3</translation>
     </message>
 </context>
 <context>
-    <name>MessageBox</name>
-    <message>
-        <location filename="../MessageBox.cpp" line="33"/>
-        <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="34"/>
-        <source>Save</source>
-        <translation>保存</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="35"/>
-        <source>Save All</source>
-        <translation>保存所有</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="36"/>
-        <source>Open</source>
-        <translation>打开</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="37"/>
-        <location filename="../mainwindow.cpp" line="3732"/>
-        <source>&amp;Yes</source>
-        <translation>确定&amp;Y</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="38"/>
-        <source>Yes to &amp;All</source>
-        <translation>确定所有&amp;A</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="39"/>
-        <location filename="../mainwindow.cpp" line="3735"/>
-        <source>&amp;No</source>
-        <translation>否&amp;N</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="40"/>
-        <source>N&amp;o to All</source>
-        <translation>全部否&amp;o</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="41"/>
-        <source>Abort</source>
-        <translation>中止</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="42"/>
-        <source>&amp;Retry</source>
-        <translation>重试&amp;R</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="43"/>
-        <source>Ignore</source>
-        <translation>忽略</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="44"/>
-        <source>Close</source>
-        <translation>关闭</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="45"/>
-        <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="46"/>
-        <source>Discard</source>
-        <translation>丢弃</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="47"/>
-        <source>Help</source>
-        <translation>帮助</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="48"/>
-        <source>Apply</source>
-        <translation>应用</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="49"/>
-        <source>Reset</source>
-        <translation>重置</translation>
-    </message>
-    <message>
-        <location filename="../MessageBox.cpp" line="50"/>
-        <source>Restore Defaults</source>
-        <translation>还原默认值</translation>
-    </message>
-</context>
-<context>
     <name>Modes</name>
     <message>
         <location filename="../Modes.cpp" line="56"/>
@@ -5182,12 +5182,12 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QMessageBox</name>
     <message>
-        <location filename="../MessageBox.cpp" line="85"/>
+        <location filename="../JTDXMessageBox.cpp" line="85"/>
         <source>Show Details...</source>
         <translation>显示详情...</translation>
     </message>
     <message>
-        <location filename="../MessageBox.cpp" line="86"/>
+        <location filename="../JTDXMessageBox.cpp" line="86"/>
         <source>Hide Details...</source>
         <translation>隐藏详情...</translation>
     </message>

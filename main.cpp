@@ -26,7 +26,7 @@
 #include <QCommandLineOption>
 #endif
 
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 #include "revision_utils.hpp"
 #include "MetaDataRegistry.hpp"
 #include "SettingsGroup.hpp"
@@ -68,12 +68,12 @@ namespace
         }
       catch (std::exception const& e)
         {
-          MessageBox::critical_message (nullptr, "", translate ("main", "Fatal error"), e.what ());
+          JTDXMessageBox::critical_message (nullptr, "", translate ("main", "Fatal error"), e.what ());
           throw;
         }
       catch (...)
         {
-          MessageBox::critical_message (nullptr, "", translate ("main", "Unexpected fatal error"));
+          JTDXMessageBox::critical_message (nullptr, "", translate ("main", "Unexpected fatal error"));
           throw;
         }
     }
@@ -133,19 +133,19 @@ int main(int argc, char *argv[])
 
       if (!parser.parse (a.arguments ()))
         {
-          MessageBox::critical_message (nullptr, a.applicationName (), parser.errorText ());
+          JTDXMessageBox::critical_message (nullptr, a.applicationName (), parser.errorText ());
           return -1;
         }
       else
         {
           if (parser.isSet (help_option))
             {
-              MessageBox::information_message (nullptr, a.applicationName (), parser.helpText ());
+              JTDXMessageBox::information_message (nullptr, a.applicationName (), parser.helpText ());
               return 0;
             }
           else if (parser.isSet (version_option))
             {
-              MessageBox::information_message (nullptr, a.applicationName (), a.applicationVersion ());
+              JTDXMessageBox::information_message (nullptr, a.applicationName (), a.applicationVersion ());
               return 0;
             }
         }
@@ -183,19 +183,19 @@ int main(int argc, char *argv[])
         {
           if (QLockFile::LockFailedError == instance_lock.error ())
             {
-              auto button = MessageBox::query_message (nullptr
+              auto button = JTDXMessageBox::query_message (nullptr
                                                    , QApplication::applicationName ()
                                                    , QObject::tr ("Another instance may be running, try to remove stale lock file?")
                                                    , "" ,""
-                                                   , MessageBox::Yes | MessageBox::Retry | MessageBox::No
-                                                   , MessageBox::Yes);
+                                                   , JTDXMessageBox::Yes | JTDXMessageBox::Retry | JTDXMessageBox::No
+                                                   , JTDXMessageBox::Yes);
               switch (button)
                 {
-                case MessageBox::Yes:
+                case JTDXMessageBox::Yes:
                   instance_lock.removeStaleLockFile ();
                   break;
 
-                case MessageBox::Retry:
+                case JTDXMessageBox::Retry:
                   break;
 
                 default:
@@ -287,7 +287,7 @@ int main(int argc, char *argv[])
 
         if(!mem_jtdxjt9.attach()) {
           if (!mem_jtdxjt9.create(sizeof(struct dec_data))) {
-            MessageBox::critical_message (nullptr, "Error", "Unable to create shared memory segment.");
+            JTDXMessageBox::critical_message (nullptr, "Error", "Unable to create shared memory segment.");
             exit(1);
           }
         }
@@ -322,12 +322,12 @@ int main(int argc, char *argv[])
     }
   catch (std::exception const& e)
     {
-      MessageBox::critical_message (nullptr, a.applicationName (), e.what ());
+      JTDXMessageBox::critical_message (nullptr, a.applicationName (), e.what ());
       std::cerr << "Error: " << e.what () << '\n';
     }
   catch (...)
     {
-      MessageBox::critical_message (nullptr, a.applicationName (), QObject::tr ("Unexpected error"));
+      JTDXMessageBox::critical_message (nullptr, a.applicationName (), QObject::tr ("Unexpected error"));
       std::cerr << "Unexpected error\n";
       throw;			// hoping the runtime might tell us more about the exception
     }

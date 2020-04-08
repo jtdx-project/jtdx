@@ -17,7 +17,7 @@
 #include <QJsonObject>
 #include <QRegularExpression>
 
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 #include "Configuration.hpp"
 #include "DirectoryNode.hpp"
 #include "FileNode.hpp"
@@ -89,7 +89,7 @@ bool Directory::url_root (QUrl root)
 
 void Directory::error (QString const& title, QString const& message)
 {
-  MessageBox::warning_message (this, "", title, message);
+  JTDXMessageBox::warning_message (this, "", title, message);
 }
 
 bool Directory::refresh ()
@@ -107,7 +107,7 @@ bool Directory::refresh ()
     }
   else
     {
-      MessageBox::warning_message (this, ""
+      JTDXMessageBox::warning_message (this, ""
                             , tr ("URL Error")
                             , tr ("Invalid URL:\n\"%1\"")
                             .arg (url.toDisplayString ()));
@@ -126,7 +126,7 @@ void Directory::download_finished (bool success)
           auto content = QJsonDocument::fromJson (contents.readAll (), &json_status);
           if (json_status.error)
             {
-              MessageBox::warning_message (this, ""
+              JTDXMessageBox::warning_message (this, ""
                                     , tr ("JSON Error")
                                     , tr ("Contents file syntax error %1 at character offset %2")
                                     .arg (json_status.errorString ()).arg (json_status.offset));
@@ -134,7 +134,7 @@ void Directory::download_finished (bool success)
             }
           if (!content.isArray ())
             {
-              MessageBox::warning_message (this, "", tr ("JSON Error")
+              JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                                     , tr ("Contents file top level must be a JSON array"));
               return;
             }
@@ -146,7 +146,7 @@ void Directory::download_finished (bool success)
         }
       else
         {
-          MessageBox::warning_message (this, "", tr ("File System Error")
+          JTDXMessageBox::warning_message (this, "", tr ("File System Error")
                                 , tr ("Failed to open \"%1\"\nError: %2 - %3")
                                 .arg (contents.fileName ())
                                 .arg (contents.error ())
@@ -183,7 +183,7 @@ void Directory::parse_entries (QJsonArray const& entries, QDir const& dir, QTree
                         }
                       else
                         {
-                          MessageBox::warning_message (this, ""
+                          JTDXMessageBox::warning_message (this, ""
                                                 , tr ("URL Error")
                                                 , tr ("Invalid URL:\n\"%1\"")
                                                 .arg (url.toDisplayString ()));
@@ -202,32 +202,32 @@ void Directory::parse_entries (QJsonArray const& entries, QDir const& dir, QTree
                             }
                           else
                             {
-                              MessageBox::warning_message (this, "", tr ("JSON Error")
+                              JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                                                     , tr ("Contents entries must be a JSON array"));
                             }
                     }
                   else
                     {
-                      MessageBox::warning_message (this, "", tr ("JSON Error")
+                      JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                                             , tr ("Contents entries must have a valid type"));
                     }
                 }
               else
                 {
-                  MessageBox::warning_message (this, "", tr ("JSON Error")
+                  JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                                         , tr ("Contents entries must have a valid name"));
                 }
             }
           else
             {
-              MessageBox::warning_message (this, "", tr ("JSON Error")
+              JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                                     , tr ("Contents entries must be JSON objects"));
             }
         }
     }
   else
     {
-      MessageBox::warning_message (this, "", tr ("JSON Error")
+      JTDXMessageBox::warning_message (this, "", tr ("JSON Error")
                             , tr ("Contents directories must be relative and within \"%1\"")
                             .arg (samples_dir_name));
     }
@@ -295,5 +295,5 @@ void Directory::update (QTreeWidgetItem * item)
 void Directory::authentication (QNetworkReply * /* reply */
                                 , QAuthenticator * /* authenticator */)
 {
-  MessageBox::warning_message (this, "", tr("Network Error"), tr("Authentication required"));
+  JTDXMessageBox::warning_message (this, "", tr("Network Error"), tr("Authentication required"));
 }

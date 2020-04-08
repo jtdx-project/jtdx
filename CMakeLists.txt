@@ -259,7 +259,7 @@ set (wsjtx_CXXSRCS
   eqsl.cpp
   wsprnet.cpp
   WSPRBandHopping.cpp
-  MessageBox.cpp
+  JTDXMessageBox.cpp
   )
 
 set (wsjt_CXXSRCS

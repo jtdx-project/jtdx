@@ -7,7 +7,7 @@
 #include <QDir>
 #include <QDebug>
 
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 
 #include "logbook/adif.h"
 #include "Configuration.hpp"
@@ -135,13 +135,13 @@ void LogQSO::accept()
   adifile.init(adifilePath);
   if (!adifile.addQSOToFile(hisCall,hisGrid,mode,rptSent,rptRcvd,m_dateTimeOn,m_dateTimeOff,band,comments,name,strDialFreq,m_myCall,m_myGrid,m_txPower,m_send_to_eqsl))
   {
-      MessageBox::information_message(0,"","Cannot open file \"" + adifilePath + "\".");
+      JTDXMessageBox::information_message(0,"","Cannot open file \"" + adifilePath + "\".");
    }
 
 //Log this QSO to file "wsjtx.log"
   static QFile f {QDir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)}.absoluteFilePath ("wsjtx.log")};
   if(!f.open(QIODevice::Text | QIODevice::Append)) {
-    MessageBox::information_message(0,"","Cannot open file \"" + f.fileName () + "\" for append:" + f.errorString ());
+    JTDXMessageBox::information_message(0,"","Cannot open file \"" + f.fileName () + "\" for append:" + f.errorString ());
   } else {
     QString logEntry=m_dateTimeOn.date().toString("yyyy-MM-dd,") +
       m_dateTimeOn.time().toString("hh:mm:ss,") + 
@@ -194,7 +194,7 @@ void LogQSO::accept()
     if(m_debug) { 
       if(f2.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) fopen = true;
       else {
-      MessageBox::warning_message (0, "", " File Open Error "
+      JTDXMessageBox::warning_message (0, "", " File Open Error "
                                   , tr ("Cannot open \"%1\" for append: %2")
                                   .arg (f2.fileName ()).arg (f2.errorString ()));
       }
@@ -208,7 +208,7 @@ void LogQSO::accept()
         myadif2 = socket.readAll();
         if(fopen) { QTextStream out2(&f2); out2 << QDateTime::currentDateTimeUtc().toString("yyyyMMdd_hhmmss.zzz") << " Received response from host: " << myadif2 << endl; }
         if (myadif2.left(3) == "NAK") {
-          MessageBox::critical_message(0, "",myadif2 + " QSO data rejected by external software");
+          JTDXMessageBox::critical_message(0, "",myadif2 + " QSO data rejected by external software");
         }
       } else {
       if(fopen) { QTextStream out2(&f2); out2 << QDateTime::currentDateTimeUtc().toString("yyyyMMdd_hhmmss.zzz") << " Getting response from host is timed out" << endl; }
@@ -216,7 +216,7 @@ void LogQSO::accept()
       socket.close();
     } else {
       if(fopen) { QTextStream out2(&f2); out2 << QDateTime::currentDateTimeUtc().toString("yyyyMMdd_hhmmss.zzz") << " Host connection timed out" << endl; }
-      MessageBox::critical_message(0, "", "TCP QSO data transfer: " + socket.errorString());
+      JTDXMessageBox::critical_message(0, "", "TCP QSO data transfer: " + socket.errorString());
     }
     if(fopen) f2.close();
   }
