@@ -3481,8 +3481,8 @@ void MainWindow::readFromStdout()                             //readFromStdout
           m_notified=true;
        }
 	   
-      DecodedText decodedtext {QString::fromUtf8 (t.constData ()).remove (QRegularExpression {"\r|\n"})};
-//      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    "};
+      DecodedText decodedtext {QString::fromUtf8 (t.constData ()).remove (QRegularExpression {"\r|\n"}),this};
+//      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    ",this};
 	  QString tcut = t.replace("\n","");
 	  if (!m_mode.startsWith("FT")) {
 		tcut = tcut.remove(0,21);
@@ -3569,7 +3569,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
 // 2  m_notified = false, show_line = true
 // 3  m_notified = true, show_line = true
 	  int notified = 2;
-      notified = ui->decodedTextBrowser->displayDecodedText (decodedtext
+      notified = ui->decodedTextBrowser->displayDecodedText (&decodedtext
                                                     , m_baseCall
                                                     , Radio::base_callsign (m_hisCall)
                                                     , m_hisGrid.left(4)
@@ -3627,7 +3627,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
 
 
 
-        ui->decodedTextBrowser2->displayDecodedText(decodedtext
+        ui->decodedTextBrowser2->displayDecodedText(&decodedtext
                                                     , m_baseCall
                                                     , Radio::base_callsign (m_hisCall)
                                                     , m_hisGrid.left(4)
@@ -3642,7 +3642,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
                                                     , m_wideGraph->rxFreq());
 
 
-        m_QSOText=decodedtext;
+        m_QSOText=decodedtext.string();
 		bcontent = false;
       }
 
@@ -4630,7 +4630,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   
   QString t2a;
   t2a = t2;
-  DecodedText decodedtext {t2a};
+  DecodedText decodedtext {t2a,this};
 
   bool addWanted = (alt && ctrl);
   if(!addWanted) {
@@ -4753,9 +4753,9 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
 
   int i9=m_QSOText.indexOf(decodedtext.string());
   if (i9<0 and !decodedtext.isTX() and m_decodedText2) {
-    DecodedText decodedtext {t2disp};
+    DecodedText decodedtext {t2disp,this};
 	if (!t2.contains (m_baseCall) || !m_showMyCallMsgRxWindow) {
-		ui->decodedTextBrowser2->displayDecodedText(decodedtext
+		ui->decodedTextBrowser2->displayDecodedText(&decodedtext
                                                   ,m_baseCall
                                                   ,Radio::base_callsign (m_hisCall)
                                                   ,m_hisGrid.left(4)
@@ -4769,7 +4769,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
                                                   ,m_bypassAllFilters
                                                   ,m_wideGraph->rxFreq());
 	}
-      m_QSOText=decodedtext;
+      m_QSOText=decodedtext.string();
   }
 
   if (ui->RxFreqSpinBox->isEnabled ())
@@ -5459,7 +5459,7 @@ void MainWindow::on_tx5_currentTextChanged (QString const& text) //tx5 edited
   if(isAllowedAuto73) m_Tx5setAutoSeqOff=false;
   if(!text.contains(QRegularExpression {R"([@#&^])"}) && !text.isEmpty()) {
     QString t="161545  -4  0.1 1939 & " + text;
-    DecodedText decodedtext {t};
+    DecodedText decodedtext {t,this};
 //      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    "};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
@@ -6440,8 +6440,8 @@ void MainWindow::on_freeTextMsg_currentTextChanged (QString const& text)
   if(isAllowedAuto73) m_FTsetAutoSeqOff=false;
   if(!text.contains(QRegularExpression {R"([@#&^])"}) && !text.isEmpty()) {
     QString t="161545  -4  0.1 1939 & " + text;
-    DecodedText decodedtext {t};
-//      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    "};
+    DecodedText decodedtext {t,this};
+//      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    ",this};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
       ui->freeTextMsg->setStyleSheet("background-color: rgb(123,255,123);color: black;");
@@ -7105,7 +7105,7 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
           // find the linefeed at the end of the line
           position = ui->decodedTextBrowser->toPlainText().indexOf("\n",position);
           auto start = messages.left (position).lastIndexOf (QChar::LineFeed) + 1;
-          DecodedText message {messages.mid (start, position - start)};
+          DecodedText message {messages.mid (start, position - start),this};
           m_decodedText2 = true;
 // keyboard modifiers and low confidence(Hint) '*' symbol are not supported yet in UDP 'reply' procedure
 //          Qt::KeyboardModifiers kbmod {modifiers << 24};

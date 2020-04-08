@@ -2133,6 +2133,39 @@ Formato:
     </message>
 </context>
 <context>
+    <name>DecodedText</name>
+    <message>
+        <location filename="../decodedtext.cpp" line="27"/>
+        <source>partial loss of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="28"/>
+        <source>ALLCALL7.TXT is too short or broken?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="29"/>
+        <source>nQSOProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="30"/>
+        <source>input signal low rms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="31"/>
+        <source>audio gap detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="32"/>
+        <source>nfqso is out of bandwidth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Designer</name>
     <message>
         <location filename="../WFPalette.cpp" line="122"/>

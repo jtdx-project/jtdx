@@ -1,4 +1,3 @@
-// last time modified by Arvo ES1JA on 20191211
 
 // -*- Mode: C++ -*-
 #ifndef DISPLAYTEXT_H
@@ -20,7 +19,7 @@ public:
     void setConfiguration(Configuration const *);
     void setContentFont (QFont const&);
     void insertLineSpacer(QString const&);
-    int displayDecodedText(DecodedText decodedText, QString myCall, QString hisCall, QString hisGrid,
+    int displayDecodedText(DecodedText* decodedText, QString myCall, QString hisCall, QString hisGrid,
                            bool once_notified, LogBook logBook, QsoHistory& qsoHistory,
                            QsoHistory& qsoHistory2, double dialFreq = 0, const QString app_mode = "",
                            bool bypassRxfFilters = false, bool bypassAllFilters = false, int rx_frq = 0,

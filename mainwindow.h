@@ -689,7 +689,7 @@ private:
   LogBook m_logBook;
   QsoHistory m_qsoHistory;
   QsoHistory m_qsoHistory2;
-  DecodedText m_QSOText {""};
+  QString m_QSOText {""};
   unsigned m_msAudioOutputBuffered;
   unsigned m_framesAudioInputBuffered;
   unsigned m_downSampleFactor;

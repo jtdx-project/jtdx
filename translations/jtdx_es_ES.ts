@@ -212,7 +212,7 @@ Formato:
         <location filename="../Configuration.cpp" line="5070"/>
         <location filename="../Configuration.cpp" line="5101"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
@@ -224,7 +224,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5066"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Carga frecuencias de trabajo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
@@ -2135,6 +2135,39 @@ Formato:
     </message>
 </context>
 <context>
+    <name>DecodedText</name>
+    <message>
+        <location filename="../decodedtext.cpp" line="27"/>
+        <source>partial loss of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="28"/>
+        <source>ALLCALL7.TXT is too short or broken?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="29"/>
+        <source>nQSOProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="30"/>
+        <source>input signal low rms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="31"/>
+        <source>audio gap detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodedtext.cpp" line="32"/>
+        <source>nfqso is out of bandwidth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Designer</name>
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
@@ -2273,7 +2306,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Error de red</translation>
+        <translation>Error de red</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
@@ -2719,89 +2752,89 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;Aceptar</translation>
+        <translation>&amp;Aceptar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">Salvar</translation>
+        <translation>Salvar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar todo</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Si</translation>
+        <translation>&amp;Si</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Si &amp;a todos</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;No</translation>
+        <translation>&amp;No</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;o a todos</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">&amp;Repetir</translation>
+        <translation>&amp;Repetir</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Cancelar</translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Descartar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">Ayuda</translation>
+        <translation>Ayuda</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">Reiniciar</translation>
+        <translation>Reiniciar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
@@ -4968,6 +5001,77 @@ Servidor UDP %2:%3</translation>
     </message>
 </context>
 <context>
+    <name>MessageBox</name>
+    <message>
+        <source>&amp;OK</source>
+        <translation type="vanished">&amp;Aceptar</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="vanished">Salvar</translation>
+    </message>
+    <message>
+        <source>Save All</source>
+        <translation type="vanished">Salvar todo</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="vanished">Abrir</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="vanished">&amp;Si</translation>
+    </message>
+    <message>
+        <source>Yes to &amp;All</source>
+        <translation type="vanished">Si &amp;a todos</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="vanished">&amp;No</translation>
+    </message>
+    <message>
+        <source>N&amp;o to All</source>
+        <translation type="vanished">N&amp;o a todos</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation type="vanished">Abortar</translation>
+    </message>
+    <message>
+        <source>&amp;Retry</source>
+        <translation type="vanished">&amp;Repetir</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <translation type="vanished">Ignorar</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="vanished">Cerrar</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation type="vanished">&amp;Cancelar</translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="vanished">Descartar</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="vanished">Ayuda</translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="vanished">Aplicar</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="vanished">Reiniciar</translation>
+    </message>
+</context>
+<context>
     <name>Modes</name>
     <message>
         <location filename="../Modes.cpp" line="56"/>
@@ -4989,7 +5093,7 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5023"/>
         <source>OK</source>
-        <translation type="unfinished">Aceptar</translation>
+        <translation>Aceptar</translation>
     </message>
 </context>
 <context>
@@ -4997,170 +5101,173 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5025"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nombre de fichero:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elige</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salvar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Todos los archivos (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva carpeta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mira en:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos de tipo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrás</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Retroceder</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Izquierdo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Adelante</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanzar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Derecho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio principal</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir al directorio principal</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Arriba</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear nueva carpeta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear una nueva carpeta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista de la lista</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>Change to list view mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el modo de vista de lista</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista de detalles</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra lateral</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de lugares y marcadores</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; está protegido contra escritura.
+¿Quieres eliminarlo de todos modos?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres eliminar &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Could not delete directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudo eliminar el directorio.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+Directorio no encontrado.
+Verifique que se haya proporcionado el nombre de directorio correcto.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5041"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Lugares recientes</translation>
     </message>
 </context>
 <context>
@@ -5168,22 +5275,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5060"/>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha de modificación</translation>
     </message>
 </context>
 <context>
