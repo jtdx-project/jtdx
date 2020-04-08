@@ -26,12 +26,12 @@
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation>Limite inferiore</translation>
+        <translation>Limite Inferiore</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation>Limite superiore</translation>
+        <translation>Limite Superiore</translation>
     </message>
 </context>
 <context>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1187"/>
         <source>&amp;OK</source>
-        <translation>C&amp;onferma</translation>
+        <translation>App&amp;lica</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1188"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancella</translation>
+        <translation>A&amp;nnulla</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1203"/>
@@ -91,14 +91,14 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
         <location filename="../Configuration.cpp" line="1246"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Crea Directory</translation>
+        <translation>Crea Cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1412"/>
         <location filename="../Configuration.cpp" line="1437"/>
         <location filename="../Configuration.cpp" line="1489"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Cancella</translation>
+        <translation>&amp;Elimina</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1441"/>
@@ -134,7 +134,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     <message>
         <location filename="../Configuration.cpp" line="2678"/>
         <source>Serial port used for CAT control</source>
-        <translation>Porta seriale da usare il controllo CAT</translation>
+        <translation>Porta seriale da usare per il CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2685"/>
@@ -150,11 +150,11 @@ Formats:
 	IPv4-address:port
 	[IPv6-address]:port</source>
         <translation>Nome host e porta per la rete opzionale.
-Lasciare bianco per il valori di default.
+Lasciare in bianco per il valori di default.
 Formati:
-	hostname:port
-	IPv4-address:port
-	[IPv6-address]:port</translation>
+	hostname:porta
+	IPv4-address:porta
+	[IPv6-address]:porta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2698"/>
@@ -175,22 +175,22 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="2734"/>
         <source>Invalid audio input device</source>
-        <translation>Dispositivo ingresso audio errato</translation>
+        <translation>Dispositivo di ingresso audio non valido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2741"/>
         <source>Invalid audio output device</source>
-        <translation>Dispositivo di uscita audio errato</translation>
+        <translation>Dispositivo di uscita audio non valido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2747"/>
         <source>Invalid PTT method</source>
-        <translation>Metodo invalido per il PTT</translation>
+        <translation>Metodo non valido per il PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2757"/>
         <source>Invalid PTT port</source>
-        <translation>porta del PTT non valida</translation>
+        <translation>Porta non valida per il PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3264"/>
@@ -205,7 +205,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="4448"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>JTDX Selezione il font del testo decodificato</translation>
+        <translation>JTDX Selezione del font del testo decodificato</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5074"/>
@@ -223,7 +223,7 @@ Formato:
         <location filename="../Configuration.cpp" line="5103"/>
         <location filename="../Configuration.cpp" line="5157"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation>Files delle frequenze (*.qrg);;All files (*.*)</translation>
+        <translation>Files delle frequenze (*.qrg);tutti i file (*.*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
@@ -233,12 +233,12 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation>Sei sicuro di voler eliminare le tue attuali frequenze di lavoro e sostituirle con queste che stai caricado?</translation>
+        <translation>Sei sicuro di voler eliminare le tue attuali frequenze e sostituirle con queste che stai caricando?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5101"/>
         <source>Merge Working Frequencies</source>
-        <translation>Aggiungi alle frequenze di lavoro</translation>
+        <translation>Aggiungi alle frequenze esistenti</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5128"/>
@@ -265,7 +265,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5157"/>
         <source>Save Working Frequencies</source>
-        <translation>Salve le frequenze di lavoro</translation>
+        <translation>Salva le frequenze di lavoro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5167"/>
@@ -275,17 +275,17 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5169"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation>Sei sicuro di voler salvare solo le frequenze di lavoro attualmente selezionate? Fai clic su No per salvare tutto.</translation>
+        <translation>Sei sicuro di voler salvare solo le frequenze selezionate? Fai clic su No per salvare tutto.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5196"/>
         <source>Reset Working Frequencies</source>
-        <translation>Resetta le frequenze di lavoro</translation>
+        <translation>Resetta le frequenze attuali</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5198"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>Sei sicuro di voler cancellare le attuali frequenze di lavoro e sostituirle con quelle predefinite?</translation>
+        <translation>Sei sicuro di voler cancellare le attuali frequenze e sostituirle con quelle predefinite?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5258"/>
@@ -295,7 +295,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5274"/>
         <source>Failed to open connection to rig</source>
-        <translation>Errore nella connessione con il RTX</translation>
+        <translation>Impossibile aprire la connessione con il RTX</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5486"/>
@@ -418,12 +418,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="55"/>
         <source>ITU HQ</source>
-        <translation></translation>
+        <translation>HQ ITU</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>United Nations HQ</source>
-        <translation>Nazioni Unite HQ</translation>
+        <translation>HQ Nazioni Unite</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="57"/>
@@ -528,12 +528,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="77"/>
         <source>Barbados</source>
-        <translation></translation>
+        <translation>Is Barbados</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="78"/>
         <source>Maldives</source>
-        <translation></translation>
+        <translation>Is. Maldives</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="79"/>
@@ -688,7 +688,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="109"/>
         <source>Bahamas</source>
-        <translation></translation>
+        <translation>Is. Bahamas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="110"/>
@@ -813,7 +813,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation></translation>
+        <translation>Is St. Paul</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
@@ -853,22 +853,22 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation></translation>
+        <translation>Is. Nord Cook</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation></translation>
+        <translation>Is. Sud Cook</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
         <source>Niue</source>
-        <translation></translation>
+        <translation>Is. di Niue</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="135"/>
         <source>Bosnia-Herzegovina</source>
-        <translation></translation>
+        <translation>Bosnia ed Erzegovina</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="136"/>
@@ -923,17 +923,17 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="148"/>
         <source>Kyrgyzstan</source>
-        <translation></translation>
+        <translation>Kirghizistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="149"/>
         <source>Tajikistan</source>
-        <translation></translation>
+        <translation>Tagikistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="150"/>
         <source>Turkmenistan</source>
-        <translation></translation>
+        <translation>Turkmenistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="151"/>
@@ -948,7 +948,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="153"/>
         <source>Mayotte</source>
-        <translation></translation>
+        <translation>Is. di Mayotte</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
@@ -963,7 +963,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>Chesterfield Is.</source>
-        <translation></translation>
+        <translation>Is. Chesterfield</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
@@ -978,22 +978,22 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation></translation>
+        <translation>Is. Australi</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation></translation>
+        <translation>Is. di Clipperton</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Marquesas Is.</source>
-        <translation></translation>
+        <translation>Is. Marchesi</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation></translation>
+        <translation>St. Pierre &amp; Miquelon</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
@@ -1003,7 +1003,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation></translation>
+        <translation>Is. di Glorioso</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
@@ -1013,22 +1013,22 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation></translation>
+        <translation>Is. Tromelin</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Crozet Is.</source>
-        <translation></translation>
+        <translation>Is. di Croze</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation></translation>
+        <translation>Is. Kerguelen</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation></translation>
+        <translation>Is. Saint-Paul e N. Amsterdam</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
@@ -1083,7 +1083,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
         <source>Temotu Province</source>
-        <translation></translation>
+        <translation>Provincia di Temotu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="183"/>
@@ -1183,12 +1183,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="203"/>
         <source>Djibouti</source>
-        <translation></translation>
+        <translation>Gibuti</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="204"/>
         <source>Grenada</source>
-        <translation></translation>
+        <translation>Is. di Grenada</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="205"/>
@@ -1238,7 +1238,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Bear Is.</source>
-        <translation></translation>
+        <translation>Is. Bear</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="215"/>
@@ -1263,7 +1263,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation>Is. Mariana</translation>
+        <translation>Is. Marianas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
@@ -1488,12 +1488,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="266"/>
         <source>Western Sahara</source>
-        <translation></translation>
+        <translation>Sahara Occidentale</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="267"/>
         <source>Bangladesh</source>
-        <translation></translation>
+        <translation>Bangladesh</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="268"/>
@@ -1508,7 +1508,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation></translation>
+        <translation>São Tomé e Príncipe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1613,7 +1613,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="291"/>
         <source>Costa Rica</source>
-        <translation></translation>
+        <translation>Costarica</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="292"/>
@@ -1668,7 +1668,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>EU Russia</source>
-        <translation>Russia Eu</translation>
+        <translation>Russia EU</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="303"/>
@@ -1918,7 +1918,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="354"/>
         <source>Latvia</source>
-        <translation></translation>
+        <translation>Lettonia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="355"/>
@@ -2175,7 +2175,7 @@ Formato:
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancella</translation>
+        <translation>Es&amp;ci</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
@@ -2190,7 +2190,7 @@ Formato:
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Cancella</translation>
+        <translation>&amp;Elimina</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
@@ -2224,7 +2224,7 @@ Formato:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Ora grigia:</translation>
+        <translation>Tempo grigio:</translation>
     </message>
 </context>
 <context>
@@ -2262,7 +2262,7 @@ Formato:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation>Il file di livello superiore deve essere un array JSON</translation>
+        <translation>Il file di livello superiore deve essere un vettore JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
@@ -2279,7 +2279,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation>Le voci di contenuto devono essere una matrice JSON</translation>
+        <translation>Le voci di contenuto devono essere un vettore JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
@@ -2304,7 +2304,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Errore di Rete</translation>
+        <translation>Errore di Rete</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
@@ -2317,7 +2317,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="46"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation>La modalità emulazione split richiede che l&apos;RTX sia in modalità simplex</translation>
+        <translation>Per il modo emulazione split l&apos;RTX deve essere in modo simplex</translation>
     </message>
 </context>
 <context>
@@ -2325,7 +2325,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="221"/>
         <source>Add Frequency</source>
-        <translation>Ag.gi frequenza</translation>
+        <translation>Ag.gi Frequenza</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
@@ -2553,7 +2553,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation>NULL RIG handle o parametro puntatore non valido</translation>
+        <translation>NULL RIG manovra o parametro puntatore non valido</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
@@ -2583,7 +2583,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="393"/>
         <source>Unsupported CAT type</source>
-        <translation>tipo di CAT non supportato</translation>
+        <translation>Tipo di CAT non supportato</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="444"/>
@@ -2593,17 +2593,17 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="454"/>
         <source>opening connection to rig</source>
-        <translation>apertura del collegamento all&apos;RTX</translation>
+        <translation>sto aprendo il collegamento all&apos;RTX</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="503"/>
         <source>getting current frequency</source>
-        <translation>sto ottenendo la frequenza</translation>
+        <translation>sto ricevendo la frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="507"/>
         <source>getting current mode</source>
-        <translation>sto ottenendo il modo</translation>
+        <translation>sto ricevendo il modo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="536"/>
@@ -2615,22 +2615,22 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="544"/>
         <location filename="../HamlibTransceiver.cpp" line="1021"/>
         <source>getting other VFO frequency</source>
-        <translation>sto ottenendo la frequenza dell&apos;altro VFO</translation>
+        <translation>sto ricevendo la frequenza dell&apos;altro VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="548"/>
         <source>getting other VFO mode</source>
-        <translation>sto ottenendo la il modo dell&apos;altro VFO</translation>
+        <translation>sto ricevendo la il modo dell&apos;altro VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="561"/>
         <source>setting current VFO</source>
-        <translation>settaggio del VFO icorrente</translation>
+        <translation>sto settando l&apos;attuale VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="570"/>
         <source>getting frequency</source>
-        <translation>sto ottenendo la frequenza</translation>
+        <translation>sto ricevendo la frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="574"/>
@@ -2641,7 +2641,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="591"/>
         <location filename="../HamlibTransceiver.cpp" line="956"/>
         <source>getting current VFO</source>
-        <translation>sto ottenendo il VFO corrente</translation>
+        <translation>sto ricevendo il VFO corrente</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="635"/>
@@ -2649,7 +2649,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="657"/>
         <location filename="../HamlibTransceiver.cpp" line="999"/>
         <source>getting current VFO frequency</source>
-        <translation>sto ottenendo la frequenza del VFO</translation>
+        <translation>sto ricevendo la frequenza del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="641"/>
@@ -2659,7 +2659,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="760"/>
         <location filename="../HamlibTransceiver.cpp" line="821"/>
         <source>setting frequency</source>
-        <translation>settaggio della frequenza</translation>
+        <translation>sto settando la frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="750"/>
@@ -2667,7 +2667,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="900"/>
         <location filename="../HamlibTransceiver.cpp" line="913"/>
         <source>getting current VFO mode</source>
-        <translation>sto ottenendo il modo del VFO</translation>
+        <translation>sto ricevendo il modo del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="756"/>
@@ -2676,7 +2676,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="906"/>
         <location filename="../HamlibTransceiver.cpp" line="919"/>
         <source>setting current VFO mode</source>
-        <translation>settaggio del  modo del VFO</translation>
+        <translation>sto settado il  modo del VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="808"/>
@@ -2693,37 +2693,37 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="847"/>
         <source>setting split TX frequency and mode</source>
-        <translation>settaggio dello split TX per modo e frequenza</translation>
+        <translation>sto settando lo split TX per modo e frequenza</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="852"/>
         <source>setting split TX frequency</source>
-        <translation>settaggio della frequenza di split</translation>
+        <translation>sto settando della frequenza di split</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="924"/>
         <source>getting split TX VFO mode</source>
-        <translation>sto ottendendo la frequenza split TX VFO</translation>
+        <translation>sto ricevendo la frequenza split TX VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="931"/>
         <source>setting split TX VFO mode</source>
-        <translation>settaggio del modo split TX VFO</translation>
+        <translation>sto settando il modo split del VFO TX</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1115"/>
         <source>getting PTT state</source>
-        <translation>sto ottenendo lo stato del PTT</translation>
+        <translation>sto ricevendo lo stato del PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1148"/>
         <source>setting PTT on</source>
-        <translation>impostazione del PTT in on</translation>
+        <translation>impostazione acceso del PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1156"/>
         <source>setting PTT off</source>
-        <translation>impostazione del PTT in off</translation>
+        <translation>impostazione spento del PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1168"/>
@@ -2733,7 +2733,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1178"/>
         <source>getting a configuration item</source>
-        <translation>sto ottenendo la configurazione dell&apos;elemento</translation>
+        <translation>sto ricevendo la configurazione dell&apos;elemento</translation>
     </message>
 </context>
 <context>
@@ -2750,12 +2750,12 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">C&amp;onferma</translation>
+        <translation>C&amp;onferma</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">Salva</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="35"/>
@@ -2765,13 +2765,13 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">Apri</translation>
+        <translation>Apri</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Si</translation>
+        <translation>&amp;Si</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
@@ -2782,7 +2782,7 @@ Errore:%2 -%3</translation>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;No</translation>
+        <translation>&amp;No</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
@@ -2797,7 +2797,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">Indiet&amp;ro</translation>
+        <translation>Indiet&amp;ro</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
@@ -2812,7 +2812,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Cancella</translation>
+        <translation>&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
@@ -2822,7 +2822,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">Aiuto</translation>
+        <translation>Aiuto</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
@@ -2832,7 +2832,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">Resetta</translation>
+        <translation>Resetta</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
@@ -2861,7 +2861,7 @@ Errore:%2 -%3</translation>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation>gg/MM/aaa OO:mm:ss</translation>
+        <translation>gg/MM/aaaa OO:mm:ss</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
@@ -2881,12 +2881,12 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>RPT inviato</translation>
+        <translation>Rpt Inviato</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation>RPT Ricev</translation>
+        <translation>Rpt Ricev</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -2901,7 +2901,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation>Potenza TX</translation>
+        <translation>Potenza Tx</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
@@ -2958,7 +2958,7 @@ Errore:%2 -%3</translation>
         <location filename="../mainwindow.cpp" line="5983"/>
         <location filename="../mainwindow.cpp" line="5994"/>
         <source>Band Activity</source>
-        <translation>Attività di Banda</translation>
+        <translation>Attività in Banda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -3093,12 +3093,12 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
         <source>TX minute</source>
-        <translation>Cambia il periodo di TX</translation>
+        <translation>Periodo di TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1407"/>
         <source>Audio Rx frequency</source>
-        <translation>frequenza RX audio</translation>
+        <translation>Frequenza audio di Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1413"/>
@@ -3115,7 +3115,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1447"/>
         <source>Toggle Tx mode</source>
-        <translation>Attiva/Disattiva modalità Tx</translation>
+        <translation>Alterna modo Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1450"/>
@@ -3157,7 +3157,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;RTX può essere impostato tramite Hamlib, Hamlib supporta il recupero dei dati dello Smiter per alcuni ricetrasmettitori.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;RTX può essere impostato tramite Hamlib che per alcuni RTX  supporta la lettura dei dati dello Smiter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
@@ -3230,7 +3230,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; L&apos;RTX deve essere impostato tramite Hamlib, Hamlib supporta l&apos;ottenimento dei dati di potenza in uscita per alcuni RTX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; L&apos;RTX deve essere impostato tramite Hamlib, Hamlib supporta il ricevimento dei dati di potenza in uscita per alcuni RTX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1949"/>
@@ -3411,7 +3411,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2610"/>
         <source>Stop transmitting immediately</source>
-        <translation>Ferma IMMEDIATAMENTE la trasmissione</translation>
+        <translation>Ferma SUBITO la trasmissione</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
@@ -3570,7 +3570,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3470"/>
         <location filename="../mainwindow.ui" line="3540"/>
         <source>Switch to this Tx message NOW</source>
-        <translation>Passa a questo messaggio Tx IMMEDIATAMENTE</translation>
+        <translation>Passa SUBITO a questo messaggio Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3199"/>
@@ -4002,7 +4002,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4646"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Cancella tuttil *.wav &amp;&amp; *.c2 files in nella Cartella Salva</translation>
+        <translation>Elimina tutti i files *.wav &amp;&amp; *.c2 nella Cartella Salva</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4657"/>
@@ -4035,7 +4035,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4759"/>
         <source>Keyboard shortcuts</source>
-        <translation>Scorciatoie della tastiera</translation>
+        <translation>Scorciatoie dalla tastiera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4762"/>
@@ -4087,7 +4087,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4827"/>
         <source>Erase ALL.TXT</source>
-        <translation>Calcella ALL.TXT</translation>
+        <translation>Cancella ALL.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4832"/>
@@ -5022,7 +5022,7 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5025"/>
         <source>Directory:</source>
-        <translation>Directory:</translation>
+        <translation>Cartella:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
@@ -5032,7 +5032,7 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>&amp;Open</source>
-        <translation>&amp;Apri:</translation>
+        <translation>&amp;Apri</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
@@ -5067,7 +5067,7 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Cancella</translation>
+        <translation>&amp;Elimina</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
@@ -5127,12 +5127,12 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Parent Directory</source>
-        <translation>Directory Principale</translation>
+        <translation>Cartella Principale</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Go to the parent directory</source>
-        <translation>Vai alla directory principale</translation>
+        <translation>Vai alla cartella principale</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
@@ -5183,27 +5183,27 @@ server DP %2:%3</translation>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation>&apos;% 1&apos; è protetto da scrittura.
-Vuoi cancellarlo comunque?</translation>
+        <translation>&apos;%1&apos; è protetto da scrittura.
+Vuoi eliminarlo comunque?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5041"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation>Sei sicuro di voler cancellare &apos;%1&apos;?</translation>
+        <translation>Sei sicuro di voler eliminare &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Could not delete directory.</source>
-        <translation>Impossibile cancellare la directory</translation>
+        <translation>Impossibile eliminare la cartella.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation>1%
-Directory non trovata.
-Verificare che il nome della directory sia corretto.</translation>
+        <translation>%1
+Cartella non trovata.
+Verificare che il nome della cartella sia corretto.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
@@ -5695,7 +5695,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Inserisci la definizione per una nuova tavolozza di colori. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Cambia o crea le definizioni per la tavolozza di colori.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="380"/>
@@ -5991,12 +5991,12 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="466"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>Moni&amp;toraggio all&apos;avvio di JTDX</translation>
+        <translation>Non mon&amp;itorare all&apos;avvio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="492"/>
         <source>Tx watchdog timer</source>
-        <translation>Periodo vigilanza del Tx: </translation>
+        <translation>Periodo vigilanza del Tx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="502"/>
@@ -6022,7 +6022,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="542"/>
         <source>Tune timer</source>
-        <translation>Tempo dell&apos;accordo: </translation>
+        <translation>Tempo dell&apos;accordo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="549"/>
@@ -6067,7 +6067,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="627"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>Inter&amp;vallo periodo ID CW: </translation>
+        <translation>Inter&amp;vallo periodo ID CW:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="643"/>
@@ -6124,7 +6124,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="771"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Richiedi dati di potenza in uscita dal ricetrasmettitore: il CAT deve essere impostato tramite Hamlib, Hamlib supporta l&apos;ottenimento dei dati di potenza in uscita per alcuni ricetrasmettitori. &lt;/p&gt;&lt;/body&gt;&lt;/ html &gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Richiedi dati di potenza in uscita dal ricetrasmettitore: il CAT deve essere impostato tramite Hamlib, Hamlib supporta il ricevimento dei dati di potenza in uscita per alcuni ricetrasmettitori. &lt;/p&gt;&lt;/body&gt;&lt;/ html &gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="774"/>
@@ -6735,7 +6735,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2219"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Cancella</translation>
+        <translation>&amp;Elimina</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2229"/>
@@ -7468,7 +7468,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
         <location filename="../Configuration.ui" line="4752"/>
         <location filename="../Configuration.ui" line="4771"/>
         <source>K1ABC</source>
-        <translation></translation>
+        <translation>I0ABC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3747"/>
@@ -8271,9 +8271,9 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
-        <translation>Annulla o applica le modifiche alla configurazione incluso
-reimpostare l&apos;interfaccia radio e applicarne una
-modifiche della scheda audio</translation>
+        <translation>Applica o annulla le modifiche alla configurazione
+compreso la reimpostazione dell&apos;interfaccia radio
+e le modifiche alla scheda audio</translation>
     </message>
 </context>
 <context>
