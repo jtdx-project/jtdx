@@ -5031,6 +5031,10 @@ void Configuration::impl::load_frequencies ()
   QFileDialog::tr("All files (*)");
   QFileDialog::tr("New Folder");
   QFileDialog::tr("Delete");
+  QFileDialog::tr("&Delete");
+  QFileDialog::tr("&Rename");
+  QFileDialog::tr("Show &hidden files");
+  QFileDialog::tr("&New Folder");
   QFileDialog::tr("Look in:");
   QFileDialog::tr("Files of type:");
   QFileDialog::tr("'%1' is write protected.\nDo you want to delete it anyway?");
