@@ -2137,32 +2137,32 @@ Formato:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>parziale perdita di dati</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALLCALL S7.TEXT è troppo corto o corrotto?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>nQSOProgressivo</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>basso rsm nel segnale d&apos;ingresso</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>rilevato gap audio</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>nfqso è fuori banda</translation>
     </message>
 </context>
 <context>
@@ -2309,7 +2309,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Autenticazione richiesta</translation>
     </message>
 </context>
 <context>
@@ -2760,7 +2760,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva tutto</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="36"/>
@@ -2776,7 +2776,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Si per &amp;tutti</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
@@ -2787,12 +2787,12 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;o per tutti</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Interrompi</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
@@ -2802,12 +2802,12 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignora</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
@@ -2817,7 +2817,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarta</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
@@ -2827,7 +2827,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Applica</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
@@ -2837,7 +2837,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripristina predefiniti</translation>
     </message>
 </context>
 <context>
@@ -5072,17 +5072,17 @@ server DP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rinomina</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Show &amp;hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Visuali&amp;zza files nascosti</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nuova cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>

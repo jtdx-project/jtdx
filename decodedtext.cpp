@@ -60,7 +60,7 @@ DecodedText::DecodedText (QString const& the_string, QObject *parent)
 QString DecodedText::string()
 {
   if (isDebug()) {
-    return string_.left(1 + column_snr + padding_) + debug_translation_.value(string_.mid(1 + column_snr + padding_,48 - column_snr - padding_).trimmed(),string_.mid(1 + column_snr + padding_,48 -column_snr - padding_).trimmed());
+    return string_.left(1 + column_snr + padding_) + debug_translation_.value(string_.mid(1 + column_snr + padding_,46 - column_snr).trimmed(),string_.mid(1 + column_snr + padding_,46 -column_snr).trimmed());
   } 
   else
     return string_; 
