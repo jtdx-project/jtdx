@@ -3153,13 +3153,14 @@ void MainWindow::process_Auto()
   QString hisCall = m_hisCall;
   QString rpt = m_rpt;
   QString grid = m_hisGrid;
+  QString mode = "";
   unsigned time = 0;
   int rx = ui->RxFreqSpinBox->value ();
   int tx = ui->TxFreqSpinBox->value ();
   QStringList StrStatus = {"NONE","RFIN","RCQ","SCQ","RCALL","SCALL","RREPORT","SREPORT","RRR","SRR","RRR73","SRR73","R73","S73","FIN"};
   if (!hisCall.isEmpty ()) {
     if (m_houndMode) count = -1; //marker for changing status to FIN when status is RRR73
-    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio);
+    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio,mode);
     if(m_config.write_decoded_debug()) {
       QString StrDirection = direction==1 ? " TX REPORT SEQUENCE;" : " TX R+REPORT SEQUENCE;";
       if(m_status == QsoHistory::FIN) StrDirection = " auto sequence is finished;";
@@ -3242,7 +3243,7 @@ void MainWindow::process_Auto()
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_callWorkedB4) time |= 64;
     if (m_rprtPriority) time |= 16;
     if (m_maxDistance) time |= 32;
-    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio);
+    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio,mode);
     if(m_config.write_decoded_debug()) {
       QString StrDirection = direction==1 ? " TX REPORT SEQUENCE;" : " TX R+REPORT SEQUENCE;";
       if(m_status == QsoHistory::FIN) StrDirection = " auto sequence is finished;";
@@ -3250,24 +3251,33 @@ void MainWindow::process_Auto()
       StrDirection = QString::number(direction) + StrDirection;
       QString StrPriority = "";
       if (!hisCall.isEmpty ()) {
-        if (prio > 19) StrPriority = " New DXCC ";
+        if (prio > 27) StrPriority = " New CQZ ";
+        else if (prio > 23) StrPriority = " New ITUZ ";
+        else if (prio > 19) StrPriority = " New DXCC ";
         else if (prio == 19 ||  prio == 4) StrPriority = " Wanted Call ";
         else if (prio == 18 ||  prio == 3) StrPriority = " Wanted Prefix ";
         else if (prio == 17 ||  prio == 2) StrPriority = " Wanted Country ";
         if (m_status > QsoHistory::RREPORT && direction > 0) StrPriority += " Resume interrupted QSO ";
       }
-      writeToALLTXT("hisCall:" + hisCall + StrPriority + " time:" + QString::number(time) +  " autoselect direction:" + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
+      writeToALLTXT("hisCall:" + hisCall + "mode:" + mode + StrPriority + " time:" + QString::number(time) +  " autoselect direction:" + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
     }
     if (!hisCall.isEmpty ()) {
       if (m_callToClipboard) clipboard->setText(hisCall);
       ui->dxCallEntry->setText(hisCall);
+      if(m_mode=="JT9+JT65" && m_modeTx != mode) {
+      m_modeTx = mode;
+      if (m_modeTx == "JT9") ui->pbTxMode->setText("Tx JT9  @");
+      else ui->pbTxMode->setText("Tx JT65  #");
+      m_wideGraph->setModeTx(m_modeTx);
+      ui->TxFreqSpinBox->setValue (rx);
+      }
       if (!rpt.isEmpty () && rpt == m_rpt) m_rpt = "-60";
     } else  if (m_transmittedQSOProgress != CALLING){
         on_txb6_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx6->text());
     }
   }
-//  printf("process_Auto: %s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),m_status,direction,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
+//  printf("process_Auto: %s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),mode.toStdString().c_str(),m_status,direction,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
 
   if (rx > 0 && rx != ui->RxFreqSpinBox->value ()) ui->RxFreqSpinBox->setValue (rx);
   //if (tx > 0 && tx != ui->TxFreqSpinBox->value ()) ui->TxFreqSpinBox->setValue (tx);

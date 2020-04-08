@@ -2769,7 +2769,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="37"/>
-        <location filename="../mainwindow.cpp" line="3732"/>
+        <location filename="../mainwindow.cpp" line="3742"/>
         <source>&amp;Yes</source>
         <translation>確定&amp;Y</translation>
     </message>
@@ -2780,7 +2780,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
-        <location filename="../mainwindow.cpp" line="3735"/>
+        <location filename="../mainwindow.cpp" line="3745"/>
         <source>&amp;No</source>
         <translation>否&amp;N</translation>
     </message>
@@ -2951,12 +2951,12 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3414"/>
-        <location filename="../mainwindow.cpp" line="3421"/>
-        <location filename="../mainwindow.cpp" line="5938"/>
-        <location filename="../mainwindow.cpp" line="5943"/>
-        <location filename="../mainwindow.cpp" line="5983"/>
-        <location filename="../mainwindow.cpp" line="5994"/>
+        <location filename="../mainwindow.cpp" line="3424"/>
+        <location filename="../mainwindow.cpp" line="3431"/>
+        <location filename="../mainwindow.cpp" line="5948"/>
+        <location filename="../mainwindow.cpp" line="5953"/>
+        <location filename="../mainwindow.cpp" line="5993"/>
+        <location filename="../mainwindow.cpp" line="6004"/>
         <source>Band Activity</source>
         <translation>波段活動</translation>
     </message>
@@ -3074,9 +3074,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4567"/>
-        <location filename="../mainwindow.cpp" line="5232"/>
-        <location filename="../mainwindow.cpp" line="5647"/>
+        <location filename="../mainwindow.cpp" line="4577"/>
+        <location filename="../mainwindow.cpp" line="5242"/>
+        <location filename="../mainwindow.cpp" line="5657"/>
         <source>DX Call</source>
         <translation>DX 呼號</translation>
     </message>
@@ -3318,7 +3318,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5954"/>
         <source>Rx Frequency</source>
         <translation>接收信息</translation>
     </message>
@@ -3329,7 +3329,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
-        <location filename="../mainwindow.cpp" line="6525"/>
+        <location filename="../mainwindow.cpp" line="6535"/>
         <source>&amp;Tune</source>
         <translation>調諧&amp;T</translation>
     </message>
@@ -4580,11 +4580,11 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="894"/>
         <location filename="../mainwindow.cpp" line="895"/>
-        <location filename="../mainwindow.cpp" line="3408"/>
-        <location filename="../mainwindow.cpp" line="5934"/>
-        <location filename="../mainwindow.cpp" line="5935"/>
-        <location filename="../mainwindow.cpp" line="5990"/>
-        <location filename="../mainwindow.cpp" line="5991"/>
+        <location filename="../mainwindow.cpp" line="3418"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5945"/>
+        <location filename="../mainwindow.cpp" line="6000"/>
+        <location filename="../mainwindow.cpp" line="6001"/>
         <source>Freq   Message</source>
         <translation>頻率   信息</translation>
     </message>
@@ -4616,25 +4616,25 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1678"/>
         <location filename="../mainwindow.cpp" line="2355"/>
-        <location filename="../mainwindow.cpp" line="3443"/>
-        <location filename="../mainwindow.cpp" line="4046"/>
-        <location filename="../mainwindow.cpp" line="4169"/>
-        <location filename="../mainwindow.cpp" line="4401"/>
-        <location filename="../mainwindow.cpp" line="6780"/>
-        <location filename="../mainwindow.cpp" line="6976"/>
+        <location filename="../mainwindow.cpp" line="3453"/>
+        <location filename="../mainwindow.cpp" line="4056"/>
+        <location filename="../mainwindow.cpp" line="4179"/>
+        <location filename="../mainwindow.cpp" line="4411"/>
+        <location filename="../mainwindow.cpp" line="6790"/>
+        <location filename="../mainwindow.cpp" line="6986"/>
         <source>File Open Error</source>
         <translation>檔案開啟出錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1679"/>
         <location filename="../mainwindow.cpp" line="2356"/>
-        <location filename="../mainwindow.cpp" line="3444"/>
-        <location filename="../mainwindow.cpp" line="4047"/>
-        <location filename="../mainwindow.cpp" line="4170"/>
-        <location filename="../mainwindow.cpp" line="4402"/>
-        <location filename="../mainwindow.cpp" line="6781"/>
-        <location filename="../mainwindow.cpp" line="6977"/>
-        <location filename="../mainwindow.cpp" line="7318"/>
+        <location filename="../mainwindow.cpp" line="3454"/>
+        <location filename="../mainwindow.cpp" line="4057"/>
+        <location filename="../mainwindow.cpp" line="4180"/>
+        <location filename="../mainwindow.cpp" line="4412"/>
+        <location filename="../mainwindow.cpp" line="6791"/>
+        <location filename="../mainwindow.cpp" line="6987"/>
+        <location filename="../mainwindow.cpp" line="7328"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>無法開啟 &quot;%1&quot; 用於附加: %2</translation>
     </message>
@@ -4783,209 +4783,209 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>滑鼠特殊組合</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="3418"/>
         <source>Avg=</source>
         <translation>平均時差=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3413"/>
-        <location filename="../mainwindow.cpp" line="3420"/>
+        <location filename="../mainwindow.cpp" line="3423"/>
+        <location filename="../mainwindow.cpp" line="3430"/>
         <source>check time</source>
         <translation>檢查時間</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3720"/>
-        <location filename="../mainwindow.cpp" line="3726"/>
+        <location filename="../mainwindow.cpp" line="3730"/>
+        <location filename="../mainwindow.cpp" line="3736"/>
         <source>Confirm change Language</source>
         <translation>確認更改語言</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3722"/>
-        <location filename="../mainwindow.cpp" line="3729"/>
+        <location filename="../mainwindow.cpp" line="3732"/>
+        <location filename="../mainwindow.cpp" line="3739"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>是否一定要將用戶語言介面更改為繁體中文, JTDX 將重新啟動?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3896"/>
+        <location filename="../mainwindow.cpp" line="3906"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>請選擇另一個發射頻率. JTDX不會故意在WSPR子波段中發射另一種模式.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3901"/>
-        <location filename="../mainwindow.cpp" line="3904"/>
+        <location filename="../mainwindow.cpp" line="3911"/>
+        <location filename="../mainwindow.cpp" line="3914"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR保護波段</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4022"/>
+        <location filename="../mainwindow.cpp" line="4032"/>
         <source>TUNE</source>
         <translation>調諧</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4023"/>
+        <location filename="../mainwindow.cpp" line="4033"/>
         <source>LastTx: </source>
         <translation>最後發射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4237"/>
+        <location filename="../mainwindow.cpp" line="4247"/>
         <source>Tx: TUNE</source>
         <translation>發射: 調諧</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4238"/>
+        <location filename="../mainwindow.cpp" line="4248"/>
         <source>Tx: </source>
         <translation>發射: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4243"/>
+        <location filename="../mainwindow.cpp" line="4253"/>
         <source>Receiving </source>
         <translation>接收 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4296"/>
+        <location filename="../mainwindow.cpp" line="4306"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>功率&lt;br&gt;%1 瓦</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4452"/>
+        <location filename="../mainwindow.cpp" line="4462"/>
         <source>Last Tx: </source>
         <translation>最後發射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5333"/>
-        <location filename="../mainwindow.cpp" line="5345"/>
-        <location filename="../mainwindow.cpp" line="5358"/>
-        <location filename="../mainwindow.cpp" line="5384"/>
+        <location filename="../mainwindow.cpp" line="5343"/>
+        <location filename="../mainwindow.cpp" line="5355"/>
+        <location filename="../mainwindow.cpp" line="5368"/>
+        <location filename="../mainwindow.cpp" line="5394"/>
         <source>Add to CALL3.TXT</source>
         <translation>添加到 CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5334"/>
+        <location filename="../mainwindow.cpp" line="5344"/>
         <source>Please enter a valid grid locator</source>
         <translation>請輸入有效的網格定位</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5346"/>
+        <location filename="../mainwindow.cpp" line="5356"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>無法開啟 &quot;%1&quot; 用於讀/寫: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5359"/>
+        <location filename="../mainwindow.cpp" line="5369"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>無法開啟 &quot;%1&quot; 用於寫入: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5382"/>
+        <location filename="../mainwindow.cpp" line="5392"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1 已經在 CALL3.TXT, 你想替換它嗎?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5745"/>
+        <location filename="../mainwindow.cpp" line="5755"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>將通聯 ADIF 數據發送到輔助 UDP 服務器時出錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5745"/>
+        <location filename="../mainwindow.cpp" line="5755"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>寫入返回 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5901"/>
         <source>Tx WSPR</source>
         <translation>發射 WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5981"/>
+        <location filename="../mainwindow.cpp" line="5991"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6080"/>
-        <location filename="../mainwindow.cpp" line="6092"/>
+        <location filename="../mainwindow.cpp" line="6090"/>
+        <location filename="../mainwindow.cpp" line="6102"/>
         <source>Confirm Erase</source>
         <translation>確認擦除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6081"/>
+        <location filename="../mainwindow.cpp" line="6091"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>是否確實要擦除 ALL.TXT ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6093"/>
+        <location filename="../mainwindow.cpp" line="6103"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>是否確實要擦除 通聯日誌?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
+        <location filename="../mainwindow.cpp" line="6708"/>
         <source>Lockd Tx=Rx</source>
         <translation>鎖定Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6699"/>
+        <location filename="../mainwindow.cpp" line="6709"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>允許 發射/接收 音頻頻率異頻操作的按鈕</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6702"/>
+        <location filename="../mainwindow.cpp" line="6712"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx異頻</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
+        <location filename="../mainwindow.cpp" line="6713"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>按下按鈕將發射頻率鎖定到接收頻率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6815"/>
+        <location filename="../mainwindow.cpp" line="6825"/>
         <source>Rig Control Error</source>
         <translation>無線電設備控制出錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6889"/>
+        <location filename="../mainwindow.cpp" line="6899"/>
         <source>Tune digital gain</source>
         <translation>調諧數字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6890"/>
+        <location filename="../mainwindow.cpp" line="6900"/>
         <source>Transmit digital gain</source>
         <translation>發射數字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6909"/>
+        <location filename="../mainwindow.cpp" line="6919"/>
         <source>Prefixes</source>
         <translation>前綴</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6958"/>
-        <location filename="../mainwindow.cpp" line="6959"/>
+        <location filename="../mainwindow.cpp" line="6968"/>
+        <location filename="../mainwindow.cpp" line="6969"/>
         <source>Logd </source>
         <translation>記錄 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7182"/>
+        <location filename="../mainwindow.cpp" line="7192"/>
         <source>Network Error</source>
         <translation>網絡出錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7183"/>
+        <location filename="../mainwindow.cpp" line="7193"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>出錯誤: %1
 UDP 服務器 %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7317"/>
+        <location filename="../mainwindow.cpp" line="7327"/>
         <source>File Error</source>
         <translation>檔案出錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7528"/>
+        <location filename="../mainwindow.cpp" line="7538"/>
         <source>Tx watchdog expired</source>
         <translation>發射監管計時器已過期</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7542"/>
+        <location filename="../mainwindow.cpp" line="7552"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>

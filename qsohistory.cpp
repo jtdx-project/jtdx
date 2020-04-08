@@ -20,6 +20,7 @@ void QsoHistory::init()
     _CQ.time = 0;
     _CQ.rx = 0;
     _CQ.distance = 0;
+    _CQ.mode = "";
 }
 
 QsoHistory::latlng QsoHistory::fromQth(QString const& qth) {
@@ -96,7 +97,7 @@ int QsoHistory::reset_count(QString const& callsign,Status status)
   return ret;
 }
 
-int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio)
+int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio, QString &mode)
 {
     if (_working)
     {
@@ -112,6 +113,7 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
           if (t.status > NONE || t.rx > 0) {
             status = t.status;
             prio = t.priority;
+            mode = t.mode;
             if (hound == -1) {
               if(t.stx_c == SCALL && status == RREPORT) count = 1;
               else count = t.count + 1;
@@ -171,6 +173,7 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
                     dist = tt.distance;
 //                    if (tt.grid.length() >3) grid = tt.grid;
                     grid = tt.grid;
+                    mode = tt.mode;
                     if (!tt.s_rep.isEmpty ()) {
                       if (tt.status == RREPORT && (algo & 16)) Rrep = tt.s_rep;
                       rep = tt.s_rep;
@@ -214,6 +217,7 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
                     dist = tt.distance;
 //                    if (tt.grid.length() >3) grid = tt.grid;
                     grid = tt.grid;
+                    mode = tt.mode;
                     if (!tt.s_rep.isEmpty ()) rep = tt.s_rep;
                     if (tt.rx >0) rx = tt.rx;
                     if (tt.tx >0) tx = tt.tx;
@@ -300,7 +304,7 @@ void QsoHistory::rx(QString const& callsign,int freq)
     }
 }
 
-void QsoHistory::message(QString const& callsign, Status status, int priority, QString const& param, QString const& tyyp, QString const& continent, QString const& mpx, unsigned time, QString const& rep, int freq)
+void QsoHistory::message(QString const& callsign, Status status, int priority, QString const& param, QString const& tyyp, QString const& continent, QString const& mpx, unsigned time, QString const& rep, int freq, QString const& mode)
 {
     if (_working)
     {
@@ -319,6 +323,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
           _CQ.priority = priority;
           _CQ.count += 1;
           _CQ.direction = 1;
+          _CQ.mode = mode;
         }
       else
         {
@@ -344,6 +349,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
           t.r_rep = "";
           t.s_rep = "";
           t.distance = 0;
+          t.mode = "";
           t = _data.value(Radio::base_callsign (callsign),t);
           if (time >= t.time || time == 0 || status >= t.status || status == RREPORT) {
             if (status > NONE) {
@@ -366,6 +372,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
               {
                 t.call=callsign;
               }
+            t.mode = mode;
             switch (status)
             {
               case NONE:

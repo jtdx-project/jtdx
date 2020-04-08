@@ -200,6 +200,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     int priority = 0;
     QString param;
     QString report;
+    QString checkMode;
     unsigned c_time = 0;
     if (!decodedText->isDebug() && app_mode != "WSPR-2") {
         c_time = decodedText->timeInSeconds();
@@ -366,26 +367,25 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         bool callB4BandMode = true;
         bool gridB4 = true;
         bool gridB4BandMode = true;
-        QString checkMode;
 
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
         if (!lotw.isEmpty ()) priority = 1;
         if (displayPotential && std_type == 3) {
             txtColor = m_config->color_StandardCall().name();
         }
+        if (app_mode == "JT9+JT65") {
+            if (decodedText->isJT9()) {
+                checkMode = "JT9";
+            } else if (decodedText->isJT65()) { // TODO: is this if-condition necessary?
+                checkMode = "JT65";
+            }
+        } else {
+            checkMode = app_mode;
+        }
         if (!jt65bc && (displayCountryName || displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx)) {
             if (!displayNewCQZ && !displayNewITUZ && !displayNewDXCC && displayCountryName && !displayNewCall && !displayNewPx) {
                         logBook.getDXCC(/*in*/ checkCall, /*out*/ countryName);
                     }
-            if (app_mode == "JT9+JT65") {
-                if (decodedText->isJT9()) {
-                    checkMode = "JT9";
-                } else if (decodedText->isJT65()) { // TODO: is this if-condition necessary?
-                    checkMode = "JT65";
-                }
-            } else {
-                checkMode = app_mode;
-            }
             if (displayNewCQZ) {
                 if (displayNewCQZBand || displayNewCQZBandMode) {
                     if (displayNewCQZBand && displayNewCQZBandMode) {
@@ -830,7 +830,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     }
     if (show_line) {
         if (!checkCall.isEmpty () && (std_type == 1 || std_type == 2 || std_type == 4 || (std_type == 3 && !param.isEmpty()))) {
-            qsoHistory.message(checkCall,status,priority,param,tyyp,countryName.left(2),mpx,c_time,decodedText->report(),decodedText->frequencyOffset());
+            qsoHistory.message(checkCall,status,priority,param,tyyp,countryName.left(2),mpx,c_time,decodedText->report(),decodedText->frequencyOffset(),checkMode);
         } 
         if (std_type == 2) {
             if(!m_config->redMarker()) std_type = 0;
@@ -957,7 +957,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
                   }
                }
             mystatus_ = status;
-            qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq);
+            qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq,modeTx);
           }
         if (wastx_ && ttime - last_tx < 2 && m_config->hide_TX_messages())
             appendText(t,bg,"black",0," "," ",false,false,false,false,true);
