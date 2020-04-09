@@ -2139,32 +2139,32 @@ Formato:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>pérdida parcial de datos</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALLCALLt.TXT es demasiado corto o ¿esta roto?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso n QSO</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>señal de entrada de bajo valor eficaz</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>brecha de audio detectada</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>NFQSO se ha quedado sin ancho de banda</translation>
     </message>
 </context>
 <context>
@@ -2311,7 +2311,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Autenticación requerida</translation>
     </message>
 </context>
 <context>
@@ -2778,7 +2778,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation>Si &amp;a todos</translation>
+        <translation>Si &amp;a todo</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
@@ -2789,7 +2789,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation>N&amp;o a todos</translation>
+        <translation>N&amp;o a todo</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
@@ -2839,7 +2839,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar valores predeterminados</translation>
     </message>
 </context>
 <context>
@@ -3933,8 +3933,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4568"/>
         <source>DXpedition</source>
-        <translatorcomment>DXpedición</translatorcomment>
-        <translation>DXpedition</translation>
+        <translation>DXpedición</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4587"/>
@@ -5075,22 +5074,22 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Renombrar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Show &amp;hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar &amp;ocultar archivos</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nueva carpeta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
