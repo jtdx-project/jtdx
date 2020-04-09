@@ -213,7 +213,7 @@ Format:
         <location filename="../Configuration.cpp" line="5074"/>
         <location filename="../Configuration.cpp" line="5105"/>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
@@ -2297,7 +2297,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation></translation>
+        <translation>Requer autenticação</translation>
     </message>
 </context>
 <context>
@@ -5009,47 +5009,47 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5025"/>
         <source>Directory:</source>
-        <translation></translation>
+        <translation>Diretório:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5026"/>
         <source>File &amp;name:</source>
-        <translation></translation>
+        <translation>&amp;Nome do Arquivo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5027"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5028"/>
         <source>&amp;Choose</source>
-        <translation></translation>
+        <translation>&amp;Selecionar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5029"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;Salvar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5030"/>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5031"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Todos arquivos (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5032"/>
         <source>New Folder</source>
-        <translation></translation>
+        <translation>Nova Pasta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5033"/>
         <source>Delete</source>
-        <translation></translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
@@ -5074,125 +5074,128 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Look in:</source>
-        <translation></translation>
+        <translation>Olhar em:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
         <source>Files of type:</source>
-        <translation></translation>
+        <translation>Arquivos do tipo:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5040"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation></translation>
+        <translation>&apos;%1&apos; está protegido para escrita.
+Quer apagar assim mesmo?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5041"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation></translation>
+        <translation>Tem certeza que quer apagar &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>Could not delete directory.</source>
-        <translation></translation>
+        <translation>O diretório não pode ser apagado.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
-        <translation></translation>
+        <translation>%1
+Diretório não encontrado.
+Por favor verifique se foi dado o nome correto do diretório.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Recent Places</source>
-        <translation></translation>
+        <translation>Lugares Recentes</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>Back</source>
-        <translation></translation>
+        <translation>Atrás</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>Go back</source>
-        <translation></translation>
+        <translation>Voltar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>Alt+Esq</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Forward</source>
-        <translation></translation>
+        <translation>Frente</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go forward</source>
-        <translation></translation>
+        <translation>Adiantar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+Dir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Parent Directory</source>
-        <translation></translation>
+        <translation>Diretório Anterior</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
         <source>Go to the parent directory</source>
-        <translation></translation>
+        <translation>Voltar diretório</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>Alt+Cima</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>Create New Folder</source>
-        <translation></translation>
+        <translation>Criar Nova Pasta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Create a New Folder</source>
-        <translation></translation>
+        <translation>Criar uma Nova Pasta</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>List View</source>
-        <translation></translation>
+        <translation>Ver Lista</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Change to list view mode</source>
-        <translation></translation>
+        <translation>Mudar para modo lista</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>Detail View</source>
-        <translation></translation>
+        <translation>Ver Detalhes</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5060"/>
         <source>Change to detail view mode</source>
-        <translation></translation>
+        <translation>Mudar para modo detalhes</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>Sidebar</source>
-        <translation></translation>
+        <translation>Barra Lateral</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>List of places and bookmarks</source>
-        <translation></translation>
+        <translation>Lista de lugares e favoritos</translation>
     </message>
 </context>
 <context>
@@ -5205,17 +5208,17 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5065"/>
         <source>Size</source>
-        <translation></translation>
+        <translation>Tamanho</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5066"/>
         <source>Type</source>
-        <translation></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5067"/>
         <source>Date Modified</source>
-        <translation></translation>
+        <translation>Data da modificação</translation>
     </message>
 </context>
 <context>
