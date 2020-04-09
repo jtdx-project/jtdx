@@ -2861,7 +2861,7 @@ Błąd: %2 - %3</translation>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation>dd/MM/rrrr GG:mm</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
