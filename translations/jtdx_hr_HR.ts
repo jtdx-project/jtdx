@@ -2129,32 +2129,32 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>djelomični gubitak podataka</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALLCALL7.TXT je prekratak ili nepotpun?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>nQSOProgres</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>niski ulazni signal</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>otkriven je prekid zvuka</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>nfqso je izvan propusne širine</translation>
     </message>
 </context>
 <context>
@@ -2296,12 +2296,12 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Greška Mreže</translation>
+        <translation>Greška Mreže</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrebna provjera</translation>
     </message>
 </context>
 <context>
@@ -2742,94 +2742,94 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">Spremanje</translation>
+        <translation>Spremanje</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremi sve</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">Otvori</translation>
+        <translation>Otvori</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="37"/>
         <location filename="../mainwindow.cpp" line="3742"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Da</translation>
+        <translation>&amp;Da</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Da za S&amp;ve</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <location filename="../mainwindow.cpp" line="3745"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Ne</translation>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;e za Sve</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekid</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">&amp;Ponovi</translation>
+        <translation>&amp;Ponovi</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Zanemari</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatvori</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prekid</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Odbaci</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">Pomoć</translation>
+        <translation>Pomoć</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Potvrdi</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetiraj</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrati na zadano</translation>
     </message>
 </context>
 <context>
@@ -4606,7 +4606,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1633"/>
         <source>TX Odd</source>
-        <translation>TX neparne</translation>
+        <translation>TX Neparne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1678"/>
@@ -5062,22 +5062,22 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Obriši</translation>
+        <translation>&amp;Obriši</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;reimenuj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Show &amp;hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži s&amp;krivene datoteke</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nova mapa</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
