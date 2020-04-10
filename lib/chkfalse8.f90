@@ -20,48 +20,52 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 !print *,iaptype
 !print *,i3,n3,msg37
 
-! 'CQ 5NGX46MFKUE' 'CQ 53HDFKJEASD' 'CQ HDF53KJEASD'
+! 'CQ 5NGX46MFKUE' 'CQ 53HDFKJEASD' 'CQ HDF53KJEASD'  i3=4 n3=1 
+! -23  0.3 1482 ~ CQ EQ3YCI/KVNA  i3=4 n3=1 
+! -23 -1.3 CQ P28Z58W/77M  i3=4 n3=1
   if(msg37(1:3).eq.'CQ ') then
-
-    callsign='            '
-    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; islashr=index(msg37,'/R ')
-    if(ispc2.gt.7 .and. islashr.le.0) then ! 'CQ nnn XX1XX' message shall not be checked
-      callsign=msg37(ispc1+1:ispc2-1)
-      include 'callsign_q.f90'
-      if(len_trim(callsign).ge.10) then
-        falsedec=.false.
-        call chklong8(callsign,falsedec)
-        if(falsedec) then; nbadcrc=1; &
-          msg37='                                     '; return; endif
-      endif
-    endif
-
-! i=1 n=7 'CQ 2A1GKO/R GC63        *'
-    if(iaptype.eq.1 .and. ispc2.gt.7 .and. islashr.gt.0) then
-      callsign=msg37(ispc1+1:islashr-1)
-      include 'callsign_q.f90'
-      falsedec=.false.
-      call chkflscall('CQ          ',callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
-    endif
-! 'CQ 3Q2VFI RH49          *' filter is based on the Grid
-    islash=index(msg37,'/')
-    if(iaptype.eq.1 .and. ispc2.gt.7 .and. islash.le.0) then
-      ispc3=index(msg37((ispc2+1):),' ')+ispc2
-      if(ispc3.eq.ispc2+5) then
-        callsign=msg37(ispc1+1:ispc2-1)
-        grid=msg37(ispc2+1:ispc3-1)
-        include 'callsign_q.f90'
-        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-        if(lwrongcall) then; nbadcrc=1; &
-          msg37='                                     '; return; endif
-        if(lchkcall .or. .not.lgvalid) then
-          falsedec=.false.
-          call chkflscall('CQ          ',callsign,falsedec)
-          if(falsedec) then; nbadcrc=1; &
-            msg37='                                     '; return; endif
+    callsign='            '; ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    if(i3.eq.4 .and. n3.eq.1) then
+      islash=index(msg37,'/')
+      if(ispc2.gt.7 .and. islash.le.0) then ! 'CQ nnn XX1XX' message shall not be checked
+        if(islash.le.0) then
+          callsign=msg37(ispc1+1:ispc2-1)
+        else
+          if(islash.gt.ispc1 .and. islash.lt.ispc2) then
+            if(islash-ispc1.le.ispc2-islash) then; callsign=msg37(islash+1:ispc2-1)
+            else; callsign=msg37(ispc1+1:islash-1)
+            endif
+          endif
         endif
+        include 'callsign_q.f90'
+        if(islash.gt.0) then
+          falsedec=.false.; call chkflscall('CQ          ',callsign,falsedec)
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        else
+          if(len_trim(callsign).ge.10) then
+            falsedec=.false.
+            call chklong8(callsign,falsedec)
+            if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+          endif
+        endif
+      endif
+! 'CQ 3Q2VFI RH49          *' filter is based on the Grid
+! i=1 n=7 'CQ 2A1GKO/R GC63        *'
+! -24 -1.8 2389 ~ CQ N9OAT/R RP25         *
+! -24  0.3  550 ~ CQ DZ0BIL/R AD94          *
+    else if(iaptype.eq.1) then
+      ispc3=index(msg37((ispc2+1):),' ')+ispc2
+      if(msg37(ispc2-3:ispc2-1).eq.'/R' .or. msg37(ispc2-3:ispc2-1).eq.'/P') then; callsign=msg37(ispc1+1:ispc2-3)
+      else; callsign=msg37(ispc1+1:ispc2-1)
+      endif
+      grid=msg37(ispc2+1:ispc3-1)
+      include 'callsign_q.f90'
+      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+      if(lwrongcall) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(lchkcall .or. .not.lgvalid) then
+        falsedec=.false.
+        call chkflscall('CQ          ',callsign,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
       endif
     endif
 
