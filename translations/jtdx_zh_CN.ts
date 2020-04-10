@@ -4010,7 +4010,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4668"/>
         <source>None</source>
-        <translation>不储存</translation>
+        <translation>不保存</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4676"/>
@@ -4318,12 +4318,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5204"/>
         <source>0  Call None</source>
-        <translation>0  没有选择</translation>
+        <translation>0  手动选择</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5212"/>
         <source>1  Call first</source>
-        <translation>1  优先呼叫</translation>
+        <translation>1  呼叫首先解码</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5220"/>
@@ -5421,7 +5421,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation>设备不支持请求的输入音频格式.</translation>
+        <translation>设备不支持请求输入的音频格式.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
@@ -5489,7 +5489,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="51"/>
         <source>Requested output audio format is not supported on device.</source>
-        <translation>设备上不支持请求的输出音频格式.</translation>
+        <translation>设备不支持请求输出的音频格式.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>

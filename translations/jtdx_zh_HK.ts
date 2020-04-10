@@ -4318,12 +4318,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5204"/>
         <source>0  Call None</source>
-        <translation>0  沒有選擇</translation>
+        <translation>0  手動選擇</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5212"/>
         <source>1  Call first</source>
-        <translation>1  優先呼叫</translation>
+        <translation>1  呼叫首先解碼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5220"/>
@@ -5421,7 +5421,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation>設備不支持請求的輸入音頻格式.</translation>
+        <translation>設備不支持請求輸入的音頻格式.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
@@ -5489,7 +5489,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="51"/>
         <source>Requested output audio format is not supported on device.</source>
-        <translation>設備上不支持請求的輸出音頻格式.</translation>
+        <translation>設備不支持請求輸出的音頻格式.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>
