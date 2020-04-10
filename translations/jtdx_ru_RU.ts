@@ -418,12 +418,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="55"/>
         <source>ITU HQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>United Nations HQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="57"/>
@@ -938,7 +938,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Австралийские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
@@ -1018,7 +1018,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="175"/>
         <source>N. Ireland</source>
-        <translation type="unfinished"></translation>
+        <translation>С.Ирландия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="176"/>
@@ -1998,7 +1998,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Каймановы острова</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
@@ -2137,22 +2137,22 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>частичная потеря данных</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALLCALL7.TXT слишком короткий или поврежден</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>уровень сигнала слишком мал</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
@@ -2162,7 +2162,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>nfqso вне полосы пропускания</translation>
     </message>
 </context>
 <context>
@@ -2304,12 +2304,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Ошибка сети</translation>
+        <translation>Ошибка сети</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Необходима аутентификация</translation>
     </message>
 </context>
 <context>
@@ -2345,7 +2345,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="233"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
@@ -2563,7 +2563,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Argument out of domain of func</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="313"/>
@@ -2750,94 +2750,94 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="33"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="34"/>
         <source>Save</source>
-        <translation type="unfinished">Сохранить</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="35"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить все</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="36"/>
         <source>Open</source>
-        <translation type="unfinished">Открыть</translation>
+        <translation>Открыть</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="37"/>
-        <location filename="../mainwindow.cpp" line="3742"/>
+        <location filename="../mainwindow.cpp" line="3732"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Да</translation>
+        <translation>&amp;Да</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="38"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Да для &amp;всех</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
-        <location filename="../mainwindow.cpp" line="3745"/>
+        <location filename="../mainwindow.cpp" line="3735"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Нет</translation>
+        <translation>&amp;Нет</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>Н&amp;ет для всех</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Прервать</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">&amp;Повторить</translation>
+        <translation>&amp;Повторить</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Игнорировать</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">О&amp;тменить</translation>
+        <translation>О&amp;тменить</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Help</source>
-        <translation type="unfinished">Помощь</translation>
+        <translation>Помощь</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Принять</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Reset</source>
-        <translation type="unfinished">Сброс</translation>
+        <translation>Сброс</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить по умолчанию</translation>
     </message>
 </context>
 <context>
@@ -3744,7 +3744,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3915"/>
         <source>Generate message with 73</source>
-        <translation type="unfinished"></translation>
+        <translation>Создание сообщений содержащих 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3918"/>
@@ -3774,32 +3774,32 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4114"/>
         <source>Band Hopping</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
         <source>Schedule ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Расписание</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4149"/>
         <source>Upload decoded messages to WPRnet.org.</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить декодированные сообщения на WPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4152"/>
         <source>Upload spots</source>
-        <translation type="unfinished"></translation>
+        <translation>Послать спот</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4181"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation type="unfinished"></translation>
+        <translation>Передача в течение следующей 2-минутной последовательности</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4195"/>
@@ -3944,7 +3944,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4601"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфигурация</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4604"/>
@@ -4023,7 +4023,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4751"/>
         <source>JTDX Web site</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4754"/>
@@ -4080,7 +4080,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4822"/>
         <source>Monitor OFF at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Монитор выключен при запуске программы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4827"/>
@@ -4302,7 +4302,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5177"/>
         <source>Call priority and search CQ</source>
-        <translation type="unfinished"></translation>
+        <translation>Приоритет вызова и поиск CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5180"/>
@@ -4427,7 +4427,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5465"/>
         <source>CQ and 73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5473"/>
@@ -4564,7 +4564,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5728"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>Работа разнесенными частотами на 160м с Японией</translation>
+        <translation>Работа разнесенными частотами на 160м с Японией и Кореей</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="442"/>
@@ -4590,12 +4590,12 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="6000"/>
         <location filename="../mainwindow.cpp" line="6001"/>
         <source>Freq   Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Свободные сообщения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>KillByName return code: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>KillByName код возврата :%1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="934"/>
@@ -4610,12 +4610,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1626"/>
         <source>TX Even</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1633"/>
         <source>TX Odd</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1678"/>
@@ -4688,7 +4688,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2563"/>
         <source>Spotted</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2570"/>
@@ -4774,7 +4774,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="2900"/>
         <source>HoundFC</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2961"/>
@@ -4789,13 +4789,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="3418"/>
         <source>Avg=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3423"/>
         <location filename="../mainwindow.cpp" line="3430"/>
         <source>check time</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3730"/>
@@ -5017,7 +5017,7 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5023"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5070,27 +5070,27 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5034"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Удалить</translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5035"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Переименовать</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5036"/>
         <source>Show &amp;hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать скрытые &amp;файлы</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5037"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Новая папка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5038"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Посмотреть внутрь:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5039"/>
@@ -5110,7 +5110,7 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
@@ -5120,12 +5120,12 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Продолжить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
@@ -5140,7 +5140,7 @@ UDP вервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
@@ -5552,7 +5552,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="278"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
@@ -6228,7 +6228,7 @@ quiet period when decoding is done.</source>
         <location filename="../Configuration.ui" line="1013"/>
         <location filename="../Configuration.ui" line="1080"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="969"/>
@@ -6297,12 +6297,12 @@ a few, particularly some Kenwood rigs, require it).</source>
     <message>
         <location filename="../Configuration.ui" line="1111"/>
         <source>&amp;Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
         <source>Special control of CAT port control lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Управление линиями DTR/RTS CAT порта.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
@@ -6406,12 +6406,12 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1359"/>
         <source>Rear&amp;/Data</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1369"/>
         <source>&amp;Front/Mic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1392"/>
@@ -6431,7 +6431,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1404"/>
         <source>US&amp;B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1417"/>
@@ -6456,7 +6456,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1435"/>
         <source>Data/P&amp;kt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1455"/>
@@ -6466,12 +6466,12 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1461"/>
         <source>Fake It</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1471"/>
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1514"/>
@@ -6481,7 +6481,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1517"/>
         <source>Test CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>Тест CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1540"/>
@@ -6498,7 +6498,7 @@ Tx на вашем трансивере и / или вашем радиоинт�
     <message>
         <location filename="../Configuration.ui" line="1558"/>
         <source>Test PTT</source>
-        <translation type="unfinished"></translation>
+        <translation>Тест PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1585"/>
@@ -6509,7 +6509,7 @@ Tx на вашем трансивере и / или вашем радиоинт�
     <message>
         <location filename="../Configuration.ui" line="1588"/>
         <source>Tx delay:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1645"/>
@@ -6637,7 +6637,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1853"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1860"/>
@@ -6858,7 +6858,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2469"/>
         <source>TCP port:</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP порт:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2491"/>
@@ -7107,7 +7107,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3063"/>
         <source> ppm</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3106"/>
@@ -7329,7 +7329,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3466"/>
         <source>underline it</source>
-        <translation type="unfinished"></translation>
+        <translation>подчеркнуть</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3473"/>
@@ -7477,7 +7477,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="4752"/>
         <location filename="../Configuration.ui" line="4771"/>
         <source>K1ABC</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3747"/>
@@ -7487,12 +7487,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3753"/>
         <source>RR73/73           </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3766"/>
         <source>CQ/73 in message</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3779"/>
@@ -8314,7 +8314,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="127"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="131"/>
