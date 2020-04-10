@@ -193,10 +193,28 @@ endif
          (grid(1:2).eq.'QF' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'7') .or. &
          (grid(1:2).eq.'PF' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.':') .or. &
          (grid(1:2).eq.'OF' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':').or. &
-         (grid(1:2).eq.'QE' .and. grid(3:3).gt.'0' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'QE' .and. ((grid(3:3).gt.'1' .and. grid(3:3).lt.'5' .and.grid(4:4).gt.'5'.and. grid(4:4).lt.':').or. &
+          grid(3:4).eq.'19')) .or. &
          (grid(1:2).eq.'QH' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'5') .or. & 
          (grid(1:2).eq.'OG' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':') .or. & 
          grid(1:2).eq.'PG' .or. grid(1:2).eq.'PH') lgvalid=.true.
+
+if(lgvalid) then
+      if(grid(1:2).eq.'QF' .and. grid(3:3).eq.'6' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'7') then; lgvalid=.false.
+      else if(grid(1:2).eq.'PF' .and. ((grid(3:3).gt.'/'.and.grid(3:3).lt.'8'.and.grid(4:4).gt.'1'.and.grid(4:4).lt.'5').or. &
+              (grid(4:4).eq.'5' .and. grid(3:3).gt.'1' .and. grid(3:3).lt.'7') .or. &
+              (grid(4:4).eq.'6' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'7') .or. grid(3:4).eq.'57')) then; lgvalid=.false.
+      else if(grid(1:4).eq.'OF74') then; lgvalid=.false.
+      else if(grid(1:2).eq.'QH' .and. ((grid(3:3).eq.'3' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':') .or. &
+              (grid(3:3).eq.'4' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':') .or. grid(3:4).eq.'09')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'OG' .and. (grid(3:4).eq.'60' .or. grid(3:4).eq.'69')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'PH' .and. ((grid(3:3).eq.'0' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.':' .and. &
+              grid(4:4).ne.'5' .and. grid(4:4).ne.'6') .or. &
+              (grid(3:3).gt.'1' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':') .or. &
+              (grid(3:3).eq.'9' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':') .or. &
+              grid(3:4).eq.'59' .or. grid(3:4).eq.'79' .or. grid(3:4).eq.'89')) then; lgvalid=.false.
+      endif
+endif
 
 ! Pakistan 6P..6S, AP..AS
     else if(callsign(2:2).gt.'O' .and. callsign(2:2).lt.'T') then
@@ -401,8 +419,30 @@ endif
          grid(1:2).eq.'FO' .or. grid(1:2).eq.'EO' .or. grid(1:2).eq.'DO' .or. &
          (grid(1:2).eq.'GO' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5').or. &
          (grid(1:2).eq.'DN'.and. grid(4:4).gt.'8' .and. grid(4:4).lt.':') .or. &
-         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or.grid(1:4).eq.'GN03'.or.grid(1:4).eq.'FN93' .or. &
-         grid(1:4).eq.'ER60') lgvalid=.true.
+         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or. &
+         (grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/'.and.grid(4:4).lt.'8').or. &
+          grid(3:4).eq.'96')) .or. &
+         (grid(1:2).eq.'EQ' .and. (grid(3:4).eq.'15' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'24' .or.grid(3:4).eq.'71'.or. &
+          grid(3:4).eq.'73' .or. grid(3:4).eq.'79' .or. grid(3:4).eq.'84' .or. grid(3:4).eq.'86' .or.grid(3:4).eq.'96')).or. &
+         (grid(1:2).eq.'FR' .and. (grid(3:4).eq.'71' .or. grid(3:4).eq.'82')) .or. &
+         (grid(1:2).eq.'FQ' .and. (grid(3:4).eq.'50' .or. grid(3:4).eq.'12')) .or. grid(1:4).eq.'GN03' .or. &
+         grid(1:4).eq.'FN93' .or. grid(1:4).eq.'ER60' .or. grid(1:4).eq.'DQ10' .or. grid(1:4).eq.'CQ71') lgvalid=.true.
+
+if(lgvalid) then
+      if(grid(1:2).eq.'EO' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'7' .and.grid(4:4).lt.':').or. &
+         (grid(4:4).eq.'7' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'9') .or. grid(3:4).eq.'76' .or. grid(3:4).eq.'86')) &
+        then; lgvalid=.false.
+      else if(grid(1:2).eq.'CO' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. &
+              grid(4:4).lt.'8').or. grid(3:4).eq.'08' .or. grid(3:4).eq.'18' .or. grid(3:4).eq.'30'.or.grid(3:4).eq.'31'.or. &
+              grid(3:4).eq.'40')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'EP' .and. ((grid(4:4).eq.'0' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.':') .or. &
+              (grid(4:4).eq.'1' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'9') .or. &
+              (grid(4:4).eq.'2' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'8'))) then; lgvalid=.false.
+      else if(grid(1:2).eq.'CN' .and. (grid(3:4).eq.'68' .or. grid(3:4).eq.'98')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'6' .and. grid(4:4).gt.'4' .and. &
+              grid(4:4).lt.'8') .or. grid(3:4).eq.'04')) then; lgvalid=.false.
+      endif
+endif
 
 ! Portugal, Madeira, Azores CQ..CU
     else if(callsign(2:2).gt.'P' .and. callsign(2:2).lt.'U') then
@@ -1766,8 +1806,30 @@ endif
          grid(1:2).eq.'FO' .or. grid(1:2).eq.'EO' .or. grid(1:2).eq.'DO' .or. &
          (grid(1:2).eq.'GO' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5').or. &
          (grid(1:2).eq.'DN'.and. grid(4:4).gt.'8' .and. grid(4:4).lt.':') .or. &
-         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or.grid(1:4).eq.'GN03'.or.grid(1:4).eq.'FN93' .or. &
-         grid(1:4).eq.'ER60') lgvalid=.true.
+         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or. &
+         (grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/'.and.grid(4:4).lt.'8').or. &
+          grid(3:4).eq.'96')) .or. &
+         (grid(1:2).eq.'EQ' .and. (grid(3:4).eq.'15' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'24' .or.grid(3:4).eq.'71'.or. &
+          grid(3:4).eq.'73' .or. grid(3:4).eq.'79' .or. grid(3:4).eq.'84' .or. grid(3:4).eq.'86' .or.grid(3:4).eq.'96')).or. &
+         (grid(1:2).eq.'FR' .and. (grid(3:4).eq.'71' .or. grid(3:4).eq.'82')) .or. &
+         (grid(1:2).eq.'FQ' .and. (grid(3:4).eq.'50' .or. grid(3:4).eq.'12')) .or. grid(1:4).eq.'GN03' .or. &
+         grid(1:4).eq.'FN93' .or. grid(1:4).eq.'ER60' .or. grid(1:4).eq.'DQ10' .or. grid(1:4).eq.'CQ71') lgvalid=.true.
+
+if(lgvalid) then
+      if(grid(1:2).eq.'EO' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'7' .and.grid(4:4).lt.':').or. &
+         (grid(4:4).eq.'7' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'9') .or. grid(3:4).eq.'76' .or. grid(3:4).eq.'86')) &
+        then; lgvalid=.false.
+      else if(grid(1:2).eq.'CO' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. &
+              grid(4:4).lt.'8').or. grid(3:4).eq.'08' .or. grid(3:4).eq.'18' .or. grid(3:4).eq.'30'.or.grid(3:4).eq.'31'.or. &
+              grid(3:4).eq.'40')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'EP' .and. ((grid(4:4).eq.'0' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.':') .or. &
+              (grid(4:4).eq.'1' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'9') .or. &
+              (grid(4:4).eq.'2' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'8'))) then; lgvalid=.false.
+      else if(grid(1:2).eq.'CN' .and. (grid(3:4).eq.'68' .or. grid(3:4).eq.'98')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'6' .and. grid(4:4).gt.'4' .and. &
+              grid(4:4).lt.'8') .or. grid(3:4).eq.'04')) then; lgvalid=.false.
+      endif
+endif
 
 ! Australia AX,VH..VN,VZ
     else if((callsign(2:2).gt.'G' .and. callsign(2:2).lt.'O') .or. callsign(1:2).eq.'VZ') then
@@ -1775,7 +1837,8 @@ endif
          (grid(1:2).eq.'QF' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'7') .or. &
          (grid(1:2).eq.'PF' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.':') .or. &
          (grid(1:2).eq.'OF' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':').or. &
-         (grid(1:2).eq.'QE' .and. grid(3:3).gt.'0' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.':').or. &
+         (grid(1:2).eq.'QE' .and. ((grid(3:3).gt.'1' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'5'.and.grid(4:4).lt.':').or. &
+          grid(3:4).eq.'19')) .or. &
          (grid(1:2).eq.'QH' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'5') .or. & 
          (grid(1:2).eq.'OG' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':') .or. & 
          grid(1:2).eq.'PG' .or. grid(1:2).eq.'PH' .or. &
@@ -1790,6 +1853,23 @@ endif
            (grid(1:2).eq.'RG' .and. (grid(3:4).eq.'30' .or. grid(3:4).eq.'31')) .or. &
            (grid(1:2).eq.'QH' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'1' .and. &
             grid(4:4).lt.'5')))) lgvalid=.true.
+
+if(lgvalid) then
+      if(grid(1:2).eq.'QF' .and. grid(3:3).eq.'6' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'7') then; lgvalid=.false.
+      else if(grid(1:2).eq.'PF' .and. ((grid(3:3).gt.'/'.and.grid(3:3).lt.'8'.and.grid(4:4).gt.'1'.and.grid(4:4).lt.'5').or. &
+              (grid(4:4).eq.'5' .and. grid(3:3).gt.'1' .and. grid(3:3).lt.'7') .or. &
+              (grid(4:4).eq.'6' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'7') .or. grid(3:4).eq.'57')) then; lgvalid=.false.
+      else if(grid(1:4).eq.'OF74') then; lgvalid=.false.
+      else if(grid(1:2).eq.'QH' .and. ((grid(3:3).eq.'3' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':') .or. &
+              (grid(3:3).eq.'4' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':') .or. grid(3:4).eq.'09')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'OG' .and. (grid(3:4).eq.'60' .or. grid(3:4).eq.'69')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'PH' .and. ((grid(3:3).eq.'0' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.':' .and. &
+              grid(4:4).ne.'5' .and. grid(4:4).ne.'6') .or. &
+              (grid(3:3).gt.'1' .and. grid(3:3).lt.'5' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':') .or. &
+              (grid(3:3).eq.'9' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.':') .or. &
+              grid(3:4).eq.'59' .or. grid(3:4).eq.'79' .or. grid(3:4).eq.'89')) then; lgvalid=.false.
+      endif
+endif
 
 ! India 8T..8Y,AT..AW,VT..VW
     else if(callsign(2:2).gt.'S' .and. callsign(2:2).lt.'X') then
@@ -2017,8 +2097,30 @@ endif
          grid(1:2).eq.'FO' .or. grid(1:2).eq.'EO' .or. grid(1:2).eq.'DO' .or. &
          (grid(1:2).eq.'GO' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5').or. &
          (grid(1:2).eq.'DN'.and. grid(4:4).gt.'8' .and. grid(4:4).lt.':') .or. &
-         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or.grid(1:4).eq.'GN03'.or.grid(1:4).eq.'FN93' .or. &
-         grid(1:4).eq.'ER60') lgvalid=.true.
+         grid(1:2).eq.'CP' .or. grid(1:2).eq.'DP' .or. grid(1:2).eq.'EP' .or. &
+         (grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'/'.and.grid(4:4).lt.'8').or. &
+          grid(3:4).eq.'96')) .or. &
+         (grid(1:2).eq.'EQ' .and. (grid(3:4).eq.'15' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'24' .or.grid(3:4).eq.'71'.or. &
+          grid(3:4).eq.'73' .or. grid(3:4).eq.'79' .or. grid(3:4).eq.'84' .or. grid(3:4).eq.'86' .or.grid(3:4).eq.'96')).or. &
+         (grid(1:2).eq.'FR' .and. (grid(3:4).eq.'71' .or. grid(3:4).eq.'82')) .or. &
+         (grid(1:2).eq.'FQ' .and. (grid(3:4).eq.'50' .or. grid(3:4).eq.'12')) .or. grid(1:4).eq.'GN03' .or. &
+         grid(1:4).eq.'FN93' .or. grid(1:4).eq.'ER60' .or. grid(1:4).eq.'DQ10' .or. grid(1:4).eq.'CQ71') lgvalid=.true.
+
+if(lgvalid) then
+      if(grid(1:2).eq.'EO' .and. ((grid(3:3).gt.'3' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'7' .and.grid(4:4).lt.':').or. &
+         (grid(4:4).eq.'7' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'9') .or. grid(3:4).eq.'76' .or. grid(3:4).eq.'86')) &
+        then; lgvalid=.false.
+      else if(grid(1:2).eq.'CO' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'3' .and. grid(4:4).gt.'/' .and. &
+              grid(4:4).lt.'8').or. grid(3:4).eq.'08' .or. grid(3:4).eq.'18' .or. grid(3:4).eq.'30'.or.grid(3:4).eq.'31'.or. &
+              grid(3:4).eq.'40')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'EP' .and. ((grid(4:4).eq.'0' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.':') .or. &
+              (grid(4:4).eq.'1' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'9') .or. &
+              (grid(4:4).eq.'2' .and. grid(3:3).gt.'4' .and. grid(3:3).lt.'8'))) then; lgvalid=.false.
+      else if(grid(1:2).eq.'CN' .and. (grid(3:4).eq.'68' .or. grid(3:4).eq.'98')) then; lgvalid=.false.
+      else if(grid(1:2).eq.'FP' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'6' .and. grid(4:4).gt.'4' .and. &
+              grid(4:4).lt.'8') .or. grid(3:4).eq.'04')) then; lgvalid=.false.
+      endif
+endif
 
 ! Burkina Faso XT
     else if(callsign(1:2).eq.'XT') then
