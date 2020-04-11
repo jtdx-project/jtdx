@@ -986,6 +986,7 @@ set (LANGUAGES
   zh_HK
   zh_CN
   ja_JP
+  ca_ES
   )
 foreach (lang_ ${LANGUAGES})
   file (TO_NATIVE_PATH translations/jtdx_${lang_}.ts ts_)
