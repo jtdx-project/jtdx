@@ -1,6 +1,6 @@
 /*
  * maintains QSO Histories and autoselect
- * ES1JA last modified 07.02.2020
+ * Created by Arvo ES1JA 
  */
 
 #ifndef __QSOHISTORY_H
@@ -9,12 +9,11 @@
 #include <QList>
 #include <QString>
 #include <QStringList>
-#include <QDateTime>
 #include <QHash>
 #include "Radio.hpp"
 #include <QRegularExpression>
 #include <QtMath>
-
+#include "JTDXDateTime.h"
 class QsoHistory
 {
  public:
@@ -31,6 +30,7 @@ class QsoHistory
 	int remove(QString const& callsign);		
 	int blacklist(QString const& callsign);
 	int reset_count(QString const& callsign,Status status = NONE);
+	JTDXDateTime * jtdxtime;
  private:
  	QRegularExpression _gridRe = QRegularExpression("^[A-R]{2,2}[0-9]{2,2}[A-R]{0,2}[0-9]{0,2}[A-R]{0,2}");
 

@@ -1,3 +1,9 @@
+//
+// JTDXMessageBox - wrap the Qt QMessageBox class to give a more platform
+// neutral and functional interface and translation of buttons
+//
+//Created by Arvo, ES1JA 2020
+
 #include "JTDXMessageBox.hpp"
 
 #include <QDialogButtonBox>

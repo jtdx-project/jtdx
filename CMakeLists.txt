@@ -260,6 +260,7 @@ set (wsjtx_CXXSRCS
   wsprnet.cpp
   WSPRBandHopping.cpp
   JTDXMessageBox.cpp
+  JTDXDateTime.cpp
   )
 
 set (wsjt_CXXSRCS

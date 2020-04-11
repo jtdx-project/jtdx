@@ -1,4 +1,3 @@
-// last time modified by Igor UA3DJY on 20200205
 // -*- Mode: C++ -*-
 
 #ifndef LogQSO_H
@@ -13,6 +12,7 @@
 #include <QScopedPointer>
 
 #include "Radio.hpp"
+#include "JTDXDateTime.h"
 
 namespace Ui {
   class LogQSO;
@@ -26,7 +26,7 @@ class LogQSO : public QDialog
   Q_OBJECT;
 
 public:
-  explicit LogQSO(QSettings *, Configuration const *, QWidget *parent = 0);
+  explicit LogQSO(QSettings *, Configuration const *, JTDXDateTime * jtdxtime, QWidget *parent = 0);
   ~LogQSO();
   void initLogQSO(QString const& hisCall, QString const& hisGrid, QString mode,
                   QString const& rptSent, QString const& rptRcvd, QString const& name, QDateTime const& dateTimeOn,
@@ -70,6 +70,7 @@ private:
   uint m_eqsltimer;
   bool m_enable_tcp_connection;
   bool m_debug;
+  JTDXDateTime * m_jtdxtime;
 };
 
 #endif // LogQSO_H

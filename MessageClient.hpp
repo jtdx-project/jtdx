@@ -5,7 +5,6 @@
 
 #include <QObject>
 #include <QTime>
-#include <QDateTime>
 #include <QString>
 
 #include "Radio.hpp"

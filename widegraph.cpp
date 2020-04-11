@@ -17,14 +17,15 @@ namespace
   auto user_defined = QObject::tr ("User Defined");
 }
 
-WideGraph::WideGraph(QSettings * settings, QWidget *parent) :
+WideGraph::WideGraph(QSettings * settings, JTDXDateTime * jtdxtime, QWidget *parent) :
   QDialog(parent),
   ui(new Ui::WideGraph),
   m_settings (settings),
   m_palettes_path {":/Palettes"},
   m_tr0 {0.0},
   m_lockTxFreq {false},
-  m_filter {false}
+  m_filter {false},
+  m_jtdxtime {jtdxtime}
 {
   ui->setupUi(this);
 
@@ -33,6 +34,7 @@ WideGraph::WideGraph(QSettings * settings, QWidget *parent) :
   setMaximumWidth (MAX_SCREENSIZE);
   setMaximumHeight (880);
 
+  ui->widePlot->m_jtdxtime = m_jtdxtime;
   ui->widePlot->setCursor(Qt::CrossCursor);
   ui->widePlot->setMaximumHeight(800);
   ui->widePlot->setCurrent(false);
@@ -225,7 +227,7 @@ void WideGraph::dataSink2(float s[], float df3, int ihsym, int ndiskdata)  //dat
     }
 
 // Time according to this computer
-    qint64 ms = QDateTime::currentMSecsSinceEpoch() % 86400000;
+    qint64 ms = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
     double tr = fmod(0.001*ms,m_TRperiod);
     if((ndiskdata && ihsym <= m_waterfallAvg) || (!ndiskdata && tr<m_tr0)) {
       float flagValue=1.0e30;

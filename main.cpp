@@ -7,7 +7,7 @@
 
 #include <locale.h>
 
-#include <QDateTime>
+//#include <QDateTime>
 #include <QApplication>
 #include <QTranslator>
 #include <QNetworkAccessManager>

@@ -4,7 +4,6 @@
 #include <QtGlobal>
 #include <QApplication>
 #include <QMouseEvent>
-#include <QDateTime>
 #include <QTextCharFormat>
 #include <QFont>
 #include <QTextCursor>

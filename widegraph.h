@@ -8,7 +8,7 @@
 #include <QScopedPointer>
 #include <QDir>
 #include "WFPalette.hpp"
-
+#include "JTDXDateTime.h"
 #define MAX_SCREENSIZE 2048
 
 namespace Ui {
@@ -23,7 +23,7 @@ class WideGraph : public QDialog
   Q_OBJECT
 
 public:
-  explicit WideGraph(QSettings *, QWidget *parent = 0);
+  explicit WideGraph(QSettings *, JTDXDateTime * jtdxtime, QWidget *parent = 0);
   ~WideGraph ();
 
   void   dataSink2(float s[], float df3, int ihsym, int ndiskdata);
@@ -115,6 +115,8 @@ private:
   bool   m_bScale;
   bool   m_bFlatten;
   bool   m_bHaveTransmitted;    //Set true at end of a WSPR transmission
+
+  JTDXDateTime * m_jtdxtime;
 
   QString m_mode;
   QString m_modeTx;

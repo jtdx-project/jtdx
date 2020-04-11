@@ -20,7 +20,7 @@
 #include <QImage>
 #include <QVector>
 #include <cstring>
-
+#include "JTDXDateTime.h"
 #define VERT_DIVS 7	//specify grid screen divisions
 #define HORZ_DIVS 20
 
@@ -32,6 +32,7 @@ public:
   explicit CPlotter(QWidget *parent = 0);
   ~CPlotter();
 
+  JTDXDateTime * m_jtdxtime;
   QSize minimumSizeHint() const;
   QSize sizeHint() const;
   bool    m_bScaleOK;

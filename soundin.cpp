@@ -106,7 +106,6 @@ void SoundInput::suspend ()
 
 void SoundInput::resume ()
 {
-//  qDebug() << "Resume" << fmod(0.001*QDateTime::currentMSecsSinceEpoch(),6.0);
   if (m_sink)
     {
       m_sink->reset ();

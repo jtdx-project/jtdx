@@ -1,4 +1,3 @@
-// last time modified by Igor UA3DJY on 20200209
 
 // -*- Mode: C++ -*-
 #ifndef MAINWINDOW_H
@@ -11,7 +10,6 @@
 #include <QTranslator>
 #include <QThread>
 #include <QTimer>
-#include <QDateTime>
 #include <QList>
 #include <QStringList>
 #include <QAudioDeviceInfo>
@@ -40,6 +38,7 @@
 #include "decodedtext.h"
 #include "JTDXMessageBox.hpp"
 #include "qsohistory.h"
+#include "JTDXDateTime.h"
 
 #define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
 #define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
@@ -80,7 +79,6 @@ class SoundInput;
 class Detector;
 class SampleDownloader;
 class DecodedText;
-
 class MainWindow : public QMainWindow
 {
   Q_OBJECT;
@@ -388,6 +386,7 @@ private:
 private:
   void hideMenus (bool b);
 
+  JTDXDateTime * m_jtdxtime;
   QDir m_dataDir;
   bool m_valid;
   QString m_revision;
@@ -782,7 +781,8 @@ private:
                           , QString const& mode
                           , Frequency frequency
                           , QString const& his_call
-                          , QString const& his_grid) const;
+                          , QString const& his_grid
+                          , JTDXDateTime * jtdxtime) const;
   void read_wav_file (QString const& fname);
   void subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
   void subProcessError (QProcess *, QProcess::ProcessError);

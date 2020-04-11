@@ -1,6 +1,6 @@
 /*
  * maintains QSO Histories and autoselect
- * ES1JA last modified 07.02.2020
+ * Created by Arvo ES1JA 
  */
 
 #include "qsohistory.h"

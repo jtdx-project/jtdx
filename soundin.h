@@ -4,7 +4,6 @@
 
 #include <QObject>
 #include <QString>
-#include <QDateTime>
 #include <QScopedPointer>
 #include <QPointer>
 #include <QAudioInput>
