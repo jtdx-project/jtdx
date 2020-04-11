@@ -806,13 +806,12 @@ endif
 ! Hungary HA,HG
     if(callsign(1:2).eq.'HA' .or. callsign(1:2).eq.'HG') then
       if((grid(1:2).eq.'JN' .and. grid(3:3).gt.'7' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'9').or. &
-       (grid(1:2).eq.'KN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.'9')) &
-        lgvalid=.true.
+       (grid(1:2).eq.'KN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'5' .and. grid(4:4).lt.'9' .and. &
+        grid(3:4).ne.'16')) lgvalid=.true.
 
 ! Switzerland, Liechtenstein HB,HE
     else if(callsign(1:2).eq.'HB' .or. callsign(1:2).eq.'HE') then
-      if((grid(1:3).eq.'JN3' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'8') .or. &
-         (grid(1:3).eq.'JN4' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'8') .or. &
+      if(((grid(1:3).eq.'JN3' .or. grid(1:3).eq.'JN4') .and. grid(4:4).gt.'4' .and. grid(4:4).lt.'8') .or. &
          grid(1:4).eq.'JN56') lgvalid=.true.
 
 ! Thailand E2,HS
