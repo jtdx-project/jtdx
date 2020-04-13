@@ -1098,7 +1098,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->txrb6->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
   m_lastDisplayFreq=m_lastMonitoredFrequency;
 //  if(m_houndMode) on_AutoTxButton_clicked(true);
-  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffff88;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
+  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffbbbb;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
   m_bMyCallStd=stdCall(m_config.my_callsign ());
 
   if(!m_config.my_callsign().isEmpty()) {
@@ -2021,7 +2021,7 @@ void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
   m_autoTx = checked;
   if(checked) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n min-width: 5em;\n padding: 3px;\n}");
-  else if(m_autoseq) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffff88;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
+  else if(m_autoseq) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffbbbb;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
   else ui->AutoTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #e0e0e0;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
 }
 
@@ -2036,7 +2036,7 @@ void MainWindow::on_AutoSeqButton_clicked (bool checked)
       on_rbGenMsg_clicked(true);
       ui->rbGenMsg->setChecked(true);
     }
-    if(!m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
+    if(!m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #ffbbbb;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
   } else {
     enableTab1TXRB(true);
 	if(!m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #e0e0e0;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
