@@ -259,7 +259,8 @@ set (wsjtx_CXXSRCS
   eqsl.cpp
   wsprnet.cpp
   WSPRBandHopping.cpp
-  MessageBox.cpp
+  JTDXMessageBox.cpp
+  JTDXDateTime.cpp
   )
 
 set (wsjt_CXXSRCS
@@ -986,6 +987,7 @@ set (LANGUAGES
   zh_HK
   zh_CN
   ja_JP
+  ca_ES
   )
 foreach (lang_ ${LANGUAGES})
   file (TO_NATIVE_PATH translations/jtdx_${lang_}.ts ts_)

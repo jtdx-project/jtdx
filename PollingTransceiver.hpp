@@ -39,11 +39,9 @@ protected:
                                QObject * parent);
 
 protected:
-  void do_sync (bool force_signal = false, bool no_poll = false) override final;
-
   // Sub-classes implement this and fetch what they can from the rig
   // in a non-intrusive manner.
-  virtual void poll () = 0;
+  virtual void do_poll () = 0;
 
   void do_post_start () override final;
   void do_post_stop () override final;

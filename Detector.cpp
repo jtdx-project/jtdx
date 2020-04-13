@@ -2,12 +2,10 @@
 // All changes are shown in the patch file coming together with the full JTDX source code.
 
 #include "Detector.hpp"
-#include <QDateTime>
 #include <QtAlgorithms>
 #include <QDebug>
 #include <math.h>
 #include "commons.h"
-
 #include "moc_Detector.cpp"
 
 extern "C" {
@@ -15,7 +13,7 @@ extern "C" {
 }
 
 Detector::Detector (unsigned frameRate, double periodLengthInSeconds,
-                    unsigned downSampleFactor, QObject * parent)
+                    JTDXDateTime * jtdxtime, unsigned downSampleFactor, QObject * parent)
   : AudioDevice (parent)
   , m_frameRate (frameRate)
   , m_period (periodLengthInSeconds)
@@ -25,6 +23,7 @@ Detector::Detector (unsigned frameRate, double periodLengthInSeconds,
   , m_buffer ((downSampleFactor > 1) ?
               new int [max_buffer_size * downSampleFactor] : nullptr)
   , m_bufferPos (0)
+  , m_jtdxtime {jtdxtime}
 {
   (void)m_frameRate;            // quell compiler warning
   clear ();
@@ -59,7 +58,7 @@ void Detector::clear ()
 qint64 Detector::writeData (char const * data, qint64 maxSize)
 {
   static unsigned mstr0=999999;
-  qint64 ms0 = QDateTime::currentMSecsSinceEpoch() % 86400000;
+  qint64 ms0 = m_jtdxtime -> currentMSecsSinceEpoch2() % 86400000;
   unsigned mstr = ms0 % int(1000.0*m_period); // ms into the nominal Tx start time
   if(mstr < mstr0) {              //When mstr has wrapped around to 0, restart the buffer
     dec_data.params.kin = 0;

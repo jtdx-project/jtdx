@@ -289,10 +289,10 @@ int FrequencyList_v2::best_working_frequency (Frequency f) const
           if (band == target_band)
             {
               // take closest band match
-              if (m_->frequency_list_[source_row].default_) defa = row;
               Radio::FrequencyDelta new_delta = f - candidate_frequency;
               if (std::abs (new_delta) < std::abs (delta))
                 {
+                  if (m_->frequency_list_[source_row].default_) defa = row;
                   delta = new_delta;
                   result = row;
                 }

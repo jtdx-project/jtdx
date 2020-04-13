@@ -2,7 +2,6 @@
 
 #include "soundout.h"
 
-#include <QDateTime>
 #include <QAudioDeviceInfo>
 #include <QAudioOutput>
 #include <QSysInfo>

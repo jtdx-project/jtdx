@@ -1,11 +1,9 @@
-// last time modified by Igor UA3DJY on 20200105
 
 #include "displaytext.h"
 
 #include <QtGlobal>
 #include <QApplication>
 #include <QMouseEvent>
-#include <QDateTime>
 #include <QTextCharFormat>
 #include <QFont>
 #include <QTextCursor>
@@ -126,7 +124,7 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
     document ()->setMaximumBlockCount (document ()->maximumBlockCount ());
 }
 
-int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QString hisCall, QString hisGrid,
+int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QString hisCall, QString hisGrid,
                             bool once_notified, LogBook logBook, QsoHistory& qsoHistory,
                             QsoHistory& qsoHistory2, double dialFreq, const QString app_mode,
                             bool bypassRxfFilters,bool bypassAllFilters, int rx_frq,
@@ -185,9 +183,9 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     bool bwantedPrefix = false;
     bool bwantedGrid = false;
     bool bwantedCountry = false;
-    if (app_mode.startsWith("FT")) messageText = decodedText.string().left(49);
-    else if (app_mode == "WSPR-2") messageText = decodedText.string().trimmed();
-    else messageText = decodedText.string().left(40);
+    if (app_mode.startsWith("FT")) messageText = decodedText->string().left(49);
+    else if (app_mode == "WSPR-2") messageText = decodedText->string().trimmed();
+    else messageText = decodedText->string().left(40);
     QString servis = " ";
     QString cntry = " ";
     QString checkCall;
@@ -201,9 +199,10 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     int priority = 0;
     QString param;
     QString report;
+    QString checkMode;
     unsigned c_time = 0;
-    if (!decodedText.isDebug() && app_mode != "WSPR-2") {
-        c_time = decodedText.timeInSeconds();
+    if (!decodedText->isDebug() && app_mode != "WSPR-2") {
+        c_time = decodedText->timeInSeconds();
         if (c_time != 0 && c_time != max_r_time) {
             max_r_time = c_time;
             qsoHistory.time(max_r_time);
@@ -213,15 +212,15 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 myhisCall_ = hisCall;
                 }
         }
-        auto const& parts = decodedText.message().split (' ', QString::SkipEmptyParts);
-        checkCall = decodedText.CQersCall(grid,tyyp);
+        auto const& parts = decodedText->message().split (' ', QString::SkipEmptyParts);
+        checkCall = decodedText->CQersCall(grid,tyyp);
         if(!app_mode.startsWith("FT") && (messageText.contains("2nd-h") || messageText.contains("3rd-h"))) jt65bc = true;
         if (!checkCall.isEmpty ()) {
             if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
             if (grid.isEmpty () && Radio::base_callsign (checkCall) == hisCall) grid = hisGrid;
-            if (decodedText.message().left(3) == "DE "){
+            if (decodedText->message().left(3) == "DE "){
                 tyyp = "";
-                if (qAbs(rx_frq - decodedText.frequencyOffset()) < 10 ) {
+                if (qAbs(rx_frq - decodedText->frequencyOffset()) < 10 ) {
                     std_type = 2;
                     txtColor = m_config->color_MyCall().name();
                      
@@ -229,21 +228,21 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                         status = QsoHistory::RCALL;
                         param = grid;
                     }
-                    else if (hisCall.isEmpty () && decodedText.message().right(4) == checkCall) {
+                    else if (hisCall.isEmpty () && decodedText->message().right(4) == checkCall) {
                         status = QsoHistory::RCALL;
                     }
                     else if (checkCall.contains(hisCall)  && mystatus_ > QsoHistory::SCQ  && mystatus_ != QsoHistory::FIN) {
-                        if (decodedText.report(myCall,Radio::base_callsign (checkCall),report) && report != "RR73" && !report.isEmpty ()) {
+                        if (decodedText->report(myCall,Radio::base_callsign (checkCall),report) && report != "RR73" && !report.isEmpty ()) {
                             status = QsoHistory::RREPORT;
                             param = report;
                         }
-                        else if (decodedText.message().contains(" RRR") && mystatus_ > QsoHistory::SREPORT) {
+                        else if (decodedText->message().contains(" RRR") && mystatus_ > QsoHistory::SREPORT) {
                             status = QsoHistory::RRR;
                         }
-                        else if (decodedText.message().contains("RR73") && mystatus_ > QsoHistory::SREPORT) {
+                        else if (decodedText->message().contains("RR73") && mystatus_ > QsoHistory::SREPORT) {
                             status = QsoHistory::RRR73;
                         }
-                        else if (decodedText.message().contains(" 73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // DE call 73 case
+                        else if (decodedText->message().contains(" 73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // DE call 73 case
                             status = QsoHistory::R73;
                         }
                         else {
@@ -264,14 +263,14 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 param = grid;
             }
         }
-        else if (!myCall.isEmpty () && Radio::base_callsign (decodedText.call()) == myCall) {
+        else if (!myCall.isEmpty () && Radio::base_callsign (decodedText->call()) == myCall) {
                 std_type = 2;
                 txtColor = m_config->color_MyCall().name();
                 actwind = true;
                 if (m_config->beepOnMyCall()) {
                     beep = true;
                 }
-                decodedText.deCallAndGrid(checkCall, grid);
+                decodedText->deCallAndGrid(checkCall, grid);
                 if (!grid.isEmpty () || (!checkCall.isEmpty () && parts.length() == 2)) {
                     status = QsoHistory::RCALL;
                     if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
@@ -281,19 +280,19 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 else {
                     if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
                     if (grid.isEmpty () && Radio::base_callsign (checkCall) == hisCall) grid = hisGrid;
-                    if (decodedText.report(myCall,Radio::base_callsign (checkCall),report)) {
+                    if (decodedText->report(myCall,Radio::base_callsign (checkCall),report)) {
                         if (!checkCall.isEmpty ()) {
                             if (report != "RR73" && !report.isEmpty ()) {
                                 status = QsoHistory::RREPORT;
                                 param = report;
                             }
-                            else if (decodedText.message().contains(" RRR")) {
+                            else if (decodedText->message().contains(" RRR")) {
                                 status = QsoHistory::RRR;
                             }
-                            else if (decodedText.message().contains("RR73")) {
+                            else if (decodedText->message().contains("RR73")) {
                                 status = QsoHistory::RRR73;
                             }
-                            else if (decodedText.message().contains(" 73")) {
+                            else if (decodedText->message().contains(" 73")) {
                                 status = QsoHistory::R73;
                             }
                             else {
@@ -301,7 +300,7 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                             }
                         }
                     }            
-                    else if (decodedText.message().contains("73") && !hisCall.isEmpty () && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // nonstandard73 with myCall
+                    else if (decodedText->message().contains("73") && !hisCall.isEmpty () && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // nonstandard73 with myCall
                         status = QsoHistory::R73;
                         checkCall = hisCall;
                     }
@@ -320,31 +319,31 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
                 }
         }
         else {
-                decodedText.deCallAndGrid(checkCall, grid);
+                decodedText->deCallAndGrid(checkCall, grid);
                 if (!checkCall.isEmpty ()) {
                     if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
                     if (grid.isEmpty () && Radio::base_callsign (checkCall) == hisCall) grid = hisGrid;
-                    if (!decodedText.isNonStd1() && !decodedText.isNonStd2()) { 
+                    if (!decodedText->isNonStd1() && !decodedText->isNonStd2()) { 
                         std_type = 3;
                         if (!grid.isEmpty ()) param = grid;
-                        if (!hisCall.isEmpty () && checkCall.contains(hisCall)) qsoHistory.rx(checkCall,decodedText.frequencyOffset());
-                    } else if (!hisCall.isEmpty () && checkCall.contains(hisCall) && qAbs(rx_frq - decodedText.frequencyOffset()) < 10 && decodedText.message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { //nonstandard73 with hisCall
+                        if (!hisCall.isEmpty () && checkCall.contains(hisCall)) qsoHistory.rx(checkCall,decodedText->frequencyOffset());
+                    } else if (!hisCall.isEmpty () && checkCall.contains(hisCall) && qAbs(rx_frq - decodedText->frequencyOffset()) < 10 && decodedText->message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { //nonstandard73 with hisCall
                         std_type = 2;
                         txtColor = m_config->color_MyCall().name();
                         status = QsoHistory::R73;
                         mystatus_ = status;
                     } else if (!hisCall.isEmpty () && checkCall.contains(hisCall)) {
-                        qsoHistory.rx(checkCall,decodedText.frequencyOffset());
+                        qsoHistory.rx(checkCall,decodedText->frequencyOffset());
                         checkCall = "";
                     } else {
                         checkCall = "";
                     }
-                    if (!checkCall.isEmpty () && m_config->RR73Marker() && (decodedText.message().contains("RR73") || decodedText.message().contains(" 73"))) {
+                    if (!checkCall.isEmpty () && m_config->RR73Marker() && (decodedText->message().contains("RR73") || decodedText->message().contains(" 73"))) {
                         std_type = 4;
                         txtColor = m_config->color_CQ().name();
                         status = QsoHistory::RFIN;
                     }
-                } else if (std_type == 0 && !hisCall.isEmpty () && qAbs(rx_frq - decodedText.frequencyOffset()) < 10 && decodedText.message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // nonstandard 73 in my rx
+                } else if (std_type == 0 && !hisCall.isEmpty () && qAbs(rx_frq - decodedText->frequencyOffset()) < 10 && decodedText->message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // nonstandard 73 in my rx
                     std_type = 2;
                     txtColor = m_config->color_MyCall().name();
                     checkCall = hisCall;
@@ -367,26 +366,25 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
         bool callB4BandMode = true;
         bool gridB4 = true;
         bool gridB4BandMode = true;
-        QString checkMode;
 
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
         if (!lotw.isEmpty ()) priority = 1;
         if (displayPotential && std_type == 3) {
             txtColor = m_config->color_StandardCall().name();
         }
+        if (app_mode == "JT9+JT65") {
+            if (decodedText->isJT9()) {
+                checkMode = "JT9";
+            } else if (decodedText->isJT65()) { // TODO: is this if-condition necessary?
+                checkMode = "JT65";
+            }
+        } else {
+            checkMode = app_mode;
+        }
         if (!jt65bc && (displayCountryName || displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx)) {
             if (!displayNewCQZ && !displayNewITUZ && !displayNewDXCC && displayCountryName && !displayNewCall && !displayNewPx) {
                         logBook.getDXCC(/*in*/ checkCall, /*out*/ countryName);
                     }
-            if (app_mode == "JT9+JT65") {
-                if (decodedText.isJT9()) {
-                    checkMode = "JT9";
-                } else if (decodedText.isJT65()) { // TODO: is this if-condition necessary?
-                    checkMode = "JT65";
-                }
-            } else {
-                checkMode = app_mode;
-            }
             if (displayNewCQZ) {
                 if (displayNewCQZBand || displayNewCQZBandMode) {
                     if (displayNewCQZBand && displayNewCQZBandMode) {
@@ -791,20 +789,20 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
         }
     }
     
-    if (show_line && decodedText.isNonStd2() && m_config->hidefree() && !decodedText.message().contains(myCall) && std_type != 1 && !jt65bc) {
+    if (show_line && decodedText->isNonStd2() && m_config->hidefree() && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcq() && std_type != 1 && std_type != 2 && qAbs(rx_frq-decodedText.frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && m_config->showcq() && std_type != 1 && std_type != 2 && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcqrrr73() && std_type != 1 && std_type != 2 && !decodedText.isEnd() && qAbs(rx_frq-decodedText.frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && m_config->showcqrrr73() && std_type != 1 && std_type != 2 && !decodedText->isEnd() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcq73() && std_type != 1 && std_type != 2 && !decodedText.isFin() && qAbs(rx_frq-decodedText.frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && m_config->showcq73() && std_type != 1 && std_type != 2 && !decodedText->isFin() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (decodedText.isHint()) {
+    } else if (decodedText->isHint()) {
         if(lotw.isEmpty ())
             servis = "*" + servis.mid(1); // hinted decode
         else
             servis = "°" + servis.mid(1); // lotw hinted decode
-    } else if (decodedText.isWrong()) {
+    } else if (decodedText->isWrong()) {
         servis = "?" + servis.mid(1); // error decode
     } else if (!lotw.isEmpty ()) {
         servis = "•" + servis.mid(1); // lotw 
@@ -831,13 +829,13 @@ int DisplayText::displayDecodedText(DecodedText decodedText, QString myCall, QSt
     }
     if (show_line) {
         if (!checkCall.isEmpty () && (std_type == 1 || std_type == 2 || std_type == 4 || (std_type == 3 && !param.isEmpty()))) {
-            qsoHistory.message(checkCall,status,priority,param,tyyp,countryName.left(2),mpx,c_time,decodedText.report(),decodedText.frequencyOffset());
+            qsoHistory.message(checkCall,status,priority,param,tyyp,countryName.left(2),mpx,c_time,decodedText->report(),decodedText->frequencyOffset(),checkMode);
         } 
         if (std_type == 2) {
             if(!m_config->redMarker()) std_type = 0;
             else if(m_config->blueMarker() && !hisCall.isEmpty () && checkCall.contains(hisCall)) std_type = 5;
         }
-        appendText(messageText, bgColor, txtColor, std_type, servis, cntry, forceBold, strikethrough, underlined, decodedText.isDXped());
+        appendText(messageText, bgColor, txtColor, std_type, servis, cntry, forceBold, strikethrough, underlined, decodedText->isDXped());
         wastx_ = false;
     }
         if (notified) inotified |= 1;
@@ -958,7 +956,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
                   }
                }
             mystatus_ = status;
-            qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq);
+            qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq,modeTx);
           }
         if (wastx_ && ttime - last_tx < 2 && m_config->hide_TX_messages())
             appendText(t,bg,"black",0," "," ",false,false,false,false,true);

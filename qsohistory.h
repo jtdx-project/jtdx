@@ -1,6 +1,6 @@
 /*
  * maintains QSO Histories and autoselect
- * ES1JA last modified 07.02.2020
+ * Created by Arvo ES1JA 
  */
 
 #ifndef __QSOHISTORY_H
@@ -9,28 +9,28 @@
 #include <QList>
 #include <QString>
 #include <QStringList>
-#include <QDateTime>
 #include <QHash>
 #include "Radio.hpp"
 #include <QRegularExpression>
 #include <QtMath>
-
+#include "JTDXDateTime.h"
 class QsoHistory
 {
  public:
 //			0     1    2    3      4      5        6        7    8    9     10     11   12   13   14
 	enum Status {NONE, RFIN, RCQ, SCQ, RCALL, SCALL, RREPORT, SREPORT, RRR, SRR, RRR73, SRR73, R73, S73, FIN};
 	void init();
-	void message(QString const& callsign, Status status, int priority, QString const& param, QString const& tyyp, QString const& continent, QString const& mpx, unsigned time, QString const& rep, int freq);
+	void message(QString const& callsign, Status status, int priority, QString const& param, QString const& tyyp, QString const& continent, QString const& mpx, unsigned time, QString const& rep, int freq,  QString const& mode);
 	void rx(QString const& callsign, int freq);
 	void time(unsigned time);
 	void owndata (QString const& mycontinent, QString const& myprefix, QString const& mygrid, bool strictdirCQ);
 	Status status(QString const& callsign, QString &grid);
-	int autoseq(QString &callsign, QString &grid, Status &status, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio);
+	int autoseq(QString &callsign, QString &grid, Status &status, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio, QString &mode);
 	Status log_data(QString const& callsign, unsigned &time, QString &rrep, QString &srep);
 	int remove(QString const& callsign);		
 	int blacklist(QString const& callsign);
 	int reset_count(QString const& callsign,Status status = NONE);
+	JTDXDateTime * jtdxtime;
  private:
  	QRegularExpression _gridRe = QRegularExpression("^[A-R]{2,2}[0-9]{2,2}[A-R]{0,2}[0-9]{0,2}[A-R]{0,2}");
 
@@ -41,7 +41,7 @@ class QsoHistory
 
  	struct QSO
  	{
-	  QString	call,grid,r_rep,s_rep,tyyp,continent,mpx;
+	  QString	call,grid,r_rep,s_rep,tyyp,continent,mpx,mode;
 	  Status	status,srx_c,srx_p,stx_c,stx_p;
 	  unsigned	b_time,time;
 	  int		distance,rx,tx,count,priority,direction;

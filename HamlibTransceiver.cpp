@@ -8,7 +8,7 @@
 
 #include <QByteArray>
 #include <QString>
-#include <QDateTime>
+//#include <QDateTime>
 #include <QStandardPaths>
 #include <QFile>
 #include <QJsonDocument>
@@ -668,7 +668,7 @@ int HamlibTransceiver::do_start ()
       resolution = -1;          // best guess
     }
 
-  poll ();
+  do_poll ();
 
   TRACE_CAT ("HamlibTransceiver", "exit" << state () << "reversed =" << reversed_ << "resolution = " << resolution);
   return resolution;
@@ -934,7 +934,7 @@ void HamlibTransceiver::do_mode (MODE mode)
   update_mode (mode);
 }
 
-void HamlibTransceiver::poll ()
+void HamlibTransceiver::do_poll ()
 {
 #if !WSJT_TRACE_CAT_POLLS
 #if defined (NDEBUG)

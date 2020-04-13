@@ -7163,7 +7163,6 @@ soundcard changes</string>
   <tabstop>udpWindowToFront</tabstop>
   <tabstop>udpWindowRestore</tabstop>
   <tabstop>frequencies_table_view</tabstop>
-  <tabstop>reset_frequencies_push_button</tabstop>
   <tabstop>calibration_intercept_spin_box</tabstop>
   <tabstop>calibration_slope_ppm_spin_box</tabstop>
   <tabstop>stations_table_view</tabstop>

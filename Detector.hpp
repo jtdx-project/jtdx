@@ -5,6 +5,7 @@
 #define DETECTOR_HPP__
 
 #include "AudioDevice.hpp"
+#include "JTDXDateTime.h"
 
 #include <QScopedArrayPointer>
 
@@ -27,7 +28,7 @@ public:
   //
   // the samplesPerFFT argument is the number after down sampling
   //
-  Detector (unsigned frameRate, double periodLengthInSeconds, unsigned downSampleFactor = 4u, QObject * parent = 0);
+  Detector (unsigned frameRate, double periodLengthInSeconds, JTDXDateTime * jtdxtime, unsigned downSampleFactor = 4, QObject * parent = 0);
 
   void setPeriod(double p) {m_period=p;}
   bool reset () override;
@@ -58,6 +59,7 @@ private:
   // data (a signals worth) at
   // the input sample rate
   unsigned m_bufferPos;
+  JTDXDateTime * m_jtdxtime;
 };
 
 #endif

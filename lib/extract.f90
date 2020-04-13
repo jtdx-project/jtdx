@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on 20181215
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine extract(s3b,s3c,ntrials,hint_on,mycall_12,hiscall_12,hisgrid,  &
            msg_decoded,decoded,freemsg,nft,hintedrxfreq,hint,npass1, &
            hintedw,bypass_hintcq,bypass_hintall,bypass_ftrsd,nstophint, &
@@ -209,7 +206,7 @@ subroutine extract(s3b,s3c,ntrials,hint_on,mycall_12,hiscall_12,hisgrid,  &
        tmp(i)=correct(64-i)
      enddo
      correct(1:63)=tmp(1:63)
-     call interleave63(correct,63,1)
+     call interleave63(correct,1)
      call graycode65(correct,63,1)
      call unpackmsg(dat4,decoded)     !Unpack the user message
      if(decoded.ne.'                      ') then
@@ -661,7 +658,7 @@ subroutine extract(s3b,s3c,ntrials,hint_on,mycall_12,hiscall_12,hisgrid,  &
           tmp(i)=correct(64-i)
         enddo
         correct(1:63)=tmp(1:63)
-        call interleave63(correct,63,1)
+        call interleave63(correct,1)
         call graycode65(correct,63,1)
         call unpackmsg(dat4,decoded)     !Unpack the user message
         if(decoded.ne.'                      ') then

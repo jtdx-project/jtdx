@@ -3,7 +3,6 @@
 #include "Modulator.hpp"
 #include <limits>
 #include <qmath.h>
-#include <QDateTime>
 #include <QDebug>
 #include "mainwindow.h"
 #include "soundout.h"
@@ -24,7 +23,7 @@ extern float gran();		// Noise generator (for tests only)
 
 double constexpr Modulator::m_twoPi;
 
-Modulator::Modulator (unsigned frameRate, double periodLengthInSeconds, QObject * parent)
+Modulator::Modulator (unsigned frameRate, double periodLengthInSeconds, JTDXDateTime * jtdxtime, QObject * parent)
   : AudioDevice {parent}
   , m_quickClose {false}
   , m_phi {0.0}
@@ -37,6 +36,7 @@ Modulator::Modulator (unsigned frameRate, double periodLengthInSeconds, QObject 
   , m_cwLevel {false}
   , m_j0 {-1}
   , m_toneFrequency0 {1500.0}
+  , m_jtdxtime {jtdxtime}
 {
 }
 
@@ -47,7 +47,7 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
 {
   Q_ASSERT (stream);
 // Time according to this computer which becomes our base time
-  qint64 ms0 = QDateTime::currentMSecsSinceEpoch() % 86400000;
+  qint64 ms0 = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
 //  qDebug() << "ModStart" << QDateTime::currentDateTimeUtc().toString("hh:mm:ss.sss");
   unsigned mstr = ms0 % int(1000.0*m_period); // ms into the nominal Tx start time
   if (m_state != Idle) stop ();

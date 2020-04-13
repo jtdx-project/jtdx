@@ -141,9 +141,9 @@
 #include <QAudioDeviceInfo>
 #include <QAudioInput>
 #include <QDialog>
-#include <QMessageBox>
 #include <QAction>
 #include <QFileDialog>
+#include <QFileSystemModel>
 #include <QDir>
 #include <QTemporaryFile>
 #include <QFormLayout>
@@ -162,7 +162,7 @@
 #include <QSerialPortInfo>
 #include <QScopedPointer>
 #include <QDebug>
-
+#include <QtGui>
 #include "qt_helpers.hpp"
 #include "MetaDataRegistry.hpp"
 #include "SettingsGroup.hpp"
@@ -180,7 +180,7 @@
 #include "FrequencyList.hpp"
 #include "StationList.hpp"
 #include "NetworkServerLookup.hpp"
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 
 #include "pimpl_impl.hpp"
 
@@ -219,8 +219,9 @@ public:
   {
     setWindowTitle (QApplication::applicationName () + " - " +
                     tr ("Add Frequency"));
-    mode_combo_box_.setModel (modes_model);
     region_combo_box_.setModel (regions_model);
+    mode_combo_box_.setModel (modes_model);
+
     auto form_layout = new QFormLayout ();
     form_layout->addRow (tr ("IARU &Region:"), &region_combo_box_);
     form_layout->addRow (tr ("&Mode:"), &mode_combo_box_);
@@ -394,6 +395,7 @@ private:
       (WSJT_RIG_NONE_CAN_SPLIT || !rig_is_dummy_) &&
       (rig_params_.split_mode != TransceiverFactory::split_mode_none);
   }
+  void set_cached_mode ();
   bool open_rig (bool force = false);
   //bool set_mode ();
   void close_rig ();
@@ -813,6 +815,8 @@ private:
   QAudioDeviceInfo audio_output_device_;
   bool default_audio_output_device_selected_;
   AudioDevice::Channel audio_output_channel_;
+  
+  
 
   friend class Configuration;
 };
@@ -1198,15 +1202,15 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
         if (!temp_dir_.mkpath (unique_directory)
             || !temp_dir_.cd (unique_directory))
           {
-            QMessageBox::critical (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
+            JTDXMessageBox::critical_message (this, "JTDX", tr ("Create temporary directory error: ") + temp_dir_.absolutePath ());
             throw std::runtime_error {"Failed to create a temporary directory"};
           }
         if (!temp_dir_.isReadable () || !(ok = QTemporaryFile {temp_dir_.absoluteFilePath ("test")}.open ()))
           {
-            if (QMessageBox::Cancel == QMessageBox::critical (this, "JTDX",
+            if (JTDXMessageBox::Cancel == JTDXMessageBox::critical_message (this, "JTDX",
                                                               tr ("Create temporary directory error:\n%1\n"
-                                                                  "Another application may be locking the directory").arg (temp_dir_.absolutePath ()),
-                                                              QMessageBox::Retry | QMessageBox::Cancel))
+                                                                  "Another application may be locking the directory").arg (temp_dir_.absolutePath ()),"","",
+                                                              JTDXMessageBox::Retry | JTDXMessageBox::Cancel))
               {
                 throw std::runtime_error {"Failed to create a usable temporary directory"};
               }
@@ -1221,7 +1225,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QDir data_dir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)};
     if (!data_dir.mkpath ("."))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create data directory error: ") + data_dir.absolutePath ());
         throw std::runtime_error {"Failed to create data directory"};
       }
 
@@ -1230,7 +1234,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     default_save_directory_ = data_dir;
     if (!default_save_directory_.mkpath (save_dir) || !default_save_directory_.cd (save_dir))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (save_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -1241,7 +1245,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
     QString samples_dir {"samples"};
     if (!default_save_directory_.mkpath (samples_dir))
       {
-        QMessageBox::critical (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
+        JTDXMessageBox::critical_message (this, "JTDX", tr ("Create Directory", "Cannot create directory \"") +
                                default_save_directory_.absoluteFilePath (samples_dir) + "\".");
         throw std::runtime_error {"Failed to create save directory"};
       }
@@ -3185,16 +3189,35 @@ void Configuration::impl::reject ()
 
 void Configuration::impl::message_box_critical (QString const& reason, QString const& detail)
 {
-  QMessageBox mb;
+/*  QPushButton::tr("OK");
+  QPushButton::tr("Save");
+  QPushButton::tr("Save All");
+  QPushButton::tr("Open");
+  QPushButton::tr("&Yes");
+  QPushButton::tr("Yes to &All");
+  QPushButton::tr("&No");
+  QPushButton::tr("N&o to All");
+  QPushButton::tr("Abort");
+  QPushButton::tr("Retry");
+  QPushButton::tr("Ignore");
+  QPushButton::tr("Close");
+  QPushButton::tr("Cancel");
+  QPushButton::tr("Discard");
+  QPushButton::tr("Help");
+  QPushButton::tr("Apply");
+  QPushButton::tr("Reset");
+  QPushButton::tr("Restore Defaults");*/
+
+  JTDXMessageBox mb;
   mb.setText (reason);
   if (!detail.isEmpty ())
     {
       mb.setDetailedText (detail);
     }
-  mb.setStandardButtons (QMessageBox::Ok);
-  mb.setDefaultButton (QMessageBox::Ok);
-  mb.setIcon (QMessageBox::Critical);
-  mb.button(QMessageBox::Ok)->setText(tr("&OK"));
+  mb.setStandardButtons (JTDXMessageBox::Ok);
+  mb.setDefaultButton (JTDXMessageBox::Ok);
+  mb.setIcon (JTDXMessageBox::Critical);
+  mb.translate_buttons();
   mb.exec ();
 }
 
@@ -4999,13 +5022,71 @@ void Configuration::impl::delete_frequencies ()
 
 void Configuration::impl::load_frequencies ()
 {
-  auto file_name = QFileDialog::getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
-  if (!file_name.isNull ())
+  QDialogButtonBox::tr("OK");
+  
+  QFileDialog::tr("Directory:");
+  QFileDialog::tr("File &name:");
+  QFileDialog::tr("&Open");
+  QFileDialog::tr("&Choose");
+  QFileDialog::tr("&Save");
+  QFileDialog::tr("Cancel");
+  QFileDialog::tr("All files (*)");
+  QFileDialog::tr("New Folder");
+  QFileDialog::tr("Delete");
+  QFileDialog::tr("&Delete");
+  QFileDialog::tr("&Rename");
+  QFileDialog::tr("Show &hidden files");
+  QFileDialog::tr("&New Folder");
+  QFileDialog::tr("Look in:");
+  QFileDialog::tr("Files of type:");
+  QFileDialog::tr("'%1' is write protected.\nDo you want to delete it anyway?");
+  QFileDialog::tr("Are you sure you want to delete '%1'?");
+  QFileDialog::tr("Could not delete directory.");
+  QFileDialog::tr("%1\nDirectory not found.\nPlease verify the "
+                                            "correct directory name was given.");
+  QFileDialog::tr("Recent Places");
+  QFileDialog::tr("Back");
+  QFileDialog::tr("Go back");
+  QFileDialog::tr("Alt+Left");
+  QFileDialog::tr("Forward");
+  QFileDialog::tr("Go forward");
+  QFileDialog::tr("Alt+Right");
+  QFileDialog::tr("Parent Directory");
+  QFileDialog::tr("Go to the parent directory");
+  QFileDialog::tr("Alt+Up");
+  QFileDialog::tr("Create New Folder");
+  QFileDialog::tr("Create a New Folder");
+  QFileDialog::tr("List View");
+  QFileDialog::tr("Change to list view mode");
+  QFileDialog::tr("Detail View");
+  QFileDialog::tr("Change to detail view mode");
+  QFileDialog::tr("Sidebar");
+  QFileDialog::tr("List of places and bookmarks");
+
+  QFileSystemModel::tr("Name");
+  QFileSystemModel::tr("Size");
+  QFileSystemModel::tr("Type");
+  QFileSystemModel::tr("Date Modified");
+
+  QFileDialog* fileDlg=new QFileDialog(this);
+    fileDlg->setWindowTitle(tr ("Load Working Frequencies"));
+  fileDlg->setFileMode(QFileDialog::ExistingFile);
+  fileDlg->setNameFilter(tr ("Frequency files (*.qrg);;All files (*.*)"));
+  fileDlg->setDirectory(data_dir_.absolutePath ());
+  fileDlg->setLabelText(QFileDialog::Reject,tr("Cancel"));
+  QString file_name = "";
+  if (fileDlg->exec()) {
+      file_name = fileDlg->selectedFiles()[0];
+  }   
+//  auto file_name = fileDlg->getOpenFileName (this, tr ("Load Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"),NULL,QFileDialog::DontUseNativeDialog);
+  delete fileDlg;
+  if (!file_name.isEmpty ())
     {
+      
       auto const list = read_frequencies_file (file_name);
       if (list.size ()
           && (!next_frequencies_.frequency_list ().size ()
-              || MessageBox::Yes == MessageBox::query_message (this
+              || JTDXMessageBox::Yes == JTDXMessageBox::query_message (this
                                                                , tr ("Replace Working Frequencies")
                                                                , tr ("Are you sure you want to discard your current "
                                                                      "working frequencies and replace them with the "
@@ -5018,8 +5099,19 @@ void Configuration::impl::load_frequencies ()
 
 void Configuration::impl::merge_frequencies ()
 {
-  auto file_name = QFileDialog::getOpenFileName (this, tr ("Merge Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
-  if (!file_name.isNull ())
+  QFileDialog* fileDlg=new QFileDialog(this);
+    fileDlg->setWindowTitle(tr ("Merge Working Frequencies"));
+  fileDlg->setFileMode(QFileDialog::ExistingFile);
+  fileDlg->setNameFilter(tr ("Frequency files (*.qrg);;All files (*.*)"));
+  fileDlg->setDirectory(data_dir_.absolutePath ());
+  fileDlg->setLabelText(QFileDialog::Reject,tr("Cancel"));
+  QString file_name = "";
+  if (fileDlg->exec()) {
+      file_name = fileDlg->selectedFiles()[0];
+  }   
+//  auto file_name = QFileDialog::getOpenFileName (this, tr ("Merge Working Frequencies"), data_dir_.absolutePath (), tr ("Frequency files (*.qrg);;All files (*.*)"));
+delete fileDlg;
+  if (!file_name.isEmpty ())
     {
       next_frequencies_.frequency_list_merge (read_frequencies_file (file_name)); // update the model
     }
@@ -5035,7 +5127,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
   ids >> magic;
   if (qrg_magic != magic)
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Incorrect file magic"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Incorrect file magic"));
       return list;
     }
   quint32 version;
@@ -5044,7 +5136,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
   // necessary
   if (version > qrg_version)
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Version is too new"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Version is too new"));
       return list;
     }
 
@@ -5054,7 +5146,7 @@ FrequencyList_v2::FrequencyItems Configuration::impl::read_frequencies_file (QSt
 
   if (ids.status () != QDataStream::Ok || !ids.atEnd ())
     {
-      MessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Contents corrupt"));
+      JTDXMessageBox::warning_message (this, tr ("Not a valid frequencies file"), tr ("Contents corrupt"));
       list.clear ();
       return list;
     }
@@ -5073,18 +5165,17 @@ void Configuration::impl::save_frequencies ()
       QDataStream ods {&frequencies_file};
       auto selection_model = ui_->frequencies_table_view->selectionModel ();
       if (selection_model->hasSelection ()) {
-          QMessageBox msgbox;
+          JTDXMessageBox msgbox;
           msgbox.setWindowTitle(tr("Only Save Selected  Working Frequencies"));
-          msgbox.setIcon(QMessageBox::Question);
+          msgbox.setIcon(JTDXMessageBox::Question);
           msgbox.setText(tr("Are you sure you want to save only the "
                                                                  "working frequencies that are currently selected? "
                                                                  "Click No to save all."));
-          msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-          msgbox.setDefaultButton(QMessageBox::No);
-          msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
-          msgbox.button(QMessageBox::No)->setText(tr("&No"));
-
-          if (QMessageBox::Yes == msgbox.exec())
+          msgbox.setStandardButtons(JTDXMessageBox::Yes | JTDXMessageBox::No);
+          msgbox.setDefaultButton(JTDXMessageBox::No);
+          msgbox.translate_buttons();
+          
+          if (JTDXMessageBox::Yes == msgbox.exec())
             {
               selection_model->select (selection_model->selection (), QItemSelectionModel::SelectCurrent | QItemSelectionModel::Rows);
               ods << qrg_magic << qrg_version << next_frequencies_.frequency_list (selection_model->selectedRows ());
@@ -5103,18 +5194,17 @@ void Configuration::impl::save_frequencies ()
 
 void Configuration::impl::reset_frequencies ()
 {
-  QMessageBox msgbox;
+  JTDXMessageBox msgbox;
   msgbox.setWindowTitle(tr("Reset Working Frequencies"));
-  msgbox.setIcon(QMessageBox::Question);
+  msgbox.setIcon(JTDXMessageBox::Question);
   msgbox.setText(tr("Are you sure you want to discard your current "
                                                        "working frequencies and replace them with default "
                                                        "ones?"));
-  msgbox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-  msgbox.setDefaultButton(QMessageBox::No);
-  msgbox.button(QMessageBox::Yes)->setText(tr("&Yes"));
-  msgbox.button(QMessageBox::No)->setText(tr("&No"));
+  msgbox.setStandardButtons(JTDXMessageBox::Yes | JTDXMessageBox::No);
+  msgbox.setDefaultButton(JTDXMessageBox::No);
+  msgbox.translate_buttons();
 
-  if (QMessageBox::Yes == msgbox.exec())
+  if (JTDXMessageBox::Yes == msgbox.exec())
     {
       next_frequencies_.reset_to_defaults ();
     }
@@ -5183,7 +5273,7 @@ bool Configuration::impl::have_rig ()
 {
   if (!open_rig ())
     {
-      QMessageBox::critical (this, "JTDX", tr ("Failed to open connection to rig"));
+      JTDXMessageBox::critical_message (this, "JTDX", tr ("Failed to open connection to rig"));
     }
   return rig_active_;
 }
@@ -5257,19 +5347,26 @@ bool Configuration::impl::open_rig (bool force)
   return result;
 }
 
+void Configuration::impl::set_cached_mode ()
+{
+  MODE mode {Transceiver::UNK};
+  // override cache mode with what we want to enforce which includes
+  // UNK (unknown) where we want to leave the rig mode untouched
+  switch (data_mode_)
+     {
+     case data_mode_USB: mode = Transceiver::USB; break;
+     case data_mode_data: mode = Transceiver::DIG_U; break;
+     default: break;
+     }
+
+  cached_rig_state_.mode (mode);
+}
+
 void Configuration::impl::transceiver_frequency (Frequency f)
 {
-  Transceiver::MODE mode {Transceiver::UNK};
-  switch (data_mode_)
-    {
-    case data_mode_USB: mode = Transceiver::USB; break;
-    case data_mode_data: mode = Transceiver::DIG_U; break;
-    case data_mode_none: break;
-    }
-
   cached_rig_state_.online (true); // we want the rig online
-  cached_rig_state_.mode (mode);
-
+  set_cached_mode ();
+  
   // apply any offset & calibration
   // we store the offset here for use in feedback from the rig, we
   // cannot absolutely determine if the offset should apply but by
@@ -5278,6 +5375,7 @@ void Configuration::impl::transceiver_frequency (Frequency f)
   current_offset_ = stations_.offset (f);
   cached_rig_state_.frequency (apply_calibration (f + current_offset_));
 
+//  printf("%s Coniguration transceiver_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
@@ -5286,15 +5384,8 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
   Q_ASSERT (!f || split_mode ());
   if (split_mode ())
     {
-      Transceiver::MODE mode {Transceiver::UNK};
-      switch (data_mode_)
-        {
-        case data_mode_USB: mode = Transceiver::USB; break;
-        case data_mode_data: mode = Transceiver::DIG_U; break;
-        case data_mode_none: break;
-        }
       cached_rig_state_.online (true); // we want the rig online
-      cached_rig_state_.mode (mode);
+      set_cached_mode ();
       cached_rig_state_.split (f);
       cached_rig_state_.tx_frequency (f);
 
@@ -5310,6 +5401,7 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
           cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
         }
 
+//      printf("%s Coniguration transceiver_tx_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
       Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
     }
 }
@@ -5318,18 +5410,22 @@ void Configuration::impl::transceiver_mode (MODE m)
 {
   cached_rig_state_.online (true); // we want the rig online
   cached_rig_state_.mode (m);
+//  printf("%s Coniguration mode: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),m);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
 void Configuration::impl::transceiver_ptt (bool on)
 {
   cached_rig_state_.online (true); // we want the rig online
+  set_cached_mode ();
   cached_rig_state_.ptt (on);
+//  printf("%s Coniguration ptt: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),on);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
 void Configuration::impl::sync_transceiver (bool /*force_signal*/)
 {
+//  printf("%s Coniguration sync force: NULL\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
   // pass this on as cache must be ignored
   // Q_EMIT sync (force_signal);
 }

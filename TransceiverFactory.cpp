@@ -197,15 +197,6 @@ std::unique_ptr<Transceiver> TransceiverFactory::create (ParameterPack const& pa
   return result;
 }
 
-#if !defined (QT_NO_DEBUG_STREAM)
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, DataBits);
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, StopBits);
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, Handshake);
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, PTTMethod);
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, TXAudioSource);
-ENUM_QDEBUG_OPS_IMPL (TransceiverFactory, SplitMode);
-#endif
-
 ENUM_QDATASTREAM_OPS_IMPL (TransceiverFactory, DataBits);
 ENUM_QDATASTREAM_OPS_IMPL (TransceiverFactory, StopBits);
 ENUM_QDATASTREAM_OPS_IMPL (TransceiverFactory, Handshake);

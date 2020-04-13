@@ -7,6 +7,7 @@
 #include "SettingsGroup.hpp"
 #include "SampleDownloader/Directory.hpp"
 
+#include "JTDXMessageBox.hpp"
 #include "pimpl_impl.hpp"
 
 #include "moc_SampleDownloader.cpp"
@@ -124,7 +125,7 @@ SampleDownloader::impl::impl (QSettings * settings
         }
       else
         {
-          QMessageBox::warning (this, "Input Error", "Invalid URL format");
+          JTDXMessageBox::warning_message (this, "", "Input Error", "Invalid URL format");
         }
     });
 }

@@ -3,10 +3,10 @@
 #include <QApplication>
 #include <QString>
 #include <QPalette>
-#include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
 
+#include "JTDXMessageBox.hpp"
 #include "qt_helpers.hpp"
 
 HelpTextWindow::HelpTextWindow (QString const& title, QString const& file_name, QFont const& font, QWidget * parent)
@@ -15,7 +15,7 @@ HelpTextWindow::HelpTextWindow (QString const& title, QString const& file_name, 
   QFile source {file_name};
   if (!source.open (QIODevice::ReadOnly | QIODevice::Text))
     {
-      QMessageBox::warning (this, QApplication::applicationName ()
+      JTDXMessageBox::warning_message (this, QApplication::applicationName ()
                             , "Cannot open \"" + source.fileName ()
                             + "\" for reading:" + source.errorString ());
       return;

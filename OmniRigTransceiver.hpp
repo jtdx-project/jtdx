@@ -5,6 +5,7 @@
 
 #include <QScopedPointer>
 #include <QString>
+#include <QTimer>
 
 #include "TransceiverFactory.hpp"
 #include "TransceiverBase.hpp"
@@ -38,10 +39,11 @@ public:
   void do_tx_frequency (Frequency, MODE, bool no_ignore) override;
   void do_mode (MODE) override;
   void do_ptt (bool on) override;
-  void do_sync (bool force_signal, bool no_poll) override;
 
 private:
-  Q_SLOT void timeout_check ();
+  bool await_notification_with_timeout (int timeout);
+  Q_SIGNAL void notified () const;
+  // Q_SLOT void timeout_check ();
   Q_SLOT void handle_COM_exception (int,  QString, QString, QString);
   Q_SLOT void handle_visible_change ();
   Q_SLOT void handle_rig_type_change (int rig_number);

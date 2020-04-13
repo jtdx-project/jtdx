@@ -2,6 +2,7 @@
 
 #include <exception>
 
+#include <QDateTime>
 #include <QString>
 #include <QTimer>
 #include <QThread>
@@ -19,10 +20,10 @@ void TransceiverBase::start (unsigned sequence_number) noexcept
   QString message;
   try
     {
+      last_sequence_number_ = sequence_number;
       may_update u {this, true};
       shutdown ();
       startup ();
-      last_sequence_number_ = sequence_number;
     }
   catch (std::exception const& e)
     {
@@ -46,7 +47,9 @@ void TransceiverBase::set (TransceiverState const& s,
   QString message;
   try
     {
+      last_sequence_number_ = sequence_number;
       may_update u {this, true};
+//      printf("%s Transiever set\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
       bool was_online {requested_.online ()};
       if (!s.online () && was_online)
         {
@@ -68,6 +71,7 @@ void TransceiverBase::set (TransceiverState const& s,
             }
           if (ptt_off)
             {
+//              printf("%s Timing ptt_off\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
               do_ptt (false);
               do_post_ptt (false);
               QThread::msleep (100); // some rigs cannot process CAT
@@ -79,6 +83,7 @@ void TransceiverBase::set (TransceiverState const& s,
                    || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
                   || ptt_off))       // or just returned to rx
             {
+//              printf("%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
               do_frequency (s.frequency (), s.mode (), ptt_off);
               do_post_frequency (s.frequency (), s.mode ());
 
@@ -95,6 +100,7 @@ void TransceiverBase::set (TransceiverState const& s,
                   // || s.split () != requested_.split ())) // or split change
                   || (s.tx_frequency () && ptt_on)) // or about to tx split
                 {
+//                  printf("%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
                   do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
                   do_post_tx_frequency (s.tx_frequency (), s.mode ());
 
@@ -105,6 +111,7 @@ void TransceiverBase::set (TransceiverState const& s,
             }
           if (ptt_on)
             {
+//              printf("%s Timing ptt_on\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
               do_ptt (true);
               do_post_ptt (true);
               QThread::msleep (100); // some rigs cannot process CAT
@@ -115,7 +122,7 @@ void TransceiverBase::set (TransceiverState const& s,
           // record what actually changed
           requested_.ptt (actual_.ptt ());
         }
-      last_sequence_number_ = sequence_number;
+//      printf("%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
     }
   catch (std::exception const& e)
     {
@@ -133,10 +140,30 @@ void TransceiverBase::set (TransceiverState const& s,
 
 void TransceiverBase::startup ()
 {
-  Q_EMIT resolution (do_start ());
-  do_post_start ();
-  actual_.online (true);
-  requested_.online (true);
+  QString message;
+  try
+    {
+      actual_.online (true);
+      requested_.online (true);
+      auto res = do_start ();
+      auto ms = QDateTime::currentMSecsSinceEpoch() % 1000;
+      printf ("startup ms %lld\n",ms);
+      QThread::msleep (abs(500-ms));
+      do_post_start ();
+      Q_EMIT resolution (res);
+    }
+  catch (std::exception const& e)
+    {
+      message = e.what ();
+    }
+  catch (...)
+    {
+      message = unexpected;
+    }
+  if (!message.isEmpty ())
+    {
+      offline (message);
+    }
 }
 
 void TransceiverBase::shutdown ()
@@ -163,8 +190,8 @@ void TransceiverBase::shutdown ()
     }
   do_stop ();
   do_post_stop ();
-  actual_.online (false);
-  requested_.online (false);
+  actual_ = TransceiverState {};
+  requested_ = TransceiverState {};
 }
 
 void TransceiverBase::stop () noexcept
@@ -194,8 +221,11 @@ void TransceiverBase::stop () noexcept
 
 void TransceiverBase::update_rx_frequency (Frequency rx)
 {
-  actual_.frequency (rx);
-  requested_.frequency (rx);    // track rig changes
+  if (rx)
+    {
+      actual_.frequency (rx);
+      requested_.frequency (rx);    // track rig changes
+    }
 }
 
 void TransceiverBase::update_other_frequency (Frequency tx)

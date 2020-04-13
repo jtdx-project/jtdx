@@ -1,5 +1,3 @@
-// This source code file was last time modified by Arvo ES1JA 20191211
-
 // -*- Mode: C++ -*-
 /*
  * Class to handle the formatted string as returned from the fortran decoder
@@ -11,9 +9,10 @@
 #ifndef DECODEDTEXT_H
 #define DECODEDTEXT_H
 
+#include <QObject>
 #include <QString>
 #include <QRegularExpression>
-
+#include <QHash>
 
 
 /*
@@ -31,12 +30,13 @@
 0605  Tx      1259 # CQ VK3ACF QF22
 */
 
-class DecodedText
+class DecodedText : public QObject
 {
+Q_OBJECT;
 public:
-    explicit DecodedText (QString const& message);
+    explicit DecodedText (QString const& message, QObject *parent = nullptr);
 
-    QString string() { return string_; };
+    QString string();
     QString message() { return message_; };
     int indexOf(QString s) { return string_.indexOf(s); };
     int indexOf(QString s, int i) { return string_.indexOf(s,i); };
@@ -95,6 +95,7 @@ private:
     int padding_;
     QString message_;
     bool is_standard_;
+    QHash<QString, QString> debug_translation_;
 };
 
 

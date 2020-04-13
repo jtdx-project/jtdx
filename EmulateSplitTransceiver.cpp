@@ -1,5 +1,7 @@
 #include "EmulateSplitTransceiver.hpp"
 
+#include "moc_EmulateSplitTransceiver.cpp"
+
 EmulateSplitTransceiver::EmulateSplitTransceiver (std::unique_ptr<Transceiver> wrapped, QObject * parent)
   : Transceiver {parent}
   , wrapped_ {std::move (wrapped)}

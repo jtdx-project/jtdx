@@ -1,4 +1,3 @@
-// last time modified by Igor UA3DJY on 20200209
 
 // -*- Mode: C++ -*-
 #ifndef MAINWINDOW_H
@@ -11,7 +10,6 @@
 #include <QTranslator>
 #include <QThread>
 #include <QTimer>
-#include <QDateTime>
 #include <QList>
 #include <QStringList>
 #include <QAudioDeviceInfo>
@@ -38,8 +36,9 @@
 #include "psk_reporter.h"
 #include "logbook/logbook.h"
 #include "decodedtext.h"
-#include "MessageBox.hpp"
+#include "JTDXMessageBox.hpp"
 #include "qsohistory.h"
+#include "JTDXDateTime.h"
 
 #define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
 #define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
@@ -80,7 +79,6 @@ class SoundInput;
 class Detector;
 class SampleDownloader;
 class DecodedText;
-
 class MainWindow : public QMainWindow
 {
   Q_OBJECT;
@@ -170,6 +168,7 @@ private slots:
   void on_actionPolish_triggered();
   void on_actionPortuguese_triggered();
   void on_actionPortuguese_BR_triggered();
+  void on_actionCatalan_triggered();
   void on_actionCroatian_triggered();
   void on_actionSpanish_triggered();
   void on_actionFrench_triggered();
@@ -387,6 +386,7 @@ private:
 private:
   void hideMenus (bool b);
 
+  JTDXDateTime * m_jtdxtime;
   QDir m_dataDir;
   bool m_valid;
   QString m_revision;
@@ -404,7 +404,7 @@ private:
   Configuration m_config;
   WSPRBandHopping m_WSPR_band_hopping;
   bool m_WSPR_tx_next;
-  QMessageBox m_rigErrorMessageBox;
+  JTDXMessageBox m_rigErrorMessageBox;
   QScopedPointer<SampleDownloader> m_sampleDownloader;
 
   QScopedPointer<WideGraph> m_wideGraph;
@@ -617,7 +617,7 @@ private:
   QLabel * lastlogged_label;
   QLabel * qso_count_label;
 
-  QMessageBox msgBox0;
+  JTDXMessageBox msgBox0;
 
   QFuture<void> m_wav_future;
   QFutureWatcher<void> m_wav_future_watcher;
@@ -689,7 +689,7 @@ private:
   LogBook m_logBook;
   QsoHistory m_qsoHistory;
   QsoHistory m_qsoHistory2;
-  DecodedText m_QSOText {""};
+  QString m_QSOText {""};
   unsigned m_msAudioOutputBuffered;
   unsigned m_framesAudioInputBuffered;
   unsigned m_downSampleFactor;
@@ -781,7 +781,8 @@ private:
                           , QString const& mode
                           , Frequency frequency
                           , QString const& his_call
-                          , QString const& his_grid) const;
+                          , QString const& his_grid
+                          , JTDXDateTime * jtdxtime) const;
   void read_wav_file (QString const& fname);
   void subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
   void subProcessError (QProcess *, QProcess::ProcessError);

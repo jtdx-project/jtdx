@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on April 12th, 2018
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 #ifndef TRANSCEIVER_FACTORY_HPP__
 #define TRANSCEIVER_FACTORY_HPP__
 
@@ -24,7 +21,6 @@ class TransceiverFactory
   : public QObject
 {
   Q_OBJECT
-  Q_ENUMS (DataBits StopBits Handshake PTTMethod TXAudioSource SplitMode)
 
 public:
   //
@@ -167,28 +163,6 @@ bool operator != (TransceiverFactory::ParameterPack const& lhs, TransceiverFacto
 {
   return !(lhs == rhs);
 }
-
-//
-// boilerplate routines to make enum types useable and debuggable in
-// Qt
-//
-#if QT_VERSION < 0x050500
-Q_DECLARE_METATYPE (TransceiverFactory::DataBits);
-Q_DECLARE_METATYPE (TransceiverFactory::StopBits);
-Q_DECLARE_METATYPE (TransceiverFactory::Handshake);
-Q_DECLARE_METATYPE (TransceiverFactory::PTTMethod);
-Q_DECLARE_METATYPE (TransceiverFactory::TXAudioSource);
-Q_DECLARE_METATYPE (TransceiverFactory::SplitMode);
-#endif
-
-#if !defined (QT_NO_DEBUG_STREAM)
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, DataBits);
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, StopBits);
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, Handshake);
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, PTTMethod);
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, TXAudioSource);
-ENUM_QDEBUG_OPS_DECL (TransceiverFactory, SplitMode);
-#endif
 
 ENUM_QDATASTREAM_OPS_DECL (TransceiverFactory, DataBits);
 ENUM_QDATASTREAM_OPS_DECL (TransceiverFactory, StopBits);

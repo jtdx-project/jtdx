@@ -20,7 +20,6 @@
 
 #include <QCoreApplication>
 #include <QCommandLineParser>
-#include <QDateTime>
 #include <QTime>
 #include <QHash>
 

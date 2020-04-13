@@ -127,7 +127,7 @@ int DXLabSuiteCommanderTransceiver::do_start ()
       throw error {tr ("DX Lab Suite Commander didn't respond correctly reading frequency: ") + reply};
     }
 
-  poll ();
+  do_poll ();
   return resolution;
 }
 
@@ -247,7 +247,7 @@ void DXLabSuiteCommanderTransceiver::do_mode (MODE m)
   update_mode (m);
 }
 
-void DXLabSuiteCommanderTransceiver::poll ()
+void DXLabSuiteCommanderTransceiver::do_poll ()
 {
 #if WSJT_TRACE_CAT && WSJT_TRACE_CAT_POLLS
   bool quiet {false};

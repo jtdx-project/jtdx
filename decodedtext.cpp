@@ -1,8 +1,8 @@
-// last time modified by Arvo ES1JA on 20200105
 
+#include "decodedtext.h"
 #include <QStringList>
 #include <QDebug>
-#include "decodedtext.h"
+#include "moc_decodedtext.cpp"
 //#include <QRegularExpression>
 
 extern "C" {  bool stdmsg_(char const * msg, int len_msg); }
@@ -12,8 +12,9 @@ namespace
   QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{2}|\d{3}))|...|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
 }
 
-DecodedText::DecodedText (QString const& the_string)
-  : string_ {the_string.left (the_string.indexOf (QChar::Nbsp))} // discard appended info
+DecodedText::DecodedText (QString const& the_string, QObject *parent)
+  : QObject {parent}
+  ,string_ {the_string.left (the_string.indexOf (QChar::Nbsp))} // discard appended info
 //  : string_ {"185415   4  0.2  950 ~  CQ 5B/SQ9UM"}
   , padding_ {string_.indexOf (" ") > 4 ? 2 : 0} // allow for
                                                     // seconds
@@ -22,6 +23,14 @@ DecodedText::DecodedText (QString const& the_string)
 {
   if (!message_.isEmpty ())
     {
+      debug_translation_.clear();
+      debug_translation_.insert("partial loss of data",tr("partial loss of data"));
+      debug_translation_.insert("ALLCALL7.TXT is too short or broken?",tr("ALLCALL7.TXT is too short or broken?"));
+      debug_translation_.insert("nQSOProgress",tr("nQSOProgress"));
+      debug_translation_.insert("input signal low rms",tr("input signal low rms"));
+      debug_translation_.insert("audio gap detected",tr("audio gap detected"));
+      debug_translation_.insert("nfqso is out of bandwidth",tr("nfqso is out of bandwidth"));
+            
       message_ = message_.left (24).remove (QRegularExpression {"[<>]"});
       int i1 = message_.indexOf ('\r');
       if (i1 > 0)
@@ -47,6 +56,15 @@ DecodedText::DecodedText (QString const& the_string)
     }
 };
 
+
+QString DecodedText::string()
+{
+  if (isDebug()) {
+    return string_.left(1 + column_snr + padding_) + debug_translation_.value(string_.mid(1 + column_snr + padding_,46 - column_snr).trimmed(),string_.mid(1 + column_snr + padding_,46 -column_snr).trimmed());
+  } 
+  else
+    return string_; 
+}
 
 QString DecodedText::CQersCall(QString& grid,QString& tyyp)
 {
