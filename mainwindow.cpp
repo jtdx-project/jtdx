@@ -6764,7 +6764,9 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
  //Start-of-transmission sequencer delay
       if (m_tx_when_ready && g_iptt) {
           QThread::currentThread()->setPriority(QThread::HighestPriority);
-          ptt1Timer.start(1000 * m_config.txDelay ());
+          int ms_delay=1000*m_config.txDelay();
+          if(m_mode=="FT4") ms_delay=20;
+          ptt1Timer.start(ms_delay);
 //          printf("ptt1Timer started\n");
           if(m_config.write_decoded_debug()) writeToALLTXT("ptt1Timer started");
       }
