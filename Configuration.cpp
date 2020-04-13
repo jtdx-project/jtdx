@@ -219,8 +219,9 @@ public:
   {
     setWindowTitle (QApplication::applicationName () + " - " +
                     tr ("Add Frequency"));
-    mode_combo_box_.setModel (modes_model);
     region_combo_box_.setModel (regions_model);
+    mode_combo_box_.setModel (modes_model);
+
     auto form_layout = new QFormLayout ();
     form_layout->addRow (tr ("IARU &Region:"), &region_combo_box_);
     form_layout->addRow (tr ("&Mode:"), &mode_combo_box_);
@@ -394,6 +395,7 @@ private:
       (WSJT_RIG_NONE_CAN_SPLIT || !rig_is_dummy_) &&
       (rig_params_.split_mode != TransceiverFactory::split_mode_none);
   }
+  void set_cached_mode ();
   bool open_rig (bool force = false);
   //bool set_mode ();
   void close_rig ();
@@ -5345,19 +5347,26 @@ bool Configuration::impl::open_rig (bool force)
   return result;
 }
 
+void Configuration::impl::set_cached_mode ()
+{
+  MODE mode {Transceiver::UNK};
+  // override cache mode with what we want to enforce which includes
+  // UNK (unknown) where we want to leave the rig mode untouched
+  switch (data_mode_)
+     {
+     case data_mode_USB: mode = Transceiver::USB; break;
+     case data_mode_data: mode = Transceiver::DIG_U; break;
+     default: break;
+     }
+
+  cached_rig_state_.mode (mode);
+}
+
 void Configuration::impl::transceiver_frequency (Frequency f)
 {
-  Transceiver::MODE mode {Transceiver::UNK};
-  switch (data_mode_)
-    {
-    case data_mode_USB: mode = Transceiver::USB; break;
-    case data_mode_data: mode = Transceiver::DIG_U; break;
-    case data_mode_none: break;
-    }
-
   cached_rig_state_.online (true); // we want the rig online
-  cached_rig_state_.mode (mode);
-
+  set_cached_mode ();
+  
   // apply any offset & calibration
   // we store the offset here for use in feedback from the rig, we
   // cannot absolutely determine if the offset should apply but by
@@ -5366,6 +5375,7 @@ void Configuration::impl::transceiver_frequency (Frequency f)
   current_offset_ = stations_.offset (f);
   cached_rig_state_.frequency (apply_calibration (f + current_offset_));
 
+//  printf("%s Coniguration transceiver_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
@@ -5374,15 +5384,8 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
   Q_ASSERT (!f || split_mode ());
   if (split_mode ())
     {
-      Transceiver::MODE mode {Transceiver::UNK};
-      switch (data_mode_)
-        {
-        case data_mode_USB: mode = Transceiver::USB; break;
-        case data_mode_data: mode = Transceiver::DIG_U; break;
-        case data_mode_none: break;
-        }
       cached_rig_state_.online (true); // we want the rig online
-      cached_rig_state_.mode (mode);
+      set_cached_mode ();
       cached_rig_state_.split (f);
       cached_rig_state_.tx_frequency (f);
 
@@ -5398,6 +5401,7 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
           cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
         }
 
+//      printf("%s Coniguration transceiver_tx_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
       Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
     }
 }
@@ -5406,18 +5410,22 @@ void Configuration::impl::transceiver_mode (MODE m)
 {
   cached_rig_state_.online (true); // we want the rig online
   cached_rig_state_.mode (m);
+//  printf("%s Coniguration mode: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),m);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
 void Configuration::impl::transceiver_ptt (bool on)
 {
   cached_rig_state_.online (true); // we want the rig online
+  set_cached_mode ();
   cached_rig_state_.ptt (on);
+//  printf("%s Coniguration ptt: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),on);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
 void Configuration::impl::sync_transceiver (bool /*force_signal*/)
 {
+//  printf("%s Coniguration sync force: NULL\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
   // pass this on as cache must be ignored
   // Q_EMIT sync (force_signal);
 }

@@ -1451,7 +1451,7 @@ void MainWindow::readSettings()
 
   m_lastMonitoredFrequency = m_settings->value ("DialFreq",
      QVariant::fromValue<Frequency> (default_frequency)).value<Frequency> ();
-
+//  printf ("m_lastMonitoredFrequency = %LLd",m_lastMonitoredFrequency);
   // setup initial value of tx attenuator, range 0...450 (0...45dB attenuation)
   if(m_settings->value("OutAttenuation").toInt()>=0 && m_settings->value("OutAttenuation").toInt()<=450)
     ui->outAttenuation->setValue (m_settings->value ("OutAttenuation", 225).toInt ());
@@ -4382,9 +4382,10 @@ void MainWindow::logChanged()
 
 void MainWindow::startTx2()
 {
-  for(int i=0; i<15; i++) { // workaround to modulator start failure
-    if(i==1) QThread::currentThread()->msleep(5);
-    else if(i>1) QThread::currentThread()->msleep(10);
+//  for(int i=0; i<15; i++) { // workaround to modulator start failure
+//    if(i==1) QThread::currentThread()->msleep(5);
+//    else if(i>1) QThread::currentThread()->msleep(10);
+//    printf("%s(%0.1f) Timing modulator",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
     if (!m_modulator->isActive ()) { // TODO - not thread safe
       double fSpread=0.0;
       double snr=99.0;
@@ -4395,6 +4396,7 @@ void MainWindow::startTx2()
       if(t.left(1)=="#") snr=t.mid(1,5).toDouble();
       if(snr>0.0 or snr < -50.0) snr=99.0;
       transmit (snr);
+//      printf(" started %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
       if(m_config.write_decoded_debug()) writeToALLTXT("Modulator started");
       QThread::currentThread()->setPriority(QThread::HighPriority);
       ui->signal_meter_widget->setValue(0);
@@ -4421,7 +4423,7 @@ void MainWindow::startTx2()
       }
       return;
     }
-  }
+//  }
   if(m_config.write_decoded_debug()) writeToALLTXT("MainWindow::startTx2() failed to start modulator: m_modulator is active");
 }
 
@@ -5936,8 +5938,8 @@ void MainWindow::switch_mode (Mode mode)
 
 void MainWindow::commonActions ()
 {
-  m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
-  m_detector->setPeriod(m_TRperiod);   // TODO - not thread safe
+//  m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
+//  m_detector->setPeriod(m_TRperiod);   // TODO - not thread safe
   m_nsps=6912;                   //For symspec only
   m_FFTSize = m_nsps / 2;
   Q_EMIT FFTSize (m_FFTSize);
@@ -6753,7 +6755,8 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
     writeToALLTXT("handle_transceiver_update started, current rig state: " + curPttState + 
       ", requested state: " + reqPttState + ", m_tx_when_ready: " + tx_when_ready + ", g_iptt=" + QString::number(g_iptt));
    }
-
+//   printf("%s(%0.1f) tranceiver update %d %d old %d new %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),
+//     m_jtdxtime->GetOffset(),m_tx_when_ready,g_iptt,m_rigState.ptt (),s.ptt ());
   if (s.ptt () && !m_rigState.ptt ()) // safe to start audio
                                       // (caveat - DX Lab Suite Commander)
     {
@@ -6762,6 +6765,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
       if (m_tx_when_ready && g_iptt) {
           QThread::currentThread()->setPriority(QThread::HighestPriority);
           ptt1Timer.start(1000 * m_config.txDelay ());
+//          printf("ptt1Timer started\n");
           if(m_config.write_decoded_debug()) writeToALLTXT("ptt1Timer started");
       }
       m_tx_when_ready = false;

@@ -39,7 +39,7 @@ protected:
   void do_mode (MODE) override;
   void do_ptt (bool on) override;
 
-  void poll () override;
+  void do_poll () override;
 
 private:
   MODE get_mode (bool no_debug = false);

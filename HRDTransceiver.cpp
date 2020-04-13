@@ -19,6 +19,8 @@ namespace
   int constexpr yaesu_delay {250};
 }
 
+#include "moc_HRDTransceiver.cpp"
+
 void HRDTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, int id)
 {
   (*registry)[HRD_transceiver_name] = TransceiverFactory::Capabilities (id, TransceiverFactory::Capabilities::network, true, true /* maybe */);
@@ -885,7 +887,7 @@ bool HRDTransceiver::is_button_checked (int button_index, bool no_debug)
   return "1" == reply;
 }
 
-void HRDTransceiver::poll ()
+void HRDTransceiver::do_poll ()
 {
 #if WSJT_TRACE_CAT && WSJT_TRACE_CAT_POLLS
   bool quiet {false};
@@ -1021,6 +1023,7 @@ QString HRDTransceiver::send_command (QString const& cmd, bool no_debug, bool pr
   if (!recurse && prepend_context)
     {
       auto radio_name = send_command ("get radio", true, current_radio_, true);
+      qDebug () << "HRDTransceiver::send_command: radio_name:" << radio_name;
       auto radio_iter = std::find_if (radios_.begin (), radios_.end (), [this, &radio_name] (RadioMap::value_type const& radio)
                                       {
                                         return std::get<1> (radio) == radio_name;

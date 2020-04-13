@@ -3,9 +3,6 @@
 #include "moc_Transceiver.cpp"
 
 #if !defined (QT_NO_DEBUG_STREAM)
-
-ENUM_QDEBUG_OPS_IMPL (Transceiver, MODE);
-
 QDebug operator << (QDebug d, Transceiver::TransceiverState const& s)
 {
   d.nospace ()
@@ -18,7 +15,6 @@ QDebug operator << (QDebug d, Transceiver::TransceiverState const& s)
     << ')';
   return d.space (); 
 }
-
 #endif
 
 ENUM_QDATASTREAM_OPS_IMPL (Transceiver, MODE);

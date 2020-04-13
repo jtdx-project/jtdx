@@ -26,7 +26,8 @@
 class EmulateSplitTransceiver final
   : public Transceiver
 {
-Q_OBJECT;
+  Q_OBJECT
+
 public:
   // takes ownership of wrapped Transceiver
   explicit EmulateSplitTransceiver (std::unique_ptr<Transceiver> wrapped,
