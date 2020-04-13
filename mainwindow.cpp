@@ -6771,8 +6771,15 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   m_freqNominal = s.frequency ();
   // initializing
   if (old_state.online () == false && s.online () == true) {
-	  on_monitorButton_clicked (!m_config.monitor_off_at_startup ());
+      on_monitorButton_clicked (!m_config.monitor_off_at_startup ());
       if(m_config.write_decoded_debug()) writeToALLTXT("handle_transceiver_update: transceiver state transition from offline to online");
+      if(m_mode=="FT8") on_actionFT8_triggered();
+      else if(m_mode=="FT4") on_actionFT4_triggered();
+      else if(m_mode=="JT9+JT65") on_actionJT9_JT65_triggered();
+      else if(m_mode=="JT9") on_actionJT9_triggered();
+      else if(m_mode=="JT65") on_actionJT65_triggered();
+      else if(m_mode=="T10") on_actionT10_triggered();
+      else if(m_mode=="WSPR-2") on_actionWSPR_2_triggered();
   }
   if (s.frequency () != old_state.frequency () || s.split () != m_splitMode) {
       m_splitMode = s.split ();

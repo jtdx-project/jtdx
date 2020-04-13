@@ -308,7 +308,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>Paese sconosciuto</translation>
+        <translation>Bohhhhhhhhh???</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2058,7 +2058,7 @@ Formato:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX Lab Suite Commander ha inviato uno stato TX non riconosciuto: </translation>
+        <translation>DX Lab Suite Commander ha inviato uno stato TX sconosciuto: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
@@ -2083,7 +2083,7 @@ Formato:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX Lab Suite Commander ha inviato uno stato di split non riconosciuto: </translation>
+        <translation>DX Lab Suite Commander ha inviato uno stato di split sconosciuto: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
@@ -2325,7 +2325,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="221"/>
         <source>Add Frequency</source>
-        <translation>Ag.gi Frequenza</translation>
+        <translation>Agg.gi Frequenza</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
@@ -2409,7 +2409,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="438"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation>Ham Radio Deluxe: indica modo non riconosciuto</translation>
+        <translation>Ham Radio Deluxe: indica modo sconosciuto</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="473"/>
@@ -2419,7 +2419,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="517"/>
         <source>Ham Radio Deluxe: button not available</source>
-        <translation>Ham Radio Deluxe: bottone non disponibile</translation>
+        <translation>Ham Radio Deluxe: bottone indisponibile</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="883"/>
@@ -2533,7 +2533,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Feature not available</source>
-        <translation>Funzione non disponibile</translation>
+        <translation>Funzione indisponibile</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
@@ -2568,17 +2568,17 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="313"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation>Errore del file delle impostazioni di Hamlib:%1 all&apos;offset del carattere%2</translation>
+        <translation>Errore del file di configurazione di Hamlib: %1 all&apos;offset del carattere %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="319"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
-        <translation>Errore del file delle impostazioni di Hamlib: il livello principale deve essere un oggetto JSON</translation>
+        <translation>Errore del file di configurazione di Hamlib: il livello principale deve essere un oggetto JSON</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="331"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
-        <translation>Errore del file delle impostazioni di Hamlib: il livello principale deve essere un oggetto JSON</translation>
+        <translation>Errore del file di configurazione di Hamlib: la sonfigurazione deve essere un oggetto JSON</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="393"/>
@@ -2688,7 +2688,7 @@ Errore:%2 -%3</translation>
         <location filename="../HamlibTransceiver.cpp" line="819"/>
         <location filename="../HamlibTransceiver.cpp" line="859"/>
         <source>setting split mode</source>
-        <translation>settagio modo dello split</translation>
+        <translation>sto settando il  modo split</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="847"/>
@@ -2698,7 +2698,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="852"/>
         <source>setting split TX frequency</source>
-        <translation>sto settando della frequenza di split</translation>
+        <translation>sto settando lo split della frequenza in TX</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="924"/>
@@ -2861,7 +2861,7 @@ Errore:%2 -%3</translation>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation>gg/MM/aaaa OO:mm:ss</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
@@ -3351,7 +3351,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ignora tutti i filtri e replica l&apos;azione prevista nella scheda Varie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ignora tutti i filtri di testo e duplica l&apos;azione prevista nella scheda Varie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
@@ -3371,7 +3371,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione AutoSeq B4 - Risposta a Nominativo lavorato&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione AutoSeq B4 - Risposta a Nominativo già lavorato&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2456"/>
@@ -3421,7 +3421,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Inserisci questo QSO nel log ADIF</translation>
+        <translation>Inserisci questo QSO nel Log</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
@@ -3540,7 +3540,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3123"/>
         <location filename="../mainwindow.ui" line="3742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona per saltare la trasmissione del messaggio Tx 1 con QTH Grid locator e passare a Tx 2 con invio diretto del segnale di ricezione&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona per saltare la trasmissione del messaggio Tx 1 con la Griglia e passa a Tx 2 con invio diretto del segnale di ricezione (attenzione le DXped che usano il modo FOX/HOUD non rispondono alla chiamata conl solo il segnale)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
@@ -4128,7 +4128,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4886"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Cancella nom DX e Griglia dopo aver loggato</translation>
+        <translation>Cancella Nom DX e Griglia dopo aver loggato</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4894"/>
@@ -4586,7 +4586,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.cpp" line="6006"/>
         <location filename="../mainwindow.cpp" line="6007"/>
         <source>Freq   Message</source>
-        <translation>Messaggio Freq</translation>
+        <translation>Freq Messaggio</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
@@ -4625,8 +4625,8 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.cpp" line="4062"/>
         <location filename="../mainwindow.cpp" line="4185"/>
         <location filename="../mainwindow.cpp" line="4417"/>
-        <location filename="../mainwindow.cpp" line="6796"/>
-        <location filename="../mainwindow.cpp" line="6992"/>
+        <location filename="../mainwindow.cpp" line="6803"/>
+        <location filename="../mainwindow.cpp" line="6999"/>
         <source>File Open Error</source>
         <translation>Errore Apertura File</translation>
     </message>
@@ -4637,9 +4637,9 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.cpp" line="4063"/>
         <location filename="../mainwindow.cpp" line="4186"/>
         <location filename="../mainwindow.cpp" line="4418"/>
-        <location filename="../mainwindow.cpp" line="6797"/>
-        <location filename="../mainwindow.cpp" line="6993"/>
-        <location filename="../mainwindow.cpp" line="7334"/>
+        <location filename="../mainwindow.cpp" line="6804"/>
+        <location filename="../mainwindow.cpp" line="7000"/>
+        <location filename="../mainwindow.cpp" line="7341"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Impossibile aprire &quot;%1 per appendere: %2</translation>
     </message>
@@ -4804,7 +4804,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <location filename="../mainwindow.cpp" line="3737"/>
         <location filename="../mainwindow.cpp" line="3744"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Sei sicuro di cambiare la lingua dall&apos;Inglese (JTDX sarà riavviato)?</translation>
+        <translation>Sei sicuro di cambiare la lingua in Italiano? (JTDX sarà riavviato)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3912"/>
@@ -4830,7 +4830,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4253"/>
         <source>Tx: TUNE</source>
-        <translation>Tx: ACCORDA</translation>
+        <translation>ACCORDO</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4254"/>
@@ -4840,7 +4840,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4259"/>
         <source>Receiving </source>
-        <translation>Sto ricevendo </translation>
+        <translation>Ricezione</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4312"/>
@@ -4863,7 +4863,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5350"/>
         <source>Please enter a valid grid locator</source>
-        <translation>Per favore inserisci un WW locator valido</translation>
+        <translation>Per favore inserisci una Griglia valida</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5362"/>
@@ -4900,7 +4900,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="5997"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation>    Freq     Drift  Nom          Grid    dBm   Dist</translation>
+        <translation>    Freq     Drift  Nom          Grig    dBm   Dist</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6096"/>
@@ -4939,55 +4939,55 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Pulsante per bloccare la frequenza Tx sulla frequenza Rx AF. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6831"/>
+        <location filename="../mainwindow.cpp" line="6838"/>
         <source>Rig Control Error</source>
         <translation>Errore nel controllo RTX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6905"/>
+        <location filename="../mainwindow.cpp" line="6912"/>
         <source>Tune digital gain</source>
-        <translation>Ottimizza il guadagno digitale</translation>
+        <translation>Guadagno digitale in accordo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6906"/>
+        <location filename="../mainwindow.cpp" line="6913"/>
         <source>Transmit digital gain</source>
-        <translation>Trasmette il guadagno digitale</translation>
+        <translation>Guadagno digitale in Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6925"/>
+        <location filename="../mainwindow.cpp" line="6932"/>
         <source>Prefixes</source>
         <translation>Prefissi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6974"/>
-        <location filename="../mainwindow.cpp" line="6975"/>
+        <location filename="../mainwindow.cpp" line="6981"/>
+        <location filename="../mainwindow.cpp" line="6982"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7198"/>
+        <location filename="../mainwindow.cpp" line="7205"/>
         <source>Network Error</source>
         <translation>Errore di Rete</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7199"/>
+        <location filename="../mainwindow.cpp" line="7206"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Error: %1
 server DP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7333"/>
+        <location filename="../mainwindow.cpp" line="7340"/>
         <source>File Error</source>
         <translation>Errore File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7544"/>
+        <location filename="../mainwindow.cpp" line="7551"/>
         <source>Tx watchdog expired</source>
         <translation>timer Tx  scaduto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7558"/>
+        <location filename="../mainwindow.cpp" line="7565"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5640,12 +5640,12 @@ Errore (%2):%3</translation>
         <location filename="../widegraph.ui" line="233"/>
         <location filename="../widegraph.ui" line="243"/>
         <source>Position of timestamp above each interval line</source>
-        <translation>Posizione del timestamp sopra ogni linea di intervallo</translation>
+        <translation>Posizione dell&apos;ora e banda sopra ogni linea di intervallo</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="236"/>
         <source>Timestamp</source>
-        <translation>Ora-Banda</translation>
+        <translation>Ora e Banda a: </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="247"/>
@@ -5996,7 +5996,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="492"/>
         <source>Tx watchdog timer</source>
-        <translation>Periodo vigilanza del Tx</translation>
+        <translation>Periodo monitoraggio del Tx </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="502"/>
@@ -6022,7 +6022,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="542"/>
         <source>Tune timer</source>
-        <translation>Tempo dell&apos;accordo</translation>
+        <translation>Tempo dell&apos;accordo </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="549"/>
@@ -6067,7 +6067,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="627"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>Inter&amp;vallo periodo ID CW:</translation>
+        <translation>Inter&amp;vallo periodo ID CW: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="643"/>
@@ -6602,7 +6602,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1787"/>
         <source>Transmit</source>
-        <translation>Trasmetti</translation>
+        <translation>Trasmissione</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1794"/>
@@ -6622,7 +6622,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1828"/>
         <source>Loc&amp;ation:</source>
-        <translation>Loc&amp;alità:</translation>
+        <translation>C&amp;artella:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1844"/>
@@ -6745,7 +6745,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="2280"/>
         <source>Reportin&amp;g</source>
-        <translation>&amp;Segnalazioni</translation>
+        <translation>Se&amp;gnalazioni</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2283"/>
@@ -6777,23 +6777,23 @@ campo commenti.</translation>
         <location filename="../Configuration.ui" line="2335"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation>Seleziona questa opzione per forzare la cancellazione della chiamata DX
-e DX Grid field quando viene inviato un messaggio di testo o 73.</translation>
+        <translation>Seleziona questa opzione per forzare la cancellazione del Nom DX
+e Griglia DX quando viene inviato un messaggio di testo o 73.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Cancella dati &amp;DX e WWl dopo aver loggato</translation>
+        <translation>Cancella dati &amp;DX e Griglia dopo aver loggato</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona questa opzione per forzare la cancellazione dei campi DX Call e DX Grid all&apos;uscita da JTDX. Questa funzionalità è pensata per gli utenti del software di log UR5EQF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona questa opzione per forzare la cancellazione dei campi Nom DX e Griglia DX all&apos;uscita da JTDX. Questa funzionalità è pensata per gli utenti del software di log UR5EQF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>Cancella il Nom DX e il WWl all&apos;uscita</translation>
+        <translation>Cancella il Nom DX e la Griglia all&apos;uscita</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2356"/>
@@ -7130,7 +7130,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation>Controlla nuova zona CQ</translation>
+        <translation>Evidenzia nuova zona CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
@@ -7150,7 +7150,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation>Controlla nuova zona ITU</translation>
+        <translation>Evidenzia nuova zona ITU</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -7170,7 +7170,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Controlla nuovo DXCC</translation>
+        <translation>Evidenzia nuovo DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -7230,22 +7230,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzia i messaggi con il WW locator che ti mancano nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzia i messaggi conle Griglie che ti mancano nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Controlla nuovo WW locator</translation>
+        <translation>Evidenzia nuova Griglia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzia i nuovi WW locator che ti mancano per banda nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzialei nuove Griglie che ti mancano per banda nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzia i nuovi WW locator che ti mancano per modo nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Evidenzia le nuove Griglie che ti mancano per modo nel log wsjtx_log.adi. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3360"/>
@@ -7255,7 +7255,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Controlla nuovo prefisso</translation>
+        <translation>Evidenzia nuovo Prefisso</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -7275,7 +7275,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new calls</source>
-        <translation>Controlla nuovi NOMINATIVI</translation>
+        <translation>Evidenzia nuovo NOMINATIVO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
@@ -7290,7 +7290,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Usa la notifica a colori per i messaggi con DXCC, Grid, Nomin lavorati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Usa la notifica a colori per i messaggi con DXCC, Griglia, Nomin lavorati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
@@ -7300,7 +7300,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Grid, Call lavorati verranno cancellati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Griglia, Nomin lavorati verranno cancellati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3453"/>
@@ -7315,22 +7315,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Grid, Call lavorati saranno sottolineati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Griglie, Nomin lavorati saranno sottolineati. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3466"/>
         <source>underline it</source>
-        <translation>sottolinealo</translation>
+        <translation>sottolinea</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3473"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Grid, Call lavorati dove non c&apos;èil mio Nom verranno ignorati nella finestra di decodifica &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; I messaggi con DXCC, Griglia, Nomin lavorati dove non c&apos;èil mio Nom verranno ignorati nella finestra di decodifica &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3476"/>
         <source>don&apos;t show it</source>
-        <translation>non mostrarlo</translation>
+        <translation>non mostrare</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
@@ -7380,12 +7380,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3566"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Usa l&apos;indicatore blu per avvisare se c&apos;è un mio nominativo nel messaggio decodificato relativo al QSO in corso (il nominativo del QSO è nella finestra di Chiamata DX), altre chiamate in arrivo con il mio nominativo sarànno seguiio con dall&apos;indicatore rosso. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Usa l&apos;indicatore blu per avvisare se c&apos;è un mio nominativo nel messaggio decodificato relativo al QSO in corso (il Nominativo del QSO è nella finestra di Chiamata DX), altre chiamate in arrivo con il mio nominativo sarànno seguiio con dall&apos;indicatore rosso.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3569"/>
         <source>blue / my call at QSO</source>
-        <translation>blu/il mio Nom è nel QSO</translation>
+        <translation>blu - il mio Nom. è nel QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3605"/>
@@ -7395,7 +7395,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3608"/>
         <source>red / my call in message</source>
-        <translation>il mio Nom è in rosso</translation>
+        <translation>rosso - il mio Nom nel msg</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3618"/>
@@ -7533,12 +7533,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4294"/>
         <source>New Grid</source>
-        <translation>Nuovo WW locator</translation>
+        <translation>Nuova Griglia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Nuovo WWl di Banda/Modo</translation>
+        <translation>Nuovo Griglia di Banda/Modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4434"/>
@@ -7583,7 +7583,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4837"/>
         <source>Africa</source>
-        <translation>Africa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4844"/>
@@ -7593,7 +7593,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4851"/>
         <source>Asia</source>
-        <translation>Asia</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
@@ -7741,17 +7741,17 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5069"/>
         <source>Show CQ messages only</source>
-        <translation>Mostra solo messaggi CQ</translation>
+        <translation>Mostra solo i messaggi con CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5092"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation>Mostra solo i messaggi CQ/RRR/RR73/73</translation>
+        <translation>Mostra solo i messaggi con CQ/RRR/RR73/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5115"/>
         <source>Show CQ/RR73/73 messages only</source>
-        <translation>Mostra solo i messaggi CQ/RR73/73</translation>
+        <translation>Mostra solo i messaggi con CQ/RR73/73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5137"/>
@@ -7766,7 +7766,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5147"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
-        <translation>Nasconde i messaggi con parte non associata per il 2° nominativo</translation>
+        <translation>Nascondi i messaggi con parte non associata per il 2° nominativo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5170"/>
@@ -7786,7 +7786,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5191"/>
         <source>hh</source>
-        <translation>hh</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5201"/>
@@ -8205,7 +8205,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6730"/>
         <location filename="../Configuration.ui" line="6888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Questa finestra DT viene utilizzata solo per i decodificatori di suggerimenti CALL3 basati su dati CALL3 con frequenza RX focalizzati sui messaggi CQ e &apos;mycall hiscall hisgrid&apos;. Valori più alti possono aumentare il numero di decodificazioni false. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Questa finestra DT viene utilizzata solo per i decodificatori di suggerimenti CALL3 basati su dati CALL3 con frequenza RX focalizzati sui messaggi CQ e &apos;mycall hiscall hisgrid&apos;. Valori più alti possono aumentare il numero di false decodificazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6720"/>
