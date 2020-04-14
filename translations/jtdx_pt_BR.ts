@@ -175,7 +175,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="2756"/>
         <source>Invalid PTT method</source>
-        <translation>Metodo PTT inválido</translation>
+        <translation>Método PTT inválido</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2766"/>
@@ -4101,12 +4101,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4870"/>
         <source>Prompt me to log QSO</source>
-        <translation>Solicitar-me que registe o QSO</translation>
+        <translation>Solicitar-me que registre o QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4878"/>
         <source>Blank line between decoding periods</source>
-        <translation>Linha em branco entre periodos decodificados</translation>
+        <translation>Linha em branco entre períodos decodificados</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4886"/>
@@ -5254,7 +5254,7 @@ Por favor verifique se foi dado o nome correto do diretório.</translation>
     <message>
         <location filename="../widegraph.cpp" line="17"/>
         <source>User Defined</source>
-        <translation>Utilizador Definido</translation>
+        <translation>Usuário Definido</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
@@ -5917,12 +5917,12 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="363"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>Incluir linha separadora entre periodos na janela de atividade da banda.</translation>
+        <translation>Incluir linha separadora entre períodos na janela de atividade da banda.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>Linha em &amp;branco entre periodos decodificados</translation>
+        <translation>Linha em &amp;branco entre períodos decodificados</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
@@ -5937,7 +5937,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="396"/>
         <source>Append prefix instead of name.</source>
-        <translation>Juntar prefixo em vez de nome.</translation>
+        <translation>Mostrar prefixo em vez de nome.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="399"/>
@@ -6282,7 +6282,7 @@ alguns não, particularmente equipamentos Kenwood, exigem-no).</translation>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
         <source>Special control of CAT port control lines.</source>
-        <translation>Controle especial de linhas de controle de portas CAT.</translation>
+        <translation>Controle especial das linhas de controle de portas CAT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
@@ -6319,7 +6319,7 @@ alguns não, particularmente equipamentos Kenwood, exigem-no).</translation>
     <message>
         <location filename="../Configuration.ui" line="1233"/>
         <source>PTT Method</source>
-        <translation>Metodo PTT</translation>
+        <translation>Método PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1239"/>
@@ -6348,7 +6348,7 @@ outra interface de hardware para PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Não há ativação PTT. Em vez disso, o VOX automático do rádio é usado para ligar o transmissor. &lt;/p&gt; &lt;p&gt; Use isso se você não tiver hardware de interface de rádio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Não há ativação PTT. Em vez disso, o VOX do rádio é usado para ligar o transmissor. &lt;/p&gt; &lt;p&gt; Use isso se você não tiver hardware de interface de rádio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1273"/>
@@ -6496,7 +6496,7 @@ interface de rádio se comporta conforme esperado.</translation>
     <message>
         <location filename="../Configuration.ui" line="1645"/>
         <source>A&amp;udio</source>
-        <translation>A&amp;udio</translation>
+        <translation>Á&amp;udio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1648"/>
@@ -6758,7 +6758,7 @@ campo de comentários.</translation>
     <message>
         <location filename="../Configuration.ui" line="2328"/>
         <source>d&amp;B reports to comments</source>
-        <translation>Reportes d&amp;B nos comentários</translation>
+        <translation>Reportagem d&amp;B nos comentários</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2335"/>
@@ -6770,7 +6770,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Limpar indicat.&amp;DX e Grid ao registrar QSO</translation>
+        <translation>Limpar indicat.&amp;DX e Grid ao regist. QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6800,12 +6800,12 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>Solici&amp;tar que registe o QSO</translation>
+        <translation>Solici&amp;tar que registre o QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2376"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Ativar registo automático de QSO</translation>
+        <translation>Ativar registro automático de QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
@@ -6903,12 +6903,12 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
         <source>EQSL Username.</source>
-        <translation>Utilizador EQSL.</translation>
+        <translation>Usuário EQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2707"/>
         <source>U&amp;sername:</source>
-        <translation>U&amp;tilizador:</translation>
+        <translation>U&amp;suário:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2717"/>
@@ -6974,7 +6974,7 @@ para avaliar a propagação e o desempenho do sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2836"/>
         <source>UDP Server port number:</source>
-        <translation>Nº de porta do servidor UDP:</translation>
+        <translation>Nº da porta do servidor UDP:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>
@@ -6999,7 +6999,7 @@ para avaliar a propagação e o desempenho do sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2876"/>
         <source>Notify on accepted UDP request</source>
-        <translation>Notificar um pedido UDP aceite</translation>
+        <translation>Notificar um pedido UDP aceito</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2883"/>
@@ -7014,7 +7014,7 @@ para avaliar a propagação e o desempenho do sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2897"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation>Habilitar o envio de dados QSO ADIF registados</translation>
+        <translation>Habilitar o envio de dados QSO ADIF registrados</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2907"/>
@@ -7107,7 +7107,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="3174"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation>Condição das notificações &apos;Novo&apos; e &apos;trabalhado antes&apos;</translation>
+        <translation>Condição das notificações &apos;Novo&apos; e &apos;Trabalhado antes&apos;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3200"/>
@@ -7222,7 +7222,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Verifique e estaque novos Grids</translation>
+        <translation>Verifique e destaque novos Grids</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -7317,7 +7317,7 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="3476"/>
         <source>don&apos;t show it</source>
-        <translation>Não visualiza-lo</translation>
+        <translation>Não visualizá-lo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
@@ -7570,17 +7570,17 @@ Clique com o botão direito do mouse para inserir e excluir opções.</translati
     <message>
         <location filename="../Configuration.ui" line="4837"/>
         <source>Africa</source>
-        <translation>Africa</translation>
+        <translation>África</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4844"/>
         <source>Antarctica</source>
-        <translation>Antartica</translation>
+        <translation>Antártica</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4851"/>
         <source>Asia</source>
-        <translation>Asia</translation>
+        <translation>Ásia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4858"/>
