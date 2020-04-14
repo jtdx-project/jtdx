@@ -133,7 +133,7 @@ private:
   void startup ();
   void shutdown ();
   bool maybe_low_resolution (Frequency low_res, Frequency high_res);
-
+  qint64 set_freq_time = 0;
   // use this convenience class to notify in update methods
   class may_update
   {

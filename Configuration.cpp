@@ -371,7 +371,7 @@ public:
   void transceiver_mode (MODE);
   void transceiver_ptt (bool);
   void sync_transceiver (bool force_signal);
-
+ 
   Q_SLOT int exec () override;
   Q_SLOT void accept () override;
   Q_SLOT void reject () override;
@@ -545,6 +545,8 @@ private:
 
   QSettings * settings_;
 
+  JTDXDateTime * jtdxtime_;
+  
   QDir doc_dir_;
   QDir data_dir_;
   QDir temp_dir_;
@@ -2369,6 +2371,11 @@ void Configuration::add_callsign_hideFilter (QString basecall)
   QString curcallsigns = m_->callsigns_;
   if(curcallsigns.isEmpty ()) { m_->callsigns_ = basecall; m_->enableCallsignFilter_ = true;}
   else { if(!curcallsigns.contains ("," + basecall + ",") && !curcallsigns.endsWith (basecall) && !curcallsigns.startsWith (basecall)) m_->callsigns_ = curcallsigns + "," + basecall; }
+}
+
+void Configuration::set_jtdxtime (JTDXDateTime * jtdxtime)
+{
+  m_->jtdxtime_ = jtdxtime;
 }
 
 void Configuration::impl::write_settings ()
@@ -5372,11 +5379,14 @@ void Configuration::impl::transceiver_frequency (Frequency f)
   // cannot absolutely determine if the offset should apply but by
   // simply picking an offset when the Rx frequency is set and
   // sticking to it we get sane behaviour
-  current_offset_ = stations_.offset (f);
-  cached_rig_state_.frequency (apply_calibration (f + current_offset_));
+  if (current_offset_ != stations_.offset (f) || cached_rig_state_.frequency() != apply_calibration (f + current_offset_))
+  {
+    current_offset_ = stations_.offset (f);
+    cached_rig_state_.frequency (apply_calibration (f + current_offset_));
 
-//  printf("%s Coniguration transceiver_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
-  Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+//    printf("%s(%0.1f) Coniguration transceiver_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),f);
+    Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+  }
 }
 
 void Configuration::impl::transceiver_tx_frequency (Frequency f)
@@ -5386,32 +5396,39 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
     {
       cached_rig_state_.online (true); // we want the rig online
       set_cached_mode ();
-      cached_rig_state_.split (f);
-      cached_rig_state_.tx_frequency (f);
+      if (cached_rig_state_.split() != f ||  cached_rig_state_.tx_frequency() != f ||
+         (f && (current_tx_offset_ != stations_.offset (f) || cached_rig_state_.tx_frequency() != apply_calibration (f + current_tx_offset_))))
+      {
+        cached_rig_state_.split (f);
+        cached_rig_state_.tx_frequency (f);
 
-      // lookup offset for tx and apply calibration
-      if (f)
-        {
-          // apply and offset and calibration
-          // we store the offset here for use in feedback from the
-          // rig, we cannot absolutely determine if the offset should
-          // apply but by simply picking an offset when the Rx
-          // frequency is set and sticking to it we get sane behaviour
-          current_tx_offset_ = stations_.offset (f);
-          cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
-        }
+        // lookup offset for tx and apply calibration
+        if (f)
+          {
+            // apply and offset and calibration
+            // we store the offset here for use in feedback from the
+            // rig, we cannot absolutely determine if the offset should
+            // apply but by simply picking an offset when the Rx
+            // frequency is set and sticking to it we get sane behaviour
+            current_tx_offset_ = stations_.offset (f);
+            cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
+          }
 
-//      printf("%s Coniguration transceiver_tx_frequency: %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
-      Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+//        printf("%s(%0.1f) Coniguration transceiver_tx_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),f);
+        Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+      }
     }
 }
 
 void Configuration::impl::transceiver_mode (MODE m)
 {
   cached_rig_state_.online (true); // we want the rig online
-  cached_rig_state_.mode (m);
-//  printf("%s Coniguration mode: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),m);
-  Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+  if (cached_rig_state_.mode() != m)
+  {
+    cached_rig_state_.mode (m);
+//    printf("%s(%0.1f) Coniguration mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),m);
+    Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
+  }
 }
 
 void Configuration::impl::transceiver_ptt (bool on)
@@ -5419,13 +5436,13 @@ void Configuration::impl::transceiver_ptt (bool on)
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
   cached_rig_state_.ptt (on);
-//  printf("%s Coniguration ptt: %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),on);
+//  printf("%s(%0.1f) Coniguration ptt: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
 void Configuration::impl::sync_transceiver (bool /*force_signal*/)
 {
-//  printf("%s Coniguration sync force: NULL\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+//  printf("%s(%0.1f) Coniguration sync force: NULL\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
   // pass this on as cache must be ignored
   // Q_EMIT sync (force_signal);
 }

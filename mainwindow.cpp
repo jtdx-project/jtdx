@@ -147,6 +147,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   QMainWindow(parent),
   m_exitCode {0},
   m_jtdxtime {new JTDXDateTime()},
+
   m_dataDir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)},
   m_valid {true},
   m_revision {revision ()},
@@ -156,6 +157,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  m_olek {false},
 //  m_olek2 {false},
   m_config {settings, this},
+
   m_WSPR_band_hopping {settings, &m_config, this},
   m_WSPR_tx_next {false},
   m_wideGraph (new WideGraph(settings, m_jtdxtime)),
@@ -426,6 +428,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_manual {network_manager}
 {
   ui->setupUi(this);
+  m_config.set_jtdxtime (m_jtdxtime);
   ui->decodedTextBrowser->setConfiguration (&m_config);
   ui->decodedTextBrowser2->setConfiguration (&m_config);
   m_qsoHistory.jtdxtime = m_jtdxtime;
@@ -1451,7 +1454,6 @@ void MainWindow::readSettings()
 
   m_lastMonitoredFrequency = m_settings->value ("DialFreq",
      QVariant::fromValue<Frequency> (default_frequency)).value<Frequency> ();
-//  printf ("m_lastMonitoredFrequency = %LLd",m_lastMonitoredFrequency);
   // setup initial value of tx attenuator, range 0...450 (0...45dB attenuation)
   if(m_settings->value("OutAttenuation").toInt()>=0 && m_settings->value("OutAttenuation").toInt()<=450)
     ui->outAttenuation->setValue (m_settings->value ("OutAttenuation", 225).toInt ());
