@@ -308,7 +308,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation type="unfinished"></translation>
+        <translation>où ? ?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2137,32 +2137,32 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>perte partielle de données</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>ALLCALL7.TXT est trop court ou cassé ?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression du QSO</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>signal d&apos;entrée faible valeur efficace</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>écart audio détecté</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>nfqso est hors bande passante</translation>
     </message>
 </context>
 <context>
@@ -2305,12 +2305,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Erreur de réseau</translation>
+        <translation>Erreur de réseau</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Authentification requise</translation>
     </message>
 </context>
 <context>
@@ -2974,7 +2974,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>USB dial frequency</source>
-        <translation>Fréquence de numérotation USB</translation>
+        <translation>Fréquence Trx USB</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
@@ -2999,7 +2999,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>Sélectionnez la bande ou la fréquence d&apos;exploitation en MHz</translation>
+        <translation>Sélectionnez une bande</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -3041,12 +3041,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="987"/>
         <source>Locator of station to be worked</source>
-        <translation>Localisateur de la station à travailler</translation>
+        <translation>Locator du contact</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1006"/>
         <source>Callsign of station to be worked</source>
-        <translation>Indicatif de la station à travailler</translation>
+        <translation>Indicatif du contact</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1025"/>
@@ -3071,7 +3071,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliquez avec le bouton gauche de la souris pour repérer l&apos;appel DX à dxsummit.fi (le repérage doit être activé dans l&apos;onglet &quot;Reporting&quot; des paramètres). Cliquez avec le bouton droit de la souris pour ajouter l&apos;indicatif d&apos;appel au filtre &quot;Hide messages from callsigns&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliquez avec le bouton gauche de la souris pour envoyer ce contact à dxsummit.fi (Cette fonction doit être activé dans l&apos;onglet &quot;Report&quot; des paramètres). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -3089,7 +3089,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;tête/&gt;&lt;p&gt;Partage Pair/Impair TX&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
@@ -3326,7 +3326,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Transmettre un ton pur. La minuterie peut être réglée dans l&apos;onglet Général des paramètres.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Transmettre un ton pure. La minuterie peut être réglée dans l&apos;onglet Général des paramètres.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
@@ -3337,7 +3337,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
         <source>Start monitoring</source>
-        <translation></translation>
+        <translation>Départ du moniteur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
@@ -3347,7 +3347,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voir les stations déja contactées, action en double dans l&apos;onglet Divers.&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2366"/>
@@ -3367,7 +3367,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Répondre aux stations déja contactées (B4)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2456"/>
@@ -3397,7 +3397,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
         <source>Toggle Tx Enable On/Off</source>
-        <translation>Activation/désactivation duTx</translation>
+        <translation>Activation duTx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2582"/>
@@ -3412,7 +3412,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation></translation>
+        <translation>&amp;Stop TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
@@ -3422,7 +3422,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Log &amp;QSO</source>
-        <translation></translation>
+        <translation>Enreg. &amp;Qso</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2666"/>
@@ -3432,7 +3432,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&amp;Erase</source>
-        <translation></translation>
+        <translation>&amp;Effacer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2694"/>
@@ -3462,7 +3462,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
         <source>Filter</source>
-        <translation></translation>
+        <translation>Filtre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2832"/>
@@ -3482,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>Clear D&amp;X</source>
-        <translation></translation>
+        <translation>Effacer D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
@@ -3524,7 +3524,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3104"/>
         <location filename="../mainwindow.ui" line="3688"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation></translation>
+        <translation>Cochez pour générer le message &quot;RRR&quot;, décochez pour générer le message &quot;RR73&quot;.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3110"/>
@@ -3536,7 +3536,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3123"/>
         <location filename="../mainwindow.ui" line="3742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cocher pour transmettre sans le  le locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3129"/>
@@ -3630,7 +3630,10 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation></translation>
+        <translation>Saisissez un message texte libre (13 caractères maximum)
+ou sélectionnez une macro prédéfinie dans la liste déroulante.
+ La liste peut être gérée dans les paramètres (F2).
+&quot;Macros&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3448"/>
@@ -3679,17 +3682,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3726"/>
         <source>AnsCQ </source>
-        <translation></translation>
+        <translation>Réponse aux CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3748"/>
         <source>SkpGrid</source>
-        <translation></translation>
+        <translation>Trans. sans locator</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Générer un message CQ ou CQ directionnel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3778"/>
@@ -3709,7 +3712,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation></translation>
+        <translation>Générer un message avec un report</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
@@ -3719,7 +3722,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation></translation>
+        <translation>Générer un message avec R+report</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
@@ -3729,7 +3732,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Génère un message avec RR73 si la case RRR n&apos;est pas cochée, génère un message RRR si la case RRR est cochée&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3890"/>
@@ -5065,22 +5068,22 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5043"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Renommer</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>Show &amp;hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher &amp; fichiers cachés</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nouveau dossier</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
@@ -5910,7 +5913,7 @@ jjhhmmssAAAA)</translation>
         <location filename="../Configuration.ui" line="346"/>
         <source>Application Font...</source>
         <translatorcomment>Police des Applications</translatorcomment>
-        <translation></translation>
+        <translation>Police Application</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
@@ -7411,7 +7414,8 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="3664"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;En haut du panneau de prévisualisation, il y a des types de messages qui sont vérifiés pour un certain critère, la couleur du texte étant sélectionnée pour chaque type de message.&lt;br&gt;&lt;br&gt;Sur le côté gauche, il y a des critères alloués dans l&apos;ordre hiérarchique, et la couleur de fond étant sélectionnée pour les messages pour chaque critère.&lt;br&gt;&lt;br&gt; La fonctionnalité de notification &quot;Un travaillé&quot; est basée sur le principe résiduel, déclenchée si tous les critères ou critères &quot;Un nouveau&quot; activés ne sont pas remplis. &lt;br&gt;&lt;br&gt; &quot;Couleur inverse&quot; peut être utilisée si l&apos;utilisateur souhaite mettre en évidence les messages CQ et &quot;MyCall&quot; par une couleur de fond spécifique.&lt;br&gt;&lt;br&gt;Pour commencer, un critère peut être choisi et pour les notifications de nouvelle bande/mode, une couleur similaire peut être utilisée avec un niveau de saturation différent, le nombre de critères requis peut être augmenté ultérieurement.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3667"/>
