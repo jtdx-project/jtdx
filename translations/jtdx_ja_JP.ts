@@ -2137,7 +2137,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation>データの部分的な損失</translation>
+        <translation>データの部分的な損失がありました</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
