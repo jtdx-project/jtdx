@@ -73,12 +73,14 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
   }
 
   // round up to an exact portion of a second that allows for startup delays
-  m_ic = (mstr / delay_ms) * m_frameRate * delay_ms / 1000;
+//  m_ic = (mstr / delay_ms) * m_frameRate * delay_ms / 1000;
+  m_ic = mstr * (m_frameRate / 1000);
 
   m_silentFrames = 0;
   // calculate number of silent frames to send
   if (synchronize && !m_tuning)	{
-    m_silentFrames = m_ic + m_frameRate / (1000 / delay_ms) - (mstr * (m_frameRate / 1000));
+//    m_silentFrames = m_ic + m_frameRate / (1000 / delay_ms) - (mstr * (m_frameRate / 1000));
+    m_silentFrames = delay_ms * (m_frameRate / 1000);
   }
   initialize (QIODevice::ReadOnly, channel);
   Q_EMIT stateChanged ((m_state = (synchronize && m_silentFrames) ?
