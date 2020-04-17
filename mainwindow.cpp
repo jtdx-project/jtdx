@@ -401,9 +401,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_msAudioOutputBuffered (0u),
   m_framesAudioInputBuffered (RX_SAMPLE_RATE / 10),
   m_downSampleFactor (downSampleFactor),
-//  m_audioThreadPriority (QThread::HighPriority),
+  m_audioThreadPriority (QThread::HighPriority),
 //  m_audioThreadPriority (QThread::HighestPriority),
-  m_audioThreadPriority (QThread::TimeCriticalPriority),
+//  m_audioThreadPriority (QThread::TimeCriticalPriority),
   m_bandEdited {false},
   m_splitMode {false},
   m_monitoring {false},
@@ -977,7 +977,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   QByteArray cfname=fname.toLocal8Bit();
   fftwf_import_wisdom_from_filename(cfname);
 
-  QThread::currentThread()->setPriority(QThread::HighPriority);
+//  QThread::currentThread()->setPriority(QThread::HighPriority);
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
 
@@ -4400,7 +4400,7 @@ void MainWindow::startTx2()
       transmit (snr);
 //      printf(" started %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
       if(m_config.write_decoded_debug()) writeToALLTXT("Modulator started");
-      QThread::currentThread()->setPriority(QThread::HighPriority);
+//      QThread::currentThread()->setPriority(QThread::HighPriority);
       ui->signal_meter_widget->setValue(0);
 
       if(m_mode.left(4)=="WSPR" and !m_tune) {
@@ -4463,7 +4463,7 @@ void MainWindow::stopTx()
 void MainWindow::stopTx2()
 {
   Q_EMIT m_config.transceiver_ptt (false);      //Lower PTT
-  QThread::currentThread()->setPriority(QThread::HighPriority);
+//  QThread::currentThread()->setPriority(QThread::HighPriority);
   if(m_mode.left(4)=="WSPR" and m_ntr==-1 and !m_tuneup) {
     m_wideGraph->setWSPRtransmitted();
     WSPR_scheduling ();
@@ -6765,7 +6765,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
  // waiting to Tx and still needed
  //Start-of-transmission sequencer delay
       if (m_tx_when_ready && g_iptt) {
-          QThread::currentThread()->setPriority(QThread::HighestPriority);
+//          QThread::currentThread()->setPriority(QThread::HighestPriority);
           int ms_delay=1000*m_config.txDelay();
           if(m_mode=="FT4") ms_delay=20;
           ptt1Timer.start(ms_delay);

@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1191"/>
         <source>&amp;OK</source>
-        <translation>App&amp;lica</translation>
+        <translation>C&amp;onferma</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1192"/>
         <source>&amp;Cancel</source>
-        <translation>A&amp;nnulla</translation>
+        <translation>&amp;Cancella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1207"/>
@@ -91,7 +91,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
         <location filename="../Configuration.cpp" line="1250"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Crea Cartella</translation>
+        <translation>Crea Cartella &quot;</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1416"/>
@@ -109,17 +109,17 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     <message>
         <location filename="../Configuration.cpp" line="1449"/>
         <source>&amp;Load ...</source>
-        <translation>&amp;Apri ...</translation>
+        <translation>&amp;Apri...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1453"/>
         <source>&amp;Save as ...</source>
-        <translation>&amp;Salva con nome ...</translation>
+        <translation>&amp;Salva con nome...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1457"/>
         <source>&amp;Merge ...</source>
-        <translation>A&amp;ggiungi ...</translation>
+        <translation>A&amp;ggiungi...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1461"/>
@@ -205,7 +205,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="4457"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>JTDX Selezione del font della finestra di decodifica</translation>
+        <translation>Selezione del font della finestra di decodifica</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5083"/>
@@ -216,7 +216,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5079"/>
         <source>Load Working Frequencies</source>
-        <translation>Carica le frequenze di lavoro</translation>
+        <translation>Carica le Frequenze di Lavoro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5081"/>
@@ -228,7 +228,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5097"/>
         <source>Replace Working Frequencies</source>
-        <translation>Sostituisci le frequenze di lavoro</translation>
+        <translation>Sostituisci le Frequenze di Lavoro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5098"/>
@@ -238,7 +238,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5110"/>
         <source>Merge Working Frequencies</source>
-        <translation>Aggiungi alle frequenze esistenti</translation>
+        <translation>Aggiungi alle Frequenze Esistenti</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5137"/>
@@ -265,12 +265,12 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5166"/>
         <source>Save Working Frequencies</source>
-        <translation>Salva le frequenze di lavoro</translation>
+        <translation>Salva le Frequenze di Lavoro</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5176"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation>Salva solo le frequenze selezionate</translation>
+        <translation>Salva solo le Frequenze Selezionate</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5178"/>
@@ -280,7 +280,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5205"/>
         <source>Reset Working Frequencies</source>
-        <translation>Resetta le frequenze attuali</translation>
+        <translation>Resetta le Frequenze Attuali</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5207"/>
@@ -290,7 +290,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5267"/>
         <source>Save Directory</source>
-        <translation>Salva cartella</translation>
+        <translation>Salva Cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5283"/>
@@ -300,7 +300,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5511"/>
         <source>Rig failure</source>
-        <translation>Errore dell TX</translation>
+        <translation>Errore dell&apos;RTX</translation>
     </message>
 </context>
 <context>
@@ -586,11 +586,6 @@ Formato:
         <translation></translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="89"/>
-        <source>Dem. Rep. of the Congo</source>
-        <translation>Rep. Dem. del Congo</translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
         <source>Burundi</source>
         <translation></translation>
@@ -741,6 +736,11 @@ Formato:
         <translation>Rep.Dominicana</translation>
     </message>
     <message>
+        <location filename="../logbook/countrydat.cpp" line="193"/>
+        <source>Rep. of Korea</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
         <translation>Slovacchia</translation>
@@ -749,6 +749,11 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
         <translation>Is.Faroe</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="296"/>
+        <source>Rep. of the Congo</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
@@ -761,6 +766,16 @@ Formato:
         <translation>Is.Falkland</translation>
     </message>
     <message>
+        <location filename="../logbook/countrydat.cpp" line="363"/>
+        <source>Rep. of Kosovo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="364"/>
+        <source>Rep. of S. Sudan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
         <translation>Is.Cayman</translation>
@@ -769,6 +784,11 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
         <translation>Is.Juan Fernandez</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="89"/>
+        <source>Dem. Rep. of the Congo</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -1129,11 +1149,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
         <translation>Is.di Malpelo</translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="193"/>
-        <source>Rep. of Korea</source>
-        <translation>Corea del Sud</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="194"/>
@@ -1633,12 +1648,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation>Rep. Centro Africana</translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="296"/>
-        <source>Rep. of the Congo</source>
-        <translation>Rep. del Congo</translation>
+        <translation>Rep.Centro Africana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
@@ -1959,16 +1969,6 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="363"/>
-        <source>Rep. of Kosovo</source>
-        <translation>Rep. del Kosovo</translation>
-    </message>
-    <message>
-        <location filename="../logbook/countrydat.cpp" line="364"/>
-        <source>Rep. of S. Sudan</source>
-        <translation>Rep. del S. Sudan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -2947,7 +2947,7 @@ Errore:%2 -%3</translation>
         <location filename="../mainwindow.ui" line="178"/>
         <location filename="../mainwindow.ui" line="2114"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation>UTC           dB            DT           Freq          Dr </translation>
+        <translation>UTC           dB            DT           Freq            Dr </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
@@ -2973,7 +2973,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>USB dial frequency</source>
-        <translation>Frequenza di chiamata USB</translation>
+        <translation>Frequenza USB di lavoro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
@@ -3055,7 +3055,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Consulta</translation>
+        <translation>&amp;Cerca</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
@@ -3088,7 +3088,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scegli il periodo di TX (trasmissione)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliccare percambiare il periodo di TX (trasmissione)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
@@ -3376,12 +3376,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2456"/>
         <source>AnsB4</source>
-        <translation>RispB4</translation>
+        <translation>Risp B4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interrompi il monitoraggio del segnale di input, interrompi la riproduzione del pacchetto dei file wav audio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interrompi il monitoraggio del segnale di input o interrompi la riproduzione del pacchetto dei file audio wav&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2487"/>
@@ -3499,7 +3499,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>Genera messaggi predefiniti per un QSO minimo</translation>
+        <translation>Genera messaggi predefiniti per un minimo QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
@@ -3781,7 +3781,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4123"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation>Scegli le fasce e gli orari del giorno persalto di banda.</translation>
+        <translation>Scegli le fasce e gli orari del giorno per salto di banda.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4126"/>
@@ -4333,7 +4333,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5226"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+ Chiama e cerca tra i messaggi CQ</translation>
+        <translation>4 Chiama e cerca tra i messaggi CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5234"/>
@@ -4353,7 +4353,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5258"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>Cancella l&apos;attività della banda dall&apos;inizio della decodifica</translation>
+        <translation>Cancella l&apos;attività in banda all&apos;inizio della decodifica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5266"/>
@@ -4488,7 +4488,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5573"/>
         <source>Color Tx message buttons</source>
-        <translation>Colore bottone messaggio TX</translation>
+        <translation>Colora bottone messaggio TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5581"/>
@@ -4560,12 +4560,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5726"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Con doppio click richiama/autoseleziona Nominativo dagli appunti</translation>
+        <translation>Con un doppio click richiama Nominativo dagli appunti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5734"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>Operazione di crossban in 160 per operare con il Giappone</translation>
+        <translation>Crossban in 160Mt per operare con il Giappone</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="447"/>
@@ -4786,7 +4786,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3425"/>
         <source>Avg=</source>
-        <translation></translation>
+        <translation>Med=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3430"/>
@@ -5614,7 +5614,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="160"/>
         <source>Compression factor for frequency scale</source>
-        <translation>Fattore di compressione per la scala di frequenza</translation>
+        <translation>Fattore di compressione della scala della frequenza</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="166"/>
@@ -5640,7 +5640,7 @@ Errore (%2):%3</translation>
         <location filename="../widegraph.ui" line="233"/>
         <location filename="../widegraph.ui" line="243"/>
         <source>Position of timestamp above each interval line</source>
-        <translation>Posizione dell&apos;ora e banda sopra ogni linea di intervallo</translation>
+        <translation>Posizione dell&apos;ora e della banda sopra alla linea del periodo di ricezione</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="236"/>
@@ -5665,7 +5665,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Frequenza sul bordo sinistro dello spettro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Inizio della visualizzazione della Frequenza&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="292"/>
@@ -5720,7 +5720,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Visualizza in basso allo spettro sull&apos;intero intervallo. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Appiattisce la linea di base dello spettro per l&apos;intero intervallo visualizzato.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
@@ -5801,7 +5801,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>Selezionare la scheda per modificare i parametri di configurazione.</translation>
+        <translation> Selezionare per modificare i parametri di configurazione. </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -6433,9 +6433,9 @@ questa impostazione consente di selezionare quale ingresso audio verrà utilizza
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation>Non consentire al programma di impostare la modalità radio
-(sconsigliato ma utilizzare se la modalità è sbagliata
-o la larghezza di banda è selezionata).</translation>
+        <translation>Non consentire al programma di impostare la modalità
+radio (uso sconsigliato da utilizzare solo se la modalità
+è sbagliata o la larghezza di banda è selezionata).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1422"/>
@@ -6592,7 +6592,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1776"/>
         <source>Remember power settings by band and mode</source>
-        <translation>Ricorda le impostazioni per la potenza in uscita per banda e modo</translation>
+        <translation>Ricorda le impostazioni della potenza in uscita per banda e modo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1784"/>
@@ -6783,7 +6783,7 @@ e Griglia DX quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Cancella dati &amp;DX e Griglia dopo aver loggato</translation>
+        <translation>Cancella &amp;dati dopo aver loggato il QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6860,7 +6860,7 @@ e Griglia DX quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
         <source>2nd UDP server</source>
-        <translation>Server UDP 2</translation>
+        <translation>Server UDP2:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2530"/>
@@ -7335,7 +7335,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3483"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Inverti testo &lt;-&gt; colore di sfondo per i messaggi ricevuti &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Inverti il colore di sfondo con il colore del testo nei messaggi ricevuti&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
@@ -7410,7 +7410,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3664"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Nella parte superiore del riquadro di anteprima ci sono tipi di messaggi che vengono controllati per alcuni criteri, il colore del testo viene selezionato per ogni tipo di messaggio. &lt;br&gt;&lt;br&gt; Sul lato sinistro vi sono criteri assegnati nell&apos;ordine gerarchico e il colore di sfondo viene selezionato per i messaggi per ciascun criterio. &lt;br&gt;&lt;br&gt; La funzionalità di notifica &quot;Lavorato uno&quot; si basa sul principio residuo, attivato se tutti i criteri o criterio &quot;Nuovo uno&quot; attivati non sono soddisfatti. &lt;br&gt;&lt;br&gt;&apos;Colore inverso&apos; può essere utilizzato se l&apos;utente desidera evidenziare i messaggi CQ e &apos;Mio Nom&apos; con un colore di backgroung specifico. &lt;br&gt;&lt;br&gt; Per iniziare è possibile scegliere un criterio e per le nuove notifiche di banda / modalità possono essere utilizzate con colori simili con il diverso livello di saturazione, in seguito è possibile aumentare il numero di criteri richiesti. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nella parte superiore del riquadro di anteprima ci sono tipi di messaggi che vengono controllati per alcuni criteri, il colore del testo viene selezionato per ogni tipo di messaggio.&lt;br&gt;&lt;br&gt; Sul lato sinistro vi sono criteri assegnati nell&apos;ordine gerarchico e il colore di sfondo viene selezionato per i messaggi per ciascun criterio.&lt;br&gt;&lt;br&gt; La funzionalità di notifica &quot;Lavorato uno&quot; si basa sul principio residuo, attivato se tutti i criteri o criterio &quot;Nuovo uno&quot; attivati non sono soddisfatti.&lt;br&gt;&lt;br&gt;&apos;Colore inverso&apos; può essere utilizzato se l&apos;utente desidera evidenziare i messaggi CQ e &apos;Mio Nom&apos; con un colore di backgroung specifico.&lt;br&gt;&lt;br&gt; Per iniziare è possibile scegliere un criterioe  per le nuove notifiche di banda/modo possono essere utilizzate colori simili con un diverso livello di saturazione, in seguito sarà possibile aumentare il numero di criteri richiesti.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3667"/>
@@ -7796,7 +7796,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5211"/>
         <source>Band</source>
-        <translation>BandaBanda</translation>
+        <translation>Banda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5221"/>
@@ -8143,7 +8143,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6539"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Attivazione del programmatore di banda &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attivazione della programmazione di banda&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6542"/>
@@ -8169,7 +8169,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6606"/>
         <location filename="../Configuration.ui" line="6619"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Setta il numero di tentativi di decodifica per i passaggi di decodifica a banda larga &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Definisce il numero di tentativi di decodifica per i passaggi di decodifica a banda larga &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6609"/>
