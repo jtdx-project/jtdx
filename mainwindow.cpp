@@ -5922,7 +5922,13 @@ void MainWindow::on_actionWSPR_2_triggered()
 void MainWindow::switch_mode (Mode mode)
 {
 // m_lastMode value is deliberately not assigned in constructor to let qsohistory init at SW startup 
-  if(m_lastMode!=m_mode) { m_qsoHistory.init(); m_lastMode=m_mode; if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");} 
+  if(m_lastMode!=m_mode) {
+     if (m_lastMode == "FT4") Q_EMIT m_config.transceiver_fast_mode (false);
+     else if (m_mode == "FT4") Q_EMIT m_config.transceiver_fast_mode (true);
+     m_qsoHistory.init(); 
+     m_lastMode=m_mode; 
+     if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");
+  } 
   m_okToPost = false;
   m_config.frequencies ()->filter (m_config.region (),mode);
   auto const& row = m_config.frequencies ()->best_working_frequency (m_freqNominal);

@@ -54,17 +54,25 @@ void TransceiverBase::set (TransceiverState const& s,
       auto ms = set_freq_time;
       if (!s.online () && was_online)
         {
+//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           shutdown ();
         }
       else if (s.online () && !was_online)
         {
+//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           shutdown ();
+//          printf("%s start",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           startup ();
         }
       if (requested_.online ())
         {
           bool ptt_on {false};
           bool ptt_off {false};
+          if (requested_.fast_mode() != s.fast_mode()) {
+//            printf("%s Timing fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.fast_mode());
+            do_post_fast_mode (s.fast_mode());
+            requested_.fast_mode (s.fast_mode ());
+          }
           if (s.ptt () != requested_.ptt ())
             {
               ptt_on = s.ptt ();
@@ -126,7 +134,7 @@ void TransceiverBase::set (TransceiverState const& s,
 
           // record what actually changed
           requested_.ptt (actual_.ptt ());
-        }
+        } //else printf ("%s NOT ONLINE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
 //      printf("%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
     }
   catch (std::exception const& e)
@@ -137,8 +145,10 @@ void TransceiverBase::set (TransceiverState const& s,
     {
       message = unexpected;
     }
+  
   if (!message.isEmpty ())
     {
+//      printf("%s Transiever set message %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
       offline (message);
     }
 }
@@ -151,12 +161,6 @@ void TransceiverBase::startup ()
       actual_.online (true);
       requested_.online (true);
       auto res = do_start ();
-      auto ms = QDateTime::currentMSecsSinceEpoch() % 1000;
-//      printf ("startup ms %lld\n",ms);
-      if (ms < 500)
-        QThread::msleep (500-ms);
-      else
-        QThread::msleep (1500-ms);
       do_post_start ();
       Q_EMIT resolution (res);
     }

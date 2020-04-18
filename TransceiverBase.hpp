@@ -112,6 +112,8 @@ protected:
   virtual void do_ptt (bool = true) = 0;
   virtual void do_post_ptt (bool = true) {}
 
+  virtual void do_post_fast_mode (bool = false) {}
+
   virtual bool do_pre_update () {return true;}
 
   // sub classes report rig state changes with these methods

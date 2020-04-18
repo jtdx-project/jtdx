@@ -308,6 +308,10 @@ public:
   // frequency changes.
   Q_SLOT void transceiver_ptt (bool = true);
 
+  // Set/unset Fast_mode for polling tranceiver for FT4.
+  //
+  Q_SLOT void transceiver_fast_mode (bool = false);
+
   // Attempt to (re-)synchronise transceiver state.
   //
   // Force signal guarantees either a transceiver_update or a

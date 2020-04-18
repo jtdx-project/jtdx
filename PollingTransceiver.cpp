@@ -6,6 +6,7 @@
 #include <QString>
 #include <QTimer>
 #include <QDateTime>
+#include <QThread>
 #include "moc_PollingTransceiver.cpp"
 
 namespace
@@ -17,8 +18,11 @@ PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
   : TransceiverBase {parent}
   , interval_ {poll_interval * 1000}
   , poll_timer_ {nullptr}
+  , change_done_ {false}
+  , fast_mode_ {false}
   , retries_ {0}
 {
+//printf ("%s Polling Tranceiver created interval %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),poll_interval);
 }
 
 void PollingTransceiver::start_timer ()
@@ -34,9 +38,8 @@ void PollingTransceiver::start_timer ()
           connect (poll_timer_, &QTimer::timeout, this,
                    &PollingTransceiver::handle_timeout);
         }
-      poll_timer_->setInterval(interval_);
 //      printf("%s Poll timer start interval=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),interval_);
-      poll_timer_->start ();
+      poll_timer_->start (interval_);
 //      printf("%s Poll timer started\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
     }
   else
@@ -55,6 +58,16 @@ void PollingTransceiver::stop_timer ()
 
 void PollingTransceiver::do_post_start ()
 {
+  auto ms = QDateTime::currentMSecsSinceEpoch() % 1000;
+  int sec = QDateTime::currentDateTimeUtc().toString("ss").toInt() % 15;
+//  printf ("startup ms %lld %d\n",ms,sec);
+  if (fast_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11))
+    QThread::msleep (1000-ms);
+  else
+    if (ms <= 500)
+      QThread::msleep (500-ms);
+    else
+      QThread::msleep (1500-ms);
   start_timer ();
   if (!next_state_.online ())
     {
@@ -111,6 +124,18 @@ void PollingTransceiver::do_post_mode (MODE m)
     }
 }
 
+void PollingTransceiver::do_post_fast_mode (bool p)
+{
+//  printf("PollingTransceiver do_post_fast_mode = %d\n",p);
+//  if (next_state_.fast_mode () != p)
+//    {
+      // update polling style
+      next_state_.fast_mode (p);
+      fast_mode_ = p;
+      do_post_start ();
+//    }
+}
+
 void PollingTransceiver::do_post_ptt (bool p)
 {
   if (next_state_.ptt () != p)
@@ -118,7 +143,7 @@ void PollingTransceiver::do_post_ptt (bool p)
       // update expected state with new PTT and set poll count
       next_state_.ptt (p);
       retries_ = polls_to_stabilize;
-      //retries_ = 0;             // fast feedback on PTT
+      retries_ = 0;             // fast feedback on PTT
     }
 }
 
@@ -141,7 +166,26 @@ void PollingTransceiver::handle_timeout ()
   // inform our parent of the failure via the offline() message
   try
     {
-//      printf("%s Poll start ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+      int sec = QDateTime::currentDateTimeUtc().toString("ss").toInt();
+//      printf("%s %d Poll start retries=%d fast_mode=%d done=%d ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,change_done_);
+      if (fast_mode_) {
+        if (sec == 6 || sec == 13 || sec == 21 || sec == 28 ||
+            sec == 36 || sec == 43 || sec == 51 || sec == 58) {
+          poll_timer_->stop ();
+          QThread::msleep (500);
+          poll_timer_->start (interval_);
+          change_done_ = false;
+          if (sec == 6 || sec == 21 || sec == 36 || sec == 51) change_done_ = true;
+//          printf ("%s waited ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+        }
+        else if ((sec == 14 && change_done_) || (sec == 29 && change_done_) || (sec == 44 && change_done_) || (sec == 59 && change_done_)) {
+          poll_timer_->stop ();
+          QThread::msleep (250);
+          poll_timer_->start (interval_);
+          change_done_ = false;
+//          printf ("%s waited ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+        }
+      }
       do_poll ();              // tell sub-classes to update our state
 //      printf("%s end ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
 
