@@ -2850,8 +2850,18 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   m_houndMode=checked;
   m_wideGraph->setHoundFilter(m_houndMode);
   if(m_houndMode) {
+    bool defBand=false;
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    for(int i=0; i<11; i++) {
+      int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
+      if(qAbs(kHzdiff) < 3) {
+        defBand=true;
+        break;
+      }
+    }
     ui->HoundButton->setChecked(true);
-    ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+    if(defBand) ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+    else ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
     ui->actionUse_TX_frequency_jumps->setEnabled(true);
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
