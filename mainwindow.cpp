@@ -3514,7 +3514,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString deCall="";
       QString grid="";
       decodedtext.deCallAndGrid(/*out*/deCall,grid);
-
+      if (!m_hisCall.isEmpty() && !deCall.isEmpty() && Radio::base_callsign (m_hisCall) == Radio::base_callsign (deCall)) ui->RxFreqSpinBox->setValue (decodedtext.frequencyOffset());
 
 /*      bool bwantedCall=false;
       if(m_hisCall.isEmpty ()) { // run this code only if not in the QSO
