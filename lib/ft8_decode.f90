@@ -230,9 +230,9 @@ contains
                   if(.not.lspecial .and. lFreeText) then
                     if(abs(nfqso-nint(f1)).le.10) then; servis8=','; else; servis8='.'; endif
                   endif
-                  if(lft8sd) servis8='^'
+                  if(lft8sd .or. lft8s) servis8='^'
                 else
-                  if(lft8s .or. lft8sd) then; servis8='^'; else; servis8='*'; endif
+                  if(lft8sd .or. lft8s) then; servis8='^'; else; servis8='*'; endif
                 endif
                 if(i3bit.eq.1) servis8='1'
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
