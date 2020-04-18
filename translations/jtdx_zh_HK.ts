@@ -4980,12 +4980,12 @@ UDP 服務器 %2:%3</translation>
         <translation>檔案出錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7565"/>
+        <location filename="../mainwindow.cpp" line="7566"/>
         <source>Tx watchdog expired</source>
         <translation>發射監管計時器已過期</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7579"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>

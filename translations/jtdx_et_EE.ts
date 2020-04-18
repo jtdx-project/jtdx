@@ -5000,13 +5000,13 @@ UDP server %2:%3</translation>
         <translation>Faili viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7565"/>
+        <location filename="../mainwindow.cpp" line="7566"/>
         <source>Tx watchdog expired</source>
         <translatorcomment>võib-olla: TX-taimer aegus?</translatorcomment>
         <translation>Tx valvekoer aegus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7579"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>

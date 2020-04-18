@@ -4940,12 +4940,12 @@ UDP server %2:%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7565"/>
+        <location filename="../mainwindow.cpp" line="7566"/>
         <source>Tx watchdog expired</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7579"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>WD %1m</source>
         <translation type="unfinished"></translation>
     </message>

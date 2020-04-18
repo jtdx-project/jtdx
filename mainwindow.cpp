@@ -7469,6 +7469,7 @@ void MainWindow::setRig ()
   if ((m_monitoring || m_transmitting) && m_config.transceiver_online ()) {
       if(m_transmitting && m_config.split_mode ()) { Q_EMIT m_config.transceiver_tx_frequency (m_freqTxNominal); }
       else { Q_EMIT m_config.transceiver_frequency (m_freqNominal); }
+      Q_EMIT m_config.transceiver_fast_mode (m_mode == "FT4");
   }
 }
 

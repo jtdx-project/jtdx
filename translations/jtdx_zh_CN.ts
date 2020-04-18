@@ -4980,12 +4980,12 @@ UDP 服务器 %2:%3</translation>
         <translation>文件出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7565"/>
+        <location filename="../mainwindow.cpp" line="7566"/>
         <source>Tx watchdog expired</source>
         <translation>发射监管计时器已过期</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7579"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>

@@ -4989,12 +4989,12 @@ Servidor UDP %2:%3</translation>
         <translation>Error de archivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7565"/>
+        <location filename="../mainwindow.cpp" line="7566"/>
         <source>Tx watchdog expired</source>
         <translation>Temporizador WD de tiempo de TX expiró</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7579"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
