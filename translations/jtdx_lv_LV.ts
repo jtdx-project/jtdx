@@ -60,79 +60,81 @@
     <message>
         <location filename="../Configuration.cpp" line="1201"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1202"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1217"/>
         <source>Create temporary directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda, izveidojot pagaidu mapi: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1223"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda, izveidojot pagaidu mapi:
+% 1
+Cita programma var bloķēt mapi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1240"/>
         <source>Create data directory error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda, izveidojot datu mapi: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1249"/>
         <location filename="../Configuration.cpp" line="1260"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Izveidot mapi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1426"/>
         <location filename="../Configuration.cpp" line="1451"/>
         <location filename="../Configuration.cpp" line="1503"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1455"/>
         <location filename="../Configuration.cpp" line="1507"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1459"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1463"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1467"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1471"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2696"/>
         <source>Serial Port:</source>
-        <translation>Seriālais Ports:</translation>
+        <translation>COM Ports:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2697"/>
         <source>Serial port used for CAT control</source>
-        <translation type="unfinished"></translation>
+        <translation>Komports priekš CAT kontrolei</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2704"/>
@@ -147,7 +149,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēles resursdatora nosaukums un tīkla pakalpojuma ports.
+Šajā mašīnā izmantoto noklusējuma vērtību atstājiet tukšu.
+Formāti:
+resursdatora nosaukums: ports
+IPv4 adrese: ports
+[IPv6 adrese]: por</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2717"/>
@@ -160,27 +167,30 @@ Formats:
 Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēles ierīces identifikācija.
+Atstājiet tukšu, lai izmantotu noklusējuma uztvērēju.
+Formāts:
+[VID [: PID [: VENDOR [: PRODUCT]]]]</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2753"/>
         <source>Invalid audio input device</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepareiza skaņas kartes izvēle ievadei</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2760"/>
         <source>Invalid audio output device</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepareiza skaņas kartes izvēle izeja</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2766"/>
         <source>Invalid PTT method</source>
-        <translation type="unfinished"></translation>
+        <translation>Nkorekta PTT metode</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2776"/>
         <source>Invalid PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nekorekts PTT ports</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3283"/>
@@ -195,19 +205,19 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4467"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation type="unfinished"></translation>
+        <translation>JTDX izvēlētā fonta dekodēšanas tekstam</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādējiet darba frekvences</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5091"/>
         <location filename="../Configuration.cpp" line="5122"/>
         <location filename="../Configuration.cpp" line="5176"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>&gt; Frekvences fails (* .qrg) ;; Visi faili (*. *)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5093"/>
@@ -218,17 +228,17 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5107"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomainiet darba frekvences</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5108"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām vēlaties atiestatīt pašreizējās darba frekvences un aizstāt tās ar ielādētajām?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5120"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apvienojiet darba frekvences</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5147"/>
@@ -275,22 +285,22 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5217"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām vēlaties atiestatīt pašreizējās darba frekvences un aizstāt tās ar noklusējuma vērtībām?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5277"/>
         <source>Save Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Saglabāt mapi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5293"/>
         <source>Failed to open connection to rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda, savienojot ar transīveru</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5533"/>
         <source>Rig failure</source>
-        <translation type="unfinished"></translation>
+        <translation>Transīvers nereaģē</translation>
     </message>
 </context>
 <context>
@@ -303,7 +313,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation type="unfinished"></translation>
+        <translation>Neatkarīgais Maltas Bruņinieku ordenis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
@@ -333,12 +343,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
         <source>Equatorial Guinea</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekvatoriālā Gvineja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Annobona sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
@@ -353,7 +363,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotuma </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
@@ -473,92 +483,92 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="68"/>
         <source>Samoa</source>
-        <translation type="unfinished"></translation>
+        <translation>Samoa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="69"/>
         <source>Uganda</source>
-        <translation type="unfinished"></translation>
+        <translation>Uganda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="70"/>
         <source>Kenya</source>
-        <translation type="unfinished"></translation>
+        <translation>Kenija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="71"/>
         <source>Senegal</source>
-        <translation type="unfinished"></translation>
+        <translation>Senegāla</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="72"/>
         <source>Jamaica</source>
-        <translation type="unfinished"></translation>
+        <translation>Jamaika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="73"/>
         <source>Yemen</source>
-        <translation type="unfinished"></translation>
+        <translation>Jemena</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="74"/>
         <source>Lesotho</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesoto</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="75"/>
         <source>Malawi</source>
-        <translation type="unfinished"></translation>
+        <translation>Malavi</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="76"/>
         <source>Algeria</source>
-        <translation type="unfinished"></translation>
+        <translation>Alžīrija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="77"/>
         <source>Barbados</source>
-        <translation type="unfinished"></translation>
+        <translation>Barbadosa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="78"/>
         <source>Maldives</source>
-        <translation type="unfinished"></translation>
+        <translation>Maldīvas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="79"/>
         <source>Guyana</source>
-        <translation type="unfinished"></translation>
+        <translation>Gajana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="80"/>
         <source>Croatia</source>
-        <translation type="unfinished"></translation>
+        <translation>Horvātija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="81"/>
         <source>Ghana</source>
-        <translation type="unfinished"></translation>
+        <translation>Gana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="82"/>
         <source>Malta</source>
-        <translation type="unfinished"></translation>
+        <translation>Malta</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="83"/>
         <source>Zambia</source>
-        <translation type="unfinished"></translation>
+        <translation>Zambija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="84"/>
         <source>Kuwait</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuveita</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Sierra Leone</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjerraleone</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
@@ -573,32 +583,32 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="88"/>
         <source>Nepal</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepāla</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation>Kongo Demokrātiskā Republika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
         <source>Burundi</source>
-        <translation type="unfinished"></translation>
+        <translation>Burundi</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="91"/>
         <source>Singapore</source>
-        <translation type="unfinished"></translation>
+        <translation>Singapūra</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="92"/>
         <source>Rwanda</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruanda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="93"/>
         <source>Trinidad &amp; Tobago</source>
-        <translation type="unfinished"></translation>
+        <translation>Trinidāda un Tobāgo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="94"/>
@@ -4962,7 +4972,7 @@ UDP server %2:%3</source>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="230"/>
+        <location filename="../PollingTransceiver.cpp" line="225"/>
         <source>Unexpected rig error</source>
         <translation type="unfinished"></translation>
     </message>

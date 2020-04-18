@@ -3066,7 +3066,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5252"/>
         <location filename="../mainwindow.cpp" line="5667"/>
         <source>DX Call</source>
-        <translation>Estação DX / Spot</translation>
+        <translation>EstaçãoDX/Spot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
@@ -4991,7 +4991,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="230"/>
+        <location filename="../PollingTransceiver.cpp" line="225"/>
         <source>Unexpected rig error</source>
         <translation>Erro de rádio inesperado</translation>
     </message>

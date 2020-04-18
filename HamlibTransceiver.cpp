@@ -465,7 +465,7 @@ int HamlibTransceiver::do_start ()
   tickle_hamlib_ = false;
   get_vfo_works_ = true;
   set_vfo_works_ = true;
-printf("do_snr_ %d do_pwr_ %d do_pwr2_ %d\n",do_snr_,do_pwr_,do_pwr2_);
+//printf("do_snr_ %d do_pwr_ %d do_pwr2_ %d\n",do_snr_,do_pwr_,do_pwr2_);
   // the Net rigctl back end promises all functions work but we must
   // test get_vfo as it determines our strategy for Icom rigs
   vfo_t vfo;

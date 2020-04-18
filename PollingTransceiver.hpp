@@ -60,7 +60,6 @@ private:
 
   int interval_;    // polling interval in milliseconds
   QTimer * poll_timer_;
-  bool change_done_;
   bool fast_mode_;
 
   // keep a record of the last state signalled so we can elide
