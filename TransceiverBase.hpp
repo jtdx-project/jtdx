@@ -112,6 +112,8 @@ protected:
   virtual void do_ptt (bool = true) = 0;
   virtual void do_post_ptt (bool = true) {}
 
+  virtual void do_post_fast_mode (bool = false) {}
+
   virtual bool do_pre_update () {return true;}
 
   // sub classes report rig state changes with these methods
@@ -133,7 +135,7 @@ private:
   void startup ();
   void shutdown ();
   bool maybe_low_resolution (Frequency low_res, Frequency high_res);
-
+  qint64 set_freq_time = 0;
   // use this convenience class to notify in update methods
   class may_update
   {

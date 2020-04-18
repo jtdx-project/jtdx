@@ -6,8 +6,8 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translatorcomment>Nom de banda</translatorcomment>
-        <translation>Nom de banda</translation>
+        <translatorcomment>Nom de la banda</translatorcomment>
+        <translation>Nom banda</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation>Acceptar</translation>
+        <translation>D&apos;acord</translation>
     </message>
 </context>
 <context>
@@ -61,22 +61,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1189"/>
+        <location filename="../Configuration.cpp" line="1201"/>
         <source>&amp;OK</source>
         <translation>&amp;Acceptar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1190"/>
+        <location filename="../Configuration.cpp" line="1202"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancel·lar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1205"/>
+        <location filename="../Configuration.cpp" line="1217"/>
         <source>Create temporary directory error: </source>
         <translation>Erroral directori temporal: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1211"/>
+        <location filename="../Configuration.cpp" line="1223"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -85,68 +85,68 @@ Another application may be locking the directory</source>
 Una altra aplicació pot bloquejar el directori</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1228"/>
+        <location filename="../Configuration.cpp" line="1240"/>
         <source>Create data directory error: </source>
         <translation>Error del directori de dades: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1237"/>
-        <location filename="../Configuration.cpp" line="1248"/>
+        <location filename="../Configuration.cpp" line="1249"/>
+        <location filename="../Configuration.cpp" line="1260"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translatorcomment>No se puede crear el directorio &quot;</translatorcomment>
         <translation>Crear directori</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1414"/>
-        <location filename="../Configuration.cpp" line="1439"/>
-        <location filename="../Configuration.cpp" line="1491"/>
+        <location filename="../Configuration.cpp" line="1426"/>
+        <location filename="../Configuration.cpp" line="1451"/>
+        <location filename="../Configuration.cpp" line="1503"/>
         <source>&amp;Delete</source>
         <translation>&amp;Eliminar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1443"/>
-        <location filename="../Configuration.cpp" line="1495"/>
+        <location filename="../Configuration.cpp" line="1455"/>
+        <location filename="../Configuration.cpp" line="1507"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Insereix ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1447"/>
-        <source>&amp;Load ...</source>
-        <translation>&amp;Càrrega ...</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="1451"/>
-        <source>&amp;Save as ...</source>
-        <translation>&amp;Guardar com ...</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="1455"/>
-        <source>&amp;Merge ...</source>
-        <translation>&amp;Combinar ...</translation>
-    </message>
-    <message>
         <location filename="../Configuration.cpp" line="1459"/>
-        <source>&amp;Reset</source>
-        <translation>&amp;Restablir</translation>
+        <source>&amp;Load ...</source>
+        <translation>Càrrega ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2679"/>
+        <location filename="../Configuration.cpp" line="1463"/>
+        <source>&amp;Save as ...</source>
+        <translation>Guardar com ...</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1467"/>
+        <source>&amp;Merge ...</source>
+        <translation>Combinar ...</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1471"/>
+        <source>&amp;Reset</source>
+        <translation>Restablir</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="2696"/>
         <source>Serial Port:</source>
         <translation>Port sèrie:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2680"/>
+        <location filename="../Configuration.cpp" line="2697"/>
         <source>Serial port used for CAT control</source>
         <translation>Port sèrie utilitzat per al control CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2687"/>
+        <location filename="../Configuration.cpp" line="2704"/>
         <source>Network Server:</source>
         <translation>Servidor de xarxa:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2688"/>
+        <location filename="../Configuration.cpp" line="2705"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -161,12 +161,12 @@ Adreça IPv4: port
 [Adreça IPv6]: port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2700"/>
+        <location filename="../Configuration.cpp" line="2717"/>
         <source>USB Device:</source>
         <translation>Dispositiu USB:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2701"/>
+        <location filename="../Configuration.cpp" line="2718"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -177,132 +177,132 @@ Format:
 [VID [: PID [: VENDOR [: PRODUCTE]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2736"/>
+        <location filename="../Configuration.cpp" line="2753"/>
         <source>Invalid audio input device</source>
         <translation>El dispositiu d&apos;entrada d&apos;àudio no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2743"/>
+        <location filename="../Configuration.cpp" line="2760"/>
         <source>Invalid audio output device</source>
         <translation>El dispositiu de sortida d&apos;àudio no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2749"/>
+        <location filename="../Configuration.cpp" line="2766"/>
         <source>Invalid PTT method</source>
         <translation>El mètode PTT no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2759"/>
+        <location filename="../Configuration.cpp" line="2776"/>
         <source>Invalid PTT port</source>
         <translation>El port PTT no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3266"/>
+        <location filename="../Configuration.cpp" line="3283"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 en missatge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3267"/>
+        <location filename="../Configuration.cpp" line="3284"/>
         <source>CQ in message</source>
         <translation>CQ al missatge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4450"/>
+        <location filename="../Configuration.cpp" line="4467"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>Tria la font de text descodificada JTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Load Working Frequencies</source>
         <translation>Freqüència de treball de càrrega</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
-        <location filename="../Configuration.cpp" line="5105"/>
-        <location filename="../Configuration.cpp" line="5159"/>
+        <location filename="../Configuration.cpp" line="5091"/>
+        <location filename="../Configuration.cpp" line="5122"/>
+        <location filename="../Configuration.cpp" line="5176"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Fitxers de freqüència (* .qrg) ;; Tots els fitxers (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5093"/>
+        <location filename="../Configuration.cpp" line="5124"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5090"/>
+        <location filename="../Configuration.cpp" line="5107"/>
         <source>Replace Working Frequencies</source>
         <translation>Substituïu les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Segur que voleu descartar les vostres freqüències de treball actuals i reemplaçar-les per les carregades?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5120"/>
         <source>Merge Working Frequencies</source>
         <translation>Combina freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5130"/>
-        <location filename="../Configuration.cpp" line="5139"/>
-        <location filename="../Configuration.cpp" line="5149"/>
+        <location filename="../Configuration.cpp" line="5147"/>
+        <location filename="../Configuration.cpp" line="5156"/>
+        <location filename="../Configuration.cpp" line="5166"/>
         <source>Not a valid frequencies file</source>
         <translation>No és un fitxer de freqüències vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5130"/>
+        <location filename="../Configuration.cpp" line="5147"/>
         <source>Incorrect file magic</source>
         <translation>Màgia d&apos;arxiu incorrecta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5139"/>
+        <location filename="../Configuration.cpp" line="5156"/>
         <source>Version is too new</source>
         <translation>La versió és massa nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5149"/>
+        <location filename="../Configuration.cpp" line="5166"/>
         <source>Contents corrupt</source>
         <translation>Continguts corruptes</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5159"/>
+        <location filename="../Configuration.cpp" line="5176"/>
         <source>Save Working Frequencies</source>
         <translation>Desa les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5169"/>
+        <location filename="../Configuration.cpp" line="5186"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Desa només les freqüències de treball seleccionades</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5171"/>
+        <location filename="../Configuration.cpp" line="5188"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation>Esteu segur que voleu desar només les freqüències de treball seleccionades actualment? Feu clic a No per desar-ho tot.</translation>
+        <translation>Esteu segur que vols desar només les freqüències de treball seleccionades actualment? Fes clic a No per desar-ho tot.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5198"/>
+        <location filename="../Configuration.cpp" line="5215"/>
         <source>Reset Working Frequencies</source>
         <translation>Restablir les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5200"/>
+        <location filename="../Configuration.cpp" line="5217"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Segur que voleu descartar les vostres freqüències de treball actuals i reemplaçar-les per altres?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5260"/>
+        <location filename="../Configuration.cpp" line="5277"/>
         <source>Save Directory</source>
         <translation>Guardar directori</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5276"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>Failed to open connection to rig</source>
         <translation>No s&apos;ha pogut obrir la connexió al equip</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5494"/>
+        <location filename="../Configuration.cpp" line="5533"/>
         <source>Rig failure</source>
         <translation>Fallida del equip</translation>
     </message>
@@ -323,7 +323,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation>Spratly Is.</translation>
+        <translation>Illa Spratly.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -343,7 +343,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation>Rodrigues Is.</translation>
+        <translation>Illes Rodrigues.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
@@ -353,7 +353,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation>Annobón Is.</translation>
+        <translation>Illes Annobón.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
@@ -368,7 +368,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation>Rotuma Is.</translation>
+        <translation>Illes Rotuma.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
@@ -398,7 +398,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Peter 1 Is.</source>
-        <translation>Pere I Is.</translation>
+        <translation>Illes Pere I.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="51"/>
@@ -533,7 +533,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="77"/>
         <source>Barbados</source>
-        <translation></translation>
+        <translation>Barbados</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="78"/>
@@ -593,7 +593,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation>República Democrática del Congo</translation>
+        <translation>R. D. del Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
@@ -668,7 +668,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="104"/>
         <source>Pratas Is.</source>
-        <translation>Pratas Is.</translation>
+        <translation>Illes Prates.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="105"/>
@@ -713,12 +713,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation>Pasqua Is.</translation>
+        <translation>Illa de Pasqua.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation>Juan Fernández Is.</translation>
+        <translation>Illa Juan Fernández.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -748,7 +748,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation>Madeira Is.</translation>
+        <translation>Madeira.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
@@ -763,12 +763,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
         <source>Sable Is.</source>
-        <translation>Sable Is.</translation>
+        <translation>Illes Sable.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation>Sant Pau Is.</translation>
+        <translation>Illes Sant Pau.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
@@ -808,12 +808,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation>Cook del Nord Is.</translation>
+        <translation>Illes Cook del Nord.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation>Cook del Sur Is.</translation>
+        <translation>Illes Cook del Sud.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
@@ -833,12 +833,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Balears Is.</translation>
+        <translation>Illes Balears.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation>Canàries Is.</translation>
+        <translation>Illes Canàries.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
@@ -928,7 +928,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>Chesterfield Is.</source>
-        <translation>Chesterfield Is.</translation>
+        <translation>Illes Chesterfield.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
@@ -943,17 +943,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation>Australs Is.</translation>
+        <translation>Illes Australs.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation>Clipperton Is.</translation>
+        <translation>Illes Clipperton.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Marquesas Is.</source>
-        <translation>Marqueses Is.</translation>
+        <translation>Illes Marqueses.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
@@ -963,7 +963,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation>Reunión Is.</translation>
+        <translation>Illes Reunión.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
@@ -973,7 +973,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation>Glorioso Is.</translation>
+        <translation>Illes Glorioso.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
@@ -983,27 +983,27 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation>Tromelin Is.</translation>
+        <translation>Illes Tromelin.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Crozet Is.</source>
-        <translation>Crozet Is.</translation>
+        <translation>Illes Crozet.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation>Kerguelen Is.</translation>
+        <translation>Illes Kerguelen.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>Amsterdam i St. Pau Is.</translation>
+        <translation>Illes Amsterdam i St. Pau.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation>Wallis i Futuna Is.</translation>
+        <translation>Illes Wallis i Futuna.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
@@ -1033,7 +1033,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation>Shetland Is.</translation>
+        <translation>Illes Shetland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
@@ -1053,7 +1053,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation>Salomón Is.</translation>
+        <translation>Illes Salomón.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
@@ -1083,7 +1083,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation>Galapagos Is.</translation>
+        <translation>Illes Galapagos.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
@@ -1093,7 +1093,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="189"/>
         <source>Dominican Rep.</source>
-        <translation>Dominicana Rep.</translation>
+        <translation>Rep. Dominicana.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="190"/>
@@ -1108,12 +1108,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
-        <translation>Malpelo Is.</translation>
+        <translation>Illes Malpelo.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
         <source>Rep. of Korea</source>
-        <translation>República de Corea</translation>
+        <translation>Rep. de Corea</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="194"/>
@@ -1218,7 +1218,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Bear Is.</source>
-        <translation>&apos;Ós Is.</translation>
+        <translation>Illa de l&apos;Ós.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="215"/>
@@ -1243,12 +1243,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation>Mariana Is.</translation>
+        <translation>Illes Mariana.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
         <source>Baker &amp; Howland Is.</source>
-        <translation>Baker i Howland Is.</translation>
+        <translation>Illes Baker i Howland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
@@ -1258,17 +1258,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Johnston Is.</source>
-        <translation>Johnston Is.</translation>
+        <translation>Illes Johnston.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="223"/>
         <source>Midway Is.</source>
-        <translation>Midway Is.</translation>
+        <translation>Illes Midway.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation>Palmyra i Jarvis Is.</translation>
+        <translation>Illes Palmyra i Jarvis.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
@@ -1278,7 +1278,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation>Kure Is.</translation>
+        <translation>Illes Kure.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
@@ -1288,12 +1288,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="228"/>
         <source>Swains Is.</source>
-        <translation>Swains Is.</translation>
+        <translation>Illes Swains.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>Wake Is.</source>
-        <translation>Wake Is.</translation>
+        <translation>Illes Wake.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
@@ -1303,12 +1303,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Navassa Is.</source>
-        <translation>Navassa Is.</translation>
+        <translation>Illes Navassa.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>Verges dels EUA Is.</translation>
+        <translation>Illes Verges dels E.U.A.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1318,7 +1318,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation>Desecheo Is.</translation>
+        <translation>Illes Desecheo.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
@@ -1368,7 +1368,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="244"/>
         <source>Aland Is.</source>
-        <translation>Aland Is.</translation>
+        <translation>Illes Aland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="245"/>
@@ -1378,12 +1378,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation>Txeca Rep.</translation>
+        <translation>Rep. Txeca.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation>Eslovàquia Rep.</translation>
+        <translation>Rep. Eslovàquia.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1398,7 +1398,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation>Faroe Is.</translation>
+        <translation>Illes Faroe.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1563,7 +1563,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>Banaba Is.</source>
-        <translation>Banaba Is.</translation>
+        <translation>Illes Banaba.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
@@ -1608,7 +1608,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="292"/>
         <source>Cocos Is.</source>
-        <translation>Cocos Is.</translation>
+        <translation>Illes Cocos.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="293"/>
@@ -1623,12 +1623,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation>Centroafricana Rep.</translation>
+        <translation>Rep. Centroafricana.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Rep. of the Congo</source>
-        <translation>República del Congo</translation>
+        <translation>Rep. del Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
@@ -1713,7 +1713,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation>Marshall Is.</translation>
+        <translation>Illes Marshall.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
@@ -1733,22 +1733,22 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="317"/>
         <source>Heard Is.</source>
-        <translation>Heard Is.</translation>
+        <translation>Illes Heard.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Macquarie Is.</source>
-        <translation>Macquarie Is.</translation>
+        <translation>Illes Macquarie.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Cocos (Keeling) Is.</source>
-        <translation>Cocos (Keeling) Is.</translation>
+        <translation>Illes Cocos (Keeling).</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Lord Howe Is.</source>
-        <translation>Lord Howe Is.</translation>
+        <translation>Illes Lord Howe.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
@@ -1758,17 +1758,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Norfolk Is.</source>
-        <translation>Norfolk Is.</translation>
+        <translation>Illes Norfolk.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation>Willis Is.</translation>
+        <translation>Illes Willis.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>Christmas Is.</translation>
+        <translation>Illes Christmas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -1783,47 +1783,47 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation>Verges Britàniques Is.</translation>
+        <translation>Illes Verges Britàniques.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
-        <translation>Turks i Caicos Is.</translation>
+        <translation>Illes Turks i Caicos.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="329"/>
         <source>Pitcairn Is.</source>
-        <translation>Pitcairn Is.</translation>
+        <translation>Illes Pitcairn.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Ducie Is.</source>
-        <translation>Ducie Is.</translation>
+        <translation>Illes Ducie.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation>Falkland (Malvines) Is.</translation>
+        <translation>Illes Falkland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>S. Georgia Is.</source>
-        <translation>Geòrgia del Sur Is.</translation>
+        <translation>Illes Geòrgia del Sud.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation>Shetland del Sud Is.</translation>
+        <translation>Illes Shetland del Sud.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation>Orkney del Sur Is.</translation>
+        <translation>Illes Orkney del Sud.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation>Sandwich del Sud Is.</translation>
+        <translation>Illes Sandwich del Sud.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
@@ -1833,7 +1833,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="337"/>
         <source>Chagos Is.</source>
-        <translation>Chagos Is.</translation>
+        <translation>Illes Chagos.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="338"/>
@@ -1848,12 +1848,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation>Andamán i Nicobar Is.</translation>
+        <translation>Illes Andamán i Nicobar.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="341"/>
         <source>Lakshadweep Is.</source>
-        <translation>Lakshadweep Is.</translation>
+        <translation>Illes Lakshadweep.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="342"/>
@@ -1948,7 +1948,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="360"/>
         <source>Aves Is.</source>
-        <translation>Aves Is.</translation>
+        <translation>Illes Aves.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
@@ -1963,12 +1963,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Rep. of Kosovo</source>
-        <translation>República de Kosovo</translation>
+        <translation>Rep. de Kosovo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation>República Sudan de l&apos;Sud</translation>
+        <translation>Rep. Sudan de l&apos;Sud</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -1993,7 +1993,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>Ascension Is.</source>
-        <translation>Ascensió Is.</translation>
+        <translation>Illes Ascensió.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="370"/>
@@ -2003,12 +2003,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation>Caiman Is.</translation>
+        <translation>Illes Caiman.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tokelau Is.</source>
-        <translation>Tokelau Is.</translation>
+        <translation>Illes Tokelau.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
@@ -2018,12 +2018,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
         <source>Chatham Is.</source>
-        <translation>Chatham Is.</translation>
+        <translation>Illes Chatham.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="375"/>
         <source>Kermadec Is.</source>
-        <translation>Kermadec Is.</translation>
+        <translation>Illes Kermadec.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
@@ -2043,7 +2043,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Pr. Edward &amp; Marion Is.</source>
-        <translation>Edward i Marion Is.</translation>
+        <translation>Illes Edward i Marion.</translation>
     </message>
 </context>
 <context>
@@ -2052,89 +2052,89 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
-        <translation>Ha fallat la comanda d&apos;enviament del DX Lab Suite Commander
+        <translation>Fallada al connectar al DX Lab Suite Commander
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation>El comando DX Lab Suite no respon correctament a la freqüència de lectura: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament la freqüència de lectura: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>El comando DX Lab Suite va enviar un estat de divisió no reconegut: </translation>
+        <translation>El DX Lab Suite Commander ha enviat un estat de TX desconegut: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>El comando Lab Suite no  respon correctament l&apos;estat de TX de sondeig: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament l&apos;estat de TX del sondeig: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>La plataforma de comando de DX Lab Suite Commander no va respondre al PTT: </translation>
+        <translation>La transmissió del DX Lab Suite Commander no ha respost al PTT: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation>El comando DX Lab Suite no ha respost la freqüència de sondeig correctament: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament la freqüència del sondeig: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation>El comando DX Lab Suite no ha respost la freqüència de sondeig correctament: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament la freqüència del sondeig: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>El comando DX Lab Suite va enviar un estat de divisió no reconegut: </translation>
+        <translation>El DX Lab Suite Commander ha enviat un estat de split desconegut: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation>El comando DX Lab Suite no ha respost correctament l&apos;estat de la divisió de sondeigs: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament l&apos;estat del split del sondeig: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>El comando de DX Lab Suite va enviar un mode no reconegut: &quot;</translation>
+        <translation>El DX Lab Suite Commander ha enviat un mode desconegut: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation>El comando DX Lab Suite no ha respost correctament el mode de sondeig: </translation>
+        <translation>El DX Lab Suite Commander no ha respost correctament el mode del sondeig: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
         <source>DX Lab Suite Commander send command failed
 </source>
-        <translation>Ha fallat la comanda d&apos;enviament del DX Lab Suite Commander
+        <translation>Errada del DX Lab Suite Commander en l&apos;enviament de comanda
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation>El comando DX Lab Suite no ha pogut enviar la comanda &quot;%1&quot;: %2
+        <translation>El DX Lab Suite Commander no ha pogut enviar la comanda &quot;%1&quot;: %2
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation>Ha fallat la resposta del comando DX Lab Suite &quot;%1&quot;la resposta ha fallat: %2
+        <translation>El DX Lab Suite Commander ha enviat la comanda &quot;%1&quot; lectura de la resposta incorrecta: %2
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation>DX Lab Suite Commander torna a intentar l&apos;enviament de les ordres &quot;%1&quot;</translation>
+        <translation>El DX Lab Suite Commander ha esgotat els reintents de la comanda &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation>El comando DX Lab Suite va enviar una freqüència no reconeguda</translation>
+        <translation>El DX Lab Suite Commander ha enviat una freqüència desconeguda</translation>
     </message>
 </context>
 <context>
@@ -2195,22 +2195,22 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Suprimeix</translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Insereix ...</translation>
+        <translation>&amp;Inserir ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
-        <translation>Insereix &amp;després ...</translation>
+        <translation>Inserir &amp;després ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
-        <translation>Importar la paleta</translation>
+        <translation>Importar paleta</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
@@ -2221,7 +2221,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
-        <translation>Exporta la paleta</translation>
+        <translation>Exportar paleta</translation>
     </message>
 </context>
 <context>
@@ -2229,7 +2229,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Hora línia gris:</translation>
+        <translation>Hora línia grisa:</translation>
     </message>
 </context>
 <context>
@@ -2238,7 +2238,7 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation>Error URL</translation>
+        <translation>Error al URL</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
@@ -2257,12 +2257,12 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation>Error JSON</translation>
+        <translation>Error a JSON</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation>Error de sintaxi de l&apos;arxiu de contingut %1 en el desplaçament de caràcters %2</translation>
+        <translation>Error de sintaxi %1 a l&apos;arxiu de contingut, posició %2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
@@ -2272,13 +2272,13 @@ Format:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation>Error de sistema d&apos;arxius</translation>
+        <translation>Error al directori</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation>Error a l&apos;obrir&quot;%1&quot;
+        <translation>Error a l&apos;obrir &quot;%1&quot;
 Error: %2 - %3</translation>
     </message>
     <message>
@@ -2309,7 +2309,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation>Error de xarxa</translation>
+        <translation type="unfinished">Error de xarxa</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
@@ -2330,7 +2330,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="221"/>
         <source>Add Frequency</source>
-        <translation>Afegiu freqüència</translation>
+        <translation>Afegir freqüència</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
@@ -2361,26 +2361,26 @@ Error: %2 - %3</translation>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="500"/>
-        <location filename="../FrequencyList.cpp" line="664"/>
+        <location filename="../FrequencyList.cpp" line="505"/>
+        <location filename="../FrequencyList.cpp" line="669"/>
         <source>IARU Region</source>
         <translation>Regió IARU</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="521"/>
-        <location filename="../FrequencyList.cpp" line="665"/>
+        <location filename="../FrequencyList.cpp" line="526"/>
+        <location filename="../FrequencyList.cpp" line="670"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="553"/>
-        <location filename="../FrequencyList.cpp" line="666"/>
+        <location filename="../FrequencyList.cpp" line="558"/>
+        <location filename="../FrequencyList.cpp" line="671"/>
         <source>Frequency</source>
         <translation>Freqüència</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="584"/>
-        <location filename="../FrequencyList.cpp" line="667"/>
+        <location filename="../FrequencyList.cpp" line="589"/>
+        <location filename="../FrequencyList.cpp" line="672"/>
         <source>Frequency (MHz)</source>
         <translation>Freqüència (MHz)</translation>
     </message>
@@ -2392,7 +2392,7 @@ Error: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="149"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation>No s&apos;ha pogut connectar a Ham Radio Deluxe
+        <translation>No s&apos;ha pogut connectar amb el Ham Radio Deluxe
 </translation>
     </message>
     <message>
@@ -2404,7 +2404,7 @@ Error: %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="173"/>
         <location filename="../HRDTransceiver.cpp" line="197"/>
         <source>Ham Radio Deluxe: no rig found</source>
-        <translation>Ham Radio Deluxe:no s&apos;ha trobat equip</translation>
+        <translation>Ham Radio Deluxe: no s&apos;ha trobat cap equip</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="421"/>
@@ -2414,7 +2414,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="440"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation>Ham Radio Deluxe: a enviat un modus no reconegut</translation>
+        <translation>Ham Radio Deluxe: ha enviat un mode desconegut</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="475"/>
@@ -2429,47 +2429,47 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="885"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation>Ham Radio Deluxe no ha respost com s&apos;esperava</translation>
+        <translation>La resposta del Ham Radio Deluxe no és l&apos;esperada</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1034"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
-        <translation>Ham Radio Deluxe:l&apos;equip ha desaparegut o canviat</translation>
+        <translation>Ham Radio Deluxe: l&apos;equip ha desaparegut o s&apos;ha modificat</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1049"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation>La instrucció d&apos;enviament Ham Radio Deluxe &quot;%1&quot; ha fallat %2
+        <translation>La comanda %1 del Ham Radio Deluxe ha fallat %2
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1062"/>
         <location filename="../HRDTransceiver.cpp" line="1075"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe:error a l&apos;escriure la instrucció &quot;%1&quot;</translation>
+        <translation>Ham Radio Deluxe: error a l&apos;escriure la comanda &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1092"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe va enviar una resposta no vàlida a la nostra instrucció &quot;%1&quot;</translation>
+        <translation>La resposta del Ham Radio Deluxe no és vàlida per a la comanda &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1146"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe no va respondre a la ordre &quot;%1&quot; %2
+        <translation>Fallada a la resposta del Ham Radio Deluxe a la comanda &quot;%1&quot; %2
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1156"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe reintent esgotat enviant la instrucció &quot;%1&quot;</translation>
+        <translation>El Ham Radio Deluxe ha esgotat els reintents de la comanda &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1169"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
-        <translation>Ham Radio Deluxeno va respondre a la instrucció &quot;%1&quot; com s&apos;esperava</translation>
+        <translation>La resposta del Ham Radio Deluxe a la instrucció &quot;%1&quot; no és l&apos;esperada</translation>
     </message>
 </context>
 <context>
@@ -2601,117 +2601,117 @@ Error: %2 - %3</translation>
         <translation>connexió d&apos;obertura a l&apos;equip</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="503"/>
+        <location filename="../HamlibTransceiver.cpp" line="504"/>
         <source>getting current frequency</source>
         <translation>obtenint freqüència actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="507"/>
+        <location filename="../HamlibTransceiver.cpp" line="508"/>
         <source>getting current mode</source>
         <translation>obtenir el mode actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="536"/>
-        <location filename="../HamlibTransceiver.cpp" line="556"/>
+        <location filename="../HamlibTransceiver.cpp" line="537"/>
+        <location filename="../HamlibTransceiver.cpp" line="557"/>
         <source>exchanging VFOs</source>
         <translation>intercanviant VFOs</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="544"/>
-        <location filename="../HamlibTransceiver.cpp" line="1021"/>
+        <location filename="../HamlibTransceiver.cpp" line="545"/>
+        <location filename="../HamlibTransceiver.cpp" line="1022"/>
         <source>getting other VFO frequency</source>
         <translation>obtenint una altra freqüència de VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="548"/>
+        <location filename="../HamlibTransceiver.cpp" line="549"/>
         <source>getting other VFO mode</source>
         <translation>obtenint un altre mode VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="561"/>
+        <location filename="../HamlibTransceiver.cpp" line="562"/>
         <source>setting current VFO</source>
         <translation>configuració del VFO actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="570"/>
+        <location filename="../HamlibTransceiver.cpp" line="571"/>
         <source>getting frequency</source>
         <translation>obtenint freqüència</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="574"/>
+        <location filename="../HamlibTransceiver.cpp" line="575"/>
         <source>getting mode</source>
-        <translation>obtenint modus</translation>
+        <translation>obtenint mode</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="591"/>
-        <location filename="../HamlibTransceiver.cpp" line="956"/>
+        <location filename="../HamlibTransceiver.cpp" line="592"/>
+        <location filename="../HamlibTransceiver.cpp" line="957"/>
         <source>getting current VFO</source>
         <translation>obtenir VFO actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="635"/>
-        <location filename="../HamlibTransceiver.cpp" line="643"/>
-        <location filename="../HamlibTransceiver.cpp" line="657"/>
-        <location filename="../HamlibTransceiver.cpp" line="999"/>
+        <location filename="../HamlibTransceiver.cpp" line="636"/>
+        <location filename="../HamlibTransceiver.cpp" line="644"/>
+        <location filename="../HamlibTransceiver.cpp" line="658"/>
+        <location filename="../HamlibTransceiver.cpp" line="1000"/>
         <source>getting current VFO frequency</source>
         <translation>obtenir la freqüència actual del VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="641"/>
-        <location filename="../HamlibTransceiver.cpp" line="656"/>
-        <location filename="../HamlibTransceiver.cpp" line="663"/>
-        <location filename="../HamlibTransceiver.cpp" line="742"/>
-        <location filename="../HamlibTransceiver.cpp" line="760"/>
-        <location filename="../HamlibTransceiver.cpp" line="821"/>
+        <location filename="../HamlibTransceiver.cpp" line="642"/>
+        <location filename="../HamlibTransceiver.cpp" line="657"/>
+        <location filename="../HamlibTransceiver.cpp" line="664"/>
+        <location filename="../HamlibTransceiver.cpp" line="743"/>
+        <location filename="../HamlibTransceiver.cpp" line="761"/>
+        <location filename="../HamlibTransceiver.cpp" line="822"/>
         <source>setting frequency</source>
         <translation>ajust de freqüència</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="750"/>
-        <location filename="../HamlibTransceiver.cpp" line="828"/>
-        <location filename="../HamlibTransceiver.cpp" line="900"/>
-        <location filename="../HamlibTransceiver.cpp" line="913"/>
+        <location filename="../HamlibTransceiver.cpp" line="751"/>
+        <location filename="../HamlibTransceiver.cpp" line="829"/>
+        <location filename="../HamlibTransceiver.cpp" line="901"/>
+        <location filename="../HamlibTransceiver.cpp" line="914"/>
         <source>getting current VFO mode</source>
         <translation>obtenir el mode VFO actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="756"/>
-        <location filename="../HamlibTransceiver.cpp" line="765"/>
-        <location filename="../HamlibTransceiver.cpp" line="834"/>
-        <location filename="../HamlibTransceiver.cpp" line="906"/>
-        <location filename="../HamlibTransceiver.cpp" line="919"/>
+        <location filename="../HamlibTransceiver.cpp" line="757"/>
+        <location filename="../HamlibTransceiver.cpp" line="766"/>
+        <location filename="../HamlibTransceiver.cpp" line="835"/>
+        <location filename="../HamlibTransceiver.cpp" line="907"/>
+        <location filename="../HamlibTransceiver.cpp" line="920"/>
         <source>setting current VFO mode</source>
         <translation>ajust del mode VFO actual</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="808"/>
-        <location filename="../HamlibTransceiver.cpp" line="877"/>
+        <location filename="../HamlibTransceiver.cpp" line="809"/>
+        <location filename="../HamlibTransceiver.cpp" line="878"/>
         <source>setting/unsetting split mode</source>
         <translation>activar/desactivar mode dividid (split)</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="819"/>
-        <location filename="../HamlibTransceiver.cpp" line="859"/>
+        <location filename="../HamlibTransceiver.cpp" line="820"/>
+        <location filename="../HamlibTransceiver.cpp" line="860"/>
         <source>setting split mode</source>
         <translation>activar mode dividid (Split)</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="847"/>
+        <location filename="../HamlibTransceiver.cpp" line="848"/>
         <source>setting split TX frequency and mode</source>
         <translation>ajust de freqüència i mode de transmissió dividida (Split)</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="852"/>
+        <location filename="../HamlibTransceiver.cpp" line="853"/>
         <source>setting split TX frequency</source>
         <translation>ajust de freqüència dividida (Split) TX</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="924"/>
+        <location filename="../HamlibTransceiver.cpp" line="925"/>
         <source>getting split TX VFO mode</source>
         <translation>obtenir el mode dividit (Split) TX VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="931"/>
+        <location filename="../HamlibTransceiver.cpp" line="932"/>
         <source>setting split TX VFO mode</source>
         <translation>configuració del mode dividid (Split) TX VFO</translation>
     </message>
@@ -2755,12 +2755,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <source>&amp;OK</source>
-        <translation>&amp;Acceptar</translation>
+        <translation type="unfinished">&amp;Acceptar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>Save</source>
-        <translation>Desa</translation>
+        <translation type="unfinished">Desa</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
@@ -2770,13 +2770,13 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>Open</source>
-        <translation>Obrir</translation>
+        <translation type="unfinished">Obrir</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3747"/>
+        <location filename="../mainwindow.cpp" line="3759"/>
         <source>&amp;Yes</source>
-        <translation>&amp;Si</translation>
+        <translation type="unfinished">&amp;Si</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
@@ -2785,9 +2785,9 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3750"/>
+        <location filename="../mainwindow.cpp" line="3762"/>
         <source>&amp;No</source>
-        <translation>&amp;No</translation>
+        <translation type="unfinished">&amp;No</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
@@ -2802,7 +2802,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>&amp;Retry</source>
-        <translation>&amp;Repetir</translation>
+        <translation type="unfinished">&amp;Repetir</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
@@ -2817,7 +2817,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="51"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancel·lar</translation>
+        <translation type="unfinished">&amp;Cancel·lar</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="52"/>
@@ -2827,7 +2827,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="53"/>
         <source>Help</source>
-        <translation>Ajuda</translation>
+        <translation type="unfinished">Ajuda</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="54"/>
@@ -2837,7 +2837,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="55"/>
         <source>Reset</source>
-        <translation>Restablir</translation>
+        <translation type="unfinished">Restablir</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="56"/>
@@ -2850,7 +2850,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>Feu clic a Acceptar per confirmar el següent QSO:</translation>
+        <translation>Clica Acceptar per confirmar el següent QSO:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -2871,7 +2871,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation>Fi</translation>
+        <translation>Final</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
@@ -2886,12 +2886,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Rep Env</translation>
+        <translation>Rpt Env</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation>Rep Rec</translation>
+        <translation>Rpt Reb</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -2956,14 +2956,14 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3429"/>
-        <location filename="../mainwindow.cpp" line="3436"/>
-        <location filename="../mainwindow.cpp" line="5956"/>
-        <location filename="../mainwindow.cpp" line="5961"/>
-        <location filename="../mainwindow.cpp" line="6001"/>
-        <location filename="../mainwindow.cpp" line="6012"/>
+        <location filename="../mainwindow.cpp" line="3441"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
+        <location filename="../mainwindow.cpp" line="5974"/>
+        <location filename="../mainwindow.cpp" line="5979"/>
+        <location filename="../mainwindow.cpp" line="6019"/>
+        <location filename="../mainwindow.cpp" line="6030"/>
         <source>Band Activity</source>
-        <translation>Activ.banda</translation>
+        <translation>Activitat a la banda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -2998,7 +2998,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Spt</source>
-        <translation>Spt</translation>
+        <translation>Espot DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
@@ -3055,7 +3055,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1025"/>
         <source>Search for callsign in database</source>
-        <translation>Cercar indicatiu a la base de dades</translation>
+        <translation>Cerca indicatiu a la base de dades</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1028"/>
@@ -3065,30 +3065,30 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
         <source>Add callsign and locator to database</source>
-        <translation>Afegir indicatiu i locator a la base de dades</translation>
+        <translation>Afegeix indicatiu i locator a la base de dades</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1044"/>
         <source>Add</source>
-        <translation>Afegir</translation>
+        <translation>Afegeix</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Fes clic amb el botó esquerre del&apos;ratolí per anunciar l&apos;indicatiu DX a dxsummit.fi (l&apos;opció s&apos;habilitarà a Característiques ... pestanya Informes). Fes clic amb el botó dret del ratolí per afegir l&apos;indicatiu a el filtre &apos;Amagar els missatges d&apos;indicatius&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Fes clic amb el botó esquerre del ratolí per anunciar l&apos;indicatiu DX a dxsummit.fi (l&apos;opció s&apos;habilitarà a Característiques ... pestanya Informes). Fes clic amb el botó dret del ratolí per afegir l&apos;indicatiu al filtre &apos;Amagar els missatges d&apos;indicatius&apos;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4585"/>
-        <location filename="../mainwindow.cpp" line="5250"/>
-        <location filename="../mainwindow.cpp" line="5665"/>
+        <location filename="../mainwindow.cpp" line="4597"/>
+        <location filename="../mainwindow.cpp" line="5262"/>
+        <location filename="../mainwindow.cpp" line="5677"/>
         <source>DX Call</source>
         <translation>Indicatiu DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;centre&quot;&gt;&lt;span style=&quot; tamany de la font:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;centre&quot;&gt;&lt;span style=&quot; mida de la font:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
@@ -3134,7 +3134,7 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2905"/>
+        <location filename="../mainwindow.cpp" line="2917"/>
         <source>Hound</source>
         <translation>Hound</translation>
     </message>
@@ -3166,8 +3166,8 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1519"/>
-        <location filename="../mainwindow.cpp" line="1951"/>
+        <location filename="../mainwindow.cpp" line="1521"/>
+        <location filename="../mainwindow.cpp" line="1953"/>
         <source>S meter</source>
         <translation>S meter</translation>
     </message>
@@ -3252,7 +3252,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Llista separada per comes dels indicatius desitjats. La selecció automàtica en AutoSeq 1..7 processarà l&apos;indicatiu desitjat d&apos;acord amb les notificacions / prioritats elegides, aquesta funcionalitat no és compatible amb AutoSeq0.
- Només els modus no FT8: per als indicatius compostos, s&apos;utilitzarà l&apos;indicatiu base a la llista, de vegades l&apos;indicatiu bàsic es copiarà del missatge descodificat: quan es registra tal QSO l&apos;usuari haurà de canviar l&apos;indicatiu del corresponsal a un de compost si cal .&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;</translation>
+ Només els modes no FT8: per als indicatius compostos, s&apos;utilitzarà l&apos;indicatiu base a la llista, de vegades l&apos;indicatiu bàsic es copiarà del missatge descodificat: quan es registra tal QSO l&apos;usuari haurà de canviar l&apos;indicatiu del corresponsal a un de compost si cal .&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -3263,7 +3263,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1906"/>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Llista separada per comes dels prefixos desitjats. La selecció automàtica en AutoSeq 1..7 processarà el prefix desitjat d&apos;acord amb les notificacions / prioritats elegides, aquesta funcionalitat no és compatible amb AutoSeq0. Pel prefix indicatiu compost es reconeix al començament de l&apos;indicatiu. La selecció automàtica processarà l&apos;indicatiu desitjat d&apos;acord amb les notificacions / prioritats elegides. Només els modus que no són FT8: de vegades, l&apos;indicatiu base es copiarà del missatge descodificat: al iniciar sessió, aquest usuari de QSO haurà de canviar l&apos;indicatiu corresponent al compost si és necessari. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Llista separada per comes dels prefixos desitjats. La selecció automàtica en AutoSeq 1..7 processarà el prefix desitjat d&apos;acord amb les notificacions / prioritats elegides, aquesta funcionalitat no és compatible amb AutoSeq0. Pel prefix indicatiu compost es reconeix al començament de l&apos;indicatiu. La selecció automàtica processarà l&apos;indicatiu desitjat d&apos;acord amb les notificacions / prioritats elegides. Només els modes que no són FT8: de vegades, l&apos;indicatiu base es copiarà del missatge descodificat: al iniciar sessió, aquest usuari de QSO haurà de canviar l&apos;indicatiu corresponent al compost si és necessari. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
@@ -3300,7 +3300,7 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Llista separada per comes dels països buscats: el prefix principal de país s&apos;utilitzarà en aquesta llista. Pel prefix indicatiu compost es reconeix al començament de l&apos;indicatiu. La selecció automàtica en AutoSeq 1..7 processarà el país desitjat d&apos;acord amb les notificacions / prioritats elegides, aquesta funcionalitat no és compatible amb AutoSeq0. Només moduss que no són FT8: de vegades, l&apos;indicatiu base es copiarà del missatge descodificat: a l&apos;iniciar sessió, aquest usuari de QSO haurà de canviar l&apos;indicatiu corresponent al compost un si és necessari. Llista dels principals prefixos de país:1A,1C,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Llista separada per comes dels països buscats: el prefix principal de país s&apos;utilitzarà en aquesta llista. Pel prefix indicatiu compost es reconeix al començament de l&apos;indicatiu. La selecció automàtica en AutoSeq 1..7 processarà el país desitjat d&apos;acord amb les notificacions / prioritats elegides, aquesta funcionalitat no és compatible amb AutoSeq0. Només modes que no són FT8: de vegades, l&apos;indicatiu base es copiarà del missatge descodificat: a l&apos;iniciar sessió, aquest usuari de QSO haurà de canviar l&apos;indicatiu corresponent al compost un si és necessari. Llista dels principals prefixos de país:1A,1C,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -3324,7 +3324,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5962"/>
+        <location filename="../mainwindow.cpp" line="5980"/>
         <source>Rx Frequency</source>
         <translation>Freqüència RX</translation>
     </message>
@@ -3335,9 +3335,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
-        <location filename="../mainwindow.cpp" line="6543"/>
+        <location filename="../mainwindow.cpp" line="6561"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Tune</translation>
+        <translation>&amp;Sintonitza</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2307"/>
@@ -3417,7 +3417,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2613"/>
         <source>&amp;Halt Tx</source>
-        <translation>A&amp;turar TX</translation>
+        <translation>&amp;Aturar TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2638"/>
@@ -3447,7 +3447,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2708"/>
         <source>S&amp;WL mode</source>
-        <translation>Modus S&amp;WL</translation>
+        <translation>Mode S&amp;WL</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2739"/>
@@ -3462,7 +3462,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ample de banda, FT8 150Hz, modus FT8 hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Senyals JT65: descodificació de 580Hz, 300 Hz per mostrar missatges. El filtre està centrat en l&apos;espectre de senyal RX.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ample de banda, FT8 150Hz, modes FT8 hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Senyals JT65: descodificació de 580Hz, 300 Hz per mostrar missatges. El filtre està centrat en l&apos;espectre de senyal RX.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2798"/>
@@ -3482,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;El botó esquerra del ratolí  esborra les dades de les finestres de la Crida DX i Locator DX.El botó dret del ratolí esborra les dades de les finestres de la Crida DX, Locator DX, l&apos;historial de QSO i la llista negra. CTRL + botó dret del ratolí afegueix l&apos;indicatiu de la finestra Crida DX a la llista negra, esborrar les dades de les finestres Crida DX, Locator DX i l&apos;historial de QSO.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;El botó esquerra del ratolí  esborra les dades de les finestres del Indicatiu DX i Locator DX.El botó dret del ratolí esborra les dades de les finestres del Indicatiu DX, Locator DX, l&apos;historial de QSO i la llista negra. CTRL + botó dret del ratolí afegeix l&apos;indicatiu de la finestra Indicatiu DX a la llista negra, esborrar les dades de les finestres Indicatiu DX, Locator DX i l&apos;historial de QSO.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
@@ -3721,7 +3721,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation>Generar missatge amb report</translation>
+        <translation>Generar missatge amb senyal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
@@ -3731,7 +3731,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation>Generar missatge amb informe R +report</translation>
+        <translation>Generar missatge amb R +senyal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>
@@ -3846,7 +3846,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4342"/>
         <source>Decode</source>
-        <translation>Decodificar</translation>
+        <translation>Descodificar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
@@ -3856,12 +3856,12 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
         <source>JT9 WSPR decoding</source>
-        <translation>Decodificació JT9 WSPR</translation>
+        <translation>Descodificació JT9 WSPR</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4372"/>
         <source>FT8 decoding</source>
-        <translation>Decodificació FT8</translation>
+        <translation>Descodificació FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4376"/>
@@ -3886,7 +3886,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4408"/>
         <source>decoding cycles</source>
-        <translation>cicles de descodificació</translation>
+        <translation>Cicles de descodificació</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4416"/>
@@ -4114,12 +4114,12 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4854"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>Converteix el modus RTTY per iniciar sessió</translation>
+        <translation>Converteix el mode RTTY per iniciar sessió</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4862"/>
         <source>Log dB reports to Comments</source>
-        <translation>Registrar informes de dB en Comentaris</translation>
+        <translation>Desa el senyal enviat en dB a Comentaris</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4870"/>
@@ -4134,7 +4134,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4886"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Esborrar Crida DX i Locator DX després d&apos;iniciar sessió</translation>
+        <translation>Esborrar Indicatiu DX i Locator DX després d&apos;iniciar sessió</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4894"/>
@@ -4234,7 +4234,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5058"/>
         <source>JT65 hinted decoding</source>
-        <translation>decodificació indicada JT65</translation>
+        <translation>descodificació indicada JT65</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5069"/>
@@ -4254,7 +4254,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Descarrega arxius d&apos;àudio de mostra que demostrin les diferents modes. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Descarrega una mostra de fitxers d&apos;àudio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5090"/>
@@ -4319,7 +4319,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5194"/>
         <source>FT8 call last</source>
-        <translation>FT8 última crida</translation>
+        <translation>FT8 últim indicatiu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5202"/>
@@ -4429,7 +4429,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5452"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Trucada de treball B4</translation>
+        <translation>Indicatiu de treball B4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5471"/>
@@ -4469,7 +4469,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5527"/>
         <source>Report message priority</source>
-        <translation>Informe de prioritat de missatge</translation>
+        <translation>Prioritat del missatge enviat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5535"/>
@@ -4566,7 +4566,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5726"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Indicatiu de crida al portapapers amb doble clic | selecció automàtica</translation>
+        <translation>Indicatiu al portapapers amb doble clic | selecció automàtica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5734"/>
@@ -4574,431 +4574,431 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <translation>Operació de banda creuada de 160m amb el Japó</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="447"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Voleu reconfigurar la interfície de ràdio?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="739"/>
+        <location filename="../mainwindow.cpp" line="742"/>
         <source>Error Writing WAV File</source>
         <translation>Error a l&apos;escriure l&apos;arxiu WAV</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="919"/>
+        <location filename="../mainwindow.cpp" line="922"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Error al sortir del procés jtdxjt9.exe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="897"/>
-        <location filename="../mainwindow.cpp" line="898"/>
-        <location filename="../mainwindow.cpp" line="3423"/>
-        <location filename="../mainwindow.cpp" line="5952"/>
-        <location filename="../mainwindow.cpp" line="5953"/>
-        <location filename="../mainwindow.cpp" line="6008"/>
-        <location filename="../mainwindow.cpp" line="6009"/>
+        <location filename="../mainwindow.cpp" line="900"/>
+        <location filename="../mainwindow.cpp" line="901"/>
+        <location filename="../mainwindow.cpp" line="3435"/>
+        <location filename="../mainwindow.cpp" line="5970"/>
+        <location filename="../mainwindow.cpp" line="5971"/>
+        <location filename="../mainwindow.cpp" line="6026"/>
+        <location filename="../mainwindow.cpp" line="6027"/>
         <source>Freq   Message</source>
         <translation>Frec..Missatge</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="920"/>
+        <location filename="../mainwindow.cpp" line="923"/>
         <source>KillByName return code: %1</source>
         <translation>Codi de retorn de sortir per nom: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="937"/>
+        <location filename="../mainwindow.cpp" line="940"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Error al eliminar &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="938"/>
+        <location filename="../mainwindow.cpp" line="941"/>
         <source>Click OK to retry</source>
         <translation>Prem Acceptar per tornar a intentar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1630"/>
+        <location filename="../mainwindow.cpp" line="1632"/>
         <source>TX Even</source>
         <translation>TX Parell</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1637"/>
+        <location filename="../mainwindow.cpp" line="1639"/>
         <source>TX Odd</source>
         <translation>TX Imparell</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1682"/>
-        <location filename="../mainwindow.cpp" line="2359"/>
-        <location filename="../mainwindow.cpp" line="3458"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
-        <location filename="../mainwindow.cpp" line="4185"/>
-        <location filename="../mainwindow.cpp" line="4419"/>
-        <location filename="../mainwindow.cpp" line="6809"/>
-        <location filename="../mainwindow.cpp" line="7005"/>
+        <location filename="../mainwindow.cpp" line="1684"/>
+        <location filename="../mainwindow.cpp" line="2361"/>
+        <location filename="../mainwindow.cpp" line="3470"/>
+        <location filename="../mainwindow.cpp" line="4074"/>
+        <location filename="../mainwindow.cpp" line="4197"/>
+        <location filename="../mainwindow.cpp" line="4431"/>
+        <location filename="../mainwindow.cpp" line="6827"/>
+        <location filename="../mainwindow.cpp" line="7023"/>
         <source>File Open Error</source>
         <translation>Error d&apos;obertura d&apos;arxiu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1683"/>
-        <location filename="../mainwindow.cpp" line="2360"/>
-        <location filename="../mainwindow.cpp" line="3459"/>
-        <location filename="../mainwindow.cpp" line="4063"/>
-        <location filename="../mainwindow.cpp" line="4186"/>
-        <location filename="../mainwindow.cpp" line="4420"/>
-        <location filename="../mainwindow.cpp" line="6810"/>
-        <location filename="../mainwindow.cpp" line="7006"/>
-        <location filename="../mainwindow.cpp" line="7347"/>
+        <location filename="../mainwindow.cpp" line="1685"/>
+        <location filename="../mainwindow.cpp" line="2362"/>
+        <location filename="../mainwindow.cpp" line="3471"/>
+        <location filename="../mainwindow.cpp" line="4075"/>
+        <location filename="../mainwindow.cpp" line="4198"/>
+        <location filename="../mainwindow.cpp" line="4432"/>
+        <location filename="../mainwindow.cpp" line="6828"/>
+        <location filename="../mainwindow.cpp" line="7024"/>
+        <location filename="../mainwindow.cpp" line="7365"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per afegir: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1786"/>
+        <location filename="../mainwindow.cpp" line="1788"/>
         <source>Error saving c2 file</source>
         <translation>Error al desar el fitxer c2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1863"/>
+        <location filename="../mainwindow.cpp" line="1865"/>
         <source>Error in SoundInput</source>
         <translation>Error en entrada de so</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1867"/>
+        <location filename="../mainwindow.cpp" line="1869"/>
         <source>Error in SoundOutput</source>
         <translation>Error en sortida de so</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1953"/>
+        <location filename="../mainwindow.cpp" line="1955"/>
         <source>Pwr</source>
         <translation>Pwr</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2470"/>
+        <location filename="../mainwindow.cpp" line="2472"/>
         <source>Subprocess Error</source>
         <translation>Error de subprocés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2471"/>
+        <location filename="../mainwindow.cpp" line="2473"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>El  subprocés ha fallat amb el codi de sortida %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2473"/>
-        <location filename="../mainwindow.cpp" line="2492"/>
+        <location filename="../mainwindow.cpp" line="2475"/>
+        <location filename="../mainwindow.cpp" line="2494"/>
         <source>Running: %1
 %2</source>
         <translation>Executant: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2491"/>
+        <location filename="../mainwindow.cpp" line="2493"/>
         <source>Subprocess error</source>
         <translation>Error de subprocés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2567"/>
+        <location filename="../mainwindow.cpp" line="2569"/>
         <source>Spotted</source>
         <translation>Anunciat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2574"/>
+        <location filename="../mainwindow.cpp" line="2576"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>No es pot establir / completar la connexió al servidor dxsummit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2597"/>
+        <location filename="../mainwindow.cpp" line="2599"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>Els algoritmes, el codi font, l&apos;aparença de WSJT-X i els programes relacionats, i les especificacions de protocol per als modus FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 són Copyright (C) 2001 -2018 per un o més dels següents autors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palerm, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; i altres membres de el Grup de Desenvolupament WSJT.</translation>
+        <translation>Els algoritmes, el codi font, l&apos;aparença de WSJT-X i els programes relacionats, i les especificacions de protocol per als modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 són Copyright (C) 2001 -2018 per un o més dels següents autors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palerm, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; i altres membres de el Grup de desenvolupament WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2717"/>
+        <location filename="../mainwindow.cpp" line="2719"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>No es llegeixen dades del disc. Format d&apos;arxiu incorrecte?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2724"/>
+        <location filename="../mainwindow.cpp" line="2726"/>
         <source>Confirm Delete</source>
         <translation>Confirma Eliminar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2725"/>
+        <location filename="../mainwindow.cpp" line="2727"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Estàs segur de voler esborrar tots els arxius ? *.wav i *.c2
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2764"/>
+        <location filename="../mainwindow.cpp" line="2766"/>
         <source>AutoSeq0</source>
         <translation>AutoSeq0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2777"/>
+        <location filename="../mainwindow.cpp" line="2779"/>
         <source>AutoSeq1</source>
         <translation>AutoSeq1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2786"/>
-        <location filename="../mainwindow.cpp" line="2812"/>
+        <location filename="../mainwindow.cpp" line="2788"/>
+        <location filename="../mainwindow.cpp" line="2814"/>
         <source>AutoSeq2</source>
         <translation>AutoSeq2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2787"/>
-        <location filename="../mainwindow.cpp" line="2808"/>
+        <location filename="../mainwindow.cpp" line="2789"/>
+        <location filename="../mainwindow.cpp" line="2810"/>
         <source>AutoSeq6</source>
         <translation>AutoSeq6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2796"/>
-        <location filename="../mainwindow.cpp" line="2813"/>
+        <location filename="../mainwindow.cpp" line="2798"/>
+        <location filename="../mainwindow.cpp" line="2815"/>
         <source>AutoSeq3</source>
         <translation>AutoSeq3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2797"/>
-        <location filename="../mainwindow.cpp" line="2809"/>
+        <location filename="../mainwindow.cpp" line="2799"/>
+        <location filename="../mainwindow.cpp" line="2811"/>
         <source>AutoSeq7</source>
         <translation>AutoSeq7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2881"/>
+        <location filename="../mainwindow.cpp" line="2893"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>El control de freqüència Hound TX no està permès en les subbandes FT8 estàndard.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2889"/>
+        <location filename="../mainwindow.cpp" line="2901"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>El control de freqüència TX del mòdus Hound requereix control * Split * d&apos;equip (ja sigui * Rig * o * Fake It * a la pestanya * Configuració | Ràdio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2892"/>
+        <location filename="../mainwindow.cpp" line="2904"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>El control de freqüència Hound TX no està permès en les sub-bandes estàndard de FT8 i requereix un control * Split * d&apos;equip (ja sigui * Rig * o * Fake It * a la pestanya * Configuració | Ràdio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2900"/>
+        <location filename="../mainwindow.cpp" line="2912"/>
         <source>Hound TX frequency control warning</source>
         <translation>Notes de control de freqüència de Hound TX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2905"/>
+        <location filename="../mainwindow.cpp" line="2917"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2966"/>
+        <location filename="../mainwindow.cpp" line="2978"/>
         <source>Keyboard Shortcuts</source>
         <translation>Dreceres de teclat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2977"/>
+        <location filename="../mainwindow.cpp" line="2989"/>
         <source>Special Mouse Commands</source>
         <translation>Ordres especials del ratolí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3423"/>
+        <location filename="../mainwindow.cpp" line="3435"/>
         <source>Avg=</source>
         <translation>Per=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3428"/>
-        <location filename="../mainwindow.cpp" line="3435"/>
+        <location filename="../mainwindow.cpp" line="3440"/>
+        <location filename="../mainwindow.cpp" line="3447"/>
         <source>check time</source>
         <translation>Revisa Rellotge</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3735"/>
-        <location filename="../mainwindow.cpp" line="3741"/>
+        <location filename="../mainwindow.cpp" line="3747"/>
+        <location filename="../mainwindow.cpp" line="3753"/>
         <source>Confirm change Language</source>
         <translation>Confirmar canvi d&apos;idioma</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3737"/>
-        <location filename="../mainwindow.cpp" line="3744"/>
+        <location filename="../mainwindow.cpp" line="3749"/>
+        <location filename="../mainwindow.cpp" line="3756"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Està segur de canviar l&apos;idioma de la interfície d&apos;usuari al català ?, JTDX es reiniciarà?</translation>
+        <translation>Estàs segur de canviar l&apos;idioma de la interfície d&apos;usuari al català ? JTDX es reiniciarà!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3912"/>
+        <location filename="../mainwindow.cpp" line="3924"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>Si us plau, triï una altra freqüència de transmissió. JTDX no transmetrà sabent altra modus en la sub-banda WSPR.</translation>
+        <translation>Si us plau, triï una altra freqüència de transmissió. JTDX no transmetrà sabent altra mode en la sub-banda WSPR.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3917"/>
-        <location filename="../mainwindow.cpp" line="3920"/>
+        <location filename="../mainwindow.cpp" line="3929"/>
+        <location filename="../mainwindow.cpp" line="3932"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR Banda reservada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4038"/>
+        <location filename="../mainwindow.cpp" line="4050"/>
         <source>TUNE</source>
         <translation>TUNE</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4039"/>
+        <location filename="../mainwindow.cpp" line="4051"/>
         <source>LastTx: </source>
         <translation>Últim Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4253"/>
+        <location filename="../mainwindow.cpp" line="4265"/>
         <source>Tx: TUNE</source>
         <translation>Tx: TUNE</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4254"/>
+        <location filename="../mainwindow.cpp" line="4266"/>
         <source>Tx: </source>
         <translation>TX: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4259"/>
+        <location filename="../mainwindow.cpp" line="4271"/>
         <source>Receiving </source>
         <translatorcomment>Recepción </translatorcomment>
         <translation>Rebent </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4312"/>
+        <location filename="../mainwindow.cpp" line="4324"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4470"/>
+        <location filename="../mainwindow.cpp" line="4482"/>
         <source>Last Tx: </source>
         <translation>Últim Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5351"/>
         <location filename="../mainwindow.cpp" line="5363"/>
-        <location filename="../mainwindow.cpp" line="5376"/>
-        <location filename="../mainwindow.cpp" line="5402"/>
+        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5388"/>
+        <location filename="../mainwindow.cpp" line="5414"/>
         <source>Add to CALL3.TXT</source>
         <translation>Afegeix a CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5352"/>
+        <location filename="../mainwindow.cpp" line="5364"/>
         <source>Please enter a valid grid locator</source>
         <translation>Ingressa una quadrícula locator vàlida</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5364"/>
+        <location filename="../mainwindow.cpp" line="5376"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per a lectura / escriptura: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5377"/>
+        <location filename="../mainwindow.cpp" line="5389"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per escriptura: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5400"/>
+        <location filename="../mainwindow.cpp" line="5412"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 ja està en CALL3.TXT, el vols reemplaçar?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5763"/>
+        <location filename="../mainwindow.cpp" line="5775"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Error a l&apos;enviar dades ADIF QSO a servidor UDP secundari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5763"/>
+        <location filename="../mainwindow.cpp" line="5775"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>L&apos;escriptura ha retornat &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5909"/>
+        <location filename="../mainwindow.cpp" line="5921"/>
         <source>Tx WSPR</source>
         <translation>TX WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5999"/>
+        <location filename="../mainwindow.cpp" line="6017"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Frec     Desv.  Ind.          Loc.    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6098"/>
-        <location filename="../mainwindow.cpp" line="6110"/>
+        <location filename="../mainwindow.cpp" line="6116"/>
+        <location filename="../mainwindow.cpp" line="6128"/>
         <source>Confirm Erase</source>
         <translation>Confirmar Esborrar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6099"/>
+        <location filename="../mainwindow.cpp" line="6117"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Estàs segur de que vols eliminar l&apos;arxiu ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6111"/>
+        <location filename="../mainwindow.cpp" line="6129"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Estàs segur de que vols eliminar el teu registre de QSO?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6716"/>
+        <location filename="../mainwindow.cpp" line="6734"/>
         <source>Lockd Tx=Rx</source>
         <translation>Lockd TX=RX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6717"/>
+        <location filename="../mainwindow.cpp" line="6735"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prem el botó per permetre l&apos;operació de divisió &quot;Split&quot; de freqüències TX / RX AF. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6720"/>
+        <location filename="../mainwindow.cpp" line="6738"/>
         <source>Tx/Rx Split</source>
         <translation>TX/RX Split</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6721"/>
+        <location filename="../mainwindow.cpp" line="6739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prem el botó per bloquejar la freqüència de TX a la freqüència de RX AF. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6844"/>
+        <location filename="../mainwindow.cpp" line="6862"/>
         <source>Rig Control Error</source>
         <translation>Error de control del equip</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6918"/>
+        <location filename="../mainwindow.cpp" line="6936"/>
         <source>Tune digital gain</source>
         <translation>Guany de TUNE digital</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6919"/>
+        <location filename="../mainwindow.cpp" line="6937"/>
         <source>Transmit digital gain</source>
         <translation>Guany de transmissió digital</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6938"/>
+        <location filename="../mainwindow.cpp" line="6956"/>
         <source>Prefixes</source>
         <translation>Prefixes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6987"/>
-        <location filename="../mainwindow.cpp" line="6988"/>
+        <location filename="../mainwindow.cpp" line="7005"/>
+        <location filename="../mainwindow.cpp" line="7006"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7211"/>
+        <location filename="../mainwindow.cpp" line="7229"/>
         <source>Network Error</source>
         <translation>Error de xarxa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7212"/>
+        <location filename="../mainwindow.cpp" line="7230"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Error: %1
 Servidor UDP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7346"/>
+        <location filename="../mainwindow.cpp" line="7364"/>
         <source>File Error</source>
         <translation>Error d&apos;arxiu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7557"/>
+        <location filename="../mainwindow.cpp" line="7576"/>
         <source>Tx watchdog expired</source>
         <translation>Temporitzador WD de temps de TX ha expirat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7571"/>
+        <location filename="../mainwindow.cpp" line="7590"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5015,7 +5015,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="186"/>
+        <location filename="../PollingTransceiver.cpp" line="225"/>
         <source>Unexpected rig error</source>
         <translation>Error inesperat de l&apos;equip</translation>
     </message>
@@ -5023,198 +5023,198 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5025"/>
+        <location filename="../Configuration.cpp" line="5042"/>
         <source>OK</source>
-        <translation>Acceptar</translation>
+        <translation type="unfinished">D&apos;acord</translation>
     </message>
 </context>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5027"/>
+        <location filename="../Configuration.cpp" line="5044"/>
         <source>Directory:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5028"/>
+        <location filename="../Configuration.cpp" line="5045"/>
         <source>File &amp;name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5029"/>
+        <location filename="../Configuration.cpp" line="5046"/>
         <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5030"/>
+        <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Choose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5031"/>
+        <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5032"/>
+        <location filename="../Configuration.cpp" line="5049"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5033"/>
+        <location filename="../Configuration.cpp" line="5050"/>
         <source>All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5034"/>
+        <location filename="../Configuration.cpp" line="5051"/>
         <source>New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5035"/>
+        <location filename="../Configuration.cpp" line="5052"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5036"/>
+        <location filename="../Configuration.cpp" line="5053"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Eliminar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5037"/>
+        <location filename="../Configuration.cpp" line="5054"/>
         <source>&amp;Rename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5038"/>
+        <location filename="../Configuration.cpp" line="5055"/>
         <source>Show &amp;hidden files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5039"/>
+        <location filename="../Configuration.cpp" line="5056"/>
         <source>&amp;New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5040"/>
+        <location filename="../Configuration.cpp" line="5057"/>
         <source>Look in:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5041"/>
+        <location filename="../Configuration.cpp" line="5058"/>
         <source>Files of type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5042"/>
+        <location filename="../Configuration.cpp" line="5059"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5043"/>
+        <location filename="../Configuration.cpp" line="5060"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5044"/>
+        <location filename="../Configuration.cpp" line="5061"/>
         <source>Could not delete directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5045"/>
+        <location filename="../Configuration.cpp" line="5062"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5064"/>
         <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5048"/>
+        <location filename="../Configuration.cpp" line="5065"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5049"/>
+        <location filename="../Configuration.cpp" line="5066"/>
         <source>Go back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5050"/>
+        <location filename="../Configuration.cpp" line="5067"/>
         <source>Alt+Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5051"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5052"/>
+        <location filename="../Configuration.cpp" line="5069"/>
         <source>Go forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5053"/>
+        <location filename="../Configuration.cpp" line="5070"/>
         <source>Alt+Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5054"/>
+        <location filename="../Configuration.cpp" line="5071"/>
         <source>Parent Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5055"/>
+        <location filename="../Configuration.cpp" line="5072"/>
         <source>Go to the parent directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5056"/>
+        <location filename="../Configuration.cpp" line="5073"/>
         <source>Alt+Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Create New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5058"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>Create a New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5059"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>List View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5060"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>Change to list view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5061"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>Detail View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5062"/>
+        <location filename="../Configuration.cpp" line="5079"/>
         <source>Change to detail view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5063"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5064"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>List of places and bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5222,22 +5222,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
+        <location filename="../Configuration.cpp" line="5083"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation type="unfinished">Nom</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5069"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>Date Modified</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5247,12 +5247,12 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="91"/>
         <source>Show Details...</source>
-        <translation>Mostra els detalls...</translation>
+        <translation>Mostrar detalls...</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="92"/>
         <source>Hide Details...</source>
-        <translation>Amaga els detalls ...</translation>
+        <translation>Amagar detalls ...</translation>
     </message>
 </context>
 <context>
@@ -5265,7 +5265,7 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../main.cpp" line="188"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation>Es pot estar executant una altra instrucció, intenta eliminar l&apos;arxiu de bloqueig obsolet?</translation>
+        <translation>Es pot estar executant una altra instrucció,eliminar l&apos;arxiu obsolet de bloqueig?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="330"/>
@@ -5280,7 +5280,7 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translatorcomment>OOB</translatorcomment>
+        <translatorcomment>OOB?????</translatorcomment>
         <translation>OOB</translation>
     </message>
     <message>
@@ -5291,27 +5291,27 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation>Error al &apos;llegir l&apos;arxiu de la paleta en la cascada &quot;%1:%2&quot; massa colors.</translation>
+        <translation>Error de lectura de l&apos;arxiu de paleta de la cascada &quot;%1:%2&quot; massa colors.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation>Error al &apos;llegir l&apos;arxiu de la paleta en la cascada &quot;%1:%2&quot; triplet no vàlid.</translation>
+        <translation>Error de lectura de l&apos;arxiu de paleta de la cascada &quot;%1:%2&quot; triplet no vàlid.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation>Error al &apos;llegir l&apos;arxiu de la paleta en la cascada &quot;%1:%2&quot; color no vàlid.</translation>
+        <translation>Error de lectura de l&apos;arxiu de paleta de la cascada &quot;%1:%2&quot; color no vàlid.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>Error al &apos;llegir l&apos;arxiu de la paleta en la cascada &quot;%1&quot;: %2.</translation>
+        <translation>Error obrint l&apos;arxiu de paleta de la cascada &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>Error al &apos;llegir l&apos;arxiu de la paleta en la cascada &quot;%1&quot;: %2.</translation>
+        <translation>Error d&apos;escriptura de l&apos;arxiu de paleta de la cascada &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -5324,7 +5324,7 @@ Please verify the correct directory name was given.</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation>Error arxiu de sistema</translation>
+        <translation>Error de directori</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -5332,7 +5332,7 @@ Please verify the correct directory name was given.</source>
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation>No es pot canviar el nom de l&apos;arxiu:
+        <translation>No es pot renombrar l&apos;arxiu:
 &quot;%1&quot;
 a: &quot;%2&quot;
 Error (%3): %4</translation>
@@ -5354,7 +5354,7 @@ Error (%3): %4</translation>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation>Hi havia massa redireccionaments: %1</translation>
+        <translation>Massa redireccionaments: %1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
@@ -5365,7 +5365,7 @@ Error (%3): %4</translation>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation>No es poden enviar actualitzacions de:
+        <translation>No es poden fer canvis a:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5373,7 +5373,7 @@ Error (%3): %4</translation>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation>No pot obrir el fitxer:
+        <translation>No es pot obrir el fitxer:
 &quot;%1&quot;
 Error (%2): %3</translation>
     </message>
@@ -5381,7 +5381,7 @@ Error (%2): %3</translation>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation>No es pot fer el camí:
+        <translation>No es pot crear el directori:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5399,7 +5399,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../SampleDownloader.cpp" line="99"/>
         <source>Download Samples</source>
-        <translation>Descarregueu mostres</translation>
+        <translation>Descarregar exemples</translation>
     </message>
 </context>
 <context>
@@ -5407,42 +5407,42 @@ Error (%2): %3</translation>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation>S&apos;ha produït un error a l&apos;obrir el dispositiu d&apos;entrada d&apos;àudio.</translation>
+        <translation>S&apos;ha produït un error obrint el dispositiu d&apos;entrada d&apos;àudio.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation>S&apos;ha produït un error durant la lectura des del dispositiu d&apos;entrada d&apos;àudio.</translation>
+        <translation>S&apos;ha produït un error de lectura des del dispositiu d&apos;entrada d&apos;àudio.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation>S&apos;ha produït un error durant la lectura des del dispositiu d&apos;entrada d&apos;àudio.</translation>
+        <translation>Les dades d&apos;àudio no s&apos;envien al dispositiu d&apos;entrada d&apos;àudio prou ràpid.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation>Error no recuperable, el dispositiu d&apos;entrada d&apos;àudio no es pot utilitzar en aquest moment.</translation>
+        <translation>Error no recuperable, el dispositiu d&apos;entrada d&apos;àudio no es pot utilitzar ara.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation>El format d&apos;àudio d&apos;entrada sol·licitat no és vàlid.</translation>
+        <translation>El format sol·licitat d&apos;àudio d&apos;entrada no és vàlid.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation>El format d&apos;àudio d&apos;entrada sol·licitat no és vàlid.</translation>
+        <translation>El format sol·licitat d&apos;àudio d&apos;entrada  no és vàlid.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation>Error a l&apos;inicialitzar el dispositiu receptor d&apos;àudio</translation>
+        <translation>Error a l&apos;inicialitzar el dispositiu de descarrega d&apos;àudio</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="128"/>
         <source>Idle</source>
-        <translation>A punt</translation>
+        <translation>Inactiu</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="132"/>
@@ -5475,38 +5475,38 @@ Error (%2): %3</translation>
     <message>
         <location filename="../soundout.cpp" line="27"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation>S&apos;ha produït un error a l&apos;obrir el dispositiu de sortida d&apos;àudio.</translation>
+        <translation>S&apos;ha produït un error obrint el dispositiu de sortida d&apos;àudio.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation>S&apos;ha produït un error en escriure en el dispositiu de sortida d&apos;àudio.</translation>
+        <translation>S&apos;ha produït un error escribint en el dispositiu de sortida d&apos;àudio.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
-        <translation>Les dades d&apos;àudio no s&apos;envien a el dispositiu de sortida d&apos;àudio prou ràpid.</translation>
+        <translation>Les dades d&apos;àudio no s&apos;envien al dispositiu de sortida d&apos;àudio prou ràpid.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation>Error no recuperable, dispositiu de sortida d&apos;àudio no utilitzable en aquest moment.</translation>
+        <translation>Error no recuperable, dispositiu de sortida d&apos;àudio no utilitzable ara.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not valid.</source>
-        <translation>El format d&apos;àudio de sortida sol·licitat no és vàlid.</translation>
+        <translation>El format sol·licitat d&apos;àudio de sortida no és vàlid.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
         <source>Requested output audio format is not supported on device.</source>
         <translatorcomment>El formato de audio de salida solicitado no es compatible con el dispositivo.</translatorcomment>
-        <translation>El format d&apos;àudio de sortida sol·licitat no és compatible amb el dispositiu.</translation>
+        <translation>El format sol·licitat d&apos;àudio de sortida no és compatible amb el dispositiu.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="113"/>
         <source>Idle</source>
-        <translation>A punt</translation>
+        <translation>Inactiu</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>
@@ -5549,7 +5549,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
-        <translation>&amp;Offset (MHz):</translation>
+        <translation>&amp;Desplaçament (MHz):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="273"/>
@@ -5573,17 +5573,17 @@ Error (%2): %3</translation>
     <message>
         <location filename="../StationList.cpp" line="296"/>
         <source>Band name</source>
-        <translation>Nom de banda</translation>
+        <translation>Nom banda</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="322"/>
         <source>Frequency offset</source>
-        <translation>Freqüència de desplaçament</translation>
+        <translation>Desplaçament de freqüència</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="344"/>
         <source>Antenna description</source>
-        <translation>Descripció d&apos;antena</translation>
+        <translation>Descripció de l&apos;antena</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="366"/>
@@ -5598,7 +5598,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
-        <translation>Descripció d&apos;antena</translation>
+        <translation>Descripció de l&apos;antena</translation>
     </message>
 </context>
 <context>
@@ -5862,22 +5862,22 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Els indicatius compostos de tipus 2 són aquells amb prefixos o sufixos no inclosos en la llista permesa (Consulteu l&apos;ajuda &amp;gt;Llista breu de prefixos i sufixos.&lt;/p&gt;&lt;p&gt;Aquesta opció determina quins missatges generats han de contenir el seu distintiu de trucada compost de tipus 2 complet en lloc de la seva indicatiu de trucada base. Només s&apos;aplica si té un indicatiu compost de tipus 2. &lt;/p&gt; &lt;p&gt; Aquesta opció controla la forma en què es generen els missatges que s&apos;utilitzen per respondre trucades CQ. Els missatges generats juny (CQ) i 5 (73) sempre contindran la seva indicatiu complet. Els protocols JT65 i JT9 permeten alguns missatges estàndard amb la seva crida completa a costa d&apos;una altra informació, com l&apos;anomenada DX o el seu locator. &lt;/p&gt; &lt;p&gt; A l&apos;escollir el missatge 1, s&apos;omet l&apos;indicatiu DX, el que pot ser un problema a l&apos;respondre a trucades CQ. A l&apos;escollir el missatge 3 també s&apos;omet l&apos;indicatiu DX i moltes versions d&apos;aquest i altres programes no s&apos;extrauran l&apos;informe. Triar cap significa que el seu indicatiu complet només va en el seu missatge maig (73) pel que el seu company de QSO pot registrar l&apos;indicatiu incorrecte. &lt;/p&gt; &lt;p&gt;Cap d&apos;aquestes opcions és perfecta, el missatge 3 és millor i tingueu en compte que el seu company de QSO pot no registrar l&apos;informe que li enviïs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Els indicatius compostos de tipus 2 són aquells amb prefixos o sufixos no inclosos en la llista permesa (Consulta l&apos;ajuda &amp;gt;Llista breu de prefixos i sufixos.&lt;/p&gt;&lt;p&gt;Aquesta opció determina quins missatges generats han de contenir el teu indicatiu compost de tipus 2 complet en lloc del teu indicatiu de trucada base. Només s&apos;aplica si té un indicatiu compost de tipus 2. &lt;/p&gt; &lt;p&gt; Aquesta opció controla la forma en què es generen els missatges que s&apos;utilitzen per respondre trucades CQ. Els missatges generats 6 (CQ) i 5 (73) sempre portaran el teu indicatiu complet. Els protocols JT65 i JT9 permeten alguns missatges estàndard amb el teu indicatiu complet a costa d&apos;una altra informació, com l&apos;anomenada DX o el teu locator. &lt;/p&gt; &lt;p&gt; A l&apos;escollir el missatge 1, s&apos;omet l&apos;indicatiu DX, el que pot ser un problema a l&apos;respondre a indicatius CQ. A l&apos;escollir el missatge 3 també s&apos;omet l&apos;indicatiu DX i moltes versions d&apos;aquest i altres programes no s&apos;extrauran l&apos;informe. Triar cap significa que el seu indicatiu complet només va en el seu missatge 5 (73) pel que el seu company de QSO pot registrar l&apos;indicatiu incorrecte. &lt;/p&gt; &lt;p&gt;Cap d&apos;aquestes opcions és perfecta, el missatge 3 és millor i tingueu en compte que el teu company de QSO pot no registrar l&apos;informe que li enviïs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
         <source>Full call in Tx1</source>
-        <translation>Crida completa a TX1</translation>
+        <translation>Indicatiu complet a TX1</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="157"/>
         <source>Full call in Tx3</source>
-        <translation>Crida completa a TX3</translation>
+        <translation>Indicatiu complet a TX3</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="162"/>
         <source>Full call in Tx5 only</source>
-        <translation>Trucada completa només a TX5</translation>
+        <translation>Indicatiu complet només a TX5</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="170"/>
@@ -5967,7 +5967,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>Mostrar &amp;prefixe no nom</translation>
+        <translation>Mostrar &amp;prefix no nom</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -6028,7 +6028,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="522"/>
         <source>Decode at t = 52 s</source>
-        <translation>Decodificar a t = 52 s</translation>
+        <translation>Descodificar a t = 52 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="542"/>
@@ -6432,7 +6432,7 @@ aquesta configuració et permet seleccionar quina entrada d&apos;àudio es farà
     <message>
         <location filename="../Configuration.ui" line="1401"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; USB sol ser el modus de modulació correcte, &lt;/p&gt; &lt;p&gt; llevat que l&apos;equip tingui una configuració especial de dades o modus de paquet &lt;/p&gt; &lt;p&gt; per a l&apos;operació AFSK. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; USB sol ser el mode de modulació correcte, &lt;/p&gt; &lt;p&gt; llevat que l&apos;equip tingui una configuració especial de dades o mode de paquet &lt;/p&gt; &lt;p&gt; per a l&apos;operació AFSK. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1404"/>
@@ -6444,8 +6444,8 @@ aquesta configuració et permet seleccionar quina entrada d&apos;àudio es farà
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation>No permetis que el programa configuri el modus de l&apos;equip
-(no es recomana però s&apos;usa si el modus és incorrecte
+        <translation>No permetis que el programa configuri el mode de l&apos;equip
+(no es recomana però s&apos;usa si el mode és incorrecte
 o es selecciona l&apos;ample de banda).</translation>
     </message>
     <message>
@@ -6687,7 +6687,7 @@ tots dos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="1974"/>
         <source>called CQ,  received a call and answered</source>
-        <translation>Crida a CQ, rebo una trucada i responc</translation>
+        <translation>Crida a CQ, rebo un indicatiu i responc</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2036"/>
@@ -6717,7 +6717,7 @@ tots dos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="2132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Per defecte, la selecció automàtica ignora la direcció rebuda / transmesa de CQ si hi ha un missatge vàlid &apos;nou DXCC&apos; descodificat, ja sigui trucada entrant o selecció de missatges descodificats CQ / 73. Aquesta opció elimina l&apos;excepció &apos;nou DXCC&apos; a la selecció automàtica per al processament direccional de CQ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Per defecte, la selecció automàtica ignora la direcció rebuda / transmesa de CQ si hi ha un missatge vàlid &apos;nou DXCC&apos; descodificat, ja sigui indicatiu entrant o selecció de missatges descodificats CQ / 73. Aquesta opció elimina l&apos;excepció &apos;nou DXCC&apos; a la selecció automàtica per al processament direccional de CQ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2135"/>
@@ -6737,7 +6737,7 @@ tots dos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Add</source>
-        <translation>&amp;Afegir</translation>
+        <translation>Afegir</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2209"/>
@@ -6752,7 +6752,7 @@ tots dos aquí.</translation>
     <message>
         <location filename="../Configuration.ui" line="2229"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Arrossega i deixa anar elements per reorganitzar l&apos;ordre. Fes clic dret per a accions específiques de l&apos;article. Fes clic, MAJÚS + clic i CRTL + clic per seleccionar elements. El símbol @ se substitueix amb l&apos;indicatiu DX, i lsímbolo &amp; amb l&apos;indicatiu base de l&apos;usuari, el símbol # amb l&apos;informe a transmetre, el símbol ^ amb el nom de l&apos;corresponsal recuperat del log on el nom no pot superar els 7 caràcters. &lt;/p&gt; &lt;/body&gt; &lt; / html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Arrossega i deixa anar elements per reorganitzar l&apos;ordre. Fes clic dret per a accions específiques de l&apos;article. Fes clic, MAJÚS + clic i CRTL + clic per seleccionar elements. El símbol @ es substitueix amb l&apos;indicatiu DX, i el símbol &amp; amb l&apos;indicatiu base de l&apos;usuari, el símbol # amb l&apos;informe a transmetre, el símbol ^ amb el nom del corresponsal recuperat del log on el nom no pot superar els 7 caràcters. &lt;/p&gt; &lt;/body&gt; &lt; / html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2280"/>
@@ -6775,9 +6775,9 @@ tots dos aquí.</translation>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation>Alguns programes de registre no acceptaran el tipus d&apos;informes
+        <translation>Alguns programes de registre no acceptaran el tipus de senyals
 guardat per aquest programa.
-Marca aquesta opció per emmagatzemar els informes enviats i rebuts en
+Marca aquesta opció per emmagatzemar els senyals enviats i rebuts en
 camp de comentaris.</translation>
     </message>
     <message>
@@ -6908,7 +6908,7 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
     <message>
         <location filename="../Configuration.ui" line="2614"/>
         <source>decoded and debug messages</source>
-        <translation>decodificar i depurar missatges</translation>
+        <translation>descodificar i depurar missatges</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2656"/>
@@ -6943,7 +6943,7 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
     <message>
         <location filename="../Configuration.ui" line="2727"/>
         <source>EQSL Password.</source>
-        <translation>Contrasenya a eQSL.</translation>
+        <translation>Contraseny&amp;a a eQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2737"/>
@@ -6951,10 +6951,10 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>El programa pot enviar els detalls de la teva estació i totes les
-senyals descodificades com espots en el lloc web http://pskreporter.info.
+        <translation>El programa pot enviar els detalls de la teva estació i tots els
+senyals descodificats com espots en el lloc web http://pskreporter.info.
 Això s&apos;utilitza per a l&apos;anàlisi de balisa inversa que és molt útil
-per avaluar la propagació i el rendiment de el sistema.</translation>
+per avaluar la propagació i el rendiment del sistema.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2743"/>
@@ -7393,7 +7393,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3566"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Utilitza un marcador blau per notificar si hi ha el meu indicatiu en el missatge descodificat relacionat amb el QSO en curs (l&apos;indicatiu de la part QSO està a la finestra de Crida DX), altres trucades entrants amb el meu indicatiu serà seguit amb el marcador vermell. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Utilitza un marcador blau per notificar si hi ha el meu indicatiu en el missatge descodificat relacionat amb el QSO en curs (l&apos;indicatiu de la part QSO està a la finestra de Indicatiu DX), altres trucades entrants amb el meu indicatiu serà seguit amb el marcador vermell. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3569"/>
@@ -8324,7 +8324,7 @@ canvi en la targeta de so</translation>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation>Arxius gravables en la ubicació de prova. Utilitza amb precaució, només per a proves.</translation>
+        <translation>Arxius amb permis d&apos;escriptura a la ubicació de proves. Utilitzar amb precaució, només per a proves.</translation>
     </message>
 </context>
 <context>
@@ -8337,7 +8337,7 @@ canvi en la targeta de so</translation>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Fes doble clic a un color per editar-lo. &lt;/p&gt; &lt;p&gt; Fes clic dret per inserir o eliminar colors. &lt;/p&gt; &lt;p&gt; Els colors a la part superior representen senyals febles &lt;/p&gt; &lt;p&gt; i els colors a la part inferior representen forts senyals &lt;/p&gt; &lt;p&gt;. Pot tenir fins a 256 colors. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Doble clic sobre un color per editar-lo. &lt;/p&gt; &lt;p&gt; Clic dret per inserir o eliminar colors. &lt;/p&gt; &lt;p&gt; Els colors a la part superior representen senyals febles &lt;/p&gt; &lt;p&gt; i els colors a la part inferior representen senyals fortes&lt;/p&gt; &lt;p&gt;. Es poden tenir fins a 256 colors. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
 </context>
 </TS>

@@ -357,12 +357,12 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         else if(nsyncscorew.eq.4) then
           if(nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. scoreratio1.gt.10. .or. nsyncscore2.gt.10) go to 32
           nbadcrc=1; return ! 103
-        endif
         else if(nsyncscorew.eq.5) then
           if(nsyncscore.gt.11 .or. nsyncscore1.eq.7 .or. nsyncscore2.eq.7 .or. scoreratio1.gt.10. .or. &
              scoreratio2.gt.10.) go to 32
             nbadcrc=1; return ! 0
         endif
+      endif
     endif
 
 32  if(lsd) then

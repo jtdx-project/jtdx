@@ -45,6 +45,7 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
                        SoundOutput * stream, Channel channel,
                        bool synchronize, double dBSNR, double TRperiod)
 {
+  QThread::currentThread()->setPriority(QThread::HighPriority);
   Q_ASSERT (stream);
 // Time according to this computer which becomes our base time
   qint64 ms0 = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
@@ -64,8 +65,9 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
   m_TRperiod=TRperiod;
   unsigned delay_ms=1000;
   if(m_nsps==1920) delay_ms=500;   //FT8
-  else if(m_nsps==576) delay_ms=300;   //FT4
-
+  else if(m_nsps==576) {
+    delay_ms=500;   //FT4
+  }
   // noise generator parameters
   if (m_addNoise) {
     m_snr = qPow (10.0, 0.05 * (dBSNR - 6.0));
@@ -74,13 +76,19 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
   }
 
   // round up to an exact portion of a second that allows for startup delays
-  m_ic = (mstr / delay_ms) * m_frameRate * delay_ms / 1000;
-
+  //m_ic = (mstr / delay_ms) * m_frameRate * delay_ms / 1000;
+  auto mstr2 = mstr - delay_ms;
+  if (mstr <= delay_ms) {
+    m_ic = 0;
+  } else {
+    m_ic = mstr2 * (m_frameRate / 1000);
+  }
   m_silentFrames = 0;
   // calculate number of silent frames to send
-  if (synchronize && !m_tuning)	{
-    m_silentFrames = m_ic + m_frameRate / (1000 / delay_ms) - (mstr * (m_frameRate / 1000));
+  if (m_ic == 0 && synchronize && !m_tuning)	{
+    m_silentFrames = m_frameRate / (1000 / delay_ms) - (mstr * (m_frameRate / 1000));
   }
+//  printf ("delay_ms=%d m_frameRate=%d mstr=%d mstr2 = %d m_ic=%d m_silentFrames=%lld \n",delay_ms,m_frameRate,mstr,mstr2,m_ic,m_silentFrames);
   initialize (QIODevice::ReadOnly, channel);
   Q_EMIT stateChanged ((m_state = (synchronize && m_silentFrames) ?
                         Synchronizing : Active));

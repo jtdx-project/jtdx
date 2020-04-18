@@ -465,6 +465,7 @@ int HamlibTransceiver::do_start ()
   tickle_hamlib_ = false;
   get_vfo_works_ = true;
   set_vfo_works_ = true;
+//printf("do_snr_ %d do_pwr_ %d do_pwr2_ %d\n",do_snr_,do_pwr_,do_pwr2_);
   // the Net rigctl back end promises all functions work but we must
   // test get_vfo as it determines our strategy for Icom rigs
   vfo_t vfo;
@@ -948,7 +949,7 @@ void HamlibTransceiver::do_poll ()
   rmode_t m;
   pbwidth_t w;
   split_t s;
-
+//auto ms = QDateTime::currentMSecsSinceEpoch();
 //printf("%s poll start\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
   if (get_vfo_works_ && rig_->caps->get_vfo)
     {
@@ -1060,8 +1061,7 @@ void HamlibTransceiver::do_poll ()
               rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_STRENGTH, &strength);
               if (RIG_OK == rc) {
                 update_level (strength.i);
-//printf("%s get level\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
-//                printf ("LEVEL %d\n",strength.i);
+//printf("%s get level %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.i);
               } else {
                 update_level (-60);
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level failed with rc:" << rc << "ignoring");
@@ -1117,7 +1117,7 @@ void HamlibTransceiver::do_poll ()
           update_PTT (!(RIG_PTT_OFF == p));
         }
     }
-//printf("%s poll end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+//printf("%s poll end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch()-ms);
 
 #if !WSJT_TRACE_CAT_POLLS
 #if WSJT_HAMLIB_TRACE

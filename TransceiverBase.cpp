@@ -51,19 +51,28 @@ void TransceiverBase::set (TransceiverState const& s,
       may_update u {this, true};
 //      printf("%s Transiever set\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
       bool was_online {requested_.online ()};
+      auto ms = set_freq_time;
       if (!s.online () && was_online)
         {
+//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           shutdown ();
         }
       else if (s.online () && !was_online)
         {
+//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           shutdown ();
+//          printf("%s start",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
           startup ();
         }
       if (requested_.online ())
         {
           bool ptt_on {false};
           bool ptt_off {false};
+          if (requested_.fast_mode() != s.fast_mode()) {
+//            printf("%s Timing fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.fast_mode());
+            do_post_fast_mode (s.fast_mode());
+            requested_.fast_mode (s.fast_mode ());
+          }
           if (s.ptt () != requested_.ptt ())
             {
               ptt_on = s.ptt ();
@@ -83,13 +92,16 @@ void TransceiverBase::set (TransceiverState const& s,
                    || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
                   || ptt_off))       // or just returned to rx
             {
+              auto ms2 = QDateTime::currentMSecsSinceEpoch();
 //              printf("%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+              ms = 0;
               do_frequency (s.frequency (), s.mode (), ptt_off);
               do_post_frequency (s.frequency (), s.mode ());
 
               // record what actually changed
               requested_.frequency (actual_.frequency ());
               requested_.mode (actual_.mode ());
+              set_freq_time = QDateTime::currentMSecsSinceEpoch() - ms2;
             }
           if (!s.tx_frequency ()
               || (s.tx_frequency () > 10000 // ignore bogus startup values
@@ -101,6 +113,7 @@ void TransceiverBase::set (TransceiverState const& s,
                   || (s.tx_frequency () && ptt_on)) // or about to tx split
                 {
 //                  printf("%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+                  ms = 0;
                   do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
                   do_post_tx_frequency (s.tx_frequency (), s.mode ());
 
@@ -114,14 +127,14 @@ void TransceiverBase::set (TransceiverState const& s,
 //              printf("%s Timing ptt_on\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
               do_ptt (true);
               do_post_ptt (true);
-              QThread::msleep (100); // some rigs cannot process CAT
+              QThread::msleep (100 + ms); // some rigs cannot process CAT
                                      // commands while switching from
                                      // Rx to Tx
             }
 
           // record what actually changed
           requested_.ptt (actual_.ptt ());
-        }
+        } //else printf ("%s NOT ONLINE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
 //      printf("%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
     }
   catch (std::exception const& e)
@@ -132,8 +145,10 @@ void TransceiverBase::set (TransceiverState const& s,
     {
       message = unexpected;
     }
+  
   if (!message.isEmpty ())
     {
+//      printf("%s Transiever set message %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
       offline (message);
     }
 }
@@ -146,9 +161,6 @@ void TransceiverBase::startup ()
       actual_.online (true);
       requested_.online (true);
       auto res = do_start ();
-      auto ms = QDateTime::currentMSecsSinceEpoch() % 1000;
-      printf ("startup ms %lld\n",ms);
-      QThread::msleep (abs(500-ms));
       do_post_start ();
       Q_EMIT resolution (res);
     }

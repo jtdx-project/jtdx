@@ -280,6 +280,7 @@ int FrequencyList_v2::best_working_frequency (Frequency f) const
   if (!target_band.isEmpty ())
     {
       Radio::FrequencyDelta delta {std::numeric_limits<Radio::FrequencyDelta>::max ()};
+      Radio::FrequencyDelta def_delta {std::numeric_limits<Radio::FrequencyDelta>::max ()};
       // find a frequency in the same band that is allowed
       for (int row = 0; row < rowCount (); ++row)
         {
@@ -292,9 +293,13 @@ int FrequencyList_v2::best_working_frequency (Frequency f) const
               Radio::FrequencyDelta new_delta = f - candidate_frequency;
               if (std::abs (new_delta) < std::abs (delta))
                 {
-                  if (m_->frequency_list_[source_row].default_) defa = row;
                   delta = new_delta;
                   result = row;
+                }
+              if (std::abs (new_delta) < std::abs (def_delta) && m_->frequency_list_[source_row].default_)
+                {
+                  def_delta = new_delta;
+                  defa = row;
                 }
             }
         }

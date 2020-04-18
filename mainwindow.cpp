@@ -147,6 +147,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   QMainWindow(parent),
   m_exitCode {0},
   m_jtdxtime {new JTDXDateTime()},
+
   m_dataDir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)},
   m_valid {true},
   m_revision {revision ()},
@@ -156,6 +157,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  m_olek {false},
 //  m_olek2 {false},
   m_config {settings, this},
+
   m_WSPR_band_hopping {settings, &m_config, this},
   m_WSPR_tx_next {false},
   m_wideGraph (new WideGraph(settings, m_jtdxtime)),
@@ -399,9 +401,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_msAudioOutputBuffered (0u),
   m_framesAudioInputBuffered (RX_SAMPLE_RATE / 10),
   m_downSampleFactor (downSampleFactor),
-//  m_audioThreadPriority (QThread::HighPriority),
+  m_audioThreadPriority (QThread::HighPriority),
 //  m_audioThreadPriority (QThread::HighestPriority),
-  m_audioThreadPriority (QThread::TimeCriticalPriority),
+//  m_audioThreadPriority (QThread::TimeCriticalPriority),
   m_bandEdited {false},
   m_splitMode {false},
   m_monitoring {false},
@@ -426,6 +428,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_manual {network_manager}
 {
   ui->setupUi(this);
+  m_config.set_jtdxtime (m_jtdxtime);
   ui->decodedTextBrowser->setConfiguration (&m_config);
   ui->decodedTextBrowser2->setConfiguration (&m_config);
   m_qsoHistory.jtdxtime = m_jtdxtime;
@@ -974,7 +977,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   QByteArray cfname=fname.toLocal8Bit();
   fftwf_import_wisdom_from_filename(cfname);
 
-  QThread::currentThread()->setPriority(QThread::HighPriority);
+//  QThread::currentThread()->setPriority(QThread::HighPriority);
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
 
@@ -1451,7 +1454,6 @@ void MainWindow::readSettings()
 
   m_lastMonitoredFrequency = m_settings->value ("DialFreq",
      QVariant::fromValue<Frequency> (default_frequency)).value<Frequency> ();
-//  printf ("m_lastMonitoredFrequency = %LLd",m_lastMonitoredFrequency);
   // setup initial value of tx attenuator, range 0...450 (0...45dB attenuation)
   if(m_settings->value("OutAttenuation").toInt()>=0 && m_settings->value("OutAttenuation").toInt()<=450)
     ui->outAttenuation->setValue (m_settings->value ("OutAttenuation", 225).toInt ());
@@ -2848,8 +2850,18 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   m_houndMode=checked;
   m_wideGraph->setHoundFilter(m_houndMode);
   if(m_houndMode) {
+    bool defBand=false;
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    for(int i=0; i<11; i++) {
+      int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
+      if(qAbs(kHzdiff) < 3) {
+        defBand=true;
+        break;
+      }
+    }
     ui->HoundButton->setChecked(true);
-    ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+    if(defBand) ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+    else ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
     ui->actionUse_TX_frequency_jumps->setEnabled(true);
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
@@ -3512,7 +3524,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString deCall="";
       QString grid="";
       decodedtext.deCallAndGrid(/*out*/deCall,grid);
-
+      if (!m_hisCall.isEmpty() && !deCall.isEmpty() && Radio::base_callsign (m_hisCall) == Radio::base_callsign (deCall)) ui->RxFreqSpinBox->setValue (decodedtext.frequencyOffset());
 
 /*      bool bwantedCall=false;
       if(m_hisCall.isEmpty ()) { // run this code only if not in the QSO
@@ -4398,7 +4410,7 @@ void MainWindow::startTx2()
       transmit (snr);
 //      printf(" started %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
       if(m_config.write_decoded_debug()) writeToALLTXT("Modulator started");
-      QThread::currentThread()->setPriority(QThread::HighPriority);
+//      QThread::currentThread()->setPriority(QThread::HighPriority);
       ui->signal_meter_widget->setValue(0);
 
       if(m_mode.left(4)=="WSPR" and !m_tune) {
@@ -4461,7 +4473,7 @@ void MainWindow::stopTx()
 void MainWindow::stopTx2()
 {
   Q_EMIT m_config.transceiver_ptt (false);      //Lower PTT
-  QThread::currentThread()->setPriority(QThread::HighPriority);
+//  QThread::currentThread()->setPriority(QThread::HighPriority);
   if(m_mode.left(4)=="WSPR" and m_ntr==-1 and !m_tuneup) {
     m_wideGraph->setWSPRtransmitted();
     WSPR_scheduling ();
@@ -5920,7 +5932,13 @@ void MainWindow::on_actionWSPR_2_triggered()
 void MainWindow::switch_mode (Mode mode)
 {
 // m_lastMode value is deliberately not assigned in constructor to let qsohistory init at SW startup 
-  if(m_lastMode!=m_mode) { m_qsoHistory.init(); m_lastMode=m_mode; if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");} 
+  if(m_lastMode!=m_mode) {
+     if (m_lastMode == "FT4") Q_EMIT m_config.transceiver_fast_mode (false);
+     else if (m_mode == "FT4") Q_EMIT m_config.transceiver_fast_mode (true);
+     m_qsoHistory.init(); 
+     m_lastMode=m_mode; 
+     if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");
+  } 
   m_okToPost = false;
   m_config.frequencies ()->filter (m_config.region (),mode);
   auto const& row = m_config.frequencies ()->best_working_frequency (m_freqNominal);
@@ -6763,7 +6781,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
  // waiting to Tx and still needed
  //Start-of-transmission sequencer delay
       if (m_tx_when_ready && g_iptt) {
-          QThread::currentThread()->setPriority(QThread::HighestPriority);
+//          QThread::currentThread()->setPriority(QThread::HighestPriority);
           int ms_delay=1000*m_config.txDelay();
           if(m_mode=="FT4") ms_delay=20;
           ptt1Timer.start(ms_delay);
@@ -7461,6 +7479,7 @@ void MainWindow::setRig ()
   if ((m_monitoring || m_transmitting) && m_config.transceiver_online ()) {
       if(m_transmitting && m_config.split_mode ()) { Q_EMIT m_config.transceiver_tx_frequency (m_freqTxNominal); }
       else { Q_EMIT m_config.transceiver_frequency (m_freqNominal); }
+      Q_EMIT m_config.transceiver_fast_mode (m_mode == "FT4");
   }
 }
 

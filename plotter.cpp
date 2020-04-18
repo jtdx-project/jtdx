@@ -193,7 +193,7 @@ void CPlotter::draw(float swide[], bool bScroll)                            //dr
       } else {
         t=m_jtdxtime->currentDateTimeUtc2().toString("hh:mm") + "    " + m_rxBand;
       }
-      QRect rect{5, -2, m_w-10, 52};
+      QRect rect{5, -2, m_w-10, metrics.height()};
       painter1.drawText(rect, m_timestamp==2?Qt::AlignRight:Qt::AlignLeft,t);
     }
   }

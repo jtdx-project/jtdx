@@ -10,6 +10,7 @@
 #include "IARURegions.hpp"
 #include "AudioDevice.hpp"
 #include "Transceiver.hpp"
+#include "JTDXDateTime.h"
 
 #include "pimpl_h.hpp"
 
@@ -287,7 +288,7 @@ public:
   // Close down connection to rig.
   void transceiver_offline ();
   void add_callsign_hideFilter (QString);
-
+  void set_jtdxtime (JTDXDateTime*);
   // Set transceiver frequency in Hertz.
   Q_SLOT void transceiver_frequency (Frequency);
 
@@ -306,6 +307,10 @@ public:
   // the "Emulate Split" mode requires PTT information to coordinate
   // frequency changes.
   Q_SLOT void transceiver_ptt (bool = true);
+
+  // Set/unset Fast_mode for polling tranceiver for FT4.
+  //
+  Q_SLOT void transceiver_fast_mode (bool = false);
 
   // Attempt to (re-)synchronise transceiver state.
   //
