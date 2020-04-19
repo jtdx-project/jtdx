@@ -2769,7 +2769,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3759"/>
+        <location filename="../mainwindow.cpp" line="3762"/>
         <source>&amp;Yes</source>
         <translation>确定&amp;Y</translation>
     </message>
@@ -2780,7 +2780,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3762"/>
+        <location filename="../mainwindow.cpp" line="3765"/>
         <source>&amp;No</source>
         <translation>否&amp;N</translation>
     </message>
@@ -2951,12 +2951,12 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
-        <location filename="../mainwindow.cpp" line="3441"/>
-        <location filename="../mainwindow.cpp" line="3448"/>
-        <location filename="../mainwindow.cpp" line="5974"/>
-        <location filename="../mainwindow.cpp" line="5979"/>
-        <location filename="../mainwindow.cpp" line="6019"/>
-        <location filename="../mainwindow.cpp" line="6030"/>
+        <location filename="../mainwindow.cpp" line="3444"/>
+        <location filename="../mainwindow.cpp" line="3451"/>
+        <location filename="../mainwindow.cpp" line="5978"/>
+        <location filename="../mainwindow.cpp" line="5983"/>
+        <location filename="../mainwindow.cpp" line="6023"/>
+        <location filename="../mainwindow.cpp" line="6034"/>
         <source>Band Activity</source>
         <translation>波段活动</translation>
     </message>
@@ -3074,9 +3074,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
-        <location filename="../mainwindow.cpp" line="4597"/>
-        <location filename="../mainwindow.cpp" line="5262"/>
-        <location filename="../mainwindow.cpp" line="5677"/>
+        <location filename="../mainwindow.cpp" line="4601"/>
+        <location filename="../mainwindow.cpp" line="5266"/>
+        <location filename="../mainwindow.cpp" line="5681"/>
         <source>DX Call</source>
         <translation>DX 呼号</translation>
     </message>
@@ -3129,7 +3129,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="2917"/>
+        <location filename="../mainwindow.cpp" line="2920"/>
         <source>Hound</source>
         <translation>猎犬</translation>
     </message>
@@ -3161,8 +3161,8 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <location filename="../mainwindow.cpp" line="1521"/>
-        <location filename="../mainwindow.cpp" line="1953"/>
+        <location filename="../mainwindow.cpp" line="1523"/>
+        <location filename="../mainwindow.cpp" line="1955"/>
         <source>S meter</source>
         <translation>S 表</translation>
     </message>
@@ -3193,7 +3193,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
-        <location filename="../mainwindow.ui" line="4541"/>
+        <location filename="../mainwindow.ui" line="4542"/>
         <source>AutoSeq</source>
         <translation>自动程序</translation>
     </message>
@@ -3318,7 +3318,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2192"/>
-        <location filename="../mainwindow.cpp" line="5980"/>
+        <location filename="../mainwindow.cpp" line="5984"/>
         <source>Rx Frequency</source>
         <translation>接收信息</translation>
     </message>
@@ -3329,7 +3329,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
-        <location filename="../mainwindow.cpp" line="6561"/>
+        <location filename="../mainwindow.cpp" line="6565"/>
         <source>&amp;Tune</source>
         <translation>调谐&amp;T</translation>
     </message>
@@ -3485,9 +3485,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2978"/>
-        <location filename="../mainwindow.ui" line="5285"/>
-        <location filename="../mainwindow.ui" line="5742"/>
-        <location filename="../mainwindow.ui" line="5766"/>
+        <location filename="../mainwindow.ui" line="5291"/>
+        <location filename="../mainwindow.ui" line="5748"/>
+        <location filename="../mainwindow.ui" line="5772"/>
         <source>1</source>
         <translation></translation>
     </message>
@@ -3503,7 +3503,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5463"/>
+        <location filename="../mainwindow.ui" line="5469"/>
         <source>CQ</source>
         <translation></translation>
     </message>
@@ -3666,10 +3666,10 @@ list. The list can be maintained in Settings (F2).</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3564"/>
-        <location filename="../mainwindow.ui" line="5293"/>
-        <location filename="../mainwindow.ui" line="5296"/>
-        <location filename="../mainwindow.ui" line="5750"/>
-        <location filename="../mainwindow.ui" line="5774"/>
+        <location filename="../mainwindow.ui" line="5299"/>
+        <location filename="../mainwindow.ui" line="5302"/>
+        <location filename="../mainwindow.ui" line="5756"/>
+        <location filename="../mainwindow.ui" line="5780"/>
         <source>2</source>
         <translation></translation>
     </message>
@@ -3899,666 +3899,666 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4480"/>
+        <location filename="../mainwindow.ui" line="4481"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4496"/>
+        <location filename="../mainwindow.ui" line="4497"/>
         <source>Mode</source>
         <translation>模式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4508"/>
+        <location filename="../mainwindow.ui" line="4509"/>
         <source>Misc</source>
         <translation>杂项</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4512"/>
+        <location filename="../mainwindow.ui" line="4513"/>
         <source>Accept UDP Reply messages</source>
         <translation>处理从UDP 传入的信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4545"/>
+        <location filename="../mainwindow.ui" line="4546"/>
         <source>Auto RX frequency Filter</source>
         <translation>接收频率自动窄带过滤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4569"/>
+        <location filename="../mainwindow.ui" line="4570"/>
         <source>DXpedition</source>
         <translation>DX远征</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4588"/>
+        <location filename="../mainwindow.ui" line="4589"/>
         <source>Exit</source>
         <translation>关闭软件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4591"/>
+        <location filename="../mainwindow.ui" line="4592"/>
         <source>Alt+F4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4602"/>
+        <location filename="../mainwindow.ui" line="4603"/>
         <source>Configuration</source>
         <translation>配置档</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4605"/>
-        <location filename="../mainwindow.ui" line="5006"/>
+        <location filename="../mainwindow.ui" line="4606"/>
+        <location filename="../mainwindow.ui" line="5012"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4610"/>
+        <location filename="../mainwindow.ui" line="4611"/>
         <source>About JTDX</source>
         <translation>有关 JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4613"/>
+        <location filename="../mainwindow.ui" line="4614"/>
         <source>Ctrl+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4618"/>
+        <location filename="../mainwindow.ui" line="4619"/>
         <source>Waterfall</source>
         <translation>瀑布图</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4623"/>
+        <location filename="../mainwindow.ui" line="4624"/>
         <source>Open</source>
         <translation>打开文件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4626"/>
+        <location filename="../mainwindow.ui" line="4627"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4631"/>
+        <location filename="../mainwindow.ui" line="4632"/>
         <source>Open next in directory</source>
         <translation>打开下一个文件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4634"/>
+        <location filename="../mainwindow.ui" line="4635"/>
         <source>F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4639"/>
+        <location filename="../mainwindow.ui" line="4640"/>
         <source>Decode remaining files in directory</source>
         <translation>打开余下文件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4642"/>
+        <location filename="../mainwindow.ui" line="4643"/>
         <source>Shift+F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4647"/>
+        <location filename="../mainwindow.ui" line="4648"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>删除所有在SaveDir目录内 *.wav &amp;&amp; *.c2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4658"/>
-        <location filename="../mainwindow.ui" line="5336"/>
-        <location filename="../mainwindow.ui" line="5398"/>
-        <location filename="../mainwindow.ui" line="5680"/>
+        <location filename="../mainwindow.ui" line="4659"/>
+        <location filename="../mainwindow.ui" line="5342"/>
+        <location filename="../mainwindow.ui" line="5404"/>
+        <location filename="../mainwindow.ui" line="5686"/>
         <source>fast</source>
         <translation>快速</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4669"/>
+        <location filename="../mainwindow.ui" line="4670"/>
         <source>None</source>
         <translation>不保存</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4677"/>
+        <location filename="../mainwindow.ui" line="4678"/>
         <source>Save all</source>
         <translation>保存所有</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4757"/>
+        <location filename="../mainwindow.ui" line="4763"/>
         <source>JTDX Web site</source>
         <translation>JTDX 网站</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4760"/>
+        <location filename="../mainwindow.ui" line="4766"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4765"/>
+        <location filename="../mainwindow.ui" line="4771"/>
         <source>Keyboard shortcuts</source>
         <translation>键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4768"/>
+        <location filename="../mainwindow.ui" line="4774"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4773"/>
+        <location filename="../mainwindow.ui" line="4779"/>
         <source>Special mouse commands</source>
         <translation>滑鼠特殊组合</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4776"/>
+        <location filename="../mainwindow.ui" line="4782"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4787"/>
+        <location filename="../mainwindow.ui" line="4793"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4798"/>
+        <location filename="../mainwindow.ui" line="4804"/>
         <source>Save decoded</source>
         <translation>保存解码</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4809"/>
-        <location filename="../mainwindow.ui" line="5344"/>
-        <location filename="../mainwindow.ui" line="5406"/>
-        <location filename="../mainwindow.ui" line="5648"/>
-        <location filename="../mainwindow.ui" line="5688"/>
+        <location filename="../mainwindow.ui" line="4815"/>
+        <location filename="../mainwindow.ui" line="5350"/>
+        <location filename="../mainwindow.ui" line="5412"/>
+        <location filename="../mainwindow.ui" line="5654"/>
+        <location filename="../mainwindow.ui" line="5694"/>
         <source>medium</source>
         <translation>中度</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4820"/>
-        <location filename="../mainwindow.ui" line="5355"/>
-        <location filename="../mainwindow.ui" line="5417"/>
-        <location filename="../mainwindow.ui" line="5699"/>
+        <location filename="../mainwindow.ui" line="4826"/>
+        <location filename="../mainwindow.ui" line="5361"/>
+        <location filename="../mainwindow.ui" line="5423"/>
+        <location filename="../mainwindow.ui" line="5705"/>
         <source>deep</source>
         <translation>深度</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4828"/>
+        <location filename="../mainwindow.ui" line="4834"/>
         <source>Monitor OFF at startup</source>
         <translation>启动时关闭监听</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4833"/>
+        <location filename="../mainwindow.ui" line="4839"/>
         <source>Erase ALL.TXT</source>
         <translation>删除 ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4838"/>
+        <location filename="../mainwindow.ui" line="4844"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>删除通联日志 wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4843"/>
+        <location filename="../mainwindow.ui" line="4849"/>
         <source>Open wsjtx_log.adi</source>
         <translation>打开 wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4846"/>
-        <location filename="../mainwindow.ui" line="5030"/>
+        <location filename="../mainwindow.ui" line="4852"/>
+        <location filename="../mainwindow.ui" line="5036"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4854"/>
+        <location filename="../mainwindow.ui" line="4860"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>将日志记录 模式转换为RTTY</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4862"/>
+        <location filename="../mainwindow.ui" line="4868"/>
         <source>Log dB reports to Comments</source>
         <translation>将 dB 报告记录到注释</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4870"/>
+        <location filename="../mainwindow.ui" line="4876"/>
         <source>Prompt me to log QSO</source>
         <translation>提示我记录通联</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4878"/>
+        <location filename="../mainwindow.ui" line="4884"/>
         <source>Blank line between decoding periods</source>
         <translation>解码期间之间添加空白行</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4886"/>
+        <location filename="../mainwindow.ui" line="4892"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>日志记录后清除 DX 呼号和网格</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4894"/>
+        <location filename="../mainwindow.ui" line="4900"/>
         <source>Display distance in miles</source>
         <translation>显示距离以英里为单位</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4902"/>
+        <location filename="../mainwindow.ui" line="4908"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>双击呼号启用发射</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4910"/>
+        <location filename="../mainwindow.ui" line="4916"/>
         <source>Tx disabled after sending 73</source>
         <translation>发送 73 后停止发射</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4918"/>
+        <location filename="../mainwindow.ui" line="4924"/>
         <source>Runaway Tx watchdog</source>
         <translation>运行发射监管计时器</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4926"/>
+        <location filename="../mainwindow.ui" line="4932"/>
         <source>Allow multiple instances</source>
         <translation>允许多个情况</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4934"/>
+        <location filename="../mainwindow.ui" line="4940"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>&gt;发射频率锁定到接收频率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4942"/>
+        <location filename="../mainwindow.ui" line="4948"/>
         <source>Skip Tx 1</source>
         <translation>跳过 Tx 1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4950"/>
+        <location filename="../mainwindow.ui" line="4956"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4961"/>
+        <location filename="../mainwindow.ui" line="4967"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4969"/>
+        <location filename="../mainwindow.ui" line="4975"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>发射信息发送到接收信息窗口</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4977"/>
+        <location filename="../mainwindow.ui" line="4983"/>
         <source>Gray1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4985"/>
+        <location filename="../mainwindow.ui" line="4991"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation>显示 DXCC 实体和曾经通联状态</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4993"/>
+        <location filename="../mainwindow.ui" line="4999"/>
         <source>Astronomical data</source>
         <translation>天文数据</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4998"/>
+        <location filename="../mainwindow.ui" line="5004"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>前缀和后缀简短列表</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5003"/>
+        <location filename="../mainwindow.ui" line="5009"/>
         <source>Settings...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5014"/>
+        <location filename="../mainwindow.ui" line="5020"/>
         <source>JTDX forum</source>
         <translation>JTDX 论坛</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5019"/>
+        <location filename="../mainwindow.ui" line="5025"/>
         <source>Open log directory</source>
         <translation>打开日志文件目录</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5027"/>
+        <location filename="../mainwindow.ui" line="5033"/>
         <source>Message averaging</source>
         <translation>信息平均值</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5044"/>
+        <location filename="../mainwindow.ui" line="5050"/>
         <source>Include averaging</source>
         <translation>包括平均值</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5058"/>
+        <location filename="../mainwindow.ui" line="5064"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 提升解码</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5069"/>
+        <location filename="../mainwindow.ui" line="5075"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5074"/>
+        <location filename="../mainwindow.ui" line="5080"/>
         <source>Save reference spectrum</source>
         <translation>保存参考频谱</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5079"/>
+        <location filename="../mainwindow.ui" line="5085"/>
         <source>&amp;Download Samples ...</source>
         <translation>下载样本&amp;D ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5082"/>
+        <location filename="../mainwindow.ui" line="5088"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;下载演示各种模式的示例音频文件.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5090"/>
+        <location filename="../mainwindow.ui" line="5096"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5101"/>
+        <location filename="../mainwindow.ui" line="5107"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>接收信息窗口不使用信息过滤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5112"/>
+        <location filename="../mainwindow.ui" line="5118"/>
         <source>Bypass all text filters</source>
         <translation>不使用所有信息过滤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5115"/>
+        <location filename="../mainwindow.ui" line="5121"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5123"/>
+        <location filename="../mainwindow.ui" line="5129"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>显示JT65从谐波中解码的信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5134"/>
+        <location filename="../mainwindow.ui" line="5140"/>
         <source>Enable main window popup</source>
         <translation>主窗口每次解码后都跳到桌面前</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5145"/>
+        <location filename="../mainwindow.ui" line="5151"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>接收信息窗口显示有我呼号信息 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5150"/>
+        <location filename="../mainwindow.ui" line="5156"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>WSJT 研发组的版权声明</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5164"/>
+        <location filename="../mainwindow.ui" line="5170"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5172"/>
+        <location filename="../mainwindow.ui" line="5178"/>
         <source>FT8 call first</source>
         <translation>FT8 优先呼叫</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5183"/>
+        <location filename="../mainwindow.ui" line="5189"/>
         <source>Call priority and search CQ</source>
         <translation>呼叫优先和搜索 CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5186"/>
+        <location filename="../mainwindow.ui" line="5192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动选择搜索具有优先的 CQ 响应, 如果失败, 则搜索优先级较高的 CQ 信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5194"/>
+        <location filename="../mainwindow.ui" line="5200"/>
         <source>FT8 call last</source>
         <translation>FT8 呼叫最后</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5202"/>
+        <location filename="../mainwindow.ui" line="5208"/>
         <source>FT8 manual call</source>
         <translation>FT8 手动选择</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5210"/>
+        <location filename="../mainwindow.ui" line="5216"/>
         <source>0  Call None</source>
         <translation>0  手动选择</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5218"/>
+        <location filename="../mainwindow.ui" line="5224"/>
         <source>1  Call first</source>
         <translation>1  呼叫首先解码</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5226"/>
+        <location filename="../mainwindow.ui" line="5232"/>
         <source>4+ Call and search through CQ messages</source>
         <translation>4+ 自动搜索及自动回应别人的CQ信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5234"/>
+        <location filename="../mainwindow.ui" line="5240"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2  解码至发射间隔期间</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5242"/>
+        <location filename="../mainwindow.ui" line="5248"/>
         <source>3  Call based on end of decoding</source>
         <translation>3  直到解码结束</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5250"/>
+        <location filename="../mainwindow.ui" line="5256"/>
         <source>Single shot QSO</source>
         <translation>一次通联</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5258"/>
+        <location filename="../mainwindow.ui" line="5264"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>开始解码时把旧信息清除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5266"/>
+        <location filename="../mainwindow.ui" line="5272"/>
         <source>Answer worked B4 calls</source>
         <translation>回答曾经通联的电台</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5277"/>
+        <location filename="../mainwindow.ui" line="5283"/>
         <source>Auto</source>
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5304"/>
+        <location filename="../mainwindow.ui" line="5310"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5312"/>
+        <location filename="../mainwindow.ui" line="5318"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5320"/>
+        <location filename="../mainwindow.ui" line="5326"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5328"/>
+        <location filename="../mainwindow.ui" line="5334"/>
         <source>Erase both message windows at band change</source>
         <translation>当转换波段时清除所有窗口信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5366"/>
+        <location filename="../mainwindow.ui" line="5372"/>
         <source>deep with 4 passes</source>
         <translation>通过4重深度解码</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5374"/>
+        <location filename="../mainwindow.ui" line="5380"/>
         <source>Max distance instead of best SNR</source>
         <translation>最远距离取代最佳信噪比</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5382"/>
+        <location filename="../mainwindow.ui" line="5388"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>接收信息窗口显示信息内容渴望的呼号</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5390"/>
+        <location filename="../mainwindow.ui" line="5396"/>
         <source>use low thresholds</source>
         <translation>使用低阈值</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5425"/>
+        <location filename="../mainwindow.ui" line="5431"/>
         <source>use subpass</source>
         <translation>使用子通道</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5436"/>
+        <location filename="../mainwindow.ui" line="5442"/>
         <source>minimum</source>
         <translation>最少</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5444"/>
+        <location filename="../mainwindow.ui" line="5450"/>
         <source>late start of decoder</source>
         <translation>延迟启动解码</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5452"/>
+        <location filename="../mainwindow.ui" line="5458"/>
         <source>Call worked B4 callsigns</source>
         <translation>呼叫曾经通联过的电台</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5471"/>
+        <location filename="../mainwindow.ui" line="5477"/>
         <source>CQ and 73</source>
         <translation>CQ 及 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5479"/>
+        <location filename="../mainwindow.ui" line="5485"/>
         <source>any messages</source>
         <translation>任何信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5487"/>
+        <location filename="../mainwindow.ui" line="5493"/>
         <source>Enable</source>
         <translation>启用</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5495"/>
+        <location filename="../mainwindow.ui" line="5501"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>发送73后关闭窄带过滤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5503"/>
+        <location filename="../mainwindow.ui" line="5509"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>接收73后关闭窄带过滤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5511"/>
+        <location filename="../mainwindow.ui" line="5517"/>
         <source>Hide FT8 dupe messages</source>
         <translation>隐藏 FT8 重复信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5519"/>
+        <location filename="../mainwindow.ui" line="5525"/>
         <source>Display output power</source>
         <translation>显示输出功率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5527"/>
+        <location filename="../mainwindow.ui" line="5533"/>
         <source>Report message priority</source>
         <translation>报告信息优先</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5535"/>
+        <location filename="../mainwindow.ui" line="5541"/>
         <source>Enable hound mode</source>
         <translation>启用猎犬模式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5546"/>
+        <location filename="../mainwindow.ui" line="5552"/>
         <source>Use hound TX frequency control</source>
         <translation>使用猎犬发射频率控制</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5554"/>
+        <location filename="../mainwindow.ui" line="5560"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>在手动模式下发送 RRR/RR73/73 后停止发射</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5565"/>
+        <location filename="../mainwindow.ui" line="5571"/>
         <source>Show tooltips in main window</source>
         <translation>在主窗口显示提示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5573"/>
+        <location filename="../mainwindow.ui" line="5579"/>
         <source>Color Tx message buttons</source>
         <translation>信息按钮颜色提示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5581"/>
-        <location filename="../mainwindow.ui" line="5758"/>
-        <location filename="../mainwindow.ui" line="5782"/>
+        <location filename="../mainwindow.ui" line="5587"/>
+        <location filename="../mainwindow.ui" line="5764"/>
+        <location filename="../mainwindow.ui" line="5788"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5589"/>
+        <location filename="../mainwindow.ui" line="5595"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5597"/>
+        <location filename="../mainwindow.ui" line="5603"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5605"/>
+        <location filename="../mainwindow.ui" line="5611"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5613"/>
+        <location filename="../mainwindow.ui" line="5619"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5621"/>
+        <location filename="../mainwindow.ui" line="5627"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5629"/>
+        <location filename="../mainwindow.ui" line="5635"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5637"/>
+        <location filename="../mainwindow.ui" line="5643"/>
         <source>low</source>
         <translation>低</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5656"/>
+        <location filename="../mainwindow.ui" line="5662"/>
         <source>high</source>
         <translation>高</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5664"/>
+        <location filename="../mainwindow.ui" line="5670"/>
         <source>Hide FT contest messages</source>
         <translation>隐藏 FT 竞赛信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5672"/>
+        <location filename="../mainwindow.ui" line="5678"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5707"/>
+        <location filename="../mainwindow.ui" line="5713"/>
         <source>wideband DX Call search</source>
         <translation>带宽 DX 呼号搜索</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5715"/>
+        <location filename="../mainwindow.ui" line="5721"/>
         <source>6 pass SWL mode</source>
         <translation>通过6次 SWL 模式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5726"/>
+        <location filename="../mainwindow.ui" line="5732"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translation>双击|自动选择 时调用剪贴板</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5734"/>
+        <location filename="../mainwindow.ui" line="5740"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>与日本的160米跨波段通联</translation>
     </message>
@@ -4568,424 +4568,424 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>是否要重新配置无线电设备接口?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="742"/>
+        <location filename="../mainwindow.cpp" line="743"/>
         <source>Error Writing WAV File</source>
         <translation>写入 WAV 文件时出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="922"/>
+        <location filename="../mainwindow.cpp" line="923"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>结束 jtdxjt9.exe 过程出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="900"/>
         <location filename="../mainwindow.cpp" line="901"/>
-        <location filename="../mainwindow.cpp" line="3435"/>
-        <location filename="../mainwindow.cpp" line="5970"/>
-        <location filename="../mainwindow.cpp" line="5971"/>
-        <location filename="../mainwindow.cpp" line="6026"/>
-        <location filename="../mainwindow.cpp" line="6027"/>
+        <location filename="../mainwindow.cpp" line="902"/>
+        <location filename="../mainwindow.cpp" line="3438"/>
+        <location filename="../mainwindow.cpp" line="5974"/>
+        <location filename="../mainwindow.cpp" line="5975"/>
+        <location filename="../mainwindow.cpp" line="6030"/>
+        <location filename="../mainwindow.cpp" line="6031"/>
         <source>Freq   Message</source>
         <translation>频率   信息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="923"/>
+        <location filename="../mainwindow.cpp" line="924"/>
         <source>KillByName return code: %1</source>
         <translation>按结束名称返回代码: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="940"/>
+        <location filename="../mainwindow.cpp" line="941"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>删除时出错误 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="941"/>
+        <location filename="../mainwindow.cpp" line="942"/>
         <source>Click OK to retry</source>
         <translation>单击 确定 重试</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1632"/>
+        <location filename="../mainwindow.cpp" line="1634"/>
         <source>TX Even</source>
         <translation>TX 偶数</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1639"/>
+        <location filename="../mainwindow.cpp" line="1641"/>
         <source>TX Odd</source>
         <translation>TX 奇数</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1684"/>
-        <location filename="../mainwindow.cpp" line="2361"/>
-        <location filename="../mainwindow.cpp" line="3470"/>
-        <location filename="../mainwindow.cpp" line="4074"/>
-        <location filename="../mainwindow.cpp" line="4197"/>
-        <location filename="../mainwindow.cpp" line="4431"/>
-        <location filename="../mainwindow.cpp" line="6827"/>
-        <location filename="../mainwindow.cpp" line="7023"/>
+        <location filename="../mainwindow.cpp" line="1686"/>
+        <location filename="../mainwindow.cpp" line="2363"/>
+        <location filename="../mainwindow.cpp" line="3473"/>
+        <location filename="../mainwindow.cpp" line="4078"/>
+        <location filename="../mainwindow.cpp" line="4201"/>
+        <location filename="../mainwindow.cpp" line="4435"/>
+        <location filename="../mainwindow.cpp" line="6831"/>
+        <location filename="../mainwindow.cpp" line="7027"/>
         <source>File Open Error</source>
         <translation>文件打开出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1685"/>
-        <location filename="../mainwindow.cpp" line="2362"/>
-        <location filename="../mainwindow.cpp" line="3471"/>
-        <location filename="../mainwindow.cpp" line="4075"/>
-        <location filename="../mainwindow.cpp" line="4198"/>
-        <location filename="../mainwindow.cpp" line="4432"/>
-        <location filename="../mainwindow.cpp" line="6828"/>
-        <location filename="../mainwindow.cpp" line="7024"/>
-        <location filename="../mainwindow.cpp" line="7365"/>
+        <location filename="../mainwindow.cpp" line="1687"/>
+        <location filename="../mainwindow.cpp" line="2364"/>
+        <location filename="../mainwindow.cpp" line="3474"/>
+        <location filename="../mainwindow.cpp" line="4079"/>
+        <location filename="../mainwindow.cpp" line="4202"/>
+        <location filename="../mainwindow.cpp" line="4436"/>
+        <location filename="../mainwindow.cpp" line="6832"/>
+        <location filename="../mainwindow.cpp" line="7028"/>
+        <location filename="../mainwindow.cpp" line="7369"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于附加: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1788"/>
+        <location filename="../mainwindow.cpp" line="1790"/>
         <source>Error saving c2 file</source>
         <translation>保存c2文件出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1865"/>
+        <location filename="../mainwindow.cpp" line="1867"/>
         <source>Error in SoundInput</source>
         <translation>声音输入出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1869"/>
+        <location filename="../mainwindow.cpp" line="1871"/>
         <source>Error in SoundOutput</source>
         <translation>声音输出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1955"/>
+        <location filename="../mainwindow.cpp" line="1957"/>
         <source>Pwr</source>
         <translation>功率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2472"/>
+        <location filename="../mainwindow.cpp" line="2474"/>
         <source>Subprocess Error</source>
         <translation>子流程出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2473"/>
+        <location filename="../mainwindow.cpp" line="2475"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>子流程失败, 退出代码为 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2475"/>
-        <location filename="../mainwindow.cpp" line="2494"/>
+        <location filename="../mainwindow.cpp" line="2477"/>
+        <location filename="../mainwindow.cpp" line="2496"/>
         <source>Running: %1
 %2</source>
         <translation>运行: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2493"/>
+        <location filename="../mainwindow.cpp" line="2495"/>
         <source>Subprocess error</source>
         <translation>子进程出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2569"/>
+        <location filename="../mainwindow.cpp" line="2571"/>
         <source>Spotted</source>
         <translation>发布Spot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2576"/>
+        <location filename="../mainwindow.cpp" line="2578"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>无法 创建/完全 连接到 Dxsummit 服务器</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2599"/>
+        <location filename="../mainwindow.cpp" line="2601"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>WSJT-X 和相关程序的算法、源代码、外观和感觉, 以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的协议规范是由以下一个或多个作者版权所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和 WSJT 发展小组的其他成员.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2719"/>
+        <location filename="../mainwindow.cpp" line="2721"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>没有从磁盘读取数据. 文件格式出错误?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2726"/>
+        <location filename="../mainwindow.cpp" line="2728"/>
         <source>Confirm Delete</source>
         <translation>确认删除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2727"/>
+        <location filename="../mainwindow.cpp" line="2729"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>是否确实要删除所有 *.wav 和 *.c2 文件在
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2769"/>
         <source>AutoSeq0</source>
         <translation>自动程序0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2779"/>
+        <location filename="../mainwindow.cpp" line="2782"/>
         <source>AutoSeq1</source>
         <translation>自动程序1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2788"/>
-        <location filename="../mainwindow.cpp" line="2814"/>
+        <location filename="../mainwindow.cpp" line="2791"/>
+        <location filename="../mainwindow.cpp" line="2817"/>
         <source>AutoSeq2</source>
         <translation>自动程序2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2789"/>
-        <location filename="../mainwindow.cpp" line="2810"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2813"/>
         <source>AutoSeq6</source>
         <translation>自动程序6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2798"/>
-        <location filename="../mainwindow.cpp" line="2815"/>
+        <location filename="../mainwindow.cpp" line="2801"/>
+        <location filename="../mainwindow.cpp" line="2818"/>
         <source>AutoSeq3</source>
         <translation>自动程序3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2799"/>
-        <location filename="../mainwindow.cpp" line="2811"/>
+        <location filename="../mainwindow.cpp" line="2802"/>
+        <location filename="../mainwindow.cpp" line="2814"/>
         <source>AutoSeq7</source>
         <translation>自动程序7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2893"/>
+        <location filename="../mainwindow.cpp" line="2896"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>猎犬 发射频率控制不能在正常FT8通讯子波段频率使用.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2901"/>
+        <location filename="../mainwindow.cpp" line="2904"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>猎犬模式 发射频率控制要求 *设置 | 电台页* 把机器控制在 *异频* (要么选择 *电台* 或 *虚假*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2904"/>
+        <location filename="../mainwindow.cpp" line="2907"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>标准FT8子波段不允许 猎犬 发送频率控制要求 *设置 | 电台页* 把机器控制在 *异频* (要么选择 *电台* 或 *虚假*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2912"/>
+        <location filename="../mainwindow.cpp" line="2915"/>
         <source>Hound TX frequency control warning</source>
         <translation>猎犬 发射频率控制警告</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2917"/>
+        <location filename="../mainwindow.cpp" line="2920"/>
         <source>HoundFC</source>
         <translation>猎犬频控</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2978"/>
+        <location filename="../mainwindow.cpp" line="2981"/>
         <source>Keyboard Shortcuts</source>
         <translation>键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2989"/>
+        <location filename="../mainwindow.cpp" line="2992"/>
         <source>Special Mouse Commands</source>
         <translation>滑鼠特殊组合</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3435"/>
+        <location filename="../mainwindow.cpp" line="3438"/>
         <source>Avg=</source>
         <translation>平均时差=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3440"/>
-        <location filename="../mainwindow.cpp" line="3447"/>
+        <location filename="../mainwindow.cpp" line="3443"/>
+        <location filename="../mainwindow.cpp" line="3450"/>
         <source>check time</source>
         <translation>检查时间</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3747"/>
-        <location filename="../mainwindow.cpp" line="3753"/>
+        <location filename="../mainwindow.cpp" line="3750"/>
+        <location filename="../mainwindow.cpp" line="3756"/>
         <source>Confirm change Language</source>
         <translation>确认更改语言</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3749"/>
-        <location filename="../mainwindow.cpp" line="3756"/>
+        <location filename="../mainwindow.cpp" line="3752"/>
+        <location filename="../mainwindow.cpp" line="3759"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>是否一定要将用戶语言介面更改为简体中文, JTDX 将重新启动?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3924"/>
+        <location filename="../mainwindow.cpp" line="3928"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>请选择另一个发射频率. JTDX不会故意在 WSPR 子波段中发射另一种模式.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3929"/>
-        <location filename="../mainwindow.cpp" line="3932"/>
+        <location filename="../mainwindow.cpp" line="3933"/>
+        <location filename="../mainwindow.cpp" line="3936"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR保护波段</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4050"/>
+        <location filename="../mainwindow.cpp" line="4054"/>
         <source>TUNE</source>
         <translation>调谐</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4051"/>
+        <location filename="../mainwindow.cpp" line="4055"/>
         <source>LastTx: </source>
         <translation>最后发射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4265"/>
+        <location filename="../mainwindow.cpp" line="4269"/>
         <source>Tx: TUNE</source>
         <translation>发射: 调谐</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4266"/>
+        <location filename="../mainwindow.cpp" line="4270"/>
         <source>Tx: </source>
         <translation>发射: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4271"/>
+        <location filename="../mainwindow.cpp" line="4275"/>
         <source>Receiving </source>
         <translation>接收 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4324"/>
+        <location filename="../mainwindow.cpp" line="4328"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>功率&lt;br&gt;%1 瓦</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4482"/>
+        <location filename="../mainwindow.cpp" line="4486"/>
         <source>Last Tx: </source>
         <translation>最后发射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5363"/>
-        <location filename="../mainwindow.cpp" line="5375"/>
-        <location filename="../mainwindow.cpp" line="5388"/>
-        <location filename="../mainwindow.cpp" line="5414"/>
+        <location filename="../mainwindow.cpp" line="5367"/>
+        <location filename="../mainwindow.cpp" line="5379"/>
+        <location filename="../mainwindow.cpp" line="5392"/>
+        <location filename="../mainwindow.cpp" line="5418"/>
         <source>Add to CALL3.TXT</source>
         <translation>添加到 CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5364"/>
+        <location filename="../mainwindow.cpp" line="5368"/>
         <source>Please enter a valid grid locator</source>
         <translation>请输入有效的网格定位</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5376"/>
+        <location filename="../mainwindow.cpp" line="5380"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于读/写: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5389"/>
+        <location filename="../mainwindow.cpp" line="5393"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于写入: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5412"/>
+        <location filename="../mainwindow.cpp" line="5416"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1 已经在 CALL3.TXT, 你想替换它吗?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5775"/>
+        <location filename="../mainwindow.cpp" line="5779"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>将通联 ADIF 数据发送到辅助 UDP 服务器时出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5775"/>
+        <location filename="../mainwindow.cpp" line="5779"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>写入返回 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5921"/>
+        <location filename="../mainwindow.cpp" line="5925"/>
         <source>Tx WSPR</source>
         <translation>发射 WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6017"/>
+        <location filename="../mainwindow.cpp" line="6021"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6116"/>
-        <location filename="../mainwindow.cpp" line="6128"/>
+        <location filename="../mainwindow.cpp" line="6120"/>
+        <location filename="../mainwindow.cpp" line="6132"/>
         <source>Confirm Erase</source>
         <translation>确认擦除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6117"/>
+        <location filename="../mainwindow.cpp" line="6121"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>是否确实要擦除 ALL.TXT ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6129"/>
+        <location filename="../mainwindow.cpp" line="6133"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>是否确实要擦除通联日志?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6734"/>
+        <location filename="../mainwindow.cpp" line="6738"/>
         <source>Lockd Tx=Rx</source>
         <translation>锁定Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6735"/>
+        <location filename="../mainwindow.cpp" line="6739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>允许 发射/接收 音频频率异频操作的按钮</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6738"/>
+        <location filename="../mainwindow.cpp" line="6742"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx异频</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6739"/>
+        <location filename="../mainwindow.cpp" line="6743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>按下按钮将发射频率锁定到接收频率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6862"/>
+        <location filename="../mainwindow.cpp" line="6866"/>
         <source>Rig Control Error</source>
         <translation>无线电设备控制出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6936"/>
+        <location filename="../mainwindow.cpp" line="6940"/>
         <source>Tune digital gain</source>
         <translation>调谐数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6937"/>
+        <location filename="../mainwindow.cpp" line="6941"/>
         <source>Transmit digital gain</source>
         <translation>发射数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6956"/>
+        <location filename="../mainwindow.cpp" line="6960"/>
         <source>Prefixes</source>
         <translation>前缀</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7005"/>
-        <location filename="../mainwindow.cpp" line="7006"/>
+        <location filename="../mainwindow.cpp" line="7009"/>
+        <location filename="../mainwindow.cpp" line="7010"/>
         <source>Logd </source>
         <translation>记录 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7229"/>
+        <location filename="../mainwindow.cpp" line="7233"/>
         <source>Network Error</source>
         <translation>网络出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7230"/>
+        <location filename="../mainwindow.cpp" line="7234"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>出错误: %1
 UDP 服务器 %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7364"/>
+        <location filename="../mainwindow.cpp" line="7368"/>
         <source>File Error</source>
         <translation>文件出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7576"/>
+        <location filename="../mainwindow.cpp" line="7580"/>
         <source>Tx watchdog expired</source>
         <translation>发射监管计时器已过期</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7590"/>
+        <location filename="../mainwindow.cpp" line="7594"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>

@@ -733,7 +733,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             }
         }
         for (int i=0; i<wantedCountryList.size(); i++) {
-            if (wantedCountryList.at(i).size() > 0 && wantedCountryList.at(i) == mpx) {
+            if (wantedCountryList.at(i).size() > 0 && wantedCountryList.at(i) == mpx.replace("*","")) {
                 bwantedCountry = true;
                 break;
             }
