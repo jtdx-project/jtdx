@@ -3081,12 +3081,12 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5266"/>
         <location filename="../mainwindow.cpp" line="5681"/>
         <source>DX Call</source>
-        <translation></translation>
+        <translation>Dx Call</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1329"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1363"/>
@@ -3230,7 +3230,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1754"/>
         <source>Wanted</source>
-        <translation>Ønskede</translation>
+        <translation>Valgt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1795"/>
@@ -3396,7 +3396,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2540"/>
         <source>Dec&amp;ode</source>
-        <translation>Dek&amp;ode</translation>
+        <translation>Dek&amp;od</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2568"/>
@@ -3706,7 +3706,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="3803"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>Generer meddelse for svar på et CQ</translation>
+        <translation>Generer meddelse som svar på et CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3806"/>
@@ -3841,7 +3841,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4342"/>
         <source>Decode</source>
-        <translation>Dekode</translation>
+        <translation>Dekod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4346"/>
