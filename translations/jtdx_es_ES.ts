@@ -3260,7 +3260,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1906"/>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lista separada por comas de los prefijos deseados. La selección automática en AutoSeq 1..7 procesará el prefijo deseado de acuerdo con las notificaciones / prioridades elegidas, esta funcionalidad no es compatible con AutoSeq0. Para el prefijo indicativo compuesto se reconoce al comienzo del indicativo. La selección automática procesará el indicativo deseado de acuerdo con las notificaciones / prioridades elegidas. Solo modos que no son FT8: a veces, el indicativo base se copiará del mensaje decodificado: al iniciar sesión, dicho usuario de QSO tendrá que cambiar el indicativo correspondiente al compuesto uno si es necesario. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lista separada por comas de los prefijos deseados. La selección automática en AutoSeq 1..7 procesará el prefijo deseado de acuerdo con las notificaciones / prioridades elegidas, esta funcionalidad no es compatible con AutoSeq0. Para el prefijo indicativo compuesto se reconoce al comienzo del indicativo. La selección automática procesará el indicativo deseado de acuerdo con las notificaciones / prioridades elegidas. Solo modos que no son FT8: a veces, el indicativo base se copiará del mensaje decodificado: al guardar, dicho usuario de QSO tendrá que cambiar el indicativo correspondiente a uno compuesto si es necesario. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1909"/>
@@ -3297,7 +3297,7 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lista separada por comas de los países buscados: el prefijo principal del país se utilizará en esta lista. Para el prefijo indicativo compuesto se reconoce al comienzo del indicativo. La selección automática en AutoSeq 1..7 procesará el país deseado de acuerdo con las notificaciones / prioridades elegidas, esta funcionalidad no es compatible con AutoSeq0. Solo modos que no son FT8: a veces, el indicativo base se copiará del mensaje decodificado: al iniciar sesión, dicho usuario de QSO tendrá que cambiar el indicativo correspondiente al compuesto uno si es necesario. Lista de los principales prefijos de país:1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lista separada por comas de los países buscados: el prefijo principal del país se utilizará en esta lista. Para el prefijo indicativo compuesto se reconoce al comienzo del indicativo. La selección automática en AutoSeq 1..7 procesará el país deseado de acuerdo con las notificaciones / prioridades elegidas, esta funcionalidad no es compatible con AutoSeq0. Solo modos que no son FT8: a veces, el indicativo base se copiará del mensaje decodificado: al guardar, dicho usuario de QSO tendrá que cambiar el indicativo correspondiente a uno compuesto si es necesario. Lista de los principales prefijos de país:1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -4110,7 +4110,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4860"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>Convierta el modo a RTTY para iniciar sesión</translation>
+        <translation>Conviertir el modo a RTTY para guardar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4868"/>
@@ -4130,7 +4130,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4892"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Borrar Llamada DX y Locator DX después de iniciar sesión</translation>
+        <translation>Borrar Llamada DX y Locator después de guardar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4900"/>
@@ -6774,7 +6774,7 @@ Ambos aquí.</translation>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation>Algunos programas de registro no aceptarán el tipo de informes.
+        <translation>Algunos programas de registro no aceptarán el tipo de informes
 guardado por este programa.
 Marque esta opción para guardar los informes enviados y recibidos en
 campo de comentarios.</translation>
@@ -6782,7 +6782,7 @@ campo de comentarios.</translation>
     <message>
         <location filename="../Configuration.ui" line="2328"/>
         <source>d&amp;B reports to comments</source>
-        <translation>Informa d&amp;B a los comentarios</translation>
+        <translation>Informes en d&amp;B a comentarios</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2335"/>
@@ -6794,7 +6794,7 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Limpia &amp;DX y locator al iniciar sesión</translation>
+        <translation>Limpiar &amp;DX y locator al guardar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6804,12 +6804,12 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="2349"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>Limpiar Llamada DX y Locator DX al salir</translation>
+        <translation>Limpiar DX y locator al salir</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2356"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation>Algunos programas de registro no aceptarán JT-65 o JT9 como modo reconocido.</translation>
+        <translation>Algunos programas de registro no aceptarán JT65 o JT9 como modo reconocido.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
@@ -6824,7 +6824,7 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>Avisa&amp;r que registre QSO</translation>
+        <translation>Avisa&amp;r que registre el QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2376"/>

@@ -11,12 +11,12 @@
     <message>
         <location filename="../Bands.cpp" line="136"/>
         <source>Lower frequency limit</source>
-        <translation>Zemākā frekvences diapazona robeža</translation>
+        <translation>Zemākās frekvences robeža</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Upper frequency limit</source>
-        <translation>Augšējā diapazona frekvences robeža</translation>
+        <translation>Augšējās frekvences robeža</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="199"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation>apakšējā robeža</translation>
+        <translation>Apakšējā robeža</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation>augšējā robeža</translation>
+        <translation>Augšējā robeža</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>Labi</translation>
     </message>
 </context>
 <context>
@@ -70,28 +70,28 @@
     <message>
         <location filename="../Configuration.cpp" line="1217"/>
         <source>Create temporary directory error: </source>
-        <translation>Kļūda, izveidojot pagaidu mapi: </translation>
+        <translation>Kļūda izveidojot pagaidu direktoriju: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1223"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation>Kļūda, izveidojot pagaidu mapi:
+        <translation> Kļūda izveidojot pagaidu direktoriju:
 % 1
-Cita programma var bloķēt mapi</translation>
+ Cita programma var bloķēt direktoriju</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1240"/>
         <source>Create data directory error: </source>
-        <translation>Kļūda, izveidojot datu mapi: </translation>
+        <translation>Kļūda, izveidojot datu katalogu:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1249"/>
         <location filename="../Configuration.cpp" line="1260"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Izveidot mapi</translation>
+        <translation>Izveidot direktoriju</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1426"/>
@@ -175,7 +175,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="2753"/>
         <source>Invalid audio input device</source>
-        <translation>Nepareiza skaņas kartes izvēle ievadei</translation>
+        <translation>Nepareiza audio ievades ierīce</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2760"/>
@@ -233,19 +233,19 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="5108"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation>Vai tiešām vēlaties atiestatīt pašreizējās darba frekvences un aizstāt tās ar ielādētajām?</translation>
+        <translation>Vai tiešām vēlaties atmest pašreizējās darba frekvences un aizstāt tās ar ielādētajām?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5120"/>
         <source>Merge Working Frequencies</source>
-        <translation>Apvienojiet darba frekvences</translation>
+        <translation>Apvienot darba frekvences</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5147"/>
         <location filename="../Configuration.cpp" line="5156"/>
         <location filename="../Configuration.cpp" line="5166"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nav derīgs frekvenču fails</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5147"/>
@@ -363,7 +363,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation type="unfinished">Rotuma </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
@@ -1653,7 +1653,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>EU Russia</source>
-        <translation type="unfinished"></translation>
+        <translation>EU Krievija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="303"/>
@@ -1663,7 +1663,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="304"/>
         <source>AS Russia</source>
-        <translation type="unfinished"></translation>
+        <translation>AZ Krievija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="305"/>
@@ -1673,12 +1673,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="306"/>
         <source>Kazakhstan</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazahstāna </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="307"/>
         <source>Ukraine</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukraina</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
@@ -4982,7 +4982,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Labi</translation>
     </message>
 </context>
 <context>
