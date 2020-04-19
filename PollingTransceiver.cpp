@@ -128,8 +128,8 @@ void PollingTransceiver::do_post_fast_mode (bool p)
 //  printf("PollingTransceiver do_post_fast_mode = %d\n",p);
       // update polling style
       next_state_.fast_mode (p);
-      fast_mode_ = p;
-      do_post_start ();
+      fast_mode_ = p && interval_ == 1000;
+      if (interval_ == 1000) do_post_start ();
 }
 
 void PollingTransceiver::do_post_ptt (bool p)
