@@ -7389,7 +7389,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>プログラムは、ステーションの詳細とすべてを送信できますhttp://pskreporter.info Webサイトへのスポットとしてデコードされた信号。これは非常に便利な逆ビーコン分析に使用されます伝播とシステムパフォーマンスの評価用。</translation>
+        <translation>ぜひ有効にしてください。プログラムは、自局の詳細と全てのデコード情報をPSKR Mapサイトに送信します。http://pskreporter.info これは非常に便利な逆ビーコンで、伝播とシステムパフォーマンスの評価に使用されます。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2757"/>
