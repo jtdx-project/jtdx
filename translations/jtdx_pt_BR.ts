@@ -3002,7 +3002,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="787"/>
         <location filename="../mainwindow.ui" line="797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit modo de edição da linha do spot: modo no campo de informação a ser anunciado automaticamente, o utilizador pode juntar o seu texto no campo informação. Macros disponíveis: #D para distância, #G para &quot;Grid1&lt;&gt;Grid2&quot;, #R é para valor de reporte. Informação de previsualização disponivel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit modo de edição da linha do spot: modo no campo de informação a ser anunciado automaticamente, o utilizador pode juntar o seu texto no campo informação. Macros disponíveis: #D para distância, #G para &quot;Grid1&lt;&gt;Grid2&quot;, #R é para valor de reportagem. Informação de previsualização disponível.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -3058,7 +3058,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar ativa na aba Reportes das configurações).Clique com botão direito do mouse para adicionar indicativos á função de filtros &apos;Ocultar mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar ativa na aba Reportagem das Configurações).Clique com botão direito do mouse para adicionar indicativos á função de filtros &apos;Ocultar mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -3124,7 +3124,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1505"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reporte  sinal (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reportagem  sinal (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1508"/>
@@ -3699,7 +3699,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3831"/>
         <source>Generate message with report</source>
-        <translation>Gerar mensagem com reporte</translation>
+        <translation>Gerar mensagem com reportagem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3834"/>
@@ -3709,7 +3709,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3859"/>
         <source>Generate message with R+report</source>
-        <translation>Gerar mensagem com R +report</translation>
+        <translation>Gerar mensagem com R +reportagem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3862"/>

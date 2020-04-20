@@ -91,7 +91,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
         <location filename="../Configuration.cpp" line="1260"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Crea Cartella &quot;</translation>
+        <translation>Crea la cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1426"/>
@@ -149,7 +149,7 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation>Nome host e porta per la rete.
+        <translation>Nome host e porta opzionale per la rete.
 Lasciare in bianco per valori di default.
 Formati:
 	hostname:porta
@@ -205,7 +205,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="4467"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>Selezione del font della finestra di decodifica</translation>
+        <translation>Carattere finestre di decodifica...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5093"/>
@@ -295,7 +295,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="5293"/>
         <source>Failed to open connection to rig</source>
-        <translation>Impossibile aprire la connessione con il RTX</translation>
+        <translation>Impossibile effettuare la connessione con l&apos;RTX</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5533"/>
@@ -308,7 +308,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>Bohhhhhhhhh???</translation>
+        <translation>Boohhh?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -738,7 +738,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
         <source>Rep. of Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Corea del Sud</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
@@ -753,7 +753,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rep.del Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
@@ -768,12 +768,12 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Rep. of Kosovo</source>
-        <translation type="unfinished"></translation>
+        <translation>Cossovo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation>Rep. del Sudan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
@@ -788,7 +788,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rep.Dem. del Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -2274,7 +2274,7 @@ Formato:
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
         <translation>Impossibile aprire &quot;%1&quot;
-Errore:%2 -%3</translation>
+Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
@@ -2414,7 +2414,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="475"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
-        <translation>Ham Radio Deluxe: elemento non trovato nell&apos;elenco a discesa%1</translation>
+        <translation>Ham Radio Deluxe: elemento non trovato nell&apos;elenco a discesa %1</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="519"/>
@@ -2453,7 +2453,7 @@ Errore:%2 -%3</translation>
         <location filename="../HRDTransceiver.cpp" line="1146"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe non ha risposto al comando &quot;%1&quot;%2
+        <translation>Ham Radio Deluxe non ha risposto al comando &quot;%1&quot; %2
 </translation>
     </message>
     <message>
@@ -2760,7 +2760,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Save All</source>
-        <translation>Salva tutto</translation>
+        <translation>Tutto (Rx e Tx)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
@@ -2958,7 +2958,7 @@ Errore:%2 -%3</translation>
         <location filename="../mainwindow.cpp" line="6023"/>
         <location filename="../mainwindow.cpp" line="6034"/>
         <source>Band Activity</source>
-        <translation>Attività in Banda</translation>
+        <translation>Attività di Banda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
@@ -3070,7 +3070,7 @@ Errore:%2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fare clic con il pulsante sinistro del mouse per individuare la chiamata DX su DXsummit.fi (lo spotting deve essere abilitato nella scheda Rapporti delle impostazioni). Fare clic con il tasto destro del mouse per aggiungere il nominativo al filtro &quot;Nascondi messaggi dai nominativi&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fare clic con il pulsante sinistro del mouse per individuare la chiamata DX su DXsummit.fi (lo spotting deve essere abilitato nella scheda Rapporti di Iimpostazioni). Fare clic con il tasto destro del mouse per aggiungere il nominativo al filtro &quot;Nascondi messaggi dai nominativi&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -3325,12 +3325,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="2192"/>
         <location filename="../mainwindow.cpp" line="5984"/>
         <source>Rx Frequency</source>
-        <translation>Frequenza RX</translation>
+        <translation>Frequenza Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trasmette un tono puro. Il tempo dell&apos;accordo può essere impostato nella scheda Generale delle impostazioni.(nel caso che non esca potenza dal TRX portare a 0 e poi ancora alla potenza desiderata il cursore PWR sopra a questo tasto)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trasmette un tono puro. Il tempo dell&apos;accordo può essere impostato nella scheda Generale di Impostazioni. (Nel caso che non esca potenza dal TRX portare a 0 e poi ancora alla potenza desiderata il cursore PWR sopra a questo tasto)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2279"/>
@@ -3499,7 +3499,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3021"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>Genera messaggi predefiniti per un minimo QSO</translation>
+        <translation>Genera messaggi predefiniti per un QSO minimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
@@ -3972,7 +3972,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4624"/>
         <source>Open</source>
-        <translation>Apri</translation>
+        <translation>Apri file wav</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4627"/>
@@ -3982,7 +3982,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4632"/>
         <source>Open next in directory</source>
-        <translation>Apri il successivo nella cartella</translation>
+        <translation>Apri il file wav successivo nella cartella</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4635"/>
@@ -4015,12 +4015,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4670"/>
         <source>None</source>
-        <translation>Nessuna</translation>
+        <translation>Niente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4678"/>
         <source>Save all</source>
-        <translation>Salva tutto</translation>
+        <translation>Tutto (Rx e Tx)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4763"/>
@@ -4060,7 +4060,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4804"/>
         <source>Save decoded</source>
-        <translation>Salva il decodificato</translation>
+        <translation>Testo decodificato (Rx)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4815"/>
@@ -4358,7 +4358,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5272"/>
         <source>Answer worked B4 calls</source>
-        <translation>Rispondi a Nominativi già LAVORATI</translation>
+        <translation>Rispondi a Nominativi già LAVORATI (B4)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5283"/>
@@ -5906,7 +5906,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Decoded Text Font...</source>
-        <translation>Carattere testo decodificato ...</translation>
+        <translation>Carattere testo ricevuto ...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="343"/>
@@ -5916,7 +5916,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Application Font...</source>
-        <translation>Carattere dell&apos;applicazione ...</translation>
+        <translation>Carattere dell&apos;applicazione...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
@@ -5936,7 +5936,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>&amp;Riga vuota tra i  periodi di decodifica</translation>
+        <translation>&amp;Riga vuota tra i periodi di decodifica</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
@@ -5946,7 +5946,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>Show &amp;DXCC names</source>
-        <translation>Mostra e nomi dei &amp;DXCC</translation>
+        <translation>Mostra il nome &amp;dei Paesi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="396"/>
@@ -6257,7 +6257,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="1052"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Protocollo di controllo del flusso utilizzato tra questo computer e l&apos;interfaccia CAT della radio (generalmente &amp;quot;Nessuna&amp;quot; ma qualche volta è richiesto &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Protocollo di controllo del flusso utilizzato tra questo computer e l&apos;interfaccia CAT della radio (generalmente &amp;quot;Nessuno&amp;quot; ma qualche volta è richiesto &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1055"/>
@@ -6267,7 +6267,7 @@ periodo di quiete al termine della decodifica.</translation>
     <message>
         <location filename="../Configuration.ui" line="1067"/>
         <source>&amp;None</source>
-        <translation>&amp;Niente</translation>
+        <translation>&amp;Nessuno</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1093"/>
@@ -6284,9 +6284,10 @@ periodo di quiete al termine della decodifica.</translation>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation>Controllo del flusso mediante le linee di controllo RTS e CTS RS-232
-non usato spesso ma alcune radio lo hanno come opzione e
-alcuni, in particolare alcuni rig Kenwood, lo richiedono).</translation>
+        <translation>Controllo del flusso mediante le linee di controllo
+RTS e CTS della RS-232, non usato spesso, ma
+alcune radio lo hanno come opzione e, in particolare
+alcuni Yaesu o Kenwood, lorichiedono.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1111"/>
@@ -6597,7 +6598,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1784"/>
         <source>Enable power memory during transmit</source>
-        <translation>Abilita la memoria per la potenza in trasmissione</translation>
+        <translation>Abilita la memoria della potenza di trasmissione</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1787"/>
@@ -6607,7 +6608,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1794"/>
         <source>Enable power memory during tuning</source>
-        <translation>Abilita la memoria della potenza per l&apos;accordo</translation>
+        <translation>Abilita la memoria della potenza di accordo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1797"/>
@@ -6617,7 +6618,7 @@ differenti; di solito si seleziona mono o entrambi.</translation>
     <message>
         <location filename="../Configuration.ui" line="1822"/>
         <source>Audio files save directory</source>
-        <translation>Cartella per salvare i file audio</translation>
+        <translation>Cartella dove salvare i file audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1828"/>
@@ -6783,7 +6784,7 @@ e Griglia DX quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Cancella &amp;dati dopo aver loggato il QSO</translation>
+        <translation>Cancella i &amp;dati dopo aver loggato il QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -7618,7 +7619,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="4889"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Mostra nome/prefisso DXCC&apos; deve essere attivato nella scheda Generale delle impostazioni o in qualsiasi notifica &apos;Nuovo&apos; per far funzionare questa funzionalità. &lt;/p&gt;&lt;/body&gt;&lt;/ html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Mostra nome/prefisso DXCC&apos; deve essere attivato nella scheda Generale di Impostazioni o in qualsiasi notifica &apos;Nuovo&apos; per far funzionare questa funzionalità. &lt;/p&gt;&lt;/body&gt;&lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4892"/>
