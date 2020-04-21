@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200209
-
 subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread)
 
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
@@ -80,21 +78,28 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     nfos6=12 ! nfos*6
     do j=jzb,jzt
       do i=iaw,ibw
-        ta=0.; tb=0.; tc=0.; t0a=0.; t0b=0.; t0c=0.
+        ta=0.; tb=0.; tc=0.; tcq=0.; t0a=0.; t0b=0.; t0c=0.; t0cq=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1.and.k.le.NHSYM) then
-            ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6:nfos,k))
-          endif
+          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6:nfos,k)); endif
           tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6:nfos,k+nssy36))
-          if(k+nssy72.le.NHSYM) then
-            tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6:nfos,k+nssy72))
-          endif
+          if(k+nssy72.le.NHSYM) then; tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6:nfos,k+nssy72)); endif
         enddo
-        t=ta+tb+tc; t0=t0a+t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
-        sync_abc=t/t0
-        t=tb+tc; t0=t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
-        sync_bc=t/t0
+        if(ipass.gt.1) then
+          do n=7,14
+            k=j+jstrt+nssy*n
+            if(k.ge.1) then; tcq=tcq + s(i,k); t0cq=t0cq + sum(s(i:i+nfos6:nfos,k)); endif
+          enddo
+          t1=ta+tb+tc; t2=t1+tcq; t01=t0a+t0b+t0c; t02=t01+t0cq; t01=(t01-t1)/6.0; t02=(t02-t2)/6.0
+          if(t01.lt.1e-8) t01=1.0; if(t02.lt.1e-8) t02=1.0; sync_abc=max(t1/t01,t2/t02)
+          t1=tb+tc; t2=t1+tcq; t01=t0b+t0c; t02=t01+t0cq; t01=(t01-t1)/6.0; t02=(t02-t2)/6.0
+          if(t01.lt.1e-8) t01=1.0; if(t02.lt.1e-8) t02=1.0; sync_bc=max(t1/t01,t2/t02)
+        else
+          t=ta+tb+tc; t0=t0a+t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
+          sync_abc=t/t0
+          t=tb+tc; t0=t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
+          sync_bc=t/t0
+        endif
         sync2d(i,j)=max(sync_abc,sync_bc)
       enddo
     enddo
@@ -102,20 +107,21 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     nfos6=15 ! 16i spec bw -1 
     do j=jzb,jzt
       do i=iaw,ibw
-        ta=0.; tb=0.; tc=0.; t0a=0.; t0b=0.; t0c=0.
+        ta=0.; tb=0.; tc=0.; tcq=0.; t0a=0.; t0b=0.; t0c=0.; t0cq=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1.and.k.le.NHSYM) then
-            ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k))
-          endif
+          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k)); endif
           tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6,k+nssy36))
-          if(k+nssy72.le.NHSYM) then
-            tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6,k+nssy72))
-          endif
+          if(k+nssy72.le.NHSYM) then; tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6,k+nssy72)); endif
         enddo
-        t=ta+tb+tc; t0=t0a+t0b+t0c; t0=(t0-t*2)/42.0; if(t0.lt.1e-8) t0=1.0 ! safe division
-        sync_abc=t/(7.0*t0)
-        sync2d(i,j)=sync_abc
+        do n=7,14
+          k=j+jstrt+nssy*n
+          if(k.ge.1) then; tcq=tcq + s(i,k); t0cq=t0cq + sum(s(i:i+nfos6,k)); endif
+        enddo
+        t1=ta+tb+tc; t01=t0a+t0b+t0c; t2=t1+tcq; t02=t01+t0cq
+        t01=(t01-t1*2)/42.0; if(t01.lt.1e-8) t01=1.0; t02=(t02-t2*2)/56.0; if(t02.lt.1e-8) t02=1.0 ! safe division
+        sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/8.0)/t02
+        sync2d(i,j)=max(sync01,sync02)
       enddo
     enddo
   endif
