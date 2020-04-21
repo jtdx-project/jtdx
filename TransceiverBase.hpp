@@ -4,7 +4,8 @@
 #include <stdexcept>
 
 #include <QString>
-
+#include <QDir>
+#include <QStandardPaths>
 #include "Transceiver.hpp"
 
 //
@@ -64,6 +65,7 @@ protected:
   TransceiverBase (QObject * parent)
     : Transceiver {parent}
     , last_sequence_number_ {0}
+    , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
   {}
 
 public:
@@ -154,6 +156,7 @@ private:
   TransceiverState actual_;
   TransceiverState last_;
   unsigned last_sequence_number_;    // from set state operation
+  std::string debug_file_;
 };
 
 // some trace macros

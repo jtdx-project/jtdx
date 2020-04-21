@@ -43,25 +43,40 @@ void TransceiverBase::set (TransceiverState const& s,
                            unsigned sequence_number) noexcept
 {
   TRACE_CAT ("TransceiverBase", "#:" << sequence_number << s);
-
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Transiever set\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   QString message;
   try
     {
       last_sequence_number_ = sequence_number;
       may_update u {this, true};
-//      printf("%s Transiever set\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
       bool was_online {requested_.online ()};
       auto ms = set_freq_time;
       if (!s.online () && was_online)
         {
-//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file_.c_str(),"a");
+          fprintf(pFile,"%s Transceiver shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           shutdown ();
         }
       else if (s.online () && !was_online)
         {
-//          printf("%s shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file_.c_str(),"a");
+          fprintf(pFile,"%s restart shutdown ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           shutdown ();
-//          printf("%s start",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file_.c_str(),"a");
+          fprintf(pFile,"%s start",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           startup ();
         }
       if (requested_.online ())
@@ -69,7 +84,11 @@ void TransceiverBase::set (TransceiverState const& s,
           bool ptt_on {false};
           bool ptt_off {false};
           if (requested_.fast_mode() != s.fast_mode()) {
-//            printf("%s Timing fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.fast_mode());
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.fast_mode());
+            fclose (pFile);
+#endif
             do_post_fast_mode (s.fast_mode());
             requested_.fast_mode (s.fast_mode ());
           }
@@ -80,7 +99,11 @@ void TransceiverBase::set (TransceiverState const& s,
             }
           if (ptt_off)
             {
-//              printf("%s Timing ptt_off\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+              pFile = fopen (debug_file_.c_str(),"a");
+              fprintf(pFile,"%s Timing ptt_off\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fclose (pFile);
+#endif
               do_ptt (false);
               do_post_ptt (false);
               QThread::msleep (100); // some rigs cannot process CAT
@@ -93,7 +116,11 @@ void TransceiverBase::set (TransceiverState const& s,
                   || ptt_off))       // or just returned to rx
             {
               auto ms2 = QDateTime::currentMSecsSinceEpoch();
-//              printf("%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+#if JTDX_DEBUG_TO_FILE
+              pFile = fopen (debug_file_.c_str(),"a");
+              fprintf(pFile,"%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+              fclose (pFile);
+#endif
               ms = 0;
               do_frequency (s.frequency (), s.mode (), ptt_off);
               do_post_frequency (s.frequency (), s.mode ());
@@ -112,7 +139,11 @@ void TransceiverBase::set (TransceiverState const& s,
                   // || s.split () != requested_.split ())) // or split change
                   || (s.tx_frequency () && ptt_on)) // or about to tx split
                 {
-//                  printf("%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+#if JTDX_DEBUG_TO_FILE
+                  pFile = fopen (debug_file_.c_str(),"a");
+                  fprintf(pFile,"%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+                  fclose (pFile);
+#endif
                   ms = 0;
                   do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
                   do_post_tx_frequency (s.tx_frequency (), s.mode ());
@@ -124,7 +155,11 @@ void TransceiverBase::set (TransceiverState const& s,
             }
           if (ptt_on)
             {
-//              printf("%s Timing ptt_on\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+              pFile = fopen (debug_file_.c_str(),"a");
+              fprintf(pFile,"%s Timing ptt_on\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fclose (pFile);
+#endif
               do_ptt (true);
               do_post_ptt (true);
               QThread::msleep (100 + ms); // some rigs cannot process CAT
@@ -134,8 +169,18 @@ void TransceiverBase::set (TransceiverState const& s,
 
           // record what actually changed
           requested_.ptt (actual_.ptt ());
-        } //else printf ("%s NOT ONLINE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
-//      printf("%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+        } else {
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file_.c_str(),"a");
+          fprintf (pFile,"%s NOT ONLINE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
+        }
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
     }
   catch (std::exception const& e)
     {
@@ -148,7 +193,11 @@ void TransceiverBase::set (TransceiverState const& s,
   
   if (!message.isEmpty ())
     {
-//      printf("%s Transiever set message %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever set message %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+      fclose (pFile);
+#endif
       offline (message);
     }
 }

@@ -36,6 +36,7 @@ Modulator::Modulator (unsigned frameRate, double periodLengthInSeconds, JTDXDate
   , m_j0 {-1}
   , m_toneFrequency0 {1500.0}
   , m_jtdxtime {jtdxtime}
+  , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
 {
 }
 
@@ -46,6 +47,12 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
 {
   QThread::currentThread()->setPriority(QThread::HighPriority);
   Q_ASSERT (stream);
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf (pFile,"%s Modulator start\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
+
 // Time according to this computer which becomes our base time
   qint64 ms0 = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
 //  qDebug() << "ModStart" << QDateTime::currentDateTimeUtc().toString("hh:mm:ss.sss");
@@ -88,6 +95,11 @@ void Modulator::start (unsigned symbolsLength, double framesPerSymbol,
     m_silentFrames = m_frameRate / (1000 / delay_ms) - (mstr * (m_frameRate / 1000));
   }
 //  printf ("delay_ms=%d m_frameRate=%d mstr=%d mstr2 = %d m_ic=%d m_silentFrames=%lld \n",delay_ms,m_frameRate,mstr,mstr2,m_ic,m_silentFrames);
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");  
+  fprintf (pFile,"delay_ms=%d m_frameRate=%d mstr=%d mstr2 = %d m_ic=%d m_silentFrames=%lld \n",delay_ms,m_frameRate,mstr,mstr2,m_ic,m_silentFrames);
+  fclose (pFile);
+#endif
   initialize (QIODevice::ReadOnly, channel);
   Q_EMIT stateChanged ((m_state = (synchronize && m_silentFrames) ?
                         Synchronizing : Active));

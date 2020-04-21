@@ -61,7 +61,6 @@ private:
   int interval_;    // polling interval in milliseconds
   QTimer * poll_timer_;
   bool fast_mode_;
-
   // keep a record of the last state signalled so we can elide
   // duplicate updates
   Transceiver::TransceiverState last_signalled_state_;
@@ -71,6 +70,7 @@ private:
   Transceiver::TransceiverState next_state_;
 
   unsigned retries_;            // number of incorrect polls left
+  std::string debug_file_;
 };
 
 #endif
