@@ -117,6 +117,7 @@ namespace
   QRegularExpression message_alphabet {"[- @A-Za-z0-9+./?#<>]*"};
   QRegularExpression messagespec_alphabet {"[- @A-Za-z0-9+./?#<>;]*"};
   QRegularExpression wcall_alphabet {"[A-Za-z0-9/,]*"};
+  QRegularExpression wcountry_alphabet {"[A-Za-z0-9/,*]*"};
   QRegularExpression wgrid_alphabet {"([a-r]{2,2}[0-9]{2,2}[,]{1,1})*",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression cqdir_alphabet {"[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression dxCall_alphabet {"[A-Za-z0-9/]*"};
@@ -174,6 +175,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_msErase {0},
   m_secBandChanged {0},
   m_secTxStopped {0},
+  m_msDecStarted {0},
   m_freqNominal {0},
   m_freqTxNominal {0},
   m_lastDisplayFreq {0},
@@ -592,6 +594,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionRussian->setActionGroup(languageGroup);
   ui->actionCatalan->setActionGroup(languageGroup);
   ui->actionCroatian->setActionGroup(languageGroup);
+  ui->actionDanish->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
@@ -779,7 +782,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->tx6->setValidator (new QRegularExpressionValidator {message_alphabet, this});
   ui->freeTextMsg->setValidator (new QRegularExpressionValidator {message_alphabet, this});
   ui->wantedCall->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
-  ui->wantedCountry->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
+  ui->wantedCountry->setValidator (new QRegularExpressionValidator {wcountry_alphabet, this});
   ui->wantedPrefix->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
   ui->wantedGrid->setValidator (new QRegularExpressionValidator {wgrid_alphabet, this});
   ui->dxCallEntry->setValidator (new QRegularExpressionValidator {dxCall_alphabet, this});
@@ -1333,6 +1336,7 @@ void MainWindow::readSettings()
   ui->actionRussian->setText("Русский");
   ui->actionCatalan->setText("Català");
   ui->actionCroatian->setText("Hrvatski");
+  ui->actionDanish->setText("Dansk");
   ui->actionSpanish->setText("Español");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
@@ -2614,7 +2618,7 @@ void MainWindow::hideMenus(bool checked)
      ui->label_7->setVisible(!checked);
      ui->decodedTextLabel2->setVisible(!checked);
   }
-  ui->decodedTextLabel->setVisible(!checked);
+//  ui->decodedTextLabel->setVisible(!checked);
   ui->gridLayout_14->layout()->setSpacing(0);
   ui->gridLayout_14->layout()->setContentsMargins(0,0,0,0);
   ui->horizontalLayout_10->layout()->setSpacing(0);
@@ -2743,6 +2747,7 @@ void MainWindow::on_actionEstonian_triggered() { ui->actionEstonian->setChecked(
 void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(true); set_language("ru_RU"); }
 void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(true); set_language("ca_ES"); }
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
+void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
@@ -3025,13 +3030,16 @@ void MainWindow::decode()                                       //decode()
   if(!m_manualDecode) { m_processAuto_done = false; m_callFirst73 = false; }
   m_used_freq = 0;
   if(m_diskData && !m_mode.startsWith("FT")) dec_data.params.nutc=dec_data.params.nutc/100;
-  if(dec_data.params.newdat==1 && !m_diskData && !m_mode.startsWith("FT")) {
-    qint64 ms = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
-    int imin=ms/60000;
-    int ihr=imin/60;
-    imin=imin % 60;
-    if(m_TRperiod>=60.0) imin=imin - (imin % (int(m_TRperiod)/60));
-    dec_data.params.nutc=100*ihr + imin;
+  if(dec_data.params.newdat==1 && !m_diskData) {
+    m_msDecStarted=m_jtdxtime->currentMSecsSinceEpoch2();
+    if(!m_mode.startsWith("FT")) {
+      qint64 ms = m_msDecStarted % 86400000;
+      int imin=ms/60000;
+      int ihr=imin/60;
+      imin=imin % 60;
+      if(m_TRperiod>=60.0) imin=imin - (imin % (int(m_TRperiod)/60));
+      dec_data.params.nutc=100*ihr + imin;
+    }
   }
   if(dec_data.params.newdat==1 && (!m_diskData) && m_mode.startsWith("FT")) {
     qint64 ms=1000.0*(2.0-m_TRperiod);
@@ -3429,10 +3437,16 @@ void MainWindow::readFromStdout()                             //readFromStdout
         countQSOs ();
         m_logInitNeeded=false;
       }
+      QString slag;
+      if(!m_manualDecode && !m_diskData) {
+        qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2(); qint64 periodms=m_TRperiod*1000;
+        qint64 lagms=msDecFin - periodms*((m_msDecStarted / periodms)+1); // rounding to base int
+        float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag >= 0.0) slag="+"+slag;
+      }
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq   Message")+" "+tr("Avg=") + avexdt);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag);
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -3448,6 +3462,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
           else  ui->label_6->setText(tr("Band Activity"));
         }
       }
+      else ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Lag=")+slag);
       dec_data.params.nagain=0; dec_data.params.nagainfil=0; dec_data.params.ndiskdat=0;
       m_manualDecode=false; ui->DecodeButton->setChecked (false);
       QFile {m_config.temp_dir ().absoluteFilePath (".lock")}.open(QIODevice::ReadWrite);
@@ -3773,6 +3788,7 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="ru_RU") ui->actionRussian->setChecked(true);
   else if(m_lang=="ca_ES") ui->actionCatalan->setChecked(true);
   else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
+  else if(m_lang=="da_DK") ui->actionDanish->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);

@@ -8,9 +8,10 @@
 
 #include <QByteArray>
 #include <QString>
-//#include <QDateTime>
+#include <QDateTime>
 #include <QStandardPaths>
 #include <QFile>
+#include <QDir>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonValue>
@@ -949,15 +950,24 @@ void HamlibTransceiver::do_poll ()
   rmode_t m;
   pbwidth_t w;
   split_t s;
-//auto ms = QDateTime::currentMSecsSinceEpoch();
-//printf("%s poll start\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+  std::string debug_file = QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString();
+  FILE * pFile = fopen (debug_file.c_str(),"a");
+  auto ms = QDateTime::currentMSecsSinceEpoch();
+  fprintf(pFile,"%s poll start\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   if (get_vfo_works_ && rig_->caps->get_vfo)
     {
       vfo_t v;
       error_check (rig_get_vfo (rig_.data (), &v), tr ("getting current VFO")); // has side effect of establishing current VFO inside hamlib
       TRACE_CAT_POLL ("HamlibTransceiver", "VFO =" << rig_strvfo (v));
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file.c_str(),"a");
+      fprintf(pFile,"%s poll current VFO\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
       reversed_ = RIG_VFO_B == v;
-//printf("%s poll current VFO\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
     }
 
   if ((WSJT_RIG_NONE_CAN_SPLIT || !is_dummy_)
@@ -968,18 +978,26 @@ void HamlibTransceiver::do_poll ()
       if (-RIG_OK == rc && RIG_SPLIT_ON == s)
         {
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_split_vfo split = " << s << " VFO = " << rig_strvfo (v));
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s poll split true\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           update_split (true);
           // if (RIG_VFO_A == v)
           // 	{
           // 	  reversed_ = true;	// not sure if this helps us here
           // 	}
-//printf("%s poll split true\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
       else if (-RIG_OK == rc)	// not split
         {
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_split_vfo split = " << s << " VFO = " << rig_strvfo (v));
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s poll split false\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           update_split (false);
-//printf("%s poll split false\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
       else
         {
@@ -987,8 +1005,12 @@ void HamlibTransceiver::do_poll ()
           // mode
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_split_vfo can't do on this rig");
           // just report how we see it based on prior commands
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s poll split not works\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           split_query_works_ = false;
-//printf("%s poll split not works\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
     }
 
@@ -1000,8 +1022,12 @@ void HamlibTransceiver::do_poll ()
           error_check (rig_get_freq (rig_.data (), RIG_VFO_CURR, &f), tr ("getting current VFO frequency"));
           f = std::round (f);
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_freq frequency =" << f);
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s update frequency %f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
+          fclose (pFile);
+#endif
           update_rx_frequency (f);
-//printf("%s update frequency\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
 
       if ((WSJT_RIG_NONE_CAN_SPLIT || !is_dummy_)
@@ -1022,8 +1048,12 @@ void HamlibTransceiver::do_poll ()
                                      , &f), tr ("getting other VFO frequency"));
           f = std::round (f);
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_freq other VFO =" << f);
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s update other frequency %f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
+          fclose (pFile);
+#endif
           update_other_frequency (f);
-//printf("%s update other frequency\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
     }
 
@@ -1041,13 +1071,21 @@ void HamlibTransceiver::do_poll ()
       if (RIG_OK == rc)
         {
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_mode mode =" << rig_strrmode (m) << "bw =" << w);
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s get mode %s bw %ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
+          fclose (pFile);
+#endif
           update_mode (map_mode (m));
-//printf("%s get mode\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
         }
       else
         {
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_mode mode failed with rc:" << rc << "ignoring");
-//printf("%s get mode failed\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file.c_str(),"a");
+          fprintf(pFile,"%s get mode failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+          fclose (pFile);
+#endif
         }
     }
 
@@ -1060,12 +1098,20 @@ void HamlibTransceiver::do_poll ()
           if (do_snr_) {
               rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_STRENGTH, &strength);
               if (RIG_OK == rc) {
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get level %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.i);
+                fclose (pFile);
+#endif
                 update_level (strength.i);
-//printf("%s get level %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.i);
               } else {
-                update_level (-60);
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level failed with rc:" << rc << "ignoring");
-//printf("%s get level failed\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get level failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fclose (pFile);
+#endif
+                update_level (-60);
               }
           } else update_level (-60);
       } else {
@@ -1073,31 +1119,56 @@ void HamlibTransceiver::do_poll ()
           if (do_pwr_) {
               rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_RFPOWER_METER, &strength);
               if (RIG_OK == rc) {
-//printf("%s get power RFPOWER_METER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get power RFPOWER_METER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+                fclose (pFile);
+#endif
                 update_power (strength.f*100000);
               } else {
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER_METER failed with rc:" << rc << "ignoring");
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get power RFPOWER_METER failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fclose (pFile);
+#endif
                 update_power (0);
-//printf("%s get power RFPOWER_METER failed\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
               }
           }
           else if (do_pwr2_) {
               rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_RFPOWER, &strength);
               if (RIG_OK == rc) {
-//printf("%s get power RFPOWER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get power RFPOWER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+                fclose (pFile);
+#endif
                 unsigned int mwpower;
                 rc = rig_power2mW(rig_.data (),&mwpower,strength.f,f,m);
-//printf("%s get watts %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),mwpower);
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get watts %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),mwpower);
+                fclose (pFile);
+#endif
                 if (RIG_OK != rc) {
                   TRACE_CAT_POLL ("HamlibTransceiver", "rig_power2mW failed with rc:" << rc << "ignoring");
+#if JTDX_DEBUG_TO_FILE
+                  pFile = fopen (debug_file.c_str(),"a");
+                  fprintf(pFile,"%s get power rig_power2mW failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                  fclose (pFile);    
+#endif
                   mwpower=0;
                 }
                 update_power (mwpower);
 //                printf ("POWER %.3f %.1f\n",strength.f,mwpower / 1000.);
               } else {
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER failed with rc:" << rc << "ignoring");
+#if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file.c_str(),"a");
+                fprintf(pFile,"%s get power failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fclose (pFile);
+#endif
                 update_power (0);
-//printf("%s get power failed\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
               }
           } else  update_power (0);
       }
@@ -1107,7 +1178,11 @@ void HamlibTransceiver::do_poll ()
     {
       ptt_t p;
       auto rc = rig_get_ptt (rig_.data (), RIG_VFO_CURR, &p);
-//printf("%s get ptt\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file.c_str(),"a");
+      fprintf(pFile,"%s get ptt %d %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),p,rc);
+      fclose (pFile);
+#endif
       if (-RIG_ENAVAIL != rc && -RIG_ENIMPL != rc) // may fail if
         // Net rig ctl and target doesn't
         // support command
@@ -1117,8 +1192,11 @@ void HamlibTransceiver::do_poll ()
           update_PTT (!(RIG_PTT_OFF == p));
         }
     }
-//printf("%s poll end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch()-ms);
-
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file.c_str(),"a");
+  fprintf(pFile,"%s poll end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch()-ms);
+  fclose (pFile);
+#endif
 #if !WSJT_TRACE_CAT_POLLS
 #if WSJT_HAMLIB_TRACE
 #if WSJT_HAMLIB_VERBOSE_TRACE

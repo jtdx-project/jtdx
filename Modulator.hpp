@@ -94,6 +94,7 @@ private:
   int m_j0;
   double m_toneFrequency0;
   JTDXDateTime * m_jtdxtime;
+  std::string debug_file_;
 };
 
 #endif

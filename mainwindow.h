@@ -170,6 +170,7 @@ private slots:
   void on_actionPortuguese_BR_triggered();
   void on_actionCatalan_triggered();
   void on_actionCroatian_triggered();
+  void on_actionDanish_triggered();
   void on_actionSpanish_triggered();
   void on_actionFrench_triggered();
   void on_actionItalian_triggered();
@@ -432,6 +433,7 @@ private:
   qint64  m_msErase;
   qint64  m_secBandChanged;
   qint64  m_secTxStopped;
+  qint64  m_msDecStarted;
   Frequency m_freqNominal;
   Frequency m_freqTxNominal;
   quint64  m_lastDisplayFreq;

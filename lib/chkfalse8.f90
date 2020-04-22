@@ -55,7 +55,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! -24  0.3  550 ~ CQ DZ0BIL/R AD94          *
     else if(iaptype.eq.1) then
       ispc3=index(msg37((ispc2+1):),' ')+ispc2
-      if(msg37(ispc2-3:ispc2-1).eq.'/R' .or. msg37(ispc2-3:ispc2-1).eq.'/P') then; callsign=msg37(ispc1+1:ispc2-3)
+      if(msg37(ispc2-2:ispc2-1).eq.'/R' .or. msg37(ispc2-2:ispc2-1).eq.'/P') then; callsign=msg37(ispc1+1:ispc2-3)
       else; callsign=msg37(ispc1+1:ispc2-1)
       endif
       grid=msg37(ispc2+1:ispc3-1)

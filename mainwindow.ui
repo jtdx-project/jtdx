@@ -122,9 +122,9 @@
                <colorrole role="Window">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>170</red>
-                  <green>170</green>
-                  <blue>170</blue>
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -142,9 +142,9 @@
                <colorrole role="Window">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>170</red>
-                  <green>170</green>
-                  <blue>170</blue>
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -153,18 +153,18 @@
                <colorrole role="Base">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>170</red>
-                  <green>170</green>
-                  <blue>170</blue>
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
                  </color>
                 </brush>
                </colorrole>
                <colorrole role="Window">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>170</red>
-                  <green>170</green>
-                  <blue>170</blue>
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -2058,9 +2058,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                      <colorrole role="Window">
                       <brush brushstyle="SolidPattern">
                        <color alpha="255">
-                        <red>170</red>
-                        <green>170</green>
-                        <blue>170</blue>
+                        <red>205</red>
+                        <green>205</green>
+                        <blue>205</blue>
                        </color>
                       </brush>
                      </colorrole>
@@ -2078,9 +2078,9 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                      <colorrole role="Window">
                       <brush brushstyle="SolidPattern">
                        <color alpha="255">
-                        <red>170</red>
-                        <green>170</green>
-                        <blue>170</blue>
+                        <red>205</red>
+                        <green>205</green>
+                        <blue>205</blue>
                        </color>
                       </brush>
                      </colorrole>
@@ -2089,18 +2089,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                      <colorrole role="Base">
                       <brush brushstyle="SolidPattern">
                        <color alpha="255">
-                        <red>170</red>
-                        <green>170</green>
-                        <blue>170</blue>
+                        <red>205</red>
+                        <green>205</green>
+                        <blue>205</blue>
                        </color>
                       </brush>
                      </colorrole>
                      <colorrole role="Window">
                       <brush brushstyle="SolidPattern">
                        <color alpha="255">
-                        <red>170</red>
-                        <green>170</green>
-                        <blue>170</blue>
+                        <red>205</red>
+                        <green>205</green>
+                        <blue>205</blue>
                        </color>
                       </brush>
                      </colorrole>
@@ -4464,6 +4464,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionRussian"/>
     <addaction name="actionCatalan"/>
     <addaction name="actionCroatian"/>
+    <addaction name="actionDanish"/>
     <addaction name="actionSpanish"/>
     <addaction name="actionFrench"/>
     <addaction name="actionItalian"/>
@@ -4698,6 +4699,11 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
   </action>
   <action name="actionCroatian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDanish">
    <property name="checkable">
     <bool>true</bool>
    </property>

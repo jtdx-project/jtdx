@@ -733,7 +733,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             }
         }
         for (int i=0; i<wantedCountryList.size(); i++) {
-            if (wantedCountryList.at(i).size() > 0 && wantedCountryList.at(i) == mpx) {
+            if (wantedCountryList.at(i).size() > 0 && wantedCountryList.at(i) == mpx.toUpper()) {
                 bwantedCountry = true;
                 break;
             }
@@ -778,7 +778,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 show_line = false;
             } else if (m_config->enableCountryFilter() && std_type != 2 && !jt65bc) {
                 auto countries = m_config->countries ().split(',');
-                if (countries.contains(items[1]))
+                if (countries.contains(items[1].toUpper()))
                     show_line = false;
             }
             if (show_line && m_config->enableCallsignFilter() && std_type != 2 && !jt65bc) {
