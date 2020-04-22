@@ -119,7 +119,7 @@ void CPlotter::draw(float swide[], bool bScroll)                            //dr
   QPainter painter2D(&m_2DPixmap);
   if(!painter2D.isActive()) return;
   QFont Font("Arial");
-  Font.setPointSize(12);
+  Font.setPointSize(11);
   QFontMetrics metrics(Font);
   Font.setWeight(QFont::Normal);
   painter2D.setFont(Font);
@@ -182,7 +182,7 @@ void CPlotter::draw(float swide[], bool bScroll)                            //dr
   if(m_mode=="FT4" and m_line==34) m_line=0;
   m_line++;
   if(m_timestamp!=0 || m_mode=="JT9+JT65") {
-    if(m_line == 13) {
+    if(m_line == 16) {
       painter1.setPen(Qt::white);
       QString t;
       if(m_TRperiod < 60.0) {
@@ -194,7 +194,15 @@ void CPlotter::draw(float swide[], bool bScroll)                            //dr
         t=m_jtdxtime->currentDateTimeUtc2().toString("hh:mm") + "    " + m_rxBand;
       }
       QRect rect{5, -2, m_w-10, metrics.height()};
-      painter1.drawText(rect, m_timestamp==2?Qt::AlignRight:Qt::AlignLeft,t);
+      QRect boundingRect;
+      painter1.drawText(rect, m_timestamp==2?0x0082:0x0081,t, &boundingRect);
+/*QPen pen = painter1.pen();
+pen.setStyle(Qt::DotLine);
+painter1.setPen(pen);
+painter1.drawRect(boundingRect.adjusted(0, 0, -pen.width(), -pen.width()));
+pen.setStyle(Qt::DashLine);
+painter1.setPen(pen);
+painter1.drawRect(rect.adjusted(0, 0, -pen.width(), -pen.width())); */
     }
   }
   update();                    //trigger a new paintEvent
