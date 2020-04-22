@@ -174,6 +174,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_msErase {0},
   m_secBandChanged {0},
   m_secTxStopped {0},
+  m_msDecStarted {0},
   m_freqNominal {0},
   m_freqTxNominal {0},
   m_lastDisplayFreq {0},
@@ -3028,13 +3029,16 @@ void MainWindow::decode()                                       //decode()
   if(!m_manualDecode) { m_processAuto_done = false; m_callFirst73 = false; }
   m_used_freq = 0;
   if(m_diskData && !m_mode.startsWith("FT")) dec_data.params.nutc=dec_data.params.nutc/100;
-  if(dec_data.params.newdat==1 && !m_diskData && !m_mode.startsWith("FT")) {
-    qint64 ms = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000;
-    int imin=ms/60000;
-    int ihr=imin/60;
-    imin=imin % 60;
-    if(m_TRperiod>=60.0) imin=imin - (imin % (int(m_TRperiod)/60));
-    dec_data.params.nutc=100*ihr + imin;
+  if(dec_data.params.newdat==1 && !m_diskData) {
+    m_msDecStarted=m_jtdxtime->currentMSecsSinceEpoch2();
+    if(!m_mode.startsWith("FT")) {
+      qint64 ms = m_msDecStarted % 86400000;
+      int imin=ms/60000;
+      int ihr=imin/60;
+      imin=imin % 60;
+      if(m_TRperiod>=60.0) imin=imin - (imin % (int(m_TRperiod)/60));
+      dec_data.params.nutc=100*ihr + imin;
+    }
   }
   if(dec_data.params.newdat==1 && (!m_diskData) && m_mode.startsWith("FT")) {
     qint64 ms=1000.0*(2.0-m_TRperiod);
@@ -3432,10 +3436,16 @@ void MainWindow::readFromStdout()                             //readFromStdout
         countQSOs ();
         m_logInitNeeded=false;
       }
+      QString slag;
+      if(!m_manualDecode && !m_diskData) {
+        qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2(); qint64 periodms=m_TRperiod*1000;
+        qint64 lagms=msDecFin - periodms*((m_msDecStarted / periodms)+1); // rounding to base int
+        float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag >= 0.0) slag="+"+slag;
+      }
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq   Message")+" "+tr("Avg=") + avexdt);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag);
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -3451,6 +3461,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
           else  ui->label_6->setText(tr("Band Activity"));
         }
       }
+      else ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Lag=")+slag);
       dec_data.params.nagain=0; dec_data.params.nagainfil=0; dec_data.params.ndiskdat=0;
       m_manualDecode=false; ui->DecodeButton->setChecked (false);
       QFile {m_config.temp_dir ().absoluteFilePath (".lock")}.open(QIODevice::ReadWrite);
