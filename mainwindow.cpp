@@ -117,6 +117,7 @@ namespace
   QRegularExpression message_alphabet {"[- @A-Za-z0-9+./?#<>]*"};
   QRegularExpression messagespec_alphabet {"[- @A-Za-z0-9+./?#<>;]*"};
   QRegularExpression wcall_alphabet {"[A-Za-z0-9/,]*"};
+  QRegularExpression wcountry_alphabet {"[A-Za-z0-9/,*]*"};
   QRegularExpression wgrid_alphabet {"([a-r]{2,2}[0-9]{2,2}[,]{1,1})*",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression cqdir_alphabet {"[a-z]{0,2}",QRegularExpression::CaseInsensitiveOption};
   QRegularExpression dxCall_alphabet {"[A-Za-z0-9/]*"};
@@ -781,7 +782,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->tx6->setValidator (new QRegularExpressionValidator {message_alphabet, this});
   ui->freeTextMsg->setValidator (new QRegularExpressionValidator {message_alphabet, this});
   ui->wantedCall->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
-  ui->wantedCountry->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
+  ui->wantedCountry->setValidator (new QRegularExpressionValidator {wcountry_alphabet, this});
   ui->wantedPrefix->setValidator (new QRegularExpressionValidator {wcall_alphabet, this});
   ui->wantedGrid->setValidator (new QRegularExpressionValidator {wgrid_alphabet, this});
   ui->dxCallEntry->setValidator (new QRegularExpressionValidator {dxCall_alphabet, this});
@@ -2617,7 +2618,7 @@ void MainWindow::hideMenus(bool checked)
      ui->label_7->setVisible(!checked);
      ui->decodedTextLabel2->setVisible(!checked);
   }
-  ui->decodedTextLabel->setVisible(!checked);
+//  ui->decodedTextLabel->setVisible(!checked);
   ui->gridLayout_14->layout()->setSpacing(0);
   ui->gridLayout_14->layout()->setContentsMargins(0,0,0,0);
   ui->horizontalLayout_10->layout()->setSpacing(0);
