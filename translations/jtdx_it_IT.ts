@@ -2946,7 +2946,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Media: DT (differenza orario) medio accumulato nei segnali decodificatifino ad ora sulla banda. Lag: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che è possibile aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse sufficienti della CPU per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale. / xx: numero di messaggi decodificati nell&apos;ultimo intervallo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -4808,7 +4808,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <location filename="../mainwindow.cpp" line="3456"/>
         <location filename="../mainwindow.cpp" line="3463"/>
         <source>check time</source>
-        <translation>controlla orario</translation>
+        <translation>controllare orario</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3765"/>
@@ -7069,7 +7069,7 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="2964"/>
         <source>Working Frequencies</source>
-        <translation>Frequenze di lavoro</translation>
+        <translation>Frequenze di lavoro:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5052"/>
@@ -7127,7 +7127,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="3174"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation>Stato delle notifiche &quot;Nuovo&quot; e &quot;lavorato B4&quot;</translation>
+        <translation>Stato delle notifiche &quot;Nuovo&quot; e &quot;lavorato B4&quot;:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3200"/>
@@ -7433,7 +7433,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
         <location filename="../Configuration.ui" line="3667"/>
         <location filename="../Configuration.ui" line="6847"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Suggerimenti per la configurazione&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Suggerimenti per la configurazione:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3715"/>
