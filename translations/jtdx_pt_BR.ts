@@ -3909,7 +3909,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4546"/>
         <source>Auto RX frequency Filter</source>
-        <translation>Filtro de frequência RX auto</translation>
+        <translation>Filtro de frequência de RX auto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4570"/>
@@ -4065,7 +4065,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4834"/>
         <source>Monitor OFF at startup</source>
-        <translation>Monitor desligado no início</translation>
+        <translation>Monitor desligado na inicialização</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4839"/>
@@ -4241,7 +4241,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5107"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>Ignorar filtros de texto na frequência RX</translation>
+        <translation>Ignorar filtros de texto na frequência de RX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5118"/>
@@ -4266,7 +4266,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5151"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>Mensagens com o meu indicativo na janela de frequência RX </translation>
+        <translation>Mensagens com o meu indicativo na janela de frequência de RX </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5156"/>
@@ -4321,7 +4321,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5240"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 Chamada decodificada até o início do intervalo TX</translation>
+        <translation>2 Chamada decodificada até o início do intervalo de TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5248"/>
@@ -4336,12 +4336,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5264"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>Limpar a janela de atividade da banda no início da decodificação</translation>
+        <translation>Limpar a janela de Atividade da Banda no início da decodificação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5272"/>
         <source>Answer worked B4 calls</source>
-        <translation>Atender chamadas trabalhadas antes</translation>
+        <translation>Atender chamadas trabalhadas anteriormente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5283"/>
@@ -4366,7 +4366,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5334"/>
         <source>Erase both message windows at band change</source>
-        <translation>Limpar ambas as janelas de mensagem na troca de banda</translation>
+        <translation>Limpar as janelas de mensagens na troca de banda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5372"/>
@@ -4376,12 +4376,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5380"/>
         <source>Max distance instead of best SNR</source>
-        <translation>Distância máxima em vez do melhor SNR</translation>
+        <translation>Distância máxima em vez do melhor sinal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5388"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>Mensagens com chamadas desejadas para a janela de frequência do RX</translation>
+        <translation>Mensagens com chamadas desejadas para a janela de frequência de RX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5396"/>
@@ -4406,7 +4406,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5458"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Chamar indicativos trabalhados B4</translation>
+        <translation>Chamar indicativos trabalhados anteriormente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5477"/>
@@ -4431,7 +4431,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5509"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>Desligue o filtro ao obter 73</translation>
+        <translation>Desligar o filtro ao receber 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5517"/>
@@ -4471,7 +4471,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5579"/>
         <source>Color Tx message buttons</source>
-        <translation>Botões de mensagem Tx colorida</translation>
+        <translation>Botões de mensagem TX coloridos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5587"/>
@@ -4523,7 +4523,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5670"/>
         <source>Hide FT contest messages</source>
-        <translation>Ocultar mensagens do concurso FT</translation>
+        <translation>Ocultar mensagens de concurso FT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5678"/>
@@ -4543,12 +4543,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5732"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Indicativo de chamada para a área de transferência com um clique duplo | seleção automática</translation>
+        <translation>Indicativo de chamada para a área de transferência com um clique duplo | Seleção Automática</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5740"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>Operação de banda cruzada de 160m com o Japão</translation>
+        <translation>Operação de banda cruzada em 160m com o Japão</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="449"/>
@@ -4778,13 +4778,13 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Freq  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Lat=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>
@@ -5953,7 +5953,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>Ver &amp;prefixo não o nome</translation>
+        <translation>Ver &amp;prefixo e não o nome</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -5973,7 +5973,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="422"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>&amp;Tx mensagens na janela de frequência Rx</translation>
+        <translation>&amp;Tx mensagens na janela de frequência de Rx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="437"/>
@@ -6039,7 +6039,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="579"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation>Permitir alterações de frequência Tx durante a transmissão</translation>
+        <translation>Permitir alterações de frequência de Tx durante a transmissão</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="586"/>
@@ -6698,7 +6698,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="2125"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Parar TX se o operador que eu chamei atendeu outro operador</translation>
+        <translation>Parar Tx se o operador que eu chamei atendeu outro operador</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2132"/>

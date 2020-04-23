@@ -4780,19 +4780,19 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <source>Avg=</source>
-        <translation>Avg=</translation>
+        <translation>Prosj.=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Frekv  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasni=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>

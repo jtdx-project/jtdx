@@ -2147,7 +2147,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
@@ -2162,7 +2162,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4771,13 +4771,13 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>

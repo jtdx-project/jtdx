@@ -2147,22 +2147,22 @@ Vorming:
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>nQSOkäik</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>helinivoo madal</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>helis augud</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>qso sagedus väljaspool riba</translation>
     </message>
 </context>
 <context>
@@ -4810,13 +4810,13 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>
