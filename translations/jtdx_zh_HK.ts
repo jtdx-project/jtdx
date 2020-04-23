@@ -493,7 +493,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="70"/>
         <source>Kenya</source>
-        <translation>肯雅</translation>
+        <translation>肯尼亞</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="71"/>
@@ -2053,37 +2053,37 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation>DX Lab Suite Commander讀取頻率沒有正確響應: </translation>
+        <translation>DX Lab Suite Commander讀取頻率沒有正確回應: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX Lab Suite Commander 發送了一個無法識別的發送狀態: </translation>
+        <translation>DX Lab Suite Commander 傳送未識別的發射狀態: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>DX Lab Suite Commander 沒有測試正確響應輪詢發送狀態: </translation>
+        <translation>DX Lab Suite Commander 没有正確回應輪詢發射狀態: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>DX Lab Suite Commander 未響應無線電設備發送PTT: </translation>
+        <translation>DX Lab Suite Commander 無線電設備沒有回應PTT: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation>DX Lab Suite Commander 沒有正確響應輪詢頻率: </translation>
+        <translation>DX Lab Suite Commander 沒有正確回應輪詢頻率: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation>DX Lab Suite Commander 沒有正確響應輪詢發射頻率: </translation>
+        <translation>DX Lab Suite Commander 沒有正確回應輪詢發射頻率: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX Lab Suite Commander 發送了一個無法識別的異頻狀態: </translation>
+        <translation>DX Lab Suite Commander 發送無法識別的異頻狀態: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
@@ -2093,7 +2093,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>DX Lab Suite Commander 發送了一個無法識別的模式: &quot;</translation>
+        <translation>DX Lab Suite Commander 發送無法識別的模式: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
@@ -2129,7 +2129,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation>DX Lab Suite Commander 發送了無法識別的頻率</translation>
+        <translation>DX Lab Suite Commander 發送無法識別的頻率</translation>
     </message>
 </context>
 <context>
@@ -2330,7 +2330,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation>IARU 區域&amp;R:</translation>
+        <translation>IA&amp;RU 區域:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
@@ -4784,19 +4784,19 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <source>Avg=</source>
-        <translation>平均時差=</translation>
+        <translation>平均=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>頻率  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>滯後=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>

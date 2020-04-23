@@ -2058,17 +2058,17 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX Lab Suite Commander 发送了一个无法识别的发送状态: </translation>
+        <translation>DX Lab Suite Commander 发送无法识别的发射状态: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>DX Lab Suite Commander 没有测试正确响应轮询发送状态: </translation>
+        <translation>DX Lab Suite Commander 没有正确响应轮询发射状态: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>DX Lab Suite Commander 未响应无线电设备发送PTT: </translation>
+        <translation>DX Lab Suite Commander 无线电设备没有响应PTT: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
@@ -2083,7 +2083,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX Lab Suite Commander 发送了一个无法识别的异频状态: </translation>
+        <translation>DX Lab Suite Commander 发送无法识别的异频状态: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
@@ -2093,7 +2093,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>DX Lab Suite Commander 发送了一个无法识别的模式: &quot;</translation>
+        <translation>DX Lab Suite Commander 发送无法识别的模式: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
@@ -2129,7 +2129,7 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation>DX Lab Suite Commander 发送了无法识别的频率</translation>
+        <translation>DX Lab Suite Commander 发送无法识别的频率</translation>
     </message>
 </context>
 <context>
@@ -2330,7 +2330,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation>IARU 区域&amp;R:</translation>
+        <translation>IA&amp;RU 区域:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
@@ -4784,19 +4784,19 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <source>Avg=</source>
-        <translation>平均时差=</translation>
+        <translation>平均=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>频率  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3449"/>
         <location filename="../mainwindow.cpp" line="3465"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>滞后=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3454"/>
