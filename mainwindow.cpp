@@ -217,6 +217,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_ft8Sensitivity {0},
   m_position {0},
   m_nsecBandChanged {0},
+  m_nDecodes {0},
   m_btxok {false},
   m_diskData {false},
   m_loopall {false},
@@ -3023,6 +3024,7 @@ void MainWindow::decode()                                       //decode()
   decodeBusy(true); // shall be second line
   if(m_autoErase) ui->decodedTextBrowser->clear();
 //  printf("%s(%0.1f) Timing decode start\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  m_nDecodes = 0;
   m_reply_me = false;
   m_reply_other = false;
   m_reply_CQ73 = false;
@@ -3446,7 +3448,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -3469,6 +3471,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       decodeBusy(false); // shall be last line
       return;
     } else {
+      m_nDecodes ++;
       if(t.indexOf(m_baseCall) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
         QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
         if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
@@ -6686,7 +6689,7 @@ void MainWindow::setXIT(int n, Frequency base)
         // All conditions are met, reset the transceiver Tx dial
         // frequency
         m_freqTxNominal = base + m_XIT;
-        if (m_crossbandOptionEnabled || m_m_continent == "EU" || m_m_prefix == "JA") {
+        if (m_crossbandOptionEnabled) {
           if (base == 1908000 && m_m_prefix != "JA") m_freqTxNominal -= 68000;
           else if (base == 1840000 && m_m_prefix == "JA") m_freqTxNominal += 68000;
         }

@@ -482,7 +482,8 @@ private:
   qint32  m_ft8Sensitivity;
   qint32  m_position;
   qint32  m_nsecBandChanged;
-  
+  qint32  m_nDecodes;
+    
   bool    m_btxok;		//True if OK to transmit
   bool    m_diskData;
   bool    m_loopall;
