@@ -3471,7 +3471,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
       decodeBusy(false); // shall be last line
       return;
     } else {
-      m_nDecodes ++;
       if(t.indexOf(m_baseCall) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
         QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
         if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
@@ -3534,6 +3533,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
 	  } else {
 		tcut = tcut.remove(0,23);
 	  }
+      if (!decodedtext.isDebug()) m_nDecodes ++;
       auto decodedtextmsg = decodedtext.message();
       bool mycallinmsg = false;
       if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) mycallinmsg = true;
