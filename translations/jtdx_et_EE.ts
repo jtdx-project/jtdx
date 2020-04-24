@@ -2954,7 +2954,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: dekodeeritud sõnumite kaalutud keskmine DT näitab kui palju teie arvuti kell erineb teistest. Lag: See on dekooderi hilinemine järgmise intervalli suhtes, negatiivne väärtus tähendab, et on vaba aega ja võib üritada dekooderit muuta agressiivsemaks, positiivne väärtus tähendab dekooderi &quot;sissesõitmist&quot; TX perioodi, mis tähendab, et on valitud liiga agressiivsed dekooderi settingud. /xx: viimases perioodis dekodeeritud sõnumite arv.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
