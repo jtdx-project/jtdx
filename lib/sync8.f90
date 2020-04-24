@@ -90,8 +90,8 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
             if(k.ge.1) then
               if(n.lt.15) then
                 tall(n+1)=s(i,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i,k))
-              else
-                tall(n+1)=s(i+1,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i+1,k))
+!              else
+!                tall(n+1)=s(i+1,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i+1,k))
               endif
             endif
           enddo
