@@ -3,16 +3,8 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM)
-  real x(NFFT1)
-  real sync2d(NH1,jzb:jzt)
-  real red(NH1)
-  real candidate0(3,250)
-  real candidate(3,260)
-  real freq
-  integer jpeak(NH1)
-  integer indx(NH1)
-  integer ii(1)
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(3,250),candidate(3,260),tall(29),freq
+  integer jpeak(NH1),indx(NH1),ii(1)
   integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass
   logical(1), intent(in) :: swl,lqsothread
   equivalence (x,cx)
@@ -78,30 +70,36 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     nfos6=12 ! nfos*6
     do j=jzb,jzt
       do i=iaw,ibw
-        ta=0.; tb=0.; tc=0.; tcq=0.; t0a=0.; t0b=0.; t0c=0.; t0cq=0.
+        ta=0.; tb=0.; tc=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6:nfos,k)); endif
-          tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6:nfos,k+nssy36))
-          if(k+nssy72.le.NHSYM) then; tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6:nfos,k+nssy72)); endif
+          if(k.ge.1) then
+            ta=s(i+nfos*icos7(n),k)
+            if(ta.gt.1e-9) then; tall(n+1)=ta*6.0/(sum(s(i:i+nfos6:nfos,k))-ta); else; tall(n+1)=0.; endif
+          endif
+          tb=s(i+nfos*icos7(n),k+nssy36)
+            if(tb.gt.1e-9) then; tall(n+16)=tb*6.0/(sum(s(i:i+nfos6:nfos,k+nssy36))-tb); else; tall(n+16)=0.; endif
+          if(k+nssy72.le.NHSYM) then
+            tc=s(i+nfos*icos7(n),k+nssy72)
+            if(tc.gt.1e-9) then; tall(n+23)=tc*6.0/(sum(s(i:i+nfos6:nfos,k+nssy72))-tc); else; tall(n+23)=0.; endif
+          endif
         enddo
         if(ipass.gt.1) then
           do n=7,15
             k=j+jstrt+nssy*n
             if(k.ge.1) then
-              if(n.lt.15) then; tcq=tcq + s(i,k); else; tcq=tcq + s(i+1,k); endif
-              t0cq=t0cq + sum(s(i:i+nfos6:nfos,k))
+              if(n.lt.15) then
+                tall(n+1)=s(i,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i,k))
+              else
+                tall(n+1)=s(i+1,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i+1,k))
+              endif
             endif
           enddo
-          t1=ta+tb+tc; t2=t1+tcq; t01=t0a+t0b+t0c; t02=t01+t0cq; t01=(t01-t1)/6.0; t02=(t02-t2)/6.0
-          if(t01.lt.1e-8) t01=1.0; if(t02.lt.1e-8) t02=1.0; sync_abc=max(t1/t01,t2/t02)
-          t1=tb+tc; t2=t1+tcq; t01=t0b+t0c; t02=t01+t0cq; t01=(t01-t1)/6.0; t02=(t02-t2)/6.0
-          if(t01.lt.1e-8) t01=1.0; if(t02.lt.1e-8) t02=1.0; sync_bc=max(t1/t01,t2/t02)
+          sya=sum(tall(1:7)); sycq=sum(tall(8:15)); sybc=sum(tall(16:29))
+           sy1=(sya+sycq+sybc)/29.; sy2=(sya+sybc)/21.; sync_abc=max(sy1,sy2)
+           sy1=(sycq+sybc)/22.; sy2=(sybc)/14.; sync_bc=max(sy1,sy2)
         else
-          t=ta+tb+tc; t0=t0a+t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
-          sync_abc=t/t0
-          t=tb+tc; t0=t0b+t0c; t0=(t0-t)/6.0; if(t0.lt.1e-8) t0=1.0 ! safe division
-          sync_bc=t/t0
+          sybc=sum(tall(16:29)); sync_abc=sum(tall(1:7))+sybc; sync_bc=sybc/14.; sync_abc=sync_abc/21.
         endif
         sync2d(i,j)=max(sync_abc,sync_bc)
       enddo
