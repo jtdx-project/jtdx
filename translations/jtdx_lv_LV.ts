@@ -4990,7 +4990,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../PollingTransceiver.cpp" line="259"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Negaidīta transīvera kļūda</translation>
     </message>
 </context>
 <context>
@@ -5574,7 +5574,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dialogs</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
