@@ -13,7 +13,7 @@
 
 namespace
 {
-  unsigned const polls_to_stabilize {3};
+  unsigned const polls_to_stabilize {2};
 }
 
 PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
@@ -156,7 +156,7 @@ void PollingTransceiver::do_post_ptt (bool p)
       // update expected state with new PTT and set poll count
       next_state_.ptt (p);
       retries_ = polls_to_stabilize;
-//      retries_ = 0;             // fast feedback on PTT
+      retries_ = 1;             // fast feedback on PTT
     }
 }
 
