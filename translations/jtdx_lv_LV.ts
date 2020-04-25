@@ -285,7 +285,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="5217"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>Vai tiešām vēlaties atiestatīt pašreizējās darba frekvences un aizstāt tās ar noklusējuma vērtībām?</translation>
+        <translation>Vai tiešām vēlaties ateikties no pašreizējās darba frekvences un aizstāt tās ar noklusēto frekvenci?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5277"/>
@@ -2872,12 +2872,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Rpt nosūtītais</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -2892,19 +2892,19 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation>Tx jauda</translation>
+        <translation>Raidītāja jauda</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
         <location filename="../logqso.ui" line="348"/>
         <location filename="../logqso.ui" line="381"/>
         <source>Retain</source>
-        <translation type="unfinished"></translation>
+        <translation>Saglabāt</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation>Comentārs</translation>
+        <translation>Komentāri</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
@@ -2919,7 +2919,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="28"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="199"/>
@@ -2932,7 +2932,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>JTDX</source>
-        <translation>JTDX</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
@@ -2943,7 +2943,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="181"/>
         <location filename="../mainwindow.ui" line="2117"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
@@ -2954,7 +2954,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="6038"/>
         <location filename="../mainwindow.cpp" line="6049"/>
         <source>Band Activity</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
@@ -2964,7 +2964,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="424"/>
         <source>?</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
@@ -2974,12 +2974,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="663"/>
         <source>14.078 000</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="692"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlne</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="702"/>
@@ -2989,7 +2989,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
         <source>Spt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="727"/>
@@ -3004,7 +3004,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="778"/>
         <source>info:</source>
-        <translation></translation>
+        <translation>informācija:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -3015,7 +3015,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="793"/>
         <source>edit</source>
-        <translation type="unfinished"></translation>
+        <translation>rediģēt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="807"/>
@@ -3026,7 +3026,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="810"/>
         <source>prop</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="968"/>
@@ -3074,7 +3074,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5281"/>
         <location filename="../mainwindow.cpp" line="5696"/>
         <source>DX Call</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1332"/>
@@ -5548,7 +5548,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="366"/>
         <source>Band</source>
-        <translation type="unfinished">Diapazons</translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="367"/>
@@ -5558,7 +5558,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../StationList.cpp" line="368"/>
         <source>Antenna Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Antenas apraksts</translation>
     </message>
 </context>
 <context>
@@ -5566,7 +5566,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TransceiverBase.cpp" line="15"/>
         <source>Unexpected rig error</source>
-        <translation type="unfinished"></translation>
+        <translation>Negaidīta transīvera kļūda</translation>
     </message>
 </context>
 <context>
@@ -8201,12 +8201,12 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fatāla kļūda</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Unexpected fatal error</source>
-        <translation type="unfinished"></translation>
+        <translation>Negaidīta fatāla kļūda</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="121"/>
@@ -8216,7 +8216,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="122"/>
         <source>style</source>
-        <translation type="unfinished"></translation>
+        <translation>stils</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="126"/>
@@ -8226,7 +8226,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="127"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="131"/>
@@ -8239,7 +8239,7 @@ soundcard changes</source>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogs</translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
