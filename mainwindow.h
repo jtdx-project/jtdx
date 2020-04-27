@@ -113,6 +113,7 @@ public slots:
   void setRxFreq4(int rxFreq);
   void filter_on();
   void toggle_filter();
+  void escapeHalt();
 
 protected:
   virtual void keyPressEvent( QKeyEvent *e );
