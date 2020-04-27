@@ -118,7 +118,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         do n=7,15
           k=j+jstrt+nssy*n
           if(k.ge.1) then
-            if(n.lt.15) then; tcq=tcq + s(i,k); else; tcq=tcq + s(i+1,k); endif
+            if(n.lt.15) then; tcq=tcq + s(i,k); else; tcq=tcq + s(i+2,k); endif
             t0cq=t0cq + sum(s(i:i+nfos6,k))
           endif
         enddo
