@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20191019
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 #include "widegraph.h"
 #include <QApplication>
 #include <QSettings>
@@ -273,6 +270,9 @@ void WideGraph::keyPressEvent(QKeyEvent *e)                                 //F1
       emit toggle_filter3 ();
       return;
     }
+    break;
+  case Qt::Key_Escape:
+    emit esc_key ();
     break;
   default:
     QDialog::keyPressEvent (e);

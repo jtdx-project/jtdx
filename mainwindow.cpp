@@ -217,6 +217,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_ft8Sensitivity {0},
   m_position {0},
   m_nsecBandChanged {0},
+  m_nDecodes {0},
   m_btxok {false},
   m_diskData {false},
   m_loopall {false},
@@ -803,72 +804,33 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   connect(&m_guiTimer, &QTimer::timeout, this, &MainWindow::guiUpdate);
   m_guiTimer.start(100);   //### Don't change the 100 ms! ###
 
-  stophintTimer.setSingleShot(true);
-  connect(&stophintTimer, &QTimer::timeout, this, &MainWindow::stopHint_call3_rxfreq);
+  stophintTimer.setSingleShot(true); connect(&stophintTimer, &QTimer::timeout, this, &MainWindow::stopHint_call3_rxfreq);
+  ptt0Timer.setSingleShot(true); connect(&ptt0Timer, &QTimer::timeout, this, &MainWindow::stopTx2);
+  ptt1Timer.setSingleShot(true); connect(&ptt1Timer, &QTimer::timeout, this, &MainWindow::startTx2);
+  logQSOTimer.setSingleShot(true); connect(&logQSOTimer, &QTimer::timeout, this, &MainWindow::on_logQSOButton_clicked);
+  tuneButtonTimer.setSingleShot(true); connect(&tuneButtonTimer, &QTimer::timeout, this, &MainWindow::haltTxTuneTimer);
+  cqButtonTimer.setSingleShot(true); connect(&cqButtonTimer, &QTimer::timeout, this, &MainWindow::on_pbCallCQ_clicked);
+  enableTxButtonTimer.setSingleShot(true); connect(&enableTxButtonTimer, &QTimer::timeout, this, &MainWindow::enableTxButton_off);
+  tx73ButtonTimer.setSingleShot(true); connect(&tx73ButtonTimer, &QTimer::timeout, this, &MainWindow::on_pbSend73_clicked);
+  logClearDXTimer.setSingleShot(true); connect(&logClearDXTimer, &QTimer::timeout, this, &MainWindow::logClearDX);
+  dxbcallTxHaltedClearTimer.setSingleShot(true); connect(&dxbcallTxHaltedClearTimer, &QTimer::timeout, this, &MainWindow::dxbcallTxHaltedClear);
+  tuneATU_Timer.setSingleShot(true); connect(&tuneATU_Timer, &QTimer::timeout, this, &MainWindow::stopTuneATU);
+  killFileTimer.setSingleShot(true); connect(&killFileTimer, &QTimer::timeout, this, &MainWindow::killFile);
+  uploadTimer.setSingleShot(true); connect(&uploadTimer, SIGNAL(timeout()), this, SLOT(uploadSpots()));
+  TxAgainTimer.setSingleShot(true); connect(&TxAgainTimer, SIGNAL(timeout()), this, SLOT(TxAgain()));
+  StopTuneTimer.setSingleShot(true); connect(&StopTuneTimer, SIGNAL(timeout()), this, SLOT(stop_tuning()));
+  RxQSYTimer.setSingleShot(true); connect(&RxQSYTimer, SIGNAL(timeout()), this, SLOT(RxQSY()));
+  minuteTimer.setSingleShot(true); connect (&minuteTimer, &QTimer::timeout, this, &MainWindow::on_the_minute);
 
-  ptt0Timer.setSingleShot(true);
-  connect(&ptt0Timer, &QTimer::timeout, this, &MainWindow::stopTx2);
-  ptt1Timer.setSingleShot(true);
-  connect(&ptt1Timer, &QTimer::timeout, this, &MainWindow::startTx2);
-
-  logQSOTimer.setSingleShot(true);
-  connect(&logQSOTimer, &QTimer::timeout, this, &MainWindow::on_logQSOButton_clicked);
-
-  tuneButtonTimer.setSingleShot(true);
-  connect(&tuneButtonTimer, &QTimer::timeout, this, &MainWindow::haltTxTuneTimer);
-  
-  cqButtonTimer.setSingleShot(true);
-  connect(&cqButtonTimer, &QTimer::timeout, this, &MainWindow::on_pbCallCQ_clicked);
-  
-  enableTxButtonTimer.setSingleShot(true);
-  connect(&enableTxButtonTimer, &QTimer::timeout, this, &MainWindow::enableTxButton_off);
-  
-  tx73ButtonTimer.setSingleShot(true);
-  connect(&tx73ButtonTimer, &QTimer::timeout, this, &MainWindow::on_pbSend73_clicked);
-  
-  logClearDXTimer.setSingleShot(true);
-  connect(&logClearDXTimer, &QTimer::timeout, this, &MainWindow::logClearDX);
-  
-  dxbcallTxHaltedClearTimer.setSingleShot(true);
-  connect(&dxbcallTxHaltedClearTimer, &QTimer::timeout, this, &MainWindow::dxbcallTxHaltedClear);
-
-  tuneATU_Timer.setSingleShot(true);
-  connect(&tuneATU_Timer, &QTimer::timeout, this, &MainWindow::stopTuneATU);
-
-  killFileTimer.setSingleShot(true);
-  connect(&killFileTimer, &QTimer::timeout, this, &MainWindow::killFile);
-
-  uploadTimer.setSingleShot(true);
-  connect(&uploadTimer, SIGNAL(timeout()), this, SLOT(uploadSpots()));
-
-  TxAgainTimer.setSingleShot(true);
-  connect(&TxAgainTimer, SIGNAL(timeout()), this, SLOT(TxAgain()));
-
-  StopTuneTimer.setSingleShot(true);
-  connect(&StopTuneTimer, SIGNAL(timeout()), this, SLOT(stop_tuning()));
-
-  RxQSYTimer.setSingleShot(true);
-  connect(&RxQSYTimer, SIGNAL(timeout()), this, SLOT(RxQSY()));
-
-  minuteTimer.setSingleShot(true);
-  connect (&minuteTimer, &QTimer::timeout, this, &MainWindow::on_the_minute);
-
-  connect(m_wideGraph.data (), SIGNAL(setFreq3(int,int)),this,
-          SLOT(setFreq4(int,int)));
-
-  connect(m_wideGraph.data (), SIGNAL(setRxFreq3(int)),this,
-          SLOT(setRxFreq4(int)));
-
-  connect(m_wideGraph.data (), SIGNAL(filter_on3()),this,
-          SLOT(filter_on()));
-
-  connect(m_wideGraph.data (), SIGNAL(toggle_filter3()),this,
-          SLOT(toggle_filter()));
+  connect(m_wideGraph.data (), SIGNAL(setFreq3(int,int)), this, SLOT(setFreq4(int,int)));
+  connect(m_wideGraph.data (), SIGNAL(setRxFreq3(int)), this, SLOT(setRxFreq4(int)));
+  connect(m_wideGraph.data (), SIGNAL(filter_on3()), this, SLOT(filter_on()));
+  connect(m_wideGraph.data (), SIGNAL(toggle_filter3()), this, SLOT(toggle_filter()));
+  connect(m_wideGraph.data (), SIGNAL(esc_key()), this, SLOT(escapeHalt()));
 
   fsWatcher = new QFileSystemWatcher(this);
   fsWatcher->addPath(m_dataDir.absoluteFilePath ("wsjtx_log.adi"));
-  connect(fsWatcher, SIGNAL(fileChanged(QString)), this,    
-          SLOT(logChanged()));
+  connect(fsWatcher, SIGNAL(fileChanged(QString)), this, SLOT(logChanged()));
   
   m_rrr=false;
   m_killAll=false;
@@ -1971,30 +1933,13 @@ void MainWindow::on_filterButton_clicked (bool checked)
   }
 }
 
-void MainWindow::toggle_filter()
-{
-  ui->filterButton->click();
-}
-
-void MainWindow::filter_on()
-{
-  if(!m_filter) ui->filterButton->click();
-}
-
-void MainWindow::on_swlButton_clicked (bool checked)
-{ 
-  if(checked) m_swl=true; else m_swl=false;
-}
-
-void MainWindow::on_AGCcButton_clicked(bool checked)
-{
-  if(checked) m_agcc=true; else m_agcc=false;
-}
-
-void MainWindow::stopHint_call3_rxfreq () // for T10 also DXCall Hint
-{
-  dec_data.params.nstophint=1;
-}
+void MainWindow::toggle_filter() { ui->filterButton->click(); }
+void MainWindow::escapeHalt() { haltTx("TX halted via Escape button from widegraph "); }
+void MainWindow::filter_on() { if(!m_filter) ui->filterButton->click(); }
+void MainWindow::on_swlButton_clicked (bool checked) { if(checked) m_swl=true; else m_swl=false; }
+void MainWindow::on_AGCcButton_clicked(bool checked) { if(checked) m_agcc=true; else m_agcc=false; }
+// for T10 also DXCall Hint
+void MainWindow::stopHint_call3_rxfreq () { dec_data.params.nstophint=1; }
 
 void MainWindow::on_hintButton_clicked (bool checked)
 {
@@ -3023,6 +2968,7 @@ void MainWindow::decode()                                       //decode()
   decodeBusy(true); // shall be second line
   if(m_autoErase) ui->decodedTextBrowser->clear();
 //  printf("%s(%0.1f) Timing decode start\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  m_nDecodes = 0;
   m_reply_me = false;
   m_reply_other = false;
   m_reply_CQ73 = false;
@@ -3446,7 +3392,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
-        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag);
+        ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));
         if(m_mode=="FT8") {
           if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
           else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
@@ -3531,6 +3477,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
 	  } else {
 		tcut = tcut.remove(0,23);
 	  }
+      if (!decodedtext.isDebug()) m_nDecodes ++;
       auto decodedtextmsg = decodedtext.message();
       bool mycallinmsg = false;
       if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) mycallinmsg = true;
@@ -6686,7 +6633,7 @@ void MainWindow::setXIT(int n, Frequency base)
         // All conditions are met, reset the transceiver Tx dial
         // frequency
         m_freqTxNominal = base + m_XIT;
-        if (m_crossbandOptionEnabled || m_m_continent == "EU" || m_m_prefix == "JA") {
+        if (m_crossbandOptionEnabled) {
           if (base == 1908000 && m_m_prefix != "JA") m_freqTxNominal -= 68000;
           else if (base == 1840000 && m_m_prefix == "JA") m_freqTxNominal += 68000;
         }

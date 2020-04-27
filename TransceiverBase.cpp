@@ -45,7 +45,7 @@ void TransceiverBase::set (TransceiverState const& s,
   TRACE_CAT ("TransceiverBase", "#:" << sequence_number << s);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transiever set\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fprintf(pFile,"%s Transiever set state %d #:%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
   fclose (pFile);
 #endif
   QString message;
@@ -54,7 +54,7 @@ void TransceiverBase::set (TransceiverState const& s,
       last_sequence_number_ = sequence_number;
       may_update u {this, true};
       bool was_online {requested_.online ()};
-      auto ms = set_freq_time;
+      auto ms = QDateTime::currentMSecsSinceEpoch();
       if (!s.online () && was_online)
         {
 #if JTDX_DEBUG_TO_FILE
@@ -162,7 +162,7 @@ void TransceiverBase::set (TransceiverState const& s,
 #endif
               do_ptt (true);
               do_post_ptt (true);
-              QThread::msleep (100 + ms); // some rigs cannot process CAT
+//              QThread::msleep (100 + ms); // some rigs cannot process CAT
                                      // commands while switching from
                                      // Rx to Tx
             }
@@ -178,7 +178,7 @@ void TransceiverBase::set (TransceiverState const& s,
         }
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s Transiever set end\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fprintf(pFile,"%s Transiever set end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch() - ms);
       fclose (pFile);
 #endif
     }

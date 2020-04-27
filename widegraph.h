@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20190724
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 // -*- Mode: C++ -*-
 #ifndef WIDEGRAPH_H
 #define WIDEGRAPH_H
@@ -58,6 +55,7 @@ signals:
   void setRxFreq3(int rxFreq);
   void filter_on3();
   void toggle_filter3();
+  void esc_key();
 
 public slots:
   void wideFreezeDecode(int n);

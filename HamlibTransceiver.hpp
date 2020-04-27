@@ -75,6 +75,7 @@ class HamlibTransceiver final
                                 // establish the Tx VFO
   bool get_vfo_works_;          // Net rigctl promises what it can't deliver
   bool set_vfo_works_;          // More rigctl promises which it can't deliver
+  std::string debug_file_;
 };
 
 #endif
