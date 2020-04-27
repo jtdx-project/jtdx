@@ -74,7 +74,7 @@ void PollingTransceiver::do_post_start ()
   int sec = QDateTime::currentDateTimeUtc().toString("ss").toInt() % 15;
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  fprintf (pFile,"startup ms %lld %d\n",ms,sec);
+  fprintf (pFile,"%s Poll start ms %lld %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),ms,sec);
   fclose (pFile);
 #endif
   if (fast_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11))
@@ -97,6 +97,11 @@ void PollingTransceiver::do_post_stop ()
 {
   // not much point waiting for rig to go offline since we are ceasing
   // polls
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf (pFile,"%s Poll stop\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   stop_timer ();
 }
 
