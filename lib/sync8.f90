@@ -105,27 +105,35 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
       enddo
     enddo
   else
-    nfos6=15 ! 16i spec bw -1 
+!    nfos6=15 ! 16i spec bw -1
+    nfos6=16
     do j=jzb,jzt
       do i=iaw,ibw
         ta=0.; tb=0.; tc=0.; tcq=0.; t0a=0.; t0b=0.; t0c=0.; t0cq=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k)); endif
-          tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6,k+nssy36))
-          if(k+nssy72.le.NHSYM) then; tc=tc + s(i+nfos*icos7(n),k+nssy72); t0c=t0c + sum(s(i:i+nfos6,k+nssy72)); endif
+          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k)) - s(i+nfos*icos7(n)+1,k); endif
+          tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6,k+nssy36)) - s(i+nfos*icos7(n)+1,k+nssy36)
+          if(k+nssy72.le.NHSYM) then
+            tc=tc + s(i+nfos*icos7(n),k+nssy72)
+            t0c=t0c + sum(s(i:i+nfos6,k+nssy72)) - s(i+nfos*icos7(n)+1,k+nssy72)
+          endif
         enddo
         do n=7,15
           k=j+jstrt+nssy*n
           if(k.ge.1) then
-            if(n.lt.15) then; tcq=tcq + s(i,k); else; tcq=tcq + s(i+2,k); endif
-            t0cq=t0cq + sum(s(i:i+nfos6,k))
+            if(n.lt.15) then; tcq=tcq + s(i,k); t0cq=t0cq + sum(s(i:i+nfos6,k)) - s(i,k+1)
+            else; tcq=tcq + s(i+2,k); t0cq=t0cq + sum(s(i:i+nfos6,k)) - s(i,k+3)
+            endif
           endif
         enddo
         t1=ta+tb+tc; t01=t0a+t0b+t0c; t2=t1+tcq; t02=t01+t0cq
         t01=(t01-t1*2)/42.0; if(t01.lt.1e-8) t01=1.0; t02=(t02-t2*2)/60.0; if(t02.lt.1e-8) t02=1.0 ! safe division
-        sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/9.0)/t02
-        sync2d(i,j)=max(sync01,sync02)
+        sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/9.0)/t02; syncf=max(sync01,sync02)
+        t1=tb+tc; t01=t0b+t0c; t2=t1+tcq; t02=t01+t0cq
+        t01=(t01-t1*2)/28.0; if(t01.lt.1e-8) t01=1.0; t02=(t02-t2*2)/46.0; if(t02.lt.1e-8) t02=1.0 ! safe division
+        sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/9.0)/t02; syncs=max(sync01,sync02)
+        sync2d(i,j)=max(syncf,syncs)
       enddo
     enddo
   endif
