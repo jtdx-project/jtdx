@@ -2949,7 +2949,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Gennemsnit: akkumuleret gennemsnitlig DT af afkodede signaler på det aktuelle bånd. Lag: det er dekoderforsinkelse beregnet relativt til begyndelsen af ​​næste interval, negative værdier betyder, at der er ledig tid til rådighed til at øge afkodningsdybden, positive værdier er dekoderens forsinkelse i TX eller næste interval, hvilket betyder, at der muligvis ikke er nok CPU-ressourcer til valgt dekodningsdybde til give pålidelig signal transmission. / xx: antal afkodede meddelelser i sidste interval. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -4800,13 +4800,13 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Frekv  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>

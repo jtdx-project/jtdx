@@ -310,7 +310,7 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
         <translatorcomment>¿dónde?</translatorcomment>
-        <translation></translation>
+        <translation>¿dónde?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2948,7 +2948,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro: promedio acumulado de DT de señales decodificadas en la banda actual. Ret: es el retardo del decodificador calculado en relación con el comienzo del siguiente intervalo, los valores negativos significan que hay tiempo libre disponible para aumentar la profundidad de decodificación, los valores positivos son el retardo del decodificador hacia el TX o el siguiente intervalo, lo que significa que puede que no haya suficientes recursos de CPU para la profundidad de decodificación seleccionada para proporcionar una transmisión fiable de la señal. /xx: número de mensajes decodificados en el último intervalo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -4796,19 +4796,19 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
-        <translation>Por=</translation>
+        <translation>Pro=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Frec  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ret=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>
@@ -7228,7 +7228,7 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="2863"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Con esto activado, JTDX aceptará ciertas peticiones de un servidor UDP que reciba mensajes decodificados.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2979"/>
