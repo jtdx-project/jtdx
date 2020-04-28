@@ -3668,7 +3668,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;平均：現在のバンドのデコードされた信号の累積平均DT。Lag：次の送信の開始に対して相対的に計算されたデコーダーLagです。負の値は、デコード深度を増やすために利用できる時間があることを意味します。正の値は、TXまたは次のインターバルへのデコーダーのラグであり、信頼できる信号送信のためには選択したデコード深度では十分なCPUリソースがない可能性があります。 / xx：最後のピリオドでデコードされたメッセージの数。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
@@ -4551,7 +4551,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5743"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>160mBandでJAとのクロスバンド運用をする</translation>
+        <translation>160mBandでクロスバンド（1840 DX⇔ 1908 JA)運用をする</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="450"/>

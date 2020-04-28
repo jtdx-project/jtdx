@@ -121,7 +121,6 @@ void TransceiverBase::set (TransceiverState const& s,
               fprintf(pFile,"%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
               fclose (pFile);
 #endif
-              ms = 0;
               do_frequency (s.frequency (), s.mode (), ptt_off);
               do_post_frequency (s.frequency (), s.mode ());
 
@@ -144,7 +143,6 @@ void TransceiverBase::set (TransceiverState const& s,
                   fprintf(pFile,"%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
                   fclose (pFile);
 #endif
-                  ms = 0;
                   do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
                   do_post_tx_frequency (s.tx_frequency (), s.mode ());
 
