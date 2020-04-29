@@ -2944,9 +2944,8 @@ Errore: %2 -%3</translation>
         <translation>JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Media: DT (differenza orario) medio accumulato nei segnali decodificatifino ad ora sulla banda. Lag: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che è possibile aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse sufficienti della CPU per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale. / xx: numero di messaggi decodificati nell&apos;ultimo intervallo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Media: DT (differenza orario) medio accumulato nei segnali decodificatifino ad ora sulla banda. Lag: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che è possibile aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse sufficienti della CPU per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale. / xx: numero di messaggi decodificati nell&apos;ultimo intervallo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -3241,6 +3240,11 @@ Errore: %2 -%3</translation>
         <location filename="../mainwindow.cpp" line="1921"/>
         <source>Pwr</source>
         <translation>PWR</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="175"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1801"/>
