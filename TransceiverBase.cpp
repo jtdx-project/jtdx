@@ -47,6 +47,7 @@ void TransceiverBase::set (TransceiverState const& s,
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   fprintf(pFile,"%s Transiever set state %d #:%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
   fclose (pFile);
+  auto ms = QDateTime::currentMSecsSinceEpoch();
 #endif
   QString message;
   try
@@ -54,7 +55,6 @@ void TransceiverBase::set (TransceiverState const& s,
       last_sequence_number_ = sequence_number;
       may_update u {this, true};
       bool was_online {requested_.online ()};
-      auto ms = QDateTime::currentMSecsSinceEpoch();
       if (!s.online () && was_online)
         {
 #if JTDX_DEBUG_TO_FILE
