@@ -985,6 +985,17 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       endif
     endif
 
+! FT8OPG/R Z27HRN/R OH12 check all standard messages with contest callsigns
+! /P has i3.eq.2 .and. n3.eq.0
+    if(iaptype.eq.0 .and. i3.eq.1 .and. n3.eq.0 .and. index(msg37,'/R ').gt.3) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      call_a='            '; call_b='            '
+      if(msg37(ispc1-2:ispc1-1).eq.'/R') then; call_a=msg37(1:ispc1-3); else; call_a=msg37(1:ispc1-1); endif
+      if(msg37(ispc2-2:ispc2-1).eq.'/R') then; call_b=msg37(ispc1+1:ispc2-3); else; call_b=msg37(ispc1+1:ispc2-1); endif
+      falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+    endif
+
 ! -23 -0.5 2533 ~ <...> W LKNQZG2K4 RR73  invalid message, iaptype=0 this type of message is not allowed for transmission with RR73   
 ! -23 -1.2 1335 ~ <...> Z7VENB8R G9 RRR   non AP decode, iaptype=0 invalid message, this type of message is not allowed 
 ! for transmission with RRR   
