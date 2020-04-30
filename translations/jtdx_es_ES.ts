@@ -1085,7 +1085,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
         <source>Haiti</source>
-        <translation>Hatí</translation>
+        <translation>Haití</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="189"/>
