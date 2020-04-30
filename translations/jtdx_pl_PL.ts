@@ -2359,13 +2359,13 @@ Błąd: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="505"/>
         <location filename="../FrequencyList.cpp" line="669"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Region IARU</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="526"/>
         <location filename="../FrequencyList.cpp" line="670"/>
         <source>Mode</source>
-        <translation>Modulacja</translation>
+        <translation>Emisja</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="558"/>
@@ -2963,7 +2963,7 @@ Błąd: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5982"/>
         <location filename="../mainwindow.cpp" line="5993"/>
         <source>Band Activity</source>
-        <translation>Aktywność na pasmie</translation>
+        <translation>Aktywność Pasma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
@@ -3040,9 +3040,10 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="968"/>
         <source>DX Grid</source>
-        <translation>Lokator DX&apos;a</translation>
+        <translation>Lokator DX</translation>
     </message>
-    <message>
+    
+<message>
         <location filename="../mainwindow.ui" line="990"/>
         <source>Locator of station to be worked</source>
         <translation>Lokator stacji do zrobienia</translation>
@@ -3083,7 +3084,7 @@ Błąd: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5225"/>
         <location filename="../mainwindow.cpp" line="5640"/>
         <source>DX Call</source>
-        <translation>Znak wyw. DX&apos;a</translation>
+        <translation>Znak DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1332"/>
@@ -3421,7 +3422,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2641"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Wpisać to QSO do logu ADIF</translation>
+        <translation>Zapis QSO do logu ADIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2644"/>
@@ -3481,12 +3482,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lefwy klawisz myszy: czyści dane z okienek Znak DX i Lokator DX. Prawy klawisz myszy: Right mouse button: czyści dane z okienek Znak DX, Lokator DX, historia QSO i czarną listę. CTRL+Prawy klawisz myszy:dodaje znak wywoławczy z okienka Znak DX do czarnej listy, czyści dane z okienek Znak DX, Lokator DX oraz historię QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lefwy klawisz myszy: czyści dane z okienek Znak DX i Lokator DX. Prawy klawisz myszy: czyści dane z okienek Znak DX, Lokator DX, historia QSO i czarną listę. CTRL+Prawy klawisz myszy: dodaje znak wywoławczy z okienka Znak DX do czarnej listy, czyści dane z okienek Znak DX, Lokator DX oraz historię QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2883"/>
         <source>Clear D&amp;X</source>
-        <translation>Czyszcz. D&amp;X</translation>
+        <translation>Czyść D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2981"/>
@@ -4002,7 +4003,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4651"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Usuwanie plków *.wav &amp;&amp; *.c2 w katalogu SaveDir</translation>
+        <translation>Usuwanie plików *.wav &amp;&amp; *.c2 w katalogu SaveDir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4662"/>
@@ -4010,12 +4011,12 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.ui" line="5407"/>
         <location filename="../mainwindow.ui" line="5689"/>
         <source>fast</source>
-        <translation>szybko</translation>
+        <translation>szybkie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4673"/>
         <source>None</source>
-        <translation>Nic</translation>
+        <translation>Nie zapisuj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4681"/>
@@ -4035,7 +4036,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4774"/>
         <source>Keyboard shortcuts</source>
-        <translation>Skróty klawiaturowe</translation>
+        <translation>Skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4777"/>
@@ -4069,7 +4070,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.ui" line="5657"/>
         <location filename="../mainwindow.ui" line="5697"/>
         <source>medium</source>
-        <translation>śreni</translation>
+        <translation>średnie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4829"/>
@@ -4077,7 +4078,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.ui" line="5426"/>
         <location filename="../mainwindow.ui" line="5708"/>
         <source>deep</source>
-        <translation>głęboki</translation>
+        <translation>głębokie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4837"/>
@@ -4118,7 +4119,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4879"/>
         <source>Prompt me to log QSO</source>
-        <translation>Sugeruj mi zalogowanie QSO</translation>
+        <translation>Ręczne logowanie QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4887"/>
@@ -4128,7 +4129,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4895"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Wyczyść okienka Znak DX i Lokator po zalogowaniu</translation>
+        <translation>Wyczyść okienka Znak DX i Lokator DX po zalogowaniu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4903"/>
@@ -4283,7 +4284,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5154"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>Wiadomości z moim znakiem wywoławczym do okna częstotliwośći RC </translation>
+        <translation>Wiadomości z moim znakiem wywoławczym do okna częstotliwości RC </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5159"/>
@@ -4333,7 +4334,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5235"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+  Znak oraz przeszukiwanie wiadomośći CQ</translation>
+        <translation>4+  Znak oraz przeszukiwanie wiadomości CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5243"/>
@@ -4463,7 +4464,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5536"/>
         <source>Report message priority</source>
-        <translation></translation>
+        <translation>Priorytet wiadomości raportów</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5544"/>
@@ -4473,7 +4474,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5555"/>
         <source>Use hound TX frequency control</source>
-        <translation>Używanie kontroli częstotliwośći TX hound</translation>
+        <translation>Używanie kontroli częstotliwości TX hound</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5563"/>
@@ -4560,7 +4561,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5735"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Znak wywoławczy do schowka po podwójym kliknięciu|autoselect</translation>
+        <translation>Znak wywoławczy do schowka po podwójnym kliknięciu|autoselect</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5743"/>
@@ -4759,12 +4760,12 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2851"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Sterowanie częstotliwością hound TX wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)</translation>
+        <translation>Sterowanie częstotliwością hound TX wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Emulowane* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2854"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Sztuczne* w zakładce *Ustawienia | Radio*.)</translation>
+        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Emulowan* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2862"/>
@@ -4779,7 +4780,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2928"/>
         <source>Keyboard Shortcuts</source>
-        <translation>Skróty klawiaturowe</translation>
+        <translation>Skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2939"/>
@@ -4789,19 +4790,19 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
-        <translation>Uśrednione</translation>
+        <translation>Średnia</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Częst. </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźn.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>
@@ -5851,7 +5852,7 @@ Error(%2): %3</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
-        <source>IARU Region:</source>
+        <source>Region IARU:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5862,7 +5863,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znaki złożone typu 2 zawierają prefiksy lub sufiksy nie znajdujące sie na dozwolonej krótkiej liście (Patrz Pomoc-&amp;gt;Dodatkowe prefiksy i sufiksy).&lt;/p&gt;&lt;p&gt;Ta opcja określa, które generowane wiadomości powinny raczej zawierać twój pełny znak złożony typu 2 niż twój bazowy znak wywoławczy. Stosuje się  tylko gdy posiadasz złożony znak wywoławczy typu 2.&lt;/p&gt;&lt;p&gt;Ta opcja kontroluje sposób w jaki generowane są wiadomości używane do odpowiadania na CQ. Generowane wiadomości 6 (CQ) i 5 (73) będą zawsze zawierały twój pełny znak wywoławczy. Protokoły JT65 i JT9 dopuszczają niektóre standardowe wiadomości z pełnymi znakami wywoławczymi kosztem innych części informacji takich jak znak DX lub twój lokator.&lt;/p&gt;&lt;p&gt;Wybranie wiadomości 1 pomija znak wywoławczy DX co może być problemem przy odpowiadaniu na wołania CQ. Wybranie wiadomości 3 takżę pomija znak wywoławczy DX i wiele wersji tego i innych programów nie odczytaja raportu. Nie wybranie żadnej z nich oznacza, że twój pełen znak wywoławczy znajdzie sie tylko w wiadomości 5 (73) a więc twój partnej może zalogować zły znak wywoławczy.&lt;/p&gt;&lt;p&gt;Żadna z tych opcji nie jest doskonała, wiadomość 3 jest najlepsza ale miej świadomość, iż twój QSO partner może nie zalogować raporty wysłanego do niego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znaki złożone typu 2 zawierają prefiksy lub sufiksy nie znajdujące sie na dozwolonej krótkiej liście (Patrz Pomoc-&amp;gt;Dodatkowe prefiksy i sufiksy).&lt;/p&gt;&lt;p&gt;Ta opcja określa, które generowane wiadomości powinny raczej zawierać twój pełny znak złożony typu 2 niż twój bazowy znak wywoławczy. Stosuje się  tylko gdy posiadasz złożony znak wywoławczy typu 2.&lt;/p&gt;&lt;p&gt;Ta opcja kontroluje sposób w jaki generowane są wiadomości używane do odpowiadania na CQ. Generowane wiadomości 6 (CQ) i 5 (73) będą zawsze zawierały twój pełny znak wywoławczy. Protokoły JT65 i JT9 dopuszczają niektóre standardowe wiadomości z pełnymi znakami wywoławczymi kosztem innych części informacji takich jak znak DX lub twój lokator.&lt;/p&gt;&lt;p&gt;Wybranie wiadomości 1 pomija znak wywoławczy DX co może być problemem przy odpowiadaniu na wołania CQ. Wybranie wiadomości 3 także pomija znak wywoławczy DX i wiele wersji tego i innych programów nie odczytaja raportu. Nie wybranie żadnej z nich oznacza, że twój pełen znak wywoławczy znajdzie sie tylko w wiadomości 5 (73) a więc twój partner może zalogować zły znak wywoławczy.&lt;/p&gt;&lt;p&gt;Żadna z tych opcji nie jest doskonała, wiadomość 3 jest najlepsza ale miej świadomość, iż twój QSO partner może nie zalogować raportu wysłanego do niego.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
@@ -5977,7 +5978,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Hide partially transmitted messages</source>
-        <translation>Ukryj wiadomości częsciowo nadane</translation>
+        <translation>Ukryj wiadomości częściowo nadane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="419"/>
@@ -6176,7 +6177,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="889"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation>Dane portu szeregowego, które muszą być zgone z  ustawieniami twojego radia.</translation>
+        <translation>Dane portu szeregowego, które muszą być zgodne z  ustawieniami twojego radia.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="896"/>
@@ -6221,7 +6222,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="941"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów danych uzywanych do komunikacji z wejściem CAT twojego interfejsu (zazwyczaj osiem).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów danych używanych do komunikacji z wejściem CAT twojego interfejsu (zazwyczaj osiem).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="944"/>
@@ -6248,7 +6249,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="998"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów stop używanych do komunikacji z interfejsem CAT twojego radia&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość bitów stop używanych do komunikacji z interfejsem CAT twojego radia&lt;/p&gt;&lt;p&gt;(sprawdź w podręczniku twojego radia).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1001"/>
@@ -6268,7 +6269,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="1052"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kontrola przepływu danych między tym komputerem a interfejsem CAT twojego radia (zwykle &amp;quot;Brak&amp;quot; ale niektóre wymagają &amp;quot;Sprzętowa&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kontrola przepływu danych między tym komputerem a interfejsem CAT twojego radia (zwykle &amp;quot;Brak&amp;quot; ale niektóre wymagają &amp;quot;Sprzętowe&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1055"/>
@@ -6303,7 +6304,7 @@ urządzenia Kenwood, ich wymagają).</translation>
     <message>
         <location filename="../Configuration.ui" line="1111"/>
         <source>&amp;Hardware</source>
-        <translation>&amp;Sprzętowa</translation>
+        <translation>&amp;Sprzętowe</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
@@ -6374,7 +6375,7 @@ i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nie ma aktywacji PTT, zamiast tego automatyczny VOX twojego radia jest uzywany do kluczowania nadajnika.&lt;/p&gt;&lt;p&gt;Używać tego jeżeli nie ma sprzętowego interfejsu radia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nie ma aktywacji PTT, zamiast tego automatyczny VOX twojego radia jest używany do kluczowania nadajnika.&lt;/p&gt;&lt;p&gt;Używać tego jeżeli nie ma sprzętowego interfejsu radia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1273"/>
@@ -6384,7 +6385,7 @@ i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Używać linii kontrolnej DTR RS-232 do przełączania PTT twojego radia, wymaga sprzętu do obsługi linii./p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Używać linii kontrolnej DTR RS-232 do przełączania PTT twojego radia, wymaga sprzętu do obsługi linii.&lt;/p&gt;&lt;p&gt;Niektóre komercyjne interfejsy także używają tej metody.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Należy pamiętać, że ta opcja nie jest dostępna na szeregowych portach CAT gdy stosowana jest sprzętowa kontrola przepływu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1286"/>
@@ -6394,7 +6395,7 @@ i nie masz innego sprzętowego interfejsu dla PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1317"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz port szeregowy RS-232 używany do sterowania PTT, ta opcja jest dostępna jeżeli wybrano DTR lub RTS powyżej jako metodę nadawania.&lt;/p&gt;&lt;p&gt;Ten port może być tym samych który jest używany do sterowania CAT.&lt;/p&gt;&lt;p&gt;Dla niekórych typów interfejsów może zostać wybrana specjalna wartość CAT, jest to używane dla interfejsów CAT innych niż szeregowe, które mogą strować liniami kontrolnymi portu szeregowego zdalnie (na przykład OmniRig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz port szeregowy RS-232 używany do sterowania PTT, ta opcja jest dostępna jeżeli wybrano DTR lub RTS powyżej jako metodę nadawania.&lt;/p&gt;&lt;p&gt;Ten port może być tym samych który jest używany do sterowania CAT.&lt;/p&gt;&lt;p&gt;Dla niekórych typów interfejsów może zostać wybrana specjalna wartość CAT, jest to używane dla interfejsów CAT innych niż szeregowe, które mogą sterować liniami kontrolnymi portu szeregowego zdalnie (na przykład OmniRig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1348"/>
@@ -6403,7 +6404,7 @@ this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
         <translation>Niektóre TRCVRy mogą wybrać wejście audio używając
 poleceń CAT, takie ustawienie pozwala tobie wybrać które wejście audio
-będzie zastosowane (jeżeli jest dostępne, wtedy njczęściej
+będzie zastosowane (jeżeli jest dostępne, wtedy najczęściej
 opcja Tył/Dane będzie najlepsza).</translation>
     </message>
     <message>
@@ -6424,17 +6425,17 @@ opcja Tył/Dane będzie najlepsza).</translation>
     <message>
         <location filename="../Configuration.ui" line="1392"/>
         <source>Modulation mode selected on radio.</source>
-        <translation>Typ modulacji ustwiony w radiu.</translation>
+        <translation>Rodzaj emisji ustawiony w radiu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1395"/>
         <source>Mode</source>
-        <translation>Modulacja</translation>
+        <translation>Emisja</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1401"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB jest zazwyczaj prawidłowym trybem  modulacji,&lt;/p&gt;&lt;p&gt;czyba, że radio ma specjalne ustawienie trybu danych lub packet&lt;/p&gt;&lt;p&gt;dla pracy AFSK.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB jest zazwyczaj prawidłowym typem emisji,&lt;/p&gt;&lt;p&gt;chyba, że radio ma specjalne ustawienie trybu danych lub packet&lt;/p&gt;&lt;p&gt;dla pracy AFSK.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1404"/>
@@ -6446,7 +6447,7 @@ opcja Tył/Dane będzie najlepsza).</translation>
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation>Nie pozwalaj programowi ustawiać trybu modulacji
+        <translation>Nie pozwalaj programowi ustawiać typu emisji
 (niezalecane ale używać w przypadku wybrania
 złej modulacji lub szerokości pasma).</translation>
     </message>
@@ -6459,7 +6460,7 @@ złej modulacji lub szerokości pasma).</translation>
     <message>
         <location filename="../Configuration.ui" line="1432"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation>Jeżeli to jest dostępne, zazwyczaj będzie to prawidłowa modulacja dla tego programu.</translation>
+        <translation>Jeżeli jest dostępne, zazwyczaj będzie to prawidłowa modulacja dla tego programu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1435"/>
@@ -6474,7 +6475,7 @@ złej modulacji lub szerokości pasma).</translation>
     <message>
         <location filename="../Configuration.ui" line="1461"/>
         <source>Fake It</source>
-        <translation>Sztuczne</translation>
+        <translation>Emulowane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1471"/>
@@ -6518,7 +6519,7 @@ działają w oczekiwany sposób.</translation>
     <message>
         <location filename="../Configuration.ui" line="1588"/>
         <source>Tx delay:</source>
-        <translation></translation>
+        <translation>Opóźnienie TX:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1645"/>
@@ -6533,7 +6534,7 @@ działają w oczekiwany sposób.</translation>
     <message>
         <location filename="../Configuration.ui" line="1654"/>
         <source>Soundcard</source>
-        <translation>Karta dźwiekowa</translation>
+        <translation>Karta dźwiękowa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1666"/>
@@ -6640,7 +6641,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="1844"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation>Ścieżka do której pliki .WAV są zapisywane.</translation>
+        <translation>Ścieżka do katalogu, w którym zapisywane są pliki .WAV.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1853"/>
@@ -6670,7 +6671,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="1926"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: wołaj CQ jeżeli osiągnięto stan licznika. AutoSeq 6/7: przeszukuj zdekodowane wiadomości aby znaleźć jakąś prawidłową wiadomość &apos;CQ&apos; lub &apos;73&apos;, wołaj CQ jeżeli nie znaleziono takiej wiadomości. Wtrzymaj Tx jeżeli w zakladce AutoSeq aktywna jest opcja Pojedyncze QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: wołaj CQ jeżeli osiągnięto stan licznika. AutoSeq 6/7: przeszukuj zdekodowane wiadomości aby znaleźć jakąś prawidłową wiadomość &apos;CQ&apos; lub &apos;73&apos;, wołaj CQ jeżeli nie znaleziono takiej wiadomości. Wstrzymaj Tx jeżeli w zakladce AutoSeq aktywna jest opcja Pojedyncze QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1929"/>
@@ -6753,7 +6754,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="2229"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Złap i upuść aby zmienić kolejność. Prawoklik aby wykonać specyficzną akcję tego elementu. Kliknąć, SHIFT+Klik oraz, CRTL+Klik aby wybrać element. symbol @ jest zastępowany znakiem DX, symbol &amp; znakiem bazowym użytkownika, symbol # raportem do nadania, symbol ^ imieniem korespondenta uzyskanym z logu, gdzie imię nie powinno przekraczać 7 znaków.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Złap i upuść aby zmienić kolejność. Prawoklik aby wykonać specyficzną akcję tego elementu. Kliknąć, SHIFT+Klik oraz, CRTL+Klik aby wybrać element. Symbol @ jest zastępowany znakiem DX, symbol &amp; znakiem bazowym użytkownika, symbol # raportem do nadania, symbol ^ imieniem korespondenta uzyskanym z logu, gdzie imię nie powinno przekraczać 7 znaków.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2280"/>
@@ -6796,7 +6797,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>wyczyść znak &amp;DX i Lokator po zalogowaniu</translation>
+        <translation>wyczyść Znak &amp;DX i Lokator DX po zalogowaniu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6816,7 +6817,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>&amp;Zmień modulację na RTTY</translation>
+        <translation>&amp;Zmień emisję na RTTY</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2366"/>
@@ -6826,7 +6827,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>Suge&amp;ruj mi logowanie QSO</translation>
+        <translation>Otwie&amp;raj okno logowania QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2376"/>
@@ -7133,7 +7134,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź i podświetl nową CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
@@ -7153,7 +7154,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź i podświetl nową ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -7353,7 +7354,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
         <source>Inverse text/background color</source>
-        <translation>Odwróć lolor tekstu/tła</translation>
+        <translation>Odwróć kolor tekstu/tła</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
@@ -7516,22 +7517,22 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3874"/>
         <source>New CQZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowa CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3944"/>
         <source>New CQZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowa CQZ dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4014"/>
         <source>New ITUZ</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowa ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4084"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowa ITUZ dla Pasma/Modulacji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4154"/>
@@ -7754,7 +7755,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5069"/>
         <source>Show CQ messages only</source>
-        <translation>Pokazuj wylko wiadomośći CQ</translation>
+        <translation>Pokazuj tylko wiadomości CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5092"/>
