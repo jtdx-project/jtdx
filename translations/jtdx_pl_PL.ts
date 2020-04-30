@@ -109,22 +109,22 @@ Inna aplikacja blokuje dostęp do katalogu</translation>
     <message>
         <location filename="../Configuration.cpp" line="1459"/>
         <source>&amp;Load ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytanie</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1463"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz jako ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1467"/>
         <source>&amp;Merge ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Połącz ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1471"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2696"/>
@@ -205,77 +205,77 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4467"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>Wybór czcionki teksu dekodowanego przez JTDX</translation>
+        <translation>Wybór czcionki tekstu dekodowanego przez JTDX</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5093"/>
         <location filename="../Configuration.cpp" line="5124"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5091"/>
         <location filename="../Configuration.cpp" line="5122"/>
         <location filename="../Configuration.cpp" line="5176"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki częstotliwości (*.qrg);;Wszystkie pliki (*.*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Load Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytaj częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5107"/>
         <source>Replace Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastąp częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5108"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien, że chcesz usunąć bieżące częstotliwości robocze i zastąpić je wczytanymi?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5120"/>
         <source>Merge Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Połącz częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5147"/>
         <location filename="../Configuration.cpp" line="5156"/>
         <location filename="../Configuration.cpp" line="5166"/>
         <source>Not a valid frequencies file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieprawidłowy plik częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5147"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Błędna magiczna liczba pliku</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5156"/>
         <source>Version is too new</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbyt nowa wersja</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5166"/>
         <source>Contents corrupt</source>
-        <translation type="unfinished"></translation>
+        <translation>Uszakodzona zawartość</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5176"/>
         <source>Save Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5186"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz tylko wybrane częstotliwości robocze</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5188"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy jesteś pewien, że chcesz zapisać tylko aktualnie wybrane częstotliwości? Kliknij  No  aby zapisać wszystkie.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5215"/>
@@ -2137,32 +2137,32 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation type="unfinished"></translation>
+        <translation>częściowa utrata danych</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished"></translation>
+        <translation>Za krótki lub uszkodzony plik ALLCALL7.TXT?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation type="unfinished"></translation>
+        <translation>nQSOPostęp</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished"></translation>
+        <translation>niski poziom  rms  sygnału wejściowego</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>wykryto przerwę audio</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished"></translation>
+        <translation>nfqso jest poza pasmem</translation>
     </message>
 </context>
 <context>
@@ -2304,12 +2304,12 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished">Błąd sieci</translation>
+        <translation>Błąd sieci</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Wymagane uwierzytelnienie</translation>
     </message>
 </context>
 <context>
@@ -2330,12 +2330,12 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Region IARU:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
-        <translation>&amp;Typ modulacji:</translation>
+        <translation>E&amp;misja:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="228"/>
@@ -2345,7 +2345,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
@@ -2478,97 +2478,97 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Command completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Polecenie wykonane prawidłowo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Invalid parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepoprawny parametr</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Invalid configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Niepoprawna konfiguracja</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Memory shortage</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbyt mało pamięci</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>Feature not implemented</source>
-        <translation type="unfinished"></translation>
+        <translation>Niezaimplementowana funkcjonalność</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Communication timed out</source>
-        <translation type="unfinished"></translation>
+        <translation>Przekroczony limit czasu komunikacji</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd wejścia/wyjścia (IO)</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Internal Hamlib error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd wewnętrzny Hamlib</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Protocol error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd protokołu</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Command rejected by the rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Polecenie odrzucone przez TRCVR</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation type="unfinished"></translation>
+        <translation>Polecenie wykonane, ale skrócone, rezultat niepewny</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Feature not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Niedostępna funkcjonalność</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Target VFO unaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieosiągalne docelowe VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>Communication bus error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd szyny komunikacyjnej</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Communication bus collision</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolizja szyny komunikacyjnej</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="267"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>Niewłaściwe VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="268"/>
         <source>Argument out of domain of func</source>
-        <translation type="unfinished"></translation>
+        <translation>Argument poza dziedziną funkcji</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="316"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation>Błąd pliku ustawień Hamlib: %1 w ofsecie znaku %2</translation>
+        <translation>Błąd pliku ustawień Hamlib: %1 w offsecie znaku %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="322"/>
@@ -2723,7 +2723,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1340"/>
         <source>setting PTT off</source>
-        <translation>ustawiania PTT na wyłączone</translation>
+        <translation>ustawianie PTT na wyłączone</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1352"/>
@@ -2742,7 +2742,7 @@ Błąd: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished">Region IARU</translation>
+        <translation>Region IARU</translation>
     </message>
 </context>
 <context>
@@ -2750,94 +2750,94 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>Save</source>
-        <translation type="unfinished">Zapis</translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Save All</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz wszysko</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>Open</source>
-        <translation type="unfinished">Otwórz</translation>
+        <translation>Otwórz</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <location filename="../mainwindow.cpp" line="3721"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished">&amp;Tak</translation>
+        <translation>&amp;Tak</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Yes to &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tak na wszystkie</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <location filename="../mainwindow.cpp" line="3724"/>
         <source>&amp;No</source>
-        <translation type="unfinished">&amp;Nie</translation>
+        <translation>&amp;Nie</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>N&amp;o to All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nie na wszystkie</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Przerwać</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished">&amp;Ponownie</translation>
+        <translation>&amp;Ponownie</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomiń</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="51"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Anuluj</translation>
+        <translation>&amp;Anuluj</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="52"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Odrzuć</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="53"/>
         <source>Help</source>
-        <translation type="unfinished">Pomoc</translation>
+        <translation>Pomoc</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="54"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastosuj</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished">Resetuj</translation>
+        <translation>Resetuj</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="56"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Przywróć domyślne</translation>
     </message>
 </context>
 <context>
@@ -2845,7 +2845,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>Kliknąć OK aby potwierdzić następujące QSO:</translation>
+        <translation>Kliknąć  OK  aby potwierdzić następujące QSO:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -2946,7 +2946,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: zakumulowana średnia DT zdekodowanych sygnałów na bieżącym pasmie.&lt;/p&gt;&lt;p&gt;Lag: opóźnienie dekodera obliczone względem początku kolejnego interwału, wartość ujemna oznacza, że jest jeszcze dostępny czas aby zwiększyć głębokość dekodowania, wartość dodatnia jest opóźnienieniem dekodera do kolejnego interwału TX i oznacza, że może nie ma dostępnych wystarczających zasobów CPU dla wybranej głębokości dekodowania aby zapewnić dobry sygnał nadawania.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag zależy od wydajności CPU, zawartości szumów, zajętości pasma oraz innych programów używających komputera, może być zmniejszone poprzez zredukowanie pasma wodospadu. Jeżeli Lag jest stabilnie ujemne, to znaczy że CPU dobrze przetwarza interwał dekodowania i można spróbować ustawić dekodowanie bardziej agresywne aby uzyskać więcej dekodowań.&lt;/p&gt;&lt;p&gt;FT8: jeżeli Lag jest 0 .. 0.4 to można nadal używać Autoseq 3/7 (autoselect przełączy wiadomość TX wystarczająco wcześnie aby nadać pełną wiadomość). Jeżeli Lag jest &gt; 0.4 oznacza to, że powinno się spróbować zmniejszyć agresywność dekodowania. Jeżeli Lag jest nadal &gt; 0.4 to znaczy, że powinno się użyć Autoseq 2/6 ponieważ odpowiedź na przychodzące wołanie będzie częściowo uszkodzona przy nadawaniu z AutoSeq 3/7. Jeżeli stale Lag &gt; 2 oznacza to, że twój CPU jest nieodpowieni do pracy FT8 z bieżącymi ustawiniami dekodera. Oczywiście można monitorować jako SWL.&lt;/p&gt;&lt;p&gt;/xx: ilość zdekodowanych wiadomości w ostatnim interwale.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -3042,7 +3042,8 @@ Błąd: %2 - %3</translation>
         <source>DX Grid</source>
         <translation>Lokator DX</translation>
     </message>
-    <message>
+    
+<message>
         <location filename="../mainwindow.ui" line="990"/>
         <source>Locator of station to be worked</source>
         <translation>Lokator stacji do zrobienia</translation>
@@ -3093,12 +3094,12 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1366"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zmiana minut TX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zmiana interwału TX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1372"/>
         <source>TX minute</source>
-        <translation>Minuty TX</translation>
+        <translation>Interwał TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1410"/>
@@ -3273,7 +3274,7 @@ Błąd: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1942"/>
         <location filename="../mainwindow.ui" line="1958"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista potrzebnych QTH lokatorów rozdzielonych przecinkami; tylko czteroznakowe lokatory są wspierane. Autoselekcja przy ustawieniu AutoSeq 1..7 będzie przetwarzała potrzebne lokatory zgodnie z ustawionymi powiadomieniami/priorytetami, ta funkcjonalność nie jest wspierana dla AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista potrzebnych QTH lokatorów rozdzielonych przecinkami; tylko lokatory czteroznakowe są wspierane. Autoselekcja przy ustawieniu AutoSeq 1..7 będzie przetwarzała potrzebne lokatory zgodnie z ustawionymi powiadomieniami/priorytetami, ta funkcjonalność nie jest wspierana dla AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1945"/>
@@ -3330,7 +3331,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadawanie czystego tonu.Czas strojenia można ustawiać w zakładce Ustawienia -&gt; Ogólne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadawanie czystego tonu. Czas strojenia można ustawiać w zakładce Ustawienia -&gt; Ogólne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2282"/>
@@ -3371,7 +3372,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>Opoowiadaj wcześniej (B4) zrobionym - opcja AutoSeq</translation>
+        <translation>Opcja AutoSeq, odpoowiadaj wcześniej (B4) zrobionym</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2459"/>
@@ -3461,7 +3462,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pasmo przenoszenia, FT8 150Hz, FT8 tryb hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Sygnały JT65: 580Hz dekodowanie, 300 Hz dla wyświetlania wiadomości. Filtr jest wyśrodkowany na centrum spektrum sygnały RX. Funkcjonalność filtru nie może polepszyć dekodowania sygnałów, jest przeznaczony do użytkowania przy wolnych CPU aby umożliwić dekoderowi zakończenie procesu dekodowania przez nadawaniem sygnału i zapobiec zmianie wiadomości podczas nadawania. Wszystkie przychodzące wołania będące poza pasmem filtra będą odrzucone, używać funkcjonalności filtra tylko wtedy jeżeli jest potrzebna dla twojego CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2801"/>
@@ -3481,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2880"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lefwy klawisz myszy: czyści dane z okienek Znak DX i Lokator DX. Prawy klawisz myszy: czyści dane z okienek Znak DX, Lokator DX, historia QSO i czarną listę. CTRL+Prawy klawisz myszy: dodaje znak wywoławczy z okienka Znak DX do czarnej listy, czyści dane z okienek Znak DX, Lokator DX oraz historię QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lewy klawisz myszy: czyści dane z okienek Znak DX i Lokator DX. Prawy klawisz myszy: czyści dane z okienek Znak DX, Lokator DX, historia QSO i czarną listę. CTRL+Prawy klawisz myszy: dodaje znak wywoławczy z okienka Znak DX do czarnej listy, czyści dane z okienek Znak DX, Lokator DX oraz historię QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2883"/>
@@ -3516,7 +3517,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3091"/>
         <location filename="../mainwindow.ui" line="3659"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kierunkowe CQ, zakres od AA do ZZ jest wspierane.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kierunkowe CQ, wspierany jest zakres od AA do ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3094"/>
@@ -3545,7 +3546,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3132"/>
         <source>SkipTx1</source>
-        <translation></translation>
+        <translation>Pomiń Tx1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3165"/>
@@ -3637,7 +3638,7 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>Wprowadż dowolny tekst (maksimum 13 znaków)
 lub wybierz predefiniowane makro z rozwijanej listy.
 Naciśnij ENTER aby dodać bieżący tekst do predefiniowanej
-list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
+listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3451"/>
@@ -3771,7 +3772,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4040"/>
         <source>Free msg</source>
-        <translation></translation>
+        <translation>Dowolna wiadomość</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4117"/>
@@ -3866,7 +3867,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4387"/>
         <source>narrow Filter</source>
-        <translation>Zawężanie Filtra</translation>
+        <translation>zawężanie Filtra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4395"/>
@@ -3911,7 +3912,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4500"/>
         <source>Mode</source>
-        <translation>Modulacja</translation>
+        <translation>Emisja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4512"/>
@@ -4108,7 +4109,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4863"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>Zmodyfikuj modulację na RTTY dla logowania</translation>
+        <translation>Zmień emisję na RTTY dla logowania</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4871"/>
@@ -4163,7 +4164,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4951"/>
         <source>Skip Tx 1</source>
-        <translation></translation>
+        <translation>Pomiń Tx 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4959"/>
@@ -4228,7 +4229,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5067"/>
         <source>JT65 hinted decoding</source>
-        <translation>wspomagane dekodowanie JT65</translation>
+        <translation>Wspomagane dekodowanie JT65</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5078"/>
@@ -4248,7 +4249,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5091"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pobierz przukładowe pliki audio pokazujące rózne modulacje.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pobierz przykładowe pliki audio pokazujące różne emisje.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5099"/>
@@ -4283,7 +4284,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5154"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>Wiadomości z moim znakiem wywoławczym do okna częstotliwości RC </translation>
+        <translation>Wiadomości z moim znakiem wywoławczym do okna częstotliwości RX </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5159"/>
@@ -4313,7 +4314,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5203"/>
         <source>FT8 call last</source>
-        <translation>Wołanie FT8 jako ostatnie</translation>
+        <translation>Wołanie FT8 ostatniego</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5211"/>
@@ -4338,7 +4339,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5243"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2  Znak dekodowany to rozpoczęcia interwału TX</translation>
+        <translation>2  Znak dekodowany do rozpoczęcia interwału TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5251"/>
@@ -4540,7 +4541,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5673"/>
         <source>Hide FT contest messages</source>
-        <translation>Ukrywaj wiadomości kontestów FT</translation>
+        <translation>Ukrywaj wiadomości zawodów FT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5681"/>
@@ -4555,7 +4556,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5724"/>
         <source>6 pass SWL mode</source>
-        <translation>Tryb SWL 6 przebiegów</translation>
+        <translation>Tryb SWL, 6 przebiegów</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5735"/>
@@ -4645,7 +4646,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1754"/>
         <source>Error saving c2 file</source>
-        <translation>Błąd zappisu pliku c2</translation>
+        <translation>Błąd zapisu pliku c2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1831"/>
@@ -4698,7 +4699,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2548"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>Algorytmy, kod źródłowy, wygląd i działanie WSJT-X i powiązanych programów, oraz specyfifikacje protokołu dla modulacji FSK41, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 są zastrzeżone prawami autorskim (C) 2001-2018 przez jednego lub wielu z następujących autorów: Joseph Taylor, K1JT; K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; oraz innych członków Grupy Developerskiej WSJT.</translation>
+        <translation>Algorytmy, kod źródłowy, wygląd i działanie WSJT-X i powiązanych programów, oraz specyfifikacje protokołu dla emisji FSK41, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 są zastrzeżone prawami autorskim (C) 2001-2018 przez jednego lub wielu z następujących autorów: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; oraz innych członków Grupy Developerskiej WSJT.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2668"/>
@@ -4759,12 +4760,12 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2851"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Sterowanie częstotliwością hound TX wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Emulowane* w zakładce *Ustawienia | Radio*.)</translation>
+        <translation>Sterowanie częstotliwością hound TX wymaga ustawienia sterowania *Split* TRCVR-a (*TRCVR* lub *Emulowane* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2854"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (albo *TRCVR* lub *Emulowan* w zakładce *Ustawienia | Radio*.)</translation>
+        <translation>Sterowanie częstotliwością hound TX nie jest dozwolone w standardowych podpasmach FT8 i wymaga ustawienia sterowania *Split* TRCVR-a (*TRCVR* lub *Emulowan* w zakładce *Ustawienia | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2862"/>
@@ -4801,7 +4802,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation>Opóźn.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>
@@ -4824,7 +4825,7 @@ list. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3887"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>Prosze wybrać inną częstotliwość TX. JTDX będzie nieświadomie nadawał inną modulacją w podpasmie WSPR.</translation>
+        <translation>Prosze wybrać inną częstotliwość TX. JTDX będzie nieświadomie nadawał inną emisją w podpasmie WSPR.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3892"/>
@@ -4951,12 +4952,12 @@ jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6702"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nacisnąć przycisk aby ustawić częst. Tx taką samą jak częst. audio Rx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nacisnąć przycisk aby ustawić częstotliwość Tx taką samą jak częstotliwość audio Rx.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6825"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd sterowania TRCVR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6899"/>
@@ -4999,7 +5000,7 @@ srever UDP %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7539"/>
         <source>Tx watchdog expired</source>
-        <translation></translation>
+        <translation>Upłynął czas nadawania</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7553"/>
@@ -5013,13 +5014,13 @@ srever UDP %2:%3</translation>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation>Modulacja</translation>
+        <translation>Emisja</translation>
     </message>
 </context>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="271"/>
+        <location filename="../PollingTransceiver.cpp" line="264"/>
         <source>Unexpected rig error</source>
         <translation>Niespodziewany błąd TRCVRa</translation>
     </message>
@@ -5029,7 +5030,7 @@ srever UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5042"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5037,47 +5038,47 @@ srever UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5044"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalog:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5045"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nazwa pliku:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otwórz</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Wybierz</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zapisz</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5050"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Wszystkie pliki (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuwanie</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5053"/>
@@ -5097,72 +5098,72 @@ srever UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>&amp;New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nowy katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Szukaj w:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Typy plików:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5065"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Poprzedni</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5066"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Powrót</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5067"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Następny</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5069"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Idź do przodu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5070"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5071"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalog nadrzędny</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>Go to the parent directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Idź do katalogu nadrzędnego</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5073"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5074"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Utwórz nowy katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5075"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Utwórz nowy katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5076"/>
@@ -5177,7 +5178,7 @@ srever UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5078"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczegóły</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5079"/>
@@ -5848,6 +5849,11 @@ Error(%2): %3</translation>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
         <translation>QTH lokator (tylko cztery pierwsze znaki są potrzebne).</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="125"/>
+        <source>Region IARU:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -7199,11 +7205,6 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
         <location filename="../Configuration.ui" line="3423"/>
         <source>per mode</source>
         <translation>według modulacji</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="125"/>
-        <source>IARU Region:</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>

@@ -312,18 +312,18 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translatorcomment>¿dónde?</translatorcomment>
-        <translation>on ?</translation>
+        <translatorcomment>Sense DXCC !</translatorcomment>
+        <translation>Sense DXCC !</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation>Ordre de Malta</translation>
+        <translation>Ordre Mil. de Malta</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation>Illa Spratly.</translation>
+        <translation>Illes Spratly.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -333,7 +333,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Agalega &amp; St. Brandon</source>
-        <translation>Islles Agalega i San Brandon</translation>
+        <translation>Illes Agalega i Sant Brandon</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
@@ -343,7 +343,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation>Illes Rodrigues.</translation>
+        <translation>Illa de Rodrigues.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
@@ -353,7 +353,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation>Illes Annobón.</translation>
+        <translation>Illa Annobón.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
@@ -368,7 +368,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation>Illes Rotuma.</translation>
+        <translation>Illa Rotuma.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
@@ -398,7 +398,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Peter 1 Is.</source>
-        <translation>Illes Pere I.</translation>
+        <translation>Illa Peter I.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="51"/>
@@ -668,7 +668,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="104"/>
         <source>Pratas Is.</source>
-        <translation>Illes Prates.</translation>
+        <translation>Illa de Pratas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="105"/>
@@ -718,7 +718,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation>Illa Juan Fernández.</translation>
+        <translation>Illes Juan Fernández.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -748,12 +748,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation>Madeira.</translation>
+        <translation>Illes Madeira.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
         <source>Azores</source>
-        <translation>Açores</translation>
+        <translation>Illes Açores</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
@@ -763,12 +763,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
         <source>Sable Is.</source>
-        <translation>Illes Sable.</translation>
+        <translation>Illa Sable.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation>Illes Sant Pau.</translation>
+        <translation>Illa Sant Pau.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
@@ -918,7 +918,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation>Illa Sant Bartomeu</translation>
+        <translation>Illes Sant Bartomeu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
@@ -948,7 +948,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation>Illes Clipperton.</translation>
+        <translation>Illa Clipperton.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
@@ -958,12 +958,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation>Sant Pere i Miquelon</translation>
+        <translation>Illes Saint Pierre i Miquelon</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation>Illes Reunión.</translation>
+        <translation>Illa de la Reunió.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
@@ -978,12 +978,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
         <source>Juan de Nova, Europa</source>
-        <translation>Juan de Nova, Europa</translation>
+        <translation>Illa Juan de Nova, Europa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation>Illes Tromelin.</translation>
+        <translation>Illa Tromelin.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
@@ -998,7 +998,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>Illes Amsterdam i St. Pau.</translation>
+        <translation>Illes Amsterdam i St. Paul.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
@@ -1053,7 +1053,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation>Illes Salomón.</translation>
+        <translation>Illes Salomó.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
@@ -1083,7 +1083,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation>Illes Galapagos.</translation>
+        <translation>Illes Galápagos.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
@@ -1103,12 +1103,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation>Sant Andreu i Providència</translation>
+        <translation>Illes San Andrés i Providenia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
-        <translation>Illes Malpelo.</translation>
+        <translation>Illa de Malpelo.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
@@ -1258,12 +1258,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Johnston Is.</source>
-        <translation>Illes Johnston.</translation>
+        <translation>Illa Johnston.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="223"/>
         <source>Midway Is.</source>
-        <translation>Illes Midway.</translation>
+        <translation>Illa Midway.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
@@ -1273,12 +1273,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
         <source>Hawaii</source>
-        <translation>Hawái</translation>
+        <translation>Hawaii</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation>Illes Kure.</translation>
+        <translation>Illa Kure.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
@@ -1288,7 +1288,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="228"/>
         <source>Swains Is.</source>
-        <translation>Illes Swains.</translation>
+        <translation>Illa Swains.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
@@ -1303,7 +1303,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Navassa Is.</source>
-        <translation>Illes Navassa.</translation>
+        <translation>Illa Navassa.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
@@ -1318,7 +1318,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation>Illes Desecheo.</translation>
+        <translation>Illa Desecheo.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
@@ -1438,12 +1438,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation>Saba i Sant Eustatius</translation>
+        <translation>Illes Saba i Sant Eustatius</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
         <source>Sint Maarten</source>
-        <translation>Sint Maarten</translation>
+        <translation>Illa Sint Maarten</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="260"/>
@@ -1453,12 +1453,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation>Fernando de Noronha</translation>
+        <translation>Illa Fernando de Noronha</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>St. Peter &amp; St. Paul</source>
-        <translation>Sant Pere i Sant Pau</translation>
+        <translation>Illes Sant Pere i Sant Pau</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
@@ -1563,7 +1563,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>Banaba Is.</source>
-        <translation>Illes Banaba.</translation>
+        <translation>Illa Banaba.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
@@ -1738,7 +1738,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Macquarie Is.</source>
-        <translation>Illes Macquarie.</translation>
+        <translation>Illa Macquarie.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
@@ -1748,7 +1748,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Lord Howe Is.</source>
-        <translation>Illes Lord Howe.</translation>
+        <translation>Illa Lord Howe.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
@@ -1763,12 +1763,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation>Illes Willis.</translation>
+        <translation>Illa Willis.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>Illes Christmas.</translation>
+        <translation>Illa Christmas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -1798,7 +1798,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Ducie Is.</source>
-        <translation>Illes Ducie.</translation>
+        <translation>Illa Ducie.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
@@ -1993,7 +1993,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>Ascension Is.</source>
-        <translation>Illes Ascensió.</translation>
+        <translation>Illa de l&apos;Ascensió.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="370"/>
@@ -2043,7 +2043,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Pr. Edward &amp; Marion Is.</source>
-        <translation>Illes Edward i Marion.</translation>
+        <translation>Illes Princep Edward i Marion.</translation>
     </message>
 </context>
 <context>
