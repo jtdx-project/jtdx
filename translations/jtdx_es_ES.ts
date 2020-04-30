@@ -2580,7 +2580,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="334"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
-        <translation>Error del archivo de configuración de Hamlib: config debe ser un objeto JSON</translation>
+        <translation>Error del archivo de configuración de Hamlib: la configuración debe ser un objeto JSON</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="396"/>
@@ -2595,23 +2595,23 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="470"/>
         <source>opening connection to rig</source>
-        <translation>conexión de apertura al equipo</translation>
+        <translation>se abre la conexión con el equipo</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="531"/>
         <source>getting current frequency</source>
-        <translation>obteniendo frecuencia actual</translation>
+        <translation>se obtiene la frecuencia actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="540"/>
         <source>getting current mode</source>
-        <translation>obtener el modo actual</translation>
+        <translation>se obtiene el modo actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="589"/>
         <location filename="../HamlibTransceiver.cpp" line="624"/>
         <source>exchanging VFOs</source>
-        <translation>intercambiando VFOs</translation>
+        <translation>se intercambian VFOs</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="597"/>
@@ -2627,7 +2627,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="634"/>
         <source>setting current VFO</source>
-        <translation>ajuste de VFO actual</translation>
+        <translation>se ajusta el VFO actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="643"/>
@@ -2678,64 +2678,64 @@ Error: %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="1015"/>
         <location filename="../HamlibTransceiver.cpp" line="1028"/>
         <source>setting current VFO mode</source>
-        <translation>ajuste del modo VFO actual</translation>
+        <translation>se establece el  modo VFO actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="917"/>
         <location filename="../HamlibTransceiver.cpp" line="986"/>
         <source>setting/unsetting split mode</source>
-        <translation>activar/desactivar modo dividido (split)</translation>
+        <translation>se activa/desactiva modo dividido (split)</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="928"/>
         <location filename="../HamlibTransceiver.cpp" line="968"/>
         <source>setting split mode</source>
-        <translation>activar modo dividido (Split)</translation>
+        <translation>se activa modo dividido (Split)</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="956"/>
         <source>setting split TX frequency and mode</source>
-        <translation>ajuste de frecuencia y modo de transmisión dividida (Split)</translation>
+        <translation>se ajusta la frecuencia y modo de TX dividido (Split)</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="961"/>
         <source>setting split TX frequency</source>
-        <translation>ajuste de frecuencia dividida (Split) TX</translation>
+        <translation>se ajusta la frecuencia de TX dividida (Split)</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1033"/>
         <source>getting split TX VFO mode</source>
-        <translation>obtener el modo dividido (Split) TX VFO</translation>
+        <translation>se obtiene el modo dividido (Split) TX VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1040"/>
         <source>setting split TX VFO mode</source>
-        <translation>configuración del modo dividido (Split) TX VFO</translation>
+        <translation>se ajusta el modo split TX VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1296"/>
         <source>getting PTT state</source>
-        <translation>obtener el estado PTT</translation>
+        <translation>se obtiene el estado PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1332"/>
         <source>setting PTT on</source>
-        <translation>activando PTT</translation>
+        <translation>se activa el PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1340"/>
         <source>setting PTT off</source>
-        <translation>desactivando PTT</translation>
+        <translation>se desactiva el PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1352"/>
         <source>setting a configuration item</source>
-        <translation>establecer un elemento de configuración</translation>
+        <translation>se establece un elemento de configuración</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1362"/>
         <source>getting a configuration item</source>
-        <translation>obtener un elemento de configuración</translation>
+        <translation>se obtiene un elemento de configuración</translation>
     </message>
 </context>
 <context>
@@ -2946,13 +2946,9 @@ Error: %2 - %3</translation>
         <translation>JTDX</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro: promedio acumulado de DT de señales decodificadas en la banda actual. Ret: es el retardo del decodificador calculado en relación con el comienzo del siguiente intervalo, los valores negativos significan que hay tiempo libre disponible para aumentar la profundidad de decodificación, los valores positivos son el retardo del decodificador hacia el TX o el siguiente intervalo, lo que significa que puede que no haya suficientes recursos de CPU para la profundidad de decodificación seleccionada para proporcionar una transmisión fiable de la señal. /xx: número de mensajes decodificados en el último intervalo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro: promedio acumulado de DT de las señales decodificadas en la banda actual.&lt;/p&gt;&lt;p&gt;Ret: es el retardo del decodificador calculado en relación con el comienzo del siguiente intervalo, los valores negativos significan que hay tiempo libre disponible para aumentar la profundidad de decodificación, los valores positivos son el retardo del decodificador hacia el TX o el siguiente intervalo, lo que significa que puede que no haya suficientes recursos de CPU para la profundidad de decodificación seleccionada para proporcionar una transmisión fiable de la señal. &lt;/p&gt;&lt;p&gt;&lt;&lt;/p&gt;&lt;p&gt;El retardo depende del rendimiento de la CPU, las condiciones de ruido, la plenitud de la banda y otros programas que utilizan la computadora, puede ser disminuido reduciendo el ancho de banda de la cascada. Si el Ret es constantemente negativo entonces la CPU maneja bien la decodificación de intervalo  y puede tratar de hacer la decodificación más agresiva para obtener más decodificaciones.&lt;/p&gt;&lt;p&gt;FT8: si el Ret es 0 .. 0.4 entonces todavía puede usar Autoseq 3/7 (la autoselección ejecutará el cambio del mensaje TX lo suficientemente temprano para transmitir el mensaje completo). Si Ret &gt; 0.4 entonces deberías intentar disminuir la agresividad de la decodificación. Si todavía Ret &gt; 0.4 entonces debería usar Autoseq 2/6 ya que la respuesta a la llamada entrante se dañará parcialmente en la transmisión en AutoSeq 3/7. Si constantemente Ret &gt; 2 entonces su CPU no es apta para operar en FT8 con la configuración actual del decodificador. Seguro Puede monitorear como SWL.&lt;/p&gt;&lt;p&gt;/xx: número de mensajes decodificados en el último intervalo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -5031,7 +5027,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="264"/>
+        <location filename="../PollingTransceiver.cpp" line="271"/>
         <source>Unexpected rig error</source>
         <translation>Error inesperado del equipo</translation>
     </message>

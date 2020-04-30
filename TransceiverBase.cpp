@@ -83,14 +83,14 @@ void TransceiverBase::set (TransceiverState const& s,
         {
           bool ptt_on {false};
           bool ptt_off {false};
-          if (requested_.fast_mode() != s.fast_mode()) {
+          if (requested_.ft4_mode() != s.ft4_mode()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
-            fprintf(pFile,"%s Timing fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.fast_mode());
+            fprintf(pFile,"%s Timing ft4_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.ft4_mode());
             fclose (pFile);
 #endif
-            do_post_fast_mode (s.fast_mode());
-            requested_.fast_mode (s.fast_mode ());
+            do_post_ft4_mode (s.ft4_mode());
+            requested_.ft4_mode (s.ft4_mode ());
           }
           if (s.ptt () != requested_.ptt ())
             {

@@ -2742,7 +2742,7 @@ Błąd: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Region IARU</translation>
     </message>
 </context>
 <context>
@@ -3042,8 +3042,7 @@ Błąd: %2 - %3</translation>
         <source>DX Grid</source>
         <translation>Lokator DX</translation>
     </message>
-    
-<message>
+    <message>
         <location filename="../mainwindow.ui" line="990"/>
         <source>Locator of station to be worked</source>
         <translation>Lokator stacji do zrobienia</translation>
@@ -5020,7 +5019,7 @@ srever UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="264"/>
+        <location filename="../PollingTransceiver.cpp" line="271"/>
         <source>Unexpected rig error</source>
         <translation>Niespodziewany błąd TRCVRa</translation>
     </message>
@@ -5849,11 +5848,6 @@ Error(%2): %3</translation>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
         <translation>QTH lokator (tylko cztery pierwsze znaki są potrzebne).</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="125"/>
-        <source>Region IARU:</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
@@ -7205,6 +7199,11 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
         <location filename="../Configuration.ui" line="3423"/>
         <source>per mode</source>
         <translation>według modulacji</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="125"/>
+        <source>IARU Region:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2846"/>

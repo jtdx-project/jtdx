@@ -79,7 +79,7 @@ public:
       , mode_ {UNK}
       , split_ {Split::unknown}
       , ptt_ {false}
-      , fast_mode_ {false}
+      , ft4_mode_ {false}
       , level_ {0}
       , power_ {0}
     {
@@ -91,7 +91,7 @@ public:
     bool split () const {return Split::on == split_;}
     MODE mode () const {return mode_;}
     bool ptt () const {return ptt_;}
-    bool fast_mode () const {return fast_mode_;}
+    bool ft4_mode () const {return ft4_mode_;}
     int level () const {return level_;}
     unsigned int  power () const {return power_;}
 
@@ -101,7 +101,7 @@ public:
     void split (bool state) {split_ = state ? Split::on : Split::off;}
     void mode (MODE m) {mode_ = m;}
     void ptt (bool state) {ptt_ = state;}
-    void fast_mode (bool state) {fast_mode_ = state;}
+    void ft4_mode (bool state) {ft4_mode_ = state;}
     void level (int strength) {level_ = strength;}
     void power (unsigned int mwpower) {power_ = mwpower;}
 
@@ -112,7 +112,7 @@ public:
     MODE mode_;
     enum class Split {unknown, off, on} split_;
     bool ptt_;
-    bool fast_mode_;
+    bool ft4_mode_;
     int level_;
     unsigned int power_;
     // Don't forget to update the debug print and != operator if you

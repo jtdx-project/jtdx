@@ -49,7 +49,7 @@ protected:
   void do_post_tx_frequency (Frequency, MODE) override final;
   void do_post_mode (MODE) override final;
   void do_post_ptt (bool = true) override final;
-  void do_post_fast_mode (bool = false) override final;
+  void do_post_ft4_mode (bool = false) override final;
   bool do_pre_update () override final;
 
 private:
@@ -60,6 +60,7 @@ private:
 
   int interval_;    // polling interval in milliseconds
   QTimer * poll_timer_;
+  bool ft4_mode_;
   bool fast_mode_;
   // keep a record of the last state signalled so we can elide
   // duplicate updates

@@ -5896,8 +5896,8 @@ void MainWindow::switch_mode (Mode mode)
 {
 // m_lastMode value is deliberately not assigned in constructor to let qsohistory init at SW startup 
   if(m_lastMode!=m_mode) {
-     if (m_lastMode == "FT4") Q_EMIT m_config.transceiver_fast_mode (false);
-     else if (m_mode == "FT4") Q_EMIT m_config.transceiver_fast_mode (true);
+     if (m_lastMode == "FT4") Q_EMIT m_config.transceiver_ft4_mode (false);
+     else if (m_mode == "FT4") Q_EMIT m_config.transceiver_ft4_mode (true);
      m_qsoHistory.init(); 
      m_lastMode=m_mode; 
      if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by switch_mode");
@@ -7442,7 +7442,7 @@ void MainWindow::setRig ()
   if ((m_monitoring || m_transmitting) && m_config.transceiver_online ()) {
       if(m_transmitting && m_config.split_mode ()) { Q_EMIT m_config.transceiver_tx_frequency (m_freqTxNominal); }
       else { Q_EMIT m_config.transceiver_frequency (m_freqNominal); }
-      Q_EMIT m_config.transceiver_fast_mode (m_mode == "FT4");
+      Q_EMIT m_config.transceiver_ft4_mode (m_mode == "FT4");
   }
 }
 
