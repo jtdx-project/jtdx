@@ -30,7 +30,7 @@ contains
     class(ft4_decoder), intent(inout) :: this
     procedure(ft4_decode_callback) :: callback
     parameter (NSS=NSPS/NDOWN,NDMAX=NMAX/NDOWN)
-    character message*37,msg26*26,msgsent*37
+    character message*37,msg26*26,msgsent*37,msg37_2*37
     character c77*77
     character*37 decodes(100)
     character*12 mycall,hiscall,mycall0,hiscall0,call_a,call_b
@@ -346,9 +346,16 @@ contains
               endif
 !write(21,'(i6.6,i5,2x,f4.1,i6,2x,a37,2x,f4.1,3i3,f5.1,i4,i4,i4)') &
 !  nutc,nsnr,xdt,nint(f1),message,smax,iaptype,ipass,isp,dmin,nsync_qual,nharderror,iseg
-              msg26=message(1:26); servis4=""
-              if(lFreeText) then; if(abs(nfqso-nint(f1)).le.10) then; servis4=','; else; servis4='.'; endif; endif
-              if(.not.lhidetestmsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
+              if(i3.eq.0 .and. n3.eq.1) then ! special DXpedition msg
+                call msgparser(message,msg37_2)
+                servis4="1"
+                msg26=message(1:26); call this%callback(nsnr,xdt,f1,msg26,servis4)
+                msg26=msg37_2(1:26); call this%callback(nsnr,xdt,f1,msg26,servis4)
+              else
+                msg26=message(1:26); servis4=""
+                if(lFreeText) then; if(abs(nfqso-nint(f1)).le.10) then; servis4=','; else; servis4='.'; endif; endif
+                if(.not.lhidetestmsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
+              endif
               nFT4decd=nFT4decd+1; sumxdt=sumxdt+xdt
               exit
             endif
