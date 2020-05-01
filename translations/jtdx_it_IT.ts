@@ -2944,10 +2944,6 @@ Errore: %2 -%3</translation>
         <translation>JTDX</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Media: DT (differenza orario) medio accumulato nei segnali decodificatifino ad ora sulla banda. Lag: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che è possibile aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse sufficienti della CPU per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale. / xx: numero di messaggi decodificati nell&apos;ultimo intervallo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="181"/>
         <location filename="../mainwindow.ui" line="2117"/>
         <source>UTC           dB            DT           Freq          Dr </source>
@@ -3239,17 +3235,17 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1921"/>
         <source>Pwr</source>
-        <translation>PWR</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Med: è la differenza di tempo (DT) media accumulata nei segnali decodificati fino ad ora.&lt;/p&gt;&lt;p&gt; Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo. Un valore negativo indica che è possibile aumentare il livello di decodifica. Un valore positivo indica il ritardo di decodifica in Tx e potrebbero non esserci risorse sufficienti della CPU per il livello di decodifica selezionato per fornire un segnale affidabile nella trasmissione.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che c&apos;è tempo disponibile per aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse CPU sufficienti per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Il ritardo dipende dalle prestazioni della CPU, dalle condizioni di rumore, dalla pienezza della banda e da altri programmi che usano il computer, può essere ridotto riducendo la larghezza di banda della cascata. Se il ritardo è costantemente negativo, la CPU gestisce bene la decodifica dell&apos;intervallo e puoi provare a rendere la decodifica più aggressiva per ottenere più decodifiche.&lt;/p&gt;&lt;p&gt; FT8: se Rit è da 0 a 0.4, è comunque possibile utilizzare Autoseq 3/7 (la selezione automatica attiverà la modifica del messaggio TX abbastanza presto per trasmettere il messaggio completo). Se Rit &gt;0.4 allora dovresti provare a ridurre l&apos;aggressività della decodifica. Se il ritardo è ancora&gt;0,4, è necessario utilizzare Autoseq 2/6 poiché la risposta alla chiamata in arrivo sarà parzialmente danneggiata durante la trasmissione in AutoSeq 3/7. Se costantemente Rit &gt;2, la CPU non è adatta a funzionare in FT8 con le impostazioni correnti del decodificatore. Sicuramente puoi monitorare come SWL.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;/XX: è il numero di messaggi decodificati nell&apos;ultimo periodo di ricezione.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1801"/>
         <source> Pwr</source>
-        <translation>PWR</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1823"/>
@@ -4342,7 +4338,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5235"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4 Chiama e cerca tra i messaggi CQ</translation>
+        <translation>4+ Chiama e cerca tra i messaggi CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5243"/>
@@ -4806,7 +4802,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation></translation>
+        <translation>Rit=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>
