@@ -312,8 +312,8 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translatorcomment>Sense DXCC !</translatorcomment>
-        <translation>Sense DXCC !</translation>
+        <translatorcomment>sense DXCC !</translatorcomment>
+        <translation>sense DXCC !</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -613,7 +613,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="93"/>
         <source>Trinidad &amp; Tobago</source>
-        <translation>Trinitat i Tobago</translation>
+        <translation>Trinidad i Tobago</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="94"/>
@@ -918,7 +918,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation>Illes Sant Bartomeu</translation>
+        <translation>Illa Sant Bartomeu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
@@ -998,7 +998,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>Illes Amsterdam i St. Paul.</translation>
+        <translation>Illes Amsterdam i St. Pau.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
@@ -1108,7 +1108,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
-        <translation>Illa de Malpelo.</translation>
+        <translation>Illa Malpelo.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
@@ -1273,7 +1273,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
         <source>Hawaii</source>
-        <translation>Hawaii</translation>
+        <translation>Illes Hawaii</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
@@ -1413,7 +1413,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="253"/>
         <source>Aruba</source>
-        <translation>Aruba</translation>
+        <translation>Illa Aruba</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="254"/>
@@ -1493,12 +1493,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="269"/>
         <source>Seychelles</source>
-        <translation>Seychelles</translation>
+        <translation>Illes Seychelles</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation>Sant Tomé i Príncep</translation>
+        <translation>Illa São Tomé i Príncepe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1573,7 +1573,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="285"/>
         <source>San Marino</source>
-        <translation>Sant Marí</translation>
+        <translation>San Marino</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
@@ -1688,7 +1688,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation>Antigua i Barbuda</translation>
+        <translation>Illes Antigua i Barbuda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
@@ -1698,7 +1698,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>St. Kitts &amp; Nevis</source>
-        <translation>Sant Kitts i Nevis</translation>
+        <translation>Illes Sant Kitts i Nevis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="311"/>
@@ -1773,12 +1773,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
         <source>Anguilla</source>
-        <translation>Anguilla</translation>
+        <translation>Illa Anguilla</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Montserrat</source>
-        <translation>Montserrat</translation>
+        <translation>Illa Montserrat</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
@@ -1828,7 +1828,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
         <source>Bermuda</source>
-        <translation>Bermudes</translation>
+        <translation>Illes Bermudes</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="337"/>
@@ -2886,12 +2886,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Senyal E</translation>
+        <translation>Senyal Env</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation>Senyal R</translation>
+        <translation>Senyal Rev</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -2923,7 +2923,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
-        <translation>Missatge eQSL</translation>
+        <translation>Missatge a eQSL</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="27"/>
@@ -2951,7 +2951,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AVG: acumulat mitjà de senyals DT descodificats en el grup actual.&lt;/p&gt;&lt;p&gt;LAG: o retard, és el retard de descodificador calculat relativament al començament del següent interval, els valors negatius signifiquen que hi ha temps lliure disponible per a augmentar la profunditat de descodificació, els valors positius són el retard del descodificador en TX o el següent interval, el que significa que pot no haver prou recursos de CPU per a la profunditat de descodificació seleccionada per tal de proporcionar una transmissió de senyal fiable.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;LAG: el retard depèn del rendiment de la CPU, les condicions de soroll, la plenitud de la banda i altres programes que fan servir l&apos;ordinador, es pot disminuir al reduir l&apos;ample de banda de la cascada. si el LAG és constantment negatiu, llavors la CPU gestiona bé la descodificació d&apos;intervals i pot intentar fer que la descodificació sigui més agressiva per obtenir més descodificacions.&lt;/p&gt;&lt;p&gt;FT8 SI el retard és 0 ... 0,4, encara es podrà utilitzar Autoseq 3/7 (Autoselect activarà el canvi del missatge TX amb suficient antelació per transmetre el missatge complet). Si el LAG és  &gt;0.4, s’hauria d&apos;intentar disminuir la descodificació. Si encara el LAG és &gt;0.4, s&apos;haurà de fer servir Autoseq 2/6, ja que la resposta a la trucada entrant es farà malbé parcialment en la transmissió en Autoseq 3/7. Si constantment LAG és &gt;2, llavors la CPU no és adequada per operar amb la configuració actual del descodificador. Podem monitoritzar com SWL a FT8.&lt;/p&gt;&lt;p&gt;/xx: Número de missatges descodificats en últim interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -4800,19 +4800,19 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
-        <translation>Per=</translation>
+        <translation>Avg=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Freq  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400"/>
@@ -4846,7 +4846,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4013"/>
         <source>TUNE</source>
-        <translation>TUNE</translation>
+        <translation>Sintonitza</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4014"/>
@@ -4856,7 +4856,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4228"/>
         <source>Tx: TUNE</source>
-        <translation>TX: TUNE</translation>
+        <translation>TX: SINTONITZADOR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4229"/>
