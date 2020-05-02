@@ -3359,7 +3359,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resposta trabalhado antes opção AutoSeq&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>face&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resposta trabalhado antes opção AutoSeq&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2459"/>
@@ -3419,7 +3419,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2669"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Botão esquerdo do rato: apaga texto descodificado(esquerda) da janela. Botão direito do rato: Limpa a janela da frequência do QSO. Duplo clique para ambas as janelas.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Botão esquerdo do rato: apaga texto descodificado (esquerda) da janela. Botão direito do rato: Limpa a janela da frequência do QSO. Duplo clique para ambas as janelas.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2672"/>
@@ -3492,7 +3492,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3027"/>
         <source>GenMsgs</source>
-        <translation>GenMsgs</translation>
+        <translation>Gerar Msgs</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3056"/>
@@ -6291,7 +6291,7 @@ alguns, particularmente equipamentos Kenwood, exigem-no).</translation>
     <message>
         <location filename="../Configuration.ui" line="1111"/>
         <source>&amp;Hardware</source>
-        <translation>&amp;Hardaware</translation>
+        <translation>&amp;Hardware</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
@@ -6362,7 +6362,7 @@ outra interface de hardware para PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Não há activação PTT. Em vez disso, o VOX automático do rádio é usado para ligar o transmissor. &lt;/p&gt; &lt;p&gt; Use isso se você não tiver hardware de interface de rádio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Sem activação PTT, em vez disso, o VOX automático do rádio é usado para ligar o transmissor. &lt;/p&gt;&lt;p&gt; Use isto se você não tiver hardware de interface de rádio. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1273"/>
@@ -6421,7 +6421,7 @@ essa configuração permite selecionar qual entrada de áudio será usada
     <message>
         <location filename="../Configuration.ui" line="1401"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; USB normalmente é o modo de modulação correto, &lt;/p&gt; &lt;p&gt; a menos que o rádio tenha uma configuração especial de dados ou modo packet &lt;/p&gt; &lt;p&gt; para operação AFSK. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; USB é normalmente o modo de modulação correcto,&lt;/p&gt;&lt;p&gt;a menos que o rádio tenha uma configuração especial de dados ou modo packet&lt;/p&gt;&lt;p&gt; para operação AFSK. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1404"/>
@@ -6471,7 +6471,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1514"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tente conecctar-se ao rádio com essas configurações. &lt;/p&gt; &lt;p&gt; O botão ficará verde se a conexão for bem-sucedida ou vermelho se houver um problema. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tente conectar-se ao rádio com estas configurações. &lt;/p&gt;&lt;p&gt; O botão ficará verde se a conecção for bem-sucedida ou vermelho se houver algum problema. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1517"/>
@@ -6486,9 +6486,9 @@ output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
         <translation>Tentativa de activar o transmissor.
-Clique novamente para desactivar. Normalmente nenhuma potência
-deverá sair pois não há áudio sendo gerado no momento.
-Verifique se há indicação Tx no seu rádio e / ou o seu
+Clique novamente para desactivar. Normalmente não é emitida potência
+ pois não há áudio sendo gerado no momento.
+Verifique se há indicação Tx no seu rádio e/ou o seu
 interface de rádio se comporta conforme esperado.</translation>
     </message>
     <message>
@@ -7156,12 +7156,12 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="2846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Digite o número da porta de serviço do servidor UDP para o qual o JTDX deve enviar atualizações. Se for zero, nenhuma atualização será transmitida. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2863"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Com isso, o JTDX aceitará certas solicitações de volta de um servidor UDP que recebe mensagens de descodificação. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2979"/>

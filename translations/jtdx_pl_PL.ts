@@ -3042,8 +3042,7 @@ Błąd: %2 - %3</translation>
         <source>DX Grid</source>
         <translation>Lokator DX</translation>
     </message>
-    
-<message>
+    <message>
         <location filename="../mainwindow.ui" line="990"/>
         <source>Locator of station to be worked</source>
         <translation>Lokator stacji do zrobienia</translation>
@@ -5020,7 +5019,7 @@ srever UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="264"/>
+        <location filename="../PollingTransceiver.cpp" line="271"/>
         <source>Unexpected rig error</source>
         <translation>Niespodziewany błąd TRCVRa</translation>
     </message>
