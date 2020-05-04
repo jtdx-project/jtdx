@@ -2944,6 +2944,10 @@ Error: %2 - %3</source>
         <translation></translation>
     </message>
     <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: накопленный средний DT декодированных сигналов на текущем диапазоне. Lag: это задержка декодера, вычисленная относительно начала следующего интервала, отрицательные значения означают, что имеется свободное время для увеличения глубины декодирования, положительные значения - задержка работы декодера еще и в TX или даже в следующий интервал, означающая недостаточность ресурсов ЦП для выбранной глубины декодирования. /xx: количество декодированных сообщений за последний интервал.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -3075,7 +3079,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для посылки спота на dxsummit.fi кликните левой клавишей мыши на кнопке , при этом споттинг должен быть разрешен в меню Настройки-&amp;gt;Лог.&lt;/n&gt; Для занесения позывного в список фильтра &apos;скрыть сообщения от позывных&apos; кликните правой клавишей машине на кнопку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для посылки спота на dxsummit.fi клик левой  клавишей  мыши  на  кнопке  ,  при  этом  споттинг   должен   быть   разрешен   в   меню   Настройки--&gt;Лог. Для занесения позывного в список фильтра &apos;скрыть сообщения от позывных&apos; кликните правой клавишей машине на кнопку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1085"/>
@@ -4569,7 +4573,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5743"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>Работа разнесенными частотами на 160м с Японией и Кореей</translation>
+        <translation type="unfinished">Работа разнесенными частотами на 160м с Японией</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="450"/>
