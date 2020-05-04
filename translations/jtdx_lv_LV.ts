@@ -688,12 +688,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="109"/>
         <source>Bahamas</source>
-        <translation type="unfinished"></translation>
+        <translation>Bahamas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="110"/>
         <source>Mozambique</source>
-        <translation type="unfinished"></translation>
+        <translation>Mozambika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="111"/>
@@ -708,7 +708,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lieldienu sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
@@ -743,7 +743,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation>Madeira</translation>
+        <translation>Madeiras sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
@@ -753,7 +753,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
         <source>Uruguay</source>
-        <translation type="unfinished"></translation>
+        <translation>Urugvaja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
@@ -768,7 +768,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
         <source>Angola</source>
-        <translation type="unfinished"></translation>
+        <translation>Angola</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="126"/>
@@ -778,7 +778,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="127"/>
         <source>Comoros</source>
-        <translation type="unfinished"></translation>
+        <translation>Komorosa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="128"/>
@@ -793,12 +793,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="130"/>
         <source>Eritrea</source>
-        <translation type="unfinished"></translation>
+        <translation>Eritreja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="131"/>
         <source>Palestine</source>
-        <translation type="unfinished"></translation>
+        <translation>Palestīna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
@@ -813,7 +813,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
         <source>Niue</source>
-        <translation type="unfinished"></translation>
+        <translation>Niue</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="135"/>
@@ -828,17 +828,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Baleāru Salas</translation>
+        <translation>Baleāru Salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation>Kanāriju Salas</translation>
+        <translation>Kanāriju Salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
         <source>Ceuta &amp; Melilla</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuta &amp; Melilja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="140"/>
@@ -853,12 +853,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="142"/>
         <source>Liberia</source>
-        <translation type="unfinished"></translation>
+        <translation>Libērija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="143"/>
         <source>Iran</source>
-        <translation type="unfinished"></translation>
+        <translation>Irāna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="144"/>
@@ -873,7 +873,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="146"/>
         <source>Ethiopia</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiopija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="147"/>
@@ -903,22 +903,22 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="152"/>
         <source>Guadeloupe</source>
-        <translation type="unfinished"></translation>
+        <translation>Gvadalupe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="153"/>
         <source>Mayotte</source>
-        <translation type="unfinished"></translation>
+        <translation>Majote</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation type="unfinished"></translation>
+        <translation>Senbartelmī</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
         <source>New Caledonia</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaunkaledonija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
@@ -928,7 +928,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
         <source>Martinique</source>
-        <translation type="unfinished"></translation>
+        <translation>Martinikve</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="158"/>
@@ -943,12 +943,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klipertona sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Marquesas Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Marķīza salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
@@ -958,17 +958,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atkalapvienošanās sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
         <source>St. Martin</source>
-        <translation type="unfinished"></translation>
+        <translation>Senmartēna sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Glorjēzu salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
@@ -978,7 +978,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tromlēnas sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
@@ -1028,7 +1028,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation>Šetlandes salas</translation>
+        <translation>Šetlandes salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
@@ -1048,7 +1048,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation>Zālamanu salas</translation>
+        <translation>Zālamanu salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
@@ -1088,7 +1088,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="189"/>
         <source>Dominican Rep.</source>
-        <translation>Dominikānas Republika</translation>
+        <translation>Dominikānas Republika.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="190"/>
@@ -1238,7 +1238,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation>Ziemeļu Marianas salas</translation>
+        <translation>Ziemeļu Marianas salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
@@ -1288,7 +1288,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>Wake Is.</source>
-        <translation>Veika sala</translation>
+        <translation>Veika sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
@@ -1363,7 +1363,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="244"/>
         <source>Aland Is.</source>
-        <translation>Ālandu Salas</translation>
+        <translation>Ālandu Sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="245"/>
@@ -1373,12 +1373,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation>Čehija</translation>
+        <translation>Čehija Republika.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation>Slovākijas</translation>
+        <translation>Slovākijas Republika.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1393,7 +1393,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation>Farēru salas</translation>
+        <translation>Farēru salas.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1763,7 +1763,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>Ziemsvētku sala</translation>
+        <translation>Ziemsvētku sala.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -2186,7 +2186,7 @@ Formāts:
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Dzēst</translation>
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
@@ -5026,7 +5026,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Saglabāt</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
@@ -5202,12 +5202,12 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Izmērs</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5085"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5086"/>
@@ -5225,7 +5225,7 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="92"/>
         <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Slēpt detaļas ...</translation>
     </message>
 </context>
 <context>
@@ -5404,7 +5404,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="128"/>
         <source>Idle</source>
-        <translation type="unfinished">Dīkstāvē</translation>
+        <translation>Dīkstāvē</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="132"/>
@@ -5429,7 +5429,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="152"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Apstājās</translation>
     </message>
 </context>
 <context>
@@ -5492,7 +5492,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="119"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Apstājās</translation>
     </message>
 </context>
 <context>
@@ -5625,12 +5625,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="252"/>
         <source>Left</source>
-        <translation type="unfinished">Kreisais</translation>
+        <translation>Kreisais</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="257"/>
         <source>Right</source>
-        <translation type="unfinished">Labais</translation>
+        <translation>Labais</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="289"/>
