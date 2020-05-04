@@ -71,6 +71,7 @@
      logical(c_bool) :: lhiscallstd
      logical(c_bool) :: lapmyc
      logical(c_bool) :: lmodechanged
+     logical(c_bool) :: lbandchanged
      logical(c_bool) :: lenabledxcsearch
      logical(c_bool) :: lwidedxcsearch
      logical(c_bool) :: lmultinst

@@ -310,6 +310,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_hisCallCompound {false},
   m_callToClipboard {true},
   m_rigOk {false},
+  m_bandChanged {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -3025,6 +3026,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lhiscallstd=m_bHisCallStd;
   dec_data.params.lapmyc=m_lapmyc;
   dec_data.params.lmodechanged=m_modeChanged ? 1 : 0; m_modeChanged=false;
+  dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
 
@@ -6220,6 +6222,7 @@ void MainWindow::band_changed (Frequency f)
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {
+      m_bandChanged=true;
       qint64 ms = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000; int nsec=ms/1000;
       double TRperiod=60.0; // TR period is the only reliable way in this point of code at the mode change 
       if(m_mode=="FT8") TRperiod=15.0;

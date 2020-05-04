@@ -586,6 +586,7 @@ private:
   bool m_hisCallCompound;
   bool m_callToClipboard;
   bool m_rigOk;
+  bool m_bandChanged;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;

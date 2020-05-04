@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200209
-
 #ifndef COMMONS_H
 #define COMMONS_H
 
@@ -101,6 +99,7 @@ extern struct dec_data {
     bool lhiscallstd;
     bool lapmyc;
     bool lmodechanged;
+    bool lbandchanged;
     bool lenabledxcsearch;
     bool lwidedxcsearch;
     bool lmultinst;
