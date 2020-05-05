@@ -344,6 +344,36 @@ contains
                 nbadcrc=0; call chkfalse8(message,i3,n3,nbadcrc,iaptype)
                 if(nbadcrc.eq.1) then; message=''; cycle; endif
               endif
+! EA1AHY M83WN/R R QA79   *
+! MS8QQS UX3QBS/P R NG63  i3=2 n3=7
+! 3B4NDC/R C40AUZ/R R IR83  i3=1 n3=7
+! EA1AHY PW1BSL R GR47 i3=1 n3=3 mycall
+! EA1AHY PW1BSL R GR47 *  i3=1 n3=1 mycall
+              if((i3.eq.1 .or. i3.eq.2) .and. index(message,' R ').gt.0) then
+                ispc1=index(message,' '); ispc2=index(message((ispc1+1):),' ')+ispc1
+                ispc3=index(message((ispc2+1):),' ')+ispc2
+                if(message(ispc2:ispc3).eq.' R ') then 
+                  call_a='            '; call_b='            '
+                  if(message(1:ispc1-1).eq.trim(mycall)) then
+                    call_a='CQ          '
+                  else
+                    if((i3.eq.1 .and. message(ispc1-2:ispc1-1).eq.'/R') .or. &
+                       (i3.eq.2 .and. message(ispc1-2:ispc1-1).eq.'/R')) then
+                      call_a=message(1:ispc1-3)
+                    else
+                      call_a=message(1:ispc1-1)
+                    endif
+                  endif
+                  if((i3.eq.1 .and. message(ispc2-2:ispc2-1).eq.'/R') .or. &
+                     (i3.eq.2 .and. message(ispc2-2:ispc2-1).eq.'/P')) then
+                    call_b=message(ispc1+1:ispc2-3)
+                  else
+                    call_b=message(ispc1+1:ispc2-1)
+                  endif
+                  falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
+                  if(falsedec) then; nbadcrc=1; message=''; return; endif
+                endif
+              endif
 !write(21,'(i6.6,i5,2x,f4.1,i6,2x,a37,2x,f4.1,3i3,f5.1,i4,i4,i4)') &
 !  nutc,nsnr,xdt,nint(f1),message,smax,iaptype,ipass,isp,dmin,nsync_qual,nharderror,iseg
               if(i3.eq.0 .and. n3.eq.1) then ! special DXpedition msg

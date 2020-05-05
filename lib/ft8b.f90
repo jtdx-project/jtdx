@@ -1047,9 +1047,33 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       msg37=''; msg37='DE '//trim(call_b)//' TU'
     endif
 
-! We do not support contest message decoding by FT8 AP under iaptype=2, consider as false decode
 ! EA1AHY M83WN/R R QA79   *
-    if(i3.eq.1 .and. n3.eq.7 .and. iaptype.eq.2 .and. index(msg37,' R ').gt.0) then; nbadcrc=1; msg37=''; return; endif
+! MS8QQS UX3QBS/P R NG63  i3=2 n3=7
+! 3B4NDC/R C40AUZ/R R IR83  i3=1 n3=7
+! EA1AHY PW1BSL R GR47 i3=1 n3=3 mycall
+! EA1AHY PW1BSL R GR47 *  i3=1 n3=1 mycall
+    if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
+      if(msg37(ispc2:ispc3).eq.' R ') then 
+        call_a='            '; call_b='            '
+        if(msg37(1:ispc1-1).eq.trim(mycall)) then
+          call_a='CQ          '
+        else
+          if((i3.eq.1 .and. msg37(ispc1-2:ispc1-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc1-2:ispc1-1).eq.'/R')) then
+            call_a=msg37(1:ispc1-3)
+          else
+            call_a=msg37(1:ispc1-1)
+          endif
+        endif
+        if((i3.eq.1 .and. msg37(ispc2-2:ispc2-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc2-2:ispc2-1).eq.'/P')) then
+          call_b=msg37(ispc1+1:ispc2-3)
+        else
+          call_b=msg37(ispc1+1:ispc2-1)
+        endif
+        falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
+    endif
 
 4   ldupemsg=.false.
     if(ndecodes.gt.0) then
