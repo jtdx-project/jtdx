@@ -233,7 +233,7 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
   QRect rect;
   {
     QPainter painter(&m_OverlayPixmap);
-    painter.begin(this);
+    if (!painter.isActive()) painter.begin(this);
 //    painter.initFrom(this);
     QLinearGradient gradient(0, 0, 0 ,m_h2);         //fill background with gradient
     gradient.setColorAt(1, Qt::black);
@@ -274,7 +274,7 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
 
   QRect rect0;
   QPainter painter0(&m_ScalePixmap);
-  painter0.begin(this);
+  if (!painter0.isActive()) painter0.begin(this);
 //  painter0.initFrom(this);
 
   //create Font to use for scales
@@ -364,7 +364,7 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
     painter0.drawLine(x1,29,x2,29);
   }
   QPainter overPainter(&m_DialOverlayPixmap);
-  overPainter.begin(this);
+  if (!overPainter.isActive()) overPainter.begin(this);
 //  overPainter.initFrom(this);
   overPainter.setCompositionMode(QPainter::CompositionMode_Source);
   overPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
@@ -389,7 +389,7 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
   }
   int fwidth=XfromFreq(m_rxFreq+bw)-XfromFreq(m_rxFreq);
   QPainter hoverPainter(&m_HoverOverlayPixmap);
-  hoverPainter.begin(this);
+  if (!hoverPainter.isActive()) hoverPainter.begin(this);
 //  hoverPainter.initFrom(this);
   hoverPainter.setCompositionMode(QPainter::CompositionMode_Source);
   hoverPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
