@@ -12,7 +12,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
   include 'ft8_params.f90'
   parameter (NP2=3199)
-  character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
+  character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12,callmask*4,callpfx*4
+  character*4 mask4(4)
   character*37 msgsrcvd(130)
   complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymb0(32)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
@@ -25,6 +26,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth,lhighsens
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,lwrongcall
+  data mask4/'0010','0110','1010','1011'/
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -1072,6 +1074,28 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         endif
         falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
+    endif
+
+! CQ AE6X49IRZRV  i3=4 n3=1 11-char callsign, it is likely decoded as free text message with i3=0 n3=0
+! CQ 8YJEQV9VCIY  i3=4 n3=1
+! CQ 66C 8IACB92  i3=0 n3=0 free msg
+    if(i3.eq.0 .and. n3.eq.0 .and. msg37(1:3).eq.'CQ ') then
+      if(msg37(7:7).ne.' ') then
+         if((index(msg37(4:),' ')+3).gt.13) then; nbadcrc=1; msg37=''; return; endif ! protocol violation
+      else
+        ispc3=index(msg37(8:),' ')+7
+        if(ispc3.eq.14) then
+          callpfx=msg37(8:11)
+          do i=1,4
+            if(callpfx(i:i).gt.'/' .and. callpfx(i:i).lt.':') then; callmask(i:i)='1'; else; callmask(i:i)='0'; endif
+          enddo
+          falsedec=.true.
+          do i=1,4
+            if(callmask.eq.mask4(i)) then; falsedec=.false.; exit; endif 
+          enddo
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        endif
       endif
     endif
 
