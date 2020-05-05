@@ -2224,7 +2224,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Szary czas:</translation>
+        <translation>Strefa cienia:</translation>
     </message>
 </context>
 <context>
@@ -4807,7 +4807,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="3402"/>
         <location filename="../mainwindow.cpp" line="3409"/>
         <source>check time</source>
-        <translation>sprawdzić czas</translation>
+        <translation>sprawdź czas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3711"/>
@@ -7251,7 +7251,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Sprawdż i podświetl nowe lokatory</translation>
+        <translation>Sprawdź i podświetl nowe lokatory</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
