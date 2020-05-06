@@ -512,7 +512,8 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      else
         msg='CQ '//trim(call_2)
      endif
-     
+     if(call_2(1:1).lt.':' .and. call_2(1:1).gt.'/' .and. call_2(2:2).lt.':' .and. call_2(2:2).gt.'/') unpk77_success=.false.
+
   else if(i3.eq.5) then
 ! 5    TU; W9XYZ K1ABC R-09 FN             1 28 28 1 7 9       74   WWROF contest
      read(c77,1041) itu,n28a,n28b,ir,irpt,nexch,i3
@@ -741,6 +742,7 @@ subroutine unpack28(n28_0,c13,success)
   c13=adjustl(c13)
 
 900 i0=index(c13,' ')
+
   if((i0.ne.0 .and. i0.lt.len(trim(c13))) .or. (c13(1:1).lt.':' .and. c13(1:1).gt.'/' .and. &
      c13(2:2).lt.':' .and. c13(2:2).gt.'/')) then
      c13='QU1RK'

@@ -9,13 +9,30 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! iaptype=0 non-AP decoder
 ! iaptype=1 CQ message AP decoder
 
-! i3=0...4 n3=0...5
-! i3=0 n3=0  free text message
-! i3=0 n3=1  special message DXpedition
-! i3=1 std message with std callsigns, or both callsigns /P || /R
-! i3=2 one of two callsigns in the message is compound (/p)
-! i3=3 (n3=1?) contest message with RST and serial number 
-! i3=4 nonstandard callsign in the message
+! i3 n3                                      Bits               Total  Message type
+! ---------------------------------------------------------------------------------------
+! 0   0 FREE TEXT MSG                        71                   71
+! 0   1 K1ABC RR73; W9XYZ <KH1/KH7Z> -12     28 28 10 5           71   DXpedition Mode
+! 0   2 PA3XYZ/P R 590003 IO91NP             28 1 1 3 12 25       70   EU VHF contest (2)
+! 0   2 PA3XYZ 520093 IO91NP                 28 1 1 3 12 25       70   EU VHF contest (2)
+! 0   3 WA9XYZ KA1ABC R 16A EMA              28 28 1 4 3 7        71   ARRL Field Day
+! 0   3 WA9XYZ KA1ABC 7D EMA                 28 28 1 4 3 7        71   ARRL Field Day
+! 0   3 WA9XYZ G8ABC 1D DX                   28 28 1 4 3 7        71   ARRL Field Day
+! 0   4 WA9XYZ KA1ABC R 32A EMA              28 28 1 4 3 7        71   ARRL Field Day
+! 0   5 123456789ABCDEF012                   71                   71   Telemetry (18 hex)
+! 0   5 7123456789ABCDEF01                   71                   71   Telemetry (18 hex)
+! 0   5 71234567                             71                   71   Telemetry (18 hex)
+! 0   5 81234567                             71                   71   Telemetry (18 hex)
+! 0   5 8123456789ABCDEF01                   71                   71   Telemetry (18 hex)
+! 1     WA9XYZ/R KA1ABC/R R FN42             28 1 28 1 1 15       74   Standard msg
+! 1     WA9XYZ KA1ABC R-11                   28 1 28 1 1 15       74   Standard msg
+! 2     PA1XYZ/P GM4ABC/P R FN42             28 1 28 1 1 15       74   EU VHF Contest
+! 3     TU; W9XYZ K1ABC R 579 MA             1 28 28 1 3 13       74   ARRL RTTY contest
+! 3     TU; W9XYZ G8ABC R 559 0013           1 28 28 1 3 13       74   ARRL RTTY (DX)
+! 4     <WA9XYZ> PJ4/KA1ABC RR73             13 58 1 2            74   Nonstandard call
+! 4     <WA9XYZ> PJ4/KA1ABC                  13 58 1 2            74   Nonstandard call
+! 4     PJ4/KA1ABC <WA9XYZ> RRR              13 58 1 2            74   Nonstandard call
+
 
 !print *,iaptype
 !print *,i3,n3,msg37
@@ -25,7 +42,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! -23 -1.3 CQ P28Z58W/77M  i3=4 n3=1
   if(msg37(1:3).eq.'CQ ') then
     callsign='            '; ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    if(i3.eq.4 .and. n3.eq.1) then
+    if(i3.eq.4) then
       islash=index(msg37,'/')
       if(ispc2.gt.7 .and. islash.le.0) then ! 'CQ nnn XX1XX' message shall not be checked
         if(islash.le.0) then
@@ -89,8 +106,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-      msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
 
     if(islash1.gt.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
@@ -109,23 +125,22 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       if(call_a.ne.mycall .and. call_b.ne.hiscall) then
         falsedec=.false.
         call chkflscall(call_a,call_b,falsedec)
-        if(falsedec) then; nbadcrc=1; &
-          msg37='                                     '; return; endif
+        if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
       endif
     endif
   endif
 
-  if((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) then
 ! i3=1 n3=1 '4P6NPC 5M5UJG BK49'
-! i3=3 n3=1 '8Z7TLB JQ0OTZ 589 02' 
+! i3=3 n3=1 '8Z7TLB JQ0OTZ 589 02'
+! i3=0 n3=3 'CE3NTP 4C2DWN 5E ONE'
+  if(((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) .or. (i3.eq.0 .and. n3.eq.3)) then
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(ispc1.gt.3 .and. ispc2.gt.7) then
       call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
   endif
 
@@ -136,13 +151,11 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       callsign='            '
       callsign=msg37(1:ibrace1-2)
 ! 'R 5QCDOIY9 <...> RR73'
-      if(index(trim(callsign),' ').gt.0) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(index(trim(callsign),' ').gt.0) then; nbadcrc=1; msg37='                                     '; return; endif
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
     if(index(msg37,'<.').eq.1) then
 !'<...> 104J71MFOT9 RR73'
@@ -154,8 +167,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
 ! '<...> T99LMF GC41' need to understand how to check such message
   endif
@@ -169,20 +181,17 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
   endif
 
   if(i3.eq.0 .and. n3.eq.0) then
 ! 'J/.ZM1R-D1Q89'
-    if(index(msg37,'/.').gt.0) then; nbadcrc=1; &
-      msg37='                                     '; return; endif
+    if(index(msg37,'/.').gt.0) then; nbadcrc=1; msg37='                                     '; return; endif
     decoded=msg37(1:22)
     falsedec=.false.
     call filtersfree(decoded,falsedec)
-    if(falsedec) then; nbadcrc=1; &
-      msg37='                                     '; return; endif
+    if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
   endif
 
 ! CQ_RLXA 551626 ^J65XI 
@@ -203,8 +212,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     if(callsign.ne.hiscall) then
       falsedec=.false.
       call chkflscall('MYCALL      ',callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; &
-        msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
     endif
   endif
 
