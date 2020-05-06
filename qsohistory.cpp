@@ -492,11 +492,13 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                 {
                   t.stx_p = t.stx_c;
                   t.stx_c = status;
+                  if (t.status <= SREPORT ) {
                     t.s_rep = param;
                     old_status = t.status;
                     t.status = status;
                     t.tx = freq;
                     if (t.b_time == 0 || old_status < SCQ) t.b_time = time;
+                  }
                   break;
                 }
               case RRREPORT:
@@ -521,11 +523,13 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                 {
                   t.stx_p = t.stx_c;
                   t.stx_c = status;
+                  if(t.status <= SRREPORT) {
                     t.s_rep = param;
                     old_status = t.status;
                     t.status = status;
                     t.tx = freq;
                     if (t.b_time == 0 || old_status < SCQ) t.b_time = time;
+                  }
                   break;
                 }
               case RRR:
