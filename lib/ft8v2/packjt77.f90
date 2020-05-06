@@ -741,10 +741,12 @@ subroutine unpack28(n28_0,c13,success)
   c13=adjustl(c13)
 
 900 i0=index(c13,' ')
-  if(i0.ne.0 .and. i0.lt.len(trim(c13))) then
+  if((i0.ne.0 .and. i0.lt.len(trim(c13))) .or. (c13(1:1).lt.':' .and. c13(1:1).gt.'/' .and. &
+     c13(2:2).lt.':' .and. c13(2:2).gt.'/')) then
      c13='QU1RK'
      success=.false.
   endif
+
   return
 end subroutine unpack28
 
