@@ -1080,7 +1080,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 ! CQ AE6X49IRZRV  i3=4 n3=1 11-char callsign, it is likely decoded as free text message with i3=0 n3=0
 ! CQ 8YJEQV9VCIY  i3=4 n3=1
 ! CQ 66C 8IACB92  i3=0 n3=0 free msg
-    if(i3.eq.0 .and. n3.eq.0 .and. msg37(1:3).eq.'CQ ') then
+    if(i3.eq.0 .and. msg37(1:3).eq.'CQ ') then
       if(msg37(7:7).ne.' ') then
          if((index(msg37(4:),' ')+3).gt.13) then; nbadcrc=1; msg37=''; return; endif ! protocol violation
       else
