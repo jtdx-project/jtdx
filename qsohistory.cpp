@@ -1,6 +1,6 @@
 /*
  * maintains QSO Histories and autoselect
- * Created by Arvo ES1JA 
+ * Created by Arvo ES1JA
  */
 
 #include "qsohistory.h"
@@ -97,25 +97,27 @@ int QsoHistory::reset_count(QString const& callsign,Status status)
   return ret;
 }
 
-int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio, QString &mode)
+QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString &rep, int &rx, int &tx, unsigned &time, int &count, int &prio, QString &mode)
 {
+    QsoHistory::Status ret = NONE;
     if (_working)
     {
-      int ret = 0;
       bool myas_active = as_active;
+      int on_black = 0;
       if (callsign.length() > 2)
         {
           int hound = count;
           QSO t;
           t.status = NONE;
           t.rx = 0;
+          t.tx = 0;
           t = _data.value(Radio::base_callsign (callsign),t);
           if (t.status > NONE || t.rx > 0) {
-            status = t.status;
+            ret = t.status;
             prio = t.priority;
             mode = t.mode;
             if (hound == -1) {
-              if(t.stx_c == SCALL && status == RREPORT) count = 1;
+              if(t.stx_c == SCALL && ret == RREPORT) count = 1;
               else count = t.count + 1;
             } else if(((t.tyyp.size () == 2 && t.tyyp != mycontinent_ && t.tyyp != _CQ.call.left(2) && t.tyyp != myprefix_ && (t.tyyp != "DX" || t.continent == mycontinent_)) || 
                     (t.tyyp.size () == 1 && t.tyyp != _CQ.call.left(1) && t.tyyp != myprefix_)) && (!_strictdirCQ || (t.priority < 20 && t.status != RCQ))) {
@@ -124,11 +126,10 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
             if (t.grid.length() >3) grid = t.grid;
             if (!t.s_rep.isEmpty ()) rep = t.s_rep;
             if (t.rx >0) rx = t.rx;
-            if (t.tx >0) tx = t.tx;
+            if ((ret == SRR73 || ret >= S73) && t.tx == _CQ.tx) tx = 1;
+            else if (t.tx >0) tx = t.tx;
             if (t.b_time > 0) time = t.b_time;
-            if ((status >= S73 || status == SRR73) && tx == _CQ.tx) t.direction = 1;
-            ret = t.direction;
-            if (hound == -1 && status == RRR73) {
+            if (hound == -1 && ret == RRR73) {
               t.status = FIN;
               _data.insert(Radio::base_callsign (callsign),t);
             }
@@ -153,9 +154,9 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
             Rrep = "-60";
             bool mycall = false;
             foreach(QString key,_data.keys()) {
-              ret=_blackdata.value(key,0);
+              on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (ret == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
+              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
                 if (tt.priority > priority || 
                       (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT) && !mycall) || (tt.priority == priority &&
                          ((!(algo & 32) && ((!(algo & 16) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
@@ -167,7 +168,7 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
                     if (tt.status == RCALL || tt.status == RREPORT) mycall = true;
                     priority = tt.priority;
                     prio = tt.priority;
-                    status = tt.status;
+                    ret = tt.status;
                     callsign = tt.call;
                     count = tt.count;
                     dist = tt.distance;
@@ -180,7 +181,6 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
                     }
                     if (tt.rx >0) rx = tt.rx;
                     if (tt.tx >0) tx = tt.tx;
-                    if (tt.status == RREPORT && tt.direction == 1) tt.b_time = max_r_time;
                     time = tt.b_time;
                     myas_active = false;
                     as_active = false;
@@ -189,7 +189,7 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
               }
             }
             if (!myas_active) {
-              return t.direction;    
+              return ret;    
             }
           }
           if (algo&1 && myas_active && _data.size() > 0){ // their CQ answers
@@ -199,19 +199,22 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
             rep = "-60";
             dist = 0;
             foreach(QString key,_data.keys()) {
-              ret=_blackdata.value(key,0);
+              on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (ret == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
+              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
+//                printf("autosel:%s %d %d (%d,%d,%s,%d)\n",tt.call.toStdString().c_str(),ret,algo,tt.status,tt.priority,tt.s_rep.toStdString().c_str(),tt.distance);
                 if (tt.priority > priority || 
                     (priority > b_init && tt.priority == priority && 
                     ((!(algo & 32) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
                     || (algo & 32 && tt.distance > dist)))) {
+//                  printf("1\n");
                   if((tt.tyyp.isEmpty () || tt.tyyp.size () > 2 || (_strictdirCQ && tt.priority > 19) || tt.tyyp == mycontinent_ || _CQ.call.startsWith(tt.tyyp) || tt.tyyp == myprefix_ || (tt.tyyp == "DX" && tt.continent != mycontinent_))
                   && (_CQ.tyyp.isEmpty () || _CQ.tyyp == tt.continent || (_strictdirCQ && (tt.priority > 16 || (tt.priority > 1 && tt.priority < 5))) || tt.call.startsWith(_CQ.tyyp) || (_CQ.tyyp == "DX" && tt.continent != mycontinent_))) {
+//                    printf("selected\n");
                     t = tt;
                     priority = tt.priority;
                     prio = tt.priority;
-                    status = tt.status;
+                    ret = tt.status;
                     callsign = tt.call;
                     count = tt.count;
                     dist = tt.distance;
@@ -228,13 +231,13 @@ int QsoHistory::autoseq(QString &callsign, QString &grid, Status &status, QStrin
             }
             myas_active = false;
             as_active = false;
-            return t.direction;    
+            return ret;    
             
           }
         }
     }
 as_active = false;
-return 0;
+return NONE;
 }
 
 QsoHistory::Status QsoHistory::log_data(QString const& callsign, unsigned &time, QString &rrep, QString &srep)
@@ -322,7 +325,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
           _CQ.tx = freq;
           _CQ.priority = priority;
           _CQ.count += 1;
-          _CQ.direction = 1;
           _CQ.mode = mode;
         }
       else
@@ -340,7 +342,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
           t.rx = 0;
           t.b_time = 0;
           t.call = callsign;
-          t.direction = 0;
           t.time = 0;
           t.tyyp = "";
           t.continent = "";
@@ -354,7 +355,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
           if (time >= t.time || time == 0 || status >= t.status || status == RREPORT) {
             if (status > NONE) {
               t.time = time;
-              if (status == SCALL || status == SREPORT || status == SRR || status == SRR73 || status == S73) {
+              if (status == SCALL || status == SREPORT || status == SRREPORT || status == SRR || status == SRR73 || status == S73) {
                   if (t.status == NONE && (status == SCALL || (status == SREPORT && tyyp == "S"))) {
                     t.status = RCQ;
                     t.srx_c = RCQ;
@@ -390,7 +391,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
   //                if (t.status <= SREPORT)
                   if (t.status <= SCQ || t.status == SCALL || 
                       (t.status == RCALL && t.time != time) ||
-                      (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 300)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
+                      (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 600)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
                     {
                       old_status = t.status;
                       t.status = status;
@@ -401,7 +402,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                       t.b_time = time;
                       t.s_rep = rep;
                       t.rx = freq;
-                      t.direction = 0;
                     }  
   //                max_r_time = time;
                   as_active = true;
@@ -414,7 +414,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
   //                if (t.status <= SREPORT)
                   if (t.status <= SCQ || t.status == SCALL || 
                       (t.status == RCALL && t.time != time) ||
-                      (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 300)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
+                      (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 600)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
                     {
                       old_status = t.status;
                       t.status = status;
@@ -432,7 +432,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                       t.b_time = time;
                       t.s_rep = rep;
                       t.rx = freq;
-                      t.direction = 0;
                     }  
   //                max_r_time = time;
                   as_active = true;
@@ -442,7 +441,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                 {
                   t.srx_p = t.srx_c;
                   t.srx_c = status;
-                  t.direction = 1;
                   old_status = t.status;
                   t.status = status;
                   t.priority = priority;
@@ -468,7 +466,6 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     t.status = status;
                     t.b_time = time;
                     t.tx = freq;
-                    t.direction = 0;
   //                }
                   break;
                             }
@@ -477,8 +474,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                   t.srx_p = t.srx_c;
                   t.srx_c = status;
                   if (t.status < FIN) {
-                      if (t.status == RCALL || (t.status == SREPORT && t.r_rep == param)) t.direction = 0;
-                      if  (t.status <= status || t.direction == 0) t.s_rep = rep;
+                      t.s_rep = rep;
                       old_status = t.status;
                       t.status = status;
                       if (priority > t.priority) t.priority = priority;
@@ -496,16 +492,40 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                 {
                   t.stx_p = t.stx_c;
                   t.stx_c = status;
-                  if (t.status <= SREPORT ) {
-                    if (t.status <= RCQ || t.r_rep.isEmpty () || (t.status == RREPORT && tyyp == "S")) {
-                      t.direction = 1;
-                    } 
                     t.s_rep = param;
                     old_status = t.status;
                     t.status = status;
                     t.tx = freq;
                     if (t.b_time == 0 || old_status < SCQ) t.b_time = time;
+                  break;
+                }
+              case RRREPORT:
+                {
+                  t.srx_p = t.srx_c;
+                  t.srx_c = status;
+                  if (t.status < FIN && t.stx_c >= SREPORT) {
+                      old_status = t.status;
+                      t.status = status;
+                      if (priority > t.priority) t.priority = priority;
+                      if (t.continent.isEmpty ()) t.continent = continent.trimmed();
+                      if (t.mpx.isEmpty ()) t.mpx = mpx;
+                      t.r_rep = param;
+                      if (t.b_time == 0 || old_status < SCQ) t.b_time = time;
+                      t.rx = freq;
+      //                max_r_time = time;
+                      as_active = true;
                   }
+                  break;
+                }
+              case SRREPORT:
+                {
+                  t.stx_p = t.stx_c;
+                  t.stx_c = status;
+                    t.s_rep = param;
+                    old_status = t.status;
+                    t.status = status;
+                    t.tx = freq;
+                    if (t.b_time == 0 || old_status < SCQ) t.b_time = time;
                   break;
                 }
               case RRR:

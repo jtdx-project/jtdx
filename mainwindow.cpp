@@ -3117,7 +3117,6 @@ void MainWindow::decode()                                       //decode()
 
 void MainWindow::process_Auto()
 {
-  int direction = 0;
   int count = 0;
   int prio = 0;
   bool counters = true;
@@ -3130,19 +3129,18 @@ void MainWindow::process_Auto()
   unsigned time = 0;
   int rx = ui->RxFreqSpinBox->value ();
   int tx = ui->TxFreqSpinBox->value ();
-  QStringList StrStatus = {"NONE","RFIN","RCQ","SCQ","RCALL","SCALL","RREPORT","SREPORT","RRR","SRR","RRR73","SRR73","R73","S73","FIN"};
+  QStringList StrStatus = {"NONE","RFIN","RCQ","SCQ","RCALL","SCALL","RREPORT","SREPORT","RRREPORT","SRREPORT","RRR","SRR","RRR73","SRR73","R73","S73","FIN"};
   if (!hisCall.isEmpty ()) {
     if (m_houndMode) count = -1; //marker for changing status to FIN when status is RRR73
-    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio,mode);
+    m_status = m_qsoHistory.autoseq(hisCall,grid,rpt,rx,tx,time,count,prio,mode);
     if(m_config.write_decoded_debug()) {
-      QString StrDirection = direction==1 ? " TX REPORT SEQUENCE;" : " TX R+REPORT SEQUENCE;";
+      QString StrDirection = "";
       if(m_status == QsoHistory::FIN) StrDirection = " auto sequence is finished;";
       else if(m_status == QsoHistory::NONE) StrDirection = " auto sequence is not started;";
-      StrDirection = QString::number(direction) + StrDirection;
-      writeToALLTXT("hisCall:" + hisCall + " time:" + QString::number(time) + " autoseq direction:" + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
+      writeToALLTXT("hisCall:" + hisCall + " time:" + QString::number(time) + " autoseq: " + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
     }
     if (m_houndMode ) { //WSJT-X Fox will drop QSO if R+Report from Hound is not decoded after three attempts 
-      if (m_status == QsoHistory::SREPORT || m_status == QsoHistory::RREPORT) {
+      if (m_status == QsoHistory::SRREPORT || m_status == QsoHistory::RREPORT) {
         if(count > 3) {
           haltTx("DXpQSO failed after three TX of R+REPORT message ");
           count = m_qsoHistory.reset_count(hisCall,QsoHistory::RCQ);
@@ -3159,7 +3157,7 @@ void MainWindow::process_Auto()
          }
       }
     } else if ((m_status == QsoHistory::SRR73 || m_status >= QsoHistory::S73) && !m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall && !m_lockTxFreq &&
-        (direction == 1 || abs(rx - ui->TxFreqSpinBox->value ()) > m_nguardfreq)) { 
+        (tx == 1 || abs(rx - ui->TxFreqSpinBox->value ()) > m_nguardfreq)) { 
       clearDX (" cleared, AutoSeq QSO finished");
       hisCall = m_hisCall;
       grid = m_hisGrid;
@@ -3177,7 +3175,7 @@ void MainWindow::process_Auto()
       m_status = QsoHistory::NONE;
       if (m_singleshot)
         counters = false;
-    } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && direction == 1)) && m_config.answerInCallCount() && 
+    } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && !m_skipTx1)) && m_config.answerInCallCount() && 
         ((!m_transmitting && m_config.nAnswerInCallCounter() <= count) || (m_transmitting && m_config.nAnswerInCallCounter() < count)  || m_reply_other)) {
       clearDX (" cleared, RCALL/SREPORT count reached");
       count = m_qsoHistory.reset_count(hisCall);
@@ -3187,9 +3185,9 @@ void MainWindow::process_Auto()
       counters2 = false;
       if (m_singleshot)
         counters = false;
-    } else if ((m_status == QsoHistory::RREPORT || m_status == QsoHistory::SREPORT) && m_config.sentRReportCount() && 
+    } else if ((m_status == QsoHistory::RREPORT || m_status == QsoHistory::SRREPORT) && m_config.sentRReportCount() && 
         ((!m_transmitting && m_config.nSentRReportCounter() <= count) || (m_transmitting && m_config.nSentRReportCounter() < count))) {
-      clearDX (" cleared, RREPORT count reached");
+      clearDX (" cleared, RREPORT/SRREPORT count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
       grid = m_hisGrid;
@@ -3216,12 +3214,11 @@ void MainWindow::process_Auto()
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_callWorkedB4) time |= 64;
     if (m_rprtPriority) time |= 16;
     if (m_maxDistance) time |= 32;
-    direction = m_qsoHistory.autoseq(hisCall,grid,m_status,rpt,rx,tx,time,count,prio,mode);
+    m_status = m_qsoHistory.autoseq(hisCall,grid,rpt,rx,tx,time,count,prio,mode);
     if(m_config.write_decoded_debug()) {
-      QString StrDirection = direction==1 ? " TX REPORT SEQUENCE;" : " TX R+REPORT SEQUENCE;";
+      QString StrDirection = "";
       if(m_status == QsoHistory::FIN) StrDirection = " auto sequence is finished;";
       else if(m_status == QsoHistory::NONE) StrDirection = " auto sequence is not started;";
-      StrDirection = QString::number(direction) + StrDirection;
       QString StrPriority = "";
       if (!hisCall.isEmpty ()) {
         if (prio > 27) StrPriority = " New CQZ ";
@@ -3230,9 +3227,9 @@ void MainWindow::process_Auto()
         else if (prio == 19 ||  prio == 4) StrPriority = " Wanted Call ";
         else if (prio == 18 ||  prio == 3) StrPriority = " Wanted Prefix ";
         else if (prio == 17 ||  prio == 2) StrPriority = " Wanted Country ";
-        if (m_status > QsoHistory::RREPORT && direction > 0) StrPriority += " Resume interrupted QSO ";
+        if (m_status > QsoHistory::RREPORT) StrPriority += " Resume interrupted QSO ";
       }
-      writeToALLTXT("hisCall:" + hisCall + "mode:" + mode + StrPriority + " time:" + QString::number(time) +  " autoselect direction:" + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
+      writeToALLTXT("hisCall:" + hisCall + "mode:" + mode + StrPriority + " time:" + QString::number(time) +  " autoselect: " + StrDirection + " status: " + StrStatus[m_status] + " count: " + QString::number(count)+ " prio: " + QString::number(prio));
     }
     if (!hisCall.isEmpty ()) {
       if (m_callToClipboard) clipboard->setText(hisCall);
@@ -3250,7 +3247,7 @@ void MainWindow::process_Auto()
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx6->text());
     }
   }
-//  printf("process_Auto: %s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),mode.toStdString().c_str(),m_status,direction,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
+//  printf("process_Auto: %s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),mode.toStdString().c_str(),m_status,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
 
   if (rx > 0 && rx != ui->RxFreqSpinBox->value ()) ui->RxFreqSpinBox->setValue (rx);
   //if (tx > 0 && tx != ui->TxFreqSpinBox->value ()) ui->TxFreqSpinBox->setValue (tx);
@@ -3289,15 +3286,14 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::RREPORT: {
-        if (direction == 0) {
-		  if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
-          on_txb3_clicked();
-          if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx3->text());
-        }
-        else {
-          on_txb4_clicked();
-          if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx4->text());
-        }
+        if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
+        on_txb3_clicked();
+        if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx3->text());
+        break;
+      }
+      case QsoHistory::RRREPORT: {
+        on_txb4_clicked();
+        if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx4->text());
         break;
       }
       case QsoHistory::RRR: {
@@ -3660,8 +3656,9 @@ void MainWindow::readFromStdout()                             //readFromStdout
          postDecode (true, decodedtext.string ());
       }
       // find and extract any report for myCall
+      QString rpt_type;
       bool stdMsg = decodedtext.report(m_baseCall,
-          Radio::base_callsign(m_hisCall), m_rptRcvd);
+          Radio::base_callsign(m_hisCall), m_rptRcvd,rpt_type);
       // extract details and send to PSKreporter
       if(m_okToPost and m_config.spot_to_psk_reporter () and stdMsg and !m_diskData) {
         QString msgmode="FT8";
@@ -4873,8 +4870,9 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
           ui->rbGenMsg->setChecked(true);
         }
       }
+    QString rpt_type;
     decodedtext.report(m_baseCall,
-      Radio::base_callsign(m_hisCall), m_rptRcvd);
+      Radio::base_callsign(m_hisCall), m_rptRcvd, rpt_type);
     }
   else if (firstcall == "DE" && t4.size () == 8 && t4.at (7) == "73") {
     if (base_call == qso_partner_base_call) {
