@@ -370,7 +370,7 @@ public:
   void transceiver_tx_frequency (Frequency);
   void transceiver_mode (MODE);
   void transceiver_ptt (bool);
-  void transceiver_fast_mode (bool);
+  void transceiver_ft4_mode (bool);
   void sync_transceiver (bool force_signal);
  
   Q_SLOT int exec () override;
@@ -1105,13 +1105,13 @@ void Configuration::transceiver_ptt (bool on)
   m_->transceiver_ptt (on);
 }
 
-void Configuration::transceiver_fast_mode (bool on)
+void Configuration::transceiver_ft4_mode (bool on)
 {
 #if WSJT_TRACE_CAT
-  qDebug () << "Configuration::transceiver_fast_mode:" << on << m_->cached_rig_state_;
+  qDebug () << "Configuration::transceiver_ft4_mode:" << on << m_->cached_rig_state_;
 #endif
 
-  m_->transceiver_fast_mode (on);
+  m_->transceiver_ft4_mode (on);
 }
 
 void Configuration::sync_transceiver (bool force_signal, bool enforce_mode_and_split)
@@ -5453,14 +5453,14 @@ void Configuration::impl::transceiver_ptt (bool on)
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
-void Configuration::impl::transceiver_fast_mode (bool on)
+void Configuration::impl::transceiver_ft4_mode (bool on)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-  if (cached_rig_state_.fast_mode() != on)
+  if (cached_rig_state_.ft4_mode() != on)
   {
-    cached_rig_state_.fast_mode (on);
-//    printf("%s(%0.1f) Coniguration fast_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+    cached_rig_state_.ft4_mode (on);
+//    printf("%s(%0.1f) Coniguration ft4_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }

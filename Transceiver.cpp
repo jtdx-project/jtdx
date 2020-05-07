@@ -10,7 +10,7 @@ QDebug operator << (QDebug d, Transceiver::TransceiverState const& s)
     << " Frequency {" << s.rx_frequency_ << "Hz, " << s.tx_frequency_ << "Hz} " << s.mode_
     << "; SPLIT: " << (Transceiver::TransceiverState::Split::on == s.split_ ? "on" : Transceiver::TransceiverState::Split::off == s.split_ ? "off" : "unknown")
     << "; PTT: " << (s.ptt_ ? "on" : "off")
-    << "; FAST_MODE: " << (s.fast_mode_ ? "on" : "off")
+    << "; FAST_MODE: " << (s.ft4_mode_ ? "on" : "off")
     << "; LEVEL: " << s.level_ << "dBm"
     << "; POWER: " << s.power_ << "mWatts"
     << ')';
@@ -30,7 +30,7 @@ bool operator != (Transceiver::TransceiverState const& lhs, Transceiver::Transce
     || lhs.mode_ != rhs.mode_
     || lhs.split_ != rhs.split_
     || lhs.ptt_ != rhs.ptt_
-    || lhs.fast_mode_ != rhs.fast_mode_
+    || lhs.ft4_mode_ != rhs.ft4_mode_
     || lhs.level_ != rhs.level_
     || lhs.power_ != rhs.power_;
 }

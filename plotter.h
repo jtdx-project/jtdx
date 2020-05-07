@@ -81,6 +81,7 @@ public:
   void setColours(QVector<QColor> const& cl);
   void setTimestamp(int n);
   void setScale(bool b);
+  void setBars(bool b);
   void setFlatten(bool b);
   void setTol(int n);
   void setRxBand(QString band);
@@ -109,7 +110,7 @@ private:
   bool    m_lockTxFreq;
   bool    m_filter;
   bool    m_houndFilter;
-
+  bool	  m_bars;
   float   m_fSpan;
 
   qint32  m_plotZero;
@@ -124,6 +125,8 @@ private:
   qint32  m_topJT65;
   qint32  m_timestamp;
 
+  QPixmap m_DialOverlayPixmap;
+  QPixmap m_HoverOverlayPixmap;
   QPixmap m_WaterfallPixmap;
   QPixmap m_2DPixmap;
   QPixmap m_ScalePixmap;
@@ -167,10 +170,13 @@ private:
   qint32  m_fMax;
   qint32  m_startFreq;
   qint32  m_tol;
+  qint32  m_lastMouseX;
 
   char    m_sutc[6];
 
 private slots:
+  void leaveEvent(QEvent *event);
+  void mouseMoveEvent(QMouseEvent * event);
   void mousePressEvent(QMouseEvent *event);
   void mouseDoubleClickEvent(QMouseEvent *event);
 };

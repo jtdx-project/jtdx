@@ -1070,7 +1070,7 @@ void HamlibTransceiver::do_poll ()
       TRACE_CAT_POLL ("HamlibTransceiver", "VFO =" << rig_strvfo (v));
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s poll current VFO\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fprintf(pFile,"%s poll current VFO=%s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strvfo (v));
       fclose (pFile);
 #endif
       reversed_ = RIG_VFO_B == v;

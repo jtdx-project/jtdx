@@ -36,6 +36,7 @@ WideGraph::WideGraph(QSettings * settings, JTDXDateTime * jtdxtime, QWidget *par
   ui->widePlot->setMaximumHeight(800);
   ui->widePlot->setCurrent(false);
   ui->cbControls->setCursor(Qt::ArrowCursor);
+  ui->cbBars->setCursor(Qt::ArrowCursor);
 
   connect(ui->widePlot, SIGNAL(freezeDecode1(int)),this,
           SLOT(wideFreezeDecode(int)));
@@ -89,6 +90,10 @@ WideGraph::WideGraph(QSettings * settings, JTDXDateTime * jtdxtime, QWidget *par
   if(ststamp == "0" || ststamp == "1" || ststamp == "2") m_timestamp = itstamp; 
   ui->timestampComboBox->setCurrentIndex(m_timestamp); ui->widePlot->setTimestamp(m_timestamp);
 
+  m_bars=m_settings->value("Bars",true).toBool();
+  ui->cbBars->setChecked(m_bars);
+  ui->widePlot->setBars(m_bars);
+
   m_bScale=m_settings->value("Scale",true).toBool();
   ui->cbScale->setChecked(m_bScale);
   ui->widePlot->setScale(m_bScale);
@@ -136,6 +141,7 @@ WideGraph::WideGraph(QSettings * settings, JTDXDateTime * jtdxtime, QWidget *par
   setRxRange (m_fMin);
   ui->controls_widget->setVisible(!m_settings->value("HideControls",false).toBool());
   ui->cbControls->setChecked(!m_settings->value("HideControls",false).toBool());
+
   m_settings->endGroup();
 
   saveSettings ();		// update config with defaults
@@ -189,6 +195,7 @@ void WideGraph::saveSettings()                                           //saveS
   m_settings->setValue ("Scale",m_bScale);
   m_settings->setValue ("Flatten",m_bFlatten);
   m_settings->setValue ("HideControls", ui->controls_widget->isHidden ());
+  m_settings->setValue ("Bars", m_bars);
   m_settings->endGroup ();
 }
 
@@ -478,6 +485,12 @@ void WideGraph::on_cbFlatten_toggled(bool b)
 void WideGraph::on_cbControls_toggled(bool b)
 {
   ui->controls_widget->setVisible(b);
+}
+
+void WideGraph::on_cbBars_toggled(bool b)
+{
+  m_bars = b;
+  ui->widePlot->setBars(m_bars);
 }
 
 void WideGraph::on_adjust_palette_push_button_clicked (bool)   //Adjust Palette

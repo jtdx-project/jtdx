@@ -166,6 +166,8 @@ void LogQSO::accept()
     else myadif+=" <MODE:"  + QString::number(mode.length()) + ">" + mode;
     myadif+=" <QSO_DATE:8>" + m_dateTimeOn.date().toString("yyyyMMdd");
     myadif+=" <TIME_ON:6>" + m_dateTimeOn.time().toString("hhmmss");
+    myadif+=" <QSO_DATE_OFF:8>" + m_dateTimeOff.date().toString("yyyyMMdd");
+    myadif+=" <TIME_OFF:6>" + m_dateTimeOff.time().toString("hhmmss");
     myadif+=" <RST_SENT:" + QString::number(rptSent.length()) + ">" + rptSent;
     myadif+=" <RST_RCVD:" + QString::number(rptRcvd.length()) + ">" + rptRcvd;
     myadif+=" <TX_PWR:" + QString::number(m_txPower.length()) + ">" + m_txPower;

@@ -161,7 +161,7 @@ float DecodedText::dt()
 */
 
 // find and extract any report. Returns true if this is a standard message
-bool DecodedText::report(QString const& myBaseCall, QString const& dxBaseCall, /*mod*/QString& report)
+bool DecodedText::report(QString const& myBaseCall, QString const& dxBaseCall, /*mod*/QString& report, QString& type)
 {
     bool ret = is_standard_;
     QStringList w=message_.split(" ",QString::SkipEmptyParts);
@@ -185,6 +185,7 @@ bool DecodedText::report(QString const& myBaseCall, QString const& dxBaseCall, /
         if (ok and i1>=-50 and i1<50)
         {
             report = tt;
+            type = "";
         }
         else
         {
@@ -194,6 +195,7 @@ bool DecodedText::report(QString const& myBaseCall, QString const& dxBaseCall, /
                 if(ok and i1>=-50 and i1<50)
                 {
                     report = tt.mid(1);
+                    type = tt.left(1);
                 }
             }
         }
