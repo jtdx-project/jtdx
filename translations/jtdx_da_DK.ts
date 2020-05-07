@@ -2848,7 +2848,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>Klik på OK for at bekræfte følgende QSO:</translation>
+        <translation>Klik på OK for at bekræfte QSO:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -3235,7 +3235,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1757"/>
         <source>Wanted</source>
-        <translation>Valgt</translation>
+        <translation>Prioriteret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1798"/>
@@ -8335,7 +8335,7 @@ lydkort ændring</translation>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation>Skrivbare filer placeret  i test område. Brug det med forsigtighed, kun til test.</translation>
+        <translation>Skrivbare filer placeret  i test bibliotek. Brug det med forsigtighed, kun til test.</translation>
     </message>
 </context>
 <context>
