@@ -5627,7 +5627,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>標注條</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
