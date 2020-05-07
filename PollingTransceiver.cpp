@@ -20,7 +20,8 @@ PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
   : TransceiverBase {parent}
   , interval_ {poll_interval * 1000}
   , poll_timer_ {nullptr}
-  , fast_mode_ {false}
+  , ft4_mode_ {false}
+  , fast_mode_ {interval_ == 500}
   , retries_ {0}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
 {
@@ -77,13 +78,19 @@ void PollingTransceiver::do_post_start ()
   fprintf (pFile,"%s Poll start ms %lld %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),ms,sec);
   fclose (pFile);
 #endif
-  if (fast_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11))
+  if (fast_mode_)
+    if (ms <= 500)
+      QThread::msleep (500-ms);
+    else
+      QThread::msleep (1000-ms);
+  else if (ft4_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11))
     QThread::msleep (1000-ms);
   else
     if (ms <= 500)
       QThread::msleep (500-ms);
     else
       QThread::msleep (1500-ms);
+
   start_timer ();
   if (!next_state_.online ())
     {
@@ -145,13 +152,13 @@ void PollingTransceiver::do_post_mode (MODE m)
     }
 }
 
-void PollingTransceiver::do_post_fast_mode (bool p)
+void PollingTransceiver::do_post_ft4_mode (bool p)
 {
-//  printf("PollingTransceiver do_post_fast_mode = %d\n",p);
+//  printf("PollingTransceiver do_post_ft4_mode = %d\n",p);
       // update polling style
-      next_state_.fast_mode (p);
-      fast_mode_ = p && interval_ == 1000;
-      if (interval_ == 1000) do_post_start ();
+      next_state_.ft4_mode (p);
+      ft4_mode_ = p && (interval_ == 1000 || fast_mode_);
+      if (interval_ == 1000 && !fast_mode_) do_post_start ();
 }
 
 void PollingTransceiver::do_post_ptt (bool p)
@@ -188,15 +195,15 @@ void PollingTransceiver::handle_timeout ()
       auto ms = QDateTime::currentMSecsSinceEpoch() % 1000;
 #if JTDX_DEBUG_TO_FILE
       FILE * pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s %d Poll start retries=%d fast_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_);
+      fprintf(pFile,"%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_);
       fclose (pFile);
 #endif
-      if (!fast_mode_) {
+      if (!ft4_mode_ && !fast_mode_) {
         if (ms < 125) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
         else if (ms < 250) {poll_timer_->stop (); QThread::msleep (500 - ms); poll_timer_->start (interval_);}
         else if (ms > 875) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
         else if (ms > 750) {poll_timer_->stop (); QThread::msleep (1500 - ms); poll_timer_->start (interval_);}
-      } else {
+      } else if (!fast_mode_) {
         if ((sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11 || sec == 12) && ms > 250 && ms < 750) {
           if (ms > 375 && ms < 625) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
           else {poll_timer_->stop (); QThread::msleep (1000 - ms); poll_timer_->start (interval_);}

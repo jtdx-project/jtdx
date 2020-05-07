@@ -65,7 +65,7 @@ public:
     float dt();
 
     // find and extract any report. Returns true if this is a standard message
-  bool report(QString const& myBaseCall, QString const& dxBaseCall, /*mod*/QString& report);
+  bool report(QString const& myBaseCall, QString const& dxBaseCall, /*mod*/QString& report,QString& type);
 
     // get the first text word, usually the call
     QString call();

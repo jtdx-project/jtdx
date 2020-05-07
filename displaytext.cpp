@@ -200,6 +200,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     QString param;
     QString report;
     QString checkMode;
+    QString rep_type;
     unsigned c_time = 0;
     if (!decodedText->isDebug() && app_mode != "WSPR-2") {
         c_time = decodedText->timeInSeconds();
@@ -232,8 +233,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                         status = QsoHistory::RCALL;
                     }
                     else if (checkCall.contains(hisCall)  && mystatus_ > QsoHistory::SCQ  && mystatus_ != QsoHistory::FIN) {
-                        if (decodedText->report(myCall,Radio::base_callsign (checkCall),report) && report != "RR73" && !report.isEmpty ()) {
-                            status = QsoHistory::RREPORT;
+                        if (decodedText->report(myCall,Radio::base_callsign (checkCall),report,rep_type) && !report.isEmpty ()) {
+                            if (rep_type == "R")
+                                status = QsoHistory::RRREPORT;
+                            else
+                                status = QsoHistory::RREPORT;
                             param = report;
                         }
                         else if (decodedText->message().contains(" RRR") && mystatus_ > QsoHistory::SREPORT) {
@@ -280,10 +284,13 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 else {
                     if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
                     if (grid.isEmpty () && Radio::base_callsign (checkCall) == hisCall) grid = hisGrid;
-                    if (decodedText->report(myCall,Radio::base_callsign (checkCall),report)) {
+                    if (decodedText->report(myCall,Radio::base_callsign (checkCall),report,rep_type)) {
                         if (!checkCall.isEmpty ()) {
-                            if (report != "RR73" && !report.isEmpty ()) {
-                                status = QsoHistory::RREPORT;
+                            if (!report.isEmpty ()) {
+                                if (rep_type == "R")
+                                    status = QsoHistory::RRREPORT;
+                                else
+                                    status = QsoHistory::RREPORT;
                                 param = report;
                             }
                             else if (decodedText->message().contains(" RRR")) {
@@ -912,7 +919,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
                       status = QsoHistory::SRR73;
                     else if (parts[2].left(2) == "R+" || parts[2].left(2) == "R-") {
                       param = parts[2].mid(1,3);
-                      status = QsoHistory::SREPORT;
+                      status = QsoHistory::SRREPORT;
                       tyyp = skip_tx1;
                     }
                     else

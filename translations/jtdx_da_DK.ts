@@ -2208,7 +2208,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
-        <translation>Importer Palet</translation>
+        <translation>Importer Palette</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
@@ -2219,7 +2219,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
-        <translation>Eksport Palet</translation>
+        <translation>Eksport Palette</translation>
     </message>
 </context>
 <context>
@@ -2359,26 +2359,26 @@ Fejl: %2 - %3</translation>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="505"/>
-        <location filename="../FrequencyList.cpp" line="669"/>
+        <location filename="../FrequencyList.cpp" line="506"/>
+        <location filename="../FrequencyList.cpp" line="670"/>
         <source>IARU Region</source>
         <translation>IARU Region</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="526"/>
-        <location filename="../FrequencyList.cpp" line="670"/>
+        <location filename="../FrequencyList.cpp" line="527"/>
+        <location filename="../FrequencyList.cpp" line="671"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="558"/>
-        <location filename="../FrequencyList.cpp" line="671"/>
+        <location filename="../FrequencyList.cpp" line="559"/>
+        <location filename="../FrequencyList.cpp" line="672"/>
         <source>Frequency</source>
         <translation>Frekvens</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="589"/>
-        <location filename="../FrequencyList.cpp" line="672"/>
+        <location filename="../FrequencyList.cpp" line="590"/>
+        <location filename="../FrequencyList.cpp" line="673"/>
         <source>Frequency (MHz)</source>
         <translation>Frekvens (MHz)</translation>
     </message>
@@ -2772,7 +2772,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3721"/>
+        <location filename="../mainwindow.cpp" line="3720"/>
         <source>&amp;Yes</source>
         <translation>&amp;Ja</translation>
     </message>
@@ -2783,7 +2783,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3724"/>
+        <location filename="../mainwindow.cpp" line="3723"/>
         <source>&amp;No</source>
         <translation>&amp;Nej</translation>
     </message>
@@ -2904,7 +2904,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation>Tx power</translation>
+        <translation>Tx Effekt</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
@@ -2948,8 +2948,8 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Gennemsnit: akkumuleret gennemsnitlig DT af afkodede signaler på det aktuelle bånd.&lt;/p&gt;&lt;p&gt; Lag: er dekoderforsinkelse beregnet relativt til begyndelsen af ​​næste interval. Negative værdier betyder der er ledig tid til rådighed til at øge dekodningsdybden, positive værdier er dekoderens forsinkelse i TX eller næste interval, hvilket betyder, at der muligvis ikke er nok CPU-ressourcer til valgt dekodningsdybde til at give pålidelig signaloverførsel.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Lag afhænger af CPU-ydelse, støjforhold, båndets fylde og andre programmer, der bruger computer, det kan reduceres ved at reducere vandfaldets båndbredde. Hvis Lag er konstant negativt fungerer CPU-dekodning godt, og du kan prøve at gøre afkodningen mere aggressiv for at få flere dekodninger.&lt;/p&gt;&lt;p&gt; FT8: Hvis Lag er 0 .. 0,4, kan du stadig bruge Autosekv 3/7 (Autoselekt vil udløse ændring af TX-besked tidligt nok til at overføre fuld meddelelse). Hvis Lag&gt; 0,4, skal du prøve at mindske afkodnings aggressivitet. Hvis der stadig er Lag&gt; 0,4, skal Autosekv 2/6 bruges, da svar på det indgående opkald vil blive delvist beskadiget ved transmission i AutoSeq 3/7. Hvis Lag konstant er &gt; 2, er din CPU mindre uegnet til at fungere i mode FT8 med de aktuelle dekoderindstillinger. Men du kan sikkert køre som SWL.&lt;/p&gt;&lt;p&gt;/ xx: antal afkodede meddelelser i sidste interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -2959,8 +2959,8 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
-        <location filename="../mainwindow.cpp" line="3401"/>
-        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="3399"/>
+        <location filename="../mainwindow.cpp" line="3406"/>
         <location filename="../mainwindow.cpp" line="5937"/>
         <location filename="../mainwindow.cpp" line="5942"/>
         <location filename="../mainwindow.cpp" line="5982"/>
@@ -2971,7 +2971,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hvis der er opstået en radio kontrolfejl. Hvis den er orange eller rød, skal du klikke for at nulstille og læse frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S betyder Split. Grøn betyder alt OK. Radio kontrolfejl hvis den er orange eller rød, skal du klikke for at nulstille og læse frekvensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="424"/>
@@ -3082,7 +3082,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1085"/>
-        <location filename="../mainwindow.cpp" line="4560"/>
+        <location filename="../mainwindow.cpp" line="4559"/>
         <location filename="../mainwindow.cpp" line="5225"/>
         <location filename="../mainwindow.cpp" line="5640"/>
         <source>DX Call</source>
@@ -3134,11 +3134,11 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1466"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivér FT8 DXpedition Hound-Mode. Klik med højre museknap for at aktivere Hound frekvensfrekvensstyring. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivér FT8 DXpedition Hound Mode. Klik med højre museknap for at aktivere hundefrekvensfrekvensstyring. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1480"/>
-        <location filename="../mainwindow.cpp" line="2867"/>
+        <location filename="../mainwindow.cpp" line="2868"/>
         <source>Hound</source>
         <translation>Hound</translation>
     </message>
@@ -3171,15 +3171,15 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1597"/>
-        <location filename="../mainwindow.cpp" line="1487"/>
-        <location filename="../mainwindow.cpp" line="1919"/>
+        <location filename="../mainwindow.cpp" line="1488"/>
+        <location filename="../mainwindow.cpp" line="1920"/>
         <source>S meter</source>
         <translation>S meter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1613"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Brug forskellige Rx / Tx AF-frekvenser, eller indstil Tx-frekvens lig med Rx AF-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Brug forskellige Rx / Tx AF-frekvenser, eller indstil Tx-frekvens lig med Rx AF-frekvensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1619"/>
@@ -3199,13 +3199,13 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivér halvautomatisk meddelelsessekventering. Når du kalder CQ autoselekteres der som standard søgning efter svar med den højeste prioritet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktivér halvautomatisk meddelelsessekvens. Når du kalder CQ autoselekteres der som standard søgning efter højeste prioritet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1680"/>
         <location filename="../mainwindow.ui" line="4545"/>
         <source>AutoSeq</source>
-        <translation>AutoSek</translation>
+        <translation>AutoSekv</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1696"/>
@@ -3256,7 +3256,7 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1873"/>
         <location filename="../mainwindow.ui" line="1889"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommasepareret liste over ønskede kaldesignaler. Autoselection under AutoSeq 1..7 behandler ønsket kaldesignal i henhold til de valgte meddelelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSeq0. Kun ikke FT8-tilstande: for sammensatte kaldesignaler skal basiskallesignalet bruges på listen, undertiden kopieres kun basekaldesignal fra den dekodede meddelelse: når der logges en sådan QSO skal man i nogle tilfælde ændre modpartens kaldesignal til det korrekt sammensatte. &lt;/p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Kommasepareret liste over ønskede kaldesignaler. Autoselection under AutoSekv 1..7 behandler ønsket kaldesignal i henhold til de valgte meddelelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSekv0. Kun ikke FT8-tilstande: for sammensatte kaldesignaler skal basiskallesignalet bruges på listen, undertiden kopieres kun basekaldesignal fra den dekodede meddelelse: når der logges en sådan QSO skal man i nogle tilfælde ændre modpartens kaldesignal til det korrekt sammensatte. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1876"/>
@@ -3267,7 +3267,7 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1909"/>
         <location filename="../mainwindow.ui" line="1925"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommasepareret liste over de ønskede præfikser. Autoselektion under AutoSeq 1..7 behandler ønsket præfiks i henhold til de valgte meddelelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSeq0. For sammensatte kaldesignaler genkendes præfikset i begyndelsen af ​​kaldesignalet. Autoselektion behandler ønsket kaldesignal i henhold til de valgte meddelelser / prioriteringer. Kun ikke FT8-tilstande: undertiden kopieres basisopkaldsignalet fra den afkodede meddelelse: når der logges en sådan QSO skal man i nogle tilfælde ændre modpartens kaldesignal til det korrekt sammensatte. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Kommasepareret liste over de ønskede præfikser. Autoselektion under AutoSekv 1..7 behandler ønsket præfiks i henhold til de valgte meddelelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSekv0. For sammensatte kaldesignaler genkendes præfikset i begyndelsen af ​​kaldesignalet. Autoselektion behandler ønsket kaldesignal i henhold til de valgte meddelelser / prioriteringer. Kun ikke FT8 Modes: undertiden kopieres basisopkaldsignalet fra den afkodede meddelelse: når der logges en sådan QSO skal man i nogle tilfælde ændre modpartens kaldesignal til det korrekt sammensatte.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1912"/>
@@ -3278,7 +3278,7 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1942"/>
         <location filename="../mainwindow.ui" line="1958"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommasepareret liste over de ønskede Grid, hvor kun fire karater understøttes. Autoselektion under AutoSeq 1..7 behandler ønsket grid i henhold til de valgte underretninger / prioriteringer, denne funktion understøttes ikke under AutoSeq0. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Kommasepareret liste over de ønskede Grid, hvor kun fire karater understøttes. Autoselektion under AutoSekv 1..7 behandler ønsket grid i henhold til de valgte prioriteringer, denne funktion understøttes ikke under AutoSekv0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1945"/>
@@ -3304,7 +3304,7 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommasepareret liste over de ønskede lande:landets hoved præfiks skal bruges i denne liste. For sammensatte kaldesignaler genkendes præfikset i begyndelsen af ​​kaldesignalet. Autoselektion under AutoSeq 1..7 behandler ønsket land i henhold til de valgte meddelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSeq0. Kun ikke FT8-tilstande: undertiden kopieres basisopkaldsignalet fra den afkodede meddelelse: når sådan en QSO logges kan det være nødvendigt at ændre  kaldesignal til det korrekt sammensatte. Liste over landes hoved præfikser: 1A, 1S, 3A, 3B6,3B8,3B9,3C, 3C0,3D2,3D2 / C, &lt;br&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kommasepareret liste over de ønskede lande:landets hoved præfiks skal bruges i denne liste. For sammensatte kaldesignaler genkendes præfikset i begyndelsen af ​​kaldesignalet. Autoselektion under AutoSekv 1..7 behandler ønsket land i henhold til de valgte meddelser / prioriteringer, denne funktionalitet understøttes ikke under AutoSekv0. Kun ikke FT8 Modes: undertiden kopieres basisopkaldsignalet fra den afkodede meddelelse: når sådan en QSO logges kan det være nødvendigt at ændre  kaldesignal til det korrekt sammensatte. Liste over landes hoved præfikser: 1A, 1S, 3A, 3B6,3B8,3B9,3C, 3C0,3D2,3D2 / C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -3339,7 +3339,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2282"/>
-        <location filename="../mainwindow.cpp" line="6524"/>
+        <location filename="../mainwindow.cpp" line="6525"/>
         <source>&amp;Tune</source>
         <translation>&amp;Tune</translation>
     </message>
@@ -3366,7 +3366,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vælg Single shot QSO AutoSeq&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vælg Single shot QSO AutoSekv&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2414"/>
@@ -3401,7 +3401,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2543"/>
         <source>Dec&amp;ode</source>
-        <translation>Dek&amp;od</translation>
+        <translation>Dek&amp;ode</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2571"/>
@@ -3461,12 +3461,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2756"/>
         <source>Hint</source>
-        <translation>Tips</translation>
+        <translation>AP HINT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Båndbredde, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signaler: 580Hz dekodning, 300 Hz til visning af meddelelser. Filteret er centreret mod RX-signalspektret. Filterfunktionalitet kan ikke forbedre signalafkodning, det er dedikeret til brug med langsomme CPU&apos;er for at lade dekoderen afslutte behandlingen inden signaloverførsel og undgå ændring af meddelelse ved transmission. Alle indgående opkald fra filterbåndbredde vil gå tabt, brug kun filterfunktion, hvis det virkelig er nødvendigt for din CPU. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Båndbredde, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signaler: 580Hz dekodning, 300 Hz til visning af meddelelser. Filteret er centreret omkring RX-signalspektret. Filterfunktionalitet kan ikke forbedre signal dekodning. Det er beregnet til PC med langsomme CPU&apos;er for, at lade dekoderen afslutte behandlingen inden signaloverførsel og undgå ændring af meddelelse ved transmission. Alle indgående meddelser uden for filterbåndbredde vil gå tabt. Brug kun filterfunktion, hvis det virkelig er nødvendigt for din CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2801"/>
@@ -3856,7 +3856,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4367"/>
         <source>JT9 WSPR decoding</source>
-        <translation>JT9 WSPR decodning</translation>
+        <translation>JT9 WSPR dekodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -3896,7 +3896,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4439"/>
         <source>FT4 decoding</source>
-        <translation>FT4 decodning</translation>
+        <translation>FT4 dekodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4455"/>
@@ -4020,7 +4020,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4673"/>
         <source>None</source>
-        <translation>Ingen</translation>
+        <translation>Intet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4681"/>
@@ -4263,12 +4263,12 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5110"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>Omgå tekstfiltre på RX-frekvensen</translation>
+        <translation>Ignorer tekstfiltre på RX-frekvensen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5121"/>
         <source>Bypass all text filters</source>
-        <translation>Omgå alle tekst filtre</translation>
+        <translation>Ignorer alle tekst filtre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5124"/>
@@ -4278,7 +4278,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5132"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation>Hvis meddelser dekodet af JT65 harmoniske</translation>
+        <translation>Vis meddelser dekodet i JT65 harmoniske</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5143"/>
@@ -4328,27 +4328,27 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5219"/>
         <source>0  Call None</source>
-        <translation>0  Kald ingen</translation>
+        <translation>0  Svar ingen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5227"/>
         <source>1  Call first</source>
-        <translation>1  Kald første</translation>
+        <translation>1  Svar første dekodet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5235"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+ Kald og søg i CQ meddelser</translation>
+        <translation>4+ Svar efter søgning i CQ meddelser</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5243"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 Kald dekodet indtil start af TX interval</translation>
+        <translation>2 Svar efter dekodning indenl start af TX interval</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5251"/>
         <source>3  Call based on end of decoding</source>
-        <translation>3 Kald baseret på dekodning afsluttet</translation>
+        <translation>3 Svar efter dekodning er afsluttet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5259"/>
@@ -4363,7 +4363,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5275"/>
         <source>Answer worked B4 calls</source>
-        <translation>Svar QSO B4 kaldesignaler</translation>
+        <translation>Besvar QSO B4 stationer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5286"/>
@@ -4428,7 +4428,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5461"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Besvar QSO B4 kaldesignaler</translation>
+        <translation>Besvar QSO B4 stationer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5480"/>
@@ -4448,17 +4448,17 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5504"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Sæt Filter OFF når der sendes 73</translation>
+        <translation>Slå Filter FRA når der sendes 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5512"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>Sæt Filter når der modtages 73</translation>
+        <translation>Slå Filter FRA når der modtages 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5520"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>Skjul FT8 dupebeskeder</translation>
+        <translation>Skjul FT8 dublet beskeder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5528"/>
@@ -4473,12 +4473,12 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5544"/>
         <source>Enable hound mode</source>
-        <translation>Antiver Hound Mode</translation>
+        <translation>Aktiver Hound Mode</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5555"/>
         <source>Use hound TX frequency control</source>
-        <translation>Bru hound TX frekvens kontrol</translation>
+        <translation>Brug hound TX frekvens kontrol</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5563"/>
@@ -4555,7 +4555,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5716"/>
         <source>wideband DX Call search</source>
-        <translation>Bredbåndet søgning efter DX Call</translation>
+        <translation>Bredspektret søgning efter DX Call</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5724"/>
@@ -4573,23 +4573,23 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <translation>Krydsbånds 160m operation med Japan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="450"/>
+        <location filename="../mainwindow.cpp" line="451"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Vil du rekonfigurere radio interface?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="746"/>
+        <location filename="../mainwindow.cpp" line="747"/>
         <source>Error Writing WAV File</source>
         <translation>Fejl ved Skrivning af WAV fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="887"/>
+        <location filename="../mainwindow.cpp" line="888"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Fejl ved stop af jtdxjt9.exe Processen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="865"/>
         <location filename="../mainwindow.cpp" line="866"/>
+        <location filename="../mainwindow.cpp" line="867"/>
         <location filename="../mainwindow.cpp" line="5933"/>
         <location filename="../mainwindow.cpp" line="5934"/>
         <location filename="../mainwindow.cpp" line="5989"/>
@@ -4598,277 +4598,277 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <translation>Frek   Meddelse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="888"/>
+        <location filename="../mainwindow.cpp" line="889"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName return code: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
+        <location filename="../mainwindow.cpp" line="906"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Fejl ved fjernelse af &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="907"/>
         <source>Click OK to retry</source>
         <translation>Klik OK for at prøve igen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1598"/>
+        <location filename="../mainwindow.cpp" line="1599"/>
         <source>TX Even</source>
         <translation>TX Lige</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1605"/>
+        <location filename="../mainwindow.cpp" line="1606"/>
         <source>TX Odd</source>
         <translation>TX Ulige</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1650"/>
-        <location filename="../mainwindow.cpp" line="2310"/>
-        <location filename="../mainwindow.cpp" line="3431"/>
-        <location filename="../mainwindow.cpp" line="4037"/>
-        <location filename="../mainwindow.cpp" line="4160"/>
-        <location filename="../mainwindow.cpp" line="4394"/>
-        <location filename="../mainwindow.cpp" line="6790"/>
-        <location filename="../mainwindow.cpp" line="6986"/>
+        <location filename="../mainwindow.cpp" line="1651"/>
+        <location filename="../mainwindow.cpp" line="2311"/>
+        <location filename="../mainwindow.cpp" line="3429"/>
+        <location filename="../mainwindow.cpp" line="4036"/>
+        <location filename="../mainwindow.cpp" line="4159"/>
+        <location filename="../mainwindow.cpp" line="4393"/>
+        <location filename="../mainwindow.cpp" line="6791"/>
+        <location filename="../mainwindow.cpp" line="6987"/>
         <source>File Open Error</source>
         <translation>Fejl ved åbning af fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1651"/>
-        <location filename="../mainwindow.cpp" line="2311"/>
-        <location filename="../mainwindow.cpp" line="3432"/>
-        <location filename="../mainwindow.cpp" line="4038"/>
-        <location filename="../mainwindow.cpp" line="4161"/>
-        <location filename="../mainwindow.cpp" line="4395"/>
-        <location filename="../mainwindow.cpp" line="6791"/>
-        <location filename="../mainwindow.cpp" line="6987"/>
-        <location filename="../mainwindow.cpp" line="7328"/>
+        <location filename="../mainwindow.cpp" line="1652"/>
+        <location filename="../mainwindow.cpp" line="2312"/>
+        <location filename="../mainwindow.cpp" line="3430"/>
+        <location filename="../mainwindow.cpp" line="4037"/>
+        <location filename="../mainwindow.cpp" line="4160"/>
+        <location filename="../mainwindow.cpp" line="4394"/>
+        <location filename="../mainwindow.cpp" line="6792"/>
+        <location filename="../mainwindow.cpp" line="6988"/>
+        <location filename="../mainwindow.cpp" line="7329"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan ikke åbne &quot;%1&quot; for tilføjelse: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1754"/>
+        <location filename="../mainwindow.cpp" line="1755"/>
         <source>Error saving c2 file</source>
         <translation>Fejl da c2 filen skulle gemmes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1831"/>
+        <location filename="../mainwindow.cpp" line="1832"/>
         <source>Error in SoundInput</source>
         <translation>Fejl ved Lydingang</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1835"/>
+        <location filename="../mainwindow.cpp" line="1836"/>
         <source>Error in SoundOutput</source>
         <translation>Fejl ved LydUdgang</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1921"/>
+        <location filename="../mainwindow.cpp" line="1922"/>
         <source>Pwr</source>
         <translation>Pwr</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2421"/>
+        <location filename="../mainwindow.cpp" line="2422"/>
         <source>Subprocess Error</source>
         <translation>Underrutine fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2422"/>
+        <location filename="../mainwindow.cpp" line="2423"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Underrutine fejlede med kode %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2424"/>
-        <location filename="../mainwindow.cpp" line="2443"/>
+        <location filename="../mainwindow.cpp" line="2425"/>
+        <location filename="../mainwindow.cpp" line="2444"/>
         <source>Running: %1
 %2</source>
         <translation>Kører: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2442"/>
+        <location filename="../mainwindow.cpp" line="2443"/>
         <source>Subprocess error</source>
         <translation>Underrutine fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2518"/>
+        <location filename="../mainwindow.cpp" line="2519"/>
         <source>Spotted</source>
         <translation>Spotted</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2525"/>
+        <location filename="../mainwindow.cpp" line="2526"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Kan ikke etablere / afslutte forbindelse til dxsummit-server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2548"/>
+        <location filename="../mainwindow.cpp" line="2549"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>Algoritmerne, kildekoden, udseendet og fornemmelsen af ​​WSJT-X og relaterede programmer og protokollspecifikationer for tilstande FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 er Copyright (C) 2001 -2018 af en eller flere af følgende forfattere: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; og andre medlemmer af WSJT Development Group.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2668"/>
+        <location filename="../mainwindow.cpp" line="2669"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Ingen data læst fra disken. Forkert filformat?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2675"/>
+        <location filename="../mainwindow.cpp" line="2676"/>
         <source>Confirm Delete</source>
         <translation>Bekræft sletning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2676"/>
+        <location filename="../mainwindow.cpp" line="2677"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Er du sikker på du vil slette alle *.wav og *. filer i
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2716"/>
+        <location filename="../mainwindow.cpp" line="2717"/>
         <source>AutoSeq0</source>
         <translation>AutoSeq0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2729"/>
+        <location filename="../mainwindow.cpp" line="2730"/>
         <source>AutoSeq1</source>
         <translation>AutoSeq1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2738"/>
-        <location filename="../mainwindow.cpp" line="2764"/>
+        <location filename="../mainwindow.cpp" line="2739"/>
+        <location filename="../mainwindow.cpp" line="2765"/>
         <source>AutoSeq2</source>
         <translation>AutoSeq2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2739"/>
-        <location filename="../mainwindow.cpp" line="2760"/>
+        <location filename="../mainwindow.cpp" line="2740"/>
+        <location filename="../mainwindow.cpp" line="2761"/>
         <source>AutoSeq6</source>
         <translation>AutoSeq6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2748"/>
-        <location filename="../mainwindow.cpp" line="2765"/>
+        <location filename="../mainwindow.cpp" line="2749"/>
+        <location filename="../mainwindow.cpp" line="2766"/>
         <source>AutoSeq3</source>
         <translation>AutoSeq3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2749"/>
-        <location filename="../mainwindow.cpp" line="2761"/>
+        <location filename="../mainwindow.cpp" line="2750"/>
+        <location filename="../mainwindow.cpp" line="2762"/>
         <source>AutoSeq7</source>
         <translation>AutoSeq7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2843"/>
+        <location filename="../mainwindow.cpp" line="2844"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Hound TX-frekvensstyring er ikke tilladt på en standard FT8 frekvens.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2851"/>
+        <location filename="../mainwindow.cpp" line="2852"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>TX-frekvensstyring for Hound mode kræver * Split * rigskontrol (enten * Rig * eller * Fake It * under *Indstillinger | Fanen Radio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2854"/>
+        <location filename="../mainwindow.cpp" line="2855"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound TX-frekvensstyring er ikke tilladt på en standard FT8 frekvens og kræver * Split * riggstyring (enten * Rig * eller * Fake It *under Indstillinger | fanen Radio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2862"/>
+        <location filename="../mainwindow.cpp" line="2863"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX frekvens kontrol advarsel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2867"/>
+        <location filename="../mainwindow.cpp" line="2868"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2928"/>
+        <location filename="../mainwindow.cpp" line="2929"/>
         <source>Keyboard Shortcuts</source>
         <translation>Tastetur Genveje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2939"/>
+        <location filename="../mainwindow.cpp" line="2940"/>
         <source>Special Mouse Commands</source>
         <translation>Specielle muse kommandoer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
         <source>Avg=</source>
         <translation>Avg=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3395"/>
-        <location filename="../mainwindow.cpp" line="3411"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="3409"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Frekv  </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3395"/>
-        <location filename="../mainwindow.cpp" line="3411"/>
+        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="3409"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3400"/>
-        <location filename="../mainwindow.cpp" line="3407"/>
+        <location filename="../mainwindow.cpp" line="3398"/>
+        <location filename="../mainwindow.cpp" line="3405"/>
         <source>check time</source>
         <translation>kontoller tiden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3709"/>
-        <location filename="../mainwindow.cpp" line="3715"/>
+        <location filename="../mainwindow.cpp" line="3708"/>
+        <location filename="../mainwindow.cpp" line="3714"/>
         <source>Confirm change Language</source>
         <translation>Bekræft skif af sprog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3711"/>
-        <location filename="../mainwindow.cpp" line="3718"/>
+        <location filename="../mainwindow.cpp" line="3710"/>
+        <location filename="../mainwindow.cpp" line="3717"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Er du sikker på du vil skifte UI Bruger sprog til Dansk, JTDX vil genstarte?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3887"/>
+        <location filename="../mainwindow.cpp" line="3886"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Vælg en anden Tx-frekvens. JTDX sender ikke bevidst en anden mode i WSPR-området.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3892"/>
-        <location filename="../mainwindow.cpp" line="3895"/>
+        <location filename="../mainwindow.cpp" line="3891"/>
+        <location filename="../mainwindow.cpp" line="3894"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR Guard Bånd</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4013"/>
+        <location filename="../mainwindow.cpp" line="4012"/>
         <source>TUNE</source>
         <translation>TUNE</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4014"/>
+        <location filename="../mainwindow.cpp" line="4013"/>
         <source>LastTx: </source>
         <translation>SidsteTX: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4228"/>
+        <location filename="../mainwindow.cpp" line="4227"/>
         <source>Tx: TUNE</source>
         <translation>TX: TUNE</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4229"/>
+        <location filename="../mainwindow.cpp" line="4228"/>
         <source>Tx: </source>
         <translation>TX: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4234"/>
+        <location filename="../mainwindow.cpp" line="4233"/>
         <source>Receiving </source>
         <translation>Modtager </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4287"/>
+        <location filename="../mainwindow.cpp" line="4286"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4445"/>
+        <location filename="../mainwindow.cpp" line="4444"/>
         <source>Last Tx: </source>
         <translation>Seneste TX: </translation>
     </message>
@@ -4939,74 +4939,74 @@ er allerede i CALL3.TXT. Vil du erstatte det?</translation>
         <translation>Er du sikker du vil slette din QSO LOG?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6697"/>
+        <location filename="../mainwindow.cpp" line="6698"/>
         <source>Lockd Tx=Rx</source>
         <translation>Lockd Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
+        <location filename="../mainwindow.cpp" line="6699"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryk på knappen for at tillade Tx / Rx AF-frekvens split Operation. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6701"/>
+        <location filename="../mainwindow.cpp" line="6702"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx Split</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6702"/>
+        <location filename="../mainwindow.cpp" line="6703"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tryk på knappen for at låse Tx frekvens til Rx AF Frekvensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6825"/>
+        <location filename="../mainwindow.cpp" line="6826"/>
         <source>Rig Control Error</source>
         <translation>Radio kontrol fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6899"/>
+        <location filename="../mainwindow.cpp" line="6900"/>
         <source>Tune digital gain</source>
         <translation>Tune digital forstærkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6900"/>
+        <location filename="../mainwindow.cpp" line="6901"/>
         <source>Transmit digital gain</source>
         <translation>Sender digital forstærkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6919"/>
+        <location filename="../mainwindow.cpp" line="6920"/>
         <source>Prefixes</source>
         <translation>Præfixer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6968"/>
         <location filename="../mainwindow.cpp" line="6969"/>
+        <location filename="../mainwindow.cpp" line="6970"/>
         <source>Logd </source>
         <translation>Logget </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7192"/>
+        <location filename="../mainwindow.cpp" line="7193"/>
         <source>Network Error</source>
         <translation>Netværls fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7193"/>
+        <location filename="../mainwindow.cpp" line="7194"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7327"/>
+        <location filename="../mainwindow.cpp" line="7328"/>
         <source>File Error</source>
         <translation>Fil Fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7539"/>
+        <location filename="../mainwindow.cpp" line="7540"/>
         <source>Tx watchdog expired</source>
         <translation>TX vagthund udløbet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7553"/>
+        <location filename="../mainwindow.cpp" line="7554"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5023,7 +5023,7 @@ UDP server %2:%3</source>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="264"/>
+        <location filename="../PollingTransceiver.cpp" line="271"/>
         <source>Unexpected rig error</source>
         <translation>Uventet Radio fejl</translation>
     </message>
@@ -5738,12 +5738,12 @@ Fejl (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Flad spektralbaseline over det fulde viste interval. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kompesering af forstærkning over det fulde viste spektrum af Vandfaldet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="447"/>
         <source>Flatten</source>
-        <translation>Udglatte</translation>
+        <translation>Midling</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="464"/>
@@ -6055,7 +6055,7 @@ Fejl (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Nogle radioer kan ikke behandle CAT-kommandoer, mens de sendes. Dette betyder, at hvis du opererer i Split mode, skal du muligvis fjerne markeringen af ​​denne indstilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Nogle radioer kan ikke håndtere CAT-kommandoer, mens de sendes. Dette betyder, at hvis du opererer i Split mode, skal du muligvis fjerne markeringen af ​​denne indstilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="579"/>
@@ -6474,7 +6474,7 @@ eller båndbredde bliver valgt).</translation>
     <message>
         <location filename="../Configuration.ui" line="1455"/>
         <source>Split Operation</source>
-        <translation>Spit Operation</translation>
+        <translation>Split Operation</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1461"/>
@@ -6656,7 +6656,7 @@ begge her.</translation>
     <message>
         <location filename="../Configuration.ui" line="1860"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation>Klik for at vælge et andet bibliotek hvor .WAV filerne gemmes.</translation>
+        <translation>Klik for at vælge et andet bibliotek hvor .WAV filerne skal gemmes.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1863"/>
@@ -6666,22 +6666,22 @@ begge her.</translation>
     <message>
         <location filename="../Configuration.ui" line="1894"/>
         <source>Sequencing</source>
-        <translation>Sekventering</translation>
+        <translation>Sekvens styring</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1918"/>
         <source>Message sequencing short scenarios</source>
-        <translation>Meddelses sekventering kort senarie</translation>
+        <translation>Styring af antal afsendte meddelser inden handling</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1926"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSeq 1..3: kalder CQ, når tælleren nås. AutoSeq 6/7: søg igennem dekodede meddelelser efter en gyldig &apos;CQ&apos; eller &apos;73&apos; meddelelse, kalder CQ, hvis der ikke findes sådanne meddelelser. Stop Tx, hvis indstilling af Single Shot QSO er aktiveret under fanen AutoSeq. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSekv 1..3: kalder CQ, når tælleren nås. AutoSekv 6/7: søg igennem dekodede meddelelser efter en gyldig &apos;CQ&apos; eller &apos;73&apos; meddelelse, kalder CQ, hvis der ikke findes sådanne meddelelser. Stop Tx, hvis indstilling af Single Shot QSO er aktiveret under fanen AutoSeq.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1929"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Tællere. Søg gennem dekodede meddelelser, kaldl CQ eller Halt Tx, hvis:</translation>
+        <translation>Tæller de dekodede meddelelser og  kald CQ eller Stop Tx, hvis:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1961"/>
@@ -6714,7 +6714,7 @@ begge her.</translation>
     <message>
         <location filename="../Configuration.ui" line="2122"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Denne indstilling bruges til ikke-overlappende spektra-scenarie. Tx stoppes, hvis spektre har fælles frekvenser uden respekt for denne indstilling. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Denne indstilling bruges til ikke-overlappende spektra-scenarie. Tx stoppes, hvis spektre har fælles frekvenser uden respekt for denne indstilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2125"/>
@@ -6724,7 +6724,7 @@ begge her.</translation>
     <message>
         <location filename="../Configuration.ui" line="2132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Som standard autoselektion ignorerer den modtagne / transmitterede styring for CQ, hvis der er en gyldig &apos;ny DXCC&apos; meddelelse afkodet, enten indgående kald eller valg fra dekodet CQ / 73 meddelelser. Denne mulighed eliminerer &apos;ny DXCC&apos;-undtagelse i autoselektion for styret CQ-behandling. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Som standard ignorerer autoselektion den modtagne / transmitterede styring for CQ, hvis der er en gyldig &apos;ny DXCC&apos; meddelelse afkodet, enten indgående kald eller valg fra dekodet CQ / 73 meddelelser. Denne mulighed eliminerer at et &apos;nyt DXCC&apos; glemmes i autoselektion i den styret CQ  procces.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2135"/>
@@ -7124,12 +7124,12 @@ Højreklik for at indsætte eller slette indstillinger.</translation>
     <message>
         <location filename="../Configuration.ui" line="3166"/>
         <source>Notifications</source>
-        <translation>Underretninger</translation>
+        <translation>Farvelade Markeringer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3174"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation>&apos;New one&apos; og &apos;worked B4&apos; status notifikationer</translation>
+        <translation>&apos;Nye&apos; og &apos;QSO B4&apos; status markeringer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3200"/>
@@ -8200,7 +8200,7 @@ AA1AAA, BB1BB, CC1CC &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
         <location filename="../Configuration.ui" line="6645"/>
         <location filename="../Configuration.ui" line="6658"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Antal dekonings forløb for bredbåndet dekodning&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Antal dekonings forløb for bredspektret dekodning&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6648"/>
@@ -8277,7 +8277,7 @@ AA1AAA, BB1BB, CC1CC &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
         <location filename="../Configuration.ui" line="6958"/>
         <location filename="../Configuration.ui" line="6968"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definer antal dekodnings forsørg for bredbåndet T10 dekodning.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definer antal dekodnings forsørg for bredspektret T10 dekodning.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6994"/>
@@ -8330,7 +8330,7 @@ lydkort ændring</translation>
     <message>
         <location filename="../main.cpp" line="131"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation>Skrivbare filer i testplacering. Brug det med forsigtighed, kun til test.</translation>
+        <translation>Skrivbare filer placeret  i test område. Brug det med forsigtighed, kun til test.</translation>
     </message>
 </context>
 <context>
