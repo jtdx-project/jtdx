@@ -1,9 +1,11 @@
 subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 
   use ft8_mod1, only : mycall,hiscall
-  character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12
+  character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12,callmask6*6
+  character*6 mask6(3)
   integer, intent(in) :: i3,n3
   logical(1) falsedec,lchkcall,lgvalid,lwrongcall
+  data mask6/'001000','101000','011000'/
 
   call_a='            '; call_b='            '
 ! iaptype=0 non-AP decoder
@@ -32,7 +34,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! 4     <WA9XYZ> PJ4/KA1ABC RR73             13 58 1 2            74   Nonstandard call
 ! 4     <WA9XYZ> PJ4/KA1ABC                  13 58 1 2            74   Nonstandard call
 ! 4     PJ4/KA1ABC <WA9XYZ> RRR              13 58 1 2            74   Nonstandard call
-
+! 4     CQ ZW5STAYHOME                       13 58 1 2            74   Nonstandard call
 
 !print *,iaptype
 !print *,i3,n3,msg37
@@ -59,10 +61,20 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
           falsedec=.false.; call chkflscall('CQ          ',callsign,falsedec)
           if(falsedec) then; nbadcrc=1; msg37=''; return; endif
         else
-          if(len_trim(callsign).ge.10) then
+          nlen=len_trim(callsign)
+          if(nlen.ge.10) then
             falsedec=.false.
             call chklong8(callsign,falsedec)
-            if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+          else if(nlen.eq.6 .and. index(callsign,'/').lt.1) then ! 'CQ VK6ZRW'  protocol violation, i3 for stdcall shall be equal to 1
+            do i=1,6
+              if(callsign(i:i).gt.'/' .and. callsign(i:i).lt.':') then; callmask6(i:i)='1'; else; callmask6(i:i)='0'; endif
+            enddo
+            falsedec=.false.
+            do i=1,3
+              if(callmask6.eq.mask6(i)) then; falsedec=.true.; exit; endif ! standard callsign, false decode
+            enddo
+            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
           endif
         endif
       endif
@@ -78,11 +90,11 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       grid=msg37(ispc2+1:ispc3-1)
       include 'callsign_q.f90'
       call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-      if(lwrongcall) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
       if(lchkcall .or. .not.lgvalid) then
         falsedec=.false.
         call chkflscall('CQ          ',callsign,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
       endif
     endif
 
@@ -106,7 +118,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
 
     if(islash1.gt.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
@@ -125,7 +137,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       if(call_a.ne.mycall .and. call_b.ne.hiscall) then
         falsedec=.false.
         call chkflscall(call_a,call_b,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
       endif
     endif
   endif
@@ -140,7 +152,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
   endif
 
@@ -151,11 +163,11 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       callsign='            '
       callsign=msg37(1:ibrace1-2)
 ! 'R 5QCDOIY9 <...> RR73'
-      if(index(trim(callsign),' ').gt.0) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(index(trim(callsign),' ').gt.0) then; nbadcrc=1; msg37=''; return; endif
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
     if(index(msg37,'<.').eq.1) then
 !'<...> 104J71MFOT9 RR73'
@@ -167,7 +179,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
 ! '<...> T99LMF GC41' need to understand how to check such message
   endif
@@ -181,22 +193,22 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
   endif
 
   if(i3.eq.0 .and. n3.eq.0) then
 ! 'J/.ZM1R-D1Q89'
-    if(index(msg37,'/.').gt.0) then; nbadcrc=1; msg37='                                     '; return; endif
+    if(index(msg37,'/.').gt.0) then; nbadcrc=1; msg37=''; return; endif
     decoded=msg37(1:22)
     falsedec=.false.
     call filtersfree(decoded,falsedec)
-    if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+    if(falsedec) then; nbadcrc=1; msg37=''; return; endif
   endif
 
 ! CQ_RLXA 551626 ^J65XI 
   if(i3.eq.0 .and. (msg37(1:3).eq.'CQ_' .or. index(msg37,'^').gt.0)) then
-    nbadcrc=1; msg37='                                     '; return
+    nbadcrc=1; msg37=''; return
   endif
 
   if(iaptype.eq.2) then ! message starts with user's callsign
@@ -212,7 +224,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     if(callsign.ne.hiscall) then
       falsedec=.false.
       call chkflscall('MYCALL      ',callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37='                                     '; return; endif
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
   endif
 
