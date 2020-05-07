@@ -56,7 +56,7 @@ set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Ar
 set (PROJECT_HOMEPAGE http://jtdx.tech/)
 set (PROJECT_MANUAL index.php/videos-guides)
 set (PROJECT_MANUAL_DIRECTORY_URL http://jtdx.tech/)
-set (PROJECT_SAMPLES_URL http://release.jtdx.tech/)
+set (PROJECT_SAMPLES_URL http://jtdx.tech/public_html/downloads/)
 set (PROJECT_SAMPLES_UPLOAD_DEST frs.sourceforge.net:/home/frs/project/wsjt/)
 set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - JT9 and JT65 Modes for LF, MF and HF Amateur Radio.")
 set (PROJECT_DESCRIPTION "${PROJECT_SUMMARY_DESCRIPTION}

@@ -308,7 +308,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>каким образом?</translation>
+        <translation>страна?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2931,7 +2931,7 @@ Error: %2 - %3</source>
         <translation>О&amp;тменить</translation>
     </message>
     <message>
-        <location filename="../logqso.cpp" line="199"/>
+        <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Невозможно открыть &quot;%1&quot; для добавления: %2</translation>
     </message>
@@ -2944,13 +2944,9 @@ Error: %2 - %3</source>
         <translation></translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band. Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission. /xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: накопленный средний DT декодированных сигналов на текущем диапазоне. Lag: это задержка декодера, вычисленная относительно начала следующего интервала, отрицательные значения означают, что имеется свободное время для увеличения глубины декодирования, положительные значения - задержка работы декодера еще и в TX или даже в следующий интервал, означающая недостаточность ресурсов ЦП для выбранной глубины декодирования. /xx: количество декодированных сообщений за последний интервал.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: накопленный средний DT декодированных сигналов на текущем диапазоне.&lt;/p&gt;&lt;p&gt; Lag: это задержка декодирования, вычисленная относительно начала следующего интервала, отрицательные значения означают, что имеется запас доступного времени для увеличения глубины декодирования, положительные значения означают что декодирование заходит в интервал передачи либо следующий приемный интервал,  ресурсов процессора недостаточно для выбранной глубины декодирования для обеспечения стабильной передачи сообщений во время QSO.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Задержка зависит от производительности процессора, характера шума,  загруженности диапазона и работы других программ использующих ресурсы процессора, может быть снижена уменьшением полосы частот на водопаде программы. Если задержка постоянно отрицательная то процессор отлично справляется с декдированием интервала и можно увеличить глубину декодирования для получения большего количества декодированных сообщений.&lt;/p&gt;&lt;p&gt;FT8: если задержка находится в диапазоне 0..0.4 секунды то все еще можно использовать режим AutoSeq3/7 (функционал автовыбора при необходимости сменит TX сообщение достаточно рано чтобы передать его полностью). Если задержка более 0.4 секунды то необходимо уменьшить глубину декодирования. Если задержка все еще более 0.4 секунды то придется использовать AutoSeq2/6, так как в режиме 3/7 ответ на входящий вызов будет частично потерян при передаче. Если задержка постоянно больше двух секунд то процессор непригоден для работы в эфире в FT8, при этом все еще можно провести QSO используя функционал частотного фильтра в JTDX либо использовать программу для мониторинга диапазона&lt;/p&gt;&lt;p&gt; /xx: количество декодированных сообщений в последнем интервале.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -5634,176 +5630,181 @@ Error(%2): %3</source>
         <translation>Управл.</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="160"/>
+        <location filename="../widegraph.ui" line="108"/>
+        <source>Bars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widegraph.ui" line="185"/>
         <source>Compression factor for frequency scale</source>
         <translation>Коэффициент сжатия для частотной шкалы</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="166"/>
+        <location filename="../widegraph.ui" line="191"/>
         <source>Bins/Pixel  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="197"/>
+        <location filename="../widegraph.ui" line="222"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Декодировать JT9 только выше этой частоты&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="200"/>
+        <location filename="../widegraph.ui" line="225"/>
         <source>  JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="203"/>
+        <location filename="../widegraph.ui" line="228"/>
         <source>JT65  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="233"/>
-        <location filename="../widegraph.ui" line="243"/>
+        <location filename="../widegraph.ui" line="258"/>
+        <location filename="../widegraph.ui" line="268"/>
         <source>Position of timestamp above each interval line</source>
         <translation>Положение отметки времени над каждой интервальной линией</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="236"/>
+        <location filename="../widegraph.ui" line="261"/>
         <source>Timestamp</source>
         <translation>Отметка</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="247"/>
+        <location filename="../widegraph.ui" line="272"/>
         <source>Off</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="252"/>
+        <location filename="../widegraph.ui" line="277"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="257"/>
+        <location filename="../widegraph.ui" line="282"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="289"/>
+        <location filename="../widegraph.ui" line="314"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Частота на левом краю водопада&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="292"/>
+        <location filename="../widegraph.ui" line="317"/>
         <source> Hz</source>
         <translation> Гц</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="295"/>
+        <location filename="../widegraph.ui" line="320"/>
         <source>Start </source>
         <translation>Старт </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="320"/>
+        <location filename="../widegraph.ui" line="345"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
         <translation>Количество усредненных FFT (контролирует скорость прокрутки водопада)</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="323"/>
+        <location filename="../widegraph.ui" line="348"/>
         <source>N Avg </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="361"/>
+        <location filename="../widegraph.ui" line="386"/>
         <source>  Palette </source>
         <translation>  Палитра </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="377"/>
+        <location filename="../widegraph.ui" line="402"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите определение новой цветовой палитры.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="380"/>
+        <location filename="../widegraph.ui" line="405"/>
         <source>Adjust...</source>
         <translation>Настройка...</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="401"/>
+        <location filename="../widegraph.ui" line="426"/>
         <source>Select waterfall palette</source>
         <translation>Выберите палитру водопада</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="431"/>
+        <location filename="../widegraph.ui" line="456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Шкала спектра по медианному значению.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="434"/>
+        <location filename="../widegraph.ui" line="459"/>
         <source>Scale</source>
         <translation>Шкала</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="444"/>
+        <location filename="../widegraph.ui" line="469"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сгладить спектральную базовую линию по всему отображаемому интервалу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="447"/>
+        <location filename="../widegraph.ui" line="472"/>
         <source>Flatten</source>
         <translation>Сглаживание</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="464"/>
+        <location filename="../widegraph.ui" line="489"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбор данных для спектрального отображения&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="471"/>
+        <location filename="../widegraph.ui" line="496"/>
         <source>Current</source>
         <translation>Текущий</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="476"/>
+        <location filename="../widegraph.ui" line="501"/>
         <source>Cumulative</source>
         <translation>Накопительный</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="496"/>
+        <location filename="../widegraph.ui" line="521"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Установите в этом окне дробный размер спектра.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="502"/>
+        <location filename="../widegraph.ui" line="527"/>
         <source> %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="505"/>
+        <location filename="../widegraph.ui" line="530"/>
         <source>Spec </source>
         <translation>Спец </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="556"/>
+        <location filename="../widegraph.ui" line="581"/>
         <source>Waterfall gain</source>
         <translation>Яркость водопада</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="593"/>
+        <location filename="../widegraph.ui" line="618"/>
         <source>Spectrum gain</source>
         <translation>Уровень спектра</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="616"/>
-        <location filename="../widegraph.ui" line="623"/>
-        <location filename="../widegraph.ui" line="718"/>
-        <location filename="../widegraph.ui" line="725"/>
+        <location filename="../widegraph.ui" line="641"/>
+        <location filename="../widegraph.ui" line="648"/>
+        <location filename="../widegraph.ui" line="743"/>
+        <location filename="../widegraph.ui" line="750"/>
         <source>TextLabel</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="658"/>
+        <location filename="../widegraph.ui" line="683"/>
         <source>Waterfall zero</source>
         <translation>Контрастность водопада</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="695"/>
+        <location filename="../widegraph.ui" line="720"/>
         <source>Spectrum zero</source>
         <translation>Ноль спектра</translation>
     </message>
