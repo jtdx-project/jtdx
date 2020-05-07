@@ -45,7 +45,6 @@ CPlotter::CPlotter(QWidget *parent) :                  //CPlotter Constructor
   setAutoFillBackground(false);
   setAttribute(Qt::WA_OpaquePaintEvent, false);
   setAttribute(Qt::WA_NoSystemBackground, true);
-  setMouseTracking(true);
 }
 
 CPlotter::~CPlotter() { }                                      // Destructor
@@ -98,9 +97,11 @@ void CPlotter::paintEvent(QPaintEvent *)                                // paint
   painter.drawPixmap(0,30,m_WaterfallPixmap);
   painter.drawPixmap(0,m_h1,m_2DPixmap);
   int x = XfromFreq(m_rxFreq);
-  painter.drawPixmap(0,30,m_DialOverlayPixmap);
-  if(m_lastMouseX >= 0 && m_lastMouseX != x){
-    painter.drawPixmap(m_lastMouseX, 0, m_HoverOverlayPixmap);
+  if (m_bars) {
+    painter.drawPixmap(0,30,m_DialOverlayPixmap);
+    if(m_lastMouseX >= 0 && m_lastMouseX != x){
+      painter.drawPixmap(m_lastMouseX, 0, m_HoverOverlayPixmap);
+    }
   }
   
   m_paintEventBusy=false;
@@ -364,15 +365,18 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
     painter0.drawLine(x1,29,x2,29);
   }
   QPainter overPainter(&m_DialOverlayPixmap);
-  if (!overPainter.isActive()) overPainter.begin(this);
-//  overPainter.initFrom(this);
-  overPainter.setCompositionMode(QPainter::CompositionMode_Source);
-  overPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
+  if (m_bars) {
+    if (!overPainter.isActive()) overPainter.begin(this);
+    overPainter.setCompositionMode(QPainter::CompositionMode_Source);
+    overPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
+  }
   if(m_mode.startsWith("FT") or m_mode.startsWith("JT") or m_mode=="T10") {
     x1=XfromFreq(m_rxFreq); x2=XfromFreq(m_rxFreq+bw);
     painter0.drawLine(x1,24,x1,30); painter0.drawLine(x1,28,x2,28); painter0.drawLine(x2,24,x2,30);
-    overPainter.setPen(Qt::green);
-    overPainter.drawLine(x1,0,x1,m_h); overPainter.drawLine(x2,0,x2,m_h);
+    if (m_bars) {
+      overPainter.setPen(Qt::green);
+      overPainter.drawLine(x1,0,x1,m_h); overPainter.drawLine(x2,0,x2,m_h);
+    }
   }
 
   if(m_mode.startsWith("FT") or m_mode.startsWith("JT") or m_mode=="T10" or m_mode.left(4)=="WSPR") {
@@ -384,18 +388,21 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
       x1=XfromFreq(m_txFreq-0.5*bw); x2=XfromFreq(m_txFreq+0.5*bw);
     }
     painter0.drawLine(x1,17,x1,21); painter0.drawLine(x1,17,x2,17); painter0.drawLine(x2,17,x2,21);
-    overPainter.setPen(Qt::red);
-    overPainter.drawLine(x1,0,x1,m_h); overPainter.drawLine(x2,0,x2,m_h);
+    if (m_bars) {
+      overPainter.setPen(Qt::red);
+      overPainter.drawLine(x1,0,x1,m_h); overPainter.drawLine(x2,0,x2,m_h);
+    }
   }
-  int fwidth=XfromFreq(m_rxFreq+bw)-XfromFreq(m_rxFreq);
   QPainter hoverPainter(&m_HoverOverlayPixmap);
-  if (!hoverPainter.isActive()) hoverPainter.begin(this);
-//  hoverPainter.initFrom(this);
-  hoverPainter.setCompositionMode(QPainter::CompositionMode_Source);
-  hoverPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
-  hoverPainter.setPen(QPen(Qt::white));
-  hoverPainter.drawLine(0, 30, 0, m_h); // first slot, left line hover
-  hoverPainter.drawLine(fwidth, 30, fwidth, m_h); // first slot, right line hover
+  if (m_bars) {
+    if (!hoverPainter.isActive()) hoverPainter.begin(this);
+    int fwidth=XfromFreq(m_rxFreq+bw)-XfromFreq(m_rxFreq);
+    hoverPainter.setCompositionMode(QPainter::CompositionMode_Source);
+    hoverPainter.fillRect(0, 0, m_Size.width(), m_h, Qt::transparent);
+    hoverPainter.setPen(QPen(Qt::white));
+    hoverPainter.drawLine(0, 30, 0, m_h); // first slot, left line hover
+    hoverPainter.drawLine(fwidth, 30, fwidth, m_h); // first slot, right line hover
+  }
 
   if(m_mode=="JT9+JT65") {
     QPen pen2(Qt::blue, 3);                //Mark the JT65 | JT9 divider
@@ -589,6 +596,14 @@ void CPlotter::setNsps(double trperiod, int nsps)                    //setNsps
   if(m_nsps==252000) m_fftBinWidth=1500.0/32768.0;
   DrawOverlay();                         //Redraw scales and ticks
   update();                              //trigger a new paintEvent}
+}
+
+void CPlotter::setBars(bool b)
+{ 
+  setMouseTracking(b);
+  m_bars=b;
+  DrawOverlay();
+  update();
 }
 
 void CPlotter::setTxFreq(int n) { m_txFreq=n; DrawOverlay(); update(); }

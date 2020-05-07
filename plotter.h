@@ -81,6 +81,7 @@ public:
   void setColours(QVector<QColor> const& cl);
   void setTimestamp(int n);
   void setScale(bool b);
+  void setBars(bool b);
   void setFlatten(bool b);
   void setTol(int n);
   void setRxBand(QString band);
@@ -109,7 +110,7 @@ private:
   bool    m_lockTxFreq;
   bool    m_filter;
   bool    m_houndFilter;
-
+  bool	  m_bars;
   float   m_fSpan;
 
   qint32  m_plotZero;
