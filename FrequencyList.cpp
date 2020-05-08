@@ -469,7 +469,7 @@ Qt::ItemFlags FrequencyList_v2::impl::flags (QModelIndex const& index) const
       && row < frequency_list_.size ()
       && column < num_cols)
     {
-      if (frequency_mhz_column != column)
+      if (frequency_mhz_column != column && mode_frequency_mhz_column != column)
         {
           result |= Qt::ItemIsEditable | Qt::ItemIsDragEnabled;
         }
@@ -595,6 +595,29 @@ QVariant FrequencyList_v2::impl::data (QModelIndex const& index, int role) const
               break;
             }
           break;
+        case mode_frequency_mhz_column:
+          switch (role)
+            {
+            case Qt::EditRole:
+            case Qt::AccessibleTextRole:
+            case Qt::DisplayRole:
+              if(frequency_item.default_)
+                item = "*" + Radio::frequency_MHz_string (frequency_item.frequency_) + ' ' + Modes::name (frequency_item.mode_);
+              else
+                item = " " + Radio::frequency_MHz_string (frequency_item.frequency_) + ' ' + Modes::name (frequency_item.mode_);
+              break;
+
+
+            case Qt::ToolTipRole:
+            case Qt::AccessibleDescriptionRole:
+              item = tr ("Mode Frequency");
+              break;
+
+            case Qt::TextAlignmentRole:
+              item = Qt::AlignRight + Qt::AlignVCenter;
+              break;
+            }
+          break;
         }
     }
   return item;
@@ -671,6 +694,7 @@ QVariant FrequencyList_v2::impl::headerData (int section, Qt::Orientation orient
         case mode_column: header = tr ("Mode"); break;
         case frequency_column: header = tr ("Frequency"); break;
         case frequency_mhz_column: header = tr ("Frequency (MHz)"); break;
+        case mode_frequency_mhz_column: header = tr ("Mode Frequency"); break;
         }
     }
   else
