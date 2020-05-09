@@ -177,6 +177,7 @@ void CPlotter::draw(float swide[], bool bScroll)                            //dr
       int j=j0+m_binsPerPixel*i;
       for(int k=0; k<m_binsPerPixel; k++) {
         sum+=dec_data.savg[j++];
+        if (!m_Scale && !m_Flatten) sum-=45;
       }
       m_sum[i]=sum;
     }

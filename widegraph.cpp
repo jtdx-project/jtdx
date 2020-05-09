@@ -208,10 +208,10 @@ void WideGraph::dataSink2(float s[], float df3, int ihsym, int ndiskdata)  //dat
   //Average spectra over specified number, m_waterfallAvg
   if (n==0) {
     for (int i=0; i<NSMAX; i++)
-      splot[i]=s[i];
+      splot[i]=s[i] / 65538;
   } else {
     for (int i=0; i<NSMAX; i++)
-      splot[i] += s[i];
+      splot[i] += s[i] /65538;
   }
   n++;
 
