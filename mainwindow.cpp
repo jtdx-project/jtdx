@@ -3169,7 +3169,7 @@ void MainWindow::process_Auto()
           counters2 = false;
       else {
           m_counter = m_config.nAnswerCQCounter(); 
-          m_qsoHistory.calllist(hisCall,rpt.toInt());
+          m_qsoHistory.calllist(hisCall,rpt.toInt(),time);
       }
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
