@@ -8,6 +8,7 @@ void QsoHistory::init()
 {
     _data.clear();
     _blackdata.clear();
+    _calldata.clear();
     _working = true;
     _CQ.call = "";    
     _CQ.status = NONE;
@@ -66,6 +67,7 @@ int QsoHistory::remove(QString const& callsign)
   if (_working) {
     ret=_data.remove(Radio::base_callsign (callsign));
     ret2=_blackdata.remove(Radio::base_callsign (callsign));
+    ret2=_calldata.remove(Radio::base_callsign (callsign));
   }
   return ret;
 }
@@ -77,6 +79,19 @@ int QsoHistory::blacklist(QString const& callsign)
     ret = _blackdata.value(Radio::base_callsign (callsign),ret);
     ret += 1;
     _blackdata.insert(Radio::base_callsign (callsign),ret);
+  }
+  return ret;
+}
+
+int QsoHistory::calllist(QString const& callsign, int level=-35)
+{
+  int ret=-35;
+  if (_working) {
+    ret = _calldata.value(Radio::base_callsign (callsign),ret);
+    if(ret < level) {
+      _calldata.insert(Radio::base_callsign (callsign),level);
+      ret = level;
+    }
   }
   return ret;
 }
@@ -198,10 +213,12 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             int priority = b_init;
             rep = "-60";
             dist = 0;
+            int is_called;
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
+              is_called=_calldata.value(key,-35);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
+              if ((is_called == -35 || is_called < tt.s_rep.toInt()) && on_black == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
 //                printf("autosel:%s %d %d (%d,%d,%s,%d)\n",tt.call.toStdString().c_str(),ret,algo,tt.status,tt.priority,tt.s_rep.toStdString().c_str(),tt.distance);
                 if (tt.priority > priority || 
                     (priority > b_init && tt.priority == priority && 

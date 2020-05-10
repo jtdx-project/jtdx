@@ -3167,8 +3167,10 @@ void MainWindow::process_Auto()
       clearDX (" cleared, RCQ/SCALL/SREPORT count reached");
       if (m_reply_other)
           counters2 = false;
-      else
+      else {
           m_counter = m_config.nAnswerCQCounter(); 
+          m_qsoHistory.calllist(hisCall,rpt.toInt());
+      }
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
       grid = m_hisGrid;
