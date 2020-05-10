@@ -4026,7 +4026,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4681"/>
         <source>Save all</source>
-        <translation>Zapisz wszystko</translation>
+        <translation>Zapisuj wszystko</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4766"/>
@@ -4249,7 +4249,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5088"/>
         <source>&amp;Download Samples ...</source>
-        <translation>&amp;Pobierz Przykłady ...</translation>
+        <translation>&amp;Pobieranie przykładów ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5091"/>
@@ -4795,7 +4795,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
-        <translation>Średnia</translation>
+        <translation>Śred=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3395"/>
@@ -5411,7 +5411,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../SampleDownloader.cpp" line="99"/>
         <source>Download Samples</source>
-        <translation>Pobieranie próbek</translation>
+        <translation>Pobieranie przykładów</translation>
     </message>
 </context>
 <context>
@@ -5629,7 +5629,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation>Sterowanie</translation>
+        <translation>Kontrolki</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="108"/>
@@ -5740,7 +5740,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="459"/>
         <source>Scale</source>
-        <translation>Skala</translation>
+        <translation>Skaluj</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="469"/>
@@ -5901,7 +5901,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="192"/>
         <source>Logbook filtering</source>
-        <translation>Filtrowanie logbooka</translation>
+        <translation>Filtrowanie logu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="220"/>
@@ -5981,7 +5981,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>Pokazuj &amp;prefix zamiast imienia</translation>
+        <translation>Pokaż &amp;prefix zamiast nazwy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -6021,7 +6021,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="492"/>
         <source>Tx watchdog timer</source>
-        <translation>Ogranicznik czasu nadawania</translation>
+        <translation>Ograniczenie czasu nadawania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="502"/>
@@ -6047,7 +6047,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="542"/>
         <source>Tune timer</source>
-        <translation>Ogranicznik czasu strojenia</translation>
+        <translation>Ograniczenie czasu strojenia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="549"/>
@@ -6608,7 +6608,7 @@ Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
         <translation>Wybrać kanał audio dla nadawania.
-Czyba że masz wiele TRCVR-ów podłączonych do różnych kanałów;
+Chyba że masz wiele TRCVR-ów podłączonych do różnych kanałów;
 wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     </message>
     <message>
@@ -6669,7 +6669,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="1863"/>
         <source>S&amp;elect</source>
-        <translation>W&amp;ybrać</translation>
+        <translation>W&amp;ybór</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1894"/>
@@ -6707,7 +6707,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="2036"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>nadano RR73(73) odpowidając na przychodzące RRR(RR73)</translation>
+        <translation>nadano RR73(73) odpowiadając na przychodzące RRR(RR73)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2075"/>
@@ -8247,7 +8247,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6757"/>
         <source>Use frequency mask decoding</source>
-        <translation>Używać dekodowania z maską częstotliwości</translation>
+        <translation>Dekodowanie z maską częstotliwości</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6769"/>
