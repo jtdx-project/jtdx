@@ -3246,7 +3246,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Med: è la differenza di tempo (DT) media accumulata nei segnali decodificati fino ad ora.&lt;/p&gt;&lt;p&gt; Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo. Un valore negativo indica che è possibile aumentare il livello di decodifica. Un valore positivo indica il ritardo di decodifica in Tx e potrebbero non esserci risorse sufficienti della CPU per il livello di decodifica selezionato per fornire un segnale affidabile nella trasmissione.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che c&apos;è tempo disponibile per aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse CPU sufficienti per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Il ritardo dipende dalle prestazioni della CPU, dalle condizioni di rumore, dalla pienezza della banda e da altri programmi che usano il computer, può essere ridotto riducendo la larghezza di banda della cascata. Se il ritardo è costantemente negativo, la CPU gestisce bene la decodifica dell&apos;intervallo e puoi provare a rendere la decodifica più aggressiva per ottenere più decodifiche.&lt;/p&gt;&lt;p&gt; FT8: se Rit è da 0 a 0.4, è comunque possibile utilizzare Autoseq 3/7 (la selezione automatica attiverà la modifica del messaggio TX abbastanza presto per trasmettere il messaggio completo). Se Rit &gt;0.4 allora dovresti provare a ridurre l&apos;aggressività della decodifica. Se il ritardo è ancora&gt;0,4, è necessario utilizzare Autoseq 2/6 poiché la risposta alla chiamata in arrivo sarà parzialmente danneggiata durante la trasmissione in AutoSeq 3/7. Se costantemente Rit &gt;2 la CPU non è adatta a funzionare in FT8 con le impostazioni correnti del decodificatore. Sicuramente puoi monitorare come SWL.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;/XX: è il numero di messaggi decodificati nell&apos;ultimo periodo di ricezione.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Med: è la differenza di tempo (DT) media accumulata nei segnali decodificati.&lt;/p&gt;&lt;p&gt; Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo. Un valore negativo indica che è possibile aumentare il livello di decodifica. Un valore positivo indica il ritardo di decodifica in Tx e potrebbero non esserci risorse sufficienti della CPU per il livello di decodifica selezionato per fornire un segnale affidabile nella trasmissione.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che c&apos;è tempo disponibile per aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse CPU sufficienti per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Il ritardo dipende dalle prestazioni della CPU, dalle condizioni di rumore, dalla pienezza della banda e da altri programmi che usano il computer, può essere ridotto riducendo la larghezza di banda della cascata. Se il ritardo è costantemente negativo, la CPU gestisce bene la decodifica dell&apos;intervallo e puoi provare a rendere la decodifica più aggressiva per ottenere più decodifiche.&lt;/p&gt;&lt;p&gt; FT8: se Rit è da 0 a 0.4, è comunque possibile utilizzare Autoseq 3/7 (la selezione automatica attiverà la modifica del messaggio TX abbastanza presto per trasmettere il messaggio completo). Se Rit &gt;0.4 allora dovresti provare a ridurre l&apos;aggressività della decodifica. Se il ritardo è ancora&gt;0,4, è necessario utilizzare Autoseq 2/6 poiché la risposta alla chiamata in arrivo sarà parzialmente danneggiata durante la trasmissione in AutoSeq 3/7. Se costantemente Rit &gt;2 la CPU non è adatta a funzionare in FT8 con le impostazioni correnti del decodificatore. Sicuramente puoi monitorare come SWL.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;/XX: è il numero di messaggi decodificati nell&apos;ultimo periodo di ricezione.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1801"/>
@@ -3256,7 +3256,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1823"/>
         <source>Adjust Tx audio level</source>
-        <translation>Aggiuista il livello AGC in Tx (nel caso che l&apos;RTX vada solo in portante con una nota fissa bisogna portare questo cursore a 0 e poi riportarlo nella posizione giusta in modo che l&apos;RTX non vada fuori ALC)</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiuista il livello AGC in Tx.&lt;/p&gt;&lt;p&gt;Se l&apos;RTX va fuori ALC abbassare il livello audio di uscita portando più in basso il cursore.&lt;/p&gt;&lt;p&gt;Nel caso che l&apos;RTX esca solo in portante portare il cursore a 0 (tutto in basso) e poi riportarlo nella posizione giusta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -3372,7 +3372,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione Auto Sequenza per singolo QSO (non richiama dopo il 73)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione Auto Sequenza per singolo QSO (non richiama dopo il 73)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2414"/>
@@ -3462,7 +3462,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva un gruppo di decodificatori in base ai filtri programmati, in modalità FT8 attiva la funzionalità FT8AP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva il gruppo di decodificatori in base ai filtri programmati, in FT8 attiva la funzione FT8AP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2756"/>
@@ -3472,7 +3472,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezza di banda, FT8 150Hz, modalità hound FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX. La funzionalità di filtro non può migliorare la decodifica del segnale, è dedicata all&apos;uso con CPU lente per consentire l&apos;elaborazione del decodificatore prima della trasmissione del segnale ed evitare la modifica del messaggio durante la trasmissione. Tutte le chiamate in entrata dalla larghezza di banda del filtro andranno perse, utilizzare il filtro in modo funzionale solo se è realmente necessario per la CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezze di banda: FT8 150Hz, modalità hound FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz.&lt;/p&gt;&lt;p&gt;Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX.&lt;/p&gt;&lt;p&gt;La funzionalità di filtro non può migliorare la decodifica del segnale ed è dedicata all&apos;uso con CPU lente per consentire l&apos;elaborazione del decodificatore prima della trasmissione del segnale ed evitare la modifica del messaggio durante la trasmissione.&lt;/p&gt;&lt;p&gt;Tutte le chiamate in entrata fuori della larghezza di banda del filtro andranno perse, utilizzare il filtro in modo funzionale solo se è realmente necessario per la CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2801"/>
@@ -3482,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2835"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzionalità di compensazione AGC. Aumenta l&apos;efficienza di decodifica se AGC è attivato anche nel ricevitore&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzionalità di compensazione AGC. Aumenta l&apos;efficienza di decodifica se l&apos;AGC è attivato anche nel ricevitore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2849"/>
@@ -4088,7 +4088,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.ui" line="5426"/>
         <location filename="../mainwindow.ui" line="5708"/>
         <source>deep</source>
-        <translation>accentuato</translation>
+        <translation>approfondito</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4837"/>
@@ -4399,7 +4399,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5375"/>
         <source>deep with 4 passes</source>
-        <translation>accentuato con 4 passaggi</translation>
+        <translation>approfondito con 4 passaggi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5383"/>
