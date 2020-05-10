@@ -5932,7 +5932,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>デコードピリオド間に日時の区切り表示</translation>
+        <translation type="unfinished">デコードピリオド間に区切り表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
