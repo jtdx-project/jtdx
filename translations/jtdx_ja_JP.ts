@@ -5644,7 +5644,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="222"/>
@@ -5932,7 +5932,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>デコードピリオド間の空白行</translation>
+        <translation>デコードピリオド間に日時の区切り表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
