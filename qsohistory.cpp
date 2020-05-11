@@ -173,9 +173,9 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
+              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
                 if (tt.priority > priority || 
-                      (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT) && !mycall) || (tt.priority == priority &&
+                      (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT) && !mycall) || (tt.priority == priority &&
                          ((!(algo & 32) && ((!(algo & 16) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
                                             || (algo & 16 && ((tt.status == RCALL && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt() && Rrep == "-60")
                                                               ||(tt.status == RREPORT && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > Rrep.toInt()))))) 
