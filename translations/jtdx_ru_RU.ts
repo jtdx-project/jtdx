@@ -5275,17 +5275,17 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="163"/>
+        <location filename="../main.cpp" line="170"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Неверное имя трансивера - \ &amp; / не допускается</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="188"/>
+        <location filename="../main.cpp" line="195"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Возможно запущен другой экземпляр программы, попробуйте удалить устаревший файл блокировки?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="330"/>
+        <location filename="../main.cpp" line="337"/>
         <source>Unexpected error</source>
         <translation>Непредвиденная ошибка</translation>
     </message>
@@ -8314,37 +8314,37 @@ soundcard changes</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
         <translation>Фатальная ошибка</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="76"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
         <translation>Непредвиденная фатальная ошибка</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="121"/>
+        <location filename="../main.cpp" line="128"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>&lt;стиль может быть Fusion (по умолчанию) или Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="122"/>
+        <location filename="../main.cpp" line="129"/>
         <source>style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="126"/>
+        <location filename="../main.cpp" line="133"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Где &lt;rig-name&gt;для поддержки нескольких экземпляров.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="127"/>
+        <location filename="../main.cpp" line="134"/>
         <source>rig-name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../main.cpp" line="138"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Записываемые файлы в тестовом месте. Используйте с осторожностью, только для тестирования.</translation>
     </message>

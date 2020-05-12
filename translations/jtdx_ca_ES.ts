@@ -5283,17 +5283,17 @@ Verifica el nom del directori correcte.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="163"/>
+        <location filename="../main.cpp" line="170"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Nom d&apos;equip no vàlid: \ &amp; / no permès</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="188"/>
+        <location filename="../main.cpp" line="195"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Es pot estar executant una altra instrucció,eliminar l&apos;arxiu obsolet de bloqueig?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="330"/>
+        <location filename="../main.cpp" line="337"/>
         <source>Unexpected error</source>
         <translation>Error inesperat</translation>
     </message>
@@ -8321,37 +8321,37 @@ canvi en la targeta de so</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
         <translation>Error fatal</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="76"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
         <translation>Error fatal inesperat</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="121"/>
+        <location filename="../main.cpp" line="128"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>&lt;style&gt; pot ser Fusion (predeterminat) o Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="122"/>
+        <location filename="../main.cpp" line="129"/>
         <source>style</source>
         <translation>estil</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="126"/>
+        <location filename="../main.cpp" line="133"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>On &lt;rig-name&gt; és per a suport de múltiples instàncies.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="127"/>
+        <location filename="../main.cpp" line="134"/>
         <source>rig-name</source>
         <translation>nom de l&apos;equip</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../main.cpp" line="138"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Arxius amb permis d&apos;escriptura a la ubicació de proves. Utilitzar amb precaució, només per a proves.</translation>
     </message>

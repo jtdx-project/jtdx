@@ -5267,17 +5267,17 @@ Provjerite je li dato točno ime imenika.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="163"/>
+        <location filename="../main.cpp" line="170"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Pogrešan rig name - \ &amp; / nije dozvoljeno</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="188"/>
+        <location filename="../main.cpp" line="195"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Možda se pokreće druga instanca, pokušajte ukloniti ustajalu datoteku zaključavanja?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="330"/>
+        <location filename="../main.cpp" line="337"/>
         <source>Unexpected error</source>
         <translation>Neočekivana greška</translation>
     </message>
@@ -8302,37 +8302,37 @@ promjena zvučne kartice</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
         <translation>Neočekivana greška</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="76"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
         <translation>Neočekivana greška uređaja</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="121"/>
+        <location filename="../main.cpp" line="128"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="122"/>
+        <location filename="../main.cpp" line="129"/>
         <source>style</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="126"/>
+        <location filename="../main.cpp" line="133"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Gdje je &lt;rig-name&gt; za podršku za više instanci.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="127"/>
+        <location filename="../main.cpp" line="134"/>
         <source>rig-name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../main.cpp" line="138"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Datoteke koje se mogu pisati na testnoj lokaciji. Koristite s oprezom samo za testiranje.</translation>
     </message>

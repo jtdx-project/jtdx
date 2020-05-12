@@ -69,7 +69,7 @@ QString DecodedText::string()
 QString DecodedText::CQersCall(QString& grid,QString& tyyp)
 {
 //  QRegularExpression callsign_re {R"(^(CQ|DE|QRZ)(\s?DX|\s([A-Z]{2}|\d{3}))?\s(?<callsign>(([2-9]{0,1}[A-Z]{1,2}[0-9]{0,1}[/]{1}){0,1})[2-9]{0,1}[A-Z]{1,2}[0-9]{1,4}[A-Z]{1,6}([A-Z0-9/]{1,4}){0,1})(?:\s(?<grid>[A-R]{2}[0-9]{2})?)?)"};
-  QRegularExpression callsign_re {R"(^(CQ|DE|QRZ)(\s?(?<tyyp>([A-Z]{1,2}|\d{3}))?)?\s(?<callsign>(([2-9]{0,1}[A-Z]{1,2}[0-9]{0,2}[/]{1}){0,1})[2-9]{0,1}[A-Z]{1,2}[0-9]{1,4}[A-Z]{0,6}([A-Z0-9/]{1,7}){0,1})(\s?(?<grid>[A-R]{2}[0-9]{2})?)?)"};
+  QRegularExpression callsign_re {R"(^(CQ|DE|QRZ)(\s?(?<tyyp>([A-Z]{1,2}|\d{3}))?)?\s(?<callsign>(([2-9]{0,1}[A-Z]{1,2}[0-9]{0,2}[/]{1}){0,1})[2-9]{0,1}5JSTAYHOME|[A-Z]{1,2}[0-9]{1,4}[A-Z]{0,6}([A-Z0-9/]{1,7}){0,1})(\s?(?<grid>[A-R]{2}[0-9]{2})?)?)"};
   auto const& match = callsign_re.match (message_);
   grid = match.captured ("grid");
   tyyp = match.captured ("tyyp");

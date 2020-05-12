@@ -5259,17 +5259,17 @@ Por favor verifique se foi dado o nome correto do diretório.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="163"/>
+        <location filename="../main.cpp" line="170"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Nome de rádio inválido - \&amp; / não permitido</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="188"/>
+        <location filename="../main.cpp" line="195"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Outra instância pode estar em execução. Tente remover o arquivo de bloqueio obsoleto?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="330"/>
+        <location filename="../main.cpp" line="337"/>
         <source>Unexpected error</source>
         <translation>Erro inesperado</translation>
     </message>
@@ -8293,37 +8293,37 @@ alteração na placa de som</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
         <translation>Erro fatal</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="76"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
         <translation>Erro fatal inesperado</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="121"/>
+        <location filename="../main.cpp" line="128"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>&lt;style&gt; pode ser Fusion(padrão) ou Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="122"/>
+        <location filename="../main.cpp" line="129"/>
         <source>style</source>
         <translation>stilo</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="126"/>
+        <location filename="../main.cpp" line="133"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Onde &lt;nome-rádio&gt; é para suporte de multiplas instâncias.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="127"/>
+        <location filename="../main.cpp" line="134"/>
         <source>rig-name</source>
         <translation>nome-rádio</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../main.cpp" line="138"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Arquivos graváveis no local do teste. Use com cuidado, apenas para teste.</translation>
     </message>

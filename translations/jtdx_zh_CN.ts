@@ -5270,17 +5270,17 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="163"/>
+        <location filename="../main.cpp" line="170"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>无效的无线电设备名称 - \ &amp; / 不允许</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="188"/>
+        <location filename="../main.cpp" line="195"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>另一个JTDX可能正在运行, 是否尝试删除过时的锁定文件?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="330"/>
+        <location filename="../main.cpp" line="337"/>
         <source>Unexpected error</source>
         <translation>意外出错误</translation>
     </message>
@@ -8304,37 +8304,37 @@ soundcard changes</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
         <translation>严重出错误</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="76"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
         <translation>意外的严重出错误</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="121"/>
+        <location filename="../main.cpp" line="128"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>使用风格 &lt;style&gt; 可能是 Fusion (默认值) 或 Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="122"/>
+        <location filename="../main.cpp" line="129"/>
         <source>style</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="126"/>
+        <location filename="../main.cpp" line="133"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>使用 &lt;rig-name&gt; 用于多实例支持无线电设备.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="127"/>
+        <location filename="../main.cpp" line="134"/>
         <source>rig-name</source>
         <translation>无线电设备名称</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="131"/>
+        <location filename="../main.cpp" line="138"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>测试位置中的可写文件. 小心使用, 仅用于测试.</translation>
     </message>
