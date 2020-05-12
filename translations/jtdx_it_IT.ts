@@ -95,54 +95,54 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1426"/>
-        <location filename="../Configuration.cpp" line="1451"/>
-        <location filename="../Configuration.cpp" line="1503"/>
+        <location filename="../Configuration.cpp" line="1452"/>
+        <location filename="../Configuration.cpp" line="1504"/>
         <source>&amp;Delete</source>
         <translation>&amp;Elimina</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1455"/>
-        <location filename="../Configuration.cpp" line="1507"/>
+        <location filename="../Configuration.cpp" line="1456"/>
+        <location filename="../Configuration.cpp" line="1508"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Inserisci...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1459"/>
+        <location filename="../Configuration.cpp" line="1460"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Apri...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1463"/>
+        <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Salva con nome...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1467"/>
+        <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Merge ...</source>
         <translation>A&amp;ggiungi...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1471"/>
+        <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Reset</source>
         <translation>&amp;Resetta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2696"/>
+        <location filename="../Configuration.cpp" line="2697"/>
         <source>Serial Port:</source>
         <translation>Porta serale:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2698"/>
         <source>Serial port used for CAT control</source>
         <translation>Porta seriale da usare per il CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2704"/>
+        <location filename="../Configuration.cpp" line="2705"/>
         <source>Network Server:</source>
         <translation>Server di Rete:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2705"/>
+        <location filename="../Configuration.cpp" line="2706"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ Formati:
 	[IPv6-address]:porta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2717"/>
+        <location filename="../Configuration.cpp" line="2718"/>
         <source>USB Device:</source>
         <translation>Periferica USB:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2718"/>
+        <location filename="../Configuration.cpp" line="2719"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +173,132 @@ Formato:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2753"/>
+        <location filename="../Configuration.cpp" line="2754"/>
         <source>Invalid audio input device</source>
         <translation>Dispositivo di ingresso audio non valido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2760"/>
+        <location filename="../Configuration.cpp" line="2761"/>
         <source>Invalid audio output device</source>
         <translation>Dispositivo di uscita audio non valido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2766"/>
+        <location filename="../Configuration.cpp" line="2767"/>
         <source>Invalid PTT method</source>
         <translation>Metodo non valido per il PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2776"/>
+        <location filename="../Configuration.cpp" line="2777"/>
         <source>Invalid PTT port</source>
         <translation>Porta non valida per il PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3283"/>
+        <location filename="../Configuration.cpp" line="3284"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 nel messaggio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3284"/>
+        <location filename="../Configuration.cpp" line="3285"/>
         <source>CQ in message</source>
         <translation>CQ nel messaggio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4467"/>
+        <location filename="../Configuration.cpp" line="4468"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>Carattere finestre di decodifica...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5093"/>
-        <location filename="../Configuration.cpp" line="5124"/>
+        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5125"/>
         <source>Cancel</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5089"/>
+        <location filename="../Configuration.cpp" line="5090"/>
         <source>Load Working Frequencies</source>
         <translation>Carica le Frequenze di Lavoro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
-        <location filename="../Configuration.cpp" line="5122"/>
-        <location filename="../Configuration.cpp" line="5176"/>
+        <location filename="../Configuration.cpp" line="5092"/>
+        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5177"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Files delle frequenze (*.qrg); tutti i file (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>Replace Working Frequencies</source>
         <translation>Sostituisci le Frequenze di Lavoro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5109"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Sei sicuro di voler eliminare le tue attuali frequenze e sostituirle con queste che stai caricando?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5121"/>
         <source>Merge Working Frequencies</source>
         <translation>Aggiungi alle Frequenze Esistenti</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
-        <location filename="../Configuration.cpp" line="5156"/>
-        <location filename="../Configuration.cpp" line="5166"/>
+        <location filename="../Configuration.cpp" line="5148"/>
+        <location filename="../Configuration.cpp" line="5157"/>
+        <location filename="../Configuration.cpp" line="5167"/>
         <source>Not a valid frequencies file</source>
         <translation>Questo non è un file valido per le frequenze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
+        <location filename="../Configuration.cpp" line="5148"/>
         <source>Incorrect file magic</source>
         <translation>Versione non corretta del file</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5156"/>
+        <location filename="../Configuration.cpp" line="5157"/>
         <source>Version is too new</source>
         <translation>La versione è troppo recente</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5166"/>
+        <location filename="../Configuration.cpp" line="5167"/>
         <source>Contents corrupt</source>
         <translation>Contenuto corrotto</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5176"/>
+        <location filename="../Configuration.cpp" line="5177"/>
         <source>Save Working Frequencies</source>
         <translation>Salva le Frequenze di Lavoro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5187"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Salva solo le Frequenze Selezionate</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5188"/>
+        <location filename="../Configuration.cpp" line="5189"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Sei sicuro di voler salvare solo le frequenze selezionate? Fai clic su No per salvare tutto.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5215"/>
+        <location filename="../Configuration.cpp" line="5216"/>
         <source>Reset Working Frequencies</source>
         <translation>Resetta le Frequenze Attuali</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5217"/>
+        <location filename="../Configuration.cpp" line="5218"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Sei sicuro di voler cancellare le attuali frequenze e sostituirle con quelle predefinite?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5277"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>Save Directory</source>
         <translation>Salva Cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5293"/>
+        <location filename="../Configuration.cpp" line="5294"/>
         <source>Failed to open connection to rig</source>
         <translation>Impossibile effettuare la connessione con l&apos;RTX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5536"/>
+        <location filename="../Configuration.cpp" line="5537"/>
         <source>Rig failure</source>
         <translation>Errore dell&apos;RTX</translation>
     </message>
@@ -2357,27 +2357,33 @@ Errore: %2 -%3</translation>
     <name>FrequencyList_v2::impl</name>
     <message>
         <location filename="../FrequencyList.cpp" line="506"/>
-        <location filename="../FrequencyList.cpp" line="670"/>
+        <location filename="../FrequencyList.cpp" line="693"/>
         <source>IARU Region</source>
         <translation>Regione IARU</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="527"/>
-        <location filename="../FrequencyList.cpp" line="671"/>
+        <location filename="../FrequencyList.cpp" line="694"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="559"/>
-        <location filename="../FrequencyList.cpp" line="672"/>
+        <location filename="../FrequencyList.cpp" line="695"/>
         <source>Frequency</source>
         <translation>Frequenza</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="590"/>
-        <location filename="../FrequencyList.cpp" line="673"/>
+        <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
         <translation>Frequenza (MHz)</translation>
+    </message>
+    <message>
+        <location filename="../FrequencyList.cpp" line="613"/>
+        <location filename="../FrequencyList.cpp" line="697"/>
+        <source>Mode Frequency</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2769,7 +2775,7 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3720"/>
+        <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;Yes</source>
         <translation>&amp;Si</translation>
     </message>
@@ -2780,7 +2786,7 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3723"/>
+        <location filename="../mainwindow.cpp" line="3725"/>
         <source>&amp;No</source>
         <translation>&amp;No</translation>
     </message>
@@ -2951,12 +2957,12 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
-        <location filename="../mainwindow.cpp" line="3399"/>
-        <location filename="../mainwindow.cpp" line="3406"/>
-        <location filename="../mainwindow.cpp" line="5937"/>
-        <location filename="../mainwindow.cpp" line="5942"/>
-        <location filename="../mainwindow.cpp" line="5982"/>
-        <location filename="../mainwindow.cpp" line="5993"/>
+        <location filename="../mainwindow.cpp" line="3401"/>
+        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5984"/>
+        <location filename="../mainwindow.cpp" line="5995"/>
         <source>Band Activity</source>
         <translation>Attività di Banda</translation>
     </message>
@@ -3074,9 +3080,9 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1085"/>
-        <location filename="../mainwindow.cpp" line="4559"/>
-        <location filename="../mainwindow.cpp" line="5225"/>
-        <location filename="../mainwindow.cpp" line="5640"/>
+        <location filename="../mainwindow.cpp" line="4561"/>
+        <location filename="../mainwindow.cpp" line="5227"/>
+        <location filename="../mainwindow.cpp" line="5642"/>
         <source>DX Call</source>
         <translation>Nom DX</translation>
     </message>
@@ -3240,7 +3246,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Med: è la differenza di tempo (DT) media accumulata nei segnali decodificati fino ad ora.&lt;/p&gt;&lt;p&gt; Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo. Un valore negativo indica che è possibile aumentare il livello di decodifica. Un valore positivo indica il ritardo di decodifica in Tx e potrebbero non esserci risorse sufficienti della CPU per il livello di decodifica selezionato per fornire un segnale affidabile nella trasmissione.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che c&apos;è tempo disponibile per aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse CPU sufficienti per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Il ritardo dipende dalle prestazioni della CPU, dalle condizioni di rumore, dalla pienezza della banda e da altri programmi che usano il computer, può essere ridotto riducendo la larghezza di banda della cascata. Se il ritardo è costantemente negativo, la CPU gestisce bene la decodifica dell&apos;intervallo e puoi provare a rendere la decodifica più aggressiva per ottenere più decodifiche.&lt;/p&gt;&lt;p&gt; FT8: se Rit è da 0 a 0.4, è comunque possibile utilizzare Autoseq 3/7 (la selezione automatica attiverà la modifica del messaggio TX abbastanza presto per trasmettere il messaggio completo). Se Rit &gt;0.4 allora dovresti provare a ridurre l&apos;aggressività della decodifica. Se il ritardo è ancora&gt;0,4, è necessario utilizzare Autoseq 2/6 poiché la risposta alla chiamata in arrivo sarà parzialmente danneggiata durante la trasmissione in AutoSeq 3/7. Se costantemente Rit &gt;2, la CPU non è adatta a funzionare in FT8 con le impostazioni correnti del decodificatore. Sicuramente puoi monitorare come SWL.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;/XX: è il numero di messaggi decodificati nell&apos;ultimo periodo di ricezione.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Med: è la differenza di tempo (DT) media accumulata nei segnali decodificati.&lt;/p&gt;&lt;p&gt; Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo. Un valore negativo indica che è possibile aumentare il livello di decodifica. Un valore positivo indica il ritardo di decodifica in Tx e potrebbero non esserci risorse sufficienti della CPU per il livello di decodifica selezionato per fornire un segnale affidabile nella trasmissione.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Rit: è il ritardo del decodificatore calcolato relativamente all&apos;inizio dell&apos;intervallo successivo, i valori negativi indicano che c&apos;è tempo disponibile per aumentare la profondità di decodifica, i valori positivi è il ritardo del decodificatore in TX o l&apos;intervallo successivo significa che potrebbero non esserci risorse CPU sufficienti per la profondità di decodifica selezionata per fornire una trasmissione affidabile del segnale.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Il ritardo dipende dalle prestazioni della CPU, dalle condizioni di rumore, dalla pienezza della banda e da altri programmi che usano il computer, può essere ridotto riducendo la larghezza di banda della cascata. Se il ritardo è costantemente negativo, la CPU gestisce bene la decodifica dell&apos;intervallo e puoi provare a rendere la decodifica più aggressiva per ottenere più decodifiche.&lt;/p&gt;&lt;p&gt; FT8: se Rit è da 0 a 0.4, è comunque possibile utilizzare Autoseq 3/7 (la selezione automatica attiverà la modifica del messaggio TX abbastanza presto per trasmettere il messaggio completo). Se Rit &gt;0.4 allora dovresti provare a ridurre l&apos;aggressività della decodifica. Se il ritardo è ancora&gt;0,4, è necessario utilizzare Autoseq 2/6 poiché la risposta alla chiamata in arrivo sarà parzialmente danneggiata durante la trasmissione in AutoSeq 3/7. Se costantemente Rit &gt;2 la CPU non è adatta a funzionare in FT8 con le impostazioni correnti del decodificatore. Sicuramente puoi monitorare come SWL.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;/XX: è il numero di messaggi decodificati nell&apos;ultimo periodo di ricezione.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1801"/>
@@ -3250,7 +3256,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1823"/>
         <source>Adjust Tx audio level</source>
-        <translation>Aggiuista il livello AGC in Tx</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiuista il livello AGC in Tx.&lt;/p&gt;&lt;p&gt;Se l&apos;RTX va fuori ALC abbassare il livello audio di uscita portando più in basso il cursore.&lt;/p&gt;&lt;p&gt;Nel caso che l&apos;RTX esca solo in portante portare il cursore a 0 (tutto in basso) e poi riportarlo nella posizione giusta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -3328,7 +3334,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2195"/>
-        <location filename="../mainwindow.cpp" line="5943"/>
+        <location filename="../mainwindow.cpp" line="5945"/>
         <source>Rx Frequency</source>
         <translation>Frequenza Rx</translation>
     </message>
@@ -3339,7 +3345,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2282"/>
-        <location filename="../mainwindow.cpp" line="6525"/>
+        <location filename="../mainwindow.cpp" line="6527"/>
         <source>&amp;Tune</source>
         <translation>&amp;Accordo</translation>
     </message>
@@ -3366,7 +3372,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione Auto Sequenza per singolo QSO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opzione Auto Sequenza per singolo QSO (non richiama dopo il 73)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2414"/>
@@ -3456,7 +3462,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2742"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva un gruppo di decodificatori in base ai filtri programmati, in modalità FT8 attiva la funzionalità FT8AP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva il gruppo di decodificatori in base ai filtri programmati, in FT8 attiva la funzione FT8AP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2756"/>
@@ -3466,7 +3472,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezza di banda, FT8 150Hz, modalità hound FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX. La funzionalità di filtro non può migliorare la decodifica del segnale, è dedicata all&apos;uso con CPU lente per consentire l&apos;elaborazione del decodificatore prima della trasmissione del segnale ed evitare la modifica del messaggio durante la trasmissione. Tutte le chiamate in entrata dalla larghezza di banda del filtro andranno perse, utilizzare il filtro in modo funzionale solo se è realmente necessario per la CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Larghezze di banda: FT8 150Hz, modalità hound FT8 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz.&lt;/p&gt;&lt;p&gt;Segnali JT65: decodifica 580Hz, 300 Hz per la visualizzazione di messaggi. Il filtro è centrato sullo spettro del segnale RX.&lt;/p&gt;&lt;p&gt;La funzionalità di filtro non può migliorare la decodifica del segnale ed è dedicata all&apos;uso con CPU lente per consentire l&apos;elaborazione del decodificatore prima della trasmissione del segnale ed evitare la modifica del messaggio durante la trasmissione.&lt;/p&gt;&lt;p&gt;Tutte le chiamate in entrata fuori della larghezza di banda del filtro andranno perse, utilizzare il filtro in modo funzionale solo se è realmente necessario per la CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2801"/>
@@ -3476,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2835"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzionalità di compensazione AGC. Aumenta l&apos;efficienza di decodifica se AGC è attivato anche nel ricevitore&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzionalità di compensazione AGC. Aumenta l&apos;efficienza di decodifica se l&apos;AGC è attivato anche nel ricevitore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2849"/>
@@ -4082,7 +4088,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <location filename="../mainwindow.ui" line="5426"/>
         <location filename="../mainwindow.ui" line="5708"/>
         <source>deep</source>
-        <translation>accentuato</translation>
+        <translation>approfondito</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4837"/>
@@ -4353,7 +4359,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5259"/>
         <source>Single shot QSO</source>
-        <translation>QSO singolo</translation>
+        <translation>QSO singolo (no CQ dopo 73)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5267"/>
@@ -4393,7 +4399,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5375"/>
         <source>deep with 4 passes</source>
-        <translation>accentuato con 4 passaggi</translation>
+        <translation>approfondito con 4 passaggi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5383"/>
@@ -4428,7 +4434,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5461"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Chiama i nominativi già LAVORATI</translation>
+        <translation>Chiama i nominativi già LAVORATI (B4)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5480"/>
@@ -4585,10 +4591,10 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.cpp" line="866"/>
         <location filename="../mainwindow.cpp" line="867"/>
-        <location filename="../mainwindow.cpp" line="5933"/>
-        <location filename="../mainwindow.cpp" line="5934"/>
-        <location filename="../mainwindow.cpp" line="5989"/>
-        <location filename="../mainwindow.cpp" line="5990"/>
+        <location filename="../mainwindow.cpp" line="5935"/>
+        <location filename="../mainwindow.cpp" line="5936"/>
+        <location filename="../mainwindow.cpp" line="5991"/>
+        <location filename="../mainwindow.cpp" line="5992"/>
         <source>Freq   Message</source>
         <translation>Freq Messaggio</translation>
     </message>
@@ -4625,25 +4631,25 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.cpp" line="1651"/>
         <location filename="../mainwindow.cpp" line="2311"/>
-        <location filename="../mainwindow.cpp" line="3429"/>
-        <location filename="../mainwindow.cpp" line="4036"/>
-        <location filename="../mainwindow.cpp" line="4159"/>
-        <location filename="../mainwindow.cpp" line="4393"/>
-        <location filename="../mainwindow.cpp" line="6791"/>
-        <location filename="../mainwindow.cpp" line="6987"/>
+        <location filename="../mainwindow.cpp" line="3431"/>
+        <location filename="../mainwindow.cpp" line="4038"/>
+        <location filename="../mainwindow.cpp" line="4161"/>
+        <location filename="../mainwindow.cpp" line="4395"/>
+        <location filename="../mainwindow.cpp" line="6793"/>
+        <location filename="../mainwindow.cpp" line="6989"/>
         <source>File Open Error</source>
         <translation>Errore Apertura File</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1652"/>
         <location filename="../mainwindow.cpp" line="2312"/>
-        <location filename="../mainwindow.cpp" line="3430"/>
-        <location filename="../mainwindow.cpp" line="4037"/>
-        <location filename="../mainwindow.cpp" line="4160"/>
-        <location filename="../mainwindow.cpp" line="4394"/>
-        <location filename="../mainwindow.cpp" line="6792"/>
-        <location filename="../mainwindow.cpp" line="6988"/>
-        <location filename="../mainwindow.cpp" line="7329"/>
+        <location filename="../mainwindow.cpp" line="3432"/>
+        <location filename="../mainwindow.cpp" line="4039"/>
+        <location filename="../mainwindow.cpp" line="4162"/>
+        <location filename="../mainwindow.cpp" line="4396"/>
+        <location filename="../mainwindow.cpp" line="6794"/>
+        <location filename="../mainwindow.cpp" line="6990"/>
+        <location filename="../mainwindow.cpp" line="7331"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Impossibile aprire &quot;%1 per appendere: %2</translation>
     </message>
@@ -4788,222 +4794,222 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <translation>Comandi Speciali del Mouse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
         <translation>Med=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3409"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3409"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
         <translation>Rit=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3398"/>
-        <location filename="../mainwindow.cpp" line="3405"/>
+        <location filename="../mainwindow.cpp" line="3400"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
         <source>check time</source>
         <translation>controllare orario</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3708"/>
-        <location filename="../mainwindow.cpp" line="3714"/>
+        <location filename="../mainwindow.cpp" line="3710"/>
+        <location filename="../mainwindow.cpp" line="3716"/>
         <source>Confirm change Language</source>
         <translation>Conferma per cambiare Lingua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3710"/>
-        <location filename="../mainwindow.cpp" line="3717"/>
+        <location filename="../mainwindow.cpp" line="3712"/>
+        <location filename="../mainwindow.cpp" line="3719"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Sei sicuro di cambiare la lingua in Italiano? (JTDX sarà riavviato)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3886"/>
+        <location filename="../mainwindow.cpp" line="3888"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Scegli un&apos;altra frequenza Tx. JTDX non trasmetterà consapevolmente un&apos;altra modalità nella sottobanda WSPR.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3891"/>
-        <location filename="../mainwindow.cpp" line="3894"/>
+        <location filename="../mainwindow.cpp" line="3893"/>
+        <location filename="../mainwindow.cpp" line="3896"/>
         <source>WSPR Guard Band</source>
         <translation>Banda di Guardia WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4012"/>
+        <location filename="../mainwindow.cpp" line="4014"/>
         <source>TUNE</source>
         <translation>ACCORDA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4013"/>
+        <location filename="../mainwindow.cpp" line="4015"/>
         <source>LastTx: </source>
         <translation>Ultimo Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4227"/>
+        <location filename="../mainwindow.cpp" line="4229"/>
         <source>Tx: TUNE</source>
         <translation>ACCORDO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4228"/>
+        <location filename="../mainwindow.cpp" line="4230"/>
         <source>Tx: </source>
         <translation>Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4233"/>
+        <location filename="../mainwindow.cpp" line="4235"/>
         <source>Receiving </source>
         <translation>Ricezione</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4286"/>
+        <location filename="../mainwindow.cpp" line="4288"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>PWR&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4444"/>
+        <location filename="../mainwindow.cpp" line="4446"/>
         <source>Last Tx: </source>
         <translation>Ultimo Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5326"/>
-        <location filename="../mainwindow.cpp" line="5338"/>
-        <location filename="../mainwindow.cpp" line="5351"/>
-        <location filename="../mainwindow.cpp" line="5377"/>
+        <location filename="../mainwindow.cpp" line="5328"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
+        <location filename="../mainwindow.cpp" line="5353"/>
+        <location filename="../mainwindow.cpp" line="5379"/>
         <source>Add to CALL3.TXT</source>
         <translation>Aggiungi a CALL3TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5327"/>
+        <location filename="../mainwindow.cpp" line="5329"/>
         <source>Please enter a valid grid locator</source>
         <translation>Per favore inserisci una Griglia valida</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5339"/>
+        <location filename="../mainwindow.cpp" line="5341"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Impossibile aprire &quot;%1 per leggere/scrivere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5352"/>
+        <location filename="../mainwindow.cpp" line="5354"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Impossibile aprire &quot;%1 per scrivere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5377"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 è già in CALL3.TXT, desideri sostituirlo?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5738"/>
+        <location filename="../mainwindow.cpp" line="5740"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Errore durante l&apos;invio dei dati QSO ADIF al server UDP secondario</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5738"/>
+        <location filename="../mainwindow.cpp" line="5740"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Scrivi il restituito &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5980"/>
+        <location filename="../mainwindow.cpp" line="5982"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Freq     Drift  Nom          Grig    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6079"/>
-        <location filename="../mainwindow.cpp" line="6091"/>
+        <location filename="../mainwindow.cpp" line="6081"/>
+        <location filename="../mainwindow.cpp" line="6093"/>
         <source>Confirm Erase</source>
         <translation>Conferma Cancella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6080"/>
+        <location filename="../mainwindow.cpp" line="6082"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Sei sicuro di voler cancellarei li file ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6092"/>
+        <location filename="../mainwindow.cpp" line="6094"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Sei sicuro di voler cancellare il tuo QSO LOG?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
+        <location filename="../mainwindow.cpp" line="6700"/>
         <source>Lockd Tx=Rx</source>
         <translation>Blocca Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6699"/>
+        <location filename="../mainwindow.cpp" line="6701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Pulsante per consentire lo split delle frequenze Tx/Rx AF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6702"/>
+        <location filename="../mainwindow.cpp" line="6704"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx Split</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
+        <location filename="../mainwindow.cpp" line="6705"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Pulsante per bloccare la frequenza Tx sulla frequenza Rx AF. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6826"/>
+        <location filename="../mainwindow.cpp" line="6828"/>
         <source>Rig Control Error</source>
         <translation>Errore nel controllo RTX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6900"/>
+        <location filename="../mainwindow.cpp" line="6902"/>
         <source>Tune digital gain</source>
         <translation>Guadagno digitale in accordo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6901"/>
+        <location filename="../mainwindow.cpp" line="6903"/>
         <source>Transmit digital gain</source>
         <translation>Guadagno digitale in Tx </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6920"/>
+        <location filename="../mainwindow.cpp" line="6922"/>
         <source>Prefixes</source>
         <translation>Prefissi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6969"/>
-        <location filename="../mainwindow.cpp" line="6970"/>
+        <location filename="../mainwindow.cpp" line="6971"/>
+        <location filename="../mainwindow.cpp" line="6972"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7193"/>
+        <location filename="../mainwindow.cpp" line="7195"/>
         <source>Network Error</source>
         <translation>Errore di Rete</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7194"/>
+        <location filename="../mainwindow.cpp" line="7196"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Error: %1
 server DP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7328"/>
+        <location filename="../mainwindow.cpp" line="7330"/>
         <source>File Error</source>
         <translation>Errore File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7540"/>
+        <location filename="../mainwindow.cpp" line="7542"/>
         <source>Tx watchdog expired</source>
         <translation>timer Tx  scaduto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7554"/>
+        <location filename="../mainwindow.cpp" line="7556"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5028,7 +5034,7 @@ server DP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5042"/>
+        <location filename="../Configuration.cpp" line="5043"/>
         <source>OK</source>
         <translation>Ok</translation>
     </message>
@@ -5036,184 +5042,184 @@ server DP %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5044"/>
+        <location filename="../Configuration.cpp" line="5045"/>
         <source>Directory:</source>
         <translation>Cartella:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5045"/>
+        <location filename="../Configuration.cpp" line="5046"/>
         <source>File &amp;name:</source>
         <translation>&amp;Nome file:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5046"/>
+        <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Open</source>
         <translation>&amp;Apri</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Choose</source>
         <translation>S&amp;cegli</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5048"/>
+        <location filename="../Configuration.cpp" line="5049"/>
         <source>&amp;Save</source>
         <translation>&amp;Salva</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5050"/>
+        <location filename="../Configuration.cpp" line="5051"/>
         <source>All files (*)</source>
         <translation>Tutti i files (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5051"/>
+        <location filename="../Configuration.cpp" line="5052"/>
         <source>New Folder</source>
         <translation>Nuova Cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5052"/>
+        <location filename="../Configuration.cpp" line="5053"/>
         <source>Delete</source>
         <translation>Elimina</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5049"/>
+        <location filename="../Configuration.cpp" line="5050"/>
         <source>Cancel</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5053"/>
+        <location filename="../Configuration.cpp" line="5054"/>
         <source>&amp;Delete</source>
         <translation>&amp;Elimina</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5054"/>
+        <location filename="../Configuration.cpp" line="5055"/>
         <source>&amp;Rename</source>
         <translation>&amp;Rinomina</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5055"/>
+        <location filename="../Configuration.cpp" line="5056"/>
         <source>Show &amp;hidden files</source>
         <translation>Visuali&amp;zza files nascosti</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5056"/>
+        <location filename="../Configuration.cpp" line="5057"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Nuova cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5058"/>
         <source>Look in:</source>
         <translation>Gurada in:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5058"/>
+        <location filename="../Configuration.cpp" line="5059"/>
         <source>Files of type:</source>
         <translation>Tipo di file:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5065"/>
+        <location filename="../Configuration.cpp" line="5066"/>
         <source>Back</source>
         <translation>Indietro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
+        <location filename="../Configuration.cpp" line="5067"/>
         <source>Go back</source>
         <translation>Vai indietro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Alt+Left</source>
         <translation>Alt+Sinistro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
+        <location filename="../Configuration.cpp" line="5069"/>
         <source>Forward</source>
         <translation>Indietro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5069"/>
+        <location filename="../Configuration.cpp" line="5070"/>
         <source>Go forward</source>
         <translation>Vai indietro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5071"/>
         <source>Alt+Right</source>
         <translation>Atl+Destro</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5071"/>
+        <location filename="../Configuration.cpp" line="5072"/>
         <source>Parent Directory</source>
         <translation>Cartella Principale</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5073"/>
         <source>Go to the parent directory</source>
         <translation>Vai alla cartella principale</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5073"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Alt+Up</source>
         <translation>Alt+Su</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>Create New Folder</source>
         <translation>Crea Nuova Cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5075"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>Create a New Folder</source>
         <translation>Crea Nuova Cartella</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>List View</source>
         <translation>Visualizza Lista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>Change to list view mode</source>
         <translation>Passa alla modalità di visualizzazione elenco</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5078"/>
+        <location filename="../Configuration.cpp" line="5079"/>
         <source>Detail View</source>
         <translation>Vista Dettagliata</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Change to detail view mode</source>
         <translation>Passa alla modalità di visualizzazione dettagli</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5080"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>Sidebar</source>
         <translation>Barra laterale</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5081"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>List of places and bookmarks</source>
         <translation>Elenco di luoghi e segnalibri</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5059"/>
+        <location filename="../Configuration.cpp" line="5060"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; è protetto da scrittura.
 Vuoi eliminarlo comunque?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5060"/>
+        <location filename="../Configuration.cpp" line="5061"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Sei sicuro di voler eliminare &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5061"/>
+        <location filename="../Configuration.cpp" line="5062"/>
         <source>Could not delete directory.</source>
         <translation>Impossibile eliminare la cartella.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5062"/>
+        <location filename="../Configuration.cpp" line="5063"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5222,7 +5228,7 @@ Cartella non trovata.
 Verificare che il nome della cartella sia corretto.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5064"/>
+        <location filename="../Configuration.cpp" line="5065"/>
         <source>Recent Places</source>
         <translation>Luoghi recenti</translation>
     </message>
@@ -5230,22 +5236,22 @@ Verificare che il nome della cartella sia corretto.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5083"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Size</source>
         <translation>Dim.ne</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>Date Modified</source>
         <translation>Data modifica</translation>
     </message>

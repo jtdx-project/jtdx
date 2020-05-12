@@ -26,7 +26,7 @@
 #  define BOOST_MP_FORCEINLINE inline
 #endif
 
-#if (defined(BOOST_GCC) && (BOOST_GCC <= 40700)) || BOOST_WORKAROUND(__SUNPRO_CC, < 0x5140)
+#if (defined(BOOST_GCC) && (BOOST_GCC <= 40700)) || BOOST_WORKAROUND(__SUNPRO_CC, < 0x5140) || (defined(__clang_major__) && (__clang_major__ == 3) && (__clang_minor__ < 5))
 #  define BOOST_MP_NOEXCEPT_IF(x)
 #else
 #  define BOOST_MP_NOEXCEPT_IF(x) BOOST_NOEXCEPT_IF(x)
@@ -38,9 +38,11 @@
 
 //
 // Thread local storage:
+// Note fails on Mingw, see https://sourceforge.net/p/mingw-w64/bugs/527/
 //
-#if !defined(BOOST_NO_CXX11_THREAD_LOCAL) && !defined(BOOST_INTEL)
+#if !defined(BOOST_NO_CXX11_THREAD_LOCAL) && !defined(BOOST_INTEL) && !defined(__MINGW32__)
 #  define BOOST_MP_THREAD_LOCAL thread_local
+#  define BOOST_MP_USING_THREAD_LOCAL
 #else
 #  define BOOST_MP_THREAD_LOCAL
 #endif
@@ -51,6 +53,15 @@
 #endif
 
 namespace boost{
+
+   namespace serialization
+   {
+      template <class T>
+      struct nvp;
+      template<class T>
+      const nvp< T > make_nvp(const char * name, T & t);
+   }
+   
    namespace multiprecision{
 
 enum expression_template_option
@@ -364,11 +375,20 @@ struct unmentionable
 
 typedef unmentionable* (unmentionable::*unmentionable_type)();
 
-template <class T>
-struct expression_storage
+template <class T, bool b>
+struct expression_storage_base
 {
    typedef const T& type;
 };
+
+template <class T>
+struct expression_storage_base<T, true>
+{
+   typedef T type;
+};
+
+template <class T>
+struct expression_storage : public expression_storage_base<T, boost::is_arithmetic<T>::value> {};
 
 template <class T>
 struct expression_storage<T*>
@@ -398,6 +418,114 @@ struct expression<tag, Arg1, void, void, void>
    typedef tag tag_type;
 
    explicit expression(const Arg1& a) : arg(a) {}
+
+#ifndef BOOST_NO_CXX11_STATIC_ASSERT
+   //
+   // If we have static_assert we can give a more useful error message
+   // than if we simply have no operator defined at all:
+   //
+   template <class Other>
+   expression& operator=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not assign to a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator+=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator+= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator-=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator-= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator*=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator*= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator/=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator/= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator%=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator%= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator|=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator|= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator&=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator&= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator^=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator^= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator<<=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator<<= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator>>=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator>>= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+#endif
 
    left_type left()const { return left_type(arg); }
 
@@ -469,6 +597,114 @@ struct expression<terminal, Arg1, void, void, void>
    typedef terminal tag_type;
 
    explicit expression(const Arg1& a) : arg(a) {}
+
+#ifndef BOOST_NO_CXX11_STATIC_ASSERT
+   //
+   // If we have static_assert we can give a more useful error message
+   // than if we simply have no operator defined at all:
+   //
+   template <class Other>
+   expression& operator=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not assign to a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator+=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator+= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator-=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator-= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator*=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator*= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator/=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator/= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator%=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator%= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator|=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator|= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator&=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator&= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator^=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator^= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator<<=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator<<= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator>>=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator>>= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+#endif
 
    const Arg1& value()const BOOST_NOEXCEPT { return arg; }
 
@@ -542,6 +778,114 @@ struct expression<tag, Arg1, Arg2, void, void>
    typedef tag tag_type;
 
    expression(const Arg1& a1, const Arg2& a2) : arg1(a1), arg2(a2) {}
+
+#ifndef BOOST_NO_CXX11_STATIC_ASSERT
+   //
+   // If we have static_assert we can give a more useful error message
+   // than if we simply have no operator defined at all:
+   //
+   template <class Other>
+   expression& operator=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not assign to a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator+=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator+= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator-=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator-= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator*=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator*= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator/=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator/= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator%=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator%= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator|=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator|= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator&=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator&= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator^=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator^= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator<<=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator<<= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator>>=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator>>= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+#endif
 
    left_type left()const { return left_type(arg1); }
    right_type right()const { return right_type(arg2); }
@@ -625,6 +969,114 @@ struct expression<tag, Arg1, Arg2, Arg3, void>
    typedef tag tag_type;
 
    expression(const Arg1& a1, const Arg2& a2, const Arg3& a3) : arg1(a1), arg2(a2), arg3(a3) {}
+
+#ifndef BOOST_NO_CXX11_STATIC_ASSERT
+   //
+   // If we have static_assert we can give a more useful error message
+   // than if we simply have no operator defined at all:
+   //
+   template <class Other>
+   expression& operator=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not assign to a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator+=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator+= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator-=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator-= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator*=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator*= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator/=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator/= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator%=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator%= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator|=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator|= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator&=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator&= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator^=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator^= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator<<=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator<<= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator>>=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator>>= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+#endif
 
    left_type left()const { return left_type(arg1); }
    middle_type middle()const { return middle_type(arg2); }
@@ -717,6 +1169,114 @@ struct expression
    typedef tag tag_type;
 
    expression(const Arg1& a1, const Arg2& a2, const Arg3& a3, const Arg4& a4) : arg1(a1), arg2(a2), arg3(a3), arg4(a4) {}
+
+#ifndef BOOST_NO_CXX11_STATIC_ASSERT
+   //
+   // If we have static_assert we can give a more useful error message
+   // than if we simply have no operator defined at all:
+   //
+   template <class Other>
+   expression& operator=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not assign to a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator++(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not increment a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--()
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   expression& operator--(int)
+   {
+      // This should always fail:
+      static_assert(sizeof(*this) == INT_MAX, "You can not decrement a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator+=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator+= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator-=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator-= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator*=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator*= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator/=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator/= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator%=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator%= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator|=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator|= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator&=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator&= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator^=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator^= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator<<=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator<<= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+   template <class Other>
+   expression& operator>>=(const Other&)
+   {
+      // This should always fail:
+      static_assert(sizeof(Other) == INT_MAX, "You can not use operator>>= on a Boost.Multiprecision expression template: did you inadvertantly store an expression template in a \"auto\" variable?  Or pass an expression to a template function with deduced temnplate arguments?");
+      return *this;
+   }
+#endif
 
    left_type left()const { return left_type(arg1); }
    left_middle_type left_middle()const { return left_middle_type(arg2); }
@@ -968,6 +1528,12 @@ void check_shift_range(V val, const mpl::true_&, const mpl::false_&)
 template <class V>
 void check_shift_range(V, const mpl::false_&, const mpl::false_&) BOOST_NOEXCEPT{}
 
+template <class T>
+const T& evaluate_if_expression(const T& val) { return val; }
+template <class tag, class Arg1, class Arg2, class Arg3, class Arg4>
+typename expression<tag, Arg1, Arg2, Arg3, Arg4>::result_type evaluate_if_expression(const expression<tag, Arg1, Arg2, Arg3, Arg4>& val) { return val; }
+
+
 } // namespace detail
 
 //
@@ -979,22 +1545,48 @@ enum number_category_type
    number_kind_integer = 0,
    number_kind_floating_point = 1,
    number_kind_rational = 2,
-   number_kind_fixed_point = 3
+   number_kind_fixed_point = 3,
+   number_kind_complex = 4
 };
 
+template <class Num, bool, bool>
+struct number_category_base : public mpl::int_<number_kind_unknown> {};
 template <class Num>
-struct number_category : public mpl::int_<std::numeric_limits<Num>::is_integer ? number_kind_integer : (std::numeric_limits<Num>::max_exponent ? number_kind_floating_point : number_kind_unknown)> {};
+struct number_category_base<Num, true, false> : public mpl::int_<std::numeric_limits<Num>::is_integer ? number_kind_integer : (std::numeric_limits<Num>::max_exponent ? number_kind_floating_point : number_kind_unknown)> {};
+template <class Num>
+struct number_category : public number_category_base<Num, boost::is_class<Num>::value || boost::is_arithmetic<Num>::value, boost::is_abstract<Num>::value> {};
 template <class Backend, expression_template_option ExpressionTemplates>
 struct number_category<number<Backend, ExpressionTemplates> > : public number_category<Backend>{};
 template <class tag, class A1, class A2, class A3, class A4>
 struct number_category<detail::expression<tag, A1, A2, A3, A4> > : public number_category<typename detail::expression<tag, A1, A2, A3, A4>::result_type>{};
+//
+// Specializations for types which do not always have numberic_limits specializations:
+//
+#ifdef BOOST_HAS_INT128
+template <>
+struct number_category<boost::int128_type> : public mpl::int_<number_kind_integer> {};
+template <>
+struct number_category<boost::uint128_type> : public mpl::int_<number_kind_integer> {};
+#endif
+#ifdef BOOST_HAS_FLOAT128
+template <>
+struct number_category<__float128> : public mpl::int_<number_kind_floating_point> {};
+#endif
 
 template <class T>
-struct component_type;
-template <class T, expression_template_option ExpressionTemplates>
-struct component_type<number<T, ExpressionTemplates> > : public component_type<T>{};
+struct component_type { typedef T type; };
 template <class tag, class A1, class A2, class A3, class A4>
 struct component_type<detail::expression<tag, A1, A2, A3, A4> > : public component_type<typename detail::expression<tag, A1, A2, A3, A4>::result_type>{};
+
+template <class T>
+struct scalar_result_from_possible_complex
+{
+   typedef typename mpl::if_c<number_category<T>::value == number_kind_complex,
+      typename component_type<T>::type, T>::type type;
+};
+
+template <class T>
+struct complex_result_from_scalar; // individual backends must specialize this trait.
 
 template <class T>
 struct is_unsigned_number : public mpl::false_{};
@@ -1056,5 +1648,3 @@ namespace constants{
 #endif
 
 #endif // BOOST_MATH_BIG_NUM_BASE_HPP
-
-

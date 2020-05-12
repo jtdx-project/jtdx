@@ -95,54 +95,54 @@ Another application may be locking the directory</source>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1426"/>
-        <location filename="../Configuration.cpp" line="1451"/>
-        <location filename="../Configuration.cpp" line="1503"/>
+        <location filename="../Configuration.cpp" line="1452"/>
+        <location filename="../Configuration.cpp" line="1504"/>
         <source>&amp;Delete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1455"/>
-        <location filename="../Configuration.cpp" line="1507"/>
+        <location filename="../Configuration.cpp" line="1456"/>
+        <location filename="../Configuration.cpp" line="1508"/>
         <source>&amp;Insert ...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1459"/>
+        <location filename="../Configuration.cpp" line="1460"/>
         <source>&amp;Load ...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1463"/>
+        <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Save as ...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1467"/>
+        <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Merge ...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1471"/>
+        <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Reset</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2696"/>
+        <location filename="../Configuration.cpp" line="2697"/>
         <source>Serial Port:</source>
         <translation>COM Ports:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2698"/>
         <source>Serial port used for CAT control</source>
         <translation>Komports priekš CAT kontrolei</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2704"/>
+        <location filename="../Configuration.cpp" line="2705"/>
         <source>Network Server:</source>
         <translation>Tīkla serveris:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2705"/>
+        <location filename="../Configuration.cpp" line="2706"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ IPv4 adrese: ports
 [IPv6 adrese]: por</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2717"/>
+        <location filename="../Configuration.cpp" line="2718"/>
         <source>USB Device:</source>
         <translation>USB Ierīce:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2718"/>
+        <location filename="../Configuration.cpp" line="2719"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +173,132 @@ Formāts:
 [VID [: PID [: VENDOR [: PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2753"/>
+        <location filename="../Configuration.cpp" line="2754"/>
         <source>Invalid audio input device</source>
         <translation>Nepareiza audio ievades ierīce</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2760"/>
+        <location filename="../Configuration.cpp" line="2761"/>
         <source>Invalid audio output device</source>
         <translation>Nepareiza skaņas kartes izvēle izeja</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2766"/>
+        <location filename="../Configuration.cpp" line="2767"/>
         <source>Invalid PTT method</source>
         <translation>Nkorekta PTT metode</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2776"/>
+        <location filename="../Configuration.cpp" line="2777"/>
         <source>Invalid PTT port</source>
         <translation>Nekorekts PTT ports</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3283"/>
+        <location filename="../Configuration.cpp" line="3284"/>
         <source>CQ/73 in message</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3284"/>
+        <location filename="../Configuration.cpp" line="3285"/>
         <source>CQ in message</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4467"/>
+        <location filename="../Configuration.cpp" line="4468"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX izvēlētā fonta dekodēšanas tekstam</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5089"/>
+        <location filename="../Configuration.cpp" line="5090"/>
         <source>Load Working Frequencies</source>
         <translation>Lejupielādējiet darba frekvences</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
-        <location filename="../Configuration.cpp" line="5122"/>
-        <location filename="../Configuration.cpp" line="5176"/>
+        <location filename="../Configuration.cpp" line="5092"/>
+        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5177"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>&gt; Frekvences fails (* .qrg) ;; Visi faili (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5093"/>
-        <location filename="../Configuration.cpp" line="5124"/>
+        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5125"/>
         <source>Cancel</source>
         <translation>Acelt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>Replace Working Frequencies</source>
         <translation>Nomainiet darba frekvences</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5109"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Vai tiešām vēlaties atmest pašreizējās darba frekvences un aizstāt tās ar ielādētajām?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5121"/>
         <source>Merge Working Frequencies</source>
         <translation>Apvienot darba frekvences</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
-        <location filename="../Configuration.cpp" line="5156"/>
-        <location filename="../Configuration.cpp" line="5166"/>
+        <location filename="../Configuration.cpp" line="5148"/>
+        <location filename="../Configuration.cpp" line="5157"/>
+        <location filename="../Configuration.cpp" line="5167"/>
         <source>Not a valid frequencies file</source>
         <translation>Nav derīgs frekvenču fails</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
+        <location filename="../Configuration.cpp" line="5148"/>
         <source>Incorrect file magic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5156"/>
+        <location filename="../Configuration.cpp" line="5157"/>
         <source>Version is too new</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5166"/>
+        <location filename="../Configuration.cpp" line="5167"/>
         <source>Contents corrupt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5176"/>
+        <location filename="../Configuration.cpp" line="5177"/>
         <source>Save Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5187"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5188"/>
+        <location filename="../Configuration.cpp" line="5189"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5215"/>
+        <location filename="../Configuration.cpp" line="5216"/>
         <source>Reset Working Frequencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5217"/>
+        <location filename="../Configuration.cpp" line="5218"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Vai tiešām vēlaties ateikties no pašreizējās darba frekvences un aizstāt tās ar noklusēto frekvenci?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5277"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>Save Directory</source>
         <translation>Saglabāt mapi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5293"/>
+        <location filename="../Configuration.cpp" line="5294"/>
         <source>Failed to open connection to rig</source>
         <translation>Kļūda, savienojot ar transīveru</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5536"/>
+        <location filename="../Configuration.cpp" line="5537"/>
         <source>Rig failure</source>
         <translation>Transīvers nereaģē</translation>
     </message>
@@ -2351,27 +2351,33 @@ Error: %2 - %3</source>
     <name>FrequencyList_v2::impl</name>
     <message>
         <location filename="../FrequencyList.cpp" line="506"/>
-        <location filename="../FrequencyList.cpp" line="670"/>
+        <location filename="../FrequencyList.cpp" line="693"/>
         <source>IARU Region</source>
         <translation>IARU Reģions</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="527"/>
-        <location filename="../FrequencyList.cpp" line="671"/>
+        <location filename="../FrequencyList.cpp" line="694"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="559"/>
-        <location filename="../FrequencyList.cpp" line="672"/>
+        <location filename="../FrequencyList.cpp" line="695"/>
         <source>Frequency</source>
         <translation>Frekvence</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="590"/>
-        <location filename="../FrequencyList.cpp" line="673"/>
+        <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
         <translation>Frekvence (MHZ)</translation>
+    </message>
+    <message>
+        <location filename="../FrequencyList.cpp" line="613"/>
+        <location filename="../FrequencyList.cpp" line="697"/>
+        <source>Mode Frequency</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2760,7 +2766,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3720"/>
+        <location filename="../mainwindow.cpp" line="3722"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2771,7 +2777,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3723"/>
+        <location filename="../mainwindow.cpp" line="3725"/>
         <source>&amp;No</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2947,12 +2953,12 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
-        <location filename="../mainwindow.cpp" line="3399"/>
-        <location filename="../mainwindow.cpp" line="3406"/>
-        <location filename="../mainwindow.cpp" line="5937"/>
-        <location filename="../mainwindow.cpp" line="5942"/>
-        <location filename="../mainwindow.cpp" line="5982"/>
-        <location filename="../mainwindow.cpp" line="5993"/>
+        <location filename="../mainwindow.cpp" line="3401"/>
+        <location filename="../mainwindow.cpp" line="3408"/>
+        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5984"/>
+        <location filename="../mainwindow.cpp" line="5995"/>
         <source>Band Activity</source>
         <translation></translation>
     </message>
@@ -3070,9 +3076,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1085"/>
-        <location filename="../mainwindow.cpp" line="4559"/>
-        <location filename="../mainwindow.cpp" line="5225"/>
-        <location filename="../mainwindow.cpp" line="5640"/>
+        <location filename="../mainwindow.cpp" line="4561"/>
+        <location filename="../mainwindow.cpp" line="5227"/>
+        <location filename="../mainwindow.cpp" line="5642"/>
         <source>DX Call</source>
         <translation></translation>
     </message>
@@ -3299,7 +3305,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2195"/>
-        <location filename="../mainwindow.cpp" line="5943"/>
+        <location filename="../mainwindow.cpp" line="5945"/>
         <source>Rx Frequency</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3310,7 +3316,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2282"/>
-        <location filename="../mainwindow.cpp" line="6525"/>
+        <location filename="../mainwindow.cpp" line="6527"/>
         <source>&amp;Tune</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4553,10 +4559,10 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="866"/>
         <location filename="../mainwindow.cpp" line="867"/>
-        <location filename="../mainwindow.cpp" line="5933"/>
-        <location filename="../mainwindow.cpp" line="5934"/>
-        <location filename="../mainwindow.cpp" line="5989"/>
-        <location filename="../mainwindow.cpp" line="5990"/>
+        <location filename="../mainwindow.cpp" line="5935"/>
+        <location filename="../mainwindow.cpp" line="5936"/>
+        <location filename="../mainwindow.cpp" line="5991"/>
+        <location filename="../mainwindow.cpp" line="5992"/>
         <source>Freq   Message</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4593,25 +4599,25 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1651"/>
         <location filename="../mainwindow.cpp" line="2311"/>
-        <location filename="../mainwindow.cpp" line="3429"/>
-        <location filename="../mainwindow.cpp" line="4036"/>
-        <location filename="../mainwindow.cpp" line="4159"/>
-        <location filename="../mainwindow.cpp" line="4393"/>
-        <location filename="../mainwindow.cpp" line="6791"/>
-        <location filename="../mainwindow.cpp" line="6987"/>
+        <location filename="../mainwindow.cpp" line="3431"/>
+        <location filename="../mainwindow.cpp" line="4038"/>
+        <location filename="../mainwindow.cpp" line="4161"/>
+        <location filename="../mainwindow.cpp" line="4395"/>
+        <location filename="../mainwindow.cpp" line="6793"/>
+        <location filename="../mainwindow.cpp" line="6989"/>
         <source>File Open Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1652"/>
         <location filename="../mainwindow.cpp" line="2312"/>
-        <location filename="../mainwindow.cpp" line="3430"/>
-        <location filename="../mainwindow.cpp" line="4037"/>
-        <location filename="../mainwindow.cpp" line="4160"/>
-        <location filename="../mainwindow.cpp" line="4394"/>
-        <location filename="../mainwindow.cpp" line="6792"/>
-        <location filename="../mainwindow.cpp" line="6988"/>
-        <location filename="../mainwindow.cpp" line="7329"/>
+        <location filename="../mainwindow.cpp" line="3432"/>
+        <location filename="../mainwindow.cpp" line="4039"/>
+        <location filename="../mainwindow.cpp" line="4162"/>
+        <location filename="../mainwindow.cpp" line="4396"/>
+        <location filename="../mainwindow.cpp" line="6794"/>
+        <location filename="../mainwindow.cpp" line="6990"/>
+        <location filename="../mainwindow.cpp" line="7331"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation type="unfinished">Nevar atvērt &quot;%1&quot; lai pievienotu: %2&quot;</translation>
     </message>
@@ -4758,220 +4764,220 @@ list. The list can be maintained in Settings (F2).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
         <source>Avg=</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3409"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3411"/>
         <source>Freq  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3393"/>
-        <location filename="../mainwindow.cpp" line="3409"/>
+        <location filename="../mainwindow.cpp" line="3395"/>
+        <location filename="../mainwindow.cpp" line="3411"/>
         <source>Lag=</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3398"/>
-        <location filename="../mainwindow.cpp" line="3405"/>
+        <location filename="../mainwindow.cpp" line="3400"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
         <source>check time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3708"/>
-        <location filename="../mainwindow.cpp" line="3714"/>
+        <location filename="../mainwindow.cpp" line="3710"/>
+        <location filename="../mainwindow.cpp" line="3716"/>
         <source>Confirm change Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3710"/>
-        <location filename="../mainwindow.cpp" line="3717"/>
+        <location filename="../mainwindow.cpp" line="3712"/>
+        <location filename="../mainwindow.cpp" line="3719"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3886"/>
+        <location filename="../mainwindow.cpp" line="3888"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3891"/>
-        <location filename="../mainwindow.cpp" line="3894"/>
+        <location filename="../mainwindow.cpp" line="3893"/>
+        <location filename="../mainwindow.cpp" line="3896"/>
         <source>WSPR Guard Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4012"/>
+        <location filename="../mainwindow.cpp" line="4014"/>
         <source>TUNE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4013"/>
+        <location filename="../mainwindow.cpp" line="4015"/>
         <source>LastTx: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4227"/>
+        <location filename="../mainwindow.cpp" line="4229"/>
         <source>Tx: TUNE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4228"/>
+        <location filename="../mainwindow.cpp" line="4230"/>
         <source>Tx: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4233"/>
+        <location filename="../mainwindow.cpp" line="4235"/>
         <source>Receiving </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4286"/>
+        <location filename="../mainwindow.cpp" line="4288"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4444"/>
+        <location filename="../mainwindow.cpp" line="4446"/>
         <source>Last Tx: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5326"/>
-        <location filename="../mainwindow.cpp" line="5338"/>
-        <location filename="../mainwindow.cpp" line="5351"/>
-        <location filename="../mainwindow.cpp" line="5377"/>
+        <location filename="../mainwindow.cpp" line="5328"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
+        <location filename="../mainwindow.cpp" line="5353"/>
+        <location filename="../mainwindow.cpp" line="5379"/>
         <source>Add to CALL3.TXT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5327"/>
+        <location filename="../mainwindow.cpp" line="5329"/>
         <source>Please enter a valid grid locator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5339"/>
+        <location filename="../mainwindow.cpp" line="5341"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5352"/>
+        <location filename="../mainwindow.cpp" line="5354"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5377"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5738"/>
+        <location filename="../mainwindow.cpp" line="5740"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5738"/>
+        <location filename="../mainwindow.cpp" line="5740"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>Tx WSPR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5980"/>
+        <location filename="../mainwindow.cpp" line="5982"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6079"/>
-        <location filename="../mainwindow.cpp" line="6091"/>
+        <location filename="../mainwindow.cpp" line="6081"/>
+        <location filename="../mainwindow.cpp" line="6093"/>
         <source>Confirm Erase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6080"/>
+        <location filename="../mainwindow.cpp" line="6082"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6092"/>
+        <location filename="../mainwindow.cpp" line="6094"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
+        <location filename="../mainwindow.cpp" line="6700"/>
         <source>Lockd Tx=Rx</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6699"/>
+        <location filename="../mainwindow.cpp" line="6701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6702"/>
+        <location filename="../mainwindow.cpp" line="6704"/>
         <source>Tx/Rx Split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
+        <location filename="../mainwindow.cpp" line="6705"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6826"/>
+        <location filename="../mainwindow.cpp" line="6828"/>
         <source>Rig Control Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6900"/>
+        <location filename="../mainwindow.cpp" line="6902"/>
         <source>Tune digital gain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6901"/>
+        <location filename="../mainwindow.cpp" line="6903"/>
         <source>Transmit digital gain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6920"/>
+        <location filename="../mainwindow.cpp" line="6922"/>
         <source>Prefixes</source>
         <translation>Prefiks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6969"/>
-        <location filename="../mainwindow.cpp" line="6970"/>
+        <location filename="../mainwindow.cpp" line="6971"/>
+        <location filename="../mainwindow.cpp" line="6972"/>
         <source>Logd </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7193"/>
+        <location filename="../mainwindow.cpp" line="7195"/>
         <source>Network Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7194"/>
+        <location filename="../mainwindow.cpp" line="7196"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7328"/>
+        <location filename="../mainwindow.cpp" line="7330"/>
         <source>File Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7540"/>
+        <location filename="../mainwindow.cpp" line="7542"/>
         <source>Tx watchdog expired</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7554"/>
+        <location filename="../mainwindow.cpp" line="7556"/>
         <source>WD %1m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4996,7 +5002,7 @@ UDP server %2:%3</source>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5042"/>
+        <location filename="../Configuration.cpp" line="5043"/>
         <source>OK</source>
         <translation>Labi</translation>
     </message>
@@ -5004,190 +5010,190 @@ UDP server %2:%3</source>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5044"/>
+        <location filename="../Configuration.cpp" line="5045"/>
         <source>Directory:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5045"/>
+        <location filename="../Configuration.cpp" line="5046"/>
         <source>File &amp;name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5046"/>
+        <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Choose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5048"/>
+        <location filename="../Configuration.cpp" line="5049"/>
         <source>&amp;Save</source>
         <translation>&amp;Saglabāt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5049"/>
+        <location filename="../Configuration.cpp" line="5050"/>
         <source>Cancel</source>
         <translation>Acelt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5050"/>
+        <location filename="../Configuration.cpp" line="5051"/>
         <source>All files (*)</source>
         <translation>Visi faili (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5051"/>
+        <location filename="../Configuration.cpp" line="5052"/>
         <source>New Folder</source>
         <translation>Jauna mape</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5052"/>
+        <location filename="../Configuration.cpp" line="5053"/>
         <source>Delete</source>
         <translation>Dzēst</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5053"/>
+        <location filename="../Configuration.cpp" line="5054"/>
         <source>&amp;Delete</source>
         <translation>&amp;Dzēst</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5054"/>
+        <location filename="../Configuration.cpp" line="5055"/>
         <source>&amp;Rename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5055"/>
+        <location filename="../Configuration.cpp" line="5056"/>
         <source>Show &amp;hidden files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5056"/>
+        <location filename="../Configuration.cpp" line="5057"/>
         <source>&amp;New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5058"/>
         <source>Look in:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5058"/>
+        <location filename="../Configuration.cpp" line="5059"/>
         <source>Files of type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5059"/>
+        <location filename="../Configuration.cpp" line="5060"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5060"/>
+        <location filename="../Configuration.cpp" line="5061"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5061"/>
+        <location filename="../Configuration.cpp" line="5062"/>
         <source>Could not delete directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5062"/>
+        <location filename="../Configuration.cpp" line="5063"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5064"/>
+        <location filename="../Configuration.cpp" line="5065"/>
         <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5065"/>
+        <location filename="../Configuration.cpp" line="5066"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
+        <location filename="../Configuration.cpp" line="5067"/>
         <source>Go back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Alt+Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
+        <location filename="../Configuration.cpp" line="5069"/>
         <source>Forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5069"/>
+        <location filename="../Configuration.cpp" line="5070"/>
         <source>Go forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5071"/>
         <source>Alt+Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5071"/>
+        <location filename="../Configuration.cpp" line="5072"/>
         <source>Parent Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5073"/>
         <source>Go to the parent directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5073"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Alt+Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>Create New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5075"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>Create a New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>List View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>Change to list view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5078"/>
+        <location filename="../Configuration.cpp" line="5079"/>
         <source>Detail View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Change to detail view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5080"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5081"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>List of places and bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5195,22 +5201,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5083"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>Name</source>
         <translation>Vārds</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Size</source>
         <translation>Izmērs</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>Date Modified</source>
         <translation type="unfinished"></translation>
     </message>

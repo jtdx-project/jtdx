@@ -8,6 +8,7 @@ void QsoHistory::init()
 {
     _data.clear();
     _blackdata.clear();
+    _calldata.clear();
     _working = true;
     _CQ.call = "";    
     _CQ.status = NONE;
@@ -62,10 +63,11 @@ int QsoHistory::Distance(latlng latlng1,latlng latlng2) {
 
 int QsoHistory::remove(QString const& callsign)
 {
-  int ret=0,ret2=0;
+  int ret=0;
   if (_working) {
+    ret=_blackdata.remove(Radio::base_callsign (callsign));
+    ret=_calldata.remove(Radio::base_callsign (callsign));
     ret=_data.remove(Radio::base_callsign (callsign));
-    ret2=_blackdata.remove(Radio::base_callsign (callsign));
   }
   return ret;
 }
@@ -79,6 +81,21 @@ int QsoHistory::blacklist(QString const& callsign)
     _blackdata.insert(Radio::base_callsign (callsign),ret);
   }
   return ret;
+}
+
+void QsoHistory::calllist(QString const& callsign, int level=-35, unsigned time=0)
+{
+  CALLED ret;
+  ret.rep=-35;
+  ret.time=0;
+  if (_working) {
+    ret = _calldata.value(Radio::base_callsign (callsign),ret);
+    if(ret.rep < level || ret.time < time) {
+      ret.rep=level;
+      ret.time=time;
+      _calldata.insert(Radio::base_callsign (callsign),ret);
+    }
+  }
 }
 
 int QsoHistory::reset_count(QString const& callsign,Status status)
@@ -156,9 +173,9 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
+              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
                 if (tt.priority > priority || 
-                      (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT) && !mycall) || (tt.priority == priority &&
+                      (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT) && !mycall) || (tt.priority == priority &&
                          ((!(algo & 32) && ((!(algo & 16) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
                                             || (algo & 16 && ((tt.status == RCALL && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt() && Rrep == "-60")
                                                               ||(tt.status == RREPORT && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > Rrep.toInt()))))) 
@@ -198,10 +215,14 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             int priority = b_init;
             rep = "-60";
             dist = 0;
+            CALLED is_called;
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
+              is_called.rep=-35;
+              is_called.time=0;
+              is_called=_calldata.value(key,is_called);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
+              if ((is_called.rep == -35 || is_called.rep < tt.s_rep.toInt() || tt.b_time - is_called.time > 300) && on_black == 0 && tt.time == max_r_time && (tt.status == RCQ || (tt.status == RFIN && tt.priority > 0)) && !tt.continent.isEmpty()) {
 //                printf("autosel:%s %d %d (%d,%d,%s,%d)\n",tt.call.toStdString().c_str(),ret,algo,tt.status,tt.priority,tt.s_rep.toStdString().c_str(),tt.distance);
                 if (tt.priority > priority || 
                     (priority > b_init && tt.priority == priority && 

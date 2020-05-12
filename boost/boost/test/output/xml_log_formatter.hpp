@@ -39,7 +39,7 @@ public:
     // Formatter interface
     void    log_start( std::ostream&, counter_t test_cases_amount );
     void    log_finish( std::ostream& );
-    void    log_build_info( std::ostream& );
+    void    log_build_info( std::ostream&, bool );
 
     void    test_unit_start( std::ostream&, test_unit const& tu );
     void    test_unit_finish( std::ostream&, test_unit const& tu, unsigned long elapsed );
@@ -54,8 +54,8 @@ public:
     void    log_entry_finish( std::ostream& );
 
     void    entry_context_start( std::ostream&, log_level );
-    void    log_entry_context( std::ostream&, const_string );
-    void    entry_context_finish( std::ostream& );
+    void    log_entry_context( std::ostream&, log_level, const_string );
+    void    entry_context_finish( std::ostream&, log_level );
 
 private:
     // Data members
