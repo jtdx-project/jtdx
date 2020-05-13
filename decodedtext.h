@@ -91,7 +91,7 @@ private:
     QRegularExpression _repRe = QRegularExpression("[<>]");
 //    QRegularExpression _callRe = QRegularExpression("(([A-Z]{1,2})|([A-Z][0-9]))[0-9][A-Z]{1,3}");
 //    QRegularExpression _callRe = QRegularExpression("([BFGIKMNRTW]|[A-Z0-9]{2})[0-9][A-Z0-9]{0,3}[A-Z]");
-    QRegularExpression _callRe = QRegularExpression("5JSTAYHOME|[2-9]{0,1}[A-Z]{1,2}[0-9]{1,4}[A-Z]{0,6}");
+    QRegularExpression _callRe = QRegularExpression("[2-9]{0,1}[A-Z]{1,2}[0-9]{1,4}[A-Z]{0,6}");
     int padding_;
     QString message_;
     bool is_standard_;

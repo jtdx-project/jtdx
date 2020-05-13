@@ -19,7 +19,7 @@ namespace Radio
     // very loose validation - callsign must contain a letter next to
     // a number
 //    QRegularExpression valid_callsign_regexp {R"(\d[[:alpha:]]|[[:alpha:]]\d)"};
-    QRegularExpression valid_callsign_regexp {R"(5JSTAYHOME|[2,4-9]{1,1}[A-Z]{1,1}[0-9]{1,4}|[3]{1,1}[A-Z]{1,2}[0-9]{1,4}|[A-Z]{1,2}[0-9]{1,4})"};
+    QRegularExpression valid_callsign_regexp {R"([2,4-9]{1,1}[A-Z]{1,1}[0-9]{1,4}|[3]{1,1}[A-Z]{1,2}[0-9]{1,4}|[A-Z]{1,2}[0-9]{1,4})"};
     
     // Extracting prefix from callsign
     QRegularExpression prefix_re {R"(^(?:(?<prefix>[2-9]{0,1}[A-Z]{1,2}[0-9]{1,4})?)?)"};
