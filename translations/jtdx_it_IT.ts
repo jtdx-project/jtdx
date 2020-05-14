@@ -3256,7 +3256,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1823"/>
         <source>Adjust Tx audio level</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiuista il livello AGC in Tx.&lt;/p&gt;&lt;p&gt;Se l&apos;RTX va fuori ALC abbassare il livello audio di uscita portando più in basso il cursore.&lt;/p&gt;&lt;p&gt;Nel caso che l&apos;RTX esca solo in portante portare il cursore a 0 (tutto in basso) e poi riportarlo nella posizione giusta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiusta la potenza di uscita dell&apos;RTx.&lt;/p&gt;&lt;p&gt;Se l&apos;RTx va fuori ALC abbassare questo livello portando più in basso il cursore.&lt;/p&gt;&lt;p&gt;Per una buona emissione il livello ALC deve rimanaere a 0.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Nel caso che l&apos;RTX esca solo in portante portare il cursore a 0 (tutto in basso) e poi riportarlo nella posizione giusta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
@@ -3482,7 +3482,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2835"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzionalità di compensazione AGC. Aumenta l&apos;efficienza di decodifica se l&apos;AGC è attivato anche nel ricevitore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attiva la funzione di compensazione AGC. Aumenta l&apos;efficienza di decodifica se l&apos;AGC è attivato anche nel ricevitore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2849"/>
@@ -4842,7 +4842,7 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4014"/>
         <source>TUNE</source>
-        <translation>ACCORDA</translation>
+        <translation>ACCORDO</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4015"/>
