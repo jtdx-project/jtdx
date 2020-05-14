@@ -4523,6 +4523,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionBypass_all_text_filters"/>
     <addaction name="actionHide_FT8_dupe_messages"/>
     <addaction name="actionHide_FT_contest_messages"/>
+    <addaction name="actionHide_telemetry_messages"/>
     <addaction name="actionShow_messages_decoded_from_harmonics"/>
     <addaction name="actionMyCallRXFwindow"/>
     <addaction name="actionWantedCallRXFwindow"/>
@@ -5789,6 +5790,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>3</string>
+   </property>
+  </action>
+  <action name="actionHide_telemetry_messages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide telemetry messages</string>
    </property>
   </action>
  </widget>

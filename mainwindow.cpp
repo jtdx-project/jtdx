@@ -1151,6 +1151,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("UseHoundTxFrequencyJumps",ui->actionUse_TX_frequency_jumps->isChecked()); 
   m_settings->setValue("ShowHarmonics",ui->actionShow_messages_decoded_from_harmonics->isChecked());
   m_settings->setValue("HideFTContestMessages",ui->actionHide_FT_contest_messages->isChecked());
+  m_settings->setValue("HideTelemetryMessages",ui->actionHide_telemetry_messages->isChecked());
   m_settings->setValue("HideFT8Dupes",ui->actionHide_FT8_dupe_messages->isChecked());
   m_settings->setValue("ShowMyCallMessagesRxWindow",ui->actionMyCallRXFwindow->isChecked());
   m_settings->setValue("ShowWantedCallMessagesRxWindow",ui->actionWantedCallRXFwindow->isChecked());
@@ -1339,6 +1340,10 @@ void MainWindow::readSettings()
   if(m_settings->value("HideFTContestMessages").toString()!="false" && m_settings->value("HideFTContestMessages").toString()!="true") 
     ui->actionHide_FT_contest_messages->setChecked(false);
   else ui->actionHide_FT_contest_messages->setChecked(m_settings->value("HideFTContestMessages").toBool());
+
+  if(m_settings->value("HideTelemetryMessages").toString()!="false" && m_settings->value("HideTelemetryMessages").toString()!="true") 
+    ui->actionHide_telemetry_messages->setChecked(false);
+  else ui->actionHide_telemetry_messages->setChecked(m_settings->value("HideTelemetryMessages").toBool());
 
   ui->actionHide_FT8_dupe_messages->setChecked(m_settings->value("HideFT8Dupes",true).toBool());
   ui->actionMyCallRXFwindow->setChecked(m_settings->value("ShowMyCallMessagesRxWindow",true).toBool());
@@ -3018,6 +3023,7 @@ void MainWindow::decode()                                       //decode()
   else dec_data.params.lft8subpass=false;
   dec_data.params.lft8latestart=m_FT8LateStart;
   dec_data.params.lhidetest=(ui->actionHide_FT_contest_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
+  dec_data.params.lhidetelemetry=(ui->actionHide_telemetry_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhideft8dupes=ui->actionHide_FT8_dupe_messages->isChecked() ? 1 : 0;
   dec_data.params.lhound=m_houndMode ? 1 : 0;
   dec_data.params.lhidehash=m_config.hide2ndHash() && !m_bypassAllFilters;
