@@ -2185,7 +2185,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation></translation>
+        <translation>&amp;Eksport...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -3126,7 +3126,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1450"/>
         <source>Toggle Tx mode</source>
-        <translation>Zmiana modulacji TX</translation>
+        <translation>Zmiana emisji Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1453"/>
@@ -4830,7 +4830,8 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="3718"/>
         <location filename="../mainwindow.cpp" line="3725"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Czy jesteś pewien zmiany języka interfejsu użytkownika na Polski, i że JTDX zostanie zrestartowamy?</translation>
+        <translation>Czy jesteś pewien zmiany języka interfejsu użytkownika na Polski,
+i że JTDX zostanie zrestartowamy?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3894"/>
@@ -4932,7 +4933,7 @@ jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
         <location filename="../mainwindow.cpp" line="6087"/>
         <location filename="../mainwindow.cpp" line="6099"/>
         <source>Confirm Erase</source>
-        <translation>Potwierdzić usuwanie</translation>
+        <translation>Potwierdź usuwanie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6088"/>
@@ -5639,7 +5640,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>Celowniki</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
@@ -6144,7 +6145,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="739"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Żądaj danych S-metra z transceivera: CAT powinno być ustawione przez Hamlib, Hamblib obsługuhe pobieranie danych S-metra dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pobierz dane S-metra z transceivera: CAT powinno być ustawione przez Hamlib, Hamllib obsługuje pobieranie danych S-metra dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="742"/>
@@ -6154,7 +6155,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="771"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Żądaj danych mocy wyjściowej z transceivera: CAT powinno być ustawione przez Hamlib, Hamlib obsługuje Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib obsługuje pobieranie danych mocy wyjściowej dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pobierz dane mocy wyjściowej z transceivera: CAT powinno być ustawione przez Hamlib, Hamlib obsługuje pobieranie danych mocy wyjściowej dla niektórych transceiverów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="774"/>
@@ -6185,7 +6186,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="856"/>
         <source>Serial Port Parameters</source>
-        <translation>Parametry portu szeregowego</translation>
+        <translation>Ustawienia portu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="873"/>
@@ -6245,7 +6246,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="944"/>
         <source>Data Bits</source>
-        <translation>Ilość bitów</translation>
+        <translation>Bity danych</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="956"/>
@@ -6272,7 +6273,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="1001"/>
         <source>Stop Bits</source>
-        <translation>Ilość bitów stop</translation>
+        <translation>Bity stopu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1026"/>
@@ -6292,7 +6293,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="1055"/>
         <source>Handshake</source>
-        <translation>Uzgadnianie</translation>
+        <translation>Sterowanie przepływem</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1067"/>
@@ -6302,7 +6303,7 @@ jest zawsze w okresie ciszy gdy dekodowanie zostalo zakończone.</translation>
     <message>
         <location filename="../Configuration.ui" line="1093"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation>Programowa kontrola przepływu danych (bardzo rzadko przy interfejsach CAT).</translation>
+        <translation>Programowe sterowanie przepływem danych (bardzo rzadko przy interfejsach CAT).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1096"/>
@@ -6332,7 +6333,7 @@ urządzenia Kenwood, ich wymagają).</translation>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
         <source>Force Control Lines</source>
-        <translation>Wymuś linie sterujące</translation>
+        <translation>Stan aktywny linii sterujących</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1144"/>
@@ -6694,7 +6695,7 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     <message>
         <location filename="../Configuration.ui" line="1929"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Liczniki. Przeszukuj zdekodowane wiadomości, wołaj CQ lub wstrzymaj Tx jeżeli:</translation>
+        <translation>Liczniki. Przeszukuj zdekodowane wiadomości, wołaj CQ lub przerwij Tx jeżeli:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1961"/>
@@ -6803,7 +6804,7 @@ nadane i odebrane raporty.</translation>
     <message>
         <location filename="../Configuration.ui" line="2328"/>
         <source>d&amp;B reports to comments</source>
-        <translation>raporty d&amp;B do komentarzy</translation>
+        <translation>Raporty d&amp;B do komentarzy</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2335"/>
@@ -6815,7 +6816,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2339"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>wyczyść Znak &amp;DX i Lokator DX po zalogowaniu</translation>
+        <translation>Wyczyść Znak &amp;DX i Lokator DX po zalogowaniu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2346"/>
@@ -6850,7 +6851,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2376"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Aktywuj automatyczne logowanie QSO</translation>
+        <translation>Automatyczne logowanie QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
@@ -6923,12 +6924,12 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2607"/>
         <source>decoded messages</source>
-        <translation>wiadomości zdekodowane</translation>
+        <translation>Wiadomości zdekodowane</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2614"/>
         <source>decoded and debug messages</source>
-        <translation>wiadomości zdekodowane i debugowania</translation>
+        <translation>Wiadomości zdekodowane i debugowania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2656"/>
@@ -7069,7 +7070,7 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     <message>
         <location filename="../Configuration.ui" line="2920"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation>Użyj filtrów tekstowych przy nadawaniu widomości UDP</translation>
+        <translation>Użyj filtrów tekstowych przy nadawaniu wiadomości UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2955"/>
@@ -7448,7 +7449,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
         <location filename="../Configuration.ui" line="3667"/>
         <location filename="../Configuration.ui" line="6847"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rady konfiguracyjne&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wskazówki konfiguracyjne&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3715"/>
@@ -7590,7 +7591,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="4644"/>
         <source>New Call on Band/Mode</source>
-        <translation>Now Znak dla Pasma/Emisji</translation>
+        <translation>Nowy Znak dla Pasma/Emisji</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4714"/>
@@ -7741,7 +7742,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5015"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation>Pokaż wiadomości merytoryczne w oknie częstotliwości RX </translation>
+        <translation>Wiadomości merytoryczne w oknie częstotliwości RX </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5032"/>
