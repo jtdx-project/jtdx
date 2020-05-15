@@ -14,7 +14,7 @@ subroutine multimode_decoder(params)
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
                        lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
-  use packjt77, only : lcommonft8b,ihash22,calls22
+  use packjt77, only : lcommonft8b,ihash22,calls22,calls12
 
   include 'jt9com.f90'
 !  include 'timer_common.inc'
@@ -82,7 +82,7 @@ subroutine multimode_decoder(params)
   nagainjt9=.false.;  nagainjt9s=.false.;  nagainjt10=.false.
 
   if(params%lmodechanged) avexdt=0.
-  if(params%lbandchanged .and. (params%nmode.eq.8 .or. params%nmode.eq.4)) then; ihash22=-1; calls22=''; endif
+  if(params%lbandchanged .and. (params%nmode.eq.8 .or. params%nmode.eq.4)) then; ihash22=-1; calls22=''; calls12=''; endif
 
   if(.not.params%nagain) ndelay=params%ndelay
   lqsomsgdcd=.false.
