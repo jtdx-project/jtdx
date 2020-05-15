@@ -4575,12 +4575,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5744"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation type="unfinished">Работа разнесенными частотами на 160м с Японией</translation>
+        <translation>Работа разнесенными частотами на 160м с Японией</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5800"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Скрыть сообщения телеметрии</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="451"/>
