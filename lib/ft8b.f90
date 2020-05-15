@@ -987,6 +987,24 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       endif
     endif
 
+! KY2HTW/0O5M <...>  i3=4 n3=0
+! CQ Y09Q7/SS60M  i3=4 n3=1
+    if(i3.eq.4 .and. (xsnr.lt.-19.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0) .and. index(msg37,'/').gt.2) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; call_a='            '
+      if(ispc1.eq.12) then; call_a=msg37(1:ispc1-1); else; call_a=msg37(ispc1+1:ispc2-1); endif
+      if(len_trim(call_a).eq.11) then
+        islash=index(call_a,'/')
+        if(islash.gt.2 .and. (call_a(islash+1:islash+1).eq.'0' .or. call_a(islash+1:islash+1).eq.'Q' .or. &
+           (call_a(islash+1:islash+1).lt.':' .and. call_a(islash+1:islash+1).gt.'.' .and. &
+            call_a(islash+2:islash+2).lt.':' .and. call_a(islash+2:islash+2).gt.'.'))) then
+          nbadcrc=1; msg37=''; return
+        endif
+        if(islash.gt.5 .and. call_a(islash-1:islash-1).lt.':' .and. call_a(islash-1:islash-1).gt.'.') then
+          nbadcrc=1; msg37=''; return
+        endif
+      endif
+    endif
+
 ! FT8OPG/R Z27HRN/R OH12 check all standard messages with contest callsigns
 ! /P has i3.eq.2 .and. n3.eq.0
     if(iaptype.eq.0 .and. i3.eq.1 .and. n3.eq.0 .and. index(msg37,'/R ').gt.3) then
