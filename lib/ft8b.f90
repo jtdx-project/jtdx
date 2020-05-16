@@ -17,8 +17,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   character*37 msgsrcvd(130)
   complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymb0(32)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
-  real bmeta(174),bmetb(174),bmetc(174)
-  real llra(174),llrb(174),llrc(174),llrd(174)
+  real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
+  real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,napwid,nthr,imainpass,nsec,nft8rxfsens
@@ -473,6 +473,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
               if(i32+ib .gt.174) cycle
               if(nsym.eq.1) then
                 bmeta(i32+ib)=bm
+                den=max(maxval(s2(0:nt-1),one(0:nt-1,ibmax-ib)),maxval(s2(0:nt-1),.not.one(0:nt-1,ibmax-ib)))
+                if(den.gt.0.0) then; cm=bm/den; else; cm=0.0; endif
+                bmetd(i32+ib)=cm
               elseif(nsym.eq.2) then
                 bmetb(i32+ib)=bm
               elseif(nsym.eq.3) then
@@ -487,8 +490,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 !call indexx(bmetc(1:174),174,indx)
 !src=abs(bmetc(indx(1))/bmetc(indx(174)))
 !print *,src
-      call normalizebmet(bmeta,174); call normalizebmet(bmetb,174); call normalizebmet(bmetc,174)
-      scalefac=2.83; llra=scalefac*bmeta; llrb=scalefac*bmetb; llrc=scalefac*bmetc
+      call normalizebmet(bmeta,174);call normalizebmet(bmetb,174);call normalizebmet(bmetc,174);call normalizebmet(bmetd,174)
+      scalefac=2.83; llra=scalefac*bmeta; llrb=scalefac*bmetb; llrc=scalefac*bmetc; llrd=scalefac*bmetd
       apmag=maxval(abs(llra))*1.01
 
 ! ipass #
@@ -570,24 +573,30 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 !  data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
 !  data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
 
-      npasses=3
+      npasses=4
 ! iaptype 31,35,36 DX Call searching
       if(lapon) then
-        if(lhound) then; npasses=17 ! nhaptypes
+        if(lhound) then; npasses=18 ! nhaptypes
         else if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) &
-               then; npasses=15 ! naptypes
-        else if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then; npasses=17 ! ndxnsaptypes
-        else if(.not.lhound .and. .not.lmycallstd) then; npasses=3
+               then; npasses=16 ! naptypes
+        else if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then; npasses=18 ! ndxnsaptypes
+        else if(.not.lhound .and. .not.lmycallstd) then; npasses=4
         endif
-      else; npasses=3; endif ! drop AP masks for special messages if there is no TX activity
+      else; npasses=4; endif ! drop AP masks for special messages if there is no TX activity
 
       do ipass=1,npasses
-        if(ipass.lt.4) then
+        if(.not.swl .and. ipass.eq.4) cycle
+        if(ipass.lt.5) then
           apmask=0; iaptype=0
-          if(ipass.eq.1) then; llrd=llra; else if(ipass.eq.2) then; llrd=llrb; else if(ipass.eq.3) then; llrd=llrc; endif
+          if(ipass.eq.1) then
+            if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
+          else if(ipass.eq.2) then; llrz=llrb
+          else if(ipass.eq.3) then; llrz=llrc
+          else if(ipass.eq.4) then; llrz=llrd
+          endif
         else
           if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) then
-            iaptype=naptypes(nQSOProgress,ipass-3); if(iaptype.eq.0) cycle
+            iaptype=naptypes(nQSOProgress,ipass-4); if(iaptype.eq.0) cycle
             if(lqsomsgdcd .and. iaptype.ge.3 .and. iaptype.lt.31) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.eq.2) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
             if(stophint .and. iaptype.gt.2 .and. iaptype.lt.31) cycle
@@ -599,78 +608,78 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
             if(iaptype.ge.2 .and. iaptype.lt.31 .and. apsym(1).gt.1) cycle  ! No, or nonstandard, mycall 
             if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, dxcall
 
-            llrd=llra; if(iaptype.gt.30) llrd=llrc
+            llrz=llra; if(iaptype.gt.30) llrz=llrc
 
             if(iaptype.eq.1) then
-              if(.not.swl .and. ipass.eq.10) then
+              if(.not.swl .and. ipass.eq.11) then
                 scqlev=0.; do i4=1,9; scqlev=scqlev+s8(idtone25(2,i4),i4+7); enddo
                 snoiselev=(sum(s8(0:7,8:16))-scqlev)/7.0
                 scqnr(nthr)=scqlev/snoiselev
                 if(scqnr(nthr).lt.1.0) cycle
-                llrd=llrc
+                llrz=llrc
               endif
-              if(swl .and. ipass.eq.10) llrd=llrc
-              if(ipass.eq.12) then
+              if(swl .and. ipass.eq.11) llrz=llrc
+              if(ipass.eq.13) then
                 if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
-                  if(scqnr(nthr).gt.1.2) then; llrd=llrb; else; cycle; endif
+                  if(scqnr(nthr).gt.1.2) then; llrz=llrb; else; cycle; endif
                 endif
-                if(swl) llrd=llrb
+                if(swl) llrz=llrb
                 if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) then
-                  if(scqnr(nthr).gt.1.3) then; llrd=llrb; else; cycle; endif
+                  if(scqnr(nthr).gt.1.3) then; llrz=llrb; else; cycle; endif
                 endif
               endif
             endif
 
             if(iaptype.eq.2) then
-              if(.not.swl .and. ipass.eq.7) then
+              if(.not.swl .and. ipass.eq.8) then
                 smyclev=0.; do i4=1,9; smyclev=smyclev+s8(idtonemyc(i4),i4+7); enddo
                 snoiselev=(sum(s8(0:7,8:16))-smyclev)/7.0
                 smycnr(nthr)=smyclev/snoiselev
                 if(smycnr(nthr).lt.1.0) cycle
-                llrd=llrc
+                llrz=llrc
               endif
-              if(swl .and. ipass.eq.7) llrd=llrc
-              if(ipass.eq.9) then
+              if(swl .and. ipass.eq.8) llrz=llrc
+              if(ipass.eq.10) then
                 if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
-                  if(smycnr(nthr).gt.1.2) then; llrd=llrb; else; cycle; endif
+                  if(smycnr(nthr).gt.1.2) then; llrz=llrb; else; cycle; endif
                 endif
-                if(swl) llrd=llrb
+                if(swl) llrz=llrb
                 if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) cycle
               endif
             endif
 
             if(iaptype.eq.3) then
-              if(ipass.eq.4) then
+              if(ipass.eq.5) then
                 smyclev=0.; do i4=1,9; smyclev=smyclev+s8(idtonemyc(i4),i4+7); enddo
                 snoiselev=(sum(s8(0:7,8:16))-smyclev)/7.0
                 smycnr(nthr)=smyclev/snoiselev
                 if(smycnr(nthr).lt.1.0) cycle
-                llrd=llrc
-              else if(ipass.eq.6) then; if(smycnr(nthr).gt.1.2) then; llrd=llrb; else; cycle; endif
+                llrz=llrc
+              else if(ipass.eq.7) then; if(smycnr(nthr).gt.1.2) then; llrz=llrb; else; cycle; endif
               endif
             endif
 
             apmask=0
             if(iaptype.eq.1) then ! CQ
-              apmask(1:29)=1; llrd(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.2) then ! MyCall,???,???
-              apmask(1:29)=1; llrd(1:29)=apmag*apsym(1:29); apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:29)=1; llrz(1:29)=apmag*apsym(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.3) then ! MyCall,DxCall,??? 
-              apmask(1:58)=1; llrd(1:58)=apmag*apsym; apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:58)=1; llrz(1:58)=apmag*apsym; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.4 .or. iaptype.eq.5 .or. iaptype.eq.6) then  
-              apmask(1:77)=1; llrd(1:58)=apmag*apsym ! mycall, hiscall, RRR|73|RR73
-              if(iaptype.eq.4) llrd(59:77)=apmag*mrrr; if(iaptype.eq.5) llrd(59:77)=apmag*m73
-              if(iaptype.eq.6) llrd(59:77)=apmag*mrr73 
+              apmask(1:77)=1; llrz(1:58)=apmag*apsym ! mycall, hiscall, RRR|73|RR73
+              if(iaptype.eq.4) llrz(59:77)=apmag*mrrr; if(iaptype.eq.5) llrz(59:77)=apmag*m73
+              if(iaptype.eq.6) llrz(59:77)=apmag*mrr73 
             else if(iaptype.eq.31) then ! CQ  DxCall Grid(???)
-              apmask(1:77)=1; llrd(1:77)=apmag*apcqsym
+              apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
             else if(iaptype.eq.35) then ! ??? DxCall 73
-              apmask(30:77)=1; llrd(30:58)=apmag*apsym(30:58); llrd(59:77)=apmag*m73
+              apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*m73
             else if(iaptype.eq.36) then ! ??? DxCall RR73
-              apmask(30:77)=1; llrd(30:58)=apmag*apsym(30:58); llrd(59:77)=apmag*mrr73
+              apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*mrr73
             endif
 
           else if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
-            iaptype=ndxnsaptypes(nQSOProgress,ipass-3); if(iaptype.eq.0) cycle
+            iaptype=ndxnsaptypes(nQSOProgress,ipass-4); if(iaptype.eq.0) cycle
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.15) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
             if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
@@ -681,43 +690,43 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
             if(iaptype.gt.1 .and. iaptype.lt.15 .and. abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid) cycle
 
-            if(ipass.eq.4 .or. ipass.eq.7 .or. ipass.eq.10) then; llrd=llra
-            else if(ipass.eq.5 .or. ipass.eq.8 .or. ipass.eq.11) then; llrd=llrb
-            else if(ipass.eq.6 .or. ipass.eq.9 .or. ipass.gt.11) then; llrd=llrc
+            if(ipass.eq.5 .or. ipass.eq.8 .or. ipass.eq.11) then; llrz=llra
+            else if(ipass.eq.6 .or. ipass.eq.9 .or. ipass.eq.12) then; llrz=llrb
+            else if(ipass.eq.7 .or. ipass.eq.10 .or. ipass.gt.12) then; llrz=llrc
             endif
 
             apmask=0
             if(iaptype.eq.1) then ! CQ
-              apmask(1:29)=1; llrd(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.11) then ! MyCall <DxCall> ???  ! report rreport
-              apmask(1:58)=1; llrd(1:58)=apmag*apsymdxns1; apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:58)=1; llrz(1:58)=apmag*apsymdxns1; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.12 .or. iaptype.eq.13 .or. iaptype.eq.14) then  ! i3=4, to rework mrrr m73 mrr73
-              apmask(1:77)=1; llrd(1:58)=apmag*apsymdxns2 ! <MyCall> DxCall RRR|73|RR73
-              if(iaptype.eq.12) llrd(59:77)=apmag*mrrr; if(iaptype.eq.13) llrd(59:77)=apmag*m73 
-              if(iaptype.eq.14) llrd(59:77)=apmag*mrr73 
+              apmask(1:77)=1; llrz(1:58)=apmag*apsymdxns2 ! <MyCall> DxCall RRR|73|RR73
+              if(iaptype.eq.12) llrz(59:77)=apmag*mrrr; if(iaptype.eq.13) llrz(59:77)=apmag*m73 
+              if(iaptype.eq.14) llrz(59:77)=apmag*mrr73 
 ! <WA9XYZ> PJ4/KA1ABC RR73             13 58 1 2            74   Nonstandard call
 ! <WA9XYZ> PJ4/KA1ABC 73               13 58 1 2            74   Nonstandard call
             else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
-              apmask(1:77)=1; llrd(1:77)=apmag*apcqsym
+              apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
             else if(iaptype.eq.35) then ! ??? DxCall 73 ! full compound or nonstandard
-              apmask(14:77)=1; llrd(14:77)=apmag*apsymdxns73(14:77)
+              apmask(14:77)=1; llrz(14:77)=apmag*apsymdxns73(14:77)
             else if(iaptype.eq.36) then ! ??? DxCall RR73 ! full compound or nonstandard
-              apmask(14:77)=1; llrd(14:77)=apmag*apsymdxnsrr73(14:77)
+              apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
             endif
 
           else if(.not.lhound .and. .not.lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then ! empty calls or compound/nonstandard calls
-            iaptype=ndxnsaptypes(nQSOProgress,ipass-3); if(iaptype.eq.0) cycle
+            iaptype=ndxnsaptypes(nQSOProgress,ipass-4); if(iaptype.eq.0) cycle
             if(lqsomsgdcd .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! QSO message already decoded
 
-            if(iaptype.gt.1) cycle; if(ipass.gt.3) llrd=llrc ! temporary solution, need to add AP masks here
+            if(iaptype.gt.1) cycle; if(ipass.gt.4) llrz=llrc ! temporary solution, need to add AP masks here
 
             if(iaptype.eq.1) then ! CQ
-              apmask=0; apmask(1:29)=1; llrd(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrd(75:76)=apmag*(-1)
-              llrd(77)=apmag*(+1)
+              apmask=0; apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
+              llrz(77)=apmag*(+1)
             endif
 
           else if(lhound) then
-            iaptype=nhaptypes(nQSOProgress,ipass-3); if(iaptype.eq.0) cycle
+            iaptype=nhaptypes(nQSOProgress,ipass-4); if(iaptype.eq.0) cycle
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! skip AP for mycall in 2..3 minutes after last TX
             if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
@@ -728,30 +737,30 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
             if(lapon .and. nQSOProgress.gt.0 .and. iaptype.lt.31 .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! AP shall be applied to Fox frequencies
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! only Fox frequencies DX Call searching
 
-            if(ipass.eq.4 .or. ipass.eq.7 .or. ipass.eq.10 .or. ipass.eq.13) then; llrd=llra
-            else if(ipass.eq.5 .or. ipass.eq.8 .or. ipass.eq.11 .or. ipass.eq.14) then; llrd=llrb
-            else if(ipass.eq.6 .or. ipass.eq.9 .or. ipass.eq.12 .or. ipass.gt.14) then; llrd=llrc
+            if(ipass.eq.5 .or. ipass.eq.8 .or. ipass.eq.11 .or. ipass.eq.14) then; llrz=llra
+            else if(ipass.eq.6 .or. ipass.eq.9 .or. ipass.eq.12 .or. ipass.eq.15) then; llrz=llrb
+            else if(ipass.eq.7 .or. ipass.eq.10 .or. ipass.eq.13 .or. ipass.gt.15) then; llrz=llrc
             endif
 
             apmask=0
             if(iaptype.eq.21) then ! MyBaseCall DxBaseCall ???  ! report
-              apmask(1:58)=1; llrd(1:58)=apmag*apsym; apmask(75:77)=1; llrd(75:76)=apmag*(-1); llrd(77)=apmag*(+1)
+              apmask(1:58)=1; llrz(1:58)=apmag*apsym; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
             else if(iaptype.eq.22) then ! ??? RR73; MyCall <???> ??? ! report
-              apmask(29:66)=1; llrd(29:66)=apmag*apsymsp(29:66); apmask(72:77)=1; llrd(72:73)=apmag*(-1)
-              llrd(74)=apmag*(+1); llrd(75:77)=apmag*(-1)
+              apmask(29:66)=1; llrz(29:66)=apmag*apsymsp(29:66); apmask(72:77)=1; llrz(72:73)=apmag*(-1)
+              llrz(74)=apmag*(+1); llrz(75:77)=apmag*(-1)
             else if(iaptype.eq.23) then ! MyBaseCall DxBaseCall RR73
-              apmask(1:77)=1; llrd(1:58)=apmag*apsym; llrd(59:77)=apmag*mrr73
+              apmask(1:77)=1; llrz(1:58)=apmag*apsym; llrz(59:77)=apmag*mrr73
             else if(iaptype.eq.24) then ! MyCall RR73; ??? <???> ???
-              apmask(1:28)=1; apmask(57:66)=1; llrd(1:28)=apmag*apsymsp(1:28); llrd(57:66)=apmag*apsymsp(57:66)
-              apmask(72:77)=1; llrd(72:73)=apmag*(-1); llrd(74)=apmag*(+1); llrd(75:77)=apmag*(-1)
+              apmask(1:28)=1; apmask(57:66)=1; llrz(1:28)=apmag*apsymsp(1:28); llrz(57:66)=apmag*apsymsp(57:66)
+              apmask(72:77)=1; llrz(72:73)=apmag*(-1); llrz(74)=apmag*(+1); llrz(75:77)=apmag*(-1)
             else if(iaptype.eq.31) then ! CQ  DxCall Grid(???)
-              apmask(1:77)=1; llrd(1:77)=apmag*apcqsym
+              apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
             else if(iaptype.eq.36) then
               if(lhiscallstd .or. (.not.lhiscallstd .and. len(trim(hiscall)).gt.2 .and. index(hiscall,"/").gt.0)) then
-                apmask(30:77)=1; llrd(30:58)=apmag*apsym(30:58); llrd(59:77)=apmag*mrr73 ! ??? DxBaseCall RR73
+                apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*mrr73 ! ??? DxBaseCall RR73
 ! (noncompound .and. nonstandard) Fox callsign being not supported by Fox WSJT-X
 !            else if(.not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
-!              apmask=0; apmask(14:77)=1; llrd(14:77)=apmag*apsymdxnsrr73(14:77) ! ??? DxCall RR73 !  noncompound and nonstandard
+!              apmask=0; apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77) ! ??? DxCall RR73 !  noncompound and nonstandard
               endif
             endif
 
@@ -761,7 +770,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
         cw=0
 !        call timer('bpd174_91 ',0)
-        call bpdecode174_91(llrd,apmask,max_iterations,message77,cw,nharderrors,  &
+        call bpdecode174_91(llrz,apmask,max_iterations,message77,cw,nharderrors,  &
              niterations)
 !        call timer('bpd174_91 ',1)
         dmin=0.0
@@ -773,12 +782,12 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
           if(nagainfil) ndeep=5
 !print *,omp_get_nested(),OMP_get_num_threads()
 !          call timer('osd174_91 ',0)
-          call osd174_91(llrd,apmask,ndeep,message77,cw,nharderrors,dmin,nthr)
+          call osd174_91(llrz,apmask,ndeep,message77,cw,nharderrors,dmin,nthr)
 !          call timer('osd174_91 ',1)
         endif
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
-        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then
+        if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then ! chk ipass value
 
           if(.not.lapon .or. k1.eq.2) cycle
 
