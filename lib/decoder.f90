@@ -158,8 +158,7 @@ subroutine multimode_decoder(params)
      numthreads=1 ! fallback
      if(nuserthr.eq.0) then ! auto
        if(numcores.eq.1) then; numthreads=1
-       else if(numcores.eq.2) then; numthreads=2
-       else if(numcores.gt.2 .and. numcores.lt.13) then; numthreads=numcores-1
+       else if(numcores.ge.2 .and. numcores.lt.13) then; numthreads=numcores-1
        else if(numcores.gt.12) then; numthreads=12
        endif
      else if(nuserthr.gt.0 .and. nuserthr.le.12) then
