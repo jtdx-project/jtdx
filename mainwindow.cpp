@@ -489,7 +489,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   // hook up the detector signals, slots and disposal
   connect (this, &MainWindow::FFTSize, m_detector, &Detector::setBlockSize);
-  connect(m_detector, &Detector::framesWritten, this, &MainWindow::dataSink);
+  connect(m_detector, &Detector::framesWritten, this, &MainWindow::dataSink,Qt::QueuedConnection);
   connect (&m_audioThread, &QThread::finished, m_detector, &QObject::deleteLater);
 
   // setup the waterfall
@@ -1669,8 +1669,9 @@ void MainWindow::dataSink(qint64 frames)
   static int npts8;
   static float px=0.0;
   static float df3;
-  static QDateTime last {m_jtdxtime->currentDateTimeUtc2 ()};
+  static QDateTime last;
   static bool lastdelayed {false};
+  last = m_jtdxtime->currentDateTimeUtc2 ();
 
   if(m_diskData) dec_data.params.ndiskdat=1; else dec_data.params.ndiskdat=0;
 
@@ -1686,6 +1687,7 @@ void MainWindow::dataSink(qint64 frames)
 //	  msgBox("ihsym = " + QString::number(ihsym));
 	  return;
   }
+//  printf("%s(%0.1f) dataSink %s %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),last.toString("hh:mm:ss.zzz").toStdString().c_str(),ihsym,k);
   QString t;
   t = QString::asprintf(" Rx noise: %5.1f ",px);
   ui->signal_meter_widget->setValue(px); // Update thermometer
@@ -1706,7 +1708,7 @@ void MainWindow::dataSink(qint64 frames)
      || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay==0 && ihsym == m_hsymStop)
      || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= m_hsymStop)
      || (m_mode.startsWith("WSPR") && ihsym == m_hsymStop)) {
-    QDateTime now {m_jtdxtime->currentDateTimeUtc2 ()};
+    QDateTime now = m_jtdxtime->currentDateTimeUtc2 ();
 //prevent dupe decoding
     if(lastdelayed && m_delay==0) {
       if(m_mode=="FT8" && last.secsTo(now)<12) { lastdelayed=false; return; }
@@ -2036,7 +2038,8 @@ void MainWindow::monitor (bool state)
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       Q_EMIT resumeAudioInputStream ();
-      QTime currentTime = QTime::currentTime(); // decode part of interval
+//      QTime currentTime = QTime::currentTime(); // decode part of interval
+      QDateTime  currentTime = m_jtdxtime->currentDateTimeUtc2 (); // decode part of interval
       QString curtime=currentTime.toString("ss.zzz");
       curtime.remove(2,1); curtime.remove(3,2);
       int curdsec = curtime.toInt();
