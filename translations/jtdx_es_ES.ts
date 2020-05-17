@@ -4015,7 +4015,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4652"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Eliminarr todos los archivos * .wav y * .c2 en  directorio Save</translation>
+        <translation>Eliminar todos los archivos * .wav y * .c2 en  directorio Save</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4663"/>
