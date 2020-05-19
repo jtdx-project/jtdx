@@ -396,7 +396,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         endif
       endif
     endif
-    if(iqso.eq.4) then; nbadcrc=1; exit; endif
+    if(iqso.eq.4) then; nbadcrc=1; go to 2; endif
 
     synclev=0.0; snoiselev=1.0
     do k=1,7
@@ -419,7 +419,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         if(.not.lft8sdec .and. dfqso.lt.2.0) then
           if(lvirtual2 .or. lvirtual3) srr=0.0
           call ft8s(s82,srr,itone,msg37,lft8s,nft8rxfsens,stophint)
-          if(lft8s) then; nbadcrc=0; lft8sdec=.true.; lsdone=.true.; exit; endif
+          if(lft8s) then
+            if(index(msg37,'<').gt.0) then; lhashmsg=.true.; call delbraces(msg37); endif
+            nbadcrc=0; lft8sdec=.true.; lsdone=.true.; go to 2
+          endif
         endif
       endif
       lsdone=.true.; nbadcrc=1; cycle
@@ -797,7 +800,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
               if(.not.lqsomsgdcd .and. .not.(.not.lmycallstd .and. .not.lhiscallstd)) then
                 if(.not.lft8sdec .and. .not.stophint .and. dfqso.lt.2.0) then
                   call ft8s(s8,srr,itone,msg37,lft8s,nft8rxfsens,stophint)
-                  if(lft8s) then; nbadcrc=0; lft8sdec=.true.; endif
+                  if(lft8s) then
+                    if(index(msg37,'<').gt.0) then; lhashmsg=.true.; call delbraces(msg37); endif
+                    nbadcrc=0; lft8sdec=.true.
+                  endif
                 endif
               endif
               lsdone=.true.
@@ -832,7 +838,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
             if(.not.lqsomsgdcd .and. .not.(.not.lmycallstd .and. .not.lhiscallstd)) then
               if(.not.lft8sdec .and. .not.stophint .and. dfqso.lt.2.0) then
                 call ft8s(s8,srr,itone,msg37,lft8s,nft8rxfsens,stophint)
-                if(lft8s) then; nbadcrc=0; lft8sdec=.true.; endif
+                if(lft8s) then
+                  if(index(msg37,'<').gt.0) then; lhashmsg=.true.; call delbraces(msg37); endif
+                  nbadcrc=0; lft8sdec=.true.
+                endif
               endif
             endif
             lsdone=.true.
@@ -852,24 +861,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         if(i3.eq.0 .and. n3.eq.0) then; lFreeText=.true.; else; lFreeText=.false.; endif
 ! delete braces
         if(.not.lFreeText .and. i3bit.ne.1 .and. index(msg37,'<').gt.0) then
-          lhashmsg=.true.
-          ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-          ispc3=index(msg37((ispc2+1):),' ')+ispc2
-          ieoc1=ispc1-1
-          iboc2=ispc1+1; ieoc2=ispc2-1
-          if(msg37(1:1).eq.'<' .and. msg37(2:2).ne.'.') then
-            msg37(ieoc1:37)=msg37(ieoc1+1:37)//' '
-            msg37(1:37)=msg37(2:37)//' '
-          else if(msg37(iboc2:iboc2).eq.'<' .and. msg37(iboc2+1:iboc2+1).ne.'.') then
-            msg37(ieoc2:37)=msg37(ieoc2+1:37)//' '
-            msg37(iboc2:37)=msg37(iboc2+1:37)//' '
-          else
-            iboc3=ispc2+1; ieoc3=ispc3-1
-            if(msg37(iboc3:iboc3).eq.'<' .and. msg37(iboc3+1:iboc3+1).ne.'.') then
-              msg37(ieoc3:37)=msg37(ieoc3+1:37)//' '
-              msg37(iboc3:37)=msg37(iboc3+1:37)//' '
-            endif
-          endif
+          if(index(msg37,'<').gt.0) then; lhashmsg=.true.; call delbraces(msg37); endif
         endif
 !print *,msg37
         if(nbadcrc.eq.0) exit
