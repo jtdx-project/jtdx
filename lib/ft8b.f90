@@ -1117,6 +1117,14 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         endif
       endif
     endif
+! DX Call searching false decodes, search for 1st callsign in ALLCALL7
+! 6W6VIV EY8MM 73
+! 6Y9KOZ EY8MM RR73
+    if(iaptype.ge.35 .and. (xsnr.lt.-21.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0)) then
+      ispc1=index(msg37,' '); call_b='            '; call_b=msg37(1:ispc1-1)
+      falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
+      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+    endif
 
 4   ldupemsg=.false.
     if(ndecodes.gt.0) then
