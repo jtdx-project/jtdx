@@ -4480,7 +4480,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5583"/>
         <source>Color Tx message buttons</source>
-        <translation>Tx メッセージボタンの色</translation>
+        <translation>TX時メッセージボタンに色付け</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5591"/>
@@ -5937,7 +5937,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation type="unfinished">デコードピリオド間に区切り表示</translation>
+        <translation>デコードピリオド間に区切り表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>

@@ -2185,7 +2185,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Eksport...</translation>
+        <translation>Eksport...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -3467,7 +3467,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pasmo przenoszenia, FT8 150Hz, FT8 tryb hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Sygnały JT65: 580Hz dekodowanie, 300 Hz dla wyświetlania wiadomości. Filtr jest wyśrodkowany na centrum spektrum sygnały RX. Funkcjonalność filtru nie może polepszyć dekodowania sygnałów, jest przeznaczony do użytkowania przy wolnych CPU aby umożliwić dekoderowi zakończenie procesu dekodowania przez nadawaniem sygnału i zapobiec zmianie wiadomości podczas nadawania. Wszystkie przychodzące wołania będące poza pasmem filtra będą odrzucone, używać funkcjonalności filtra tylko wtedy jeżeli jest potrzebna dla twojego CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pasmo przenoszenia, FT8 150Hz, FT8 tryb hound 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. Sygnały JT65: 580Hz dekodowanie, 300 Hz dla wyświetlania wiadomości. Filtr jest wyśrodkowany na centrum spektrum sygnały RX. Funkcjonalność filtru nie może polepszyć dekodowania sygnałów, jest przeznaczony do użytkowania przy wolnych CPU aby umożliwić dekoderowi zakończenie procesu dekodowania przed nadawaniem sygnału i zapobiec zmianie wiadomości podczas nadawania. Wszystkie przychodzące wołania będące poza pasmem filtra będą odrzucone, używać funkcjonalności filtra tylko wtedy jeżeli jest potrzebna dla twojego CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2801"/>
@@ -4546,7 +4546,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5674"/>
         <source>Hide FT contest messages</source>
-        <translation>Ukrywaj wiadomości zawodów FT</translation>
+        <translation>Ukryj wiadomości zawodów FT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5682"/>
@@ -6888,7 +6888,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2491"/>
         <source>Enable sending to TCP server</source>
-        <translation>Aktywuj wysyłanie do serwera TCP</translation>
+        <translation>Wysyłanie do serwera TCP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2516"/>
@@ -6909,7 +6909,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2549"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>Aktywuj wysyłanie do drugiego serwera UDP</translation>
+        <translation>Wysyłanie do drugiego serwera UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2582"/>
@@ -6944,7 +6944,7 @@ Znak DX i Lokator DX gdy zostanie wysłany 73 lub dowolny tekst.</translation>
     <message>
         <location filename="../Configuration.ui" line="2680"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation>Aktywuj wysyłanie &amp;eQSL</translation>
+        <translation>Wysyłanie &amp;eQSL</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2700"/>
@@ -6980,7 +6980,7 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     <message>
         <location filename="../Configuration.ui" line="2743"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation>Aktywuj spoty do &amp;PSK Reporter</translation>
+        <translation>Spoty do &amp;PSK Reporter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2750"/>
@@ -6990,7 +6990,7 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     <message>
         <location filename="../Configuration.ui" line="2757"/>
         <source>Enable DXSummit Spotting </source>
-        <translation>Aktywuj przesyłanie spotów do DXSummit </translation>
+        <translation>Przesyłanie spotów do DXSummit </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2764"/>
@@ -7050,7 +7050,7 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     <message>
         <location filename="../Configuration.ui" line="2897"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation>Aktywuj wysyłanie danych ADIF zalogowanych QSO</translation>
+        <translation>Wsyłanie danych ADIF zalogowanych QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2907"/>
@@ -7193,7 +7193,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Sprawdź i podświetl nowe DXCC</translation>
+        <translation>Sprawdź i podświetl nowy DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -7268,7 +7268,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Sprawdź i podświetl nowe lokatory</translation>
+        <translation>Sprawdź i podświetl nowy lokator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -7288,7 +7288,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Sprawdź i podświetl nowe prefiksy</translation>
+        <translation>Sprawdź i podświetl nowy prefiks</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -7308,7 +7308,7 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new calls</source>
-        <translation>Sprawdź i podświetl nowe znaki</translation>
+        <translation>Sprawdź i podświetl nowy znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
