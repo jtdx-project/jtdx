@@ -223,6 +223,17 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     include 'callsign_q.f90'
     if(callsign.ne.hiscall) then
       falsedec=.false.
+      islash=index(msg37,'/R ')
+      if(islash.gt.7) then
+        ispc3=index(msg37((ispc2+1):),' ')+ispc2
+        if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+          grid=msg37(ispc2+1:ispc3-1)
+          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+        endif
+      endif
       call chkflscall('MYCALL      ',callsign,falsedec)
       if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
