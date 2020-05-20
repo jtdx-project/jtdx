@@ -102,14 +102,18 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! CQ Y09Q7/SS60M  i3=4 n3=1
       callsign=''; callsign=trim(msg37(4:)); islash=index(callsign,'/'); islash2=index(callsign(islash+1:),'/')
       nlencall=len_trim(callsign)
-      if(nlencall.eq.11 .and. islash2.lt.1) then
-        if(islash.lt.7 .and. ((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
-           callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':')) then
-          nbadcrc=1; msg37=''; return
+      if(nlencall.eq.11 .and. islash.gt.0 .and. islash2.lt.1) then
+        if(islash.lt.7) then
+          if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
+             callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
+            nbadcrc=1; msg37=''; return
+          endif
         endif
-        if(islash.gt.5 .and. (callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and. callsign(2:2).lt.':') .or. &
-           callsign(1:1).eq.'Q')) then
-          nbadcrc=1; msg37=''; return
+        if(islash.gt.5) then
+          if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and. callsign(2:2).lt.':') .or. &
+             callsign(1:1).eq.'Q') then
+            nbadcrc=1; msg37=''; return
+          endif
         endif
         if(islash.gt.4 .and. islash.lt.8) then
           call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
@@ -214,13 +218,17 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       if(islash.gt.4) then
         islash2=index(callsign(islash+1:),'/')
         if(nlencall.eq.11 .and. islash2.lt.1) then
-          if(islash.lt.7 .and. ((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
-             callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':')) then
-            nbadcrc=1; msg37=''; return
+          if(islash.lt.7) then
+            if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
+               callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
+              nbadcrc=1; msg37=''; return
+            endif
           endif
-          if(islash.gt.5 .and. (callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and.callsign(2:2).lt.':').or. &
-             callsign(1:1).eq.'Q')) then
-            nbadcrc=1; msg37=''; return
+          if(islash.gt.5) then
+            if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and.callsign(2:2).lt.':') .or. &
+               callsign(1:1).eq.'Q') then
+              nbadcrc=1; msg37=''; return
+            endif
           endif
           if(islash.gt.4 .and. islash.lt.8) then
             call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
