@@ -81,13 +81,13 @@ namespace
 
 int main(int argc, char *argv[])
 {
-// printf to CLI
-#ifdef WIN32
+#if defined(Q_OS_WIN)
   if (AttachConsole(ATTACH_PARENT_PROCESS)) {
     freopen("CONOUT$", "w", stdout);
     freopen("CONOUT$", "w", stderr);
   }
 #endif
+
   bool has_style = true;
   int result = 0;
   for (auto i = 0; i < argc; i++) if (std::string(argv[i]).find("-style") != std::string::npos ) has_style = false;
