@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
       a.setApplicationVersion (version ());
   if (version().replace("_32A","").indexOf("_") > 1) {
     #include <QDate>
-    auto expire_date = QDate().fromString(__DATE__,"MMM d yyyy").addMonths(3);
+    auto expire_date = QLocale(QLocale::English).toDate(__DATE__,"MMM d yyyy").addMonths(3);
     if (QDate().currentDate() > expire_date) {
       JTDXMessageBox::critical_message (nullptr, a.applicationName(), "Release candidate expired on " + expire_date.toString("dd.MM.yyyy"));
           return -1;
