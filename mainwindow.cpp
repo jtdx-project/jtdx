@@ -1700,6 +1700,18 @@ void MainWindow::dataSink(qint64 frames)
   if(m_diskData || m_mode.startsWith("WSPR")) m_delay=0;
   else if(m_swl || m_FT8LateStart) nhsymEStopFT8 = 51;
 
+// let Win users to decode some intervals if some frames were dropped in system audio
+#if defined(Q_OS_WIN)
+  if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
+    QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
+    quint64 n1=now1.toMSecsSinceEpoch()%15000;
+    if(n1>14735) {
+      if(m_config.write_decoded_debug()) writeToALLTXT("Dropped audio frames, ihsym=" + QString::number(ihsym) + " n1=" + QString::number(n1));
+      if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
+    } 
+  }
+#endif
+
 //cycling approximately once per 269..301 milliseconds
   if((m_mode=="FT8" && m_delay==0 && ihsym == nhsymEStopFT8)
      || (m_mode=="FT8" && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= nhsymEStopFT8)
