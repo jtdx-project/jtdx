@@ -1198,6 +1198,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("QuickCall", m_autoTx);
   m_settings->setValue("AutoSequence", m_autoseq);
   m_settings->setValue("SpotText", m_spotText);
+  m_settings->setValue ("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
   m_settings->endGroup();
 }
 
@@ -1486,6 +1487,8 @@ void MainWindow::readSettings()
 
   m_spotText=m_settings->value("SpotText","").toString();
   ui->spotLineEdit->setText(m_spotText);
+
+  ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog", true).toBool());
 
   m_settings->endGroup();
   
@@ -5770,11 +5773,13 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
   writeToALLTXT("QSO logged: " + m_lastloggedcall);
   setLastLogdLabel();
 //clean up wanted call from window/list if QSO with this call is logged in
-  int wcallidx=-1;
-  if(m_mode.startsWith("FT")) wcallidx=m_wantedCallList.indexOf(call);
-  else wcallidx=m_wantedCallList.indexOf(Radio::base_callsign (call));
-  if(wcallidx >= 0) {
-     m_wantedCallList.removeAt(wcallidx); ui->wantedCall->setText(m_wantedCallList.join(","));
+  if(ui->cbClearCallsign->isChecked ()) {
+    int wcallidx=-1;
+    if(m_mode.startsWith("FT")) wcallidx=m_wantedCallList.indexOf(call);
+    else wcallidx=m_wantedCallList.indexOf(Radio::base_callsign (call));
+    if(wcallidx >= 0) {
+      m_wantedCallList.removeAt(wcallidx); ui->wantedCall->setText(m_wantedCallList.join(","));
+    }
   }
   if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition Hound mode"); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);"); }
 }
