@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on 20190928
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 module packjt77
 
 ! These variables are accessible from outside via "use packjt77":
@@ -513,6 +510,21 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
         msg='CQ '//trim(call_2)
      endif
      if(call_2(1:1).lt.':' .and. call_2(1:1).gt.'/' .and. call_2(2:2).lt.':' .and. call_2(2:2).gt.'/') unpk77_success=.false.
+     if(len_trim(call_2).eq.11) then
+       ispace=index(call_2,' '); if(ispace.gt.0 .and. ispace.lt.12) unpk77_success=.false.
+       islash=index(call_2,'/'); if(islash.eq.1 .or. islash.eq.2 .or. islash.eq.11 .or. (islash.eq.10 .and. &
+       call_2(11:11).gt.'@' .and. call_2(11:11).lt.'[' .and. call_2(11:11).ne.'P')) unpk77_success=.false.
+       if(islash.lt.6 .and. call_2(11:11).lt.':' .and. call_2(11:11).gt.'/') unpk77_success=.false.
+     endif
+     if(msg(1:3).ne.'CQ ') then
+       if(call_1(1:1).lt.':' .and. call_1(1:1).gt.'/' .and. call_1(2:2).lt.':' .and.call_1(2:2).gt.'/') unpk77_success=.false.
+       if(len_trim(call_1).eq.11) then
+         ispace=index(call_1,' '); if(ispace.gt.0 .and. ispace.lt.12) unpk77_success=.false.
+         islash=index(call_1,'/'); if(islash.eq.1 .or. islash.eq.2 .or. islash.eq.11 .or. (islash.eq.10 .and. &
+         call_1(11:11).gt.'@' .and. call_1(11:11).lt.'[' .and. call_1(11:11).ne.'P')) unpk77_success=.false.
+         if(islash.lt.6 .and. call_1(11:11).lt.':' .and. call_1(11:11).gt.'/') unpk77_success=.false.
+       endif
+     endif
 
   else if(i3.eq.5) then
 ! 5    TU; W9XYZ K1ABC R-09 FN             1 28 28 1 7 9       74   WWROF contest

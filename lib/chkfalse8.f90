@@ -7,7 +7,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
   logical(1) falsedec,lchkcall,lgvalid,lwrongcall
   data mask6/'001000','101000','011000'/
 
-  call_a='            '; call_b='            '
+  call_a=''; call_b=''
 ! iaptype=0 non-AP decoder
 ! iaptype=1 CQ message AP decoder
 
@@ -43,39 +43,39 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! -23  0.3 1482 ~ CQ EQ3YCI/KVNA  i3=4 n3=1 
 ! -23 -1.3 CQ P28Z58W/77M  i3=4 n3=1
   if(msg37(1:3).eq.'CQ ') then
-    callsign='            '; ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    callsign=''; ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(i3.eq.4) then
       islash=index(msg37,'/')
-      if(ispc2.gt.7 .and. islash.le.0) then ! 'CQ nnn XX1XX' message shall not be checked
-        if(islash.le.0) then
-          callsign=msg37(ispc1+1:ispc2-1)
-        else
-          if(islash.gt.ispc1 .and. islash.lt.ispc2) then
-            if(islash-ispc1.le.ispc2-islash) then; callsign=msg37(islash+1:ispc2-1)
-            else; callsign=msg37(ispc1+1:islash-1)
-            endif
+      if(islash.le.0) then
+        callsign=trim(msg37(ispc1+1:)); nlencall=len_trim(callsign); ispccall=index(callsign,' ')
+! CQ 9D6T0GA4 Z space inside callsign of any length: protocol violation, or last char is digit
+        if(ispccall.lt.nlencall .or. callsign(nlencall:nlencall).lt.':') then; nbadcrc=1; msg37=''; return; endif
+      else
+        if(islash.gt.ispc1 .and. islash.lt.ispc2) then
+          if(islash-ispc1.le.ispc2-islash) then; callsign=msg37(islash+1:ispc2-1)
+          else; callsign=msg37(ispc1+1:islash-1)
           endif
         endif
-        include 'callsign_q.f90'
-        if(islash.gt.0) then
-          falsedec=.false.; call chkflscall('CQ          ',callsign,falsedec)
+      endif
+      include 'callsign_q.f90'
+      if(islash.gt.0) then
+        falsedec=.false.; call chkflscall('CQ          ',callsign,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      else
+        nlen=len_trim(callsign)
+        if(nlen.ge.10) then
+          falsedec=.false.
+          call chklong8(callsign,falsedec)
           if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-        else
-          nlen=len_trim(callsign)
-          if(nlen.ge.10) then
-            falsedec=.false.
-            call chklong8(callsign,falsedec)
-            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-          else if(nlen.eq.6 .and. index(callsign,'/').lt.1) then ! 'CQ VK6ZRW'  protocol violation, i3 for stdcall shall be equal to 1
-            do i=1,6
-              if(callsign(i:i).gt.'/' .and. callsign(i:i).lt.':') then; callmask6(i:i)='1'; else; callmask6(i:i)='0'; endif
-            enddo
-            falsedec=.false.
-            do i=1,3
-              if(callmask6.eq.mask6(i)) then; falsedec=.true.; exit; endif ! standard callsign, false decode
-            enddo
-            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-          endif
+        else if(nlen.eq.6 .and. index(callsign,'/').lt.1) then ! 'CQ VK6ZRW'  protocol violation, i3 for stdcall shall be equal to 1
+          do i=1,6
+            if(callsign(i:i).gt.'/' .and. callsign(i:i).lt.':') then; callmask6(i:i)='1'; else; callmask6(i:i)='0'; endif
+          enddo
+          falsedec=.false.
+          do i=1,3
+            if(callmask6.eq.mask6(i)) then; falsedec=.true.; exit; endif ! standard callsign, false decode
+          enddo
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
         endif
       endif
 ! 'CQ 3Q2VFI RH49          *' filter is based on the Grid
@@ -98,6 +98,32 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       endif
     endif
 
+    if(i3.eq.4) then
+! CQ Y09Q7/SS60M  i3=4 n3=1
+      callsign=''; callsign=trim(msg37(4:)); islash=index(callsign,'/'); islash2=index(callsign(islash+1:),'/')
+      nlencall=len_trim(callsign)
+      if(nlencall.eq.11 .and. islash.gt.0 .and. islash2.lt.1) then
+        if(islash.lt.7) then
+          if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
+             callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
+            nbadcrc=1; msg37=''; return
+          endif
+        endif
+        if(islash.gt.5) then
+          if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and. callsign(2:2).lt.':') .or. &
+             callsign(1:1).eq.'Q') then
+            nbadcrc=1; msg37=''; return
+          endif
+        endif
+        if(islash.gt.4 .and. islash.lt.8) then
+          call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
+          falsedec=.false.
+          call chkflscall(call_a,call_b,falsedec)
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        endif
+      endif
+    endif
+
     return ! prevent further checking if message starts from 'CQ '
 ! TO DO via patterns: '175715 -18 -0.1 2519 ~ CQ P2PSR6UWBHS'
   endif
@@ -111,7 +137,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! 'N40RTH AD2WPI/R MG62'
 !print *,msg37
     islash1=index(msg37,'/')
-    call_a='            '; call_b='            '
+    call_a=''; call_b=''
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(islash1.le.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
       call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
@@ -159,23 +185,59 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
   if(i3.eq.4) then
     ibrace1=index(msg37,'<.')
     if(index(msg37,'<.').gt.4) then
+      callsign=''; callsign=msg37(1:ibrace1-2); islash=index(callsign,'/'); nlencall=len_trim(callsign)
 ! i3=4 n3=2 '6397X6JN637 <...> RRR' 
-      callsign='            '
-      callsign=msg37(1:ibrace1-2)
 ! 'R 5QCDOIY9 <...> RR73'
-      if(index(trim(callsign),' ').gt.0) then; nbadcrc=1; msg37=''; return; endif
+      if(index(trim(callsign),' ').gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':')) then
+        nbadcrc=1; msg37=''; return
+      endif
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
       if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
-    if(index(msg37,'<.').eq.1) then
+    if(msg37(1:2).eq.'<.' .or. index(msg37,'.>').gt.4) then
 !'<...> 104J71MFOT9 RR73'
 ! i3=4 n3=0 '<...> /7ZZZZ/ /8'
 ! i3=4 n3=2 '<...> 6HGLDZ 5IN2 RRR'
-      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      callsign='            '
-      callsign=msg37(ispc1+1:ispc2-1)
+      callsign=''; nlenmsg=len_trim(msg37)
+      if(msg37(1:2).eq.'<.') then
+        if(msg37(nlenmsg-4:nlenmsg).eq.' RR73') then; callsign=msg37(7:nlenmsg-5)
+        else if(msg37(nlenmsg-2:nlenmsg).eq.' 73') then; callsign=msg37(7:nlenmsg-3)
+        else if(msg37(nlenmsg-3:nlenmsg).eq.' RRR') then; callsign=msg37(7:nlenmsg-4)
+        else; callsign=msg37(7:nlenmsg)
+        endif
+      else
+        ibracket=index(msg37,'<.'); callsign=msg37(1:ibracket-2)
+      endif
+      nlencall=len_trim(callsign); ispace=index(callsign(1:nlencall),' '); islash=index(callsign,'/')
+      if(ispace.gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':') .or. islash.eq.nlencall) then
+        nbadcrc=1; msg37=''; return
+      endif
+! KY2HTW/0O5M <...>  i3=4 n3=0
+      if(islash.gt.4) then
+        islash2=index(callsign(islash+1:),'/')
+        if(nlencall.eq.11 .and. islash2.lt.1) then
+          if(islash.lt.7) then
+            if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
+               callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
+              nbadcrc=1; msg37=''; return
+            endif
+          endif
+          if(islash.gt.5) then
+            if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and.callsign(2:2).lt.':') .or. &
+               callsign(1:1).eq.'Q') then
+              nbadcrc=1; msg37=''; return
+            endif
+          endif
+          if(islash.gt.4 .and. islash.lt.8) then
+            call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
+            falsedec=.false.
+            call chkflscall(call_a,call_b,falsedec)
+            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+      endif
       include 'callsign_q.f90'
       falsedec=.false.
       call chklong8(callsign,falsedec)
@@ -214,7 +276,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
   if(iaptype.eq.2) then ! message starts with user's callsign
 ! 'UA3ALE A70DDN/R OF23'
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    callsign='            '
+    callsign=''
     callsign=msg37(ispc1+1:ispc2-1)
     islash=index(callsign,'/')
     if(islash.gt.0) then
@@ -223,6 +285,17 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     include 'callsign_q.f90'
     if(callsign.ne.hiscall) then
       falsedec=.false.
+      islash=index(msg37,'/R ')
+      if(islash.gt.7) then
+        ispc3=index(msg37((ispc2+1):),' ')+ispc2
+        if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+          grid=msg37(ispc2+1:ispc3-1)
+          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+        endif
+      endif
       call chkflscall('MYCALL      ',callsign,falsedec)
       if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif

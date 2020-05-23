@@ -17,9 +17,9 @@ subroutine chklong8(callsign,falsedec)
 !valid masks for 11-char callsign:
 ! DL2019ABCDE TC630ABCDEF 9A200ABCDEF 9A2019ABCDE ZW5STAYHOME Z39STAYHOME 5B4STAYHOME
 ! 00111100000 00111000000 10111000000 10111100000 00100000000 01100000000 10100000000
-  callmask='            '
+  callmask=''
 ! need to exclude 8J/8N/8K Japanese callsigns from checking
-  if(index(callsign,'/').le.0 .and. callsign(1:2).ne.'8J' .and. callsign(1:2).ne.'8N') then
+  if(index(callsign,'/').lt.1 .and. callsign(1:2).ne.'8J' .and. callsign(1:2).ne.'8N') then
     if(len_trim(callsign).eq.10) then
       do i=1,10
         if(callsign(i:i).gt.'/' .and. callsign(i:i).lt.':') then; callmask(i:i)='1'; else; callmask(i:i)='0'; endif

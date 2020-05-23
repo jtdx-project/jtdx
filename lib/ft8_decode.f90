@@ -24,12 +24,13 @@ contains
 
   subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ndepth,nft8filtdepth,lapon,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
-                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhidetest,lhideft8dupes,lhidehash)
+                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
                          oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles
+    use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
 
@@ -40,10 +41,10 @@ contains
     real candidate(3,260)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ndepth,nft8filtdepth,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
-    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhidetest,lhideft8dupes, &
+    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidetestmsg,lhighsens,lonepass
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -187,13 +188,14 @@ contains
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
         if(nbadcrc.eq.0) then
-          lhidetestmsg=.false.
+          lhidemsg=.false.
+          if(lhidetelemetry .and. i3.eq.0 .and. n3.eq.5) lhidemsg=.true.
           if(lhidetest) then
             if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3) then
-              if(mycalllen1.lt.4 .or. msg37(1:mycalllen1).ne.trim(mycall)//' ') lhidetestmsg=.true.
+              if(mycalllen1.lt.4 .or. msg37(1:mycalllen1).ne.trim(mycall)//' ') lhidemsg=.true.
             endif
             if(msg37(1:3).eq.'CQ ') then
-              if(msg37(1:6).eq.'CQ RU ' .or. msg37(1:6).eq.'CQ FD ' .or. msg37(1:8).eq.'CQ TEST ') lhidetestmsg=.true.
+              if(msg37(1:6).eq.'CQ RU ' .or. msg37(1:6).eq.'CQ FD ' .or. msg37(1:8).eq.'CQ TEST ') lhidemsg=.true.
             endif
           endif
 
@@ -224,7 +226,7 @@ contains
               allmessages(ndecodes)=msg37
               allsnrs(ndecodes)=nsnr
               allfreq(ndecodes)=f1
-              if(.not.lhidetestmsg) then
+              if(.not.lhidemsg) then
                 if(iaptype.eq.0) then
                   if(.not.lFreeText .or. lspecial) servis8=' '
                   if(.not.lspecial .and. lFreeText) then

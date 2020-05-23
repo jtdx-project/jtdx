@@ -109,7 +109,7 @@ namespace
       {24917000, Modes::JT65, IARURegions::ALL,true},
       {24919000, Modes::JT9, IARURegions::ALL,true},
       {24919000, Modes::FT4, IARURegions::ALL,true}, // provisional
-      {24929000, Modes::T10, IARURegions::ALL,true},
+      {24920000, Modes::T10, IARURegions::ALL,true},
       {24924600, Modes::WSPR, IARURegions::ALL,true},
       
       {28074000, Modes::FT8, IARURegions::ALL,true},

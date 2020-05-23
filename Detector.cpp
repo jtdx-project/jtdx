@@ -63,6 +63,7 @@ qint64 Detector::writeData (char const * data, qint64 maxSize)
   if(mstr < mstr0) {              //When mstr has wrapped around to 0, restart the buffer
     dec_data.params.kin = 0;
     m_bufferPos = 0;
+//    printf("%s(%0.1f) reset buffer mstr:%d mstr0:%d maxSize:%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),mstr,mstr0,maxSize);
   }
   mstr0=mstr;
 
@@ -103,7 +104,9 @@ qint64 Detector::writeData (char const * data, qint64 maxSize)
             // qDebug() << "secondInPeriod      = " << secondInPeriod();
             // qDebug() << "framesAfterDownSample" << framesAfterDownSample;
           }
+//    printf("%s(%0.1f) frameswritten %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),dec_data.params.kin);
           Q_EMIT framesWritten (dec_data.params.kin);
+//    printf("%s(%0.1f) frameswritten done\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
           m_bufferPos = 0;
         }
 

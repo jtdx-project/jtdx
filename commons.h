@@ -91,6 +91,7 @@ extern struct dec_data {
     bool lft8subpass;
     bool lft8latestart;
     bool lhidetest;
+    bool lhidetelemetry;
     bool lhideft8dupes;
     bool lhound;
     bool lhidehash;

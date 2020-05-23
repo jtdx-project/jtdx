@@ -390,7 +390,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                 t.count = 0;
               }
             }
-            if (t.call.length() < callsign.length() && callsign.contains(t.call))
+            if (status == RCQ || status == RCALL || (t.call.length() < callsign.length() && callsign.contains(t.call)))
               {
                 t.call=callsign;
               }

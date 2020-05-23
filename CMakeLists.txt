@@ -328,6 +328,7 @@ set (wsjt_FSRCS
   lib/decode65b.f90
   lib/decoder.f90
   lib/deg2grid.f90
+  lib/delbraces.f90
   lib/demod64a.f90
   lib/determ.f90
   lib/downsam10.f90

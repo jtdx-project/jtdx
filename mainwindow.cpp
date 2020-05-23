@@ -489,7 +489,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   // hook up the detector signals, slots and disposal
   connect (this, &MainWindow::FFTSize, m_detector, &Detector::setBlockSize);
-  connect(m_detector, &Detector::framesWritten, this, &MainWindow::dataSink);
+  connect(m_detector, &Detector::framesWritten, this, &MainWindow::dataSink,Qt::QueuedConnection);
   connect (&m_audioThread, &QThread::finished, m_detector, &QObject::deleteLater);
 
   // setup the waterfall
@@ -1151,6 +1151,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("UseHoundTxFrequencyJumps",ui->actionUse_TX_frequency_jumps->isChecked()); 
   m_settings->setValue("ShowHarmonics",ui->actionShow_messages_decoded_from_harmonics->isChecked());
   m_settings->setValue("HideFTContestMessages",ui->actionHide_FT_contest_messages->isChecked());
+  m_settings->setValue("HideTelemetryMessages",ui->actionHide_telemetry_messages->isChecked());
   m_settings->setValue("HideFT8Dupes",ui->actionHide_FT8_dupe_messages->isChecked());
   m_settings->setValue("ShowMyCallMessagesRxWindow",ui->actionMyCallRXFwindow->isChecked());
   m_settings->setValue("ShowWantedCallMessagesRxWindow",ui->actionWantedCallRXFwindow->isChecked());
@@ -1197,6 +1198,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("QuickCall", m_autoTx);
   m_settings->setValue("AutoSequence", m_autoseq);
   m_settings->setValue("SpotText", m_spotText);
+  m_settings->setValue ("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
   m_settings->endGroup();
 }
 
@@ -1340,6 +1342,10 @@ void MainWindow::readSettings()
     ui->actionHide_FT_contest_messages->setChecked(false);
   else ui->actionHide_FT_contest_messages->setChecked(m_settings->value("HideFTContestMessages").toBool());
 
+  if(m_settings->value("HideTelemetryMessages").toString()!="false" && m_settings->value("HideTelemetryMessages").toString()!="true") 
+    ui->actionHide_telemetry_messages->setChecked(false);
+  else ui->actionHide_telemetry_messages->setChecked(m_settings->value("HideTelemetryMessages").toBool());
+
   ui->actionHide_FT8_dupe_messages->setChecked(m_settings->value("HideFT8Dupes",true).toBool());
   ui->actionMyCallRXFwindow->setChecked(m_settings->value("ShowMyCallMessagesRxWindow",true).toBool());
   ui->actionWantedCallRXFwindow->setChecked(m_settings->value("ShowWantedCallMessagesRxWindow",false).toBool());
@@ -1481,6 +1487,8 @@ void MainWindow::readSettings()
 
   m_spotText=m_settings->value("SpotText","").toString();
   ui->spotLineEdit->setText(m_spotText);
+
+  ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog", true).toBool());
 
   m_settings->endGroup();
   
@@ -1664,8 +1672,9 @@ void MainWindow::dataSink(qint64 frames)
   static int npts8;
   static float px=0.0;
   static float df3;
-  static QDateTime last {m_jtdxtime->currentDateTimeUtc2 ()};
+  static QDateTime last;
   static bool lastdelayed {false};
+  last = m_jtdxtime->currentDateTimeUtc2 ();
 
   if(m_diskData) dec_data.params.ndiskdat=1; else dec_data.params.ndiskdat=0;
 
@@ -1681,6 +1690,7 @@ void MainWindow::dataSink(qint64 frames)
 //	  msgBox("ihsym = " + QString::number(ihsym));
 	  return;
   }
+//  printf("%s(%0.1f) dataSink %s %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),last.toString("hh:mm:ss.zzz").toStdString().c_str(),ihsym,k);
   QString t;
   t = QString::asprintf(" Rx noise: %5.1f ",px);
   ui->signal_meter_widget->setValue(px); // Update thermometer
@@ -1693,6 +1703,18 @@ void MainWindow::dataSink(qint64 frames)
   if(m_diskData || m_mode.startsWith("WSPR")) m_delay=0;
   else if(m_swl || m_FT8LateStart) nhsymEStopFT8 = 51;
 
+// let Win users to decode some intervals if some frames were dropped in system audio
+#if defined(Q_OS_WIN)
+  if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
+    QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
+    quint64 n1=now1.toMSecsSinceEpoch()%15000;
+    if(n1>14735) {
+      if(m_config.write_decoded_debug()) writeToALLTXT("Dropped audio frames, ihsym=" + QString::number(ihsym) + " n1=" + QString::number(n1));
+      if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
+    } 
+  }
+#endif
+
 //cycling approximately once per 269..301 milliseconds
   if((m_mode=="FT8" && m_delay==0 && ihsym == nhsymEStopFT8)
      || (m_mode=="FT8" && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= nhsymEStopFT8)
@@ -1701,7 +1723,7 @@ void MainWindow::dataSink(qint64 frames)
      || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay==0 && ihsym == m_hsymStop)
      || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= m_hsymStop)
      || (m_mode.startsWith("WSPR") && ihsym == m_hsymStop)) {
-    QDateTime now {m_jtdxtime->currentDateTimeUtc2 ()};
+    QDateTime now = m_jtdxtime->currentDateTimeUtc2 ();
 //prevent dupe decoding
     if(lastdelayed && m_delay==0) {
       if(m_mode=="FT8" && last.secsTo(now)<12) { lastdelayed=false; return; }
@@ -2031,7 +2053,8 @@ void MainWindow::monitor (bool state)
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       Q_EMIT resumeAudioInputStream ();
-      QTime currentTime = QTime::currentTime(); // decode part of interval
+//      QTime currentTime = QTime::currentTime(); // decode part of interval
+      QDateTime  currentTime = m_jtdxtime->currentDateTimeUtc2 (); // decode part of interval
       QString curtime=currentTime.toString("ss.zzz");
       curtime.remove(2,1); curtime.remove(3,2);
       int curdsec = curtime.toInt();
@@ -3018,6 +3041,7 @@ void MainWindow::decode()                                       //decode()
   else dec_data.params.lft8subpass=false;
   dec_data.params.lft8latestart=m_FT8LateStart;
   dec_data.params.lhidetest=(ui->actionHide_FT_contest_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
+  dec_data.params.lhidetelemetry=(ui->actionHide_telemetry_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhideft8dupes=ui->actionHide_FT8_dupe_messages->isChecked() ? 1 : 0;
   dec_data.params.lhound=m_houndMode ? 1 : 0;
   dec_data.params.lhidehash=m_config.hide2ndHash() && !m_bypassAllFilters;
@@ -5749,11 +5773,13 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
   writeToALLTXT("QSO logged: " + m_lastloggedcall);
   setLastLogdLabel();
 //clean up wanted call from window/list if QSO with this call is logged in
-  int wcallidx=-1;
-  if(m_mode.startsWith("FT")) wcallidx=m_wantedCallList.indexOf(call);
-  else wcallidx=m_wantedCallList.indexOf(Radio::base_callsign (call));
-  if(wcallidx >= 0) {
-     m_wantedCallList.removeAt(wcallidx); ui->wantedCall->setText(m_wantedCallList.join(","));
+  if(ui->cbClearCallsign->isChecked ()) {
+    int wcallidx=-1;
+    if(m_mode.startsWith("FT")) wcallidx=m_wantedCallList.indexOf(call);
+    else wcallidx=m_wantedCallList.indexOf(Radio::base_callsign (call));
+    if(wcallidx >= 0) {
+      m_wantedCallList.removeAt(wcallidx); ui->wantedCall->setText(m_wantedCallList.join(","));
+    }
   }
   if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition Hound mode"); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);"); }
 }
