@@ -2371,7 +2371,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Frequência</translation>
     </message>
 </context>
 <context>
@@ -3255,12 +3255,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Limpa o indicativo desta lista ao registrar o QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
@@ -4574,7 +4574,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5813"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar mensagens de telemetria</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="451"/>
@@ -4669,7 +4669,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1944"/>
         <source>Pwr</source>
-        <translation>Pot.</translation>
+        <translation>Pot</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2445"/>
@@ -4869,7 +4869,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4312"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation>Pot.&lt;br&gt;%1 W</translation>
+        <translation>Pot&lt;br&gt;%1 W</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4470"/>
