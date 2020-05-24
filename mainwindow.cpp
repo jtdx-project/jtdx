@@ -7603,7 +7603,7 @@ void MainWindow::on_cbShowWanted_toggled(bool b)
   m_wantedchkd=b;
   ui->labWantCall->setVisible(b); ui->wantedCall->setVisible(b); ui->labWantCountry->setVisible(b); ui->wantedCountry->setVisible(b);
   ui->labWantPfx->setVisible(b); ui->wantedPrefix->setVisible(b); ui->labWantGrid->setVisible(b); ui->wantedGrid->setVisible(b);
-  dynamicButtonsInit();
+  ui->cbClearCallsign->setVisible(b); dynamicButtonsInit();
 }
 
 void MainWindow::on_cbShowSpot_toggled(bool b) 
