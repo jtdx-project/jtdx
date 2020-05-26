@@ -1,8 +1,6 @@
-! last time modified by Igor UA3DJY on 20200217
-
 subroutine cwfilter(swl,first,swlchanged)
 
-  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25
+  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25,csynccq
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
@@ -85,7 +83,7 @@ subroutine cwfilter(swl,first,swlchanged)
         if(iand(i,2**j).ne.0) one(i,j)=.true.
       enddo
     enddo
-	 
+ 
 !for sync8d.f90:
 !     fs2=12000.0/NDOWN         !Sample rate after downsampling
 !     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
@@ -93,12 +91,20 @@ subroutine cwfilter(swl,first,swlchanged)
     pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
     do i=0,6
       phi=0.0
-      dphi=pstep*icos7(i)  
+      dphi=pstep*icos7(i)
       do j=1,32
         csync(i,j)=cmplx(cos(phi),sin(phi)) !Waveform for 7x7 Costas array
         phi=mod(phi+dphi,twopi)
       enddo
     enddo
+    csynccq(0:7,1:32)=cmplx(1.0,0.0)
+    phi=0.0
+    if(i.lt.8) then; dphi=0.; else; dphi=pstep; endif
+    do j=1,32
+      csynccq(8,j)=cmplx(cos(phi),sin(phi)) !Waveform for 7x7 Costas array
+      phi=mod(phi+dphi,twopi)
+    enddo
+
     msgcq25=''
     msgcq25(2)='CQ 2E0DLA IO92'
     msgcq25(3)='CQ BH3NEB ON81'

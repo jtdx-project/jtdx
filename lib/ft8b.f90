@@ -1,6 +1,6 @@
 subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,filter,lft8subpass,lspecial,                       &
+                nthr,lFreeText,imainpass,filter,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
 !  use timer_module, only: timer
@@ -22,7 +22,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   integer itone(79),ip(1),ka(1)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,napwid,nthr,imainpass,nsec,nft8rxfsens
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
-  logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth,lhighsens
+  logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
+                            lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,lwrongcall
 
@@ -123,7 +124,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     i0=nint((xdt0+0.5)*fs2)                   !Initial guess for start of signal
     smax=0.0; ctwk=cmplx(1.0,0.0)
     do idt=i0-8,i0+8                         !Search over +/- one quarter symbol
-       call sync8d(cd0,idt,ctwk,0,sync,imainpass,lastsync,iqso,lcq,lcallsstd)
+       call sync8d(cd0,idt,ctwk,0,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand)
        if(sync.gt.smax) then
           smax=sync
           ibest=idt
@@ -142,7 +143,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         ctwk(i)=cmplx(cos(phi),sin(phi))
         phi=mod(phi+dphi,twopi)
       enddo
-      call sync8d(cd0,i0,ctwk,1,sync,imainpass,lastsync,iqso,lcq,lcallsstd)
+      call sync8d(cd0,i0,ctwk,1,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand)
       if(sync.gt.smax) then; smax=sync; delfbest=delf; endif
     enddo
     a=0.0
@@ -153,7 +154,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     dfqso=abs(nfqso-f1)
 !write (*,"(F5.2,1x,I1,1x,F6.1,1x,a3)") xdt,imainpass,f1,'out'
     lastsync=.true.
-    call sync8d(cd0,i0,ctwk,2,sync,imainpass,lastsync,iqso,lcq,lcallsstd)
+    call sync8d(cd0,i0,ctwk,2,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand)
 
 16  continue
     if(iqso.eq.3) ibest=ibest+1
