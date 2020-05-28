@@ -239,6 +239,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_blankLine {false},
   m_notified {false}, 
   m_start {true},
+  m_start2 {true},
   m_decodedText2 {false},
   m_freeText {false},
   m_sentFirst73 {false},
@@ -1083,7 +1084,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
-  foxgen_();
+  foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
 
   statusChanged();
   // this must be the last statement of constructor
@@ -6244,7 +6245,7 @@ void MainWindow::band_changed (Frequency f)
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
-    if (!m_transmitting) monitor (true);
+    if(!m_transmitting && !m_start2) monitor (true);
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {
@@ -6787,7 +6788,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   m_freqNominal = s.frequency ();
   // initializing
   if (old_state.online () == false && s.online () == true) {
-      on_monitorButton_clicked (!m_config.monitor_off_at_startup ());
+      on_monitorButton_clicked(true);
       if(m_config.write_decoded_debug()) writeToALLTXT("handle_transceiver_update: transceiver state transition from offline to online");
       if(m_mode=="FT8") on_actionFT8_triggered();
       else if(m_mode=="FT4") on_actionFT4_triggered();
@@ -6843,6 +6844,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
     QString splitstate = s.split () ? " Split On" : " Split Off";
     writeToALLTXT("handle_transceiver_update " + pttstate + splitstate  + " s.frequency:" + QString::number(s.frequency(),10) + " s.tx_frequency:"  + QString::number(s.tx_frequency(),10));
   }
+  if(m_start2) { if(m_config.monitor_off_at_startup ()) on_monitorButton_clicked(false); m_start2=false; }
 }
 
 void MainWindow::handle_transceiver_failure (QString const& reason)

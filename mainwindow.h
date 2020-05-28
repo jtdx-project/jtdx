@@ -513,6 +513,7 @@ private:
   bool    m_blankLine;
   bool    m_notified;
   bool    m_start;
+  bool    m_start2;
   bool    m_decodedText2;
   bool    m_freeText;
   bool    m_sentFirst73;
