@@ -210,9 +210,12 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
       else
         ibracket=index(msg37,'<.'); callsign=msg37(1:ibracket-2)
       endif
-      nlencall=len_trim(callsign); ispace=index(callsign(1:nlencall),' '); islash=index(callsign,'/')
-      if(ispace.gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':') .or. islash.eq.nlencall) then
-        nbadcrc=1; msg37=''; return
+      nlencall=len_trim(callsign)
+      if(nlencall.gt.0) then
+        ispace=index(callsign(1:nlencall),' '); islash=index(callsign,'/')
+        if(ispace.gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':') .or. islash.eq.nlencall) then
+          nbadcrc=1; msg37=''; return
+        endif
       endif
 ! KY2HTW/0O5M <...>  i3=4 n3=0
       if(islash.gt.4) then
