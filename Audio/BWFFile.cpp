@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor Chernikov UA3DJY on August 18th, 2016
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 #include "BWFFile.hpp"
 
 #include <cstring>
@@ -465,7 +462,7 @@ bool BWFFile::open(FILE * fh, OpenMode mode, FileHandleFlags flags)
 {
   bool result {false};
   if (!(mode & ReadOnly)) return result;
-  if (!mode & WriteOnly)
+  if (!(mode & WriteOnly))
     {
       result = m_->file_.open (fh, mode & ~Text, flags) && m_->read_header ();
     }
