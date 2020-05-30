@@ -249,35 +249,35 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
         if(ispace.gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':') .or. islash.eq.nlencall) then
           nbadcrc=1; msg37=''; return
         endif
-      endif
 ! KY2HTW/0O5M <...>  i3=4 n3=0
-      if(islash.gt.4) then
-        islash2=index(callsign(islash+1:),'/')
-        if(nlencall.eq.11 .and. islash2.lt.1) then
-          if(islash.lt.7) then
-            if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
-               callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
-              nbadcrc=1; msg37=''; return
+        if(islash.gt.4) then
+          islash2=index(callsign(islash+1:),'/')
+          if(nlencall.eq.11 .and. islash2.lt.1) then
+            if(islash.lt.7) then
+              if((callsign(islash+1:islash+1).lt.':' .and. callsign(islash+2:islash+2).lt.':') .or. &
+                 callsign(islash+1:islash+1).eq.'Q' .or. callsign(nlencall:nlencall).lt.':') then
+                nbadcrc=1; msg37=''; return
+              endif
             endif
-          endif
-          if(islash.gt.5) then
-            if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and.callsign(2:2).lt.':') .or. &
-               callsign(1:1).eq.'Q') then
-              nbadcrc=1; msg37=''; return
+            if(islash.gt.5) then
+              if(callsign(islash-1:islash-1).lt.':' .or. (callsign(1:1).lt.':' .and.callsign(2:2).lt.':') .or. &
+                 callsign(1:1).eq.'Q') then
+                nbadcrc=1; msg37=''; return
+              endif
             endif
-          endif
-          if(islash.gt.4 .and. islash.lt.8) then
-            call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
-            falsedec=.false.
-            call chkflscall(call_a,call_b,falsedec)
-            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+            if(islash.gt.4 .and. islash.lt.8) then
+              call_a=''; call_b=''; call_a=callsign(1:islash-1); call_b=callsign(islash+1:)
+              falsedec=.false.
+              call chkflscall(call_a,call_b,falsedec)
+              if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+            endif
           endif
         endif
+        include 'callsign_q.f90'
+        falsedec=.false.
+        call chklong8(callsign,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
       endif
-      include 'callsign_q.f90'
-      falsedec=.false.
-      call chklong8(callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
 ! '<...> T99LMF GC41' need to understand how to check such message
   endif
