@@ -3076,12 +3076,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1044"/>
         <source>Add callsign and locator to database</source>
-        <translation>Afegeix indicatiu i locator a la base de dades</translation>
+        <translation>Afegir indicatiu i locator a la base de dades</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1047"/>
         <source>Add</source>
-        <translation>Afegeix</translation>
+        <translation>Afegir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1082"/>
@@ -3358,7 +3358,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
         <location filename="../mainwindow.ui" line="2295"/>
         <location filename="../mainwindow.cpp" line="6557"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Sintonitza</translation>
+        <translation>&amp;Sintonitzar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2323"/>
@@ -3408,7 +3408,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2503"/>
         <source>&amp;Stop</source>
-        <translation>&amp;Atura</translation>
+        <translation>&amp;Aturar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2542"/>
@@ -3443,7 +3443,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2654"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Introdueix aquest QSO en el registre ADIF</translation>
+        <translation>Introdueix aquest QSO en el log ADIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2657"/>
@@ -3508,7 +3508,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2896"/>
         <source>Clear D&amp;X</source>
-        <translation>Esborra D&amp;X</translation>
+        <translation>Esborrar D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2994"/>
@@ -3732,7 +3732,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="3819"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>Generar missatge per respondre a un CQ</translation>
+        <translation>Generar un missatge per respondre a un CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3822"/>
@@ -4114,12 +4114,12 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4856"/>
         <source>Erase ALL.TXT</source>
-        <translation>Esborrar ALL.TXT</translation>
+        <translation>Esborrar l&apos;arxiu ALL.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4861"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>Esborrar el fitxer de LOG wsjtx_log.adi</translation>
+        <translation>Esborrar l&apos;arxiu de LOG wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4866"/>
@@ -4165,7 +4165,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4925"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>Doble click sobre indicatiu activa TX</translation>
+        <translation>Doble clic sobre indicatiu activa TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4933"/>
@@ -4410,7 +4410,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5351"/>
         <source>Erase both message windows at band change</source>
-        <translation>Esborra les dues finestres de missatges al canviar de banda</translation>
+        <translation>Esborrar les dues finestres de missatges al canviar de banda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5389"/>
@@ -4867,7 +4867,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4042"/>
         <source>TUNE</source>
-        <translation>Sintonitza</translation>
+        <translation>Sintonitzar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4043"/>
@@ -4906,7 +4906,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <location filename="../mainwindow.cpp" line="5381"/>
         <location filename="../mainwindow.cpp" line="5407"/>
         <source>Add to CALL3.TXT</source>
-        <translation>Afegeix a CALL3.TXT</translation>
+        <translation>Afegir a CALL3.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5357"/>
@@ -4964,7 +4964,7 @@ ja està en CALL3.TXT, el vols reemplaçar?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6124"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation>Estàs segur de que vols eliminar el teu registre de QSO&apos;s?</translation>
+        <translation>Estàs segur de que vols eliminar el teu log de QSO&apos;s?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6730"/>
@@ -5997,7 +5997,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="386"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>Afegeix noms DXCC als missatges descodificats.</translation>
+        <translation>Afegir noms DXCC als missatges descodificats.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
@@ -6820,7 +6820,7 @@ tots dos aquí.</translation>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation>Alguns programes de registre no acceptaran el tipus de senyals
+        <translation>Alguns programes de log no acceptaran el tipus de senyals
 guardat per aquest programa.
 Marca aquesta opció per emmagatzemar els senyals enviats i rebuts en
 camp de comentaris.</translation>
@@ -6865,7 +6865,7 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
     <message>
         <location filename="../Configuration.ui" line="2366"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation>En el programa apareixerà un diàleg de QSO de registre parcialment completat quan enviis un missatge de text 73 o gratuït.</translation>
+        <translation>En el programa apareixerà un diàleg de QSO de registre parcialment completat quan enviis un missatge de text 73 o lliure.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
@@ -6875,7 +6875,7 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
     <message>
         <location filename="../Configuration.ui" line="2376"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Habilitar el registre automàtic de QSO</translation>
+        <translation>Habilitar el log automàtic de QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
@@ -7074,7 +7074,7 @@ per avaluar la propagació i el rendiment del sistema MOLT RECOMANAT.</translati
     <message>
         <location filename="../Configuration.ui" line="2897"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation>Habilita l&apos;enviament de registre de dades de QSO&apos;s en format ADIF</translation>
+        <translation>Habilita l&apos;enviament de log de dades de QSO&apos;s en format ADIF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2907"/>
@@ -7467,7 +7467,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3664"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; A la part superior del panell de vista prèvia hi ha tipus de missatges que es verifiquen per algun criteri, seleccionant el color del text per a cada tipus de missatge. &lt;br&gt; &lt;br&gt; A la banda esquerra hi ha criteris assignats en l&apos;ordre jeràrquic i es selecciona el color de fons per als missatges per a cada criteri. &lt;br&gt; &lt;br&gt; La funcionalitat de notificació &apos;Has treballat a&apos; es basa en el principi residual, que s&apos;activa si tots els criteris o criteris &apos;Nou a&apos; activats no es compleixen. &lt;br&gt; &lt;br&gt; Es pot fer servir &apos;Color invers&apos; si l&apos;usuari desitja ressaltar els missatges CQ i &apos;MyCall&apos; amb algun color de fons específic. &lt;br&gt; &lt;br&gt; Per començar, es pot triar un criteri i es poden usar notificacions de banda / modes noves d&apos;un color similar amb un nivell de saturació diferent, després es pot augmentar el nombre de criteris requerits. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; A la part superior del panell de vista prèvia hi ha tipus de missatges que es verifiquen per algun criteri, seleccionant el color del text per a cada tipus de missatge. &lt;br&gt; &lt;br&gt; A la banda esquerra hi ha criteris assignats en l&apos;ordre jeràrquic i es selecciona el color de fons per als missatges per a cada criteri. &lt;br&gt; &lt;br&gt; La funcionalitat de notificació &apos;Has treballat a&apos; es basa en el principi residual, que s&apos;activa si tots els criteris &apos;Nou a&apos; activats no es compleixen. &lt;br&gt; &lt;br&gt; Es pot fer servir &apos;Color invers&apos; si l&apos;usuari desitja ressaltar els missatges &apos;CQ&apos; i &apos;el meu Indicatiu&apos; amb algun color de fons específic. &lt;br&gt; &lt;br&gt; Per començar, es pot triar un criteri i es poden usar notificacions de banda / mode noves d&apos;un color similar amb un nivell de saturació diferent, després es pot augmentar el nombre de criteris requerits. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3667"/>
@@ -7740,7 +7740,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
         <location filename="../Configuration.ui" line="4948"/>
         <location filename="../Configuration.ui" line="5003"/>
         <source>Clear</source>
-        <translation>Esborra</translation>
+        <translation>Esborrar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4960"/>
@@ -7813,7 +7813,7 @@ EA3RDG,EA3URO,1C0CAT &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5137"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Amagar els missatges descodificats gratuïts situats fora de la freqüència de RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Amagar els missatges descodificats lliures situats fora de la freqüència de RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5140"/>
