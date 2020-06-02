@@ -5441,67 +5441,67 @@ Error (%2): %3</translation>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="23"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>Se produjo un error al abrir el dispositivo de entrada de audio.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="27"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>Se produjo un error durante la lectura desde el dispositivo de entrada de audio.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="31"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>Los datos de audio no se envían al dispositivo de entrada de audio lo suficientemente rápido.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="35"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>Error no recuperable, el dispositivo de entrada de audio no se puede utilizar en este momento.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="64"/>
         <source>Requested input audio format is not valid.</source>
         <translation>El formato de audio de entrada solicitado no es válido.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="71"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>El formato de audio de entrada solicitado no es compatible con el dispositivo.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="92"/>
         <source>Failed to initialize audio sink device</source>
         <translation>Error al inicializar el dispositivo receptor de audio</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="127"/>
         <source>Idle</source>
         <translation>Listo</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="131"/>
         <source>Receiving</source>
         <translation>Recepción</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="135"/>
         <source>Suspended</source>
         <translation>Suspendido</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="140"/>
         <source>Interrupted</source>
         <translation>Interrumpido</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="147"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="151"/>
         <source>Stopped</source>
         <translation>Detenido</translation>
     </message>
@@ -5509,63 +5509,63 @@ Error (%2): %3</translation>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>Se produjo un error al abrir el dispositivo de salida de audio.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>Se produjo un error durante la escritura en el dispositivo de salida de audio.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="28"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>Los datos de audio no se envían al dispositivo de salida de audio lo suficientemente rápido.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="29"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>Error no recuperable, dispositivo de salida de audio no utilizable en este momento.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="48"/>
         <source>Requested output audio format is not valid.</source>
         <translation>El formato de audio de salida solicitado no es válido.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not supported on device.</source>
         <translatorcomment>El formato de audio de salida solicitado no es compatible con el dispositivo.</translatorcomment>
         <translation>El formato de audio de salida solicitado no es compatible con el dispositivo.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="112"/>
         <source>Idle</source>
         <translation>Listo</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Sending</source>
         <translation>Enviando</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="114"/>
         <source>Suspended</source>
         <translation>Suspendido</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="116"/>
         <source>Interrupted</source>
         <translation>Interrumpido</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Stopped</source>
         <translation>Detenido</translation>
     </message>
