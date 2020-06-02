@@ -1674,7 +1674,7 @@ void MainWindow::dataSink(qint64 frames)
   static int npts8;
   static float px=0.0;
   static float df3;
-  static QDateTime last = m_jtdxtime->currentDateTimeUtc2().addSecs(-300);
+  static QDateTime last {m_jtdxtime->currentDateTimeUtc2().addSecs(-300)};
   static bool lastdelayed {false};
 
   if(m_diskData) dec_data.params.ndiskdat=1; else dec_data.params.ndiskdat=0;
@@ -1729,13 +1729,13 @@ void MainWindow::dataSink(qint64 frames)
      || (m_mode.startsWith("WSPR") && ihsym == m_hsymStop)) {
     QDateTime now = m_jtdxtime->currentDateTimeUtc2 ();
 //prevent dupe decoding
-    if(lastdelayed && m_delay==0) {
+    if(lastdelayed && !m_modeChanged) {
       if(m_mode=="FT8" && last.secsTo(now)<12) { lastdelayed=false; return; }
       else if(m_mode=="FT4" && last.secsTo(now)<6) { lastdelayed=false; return; }
       else if(!m_mode.startsWith("FT") && !m_mode.startsWith("WSPR") && last.secsTo(now)<46) { lastdelayed=false; return; }
       lastdelayed=false;
     }
-    if(m_delay>0) { last=now; lastdelayed=true; }
+    if(m_delay>0) lastdelayed=true;
 
     if( m_dialFreqRxWSPR==0) m_dialFreqRxWSPR=m_freqNominal;
     m_dataAvailable=true;
@@ -1746,7 +1746,7 @@ void MainWindow::dataSink(qint64 frames)
     dec_data.params.nzhsym=m_hsymStop;
 //    m_dateTime = now.toString ("yyyy-MMM-dd hh:mm");
 
-    if(!m_decoderBusy && m_mode.left(4)!="WSPR") { last = m_jtdxtime->currentDateTimeUtc2 (); decode(); } //Start decoder
+    if(!m_decoderBusy && m_mode.left(4)!="WSPR") { last=now; decode(); } //Start decoder
     m_delay=0;
 
     if(!m_diskData) {                        //Always save; may delete later
