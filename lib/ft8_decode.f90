@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200209
-
 module ft8_decode
 
   type :: ft8_decoder
@@ -38,13 +36,13 @@ contains
     procedure(ft8_decode_callback) :: callback
 !    real sbase(NH1)
 !integer*2 iwave(180000)
-    real candidate(3,260)
+    real candidate(4,260)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ndepth,nft8filtdepth,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass,lcqcand
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -171,6 +169,7 @@ contains
         sync=candidate(3,icand)
         f1=candidate(1,icand)
         xdt=candidate(2,icand)
+        lcqcand=.false.; if(candidate(4,icand).gt.1.0) lcqcand=.true.
         lhighsens=.false.
         if(sync.lt.1.9 .or. ((ipass.eq.2 .or. ipass.eq.4 .or. ipass.eq.6).and. sync.lt.3.15)) lhighsens=.true.
         lspecial=.false.; lFreeText=.false.; i3bit=0; lft8s=.false.; lft8sd=.false.; lhashmsg=.false.; iaptype=0
@@ -181,7 +180,7 @@ contains
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
         call ft8b(newdat1,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,filter,lft8subpass,lspecial,                            &
+                  nthr,lFreeText,ipass,filter,lft8subpass,lspecial,lcqcand,                    &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
         nsnr=nint(xsnr) 

@@ -26,6 +26,7 @@
 #include <QToolTip>
 #include <QButtonGroup>
 #include <QUdpSocket>
+#include <QtMath>
 
 #include "revision_utils.hpp"
 #include "qt_helpers.hpp"
@@ -239,6 +240,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_blankLine {false},
   m_notified {false}, 
   m_start {true},
+  m_start2 {true},
   m_decodedText2 {false},
   m_freeText {false},
   m_sentFirst73 {false},
@@ -1083,7 +1085,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
-  foxgen_();
+  foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
 
   statusChanged();
   // this must be the last statement of constructor
@@ -1672,9 +1674,8 @@ void MainWindow::dataSink(qint64 frames)
   static int npts8;
   static float px=0.0;
   static float df3;
-  static QDateTime last;
+  static QDateTime last {m_jtdxtime->currentDateTimeUtc2().addSecs(-300)};
   static bool lastdelayed {false};
-  last = m_jtdxtime->currentDateTimeUtc2 ();
 
   if(m_diskData) dec_data.params.ndiskdat=1; else dec_data.params.ndiskdat=0;
 
@@ -1686,10 +1687,7 @@ void MainWindow::dataSink(qint64 frames)
   int nsps=m_nsps;
   symspec_(&dec_data,&k,&trmin,&nsps,&px,s,&df3,&ihsym,&npts8);
   if(m_mode=="WSPR-2") wspr_downsample_(dec_data.d2,&k);
-  if(ihsym <=0) {
-//	  msgBox("ihsym = " + QString::number(ihsym));
-	  return;
-  }
+  if(ihsym <=0) return;
 //  printf("%s(%0.1f) dataSink %s %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),last.toString("hh:mm:ss.zzz").toStdString().c_str(),ihsym,k);
   QString t;
   t = QString::asprintf(" Rx noise: %5.1f ",px);
@@ -1715,23 +1713,29 @@ void MainWindow::dataSink(qint64 frames)
   }
 #endif
 
+  int ihsymdelay=0;
+  if(m_delay > 0) {
+  float fdelta=float(m_delay)*0.345; // 1/(0.29*10)
+  if(fmod(fdelta,1.0)>0.49) ihsymdelay=qCeil(fdelta)+ihsym;
+  else ihsymdelay=qFloor(fdelta)+ihsym;
+  }
 //cycling approximately once per 269..301 milliseconds
   if((m_mode=="FT8" && m_delay==0 && ihsym == nhsymEStopFT8)
-     || (m_mode=="FT8" && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= nhsymEStopFT8)
+     || (m_mode=="FT8" && m_delay > 0 && ihsymdelay >= nhsymEStopFT8)
      || (m_mode=="FT4" && m_delay==0 && ihsym == m_hsymStop)
-     || (m_mode=="FT4" && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= m_hsymStop)
+     || (m_mode=="FT4" && m_delay > 0 && ihsymdelay >= m_hsymStop)
      || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay==0 && ihsym == m_hsymStop)
-     || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay > 0 && (ihsym+int(float(m_delay)*0.338)) >= m_hsymStop)
+     || ((m_mode.startsWith("JT") || m_mode=="T10") && m_delay > 0 && ihsymdelay >= m_hsymStop)
      || (m_mode.startsWith("WSPR") && ihsym == m_hsymStop)) {
     QDateTime now = m_jtdxtime->currentDateTimeUtc2 ();
 //prevent dupe decoding
-    if(lastdelayed && m_delay==0) {
+    if(lastdelayed && !m_modeChanged) {
       if(m_mode=="FT8" && last.secsTo(now)<12) { lastdelayed=false; return; }
       else if(m_mode=="FT4" && last.secsTo(now)<6) { lastdelayed=false; return; }
       else if(!m_mode.startsWith("FT") && !m_mode.startsWith("WSPR") && last.secsTo(now)<46) { lastdelayed=false; return; }
       lastdelayed=false;
     }
-    if(m_delay>0) { last=now; lastdelayed=true; }
+    if(m_delay>0) lastdelayed=true;
 
     if( m_dialFreqRxWSPR==0) m_dialFreqRxWSPR=m_freqNominal;
     m_dataAvailable=true;
@@ -1742,7 +1746,7 @@ void MainWindow::dataSink(qint64 frames)
     dec_data.params.nzhsym=m_hsymStop;
 //    m_dateTime = now.toString ("yyyy-MMM-dd hh:mm");
 
-    if(!m_decoderBusy && m_mode.left(4)!="WSPR") decode();                            //Start decoder
+    if(!m_decoderBusy && m_mode.left(4)!="WSPR") { last=now; decode(); } //Start decoder
     m_delay=0;
 
     if(!m_diskData) {                        //Always save; may delete later
@@ -6244,7 +6248,7 @@ void MainWindow::band_changed (Frequency f)
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
-    if (!m_transmitting) monitor (true);
+    if(!m_transmitting && !m_start2) monitor (true);
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {
@@ -6787,7 +6791,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   m_freqNominal = s.frequency ();
   // initializing
   if (old_state.online () == false && s.online () == true) {
-      on_monitorButton_clicked (!m_config.monitor_off_at_startup ());
+      on_monitorButton_clicked(true);
       if(m_config.write_decoded_debug()) writeToALLTXT("handle_transceiver_update: transceiver state transition from offline to online");
       if(m_mode=="FT8") on_actionFT8_triggered();
       else if(m_mode=="FT4") on_actionFT4_triggered();
@@ -6843,6 +6847,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
     QString splitstate = s.split () ? " Split On" : " Split Off";
     writeToALLTXT("handle_transceiver_update " + pttstate + splitstate  + " s.frequency:" + QString::number(s.frequency(),10) + " s.tx_frequency:"  + QString::number(s.tx_frequency(),10));
   }
+  if(m_start2) { if(m_config.monitor_off_at_startup ()) on_monitorButton_clicked(false); m_start2=false; }
 }
 
 void MainWindow::handle_transceiver_failure (QString const& reason)
@@ -7603,7 +7608,7 @@ void MainWindow::on_cbShowWanted_toggled(bool b)
   m_wantedchkd=b;
   ui->labWantCall->setVisible(b); ui->wantedCall->setVisible(b); ui->labWantCountry->setVisible(b); ui->wantedCountry->setVisible(b);
   ui->labWantPfx->setVisible(b); ui->wantedPrefix->setVisible(b); ui->labWantGrid->setVisible(b); ui->wantedGrid->setVisible(b);
-  dynamicButtonsInit();
+  ui->cbClearCallsign->setVisible(b); dynamicButtonsInit();
 }
 
 void MainWindow::on_cbShowSpot_toggled(bool b) 
