@@ -2386,7 +2386,7 @@ Fejl: %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Frekvens</translation>
     </message>
 </context>
 <context>
@@ -3272,12 +3272,12 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Slet kaldesignal fra listen når QSO logges.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>Clr</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
@@ -4591,7 +4591,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5813"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Skjul telemetri meddelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="453"/>

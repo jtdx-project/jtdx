@@ -2383,7 +2383,7 @@ Errore: %2 -%3</translation>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Frequenza</translation>
     </message>
 </context>
 <context>
@@ -3256,13 +3256,13 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1823"/>
         <source>Adjust Tx audio level</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiusta la potenza di uscita dell&apos;RTx.&lt;/p&gt;&lt;p&gt;Se l&apos;RTx va fuori ALC abbassare questo livello portando più in basso il cursore.&lt;/p&gt;&lt;p&gt;Per una buona emissione il livello ALC deve rimanaere a 0.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Nel caso che l&apos;RTX esca solo in portante portare il cursore a 0 (tutto in basso) e poi riportarlo nella posizione giusta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiusta il livello audio di uscita.&lt;/p&gt;&lt;p&gt;Se l&apos;RTX è fuori ALC abbassare questo livello portando in basso il cursore.&lt;/p&gt;&lt;p&gt;Per una emissione ottima il livello ALC deve rimanere a 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1873"/>
         <location filename="../mainwindow.ui" line="1889"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elenco separato da virgole dei nominativi ricercati. La selezione automatica in AutoSeq 1..7 elaborerà il nominativo ricercrato in base alle notifiche / priorità scelte, questa funzionalità non è supportata in AutoSeq0. Solo modalità non FT8: per i nominativi composti il nominativo di base deve essere utilizzato nell&apos;elenco, a volte il nominativo di base verrà copiato dal messaggio decodificato: quando si registra tale utente QSO dovrà cambiare il nominativo del corrispondente in composto se necessario.&lt;/p&gt;&lt;/ body&gt;&lt;/ html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elenco separato da virgole dei nominativi ricercati. La selezione automatica in AutoSeq 1..7 elaborerà il nominativo ricercrato in base alle notifiche / priorità scelte, questa funzionalità non è supportata in AutoSeq0. Solo modalità non FT8: per i nominativi composti il nominativo di base deve essere utilizzato nell&apos;elenco, a volte il nominativo di base verrà copiato dal messaggio decodificato: quando si registra tale utente QSO dovrà cambiare il nominativo del corrispondente in composto se necessario.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1876"/>
@@ -3272,12 +3272,12 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella il nominativo al momento della messa a Log del QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>Canc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
@@ -3351,7 +3351,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2281"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trasmette un tono puro. Il tempo dell&apos;accordo può essere impostato nella scheda Generale di Impostazioni. (Nel caso che non esca potenza dal TRX portare a 0 e poi ancora alla potenza desiderata il cursore PWR sopra a questo tasto)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trasmette un tono puro. Il tempo dell&apos;accordo può essere impostato nella scheda Impostazioni/Generali.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2295"/>
@@ -3452,7 +3452,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2682"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il pulsante sinistro del mouse: cancella la finestra Rx (a sinistra). Pulsante destro del mouse: cancella la finestra Tx (a destra). Il doppio clic cancella entrambe le finestre.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il pulsante sinistro del mouse: cancella la finestra Rx (a sinistra)&lt;/p&gt;&lt;p&gt;Il pulsante destro del mouse: cancella la finestra Tx (a destra).&lt;/p&gt;&lt;p&gt;Il doppio clic cancella entrambe le finestre.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2685"/>
@@ -3561,7 +3561,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3139"/>
         <location filename="../mainwindow.ui" line="3758"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona per saltare la trasmissione del messaggio Tx 1 con la Griglia e passa a Tx 2 con invio diretto del segnale di ricezione (attenzione le DXped che usano il modo FOX/HOUD non rispondono alla chiamata conl solo il segnale)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Seleziona per saltare la trasmissione del messaggio Tx 1 con la griglia e passa a Tx 2 con invio diretto del segnale di ricezione (attenzione le DXped che usano il modo FOX/HOUD non rispondono alla chiamata con il solo il segnale)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3145"/>
@@ -4369,7 +4369,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5273"/>
         <source>Single shot QSO</source>
-        <translation>QSO singolo (no CQ dopo 73)</translation>
+        <translation>QSO singolo (disabilita CQ dopo il 73)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5281"/>
@@ -4454,7 +4454,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5502"/>
         <source>any messages</source>
-        <translation>Ogni messaggio</translation>
+        <translation>Tutti i messaggi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5510"/>
@@ -4591,7 +4591,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5813"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascondi i messaggi di telemetria</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="453"/>
@@ -4742,36 +4742,36 @@ Nessun dato letto dal disco. Formato file errato?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2744"/>
         <source>AutoSeq0</source>
-        <translation>AutoSeq0</translation>
+        <translation>AutoSeq 0</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2757"/>
         <source>AutoSeq1</source>
-        <translation>AutoSeq1</translation>
+        <translation>AutoSeq 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2766"/>
         <location filename="../mainwindow.cpp" line="2792"/>
         <source>AutoSeq2</source>
-        <translation>AutoSeq2</translation>
+        <translation>AutoSeq 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2767"/>
         <location filename="../mainwindow.cpp" line="2788"/>
         <source>AutoSeq6</source>
-        <translation>AutoSeq6</translation>
+        <translation>AutoSeq 6</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2776"/>
         <location filename="../mainwindow.cpp" line="2793"/>
         <source>AutoSeq3</source>
-        <translation>AutoSeq3</translation>
+        <translation>AutoSeq 3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2777"/>
         <location filename="../mainwindow.cpp" line="2789"/>
         <source>AutoSeq7</source>
-        <translation>AutoSeq7</translation>
+        <translation>AutoSeq 7</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2871"/>
@@ -5010,7 +5010,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <location filename="../mainwindow.cpp" line="7227"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation>Error: %1
+        <translation>Errore: %1
 server DP %2:%3</translation>
     </message>
     <message>
@@ -5651,7 +5651,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
@@ -5848,7 +5848,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>Genera&amp;le</translation>
+        <translation>Genera&amp;li</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -6064,7 +6064,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="542"/>
         <source>Tune timer</source>
-        <translation>Tempo di accordo: </translation>
+        <translation>Tempo per l&apos;accordo: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="549"/>
@@ -8367,7 +8367,7 @@ modifiche alla scheda audio</translation>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Fai doppio clic su un colore per modificarlo.&lt;/p&gt;&lt;p&gt;Fai clic con il pulsante destro del mouse per inserire o eliminare i colori.&lt;/p&gt;&lt;p&gt;I colori nella parte superiore rappresentano segnali deboli,&lt;/p&gt;&lt;p&gt;i colori nella parte inferiore rappresentano segnali forti.&lt;/p&gt;&lt;p&gt;E&apos; possibile avere fino a 256 colori.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Fare doppio clic su un colore per modificarlo.&lt;/p&gt;&lt;p&gt;Fare clic con il pulsante destro del mouse per inserire o eliminare i colori.&lt;/p&gt;&lt;p&gt;I colori nella parte superiore rappresentano segnali deboli,&lt;/p&gt;&lt;p&gt;i colori nella parte inferiore rappresentano segnali forti.&lt;/p&gt;&lt;p&gt;E&apos; possibile avere fino a 256 colori.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
