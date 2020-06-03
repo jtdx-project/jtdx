@@ -299,6 +299,7 @@ private slots:
   void on_freeTextMsg_currentTextChanged (QString const&);
   void on_freeTextMsg_currentIndexChanged(int index);
   void on_rptSpinBox_valueChanged(int n);
+  void on_lagThreshSpinBox_valueChanged(int n);
   void killFile();
   void set_language(QString const& lang);
   void on_tuneButton_clicked (bool);
@@ -484,6 +485,7 @@ private:
   qint32  m_position;
   qint32  m_nsecBandChanged;
   qint32  m_nDecodes;
+  qint32  m_nlag;
     
   bool    m_btxok;		//True if OK to transmit
   bool    m_diskData;

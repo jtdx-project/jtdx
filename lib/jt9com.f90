@@ -48,6 +48,7 @@
      integer(c_int) :: nft8rxfsens
      integer(c_int) :: nft4depth
      integer(c_int) :: nsecbandchanged
+     integer(c_int) :: nlag
      logical(c_bool) :: ndiskdat
      logical(c_bool) :: newdat
      logical(c_bool) :: nagain
