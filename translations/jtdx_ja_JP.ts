@@ -2382,7 +2382,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>モード 周波数</translation>
     </message>
 </context>
 <context>
@@ -3679,12 +3679,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wantedに入れたコールサインの局と交信終了後リストから除外する。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2800"/>
@@ -4572,7 +4572,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5813"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>テレメトリーメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="453"/>
@@ -5825,7 +5825,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation>ステーション詳細</translation>
+        <translation>自局の詳細</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
@@ -5962,12 +5962,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="396"/>
         <source>Append prefix instead of name.</source>
-        <translation>DXCC名の代わりにプリフィックスを付加。</translation>
+        <translation>DXCC名の代わりにプリフィックスを表示。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>DXCC名ではなくプリフィックスを表示</translation>
+        <translation>DXCC名ではなく割当プリフィックスを表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -6002,7 +6002,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="466"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>&amp;スタートアップ時にモニターはオフ</translation>
+        <translation>&amp;起動時にモニターはオフ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="492"/>
@@ -6043,12 +6043,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="598"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>７３または自由なテキストメッセージの後に、CW IDを送る.</translation>
+        <translation>73またはフリーメッセージの後に、CW IDを送る.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="601"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation>CW ID a&amp;fter 73</translation>
+        <translation>73の後にCW IDを送信する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="627"/>
@@ -6058,12 +6058,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="672"/>
         <source>&amp;Radio</source>
-        <translation>Radio</translation>
+        <translation>無線機</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="675"/>
         <source>Radio interface configuration settings.</source>
-        <translation>無線インターフェイス設定。</translation>
+        <translation>無線機とのインターフェイス設定。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="683"/>
@@ -6073,7 +6073,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="703"/>
         <source>Poll Interval:</source>
-        <translation>ポール間隔：</translation>
+        <translation>ﾎﾟｰﾘﾝｸﾞ間隔：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="742"/>
@@ -6231,7 +6231,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1127"/>
         <source>Force Control Lines</source>
-        <translation>力制御線</translation>
+        <translation>制御信号の強制設定</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1144"/>
@@ -6766,17 +6766,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2866"/>
         <source>Accept UDP requests</source>
-        <translation>UDP要求を受け入れ</translation>
+        <translation>UDP要求を受け入れる</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2876"/>
         <source>Notify on accepted UDP request</source>
-        <translation>受け入れられたUDP要求において通知</translation>
+        <translation>UDP要求があった場合に通知する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2886"/>
         <source>Accepted UDP request restores window</source>
-        <translation>受け入れられたUDP要求はウィンドウを復元する</translation>
+        <translation>ウィンドウを復元するUDP要求を受けれ入れる</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2897"/>
@@ -6941,7 +6941,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="3393"/>
         <location filename="../Configuration.ui" line="3433"/>
         <source>Beep as well</source>
-        <translation>更にビーッという音を出す</translation>
+        <translation>システム音も出して通知</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
@@ -7006,7 +7006,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3486"/>
         <source>Inverse text/background color</source>
-        <translation>逆のテキスト／背景色</translation>
+        <translation>テキスト／背景色の反転</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3496"/>
@@ -7016,12 +7016,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3519"/>
         <source>Beep on 1st decoded message</source>
-        <translation>最初のデコードにビー音</translation>
+        <translation>最初のデコード時にシステム音</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3529"/>
         <source>Beep on my call</source>
-        <translation>自局コールサインにビー音</translation>
+        <translation>自局ｺｰﾙｻｲﾝにｼｽﾃﾑ音</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3559"/>
