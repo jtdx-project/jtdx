@@ -2057,12 +2057,11 @@ void MainWindow::monitor (bool state)
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       Q_EMIT resumeAudioInputStream ();
-//      QTime currentTime = QTime::currentTime(); // decode part of interval
       QDateTime  currentTime = m_jtdxtime->currentDateTimeUtc2 (); // decode part of interval
       QString curtime=currentTime.toString("ss.zzz");
       curtime.remove(2,1); curtime.remove(3,2);
       int curdsec = curtime.toInt();
-      if(m_addtx==-1) m_addtx=2; else if(m_addtx==-2) m_addtx=4; else m_addtx=10; // 1 second delay for manual triggering Monitor button
+      if(m_addtx==-1) m_addtx=2; else if(m_addtx==-2) m_addtx=4; else m_addtx=0; // no delay for manual triggering Monitor button
       if(m_mode == "FT8") {
          curdsec=curdsec%150; if(curdsec > 0 && curdsec < 90) m_delay=curdsec+m_addtx; else m_delay = 0;
       }
