@@ -313,6 +313,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_callToClipboard {true},
   m_rigOk {false},
   m_bandChanged {false},
+  m_lostaudio {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -1670,6 +1671,8 @@ void MainWindow::dataSink(qint64 frames)
 {
   static float s[NSMAX];
   static int ihsym=0;
+  static int ihsymlast=52;
+  static int nlostaudio=0;
   static int trmin;
   static int npts8;
   static float px=0.0;
@@ -1703,13 +1706,24 @@ void MainWindow::dataSink(qint64 frames)
 
 // let Win users to decode some intervals if some frames were dropped in system audio
 #if defined(Q_OS_WIN)
-  if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
-    QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
-    quint64 n1=now1.toMSecsSinceEpoch()%15000;
-    if(n1>14735) {
-      if(m_config.write_decoded_debug()) writeToALLTXT("Dropped audio frames, ihsym=" + QString::number(ihsym) + " n1=" + QString::number(n1));
-      if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
-    } 
+  if(!m_diskData && m_mode=="FT8") {
+    if(ihsym==1) nlostaudio=52-ihsymlast;
+    ihsymlast=ihsym; if(m_delay > 0) nlostaudio=0;
+    if(nlostaudio > 0 && m_delay==0) {
+//printf("%s lost audio blocks %d \n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss").toStdString().c_str(),nlostaudio);
+      if(nlostaudio < 3) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
+      else ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+      ui->label_6->setText(tr("lost audio ")+QString::number(nlostaudio));
+      nlostaudio=0; m_lostaudio=true;
+    }
+    if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
+      QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
+      quint64 n1=now1.toMSecsSinceEpoch()%15000;
+      if(n1>14735) {
+        if(m_config.write_decoded_debug()) writeToALLTXT("Dropped audio frames, ihsym=" + QString::number(ihsym) + " n1=" + QString::number(n1));
+        if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
+      } 
+    }
   }
 #endif
 
@@ -1746,7 +1760,10 @@ void MainWindow::dataSink(qint64 frames)
     dec_data.params.nzhsym=m_hsymStop;
 //    m_dateTime = now.toString ("yyyy-MMM-dd hh:mm");
 
-    if(!m_decoderBusy && m_mode.left(4)!="WSPR") { last=now; decode(); } //Start decoder
+    if(!m_decoderBusy && m_mode.left(4)!="WSPR") { //Start decoder
+      last=now; decode(); 
+      if(!m_lostaudio) { ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}"); ui->label_6->setText(tr("Band Activity")); }
+    }
     m_delay=0;
 
     if(!m_diskData) {                        //Always save; may delete later
@@ -3421,11 +3438,14 @@ void MainWindow::readFromStdout()                             //readFromStdout
       if(m_mode.startsWith("FT")) {
         ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));
         if(m_mode=="FT8") {
-          if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-          else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
-          else if(navexdt>150) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
-          if(navexdt>75) ui->label_6->setText(tr("check time"));
-          else  ui->label_6->setText(tr("Band Activity"));
+          if(!m_lostaudio) {
+            if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
+            else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
+            else if(navexdt>150) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+            if(navexdt>75) ui->label_6->setText(tr("check time"));
+            else  ui->label_6->setText(tr("Band Activity"));
+          }
+          else m_lostaudio=false;
         }
         else if (m_mode=="FT4") {
           if(navexdt<41) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");

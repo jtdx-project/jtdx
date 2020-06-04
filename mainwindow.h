@@ -588,6 +588,7 @@ private:
   bool m_callToClipboard;
   bool m_rigOk;
   bool m_bandChanged;
+  bool m_lostaudio;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
