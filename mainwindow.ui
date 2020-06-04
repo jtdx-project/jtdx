@@ -1419,7 +1419,7 @@ QLabel[oob=&quot;true&quot;] {
               <item row="1" column="1">
                <widget class="QSpinBox" name="rptSpinBox">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>1</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -1432,7 +1432,7 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
+                  <width>16777215</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1459,14 +1459,14 @@ QLabel[oob=&quot;true&quot;] {
                  <bool>false</bool>
                 </property>
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>1</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
+                  <width>16777215</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1481,7 +1481,7 @@ QLabel[oob=&quot;true&quot;] {
               <item row="2" column="0">
                <widget class="QSpinBox" name="TxFreqSpinBox">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>1</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -1494,7 +1494,7 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
+                  <width>16777215</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1524,7 +1524,7 @@ QLabel[oob=&quot;true&quot;] {
               <item row="1" column="2">
                <widget class="QLabel" name="S_meter_label">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -1565,7 +1565,7 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>16777215</width>
+                  <width>110</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1624,7 +1624,7 @@ QLabel[oob=&quot;true&quot;] {
               <item row="4" column="0">
                <widget class="QSpinBox" name="RxFreqSpinBox">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>1</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -1637,7 +1637,7 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
+                  <width>110</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1666,10 +1666,13 @@ QLabel[oob=&quot;true&quot;] {
               </item>
               <item row="3" column="0">
                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
                 <item>
                  <widget class="QPushButton" name="pbR2T">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                     <horstretch>1</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1682,7 +1685,7 @@ QLabel[oob=&quot;true&quot;] {
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>70</width>
+                    <width>40</width>
                     <height>40</height>
                    </size>
                   </property>
@@ -1697,7 +1700,7 @@ QLabel[oob=&quot;true&quot;] {
                 <item>
                  <widget class="QPushButton" name="pbT2R">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                     <horstretch>1</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1710,7 +1713,7 @@ QLabel[oob=&quot;true&quot;] {
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>70</width>
+                    <width>40</width>
                     <height>40</height>
                    </size>
                   </property>
@@ -1750,7 +1753,7 @@ QLabel[oob=&quot;true&quot;] {
                <widget class="QCheckBox" name="cbShowWanted">
                 <property name="maximumSize">
                  <size>
-                  <width>16777215</width>
+                  <width>110</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1763,42 +1766,18 @@ QLabel[oob=&quot;true&quot;] {
                </widget>
               </item>
               <item row="2" column="1">
-               <widget class="QSpinBox" name="lagThreshSpinBox">
+               <widget class="QPushButton" name="pushButton">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
+                  <width>16777215</width>
                   <height>40</height>
                  </size>
                 </property>
-                <property name="sizeIncrement">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lag threshold being used to stop FT8 decoder. This functionality can provide automatic decoding depth control in setups with slow CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="specialValueText">
-                 <string>Lag Off</string>
-                </property>
-                <property name="suffix">
-                 <string>ms</string>
-                </property>
-                <property name="prefix">
-                 <string>Lag </string>
-                </property>
-                <property name="minimum">
-                 <number>-100</number>
-                </property>
-                <property name="maximum">
-                 <number>2000</number>
-                </property>
-                <property name="singleStep">
-                 <number>100</number>
+                <property name="text">
+                 <string>Reserved</string>
                 </property>
                </widget>
               </item>

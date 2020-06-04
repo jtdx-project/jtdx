@@ -27,7 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
-                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,nlag
+                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -42,10 +42,9 @@ contains
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass,lcqcand,lslip
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass,lcqcand
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
-    integer(4) :: ival(8)
 
     type oddtmp_struct
       real freq
@@ -71,7 +70,7 @@ contains
           then; lastrxmsg(1)%lstate=.false.
     endif
 
-    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lslip=.false.
+    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.
     ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
@@ -163,16 +162,10 @@ contains
         endif
 !$omp barrier
       endif
-      if(lslip) cycle
       !call timer('sync8   ',0)
       call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread)
       !call timer('sync8   ',1)
       do icand=1,ncand
-        if(nlag.gt.-1) then ! also not m_diskData
-          call date_and_time(values = ival)
-          nmod=mod(ival(7),15)*1000
-          if(nmod.lt.3000 .and. (nmod+ival(8)).gt.nlag) then; lslip=.true.; exit; endif 
-        endif
         sync=candidate(3,icand)
         f1=candidate(1,icand)
         xdt=candidate(2,icand)

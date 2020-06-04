@@ -219,7 +219,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_position {0},
   m_nsecBandChanged {0},
   m_nDecodes {0},
-  m_nlag {-100},
   m_btxok {false},
   m_diskData {false},
   m_loopall {false},
@@ -1118,9 +1117,9 @@ MainWindow::~MainWindow()
 void MainWindow::writeSettings()
 {
   m_settings->beginGroup("MainWindow");
-  m_settings->setValue("geometry", saveGeometry ());
-  m_settings->setValue("state", saveState ());
-  m_settings->setValue("vertSplitter", ui->splitter->saveState());
+  m_settings->setValue ("geometry", saveGeometry ());
+  m_settings->setValue ("state", saveState ());
+  m_settings->setValue ("vertSplitter", ui->splitter->saveState());
   m_settings->setValue("MRUdir", m_path);
   m_settings->setValue("TxFirst",m_txFirst);
   m_settings->setValue("RRR/RR73",m_rrr);
@@ -1131,7 +1130,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("WantedCountryCommaList",ui->wantedCountry->text());
   m_settings->setValue("WantedPrefixCommaList",ui->wantedPrefix->text());
   m_settings->setValue("WantedGridCommaList",ui->wantedGrid->text());
-  m_settings->setValue("FreeText", ui->freeTextMsg->currentText ());
+  m_settings->setValue ("FreeText", ui->freeTextMsg->currentText ());
   m_settings->setValue("ShowMenus",ui->cbMenus->isChecked());
   m_settings->setValue("ShowWanted",ui->cbShowWanted->isChecked());
   m_settings->endGroup();
@@ -1178,7 +1177,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("RxFreq",ui->RxFreqSpinBox->value());
   m_settings->setValue("TxFreq",ui->TxFreqSpinBox->value());
   m_settings->setValue("WSPRfreq",ui->WSPRfreqSpinBox->value());
-  m_settings->setValue("DialFreq", QVariant::fromValue(m_lastMonitoredFrequency));
+  m_settings->setValue ("DialFreq", QVariant::fromValue(m_lastMonitoredFrequency));
   m_settings->setValue("OutAttenuation", ui->outAttenuation->value ());
   m_settings->setValue("GUItab",ui->tabWidget->currentIndex());
   m_settings->setValue("LockTxFreq",m_lockTxFreq);
@@ -1186,7 +1185,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("PctTx",m_pctx);
   m_settings->setValue("dBm",m_dBm);
   m_settings->setValue("UploadSpots",m_uploadSpots);
-  m_settings->setValue("BandHopping", ui->band_hopping_group_box->isChecked ());
+  m_settings->setValue ("BandHopping", ui->band_hopping_group_box->isChecked ());
   m_settings->setValue("pwrBandTxMemory",m_pwrBandTxMemory);
   m_settings->setValue("pwrBandTuneMemory",m_pwrBandTuneMemory);
   m_settings->setValue("SWLMode",m_swl);
@@ -1201,8 +1200,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("QuickCall", m_autoTx);
   m_settings->setValue("AutoSequence", m_autoseq);
   m_settings->setValue("SpotText", m_spotText);
-  m_settings->setValue("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
-  m_settings->setValue("LagThreshold", m_nlag);
+  m_settings->setValue ("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
   m_settings->endGroup();
 }
 
@@ -1493,9 +1491,6 @@ void MainWindow::readSettings()
   ui->spotLineEdit->setText(m_spotText);
 
   ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog", true).toBool());
-
-  ui->lagThreshSpinBox->setValue(-100); // ensure a change is signaled
-  ui->lagThreshSpinBox->setValue(m_settings->value("LagThreshold", -100).toInt());
 
   m_settings->endGroup();
   
@@ -3063,7 +3058,6 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
-  if(!m_diskData) dec_data.params.nlag=m_nlag; else dec_data.params.nlag=-100;
   dec_data.params.nswl=m_swl ? 1 : 0;
   dec_data.params.nfilter=m_filter ? 1 : 0;
   dec_data.params.nagcc=m_agcc ? 1 : 0;
@@ -6514,8 +6508,6 @@ void MainWindow::on_rptSpinBox_valueChanged(int n)
   else if(m_ntx==6) { ui->txrb6->setChecked(true); }
   statusChanged();
 }
-
-void MainWindow::on_lagThreshSpinBox_valueChanged(int n) { m_nlag=n; }
 
 void MainWindow::on_tuneButton_clicked (bool checked)
 {

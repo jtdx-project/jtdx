@@ -76,7 +76,6 @@ extern struct dec_data {
     int nft8rxfsens;
     int nft4depth;
     int nsecbandchanged;
-    int nlag;
     bool ndiskdat;
     bool newdat;
     bool nagain;
