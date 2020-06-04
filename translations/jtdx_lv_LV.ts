@@ -1998,7 +1998,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaimanu salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
