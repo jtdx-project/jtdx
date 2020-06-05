@@ -3214,10 +3214,6 @@ Fejl: %2 - %3</translation>
         <translation>Sæt Rx frekvens lig med Tx frekvens</translation>
     </message>
     <message>
-        <source>Rx=Tx</source>
-        <translation type="vanished">Rx=Tx</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktivér halvautomatisk meddelelsessekvens. Når du kalder CQ autoselekteres der som standard søgning efter højeste prioritet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -3242,10 +3238,6 @@ Fejl: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
         <translation>Sæt Tx frekvens til Rx frekvens</translation>
-    </message>
-    <message>
-        <source>Tx=Rx</source>
-        <translation type="vanished">Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>

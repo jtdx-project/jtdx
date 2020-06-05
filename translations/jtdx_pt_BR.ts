@@ -3197,10 +3197,6 @@ Error: %2 - %3</source>
         <translation>Definir frequência Rx para frequência Tx</translation>
     </message>
     <message>
-        <source>Rx=Tx</source>
-        <translation type="vanished">Rx=Tx</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ligar sequência de mensagens semi-automáticas. Em modo chamada CQ a operação auto seleciona a pesquisa por resposta com a mais alta prioridade.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -3225,10 +3221,6 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
         <translation>Definir frequência TX igual a RX</translation>
-    </message>
-    <message>
-        <source>Tx=Rx</source>
-        <translation type="vanished">Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>

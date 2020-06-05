@@ -3149,10 +3149,6 @@ Error: %2 - %3</source>
         <translation>Tx 周波数へ Rx 周波数を設定</translation>
     </message>
     <message>
-        <source>Rx=Tx</source>
-        <translation type="vanished">Rx=Tx</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;半自動メッセージシーケンスを有効にします。 デフォルトでCQ操作の自動選択を呼び出す場合、優先度が最も高い応答を検索します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -3177,10 +3173,6 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
         <translation>Rx 周波数へ Tx 周波数を設定</translation>
-    </message>
-    <message>
-        <source>Tx=Rx</source>
-        <translation type="vanished">Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>

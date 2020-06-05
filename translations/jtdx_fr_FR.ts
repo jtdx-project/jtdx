@@ -3210,10 +3210,6 @@ Erreur : %2 - %3</translation>
         <translation>Régler la fréquence Rx sur la fréquence Tx</translation>
     </message>
     <message>
-        <source>Rx=Tx</source>
-        <translation type="vanished">Rx ► TX</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Activer le séquençage semi-automatique des messages. En appelant l&apos;opération CQ, la sélection automatique par défaut recherche la réponse avec la priorité la plus élevée. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -3238,10 +3234,6 @@ Erreur : %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
         <translation>Régler la fréquence Tx sur la fréquence Rx</translation>
-    </message>
-    <message>
-        <source>Tx=Rx</source>
-        <translation type="vanished">Tx ► Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>
