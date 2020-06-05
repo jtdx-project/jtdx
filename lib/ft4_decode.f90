@@ -297,7 +297,7 @@ contains
               lhidemsg=.false.
               if(lhidetelemetry .and. i3.eq.0 .and. n3.eq.5) lhidemsg=.true.
               if(lhidetest) then
-                if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3) then
+                if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3 .or. i3.gt.4) then
                   if(mycalllen1.lt.4 .or. message(1:mycalllen1).ne.trim(mycall)//' ') lhidemsg=.true.
                 endif
                 if(message(1:3).eq.'CQ ') then
