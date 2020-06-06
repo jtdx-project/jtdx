@@ -1151,6 +1151,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     if(i3.eq.4 .and. msg37(1:8).eq."CQ <...>") then; nbadcrc=1; msg37=''; endif ! false decode
 ! 713STG 869TK NO05  i3=2 n3=5, false decode, as per protocol type2 shall be /P message
     if(i3.eq.2 .and. index(msg37,'/P ').lt.1) then; msg37=''; nbadcrc=1; return; endif
+! -18  0.5  584 ~ UA3ALE <...> PR07         *  AP decode
+    if(iaptype.eq.2 .and. index(msg37,"<.").gt.4) then; msg37=''; nbadcrc=1; return; endif
 
     if(lsubtract .and. .not.ldupemsg) then
       if(nthr.eq.1) then; call subtractft81(itone,f1,xdt2)
