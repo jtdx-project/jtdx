@@ -1998,6 +1998,19 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
+              <item>
+               <widget class="QCheckBox" name="cbClearGrid">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="text">
+                 <string>Clr</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
             <item>
@@ -4137,118 +4150,8 @@ list. The list can be maintained in Settings (F2).</string>
                  </property>
                  <item>
                   <widget class="QWidget" name="WSPR_controls_widget" native="true">
-                   <layout class="QGridLayout" name="gridLayout_7">
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item row="2" column="1">
-                     <widget class="QGroupBox" name="band_hopping_group_box">
-                      <property name="title">
-                       <string>Band Hopping</string>
-                      </property>
-                      <property name="checkable">
-                       <bool>true</bool>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_7">
-                       <item>
-                        <widget class="QPushButton" name="band_hopping_schedule_push_button">
-                         <property name="toolTip">
-                          <string>Choose bands and times of day for band-hopping.</string>
-                         </property>
-                         <property name="text">
-                          <string>Schedule ...</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item row="0" column="3">
-                     <spacer name="horizontalSpacer_2">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>0</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item row="0" column="2">
-                     <widget class="QCheckBox" name="cbUploadWSPR_Spots">
-                      <property name="toolTip">
-                       <string>Upload decoded messages to WPRnet.org.</string>
-                      </property>
-                      <property name="text">
-                       <string>Upload spots</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="QSpinBox" name="WSPRfreqSpinBox">
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                      <property name="suffix">
-                       <string>  Hz</string>
-                      </property>
-                      <property name="prefix">
-                       <string>Tx  </string>
-                      </property>
-                      <property name="minimum">
-                       <number>1400</number>
-                      </property>
-                      <property name="maximum">
-                       <number>1600</number>
-                      </property>
-                      <property name="value">
-                       <number>1500</number>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="2">
-                     <widget class="QPushButton" name="pbTxNext">
-                      <property name="toolTip">
-                       <string>Transmit during the next 2-minute sequence.</string>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton:checked {
-	background-color: red;
-	border-style: outset;
-	border-width: 1px;
-	border-radius: 5px;
-	border-color: black;
-	min-width: 5em;
-	padding: 3px;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>Tx Next</string>
-                      </property>
-                      <property name="checkable">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="2">
-                     <widget class="QComboBox" name="TxPowerComboBox">
-                      <property name="toolTip">
-                       <string>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
+                   <layout class="QHBoxLayout" name="horizontalLayout_26">
+                    <item>
                      <spacer name="horizontalSpacer_3">
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
@@ -4261,24 +4164,137 @@ list. The list can be maintained in Settings (F2).</string>
                       </property>
                      </spacer>
                     </item>
-                    <item row="1" column="1">
-                     <widget class="QSpinBox" name="sbTxPercent">
-                      <property name="toolTip">
-                       <string>Percentage of 2-minute sequences devoted to transmitting.</string>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_17">
+                      <item>
+                       <widget class="QSpinBox" name="WSPRfreqSpinBox">
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="suffix">
+                         <string>  Hz</string>
+                        </property>
+                        <property name="prefix">
+                         <string>Tx  </string>
+                        </property>
+                        <property name="minimum">
+                         <number>1400</number>
+                        </property>
+                        <property name="maximum">
+                         <number>1600</number>
+                        </property>
+                        <property name="value">
+                         <number>1500</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sbTxPercent">
+                        <property name="toolTip">
+                         <string>Percentage of 2-minute sequences devoted to transmitting.</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="suffix">
+                         <string>  %</string>
+                        </property>
+                        <property name="prefix">
+                         <string>Tx Pct </string>
+                        </property>
+                        <property name="maximum">
+                         <number>100</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="band_hopping_group_box">
+                        <property name="title">
+                         <string>Band Hopping</string>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_7">
+                         <item>
+                          <widget class="QPushButton" name="band_hopping_schedule_push_button">
+                           <property name="toolTip">
+                            <string>Choose bands and times of day for band-hopping.</string>
+                           </property>
+                           <property name="text">
+                            <string>Schedule ...</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_16">
+                      <item>
+                       <widget class="QCheckBox" name="cbUploadWSPR_Spots">
+                        <property name="toolTip">
+                         <string>Upload decoded messages to WPRnet.org.</string>
+                        </property>
+                        <property name="text">
+                         <string>Upload spots</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pbTxNext">
+                        <property name="toolTip">
+                         <string>Transmit during the next 2-minute sequence.</string>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton:checked {
+	background-color: red;
+	border-style: outset;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: black;
+	min-width: 5em;
+	padding: 3px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Tx Next</string>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QCheckBox" name="cbNoOwnCall">
+                        <property name="text">
+                         <string>No own call decodes</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="TxPowerComboBox">
+                        <property name="toolTip">
+                         <string>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_2">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
                       </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>0</width>
+                        <height>20</height>
+                       </size>
                       </property>
-                      <property name="suffix">
-                       <string>  %</string>
-                      </property>
-                      <property name="prefix">
-                       <string>Tx Pct </string>
-                      </property>
-                      <property name="maximum">
-                       <number>100</number>
-                      </property>
-                     </widget>
+                     </spacer>
                     </item>
                    </layout>
                   </widget>
