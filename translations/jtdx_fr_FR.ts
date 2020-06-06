@@ -2384,7 +2384,7 @@ Erreur : %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode de la frequence</translation>
     </message>
 </context>
 <context>
@@ -2964,7 +2964,8 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocs audio perdus. L&apos;intervalle de 15 secondes du FT8 comporte 52 blocs de données audio, le décodeur étant déclenché si les données audio atteignent 51 blocs en mode &quot;SWL/dernière strate du décodeur&quot; ou 50 blocs dans le cas contraire. Sous le système d&apos;exploitation Windows, de nombreux rapports de données audio étaient perdus. Pour le système d&apos;exploitation Windows, une solution de contournement est mise en œuvre pour lancer le décodeur FT8 si au moins 46 des 52 blocs audio reçus. La notification de perte de blocs audio permet à l&apos;utilisateur de savoir qu&apos;il y a un problème dans la configuration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3187,12 +3188,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3248,7 +3249,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>redervé</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3279,12 +3280,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Effacer l&apos;indicatif d&apos;appel de cette liste lors de l&apos;enregistrement du QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1934"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>éffacer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
@@ -4599,7 +4600,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5839"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Masquer les messages de télémétrie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="454"/>
@@ -4679,7 +4680,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.cpp" line="1716"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>perte audio </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1798"/>
@@ -4834,13 +4835,13 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="3439"/>
         <location filename="../mainwindow.cpp" line="3458"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation>Frequ.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3439"/>
         <location filename="../mainwindow.cpp" line="3458"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Cpu=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3445"/>
@@ -5667,7 +5668,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>Barres</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
