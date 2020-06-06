@@ -3321,7 +3321,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kustuta grid listist QSO logimisel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3876,7 +3876,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Peida enda kusungiga dekoodid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
