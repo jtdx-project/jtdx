@@ -1203,6 +1203,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("AutoSequence", m_autoseq);
   m_settings->setValue("SpotText", m_spotText);
   m_settings->setValue ("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
+  m_settings->setValue ("ClearWGridAtLog", ui->cbClearGrid->isChecked ());
   m_settings->endGroup();
 }
 
@@ -1493,6 +1494,8 @@ void MainWindow::readSettings()
   ui->spotLineEdit->setText(m_spotText);
 
   ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog", true).toBool());
+
+  ui->cbClearGrid->setChecked (m_settings->value ("ClearWGridAtLog", true).toBool());
 
   m_settings->endGroup();
   
@@ -5810,6 +5813,14 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
       m_wantedCallList.removeAt(wcallidx); ui->wantedCall->setText(m_wantedCallList.join(","));
     }
   }
+//clean up wanted grid from window/list if QSO with this grid is logged in
+  if(ui->cbClearGrid->isChecked () && grid.trimmed().length()==4) {
+    int wgrididx=-1;
+    wgrididx=m_wantedGridList.indexOf(grid);
+    if(wgrididx >= 0) {
+      m_wantedGridList.removeAt(wgrididx); ui->wantedGrid->setText(m_wantedGridList.join(","));
+    }
+  }
   if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition Hound mode"); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);"); }
 }
 
@@ -7633,7 +7644,7 @@ void MainWindow::on_cbShowWanted_toggled(bool b)
   m_wantedchkd=b;
   ui->labWantCall->setVisible(b); ui->wantedCall->setVisible(b); ui->labWantCountry->setVisible(b); ui->wantedCountry->setVisible(b);
   ui->labWantPfx->setVisible(b); ui->wantedPrefix->setVisible(b); ui->labWantGrid->setVisible(b); ui->wantedGrid->setVisible(b);
-  ui->cbClearCallsign->setVisible(b); dynamicButtonsInit();
+  ui->cbClearCallsign->setVisible(b); ui->cbClearGrid->setVisible(b); dynamicButtonsInit();
 }
 
 void MainWindow::on_cbShowSpot_toggled(bool b) 

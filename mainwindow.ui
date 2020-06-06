@@ -1998,6 +1998,19 @@ QLabel[oob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
+              <item>
+               <widget class="QCheckBox" name="cbClearGrid">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="text">
+                 <string>Clr</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
             <item>
