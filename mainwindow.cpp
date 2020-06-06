@@ -1119,10 +1119,10 @@ MainWindow::~MainWindow()
 void MainWindow::writeSettings()
 {
   m_settings->beginGroup("MainWindow");
-  m_settings->setValue ("geometry", saveGeometry ());
-  m_settings->setValue ("state", saveState ());
-  m_settings->setValue ("vertSplitter", ui->splitter->saveState());
-  m_settings->setValue("MRUdir", m_path);
+  m_settings->setValue("geometry",saveGeometry ());
+  m_settings->setValue("state",saveState ());
+  m_settings->setValue("vertSplitter",ui->splitter->saveState());
+  m_settings->setValue("MRUdir",m_path);
   m_settings->setValue("TxFirst",m_txFirst);
   m_settings->setValue("RRR/RR73",m_rrr);
   m_settings->setValue("CQdirection",m_cqdir);
@@ -1132,7 +1132,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("WantedCountryCommaList",ui->wantedCountry->text());
   m_settings->setValue("WantedPrefixCommaList",ui->wantedPrefix->text());
   m_settings->setValue("WantedGridCommaList",ui->wantedGrid->text());
-  m_settings->setValue ("FreeText", ui->freeTextMsg->currentText ());
+  m_settings->setValue("FreeText",ui->freeTextMsg->currentText ());
   m_settings->setValue("ShowMenus",ui->cbMenus->isChecked());
   m_settings->setValue("ShowWanted",ui->cbShowWanted->isChecked());
   m_settings->endGroup();
@@ -1179,31 +1179,32 @@ void MainWindow::writeSettings()
   m_settings->setValue("RxFreq",ui->RxFreqSpinBox->value());
   m_settings->setValue("TxFreq",ui->TxFreqSpinBox->value());
   m_settings->setValue("WSPRfreq",ui->WSPRfreqSpinBox->value());
-  m_settings->setValue ("DialFreq", QVariant::fromValue(m_lastMonitoredFrequency));
-  m_settings->setValue("OutAttenuation", ui->outAttenuation->value ());
+  m_settings->setValue("DialFreq",QVariant::fromValue(m_lastMonitoredFrequency));
+  m_settings->setValue("OutAttenuation",ui->outAttenuation->value ());
   m_settings->setValue("GUItab",ui->tabWidget->currentIndex());
   m_settings->setValue("LockTxFreq",m_lockTxFreq);
   m_settings->setValue("SkipTx1", m_skipTx1);
   m_settings->setValue("PctTx",m_pctx);
   m_settings->setValue("dBm",m_dBm);
   m_settings->setValue("UploadSpots",m_uploadSpots);
-  m_settings->setValue ("BandHopping", ui->band_hopping_group_box->isChecked ());
+  m_settings->setValue("BandHopping",ui->band_hopping_group_box->isChecked ());
   m_settings->setValue("pwrBandTxMemory",m_pwrBandTxMemory);
   m_settings->setValue("pwrBandTuneMemory",m_pwrBandTuneMemory);
   m_settings->setValue("SWLMode",m_swl);
   m_settings->setValue("Filter",m_filter);
   m_settings->setValue("AGCcompensation",m_agcc);
   m_settings->setValue("Hint",m_hint);
-  m_settings->setValue("73TxDisable", m_disable_TX_on_73);
-  m_settings->setValue("ShowMainWindowTooltips", m_showTooltips);
-  m_settings->setValue("ColorTxMessageButtons", m_colorTxMsgButtons);
-  m_settings->setValue("CallsignToClipboard", m_callToClipboard);
-  m_settings->setValue("Crossband160mJA", m_crossbandOptionEnabled);
-  m_settings->setValue("QuickCall", m_autoTx);
-  m_settings->setValue("AutoSequence", m_autoseq);
-  m_settings->setValue("SpotText", m_spotText);
-  m_settings->setValue ("ClearWCallAtLog", ui->cbClearCallsign->isChecked ());
-  m_settings->setValue ("ClearWGridAtLog", ui->cbClearGrid->isChecked ());
+  m_settings->setValue("73TxDisable",m_disable_TX_on_73);
+  m_settings->setValue("ShowMainWindowTooltips",m_showTooltips);
+  m_settings->setValue("ColorTxMessageButtons",m_colorTxMsgButtons);
+  m_settings->setValue("CallsignToClipboard",m_callToClipboard);
+  m_settings->setValue("Crossband160mJA",m_crossbandOptionEnabled);
+  m_settings->setValue("QuickCall",m_autoTx);
+  m_settings->setValue("AutoSequence",m_autoseq);
+  m_settings->setValue("SpotText",m_spotText);
+  m_settings->setValue("ClearWCallAtLog",ui->cbClearCallsign->isChecked ());
+  m_settings->setValue("ClearWGridAtLog",ui->cbClearGrid->isChecked ());
+  m_settings->setValue("NoOwnCallWSPR",ui->cbNoOwnCall->isChecked());
   m_settings->endGroup();
 }
 
@@ -1214,9 +1215,9 @@ void MainWindow::readSettings()
   
   m_geometry = m_settings->value ("geometry",saveGeometry()).toByteArray();
   restoreGeometry(m_geometry);
-  restoreState (m_settings->value ("state", saveState ()).toByteArray ());
+  restoreState (m_settings->value ("state",saveState ()).toByteArray ());
   ui->splitter->restoreState(m_settings->value("vertSplitter").toByteArray());
-  m_path = m_settings->value("MRUdir", m_config.save_directory ().absolutePath ()).toString ();
+  m_path = m_settings->value("MRUdir",m_config.save_directory ().absolutePath ()).toString ();
 
   m_txFirst = m_settings->value("TxFirst",false).toBool();
 
@@ -1232,7 +1233,7 @@ void MainWindow::readSettings()
     bool hasMatch = match.hasMatch(); if(!hasMatch) m_cqdir="";
   }
   ui->directionLineEdit->setText(m_cqdir);
-  if (!m_cqdir.isEmpty ()) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
+  if(!m_cqdir.isEmpty ()) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
   else { ui->pbCallCQ->setText("CQ"); }
 
   ui->dxCallEntry->setText(m_settings->value("DXcall","").toString());
@@ -1242,7 +1243,7 @@ void MainWindow::readSettings()
   ui->wantedPrefix->setText(m_settings->value("WantedPrefixCommaList","").toString());
   ui->wantedGrid->setText(m_settings->value("WantedGridCommaList","").toString());
 
-  if (m_settings->contains ("FreeText")) ui->freeTextMsg->setCurrentText (m_settings->value ("FreeText").toString ());
+  if(m_settings->contains ("FreeText")) ui->freeTextMsg->setCurrentText (m_settings->value ("FreeText").toString ());
 
   if(m_settings->value("ShowMenus").toString()=="false") { ui->cbMenus->setChecked(false); on_cbMenus_toggled(false); }
   else { ui->cbMenus->setChecked(true); on_cbMenus_toggled(true); }
@@ -1441,7 +1442,7 @@ void MainWindow::readSettings()
 
   m_lockTxFreq=m_settings->value("LockTxFreq",false).toBool();
 
-  m_skipTx1=m_settings->value("SkipTx1", false).toBool();
+  m_skipTx1=m_settings->value("SkipTx1",false).toBool();
   ui->skipTx1->setChecked(m_skipTx1);
   ui->skipGrid->setChecked(m_skipTx1);
 
@@ -1493,9 +1494,9 @@ void MainWindow::readSettings()
   m_spotText=m_settings->value("SpotText","").toString();
   ui->spotLineEdit->setText(m_spotText);
 
-  ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog", true).toBool());
-
-  ui->cbClearGrid->setChecked (m_settings->value ("ClearWGridAtLog", true).toBool());
+  ui->cbClearCallsign->setChecked (m_settings->value ("ClearWCallAtLog",true).toBool());
+  ui->cbClearGrid->setChecked (m_settings->value ("ClearWGridAtLog",true).toBool());
+  ui->cbNoOwnCall->setChecked(m_settings->value("NoOwnCallWSPR",false).toBool());
 
   m_settings->endGroup();
   
@@ -6033,17 +6034,11 @@ void MainWindow::WSPR_config(bool b)
   ui->QSO_controls_widget->setVisible (!b);
   ui->DX_controls_widget->setEnabled (!b);
   ui->WSPR_controls_widget->setVisible (b);
-  ui->label_6->setVisible(!b and ui->cbMenus->isChecked());
-  ui->label_7->setVisible(!b);
-  ui->logQSOButton->setEnabled(!b);
-  ui->DecodeButton->setEnabled(!b);
-  ui->filterButton->setEnabled(!b);
-  ui->AGCcButton->setEnabled(!b);
-  ui->swlButton->setEnabled(!b);
-  ui->ClearDxButton->setEnabled(!b);
-  ui->hintButton->setEnabled(!b);
-  ui->AutoTxButton->setEnabled(!b);
-  ui->AutoSeqButton->setEnabled(!b);
+  ui->label_6->setVisible(!b and ui->cbMenus->isChecked()); ui->label_7->setVisible(!b); ui->HoundButton->setEnabled(!b);
+  ui->logQSOButton->setEnabled(!b); ui->DecodeButton->setEnabled(!b); ui->filterButton->setEnabled(!b);
+  ui->AGCcButton->setEnabled(!b); ui->swlButton->setEnabled(!b); ui->ClearDxButton->setEnabled(!b);
+  ui->hintButton->setEnabled(!b); ui->AutoTxButton->setEnabled(!b); ui->AutoSeqButton->setEnabled(!b);
+  ui->bypassButton->setEnabled(!b); ui->singleQSOButton->setEnabled(!b); ui->AnsB4Button->setEnabled(!b);
   if(b) {
     ui->decodedTextLabel->setText("UTC    dB   DT "+tr("    Freq     Drift  Call          Grid    dBm   Dist"));
     ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
@@ -7275,6 +7270,10 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
 {
   while(p1.canReadLine()) {
     QString t = QString(p1.readLine());
+    if(ui->cbNoOwnCall->isChecked()) {
+      if(t.contains(" " + m_config.my_callsign() + " ")) continue;
+      if(t.contains(" <" + m_config.my_callsign() + "> ")) continue;
+    }
     QString t1;
     if(t.indexOf("<DecodeFinished>") >= 0) {
       m_bDecoded = m_nWSPRdecodes > 0;
