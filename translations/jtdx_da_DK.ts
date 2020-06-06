@@ -2778,7 +2778,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3769"/>
+        <location filename="../mainwindow.cpp" line="3775"/>
         <source>&amp;Yes</source>
         <translation>&amp;Ja</translation>
     </message>
@@ -2789,7 +2789,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3772"/>
+        <location filename="../mainwindow.cpp" line="3778"/>
         <source>&amp;No</source>
         <translation>&amp;Nej</translation>
     </message>
@@ -2966,7 +2966,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;body&gt; &lt;p&gt; Mistede lydblokke. FT8 15sec-interval har 52 blokke lyddata, hvor dekoder udløses, hvis lyddata nåede 51 blokke i &apos;SWL / sent strat af dekoder&apos; -mode eller 50 blokke. Under Windows OS var der flere rapporter om mistet lyddata. For Windows OS er der implementeret en løsning, der starter FT8-dekoder, hvis der mindst modtages 46 ud af 52 lydblokke. Melding om mistet lyd blokke fortæller brugeren, at der er noget galt i opsætningen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3094,9 +3094,9 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1088"/>
-        <location filename="../mainwindow.cpp" line="4608"/>
-        <location filename="../mainwindow.cpp" line="5274"/>
-        <location filename="../mainwindow.cpp" line="5689"/>
+        <location filename="../mainwindow.cpp" line="4614"/>
+        <location filename="../mainwindow.cpp" line="5280"/>
+        <location filename="../mainwindow.cpp" line="5695"/>
         <source>DX Call</source>
         <translation>Dx Call</translation>
     </message>
@@ -3150,7 +3150,7 @@ Fejl: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1415"/>
-        <location filename="../mainwindow.cpp" line="2911"/>
+        <location filename="../mainwindow.cpp" line="2917"/>
         <source>Hound</source>
         <translation>Hound</translation>
     </message>
@@ -3191,12 +3191,12 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3252,7 +3252,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Reserveret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3355,7 +3355,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2234"/>
-        <location filename="../mainwindow.cpp" line="5994"/>
+        <location filename="../mainwindow.cpp" line="6000"/>
         <source>Rx Frequency</source>
         <translation>Rx frekvens</translation>
     </message>
@@ -3366,7 +3366,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2321"/>
-        <location filename="../mainwindow.cpp" line="6576"/>
+        <location filename="../mainwindow.cpp" line="6582"/>
         <source>&amp;Tune</source>
         <translation>&amp;Tune</translation>
     </message>
@@ -4682,7 +4682,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.cpp" line="1716"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>Mistet Audio </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1798"/>

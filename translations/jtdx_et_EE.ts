@@ -2783,7 +2783,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3769"/>
+        <location filename="../mainwindow.cpp" line="3778"/>
         <source>&amp;Yes</source>
         <translation>&amp;Jah</translation>
     </message>
@@ -2794,7 +2794,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3772"/>
+        <location filename="../mainwindow.cpp" line="3781"/>
         <source>&amp;No</source>
         <translation>&amp;Ei</translation>
     </message>
@@ -2964,7 +2964,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
-        <location filename="../mainwindow.ui" line="2156"/>
+        <location filename="../mainwindow.ui" line="2169"/>
         <source>UTC           dB            DT           Freq          Dr </source>
         <translation></translation>
     </message>
@@ -2975,13 +2975,13 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1765"/>
-        <location filename="../mainwindow.cpp" line="3446"/>
+        <location filename="../mainwindow.cpp" line="1773"/>
         <location filename="../mainwindow.cpp" line="3455"/>
-        <location filename="../mainwindow.cpp" line="5988"/>
-        <location filename="../mainwindow.cpp" line="5993"/>
-        <location filename="../mainwindow.cpp" line="6033"/>
-        <location filename="../mainwindow.cpp" line="6044"/>
+        <location filename="../mainwindow.cpp" line="3464"/>
+        <location filename="../mainwindow.cpp" line="6005"/>
+        <location filename="../mainwindow.cpp" line="6010"/>
+        <location filename="../mainwindow.cpp" line="6050"/>
+        <location filename="../mainwindow.cpp" line="6061"/>
         <source>Band Activity</source>
         <translation>Laineala aktiivsus</translation>
     </message>
@@ -3100,9 +3100,9 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1088"/>
-        <location filename="../mainwindow.cpp" line="4608"/>
-        <location filename="../mainwindow.cpp" line="5274"/>
-        <location filename="../mainwindow.cpp" line="5689"/>
+        <location filename="../mainwindow.cpp" line="4617"/>
+        <location filename="../mainwindow.cpp" line="5283"/>
+        <location filename="../mainwindow.cpp" line="5698"/>
         <source>DX Call</source>
         <translation>DX Kutsung</translation>
     </message>
@@ -3129,7 +3129,7 @@ Viga: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1511"/>
         <location filename="../mainwindow.ui" line="1654"/>
-        <location filename="../mainwindow.ui" line="4204"/>
+        <location filename="../mainwindow.ui" line="4217"/>
         <source>  Hz</source>
         <translation></translation>
     </message>
@@ -3155,7 +3155,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1415"/>
-        <location filename="../mainwindow.cpp" line="2911"/>
+        <location filename="../mainwindow.cpp" line="2920"/>
         <source>Hound</source>
         <translation></translation>
     </message>
@@ -3176,7 +3176,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1514"/>
-        <location filename="../mainwindow.ui" line="4207"/>
+        <location filename="../mainwindow.ui" line="4220"/>
         <source>Tx  </source>
         <translation></translation>
     </message>
@@ -3187,8 +3187,8 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1557"/>
-        <location filename="../mainwindow.cpp" line="1499"/>
-        <location filename="../mainwindow.cpp" line="1963"/>
+        <location filename="../mainwindow.cpp" line="1503"/>
+        <location filename="../mainwindow.cpp" line="1971"/>
         <source>S meter</source>
         <translation>S-meeter</translation>
     </message>
@@ -3225,7 +3225,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1590"/>
-        <location filename="../mainwindow.ui" line="4585"/>
+        <location filename="../mainwindow.ui" line="4598"/>
         <source>AutoSeq</source>
         <translation></translation>
     </message>
@@ -3292,6 +3292,7 @@ Viga: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1934"/>
+        <location filename="../mainwindow.ui" line="2010"/>
         <source>Clr</source>
         <translation></translation>
     </message>
@@ -3318,8 +3319,13 @@ Viga: %2 - %3</translation>
         <translation>ruut:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2010"/>
-        <location filename="../mainwindow.ui" line="2035"/>
+        <location filename="../mainwindow.ui" line="2004"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="2023"/>
+        <location filename="../mainwindow.ui" line="2048"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted countries: main country prefix shall be used in this list. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection under AutoSeq 1..7 will process wanted country according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed. List of the main country prefixes: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
@@ -3354,320 +3360,320 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2028"/>
+        <location filename="../mainwindow.ui" line="2041"/>
         <source>country:</source>
         <translation>riik:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2234"/>
-        <location filename="../mainwindow.cpp" line="5994"/>
+        <location filename="../mainwindow.ui" line="2247"/>
+        <location filename="../mainwindow.cpp" line="6011"/>
         <source>Rx Frequency</source>
         <translation>Rx sagedus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2307"/>
+        <location filename="../mainwindow.ui" line="2320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edastage puhas toon. Taimerit saab häälestada Seadete vahekaardil Üldine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2321"/>
-        <location filename="../mainwindow.cpp" line="6576"/>
+        <location filename="../mainwindow.ui" line="2334"/>
+        <location filename="../mainwindow.cpp" line="6593"/>
         <source>&amp;Tune</source>
         <translation>&amp;Häälesta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2349"/>
+        <location filename="../mainwindow.ui" line="2362"/>
         <source>Start monitoring</source>
         <translation>Alusta monitoorimist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2363"/>
+        <location filename="../mainwindow.ui" line="2376"/>
         <source>&amp;Monitor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2394"/>
+        <location filename="../mainwindow.ui" line="2407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kõigist filtritest mööda liikumine, dubleerib toimingu vahekaardil Muu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2408"/>
+        <location filename="../mainwindow.ui" line="2421"/>
         <source>Bypass</source>
         <translation>Filtriteta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2439"/>
+        <location filename="../mainwindow.ui" line="2452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ühe QSO AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2453"/>
+        <location filename="../mainwindow.ui" line="2466"/>
         <source>1 QSO</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2484"/>
+        <location filename="../mainwindow.ui" line="2497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vasta ennem töötatud AutoSeq valik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2498"/>
+        <location filename="../mainwindow.ui" line="2511"/>
         <source>AnsB4</source>
         <translation>VastaB4</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2526"/>
+        <location filename="../mainwindow.ui" line="2539"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lõpetage signaali jälgimine ja lõpetage audio-wav-failide paki dekodeerimine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2529"/>
+        <location filename="../mainwindow.ui" line="2542"/>
         <source>&amp;Stop</source>
         <translation>&amp;Stopp</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2568"/>
+        <location filename="../mainwindow.ui" line="2581"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekodeerige uuesti viimane Rx-periood või viimati dekodeeritud wav-helifail kõigi Vihje / Filtri / SWL-režiimi nuppude kombinatsioonide korral&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2582"/>
+        <location filename="../mainwindow.ui" line="2595"/>
         <source>Dec&amp;ode</source>
         <translation>Dek&amp;odeeri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2610"/>
+        <location filename="../mainwindow.ui" line="2623"/>
         <source>Toggle Tx Enable On/Off</source>
         <translation>Lülita Luba TX sisse/välja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2624"/>
+        <location filename="../mainwindow.ui" line="2637"/>
         <source>E&amp;nable Tx</source>
         <translation>L&amp;uba Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2652"/>
+        <location filename="../mainwindow.ui" line="2665"/>
         <source>Stop transmitting immediately</source>
         <translation>Katkesta saatmine koheselt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2655"/>
+        <location filename="../mainwindow.ui" line="2668"/>
         <source>&amp;Halt Tx</source>
         <translation>&amp;Peata Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2680"/>
+        <location filename="../mainwindow.ui" line="2693"/>
         <source>Enter this QSO in ADIF log</source>
         <translation>Sisesta see QSO ADIF-logisse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2683"/>
+        <location filename="../mainwindow.ui" line="2696"/>
         <source>Log &amp;QSO</source>
         <translation>Logi &amp;QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2708"/>
+        <location filename="../mainwindow.ui" line="2721"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: Laineala aktiivsuse (vasaku) akna  tühjendamine. Hiire parem nupp: Rx sageduse (parema) akna tühjendamine. Topeltklõps mõlema akna tühjendamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2711"/>
+        <location filename="../mainwindow.ui" line="2724"/>
         <source>&amp;Erase</source>
         <translation>&amp;Tühjenda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2736"/>
+        <location filename="../mainwindow.ui" line="2749"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Increase number of decoding attempts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suurendage dekodeerimiskatsete arvu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2750"/>
+        <location filename="../mainwindow.ui" line="2763"/>
         <source>S&amp;WL mode</source>
         <translation>S&amp;WL režiim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2781"/>
+        <location filename="../mainwindow.ui" line="2794"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib dekooderite rühma, mis põhineb sobitatud filtritel, FT8 režiimis aktiveerib FT8AP funktsionaalsuse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2795"/>
+        <location filename="../mainwindow.ui" line="2808"/>
         <source>Hint</source>
         <translation>Vihjed</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2826"/>
+        <location filename="../mainwindow.ui" line="2839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ribalaius, FT8 150Hz, FT8 kübararežiim 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signaalid: 580Hz dekodeerimine, 300 Hz teadete kuvamiseks. Filter on tsentreeritud RX signaali spektrini.FIlter ei paranda dekodeerimist vaid on ette nähtud dekodeerimise aja lühendamiseks. Kõiki signaale, mis jäävad ribast väljapoole ei dekodeerita.KAsuta seda funktsioonaalsust ainult väga aeglase protsessoriga.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2840"/>
+        <location filename="../mainwindow.ui" line="2853"/>
         <source>Filter</source>
         <translation>Ribafilter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2874"/>
+        <location filename="../mainwindow.ui" line="2887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiveerib AGC kompensatsioonifunktsioonid. Dekodeerimise tõhususe suurendamine, kui AGC on rigis sisse lülitatud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2888"/>
+        <location filename="../mainwindow.ui" line="2901"/>
         <source>AGCc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2919"/>
+        <location filename="../mainwindow.ui" line="2932"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hiire vasak nupp: andmete kustutamine akendest DX Kutsung ja DX Ruut. Hiire parem nupp: andmete kustutamine akendest DX Kutsung, DX Ruut; QSO ajaloost ja mustast nimekirjast. CTRL + hiire parem nupp: lisage DX-kutsung aknas olev kutsung kutsungite musta nimekirja, kustutage andmed akendest DX-kutsung, DX-ruut ja QSO-ajaloos..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2922"/>
+        <location filename="../mainwindow.ui" line="2935"/>
         <source>Clear D&amp;X</source>
         <translation>Kustuta D&amp;X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3020"/>
-        <location filename="../mainwindow.ui" line="5334"/>
-        <location filename="../mainwindow.ui" line="5791"/>
-        <location filename="../mainwindow.ui" line="5815"/>
+        <location filename="../mainwindow.ui" line="3033"/>
+        <location filename="../mainwindow.ui" line="5347"/>
+        <location filename="../mainwindow.ui" line="5804"/>
+        <location filename="../mainwindow.ui" line="5828"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3063"/>
+        <location filename="../mainwindow.ui" line="3076"/>
         <source>Generate standard messages for minimal QSO</source>
         <translation>Koosta minimaalse QSO jaoks standardsõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3066"/>
+        <location filename="../mainwindow.ui" line="3079"/>
         <source>GenMsgs</source>
         <translation>TeeSõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3095"/>
-        <location filename="../mainwindow.ui" line="5512"/>
+        <location filename="../mainwindow.ui" line="3108"/>
+        <location filename="../mainwindow.ui" line="5525"/>
         <source>CQ</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3130"/>
-        <location filename="../mainwindow.ui" line="3698"/>
+        <location filename="../mainwindow.ui" line="3143"/>
+        <location filename="../mainwindow.ui" line="3711"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>Seda võiks täpsustada (mis on suunatud CQ)</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Suunatud CQ, toetatud on vahemik AA kuni ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3133"/>
-        <location filename="../mainwindow.ui" line="3701"/>
+        <location filename="../mainwindow.ui" line="3146"/>
+        <location filename="../mainwindow.ui" line="3714"/>
         <source>DX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3146"/>
-        <location filename="../mainwindow.ui" line="3730"/>
+        <location filename="../mainwindow.ui" line="3159"/>
+        <location filename="../mainwindow.ui" line="3743"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
         <translation>Märgi &apos;RRR&apos; sõnumi koostamiseks, tühjenda märk &apos;RR73&apos; koostamiseks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3152"/>
-        <location filename="../mainwindow.ui" line="3736"/>
+        <location filename="../mainwindow.ui" line="3165"/>
+        <location filename="../mainwindow.ui" line="3749"/>
         <source>RRR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3165"/>
-        <location filename="../mainwindow.ui" line="3784"/>
+        <location filename="../mainwindow.ui" line="3178"/>
+        <location filename="../mainwindow.ui" line="3797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edasta sõnum ilma QTH lokaatorita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3171"/>
+        <location filename="../mainwindow.ui" line="3184"/>
         <source>SkipTx1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3204"/>
-        <location filename="../mainwindow.ui" line="3274"/>
-        <location filename="../mainwindow.ui" line="3338"/>
-        <location filename="../mainwindow.ui" line="3402"/>
-        <location filename="../mainwindow.ui" line="3484"/>
-        <location filename="../mainwindow.ui" line="3551"/>
+        <location filename="../mainwindow.ui" line="3217"/>
+        <location filename="../mainwindow.ui" line="3287"/>
+        <location filename="../mainwindow.ui" line="3351"/>
+        <location filename="../mainwindow.ui" line="3415"/>
+        <location filename="../mainwindow.ui" line="3497"/>
+        <location filename="../mainwindow.ui" line="3564"/>
         <source>Send this message in next Tx interval</source>
         <translation>Saada see teade järgmisel Tx perioodil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3210"/>
+        <location filename="../mainwindow.ui" line="3223"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3235"/>
-        <location filename="../mainwindow.ui" line="3302"/>
-        <location filename="../mainwindow.ui" line="3366"/>
-        <location filename="../mainwindow.ui" line="3430"/>
-        <location filename="../mainwindow.ui" line="3512"/>
-        <location filename="../mainwindow.ui" line="3582"/>
+        <location filename="../mainwindow.ui" line="3248"/>
+        <location filename="../mainwindow.ui" line="3315"/>
+        <location filename="../mainwindow.ui" line="3379"/>
+        <location filename="../mainwindow.ui" line="3443"/>
+        <location filename="../mainwindow.ui" line="3525"/>
+        <location filename="../mainwindow.ui" line="3595"/>
         <source>Switch to this Tx message NOW</source>
         <translation>Lülitu sellele Tx-teatele NÜÜD</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3241"/>
+        <location filename="../mainwindow.ui" line="3254"/>
         <source>Tx &amp;1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3244"/>
+        <location filename="../mainwindow.ui" line="3257"/>
         <source>Alt+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3280"/>
+        <location filename="../mainwindow.ui" line="3293"/>
         <source>Ctrl+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3305"/>
+        <location filename="../mainwindow.ui" line="3318"/>
         <source>Tx &amp;2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3308"/>
+        <location filename="../mainwindow.ui" line="3321"/>
         <source>Alt+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3344"/>
+        <location filename="../mainwindow.ui" line="3357"/>
         <source>Ctrl+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3369"/>
+        <location filename="../mainwindow.ui" line="3382"/>
         <source>Tx &amp;3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3372"/>
+        <location filename="../mainwindow.ui" line="3385"/>
         <source>Alt+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3408"/>
+        <location filename="../mainwindow.ui" line="3421"/>
         <source>Ctrl+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3433"/>
+        <location filename="../mainwindow.ui" line="3446"/>
         <source>Tx &amp;4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3436"/>
+        <location filename="../mainwindow.ui" line="3449"/>
         <source>Alt+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3462"/>
-        <location filename="../mainwindow.ui" line="4039"/>
+        <location filename="../mainwindow.ui" line="3475"/>
+        <location filename="../mainwindow.ui" line="4052"/>
         <source>Enter a free text message (maximum 13 characters)
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
@@ -3678,1388 +3684,1388 @@ Praeguse teksti lisamiseks eelmääratud makrode loendisse
 vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3490"/>
+        <location filename="../mainwindow.ui" line="3503"/>
         <source>Ctrl+5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3515"/>
+        <location filename="../mainwindow.ui" line="3528"/>
         <source>Tx &amp;5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3518"/>
+        <location filename="../mainwindow.ui" line="3531"/>
         <source>Alt+5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3557"/>
+        <location filename="../mainwindow.ui" line="3570"/>
         <source>Ctrl+6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3585"/>
+        <location filename="../mainwindow.ui" line="3598"/>
         <source>Tx &amp;6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3588"/>
+        <location filename="../mainwindow.ui" line="3601"/>
         <source>Alt+6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3606"/>
-        <location filename="../mainwindow.ui" line="5342"/>
-        <location filename="../mainwindow.ui" line="5345"/>
-        <location filename="../mainwindow.ui" line="5799"/>
-        <location filename="../mainwindow.ui" line="5823"/>
+        <location filename="../mainwindow.ui" line="3619"/>
+        <location filename="../mainwindow.ui" line="5355"/>
+        <location filename="../mainwindow.ui" line="5358"/>
+        <location filename="../mainwindow.ui" line="5812"/>
+        <location filename="../mainwindow.ui" line="5836"/>
         <source>2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3660"/>
+        <location filename="../mainwindow.ui" line="3673"/>
         <source>CQ </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3768"/>
+        <location filename="../mainwindow.ui" line="3781"/>
         <source>AnsCQ </source>
         <translation>VastaCQ </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3790"/>
+        <location filename="../mainwindow.ui" line="3803"/>
         <source>SkpGrid</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3817"/>
+        <location filename="../mainwindow.ui" line="3830"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koosta CQ või suunav CQ-vastus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3820"/>
+        <location filename="../mainwindow.ui" line="3833"/>
         <source>CQ/CQ DX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3845"/>
+        <location filename="../mainwindow.ui" line="3858"/>
         <source>Generate message for replying to a CQ</source>
         <translation>Koosta vastus CQ-le vastamiseks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3848"/>
+        <location filename="../mainwindow.ui" line="3861"/>
         <source>Grid</source>
         <translation>Ruut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3873"/>
+        <location filename="../mainwindow.ui" line="3886"/>
         <source>Generate message with report</source>
         <translation>Koosta vastus koos raportiga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3876"/>
+        <location filename="../mainwindow.ui" line="3889"/>
         <source>dB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3901"/>
+        <location filename="../mainwindow.ui" line="3914"/>
         <source>Generate message with R+report</source>
         <translation>Koosta vastus koos R+raportiga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3904"/>
+        <location filename="../mainwindow.ui" line="3917"/>
         <source>R+dB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3929"/>
+        <location filename="../mainwindow.ui" line="3942"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kui RRR valikukast on märkimata, koosta vastus RR73-ga; kui RRR valikukast on märgitud, koosta RRR-vastus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3932"/>
+        <location filename="../mainwindow.ui" line="3945"/>
         <source>RRR/RR73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3957"/>
+        <location filename="../mainwindow.ui" line="3970"/>
         <source>Generate message with 73</source>
         <translation>Koosta vastus 73-ga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3960"/>
+        <location filename="../mainwindow.ui" line="3973"/>
         <source>73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4008"/>
+        <location filename="../mainwindow.ui" line="4021"/>
         <source>Send this standard (generated) message</source>
         <translation>Saada see standard (koostatud) vastus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4011"/>
+        <location filename="../mainwindow.ui" line="4024"/>
         <source>Gen msg</source>
         <translation>Koosta vastus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4076"/>
+        <location filename="../mainwindow.ui" line="4089"/>
         <source>Send this free-text message (max 13 characters)</source>
         <translation>Saada see vabas formaadis sõnum (max 13 sümbolit)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4079"/>
+        <location filename="../mainwindow.ui" line="4092"/>
         <source>Free msg</source>
         <translation>Vaba vastus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4156"/>
+        <location filename="../mainwindow.ui" line="4169"/>
         <source>Band Hopping</source>
         <translation>Laineala vahetus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4165"/>
+        <location filename="../mainwindow.ui" line="4178"/>
         <source>Choose bands and times of day for band-hopping.</source>
         <translatorcomment>Vajab võib-olla analüüsi</translatorcomment>
         <translation>Vali  lainealade automaatse vahetuse lainealad ja kellaajad.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4168"/>
+        <location filename="../mainwindow.ui" line="4181"/>
         <source>Schedule ...</source>
         <translation>Kava ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4191"/>
+        <location filename="../mainwindow.ui" line="4204"/>
         <source>Upload decoded messages to WPRnet.org.</source>
         <translation>Lae dekodeeritud sõnumid WPRnet.org lehele.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4194"/>
+        <location filename="../mainwindow.ui" line="4207"/>
         <source>Upload spots</source>
         <translation>Saada spotid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4223"/>
+        <location filename="../mainwindow.ui" line="4236"/>
         <source>Transmit during the next 2-minute sequence.</source>
         <translation>Saada järgmise 2-min. perioodi ajal.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4237"/>
+        <location filename="../mainwindow.ui" line="4250"/>
         <source>Tx Next</source>
         <translation>Tx Järgmine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4247"/>
+        <location filename="../mainwindow.ui" line="4260"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
         <translation>Seadke WSPR-teate osana Tx võimsus dBm (dB üle 1 mW).</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4267"/>
+        <location filename="../mainwindow.ui" line="4280"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
         <translation>Saatmisele kasutatavate 2-minutiliste perioodide protsent.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4273"/>
+        <location filename="../mainwindow.ui" line="4286"/>
         <source>  %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4276"/>
+        <location filename="../mainwindow.ui" line="4289"/>
         <source>Tx Pct </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4359"/>
+        <location filename="../mainwindow.ui" line="4372"/>
         <source>File</source>
         <translation>Kaust</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4377"/>
+        <location filename="../mainwindow.ui" line="4390"/>
         <source>View</source>
         <translation>Vaade</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4384"/>
+        <location filename="../mainwindow.ui" line="4397"/>
         <source>Decode</source>
         <translation>Dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4388"/>
+        <location filename="../mainwindow.ui" line="4401"/>
         <source>FT8 threads</source>
         <translation>FT8 lõimed</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4406"/>
+        <location filename="../mainwindow.ui" line="4419"/>
         <source>JT9 WSPR decoding</source>
         <translation>JT9 WSPR dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4414"/>
+        <location filename="../mainwindow.ui" line="4427"/>
         <source>FT8 decoding</source>
         <translation>FT8 dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4418"/>
+        <location filename="../mainwindow.ui" line="4431"/>
         <source>wideband decoding</source>
         <translation>lairiba dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4426"/>
+        <location filename="../mainwindow.ui" line="4439"/>
         <source>narrow Filter</source>
         <translation>kitsas Filter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4434"/>
+        <location filename="../mainwindow.ui" line="4447"/>
         <source>decoder sensitivity</source>
         <translation>dekooderi tundlikus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4442"/>
+        <location filename="../mainwindow.ui" line="4455"/>
         <source>QSO RX freq sensitivity</source>
         <translation>QSO RX sageduse tundlikus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4450"/>
+        <location filename="../mainwindow.ui" line="4463"/>
         <source>decoding cycles</source>
         <translation>dekodeerimise tsükkleid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4458"/>
+        <location filename="../mainwindow.ui" line="4471"/>
         <source>SWL decoding cycles</source>
         <translation>SWL-dekodeerimise tsükkleid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4478"/>
+        <location filename="../mainwindow.ui" line="4491"/>
         <source>FT4 decoding</source>
         <translation>FT4 dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4494"/>
+        <location filename="../mainwindow.ui" line="4507"/>
         <source>Save</source>
         <translation>Salvesta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4502"/>
+        <location filename="../mainwindow.ui" line="4515"/>
         <source>Language</source>
         <translation>Keel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4523"/>
+        <location filename="../mainwindow.ui" line="4536"/>
         <source>Help</source>
         <translation>Abi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4539"/>
+        <location filename="../mainwindow.ui" line="4552"/>
         <source>Mode</source>
         <translation>Tööliik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4551"/>
+        <location filename="../mainwindow.ui" line="4564"/>
         <source>Misc</source>
         <translation>Muu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4555"/>
+        <location filename="../mainwindow.ui" line="4568"/>
         <source>Accept UDP Reply messages</source>
         <translation>Nõustu UDP sõnumitega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4589"/>
+        <location filename="../mainwindow.ui" line="4602"/>
         <source>Auto RX frequency Filter</source>
         <translation>Automaatne RX-sageduse filter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4613"/>
+        <location filename="../mainwindow.ui" line="4626"/>
         <source>DXpedition</source>
         <translation>DXekspeditsioon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4632"/>
+        <location filename="../mainwindow.ui" line="4645"/>
         <source>Exit</source>
         <translation>Välju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4635"/>
+        <location filename="../mainwindow.ui" line="4648"/>
         <source>Alt+F4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4646"/>
+        <location filename="../mainwindow.ui" line="4659"/>
         <source>Configuration</source>
         <translation>Seadistus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4649"/>
-        <location filename="../mainwindow.ui" line="5055"/>
+        <location filename="../mainwindow.ui" line="4662"/>
+        <location filename="../mainwindow.ui" line="5068"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4654"/>
+        <location filename="../mainwindow.ui" line="4667"/>
         <source>About JTDX</source>
         <translation>JTDX info</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4657"/>
+        <location filename="../mainwindow.ui" line="4670"/>
         <source>Ctrl+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4662"/>
+        <location filename="../mainwindow.ui" line="4675"/>
         <source>Waterfall</source>
         <translation>Juga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4667"/>
+        <location filename="../mainwindow.ui" line="4680"/>
         <source>Open</source>
         <translation>Ava</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4670"/>
+        <location filename="../mainwindow.ui" line="4683"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4675"/>
+        <location filename="../mainwindow.ui" line="4688"/>
         <source>Open next in directory</source>
         <translation>Ava järgmine kataloogis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4678"/>
+        <location filename="../mainwindow.ui" line="4691"/>
         <source>F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4683"/>
+        <location filename="../mainwindow.ui" line="4696"/>
         <source>Decode remaining files in directory</source>
         <translation>Dekodeeri ülejäänud failid kataloogis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4686"/>
+        <location filename="../mainwindow.ui" line="4699"/>
         <source>Shift+F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4691"/>
+        <location filename="../mainwindow.ui" line="4704"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>Kustuta kõik *.wav &amp;&amp; *.c2 failid  Save kataloogis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4702"/>
-        <location filename="../mainwindow.ui" line="5385"/>
-        <location filename="../mainwindow.ui" line="5447"/>
-        <location filename="../mainwindow.ui" line="5729"/>
+        <location filename="../mainwindow.ui" line="4715"/>
+        <location filename="../mainwindow.ui" line="5398"/>
+        <location filename="../mainwindow.ui" line="5460"/>
+        <location filename="../mainwindow.ui" line="5742"/>
         <source>fast</source>
         <translation>kiire</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4713"/>
+        <location filename="../mainwindow.ui" line="4726"/>
         <source>None</source>
         <translation>Välja lülitatud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4721"/>
+        <location filename="../mainwindow.ui" line="4734"/>
         <source>Save all</source>
         <translation>Salvesta kõik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4806"/>
+        <location filename="../mainwindow.ui" line="4819"/>
         <source>JTDX Web site</source>
         <translation>JTDX Veebileht</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4809"/>
+        <location filename="../mainwindow.ui" line="4822"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4814"/>
+        <location filename="../mainwindow.ui" line="4827"/>
         <source>Keyboard shortcuts</source>
         <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4817"/>
+        <location filename="../mainwindow.ui" line="4830"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4822"/>
+        <location filename="../mainwindow.ui" line="4835"/>
         <source>Special mouse commands</source>
         <translation>Hiire erikäsud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4825"/>
+        <location filename="../mainwindow.ui" line="4838"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4836"/>
+        <location filename="../mainwindow.ui" line="4849"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4847"/>
+        <location filename="../mainwindow.ui" line="4860"/>
         <source>Save decoded</source>
         <translation>Salvesta dekoodeeritud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4858"/>
-        <location filename="../mainwindow.ui" line="5393"/>
-        <location filename="../mainwindow.ui" line="5455"/>
-        <location filename="../mainwindow.ui" line="5697"/>
-        <location filename="../mainwindow.ui" line="5737"/>
+        <location filename="../mainwindow.ui" line="4871"/>
+        <location filename="../mainwindow.ui" line="5406"/>
+        <location filename="../mainwindow.ui" line="5468"/>
+        <location filename="../mainwindow.ui" line="5710"/>
+        <location filename="../mainwindow.ui" line="5750"/>
         <source>medium</source>
         <translation>keskmine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4869"/>
-        <location filename="../mainwindow.ui" line="5404"/>
-        <location filename="../mainwindow.ui" line="5466"/>
-        <location filename="../mainwindow.ui" line="5748"/>
+        <location filename="../mainwindow.ui" line="4882"/>
+        <location filename="../mainwindow.ui" line="5417"/>
+        <location filename="../mainwindow.ui" line="5479"/>
+        <location filename="../mainwindow.ui" line="5761"/>
         <source>deep</source>
         <translation>sügav</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4877"/>
+        <location filename="../mainwindow.ui" line="4890"/>
         <source>Monitor OFF at startup</source>
         <translation>Monitor lülitatakse käivitamisel välja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4882"/>
+        <location filename="../mainwindow.ui" line="4895"/>
         <source>Erase ALL.TXT</source>
         <translation>Kustutatakse ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4887"/>
+        <location filename="../mainwindow.ui" line="4900"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>Kustuta QSO LOG-fail wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4892"/>
+        <location filename="../mainwindow.ui" line="4905"/>
         <source>Open wsjtx_log.adi</source>
         <translation>Ava wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4895"/>
-        <location filename="../mainwindow.ui" line="5079"/>
+        <location filename="../mainwindow.ui" line="4908"/>
+        <location filename="../mainwindow.ui" line="5092"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4903"/>
+        <location filename="../mainwindow.ui" line="4916"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>Logimisel muutke mode RTTY-ks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4911"/>
+        <location filename="../mainwindow.ui" line="4924"/>
         <source>Log dB reports to Comments</source>
         <translation>Logi dB raportid kommentaaridesse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4919"/>
+        <location filename="../mainwindow.ui" line="4932"/>
         <source>Prompt me to log QSO</source>
         <translation>Paku QSO logisse salvestamist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4927"/>
+        <location filename="../mainwindow.ui" line="4940"/>
         <source>Blank line between decoding periods</source>
         <translation>Tühi rida dekodeerimisperioodide vahel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4935"/>
+        <location filename="../mainwindow.ui" line="4948"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>Pärast logimist tühjendage DX-kutsung ja -ruut aknad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4943"/>
+        <location filename="../mainwindow.ui" line="4956"/>
         <source>Display distance in miles</source>
         <translation>Kuva kaugust miilides</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4951"/>
+        <location filename="../mainwindow.ui" line="4964"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>Topeltklõps kutsungil aktiveerib Luba Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4959"/>
+        <location filename="../mainwindow.ui" line="4972"/>
         <source>Tx disabled after sending 73</source>
         <translation>Pärast 73 saatmist Tx keelatud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4967"/>
+        <location filename="../mainwindow.ui" line="4980"/>
         <source>Runaway Tx watchdog</source>
         <translation>Eemaloleku Tx valvekoer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4975"/>
+        <location filename="../mainwindow.ui" line="4988"/>
         <source>Allow multiple instances</source>
         <translation>Luba mitut JTDX-i korraga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4983"/>
+        <location filename="../mainwindow.ui" line="4996"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx sagedus lukustatud Rx sagedusele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4991"/>
+        <location filename="../mainwindow.ui" line="5004"/>
         <source>Skip Tx 1</source>
         <translation>Jäta Tx 1 vahele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4999"/>
+        <location filename="../mainwindow.ui" line="5012"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5010"/>
+        <location filename="../mainwindow.ui" line="5023"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5018"/>
+        <location filename="../mainwindow.ui" line="5031"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Tx-sõnum Rx Sageduse aknasse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5026"/>
+        <location filename="../mainwindow.ui" line="5039"/>
         <source>Gray1</source>
         <translation>Hall1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5034"/>
+        <location filename="../mainwindow.ui" line="5047"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation>Kuva DXCC maa ja töötatud B4 olek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5042"/>
+        <location filename="../mainwindow.ui" line="5055"/>
         <source>Astronomical data</source>
         <translation>Astronoomilised andmed</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5047"/>
+        <location filename="../mainwindow.ui" line="5060"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>Lisatavate ees- ja järelliidete lühike loend</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5052"/>
+        <location filename="../mainwindow.ui" line="5065"/>
         <source>Settings...</source>
         <translation>Seaded...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5063"/>
+        <location filename="../mainwindow.ui" line="5076"/>
         <source>JTDX forum</source>
         <translation>JTDX foorum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5068"/>
+        <location filename="../mainwindow.ui" line="5081"/>
         <source>Open log directory</source>
         <translation>Ava andmete kataloog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5076"/>
+        <location filename="../mainwindow.ui" line="5089"/>
         <source>Message averaging</source>
         <translation>Keskmine sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5093"/>
+        <location filename="../mainwindow.ui" line="5106"/>
         <source>Include averaging</source>
         <translation>Lisa keskmistamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5107"/>
+        <location filename="../mainwindow.ui" line="5120"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 vihjega dekodeerimine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5118"/>
+        <location filename="../mainwindow.ui" line="5131"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5123"/>
+        <location filename="../mainwindow.ui" line="5136"/>
         <source>Save reference spectrum</source>
         <translation>Salvestage referentsspekter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5128"/>
+        <location filename="../mainwindow.ui" line="5141"/>
         <source>&amp;Download Samples ...</source>
         <translatorcomment>Vajab analüüsi</translatorcomment>
         <translation>&amp;Laadi näited alla ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5131"/>
+        <location filename="../mainwindow.ui" line="5144"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lae alla eri töörežiime tutvustavate helifailide näited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5139"/>
+        <location filename="../mainwindow.ui" line="5152"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5150"/>
+        <location filename="../mainwindow.ui" line="5163"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>RX-sagedusel filtritest mööda minek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5161"/>
+        <location filename="../mainwindow.ui" line="5174"/>
         <source>Bypass all text filters</source>
         <translation>Kõigist filtritest mööda minek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5164"/>
+        <location filename="../mainwindow.ui" line="5177"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5172"/>
+        <location filename="../mainwindow.ui" line="5185"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>Näita JT65 harmoonilistest dekodeeritud sõnumeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5183"/>
+        <location filename="../mainwindow.ui" line="5196"/>
         <source>Enable main window popup</source>
         <translatorcomment>Vajab kooskõlastamist</translatorcomment>
         <translation>Luba peaakna hüpikud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5194"/>
+        <location filename="../mainwindow.ui" line="5207"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>Minu kutsungiga sõnumid RX-sageduse aknasse </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5199"/>
+        <location filename="../mainwindow.ui" line="5212"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>WSJT arendusrühma autoriõiguse teade</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5213"/>
+        <location filename="../mainwindow.ui" line="5226"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5221"/>
+        <location filename="../mainwindow.ui" line="5234"/>
         <source>FT8 call first</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5232"/>
+        <location filename="../mainwindow.ui" line="5245"/>
         <source>Call priority and search CQ</source>
         <translatorcomment>Vajab selgitamist</translatorcomment>
         <translation>Side prioriteet ja CQ otsing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5235"/>
+        <location filename="../mainwindow.ui" line="5248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vali CQ-le vastuse otsimine automaatselt koos prioriteetidega, kui nurjus, siis otsi kõrgema prioriteediga&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5243"/>
+        <location filename="../mainwindow.ui" line="5256"/>
         <source>FT8 call last</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5251"/>
+        <location filename="../mainwindow.ui" line="5264"/>
         <source>FT8 manual call</source>
         <translation>FT8 manuaalne kutse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5259"/>
+        <location filename="../mainwindow.ui" line="5272"/>
         <source>0  Call None</source>
         <translation>0  ei ole kutset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5267"/>
+        <location filename="../mainwindow.ui" line="5280"/>
         <source>1  Call first</source>
         <translation>1 Esimene kutse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5275"/>
+        <location filename="../mainwindow.ui" line="5288"/>
         <source>4+ Call and search through CQ messages</source>
         <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>4+ Kutsed ja CQ-sõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5283"/>
+        <location filename="../mainwindow.ui" line="5296"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2 Kutsed dekodeeritud kuni TX-perioodi alguseni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5291"/>
+        <location filename="../mainwindow.ui" line="5304"/>
         <source>3  Call based on end of decoding</source>
         <translatorcomment>vajab vist täpsustamist</translatorcomment>
         <translation>3  Kutsed dekodeerimise lõpuni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5299"/>
+        <location filename="../mainwindow.ui" line="5312"/>
         <source>Single shot QSO</source>
         <translation>Üksik QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5307"/>
+        <location filename="../mainwindow.ui" line="5320"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>Tühjenda laineala aktiivsuse aken dekodeerimise alguses</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5315"/>
+        <location filename="../mainwindow.ui" line="5328"/>
         <source>Answer worked B4 calls</source>
         <translation>Vasta töötatud kutsngitele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5326"/>
+        <location filename="../mainwindow.ui" line="5339"/>
         <source>Auto</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5353"/>
+        <location filename="../mainwindow.ui" line="5366"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5361"/>
+        <location filename="../mainwindow.ui" line="5374"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5369"/>
+        <location filename="../mainwindow.ui" line="5382"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5377"/>
+        <location filename="../mainwindow.ui" line="5390"/>
         <source>Erase both message windows at band change</source>
         <translation>Laineala vahetamisel tühjenda mõlemad teateaknad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5415"/>
+        <location filename="../mainwindow.ui" line="5428"/>
         <source>deep with 4 passes</source>
         <translation>sügav 4 astmega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5423"/>
+        <location filename="../mainwindow.ui" line="5436"/>
         <source>Max distance instead of best SNR</source>
         <translation>Parima SNR asemel maksimaalne vahemaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5431"/>
+        <location filename="../mainwindow.ui" line="5444"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>Nõutud kutsungitega sõnumid RX-sageduse aknasse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5439"/>
+        <location filename="../mainwindow.ui" line="5452"/>
         <source>use low thresholds</source>
         <translation>kasuta madalat taset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5474"/>
+        <location filename="../mainwindow.ui" line="5487"/>
         <source>use subpass</source>
         <translation>kasuta subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5485"/>
+        <location filename="../mainwindow.ui" line="5498"/>
         <source>minimum</source>
         <translation>miinimum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5493"/>
+        <location filename="../mainwindow.ui" line="5506"/>
         <source>late start of decoder</source>
         <translation>dekooderi hiline start</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5501"/>
+        <location filename="../mainwindow.ui" line="5514"/>
         <source>Call worked B4 callsigns</source>
         <translation>Kutsu töötatud kutsungeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5520"/>
+        <location filename="../mainwindow.ui" line="5533"/>
         <source>CQ and 73</source>
         <translation>CQ ja 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5528"/>
+        <location filename="../mainwindow.ui" line="5541"/>
         <source>any messages</source>
         <translation>iga sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5536"/>
+        <location filename="../mainwindow.ui" line="5549"/>
         <source>Enable</source>
         <translation>Luba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5544"/>
+        <location filename="../mainwindow.ui" line="5557"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>Lülita filter välja kui saadad 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5552"/>
+        <location filename="../mainwindow.ui" line="5565"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>Lülita filter välja, kui saad 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5560"/>
+        <location filename="../mainwindow.ui" line="5573"/>
         <source>Hide FT8 dupe messages</source>
         <translation>Peida FT8 dubleerimissõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5568"/>
+        <location filename="../mainwindow.ui" line="5581"/>
         <source>Display output power</source>
         <translation>Kuva väljundvõimsus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5576"/>
+        <location filename="../mainwindow.ui" line="5589"/>
         <source>Report message priority</source>
         <translatorcomment>Võib vajada sisulist analüüsi</translatorcomment>
         <translation>Raportiga sõnumi prioriteet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5584"/>
+        <location filename="../mainwindow.ui" line="5597"/>
         <source>Enable hound mode</source>
         <translation>Luba hound mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5595"/>
+        <location filename="../mainwindow.ui" line="5608"/>
         <source>Use hound TX frequency control</source>
         <translation>Kasuta hound TX sageduse kontrolli</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5603"/>
+        <location filename="../mainwindow.ui" line="5616"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>Keela TX pärast käsitsirežiimis RRR/RR73/73 saatmist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5614"/>
+        <location filename="../mainwindow.ui" line="5627"/>
         <source>Show tooltips in main window</source>
         <translation>Näita peaaknas vihjeid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5622"/>
+        <location filename="../mainwindow.ui" line="5635"/>
         <source>Color Tx message buttons</source>
         <translation>Värvi Tx-teate nupud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5630"/>
-        <location filename="../mainwindow.ui" line="5807"/>
-        <location filename="../mainwindow.ui" line="5831"/>
+        <location filename="../mainwindow.ui" line="5643"/>
+        <location filename="../mainwindow.ui" line="5820"/>
+        <location filename="../mainwindow.ui" line="5844"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5638"/>
+        <location filename="../mainwindow.ui" line="5651"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5646"/>
+        <location filename="../mainwindow.ui" line="5659"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5654"/>
+        <location filename="../mainwindow.ui" line="5667"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5662"/>
+        <location filename="../mainwindow.ui" line="5675"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5670"/>
+        <location filename="../mainwindow.ui" line="5683"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5678"/>
+        <location filename="../mainwindow.ui" line="5691"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5686"/>
+        <location filename="../mainwindow.ui" line="5699"/>
         <source>low</source>
         <translation>madal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5705"/>
+        <location filename="../mainwindow.ui" line="5718"/>
         <source>high</source>
         <translation>kõrge</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5713"/>
+        <location filename="../mainwindow.ui" line="5726"/>
         <source>Hide FT contest messages</source>
         <translation>Peida FT võistlussõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5721"/>
+        <location filename="../mainwindow.ui" line="5734"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5756"/>
+        <location filename="../mainwindow.ui" line="5769"/>
         <source>wideband DX Call search</source>
         <translation>lairiba DX-side otsing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5764"/>
+        <location filename="../mainwindow.ui" line="5777"/>
         <source>6 pass SWL mode</source>
         <translation>6 pass SWL-režiim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5775"/>
+        <location filename="../mainwindow.ui" line="5788"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translatorcomment>Vajab ülevaatamist</translatorcomment>
         <translation>Kutsung lõikelauale topeltklõpsuga | autoselect</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5783"/>
+        <location filename="../mainwindow.ui" line="5796"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>Crossband 160m tööks Jaapaniga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5839"/>
+        <location filename="../mainwindow.ui" line="5852"/>
         <source>Hide telemetry messages</source>
         <translation>Peida telemeetria sõnumid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="454"/>
+        <location filename="../mainwindow.cpp" line="455"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Kas soovite raadio liidest uuesti seadistada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="750"/>
+        <location filename="../mainwindow.cpp" line="751"/>
         <source>Error Writing WAV File</source>
         <translation>Viga WAV-faili kirjutamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="891"/>
+        <location filename="../mainwindow.cpp" line="892"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Viga jtdxjt9.exe protsessi hävitamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="869"/>
         <location filename="../mainwindow.cpp" line="870"/>
-        <location filename="../mainwindow.cpp" line="5984"/>
-        <location filename="../mainwindow.cpp" line="5985"/>
-        <location filename="../mainwindow.cpp" line="6040"/>
-        <location filename="../mainwindow.cpp" line="6041"/>
+        <location filename="../mainwindow.cpp" line="871"/>
+        <location filename="../mainwindow.cpp" line="6001"/>
+        <location filename="../mainwindow.cpp" line="6002"/>
+        <location filename="../mainwindow.cpp" line="6057"/>
+        <location filename="../mainwindow.cpp" line="6058"/>
         <source>Freq   Message</source>
         <translation>Sag.   Sõnum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="892"/>
+        <location filename="../mainwindow.cpp" line="893"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName tgastas koodi:%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="909"/>
+        <location filename="../mainwindow.cpp" line="910"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Viga &quot;%1&quot; eemaldamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="910"/>
+        <location filename="../mainwindow.cpp" line="911"/>
         <source>Click OK to retry</source>
         <translation>Uueks katseks klõpsa OK nuppu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1610"/>
+        <location filename="../mainwindow.cpp" line="1614"/>
         <source>TX Even</source>
         <translation>TX Paaris</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1617"/>
+        <location filename="../mainwindow.cpp" line="1621"/>
         <source>TX Odd</source>
         <translation>TX Paaritu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1662"/>
-        <location filename="../mainwindow.cpp" line="2354"/>
-        <location filename="../mainwindow.cpp" line="3478"/>
-        <location filename="../mainwindow.cpp" line="4085"/>
-        <location filename="../mainwindow.cpp" line="4208"/>
-        <location filename="../mainwindow.cpp" line="4442"/>
-        <location filename="../mainwindow.cpp" line="6842"/>
-        <location filename="../mainwindow.cpp" line="7039"/>
+        <location filename="../mainwindow.cpp" line="1666"/>
+        <location filename="../mainwindow.cpp" line="2363"/>
+        <location filename="../mainwindow.cpp" line="3487"/>
+        <location filename="../mainwindow.cpp" line="4094"/>
+        <location filename="../mainwindow.cpp" line="4217"/>
+        <location filename="../mainwindow.cpp" line="4451"/>
+        <location filename="../mainwindow.cpp" line="6859"/>
+        <location filename="../mainwindow.cpp" line="7056"/>
         <source>File Open Error</source>
         <translation>Faili avamise viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1663"/>
-        <location filename="../mainwindow.cpp" line="2355"/>
-        <location filename="../mainwindow.cpp" line="3479"/>
-        <location filename="../mainwindow.cpp" line="4086"/>
-        <location filename="../mainwindow.cpp" line="4209"/>
-        <location filename="../mainwindow.cpp" line="4443"/>
-        <location filename="../mainwindow.cpp" line="6843"/>
-        <location filename="../mainwindow.cpp" line="7040"/>
-        <location filename="../mainwindow.cpp" line="7381"/>
+        <location filename="../mainwindow.cpp" line="1667"/>
+        <location filename="../mainwindow.cpp" line="2364"/>
+        <location filename="../mainwindow.cpp" line="3488"/>
+        <location filename="../mainwindow.cpp" line="4095"/>
+        <location filename="../mainwindow.cpp" line="4218"/>
+        <location filename="../mainwindow.cpp" line="4452"/>
+        <location filename="../mainwindow.cpp" line="6860"/>
+        <location filename="../mainwindow.cpp" line="7057"/>
+        <location filename="../mainwindow.cpp" line="7398"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>&quot;%1&quot; ei saa lisamiseks avada: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1716"/>
+        <location filename="../mainwindow.cpp" line="1722"/>
         <source>lost audio </source>
         <translation>heli puudu </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1798"/>
+        <location filename="../mainwindow.cpp" line="1806"/>
         <source>Error saving c2 file</source>
         <translation>Viga c2-faili salvestamisel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1875"/>
+        <location filename="../mainwindow.cpp" line="1883"/>
         <source>Error in SoundInput</source>
         <translation>Viga helisisendis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1879"/>
+        <location filename="../mainwindow.cpp" line="1887"/>
         <source>Error in SoundOutput</source>
         <translation>Viga heliväljundis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1965"/>
+        <location filename="../mainwindow.cpp" line="1973"/>
         <source>Pwr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2465"/>
+        <location filename="../mainwindow.cpp" line="2474"/>
         <source>Subprocess Error</source>
         <translation>Alamprotsessi viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2466"/>
+        <location filename="../mainwindow.cpp" line="2475"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Alamprotsess nurjus väljumiskoodiga%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2468"/>
-        <location filename="../mainwindow.cpp" line="2487"/>
+        <location filename="../mainwindow.cpp" line="2477"/>
+        <location filename="../mainwindow.cpp" line="2496"/>
         <source>Running: %1
 %2</source>
         <translation>Töötab: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2486"/>
+        <location filename="../mainwindow.cpp" line="2495"/>
         <source>Subprocess error</source>
         <translation>Alamprotsessi viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2562"/>
+        <location filename="../mainwindow.cpp" line="2571"/>
         <source>Spotted</source>
         <translation>Spotitud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2569"/>
+        <location filename="../mainwindow.cpp" line="2578"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Dxsummit-serveriga ei saa ühendust luua / lõpule viia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2592"/>
+        <location filename="../mainwindow.cpp" line="2601"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2712"/>
+        <location filename="../mainwindow.cpp" line="2721"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Kettalt ei loetud andmeid. Vale failivorming?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2719"/>
+        <location filename="../mainwindow.cpp" line="2728"/>
         <source>Confirm Delete</source>
         <translation>Kinnita kustutamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2720"/>
+        <location filename="../mainwindow.cpp" line="2729"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Kas oled kindel, et tahad kustutada kõik *.wav ja *.c2 failid
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2760"/>
+        <location filename="../mainwindow.cpp" line="2769"/>
         <source>AutoSeq0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2773"/>
+        <location filename="../mainwindow.cpp" line="2782"/>
         <source>AutoSeq1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2782"/>
-        <location filename="../mainwindow.cpp" line="2808"/>
+        <location filename="../mainwindow.cpp" line="2791"/>
+        <location filename="../mainwindow.cpp" line="2817"/>
         <source>AutoSeq2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2783"/>
-        <location filename="../mainwindow.cpp" line="2804"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2813"/>
         <source>AutoSeq6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2792"/>
-        <location filename="../mainwindow.cpp" line="2809"/>
+        <location filename="../mainwindow.cpp" line="2801"/>
+        <location filename="../mainwindow.cpp" line="2818"/>
         <source>AutoSeq3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2793"/>
-        <location filename="../mainwindow.cpp" line="2805"/>
+        <location filename="../mainwindow.cpp" line="2802"/>
+        <location filename="../mainwindow.cpp" line="2814"/>
         <source>AutoSeq7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2887"/>
+        <location filename="../mainwindow.cpp" line="2896"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2895"/>
+        <location filename="../mainwindow.cpp" line="2904"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound mode TX sageduse juhtimiseks on vaja * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2898"/>
+        <location filename="../mainwindow.cpp" line="2907"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translatorcomment>vajab kohendamist koos lisaanalüüsiga</translatorcomment>
         <translation>Hound TX sageduse juhtimine pole standardses FT8 alamribas lubatud ja see nõuab * Split * rig control (kas * Rig * või * Fake It * menüüs *Fail|Seaded | Raadio*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2906"/>
+        <location filename="../mainwindow.cpp" line="2915"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX sageduse juhtimise hoiatus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2911"/>
+        <location filename="../mainwindow.cpp" line="2920"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2972"/>
+        <location filename="../mainwindow.cpp" line="2981"/>
         <source>Keyboard Shortcuts</source>
         <translation>Klaviatuuri kiirklahvid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2983"/>
+        <location filename="../mainwindow.cpp" line="2992"/>
         <source>Special Mouse Commands</source>
         <translation>Hiire erikäsud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3439"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
         <source>Avg=</source>
         <translation>Keskm.=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3439"/>
-        <location filename="../mainwindow.cpp" line="3458"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
+        <location filename="../mainwindow.cpp" line="3467"/>
         <source>Freq  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3439"/>
-        <location filename="../mainwindow.cpp" line="3458"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
+        <location filename="../mainwindow.cpp" line="3467"/>
         <source>Lag=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3445"/>
         <location filename="../mainwindow.cpp" line="3454"/>
+        <location filename="../mainwindow.cpp" line="3463"/>
         <source>check time</source>
         <translation>kontrolli aega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3757"/>
-        <location filename="../mainwindow.cpp" line="3763"/>
+        <location filename="../mainwindow.cpp" line="3766"/>
+        <location filename="../mainwindow.cpp" line="3772"/>
         <source>Confirm change Language</source>
         <translation>Kinnita keelevahetus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3759"/>
-        <location filename="../mainwindow.cpp" line="3766"/>
+        <location filename="../mainwindow.cpp" line="3768"/>
+        <location filename="../mainwindow.cpp" line="3775"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Kas tahate vahetada kasutajaliidese keeleks Eesti, JTDX taaskäivitub?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3935"/>
+        <location filename="../mainwindow.cpp" line="3944"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Valige teine Tx sagedus. JTDX ei saada 30m lainealal WSPR sagedustel teadlikult muus töörežiimis.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3940"/>
-        <location filename="../mainwindow.cpp" line="3943"/>
+        <location filename="../mainwindow.cpp" line="3949"/>
+        <location filename="../mainwindow.cpp" line="3952"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR laineala valvur</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4061"/>
+        <location filename="../mainwindow.cpp" line="4070"/>
         <source>TUNE</source>
         <translation>Häälesta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4062"/>
+        <location filename="../mainwindow.cpp" line="4071"/>
         <source>LastTx: </source>
         <translation>ViimaneTx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4276"/>
+        <location filename="../mainwindow.cpp" line="4285"/>
         <source>Tx: TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4277"/>
+        <location filename="../mainwindow.cpp" line="4286"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4282"/>
+        <location filename="../mainwindow.cpp" line="4291"/>
         <source>Receiving </source>
         <translation>Vastuvõtt </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4335"/>
+        <location filename="../mainwindow.cpp" line="4344"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4493"/>
+        <location filename="../mainwindow.cpp" line="4502"/>
         <source>Last Tx: </source>
         <translation>Viimane Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5375"/>
-        <location filename="../mainwindow.cpp" line="5387"/>
-        <location filename="../mainwindow.cpp" line="5400"/>
-        <location filename="../mainwindow.cpp" line="5426"/>
+        <location filename="../mainwindow.cpp" line="5384"/>
+        <location filename="../mainwindow.cpp" line="5396"/>
+        <location filename="../mainwindow.cpp" line="5409"/>
+        <location filename="../mainwindow.cpp" line="5435"/>
         <source>Add to CALL3.TXT</source>
         <translation>Lisa faili CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5376"/>
+        <location filename="../mainwindow.cpp" line="5385"/>
         <source>Please enter a valid grid locator</source>
         <translation>Sisesta kehtiv lokaator</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5388"/>
+        <location filename="../mainwindow.cpp" line="5397"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>&quot;%1&quot; ei saa lugemiseks/kirjutamiseks avada: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5401"/>
+        <location filename="../mainwindow.cpp" line="5410"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>&quot;%1&quot; ei saa kirjutamiseks avada:%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5424"/>
+        <location filename="../mainwindow.cpp" line="5433"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1 on juba rakenduses CALL3.TXT, kas soovite selle asendada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5787"/>
+        <location filename="../mainwindow.cpp" line="5796"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Viga QSO ADIF-i andmete saatmisel sekundaarsele UDP-serverile</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5787"/>
+        <location filename="../mainwindow.cpp" line="5796"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Kirjutage uuesti &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5935"/>
+        <location filename="../mainwindow.cpp" line="5952"/>
         <source>Tx WSPR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6031"/>
+        <location filename="../mainwindow.cpp" line="6048"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Sagedus  Muutus Kutsung       Ruut    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6130"/>
-        <location filename="../mainwindow.cpp" line="6142"/>
+        <location filename="../mainwindow.cpp" line="6147"/>
+        <location filename="../mainwindow.cpp" line="6159"/>
         <source>Confirm Erase</source>
         <translation>Kinnita kustutamine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6131"/>
+        <location filename="../mainwindow.cpp" line="6148"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Kas oled kindel , et soovid kustutada ALL.TXT faili.?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6143"/>
+        <location filename="../mainwindow.cpp" line="6160"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Kas oled kindel , et soovid kustutada enda QSO LOG faili ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6749"/>
+        <location filename="../mainwindow.cpp" line="6766"/>
         <source>Lockd Tx=Rx</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6750"/>
+        <location filename="../mainwindow.cpp" line="6767"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu et lubada Tx / Rx AF sageduste splitis töötamiseks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6753"/>
+        <location filename="../mainwindow.cpp" line="6770"/>
         <source>Tx/Rx Split</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6754"/>
+        <location filename="../mainwindow.cpp" line="6771"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vajuta nuppu, et lukustada Tx sagedus Rx AF sagedusele.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6878"/>
+        <location filename="../mainwindow.cpp" line="6895"/>
         <source>Rig Control Error</source>
         <translation>Jaama juhtimise viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6952"/>
+        <location filename="../mainwindow.cpp" line="6969"/>
         <source>Tune digital gain</source>
         <translation>Häälesta digitaalset võimendust</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6953"/>
+        <location filename="../mainwindow.cpp" line="6970"/>
         <source>Transmit digital gain</source>
         <translation>Saate digitaalne võimendus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6972"/>
+        <location filename="../mainwindow.cpp" line="6989"/>
         <source>Prefixes</source>
         <translation>Eesliited</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7021"/>
-        <location filename="../mainwindow.cpp" line="7022"/>
+        <location filename="../mainwindow.cpp" line="7038"/>
+        <location filename="../mainwindow.cpp" line="7039"/>
         <source>Logd </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7245"/>
+        <location filename="../mainwindow.cpp" line="7262"/>
         <source>Network Error</source>
         <translation>Võrgu viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7246"/>
+        <location filename="../mainwindow.cpp" line="7263"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Viga: %1
 UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7380"/>
+        <location filename="../mainwindow.cpp" line="7397"/>
         <source>File Error</source>
         <translation>Faili viga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7592"/>
+        <location filename="../mainwindow.cpp" line="7609"/>
         <source>Tx watchdog expired</source>
         <translatorcomment>võib-olla: TX-taimer aegus?</translatorcomment>
         <translation>Tx valvekoer aegus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7606"/>
+        <location filename="../mainwindow.cpp" line="7623"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>
