@@ -221,7 +221,7 @@ Format:
         <location filename="../Configuration.cpp" line="5123"/>
         <location filename="../Configuration.cpp" line="5177"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation>Fitxers de freqüència (* .qrg) ;; Tots els fitxers (*. *)</translation>
+        <translation>Arxius de freqüència (* .qrg) ;; Tots els arxius (*. *)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5094"/>
@@ -249,7 +249,7 @@ Format:
         <location filename="../Configuration.cpp" line="5157"/>
         <location filename="../Configuration.cpp" line="5167"/>
         <source>Not a valid frequencies file</source>
-        <translation>No és un fitxer de freqüències vàlid</translation>
+        <translation>No és un arxiu de freqüències vàlid</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5148"/>
@@ -2968,7 +2968,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocs d&apos;àudio perduts. L&apos;interval FT8 de 15 segons té 52 blocs de dades d&apos;àudio, on el descodificador s&apos;activa si les dades d&apos;àudio arriben a 51 blocs en les maneres &apos;SWL / inici tardà del descodificador&apos; o 50 blocs en cas contrari. Sota el sistema operatiu Windows, es van perdre múltiples informes de dades d&apos;àudio, per aquest sistema operatiu s&apos;implementa una solució per iniciar el descodificador FT8 si es reben al menys 46 de 52 blocs d&apos;àudio. La notificació de blocs d&apos;àudio perduts li permet a l&apos;usuari saber que hi ha alguna cosa malament en la configuració.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3191,12 +3191,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3252,7 +3252,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Reservat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3868,7 +3868,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4359"/>
         <source>File</source>
-        <translation>Fitxer</translation>
+        <translation>Arxiu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4377"/>
@@ -4130,12 +4130,12 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4887"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>Esborrar l&apos;arxiu de LOG wsjtx_log.adi</translation>
+        <translation>Esborrar l&apos;arxiu de log wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4892"/>
         <source>Open wsjtx_log.adi</source>
-        <translation>Obrir arxiu wsjtx_log.adi</translation>
+        <translation>Obrir l&apos;arxiu wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4895"/>
@@ -4286,7 +4286,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Descarrega una mostra de fitxers d&apos;àudio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Descarrega una mostra d&apos;arxius d&apos;àudio. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5139"/>
@@ -4688,12 +4688,12 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1716"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>Àudio perdut </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1798"/>
         <source>Error saving c2 file</source>
-        <translation>Error al desar el fitxer c2</translation>
+        <translation>Error al desar l&apos;arxiu c2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1875"/>
@@ -5091,7 +5091,7 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>File &amp;name:</source>
-        <translation>&amp;Nom del Fitxer:</translation>
+        <translation>&amp;Nom de l&apos;arxiu:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
@@ -5116,7 +5116,7 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
         <source>All files (*)</source>
-        <translation>Tots els Fitxers (*)</translation>
+        <translation>Tots els arxius (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5052"/>
@@ -5141,7 +5141,7 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Show &amp;hidden files</source>
-        <translation>Mostra &amp;fitxers ocults</translation>
+        <translation>Mostra &amp;arxius ocults</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
@@ -5156,7 +5156,7 @@ Servidor UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5059"/>
         <source>Files of type:</source>
-        <translation>Fitxers de tipus:</translation>
+        <translation>Arxius de tipus:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5060"/>
@@ -5397,7 +5397,7 @@ Error (%3): %4</translation>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation>No es pot esborrar el fitxer:
+        <translation>No es pot esborrar l&apos;arxiu:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5429,7 +5429,7 @@ Error (%3): %4</translation>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation>No es pot obrir el fitxer:
+        <translation>No es pot obrir l&apos;arxiu:
 &quot;%1&quot;
 Error (%2): %3</translation>
     </message>
@@ -5445,7 +5445,7 @@ Error (%2): %3</translation>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation>No es pot escriure al fitxer:
+        <translation>No es pot escriure a l&apos;arxiu:
 &quot;%1&quot;
 Error (%2): %3</translation>
     </message>
@@ -6881,7 +6881,7 @@ i camps DX Locator quan s&apos;envia un missatge de text 73 o lliure.</translati
     <message>
         <location filename="../Configuration.ui" line="2366"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation>En el programa apareixerà un diàleg de QSO de registre parcialment completat quan enviis un missatge de text 73 o lliure.</translation>
+        <translation>En el programa apareixerà un diàleg de QSO al log parcialment completat quan enviis un missatge de text 73 o lliure.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
@@ -7188,7 +7188,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3200"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que no existeixen en el fitxer de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que no existeixen en l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3203"/>
@@ -7198,17 +7198,17 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3220"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que són noves en els modes d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones CQ que són noves en els modes d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que no existeixen en el fitxer de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que no existeixen en l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3243"/>
@@ -7218,17 +7218,17 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3260"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que són noves en els modes d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta missatges amb zones ITU que són noves en els modes d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;head/&gt;&lt;body&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3280"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que no existeixen en el fitxer de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que no existeixen en l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
@@ -7238,7 +7238,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3213"/>
@@ -7253,7 +7253,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ressalta missatges amb països DXCC que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3223"/>
@@ -7303,7 +7303,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Ressalta els missatges amb locator que no existeixen en el fitxer de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Ressalta els missatges amb locator que no existeixen en l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
@@ -7313,17 +7313,17 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb locator que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb locator que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb locator que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb locator que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3360"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que no existeixen en el fitxer de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; &lt;head /&gt; &lt;body &gt; &lt;p&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que no existeixen en l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; &lt;head /&gt; &lt;body &gt; &lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3363"/>
@@ -7333,17 +7333,17 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3380"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb prefixos que són nous en els modes d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que no existeixen en el fitxer de registre wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que no existeixen en l&apos;arxiu de log wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
@@ -7353,12 +7353,12 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de registre wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ressalta els missatges amb indicatius que són nous a la banda d&apos;acord amb les dades de l&apos;arxiu de log wsjtx_log.adi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3440"/>

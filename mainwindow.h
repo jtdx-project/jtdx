@@ -439,6 +439,7 @@ private:
   Frequency m_freqTxNominal;
   quint64  m_lastDisplayFreq;
   quint64  m_mslastTX;
+  quint64  m_mslastMon;
 //  quint64  m_msDecoderStarted;
 
   qint32  m_waterfallAvg;

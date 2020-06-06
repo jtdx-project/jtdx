@@ -2951,7 +2951,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocos de áudio perdidos. O intervalo de 15 segundos do FT8 possui 52 blocos de dados de áudio, onde o decodificador é acionado se os dados de áudio atingirem 51 blocos nos modos &apos;SWL / início tardio do decodificador&apos; ou 50 blocos de outra forma. No sistema operacional Windows, vários dados de áudio foram perdidos; no sistema operacional Windows, há uma solução alternativa implementada para iniciar o decodificador FT8 se houver pelo menos 46 dos 52 blocos de áudio recebidos. A notificação de bloqueio de áudio perdido permite que o usuário saiba que há algo errado na configuração.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3174,12 +3174,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3235,7 +3235,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Reservado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -4665,7 +4665,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1716"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>audio perdido </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1798"/>

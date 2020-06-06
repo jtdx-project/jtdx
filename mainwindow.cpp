@@ -181,6 +181,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_freqTxNominal {0},
   m_lastDisplayFreq {0},
   m_mslastTX {0},
+  m_mslastMon {0},
 //  m_msDecoderStarted {0},
   m_waterfallAvg {1},
   m_ntx {1},
@@ -1708,19 +1709,23 @@ void MainWindow::dataSink(qint64 frames)
 #if defined(Q_OS_WIN)
   if(!m_diskData && m_mode=="FT8") {
     if(ihsym==1) nlostaudio=52-ihsymlast;
-    ihsymlast=ihsym; if(m_delay > 0) nlostaudio=0;
-    if(nlostaudio > 0 && m_delay==0) {
+    ihsymlast=ihsym;
+    if(nlostaudio > 0) {
 //printf("%s lost audio blocks %d \n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss").toStdString().c_str(),nlostaudio);
-      if(nlostaudio < 3) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
-      else ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
-      ui->label_6->setText(tr("lost audio ")+QString::number(nlostaudio));
+      quint64 timedelta = m_jtdxtime->currentMSecsSinceEpoch2() - m_mslastMon;
+      if(timedelta > 14990) {
+        if(nlostaudio < 3) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
+        else ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+        ui->label_6->setText(tr("lost audio ")+QString::number(nlostaudio));
+        if(m_config.write_decoded_debug()) writeToALLTXT("Lost audio blocks: " + QString::number(nlostaudio));
+      }
+      else ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
       nlostaudio=0; m_lostaudio=true;
     }
     if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
       QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
       quint64 n1=now1.toMSecsSinceEpoch()%15000;
       if(n1>14735) {
-        if(m_config.write_decoded_debug()) writeToALLTXT("Dropped audio frames, ihsym=" + QString::number(ihsym) + " n1=" + QString::number(n1));
         if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
       } 
     }
@@ -2073,6 +2078,7 @@ void MainWindow::monitor (bool state)
   if (state) {
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
+      m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
       Q_EMIT resumeAudioInputStream ();
       QDateTime  currentTime = m_jtdxtime->currentDateTimeUtc2 (); // decode part of interval
       QString curtime=currentTime.toString("ss.zzz");
@@ -3846,12 +3852,12 @@ void MainWindow::guiUpdate()
 
   if(m_TRperiod==0.0) m_TRperiod=60.0;
   txDuration=0.0;
-  if(m_modeTx=="FT8") txDuration=1.0 + 79*1920/12000.0;
-  else if(m_modeTx=="FT4")  txDuration=1.0 + 105*576/12000.0;
-  else if(m_modeTx=="JT65") txDuration=1.0 + 126*4096/11025.0;
-  else if(m_modeTx=="JT9") txDuration=1.0 + 85.0*m_nsps/12000.0;
-  else if(m_modeTx=="T10") txDuration=1.0 + 85.0*m_nsps/12000.0;
-  else if(m_mode=="WSPR-2") txDuration=2.0 + 162*8192/12000.0;
+  if(m_modeTx=="FT8") txDuration=13.64; //1.0 + 79*1920/12000.0;
+  else if(m_modeTx=="FT4")  txDuration=6.04; //1.0 + 105*576/12000.0;
+  else if(m_modeTx=="JT65") txDuration=47.81142857142857; //1.0 + 126*4096/11025.0;
+  else if(m_modeTx=="JT9") txDuration=49.96; //1.0 + 85.0*m_nsps/12000.0;
+  else if(m_modeTx=="T10") txDuration=49.96; //1.0 + 85.0*m_nsps/12000.0;
+  else if(m_mode=="WSPR-2") txDuration=112.592; // 2.0 + 162*8192/12000.0;
 
   double tx1=0.0;
   double tx2=txDuration;
@@ -3900,7 +3906,7 @@ void MainWindow::guiUpdate()
   if(m_transmitting or m_enableTx or m_tune) {
 // Check for "txboth" (testing purposes only)
     QFile f(m_appDir + "/txboth");
-    if(f.exists() and fmod(tsec,m_TRperiod)<(1.0 + 85.0*m_nsps/12000.0)) m_bTxTime=true;
+    if(f.exists() and fmod(tsec,m_TRperiod)<49.96) m_bTxTime=true; //<(1.0 + 85.0*m_nsps/12000.0)
 
 // Don't transmit another mode in the 30 m WSPR sub-band
     Frequency onAirFreq = m_freqNominal + ui->TxFreqSpinBox->value();
