@@ -3314,7 +3314,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Limpiar la cuadrícula de esta lista después de regitrar el QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3871,7 +3871,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay decodificación de llamadas propias</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
