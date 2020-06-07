@@ -573,7 +573,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
         <source>W. Malaysia</source>
-        <translation>Malezja</translation>
+        <translation>Zachodnia Malezja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="87"/>
@@ -2093,12 +2093,12 @@ Format:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation>DX Lab Suite Commander wysłał nierozpoznany typ modulacji: &quot;</translation>
+        <translation>DX Lab Suite Commander wysłał nierozpoznany typ emisji: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation>DX Lab Suite Commander nie zareagował prawidłowo sprawdzając typ modulacji: </translation>
+        <translation>DX Lab Suite Commander nie zareagował prawidłowo sprawdzając typ emisji: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
@@ -2185,7 +2185,7 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation>Eksport...</translation>
+        <translation>&amp;Eksport...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2410,12 +2410,12 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../HRDTransceiver.cpp" line="421"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
-        <translation>Ham Radio Deluxe: TRCVR nie obsługuje tej modulacji&gt;</translation>
+        <translation>Ham Radio Deluxe: TRCVR nie obsługuje tej emisji&gt;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="440"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation>Ham Radio Deluxe: wysłano nierozpoznaną modulację</translation>
+        <translation>Ham Radio Deluxe: wysłano nierozpoznaną emisję</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="475"/>
@@ -2963,7 +2963,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utracone bloki audio. 15-to sekundowy interwał FT8 ma 52 bloki danych audio, gdzie dekoder zostaje przełączony jeżeli dane audio osiągną 51 bloków w trybach &apos;SWL/late strat of decoder&apos; lub 50 bloków w innym przypadku. W systemach Windows było wiele raportów o utracie danych audio, dla systemów Windows zaimplementowano poprawkę uruchamiającą dekoder FT8 jeżeli zdekodowano przynajmniej 46 z 52 odebranych bloków audio. Powiadomienie o utracie bloków audio informuje użytkownika o możliwym błędzie w ustawieniach.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3186,12 +3186,12 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3247,7 +3247,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezerwacja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3278,13 +3278,13 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Usuwa znak wywoławczy z tej listy w momencie zalogowania QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1934"/>
         <location filename="../mainwindow.ui" line="2010"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
@@ -3311,7 +3311,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Usuwa lokator z tej listy w momencie zalogowania QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3864,7 +3864,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie zdekodowano swojego znaku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4511,7 +4511,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5611"/>
         <source>Use hound TX frequency control</source>
-        <translation>Używanie kontroli częstotliwości TX hound</translation>
+        <translation>Użyj kontroli częstotliwości TX hound</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5619"/>
@@ -4608,7 +4608,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5855"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj wiadomości telemetryczne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="455"/>
@@ -4688,7 +4688,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1723"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>brak audio </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1807"/>
@@ -7779,7 +7779,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5015"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation>Wiadomości merytoryczne w oknie częstotliwości RX </translation>
+        <translation>Pokaż wiadomości merytoryczne w oknie częstotliwości RX </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5032"/>

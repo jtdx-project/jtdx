@@ -2774,7 +2774,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>Open</source>
-        <translation>Åbne</translation>
+        <translation>Åbn</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
@@ -3211,7 +3211,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1724"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Sæt Rx frekvens lig med Tx frekvens</translation>
+        <translation>Sæt Rx frekvens til Tx frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1576"/>
@@ -3854,7 +3854,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Slet grid fra denne liste ved logning af QSO. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4200"/>
@@ -3869,7 +3869,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen dekodning af eget kaldesignal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4025,7 +4025,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4691"/>
         <source>Open next in directory</source>
-        <translation>Åbne den næste i biblioteket</translation>
+        <translation>Åben den næste i biblioteket</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4694"/>
@@ -4256,7 +4256,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5084"/>
         <source>Open log directory</source>
-        <translation>Åbne log biblioteket</translation>
+        <translation>Åben log biblioteket</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5092"/>
@@ -4381,7 +4381,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5299"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 Svar efter dekodning indenl start af TX interval</translation>
+        <translation>2 Svar efter dekodning inden start af TX interval</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5307"/>
@@ -5099,7 +5099,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Open</source>
-        <translation>&amp;Åbne</translation>
+        <translation>&amp;Åben</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
@@ -5680,7 +5680,7 @@ Fejl (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation>Barre</translation>
+        <translation>Markør</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
