@@ -3701,7 +3701,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wantedに入れたGridの局と交信終了後リストから除外する。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2839"/>
@@ -3875,7 +3875,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>自局のコールサインは未デコードです</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4094,7 +4094,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4838"/>
         <source>Special mouse commands</source>
-        <translation>マウス特別コマンド</translation>
+        <translation>特別なマウス操作</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4841"/>
@@ -5771,12 +5771,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="496"/>
         <source>Current</source>
-        <translation></translation>
+        <translation>標準</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="501"/>
         <source>Cumulative</source>
-        <translation></translation>
+        <translation>累加</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="521"/>
