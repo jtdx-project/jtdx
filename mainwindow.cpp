@@ -4838,7 +4838,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
 
   // prior DX call (possible QSO partner)
   auto qso_partner_base_call = Radio::base_callsign (m_hisCall);
-
+  bool call_changed = false;
   auto base_call = Radio::base_callsign (hiscall);
   if (base_call != Radio::base_callsign (m_hisCall) || base_call != hiscall)
     {
@@ -4847,8 +4847,8 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
       if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
       i1=m_qsoHistory.reset_count(hiscall);
       if (m_callToClipboard) clipboard->setText(hiscall);
-      ui->dxCallEntry->setText(hiscall);
-      ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+      call_changed = true;
     }
   if (gridOK(hisgrid)) {
     if(m_hisGrid.left(4) != hisgrid) ui->dxGridEntry->setText(hisgrid);
@@ -4970,7 +4970,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
     {
       if (m_skipTx1 && !m_houndMode) {
         if(0 == ui->tabWidget->currentIndex()) m_ntx=2;
-        m_qsoHistory.remove(hiscall); //prevent braking Auto Sequence by QSO history values 
+        if (call_changed) m_qsoHistory.remove(hiscall); //prevent braking Auto Sequence by QSO history values 
         m_QSOProgress = REPORT;
         m_nlasttx=2;
         ui->txrb2->setChecked(true); }

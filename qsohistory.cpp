@@ -416,7 +416,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     {
                       old_status = t.status;
                       t.status = status;
-                      t.priority = priority;
+                      if (priority > t.priority) t.priority = priority;
                       if (t.continent == "") t.tyyp = tyyp;
                       if (t.continent == "") t.continent = continent.trimmed();
                       if (t.mpx == "") t.mpx = mpx;
@@ -439,7 +439,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     {
                       old_status = t.status;
                       t.status = status;
-                      t.priority = priority;
+                      if (priority > t.priority) t.priority = priority;
                       if (!param.isEmpty()) {
                         t.grid = param;
                         t.distance=Distance(_mylatlng,fromQth(param));
