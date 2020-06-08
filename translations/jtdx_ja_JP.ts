@@ -3146,7 +3146,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1724"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Tx 周波数へ Rx 周波数を設定</translation>
+        <translation>Rx周波数をTx周波数と等しく設定する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1576"/>
@@ -3172,7 +3172,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Rx 周波数へ Tx 周波数を設定</translation>
+        <translation>Tx周波数をRx周波数と等しく設定する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>

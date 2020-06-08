@@ -410,7 +410,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                   t.srx_p = t.srx_c;
                   t.srx_c = status;
   //                if (t.status <= SREPORT)
-                  if (t.status <= SCQ || t.status == SCALL || 
+                  if (t.status <= SCQ || t.status == SCALL || (t.status == SREPORT && t.srx_p < RREPORT) || 
                       (t.status == RCALL && t.time != time) ||
                       (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 600)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
                     {
@@ -433,7 +433,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                   t.srx_p = t.srx_c;
                   t.srx_c = status;
   //                if (t.status <= SREPORT)
-                  if (t.status <= SCQ || t.status == SCALL || 
+                  if (t.status <= SCQ || t.status == SCALL || (t.status == SREPORT && t.srx_p < RREPORT) || 
                       (t.status == RCALL && t.time != time) ||
                       (t.status > SCQ && t.status < SRR73 && t.time - t.b_time > 600)) // an attempt to support CQ and any other message reception from MSHV multislot operation mode
                     {
