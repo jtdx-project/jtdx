@@ -3186,7 +3186,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1724"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Setta la freq di RX uguale alla freq di Tx</translation>
+        <translation>Freq Rx uguale a freq di Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1576"/>
@@ -3212,7 +3212,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1696"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Setta la freq di TX uguale alla freq di Rx</translation>
+        <translation>Freq di Tx uguale a freq di Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1764"/>
@@ -3242,22 +3242,22 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocchi audio persi.&lt;/p&gt;&lt;p&gt;L&apos;intervallo di decodifica di15 secondi di  FT8 usa 52 blocchi di dati audio e la decodifica viene attivata se vengono raggiunti 51 blocchi in modalità &quot;SWL / ritardo della decodifica&quot; o 50 blocchi in altra modalità. Con il sistema operativo Windows vengono persi reports di dati audio e quindi per Windows è stata implementata una soluzione alternativa che avvia la decodifica FT8 quando sono stati ricevuti almeno 46 blocchi audio su 52.&lt;/p&gt;&lt;p&gt;La notifica dei blocchi audio persi informa l&apos;utente che c&apos;è qualcosa di sbagliato nelle impostazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Riservato</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1827"/>
@@ -3316,7 +3316,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Cancella griglia da questo elenco al momento della registrazione del QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3869,7 +3869,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna decodifica propria di chiamata</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4461,7 +4461,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5509"/>
         <source>late start of decoder</source>
-        <translation>inizio ritardato del decodificatore</translation>
+        <translation>inizio ritardato della decodifica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5517"/>
@@ -4693,7 +4693,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.cpp" line="1723"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>Blocchi Audio persi: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1807"/>
@@ -7538,7 +7538,7 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
         <location filename="../Configuration.ui" line="4752"/>
         <location filename="../Configuration.ui" line="4771"/>
         <source>K1ABC</source>
-        <translation>I0ABC</translation>
+        <translation>K1ABC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3747"/>
