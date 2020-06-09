@@ -2951,7 +2951,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Perca de blocos de áudio. O intervalo de 15 segundos do FT8 possui 52 blocos de dados de áudio, sendo o descodificador acionado se os dados de áudio atingirem 51 blocos nos modos &apos;SWL / late strat of decoder&apos; ou 50 blocos de outra forma. No sistema operacional Windows, foram relatados vários dados de áudio perdidos; no sistema operacional Windows, há uma solução alternativa implementada para iniciar o descodificador FT8 se houver pelo menos 46 dos 52 blocos de áudio recebidos. A notificação de blocos de áudio perdidos permite que o utilizador saiba que há algo de errado na configuração. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3174,12 +3174,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3235,7 +3235,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Reservado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3299,7 +3299,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Limpa a grelha desta lista no registro do QSO. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3852,7 +3852,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma descodificação de chamada própria</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4676,7 +4676,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1723"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>perca de áudio</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1807"/>
@@ -4876,7 +4876,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4072"/>
         <source>LastTx: </source>
-        <translation>ÚltimoTx: </translation>
+        <translation>Último Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4286"/>
@@ -7174,7 +7174,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Verifique e realce novo DXCC</translation>
+        <translation>Marcar e realçar novo DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
@@ -7229,7 +7229,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3203"/>
         <source>Check and highlight new CQZ</source>
-        <translation>Verifique e realce novo CQZ</translation>
+        <translation>Marcar e realçar novo CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3210"/>
@@ -7269,7 +7269,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new ITUZ</source>
-        <translation>Verifique e destaque o novo ITUZ</translation>
+        <translation>Marcar e realçar o novo ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
@@ -7289,7 +7289,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new grids</source>
-        <translation>Verifique e realce novos Grid</translation>
+        <translation>Marcar e realçar novos Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
@@ -7309,7 +7309,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Verifique e realce novos prefixos</translation>
+        <translation>Marcar e realçar novos prefixos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
@@ -7329,7 +7329,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new calls</source>
-        <translation>Verifique e realce novos indicativos</translation>
+        <translation>Marcar e realçar novos indicativos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
@@ -7379,7 +7379,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="3473"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Mensagens com DXCC, Grid, Indicativo onde não existe MyCall serão ignoradas na janela de texto descodificado &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;F</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Mensagens com DXCC, Grid, Indicativo onde não existe MyCall serão ignoradas na janela de texto descodificado&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3476"/>
