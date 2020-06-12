@@ -1041,7 +1041,10 @@ qt5_wrap_ui (wsjt_qt_GENUISRCS ${wsjt_qt_UISRCS})
 qt5_wrap_ui (wsjtx_GENUISRCS ${wsjtx_UISRCS})
 
 # Resource generation
-qt5_add_resources (wsjtx_RESOURCES_RCC ${CMAKE_BINARY_DIR}/wsjtx.qrc)
+qt5_add_resources (wsjtx_RESOURCES_RCC 
+  ${CMAKE_BINARY_DIR}/wsjtx.qrc
+  contrib/QDarkStyleSheet/qdarkstyle/style.qrc
+)
 
 # AX COM servers
 if (WIN32)
