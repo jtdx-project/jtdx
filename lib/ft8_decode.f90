@@ -27,7 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
-                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles
+                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -64,7 +64,7 @@ contains
 
     this%callback => callback
 
-    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0
+    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
       elseif(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -280,14 +280,17 @@ contains
           enddo
         endif
       enddo
+      ncandthr=ncandthr+ncand
     enddo
 ! h=default_header(12000,NMAX)
 ! open(10,file='subtract.wav',status='unknown',access='stream')
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
-    if(nmsgloc.gt.0) then
 !$omp critical(update_structures)
+    ncandall=ncandall+ncandthr
+!$OMP FLUSH (ncandall)
+    if(nmsgloc.gt.0) then
       if(nsec.eq.0 .or. nsec.eq.30) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
@@ -300,8 +303,8 @@ contains
         nmsg=nmsg+nmsgloc
 !$OMP FLUSH (nmsg,odd)
       endif
-!$omp end critical(update_structures)
     endif
+!$omp end critical(update_structures)
 !print *,'out',lastrxmsg(1)%lstate
 !print *,lastrxmsg(1)%lastmsg
     return

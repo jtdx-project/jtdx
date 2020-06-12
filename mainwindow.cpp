@@ -220,6 +220,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_position {0},
   m_nsecBandChanged {0},
   m_nDecodes {0},
+  m_ncand {0},
   m_btxok {false},
   m_diskData {false},
   m_loopall {false},
@@ -714,7 +715,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
@@ -724,7 +725,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
@@ -733,7 +734,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
             subProcessFailed (&p1, exitCode, status);
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p3, error);
           });
@@ -3443,7 +3444,9 @@ void MainWindow::readFromStdout()                             //readFromStdout
         qint64 lagms=msDecFin - periodms*((m_msDecStarted / periodms)+1); // rounding to base int
         float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag >= 0.0) slag="+"+slag;
       }
-      QString avexdt = t.remove(0,16).trimmed();
+      int indxncand=t.indexOf("<ncand>")+7; m_ncand=t.mid(indxncand,5).toInt();
+//printf("%d \n", m_ncand);
+      int indxdt=t.indexOf("<avexdt>")+8; QString avexdt = t.mid(indxdt,6).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
         ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));
@@ -4838,7 +4841,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
 
   // prior DX call (possible QSO partner)
   auto qso_partner_base_call = Radio::base_callsign (m_hisCall);
-  bool call_changed = false;
+
   auto base_call = Radio::base_callsign (hiscall);
   if (base_call != Radio::base_callsign (m_hisCall) || base_call != hiscall)
     {
@@ -4847,8 +4850,8 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
       if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
       i1=m_qsoHistory.reset_count(hiscall);
       if (m_callToClipboard) clipboard->setText(hiscall);
-      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
-      call_changed = true;
+      ui->dxCallEntry->setText(hiscall);
+      ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
     }
   if (gridOK(hisgrid)) {
     if(m_hisGrid.left(4) != hisgrid) ui->dxGridEntry->setText(hisgrid);
@@ -4970,7 +4973,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
     {
       if (m_skipTx1 && !m_houndMode) {
         if(0 == ui->tabWidget->currentIndex()) m_ntx=2;
-        if (call_changed) m_qsoHistory.remove(hiscall); //prevent braking Auto Sequence by QSO history values 
+        m_qsoHistory.remove(hiscall); //prevent braking Auto Sequence by QSO history values 
         m_QSOProgress = REPORT;
         m_nlasttx=2;
         ui->txrb2->setChecked(true); }
