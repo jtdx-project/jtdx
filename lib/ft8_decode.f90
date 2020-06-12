@@ -123,8 +123,8 @@ contains
     lonepass=.false.; if((.not.filter .and. ndepth.eq.1) .or. (filter .and. nft8filtdepth.eq.1)) lonepass=.true.
     if(swl) then
       if(nft8swlcycles.eq.1) then; npass=3
-      else if(nft8swlcycles.eq.2 .and. numthreads.gt.3) then; npass=6
-      else if(nft8swlcycles.eq.3 .and. numthreads.gt.3) then; npass=9
+      else if(nft8swlcycles.eq.2) then; npass=6
+      else if(nft8swlcycles.eq.3) then; npass=9
       else; npass=3
       endif
     else
@@ -287,6 +287,7 @@ contains
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
+    if(.not.lonepass) ncandthr=nint(float(ncandthr)/npass)
 !$omp critical(update_structures)
     ncandall=ncandall+ncandthr
 !$OMP FLUSH (ncandall)
