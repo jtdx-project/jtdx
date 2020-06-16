@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1201"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1202"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1217"/>
@@ -98,33 +98,33 @@ Another application may be locking the directory</source>
         <location filename="../Configuration.cpp" line="1452"/>
         <location filename="../Configuration.cpp" line="1504"/>
         <source>&amp;Delete</source>
-        <translation>删除&amp;D</translation>
+        <translation>删除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1456"/>
         <location filename="../Configuration.cpp" line="1508"/>
         <source>&amp;Insert ...</source>
-        <translation>插入&amp;I...</translation>
+        <translation>插入(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1460"/>
         <source>&amp;Load ...</source>
-        <translation>加载&amp;L ...</translation>
+        <translation>加载(&amp;L) ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Save as ...</source>
-        <translation>另存为&amp;S ...</translation>
+        <translation>另存为(&amp;S) ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Merge ...</source>
-        <translation>合并&amp;M ...</translation>
+        <translation>合并(&amp;M) ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Reset</source>
-        <translation>重置&amp;R</translation>
+        <translation>重置(&amp;R)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2697"/>
@@ -2170,37 +2170,37 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation>导入&amp;I...</translation>
+        <translation>导入(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation>导出&amp;E...</translation>
+        <translation>导出(&amp;E)...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
-        <translation>删除&amp;D</translation>
+        <translation>删除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
-        <translation>插入&amp;I...</translation>
+        <translation>插入(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
-        <translation>插入之后&amp;a...</translation>
+        <translation>插入之后(&amp;a)...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
@@ -2335,22 +2335,22 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
-        <translation>模式&amp;M:</translation>
+        <translation>模式(&amp;M):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="228"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation>频率&amp;F (MHz):</translation>
+        <translation>频率 (MH&amp;z):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2377,13 +2377,13 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="590"/>
         <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
-        <translation>频率 (MHz)</translation>
+        <translation>频率 (兆赫)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>模式 频率</translation>
     </message>
 </context>
 <context>
@@ -2756,7 +2756,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
@@ -2777,23 +2777,23 @@ Error: %2 - %3</source>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <location filename="../mainwindow.cpp" line="3784"/>
         <source>&amp;Yes</source>
-        <translation>确定&amp;Y</translation>
+        <translation>确定(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Yes to &amp;All</source>
-        <translation>确定所有&amp;A</translation>
+        <translation>确定所有(&amp;A)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <location filename="../mainwindow.cpp" line="3787"/>
         <source>&amp;No</source>
-        <translation>否&amp;N</translation>
+        <translation>否(&amp;N)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>N&amp;o to All</source>
-        <translation>全部否&amp;o</translation>
+        <translation>全部否(&amp;o)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
@@ -2803,7 +2803,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>&amp;Retry</source>
-        <translation>重试&amp;R</translation>
+        <translation>重试(&amp;R)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
@@ -2818,7 +2818,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="51"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="52"/>
@@ -2929,12 +2929,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="27"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="28"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -2963,7 +2963,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;丢失的音频块. FT8 15秒间隔有52个音频数据块, 如果音频数据在 &apos;SWL/解码器后期层&apos; 模式下达到51个块, 或者达到50个块, 则解码器被触发. 在视窗操作系统下, 有多个音频数据丢失的报告, 对于视窗操作系统, 如果在52个音频块中至少有46个被接收到, 则有一个变通方法来启动FT8解码器. 丢失音频块通知让用户知道设置有问题.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3015,7 +3015,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="730"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>波段选择 MHz</translation>
+        <translation>波段选择兆赫</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="778"/>
@@ -3072,7 +3072,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1034"/>
         <source>&amp;Lookup</source>
-        <translation>检索&amp;L</translation>
+        <translation>检索(&amp;L)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1047"/>
@@ -3122,7 +3122,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1654"/>
         <location filename="../mainwindow.ui" line="4175"/>
         <source>  Hz</source>
-        <translation></translation>
+        <translation>  赫兹</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1657"/>
@@ -3153,7 +3153,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1443"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;信号报告 (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;信号报告 (分贝)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1446"/>
@@ -3186,12 +3186,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1699"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1727"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1742"/>
@@ -3247,7 +3247,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>保留</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
@@ -3278,13 +3278,13 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在记录通联时清除此列表中的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1934"/>
         <location filename="../mainwindow.ui" line="2010"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>清除</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
@@ -3311,7 +3311,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在记录通联时从此列表中清除网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2023"/>
@@ -3369,7 +3369,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="2334"/>
         <location filename="../mainwindow.cpp" line="6593"/>
         <source>&amp;Tune</source>
-        <translation>调谐&amp;T</translation>
+        <translation>调谐(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2362"/>
@@ -3379,7 +3379,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2376"/>
         <source>&amp;Monitor</source>
-        <translation>监听&amp;M</translation>
+        <translation>监听(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2407"/>
@@ -3419,7 +3419,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2542"/>
         <source>&amp;Stop</source>
-        <translation>停止&amp;S</translation>
+        <translation>停止(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2581"/>
@@ -3429,7 +3429,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2595"/>
         <source>Dec&amp;ode</source>
-        <translation>解码&amp;o</translation>
+        <translation>解码(&amp;o)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2623"/>
@@ -3439,7 +3439,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2637"/>
         <source>E&amp;nable Tx</source>
-        <translation>启用发射&amp;n</translation>
+        <translation>启用发射(&amp;n)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2665"/>
@@ -3449,7 +3449,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2668"/>
         <source>&amp;Halt Tx</source>
-        <translation>终止发射&amp;H</translation>
+        <translation>终止发射(&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2693"/>
@@ -3459,7 +3459,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2696"/>
         <source>Log &amp;QSO</source>
-        <translation>记录通联&amp;Q</translation>
+        <translation>记录通联(&amp;Q)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2721"/>
@@ -3469,7 +3469,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2724"/>
         <source>&amp;Erase</source>
-        <translation>擦除窗口&amp;E</translation>
+        <translation>擦除窗口(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2749"/>
@@ -3754,7 +3754,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3889"/>
         <source>dB</source>
-        <translation></translation>
+        <translation>分贝</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3914"/>
@@ -3764,7 +3764,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3917"/>
         <source>R+dB</source>
-        <translation></translation>
+        <translation>R+分贝</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3942"/>
@@ -3844,7 +3844,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4280"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation>将发射功率设置为 dBm （dB 高于 1 mW） 作为 WSPR 信息的一部分.</translation>
+        <translation>将发射功率设置为 dBm (分贝高于 1 mW) 作为 WSPR 信息的一部分.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4194"/>
@@ -3864,7 +3864,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4273"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>解码中没有自己的呼号</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4375"/>
@@ -4151,7 +4151,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4927"/>
         <source>Log dB reports to Comments</source>
-        <translation>将 dB 报告记录到注释</translation>
+        <translation>将分贝报告记录到注释</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4935"/>
@@ -4281,7 +4281,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5144"/>
         <source>&amp;Download Samples ...</source>
-        <translation>下载样本&amp;D ...</translation>
+        <translation>下载样本(&amp;D) ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5147"/>
@@ -4608,7 +4608,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5855"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏遥测信息</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="456"/>
@@ -4688,7 +4688,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1724"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>丢失音频 </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1808"/>
@@ -5089,22 +5089,22 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5046"/>
         <source>File &amp;name:</source>
-        <translation>文件名称&amp;n:</translation>
+        <translation>文件名称(&amp;n):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5047"/>
         <source>&amp;Open</source>
-        <translation>打开&amp;O</translation>
+        <translation>打开(&amp;O)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5048"/>
         <source>&amp;Choose</source>
-        <translation>选择&amp;C</translation>
+        <translation>选择(&amp;C)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5049"/>
         <source>&amp;Save</source>
-        <translation>保存&amp;S</translation>
+        <translation>保存(&amp;S)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5051"/>
@@ -5129,22 +5129,22 @@ UDP 服务器 %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5054"/>
         <source>&amp;Delete</source>
-        <translation>删除&amp;D</translation>
+        <translation>删除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5055"/>
         <source>&amp;Rename</source>
-        <translation>重新命名&amp;R</translation>
+        <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5056"/>
         <source>Show &amp;hidden files</source>
-        <translation>显示隐藏文件&amp;h</translation>
+        <translation>显示隐藏文件(&amp;h)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5057"/>
         <source>&amp;New Folder</source>
-        <translation>新建文件夹&amp;N</translation>
+        <translation>新建文件夹(&amp;N)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
@@ -5596,27 +5596,27 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Band:</source>
-        <translation>波段&amp;B:</translation>
+        <translation>波段(&amp;B):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
-        <translation>偏移&amp;O (MHz):</translation>
+        <translation>偏移 (MH&amp;z):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
-        <translation>天线&amp;A:</translation>
+        <translation>天线(&amp;A):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
-        <translation>确定&amp;O</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
-        <translation>取消&amp;C</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -5736,7 +5736,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="317"/>
         <source> Hz</source>
-        <translation></translation>
+        <translation> 赫兹</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="320"/>
@@ -5746,7 +5746,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="345"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation>FFT 平均数（控制瀑布滚动速率）</translation>
+        <translation>FFT 平均数(控制瀑布滚动速率)</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="348"/>
@@ -5854,7 +5854,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.cpp" line="29"/>
         <source>Wide Graph</source>
-        <translation></translation>
+        <translation>宽图</translation>
     </message>
 </context>
 <context>
@@ -5872,7 +5872,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>一般&amp;l</translation>
+        <translation>一般(&amp;l)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -5887,7 +5887,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation>我的呼号&amp;a:</translation>
+        <translation>我的呼号(&amp;a):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
@@ -5897,7 +5897,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation>我的网格&amp;y:</translation>
+        <translation>我的网格(&amp;y):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
@@ -5992,7 +5992,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation>显示距离为英里&amp;n</translation>
+        <translation>显示距离为英里(&amp;n)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="363"/>
@@ -6002,7 +6002,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>每解码周期插入间隔行&amp;B</translation>
+        <translation>每解码周期插入间隔行(&amp;B)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
@@ -6012,7 +6012,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>Show &amp;DXCC names</source>
-        <translation>显示国家名称&amp;D</translation>
+        <translation>显示国家名称(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="396"/>
@@ -6022,7 +6022,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Show &amp;prefix not name</source>
-        <translation>显示前缀&amp;p</translation>
+        <translation>显示前缀(&amp;p)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="406"/>
@@ -6042,7 +6042,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="422"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>发出讯息在接收信息窗口显示&amp;T</translation>
+        <translation>发出讯息在接收信息窗口显示(&amp;T)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="437"/>
@@ -6057,7 +6057,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="466"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>开启时关闭监听&amp;i</translation>
+        <translation>开启时关闭监听(&amp;i)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="492"/>
@@ -6128,12 +6128,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="601"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation>73发出后用CW模式发放你的呼号&amp;f</translation>
+        <translation>&amp;73发出后用CW模式发放你的呼号</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="627"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>发射CW信息时间间隔&amp;v:</translation>
+        <translation>发射C&amp;W信息时间间隔:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="643"/>
@@ -6149,7 +6149,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="672"/>
         <source>&amp;Radio</source>
-        <translation>电台&amp;R</translation>
+        <translation>电台(&amp;R)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="675"/>
@@ -6357,7 +6357,7 @@ a few, particularly some Kenwood rigs, require it).</source>
     <message>
         <location filename="../Configuration.ui" line="1111"/>
         <source>&amp;Hardware</source>
-        <translation>硬件&amp;H</translation>
+        <translation>硬件(&amp;H)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
@@ -6472,7 +6472,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1369"/>
         <source>&amp;Front/Mic</source>
-        <translation>前方/咪高峄&amp;F</translation>
+        <translation>前方/麦克风(&amp;F)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1392"/>
@@ -6492,7 +6492,7 @@ this setting allows you to select which audio input will be used
     <message>
         <location filename="../Configuration.ui" line="1404"/>
         <source>US&amp;B</source>
-        <translation>上边带&amp;B</translation>
+        <translation>上边带(&amp;B)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1417"/>
@@ -6517,7 +6517,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1435"/>
         <source>Data/P&amp;kt</source>
-        <translation>数据/封包&amp;k</translation>
+        <translation>数据/封包(&amp;k)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1455"/>
@@ -6576,7 +6576,7 @@ radio interface behave as expected.</source>
     <message>
         <location filename="../Configuration.ui" line="1645"/>
         <source>A&amp;udio</source>
-        <translation>音频&amp;u</translation>
+        <translation>音频(&amp;u)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1648"/>
@@ -6609,7 +6609,7 @@ transmitting periods.</source>
     <message>
         <location filename="../Configuration.ui" line="1690"/>
         <source>&amp;Input:</source>
-        <translation>输入&amp;I:</translation>
+        <translation>输入(&amp;I):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1700"/>
@@ -6654,7 +6654,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1757"/>
         <source>Ou&amp;tput:</source>
-        <translation>输出&amp;t:</translation>
+        <translation>输出(&amp;t):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1776"/>
@@ -6689,7 +6689,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1828"/>
         <source>Loc&amp;ation:</source>
-        <translation>目录位置&amp;a:</translation>
+        <translation>目录位置(&amp;a):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1844"/>
@@ -6709,7 +6709,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1863"/>
         <source>S&amp;elect</source>
-        <translation>选择&amp;e</translation>
+        <translation>选择(&amp;e)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1894"/>
@@ -6782,7 +6782,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2193"/>
         <source>Tx &amp;Macros</source>
-        <translation>自定义文字&amp;M</translation>
+        <translation>自定义文字(&amp;M)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2196"/>
@@ -6792,7 +6792,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2202"/>
         <source>&amp;Add</source>
-        <translation>增加&amp;A</translation>
+        <translation>增加(&amp;A)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2209"/>
@@ -6802,7 +6802,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2219"/>
         <source>&amp;Delete</source>
-        <translation>删除&amp;D</translation>
+        <translation>删除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2229"/>
@@ -6812,7 +6812,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2280"/>
         <source>Reportin&amp;g</source>
-        <translation>报告&amp;g</translation>
+        <translation>报告(&amp;g)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2283"/>
@@ -6870,7 +6870,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2359"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>把日志记录转成RTTY模式&amp;v</translation>
+        <translation>把日志记录转成RTTY模式(&amp;v)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2366"/>
@@ -6880,7 +6880,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2369"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>提示我记录通联日志&amp;t</translation>
+        <translation>提示我记录通联日志(&amp;t)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2376"/>
@@ -6988,12 +6988,12 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2707"/>
         <source>U&amp;sername:</source>
-        <translation>用户名称&amp;s:</translation>
+        <translation>用户名称(&amp;s):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2717"/>
         <source>P&amp;assword:</source>
-        <translation>密码&amp;a:</translation>
+        <translation>密码(&amp;a):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2727"/>
@@ -7029,7 +7029,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2764"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH 昵称&amp;i:</translation>
+        <translation>&amp;QTH 昵称:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2777"/>
@@ -7145,7 +7145,7 @@ for assessing propagation and system performance.</source>
         <location filename="../Configuration.ui" line="3031"/>
         <location filename="../Configuration.ui" line="6782"/>
         <source> Hz</source>
-        <translation></translation>
+        <translation> 赫兹</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3050"/>
@@ -8293,7 +8293,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6769"/>
         <location filename="../Configuration.ui" line="6779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义用于解码 JT65a 信号的上限, 默认值值为 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义用于解码 JT65a 信号的上限, 默认值值为 3000赫兹.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6772"/>
@@ -8304,7 +8304,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6805"/>
         <location filename="../Configuration.ui" line="6818"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或发射路径中的信号失真会产生 JT65A 信号（JT65B、JT65C 等）的谐波通过解码信号的减法, 解码JT65A信号谐波可以提高整体解码效率.解码深度与所需的 CPU 资源成正比, 将其设置为 1 以表示 CPU 速度较慢.更高的深度值将允许解码更多的谐波.支持 JT65B 和 JT65C 解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或发射路径中的信号失真会产生 JT65A 信号(JT65B、JT65C 等)的谐波通过解码信号的减法, 解码JT65A信号谐波可以提高整体解码效率.解码深度与所需的 CPU 资源成正比, 将其设置为 1 以表示 CPU 速度较慢.更高的深度值将允许解码更多的谐波.支持 JT65B 和 JT65C 解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6808"/>

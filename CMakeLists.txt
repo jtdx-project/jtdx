@@ -1033,7 +1033,7 @@ add_resources (wsjtx_RESOURCES "" ${TOP_LEVEL_RESOURCES})
 add_resources (wsjtx_RESOURCES /Palettes ${PALETTE_FILES})
 add_resources (wsjtx_RESOURCES /Translations ${QM_FILES})
 
-configure_file (wsjtx.qrc.in wsjtx.qrc @ONLY)
+configure_file (jtdx.qrc.in jtdx.qrc @ONLY)
 
 
 # UI generation
@@ -1042,7 +1042,7 @@ qt5_wrap_ui (wsjtx_GENUISRCS ${wsjtx_UISRCS})
 
 # Resource generation
 qt5_add_resources (wsjtx_RESOURCES_RCC 
-  ${CMAKE_BINARY_DIR}/wsjtx.qrc
+  ${CMAKE_BINARY_DIR}/jtdx.qrc
   contrib/QDarkStyleSheet/qdarkstyle/style.qrc
 )
 
