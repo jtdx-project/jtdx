@@ -48,7 +48,7 @@ void MeterWidget::paintEvent (QPaintEvent * event)
 
   // Sanitize
   m_signal = m_signal < 0 ? 0 : m_signal;
-  m_signal = m_signal > 190 ? 190 : m_signal;
+  m_signal = m_signal > 186 ? 186 : m_signal;
 
   QPainter p {this};
   p.setPen (Qt::NoPen);
@@ -64,7 +64,7 @@ void MeterWidget::paintEvent (QPaintEvent * event)
   if (m_sigPeak)
     {
       // Draw peak hold indicator
-      auto peak = static_cast<int> (target.top () + target.height () - m_sigPeak / 190. * target.height ());
+      auto peak = static_cast<int> (target.top () + target.height () - m_sigPeak / 200. * target.height ());
       p.setBrush (Qt::black);
       p.translate (target.left (), peak);
       p.drawPolygon (QPolygon {{{0, -4}, {0, 4}, {target.width (), 0}}});
