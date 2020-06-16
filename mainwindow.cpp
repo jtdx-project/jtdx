@@ -220,6 +220,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_position {0},
   m_nsecBandChanged {0},
   m_nDecodes {0},
+  m_ncand {0},
   m_btxok {false},
   m_diskData {false},
   m_loopall {false},
@@ -714,7 +715,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
@@ -724,7 +725,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
@@ -733,7 +734,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
             subProcessFailed (&p1, exitCode, status);
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p3, error);
           });
@@ -3264,7 +3265,10 @@ void MainWindow::process_Auto()
     }
   }
   if (hisCall.isEmpty () && counters && !m_houndMode && m_callMode!=0) {
-    if(m_callPrioCQ && !m_lockTxFreq && counters2 && m_counter == 0) { time=1; }    //highiest priority, evaluating response to CQ first, then searching CQ decoded messages 
+    auto ms = m_msDecStarted % 86400000;
+    auto secs = round(ms / 1000.0) +1;
+    int nmod = fmod(double(secs),2.0*m_TRperiod);
+    if(m_callPrioCQ && !m_lockTxFreq && counters2 && m_counter == 0 && m_txFirst != (nmod!=0)) { time=1; }    //highiest priority, evaluating response to CQ first, then searching CQ decoded messages 
     else { if (m_counter > 0) m_counter -= 1; time=0; } //highiest priority, evaluating response to CQ only
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_answerWorkedB4) time |= 128;
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_callWorkedB4) time |= 64;
@@ -3423,7 +3427,9 @@ void MainWindow::readFromStdout()                             //readFromStdout
       else if(m_modeTx == "JT65") m_nguardfreq = 176;
       else if(m_modeTx == "JT9") m_nguardfreq = 16;
       else if(m_modeTx == "T10") m_nguardfreq = 67;
-//  printf("%s(%0.1f) Timing decode stop\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+      int indxncand=t.indexOf("<ncand>")+7; m_ncand=t.mid(indxncand,5).toInt();
+      int indxdt=t.indexOf("<avexdt>")+8; QString avexdt = t.mid(indxdt,6).trimmed();
+//  printf("%s(%0.1f) Timing decode stop, %d candidates\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),m_ncand);
       if (m_autoseq && !m_processAuto_done && !m_manualDecode) { m_processAuto_done = true; process_Auto(); }
       m_okToPost=true;
       m_RxLog=0;
@@ -3443,7 +3449,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
         qint64 lagms=msDecFin - periodms*((m_msDecStarted / periodms)+1); // rounding to base int
         float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag >= 0.0) slag="+"+slag;
       }
-      QString avexdt = t.remove(0,16).trimmed();
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
         ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));

@@ -1041,7 +1041,10 @@ qt5_wrap_ui (wsjt_qt_GENUISRCS ${wsjt_qt_UISRCS})
 qt5_wrap_ui (wsjtx_GENUISRCS ${wsjtx_UISRCS})
 
 # Resource generation
-qt5_add_resources (wsjtx_RESOURCES_RCC ${CMAKE_BINARY_DIR}/wsjtx.qrc)
+qt5_add_resources (wsjtx_RESOURCES_RCC 
+  ${CMAKE_BINARY_DIR}/wsjtx.qrc
+  contrib/QDarkStyleSheet/qdarkstyle/style.qrc
+)
 
 # AX COM servers
 if (WIN32)
@@ -1219,7 +1222,10 @@ qt5_use_modules (jtdx SerialPort) # not sure why the interface link library synt
 
 add_resources (message_aggregator_RESOURCES /qss ${message_aggregator_STYLESHEETS})
 configure_file (message_aggregator.qrc.in message_aggregator.qrc @ONLY)
-qt5_add_resources (message_aggregator_RESOURCES_RCC ${CMAKE_BINARY_DIR}/message_aggregator.qrc)
+qt5_add_resources (message_aggregator_RESOURCES_RCC 
+  ${CMAKE_BINARY_DIR}/message_aggregator.qrc
+  contrib/QDarkStyleSheet/qdarkstyle/style.qrc
+)
 add_executable (message_aggregator
   ${message_aggregator_CXXSRCS}
   wsjtx.rc

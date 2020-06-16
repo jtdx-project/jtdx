@@ -14,7 +14,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
-  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymb0(32)
+  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymbr(32),csr(0:7,79)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
@@ -213,12 +213,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
         scr=SQRT(abs(csymb(1)))/SQRT(abs(csymb(32)))
         if(scr.gt.1.0) then; csymb(32)=csymb(32)*scr; else; if(scr.gt.1.E-16) csymb(1)=csymb(1)/scr; endif
       endif
-      if(lreverse) then
-        do i=1,32; csymb0(i)=cmplx(real(csymb(33-i)),-aimag(csymb(33-i))); enddo
-        csymb=csymb0
-      endif
+      do i=1,32; csymbr(i)=cmplx(real(csymb(33-i)),-aimag(csymb(33-i))); enddo
+      if(lreverse) csymb=csymbr
       call four2a(csymb,32,1,-1,1)
       cs(0:7,k)=csymb(1:8)/1e3
+      if(lreverse) then; csr=cs
+      else; call four2a(csymbr,32,1,-1,1); csr(0:7,k)=csymbr(1:8)/1e3
+      endif
       s8(0:7,k)=abs(csymb(1:8))
     enddo
 
@@ -437,6 +438,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 ! a bit better efficiency on the overcrowded bands, with subpass 7935 without subpass 7948 decodes
 !    if((lft8subpass) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3)) nweak=2
     do k1=1,nweak
+      if(k1.eq.2) cs=csr
       do nsym=1,3
         nt=2**(3*nsym)
         do ihalf=1,2

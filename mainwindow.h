@@ -485,6 +485,7 @@ private:
   qint32  m_position;
   qint32  m_nsecBandChanged;
   qint32  m_nDecodes;
+  qint32  m_ncand;
     
   bool    m_btxok;		//True if OK to transmit
   bool    m_diskData;

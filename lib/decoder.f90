@@ -12,7 +12,7 @@ subroutine multimode_decoder(params)
   use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,   &
                        evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,nFT8decd,sumxdt,avexdt,   &
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
-                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1
+                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandall
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
   use packjt77, only : lcommonft8b,ihash22,calls22,calls12
 
@@ -79,7 +79,7 @@ subroutine multimode_decoder(params)
   hisgrid4=hisgrid(1:4)
 
   my_jt65%decoded=0; my_jt9%decoded=0; my_jt9s%decoded=0; my_jt10%decoded=0; my_ft8%decoded=0; my_ft4%decoded=0
-  nagainjt9=.false.;  nagainjt9s=.false.;  nagainjt10=.false.
+  nagainjt9=.false.;  nagainjt9s=.false.;  nagainjt10=.false.; ncandall=0
 
   if(params%lmodechanged) avexdt=0.
   if(params%lbandchanged .and. (params%nmode.eq.8 .or. params%nmode.eq.4)) then; ihash22=-1; calls22=''; calls12=''; endif
@@ -944,13 +944,10 @@ endif
 !print *,'Decoding finished: ',tim2
 !write (*,'(1x,a15,f6.3,a8)')'Decoding time: ',timer2-timer1, ' seconds'
 
-!800 ndecoded = my_jt4%decoded + my_jt65%decoded + my_jt9%decoded + my_ft8%decoded + my_ft4%decoded
-800 nsynced=0; ndecoded=0
-!nsynced=0; ndecoded=0
+800 continue
 
-!write(*,1010) nsynced,ndecoded
-write(*,1010) avexdt
-1010 format('<DecodeFinished>',f6.2)
+write(*,1010) avexdt,ncandall
+1010 format('<DecodeFinished><avexdt>',f6.2,'<ncand>',i5)
   call flush(6)
 !  close(13)
 
