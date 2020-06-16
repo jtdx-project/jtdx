@@ -5455,67 +5455,67 @@ Greška(%2): %3</translation>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="23"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>Došlo je do pogreške prilikom otvaranja audio ulaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="27"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>Došlo je do pogreške tijekom čitanja s audio ulaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="31"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>Audio podaci ne dolaze na audio ulazni uređaj dovoljno brzo.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="35"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>Pogreška koja se ne može povratiti, uređaj za unos zvuka trenutno nije upotrebljiv.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="64"/>
         <source>Requested input audio format is not valid.</source>
         <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="71"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>Zatraženi ulazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="92"/>
         <source>Failed to initialize audio sink device</source>
         <translation>Inicijalizacija uređaja nije uspjela</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="127"/>
         <source>Idle</source>
         <translation>Čekam</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="131"/>
         <source>Receiving</source>
         <translation>Prijem</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="135"/>
         <source>Suspended</source>
         <translation>Suspendiran</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="140"/>
         <source>Interrupted</source>
         <translation>Prekinut</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="147"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="151"/>
         <source>Stopped</source>
         <translation>Zaustavljen</translation>
     </message>
@@ -5523,62 +5523,62 @@ Greška(%2): %3</translation>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>Došlo je do pogreške prilikom otvaranja audio izlaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>Došlo je do pogreške tijekom pisanja na izlazni audio uređaj.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="28"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>Audio podaci se ne isporučuju na izlazni audio uređaj dovoljno brzo.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="29"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>Pogreška koja se ne može popraviti, uređaj za izlaz zvuka trenutačno nije upotrebljiv.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="48"/>
         <source>Requested output audio format is not valid.</source>
         <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation>Zatraženi izlazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="112"/>
         <source>Idle</source>
         <translation>Čekanje</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Sending</source>
         <translation>Slanje</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="114"/>
         <source>Suspended</source>
         <translation>Suspendiran</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="116"/>
         <source>Interrupted</source>
         <translation>Prekid</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Stopped</source>
         <translation>Zaustavljen</translation>
     </message>

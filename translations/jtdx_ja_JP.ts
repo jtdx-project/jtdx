@@ -5428,67 +5428,67 @@ Error(%2): %3</source>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="23"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>オーディオ入力デバイスを開くときにエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="27"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>オーディオ入力デバイスからの読み取り中にエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="31"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>オーディオデータがオーディオ入力デバイスに十分な速度で供給されていません。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="35"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>回復不可能なエラー、現時点では使用できないオーディオ入力デバイス。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="64"/>
         <source>Requested input audio format is not valid.</source>
         <translation>要求された入力オーディオ形式は無効です。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="71"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>要求された入力オーディオ形式はデバイスでサポートされていません。</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="92"/>
         <source>Failed to initialize audio sink device</source>
         <translation>オーディオシンクデバイスの初期化に失敗しました</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="127"/>
         <source>Idle</source>
         <translation>アイドル状態</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="131"/>
         <source>Receiving</source>
         <translation>受信中</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="135"/>
         <source>Suspended</source>
         <translation>停止中</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="140"/>
         <source>Interrupted</source>
         <translation>中断されました</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="147"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="151"/>
         <source>Stopped</source>
         <translation>停止</translation>
     </message>
@@ -5496,62 +5496,62 @@ Error(%2): %3</source>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>オーディオ出力デバイスを開くときにエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>オーディオ出力デバイスへの書き込み中にエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="28"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>オーディオデータがオーディオ出力デバイスに十分な速度で供給されていません。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="29"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>回復不可能なエラー、現時点では使用できないオーディオ出力デバイス。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="48"/>
         <source>Requested output audio format is not valid.</source>
         <translation>要求された出力オーディオ形式は無効です。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation>要求された出力オーディオ形式はデバイスでサポートされていません。</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="112"/>
         <source>Idle</source>
         <translation>アイドル状態</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Sending</source>
         <translation>送信</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="114"/>
         <source>Suspended</source>
         <translation>停止中</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="116"/>
         <source>Interrupted</source>
         <translation>中断されました</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="118"/>
         <source>Stopped</source>
         <translation>停止</translation>
     </message>
