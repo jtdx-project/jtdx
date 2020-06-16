@@ -44,7 +44,7 @@
     <message>
         <location filename="../about.ui" line="71"/>
         <source>OK</source>
-        <translation>Labi</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2166,7 +2166,7 @@ Formāts:
     <message>
         <location filename="../WFPalette.cpp" line="122"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
@@ -2747,7 +2747,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
@@ -2814,7 +2814,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="52"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Acelt</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="53"/>
@@ -2824,12 +2824,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="54"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Pielietot</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomest</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="56"/>
@@ -7704,7 +7704,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="5052"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nomest</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5066"/>
@@ -8264,27 +8264,27 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="135"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;style&gt; var būt Fusion (noklusējuma) vai Windows</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="136"/>
         <source>style</source>
-        <translation>stils</translation>
+        <translation>Stils</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="140"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kur &lt;rig-name&gt; ir paredzēts vairāku instanču atbalstam.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="141"/>
         <source>rig-name</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="145"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakstāmi faili testa vietā. Lietojiet piesardzīgi, tikai testēšanai.</translation>
     </message>
 </context>
 <context>
