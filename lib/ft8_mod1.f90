@@ -5,7 +5,7 @@ module ft8_mod1
   complex cw(nps1),cfilt1(nps1),cfilt2(nps1),cfilt3(nps1),cfilt4(nps1),cfilt5(nps1),cfilt6(nps1),cfilt7(nps1),   &
           cfilt8(nps1),cfilt9(nps1),cfilt10(nps1),cfilt11(nps1),cfilt12(nps1),cref1(nfr),cref2(nfr),cref3(nfr),  &
           cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
-          csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32)
+          csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:8,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
@@ -14,7 +14,7 @@ module ft8_mod1
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decd,nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
-          nft8cycles,nft8swlcycles
+          nft8cycles,nft8swlcycles,ncandall
   logical one(0:511,0:8),lqsomsgdcd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/

@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on 20190928
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 module packjt77
 
 ! These variables are accessible from outside via "use packjt77":
@@ -146,8 +143,8 @@ subroutine pack77(msg0,i3,n3,c77)
   call pack77_01(nwords,w,i3,n3,c77)
   if(i3.ge.0 .or. n3.ge.1) go to 900
 ! Check 0.2 (EU VHF contest exchange)
-  call pack77_02(nwords,w,i3,n3,c77)
-  if(i3.ge.0) go to 900
+!  call pack77_02(nwords,w,i3,n3,c77)
+!  if(i3.ge.0) go to 900
 
 ! Check 0.3 and 0.4 (ARRL Field Day exchange)
   call pack77_03(nwords,w,i3,n3,c77)
@@ -170,8 +167,11 @@ subroutine pack77(msg0,i3,n3,c77)
      go to 900
   endif
 
+100 call pack77_06(nwords,w,i3,n3,c77)
+  if(i3.ge.0) go to 900
+
 ! Check Type 1 (Standard 77-bit message) or Type 2, with optional "/P"
-100 call pack77_1(nwords,w,i3,n3,c77)
+  call pack77_1(nwords,w,i3,n3,c77)
   if(i3.ge.0) go to 900
 
 ! Check Type 3 (ARRL RTTY contest exchange)
@@ -182,7 +182,7 @@ subroutine pack77(msg0,i3,n3,c77)
   call pack77_4(nwords,w,i3,n3,c77)
   if(i3.ge.0) go to 900
 
-! Check Type 5 (WWROF contest exchange)
+! Check Type 5 (EU VHF Contest with 2 hashed calls, report, serial, and grid6)
   call pack77_5(nwords,w,i3,n3,c77)
   if(i3.ge.0) go to 900
 
@@ -213,17 +213,18 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
   character*13 call_1,call_2,call_3
   character*13 mycall13_0,dxcall13_0
   character*11 c11
-  character*3 crpt,cntx
+  character*3 crpt,cntx,cpfx
   character*3 cmult(NUSCAN)
   character*6 cexch,grid6
   character*4 grid4,cserial
   character*3 csec(NSEC)
-  character*2 cfield
   character*38 c
+  character*36 a2
   integer hashmy10,hashmy12,hashmy22,hashdx10,hashdx12,hashdx22
   logical unpk28_success,unpk77_success
   logical dxcall13_set,mycall13_set
 
+  data a2/'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'/,nzzz/46656/
   data c/' 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ/'/
   data csec/                                                         &
        "AB ","AK ","AL ","AR ","AZ ","BC ","CO ","CT ","DE ","EB ",  &       
@@ -314,35 +315,6 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      endif
      if(nrx.eq.0 .and. mycall13_set .and. n10.eq.hashmy10) call_3='<'//trim(mycall13)//'>'
      msg=trim(call_1)//' RR73; '//trim(call_2)//' '//trim(call_3)//' '//crpt
-  else if(i3.eq.0 .and. n3.eq.2) then
-! 0.2  PA3XYZ/P R 590003 IO91NP           28 1 1 3 12 25   70   EU VHF contest
-     read(c77,1020) n28a,ip,ir,irpt,iserial,igrid6
-1020 format(b28,2b1,b3,b12,b25)
-     call unpack28(n28a,call_1,unpk28_success)
-     if(.not.unpk28_success .or. n28a.le.2) unpk77_success=.false.
-     nrs=52+irpt
-     if(ip.eq.1) call_1=trim(call_1)//'/P'
-     write(cexch,1022) nrs,iserial
-1022 format(i2,i4.4)
-     n=igrid6
-     j1=n/(18*10*10*24*24)
-     n=n-j1*18*10*10*24*24
-     j2=n/(10*10*24*24)
-     n=n-j2*10*10*24*24
-     j3=n/(10*24*24)
-     n=n-j3*10*24*24
-     j4=n/(24*24)
-     n=n-j4*24*24
-     j5=n/24
-     j6=n-j5*24
-     grid6(1:1)=char(j1+ichar('A'))
-     grid6(2:2)=char(j2+ichar('A'))
-     grid6(3:3)=char(j3+ichar('0'))
-     grid6(4:4)=char(j4+ichar('0'))
-     grid6(5:5)=char(j5+ichar('A'))
-     grid6(6:6)=char(j6+ichar('A'))  
-     msg=trim(call_1)//' '//cexch//' '//grid6
-     if(ir.eq.1) msg=trim(call_1)//' R '//cexch//' '//grid6
 
   else if(i3.eq.0 .and. (n3.eq.3 .or. n3.eq.4)) then
 ! 0.3   WA9XYZ KA1ABC R 16A EMA            28 28 1 4 3 7    71   ARRL Field Day
@@ -383,6 +355,70 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      enddo
      msg=adjustl(msg)
 
+  else if(i3.eq.0 .and. n3.eq.6) then
+     read(c77(50:50),'(b1)') j2a
+     j2b=0
+     if(j2a.eq.0) read(c77(49:49),'(b1)') j2b
+     j2=2*j2a+j2b
+     if(j2.eq.0) then
+! WSPR Type 1
+        read(c77,2010) n28,igrid4,idbm
+2010    format(b28.28,b15.15,b5.5)
+        idbm=nint(idbm*10.0/3.0)
+        call unpack28(n28,call_1,unpk28_success) 
+        if(.not.unpk28_success) unpk77_success=.false.
+        call to_grid4(igrid4,grid4)
+        write(crpt,'(i3)') idbm
+        msg=trim(call_1)//' '//grid4//' '//trim(adjustl(crpt))
+
+     else if(j2.eq.1) then
+! WSPR Type 2
+        read(c77,2030) n28,igrid6
+2030    format(b22.22,b25.25)
+        call unpack28(n28,call_1,unpk28_success) 
+        if(.not.unpk28_success) unpk77_success=.false.
+        call to_grid6(igrid6,grid6)
+        msg=trim(call_1)//' '//grid6
+
+     else if(j2.eq.2) then
+! WSPR Type 3
+        read(c77,2020) n28,npfx,idbm
+2020    format(b28.28,b16.16,b5.5)
+        idbm=nint(idbm*10.0/3.0)        
+        call unpack28(n28,call_1,unpk28_success) 
+        if(.not.unpk28_success) unpk77_success=.false.
+        write(crpt,'(i3)') idbm
+        if(npfx.lt.nzzz) then
+! Prefix
+           do i=3,1,-1
+              j=mod(npfx,36)+1
+              cpfx(i:i)=a2(j:j)
+              npfx=npfx/36
+              if(npfx.eq.0) exit
+           enddo
+           msg=trim(adjustl(cpfx))//'/'//trim(call_1)//' '//trim(adjustl(crpt))
+        else
+! Suffix
+           npfx=npfx-nzzz
+           cpfx='   '
+           if(npfx.le.35) then
+              cpfx(1:1)=a2(npfx+1:npfx+1)
+           else if(npfx.gt.35 .and. npfx.le.1295) then
+              cpfx(1:1)=a2(npfx/36+1:npfx/36+1)
+              cpfx(2:2)=a2(mod(npfx,36)+1:mod(npfx,36)+1)
+           else if(npfx.gt.1295 .and. npfx.le.12959) then
+              cpfx(1:1)=a2(npfx/360+1:npfx/360+1)
+              cpfx(2:2)=a2(mod(npfx/10,36)+1:mod(npfx/10,36)+1)
+              cpfx(3:3)=a2(mod(npfx,10)+1:mod(npfx,10)+1)
+           else
+              unpk77_success=.false.
+              return
+           endif
+           msg=trim(call_1)//'/'//trim(adjustl(cpfx))//' '//trim(adjustl(crpt))
+        endif
+
+     endif
+
   else if(i3.eq.1 .or. i3.eq.2) then
 ! Type 1 (standard message) or Type 2 ("/P" form for EU VHF contest)
      read(c77,1000) n28a,ipa,n28b,ipb,ir,igrid4,i3
@@ -405,17 +441,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
         if(i.ge.4) call add_call_to_recent_calls(call_2)
      endif
      if(igrid4.le.MAXGRID4) then
-        n=igrid4
-        j1=n/(18*10*10)
-        n=n-j1*18*10*10
-        j2=n/(10*10)
-        n=n-j2*10*10
-        j3=n/10
-        j4=n-j3*10
-        grid4(1:1)=char(j1+ichar('A'))
-        grid4(2:2)=char(j2+ichar('A'))
-        grid4(3:3)=char(j3+ichar('0'))
-        grid4(4:4)=char(j4+ichar('0'))
+        call to_grid4(igrid4,grid4)
         if(ir.eq.0) msg=trim(call_1)//' '//trim(call_2)//' '//grid4
         if(ir.eq.1) msg=trim(call_1)//' '//trim(call_2)//' R '//grid4
         if(msg(1:3).eq.'CQ ' .and. ir.eq.1) unpk77_success=.false.
@@ -475,7 +501,9 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
         if(itu.eq.1 .and. ir.eq.1) msg='TU; '//trim(call_1)//' '//trim(call_2)//     &
              ' R '//crpt//' '//cserial
      endif
+
   else if(i3.eq.4) then
+! Type 4     
      read(c77,1050) n12,n58,iflip,nrpt,icq
 1050 format(b12,b58,b1,b2,b1)
      do i=11,1,-1
@@ -486,7 +514,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      call hash12(n12,call_3)
      if(iflip.eq.0) then       ! 12 bit hash for TO call
         call_1=call_3          
-        call_2=adjustl(c11)//'          '
+        call_2=adjustl(c11)//'  '
         call add_call_to_recent_calls(call_2)
         if(nrx.eq.1 .and.                        &  
            dxcall13_set .and. mycall13_set .and. & 
@@ -513,31 +541,46 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
         msg='CQ '//trim(call_2)
      endif
      if(call_2(1:1).lt.':' .and. call_2(1:1).gt.'/' .and. call_2(2:2).lt.':' .and. call_2(2:2).gt.'/') unpk77_success=.false.
+     if(len_trim(call_2).eq.11) then
+       ispace=index(call_2,' '); if(ispace.gt.0 .and. ispace.lt.12) unpk77_success=.false.
+       islash=index(call_2,'/'); if(islash.eq.1 .or. islash.eq.2 .or. islash.eq.11 .or. (islash.eq.10 .and. &
+       call_2(11:11).gt.'@' .and. call_2(11:11).lt.'[' .and. call_2(11:11).ne.'P')) unpk77_success=.false.
+       if(islash.lt.6 .and. call_2(11:11).lt.':' .and. call_2(11:11).gt.'/') unpk77_success=.false.
+     endif
+     if(msg(1:3).ne.'CQ ') then
+       if(call_1(1:1).lt.':' .and. call_1(1:1).gt.'/' .and. call_1(2:2).lt.':' .and.call_1(2:2).gt.'/') unpk77_success=.false.
+       if(len_trim(call_1).eq.11) then
+         ispace=index(call_1,' '); if(ispace.gt.0 .and. ispace.lt.12) unpk77_success=.false.
+         islash=index(call_1,'/'); if(islash.eq.1 .or. islash.eq.2 .or. islash.eq.11 .or. (islash.eq.10 .and. &
+         call_1(11:11).gt.'@' .and. call_1(11:11).lt.'[' .and. call_1(11:11).ne.'P')) unpk77_success=.false.
+         if(islash.lt.6 .and. call_1(11:11).lt.':' .and. call_1(11:11).gt.'/') unpk77_success=.false.
+       endif
+     endif
 
   else if(i3.eq.5) then
-! 5    TU; W9XYZ K1ABC R-09 FN             1 28 28 1 7 9       74   WWROF contest
-     read(c77,1041) itu,n28a,n28b,ir,irpt,nexch,i3
-1041 format(b1,2b28.28,b1,b7.7,b9.9,b3.3)
-     call unpack28(n28a,call_1,unpk28_success)
-     if(.not.unpk28_success) unpk77_success=.false.
-     call unpack28(n28b,call_2,unpk28_success)
-     if(.not.unpk28_success) unpk77_success=.false.
-     write(crpt,'(i3.2)') irpt-35
-     if(crpt(1:1).eq.' ') crpt(1:1)='+'
-     n1=nexch/18
-     n2=nexch - 18*n1
-     cfield(1:1)=char(ichar('A')+n1)
-     cfield(2:2)=char(ichar('A')+n2)
-     if(itu.eq.0 .and. ir.eq.0) msg=trim(call_1)//' '//trim(call_2)//             &
-          ' '//crpt//' '//cfield
-     if(itu.eq.1 .and. ir.eq.0) msg='TU; '//trim(call_1)//' '//trim(call_2)//     &
-          ' '//crpt//' '//cfield
-     if(itu.eq.0 .and. ir.eq.1) msg=trim(call_1)//' '//trim(call_2)//             &
-          ' R'//crpt//' '//cfield
-     if(itu.eq.1 .and. ir.eq.1) msg='TU; '//trim(call_1)//' '//trim(call_2)//     &
-          ' R'//crpt//' '//cfield
+     
+! Type 5  <PA3XYZ> <G4ABC/P> R 590003 IO91NP      h12 h22 r1 s3 S11 g25
+! EU VHF contest
+     read(c77,1060) n12,n22,ir,irpt,iserial,igrid6
+1060 format(b12,b22,b1,b3,b11,b25)
+     if(igrid6.lt.0 .or. igrid6.gt.18662399) then
+        unpk77_success=.false.
+        return
+     endif
+     call hash12(n12,call_1)
+     if(n12.eq.hashmy12) call_1='<'//trim(mycall13)//'>'
+     call hash22(n22,call_2)
+     nrs=52+irpt
+     write(cexch,1022) nrs,iserial
+1022 format(i2,i4.4)
+     call to_grid6(igrid6,grid6)
+     if(ir.eq.0) msg=trim(call_1)//' '//trim(call_2)//' '//cexch//' '//grid6
+     if(ir.eq.1) msg=trim(call_1)//' '//trim(call_2)//' R '//cexch//' '//grid6
+
+  else if(i3.ge.6) then ! i3 values 6 and 7 are not yet defined
+     unpk77_success=.false.
   endif
-!  if(msg(1:4).eq.'CQ <') unpk77_success=.false.
+  if(msg(1:4).eq.'CQ <') unpk77_success=.false.
 
   return
 end subroutine unpack77
@@ -650,7 +693,7 @@ subroutine pack28(c13,n28)
        npdig.ge.iarea-1 .or. nslet.gt.3) then
 ! Treat this as a nonstandard callsign: compute its 22-bit hash
      call save_hash_call(c13,n10,n12,n22)   !Save callsign in hash table
-     n22=ihashcall(c13,n22)
+     n22=ihashcall(c13,22)
      n28=NTOKENS + n22
      go to 900
   endif
@@ -826,7 +869,7 @@ subroutine pack77_01(nwords,w,i3,n3,c77)
   call chkcall(w(3),bcall_2,ok2)
   if(.not.ok2) go to 900                   !3rd word must be a valid basecall
 
-! Type 0.1:  K1ABC RR73; W9XYZ <KH1/KH7Z> -11   28 28 10 5       71   DXpedition Mode
+! Type 0.1:  K1ABC RR73; W9XYZ <KH1/KH7Z> -11   28 28 10 5       71   DXpedition special msg
   i3=0
   n3=1
   call pack28(w(1),n28a)
@@ -841,63 +884,10 @@ subroutine pack77_01(nwords,w,i3,n3,c77)
 900 return
 end subroutine pack77_01
 
-
-subroutine pack77_02(nwords,w,i3,n3,c77)
-
-  character*13 w(19),c13
-  character*77 c77
-  character*6 bcall_1,grid6
-  logical ok1,is_grid6
-
-  is_grid6(grid6)=len(trim(grid6)).eq.6 .and.                        &
-       grid6(1:1).ge.'A' .and. grid6(1:1).le.'R' .and.               &
-       grid6(2:2).ge.'A' .and. grid6(2:2).le.'R' .and.               &
-       grid6(3:3).ge.'0' .and. grid6(3:3).le.'9' .and.               &
-       grid6(4:4).ge.'0' .and. grid6(4:4).le.'9' .and.               &
-       grid6(5:5).ge.'A' .and. grid6(5:5).le.'X' .and.               &
-       grid6(6:6).ge.'A' .and. grid6(6:6).le.'X'
-
-  call chkcall(w(1),bcall_1,ok1)
-  if(.not.ok1) return                            !bcall_1 must be a valid basecall
-  if(nwords.lt.3 .or. nwords.gt.4) return        !nwords must be 3 or 4
-  nx=-1
-  if(nwords.ge.2) read(w(nwords-1),*,err=2) nx
-2 if(nx.lt.520001 .or. nx.gt.594095) return      !Exchange between 520001 - 594095
-  if(.not.is_grid6(w(nwords)(1:6))) return       !Last word must be a valid grid6
-
-! Type 0.2:   PA3XYZ/P R 590003 IO91NP           28 1 1 3 12 25   70   EU VHF contest
-  i3=0
-  n3=2
-  i=index(w(1)//' ','/P ')
-  if(i.ge.4) then
-     ip=1
-     c13=w(1)(1:i-1)
-  else
-     ip=0
-     c13=w(1)
-  end if
-  call pack28(c13,n28a)
-  ir=0
-  if(w(2)(1:2).eq.'R ') ir=1
-  irpt=nx/10000 - 52
-  iserial=mod(nx,10000)
-  grid6=w(nwords)(1:6)
-  j1=(ichar(grid6(1:1))-ichar('A'))*18*10*10*24*24
-  j2=(ichar(grid6(2:2))-ichar('A'))*10*10*24*24
-  j3=(ichar(grid6(3:3))-ichar('0'))*10*24*24
-  j4=(ichar(grid6(4:4))-ichar('0'))*24*24
-  j5=(ichar(grid6(5:5))-ichar('A'))*24
-  j6=(ichar(grid6(6:6))-ichar('A'))
-  igrid6=j1+j2+j3+j4+j5+j6
-  write(c77,1010) n28a,ip,ir,irpt,iserial,igrid6,n3,i3
-1010 format(b28.28,2b1,b3.3,b12.12,b25.25,b4.4,b3.3)
-
-  return
-end subroutine pack77_02
-
-
 subroutine pack77_03(nwords,w,i3,n3,c77)
+
 ! Check 0.3 and 0.4 (ARRL Field Day exchange)
+! Example message:  WA9XYZ KA1ABC R 16A EMA       28 28 1 4 3 7    71  
 
   parameter (NSEC=84)      !Number of ARRL Sections
   character*13 w(19)
@@ -959,8 +949,127 @@ subroutine pack77_03(nwords,w,i3,n3,c77)
   return
 end subroutine pack77_03
 
+subroutine pack77_06(nwords,w,i3,n3,c77)
+
+  character*13 w(19)
+  character*77 c77
+  character*6 bcall,grid6
+  character*4 grid4
+  character*1 c
+  character*36 a2
+  data a2/'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'/,nzzz/46656/
+  
+  logical is_grid4,is_grid6,is_digit,ok
+  is_grid4(grid4)=len(trim(grid4)).eq.4 .and.                        &
+       grid4(1:1).ge.'A' .and. grid4(1:1).le.'R' .and.               &
+       grid4(2:2).ge.'A' .and. grid4(2:2).le.'R' .and.               &
+       grid4(3:3).ge.'0' .and. grid4(3:3).le.'9' .and.               &
+       grid4(4:4).ge.'0' .and. grid4(4:4).le.'9'
+
+  is_grid6(grid6)=len(trim(grid6)).eq.6 .and.                        &
+       grid6(1:1).ge.'A' .and. grid6(1:1).le.'R' .and.               &
+       grid6(2:2).ge.'A' .and. grid6(2:2).le.'R' .and.               &
+       grid6(3:3).ge.'0' .and. grid6(3:3).le.'9' .and.               &
+       grid6(4:4).ge.'0' .and. grid6(4:4).le.'9' .and.               &
+       grid6(5:5).ge.'A' .and. grid6(5:5).le.'X' .and.               &
+       grid6(6:6).ge.'A' .and. grid6(6:6).le.'X'
+
+  is_digit(c)=c.ge.'0' .and. c.le.'9'
+
+  m1=len(trim(w(1)))
+  m2=len(trim(w(2)))
+  m3=len(trim(w(3)))
+  if(nwords.eq.3 .and. m1.ge.3 .and. m1.le.6 .and. m2.eq.4 .and. m3.le.2) then
+! WSPR Type 1
+     if(.not.is_grid4(w(2)(1:4))) go to 900
+     if(.not.is_digit(w(3)(1:1))) go to 900
+     if(m3.eq.2) then
+        if(.not.is_digit(w(3)(2:2))) go to 900
+     endif
+     i3=0
+     n3=6
+     call pack28(w(1),n28)
+     grid4=w(2)(1:4)
+     k1=(ichar(grid4(1:1))-ichar('A'))*18*10*10
+     k2=(ichar(grid4(2:2))-ichar('A'))*10*10
+     k3=(ichar(grid4(3:3))-ichar('0'))*10
+     k4=(ichar(grid4(4:4))-ichar('0'))
+     igrid4=k1+k2+k3+k4
+     read(w(3),*) idbm
+     if(idbm.lt.0) idbm=0
+     if(idbm.gt.60) idbm=60
+     idbm=nint(0.3*idbm)
+     write(c77,1010) n28,igrid4,idbm,0,0,0,n3,i3
+1010 format(b28.28,b15.15,b5.5,2i1,b21.21,2b3.3)
+     go to 900
+  endif
+  if(nwords.eq.2 .and. m1.ge.5 .and. m1.le.10 .and. m2.le.2) then
+! WSPR Type 2
+     i1=index(w(1),'/')
+     if(i1.lt.2 .or. i1.eq.m1) go to 900
+     if(.not.is_digit(w(2)(1:1))) go to 900
+     if(i1.eq.(m1-3) .and. .not.is_digit(w(1)(m1:m1))) go to 900
+     if(m2.eq.2) then
+        if(.not.is_digit(w(2)(2:2))) go to 900
+     endif
+     call chkcall(w(1),bcall,ok)
+     if(.not.ok) go to 900
+     if(i1.le.4) then
+! We have a prefix
+        npfx=index(a2,w(1)(1:1))-1
+        if(i1.ge.3) npfx=36*npfx + index(a2,w(1)(2:2))-1
+        if(i1.eq.4) npfx=36*npfx + index(a2,w(1)(3:3))-1
+     else
+! We have a suffix
+        if((m1-i1).eq.1) npfx=index(a2,w(1)(i1+1:i1+1))-1
+        if((m1-i1).eq.2) npfx=36*(index(a2,w(1)(i1+1:i1+1))-1) +             &
+             index(a2,w(1)(i1+2:i1+2))-1
+        if((m1-i1).eq.3) then
+! Third character of a suffix must be a digit
+           if(.not.is_digit(w(1)(i1+3:i1+3))) go to 900
+           npfx=36*10*(index(a2,w(1)(i1+1:i1+1))-1) +                        &
+             10*(index(a2,w(1)(i1+2:i1+2))-1) + index(a2,w(1)(i1+3:i1+3))-1
+        endif
+        npfx=npfx + nzzz
+     endif
+     i3=0
+     n3=6
+     call pack28(bcall//'       ',n28)
+     read(w(2),*) idbm
+     if(idbm.lt.0) idbm=0
+     if(idbm.gt.60) idbm=60
+     idbm=nint(0.3*idbm)
+     write(c77,1020) n28,npfx,idbm,1,0,n3,i3
+1020 format(b28.28,b16.16,b5.5,i1,b21.21,2b3.3)
+     go to 900
+  endif
+
+  if(nwords.eq.2 .and. m1.ge.5 .and. m1.le.12 .and. m2.le.6) then
+! WSPR Type 3
+     if(index(w(1),'<').lt.1 .or. index(w(1),'>').lt.1) go to 900
+     grid6=w(2)(1:6)
+     if(.not.is_grid6(grid6)) go to 900
+     i3=0
+     n3=6
+     call pack28(w(1),n28)
+     k1=(ichar(grid6(1:1))-ichar('A'))*18*10*10*24*24
+     k2=(ichar(grid6(2:2))-ichar('A'))*10*10*24*24
+     k3=(ichar(grid6(3:3))-ichar('0'))*10*24*24
+     k4=(ichar(grid6(4:4))-ichar('0'))*24*24
+     k5=(ichar(grid6(5:5))-ichar('A'))*24
+     k6=(ichar(grid6(6:6))-ichar('A'))
+     igrid6=k1+k2+k3+k4+k5+k6
+     write(c77,1030) n28,igrid6,2,0,n3,i3
+1030 format(b22.22,b25.25,b3.3,b21.21,2b3.3)
+  endif
+
+900 return  
+end subroutine pack77_06
+
 subroutine pack77_1(nwords,w,i3,n3,c77)
+
 ! Check Type 1 (Standard 77-bit message) and Type 2 (ditto, with a "/P" call)
+! Example message:  WA9XYZ/R KA1ABC/R R FN42     28 1 28 1 1 15   74
 
   parameter (MAXGRID4=32400)
   character*13 w(19),c13
@@ -1061,9 +1170,10 @@ end subroutine pack77_1
 
 
 subroutine pack77_3(nwords,w,i3,n3,c77)
-! Check Type 2 (ARRL RTTY contest exchange)
+! Check Type 3 (ARRL RTTY contest exchange)
 !ARRL RTTY   - US/Can: rpt state/prov      R 579 MA
 !     	     - DX:     rpt serial          R 559 0013
+! Example message:  TU; W9XYZ K1ABC R 579 MA           1 28 28 1 3 13   74
 
   parameter (NUSCAN=65)    !Number of US states and Canadian provinces/territories
   character*13 w(19)
@@ -1081,6 +1191,7 @@ subroutine pack77_3(nwords,w,i3,n3,c77)
        "NB ","NS ","QC ","ON ","MB ","SK ","AB ","BC ","NWT","NF ",  &
        "LB ","NU ","YT ","PEI","DC "/
 
+  if(w(1)(1:1).eq.'<' .and. w(2)(1:1).eq.'<') go to 900
   if(nwords.eq.4 .or. nwords.eq.5 .or. nwords.eq.6) then
      i1=1
      if(trim(w(1)).eq.'TU;') i1=2
@@ -1130,7 +1241,9 @@ subroutine pack77_3(nwords,w,i3,n3,c77)
 end subroutine pack77_3
 
 subroutine pack77_4(nwords,w,i3,n3,c77)
-! Check Type 3 (One nonstandard call and one hashed call)
+
+! Check Type 4 (One nonstandard call and one hashed call)
+! Example message: <WA9XYZ> PJ4/KA1ABC RR73           12 58 1 2 1      74
 
   integer*8 n58
   logical ok1,ok2
@@ -1198,56 +1311,63 @@ subroutine pack77_4(nwords,w,i3,n3,c77)
 end subroutine pack77_4
 
 subroutine pack77_5(nwords,w,i3,n3,c77)
-! Check Type 5 (WWROF contest exchange)
 
-  character*13 w(19)
+! Pack a Type 0.2 message: EU VHF Contest mode
+! Example message:  PA3XYZ/P R 590003 IO91NP           28 1 1 3 12 25
+!                 <PA3XYZ> <G4ABC/P> R 590003 IO91NP   h10 h20 r1 s3 s12 g25
+
+  character*13 w(19),c13
   character*77 c77
-  character*6 bcall_1,bcall_2
-  character crpt*4
-  character c1*1,c2*2
-  logical ok1,ok2
+  character*6 grid6
+  logical is_grid6
 
-  if(nwords.eq.4 .or. nwords.eq.5 .or. nwords.eq.6) then
-     i1=1
-     if(trim(w(1)).eq.'TU;') i1=2
-     call chkcall(w(i1),bcall_1,ok1)
-     call chkcall(w(i1+1),bcall_2,ok2)
-     if(.not.ok1 .or. .not.ok2) go to 900
-     crpt=w(nwords-1)(1:4)
-     if(index(crpt,'-').lt.1 .and. index(crpt,'+').lt.1) go to 900
+  is_grid6(grid6)=len(trim(grid6)).eq.6 .and.                        &
+       grid6(1:1).ge.'A' .and. grid6(1:1).le.'R' .and.               &
+       grid6(2:2).ge.'A' .and. grid6(2:2).le.'R' .and.               &
+       grid6(3:3).ge.'0' .and. grid6(3:3).le.'9' .and.               &
+       grid6(4:4).ge.'0' .and. grid6(4:4).le.'9' .and.               &
+       grid6(5:5).ge.'A' .and. grid6(5:5).le.'X' .and.               &
+       grid6(6:6).ge.'A' .and. grid6(6:6).le.'X'
 
-     c1=crpt(1:1)
-     c2=crpt(1:2)
-     irpt=-1
-     if(c1.eq.'+' .or. c1.eq.'-') then
-        ir=0
-        read(w(nwords-1),*,err=900) irpt
-        irpt=irpt+35
-     else if(c2.eq.'R+' .or. c2.eq.'R-') then
-        ir=1
-        read(w(nwords-1)(2:),*) irpt
-        irpt=irpt+35
-     endif
-     if(irpt.eq.-1 .or. len(trim(w(nwords))).ne.2) go to 900
-     c2=w(nwords)(1:2)
-     n1=ichar(c2(1:1)) - ichar('A')
-     n2=ichar(c2(2:2)) - ichar('A')
-     if(n1.lt.0 .or. n1.gt.17) go to 900
-     if(n2.lt.0 .or. n2.gt.17) go to 900
-     nexch=18*n1 + n2
-     i3=5
-     n3=0
-     itu=0
-     if(trim(w(1)).eq.'TU;') itu=1
-     call pack28(w(1+itu),n28a)
-     call pack28(w(2+itu),n28b)
-! 5    TU; W9XYZ K1ABC R-09 FN             1 28 28 1 7 9       74   WWROF contest
-     write(c77,1010) itu,n28a,n28b,ir,irpt,nexch,i3
-1010 format(b1,2b28.28,b1,b7.7,b9.9,b3.3)
+  if(nwords.lt.4 .or. nwords.gt.5) return        !nwords must be 4 or 5
+  if(w(1)(1:1).ne.'<' .or. w(2)(1:1).ne.'<') return !Both calls must be hashed
+  nx=-1
+  read(w(nwords-1),*,err=2) nx
+2 if(nx.lt.520001 .or. nx.gt.594095) return   !Exchange between 520001 - 594095
+  if(.not.is_grid6(w(nwords)(1:6))) return    !Last word must be a valid grid6
 
-  endif
-  
-900 return
+! Type 0.2: <PA3XYZ> <G4ABC/P> R 590003 IO91NP     h10 h20 r1 s3 s12 g25
+
+  i3=5
+  n3=0
+
+  call save_hash_call(w(1),n10,n12,n22)
+  i2=index(w(1),'>')
+  c13=w(1)(2:i2-1)
+  n12=ihashcall(c13,12)
+
+  call save_hash_call(w(2),n10a,n12a,n22)
+  i2=index(w(2),'>')
+  c13=w(2)(2:i2-1)
+  n22=ihashcall(c13,22)
+
+  ir=0
+  if(w(3)(1:2).eq.'R ') ir=1
+  irpt=nx/10000 - 52
+  iserial=mod(nx,10000)
+  if(iserial.gt.2047) iserial=2047
+  grid6=w(nwords)(1:6)
+  j1=(ichar(grid6(1:1))-ichar('A'))*18*10*10*24*24
+  j2=(ichar(grid6(2:2))-ichar('A'))*10*10*24*24
+  j3=(ichar(grid6(3:3))-ichar('0'))*10*24*24
+  j4=(ichar(grid6(4:4))-ichar('0'))*24*24
+  j5=(ichar(grid6(5:5))-ichar('A'))*24
+  j6=(ichar(grid6(6:6))-ichar('A'))
+  igrid6=j1+j2+j3+j4+j5+j6
+  write(c77,1010) n12,n22,ir,irpt,iserial,igrid6,i3
+1010 format(b12.12,b22.22,b1,b3.3,b11.11,b25.25,b3.3)
+
+  return
 end subroutine pack77_5
 
 subroutine packtext77(c13,c71)
@@ -1365,5 +1485,45 @@ subroutine add_call_to_recent_calls(callsign)
 
   return
 end subroutine add_call_to_recent_calls
+
+subroutine to_grid4(n,grid4)
+  character*4 grid4
+  
+  j1=n/(18*10*10)
+  n=n-j1*18*10*10
+  j2=n/(10*10)
+  n=n-j2*10*10
+  j3=n/10
+  j4=n-j3*10
+  grid4(1:1)=char(j1+ichar('A'))
+  grid4(2:2)=char(j2+ichar('A'))
+  grid4(3:3)=char(j3+ichar('0'))
+  grid4(4:4)=char(j4+ichar('0'))
+  
+  return
+end subroutine to_grid4
+
+subroutine to_grid6(n,grid6)
+  character*6 grid6
+
+  j1=n/(18*10*10*24*24)
+  n=n-j1*18*10*10*24*24
+  j2=n/(10*10*24*24)
+  n=n-j2*10*10*24*24
+  j3=n/(10*24*24)
+  n=n-j3*10*24*24
+  j4=n/(24*24)
+  n=n-j4*24*24
+  j5=n/24
+  j6=n-j5*24
+  grid6(1:1)=char(j1+ichar('A'))
+  grid6(2:2)=char(j2+ichar('A'))
+  grid6(3:3)=char(j3+ichar('0'))
+  grid6(4:4)=char(j4+ichar('0'))
+  grid6(5:5)=char(j5+ichar('A'))
+  grid6(6:6)=char(j6+ichar('A'))  
+
+  return
+end subroutine to_grid6
 
 end module packjt77

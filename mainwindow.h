@@ -439,6 +439,7 @@ private:
   Frequency m_freqTxNominal;
   quint64  m_lastDisplayFreq;
   quint64  m_mslastTX;
+  quint64  m_mslastMon;
 //  quint64  m_msDecoderStarted;
 
   qint32  m_waterfallAvg;
@@ -484,6 +485,7 @@ private:
   qint32  m_position;
   qint32  m_nsecBandChanged;
   qint32  m_nDecodes;
+  qint32  m_ncand;
     
   bool    m_btxok;		//True if OK to transmit
   bool    m_diskData;
@@ -513,6 +515,7 @@ private:
   bool    m_blankLine;
   bool    m_notified;
   bool    m_start;
+  bool    m_start2;
   bool    m_decodedText2;
   bool    m_freeText;
   bool    m_sentFirst73;
@@ -587,6 +590,7 @@ private:
   bool m_callToClipboard;
   bool m_rigOk;
   bool m_bandChanged;
+  bool m_lostaudio;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;

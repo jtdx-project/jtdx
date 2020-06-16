@@ -63,6 +63,7 @@
      logical(c_bool) :: lft8subpass
      logical(c_bool) :: lft8latestart
      logical(c_bool) :: lhidetest
+     logical(c_bool) :: lhidetelemetry
      logical(c_bool) :: lhideft8dupes
      logical(c_bool) :: lhound
      logical(c_bool) :: lhidehash

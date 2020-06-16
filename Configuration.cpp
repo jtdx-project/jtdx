@@ -1441,6 +1441,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   ui_->frequencies_table_view->verticalHeader ()->setSectionResizeMode (QHeaderView::ResizeToContents);
   ui_->frequencies_table_view->sortByColumn (FrequencyList_v2::frequency_column, Qt::AscendingOrder);
   ui_->frequencies_table_view->setColumnHidden (FrequencyList_v2::frequency_mhz_column, true);
+  ui_->frequencies_table_view->setColumnHidden (FrequencyList_v2::mode_frequency_mhz_column, true);
 
   // delegates
   ui_->frequencies_table_view->setItemDelegateForColumn (FrequencyList_v2::frequency_column, new FrequencyDelegate {this});
@@ -1476,15 +1477,15 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   // Schedulers
   
   ui_->bandComboBox_1->setModel(&next_frequencies_);
-  ui_->bandComboBox_1->setModelColumn(FrequencyList_v2::frequency_mhz_column);
+  ui_->bandComboBox_1->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_2->setModel(&next_frequencies_);
-  ui_->bandComboBox_2->setModelColumn(FrequencyList_v2::frequency_mhz_column);
+  ui_->bandComboBox_2->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_3->setModel(&next_frequencies_);
-  ui_->bandComboBox_3->setModelColumn(FrequencyList_v2::frequency_mhz_column);
+  ui_->bandComboBox_3->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_4->setModel(&next_frequencies_);
-  ui_->bandComboBox_4->setModelColumn(FrequencyList_v2::frequency_mhz_column);
+  ui_->bandComboBox_4->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_5->setModel(&next_frequencies_);
-  ui_->bandComboBox_5->setModelColumn(FrequencyList_v2::frequency_mhz_column);
+  ui_->bandComboBox_5->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   //
   // setup stations table model & view
   //

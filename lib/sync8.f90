@@ -3,15 +3,17 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(3,250),candidate(3,260),tall(30),freq
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,250),candidate(4,260),tall(30),freq
   integer jpeak(NH1),indx(NH1),ii(1)
   integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass
+  logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2
   logical(1), intent(in) :: swl,lqsothread
   equivalence (x,cx)
 
 ! Compute symbol spectra, stepping by NSTEP steps.  
   tstep=0.04 ! NSTEP/12000.0                         
   df=3.125 ! 12000.0/NFFT1 , Hz
+  syncq=.false.; redcq=.false.; candidate0(4,1:250)=0.; candidate(4,1:260)=0.
 
   if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
      do j=1,NHSYM
@@ -84,6 +86,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
             if(tc.gt.1e-9) then; tall(n+24)=tc*6.0/(sum(s(i:i+nfos6:nfos,k+nssy72))-tc); else; tall(n+24)=0.; endif
           endif
         enddo
+        lcq=.false.
         if(ipass.gt.1) then
           do n=7,15
             k=j+jstrt+nssy*n
@@ -97,11 +100,11 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
           enddo
           sya=sum(tall(1:7)); sycq=sum(tall(8:16)); sybc=sum(tall(17:30))
           sy1=(sya+sycq+sybc)/30.; sy2=(sya+sybc)/21.; sync_abc=max(sy1,sy2)
-          sy1=(sycq+sybc)/23.; sy2=(sybc)/14.; sync_bc=max(sy1,sy2)
+          sy1=(sycq+sybc)/23.; sy2=(sybc)/14.; sync_bc=max(sy1,sy2); if(sy1.gt.sy2) lcq=.true.
         else
           sybc=sum(tall(17:30)); sync_abc=sum(tall(1:7))+sybc; sync_bc=sybc/14.; sync_abc=sync_abc/21.
         endif
-        sync2d(i,j)=max(sync_abc,sync_bc)
+        sync2d(i,j)=max(sync_abc,sync_bc); if(lcq) syncq(i,j)=.true.
       enddo
     enddo
   else
@@ -130,10 +133,13 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         t1=ta+tb+tc; t01=t0a+t0b+t0c; t2=t1+tcq; t02=t01+t0cq
         t01=(t01-t1*2)/42.0; if(t01.lt.1e-8) t01=1.0; t02=(t02-t2*2)/60.0; if(t02.lt.1e-8) t02=1.0 ! safe division
         sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/9.0)/t02; syncf=max(sync01,sync02)
+        lcq=.false.; if(sync02.gt.sync01) lcq=.true.
         t1=tb+tc; t01=t0b+t0c; t2=t1+tcq; t02=t01+t0cq
         t01=(t01-t1*2)/28.0; if(t01.lt.1e-8) t01=1.0; t02=(t02-t2*2)/46.0; if(t02.lt.1e-8) t02=1.0 ! safe division
         sync01=t1/(7.0*t01); sync02=(t1/7.0 + tcq/9.0)/t02; syncs=max(sync01,sync02)
+        lcq2=.false.; if(sync02.gt.sync01) lcq2=.true.
         sync2d(i,j)=max(syncf,syncs)
+        if(syncf.gt.syncs) then; if(lcq) syncq(i,j)=.true.; else; if(lcq2) syncq(i,j)=.true.; endif
       enddo
     enddo
   endif
@@ -143,7 +149,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
      ii=maxloc(sync2d(i,jzb:jzt)) - 1 + jzb
      j0=ii(1)
      jpeak(i)=j0
-     red(i)=sync2d(i,j0)
+     red(i)=sync2d(i,j0); if(syncq(i,j0)) redcq(i)=.true.
 !     write(52,3052) i*df,red(i),db(red(i))
 !3052 format(3f12.3)
   enddo
@@ -170,6 +176,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
      candidate0(1,k)=freq
      candidate0(2,k)=(jpeak(n)-1)*tstep
      candidate0(3,k)=red(n)
+     if(redcq(n)) candidate0(4,k)=2.
   enddo
   ncand=k
 
@@ -204,9 +211,8 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   do i=ncand,1,-1
      j=indx(i)
      if(abs(candidate0(1,j)-nfqso).le.3.0 .and. candidate0(3,j).ge.1.1 .and. abs(candidate0(1,j)-fprev).gt.3.0) then
-        candidate(1,k)=candidate0(1,j)
-        candidate(2,k)=candidate0(2,j)
-        candidate(3,k)=candidate0(3,j)
+        candidate(1,k)=candidate0(1,j); candidate(2,k)=candidate0(2,j)
+        candidate(3,k)=candidate0(3,j); candidate(4,k)=candidate0(4,j)
         fprev=candidate0(1,j)
         k=k+1
      endif
@@ -228,9 +234,8 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
      j=indx(i)
      if(abs(candidate0(1,j)-nfqso).gt.3.0) then; syncmin1=syncmin; else; syncmin1=1.1; endif
      if(candidate0(3,j) .ge. syncmin1) then
-       candidate(1,k)=candidate0(1,j)
-       candidate(2,k)=candidate0(2,j)
-       candidate(3,k)=candidate0(3,j)
+       candidate(1,k)=candidate0(1,j); candidate(2,k)=candidate0(2,j)
+       candidate(3,k)=candidate0(3,j); candidate(4,k)=candidate0(4,j)
        k=k+1
        if(k.gt.260) exit 
      endif

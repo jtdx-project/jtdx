@@ -63,7 +63,7 @@ namespace
       {7038600, Modes::WSPR, IARURegions::ALL,true},
       {7047500, Modes::FT4, IARURegions::ALL,true}, // provisional - moved
       {7056000, Modes::FT8, IARURegions::ALL,false},
-      {7074000, Modes::FT8, IARURegions::ALL,true},
+      {7071000, Modes::FT8, IARURegions::ALL,false}, {7074000, Modes::FT8, IARURegions::ALL,true},
       {7076000, Modes::JT65, IARURegions::ALL,true},
       {7078000, Modes::JT9, IARURegions::ALL,true},
       {7079000, Modes::T10, IARURegions::ALL,true},
@@ -72,7 +72,7 @@ namespace
                                                // W1AW code practice QRG
 
       {10131000, Modes::FT8, IARURegions::ALL,false},
-      {10136000, Modes::FT8, IARURegions::ALL,true},
+      {10133000, Modes::FT8, IARURegions::ALL,false}, {10136000, Modes::FT8, IARURegions::ALL,true},
       {10138000, Modes::JT65, IARURegions::ALL,true},
       {10138700, Modes::WSPR, IARURegions::ALL,true},
       {10140000, Modes::JT9, IARURegions::ALL,true},
@@ -81,7 +81,7 @@ namespace
       {10143000, Modes::FT8, IARURegions::ALL,false},
 
       {14095600, Modes::WSPR, IARURegions::ALL,true},
-      {14074000, Modes::FT8, IARURegions::ALL,true},
+      {14071000, Modes::FT8, IARURegions::ALL,false}, {14074000, Modes::FT8, IARURegions::ALL,true},
       {14076000, Modes::JT65, IARURegions::ALL,true},
       {14078000, Modes::JT9, IARURegions::ALL,true},
       {14079000, Modes::T10, IARURegions::ALL,true},
@@ -109,7 +109,7 @@ namespace
       {24917000, Modes::JT65, IARURegions::ALL,true},
       {24919000, Modes::JT9, IARURegions::ALL,true},
       {24919000, Modes::FT4, IARURegions::ALL,true}, // provisional
-      {24929000, Modes::T10, IARURegions::ALL,true},
+      {24920000, Modes::T10, IARURegions::ALL,true},
       {24924600, Modes::WSPR, IARURegions::ALL,true},
       
       {28074000, Modes::FT8, IARURegions::ALL,true},
@@ -127,7 +127,7 @@ namespace
       {50310000, Modes::JT65, IARURegions::ALL,true},
       {50312000, Modes::JT9, IARURegions::ALL,true},
       {50312500, Modes::T10, IARURegions::ALL,true},
-      {50313000, Modes::FT8, IARURegions::ALL,true},
+      {50310000, Modes::FT8, IARURegions::ALL,false}, {50313000, Modes::FT8, IARURegions::ALL,true},
       {50318000, Modes::FT4, IARURegions::ALL,true}, // provisional
       {50323000, Modes::FT8, IARURegions::ALL,true},
       
@@ -469,7 +469,7 @@ Qt::ItemFlags FrequencyList_v2::impl::flags (QModelIndex const& index) const
       && row < frequency_list_.size ()
       && column < num_cols)
     {
-      if (frequency_mhz_column != column)
+      if (frequency_mhz_column != column && mode_frequency_mhz_column != column)
         {
           result |= Qt::ItemIsEditable | Qt::ItemIsDragEnabled;
         }
@@ -595,6 +595,29 @@ QVariant FrequencyList_v2::impl::data (QModelIndex const& index, int role) const
               break;
             }
           break;
+        case mode_frequency_mhz_column:
+          switch (role)
+            {
+            case Qt::EditRole:
+            case Qt::AccessibleTextRole:
+            case Qt::DisplayRole:
+              if(frequency_item.default_)
+                item = "*" + Radio::frequency_MHz_string (frequency_item.frequency_) + ' ' + Modes::name (frequency_item.mode_);
+              else
+                item = " " + Radio::frequency_MHz_string (frequency_item.frequency_) + ' ' + Modes::name (frequency_item.mode_);
+              break;
+
+
+            case Qt::ToolTipRole:
+            case Qt::AccessibleDescriptionRole:
+              item = tr ("Mode Frequency");
+              break;
+
+            case Qt::TextAlignmentRole:
+              item = Qt::AlignRight + Qt::AlignVCenter;
+              break;
+            }
+          break;
         }
     }
   return item;
@@ -671,6 +694,7 @@ QVariant FrequencyList_v2::impl::headerData (int section, Qt::Orientation orient
         case mode_column: header = tr ("Mode"); break;
         case frequency_column: header = tr ("Frequency"); break;
         case frequency_mhz_column: header = tr ("Frequency (MHz)"); break;
+        case mode_frequency_mhz_column: header = tr ("Mode Frequency"); break;
         }
     }
   else

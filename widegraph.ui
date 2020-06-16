@@ -66,13 +66,13 @@
        <rect>
         <x>9</x>
         <y>10</y>
-        <width>65</width>
+        <width>70</width>
         <height>17</height>
        </rect>
       </property>
       <property name="maximumSize">
        <size>
-        <width>65</width>
+        <width>70</width>
         <height>16777215</height>
        </size>
       </property>
@@ -89,9 +89,9 @@
      <widget class="QCheckBox" name="cbBars">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>85</x>
         <y>10</y>
-        <width>50</width>
+        <width>65</width>
         <height>17</height>
        </rect>
       </property>

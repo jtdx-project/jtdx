@@ -57,7 +57,7 @@ public:
   using FrequencyItems = QList<Item>;
   using BandSet = QSet<QString>;
 
-  enum Column {region_column, mode_column, frequency_column, frequency_mhz_column, SENTINAL};
+  enum Column {region_column, mode_column, frequency_column, frequency_mhz_column, mode_frequency_mhz_column, SENTINAL};
 
   // an iterator that meets the requirements of the C++ for range statement
   class const_iterator

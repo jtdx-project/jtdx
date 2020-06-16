@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200209
-
 module ft8_decode
 
   type :: ft8_decoder
@@ -24,12 +22,13 @@ contains
 
   subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ndepth,nft8filtdepth,lapon,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
-                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhidetest,lhideft8dupes,lhidehash)
+                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
-                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles
+                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
+    use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
 
@@ -37,13 +36,13 @@ contains
     procedure(ft8_decode_callback) :: callback
 !    real sbase(NH1)
 !integer*2 iwave(180000)
-    real candidate(3,260)
+    real candidate(4,260)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ndepth,nft8filtdepth,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
-    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhidetest,lhideft8dupes, &
+    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidetestmsg,lhighsens,lonepass
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass,lcqcand
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -65,7 +64,7 @@ contains
 
     this%callback => callback
 
-    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0
+    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
       elseif(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -124,8 +123,8 @@ contains
     lonepass=.false.; if((.not.filter .and. ndepth.eq.1) .or. (filter .and. nft8filtdepth.eq.1)) lonepass=.true.
     if(swl) then
       if(nft8swlcycles.eq.1) then; npass=3
-      else if(nft8swlcycles.eq.2 .and. numthreads.gt.3) then; npass=6
-      else if(nft8swlcycles.eq.3 .and. numthreads.gt.3) then; npass=9
+      else if(nft8swlcycles.eq.2) then; npass=6
+      else if(nft8swlcycles.eq.3) then; npass=9
       else; npass=3
       endif
     else
@@ -170,6 +169,7 @@ contains
         sync=candidate(3,icand)
         f1=candidate(1,icand)
         xdt=candidate(2,icand)
+        lcqcand=.false.; if(candidate(4,icand).gt.1.0) lcqcand=.true.
         lhighsens=.false.
         if(sync.lt.1.9 .or. ((ipass.eq.2 .or. ipass.eq.4 .or. ipass.eq.6).and. sync.lt.3.15)) lhighsens=.true.
         lspecial=.false.; lFreeText=.false.; i3bit=0; lft8s=.false.; lft8sd=.false.; lhashmsg=.false.; iaptype=0
@@ -180,20 +180,21 @@ contains
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
         call ft8b(newdat1,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,filter,lft8subpass,lspecial,                            &
+                  nthr,lFreeText,ipass,filter,lft8subpass,lspecial,lcqcand,                    &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
         nsnr=nint(xsnr) 
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
         if(nbadcrc.eq.0) then
-          lhidetestmsg=.false.
+          lhidemsg=.false.
+          if(lhidetelemetry .and. i3.eq.0 .and. n3.eq.5) lhidemsg=.true.
           if(lhidetest) then
-            if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3) then
-              if(mycalllen1.lt.4 .or. msg37(1:mycalllen1).ne.trim(mycall)//' ') lhidetestmsg=.true.
+            if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3 .or. i3.gt.4) then
+              if(mycalllen1.lt.4 .or. msg37(1:mycalllen1).ne.trim(mycall)//' ') lhidemsg=.true.
             endif
             if(msg37(1:3).eq.'CQ ') then
-              if(msg37(1:6).eq.'CQ RU ' .or. msg37(1:6).eq.'CQ FD ' .or. msg37(1:8).eq.'CQ TEST ') lhidetestmsg=.true.
+              if(msg37(1:6).eq.'CQ RU ' .or. msg37(1:6).eq.'CQ FD ' .or. msg37(1:8).eq.'CQ TEST ') lhidemsg=.true.
             endif
           endif
 
@@ -224,7 +225,7 @@ contains
               allmessages(ndecodes)=msg37
               allsnrs(ndecodes)=nsnr
               allfreq(ndecodes)=f1
-              if(.not.lhidetestmsg) then
+              if(.not.lhidemsg) then
                 if(iaptype.eq.0) then
                   if(.not.lFreeText .or. lspecial) servis8=' '
                   if(.not.lspecial .and. lFreeText) then
@@ -279,14 +280,18 @@ contains
           enddo
         endif
       enddo
+      ncandthr=ncandthr+ncand
     enddo
 ! h=default_header(12000,NMAX)
 ! open(10,file='subtract.wav',status='unknown',access='stream')
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
-    if(nmsgloc.gt.0) then
+    if(.not.lonepass) ncandthr=nint(float(ncandthr)/npass)
 !$omp critical(update_structures)
+    ncandall=ncandall+ncandthr
+!$OMP FLUSH (ncandall)
+    if(nmsgloc.gt.0) then
       if(nsec.eq.0 .or. nsec.eq.30) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
@@ -299,8 +304,8 @@ contains
         nmsg=nmsg+nmsgloc
 !$OMP FLUSH (nmsg,odd)
       endif
-!$omp end critical(update_structures)
     endif
+!$omp end critical(update_structures)
 !print *,'out',lastrxmsg(1)%lstate
 !print *,lastrxmsg(1)%lastmsg
     return

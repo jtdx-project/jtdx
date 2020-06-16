@@ -63,16 +63,18 @@ xml_log_formatter::log_finish( std::ostream& ostr )
 //____________________________________________________________________________//
 
 void
-xml_log_formatter::log_build_info( std::ostream& ostr )
+xml_log_formatter::log_build_info( std::ostream& ostr, bool log_build_info )
 {
-    ostr  << "<BuildInfo"
-            << " platform"  << utils::attr_value() << BOOST_PLATFORM
-            << " compiler"  << utils::attr_value() << BOOST_COMPILER
-            << " stl"       << utils::attr_value() << BOOST_STDLIB
-            << " boost=\""  << BOOST_VERSION/100000     << "."
-                            << BOOST_VERSION/100 % 1000 << "."
-                            << BOOST_VERSION % 100      << '\"'
-            << "/>";
+    if( log_build_info ) {
+        ostr  << "<BuildInfo"
+                << " platform"  << utils::attr_value() << BOOST_PLATFORM
+                << " compiler"  << utils::attr_value() << BOOST_COMPILER
+                << " stl"       << utils::attr_value() << BOOST_STDLIB
+                << " boost=\""  << BOOST_VERSION/100000     << "."
+                                << BOOST_VERSION/100 % 1000 << "."
+                                << BOOST_VERSION % 100      << '\"'
+                << "/>";
+    }
 }
 
 //____________________________________________________________________________//
@@ -199,7 +201,7 @@ xml_log_formatter::entry_context_start( std::ostream& ostr, log_level )
 //____________________________________________________________________________//
 
 void
-xml_log_formatter::entry_context_finish( std::ostream& ostr )
+xml_log_formatter::entry_context_finish( std::ostream& ostr, log_level )
 {
     ostr << BOOST_TEST_L( "</Context>" );
 }
@@ -207,7 +209,7 @@ xml_log_formatter::entry_context_finish( std::ostream& ostr )
 //____________________________________________________________________________//
 
 void
-xml_log_formatter::log_entry_context( std::ostream& ostr, const_string context_descr )
+xml_log_formatter::log_entry_context( std::ostream& ostr, log_level, const_string context_descr )
 {
     ostr << BOOST_TEST_L( "<Frame>" ) << utils::cdata() << context_descr << BOOST_TEST_L( "</Frame>" );
 }

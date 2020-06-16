@@ -1,0 +1,19 @@
+#
+# MANIFEST.in
+#
+# Manifest template for creating the PyLudic source distribution.
+
+include MANIFEST.in
+include setup.py
+include AUTHORS.md
+include CHANGES.md
+include CONTRIBUTING.md
+include LICENSE.md
+include PRODUCTION.md
+include README.md
+include qdarkstyle/style.qss
+include qdarkstyle/style.qrc
+include qdarkstyle/rc/*.png
+
+
+

@@ -24,7 +24,7 @@ contains
   subroutine decode(this,callback,nQSOProgress,nfqso,nfa,nfb,ndepth,stophint,mycall,hiscall,swl)
 !    use timer_module, only: timer
     use packjt77
-    use ft4_mod1, only : nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest
+    use ft4_mod1, only : nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry
     use ft8_mod1, only : sumxdt,avexdt
     include 'ft4/ft4_params.f90'
     class(ft4_decoder), intent(inout) :: this
@@ -50,7 +50,7 @@ contains
     integer nappasses(0:5)    ! # of decoding passes for QSO States 0-5
     integer naptypes(0:5,4)   ! nQSOProgress, decoding pass
     integer mcq(29),mrrr(19),m73(19),mrr73(19)
-    logical nohiscall,unpk77_success,first,dobigfft,dosubtract,doosd,badsync,lFreeText,lhidetestmsg
+    logical nohiscall,unpk77_success,first,dobigfft,dosubtract,doosd,badsync,lFreeText,lhidemsg
     logical(1), intent(in) :: stophint,swl
     logical(1) falsedec
 
@@ -294,14 +294,15 @@ contains
                 call subtractft4(i4tone,f1,dt)
               endif
 
-              lhidetestmsg=.false.
+              lhidemsg=.false.
+              if(lhidetelemetry .and. i3.eq.0 .and. n3.eq.5) lhidemsg=.true.
               if(lhidetest) then
-                if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3) then
-                  if(mycalllen1.lt.4 .or. message(1:mycalllen1).ne.trim(mycall)//' ') lhidetestmsg=.true.
+                if((i3.eq.0 .and. n3.gt.1 .and. n3.lt.5) .or. i3.eq.3 .or. i3.gt.4) then
+                  if(mycalllen1.lt.4 .or. message(1:mycalllen1).ne.trim(mycall)//' ') lhidemsg=.true.
                 endif
                 if(message(1:3).eq.'CQ ') then
                   if(message(1:6).eq.'CQ RU ' .or. message(1:6).eq.'CQ FD ' .or. message(1:8).eq.'CQ TEST ') &
-                    lhidetestmsg=.true.
+                    lhidemsg=.true.
                 endif
               endif
 
@@ -384,7 +385,7 @@ contains
               else
                 msg26=message(1:26); servis4=""
                 if(lFreeText) then; if(abs(nfqso-nint(f1)).le.10) then; servis4=','; else; servis4='.'; endif; endif
-                if(.not.lhidetestmsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
+                if(.not.lhidemsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
               endif
               nFT4decd=nFT4decd+1; sumxdt=sumxdt+xdt
               exit

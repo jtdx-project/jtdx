@@ -7,7 +7,6 @@
 
 #include <locale.h>
 
-//#include <QDateTime>
 #include <QApplication>
 #include <QTranslator>
 #include <QNetworkAccessManager>
@@ -82,9 +81,15 @@ namespace
 
 int main(int argc, char *argv[])
 {
+#if defined(Q_OS_WIN)
+  if (AttachConsole(ATTACH_PARENT_PROCESS)) {
+    freopen("CONOUT$", "w", stdout);
+    freopen("CONOUT$", "w", stderr);
+  }
+#endif
+
   bool has_style = true;
   int result = 0;
-    
   for (auto i = 0; i < argc; i++) if (std::string(argv[i]).find("-style") != std::string::npos ) has_style = false;
 
   init_random_seed ();
@@ -107,7 +112,16 @@ int main(int argc, char *argv[])
       // Override programs executable basename as application name.
       a.setApplicationName ("JTDX");
       a.setApplicationVersion (version ());
-//      a.setApplicationVersion ("18.1.0.93_15");
+  if (version().replace("_32A","").indexOf("_") > 1) {
+    #include <QDate>
+    auto expire_date = QLocale(QLocale::English).toDate(QString(__DATE__).replace("  "," "),"MMM d yyyy").addMonths(3);
+    if (QDate().currentDate() > expire_date) {
+      JTDXMessageBox::critical_message (nullptr, a.applicationName(), "Release candidate expired on " + expire_date.toString("dd.MM.yyyy"));
+          return -1;
+    } else if (QDate().currentDate().addDays(5) > expire_date) {
+      JTDXMessageBox::information_message (nullptr, a.applicationName(), "Release candidate will expire on " + expire_date.toString("dd.MM.yyyy"));
+    }
+  }
       bool multiple {false};
 
 #if QT_VERSION >= 0x050200
