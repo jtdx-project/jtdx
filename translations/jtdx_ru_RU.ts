@@ -2963,7 +2963,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Потерянные аудиоблоки.В  FT8 за 15-секундный интервал должно приходить 52 блока аудиоданных. Декодер запускается, если количество блоков аудиоданных достигло  51 в режимах «SWL / поздний уровень декодера» или 50 блоков в противном случае.При использовании ОС Windows были многочисленные  собощений о потере аудиоданных, поэтому для ОС Windows был реализован обходной путь запуска декодера FT8, при условии получения  как минимум 46 из 52 аудиоблоков. Уведомление о потере аудиоблоков говорит  пользователю о том, что в настройке ОС Windows что-то не так. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3015,7 +3015,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="730"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>Выбор рабочего диапазона</translation>
+        <translation type="unfinished">Выбор рабочего диапазона или частоты в мГц</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="778"/>
