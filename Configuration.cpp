@@ -5658,7 +5658,20 @@ void Configuration::impl::update_audio_channels (QComboBox const * source_combo_
 
 void Configuration::impl::set_application_font (QFont const& font)
 {
-  qApp->setStyleSheet (qApp->styleSheet () + "* {" + font_as_stylesheet (font) + '}');
+  qApp->setFont (font);
+  QString ss;
+    if (qApp->styleSheet ().size ())
+    {
+      auto sheet = qApp->styleSheet ();
+      sheet.remove ("file:///");
+      QFile sf {sheet};
+      if (sf.open (QFile::ReadOnly | QFile::Text))
+        {
+          ss = sf.readAll () + ss;
+        }
+    }
+
+  qApp->setStyleSheet (ss + "* {" + font_as_stylesheet (font) + '}');
   for (auto& widget : qApp->topLevelWidgets ())
     {
       widget->updateGeometry ();
