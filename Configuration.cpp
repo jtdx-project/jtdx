@@ -5658,7 +5658,7 @@ void Configuration::impl::update_audio_channels (QComboBox const * source_combo_
 
 void Configuration::impl::set_application_font (QFont const& font)
 {
-  qApp->setFont (font);
+//  qApp->setFont (font);
   QString ss;
     if (qApp->styleSheet ().size ())
     {
