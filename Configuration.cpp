@@ -5663,12 +5663,16 @@ void Configuration::impl::set_application_font (QFont const& font)
     if (qApp->styleSheet ().size ())
     {
       auto sheet = qApp->styleSheet ();
-      sheet.remove ("file:///");
-      QFile sf {sheet};
-      if (sf.open (QFile::ReadOnly | QFile::Text))
-        {
-          ss = sf.readAll () + ss;
-        }
+      if (sheet.startsWith("file:///")) {
+        sheet.remove ("file:///");
+        QFile sf {sheet};
+        if (sf.open (QFile::ReadOnly | QFile::Text))
+            ss = sf.readAll () + ss;
+          }
+      else {
+        int lopp = sheet.indexOf("* { font-family:");
+        if (lopp > 0) ss = sheet.mid(0,lopp);
+      }
     }
 
   qApp->setStyleSheet (ss + "* {" + font_as_stylesheet (font) + '}');
