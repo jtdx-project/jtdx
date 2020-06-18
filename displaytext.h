@@ -42,6 +42,7 @@ private:
 
     bool bold_;
     bool wastx_;
+    bool useDarkStyle_;
     QsoHistory::Status mystatus_ = QsoHistory::NONE;
     unsigned max_r_time = 0;
     QTextCharFormat m_charFormat;

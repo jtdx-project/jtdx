@@ -58,62 +58,62 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1249"/>
-        <location filename="../Configuration.cpp" line="1260"/>
+        <location filename="../Configuration.cpp" line="1251"/>
+        <location filename="../Configuration.cpp" line="1262"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>ディレクトリを作成</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1426"/>
-        <location filename="../Configuration.cpp" line="1452"/>
-        <location filename="../Configuration.cpp" line="1504"/>
+        <location filename="../Configuration.cpp" line="1428"/>
+        <location filename="../Configuration.cpp" line="1454"/>
+        <location filename="../Configuration.cpp" line="1506"/>
         <source>&amp;Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1456"/>
-        <location filename="../Configuration.cpp" line="1508"/>
+        <location filename="../Configuration.cpp" line="1458"/>
+        <location filename="../Configuration.cpp" line="1510"/>
         <source>&amp;Insert ...</source>
         <translation>挿入…</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2697"/>
+        <location filename="../Configuration.cpp" line="2698"/>
         <source>Serial Port:</source>
         <translation>シリアルポート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2698"/>
+        <location filename="../Configuration.cpp" line="2699"/>
         <source>Serial port used for CAT control</source>
         <translation>CAT制御に使用されるシリアルポート</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2705"/>
+        <location filename="../Configuration.cpp" line="2706"/>
         <source>Network Server:</source>
         <translation>ネットワークサーバー：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2718"/>
+        <location filename="../Configuration.cpp" line="2719"/>
         <source>USB Device:</source>
         <translation>USB機器：</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1217"/>
+        <location filename="../Configuration.cpp" line="1219"/>
         <source>Create temporary directory error: </source>
         <translation>一時ディレクトリの作成エラー： </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1201"/>
+        <location filename="../Configuration.cpp" line="1203"/>
         <source>&amp;OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1202"/>
+        <location filename="../Configuration.cpp" line="1204"/>
         <source>&amp;Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1223"/>
+        <location filename="../Configuration.cpp" line="1225"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -122,32 +122,32 @@ Another application may be locking the directory</source>
 別のアプリケーションがディレクトリをロックしている可能性があります</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1240"/>
+        <location filename="../Configuration.cpp" line="1242"/>
         <source>Create data directory error: </source>
         <translation>データディレクトリの作成エラー： </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1460"/>
+        <location filename="../Configuration.cpp" line="1462"/>
         <source>&amp;Load ...</source>
         <translation>読み込み...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1464"/>
+        <location filename="../Configuration.cpp" line="1466"/>
         <source>&amp;Save as ...</source>
         <translation>名前を付けて保存...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1468"/>
+        <location filename="../Configuration.cpp" line="1470"/>
         <source>&amp;Merge ...</source>
         <translation>結合する...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1472"/>
+        <location filename="../Configuration.cpp" line="1474"/>
         <source>&amp;Reset</source>
         <translation>リセット</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2706"/>
+        <location filename="../Configuration.cpp" line="2707"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -162,7 +162,7 @@ IPv4-address：port
 [IPv6-address]：port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2719"/>
+        <location filename="../Configuration.cpp" line="2720"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +173,132 @@ Format:
 ：[VID [：PID [：VENDOR [：PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2754"/>
+        <location filename="../Configuration.cpp" line="2755"/>
         <source>Invalid audio input device</source>
         <translation>無効なオーディオ入力デバイス</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2761"/>
+        <location filename="../Configuration.cpp" line="2762"/>
         <source>Invalid audio output device</source>
         <translation>無効な音声出力機器</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2767"/>
+        <location filename="../Configuration.cpp" line="2768"/>
         <source>Invalid PTT method</source>
         <translation>無効なPTTメソッド</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2777"/>
+        <location filename="../Configuration.cpp" line="2778"/>
         <source>Invalid PTT port</source>
         <translation>無効なPTTポート</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3284"/>
+        <location filename="../Configuration.cpp" line="3286"/>
         <source>CQ/73 in message</source>
         <translation>メッセージのCQ / 73</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3285"/>
+        <location filename="../Configuration.cpp" line="3287"/>
         <source>CQ in message</source>
         <translation>メッセージのＣＱ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4468"/>
+        <location filename="../Configuration.cpp" line="4470"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDXデコードテキストフォントの選択</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5094"/>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5096"/>
+        <location filename="../Configuration.cpp" line="5127"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5092"/>
-        <location filename="../Configuration.cpp" line="5123"/>
-        <location filename="../Configuration.cpp" line="5177"/>
+        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5179"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5090"/>
+        <location filename="../Configuration.cpp" line="5092"/>
         <source>Load Working Frequencies</source>
         <translation>周波数リストを読み込み</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5110"/>
         <source>Replace Working Frequencies</source>
         <translation>周波数リストを置き換え</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5111"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>現在の周波数リストを破棄して、ロードした周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
+        <location filename="../Configuration.cpp" line="5123"/>
         <source>Merge Working Frequencies</source>
         <translation>周波数リストを結合します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5148"/>
-        <location filename="../Configuration.cpp" line="5157"/>
-        <location filename="../Configuration.cpp" line="5167"/>
+        <location filename="../Configuration.cpp" line="5150"/>
+        <location filename="../Configuration.cpp" line="5159"/>
+        <location filename="../Configuration.cpp" line="5169"/>
         <source>Not a valid frequencies file</source>
         <translation>有効な周波数リストではありません</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5148"/>
+        <location filename="../Configuration.cpp" line="5150"/>
         <source>Incorrect file magic</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5157"/>
+        <location filename="../Configuration.cpp" line="5159"/>
         <source>Version is too new</source>
         <translation>バージョンが新しすぎます</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5167"/>
+        <location filename="../Configuration.cpp" line="5169"/>
         <source>Contents corrupt</source>
         <translation>内容が破損しています</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5177"/>
+        <location filename="../Configuration.cpp" line="5179"/>
         <source>Save Working Frequencies</source>
         <translation>周波数リストを保存します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5187"/>
+        <location filename="../Configuration.cpp" line="5189"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>選定した周波数だけ保存します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5189"/>
+        <location filename="../Configuration.cpp" line="5191"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>現在選択されている周波数のみを保存してもよろしいですか？すべて保存するには、[いいえ]をクリックします。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5216"/>
+        <location filename="../Configuration.cpp" line="5218"/>
         <source>Reset Working Frequencies</source>
         <translation>使用周波数のリセット</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5218"/>
+        <location filename="../Configuration.cpp" line="5220"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>現在の周波数リストを破棄して、デフォルトの周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5278"/>
+        <location filename="../Configuration.cpp" line="5280"/>
         <source>Save Directory</source>
         <translation>ディレクトリを保存</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5294"/>
+        <location filename="../Configuration.cpp" line="5296"/>
         <source>Failed to open connection to rig</source>
         <translation>リグへの接続を開けませんでした</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5537"/>
+        <location filename="../Configuration.cpp" line="5539"/>
         <source>Rig failure</source>
         <translation>リグに障害あり</translation>
     </message>
@@ -5054,7 +5054,7 @@ UDP server %2:%3</source>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5043"/>
+        <location filename="../Configuration.cpp" line="5045"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5062,184 +5062,184 @@ UDP server %2:%3</source>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5045"/>
+        <location filename="../Configuration.cpp" line="5047"/>
         <source>Directory:</source>
         <translation>ディレクトリ:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5046"/>
+        <location filename="../Configuration.cpp" line="5048"/>
         <source>File &amp;name:</source>
         <translation>ファイル名:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5047"/>
+        <location filename="../Configuration.cpp" line="5049"/>
         <source>&amp;Open</source>
         <translation>開く</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5048"/>
+        <location filename="../Configuration.cpp" line="5050"/>
         <source>&amp;Choose</source>
         <translation>選択する</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5049"/>
+        <location filename="../Configuration.cpp" line="5051"/>
         <source>&amp;Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5051"/>
+        <location filename="../Configuration.cpp" line="5053"/>
         <source>All files (*)</source>
         <translation>すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5052"/>
+        <location filename="../Configuration.cpp" line="5054"/>
         <source>New Folder</source>
         <translation>新しいフォルダー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5053"/>
+        <location filename="../Configuration.cpp" line="5055"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5050"/>
+        <location filename="../Configuration.cpp" line="5052"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5054"/>
+        <location filename="../Configuration.cpp" line="5056"/>
         <source>&amp;Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5055"/>
+        <location filename="../Configuration.cpp" line="5057"/>
         <source>&amp;Rename</source>
         <translation>リネーム</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5056"/>
+        <location filename="../Configuration.cpp" line="5058"/>
         <source>Show &amp;hidden files</source>
         <translation>隠しのファイルを表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5057"/>
+        <location filename="../Configuration.cpp" line="5059"/>
         <source>&amp;New Folder</source>
         <translation>新しいフォルダー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5058"/>
+        <location filename="../Configuration.cpp" line="5060"/>
         <source>Look in:</source>
         <translation>中をのぞく:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5059"/>
+        <location filename="../Configuration.cpp" line="5061"/>
         <source>Files of type:</source>
         <translation>ファイルの形式:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Back</source>
         <translation>後ろ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5069"/>
         <source>Go back</source>
         <translation>戻る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
+        <location filename="../Configuration.cpp" line="5070"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5069"/>
+        <location filename="../Configuration.cpp" line="5071"/>
         <source>Forward</source>
         <translation>前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5072"/>
         <source>Go forward</source>
         <translation>進む</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5071"/>
+        <location filename="../Configuration.cpp" line="5073"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Parent Directory</source>
         <translation>親ディレクトリ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5073"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>Go to the parent directory</source>
         <translation>親ディレクトリへ進む</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5075"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>Create New Folder</source>
         <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>Create a New Folder</source>
         <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5079"/>
         <source>List View</source>
         <translation>リスト表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5078"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Change to list view mode</source>
         <translation>リスト表示モードに変更</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>Detail View</source>
         <translation>詳細表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5080"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>Change to detail view mode</source>
         <translation>詳細表示モードに変更</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5081"/>
+        <location filename="../Configuration.cpp" line="5083"/>
         <source>Sidebar</source>
         <translation>サイドバー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5082"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>List of places and bookmarks</source>
         <translation>場所とブックマークのリスト</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5060"/>
+        <location filename="../Configuration.cpp" line="5062"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1 &apos;は書き込み保護されています。
 それを削除しますか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5061"/>
+        <location filename="../Configuration.cpp" line="5063"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>&apos;%1&apos;を削除していいですか?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5062"/>
+        <location filename="../Configuration.cpp" line="5064"/>
         <source>Could not delete directory.</source>
         <translation>ディレクトリは削除できません。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5063"/>
+        <location filename="../Configuration.cpp" line="5065"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5248,7 +5248,7 @@ Please verify the correct directory name was given.</source>
 ディレクトリ名が正しいか確認してください。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5065"/>
+        <location filename="../Configuration.cpp" line="5067"/>
         <source>Recent Places</source>
         <translation>最近の場所</translation>
     </message>
@@ -5256,22 +5256,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>Name</source>
         <translation>名前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>Size</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Type</source>
         <translation>タイプ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5087"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Date Modified</source>
         <translation>日付が変更されました</translation>
     </message>
@@ -5937,22 +5937,22 @@ Error(%2): %3</source>
         <translation>ディスプレイ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="333"/>
+        <location filename="../Configuration.ui" line="343"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
         <translation>選択したフォントをバンドアクティビティー窓とRx 周波数窓に設定。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="336"/>
+        <location filename="../Configuration.ui" line="346"/>
         <source>Decoded Text Font...</source>
         <translation>デコード局表示用Fontt...</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="343"/>
+        <location filename="../Configuration.ui" line="333"/>
         <source>Set the font characteristics for the application.</source>
         <translation>フォントをアプリケーションに設定。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="346"/>
+        <location filename="../Configuration.ui" line="336"/>
         <source>Application Font...</source>
         <translation>アプリケーションフォント…</translation>
     </message>
@@ -5967,1336 +5967,1341 @@ Error(%2): %3</source>
         <translation>距離をマイルで表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="363"/>
+        <location filename="../Configuration.ui" line="409"/>
         <source>Include a separator line between periods in the band activity window.</source>
         <translation>バンドアクティビティ窓の受信ピリオド間にセパレータラインを表示する。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="366"/>
+        <location filename="../Configuration.ui" line="412"/>
         <source>&amp;Blank line between decoding periods</source>
         <translation>デコードピリオド間に区切り表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="386"/>
+        <location filename="../Configuration.ui" line="399"/>
         <source>Append DXCC names to decoded messages.</source>
         <translation>DXCC名を、デコードされたメッセージに付加。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="389"/>
+        <location filename="../Configuration.ui" line="402"/>
         <source>Show &amp;DXCC names</source>
         <translation>DXCC名を表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="396"/>
+        <location filename="../Configuration.ui" line="373"/>
         <source>Append prefix instead of name.</source>
         <translation>DXCC名の代わりにプリフィックスを表示。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="399"/>
+        <location filename="../Configuration.ui" line="376"/>
         <source>Show &amp;prefix not name</source>
         <translation>DXCC名ではなく割当プリフィックスを表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="406"/>
+        <location filename="../Configuration.ui" line="363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;送信開始2秒未満で送信メッセージが変更された場合、そのメッセージは表示されない.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="409"/>
+        <location filename="../Configuration.ui" line="366"/>
         <source>Hide partially transmitted messages</source>
         <translation>部分的に送られたメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="419"/>
+        <location filename="../Configuration.ui" line="386"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
         <translation>送信されたメッセージをRx 周波数ウィンドウのメッセージを表示。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="422"/>
+        <location filename="../Configuration.ui" line="389"/>
         <source>&amp;Tx messages to Rx frequency window</source>
         <translation>Rx 周波数ウィンドウにTxメッセージ表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="437"/>
+        <location filename="../Configuration.ui" line="421"/>
+        <source>Use dark style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="448"/>
         <source>Behavior</source>
         <translation>行動・動作</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="463"/>
+        <location filename="../Configuration.ui" line="474"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
         <translation>モニタボタンがクリックされるまで、デコードしない。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="466"/>
+        <location filename="../Configuration.ui" line="477"/>
         <source>Mon&amp;itor off at startup</source>
         <translation>&amp;起動時にモニターはオフ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="492"/>
+        <location filename="../Configuration.ui" line="503"/>
         <source>Tx watchdog timer</source>
         <translation>Txのウオッチドッグタイマー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="502"/>
+        <location filename="../Configuration.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of minutes before unattended transmissions are aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;無人送信が中止されるまでの分数.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="505"/>
-        <location filename="../Configuration.ui" line="552"/>
+        <location filename="../Configuration.ui" line="516"/>
+        <location filename="../Configuration.ui" line="563"/>
         <source>Disabled</source>
         <translation>使用不可</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="522"/>
+        <location filename="../Configuration.ui" line="533"/>
         <source>Decode at t = 52 s</source>
         <translation>t = 52 sでデコード</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="542"/>
+        <location filename="../Configuration.ui" line="553"/>
         <source>Tune timer</source>
         <translation>トーン送信時間を調整</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="579"/>
+        <location filename="../Configuration.ui" line="590"/>
         <source>Allow Tx frequency changes while transmitting</source>
         <translation>送信中のTx 周波数変更を許可</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="589"/>
+        <location filename="../Configuration.ui" line="600"/>
         <source>Monitor returns to last used frequency</source>
         <translation>最後に使われた周波数に戻ってモニターする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="598"/>
+        <location filename="../Configuration.ui" line="609"/>
         <source>Send a CW ID after every 73 or free text message.</source>
         <translation>73またはフリーメッセージの後に、CW IDを送る.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="601"/>
+        <location filename="../Configuration.ui" line="612"/>
         <source>CW ID a&amp;fter 73</source>
         <translation>73の後にCW IDを送信する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="627"/>
+        <location filename="../Configuration.ui" line="638"/>
         <source>Periodic CW ID Inter&amp;val:</source>
         <translation>&amp;周期的なCW ID インターバル：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="672"/>
+        <location filename="../Configuration.ui" line="683"/>
         <source>&amp;Radio</source>
         <translation>無線機</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="675"/>
+        <location filename="../Configuration.ui" line="686"/>
         <source>Radio interface configuration settings.</source>
         <translation>無線機とのインターフェイス設定。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="683"/>
+        <location filename="../Configuration.ui" line="694"/>
         <source>Rig:</source>
         <translation>リグ：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="703"/>
+        <location filename="../Configuration.ui" line="714"/>
         <source>Poll Interval:</source>
         <translation>ﾎﾟｰﾘﾝｸﾞ間隔：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="742"/>
+        <location filename="../Configuration.ui" line="753"/>
         <source>S meter</source>
         <translation>Sメーター</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="774"/>
+        <location filename="../Configuration.ui" line="785"/>
         <source>Output power</source>
         <translation>送信出力</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="802"/>
+        <location filename="../Configuration.ui" line="813"/>
         <source>Settings that control your CAT interface.</source>
         <translation>CATインターフェイスを制御する設定。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="805"/>
+        <location filename="../Configuration.ui" line="816"/>
         <source>CAT Control</source>
         <translation>CATコントロール</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="816"/>
-        <location filename="../Configuration.ui" line="1301"/>
+        <location filename="../Configuration.ui" line="827"/>
+        <location filename="../Configuration.ui" line="1312"/>
         <source>Port:</source>
         <translation>ポート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="832"/>
+        <location filename="../Configuration.ui" line="843"/>
         <source>Serial port used for CAT control.</source>
         <translation>CAT制御に使用されるシリアルポート。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="856"/>
+        <location filename="../Configuration.ui" line="867"/>
         <source>Serial Port Parameters</source>
         <translation>シリアルポートパラメータ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="873"/>
+        <location filename="../Configuration.ui" line="884"/>
         <source>Baud Rate:</source>
         <translation>ボーレート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="889"/>
+        <location filename="../Configuration.ui" line="900"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
         <translation>無線の設定とシリアルポートのデータレートは一致する必要がある。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="896"/>
+        <location filename="../Configuration.ui" line="907"/>
         <source>1200</source>
         <translation>1200</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="901"/>
+        <location filename="../Configuration.ui" line="912"/>
         <source>2400</source>
         <translation>2400</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="906"/>
+        <location filename="../Configuration.ui" line="917"/>
         <source>4800</source>
         <translation>4800</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="911"/>
+        <location filename="../Configuration.ui" line="922"/>
         <source>9600</source>
         <translation>9600</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="916"/>
+        <location filename="../Configuration.ui" line="927"/>
         <source>19200</source>
         <translation>19200</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="921"/>
+        <location filename="../Configuration.ui" line="932"/>
         <source>38400</source>
         <translation>38400</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="926"/>
+        <location filename="../Configuration.ui" line="937"/>
         <source>57600</source>
         <translation>57600</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="931"/>
+        <location filename="../Configuration.ui" line="942"/>
         <source>115200</source>
         <translation>115200</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="944"/>
+        <location filename="../Configuration.ui" line="955"/>
         <source>Data Bits</source>
         <translation>データビット</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="956"/>
-        <location filename="../Configuration.ui" line="1013"/>
-        <location filename="../Configuration.ui" line="1080"/>
+        <location filename="../Configuration.ui" line="967"/>
+        <location filename="../Configuration.ui" line="1024"/>
+        <location filename="../Configuration.ui" line="1091"/>
         <source>Default</source>
         <translation>デフォルト</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="969"/>
+        <location filename="../Configuration.ui" line="980"/>
         <source>Se&amp;ven</source>
         <translation>７</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="982"/>
+        <location filename="../Configuration.ui" line="993"/>
         <source>E&amp;ight</source>
         <translation>８</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1001"/>
+        <location filename="../Configuration.ui" line="1012"/>
         <source>Stop Bits</source>
         <translation>ストップビット</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1026"/>
+        <location filename="../Configuration.ui" line="1037"/>
         <source>On&amp;e</source>
         <translation>１</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1036"/>
+        <location filename="../Configuration.ui" line="1047"/>
         <source>T&amp;wo</source>
         <translation>２</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1055"/>
+        <location filename="../Configuration.ui" line="1066"/>
         <source>Handshake</source>
         <translation>ハンドシェーク</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1067"/>
+        <location filename="../Configuration.ui" line="1078"/>
         <source>&amp;None</source>
         <translation>無し</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1093"/>
+        <location filename="../Configuration.ui" line="1104"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
         <translation>ソフトウェアフロー制御（CATインタフェースでは非常にまれである）。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1096"/>
+        <location filename="../Configuration.ui" line="1107"/>
         <source>XON/XOFF</source>
         <translation>XON/XOFF</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1111"/>
+        <location filename="../Configuration.ui" line="1122"/>
         <source>&amp;Hardware</source>
         <translation>ハードウェア</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1124"/>
+        <location filename="../Configuration.ui" line="1135"/>
         <source>Special control of CAT port control lines.</source>
         <translation>CATポートコントロールラインの特別なコントロール。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1127"/>
+        <location filename="../Configuration.ui" line="1138"/>
         <source>Force Control Lines</source>
         <translation>制御信号の強制設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1144"/>
+        <location filename="../Configuration.ui" line="1155"/>
         <source>DTR:</source>
         <translation>DTR：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1160"/>
-        <location filename="../Configuration.ui" line="1193"/>
+        <location filename="../Configuration.ui" line="1171"/>
+        <location filename="../Configuration.ui" line="1204"/>
         <source>High</source>
         <translation>高く</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1165"/>
-        <location filename="../Configuration.ui" line="1198"/>
+        <location filename="../Configuration.ui" line="1176"/>
+        <location filename="../Configuration.ui" line="1209"/>
         <source>Low</source>
         <translation>低く</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1177"/>
+        <location filename="../Configuration.ui" line="1188"/>
         <source>RTS:</source>
         <translation>RTS：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1230"/>
+        <location filename="../Configuration.ui" line="1241"/>
         <source>How this program activates the PTT on your radio</source>
         <translation>このプログラムはどのようにPTTをあなたのラジオで作動させるか</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1233"/>
+        <location filename="../Configuration.ui" line="1244"/>
         <source>PTT Method</source>
         <translation>PTT 方法</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1244"/>
+        <location filename="../Configuration.ui" line="1255"/>
         <source>C&amp;AT</source>
         <translation>ＣＡＴ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1254"/>
+        <location filename="../Configuration.ui" line="1265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RS-232 DTR制御線を使用して無線のPTTを切り替えます。回線を接続するにはハードウェアが必要です。&lt;/p&gt;&lt;p&gt;一部の商用インターフェイスユニットもこの方法を使用します。 &lt;/p&gt;&lt;p&gt;これにはCATシリアルポートのDTR制御線を使用するか、別のシリアルポートのDTR制御線を使用できます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1257"/>
+        <location filename="../Configuration.ui" line="1268"/>
         <source>&amp;DTR</source>
         <translation>ＤＴＲ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1270"/>
+        <location filename="../Configuration.ui" line="1281"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; PTTアクティベーションなし、代わりに無線の自動VOXが送信機のキーイングに使用されます。.&lt;/p&gt;&lt;p&gt;無線インターフェースハードウェアがない場合はこれを使用します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1273"/>
+        <location filename="../Configuration.ui" line="1284"/>
         <source>VO&amp;X</source>
         <translation>ＶＯＸ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1283"/>
+        <location filename="../Configuration.ui" line="1294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RS-232 RTSコントロールラインが貴方の無線機のPTTコントロールを行います。&lt;/p&gt;&lt;p&gt; いくつかの商業用のインタフェースユニットがこの方法を用いています。&lt;/p&gt;&lt;p&gt;RTSコントロールラインのCATのシリアルポートか別のRTSコントロールの汁あるポートが使用されます。ハードウェアフロー制御が行われているときはこのオプションは使用できません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1286"/>
+        <location filename="../Configuration.ui" line="1297"/>
         <source>R&amp;TS</source>
         <translation>ＲＴＳ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1317"/>
+        <location filename="../Configuration.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;選択されたRS-232シリアルポートがPTTコントロールに用いられます。このオプションはDTRまたはRTSが上記の送信方法に用いられた時に使用可能です。&lt;/p&gt;&lt;p&gt;このポートはCATコントロールのために使われたものと同じものでも構いません。.&lt;/p&gt;&lt;p&gt;
 一部のインターフェイスタイプでは、特別な値CATを選択できます。これは、シリアルポート制御ラインをリモートで制御できる非シリアルCATインターフェイスに使用されます（たとえば、OmniRig）&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1353"/>
+        <location filename="../Configuration.ui" line="1364"/>
         <source>Transmit Audio Source</source>
         <translation>オーディオソースを送信</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1359"/>
+        <location filename="../Configuration.ui" line="1370"/>
         <source>Rear&amp;/Data</source>
         <translation>Rear/Data</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1369"/>
+        <location filename="../Configuration.ui" line="1380"/>
         <source>&amp;Front/Mic</source>
         <translation>Front/Mic</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1392"/>
+        <location filename="../Configuration.ui" line="1403"/>
         <source>Modulation mode selected on radio.</source>
         <translation>ラジオで選ばれた変調モード。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1395"/>
+        <location filename="../Configuration.ui" line="1406"/>
         <source>Mode</source>
         <translation>モード</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1404"/>
+        <location filename="../Configuration.ui" line="1415"/>
         <source>US&amp;B</source>
         <translation>ＵＳＢ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1422"/>
-        <location filename="../Configuration.ui" line="1481"/>
+        <location filename="../Configuration.ui" line="1433"/>
+        <location filename="../Configuration.ui" line="1492"/>
         <source>None</source>
         <translation>無し</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1432"/>
+        <location filename="../Configuration.ui" line="1443"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
         <translation>もしその時これが可能であるならば、それは通常このプログラムのための正しいモードである。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1435"/>
+        <location filename="../Configuration.ui" line="1446"/>
         <source>Data/P&amp;kt</source>
         <translation>Data/Pkt</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1455"/>
+        <location filename="../Configuration.ui" line="1466"/>
         <source>Split Operation</source>
         <translation>スプリット操作</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1461"/>
+        <location filename="../Configuration.ui" line="1472"/>
         <source>Fake It</source>
         <translation>Fake It</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1471"/>
+        <location filename="../Configuration.ui" line="1482"/>
         <source>Rig</source>
         <translation>リグ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1517"/>
+        <location filename="../Configuration.ui" line="1528"/>
         <source>Test CAT</source>
         <translation>ＣＡＴテスト</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1558"/>
+        <location filename="../Configuration.ui" line="1569"/>
         <source>Test PTT</source>
         <translation>ＰＴＴテスト</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1585"/>
-        <location filename="../Configuration.ui" line="1595"/>
+        <location filename="../Configuration.ui" line="1596"/>
+        <location filename="../Configuration.ui" line="1606"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
         <translation>PTTが動作してからオーディオ送信までの最小遅延値。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1588"/>
+        <location filename="../Configuration.ui" line="1599"/>
         <source>Tx delay:</source>
         <translation>Tx遅延：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1645"/>
+        <location filename="../Configuration.ui" line="1656"/>
         <source>A&amp;udio</source>
         <translation>オーディオ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1648"/>
+        <location filename="../Configuration.ui" line="1659"/>
         <source>Audio interface settings</source>
         <translation>オーディオインタフェース設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1654"/>
+        <location filename="../Configuration.ui" line="1665"/>
         <source>Soundcard</source>
         <translation>サウンドカード</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1683"/>
+        <location filename="../Configuration.ui" line="1694"/>
         <source>Select the audio CODEC to use for receiving.</source>
         <translation>受信のために使うたオーディオCODECを選択.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1690"/>
+        <location filename="../Configuration.ui" line="1701"/>
         <source>&amp;Input:</source>
         <translation>入力：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1700"/>
+        <location filename="../Configuration.ui" line="1711"/>
         <source>Select the channel to use for receiving.</source>
         <translation>受信のために使うチャンネルを選択.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1704"/>
-        <location filename="../Configuration.ui" line="1734"/>
+        <location filename="../Configuration.ui" line="1715"/>
+        <location filename="../Configuration.ui" line="1745"/>
         <source>Mono</source>
         <translation>モノラル</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1709"/>
-        <location filename="../Configuration.ui" line="1739"/>
+        <location filename="../Configuration.ui" line="1720"/>
+        <location filename="../Configuration.ui" line="1750"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1714"/>
-        <location filename="../Configuration.ui" line="1744"/>
+        <location filename="../Configuration.ui" line="1725"/>
+        <location filename="../Configuration.ui" line="1755"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1719"/>
-        <location filename="../Configuration.ui" line="1749"/>
+        <location filename="../Configuration.ui" line="1730"/>
+        <location filename="../Configuration.ui" line="1760"/>
         <source>Both</source>
         <translation>両方</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1757"/>
+        <location filename="../Configuration.ui" line="1768"/>
         <source>Ou&amp;tput:</source>
         <translation>出力：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1776"/>
+        <location filename="../Configuration.ui" line="1787"/>
         <source>Remember power settings by band and mode</source>
         <translation>バンドとモード毎のパワー設定を記憶する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1784"/>
+        <location filename="../Configuration.ui" line="1795"/>
         <source>Enable power memory during transmit</source>
         <translation>送信中に、パワー設定のメモリーを可能にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1787"/>
+        <location filename="../Configuration.ui" line="1798"/>
         <source>Transmit</source>
         <translation>送信</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1794"/>
+        <location filename="../Configuration.ui" line="1805"/>
         <source>Enable power memory during tuning</source>
         <translation>チューニング中に、パワー設定のメモリーを可能にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1797"/>
+        <location filename="../Configuration.ui" line="1808"/>
         <source>Tune</source>
         <translation>チューン(調整)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1822"/>
+        <location filename="../Configuration.ui" line="1833"/>
         <source>Audio files save directory</source>
         <translation>オーディオファイルを保存するフォルダー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1828"/>
+        <location filename="../Configuration.ui" line="1839"/>
         <source>Loc&amp;ation:</source>
         <translation>保存するフォルダー:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1844"/>
+        <location filename="../Configuration.ui" line="1855"/>
         <source>Path to which .WAV files are saved.</source>
         <translation>.WAV filesが保存されるパス。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1853"/>
+        <location filename="../Configuration.ui" line="1864"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1860"/>
+        <location filename="../Configuration.ui" line="1871"/>
         <source>Click to select a different save directory for .WAV files.</source>
         <translation>.WAV filesのために、違う保存フォルターを選ぶためにクリック。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1863"/>
+        <location filename="../Configuration.ui" line="1874"/>
         <source>S&amp;elect</source>
         <translation>選択</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1894"/>
+        <location filename="../Configuration.ui" line="1905"/>
         <source>Sequencing</source>
         <translation>順序</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1918"/>
+        <location filename="../Configuration.ui" line="1929"/>
         <source>Message sequencing short scenarios</source>
         <translation>何回同じメッセージを送信するかの設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1926"/>
+        <location filename="../Configuration.ui" line="1937"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3：カウンターに達する時はCQを出します。AutoSeq 6/7：&apos;CQ&apos;または『73』メッセージをサーチして見つからないときはCQを出します。そのようなメッセージも見つけなかった時は送信を停止します。このオプションはAutoSeqのタブで設定できます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1929"/>
+        <location filename="../Configuration.ui" line="1940"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
         <translation>リトライ用カウンター。デコードされたメッセージを探し、設定回数を超えればCQを探すか送信を停止します:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1961"/>
-        <location filename="../Configuration.ui" line="2000"/>
-        <location filename="../Configuration.ui" line="2026"/>
-        <location filename="../Configuration.ui" line="2062"/>
+        <location filename="../Configuration.ui" line="1972"/>
+        <location filename="../Configuration.ui" line="2011"/>
+        <location filename="../Configuration.ui" line="2037"/>
+        <location filename="../Configuration.ui" line="2073"/>
         <source>times</source>
         <translation>回数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2036"/>
+        <location filename="../Configuration.ui" line="2047"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
         <translation>RRR（RR73）の受信に対してRR73(73)を送る回数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2075"/>
+        <location filename="../Configuration.ui" line="2086"/>
         <source>answered to someone&apos;s CQ with no response</source>
         <translation>CQに応答したが反応無い場合呼び続ける回数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2088"/>
+        <location filename="../Configuration.ui" line="2099"/>
         <source>sent report answering to incoming report</source>
         <translation>レポートを受信してそれに対する応答する回数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2125"/>
+        <location filename="../Configuration.ui" line="2136"/>
         <source>Halt TX if operator I called answered to other operator</source>
         <translation>他局への応答があった局への呼び出しを停止</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2135"/>
+        <location filename="../Configuration.ui" line="2146"/>
         <source>Strict directional CQ operation</source>
         <translation>指定したCQに対する指定外からの呼び出しは無視する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2193"/>
+        <location filename="../Configuration.ui" line="2204"/>
         <source>Tx &amp;Macros</source>
         <translation>Tx マクロ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2196"/>
+        <location filename="../Configuration.ui" line="2207"/>
         <source>Canned free text messages setup</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2202"/>
+        <location filename="../Configuration.ui" line="2213"/>
         <source>&amp;Add</source>
         <translation>追加</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2219"/>
+        <location filename="../Configuration.ui" line="2230"/>
         <source>&amp;Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2280"/>
+        <location filename="../Configuration.ui" line="2291"/>
         <source>Reportin&amp;g</source>
         <translation>レポーティング</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2283"/>
+        <location filename="../Configuration.ui" line="2294"/>
         <source>Reporting and logging settings</source>
         <translation>レポートおよびログ設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2296"/>
+        <location filename="../Configuration.ui" line="2307"/>
         <source>Logging</source>
         <translation>交信記録</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2328"/>
+        <location filename="../Configuration.ui" line="2339"/>
         <source>d&amp;B reports to comments</source>
         <translation>dBをレポートにコメントする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2339"/>
+        <location filename="../Configuration.ui" line="2350"/>
         <source>Clear &amp;DX call and grid after logging</source>
         <translation>記録の後にコールサインとグリッドをクリアする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2349"/>
+        <location filename="../Configuration.ui" line="2360"/>
         <source>Clear DX call and grid on exit</source>
         <translation>ＤＸコールサインとグリッドをクリアして終了</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2356"/>
+        <location filename="../Configuration.ui" line="2367"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
         <translation>いくつかのロギングソフトウェアは、モードとしてJT-65またはJT9を認めない。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2359"/>
+        <location filename="../Configuration.ui" line="2370"/>
         <source>Con&amp;vert mode to RTTY</source>
         <translation>RTTYモードへ変更</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2366"/>
+        <location filename="../Configuration.ui" line="2377"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
         <translation>あなたが73またはフリーテキストメッセージを送る時には、プログラムは、部分的に完成されたログQSOダイアログをポップアップする。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2369"/>
+        <location filename="../Configuration.ui" line="2380"/>
         <source>Promp&amp;t me to log QSO</source>
         <translation>Log QSO ウインドウを表示する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2376"/>
+        <location filename="../Configuration.ui" line="2387"/>
         <source>Enable automatic logging of QSO</source>
         <translation>QSOの自動的な記録を可能にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2409"/>
+        <location filename="../Configuration.ui" line="2420"/>
         <source>Send logged QSO ADIF data</source>
         <translation>記録されたQSO ADIFデータを送る</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2443"/>
-        <location filename="../Configuration.ui" line="2459"/>
+        <location filename="../Configuration.ui" line="2454"/>
+        <location filename="../Configuration.ui" line="2470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCPサーバー名または&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2446"/>
+        <location filename="../Configuration.ui" line="2457"/>
         <source>TCP server:</source>
         <translation>TCPサーバー：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2466"/>
-        <location filename="../Configuration.ui" line="2476"/>
+        <location filename="../Configuration.ui" line="2477"/>
+        <location filename="../Configuration.ui" line="2487"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCPサーバーポート数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2469"/>
+        <location filename="../Configuration.ui" line="2480"/>
         <source>TCP port:</source>
         <translation>TCPポート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2491"/>
+        <location filename="../Configuration.ui" line="2502"/>
         <source>Enable sending to TCP server</source>
         <translation>TCPサーバーへの送信を有効にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2516"/>
+        <location filename="../Configuration.ui" line="2527"/>
         <source>2nd UDP server</source>
         <translation>2番目のUDPサーバー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2530"/>
-        <location filename="../Configuration.ui" line="2540"/>
+        <location filename="../Configuration.ui" line="2541"/>
+        <location filename="../Configuration.ui" line="2551"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;第2UDPサーバーポート数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2533"/>
+        <location filename="../Configuration.ui" line="2544"/>
         <source>UDP port:</source>
         <translation>UDPポート：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2549"/>
+        <location filename="../Configuration.ui" line="2560"/>
         <source>Enable sending to secondary UDP server</source>
         <translation>第2のUDPサーバーに送ることを可能にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2585"/>
+        <location filename="../Configuration.ui" line="2596"/>
         <source>Recording to ALL.TXT</source>
         <translation>ALL.TXTへのレコーディング</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2607"/>
+        <location filename="../Configuration.ui" line="2618"/>
         <source>decoded messages</source>
         <translation>デコードしたメッセージ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2614"/>
+        <location filename="../Configuration.ui" line="2625"/>
         <source>decoded and debug messages</source>
         <translation>デコード済とデバッグメッセージ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2656"/>
+        <location filename="../Configuration.ui" line="2667"/>
         <source>Network Services</source>
         <translation>ネットワークサービス</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2677"/>
+        <location filename="../Configuration.ui" line="2688"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
         <translation>プログラムは、記録されたQSO情報をhttp://www.eqsl.ccウェブサイトに送ることができる。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2680"/>
+        <location filename="../Configuration.ui" line="2691"/>
         <source>Enable &amp;eQSL sending</source>
         <translation>eQSLへの送信を有効化</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2700"/>
+        <location filename="../Configuration.ui" line="2711"/>
         <source>EQSL Username.</source>
         <translation>EQSL ユーザーネーム。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2707"/>
+        <location filename="../Configuration.ui" line="2718"/>
         <source>U&amp;sername:</source>
         <translation>ユーザーネーム：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2717"/>
+        <location filename="../Configuration.ui" line="2728"/>
         <source>P&amp;assword:</source>
         <translation>パスワード：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2727"/>
+        <location filename="../Configuration.ui" line="2738"/>
         <source>EQSL Password.</source>
         <translation>EQSL パスワード。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2743"/>
+        <location filename="../Configuration.ui" line="2754"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
         <translation>PSKレポーターへの情報送信を有効化</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2750"/>
+        <location filename="../Configuration.ui" line="2761"/>
         <source>EQSL OTH Nickname.</source>
         <translation>EQSL OTH ニックネーム。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2764"/>
+        <location filename="../Configuration.ui" line="2775"/>
         <source>QTH N&amp;ickname:</source>
         <translation>QTH とニックネーム：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2780"/>
+        <location filename="../Configuration.ui" line="2791"/>
         <source>Primary UDP Server</source>
         <translation>主要なUDPサーバー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2810"/>
+        <location filename="../Configuration.ui" line="2821"/>
         <source>UDP Server:</source>
         <translation>UDP サーバー：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2836"/>
+        <location filename="../Configuration.ui" line="2847"/>
         <source>UDP Server port number:</source>
         <translation>UDP サーバーポート数：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2866"/>
+        <location filename="../Configuration.ui" line="2877"/>
         <source>Accept UDP requests</source>
         <translation>UDP要求を受け入れる</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2876"/>
+        <location filename="../Configuration.ui" line="2887"/>
         <source>Notify on accepted UDP request</source>
         <translation>UDP要求があった場合に通知する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2886"/>
+        <location filename="../Configuration.ui" line="2897"/>
         <source>Accepted UDP request restores window</source>
         <translation>ウィンドウを復元するUDP要求を受けれ入れる</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2897"/>
+        <location filename="../Configuration.ui" line="2908"/>
         <source>Enable sending logged QSO ADIF data</source>
         <translation>記録されたQSO ADIFデータを送ることを可能にする</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2910"/>
+        <location filename="../Configuration.ui" line="2921"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
         <translation>UDP経由で未確認のコールサインでのスポットを防止</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2920"/>
+        <location filename="../Configuration.ui" line="2931"/>
         <source>Apply text filters to transmission of the UDP messages</source>
         <translation>テキストフィルタをUDPメッセージのトランスミッションに適用</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2955"/>
+        <location filename="../Configuration.ui" line="2966"/>
         <source>Frequencies</source>
         <translation>周波数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2958"/>
+        <location filename="../Configuration.ui" line="2969"/>
         <source>Default frequencies and band specific station details setup</source>
         <translation>デフォルト周波数と自局のバンド毎の詳細情報の設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2964"/>
+        <location filename="../Configuration.ui" line="2975"/>
         <source>Working Frequencies</source>
         <translation>使用周波数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5052"/>
+        <location filename="../Configuration.ui" line="5063"/>
         <source>Reset</source>
         <translation>リセット</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3006"/>
+        <location filename="../Configuration.ui" line="3017"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
         <translation>WSPRのドキュメンテーションの付録Cを見て自局の無線ででの設定をどうするかを決めてください。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3009"/>
+        <location filename="../Configuration.ui" line="3020"/>
         <source>Frequency Calibration</source>
         <translation>周波数キャリブレーション</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3018"/>
+        <location filename="../Configuration.ui" line="3029"/>
         <source>Intercept:</source>
         <translation>インターセプト：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3050"/>
+        <location filename="../Configuration.ui" line="3061"/>
         <source>Slope:</source>
         <translation>スロープ：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3106"/>
+        <location filename="../Configuration.ui" line="3117"/>
         <source>Station Information</source>
         <translation>ステーション情報</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3166"/>
+        <location filename="../Configuration.ui" line="3177"/>
         <source>Notifications</source>
         <translation>通知・色付け</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3174"/>
+        <location filename="../Configuration.ui" line="3185"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
         <translation>『新しいもの』、および『既に交信している』というステータスの通知</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3200"/>
+        <location filename="../Configuration.ui" line="3211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルに存在しないCQゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3203"/>
+        <location filename="../Configuration.ui" line="3214"/>
         <source>Check and highlight new CQZ</source>
         <translation>新しいCQ Zoneをチェックして強調表示する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3210"/>
+        <location filename="../Configuration.ui" line="3221"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルからのデータに従い、バンド上で新しいCQゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3220"/>
+        <location filename="../Configuration.ui" line="3231"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルからのデータに従い、モードで新しいCQゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3240"/>
+        <location filename="../Configuration.ui" line="3251"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルに存在しないITUゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3243"/>
+        <location filename="../Configuration.ui" line="3254"/>
         <source>Check and highlight new ITUZ</source>
         <translation>新しいITU Zoneをチェックして強調表示する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3250"/>
+        <location filename="../Configuration.ui" line="3261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルのデータに従い、バンド上で新しいITUゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3260"/>
+        <location filename="../Configuration.ui" line="3271"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ログファイルからのデータに従い、モードで新しいITUゾーンのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3283"/>
+        <location filename="../Configuration.ui" line="3294"/>
         <source>Check and highlight new DXCC</source>
         <translation>ニューDXCCをチェックしてハイライトを付ける</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3213"/>
-        <location filename="../Configuration.ui" line="3253"/>
-        <location filename="../Configuration.ui" line="3293"/>
-        <location filename="../Configuration.ui" line="3333"/>
-        <location filename="../Configuration.ui" line="3373"/>
-        <location filename="../Configuration.ui" line="3413"/>
+        <location filename="../Configuration.ui" line="3224"/>
+        <location filename="../Configuration.ui" line="3264"/>
+        <location filename="../Configuration.ui" line="3304"/>
+        <location filename="../Configuration.ui" line="3344"/>
+        <location filename="../Configuration.ui" line="3384"/>
+        <location filename="../Configuration.ui" line="3424"/>
         <source>per band</source>
         <translation>バンド毎</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2846"/>
+        <location filename="../Configuration.ui" line="2857"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;JTDXがアップデート送信するためのUDPサーバーのサービスポート番号を入力。、0を入力した場合何も送信されません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2863"/>
+        <location filename="../Configuration.ui" line="2874"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;これを有効にすると、JTDXはデコードメッセージを受信するUDPサーバーからの特定のリクエストを受け入れます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3223"/>
-        <location filename="../Configuration.ui" line="3263"/>
-        <location filename="../Configuration.ui" line="3303"/>
-        <location filename="../Configuration.ui" line="3343"/>
-        <location filename="../Configuration.ui" line="3383"/>
-        <location filename="../Configuration.ui" line="3423"/>
+        <location filename="../Configuration.ui" line="3234"/>
+        <location filename="../Configuration.ui" line="3274"/>
+        <location filename="../Configuration.ui" line="3314"/>
+        <location filename="../Configuration.ui" line="3354"/>
+        <location filename="../Configuration.ui" line="3394"/>
+        <location filename="../Configuration.ui" line="3434"/>
         <source>per mode</source>
         <translation>モード毎</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3230"/>
-        <location filename="../Configuration.ui" line="3270"/>
-        <location filename="../Configuration.ui" line="3310"/>
-        <location filename="../Configuration.ui" line="3350"/>
-        <location filename="../Configuration.ui" line="3390"/>
-        <location filename="../Configuration.ui" line="3430"/>
+        <location filename="../Configuration.ui" line="3241"/>
+        <location filename="../Configuration.ui" line="3281"/>
+        <location filename="../Configuration.ui" line="3321"/>
+        <location filename="../Configuration.ui" line="3361"/>
+        <location filename="../Configuration.ui" line="3401"/>
+        <location filename="../Configuration.ui" line="3441"/>
         <source>Use also system sound for the notification.</source>
         <translation>通知のためにシステムサウンドも使用。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3233"/>
-        <location filename="../Configuration.ui" line="3273"/>
-        <location filename="../Configuration.ui" line="3313"/>
-        <location filename="../Configuration.ui" line="3353"/>
-        <location filename="../Configuration.ui" line="3393"/>
-        <location filename="../Configuration.ui" line="3433"/>
+        <location filename="../Configuration.ui" line="3244"/>
+        <location filename="../Configuration.ui" line="3284"/>
+        <location filename="../Configuration.ui" line="3324"/>
+        <location filename="../Configuration.ui" line="3364"/>
+        <location filename="../Configuration.ui" line="3404"/>
+        <location filename="../Configuration.ui" line="3444"/>
         <source>Beep as well</source>
         <translation>システム音も出して通知</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3323"/>
+        <location filename="../Configuration.ui" line="3334"/>
         <source>Check and highlight new grids</source>
         <translation>新規グリッドをチェックしてハイライトを付ける</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3363"/>
+        <location filename="../Configuration.ui" line="3374"/>
         <source>Check and highlight new prefixes</source>
         <translation>新規プリフィックスをチェックしてハイライトを付ける</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3403"/>
+        <location filename="../Configuration.ui" line="3414"/>
         <source>Check and highlight new calls</source>
         <translation>未交信局をチェックしてハイライトを付ける</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3443"/>
+        <location filename="../Configuration.ui" line="3454"/>
         <source>Highlight worked ones</source>
         <translation>交信済局を強調する</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3450"/>
+        <location filename="../Configuration.ui" line="3461"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みDXCC グリッド コールサインのメッセージがストライキされます.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3453"/>
+        <location filename="../Configuration.ui" line="3464"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みコールサインのメッセージがストライキされます&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3456"/>
+        <location filename="../Configuration.ui" line="3467"/>
         <source>strike it</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3463"/>
+        <location filename="../Configuration.ui" line="3474"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みDXCC、Grid、Callのあるメッセージには下線が引かれます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3466"/>
+        <location filename="../Configuration.ui" line="3477"/>
         <source>underline it</source>
         <translation>下線を引く</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3473"/>
+        <location filename="../Configuration.ui" line="3484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MyCallがない交信済みDXCC、Grid、Callのメッセージは、デコードされたテキストウィンドウでスキップされます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3476"/>
+        <location filename="../Configuration.ui" line="3487"/>
         <source>don&apos;t show it</source>
         <translation>表示しない</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3483"/>
+        <location filename="../Configuration.ui" line="3494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;受信したメッセージのテキストと背景色を反転する&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3486"/>
+        <location filename="../Configuration.ui" line="3497"/>
         <source>Inverse text/background color</source>
         <translation>テキスト／背景色の反転</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3496"/>
+        <location filename="../Configuration.ui" line="3507"/>
         <source>Highlight other standard messages</source>
         <translation>他の標準のメッセージを強調</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3519"/>
+        <location filename="../Configuration.ui" line="3530"/>
         <source>Beep on 1st decoded message</source>
         <translation>最初のデコード時にシステム音</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3529"/>
+        <location filename="../Configuration.ui" line="3540"/>
         <source>Beep on my call</source>
         <translation>自局ｺｰﾙｻｲﾝにｼｽﾃﾑ音</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3559"/>
+        <location filename="../Configuration.ui" line="3570"/>
         <source>Markers</source>
         <translation>マーカー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3569"/>
+        <location filename="../Configuration.ui" line="3580"/>
         <source>blue / my call at QSO</source>
         <translation>青色／QSO中の自局のコールサイン</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3608"/>
+        <location filename="../Configuration.ui" line="3619"/>
         <source>red / my call in message</source>
         <translation>赤／自局のコールサイン</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3621"/>
+        <location filename="../Configuration.ui" line="3632"/>
         <source>Other standard messages</source>
         <translation>他の標準のメッセージ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3715"/>
+        <location filename="../Configuration.ui" line="3726"/>
         <source>Transmitted message</source>
         <translation>送られたメッセージ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3731"/>
-        <location filename="../Configuration.ui" line="3814"/>
-        <location filename="../Configuration.ui" line="3836"/>
-        <location filename="../Configuration.ui" line="3858"/>
-        <location filename="../Configuration.ui" line="3890"/>
-        <location filename="../Configuration.ui" line="3909"/>
-        <location filename="../Configuration.ui" line="3928"/>
-        <location filename="../Configuration.ui" line="3960"/>
-        <location filename="../Configuration.ui" line="3979"/>
-        <location filename="../Configuration.ui" line="3998"/>
-        <location filename="../Configuration.ui" line="4030"/>
-        <location filename="../Configuration.ui" line="4049"/>
-        <location filename="../Configuration.ui" line="4068"/>
-        <location filename="../Configuration.ui" line="4100"/>
-        <location filename="../Configuration.ui" line="4119"/>
-        <location filename="../Configuration.ui" line="4138"/>
-        <location filename="../Configuration.ui" line="4170"/>
-        <location filename="../Configuration.ui" line="4189"/>
-        <location filename="../Configuration.ui" line="4208"/>
-        <location filename="../Configuration.ui" line="4240"/>
-        <location filename="../Configuration.ui" line="4259"/>
-        <location filename="../Configuration.ui" line="4278"/>
-        <location filename="../Configuration.ui" line="4310"/>
-        <location filename="../Configuration.ui" line="4329"/>
-        <location filename="../Configuration.ui" line="4348"/>
-        <location filename="../Configuration.ui" line="4380"/>
-        <location filename="../Configuration.ui" line="4399"/>
-        <location filename="../Configuration.ui" line="4418"/>
-        <location filename="../Configuration.ui" line="4450"/>
-        <location filename="../Configuration.ui" line="4469"/>
-        <location filename="../Configuration.ui" line="4488"/>
-        <location filename="../Configuration.ui" line="4520"/>
-        <location filename="../Configuration.ui" line="4539"/>
-        <location filename="../Configuration.ui" line="4558"/>
-        <location filename="../Configuration.ui" line="4590"/>
-        <location filename="../Configuration.ui" line="4609"/>
-        <location filename="../Configuration.ui" line="4628"/>
-        <location filename="../Configuration.ui" line="4660"/>
-        <location filename="../Configuration.ui" line="4679"/>
-        <location filename="../Configuration.ui" line="4698"/>
-        <location filename="../Configuration.ui" line="4733"/>
-        <location filename="../Configuration.ui" line="4752"/>
-        <location filename="../Configuration.ui" line="4771"/>
+        <location filename="../Configuration.ui" line="3742"/>
+        <location filename="../Configuration.ui" line="3825"/>
+        <location filename="../Configuration.ui" line="3847"/>
+        <location filename="../Configuration.ui" line="3869"/>
+        <location filename="../Configuration.ui" line="3901"/>
+        <location filename="../Configuration.ui" line="3920"/>
+        <location filename="../Configuration.ui" line="3939"/>
+        <location filename="../Configuration.ui" line="3971"/>
+        <location filename="../Configuration.ui" line="3990"/>
+        <location filename="../Configuration.ui" line="4009"/>
+        <location filename="../Configuration.ui" line="4041"/>
+        <location filename="../Configuration.ui" line="4060"/>
+        <location filename="../Configuration.ui" line="4079"/>
+        <location filename="../Configuration.ui" line="4111"/>
+        <location filename="../Configuration.ui" line="4130"/>
+        <location filename="../Configuration.ui" line="4149"/>
+        <location filename="../Configuration.ui" line="4181"/>
+        <location filename="../Configuration.ui" line="4200"/>
+        <location filename="../Configuration.ui" line="4219"/>
+        <location filename="../Configuration.ui" line="4251"/>
+        <location filename="../Configuration.ui" line="4270"/>
+        <location filename="../Configuration.ui" line="4289"/>
+        <location filename="../Configuration.ui" line="4321"/>
+        <location filename="../Configuration.ui" line="4340"/>
+        <location filename="../Configuration.ui" line="4359"/>
+        <location filename="../Configuration.ui" line="4391"/>
+        <location filename="../Configuration.ui" line="4410"/>
+        <location filename="../Configuration.ui" line="4429"/>
+        <location filename="../Configuration.ui" line="4461"/>
+        <location filename="../Configuration.ui" line="4480"/>
+        <location filename="../Configuration.ui" line="4499"/>
+        <location filename="../Configuration.ui" line="4531"/>
+        <location filename="../Configuration.ui" line="4550"/>
+        <location filename="../Configuration.ui" line="4569"/>
+        <location filename="../Configuration.ui" line="4601"/>
+        <location filename="../Configuration.ui" line="4620"/>
+        <location filename="../Configuration.ui" line="4639"/>
+        <location filename="../Configuration.ui" line="4671"/>
+        <location filename="../Configuration.ui" line="4690"/>
+        <location filename="../Configuration.ui" line="4709"/>
+        <location filename="../Configuration.ui" line="4744"/>
+        <location filename="../Configuration.ui" line="4763"/>
+        <location filename="../Configuration.ui" line="4782"/>
         <source>K1ABC</source>
         <translation>K1ABC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3766"/>
+        <location filename="../Configuration.ui" line="3777"/>
         <source>CQ/73 in message</source>
         <translation>メッセージの中に CQ/73</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3779"/>
+        <location filename="../Configuration.ui" line="3790"/>
         <source>My Call in message</source>
         <translation>メッセージの中に私のコールサイン</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3795"/>
+        <location filename="../Configuration.ui" line="3806"/>
         <source>Other standard message</source>
         <translation>他の標準のメッセージ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4154"/>
+        <location filename="../Configuration.ui" line="4165"/>
         <source>New DXCC</source>
         <translation>新しいDXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4224"/>
+        <location filename="../Configuration.ui" line="4235"/>
         <source>New DXCC on Band/Mode</source>
         <translation>バンド／モード毎のNew DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4294"/>
+        <location filename="../Configuration.ui" line="4305"/>
         <source>New Grid</source>
         <translation>新しいグリッド</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4364"/>
+        <location filename="../Configuration.ui" line="4375"/>
         <source>New Grid on Band/Mode</source>
         <translation>バンド／モード毎のNewグリッド</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4434"/>
+        <location filename="../Configuration.ui" line="4445"/>
         <source>New Prefix</source>
         <translation>新しいプリフィックス</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4504"/>
+        <location filename="../Configuration.ui" line="4515"/>
         <source>New Prefix on Band/Mode</source>
         <translation>バンド／モード毎のNewプリフィックス</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4574"/>
+        <location filename="../Configuration.ui" line="4585"/>
         <source>New Call</source>
         <translation>新しいコールサイン</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4644"/>
+        <location filename="../Configuration.ui" line="4655"/>
         <source>New Call on Band/Mode</source>
         <translation>バンド／モード毎のNewコールサイン</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4714"/>
+        <location filename="../Configuration.ui" line="4725"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>CQおよびMyCallメッセージのみに使用されている</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4717"/>
+        <location filename="../Configuration.ui" line="4728"/>
         <source>Worked one</source>
         <translation>交信済</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4814"/>
+        <location filename="../Configuration.ui" line="4825"/>
         <source>Filters</source>
         <translation>フィルタ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4825"/>
+        <location filename="../Configuration.ui" line="4836"/>
         <source>Hide messages from continents</source>
         <translation>この大陸からメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4837"/>
+        <location filename="../Configuration.ui" line="4848"/>
         <source>Africa</source>
         <translation>アフリカ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4844"/>
+        <location filename="../Configuration.ui" line="4855"/>
         <source>Antarctica</source>
         <translation>南極大陸</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4851"/>
+        <location filename="../Configuration.ui" line="4862"/>
         <source>Asia</source>
         <translation>アジア</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4858"/>
+        <location filename="../Configuration.ui" line="4869"/>
         <source>Europe</source>
         <translation>ヨーロッパ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4865"/>
+        <location filename="../Configuration.ui" line="4876"/>
         <source>Oceania</source>
         <translation>オセアニア</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4872"/>
+        <location filename="../Configuration.ui" line="4883"/>
         <source>North America</source>
         <translation>北アメリカ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4879"/>
+        <location filename="../Configuration.ui" line="4890"/>
         <source>South America</source>
         <translation>南アメリカ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4892"/>
+        <location filename="../Configuration.ui" line="4903"/>
         <source>Hide messages from countries</source>
         <translation>この国からメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4912"/>
-        <location filename="../Configuration.ui" line="4977"/>
+        <location filename="../Configuration.ui" line="4923"/>
+        <location filename="../Configuration.ui" line="4988"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可能なオプション&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4915"/>
-        <location filename="../Configuration.ui" line="4980"/>
+        <location filename="../Configuration.ui" line="4926"/>
+        <location filename="../Configuration.ui" line="4991"/>
         <source>Hide</source>
         <translation>隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4945"/>
+        <location filename="../Configuration.ui" line="4956"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;国リストをクリアー&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4948"/>
-        <location filename="../Configuration.ui" line="5003"/>
+        <location filename="../Configuration.ui" line="4959"/>
+        <location filename="../Configuration.ui" line="5014"/>
         <source>Clear</source>
         <translation>クリアー</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4960"/>
+        <location filename="../Configuration.ui" line="4971"/>
         <source>Hide messages from callsigns</source>
         <translation>このコールサインからのメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5000"/>
+        <location filename="../Configuration.ui" line="5011"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;callsignリストをクリアー&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="508"/>
+        <location filename="../Configuration.ui" line="519"/>
         <source> minutes</source>
         <translation> 分</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="549"/>
+        <location filename="../Configuration.ui" line="560"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;チューニングが停止されるまでの秒数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="555"/>
+        <location filename="../Configuration.ui" line="566"/>
         <source> seconds</source>
         <translation> 秒</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="576"/>
+        <location filename="../Configuration.ui" line="587"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;一部のリグは、送信中にCATコマンドを処理できません。 つまり、スプリットモードで操作している場合は、このオプションのチェックを外す必要がある場合があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="586"/>
+        <location filename="../Configuration.ui" line="597"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;モニターが有効なときに最後にモニターされた周波数に自動的に戻りたい場合はこれをチェックし、現在のリグ周波数を維持したい場合はオフのままにします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="643"/>
+        <location filename="../Configuration.ui" line="654"/>
         <source>Send a CW ID periodically every few minutes.
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
@@ -7304,81 +7309,81 @@ quiet period when decoding is done.</source>
         <translation>CW IDを数分ごとに定期的に送信します。これは、国のライセンス規制の下で必要になる場合があります。常に送信されるため、他のユーザーに干渉しませんデコードが行われる静かな期間に出されます。。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="713"/>
+        <location filename="../Configuration.ui" line="724"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;リグのステータスをポーリングする間隔。 間隔が長くなると、リグの変更が検出されるまでに時間がかかります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="716"/>
-        <location filename="../Configuration.ui" line="1598"/>
+        <location filename="../Configuration.ui" line="727"/>
+        <location filename="../Configuration.ui" line="1609"/>
         <source> s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="739"/>
+        <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;トランシーバーからSメーターデータを要求する：CATはHamlibを介してセットアップされ、Hamlibは一部のトランシーバーのSメーターデータの取得をサポートします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="771"/>
+        <location filename="../Configuration.ui" line="782"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;トランシーバーからの出力電力データの要求：CATはHamlibを介してセットアップされ、Hamlibは一部のトランシーバーの出力電力データの取得をサポートします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="941"/>
+        <location filename="../Configuration.ui" line="952"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;無線のCATインターフェイスとの通信に使用されるデータビット数（通常8）。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="998"/>
+        <location filename="../Configuration.ui" line="1009"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;無線のCATインターフェイスと通信するときに使用されるストップビットの数&lt;/p&gt;&lt;p&gt;（詳細については無線のマニュアルを参照してください）。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1052"/>
+        <location filename="../Configuration.ui" line="1063"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;このコンピューターとラジオのCATインターフェース間で使用されるフロー制御プロトコル（通常は「なし」ですが、「ハードウェア」が必要なものもあります）。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1106"/>
+        <location filename="../Configuration.ui" line="1117"/>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
         <translation>RTSおよびCTS RS-232制御ラインを使用したフロー制御あまり使用されませんが、一部のラジオではオプションとして使用できます。いくつか、特に一部のケンウッドのリグではそれが必要です）。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1239"/>
+        <location filename="../Configuration.ui" line="1250"/>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
         <translation>一部の無線機はCATコマンドを介してPTTをサポートしますが、無線機がサポートしているのにハードウェアインターフェイスを持っていない場合このオプションを使用。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1348"/>
+        <location filename="../Configuration.ui" line="1359"/>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
         <translation>一部の無線機では、CATコマンドを使用して音声入力を選択できますが、この設定により、使用するオーディオ入力を選択できます（利用可能な場合は、一般にRear / Dataオプションが最適です）。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1401"/>
+        <location filename="../Configuration.ui" line="1412"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; USBは通常、正しい変調モードです,&lt;/p&gt;&lt;p&gt;無線機にAFSK操作用の特別なデータまたはパケットモード設定がある場合を除きます&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1417"/>
+        <location filename="../Configuration.ui" line="1428"/>
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
         <translation>プログラムによるラジオモードの設定を許可しない（推奨されませんが、間違ったモードの場合に使用しますまたは帯域幅が選択されています）。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1514"/>
+        <location filename="../Configuration.ui" line="1525"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;これらの設定で無線機への接続を試みます。&lt;/p&gt;&lt;p&gt;接続が成功するとボタンが緑色に変わり、問題があると赤色に変わります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1540"/>
+        <location filename="../Configuration.ui" line="1551"/>
         <source>Attempt to activate the transmitter.
 Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
@@ -7387,7 +7392,7 @@ radio interface behave as expected.</source>
         <translation>送信状態をアクティブにします。再度クリックして無効にします。 通常パワーはは現時点では音声が生成されていないため出力されません。無線機の送信表示を確認してください。送信状態になっていればOKです。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1666"/>
+        <location filename="../Configuration.ui" line="1677"/>
         <source>Select the audio CODEC to use for transmitting.
 If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
@@ -7396,7 +7401,7 @@ transmitting periods.</source>
         <translation>送信に使用する音声コーデックを選択します。これがシステムサウンドのデフォルトデバイスである場合、すべてのシステムサウンドが無効になっていることを確認してください、さもなくば送信中に生成されたシステムサウンドを信号に載せて送信してしまいます。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1727"/>
+        <location filename="../Configuration.ui" line="1738"/>
         <source>Select the audio channel used for transmission.
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
@@ -7404,32 +7409,32 @@ both here.</source>
         <translation>送信に使用するオーディオチャネルを選択します。複数の無線を別々に接続していない限り、チャネルの選定は通常はモノを選択するか、両方にします。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1974"/>
+        <location filename="../Configuration.ui" line="1985"/>
         <source>called CQ,  received a call and answered</source>
         <translation>CQを出して呼び出しを受けそれに応答する回数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2122"/>
+        <location filename="../Configuration.ui" line="2133"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;このオプションは、重複しないスペクトルシナリオに使用されています。この設定に関係なくスペクトルに共通の周波数がある場合、送信は停止します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2132"/>
+        <location filename="../Configuration.ui" line="2143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;デフォルトでは、有効な「新しいDXCC」からのCQ/73メッセージがデコードされた場合、指定のあるCQの送受信を無視します。このオプションは指定CQの自動選択の例外で「新しいDXCC」を優先します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2209"/>
+        <location filename="../Configuration.ui" line="2220"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;フリーメッセージは最大13文字&lt;br&gt; &lt;br&gt;指定CQ標準メッセージは最大17文字。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2229"/>
+        <location filename="../Configuration.ui" line="2240"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;アイテムをドラッグアンドドロップして順序を並べ替えます。 アイテム固有のアクションを右クリックします。 クリック、Shiftキーを押しながらクリック、CRTLキーを押しながらクリックして項目を選択します。 @記号はDX呼び出しに置き換えられ、＆記号はユーザーのベースコールサインに、＃記号は送信されるレポートに、^記号はログから取得された通信者の名前に、7文字を超えてはなりません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2322"/>
+        <location filename="../Configuration.ui" line="2333"/>
         <source>Some logging programs will not accept the type of reports
 saved by this program.
 Check this option to save the sent and received reports in the
@@ -7437,28 +7442,28 @@ comments field.</source>
         <translation>一部のロギングプログラムは、このタイプのレポートを受け入れません。このプログラムによって保存されました。このオプションをオンにすると、送受信されたレポートをコメントフィールドに記録します。。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2335"/>
+        <location filename="../Configuration.ui" line="2346"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
         <translation>このオプションはDX CallとDX Gridの欄を73やフリーメッセージを受信した時にクリアーにします。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2346"/>
+        <location filename="../Configuration.ui" line="2357"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;このオプションをオンにすると、JTDXを終了するときにDXコールおよびDXグリッドのフィールドが強制的にクリアされます。 この機能は、UR5EQFログブックソフトウェアユーザーを対象としています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2406"/>
+        <location filename="../Configuration.ui" line="2417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;外部ログブックソフトウェアへの接続。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2582"/>
+        <location filename="../Configuration.ui" line="2593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; ALL.TXTファイルに記録するデータを構成できます。 TXメッセージの記録をオフにすることはできません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2737"/>
+        <location filename="../Configuration.ui" line="2748"/>
         <source>The program can send your station details and all
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
@@ -7466,210 +7471,210 @@ for assessing propagation and system performance.</source>
         <translation>ぜひ有効にしてください。プログラムは、自局の詳細と全てのデコード情報をPSKR Mapサイトに送信します。http://pskreporter.info これは非常に便利な逆ビーコンで、伝播とシステムパフォーマンスの評価に使用されます。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2757"/>
+        <location filename="../Configuration.ui" line="2768"/>
         <source>Enable DXSummit Spotting </source>
         <translation>DXSummit にスポットを可能化 </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2777"/>
+        <location filename="../Configuration.ui" line="2788"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;外部ソフトウェアへのプライマリUDP接続。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2826"/>
+        <location filename="../Configuration.ui" line="2837"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;デコードを受信するネットワークサービスのオプションのホスト名。.&lt;/p&gt;&lt;p&gt;フォーマット：:&lt;/p&gt;&lt;ul style = &quot;margin-top：0px; margin-bottom： 0px; margin-left：0px; margin-right：0px; -qt-list-indent：1; &quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; hostnamee&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4アドレス&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6アドレス&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4マルチキャストグループアドレス&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6マルチキャストグループアドレス&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;このフィールドをクリアするとUDPステータス更新のブロードキャストが無効になります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2873"/>
+        <location filename="../Configuration.ui" line="2884"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;着信UDP要求の受け入れを示します。 このオプションの効果は、オペレーティングシステムとウィンドウマネージャによって異なります。その目的は、このアプリケーションが最小化または非表示になっている場合でも、着信UDP要求の受け入れを通知することです。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2883"/>
+        <location filename="../Configuration.ui" line="2894"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; UDP要求が受け入れられた場合、ウィンドウを最小化から復元します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2907"/>
+        <location filename="../Configuration.ui" line="2918"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;疑問符でマークされたメッセージは、JTAlertおよびその他のUDPベースのソフトウェアに渡されません。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2917"/>
+        <location filename="../Configuration.ui" line="2928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;選択されたテキストフィルターは、JTDXからのUDPメッセージの送信を制限するために適用されます。たとえば、一部の大陸からのメッセージはブロックできます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2979"/>
+        <location filename="../Configuration.ui" line="2990"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;右クリックして、周波数リストを維持します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3031"/>
-        <location filename="../Configuration.ui" line="6782"/>
+        <location filename="../Configuration.ui" line="3042"/>
+        <location filename="../Configuration.ui" line="6793"/>
         <source> Hz</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3063"/>
+        <location filename="../Configuration.ui" line="3074"/>
         <source> ppm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3118"/>
+        <location filename="../Configuration.ui" line="3129"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
         <translation>アイテムは編集可能です。挿入および削除オプションを右クリックします。</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3280"/>
+        <location filename="../Configuration.ui" line="3291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルに存在しないDXCCの国のメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3290"/>
+        <location filename="../Configuration.ui" line="3301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに基づいて、バンドで新しいDXCCの国のメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3300"/>
+        <location filename="../Configuration.ui" line="3311"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに応じたモードで新しいDXCCの国のメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3320"/>
+        <location filename="../Configuration.ui" line="3331"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルに存在しないグリッドの正方形のメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3330"/>
+        <location filename="../Configuration.ui" line="3341"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに基づいて、バンド上で新しいグリッドの正方形でメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3340"/>
+        <location filename="../Configuration.ui" line="3351"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに応じたモードで新しいグリッドの四角でメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3360"/>
+        <location filename="../Configuration.ui" line="3371"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルに存在しないプリフィックスを持つメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3370"/>
+        <location filename="../Configuration.ui" line="3381"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに基づいて、バンドで新しいプリフィックスを持つメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3380"/>
+        <location filename="../Configuration.ui" line="3391"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに応じたモードで新しいプリフィックスを持つメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3400"/>
+        <location filename="../Configuration.ui" line="3411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルに存在しないコールサインを含むメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3410"/>
+        <location filename="../Configuration.ui" line="3421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに従って、バンドで新しいコールサインを含むメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3420"/>
+        <location filename="../Configuration.ui" line="3431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; wsjtx_log.adiログファイルのデータに応じたモードで新しいコールサイン付きのメッセージを強調表示します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3440"/>
+        <location filename="../Configuration.ui" line="3451"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;交信済みのDXCC、Grid、Callのメッセージに色通知を使用します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3493"/>
+        <location filename="../Configuration.ui" line="3504"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;デフォルトでは「CQ」および「MyCall」メッセージのみがチェックされるため、この設定により、新しいDXCC、Grid、Callの他の受信標準メッセージもチェックできます。 通知に使用されている「その他の標準メッセージ」の色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3516"/>
+        <location filename="../Configuration.ui" line="3527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;最初のメッセージがRX間隔でデコードされたらすぐに通知にシステムサウンドを使用します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3526"/>
+        <location filename="../Configuration.ui" line="3537"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;受信したメッセージにMyCallがある場合、通知にシステムサウンドを使用します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3566"/>
+        <location filename="../Configuration.ui" line="3577"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;青色のマーカーを使用して、進行中のQSO（QSOパーティのコールサインはDXコールウィンドウにある）に関連するデコードされたメッセージにコールサインがあるかどうかを通知します。その他自分のコールサインを含むメッセージは赤色でフォローします。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3605"/>
+        <location filename="../Configuration.ui" line="3616"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;赤いマーカーを使用して、デコードされたメッセージに自局のコールサインがあるかどうかを通知します。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3618"/>
+        <location filename="../Configuration.ui" line="3629"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;他の標準的なメッセージ通知の背景色ではなく、メッセージの最後にマーカーをつけて表示します。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3664"/>
+        <location filename="../Configuration.ui" line="3675"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;プレビュー領域の上部には、何らかの基準がチェックされているメッセージの種類があり、メッセージの種類ごとにテキストの色が選択されています。&lt;br&gt; &lt;br&gt;左側 階層順に割り当てられた基準があり、各基準のメッセージに背景色が選択されています。&lt;br&gt; &lt;br&gt;「交信済み」通知機能は、すべてが「新規」基準または基準をアクティブにした場合にトリガーされる残差原則に基づいています。 &lt;br&gt; &lt;br&gt;ユーザーが特定の背景色でCQおよび「MyCall」メッセージを強調表示する場合は、「逆色」を使用できます。&lt;br&gt; &lt;br&gt;最初に1つの基準を選択し、 新しいバンド/モード通知は、異なる彩度レベルの同様の色で使用される場合があり、後から必要な基準の数を増やすことができます。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3667"/>
-        <location filename="../Configuration.ui" line="6847"/>
+        <location filename="../Configuration.ui" line="3678"/>
+        <location filename="../Configuration.ui" line="6858"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;構成のヒント.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3747"/>
+        <location filename="../Configuration.ui" line="3758"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;RR73 / 73メッセージは、自動選択のCQメッセージと同じ方法で処理します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3753"/>
+        <location filename="../Configuration.ui" line="3764"/>
         <source>RR73/73           </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3792"/>
+        <location filename="../Configuration.ui" line="3803"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;非標準メッセージ（「CQ」および「MyCall」）のテキスト色を設定&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3874"/>
+        <location filename="../Configuration.ui" line="3885"/>
         <source>New CQZ</source>
         <translation>新しいCQ Zone</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3944"/>
+        <location filename="../Configuration.ui" line="3955"/>
         <source>New CQZ on Band/Mode</source>
         <translation>バンド/モード毎のNew CQ Zone</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4014"/>
+        <location filename="../Configuration.ui" line="4025"/>
         <source>New ITUZ</source>
         <translation>新しいITU Zone</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4084"/>
+        <location filename="../Configuration.ui" line="4095"/>
         <source>New ITUZ on Band/Mode</source>
         <translation>バンド/モード毎のNew ITU Zone</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4889"/>
+        <location filename="../Configuration.ui" line="4900"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;この機能を動作させるには、設定の[全般]タブ、または[新しい通知]の通知で[DXCC名/プリフィックスを表示]をアクティブにする必要があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4922"/>
+        <location filename="../Configuration.ui" line="4933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -7690,7 +7695,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; cty.datファイルに基づく国のプリフィックスのリスト。カンマで区切ります。&lt;br&gt;ギャップ(空白)は使えません。使えるリストは次のとおりです：1A、1S、3A、3B6,3B8,3B9,3C、3C0,3D2,3D2 / C、&lt;br&gt;3D2 / R、3DA、3V、3W、3X、3Y / B、3Y / P、4J、4L、4O、4S、4U1I、4U1U、* 4U1V、4W、4X、5A、5B、5H、5N、5R、5T 、&lt;br&gt;5U、5V、5W、5X、5Z、6W、6Y、7O、7P、7Q、7X、8P、8Q、8R、9A、9G、9H、9J、9K、9L、9M2,9M6、9N、9Q、9U、 9V、9X、&lt;br&gt;9Y、A2、A3、A4、A5、A6、A7、A9、AP、BS7、BV、BV9P、BY、C2、C3、C5、C6、C9、CE、CE0X、CE0Y、CE0Z、CE9、CM、&lt;br &gt;CN、CP、CT、CT3、CU、CX、CY0、CY9、D2、D4、D6、DL、DU、E3、E4、E5 / N、E5 / S、E6、E7、EA、EA6、EA8、EA9、 EI、&lt;br&gt;EK、EL、EP、ER、ES、ET、EU、EX、EY、EZ、F、FG、FH、FJ、FK、FK / C、FM、FO、FO / A、FO / C、FO / M、 FP、FR、FS、&lt;br&gt;FT / G、FT / J、FT / T、FT / W、FT / X、FT / Z、FW、FY、G、GD、GI、GJ、* GM / S、GM、GU、GW、H4、H40 、HA、HB、HB0、HC、&lt;br&gt;HC8、HH、HI、HK、HK0 / A、HK0 / M、HL、HP、HR、HS、HV、HZ、I、* IG9、IS、* IT9、J2、J3、J5、J6、J7、J8、 JA、&lt;br&gt;JD / M、JD / O、JT、JW、* JW / B、JX、JY、K、KG4、KH0、KH1、KH2、KH3、KH4、KH5、KH6、KH7K、KH8、KH8 / S、KH9、KL 、&lt;br&gt;KP1、KP2、KP4、KP5、LA、LU、LX、LY、LZ、OA、OD、OE、OH、OH0、OJ0、OK、OM、ON、OX、OY、OZ、P2、P4、P5、PA、 &lt;br&gt;PJ2、PJ4、PJ5、PJ7、PY、PY0F、PY0S、PY0T、PZ、R1FJ、S0、S2、S5、S7、S9、SM、SP、ST、SU、SV、SV / A、SV5、&lt;br&gt;SV9、T2、T30、T31、T32、T33、T5、T7、T8、TA、* TA1、TF、TG、TI、TI9、TJ、TK、TL、TN、TR、TT、TU、TY、TZ、UA 、&lt;br&gt;UA2、UA9、UK、UN、UR、V2、V3、V4、V5、V6、V7、V8、VE、VK、VK0H、VK0M、VK9C、VK9L、VK9M、VK9N、VK9W、VK9X、&lt;br&gt;VP2E、VP2M、VP2V、VP5、VP6、VP6 / D、VP8、VP8 / G、VP8 / H、VP8 / O、VP8 / S、VP9、VQ9、VR、VU、VU4、VU7、XE、&lt;br&gt;XF4、XT、XU、XW、XX9、XZ、YA、YB、YI、YJ、YK、YL、YN、YO、YS、YU、YV、YV0、Z2、Z3、Z6、Z8、ZA、ZB、ZC4、 ZD7、&lt;br&gt;ZD8、ZD9、ZF、ZK3、ZL、ZL7、ZL8、ZL9、ZP、ZS、ZS8 .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4987"/>
+        <location filename="../Configuration.ui" line="4998"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -7698,569 +7703,569 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;コールサインのリストはコンマで区切ります。ギャップ(空白)は使えません。基本コールサインは複合コールサインにも使用されます。AA1AAA、BB1BB、CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5015"/>
+        <location filename="../Configuration.ui" line="5026"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>RX周波数ウィンドウに コンテンツ関連のメッセージを表示する </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5032"/>
+        <location filename="../Configuration.ui" line="5043"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;コンテンツに関連するフリーメッセージをRX周波数メッセージウィンドウに反映させます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5035"/>
+        <location filename="../Configuration.ui" line="5046"/>
         <source>Enable</source>
         <translation>可能</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5042"/>
+        <location filename="../Configuration.ui" line="5053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;コンテンツ名のリストはコンマで区切ります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5049"/>
+        <location filename="../Configuration.ui" line="5060"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;コンテンツ名リストをデフォルト値にリセットします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5066"/>
-        <location filename="../Configuration.ui" line="5089"/>
-        <location filename="../Configuration.ui" line="5112"/>
+        <location filename="../Configuration.ui" line="5077"/>
+        <location filename="../Configuration.ui" line="5100"/>
+        <location filename="../Configuration.ui" line="5123"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RX周波数外でフィルターが適用されます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5069"/>
+        <location filename="../Configuration.ui" line="5080"/>
         <source>Show CQ messages only</source>
         <translation>CQメッセージだけ表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5092"/>
+        <location filename="../Configuration.ui" line="5103"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>CQ/RRR/RR73/73メッセージだけ表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5115"/>
+        <location filename="../Configuration.ui" line="5126"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>CQ/RR73/73メッセージだけ表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5137"/>
+        <location filename="../Configuration.ui" line="5148"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RX周波数外にあるデコードされたフリーメッセージを非表示にします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5140"/>
+        <location filename="../Configuration.ui" line="5151"/>
         <source>Hide decoded free messages</source>
         <translation>デコードされたフリーメッセージを隠す</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5147"/>
+        <location filename="../Configuration.ui" line="5158"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>2番目のコールサインのハッシュが関連付けられていないメッセージを非表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5170"/>
+        <location filename="../Configuration.ui" line="5181"/>
         <source>Scheduler</source>
         <translation>スケジューラ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5178"/>
+        <location filename="../Configuration.ui" line="5189"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;事前定義されたスケジュールによる自動バンド切り替え&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5181"/>
+        <location filename="../Configuration.ui" line="5192"/>
         <source>Band scheduler configuration</source>
         <translation>バンドスケジューラ設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5191"/>
+        <location filename="../Configuration.ui" line="5202"/>
         <source>hh</source>
         <translation>hh</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5201"/>
+        <location filename="../Configuration.ui" line="5212"/>
         <source>mm</source>
         <translation>mm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5211"/>
+        <location filename="../Configuration.ui" line="5222"/>
         <source>Band</source>
         <translation>バンド</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5221"/>
-        <location filename="../Configuration.ui" line="5481"/>
-        <location filename="../Configuration.ui" line="5738"/>
-        <location filename="../Configuration.ui" line="5995"/>
-        <location filename="../Configuration.ui" line="6252"/>
-        <location filename="../Configuration.ui" line="6509"/>
+        <location filename="../Configuration.ui" line="5232"/>
+        <location filename="../Configuration.ui" line="5492"/>
+        <location filename="../Configuration.ui" line="5749"/>
+        <location filename="../Configuration.ui" line="6006"/>
+        <location filename="../Configuration.ui" line="6263"/>
+        <location filename="../Configuration.ui" line="6520"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; JT65周波数が選択されている場合、スケジューラはJT65 + JT9モードを設定します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5224"/>
+        <location filename="../Configuration.ui" line="5235"/>
         <source>JT65+JT9</source>
         <translation>JT65+JT9</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5240"/>
-        <location filename="../Configuration.ui" line="5378"/>
-        <location filename="../Configuration.ui" line="5497"/>
-        <location filename="../Configuration.ui" line="5635"/>
-        <location filename="../Configuration.ui" line="5754"/>
-        <location filename="../Configuration.ui" line="5892"/>
-        <location filename="../Configuration.ui" line="6011"/>
-        <location filename="../Configuration.ui" line="6149"/>
-        <location filename="../Configuration.ui" line="6268"/>
-        <location filename="../Configuration.ui" line="6406"/>
+        <location filename="../Configuration.ui" line="5251"/>
+        <location filename="../Configuration.ui" line="5389"/>
+        <location filename="../Configuration.ui" line="5508"/>
+        <location filename="../Configuration.ui" line="5646"/>
+        <location filename="../Configuration.ui" line="5765"/>
+        <location filename="../Configuration.ui" line="5903"/>
+        <location filename="../Configuration.ui" line="6022"/>
+        <location filename="../Configuration.ui" line="6160"/>
+        <location filename="../Configuration.ui" line="6279"/>
+        <location filename="../Configuration.ui" line="6417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;時間を選択&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5249"/>
-        <location filename="../Configuration.ui" line="5387"/>
-        <location filename="../Configuration.ui" line="5506"/>
-        <location filename="../Configuration.ui" line="5644"/>
-        <location filename="../Configuration.ui" line="5763"/>
-        <location filename="../Configuration.ui" line="5901"/>
-        <location filename="../Configuration.ui" line="6020"/>
-        <location filename="../Configuration.ui" line="6158"/>
-        <location filename="../Configuration.ui" line="6277"/>
-        <location filename="../Configuration.ui" line="6415"/>
+        <location filename="../Configuration.ui" line="5260"/>
+        <location filename="../Configuration.ui" line="5398"/>
+        <location filename="../Configuration.ui" line="5517"/>
+        <location filename="../Configuration.ui" line="5655"/>
+        <location filename="../Configuration.ui" line="5774"/>
+        <location filename="../Configuration.ui" line="5912"/>
+        <location filename="../Configuration.ui" line="6031"/>
+        <location filename="../Configuration.ui" line="6169"/>
+        <location filename="../Configuration.ui" line="6288"/>
+        <location filename="../Configuration.ui" line="6426"/>
         <source>00</source>
         <translation>00</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5254"/>
-        <location filename="../Configuration.ui" line="5511"/>
-        <location filename="../Configuration.ui" line="5768"/>
-        <location filename="../Configuration.ui" line="6025"/>
-        <location filename="../Configuration.ui" line="6282"/>
+        <location filename="../Configuration.ui" line="5265"/>
+        <location filename="../Configuration.ui" line="5522"/>
+        <location filename="../Configuration.ui" line="5779"/>
+        <location filename="../Configuration.ui" line="6036"/>
+        <location filename="../Configuration.ui" line="6293"/>
         <source>01</source>
         <translation>01</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5259"/>
-        <location filename="../Configuration.ui" line="5516"/>
-        <location filename="../Configuration.ui" line="5773"/>
-        <location filename="../Configuration.ui" line="6030"/>
-        <location filename="../Configuration.ui" line="6287"/>
+        <location filename="../Configuration.ui" line="5270"/>
+        <location filename="../Configuration.ui" line="5527"/>
+        <location filename="../Configuration.ui" line="5784"/>
+        <location filename="../Configuration.ui" line="6041"/>
+        <location filename="../Configuration.ui" line="6298"/>
         <source>02</source>
         <translation>02</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5264"/>
-        <location filename="../Configuration.ui" line="5521"/>
-        <location filename="../Configuration.ui" line="5778"/>
-        <location filename="../Configuration.ui" line="6035"/>
-        <location filename="../Configuration.ui" line="6292"/>
+        <location filename="../Configuration.ui" line="5275"/>
+        <location filename="../Configuration.ui" line="5532"/>
+        <location filename="../Configuration.ui" line="5789"/>
+        <location filename="../Configuration.ui" line="6046"/>
+        <location filename="../Configuration.ui" line="6303"/>
         <source>03</source>
         <translation>03</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5269"/>
-        <location filename="../Configuration.ui" line="5526"/>
-        <location filename="../Configuration.ui" line="5783"/>
-        <location filename="../Configuration.ui" line="6040"/>
-        <location filename="../Configuration.ui" line="6297"/>
+        <location filename="../Configuration.ui" line="5280"/>
+        <location filename="../Configuration.ui" line="5537"/>
+        <location filename="../Configuration.ui" line="5794"/>
+        <location filename="../Configuration.ui" line="6051"/>
+        <location filename="../Configuration.ui" line="6308"/>
         <source>04</source>
         <translation>04</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5274"/>
-        <location filename="../Configuration.ui" line="5392"/>
-        <location filename="../Configuration.ui" line="5531"/>
-        <location filename="../Configuration.ui" line="5649"/>
-        <location filename="../Configuration.ui" line="5788"/>
-        <location filename="../Configuration.ui" line="5906"/>
-        <location filename="../Configuration.ui" line="6045"/>
-        <location filename="../Configuration.ui" line="6163"/>
-        <location filename="../Configuration.ui" line="6302"/>
-        <location filename="../Configuration.ui" line="6420"/>
+        <location filename="../Configuration.ui" line="5285"/>
+        <location filename="../Configuration.ui" line="5403"/>
+        <location filename="../Configuration.ui" line="5542"/>
+        <location filename="../Configuration.ui" line="5660"/>
+        <location filename="../Configuration.ui" line="5799"/>
+        <location filename="../Configuration.ui" line="5917"/>
+        <location filename="../Configuration.ui" line="6056"/>
+        <location filename="../Configuration.ui" line="6174"/>
+        <location filename="../Configuration.ui" line="6313"/>
+        <location filename="../Configuration.ui" line="6431"/>
         <source>05</source>
         <translation>05</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5279"/>
-        <location filename="../Configuration.ui" line="5536"/>
-        <location filename="../Configuration.ui" line="5793"/>
-        <location filename="../Configuration.ui" line="6050"/>
-        <location filename="../Configuration.ui" line="6307"/>
+        <location filename="../Configuration.ui" line="5290"/>
+        <location filename="../Configuration.ui" line="5547"/>
+        <location filename="../Configuration.ui" line="5804"/>
+        <location filename="../Configuration.ui" line="6061"/>
+        <location filename="../Configuration.ui" line="6318"/>
         <source>06</source>
         <translation>06</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5284"/>
-        <location filename="../Configuration.ui" line="5541"/>
-        <location filename="../Configuration.ui" line="5798"/>
-        <location filename="../Configuration.ui" line="6055"/>
-        <location filename="../Configuration.ui" line="6312"/>
+        <location filename="../Configuration.ui" line="5295"/>
+        <location filename="../Configuration.ui" line="5552"/>
+        <location filename="../Configuration.ui" line="5809"/>
+        <location filename="../Configuration.ui" line="6066"/>
+        <location filename="../Configuration.ui" line="6323"/>
         <source>07</source>
         <translation>07</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5289"/>
-        <location filename="../Configuration.ui" line="5546"/>
-        <location filename="../Configuration.ui" line="5803"/>
-        <location filename="../Configuration.ui" line="6060"/>
-        <location filename="../Configuration.ui" line="6317"/>
+        <location filename="../Configuration.ui" line="5300"/>
+        <location filename="../Configuration.ui" line="5557"/>
+        <location filename="../Configuration.ui" line="5814"/>
+        <location filename="../Configuration.ui" line="6071"/>
+        <location filename="../Configuration.ui" line="6328"/>
         <source>08</source>
         <translation>08</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5294"/>
-        <location filename="../Configuration.ui" line="5551"/>
-        <location filename="../Configuration.ui" line="5808"/>
-        <location filename="../Configuration.ui" line="6065"/>
-        <location filename="../Configuration.ui" line="6322"/>
+        <location filename="../Configuration.ui" line="5305"/>
+        <location filename="../Configuration.ui" line="5562"/>
+        <location filename="../Configuration.ui" line="5819"/>
+        <location filename="../Configuration.ui" line="6076"/>
+        <location filename="../Configuration.ui" line="6333"/>
         <source>09</source>
         <translation>09</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5299"/>
-        <location filename="../Configuration.ui" line="5397"/>
-        <location filename="../Configuration.ui" line="5556"/>
-        <location filename="../Configuration.ui" line="5654"/>
-        <location filename="../Configuration.ui" line="5813"/>
-        <location filename="../Configuration.ui" line="5911"/>
-        <location filename="../Configuration.ui" line="6070"/>
-        <location filename="../Configuration.ui" line="6168"/>
-        <location filename="../Configuration.ui" line="6327"/>
-        <location filename="../Configuration.ui" line="6425"/>
+        <location filename="../Configuration.ui" line="5310"/>
+        <location filename="../Configuration.ui" line="5408"/>
+        <location filename="../Configuration.ui" line="5567"/>
+        <location filename="../Configuration.ui" line="5665"/>
+        <location filename="../Configuration.ui" line="5824"/>
+        <location filename="../Configuration.ui" line="5922"/>
+        <location filename="../Configuration.ui" line="6081"/>
+        <location filename="../Configuration.ui" line="6179"/>
+        <location filename="../Configuration.ui" line="6338"/>
+        <location filename="../Configuration.ui" line="6436"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5304"/>
-        <location filename="../Configuration.ui" line="5561"/>
-        <location filename="../Configuration.ui" line="5818"/>
-        <location filename="../Configuration.ui" line="6075"/>
-        <location filename="../Configuration.ui" line="6332"/>
+        <location filename="../Configuration.ui" line="5315"/>
+        <location filename="../Configuration.ui" line="5572"/>
+        <location filename="../Configuration.ui" line="5829"/>
+        <location filename="../Configuration.ui" line="6086"/>
+        <location filename="../Configuration.ui" line="6343"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5309"/>
-        <location filename="../Configuration.ui" line="5566"/>
-        <location filename="../Configuration.ui" line="5823"/>
-        <location filename="../Configuration.ui" line="6080"/>
-        <location filename="../Configuration.ui" line="6337"/>
+        <location filename="../Configuration.ui" line="5320"/>
+        <location filename="../Configuration.ui" line="5577"/>
+        <location filename="../Configuration.ui" line="5834"/>
+        <location filename="../Configuration.ui" line="6091"/>
+        <location filename="../Configuration.ui" line="6348"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5314"/>
-        <location filename="../Configuration.ui" line="5571"/>
-        <location filename="../Configuration.ui" line="5828"/>
-        <location filename="../Configuration.ui" line="6085"/>
-        <location filename="../Configuration.ui" line="6342"/>
+        <location filename="../Configuration.ui" line="5325"/>
+        <location filename="../Configuration.ui" line="5582"/>
+        <location filename="../Configuration.ui" line="5839"/>
+        <location filename="../Configuration.ui" line="6096"/>
+        <location filename="../Configuration.ui" line="6353"/>
         <source>13</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5319"/>
-        <location filename="../Configuration.ui" line="5576"/>
-        <location filename="../Configuration.ui" line="5833"/>
-        <location filename="../Configuration.ui" line="6090"/>
-        <location filename="../Configuration.ui" line="6347"/>
+        <location filename="../Configuration.ui" line="5330"/>
+        <location filename="../Configuration.ui" line="5587"/>
+        <location filename="../Configuration.ui" line="5844"/>
+        <location filename="../Configuration.ui" line="6101"/>
+        <location filename="../Configuration.ui" line="6358"/>
         <source>14</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5324"/>
-        <location filename="../Configuration.ui" line="5402"/>
-        <location filename="../Configuration.ui" line="5581"/>
-        <location filename="../Configuration.ui" line="5659"/>
-        <location filename="../Configuration.ui" line="5838"/>
-        <location filename="../Configuration.ui" line="5916"/>
-        <location filename="../Configuration.ui" line="6095"/>
-        <location filename="../Configuration.ui" line="6173"/>
-        <location filename="../Configuration.ui" line="6352"/>
-        <location filename="../Configuration.ui" line="6430"/>
+        <location filename="../Configuration.ui" line="5335"/>
+        <location filename="../Configuration.ui" line="5413"/>
+        <location filename="../Configuration.ui" line="5592"/>
+        <location filename="../Configuration.ui" line="5670"/>
+        <location filename="../Configuration.ui" line="5849"/>
+        <location filename="../Configuration.ui" line="5927"/>
+        <location filename="../Configuration.ui" line="6106"/>
+        <location filename="../Configuration.ui" line="6184"/>
+        <location filename="../Configuration.ui" line="6363"/>
+        <location filename="../Configuration.ui" line="6441"/>
         <source>15</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5329"/>
-        <location filename="../Configuration.ui" line="5586"/>
-        <location filename="../Configuration.ui" line="5843"/>
-        <location filename="../Configuration.ui" line="6100"/>
-        <location filename="../Configuration.ui" line="6357"/>
+        <location filename="../Configuration.ui" line="5340"/>
+        <location filename="../Configuration.ui" line="5597"/>
+        <location filename="../Configuration.ui" line="5854"/>
+        <location filename="../Configuration.ui" line="6111"/>
+        <location filename="../Configuration.ui" line="6368"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5334"/>
-        <location filename="../Configuration.ui" line="5591"/>
-        <location filename="../Configuration.ui" line="5848"/>
-        <location filename="../Configuration.ui" line="6105"/>
-        <location filename="../Configuration.ui" line="6362"/>
+        <location filename="../Configuration.ui" line="5345"/>
+        <location filename="../Configuration.ui" line="5602"/>
+        <location filename="../Configuration.ui" line="5859"/>
+        <location filename="../Configuration.ui" line="6116"/>
+        <location filename="../Configuration.ui" line="6373"/>
         <source>17</source>
         <translation>17</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5339"/>
-        <location filename="../Configuration.ui" line="5596"/>
-        <location filename="../Configuration.ui" line="5853"/>
-        <location filename="../Configuration.ui" line="6110"/>
-        <location filename="../Configuration.ui" line="6367"/>
+        <location filename="../Configuration.ui" line="5350"/>
+        <location filename="../Configuration.ui" line="5607"/>
+        <location filename="../Configuration.ui" line="5864"/>
+        <location filename="../Configuration.ui" line="6121"/>
+        <location filename="../Configuration.ui" line="6378"/>
         <source>18</source>
         <translation>18</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5344"/>
-        <location filename="../Configuration.ui" line="5601"/>
-        <location filename="../Configuration.ui" line="5858"/>
-        <location filename="../Configuration.ui" line="6115"/>
-        <location filename="../Configuration.ui" line="6372"/>
+        <location filename="../Configuration.ui" line="5355"/>
+        <location filename="../Configuration.ui" line="5612"/>
+        <location filename="../Configuration.ui" line="5869"/>
+        <location filename="../Configuration.ui" line="6126"/>
+        <location filename="../Configuration.ui" line="6383"/>
         <source>19</source>
         <translation>19</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5349"/>
-        <location filename="../Configuration.ui" line="5407"/>
-        <location filename="../Configuration.ui" line="5606"/>
-        <location filename="../Configuration.ui" line="5664"/>
-        <location filename="../Configuration.ui" line="5863"/>
-        <location filename="../Configuration.ui" line="5921"/>
-        <location filename="../Configuration.ui" line="6120"/>
-        <location filename="../Configuration.ui" line="6178"/>
-        <location filename="../Configuration.ui" line="6377"/>
-        <location filename="../Configuration.ui" line="6435"/>
+        <location filename="../Configuration.ui" line="5360"/>
+        <location filename="../Configuration.ui" line="5418"/>
+        <location filename="../Configuration.ui" line="5617"/>
+        <location filename="../Configuration.ui" line="5675"/>
+        <location filename="../Configuration.ui" line="5874"/>
+        <location filename="../Configuration.ui" line="5932"/>
+        <location filename="../Configuration.ui" line="6131"/>
+        <location filename="../Configuration.ui" line="6189"/>
+        <location filename="../Configuration.ui" line="6388"/>
+        <location filename="../Configuration.ui" line="6446"/>
         <source>20</source>
         <translation>20</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5354"/>
-        <location filename="../Configuration.ui" line="5611"/>
-        <location filename="../Configuration.ui" line="5868"/>
-        <location filename="../Configuration.ui" line="6125"/>
-        <location filename="../Configuration.ui" line="6382"/>
+        <location filename="../Configuration.ui" line="5365"/>
+        <location filename="../Configuration.ui" line="5622"/>
+        <location filename="../Configuration.ui" line="5879"/>
+        <location filename="../Configuration.ui" line="6136"/>
+        <location filename="../Configuration.ui" line="6393"/>
         <source>21</source>
         <translation>21</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5359"/>
-        <location filename="../Configuration.ui" line="5616"/>
-        <location filename="../Configuration.ui" line="5873"/>
-        <location filename="../Configuration.ui" line="6130"/>
-        <location filename="../Configuration.ui" line="6387"/>
+        <location filename="../Configuration.ui" line="5370"/>
+        <location filename="../Configuration.ui" line="5627"/>
+        <location filename="../Configuration.ui" line="5884"/>
+        <location filename="../Configuration.ui" line="6141"/>
+        <location filename="../Configuration.ui" line="6398"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5364"/>
-        <location filename="../Configuration.ui" line="5621"/>
-        <location filename="../Configuration.ui" line="5878"/>
-        <location filename="../Configuration.ui" line="6135"/>
-        <location filename="../Configuration.ui" line="6392"/>
+        <location filename="../Configuration.ui" line="5375"/>
+        <location filename="../Configuration.ui" line="5632"/>
+        <location filename="../Configuration.ui" line="5889"/>
+        <location filename="../Configuration.ui" line="6146"/>
+        <location filename="../Configuration.ui" line="6403"/>
         <source>23</source>
         <translation>23</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5412"/>
-        <location filename="../Configuration.ui" line="5669"/>
-        <location filename="../Configuration.ui" line="5926"/>
-        <location filename="../Configuration.ui" line="6183"/>
-        <location filename="../Configuration.ui" line="6440"/>
+        <location filename="../Configuration.ui" line="5423"/>
+        <location filename="../Configuration.ui" line="5680"/>
+        <location filename="../Configuration.ui" line="5937"/>
+        <location filename="../Configuration.ui" line="6194"/>
+        <location filename="../Configuration.ui" line="6451"/>
         <source>25</source>
         <translation>25</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5417"/>
-        <location filename="../Configuration.ui" line="5674"/>
-        <location filename="../Configuration.ui" line="5931"/>
-        <location filename="../Configuration.ui" line="6188"/>
-        <location filename="../Configuration.ui" line="6445"/>
+        <location filename="../Configuration.ui" line="5428"/>
+        <location filename="../Configuration.ui" line="5685"/>
+        <location filename="../Configuration.ui" line="5942"/>
+        <location filename="../Configuration.ui" line="6199"/>
+        <location filename="../Configuration.ui" line="6456"/>
         <source>30</source>
         <translation>30</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5422"/>
-        <location filename="../Configuration.ui" line="5679"/>
-        <location filename="../Configuration.ui" line="5936"/>
-        <location filename="../Configuration.ui" line="6193"/>
-        <location filename="../Configuration.ui" line="6450"/>
+        <location filename="../Configuration.ui" line="5433"/>
+        <location filename="../Configuration.ui" line="5690"/>
+        <location filename="../Configuration.ui" line="5947"/>
+        <location filename="../Configuration.ui" line="6204"/>
+        <location filename="../Configuration.ui" line="6461"/>
         <source>35</source>
         <translation>35</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5427"/>
-        <location filename="../Configuration.ui" line="5684"/>
-        <location filename="../Configuration.ui" line="5941"/>
-        <location filename="../Configuration.ui" line="6198"/>
-        <location filename="../Configuration.ui" line="6455"/>
+        <location filename="../Configuration.ui" line="5438"/>
+        <location filename="../Configuration.ui" line="5695"/>
+        <location filename="../Configuration.ui" line="5952"/>
+        <location filename="../Configuration.ui" line="6209"/>
+        <location filename="../Configuration.ui" line="6466"/>
         <source>40</source>
         <translation>40</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5432"/>
-        <location filename="../Configuration.ui" line="5689"/>
-        <location filename="../Configuration.ui" line="5946"/>
-        <location filename="../Configuration.ui" line="6203"/>
-        <location filename="../Configuration.ui" line="6460"/>
+        <location filename="../Configuration.ui" line="5443"/>
+        <location filename="../Configuration.ui" line="5700"/>
+        <location filename="../Configuration.ui" line="5957"/>
+        <location filename="../Configuration.ui" line="6214"/>
+        <location filename="../Configuration.ui" line="6471"/>
         <source>45</source>
         <translation>45</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5437"/>
-        <location filename="../Configuration.ui" line="5694"/>
-        <location filename="../Configuration.ui" line="5951"/>
-        <location filename="../Configuration.ui" line="6208"/>
-        <location filename="../Configuration.ui" line="6465"/>
+        <location filename="../Configuration.ui" line="5448"/>
+        <location filename="../Configuration.ui" line="5705"/>
+        <location filename="../Configuration.ui" line="5962"/>
+        <location filename="../Configuration.ui" line="6219"/>
+        <location filename="../Configuration.ui" line="6476"/>
         <source>50</source>
         <translation>50</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5442"/>
-        <location filename="../Configuration.ui" line="5699"/>
-        <location filename="../Configuration.ui" line="5956"/>
-        <location filename="../Configuration.ui" line="6213"/>
-        <location filename="../Configuration.ui" line="6470"/>
+        <location filename="../Configuration.ui" line="5453"/>
+        <location filename="../Configuration.ui" line="5710"/>
+        <location filename="../Configuration.ui" line="5967"/>
+        <location filename="../Configuration.ui" line="6224"/>
+        <location filename="../Configuration.ui" line="6481"/>
         <source>55</source>
         <translation>55</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5462"/>
-        <location filename="../Configuration.ui" line="5719"/>
-        <location filename="../Configuration.ui" line="5976"/>
-        <location filename="../Configuration.ui" line="6233"/>
-        <location filename="../Configuration.ui" line="6490"/>
+        <location filename="../Configuration.ui" line="5473"/>
+        <location filename="../Configuration.ui" line="5730"/>
+        <location filename="../Configuration.ui" line="5987"/>
+        <location filename="../Configuration.ui" line="6244"/>
+        <location filename="../Configuration.ui" line="6501"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;バンドを選択&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6539"/>
+        <location filename="../Configuration.ui" line="6550"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;バンドスケジューラのアクティブ化.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6542"/>
+        <location filename="../Configuration.ui" line="6553"/>
         <source>Use band scheduler</source>
         <translation>バンドスケジューラを使う</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6565"/>
+        <location filename="../Configuration.ui" line="6576"/>
         <source>Advanced</source>
         <translation>高度設定</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6575"/>
+        <location filename="../Configuration.ui" line="6586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; JT65デコード用のユーザー選択可能なパラメーター。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6578"/>
+        <location filename="../Configuration.ui" line="6589"/>
         <source>JT65 decoding parameters</source>
         <translation>JT65デコードパラメータ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6606"/>
-        <location filename="../Configuration.ui" line="6619"/>
+        <location filename="../Configuration.ui" line="6617"/>
+        <location filename="../Configuration.ui" line="6630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;広帯域デコードパスのデコード試行回数を定義します&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6609"/>
-        <location filename="../Configuration.ui" line="6961"/>
+        <location filename="../Configuration.ui" line="6620"/>
+        <location filename="../Configuration.ui" line="6972"/>
         <source>Number of decoding attempts:</source>
         <translation>デコード試みの数：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6645"/>
-        <location filename="../Configuration.ui" line="6658"/>
+        <location filename="../Configuration.ui" line="6656"/>
+        <location filename="../Configuration.ui" line="6669"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;広帯域デコードのデコードパスの数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6648"/>
+        <location filename="../Configuration.ui" line="6659"/>
         <source>Number of decoding  passes: </source>
         <translation>デコードパスの数： </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6772"/>
+        <location filename="../Configuration.ui" line="6783"/>
         <source>Top decoding frequency: </source>
         <translation>一番上のデコード 周波数： </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6805"/>
-        <location filename="../Configuration.ui" line="6818"/>
+        <location filename="../Configuration.ui" line="6816"/>
+        <location filename="../Configuration.ui" line="6829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RXまたはTXパスの信号歪みにより、JT65A信号の高調波（JT65B、JT65Cなど）が生成される可能性があります。 。 デコードの深さは、必要なCPUリソースに比例し、CPUが遅い場合は1に設定します。 深度の値が大きいほど、より多くの倍音をデコードできます。 JT65BおよびJT65Cデコードがサポートされています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7098"/>
+        <location filename="../Configuration.ui" line="7109"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
         <translation>無線機のインターフェイス、サウンドカードの変更の構成の変更を破棄、または適用しますか</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6678"/>
-        <location filename="../Configuration.ui" line="6691"/>
+        <location filename="../Configuration.ui" line="6689"/>
+        <location filename="../Configuration.ui" line="6702"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RX周波数デコードパスのデコード試行回数を定義します&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6681"/>
-        <location filename="../Configuration.ui" line="6997"/>
+        <location filename="../Configuration.ui" line="6692"/>
+        <location filename="../Configuration.ui" line="7008"/>
         <source>RX frequency decoding attempts:</source>
         <translation>RX 周波数デコード試み：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6717"/>
-        <location filename="../Configuration.ui" line="6730"/>
-        <location filename="../Configuration.ui" line="6888"/>
+        <location filename="../Configuration.ui" line="6728"/>
+        <location filename="../Configuration.ui" line="6741"/>
+        <location filename="../Configuration.ui" line="6899"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;このDTウィンドウは、CQおよび「mycall hiscall hisgrid」メッセージに焦点を合わせたRX周波数CALL3データベースのヒントデコーダーにのみ使用されます。 値を大きくすると、誤ったデコードの数が増える可能性があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6720"/>
+        <location filename="../Configuration.ui" line="6731"/>
         <source>Hinted decoding DT range:</source>
         <translation>ヒントデコードDT範囲：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6751"/>
+        <location filename="../Configuration.ui" line="6762"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;過密状態の帯域に対して2つの追加周波数マスクJT65デコードパスをアクティブにします。 バンド上に信号がほとんどない場合、このデコードパスは自動的にアクティブになります。 この設定は、高速CPUにのみ使用してください。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6757"/>
+        <location filename="../Configuration.ui" line="6768"/>
         <source>Use frequency mask decoding</source>
         <translation>周波数マスクデコードを使う</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6769"/>
-        <location filename="../Configuration.ui" line="6779"/>
+        <location filename="../Configuration.ui" line="6780"/>
+        <location filename="../Configuration.ui" line="6790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; JT65a信号のデコードの上限を定義します。デフォルト値は3000 Hzです。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6808"/>
+        <location filename="../Configuration.ui" line="6819"/>
         <source>Harmonics decoding depth:</source>
         <translation>高調波のデコード深度：</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6844"/>
+        <location filename="../Configuration.ui" line="6855"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;設定はCPUパワーに依存します。過密なHFバンドにはデコードパスの最大数を使用してください。&lt;br&gt; &lt;br&gt;混雑の少ないHF / VHF帯域では、デコードパスの数を減らすことができますが、デコードの試行回数を増やすと、弱い信号のデコード効率が向上する可能性があります&lt;br&gt; &lt;br&gt;低SNR信号のデコード効率に影響するデコード試行回数：広帯域またはRX周波数1。&lt;br &gt; &lt;br&gt;同じ周波数でデコードできる、またはスペクトルが大きく重なり合って互いに近接して配置できる信号の最大数に影響するデコードパスの数、同じ周波数で最大4つの信号、最大7つの信号をデコードできます。 デコードパスの数が4に設定されている場合、RX周波数で信号を送信します。&lt;br&gt; &lt;br&gt; RX分間隔が終了するまでデコードを終了できる値までデコード試行回数を増やします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6932"/>
+        <location filename="../Configuration.ui" line="6943"/>
         <source>T10 decoding parameters</source>
         <translation>T10デコードパラメータ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6958"/>
-        <location filename="../Configuration.ui" line="6968"/>
+        <location filename="../Configuration.ui" line="6969"/>
+        <location filename="../Configuration.ui" line="6979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;広帯域T10デコードのデコード試行回数を定義します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6994"/>
-        <location filename="../Configuration.ui" line="7007"/>
+        <location filename="../Configuration.ui" line="7005"/>
+        <location filename="../Configuration.ui" line="7018"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; RX周波数のT10デコード試行回数を定義します&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>

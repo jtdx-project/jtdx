@@ -554,7 +554,7 @@ private:
   QDir default_save_directory_;
   QDir save_directory_;
 
-  QFont font_;
+  QFont font_ = QGuiApplication::font ();
   QFont next_font_;
 
   QFont decoded_text_font_;
@@ -715,6 +715,7 @@ private:
   bool prompt_to_log_;
   bool autolog_;
   bool insert_blank_;
+  bool useDarkStyle_;
   bool countryName_;
   bool countryPrefix_;
   bool callNotif_;
@@ -960,6 +961,7 @@ bool Configuration::report_in_comments () const {return m_->report_in_comments_;
 bool Configuration::prompt_to_log () const {return m_->prompt_to_log_;}
 bool Configuration::autolog () const {return m_->autolog_;}
 bool Configuration::insert_blank () const {return m_->insert_blank_;}
+bool Configuration::useDarkStyle () const {return m_->useDarkStyle_;}
 bool Configuration::countryName () const {return m_->countryName_;}
 bool Configuration::countryPrefix () const {return m_->countryPrefix_;}
 bool Configuration::callNotif () const {return m_->callNotif_;}
@@ -1838,6 +1840,7 @@ void Configuration::impl::initialize_models ()
   ui_->prompt_to_log_check_box->setChecked (prompt_to_log_);
   ui_->autolog_check_box->setChecked (autolog_);
   ui_->insert_blank_check_box->setChecked (insert_blank_);
+  ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
   ui_->countryName_check_box->setChecked (countryName_);
   ui_->countryPrefix_check_box->setChecked (countryName_ && countryPrefix_);
   ui_->callNotif_check_box->setChecked (callNotif_);
@@ -2001,16 +2004,13 @@ void Configuration::impl::read_settings ()
   next_color_NewCall_ = color_NewCall_ = settings_->value("colorNewCall","#a0a030").toString();
   next_color_NewCallBand_ = color_NewCallBand_ = settings_->value("colorNewCallBand","#e0e070").toString();
   next_color_WorkedCall_ = color_WorkedCall_ = settings_->value("colorWorkedCall","#00ff00").toString();
+  useDarkStyle_ = settings_->value ("UseDarkStyle", false).toBool ();
 
-  if (next_font_.fromString (settings_->value ("Font", QGuiApplication::font ().toString ()).toString ())
-      && next_font_ != font_)
+  next_font_.fromString (settings_->value ("Font", QGuiApplication::font ().toString ()).toString ());
+  if (next_font_ != font_ || useDarkStyle_)
     {
       font_ = next_font_;
       set_application_font (font_);
-    }
-  else
-    {
-      next_font_ = font_;
     }
 
   if (next_decoded_text_font_.fromString (settings_->value ("DecodedTextFont", "Courier, 10").toString ())
@@ -2531,6 +2531,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("PromptToLog", prompt_to_log_);
   settings_->setValue ("AutoQSOLogging", autolog_);
   settings_->setValue ("InsertBlank", insert_blank_);
+  settings_->setValue ("UseDarkStyle", useDarkStyle_);
   settings_->setValue ("countryName", countryName_);
   settings_->setValue ("countryPrefix", countryPrefix_);
   settings_->setValue ("callsignLogFiltering", callNotif_);
@@ -2874,8 +2875,9 @@ void Configuration::impl::accept ()
   // parameters so extract values from models and make them live
   //
 
-  if (next_font_ != font_)
+  if (next_font_ != font_ || useDarkStyle_ != ui_->useDarkStyle_check_box->isChecked ())
     {
+      useDarkStyle_ = ui_->useDarkStyle_check_box->isChecked ();
       font_ = next_font_;
       set_application_font (font_);
     }
@@ -5666,15 +5668,39 @@ void Configuration::impl::set_application_font (QFont const& font)
       if (sheet.startsWith("file:///")) {
         sheet.remove ("file:///");
         QFile sf {sheet};
-        if (sf.open (QFile::ReadOnly | QFile::Text))
+        if (sf.open (QFile::ReadOnly | QFile::Text)) {
             ss = sf.readAll () + ss;
-          }
-      else {
+            useDarkStyle_ = true;
+            ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+        }
+      }
+      else if (useDarkStyle_){
         int lopp = sheet.indexOf("* { font-family:");
         if (lopp > 0) ss = sheet.mid(0,lopp);
+        else {
+          QFile sf {":/qdarkstyle/style.qss"};
+          if (sf.open (QFile::ReadOnly | QFile::Text))
+            ss = sf.readAll () + ss;
+          else {
+            useDarkStyle_ = false;
+            ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+            ss = "";
+          }
+        }
+      }
+      else 
+        ss = "";
+    }
+    else if (useDarkStyle_) {
+      QFile sf {":/qdarkstyle/style.qss"};
+      if (sf.open (QFile::ReadOnly | QFile::Text))
+        ss = sf.readAll () + ss;
+      else {
+        useDarkStyle_ = false;
+        ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+        ss = "";
       }
     }
-
   qApp->setStyleSheet (ss + "* {" + font_as_stylesheet (font) + '}');
   for (auto& widget : qApp->topLevelWidgets ())
     {
