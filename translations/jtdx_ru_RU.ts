@@ -6057,7 +6057,7 @@ RX частоты</translation>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>Тёмный стиль</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
