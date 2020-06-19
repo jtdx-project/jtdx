@@ -1099,28 +1099,28 @@ endif (WIN32)
 add_library (wsjt_qtmm STATIC ${wsjt_qtmm_CXXSRCS} ${wsjt_qtmm_GENUISRCS})
 target_link_libraries (wsjt_qtmm Qt5::Multimedia)
 
-add_executable (ft4sim lib/ft4/ft4sim.f90 wsjtx.rc)
+add_executable (ft4sim lib/ft4/ft4sim.f90 jtdx.rc)
 target_link_libraries (ft4sim wsjt_fort wsjt_cxx)
 
-add_executable (ft8sim lib/ft8sim.f90 wsjtx.rc)
+add_executable (ft8sim lib/ft8sim.f90 jtdx.rc)
 target_link_libraries (ft8sim wsjt_fort wsjt_cxx)
 
-add_executable (ft8sim_gfsk lib/ft8sim_gfsk.f90 wsjtx.rc)
+add_executable (ft8sim_gfsk lib/ft8sim_gfsk.f90 jtdx.rc)
 target_link_libraries (ft8sim_gfsk wsjt_fort wsjt_cxx)
 
-add_executable (jt65sim lib/jt65sim.f90 wsjtx.rc)
+add_executable (jt65sim lib/jt65sim.f90 jtdx.rc)
 target_link_libraries (jt65sim wsjt_fort wsjt_cxx)
 
-add_executable (jt9sim lib/jt9sim.f90 wsjtx.rc)
+add_executable (jt9sim lib/jt9sim.f90 jtdx.rc)
 target_link_libraries (jt9sim wsjt_fort wsjt_cxx)
 
-add_executable (jt10sim lib/jt10sim.f90 wsjtx.rc)
+add_executable (jt10sim lib/jt10sim.f90 jtdx.rc)
 target_link_libraries (jt10sim wsjt_fort wsjt_cxx)
 
-add_executable (jt65code lib/jt65code.f90 wsjtx.rc)
+add_executable (jt65code lib/jt65code.f90 jtdx.rc)
 target_link_libraries (jt65code wsjt_fort wsjt_cxx)
 
-add_executable (jt9code lib/jt9code.f90 wsjtx.rc)
+add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
 add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90)
@@ -1129,7 +1129,7 @@ target_link_libraries (wsprd ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
-add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} wsjtx.rc)
+add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc)
 if (${OPENMP_FOUND} OR APPLE)
   if (APPLE)
     # On  Mac  we don't  have  working  OpenMP  support in  the  C/C++
@@ -1176,7 +1176,7 @@ endif (${OPENMP_FOUND} OR APPLE)
 add_executable (jtdx MACOSX_BUNDLE
   ${wsjtx_CXXSRCS}
   ${wsjtx_GENUISRCS}
-  wsjtx.rc
+  jtdx.rc
   ${WSJTX_ICON_FILE}
   ${wsjtx_RESOURCES_RCC}
   )
@@ -1228,14 +1228,14 @@ qt5_add_resources (message_aggregator_RESOURCES_RCC
 )
 add_executable (message_aggregator
   ${message_aggregator_CXXSRCS}
-  wsjtx.rc
+  jtdx.rc
   ${message_aggregator_RESOURCES_RCC}
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
 add_executable (udp_daemon
   ${UDPDaemon_CXXSRCS}
-  wsjtx.rc
+  jtdx.rc
   )
 target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
 

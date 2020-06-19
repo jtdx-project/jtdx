@@ -173,7 +173,9 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && (tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT || ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20) || (tt.priority > 1 && tt.priority < 5)))) && !tt.continent.isEmpty()) {
+              if (on_black == 0 && tt.time == max_r_time && !tt.continent.isEmpty() && 
+                  (tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT || tt.status == RRR || tt.status == RRR73 || 
+                    ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20))))) {
                 if (tt.priority > priority || 
                       (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT) && !mycall) || (tt.priority == priority &&
                          ((!(algo & 32) && ((!(algo & 16) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
@@ -497,7 +499,10 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                   if (t.status < FIN) {
                       t.s_rep = rep;
                       old_status = t.status;
-                      t.status = status;
+                      if (t.status == SREPORT)
+                        t.status = RRREPORT;
+                      else
+                        t.status = status;
                       if (priority > t.priority) t.priority = priority;
                       if (t.continent.isEmpty ()) t.continent = continent.trimmed();
                       if (t.mpx.isEmpty ()) t.mpx = mpx;
