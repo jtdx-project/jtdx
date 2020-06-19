@@ -248,7 +248,6 @@ contains
               endif
 !$OMP FLUSH (ndecodes,allmessages,allsnrs,allfreq)
 !$omp end critical(update_arrays)
-              ispc1=index(msg37,' ')
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
                 if(nsec.eq.0 .or. nsec.eq.30) then
@@ -259,8 +258,10 @@ contains
                   oddtmp(nmsgloc)%msg=msg37; oddtmp(nmsgloc)%freq=f1
                   oddtmp(nmsgloc)%dt=xdt; oddtmp(nmsgloc)%lstate=.true.
                 endif
+                go to 4 ! tmp filled in
               endif
               if(.not.lFreeText) then ! protection against any possible free txtmsg bit corruption
+                ispc1=index(msg37,' ')
                 if(.not.lhashmsg .and. mod(nsec,15).eq.0 .and. ((i3.eq.1 .and. .not.lft8sd) .or. lft8sd) .and. &
                    msg37(1:ispc1-1).ne.trim(mycall) .and. nmsgloc.lt.130 .and. index(msg37,'<').le.0) then
                   if(index(msg37,'/').gt.0 .and. msg37(1:3).ne.'CQ ') go to 4 ! compound not supported
