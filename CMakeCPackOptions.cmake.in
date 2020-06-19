@@ -33,8 +33,8 @@ if (CPACK_GENERATOR MATCHES "NSIS")
 
   # set the install/unistall icon used for the installer itself
   # There is a bug in NSI that does not handle full unix paths properly.
-  set (CPACK_NSIS_MUI_ICON "@PROJECT_SOURCE_DIR@/icons/windows-icons\\wsjtx.ico")
-  set (CPACK_NSIS_MUI_UNIICON "@PROJECT_SOURCE_DIR@/icons/windows-icons\\wsjtx.ico")
+  set (CPACK_NSIS_MUI_ICON "@PROJECT_SOURCE_DIR@/icons/windows-icons\\jtdx.ico")
+  set (CPACK_NSIS_MUI_UNIICON "@PROJECT_SOURCE_DIR@/icons/windows-icons\\jtdx.ico")
   # set the package header icon for MUI
   set (CPACK_PACKAGE_ICON "@PROJECT_SOURCE_DIR@/icons/windows-icons\\installer_logo.bmp")
   # tell cpack to create links to the doc files
@@ -42,7 +42,7 @@ if (CPACK_GENERATOR MATCHES "NSIS")
     "@PROJECT_MANUAL_DIRECTORY_URL@/@PROJECT_MANUAL@" "@PROJECT_NAME@ Documentation"
     "@PROJECT_HOMEPAGE@" "@PROJECT_NAME@ Web Site"
     )
-  # Use the icon from wsjtx for add-remove programs
+  # Use the icon from jtdx for add-remove programs
   set (CPACK_NSIS_INSTALLED_ICON_NAME "bin\\\\jtdx.exe")
 
   set (CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_DESCRIPTION_SUMMARY}")
