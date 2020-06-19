@@ -1,5 +1,4 @@
-subroutine timf2(x0,k,nfft,nwindow,nb,peaklimit,x1,     &
-     slimit,lstrong,px,nzap)
+subroutine timf2(x0,k,nfft,nwindow,nb,peaklimit,x1,slimit,lstrong,px,nzap)
 
 ! Sequential processing of time-domain I/Q data, using Linrad-like
 ! "first FFT" and "first backward FFT", treating frequencies with
@@ -59,7 +58,7 @@ subroutine timf2(x0,k,nfft,nwindow,nb,peaklimit,x1,     &
 
   x(0:nfft-1)=x0
   if(nwindow.eq.2) x(0:nfft-1)=w(0:nfft-1)*x(0:nfft-1)
-  call four2a(x,nfft,1,-1,0)                       !First forward FFT, r2c
+  call four2a(cx,nfft,1,-1,0)                       !First forward FFT, r2c
   cxt(0:nh)=cx(0:nh)
 
 ! Identify frequencies with strong signals.

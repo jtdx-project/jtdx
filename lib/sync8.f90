@@ -24,7 +24,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=SQRT(real(cx(i))**2 + aimag(cx(i))**2)
         enddo
@@ -39,7 +39,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=real(cx(i))**2 + aimag(cx(i))**2
         enddo
@@ -54,7 +54,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=abs(real(cx(i))) + abs(aimag(cx(i)))
         enddo

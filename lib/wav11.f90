@@ -14,7 +14,7 @@ subroutine wav11(d2,npts,dd)
   jz=min(NZ12,npts)
   x(1:jz)=d2(1:jz)
   x(jz+1:)=0.0
-  call four2a(x,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
+  call four2a(cx,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
   df=12000.0/NFFT1
   ia=5000.0/df
   cx(ia:)=0.0

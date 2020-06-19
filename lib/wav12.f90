@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor Chernikov UA3DJY on August 22nd, 2016.
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine wav12(d2,d1,npts,nbitsam2)
 
 ! Convert i*2 or i*1 data at 11025 Hz (from WSJT *.wav files)
@@ -37,7 +34,7 @@ subroutine wav12(d2,d1,npts,nbitsam2)
 
   x(1:jz)=d2(1:jz)
   x(jz+1:)=0.0
-  call four2a(x,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
+  call four2a(cx,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
   cx(nfft1/2:)=0.0
   call four2a(cx,nfft2,1,1,-1)                   !Inverse FFT, c2r
 
