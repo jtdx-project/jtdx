@@ -424,6 +424,10 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      read(c77,1000) n28a,ipa,n28b,ipb,ir,igrid4,i3
 1000 format(2(b28,b1),b1,b15,b3)
      call unpack28(n28a,call_1,unpk28_success)
+     if(nrx.eq.1 .and. mycall13_set .and. hashmy22.eq.(n28a-2063592)) then
+        call_1='<'//trim(mycall13)//'>'
+        unpk28_success=.true.
+     endif
      if(.not.unpk28_success) unpk77_success=.false.
      call unpack28(n28b,call_2,unpk28_success)
      if(.not.unpk28_success) unpk77_success=.false.
