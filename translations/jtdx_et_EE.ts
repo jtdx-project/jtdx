@@ -6059,7 +6059,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta tumedat stiili</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>

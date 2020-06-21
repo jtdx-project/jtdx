@@ -128,6 +128,8 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
           t.status = NONE;
           t.rx = 0;
           t.tx = 0;
+          t.s_rep = "";
+          t.priority = 0;
           t = _data.value(Radio::base_callsign (callsign),t);
           if (t.status > NONE || t.rx > 0) {
             ret = t.status;
@@ -150,6 +152,11 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
               t.status = FIN;
               _data.insert(Radio::base_callsign (callsign),t);
             }
+          } else {
+            rep = "";
+            rx = 0;
+            tx = 0;
+            prio = 0;
           }
           myas_active = false;
 //          as_active = false;
