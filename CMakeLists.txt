@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.10 FATAL_ERROR)
 
 if (APPLE)
   #
-  # The following variables define the portability and compatability attributes of the Mac OS X build
+  # The following variables define the portability and compatability attributes of the Mac macOS build
   # they are choosen with care and should not be changed without good cause.
   #
   # Among other things these options are chosen to match the portability and compatability options of the
@@ -10,15 +10,15 @@ if (APPLE)
   #
   # otool -l <binary> | grep -A3 LC_VERSION_MIN_MACOSX
   #
-  set (CMAKE_OSX_DEPLOYMENT_TARGET 10.11
-    CACHE STRING "Earliest version of OS X supported
+  set (CMAKE_OSX_DEPLOYMENT_TARGET 10.12
+    CACHE STRING "Earliest version of macOS supported
 
-Earliest version we can support with C++11 & libc++ is 10.9.
+Earliest version we can support with Qt 5.12, C++11 & libc++ is 10.13.
 Do not override this if you intend to build an official deployable installer.")
   set (CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
     CACHE STRING "Mac OS X SDK to build with
 
-Change this to the newest SDK available that you can install on your system (10.13 preferred).
+Change this to the newest SDK available that you can install on your system (>10.14 preferred).
 Do not override this if you intend to build an official deployable installer.")
 endif (APPLE)
 
@@ -780,9 +780,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 #
 
 # Widgets finds its own dependencies.
-find_package (Qt5Widgets 5 REQUIRED)
-find_package (Qt5Multimedia 5 REQUIRED)
-find_package (Qt5LinguistTools 5 REQUIRED)
+find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -1200,9 +1198,9 @@ set_target_properties (jtdx PROPERTIES
 
 target_include_directories (jtdx PRIVATE ${FFTW3_INCLUDE_DIRS})
 if (APPLE)
-  target_link_libraries (jtdx wsjt_fort wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
+  target_link_libraries (jtdx Qt5::SerialPort wsjt_fort wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
 else (APPLE)
-  target_link_libraries (jtdx wsjt_fort_omp wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
+  target_link_libraries (jtdx Qt5::SerialPort wsjt_fort_omp wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
   if (OpenMP_C_FLAGS)
     set_target_properties (jtdx PROPERTIES
       COMPILE_FLAGS "${OpenMP_C_FLAGS}"
@@ -1218,7 +1216,6 @@ else (APPLE)
       )
   endif ()
 endif ()
-qt5_use_modules (jtdx SerialPort) # not sure why the interface link library syntax above doesn't work
 
 add_resources (message_aggregator_RESOURCES /qss ${message_aggregator_STYLESHEETS})
 configure_file (message_aggregator.qrc.in message_aggregator.qrc @ONLY)

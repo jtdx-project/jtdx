@@ -15,7 +15,7 @@ if (EXISTS "${SOURCE_DIR}/.svn")
     REGEX "^[^?].*$"
     )
   if (__svn_changes)
-    message (WARNING "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
+    message (STATUS "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
     set (MY_WC_LAST_CHANGED_REV "${MY_WC_LAST_CHANGED_REV}-dirty")
     foreach (__svn_change ${__svn_changes})
       message (STATUS "${__svn_change}")
@@ -41,7 +41,7 @@ elseif (EXISTS "${SOURCE_DIR}/.git")
       REGEX "^diff-tree"
       )
     if ((NOT ${__git_svn_status} EQUAL 0) OR __svn_changes)
-      message (WARNING "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
+      message (STATUS "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
       set (MY_WC_LAST_CHANGED_REV "${MY_WC_LAST_CHANGED_REV}-dirty")
     endif ()
     # write a file with the SVNVERSION define
@@ -56,7 +56,7 @@ elseif (EXISTS "${SOURCE_DIR}/.git")
     git_local_changes (${SOURCE_DIR} GIT_DIRTY)
     string (SUBSTRING "${GIT_SHA1}" 0 6 GIT_SHA1)
     if ("${GIT_DIRTY}" STREQUAL "DIRTY")
-      message (WARNING "Source tree based on revision ${GIT_REFSPEC} ${GIT_SHA1} appears to have local changes")
+      message (STATUS "Source tree based on revision ${GIT_REFSPEC} ${GIT_SHA1} appears to have local changes")
       set (GIT_SHA1 "${GIT_SHA1}-dirty")
       execute_process (COMMAND ${GIT_EXECUTABLE} --git-dir=${SOURCE_DIR}/.git --work-tree=${SOURCE_DIR} status
 	ERROR_QUIET
