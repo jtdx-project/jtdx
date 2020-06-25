@@ -4696,7 +4696,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
         <location filename="../mainwindow.cpp" line="1724"/>
         <source>lost audio </source>
         <translatorcomment>audio perdido</translatorcomment>
-        <translation></translation>
+        <translation>audio perdido </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1808"/>
