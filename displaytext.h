@@ -28,12 +28,11 @@ public:
     void displayTransmittedText(QString text, QString myCall, QString hisCall, QString skip_tx1, QString modeTx, qint32 txFreq,
                                 QColor color_TxMsg, QsoHistory& qsoHistory);
     void displayQSY(QString text);
-
 signals:
     void selectCallsign(bool alt, bool ctrl);
 
 public slots:
-  void appendText(QString const& text, QString const& bg = "white", QString const& color = "black", int std_type = 0, QString const& servis = " ", QString const& cntry = " ", bool forceBold = false, bool strikethrough = false, bool underline = false, bool DXped = false, bool overwrite = false);
+  void appendText(QString const& text, QString const& bg = "#ffffff", QString const& color = "#000000", int std_type = 0, QString const& servis = " ", QString const& cntry = " ", bool forceBold = false, bool strikethrough = false, bool underline = false, bool DXped = false, bool overwrite = false);
 
 protected:
     void mouseDoubleClickEvent(QMouseEvent *e);

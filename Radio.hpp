@@ -46,6 +46,9 @@ namespace Radio
   QString base_callsign (QString);
   QString effective_prefix (QString);
   QString striped_prefix (QString);
+  // Darkstyle Color
+  QString convert_dark(QString const& color, bool useDarkStyle);
+
 }
 
 Q_DECLARE_METATYPE (Radio::Frequency);

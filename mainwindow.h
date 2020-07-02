@@ -590,6 +590,7 @@ private:
   bool m_callToClipboard;
   bool m_rigOk;
   bool m_bandChanged;
+  bool m_useDarkStyle;
   bool m_lostaudio;
   QString m_lang;
   QString m_lastloggedcall;
@@ -752,6 +753,7 @@ private:
   void msgtype(QString t, QLineEdit* tx);
   void stub();
   void statusChanged();
+  void styleChanged();
   bool gridOK(QString g);
   bool gridRR73(QString g);
   bool reportRCVD(QStringList msg);
