@@ -865,7 +865,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->labAz->setStyleSheet("border: 0px;");
   ui->labDist->setStyleSheet("border: 0px;");
 
-
+  m_useDarkStyle = m_config.useDarkStyle();
   readSettings();		         //Restore user's setup params
 
   QString t;
@@ -1069,7 +1069,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_multInst=QApplication::applicationName ().length()>4;
   foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
 
-  m_useDarkStyle = m_config.useDarkStyle();
   styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
@@ -2337,6 +2336,10 @@ void MainWindow::displayDialFrequency ()
 
 void MainWindow::styleChanged()
 {
+
+  ui->tx5->setStyleSheet(QString("QComboBox {selection-background-color: %1;background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
+  on_directionLineEdit_textChanged(m_cqdir);
+  on_direction1LineEdit_textChanged(m_cqdir);
   if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet(QString("QCheckBox{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
   ui->label_4->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aabec8",m_useDarkStyle)));
   ui->label_9->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aabec8",m_useDarkStyle)));
@@ -2346,12 +2349,13 @@ void MainWindow::styleChanged()
 	else if (m_config.autolog ()) { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#9999ff",m_useDarkStyle))); }
 	else { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
   }
+ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
 ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
     Radio::convert_dark("#dcdcdc",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
   setLastLogdLabel();
 
   if(m_config.spot_to_dxsummit()) {
-    ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset; border-width: 1px;border-color: gray;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
+    ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset; border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
       Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
   else {
     ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
@@ -2362,10 +2366,18 @@ ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;
 //  ui->txrb4->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
 //  ui->txrb5->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
 //  ui->txrb6->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
-  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
-      Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
-
-
+  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
+  else ui->AutoTxButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->tuneButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#ff0000",m_useDarkStyle)));
+  ui->monitorButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->bypassButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->singleQSOButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->AnsB4Button->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->swlButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->filterButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->AGCcButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->hintButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->DecodeButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ffff",m_useDarkStyle)));
 
   statusUpdate ();
 }
@@ -3254,6 +3266,7 @@ void MainWindow::process_Auto()
     } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && !m_skipTx1)) && m_config.answerInCallCount() && 
         ((!m_transmitting && m_config.nAnswerInCallCounter() <= count) || (m_transmitting && m_config.nAnswerInCallCounter() < count)  || m_reply_other)) {
       clearDX (" cleared, RCALL/SREPORT count reached");
+      m_qsoHistory.calllist(hisCall,rpt.toInt(),time);
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
       grid = m_hisGrid;
@@ -5320,7 +5333,7 @@ void MainWindow::clearDXfields (QString reason)
   QString dxcallclr=m_hisCall;
   if (!m_hisCall.isEmpty()) ui->dxCallEntry->clear();
   if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
-  ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
+  ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
   if(!reason.isEmpty() && m_config.write_decoded_debug()) writeToALLTXT("DX Call " + dxcallclr + reason);
 }
 
@@ -5494,9 +5507,9 @@ void MainWindow::msgtype(QString t, QLineEdit* tx)               //msgtype()
   if(itype==6) text=true;
   QPalette p(tx->palette());
   if(text) {
-    p.setColor(QPalette::Base,"#ffccff");
+    p.setColor(QPalette::Base,Radio::convert_dark("#ffccff",m_useDarkStyle));
   } else {
-    p.setColor(QPalette::Base,Qt::white);
+    p.setColor(QPalette::Base,Radio::convert_dark("#ffffff",m_useDarkStyle));
   }
   tx->setPalette(p);
   auto pos  = tx->cursorPosition ();
@@ -5539,13 +5552,13 @@ void MainWindow::on_tx5_currentTextChanged (QString const& text) //tx5 edited
 //      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    "};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
-      ui->tx5->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+      ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle)));
     } else {
-      if(!text.isEmpty () && text.length() < 14) { ui->tx5->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
-      else if(text.length() >= 14) { ui->tx5->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
+      if(!text.isEmpty () && text.length() < 14) { ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle))); }
+      else if(text.length() >= 14) { ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle))); }
       msgtype(text, ui->tx5->lineEdit ());
     }
-  }
+  } else ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
 }
 
 void MainWindow::on_tx5_currentIndexChanged(int index)
@@ -5620,9 +5633,9 @@ void MainWindow::on_wantedGrid_textChanged(const QString &wgrid)
 void MainWindow::on_directionLineEdit_textChanged(const QString &dir) //CQ direction changed
 {
   QString cqdirection = dir.toUpper();
-  if(cqdirection.isEmpty ()) { ui->directionLineEdit->setStyleSheet(QString("background: %1").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
-  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->directionLineEdit->setStyleSheet(QString("background: %1").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
-  else if(cqdirection.length() == 2) { ui->directionLineEdit->setStyleSheet(QString("background: rgb(130,255,140)").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
+  if(cqdirection.isEmpty ()) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
+  else if(cqdirection.length() == 2) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
   m_cqdir = cqdirection;
   if (cqdirection.isEmpty ()) { ui->pbCallCQ->setText("CQ"); }
   else if (cqdirection.length() == 2) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
@@ -5638,9 +5651,9 @@ void MainWindow::on_directionLineEdit_textChanged(const QString &dir) //CQ direc
 void MainWindow::on_direction1LineEdit_textChanged(const QString &dir) //CQ direction changed
 {
   QString cqdirection = dir.toUpper();
-  if(cqdirection.isEmpty ()) { ui->direction1LineEdit->setStyleSheet(QString("background: %1").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
-  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->direction1LineEdit->setStyleSheet(QString("background: %1").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
-  else if(cqdirection.length() == 2) { ui->direction1LineEdit->setStyleSheet(QString("background: rgb(130,255,140)").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
+  if(cqdirection.isEmpty ()) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
+  else if(cqdirection.length() == 2) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
   m_cqdir = cqdirection;
   if (cqdirection.isEmpty ()) { ui->pbCallCQ->setText("CQ"); }
   else if (cqdirection.length() == 2) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
@@ -5701,7 +5714,7 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
           } else {
              m_name = "";
           }
-      ui->dxCallEntry->setStyleSheet(QString("color: black; background: %1").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
+      ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
       if (logClearDXTimer.isActive()) logClearDXTimer.stop();
       // Refresh Tx macros
       QStringListModel* model1 = m_config.macros();
@@ -5822,7 +5835,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
   }
   if (m_config.send_to_eqsl())
       Eqsl->upload(m_config.eqsl_username(),m_config.eqsl_passwd(),m_config.eqsl_nickname(),call,mode,QSO_date_on,rpt_sent,m_config.bands ()->find (dial_freq),eqslcomments);
-  ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#7fff7f",m_useDarkStyle)));
+  ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#7fff7f",m_useDarkStyle)));
   m_lastloggedcall=call;
   m_lastloggedtime=m_jtdxtime->currentDateTimeUtc2();
   if (m_config.clear_DX () && !logClearDXTimer.isActive() && !m_autoTx && !m_autoseq) logClearDXTimer.start ((qAbs(int(m_TRperiod)-m_nseq))*1000);
@@ -5846,7 +5859,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
       m_wantedGridList.removeAt(wgrididx); ui->wantedGrid->setText(m_wantedGridList.join(","));
     }
   }
-  if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition Hound mode"); ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition mode"); ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle))); }
 }
 
 void MainWindow::on_actionJT9_triggered()
@@ -6531,7 +6544,7 @@ void MainWindow::on_freeTextMsg_currentTextChanged (QString const& text)
 //      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    ",this};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
-      ui->freeTextMsg->setStyleSheet(QString("background: #1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+      ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     } else {
       if(text.length() < 14) { ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
       else if(text.length() >= 14) { ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
