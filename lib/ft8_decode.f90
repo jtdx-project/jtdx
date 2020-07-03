@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
                          oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles, &
-                         ncandall,lthread,npenalty
+                         ncandall,lthread
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -151,11 +151,15 @@ contains
       endif
       if(lonepass .and. ipass.ne.1 .and. ipass.ne.4 .and. ipass.ne.7) cycle
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
+      if(ipass.eq.4 .and. .not.lthread(numthreads)) then
+        do i=1,100
+          call sleep_msec(5)
+!$OMP FLUSH (lthread)
+          if(lthread(numthreads)) exit
+        enddo
+      endif
       if(ipass.eq.4 .or. ipass.eq.7) then
-        if(.not.lthread(numthreads)) then
-          if(ipass.eq.4) npenalty=npenalty+1
-          go to 2 ! skip barrier if OS did not allocate last thread to logical core
-        endif
+        if(.not.lthread(numthreads)) go to 2 ! skip barrier if OS did not allocate last thread to logical core
 !$omp barrier
 2       if(nthr.eq.1) then
 !$omp critical(change_dd8)
