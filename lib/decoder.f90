@@ -203,8 +203,7 @@ subroutine multimode_decoder(params)
        oddcopy%dt=odd%dt; oddcopy%lstate=odd%lstate
        odd%lstate=.false.
      endif
-     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0
-     lthread=.false.
+     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0; lthread=.false.
 !do i=9595,9605; print *,i,dd8(i); enddo ! check wav files processing
 
 !     call timer('decft8  ',0)

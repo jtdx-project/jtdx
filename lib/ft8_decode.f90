@@ -65,10 +65,12 @@ contains
 
     this%callback => callback
 
-    lthread(nthr)=.true.
-    if(nthr.eq.numthreads) then
+    if(numthreads.eq.1) lthread=.true.
+    if(numthreads.gt.1 .and. nthr.eq.numthreads) then
+      lthread=.true.
 !$OMP FLUSH (lthread)
     endif
+
     oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
       elseif(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
@@ -151,15 +153,14 @@ contains
       endif
       if(lonepass .and. ipass.ne.1 .and. ipass.ne.4 .and. ipass.ne.7) cycle
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
-      if(ipass.eq.4 .and. .not.lthread(numthreads)) then
+      if(ipass.eq.4 .and. .not.lthread) then
         do i=1,100
-          call sleep_msec(5)
-!$OMP FLUSH (lthread)
-          if(lthread(numthreads)) exit
+          call sleep_msec(5) ! do not let thread reach barrier until last thread is started
+          if(lthread) exit
         enddo
       endif
       if(ipass.eq.4 .or. ipass.eq.7) then
-        if(.not.lthread(numthreads)) go to 2 ! skip barrier if OS did not allocate last thread to logical core
+        if(.not.lthread) go to 2 ! skip barrier if OS did not allocate last thread to logical core
 !$omp barrier
 2       if(nthr.eq.1) then
 !$omp critical(change_dd8)
@@ -174,7 +175,7 @@ contains
 !$OMP FLUSH (dd8)
 !$omp end critical(change_dd8)
         endif
-        if(.not.lthread(numthreads)) go to 8
+        if(.not.lthread) go to 8
 !$omp barrier
 8     endif
       !call timer('sync8   ',0)
