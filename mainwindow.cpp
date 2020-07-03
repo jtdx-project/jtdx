@@ -1015,8 +1015,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->TxPowerComboBox->setCurrentIndex(int(0.3*(m_dBm + 30.0)+0.2));
   ui->cbUploadWSPR_Spots->setChecked(m_uploadSpots);
   
-  ui->pbTxLock->setChecked(m_lockTxFreq);
-  on_pbTxLock_clicked(m_lockTxFreq);
+//  ui->pbTxLock->setChecked(m_lockTxFreq);
+//  on_pbTxLock_clicked(m_lockTxFreq);
 
   if(m_mode.left(4)=="WSPR" and m_pctx>0)  {
     QPalette palette {ui->sbTxPercent->palette ()};
@@ -2318,8 +2318,9 @@ void MainWindow::displayDialFrequency ()
   if (min_offset < 10000u) {
     valid = true;
   }
-
-  update_dynamic_property (ui->labDialFreq, "oob", !valid);
+  update_dynamic_property (ui->labDialFreq, "dark", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->labDialFreq, "darkoob", !valid); 
+  else update_dynamic_property (ui->labDialFreq, "oob", !valid);
   ui->labDialFreq->setText (Radio::pretty_frequency_MHz_string (dial_frequency));
 
   static bool first_freq {true};
@@ -2337,6 +2338,8 @@ void MainWindow::displayDialFrequency ()
 void MainWindow::styleChanged()
 {
 
+  ui->pbTxLock->setChecked(m_lockTxFreq);
+  on_pbTxLock_clicked(m_lockTxFreq);
   ui->tx5->setStyleSheet(QString("QComboBox {selection-background-color: %1;background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
   on_directionLineEdit_textChanged(m_cqdir);
   on_direction1LineEdit_textChanged(m_cqdir);
@@ -6652,7 +6655,9 @@ void MainWindow::on_stopTxButton_clicked()                    //Stop Tx
 
 void MainWindow::rigOpen ()
 {
-  update_dynamic_property (ui->readFreq, "state", "warning");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkwarning");
+  else update_dynamic_property (ui->readFreq, "state", "warning");
   m_rigOk=false;
   ui->readFreq->setText ("");
   ui->readFreq->setEnabled (true);
@@ -6906,7 +6911,9 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   }
 
   displayDialFrequency ();
-  update_dynamic_property (ui->readFreq, "state", "ok");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkok");
+  else update_dynamic_property (ui->readFreq, "state", "ok");
   m_rigOk=true;
   ui->readFreq->setEnabled (false);
   ui->readFreq->setText (s.split () ? "S" : "");
@@ -6920,7 +6927,9 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
 
 void MainWindow::handle_transceiver_failure (QString const& reason)
 {
-  update_dynamic_property (ui->readFreq, "state", "error");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkerror");
+  else update_dynamic_property (ui->readFreq, "state", "error");
   m_rigOk=false;
   ui->readFreq->setEnabled (true);
   haltTx("Rig control error: " + reason + " ");
