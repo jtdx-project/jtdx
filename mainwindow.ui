@@ -423,17 +423,17 @@ QPushButton[state=&quot;ok&quot;] {
  background-color: #00ff00;
 }
 QPushButton[dark1=&quot;true&quot;] {
- background-color: #252525;
- color: #f8f8f8;
+ background-color: #19232d;
+ color: #e6dcd2;
 }
 QPushButton[state=&quot;darkerror&quot;] {
- background-color: #25f8f8;
+ background-color: #19dcd2;
 }
 QPushButton[state=&quot;darkwarning&quot;] {
- background-color: #075df8;
+ background-color: #1976d2;
 }
 QPushButton[state=&quot;darkok&quot;] {
- background-color: #f807f8;
+ background-color: #e623d2;
 }</string>
                     </property>
                     <property name="text">
@@ -674,11 +674,11 @@ QLabel[oob=&quot;true&quot;] {
   background-color: red;
 }
 QLabel[dark=&quot;true&quot;] {
-  color : rgb(248,248,7);
-  background-color : rgb(25,25,25);
+  color : #e6dc2d;
+  background-color : #073d33;
 }
 QLabel[darkoob=&quot;true&quot;] {
-  background-color : rgb(7,248,248);
+  background-color : #19dcd2;
 }
 </string>
                   </property>

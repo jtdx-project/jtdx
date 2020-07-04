@@ -160,7 +160,7 @@ QString convert_dark(QString const& color, bool useDarkStyle)
     bool ok;
     auto hexcolor = color.mid(1).toUInt(&ok, 16);
     if (ok && useDarkStyle) {
-        hexcolor = hexcolor xor 0xf8f8f8;
+        hexcolor = hexcolor xor 0xe6dcd2;
         res.setNum(hexcolor,16);
         res = res.rightJustified(6, '0');
         res = "#" + res.right(6);
