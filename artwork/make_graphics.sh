@@ -51,9 +51,9 @@ convert '/tmp/image-%d.png[0-1]' -background transparent	\
     \( -clone 1 -resize 128 -compress none \)	\
     \( -clone 1 -resize 256 -compress Zip \)	\
     -delete 1 -delete 0	\
-    -alpha remove ../icons/windows-icons/wsjtx.ico
+    -alpha remove ../icons/windows-icons/jtdx.ico
 rm /tmp/image-0.png /tmp/image-1.png
-identify -format '%f %p/%n %m %C/%Q %r %G %A %z\n' ../icons/windows-icons/wsjtx.ico
+identify -format '%f %p/%n %m %C/%Q %r %G %A %z\n' ../icons/windows-icons/jtdx.ico
 #
 inkscape -z -e installer_logo.png -w 150 -h 57 -b white installer_logo.svg
 convert png:installer_logo.png -resize 150x57 +matte BMP3:../icons/windows-icons/installer_logo.bmp

@@ -168,6 +168,7 @@ public:
   bool prompt_to_log () const;
   bool autolog () const;
   bool insert_blank () const;
+  bool useDarkStyle () const;
   bool countryName () const;
   bool countryPrefix () const;
   bool callNotif () const;

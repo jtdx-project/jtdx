@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 
   bool has_style = true;
   int result = 0;
-  for (auto i = 0; i < argc; i++) if (std::string(argv[i]).find("-style") != std::string::npos ) has_style = false;
+  for (auto i = 0; i < argc; i++) {if (std::string(argv[i]).find("-style") != std::string::npos && std::string(argv[i]).find("-stylesheet") == std::string::npos) has_style = false;}
 
   init_random_seed ();
 

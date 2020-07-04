@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20191209
-
 #include "plotter.h"
 #include <qmath.h>
 #include <QDebug>
@@ -325,7 +323,7 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
     if(m_mode=="FT8") {
       QPen pen4(Qt::blue, 2);
       painter0.setPen(pen4);
-      if(!m_houndFilter) { x1=XfromFreq(m_rxFreq-50.0); x2=XfromFreq(m_rxFreq+100.0); }
+      if(!m_houndFilter) { x1=XfromFreq(m_rxFreq-60.0); x2=XfromFreq(m_rxFreq+110.0); }
       else { x1=XfromFreq(m_rxFreq-290.0); x2=XfromFreq(m_rxFreq+340.0); }
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
     }

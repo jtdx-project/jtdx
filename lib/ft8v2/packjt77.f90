@@ -203,7 +203,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
 ! the value of nrx is used to decide when mycall13 or dxcall13 should
 ! be used in place of a callsign from the hashtable
 !
-  parameter (NSEC=84)      !Number of ARRL Sections
+  parameter (NSEC=85)      !Number of ARRL Sections
   parameter (NUSCAN=65)    !Number of US states and Canadian provinces
   parameter (MAXGRID4=32400)
   integer*8 n58
@@ -235,7 +235,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
        "ONS","OR ","ORG","PAC","PR ","QC ","RI ","SB ","SC ","SCV",  &       
        "SD ","SDG","SF ","SFL","SJV","SK ","SNJ","STX","SV ","TN ",  &       
        "UT ","VA ","VI ","VT ","WCF","WI ","WMA","WNY","WPA","WTX",  &       
-       "WV ","WWA","WY ","DX "/
+       "WV ","WWA","WY ","DX ","PE "/
   data cmult/                                                        &
        "AL ","AK ","AZ ","AR ","CA ","CO ","CT ","DE ","FL ","GA ",  &
        "HI ","ID ","IL ","IN ","IA ","KS ","KY ","LA ","ME ","MD ",  &
@@ -289,7 +289,6 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
 ! 0.0  Free text
      call unpacktext77(c77(1:71),msg(1:13))
      msg(14:)='                        '
-     msg=adjustl(msg)
      
   else if(i3.eq.0 .and. n3.eq.1) then
 ! 0.1  K1ABC RR73; W9XYZ <KH1/KH7Z> -11   28 28 10 5       71   DXpedition Mode
@@ -424,6 +423,10 @@ subroutine unpack77(c77,nrx,msg,unpk77_success)
      read(c77,1000) n28a,ipa,n28b,ipb,ir,igrid4,i3
 1000 format(2(b28,b1),b1,b15,b3)
      call unpack28(n28a,call_1,unpk28_success)
+     if(nrx.eq.1 .and. mycall13_set .and. hashmy22.eq.(n28a-2063592)) then
+        call_1='<'//trim(mycall13)//'>'
+        unpk28_success=.true.
+     endif
      if(.not.unpk28_success) unpk77_success=.false.
      call unpack28(n28b,call_2,unpk28_success)
      if(.not.unpk28_success) unpk77_success=.false.
@@ -889,7 +892,7 @@ subroutine pack77_03(nwords,w,i3,n3,c77)
 ! Check 0.3 and 0.4 (ARRL Field Day exchange)
 ! Example message:  WA9XYZ KA1ABC R 16A EMA       28 28 1 4 3 7    71  
 
-  parameter (NSEC=84)      !Number of ARRL Sections
+  parameter (NSEC=85)      !Number of ARRL Sections
   character*13 w(19)
   character*77 c77
   character*6 bcall_1,bcall_2
@@ -904,7 +907,7 @@ subroutine pack77_03(nwords,w,i3,n3,c77)
        "ONS","OR ","ORG","PAC","PR ","QC ","RI ","SB ","SC ","SCV",  &       
        "SD ","SDG","SF ","SFL","SJV","SK ","SNJ","STX","SV ","TN ",  &       
        "UT ","VA ","VI ","VT ","WCF","WI ","WMA","WNY","WPA","WTX",  &       
-       "WV ","WWA","WY ","DX "/
+       "WV ","WWA","WY ","DX ","PE "/
 
   if(nwords.lt.4 .or. nwords.gt.5) return  
   call chkcall(w(1),bcall_1,ok1)

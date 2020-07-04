@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.10 FATAL_ERROR)
 
 if (APPLE)
   #
-  # The following variables define the portability and compatability attributes of the Mac OS X build
+  # The following variables define the portability and compatability attributes of the Mac macOS build
   # they are choosen with care and should not be changed without good cause.
   #
   # Among other things these options are chosen to match the portability and compatability options of the
@@ -10,15 +10,15 @@ if (APPLE)
   #
   # otool -l <binary> | grep -A3 LC_VERSION_MIN_MACOSX
   #
-  set (CMAKE_OSX_DEPLOYMENT_TARGET 10.11
-    CACHE STRING "Earliest version of OS X supported
+  set (CMAKE_OSX_DEPLOYMENT_TARGET 10.12
+    CACHE STRING "Earliest version of macOS supported
 
-Earliest version we can support with C++11 & libc++ is 10.9.
+Earliest version we can support with Qt 5.12, C++11 & libc++ is 10.13.
 Do not override this if you intend to build an official deployable installer.")
   set (CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
     CACHE STRING "Mac OS X SDK to build with
 
-Change this to the newest SDK available that you can install on your system (10.13 preferred).
+Change this to the newest SDK available that you can install on your system (>10.14 preferred).
 Do not override this if you intend to build an official deployable installer.")
 endif (APPLE)
 
@@ -780,9 +780,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 #
 
 # Widgets finds its own dependencies.
-find_package (Qt5Widgets 5 REQUIRED)
-find_package (Qt5Multimedia 5 REQUIRED)
-find_package (Qt5LinguistTools 5 REQUIRED)
+find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -1033,7 +1031,7 @@ add_resources (wsjtx_RESOURCES "" ${TOP_LEVEL_RESOURCES})
 add_resources (wsjtx_RESOURCES /Palettes ${PALETTE_FILES})
 add_resources (wsjtx_RESOURCES /Translations ${QM_FILES})
 
-configure_file (wsjtx.qrc.in wsjtx.qrc @ONLY)
+configure_file (jtdx.qrc.in jtdx.qrc @ONLY)
 
 
 # UI generation
@@ -1042,7 +1040,7 @@ qt5_wrap_ui (wsjtx_GENUISRCS ${wsjtx_UISRCS})
 
 # Resource generation
 qt5_add_resources (wsjtx_RESOURCES_RCC 
-  ${CMAKE_BINARY_DIR}/wsjtx.qrc
+  ${CMAKE_BINARY_DIR}/jtdx.qrc
   contrib/QDarkStyleSheet/qdarkstyle/style.qrc
 )
 
@@ -1099,28 +1097,28 @@ endif (WIN32)
 add_library (wsjt_qtmm STATIC ${wsjt_qtmm_CXXSRCS} ${wsjt_qtmm_GENUISRCS})
 target_link_libraries (wsjt_qtmm Qt5::Multimedia)
 
-add_executable (ft4sim lib/ft4/ft4sim.f90 wsjtx.rc)
+add_executable (ft4sim lib/ft4/ft4sim.f90 jtdx.rc)
 target_link_libraries (ft4sim wsjt_fort wsjt_cxx)
 
-add_executable (ft8sim lib/ft8sim.f90 wsjtx.rc)
+add_executable (ft8sim lib/ft8sim.f90 jtdx.rc)
 target_link_libraries (ft8sim wsjt_fort wsjt_cxx)
 
-add_executable (ft8sim_gfsk lib/ft8sim_gfsk.f90 wsjtx.rc)
+add_executable (ft8sim_gfsk lib/ft8sim_gfsk.f90 jtdx.rc)
 target_link_libraries (ft8sim_gfsk wsjt_fort wsjt_cxx)
 
-add_executable (jt65sim lib/jt65sim.f90 wsjtx.rc)
+add_executable (jt65sim lib/jt65sim.f90 jtdx.rc)
 target_link_libraries (jt65sim wsjt_fort wsjt_cxx)
 
-add_executable (jt9sim lib/jt9sim.f90 wsjtx.rc)
+add_executable (jt9sim lib/jt9sim.f90 jtdx.rc)
 target_link_libraries (jt9sim wsjt_fort wsjt_cxx)
 
-add_executable (jt10sim lib/jt10sim.f90 wsjtx.rc)
+add_executable (jt10sim lib/jt10sim.f90 jtdx.rc)
 target_link_libraries (jt10sim wsjt_fort wsjt_cxx)
 
-add_executable (jt65code lib/jt65code.f90 wsjtx.rc)
+add_executable (jt65code lib/jt65code.f90 jtdx.rc)
 target_link_libraries (jt65code wsjt_fort wsjt_cxx)
 
-add_executable (jt9code lib/jt9code.f90 wsjtx.rc)
+add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
 add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90)
@@ -1129,7 +1127,7 @@ target_link_libraries (wsprd ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
-add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} wsjtx.rc)
+add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc)
 if (${OPENMP_FOUND} OR APPLE)
   if (APPLE)
     # On  Mac  we don't  have  working  OpenMP  support in  the  C/C++
@@ -1176,7 +1174,7 @@ endif (${OPENMP_FOUND} OR APPLE)
 add_executable (jtdx MACOSX_BUNDLE
   ${wsjtx_CXXSRCS}
   ${wsjtx_GENUISRCS}
-  wsjtx.rc
+  jtdx.rc
   ${WSJTX_ICON_FILE}
   ${wsjtx_RESOURCES_RCC}
   )
@@ -1200,9 +1198,9 @@ set_target_properties (jtdx PROPERTIES
 
 target_include_directories (jtdx PRIVATE ${FFTW3_INCLUDE_DIRS})
 if (APPLE)
-  target_link_libraries (jtdx wsjt_fort wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
+  target_link_libraries (jtdx Qt5::SerialPort wsjt_fort wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
 else (APPLE)
-  target_link_libraries (jtdx wsjt_fort_omp wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
+  target_link_libraries (jtdx Qt5::SerialPort wsjt_fort_omp wsjt_cxx wsjt_qt wsjt_qtmm ${hamlib_LIBRARIES} ${FFTW3_LIBRARIES})
   if (OpenMP_C_FLAGS)
     set_target_properties (jtdx PROPERTIES
       COMPILE_FLAGS "${OpenMP_C_FLAGS}"
@@ -1218,7 +1216,6 @@ else (APPLE)
       )
   endif ()
 endif ()
-qt5_use_modules (jtdx SerialPort) # not sure why the interface link library syntax above doesn't work
 
 add_resources (message_aggregator_RESOURCES /qss ${message_aggregator_STYLESHEETS})
 configure_file (message_aggregator.qrc.in message_aggregator.qrc @ONLY)
@@ -1228,14 +1225,14 @@ qt5_add_resources (message_aggregator_RESOURCES_RCC
 )
 add_executable (message_aggregator
   ${message_aggregator_CXXSRCS}
-  wsjtx.rc
+  jtdx.rc
   ${message_aggregator_RESOURCES_RCC}
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
 add_executable (udp_daemon
   ${UDPDaemon_CXXSRCS}
-  wsjtx.rc
+  jtdx.rc
   )
 target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
 

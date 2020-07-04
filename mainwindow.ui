@@ -421,6 +421,19 @@ QPushButton[state=&quot;warning&quot;] {
 }
 QPushButton[state=&quot;ok&quot;] {
  background-color: #00ff00;
+}
+QPushButton[dark1=&quot;true&quot;] {
+ background-color: #19232d;
+ color: #e6dcd2;
+}
+QPushButton[state=&quot;darkerror&quot;] {
+ background-color: #19dcd2;
+}
+QPushButton[state=&quot;darkwarning&quot;] {
+ background-color: #1976d2;
+}
+QPushButton[state=&quot;darkok&quot;] {
+ background-color: #e623d2;
 }</string>
                     </property>
                     <property name="text">
@@ -659,6 +672,13 @@ QPushButton[state=&quot;ok&quot;] {
 }
 QLabel[oob=&quot;true&quot;] {
   background-color: red;
+}
+QLabel[dark=&quot;true&quot;] {
+  color : #e6dc2d;
+  background-color : #073d33;
+}
+QLabel[darkoob=&quot;true&quot;] {
+  background-color : #19dcd2;
 }
 </string>
                   </property>
@@ -2836,7 +2856,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                </size>
               </property>
               <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 150Hz, FT8 hound mode 580Hz, FT4 190Hz, JT9 115Hz, T10: 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 170Hz, FT8 hound mode 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QPushButton:checked {

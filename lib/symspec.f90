@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200128
-
 subroutine symspec(shared_data,k,ntrperiod,nsps,pxdb,s,df3,ihsym,npts8)
 
 ! Input:
@@ -88,7 +86,7 @@ subroutine symspec(shared_data,k,ntrperiod,nsps,pxdb,s,df3,ihsym,npts8)
   ihsym=ihsym+1
 
   xc(0:nfft3-1)=w3(1:nfft3)*xc(0:nfft3-1)    !Apply window w3
-  call four2a(xc,nfft3,1,-1,0)               !Real-to-complex FFT
+  call four2a(cx,nfft3,1,-1,0)               !Real-to-complex FFT
 
   df3=12000.0/nfft3                   !JT9-1: 0.732 Hz = 0.42 * tone spacing
   iz=min(NSMAX,nint(5000.0/df3))

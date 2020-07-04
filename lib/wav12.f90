@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200124
-
 subroutine wav12(d2,d1,npts,nbitsam2)
 
 ! Convert i*2 or i*1 data at 11025 Hz (from WSJT *.wav files)
@@ -13,14 +11,14 @@ subroutine wav12(d2,d1,npts,nbitsam2)
 
   parameter (NZ11=60*11025,NZ12=60*12000)
   parameter (NFFT1=64*11025,NFFT2=64*12000)
-  integer   d1(NZ11)
-  integer   d1a(NZ11)
-  integer   i1
-  integer   i2
-  integer   d2(NZ12)
+  integer*1 d1(NZ11)
+  integer*1 d1a(NZ11)
+  integer*1 i1
+  integer*2 i2
+  integer*2 d2(NZ12)
   real x(NFFT2)
   complex cx(0:NFFT2/2)
-  integer nbitsam2
+  integer*2 nbitsam2
   equivalence (x,cx),(i1,i2)
 
   jz=min(NZ11,npts)
@@ -36,7 +34,7 @@ subroutine wav12(d2,d1,npts,nbitsam2)
 
   x(1:jz)=d2(1:jz)
   x(jz+1:)=0.0
-  call four2a(x,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
+  call four2a(cx,nfft1,1,-1,0)                    !Forwarxd FFT, r2c
   cx(nfft1/2:)=0.0
   call four2a(cx,nfft2,1,1,-1)                   !Inverse FFT, c2r
 

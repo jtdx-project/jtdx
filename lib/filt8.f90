@@ -9,7 +9,7 @@ subroutine filt8(f0,nslots,width,wave)
   equivalence (x,cx)
 
   x=wave
-  call four2a(x,NFFT,1,-1,0)              !r2c
+  call four2a(cx,NFFT,1,-1,0)              !r2c
   df=12000.0/NFFT
   fa=f0 - 0.5*6.25
   fb=f0 + 7.5*6.25 + (nslots-1)*60.0
@@ -35,7 +35,7 @@ subroutine filt8(f0,nslots,width,wave)
 !###
   if(nslots.ne.99) return
   x=wave
-  call four2a(x,NFFT,1,-1,0)              !r2c
+  call four2a(cx,NFFT,1,-1,0)              !r2c
   do i=0,NH
      s1(i)=real(cx(i))**2 + aimag(cx(i))**2
   enddo

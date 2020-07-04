@@ -905,6 +905,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     if(lft8s .or. lft8sd) then
       if(xsnr.lt.-22.0) xsnr=xsnrs-1.0 ! correction offset
       if(xsnr.lt.-26.0) xsnr=-26.0;
+! -26  0.1 1477 ~ AC1MX AC1MX R-17          ^
+      if(len_trim(mycall).gt.3 .and. index(msg37,' '//trim(mycall)//' ').gt.1) then; msg37=''; return; endif 
       go to 4 ! bypass checking to false decode
     endif
 !print *,qual,msg37

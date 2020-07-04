@@ -154,4 +154,19 @@ namespace Radio
     auto const& match = prefix_re.match (callsign);  
     return match.captured ("prefix");
   }
+QString convert_dark(QString const& color, bool useDarkStyle)
+{
+    QString res;
+    bool ok;
+    auto hexcolor = color.mid(1).toUInt(&ok, 16);
+    if (ok && useDarkStyle) {
+        hexcolor = hexcolor xor 0xe6dcd2;
+        res.setNum(hexcolor,16);
+        res = res.rightJustified(6, '0');
+        res = "#" + res.right(6);
+        
+    } else res = color;
+    return res;
+}
+
 }
