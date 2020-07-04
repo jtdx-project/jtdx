@@ -12,7 +12,7 @@ subroutine multimode_decoder(params)
   use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,   &
                        evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,nFT8decd,sumxdt,avexdt,   &
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
-                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandall,lthread
+                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandall
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
   use packjt77, only : lcommonft8b,ihash22,calls22,calls12
 
@@ -167,7 +167,7 @@ subroutine multimode_decoder(params)
      endif
 
 !print *,nuserthr,numcores,numthreads
-     call omp_set_dynamic(.true.)
+     call omp_set_dynamic(.false.)
      call omp_set_nested(.true.)
 
      nfa=params%nfa; nfb=params%nfb; nfqso=params%nfqso; nfawide=params%nfa; nfbwide=params%nfb
@@ -203,7 +203,8 @@ subroutine multimode_decoder(params)
        oddcopy%dt=odd%dt; oddcopy%lstate=odd%lstate
        odd%lstate=.false.
      endif
-     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0; lthread=.false.
+     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0
+
 !do i=9595,9605; print *,i,dd8(i); enddo ! check wav files processing
 
 !     call timer('decft8  ',0)

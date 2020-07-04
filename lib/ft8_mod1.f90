@@ -15,7 +15,7 @@ module ft8_mod1
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decd,nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles,ncandall
-  logical one(0:511,0:8),lthread,lqsomsgdcd
+  logical one(0:511,0:8),lqsomsgdcd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
   data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/

@@ -27,8 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
-                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles, &
-                         ncandall,lthread
+                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -64,12 +63,6 @@ contains
     type(eventmp_struct) eventmp(130)
 
     this%callback => callback
-
-    if(numthreads.eq.1) lthread=.true.
-    if(numthreads.gt.1 .and. nthr.eq.numthreads) then
-      lthread=.true.
-!$OMP FLUSH (lthread)
-    endif
 
     oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
@@ -153,16 +146,9 @@ contains
       endif
       if(lonepass .and. ipass.ne.1 .and. ipass.ne.4 .and. ipass.ne.7) cycle
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
-      if(ipass.eq.4 .and. .not.lthread) then
-        do i=1,100
-          call sleep_msec(5) ! do not let thread reach barrier until last thread is started
-          if(lthread) exit
-        enddo
-      endif
       if(ipass.eq.4 .or. ipass.eq.7) then
-        if(.not.lthread) go to 2 ! skip barrier if OS did not allocate last thread to logical core
 !$omp barrier
-2       if(nthr.eq.1) then
+        if(nthr.eq.1) then
 !$omp critical(change_dd8)
           if(ipass.eq.4) then
             dd8m=dd8
@@ -175,9 +161,8 @@ contains
 !$OMP FLUSH (dd8)
 !$omp end critical(change_dd8)
         endif
-        if(.not.lthread) go to 8
 !$omp barrier
-8     endif
+      endif
       !call timer('sync8   ',0)
       call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread)
       !call timer('sync8   ',1)
