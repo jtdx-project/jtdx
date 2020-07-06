@@ -7103,20 +7103,20 @@ void MainWindow::writeToALLTXT(QString const& text)
 void MainWindow::setTxMsgBtnColor()
 {
   if(0 == ui->tabWidget->currentIndex ()) {
-    if(m_ntx==1) ui->txb1->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==2) ui->txb2->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==3) ui->txb3->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==4) ui->txb4->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==5) ui->txb5->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==6) ui->txb6->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    if(m_ntx==1) ui->txb1->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==2) ui->txb2->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==3) ui->txb3->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==4) ui->txb4->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==5) ui->txb5->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==6) ui->txb6->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
   else if(1 == ui->tabWidget->currentIndex ()) {
-    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
 }
 
