@@ -2963,7 +2963,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Потерянные аудиоблоки.В  FT8 за 15-секундный интервал должно приходить 52 блока аудиоданных. Декодер запускается, если количество блоков аудиоданных достигло  51 в режимах «SWL / поздний уровень декодера» или 50 блоков в противном случае.При использовании ОС Windows были многочисленные  собощений о потере аудиоданных, поэтому для ОС Windows был реализован обходной путь запуска декодера FT8, при условии получения  как минимум 46 из 52 аудиоблоков. Уведомление о потере аудиоблоков говорит  пользователю о том, что в настройке ОС Windows что-то не так. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Потерянные аудиоблоки.В  FT8 за 15-секундный интервал должно приходить 52 блока аудиоданных. Декодер запускается, если количество блоков аудиоданных достигло  51 в режимах «SWL / поздний уровень декодера» или 50 блоков в противном случае.При использовании ОС Windows были многочисленные  собощений о потере аудиоданных, поэтому для ОС Windows был реализован обходной путь запуска декодера FT8, при условии получения  как минимум 46 из 52 аудиоблоков. Уведомление о потере аудиоблоков говорит  пользователю о том, что в настройке ОС Windows что-то не так. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3015,7 +3015,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation type="unfinished">Выбор рабочего диапазона или частоты в мГц</translation>
+        <translation>Выбор рабочего диапазона или частоты в мГц</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
@@ -3087,7 +3087,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для посылки спота на dxsummit.fi клик левой  клавишей  мыши  на  кнопке  ,  при  этом  споттинг   должен   быть   разрешен   в   меню   Настройки--&gt;Лог. Для занесения позывного в список фильтра &apos;скрыть сообщения от позывных&apos; кликните правой клавишей машине на кнопку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для посылки спота на dxsummit.fi клик левой  клавишей  мыши  на  кнопке  ,  при  этом  споттинг   должен   быть   разрешен   в   меню   Настройки--&gt;Лог. Для занесения позывного в список фильтра &apos;скрыть сообщения от позывных&apos; кликните правой клавишей машине на кнопку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
@@ -3247,7 +3247,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1803"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Зарезервировано</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1844"/>
@@ -3278,7 +3278,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить позывной из списка после записи QSO в журнал.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1954"/>
@@ -3311,7 +3311,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить локатор из списка  после ввода QSO в журнал&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2043"/>
@@ -3847,12 +3847,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4300"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Установите мощность передачи в дБм (дБ больше 1 мВт) ,как часть вашего сообщения WSPR.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4214"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Процент 2-минутных последовательностей, отведенных  передаче</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4220"/>
@@ -4613,7 +4613,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5875"/>
         <source>Hide telemetry messages</source>
         <translatorcomment>Скрыть сообщения телеметрии</translatorcomment>
-        <translation></translation>
+        <translation>Скрыть телеметрические сообщения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="457"/>
@@ -4888,7 +4888,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4111"/>
         <source>TUNE</source>
-        <translation></translation>
+        <translation type="unfinished">Настр.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4112"/>
@@ -5486,7 +5486,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запрошенный входной аудиоформат неверен.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
