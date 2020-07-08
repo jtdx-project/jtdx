@@ -5681,7 +5681,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>Границы</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
@@ -7156,7 +7156,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3029"/>
         <source>Intercept:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cмещение:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3042"/>
@@ -7167,7 +7167,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3061"/>
         <source>Slope:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Наклон:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3074"/>
