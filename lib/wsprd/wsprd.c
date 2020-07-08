@@ -711,7 +711,7 @@ int main(int argc, char *argv[])
     int i,j,k;
     unsigned char *symbols, *decdata, *channel_symbols, *apmask, *cw;
     signed char message[]={-9,13,-35,123,57,-39,64,0,0,0,0};
-    char *callsign, *call_loc_pow;
+    char *callsign, *grid, *call_loc_pow;
     char *ptr_to_infile,*ptr_to_infile_suffix;
     char *data_dir=NULL;
     char wisdom_fname[200],all_fname[200],spots_fname[200];
@@ -748,6 +748,8 @@ int main(int argc, char *argv[])
     
     char *hashtab;
     hashtab=calloc(32768*13,sizeof(char));
+    char *loctab;
+    loctab=calloc(32768*5,sizeof(char));
     int nh;
     symbols=calloc(nbits*2,sizeof(unsigned char));
     apmask=calloc(162,sizeof(unsigned char));
@@ -755,6 +757,7 @@ int main(int argc, char *argv[])
     decdata=calloc(11,sizeof(unsigned char));
     channel_symbols=calloc(nbits*2,sizeof(unsigned char));
     callsign=calloc(13,sizeof(char));
+    grid=calloc(5,sizeof(char));
     call_loc_pow=calloc(23,sizeof(char));
     float allfreqs[100];
     char allcalls[100][13];
@@ -947,11 +950,13 @@ int main(int argc, char *argv[])
     for(i=1; i<511; i++) { w3[i]=1.0; }
 
     if( usehashtable ) {
-        char line[80], hcall[12];
+        char line[80], hcall[13], hgrid[5];
         if( (fhash=fopen(hash_fname,"r+")) ) {
             while (fgets(line, sizeof(line), fhash) != NULL) {
-                sscanf(line,"%d %s",&nh,hcall);
+                hgrid[0]='\0';
+                sscanf(line,"%d %s %s",&nh,hcall,hgrid);
                 strcpy(hashtab+nh*13,hcall);
+                if(strlen(hgrid)>0) strcpy(loctab+nh*5,hgrid);
             }
         } else {
             fhash=fopen(hash_fname,"w+");
@@ -1212,6 +1217,7 @@ int main(int argc, char *argv[])
         for (j=0; j<npk; j++) {
             memset(symbols,0,sizeof(char)*nbits*2);
             memset(callsign,0,sizeof(char)*13);
+            memset(grid,0,sizeof(char)*5);
             memset(call_loc_pow,0,sizeof(char)*23);
 
             f1=freq0[j];
@@ -1339,21 +1345,30 @@ int main(int argc, char *argv[])
                             unpack50(message,&n1,&n2);
                             if( !unpackcall(n1,callsign) ) break;
                             callsign[12]=0;
+                            if( !unpackgrid(n2, grid) ) break;
+                            grid[4]=0;
                             ntype = (n2&127) - 64;
+                            int itype;
                             if( (ntype >= 0) && (ntype <= 62) ) {
                                 nu = ntype%10;
+                                itype=1;
                                 if( !(nu == 0 || nu == 3 || nu == 7) ) {
-                                   nadd=nu;
-                                   if( nu > 3 ) nadd=nu-3;
-                                   if( nu > 7 ) nadd=nu-7;
-                                   n3=n2/128+32768*(nadd-1);
-                                   if( !unpackpfx(n3,callsign) ) break;
+                                    nadd=nu;
+                                    if( nu > 3 ) nadd=nu-3;
+                                    if( nu > 7 ) nadd=nu-7;
+                                    n3=n2/128+32768*(nadd-1);
+                                    if( !unpackpfx(n3,callsign) ) {
+                                        break;
+                                    }
+                                    itype=2;
                                 }
                                 ihash=nhash(callsign,strlen(callsign),(uint32_t)146);
-                                if(strncmp(hashtab+ihash*13,callsign,13)==0) {  
-                                   not_decoded=0;
-                                   osd_decode =1;
-                                   break;
+                                if(strncmp(hashtab+ihash*13,callsign,13)==0) {
+                                    if( (itype==1 && strncmp(loctab+ihash*5,grid,5)==0) ||
+                                        (itype==2) ) {
+                                       not_decoded=0;
+                                       osd_decode =1;
+                                    } 
                                 }
                             } 
                         }
@@ -1381,11 +1396,11 @@ int main(int argc, char *argv[])
                 // Unpack the decoded message, update the hashtable, apply
                 // sanity checks on grid and power, and return
                 // call_loc_pow string and also callsign (for de-duping).
-                noprint=unpk_(message,hashtab,call_loc_pow,callsign);
+                noprint=unpk_(message,hashtab,loctab,call_loc_pow,callsign);
 
                 // subtract even on last pass
                 if( subtraction && (ipass < npasses ) && !noprint ) {
-                    if( get_wspr_channel_symbols(call_loc_pow, hashtab, channel_symbols) ) {
+                    if( get_wspr_channel_symbols(call_loc_pow, hashtab, loctab, channel_symbols) ) {
                         subtract_signal2(idat, qdat, npoints, f1, shift1, drift1, channel_symbols);
                     } else {
                         break;
@@ -1510,13 +1525,14 @@ int main(int argc, char *argv[])
         fhash=fopen(hash_fname,"w");
         for (i=0; i<32768; i++) {
             if( strncmp(hashtab+i*13,"\0",1) != 0 ) {
-                fprintf(fhash,"%5d %s\n",i,hashtab+i*13);
+                fprintf(fhash,"%5d %s %s\n",i,hashtab+i*13,loctab+i*5);
             }
         }
         fclose(fhash);
     }
    
     free(hashtab);
+    free(loctab);
     free(symbols);
     free(decdata);
     free(channel_symbols);

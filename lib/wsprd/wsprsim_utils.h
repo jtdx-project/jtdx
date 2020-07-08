@@ -11,6 +11,6 @@
 
 extern int printdata;
 
-int get_wspr_channel_symbols(char* message, char* hashtab, unsigned char* symbols);
+int get_wspr_channel_symbols(char* message, char* hashtab, char*loctab, unsigned char* symbols);
 
 #endif

@@ -1,5 +1,9 @@
 #include "getfile.h"
 #include <QDir>
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+#include <QRandomGenerator>
+#include <random>
+#endif
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
@@ -20,23 +24,25 @@
 
 #include "commons.h"
 
+extern dec_data dec_data;
+
 void getfile(QString fname, int ntrperiod)
 {
-  struct WAVHDR {
-    char ariff[4];
-    int lenfile;
-    char awave[4];
-    char afmt[4];
-    int lenfmt;
-    short nfmt2;
-    short nchan2;
-    int nsamrate;
-    int nbytesec;
-    short nbytesam2;
-    short nbitsam2;
-    char adata[4];
-    int ndata;
-  } hdr;
+  // struct WAVHDR {
+  //   char ariff[4];
+  //   int lenfile;
+  //   char awave[4];
+  //   char afmt[4];
+  //   int lenfmt;
+  //   short nfmt2;
+  //   short nchan2;
+  //   int nsamrate;
+  //   int nbytesec;
+  //   short nbytesam2;
+  //   short nbitsam2;
+  //   char adata[4];
+  //   int ndata;
+  // } hdr;
 
   char name[512];
   strncpy(name,fname.toLatin1(), sizeof (name) - 1);
@@ -79,24 +85,24 @@ void getfile(QString fname, int ntrperiod)
     } fmt;
 
     // read header
-    fread(&desc, 1, sizeof desc, fp); // RIFF
-    fread(type, 1, sizeof type, fp);  // WAVE
+    if (fread(&desc, sizeof desc, 1, fp) < 1) return; // RIFF
+    if (fread(type, sizeof type, 1, fp) < 1) return;  // WAVE
     do
       {
-        fread(&desc, 1, sizeof desc, fp); // WAVE component
+        if (fread(&desc, sizeof desc, 1, fp) < 1) return; // WAVE component
         if (!memcmp(desc.id,"fmt ",4)) {
           fpos_t pos;
           fgetpos(fp,&pos);
-          fread(&fmt,1,sizeof fmt,fp);
+          if (fread(&fmt,sizeof fmt,1,fp) < 1) return;
           fsetpos(fp,&pos);
         }
         if (!memcmp(desc.id,"data",sizeof desc.id)) break;
       } while (!fseek(fp,(desc.size + 1) / 2 * 2,SEEK_CUR));
     
-// Read (and ignore) a 44-byte WAV header; then read data
-//    int n=fread(&hdr,1,44,fp);
+    // Read (and ignore) a 44-byte WAV header; then read data
+    // int n=fread(&hdr,1,44,fp);
     int n=fread(dec_data.d2,2,npts,fp);
-    if(hdr.nsamrate==11025) wav12_(dec_data.d2,dec_data.d2,&n,(short*)&fmt.nbitsam2);
+    if(fmt.nsamrate==11025) wav12_(dec_data.d2,dec_data.d2,&n,(short*)&fmt.nbitsam2);
     fclose(fp);
     dec_data.params.newdat=1;
     dec_data.params.kin=n;
@@ -169,6 +175,10 @@ void savewav(QString fname, int ntrperiod)
 /* Generate gaussian random float with mean=0 and std_dev=1 */
 float gran()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+  static std::normal_distribution<float> d;
+  return d (*QRandomGenerator::global ());
+#else
   float fac,rsq,v1,v2;
   static float gset;
   static int iset;
@@ -190,6 +200,7 @@ float gran()
   gset = v1*fac;
   iset++;
   return v2*fac;
+#endif
 }
 
 int ptt(int nport, int ntx, int* iptt, int* nopen)
@@ -210,7 +221,7 @@ int ptt(int nport, int ntx, int* iptt, int* nopen)
                      FILE_ATTRIBUTE_NORMAL,NULL);
     if(hFile==INVALID_HANDLE_VALUE) {
       QString t;
-      t = QString::asprintf("Cannot open COM port %d for PTT\n",nport);
+      t = t.asprintf("Cannot open COM port %d for PTT\n",nport);
       return 1;
     }
     *nopen=1;

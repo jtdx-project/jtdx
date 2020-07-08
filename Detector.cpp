@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20190927
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 #include "Detector.hpp"
 #include <QtAlgorithms>
 #include <QDebug>
@@ -11,6 +8,7 @@
 extern "C" {
   void   fil4_(qint16*, qint32*, qint16*, qint32*, float*);
 }
+extern dec_data dec_data;
 
 Detector::Detector (unsigned frameRate, double periodLengthInSeconds,
                     JTDXDateTime * jtdxtime, unsigned downSampleFactor, QObject * parent)

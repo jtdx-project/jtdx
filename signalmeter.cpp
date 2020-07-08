@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on March 12th, 2017
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 // Simple bargraph dB meter
 // Implemented by Edson Pereira PY2SDR
 //
@@ -37,7 +34,7 @@ public:
   {
     QFontMetrics font_metrics {font (), nullptr};
 //    return {tick_length + text_indent + font_metrics.width ("00+"), (font_metrics.height () + line_spacing) * range};
-    return {tick_length + text_indent + font_metrics.width ("00000"), (font_metrics.height () + line_spacing) * range};
+    return {tick_length + text_indent + font_metrics.boundingRect ("000000").width (), (font_metrics.height () + line_spacing) * range};
   }
 
 protected:

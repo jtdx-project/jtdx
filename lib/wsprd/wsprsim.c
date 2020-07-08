@@ -128,10 +128,12 @@ int main(int argc, char *argv[])
     int i, c, printchannel=0, writec2=0;
     float snr=50.0;
     float f0=0.0, t0=1.0;
-    char *message, *c2filename, *hashtab;
+    char *message, *c2filename, *hashtab, *loctab;
     c2filename=malloc(sizeof(char)*15);
     hashtab=malloc(sizeof(char)*32768*13);
+    loctab=malloc(sizeof(char)*32768*5);
     memset(hashtab,0,sizeof(char)*32768*13);
+    memset(loctab,0,sizeof(char)*32768*5);
 
     // message length is 22 characters
     message=malloc(sizeof(char)*23);
@@ -150,6 +152,7 @@ int main(int argc, char *argv[])
                 break;
             case 'f':
                 f0 = atof(optarg);
+                break;
             case 'o':
                 c2filename = optarg;
                 writec2=1;
@@ -169,7 +172,7 @@ int main(int argc, char *argv[])
     }
     
     unsigned char channel_symbols[162];
-    get_wspr_channel_symbols(message, hashtab, channel_symbols);
+    get_wspr_channel_symbols(message, hashtab, loctab, channel_symbols);
     
     if( printchannel ) {
         printf("Channel symbols:\n");

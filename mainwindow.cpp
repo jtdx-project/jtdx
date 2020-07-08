@@ -104,7 +104,7 @@ extern "C" {
 
 int volatile itone[NUM_ISCAT_SYMBOLS];	//Audio tones for all Tx symbols
 int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
-struct dec_data dec_data;             // for sharing with Fortran
+dec_data_t dec_data;             // for sharing with Fortran
 
 int rc;
 qint32  g_iptt {0};
@@ -4150,7 +4150,7 @@ void MainWindow::guiUpdate()
     }
 
     icw[0] = 0;
-    auto msg_parts = m_currentMessage.split (' ', QString::SkipEmptyParts);
+    auto msg_parts = m_currentMessage.split (' ', SkipEmptyParts);
 /*    if (msg_parts.size () > 2) {
       // clean up short code forms
       msg_parts[0].remove (QChar {'<'});
@@ -4159,7 +4159,7 @@ void MainWindow::guiUpdate()
 
 // m_currentMessageType m_lastMessageType are always 0 in FT8 mode
     auto is_73 = (m_QSOProgress >= ROGER_REPORT || m_ntx==4 || m_ntx==5) && message_is_73 (m_currentMessageType, msg_parts);
-	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', QString::SkipEmptyParts));
+	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', SkipEmptyParts));
     m_sentFirst73 = is_73 && m_lastloggedcall!=m_hisCall
       && (!lastmsg_is73 || (lastmsg_is73 && !m_lastMessageSent.contains(m_hisCall)));
 
@@ -4741,7 +4741,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   }
 
   auto t3 = decodedtext.string ().left(47);
-  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", QString::SkipEmptyParts);
+  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
   if(t4.size () < 6) return;             //Skip the rest if no decoded text
 
 
@@ -7045,7 +7045,7 @@ bool MainWindow::shortList(QString callsign)
 
 bool MainWindow::isAutoSeq73(QString const& text)
 {
-  auto parts = text.split (' ', QString::SkipEmptyParts);
+  auto parts = text.split (' ', SkipEmptyParts);
   auto partsSize = parts.size ();
   bool b=((partsSize > 0 && (parts[0] == "73" || parts[0] == "TNX" || parts[0] == "TKS" || parts[0] == "TU"))
        || (partsSize > 1 && (parts[1] == "73" || parts[1] == "TNX" || parts[1] == "TKS" || parts[1] == "TU"))
@@ -7252,10 +7252,10 @@ void MainWindow::replayDecodes ()
   // is not checked
 
   // attempt to parse the decoded text
-  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', QString::SkipEmptyParts))
+  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', SkipEmptyParts))
     {
       if (message.size() >= 4 && message.left (4) != "----") {
-          auto const& parts = message.split (' ', QString::SkipEmptyParts);
+          auto const& parts = message.split (' ', SkipEmptyParts);
           if (parts.size () >= 5 && parts[3].contains ('.')) { // WSPR
               postWSPRDecode (false, parts);
           } else {
@@ -7275,7 +7275,7 @@ void MainWindow::replayDecodes ()
 void MainWindow::postDecode (bool is_new, QString const& message)
 {
   auto const& decode = message.trimmed ();
-  auto const& parts = decode.left (22).split (' ', QString::SkipEmptyParts);
+  auto const& parts = decode.left (22).split (' ', SkipEmptyParts);
   if (parts.size () >= 5) {
       auto has_seconds = parts[0].size () > 4;
       bool low_confidence=(QChar {'*'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1)) || (QChar {'^'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1));

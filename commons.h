@@ -26,7 +26,7 @@ extern "C" {
    * bool ndiskdat;              //true ==> data read from *.wav file
    * bool newdat;                //true ==> new data, must do long FFT
    */
-extern struct dec_data {
+typedef struct dec_data {
   float ss[184*NSMAX];
   float savg[NSMAX];
   short int d2[NTMAX*RX_SAMPLE_RATE];
@@ -106,7 +106,7 @@ extern struct dec_data {
     bool lmultinst;
     bool lskiptx1;
     } params;
-} dec_data;
+} dec_data_t;
 
 // for unknown reason values of the variables at beginning of dec_data list are being
 // not updated while Decode button is pushed manually, for decoding again keep variables at end

@@ -41,6 +41,7 @@ class StationList final
   : public QSortFilterProxyModel
 {
   Q_OBJECT
+
 public:
   using Frequency = Radio::Frequency;
   using FrequencyDelta = Radio::FrequencyDelta;

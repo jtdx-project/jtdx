@@ -124,7 +124,7 @@ subroutine unpack77sd(c77,msg,unpk77_success)
          c11(i:i)=c(j:j)
          n58=n58/38
        enddo
-       call_2=adjustl(c11)//'          '
+       call_2=adjustl(c11)//'  '
        msg='CQ '//trim(call_2)
        if(msg(1:4).eq.'CQ <') unpk77_success=.false.
      else

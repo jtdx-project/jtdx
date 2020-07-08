@@ -1,8 +1,8 @@
-
 #include "decodedtext.h"
 #include <QStringList>
 #include <QDebug>
 #include "moc_decodedtext.cpp"
+#include "qt_helpers.hpp"
 //#include <QRegularExpression>
 
 extern "C" {  bool stdmsg_(char const * msg, int len_msg); }
@@ -164,7 +164,7 @@ float DecodedText::dt()
 bool DecodedText::report(QString const& myBaseCall, QString const& dxBaseCall, /*mod*/QString& report, QString& type)
 {
     bool ret = is_standard_;
-    QStringList w=message_.split(" ",QString::SkipEmptyParts);
+    QStringList w=message_.split(" ",SkipEmptyParts);
     if(w.size ()
        && (w[0] == myBaseCall
              || w[0] == "DE"
