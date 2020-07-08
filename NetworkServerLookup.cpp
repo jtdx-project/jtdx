@@ -66,8 +66,7 @@ network_server_lookup (QString query
                 {
                   break;
                 }
-              // drop through
-
+              // fall through
             case QAbstractSocket::AnyIPProtocol:
               found = true;
               break;

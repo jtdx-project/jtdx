@@ -2105,7 +2105,7 @@ void Configuration::impl::read_settings ()
     hideSAmerica_ = settings_->value ("hideSAmerica").toBool ();
   else hideSAmerica_ = false;
 
-  save_directory_ = settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ();
+  save_directory_.setPath (settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ());
 
   {
     //
@@ -3107,7 +3107,7 @@ void Configuration::impl::accept ()
   TX_messages_ = ui_->TX_messages_check_box->isChecked ();
   hide_TX_messages_ = ui_->hide_TX_messages_check_box->isChecked ();
   data_mode_ = static_cast<DataMode> (ui_->TX_mode_button_group->checkedId ());
-  save_directory_ = ui_->save_path_display_label->text ();
+  save_directory_.setPath (ui_->save_path_display_label->text ());
   decode_at_52s_ = ui_->decode_at_52s_check_box->isChecked ();
   beepOnMyCall_ = ui_->beep_on_my_call_check_box->isChecked();
   beepOnNewCQZ_ = ui_->beep_on_newCQZ_check_box->isChecked();
@@ -5009,7 +5009,7 @@ void Configuration::impl::delete_selected_macros (QModelIndexList selected_rows)
 {
   // sort in reverse row order so that we can delete without changing
   // indices underneath us
-  qSort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
+  std::sort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
          {
            return rhs.row () < lhs.row (); // reverse row ordering
          });

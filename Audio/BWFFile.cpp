@@ -344,6 +344,7 @@ bool BWFFile::impl::update_header ()
             {
             case BextVersion::v_0:
               data->version_ = qToBigEndian<quint32> (data->version_);
+              // fall through
             default:
               data->loudness_value_ = qToBigEndian<quint16> (data->loudness_value_);
               data->loudness_range_ = qToBigEndian<quint16> (data->loudness_range_);
@@ -360,6 +361,7 @@ bool BWFFile::impl::update_header ()
             {
             case BextVersion::v_0:
               data->version_ = qToLittleEndian<quint32> (data->version_);
+              // fall through
             default:
               data->loudness_value_ = qToLittleEndian<quint16> (data->loudness_value_);
               data->loudness_range_ = qToLittleEndian<quint16> (data->loudness_range_);
