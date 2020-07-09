@@ -2390,86 +2390,86 @@ Erreur : %2 - %3</translation>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="124"/>
-        <location filename="../HRDTransceiver.cpp" line="149"/>
+        <location filename="../HRDTransceiver.cpp" line="126"/>
+        <location filename="../HRDTransceiver.cpp" line="151"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>Impossible de se connecter à Ham Radio Deluxe
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="158"/>
+        <location filename="../HRDTransceiver.cpp" line="160"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>Impossible d&apos;ouvrir le dossier &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="173"/>
-        <location filename="../HRDTransceiver.cpp" line="197"/>
+        <location filename="../HRDTransceiver.cpp" line="175"/>
+        <location filename="../HRDTransceiver.cpp" line="199"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe : aucun appareil trouvé</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="421"/>
+        <location filename="../HRDTransceiver.cpp" line="423"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe : le Trx ne prend pas en charge le mode de fonctionnement</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="440"/>
+        <location filename="../HRDTransceiver.cpp" line="442"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation>Ham Radio Deluxe : envoi d&apos;un mode non reconnu</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="475"/>
+        <location filename="../HRDTransceiver.cpp" line="477"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation>Ham Radio Deluxe : article non trouvé dans la liste déroulante %1</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="519"/>
+        <location filename="../HRDTransceiver.cpp" line="521"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe : bouton non disponible</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="885"/>
+        <location filename="../HRDTransceiver.cpp" line="887"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu comme prévu</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1034"/>
+        <location filename="../HRDTransceiver.cpp" line="1036"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe : la plateforme a disparu ou a changé</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1049"/>
+        <location filename="../HRDTransceiver.cpp" line="1051"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>Ham Radio Deluxe envoie la commande &quot;%1&quot; a échoué %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1062"/>
-        <location filename="../HRDTransceiver.cpp" line="1075"/>
+        <location filename="../HRDTransceiver.cpp" line="1064"/>
+        <location filename="../HRDTransceiver.cpp" line="1077"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe : a échoué à écrire la commande &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1092"/>
+        <location filename="../HRDTransceiver.cpp" line="1094"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe a envoyé une réponse invalide à notre commande &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1146"/>
+        <location filename="../HRDTransceiver.cpp" line="1148"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1156"/>
+        <location filename="../HRDTransceiver.cpp" line="1158"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe essaie à nouveau la commande d&apos;envoi épuisée &quot;%1</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1169"/>
+        <location filename="../HRDTransceiver.cpp" line="1171"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; comme prévu</translation>
     </message>
@@ -5626,32 +5626,32 @@ Erreur(%2) : %3</translation>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="296"/>
+        <location filename="../StationList.cpp" line="294"/>
         <source>Band name</source>
         <translation>Nom de Bande</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="322"/>
+        <location filename="../StationList.cpp" line="320"/>
         <source>Frequency offset</source>
         <translation>Décalage de fréquence</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="344"/>
+        <location filename="../StationList.cpp" line="342"/>
         <source>Antenna description</source>
         <translation>Description antenne</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="366"/>
+        <location filename="../StationList.cpp" line="364"/>
         <source>Band</source>
         <translation>Bande</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="367"/>
+        <location filename="../StationList.cpp" line="365"/>
         <source>Offset</source>
         <translation>Compensation</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="368"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Antenna Description</source>
         <translation>Description antenne</translation>
     </message>

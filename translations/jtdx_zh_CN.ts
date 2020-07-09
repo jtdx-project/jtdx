@@ -2389,86 +2389,86 @@ Error: %2 - %3</source>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="124"/>
-        <location filename="../HRDTransceiver.cpp" line="149"/>
+        <location filename="../HRDTransceiver.cpp" line="126"/>
+        <location filename="../HRDTransceiver.cpp" line="151"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>无法连接到 Ham Radio Deluxe
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="158"/>
+        <location filename="../HRDTransceiver.cpp" line="160"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>无法打开文件 &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="173"/>
-        <location filename="../HRDTransceiver.cpp" line="197"/>
+        <location filename="../HRDTransceiver.cpp" line="175"/>
+        <location filename="../HRDTransceiver.cpp" line="199"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe: 未找到无线电设备</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="421"/>
+        <location filename="../HRDTransceiver.cpp" line="423"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe: 无线电设备不支持模式</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="440"/>
+        <location filename="../HRDTransceiver.cpp" line="442"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation>Ham Radio Deluxe: 发送了一个无法识别的模式</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="475"/>
+        <location filename="../HRDTransceiver.cpp" line="477"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation>Ham Radio Deluxe: 在 %1 下拉列表中找不到项目</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="519"/>
+        <location filename="../HRDTransceiver.cpp" line="521"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe: 按钮不可用</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="885"/>
+        <location filename="../HRDTransceiver.cpp" line="887"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>Ham Radio Deluxe 没有如预期的那样响应</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1034"/>
+        <location filename="../HRDTransceiver.cpp" line="1036"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe: 无线电设备已经消失或改变</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1049"/>
+        <location filename="../HRDTransceiver.cpp" line="1051"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>Ham Radio Deluxe 发送命令 &quot;%1&quot; 失败 %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1062"/>
-        <location filename="../HRDTransceiver.cpp" line="1075"/>
+        <location filename="../HRDTransceiver.cpp" line="1064"/>
+        <location filename="../HRDTransceiver.cpp" line="1077"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe: 无法写入命令 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1092"/>
+        <location filename="../HRDTransceiver.cpp" line="1094"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe 对我们的命令发出了无效的回复 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1146"/>
+        <location filename="../HRDTransceiver.cpp" line="1148"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>Ham Radio Deluxe 无法回复命令 &quot;%1&quot; %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1156"/>
+        <location filename="../HRDTransceiver.cpp" line="1158"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe 发送命令重试失败 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1169"/>
+        <location filename="../HRDTransceiver.cpp" line="1171"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>Ham Radio Deluxe 没有回应预期的命令 &quot;%1&quot;</translation>
     </message>
@@ -5622,32 +5622,32 @@ Error(%2): %3</source>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="296"/>
+        <location filename="../StationList.cpp" line="294"/>
         <source>Band name</source>
         <translation>波段名称</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="322"/>
+        <location filename="../StationList.cpp" line="320"/>
         <source>Frequency offset</source>
         <translation>频率偏移</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="344"/>
+        <location filename="../StationList.cpp" line="342"/>
         <source>Antenna description</source>
         <translation>天线描述</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="366"/>
+        <location filename="../StationList.cpp" line="364"/>
         <source>Band</source>
         <translation>波段</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="367"/>
+        <location filename="../StationList.cpp" line="365"/>
         <source>Offset</source>
         <translation>偏移</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="368"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Antenna Description</source>
         <translation>天线描述</translation>
     </message>

@@ -2392,88 +2392,88 @@ Viga: %2 - %3</translation>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="124"/>
-        <location filename="../HRDTransceiver.cpp" line="149"/>
+        <location filename="../HRDTransceiver.cpp" line="126"/>
+        <location filename="../HRDTransceiver.cpp" line="151"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>Ham Radio Deluxega ei õnnestu ühenduda
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="158"/>
+        <location filename="../HRDTransceiver.cpp" line="160"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>Faili &quot;%1&quot; avamine ebaõnnestus: %2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="173"/>
-        <location filename="../HRDTransceiver.cpp" line="197"/>
+        <location filename="../HRDTransceiver.cpp" line="175"/>
+        <location filename="../HRDTransceiver.cpp" line="199"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe: raadiot ei leitud</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="421"/>
+        <location filename="../HRDTransceiver.cpp" line="423"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe: raadio ei toeta seda töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="440"/>
+        <location filename="../HRDTransceiver.cpp" line="442"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translatorcomment>-režiim vs -liik (a&apos;la SSB vs USB vs Phone), vajab konteksti analüüsi</translatorcomment>
         <translation>Ham Radio Deluxe: saatis tundmatu töörežiimi</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="475"/>
+        <location filename="../HRDTransceiver.cpp" line="477"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translatorcomment>või: rippmenüü %1 üksust ei leitud</translatorcomment>
         <translation>Ham Radio Deluxe: %1 rippmenüü üksust ei leitud</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="519"/>
+        <location filename="../HRDTransceiver.cpp" line="521"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe: nupp pole saadaval</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="885"/>
+        <location filename="../HRDTransceiver.cpp" line="887"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>Ham Radio Deluxe ei vastanud ootuspäraselt</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1034"/>
+        <location filename="../HRDTransceiver.cpp" line="1036"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe: raadio on kadunud või muutunud</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1049"/>
+        <location filename="../HRDTransceiver.cpp" line="1051"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>Ham Radio Deluxe saatmiskäsk &quot;%1&quot; ebaõnnestus %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1062"/>
-        <location filename="../HRDTransceiver.cpp" line="1075"/>
+        <location filename="../HRDTransceiver.cpp" line="1064"/>
+        <location filename="../HRDTransceiver.cpp" line="1077"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe: käsku ei õnnestu kirjutada &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1092"/>
+        <location filename="../HRDTransceiver.cpp" line="1094"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe saatis meie käsule kehtetu vastuse &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1146"/>
+        <location filename="../HRDTransceiver.cpp" line="1148"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>Ham Radio Deluxe-l ei õnnestu käsule vastata &quot;%1&quot; %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1156"/>
+        <location filename="../HRDTransceiver.cpp" line="1158"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe käsu saatmise kordused ammendatud &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1169"/>
+        <location filename="../HRDTransceiver.cpp" line="1171"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>Ham Radio Deluxe ei vastanud käsule &quot;%1&quot; ootuspäraselt</translation>
     </message>
@@ -5633,32 +5633,32 @@ Error(%2): %3</source>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="296"/>
+        <location filename="../StationList.cpp" line="294"/>
         <source>Band name</source>
         <translation>Laineala nimetus</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="322"/>
+        <location filename="../StationList.cpp" line="320"/>
         <source>Frequency offset</source>
         <translation>Sageduse nihe</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="344"/>
+        <location filename="../StationList.cpp" line="342"/>
         <source>Antenna description</source>
         <translation>Antenni kirjeldus</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="366"/>
+        <location filename="../StationList.cpp" line="364"/>
         <source>Band</source>
         <translation>Laineala</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="367"/>
+        <location filename="../StationList.cpp" line="365"/>
         <source>Offset</source>
         <translation>Nihe</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="368"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Antenna Description</source>
         <translation>Antenni kirjeldus</translation>
     </message>

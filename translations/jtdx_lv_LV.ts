@@ -60,12 +60,12 @@
     <message>
         <location filename="../Configuration.cpp" line="1203"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1204"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1219"/>
@@ -98,33 +98,33 @@ Another application may be locking the directory</source>
         <location filename="../Configuration.cpp" line="1454"/>
         <location filename="../Configuration.cpp" line="1506"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation type="unfinished">&amp;Dzēst</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1458"/>
         <location filename="../Configuration.cpp" line="1510"/>
         <source>&amp;Insert ...</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1462"/>
         <source>&amp;Load ...</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1466"/>
         <source>&amp;Save as ...</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1470"/>
         <source>&amp;Merge ...</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1474"/>
         <source>&amp;Reset</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2698"/>
@@ -185,7 +185,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="2768"/>
         <source>Invalid PTT method</source>
-        <translation>Nkorekta PTT metode</translation>
+        <translation>Nekorekta PTT metode</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2778"/>
@@ -195,17 +195,17 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="3286"/>
         <source>CQ/73 in message</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3287"/>
         <source>CQ in message</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4470"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>JTDX izvēlētā fonta dekodēšanas tekstam</translation>
+        <translation>JTDX dekodēšanas tekstam izvēlētais fonts</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5092"/>
@@ -233,19 +233,19 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="5111"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation>Vai tiešām vēlaties atmest pašreizējās darba frekvences un aizstāt tās ar ielādētajām?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5123"/>
         <source>Merge Working Frequencies</source>
-        <translation>Apvienot darba frekvences</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5150"/>
         <location filename="../Configuration.cpp" line="5159"/>
         <location filename="../Configuration.cpp" line="5169"/>
         <source>Not a valid frequencies file</source>
-        <translation>Nav derīgs frekvenču fails</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5150"/>
@@ -285,7 +285,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="5220"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>Vai tiešām vēlaties ateikties no pašreizējās darba frekvences un aizstāt tās ar noklusēto frekvenci?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5280"/>
@@ -295,7 +295,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="5296"/>
         <source>Failed to open connection to rig</source>
-        <translation>Kļūda, savienojot ar transīveru</translation>
+        <translation>Kļūda, savienojoties ar transīveru</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5539"/>
@@ -308,12 +308,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>kādā veidā?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation>Neatkarīgais Maltas Bruņinieku ordenis</translation>
+        <translation type="unfinished">Neatkarīgais Maltas Bruņinieku ordenis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
@@ -588,7 +588,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation>Kongo Demokrātiskā Republika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
@@ -968,7 +968,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation>Glorjēzu salas.</translation>
+        <translation>Glorjēzu salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
@@ -2143,7 +2143,7 @@ Formāts:
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
@@ -2220,7 +2220,7 @@ Formāts:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translation>Pelēkais laiks:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2236,7 +2236,8 @@ Formāts:
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>URL kķuda:
+&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="130"/>
@@ -2298,7 +2299,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Tīkla kļūda</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
@@ -2324,12 +2325,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>IARU &amp;Reģionas:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modes:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="228"/>
@@ -2339,7 +2340,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
@@ -2359,7 +2360,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="527"/>
         <location filename="../FrequencyList.cpp" line="694"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Modes</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="559"/>
@@ -2377,89 +2378,89 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Modes Frekvence</translation>
     </message>
 </context>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="124"/>
-        <location filename="../HRDTransceiver.cpp" line="149"/>
+        <location filename="../HRDTransceiver.cpp" line="126"/>
+        <location filename="../HRDTransceiver.cpp" line="151"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="158"/>
+        <location filename="../HRDTransceiver.cpp" line="160"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="173"/>
-        <location filename="../HRDTransceiver.cpp" line="197"/>
+        <location filename="../HRDTransceiver.cpp" line="175"/>
+        <location filename="../HRDTransceiver.cpp" line="199"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="421"/>
+        <location filename="../HRDTransceiver.cpp" line="423"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="440"/>
+        <location filename="../HRDTransceiver.cpp" line="442"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="475"/>
+        <location filename="../HRDTransceiver.cpp" line="477"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="519"/>
+        <location filename="../HRDTransceiver.cpp" line="521"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="885"/>
+        <location filename="../HRDTransceiver.cpp" line="887"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1034"/>
+        <location filename="../HRDTransceiver.cpp" line="1036"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1049"/>
+        <location filename="../HRDTransceiver.cpp" line="1051"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1062"/>
-        <location filename="../HRDTransceiver.cpp" line="1075"/>
+        <location filename="../HRDTransceiver.cpp" line="1064"/>
+        <location filename="../HRDTransceiver.cpp" line="1077"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1092"/>
+        <location filename="../HRDTransceiver.cpp" line="1094"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1146"/>
+        <location filename="../HRDTransceiver.cpp" line="1148"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1156"/>
+        <location filename="../HRDTransceiver.cpp" line="1158"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1169"/>
+        <location filename="../HRDTransceiver.cpp" line="1171"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2779,7 +2780,7 @@ Error: %2 - %3</source>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <location filename="../mainwindow.cpp" line="3822"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nē</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
@@ -2804,7 +2805,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Close</source>
-        <translation>Acelt</translation>
+        <translation>Aizvērt</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="51"/>
@@ -2858,7 +2859,7 @@ Error: %2 - %3</source>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
@@ -2878,12 +2879,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation></translation>
+        <translation>Rpt noraidītais</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation></translation>
+        <translation>Rpt saņemtais</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
@@ -2910,7 +2911,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation>Komentāri</translation>
+        <translation>Komentārs</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
@@ -2920,12 +2921,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="27"/>
         <source>&amp;OK</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="28"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -2949,7 +2950,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="181"/>
         <location filename="../mainwindow.ui" line="2189"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
@@ -2966,7 +2967,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="6085"/>
         <location filename="../mainwindow.cpp" line="6096"/>
         <source>Band Activity</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
@@ -2976,7 +2977,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>?</source>
-        <translation></translation>
+        <translation>?</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="664"/>
@@ -3001,7 +3002,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Spt</source>
-        <translation></translation>
+        <translation>Spots</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
@@ -3038,7 +3039,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>prop</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="991"/>
@@ -3086,7 +3087,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="5324"/>
         <location filename="../mainwindow.cpp" line="5739"/>
         <source>DX Call</source>
-        <translation></translation>
+        <translation>DX Izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1355"/>
@@ -3177,12 +3178,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1719"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1747"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1762"/>
@@ -3248,7 +3249,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1847"/>
         <source> Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation> Jauda Pwr</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1869"/>
@@ -3264,7 +3265,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>callsign:</source>
-        <translation type="unfinished"></translation>
+        <translation>izsaukuma signāls:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
@@ -3297,7 +3298,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>lokātors:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
@@ -3328,7 +3329,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2061"/>
         <source>country:</source>
-        <translation type="unfinished"></translation>
+        <translation>valsts:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2267"/>
@@ -3465,7 +3466,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
     <message>
         <location filename="../mainwindow.ui" line="2828"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2873"/>
@@ -3498,7 +3499,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sou
         <location filename="../mainwindow.ui" line="5827"/>
         <location filename="../mainwindow.ui" line="5851"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3096"/>
@@ -3677,7 +3678,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5835"/>
         <location filename="../mainwindow.ui" line="5859"/>
         <source>2</source>
-        <translation type="unfinished">2</translation>
+        <translation>2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3693"/>
@@ -3712,7 +3713,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3881"/>
         <source>Grid</source>
-        <translation type="unfinished">Lokātors</translation>
+        <translation>Lokātors</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3906"/>
@@ -3752,7 +3753,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3993"/>
         <source>73</source>
-        <translation type="unfinished">73</translation>
+        <translation>73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4041"/>
@@ -3842,7 +3843,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4395"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4413"/>
@@ -3867,7 +3868,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4450"/>
         <source>FT8 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FT4 kodēšana {8 ?}</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4454"/>
@@ -3902,7 +3903,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4514"/>
         <source>FT4 decoding</source>
-        <translation type="unfinished"></translation>
+        <translation>FT4 kodēšana</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4530"/>
@@ -3922,7 +3923,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4575"/>
         <source>Mode</source>
-        <translation type="unfinished">Mode</translation>
+        <translation>Modes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4587"/>
@@ -3942,12 +3943,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4649"/>
         <source>DXpedition</source>
-        <translation type="unfinished"></translation>
+        <translation>DX ekspedīcijas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4668"/>
         <source>Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Iziet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4671"/>
@@ -3963,12 +3964,12 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="4685"/>
         <location filename="../mainwindow.ui" line="5091"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4690"/>
         <source>About JTDX</source>
-        <translation type="unfinished">Par JTDX</translation>
+        <translation>Par JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4693"/>
@@ -3983,7 +3984,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4703"/>
         <source>Open</source>
-        <translation type="unfinished">Atvērt</translation>
+        <translation>Atvērt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4706"/>
@@ -3998,7 +3999,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
         <source>F6</source>
-        <translation type="unfinished"></translation>
+        <translation>F6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4719"/>
@@ -4026,12 +4027,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4749"/>
         <source>None</source>
-        <translation type="unfinished">Nav</translation>
+        <translation>Nav</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4757"/>
         <source>Save all</source>
-        <translation type="unfinished"></translation>
+        <translation>Saglabāt visu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4842"/>
@@ -4041,7 +4042,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4845"/>
         <source>F1</source>
-        <translation type="unfinished"></translation>
+        <translation>F1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4850"/>
@@ -4051,7 +4052,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4853"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4858"/>
@@ -4061,12 +4062,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4861"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4872"/>
         <source>JT9</source>
-        <translation type="unfinished"></translation>
+        <translation>JT9</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4883"/>
@@ -4098,7 +4099,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4918"/>
         <source>Erase ALL.TXT</source>
-        <translation type="unfinished"></translation>
+        <translation>Notīrīt ALL.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4923"/>
@@ -4108,13 +4109,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4928"/>
         <source>Open wsjtx_log.adi</source>
-        <translation type="unfinished"></translation>
+        <translation>Atvērt wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4931"/>
         <location filename="../mainwindow.ui" line="5115"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4939"/>
@@ -4179,12 +4180,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5035"/>
         <source>JT65</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">JT65</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5046"/>
         <source>JT9+JT65</source>
-        <translation type="unfinished">JT65+JT65 {9+?}</translation>
+        <translation>JT65+JT65 {9+?}</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5054"/>
@@ -4264,7 +4265,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5175"/>
         <source>T10</source>
-        <translation type="unfinished"></translation>
+        <translation>T10</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5186"/>
@@ -4304,7 +4305,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5249"/>
         <source>FT8</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5257"/>
@@ -4379,17 +4380,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5389"/>
         <source>4</source>
-        <translation type="unfinished">4</translation>
+        <translation>4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5397"/>
         <source>8</source>
-        <translation type="unfinished">8</translation>
+        <translation>8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5405"/>
         <source>12</source>
-        <translation type="unfinished">12</translation>
+        <translation>12</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5413"/>
@@ -4506,42 +4507,42 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.ui" line="5843"/>
         <location filename="../mainwindow.ui" line="5867"/>
         <source>3</source>
-        <translation type="unfinished">3</translation>
+        <translation>3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5674"/>
         <source>6</source>
-        <translation type="unfinished">6</translation>
+        <translation>6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5682"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5690"/>
         <source>5</source>
-        <translation type="unfinished">5</translation>
+        <translation>5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5698"/>
         <source>7</source>
-        <translation type="unfinished">7</translation>
+        <translation>7</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5706"/>
         <source>9</source>
-        <translation type="unfinished">9</translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5714"/>
         <source>11</source>
-        <translation type="unfinished">11</translation>
+        <translation>11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5722"/>
         <source>low</source>
-        <translation type="unfinished"></translation>
+        <translation>zems</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5741"/>
@@ -4556,7 +4557,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5757"/>
         <source>FT4</source>
-        <translation type="unfinished"></translation>
+        <translation>FT4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5792"/>
@@ -4656,7 +4657,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="7098"/>
         <location filename="../mainwindow.cpp" line="7443"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation type="unfinished">Nevar atvērt &quot;%1&quot; lai pievienotu: %2&quot;</translation>
+        <translation>Nevar atvērt &quot;%1&quot; lai pievienotu: %2&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1702"/>
@@ -5000,7 +5001,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7303"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tīkla kļūda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7304"/>
@@ -5301,7 +5302,7 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Bands.cpp" line="50"/>
         <source>OOB</source>
-        <translation>OOB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
@@ -5365,7 +5366,7 @@ Error(%3): %4</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tīkla kļūda</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
@@ -5457,17 +5458,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="132"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translation>Saņemt</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="136"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendēts</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="141"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>pārtraukt</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="148"/>
@@ -5477,7 +5478,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="152"/>
         <source>Stopped</source>
-        <translation>Apstājās</translation>
+        <translation>Apturēt</translation>
     </message>
 </context>
 <context>
@@ -5525,12 +5526,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Suspended</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suspendēts</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="117"/>
         <source>Interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">pārtraukt</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="119"/>
@@ -5568,7 +5569,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="280"/>
@@ -5579,32 +5580,32 @@ Error(%2): %3</source>
 <context>
     <name>StationList::impl</name>
     <message>
-        <location filename="../StationList.cpp" line="296"/>
+        <location filename="../StationList.cpp" line="294"/>
         <source>Band name</source>
         <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="322"/>
+        <location filename="../StationList.cpp" line="320"/>
         <source>Frequency offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="344"/>
+        <location filename="../StationList.cpp" line="342"/>
         <source>Antenna description</source>
-        <translation type="unfinished"></translation>
+        <translation>Antenas apraksts</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="366"/>
+        <location filename="../StationList.cpp" line="364"/>
         <source>Band</source>
         <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="367"/>
+        <location filename="../StationList.cpp" line="365"/>
         <source>Offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../StationList.cpp" line="368"/>
+        <location filename="../StationList.cpp" line="366"/>
         <source>Antenna Description</source>
         <translation>Antenas apraksts</translation>
     </message>
@@ -5698,7 +5699,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Start </source>
-        <translation>Sākt </translation>
+        <translation>Sākt</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="345"/>
@@ -5844,7 +5845,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mans C&amp;all:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
@@ -8284,7 +8285,7 @@ soundcard changes</source>
     <message>
         <location filename="../main.cpp" line="141"/>
         <source>rig-name</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="145"/>
