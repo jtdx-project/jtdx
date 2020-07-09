@@ -6309,11 +6309,13 @@ void MainWindow::band_changed (Frequency f)
     auto const& newband = m_config.bands ()->find (f);
     auto const& oldband = m_config.bands ()->find (m_lastMonitoredFrequency);
     bool cleared=false;
-    if (m_autoEraseBC && (oldband != newband || m_oldmode != m_mode)) { // option: erase both windows if band is changed
-        ui->decodedTextBrowser->clear();
-        ui->decodedTextBrowser2->clear();
-        clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
-        cleared=true;
+    if (oldband != newband || m_oldmode != m_mode) {
+      clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
+      if (m_autoEraseBC) { // option: erase both windows if band is changed
+          ui->decodedTextBrowser->clear();
+          ui->decodedTextBrowser2->clear();
+          cleared=true;
+      }
     }
     m_lastBand.clear ();
     m_bandEdited = false;
@@ -6341,10 +6343,10 @@ void MainWindow::band_changed (Frequency f)
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
         if(stophintTimer.isActive()) stophintTimer.stop();
         dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
+        clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
             ui->decodedTextBrowser->clear();
             ui->decodedTextBrowser2->clear();
-            clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         }
     // Set the attenuation value if options are checked
         QString curBand;
