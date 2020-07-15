@@ -603,6 +603,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionCatalan->setActionGroup(languageGroup);
   ui->actionCroatian->setActionGroup(languageGroup);
   ui->actionDanish->setActionGroup(languageGroup);
+  ui->actionDutch->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
@@ -1067,7 +1068,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
-  foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
+  foxgen_(); ui->actionLatvian->setEnabled(false); ui->actionDutch->setEnabled(false);//temporarily disable
 
   styleChanged();
   // this must be the last statement of constructor
@@ -1288,6 +1289,7 @@ void MainWindow::readSettings()
   ui->actionCatalan->setText("Català");
   ui->actionCroatian->setText("Hrvatski");
   ui->actionDanish->setText("Dansk");
+  ui->actionDutch->setText("Nederlands");
   ui->actionSpanish->setText("Español");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
@@ -2782,6 +2784,7 @@ void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(tr
 void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(true); set_language("ca_ES"); }
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
 void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
+void MainWindow::on_actionDutch_triggered() { ui->actionDutch->setChecked(true); set_language("nl_NL"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
@@ -3834,6 +3837,7 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="ca_ES") ui->actionCatalan->setChecked(true);
   else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
   else if(m_lang=="da_DK") ui->actionDanish->setChecked(true);
+  else if(m_lang=="nl_NL") ui->actionDutch->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
