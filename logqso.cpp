@@ -111,7 +111,7 @@ void LogQSO::initLogQSO(QString const& hisCall, QString const& hisGrid, QString 
 
 void LogQSO::accept()
 {
-  QString hisCall,hisGrid,mode,rptSent,rptRcvd,date,time,band;
+  QString hisCall,hisGrid,mode,rptSent,rptRcvd,time,band;
   QString comments,eqslcomments,name;
   hisCall=ui->call->text();
   hisGrid=ui->grid->text();
@@ -181,7 +181,7 @@ void LogQSO::accept()
       myadif+=" <COMMENT:" + QString::number(comments.length()) + ">" + comments;
     }
     if (m_send_to_eqsl) {
-      myadif+=" <EQSL_QSL_SENT:1>Y <EQSL_QSLSDATE:8>" + date;
+      myadif+=" <EQSL_QSL_SENT:1>Y <EQSL_QSLSDATE:8>" + m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd");
     }
     myadif+=" <EOR> ";
     myadif2 = myadif.trimmed().toUtf8();
