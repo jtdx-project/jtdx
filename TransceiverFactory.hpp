@@ -109,6 +109,7 @@ public:
     bool rts_high;              // to power interface
     bool do_snr;
     bool do_pwr;
+    bool rig_power;		// control rig_power when supported
     PTTMethod ptt_type;         // "CAT" | "DTR" | "RTS" | "VOX"
     TXAudioSource audio_source; // some rigs allow audio routing
                                 // to Mic/Data connector
@@ -134,6 +135,7 @@ public:
         && rhs.rts_high == rts_high
         && rhs.do_snr == do_snr
         && rhs.do_pwr == do_pwr
+        && rhs.rig_power == rig_power
         && rhs.ptt_type == ptt_type
         && rhs.audio_source == audio_source
         && rhs.split_mode == split_mode

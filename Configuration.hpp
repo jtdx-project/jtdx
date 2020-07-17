@@ -130,6 +130,7 @@ public:
   bool enableCallsignFilter() const;
   bool do_snr() const;
   bool do_pwr() const;
+  bool rig_power() const;
   bool id_after_73 () const;
   bool tx_QSY_allowed () const;
   bool spot_to_psk_reporter () const;

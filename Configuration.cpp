@@ -677,6 +677,7 @@ private:
   bool enableCallsignFilter_;
   bool do_snr_;
   bool do_pwr_;
+  bool rig_power_;
   bool id_after_73_;
   bool tx_QSY_allowed_;
   bool spot_to_psk_reporter_;
@@ -919,6 +920,7 @@ bool Configuration::enableCountryFilter () const {return m_->enableCountryFilter
 bool Configuration::enableCallsignFilter () const {return m_->enableCallsignFilter_;}
 bool Configuration::do_snr () const {return m_->do_snr_;}
 bool Configuration::do_pwr () const {return m_->do_pwr_;}
+bool Configuration::rig_power () const {return m_->rig_power_;}
 bool Configuration::id_after_73 () const {return m_->id_after_73_;}
 bool Configuration::tx_QSY_allowed () const {return m_->tx_QSY_allowed_;}
 bool Configuration::spot_to_psk_reporter () const
@@ -1791,6 +1793,7 @@ void Configuration::impl::initialize_models ()
   ui_->enableCallsignFilter_check_box->setChecked (enableCallsignFilter_);
   ui_->S_meter_check_box->setChecked (do_snr_);
   ui_->output_power_check_box->setChecked (do_pwr_);
+  ui_->rig_power_check_box->setChecked (rig_power_);
   ui_->sbTopFreq->setValue (ntopfreq65_);
   ui_->sbAnswerCQCounter->setValue (nAnswerCQCounter_);
   ui_->sbAnswerInCallCounter->setValue (nAnswerInCallCounter_);
@@ -2076,6 +2079,7 @@ void Configuration::impl::read_settings ()
 
   do_snr_ = settings_->value ("CATRequestSNR", false).toBool ();
   do_pwr_ = settings_->value ("CATRequestPower", false).toBool ();
+  rig_power_ = settings_->value ("RigPower", false).toBool ();
 
   if(settings_->value ("hideAfrica").toString()=="false" || settings_->value ("hideAfrica").toString()=="true")
     hideAfrica_ = settings_->value ("hideAfrica").toBool ();
@@ -2448,6 +2452,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("EnableCallsignFilter", enableCallsignFilter_);
   settings_->setValue ("CATRequestSNR", do_snr_);
   settings_->setValue ("CATRequestPower", do_pwr_);
+  settings_->setValue ("RigPower", rig_power_);
   settings_->setValue ("hideAfrica", hideAfrica_);
   settings_->setValue ("hideAntarctica", hideAntarctica_);
   settings_->setValue ("hideAsia", hideAsia_);
@@ -2825,6 +2830,7 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
 
   result.do_snr = ui_->S_meter_check_box->isChecked ();
   result.do_pwr = ui_->output_power_check_box->isChecked ();
+  result.rig_power = ui_->rig_power_check_box->isChecked ();
   result.baud = ui_->CAT_serial_baud_combo_box->currentText ().toInt ();
   result.data_bits = static_cast<TransceiverFactory::DataBits> (ui_->CAT_data_bits_button_group->checkedId ());
   result.stop_bits = static_cast<TransceiverFactory::StopBits> (ui_->CAT_stop_bits_button_group->checkedId ());
@@ -3050,6 +3056,7 @@ void Configuration::impl::accept ()
   enableCallsignFilter_ = ui_->enableCallsignFilter_check_box->isChecked ();
   do_snr_ = ui_->S_meter_check_box->isChecked ();
   do_pwr_ = ui_->output_power_check_box->isChecked ();
+  rig_power_ = ui_->rig_power_check_box->isChecked ();
   id_after_73_ = ui_->CW_id_after_73_check_box->isChecked ();
   tx_QSY_allowed_ = ui_->tx_QSY_check_box->isChecked ();
   monitor_off_at_startup_ = ui_->monitor_off_check_box->isChecked ();

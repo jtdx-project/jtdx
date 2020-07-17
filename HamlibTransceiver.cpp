@@ -343,6 +343,7 @@ HamlibTransceiver::HamlibTransceiver (int model_number, TransceiverFactory::Para
             }
         }
 
+      if (params.rig_power) { set_conf ("auto_power_on","1"); }
       if (params.do_snr) do_snr_ = true;
       if (params.do_pwr) { do_pwr_ = true; do_pwr2_ = true; }
       
