@@ -491,9 +491,10 @@ private:
   Q_SLOT void on_newGridBandMode_check_box_clicked(bool checked);
   Q_SLOT void on_newPotential_check_box_clicked(bool checked);
 
-  Q_SLOT void on_eqsluser_edit_editingFinished();
-  Q_SLOT void on_eqslpasswd_edit_editingFinished();
-  Q_SLOT void on_eqslnick_edit_editingFinished();
+  Q_SLOT void on_eqsluser_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslpasswd_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslnick_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqsl_check_box_toggled(bool b);
 
   Q_SLOT void on_pbCQmsg_clicked();
   Q_SLOT void on_pbMyCall_clicked();
@@ -1810,8 +1811,10 @@ void Configuration::impl::initialize_models ()
   ui_->dxsummit_check_box->setChecked (spot_to_dxsummit_);
   ui_->preventFalseUDP_check_box->setChecked (prevent_spotting_false_);
   ui_->filterUDP_check_box->setChecked (filterUDP_);
-  ui_->eqsl_check_box->setEnabled (!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ());
-  ui_->eqsl_check_box->setChecked ((!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) && send_to_eqsl_);
+  if(!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setEnabled (true);
+    ui_->eqsl_check_box->setChecked (send_to_eqsl_);
+  }
   ui_->eqsluser_edit->setText (eqsl_username_);
   ui_->eqslpasswd_edit->setText (eqsl_passwd_);
   ui_->eqslnick_edit->setText (eqsl_nickname_);
@@ -3248,22 +3251,27 @@ void Configuration::impl::message_box_critical (QString const& reason, QString c
   mb.exec ();
 }
 
-void Configuration::impl::on_eqsluser_edit_editingFinished()
+void Configuration::impl::on_eqsluser_edit_textEdited(const QString &user)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setEnabled (!user.isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
   ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslpasswd_edit_editingFinished()
+void Configuration::impl::on_eqslpasswd_edit_textEdited(const QString &passwd)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslnick_edit_editingFinished()
+void Configuration::impl::on_eqslnick_edit_textEdited(const QString &nick)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ()) && send_to_eqsl_);  
+}
+
+void Configuration::impl::on_eqsl_check_box_toggled(bool b)
+{
+  send_to_eqsl_ = b;
 }
 
 void Configuration::impl::on_font_push_button_clicked ()
