@@ -98,13 +98,13 @@ Another application may be locking the directory</source>
         <location filename="../Configuration.cpp" line="1457"/>
         <location filename="../Configuration.cpp" line="1509"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Dzēst</translation>
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1461"/>
         <location filename="../Configuration.cpp" line="1513"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ievietot ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1465"/>
@@ -114,7 +114,7 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="1469"/>
         <source>&amp;Save as ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Saglabāt kā ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1473"/>
@@ -200,7 +200,7 @@ Formāts:
     <message>
         <location filename="../Configuration.cpp" line="3302"/>
         <source>CQ in message</source>
-        <translation type="unfinished"></translation>
+        <translation>CQ ziņojums</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4485"/>
@@ -308,7 +308,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation type="unfinished"></translation>
+        <translation>valsts?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2191,7 +2191,7 @@ Formāts:
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Ievietot ...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="208"/>
@@ -2859,7 +2859,7 @@ Error: %2 - %3</source>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
@@ -2921,12 +2921,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.cpp" line="27"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="28"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
@@ -5001,7 +5001,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7309"/>
         <source>Network Error</source>
-        <translation type="unfinished">Tīkla kļūda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7310"/>
@@ -5366,7 +5366,7 @@ Error(%3): %4</source>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation type="unfinished">Tīkla kļūda</translation>
+        <translation>Tīkla kļuda</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
@@ -6036,7 +6036,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="516"/>
         <location filename="../Configuration.ui" line="563"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Atslēgt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="519"/>
@@ -6165,7 +6165,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="814"/>
         <source>Output power</source>
-        <translation type="unfinished"></translation>
+        <translation>Izejas jauda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="842"/>
@@ -6196,7 +6196,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="913"/>
         <source>Baud Rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārraides ātrumu:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="929"/>
@@ -6352,7 +6352,7 @@ a few, particularly some Kenwood rigs, require it).</source>
         <location filename="../Configuration.ui" line="1205"/>
         <location filename="../Configuration.ui" line="1238"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Zems</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1217"/>
@@ -6494,7 +6494,7 @@ or bandwidth is selected).</source>
     <message>
         <location filename="../Configuration.ui" line="1511"/>
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation>Transīvers</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1554"/>
