@@ -494,7 +494,6 @@ private:
   Q_SLOT void on_eqsluser_edit_textEdited(const QString &arg1);
   Q_SLOT void on_eqslpasswd_edit_textEdited(const QString &arg1);
   Q_SLOT void on_eqslnick_edit_textEdited(const QString &arg1);
-  Q_SLOT void on_eqsl_check_box_toggled(bool b);
 
   Q_SLOT void on_pbCQmsg_clicked();
   Q_SLOT void on_pbMyCall_clicked();
@@ -1811,13 +1810,13 @@ void Configuration::impl::initialize_models ()
   ui_->dxsummit_check_box->setChecked (spot_to_dxsummit_);
   ui_->preventFalseUDP_check_box->setChecked (prevent_spotting_false_);
   ui_->filterUDP_check_box->setChecked (filterUDP_);
+  ui_->eqsluser_edit->setText (eqsl_username_);
+  ui_->eqslpasswd_edit->setText (eqsl_passwd_);
+  ui_->eqslnick_edit->setText (eqsl_nickname_);
   if(!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) {
     ui_->eqsl_check_box->setEnabled (true);
     ui_->eqsl_check_box->setChecked (send_to_eqsl_);
   }
-  ui_->eqsluser_edit->setText (eqsl_username_);
-  ui_->eqslpasswd_edit->setText (eqsl_passwd_);
-  ui_->eqslnick_edit->setText (eqsl_nickname_);
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
@@ -2185,10 +2184,13 @@ void Configuration::impl::read_settings ()
     filterUDP_ = settings_->value ("ApplyFiltersToUDPmessages").toBool ();
   else filterUDP_ = false;
 
-  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
   eqsl_username_ = settings_->value ("EQSLUser", "").toString ();
   eqsl_passwd_ = settings_->value ("EQSLPasswd", "").toString ();
   eqsl_nickname_ = settings_->value ("EQSLNick", "").toString ();
+  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
+  if(eqsl_username_.isEmpty () || eqsl_passwd_.isEmpty () || eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setChecked (false); ui_->eqsl_check_box->setEnabled (false); send_to_eqsl_=false; 
+  }
   usesched_ = settings_->value ("UseSchedBands", false).toBool ();
   sched_hh_1_ = settings_->value ("Sched_hh_1", "").toString ();
   sched_mm_1_ = settings_->value ("Sched_mm_1", "").toString ();
@@ -3003,7 +3005,8 @@ void Configuration::impl::accept ()
   spot_to_dxsummit_ = ui_->dxsummit_check_box->isChecked ();
   prevent_spotting_false_ = ui_->preventFalseUDP_check_box->isChecked ();
   filterUDP_ =  ui_->filterUDP_check_box->isChecked ();
-  send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  if(!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  else send_to_eqsl_ = false;
   eqsl_username_ = ui_->eqsluser_edit->text ();
   eqsl_passwd_ = ui_->eqslpasswd_edit->text ();
   eqsl_nickname_ = ui_->eqslnick_edit->text ();
@@ -3267,11 +3270,6 @@ void Configuration::impl::on_eqslnick_edit_textEdited(const QString &nick)
 {
   ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ());  
   ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ()) && send_to_eqsl_);  
-}
-
-void Configuration::impl::on_eqsl_check_box_toggled(bool b)
-{
-  send_to_eqsl_ = b;
 }
 
 void Configuration::impl::on_font_push_button_clicked ()

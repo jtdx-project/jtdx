@@ -2245,6 +2245,18 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
     case Qt::Key_Escape:
       haltTx("TX halted via Escape button ");
       break;
+    case Qt::Key_8:
+      if(e->modifiers() & Qt::AltModifier && e->modifiers() & Qt::ControlModifier) {
+        on_actionFT8_triggered();
+        return;
+      }
+      break;
+    case Qt::Key_4:
+      if(e->modifiers() & Qt::AltModifier && e->modifiers() & Qt::ControlModifier) {
+        on_actionFT4_triggered();
+        return;
+      }
+      break;
     }
 
   QMainWindow::keyPressEvent (e);
