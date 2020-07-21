@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1206"/>
+        <location filename="../Configuration.cpp" line="1205"/>
         <source>&amp;OK</source>
         <translation>确定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1207"/>
+        <location filename="../Configuration.cpp" line="1206"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1222"/>
+        <location filename="../Configuration.cpp" line="1221"/>
         <source>Create temporary directory error: </source>
         <translation>创建临时目录出错误: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1228"/>
+        <location filename="../Configuration.cpp" line="1227"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 另一个应用程序可能正在锁定目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1245"/>
+        <location filename="../Configuration.cpp" line="1244"/>
         <source>Create data directory error: </source>
         <translation>创建数据目录出错误: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1254"/>
-        <location filename="../Configuration.cpp" line="1265"/>
+        <location filename="../Configuration.cpp" line="1253"/>
+        <location filename="../Configuration.cpp" line="1264"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>创建数据目录出错误 &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1431"/>
-        <location filename="../Configuration.cpp" line="1457"/>
-        <location filename="../Configuration.cpp" line="1509"/>
+        <location filename="../Configuration.cpp" line="1430"/>
+        <location filename="../Configuration.cpp" line="1456"/>
+        <location filename="../Configuration.cpp" line="1508"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1461"/>
-        <location filename="../Configuration.cpp" line="1513"/>
+        <location filename="../Configuration.cpp" line="1460"/>
+        <location filename="../Configuration.cpp" line="1512"/>
         <source>&amp;Insert ...</source>
         <translation>插入(&amp;I)...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1465"/>
+        <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Load ...</source>
         <translation>加载(&amp;L) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1469"/>
+        <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Save as ...</source>
         <translation>另存为(&amp;S) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1473"/>
+        <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Merge ...</source>
         <translation>合并(&amp;M) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1477"/>
+        <location filename="../Configuration.cpp" line="1476"/>
         <source>&amp;Reset</source>
         <translation>重置(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2706"/>
+        <location filename="../Configuration.cpp" line="2708"/>
         <source>Serial Port:</source>
         <translation>串行端口:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2707"/>
+        <location filename="../Configuration.cpp" line="2709"/>
         <source>Serial port used for CAT control</source>
         <translation>用于CAT控制的串行端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2714"/>
+        <location filename="../Configuration.cpp" line="2716"/>
         <source>Network Server:</source>
         <translation>网络服务器:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2715"/>
+        <location filename="../Configuration.cpp" line="2717"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ IP v4-地址:端口
 [IPv6-地址]:端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2727"/>
+        <location filename="../Configuration.cpp" line="2729"/>
         <source>USB Device:</source>
         <translation>USB 设备:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2728"/>
+        <location filename="../Configuration.cpp" line="2730"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +173,132 @@ Format:
 [VID[:PID[:供应商[:产品]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2763"/>
+        <location filename="../Configuration.cpp" line="2765"/>
         <source>Invalid audio input device</source>
         <translation>无效的音频输入设备</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2770"/>
+        <location filename="../Configuration.cpp" line="2772"/>
         <source>Invalid audio output device</source>
         <translation>无效的音频输出设备</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2776"/>
+        <location filename="../Configuration.cpp" line="2778"/>
         <source>Invalid PTT method</source>
         <translation>无效的PTT方法</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2786"/>
+        <location filename="../Configuration.cpp" line="2788"/>
         <source>Invalid PTT port</source>
         <translation>无效的PTT端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3301"/>
+        <location filename="../Configuration.cpp" line="3299"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3302"/>
+        <location filename="../Configuration.cpp" line="3300"/>
         <source>CQ in message</source>
         <translation>CQ 在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4485"/>
+        <location filename="../Configuration.cpp" line="4483"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX 解码文本字体选择</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
-        <location filename="../Configuration.cpp" line="5142"/>
+        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5140"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5105"/>
         <source>Load Working Frequencies</source>
         <translation>载入工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
-        <location filename="../Configuration.cpp" line="5140"/>
-        <location filename="../Configuration.cpp" line="5194"/>
+        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5192"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>频率文件 (*.qrg);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5123"/>
         <source>Replace Working Frequencies</source>
         <translation>替换工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5124"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>是否确实要放弃当前工作频率, 并将其替换为加载的频率?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Merge Working Frequencies</source>
         <translation>合并工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5165"/>
-        <location filename="../Configuration.cpp" line="5174"/>
-        <location filename="../Configuration.cpp" line="5184"/>
+        <location filename="../Configuration.cpp" line="5163"/>
+        <location filename="../Configuration.cpp" line="5172"/>
+        <location filename="../Configuration.cpp" line="5182"/>
         <source>Not a valid frequencies file</source>
         <translation>不是有效频率文件</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5165"/>
+        <location filename="../Configuration.cpp" line="5163"/>
         <source>Incorrect file magic</source>
         <translation>不正确的文件內容</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5174"/>
+        <location filename="../Configuration.cpp" line="5172"/>
         <source>Version is too new</source>
         <translation>版本太新</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5184"/>
+        <location filename="../Configuration.cpp" line="5182"/>
         <source>Contents corrupt</source>
         <translation>内容已损坏</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5194"/>
+        <location filename="../Configuration.cpp" line="5192"/>
         <source>Save Working Frequencies</source>
         <translation>保存工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5204"/>
+        <location filename="../Configuration.cpp" line="5202"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>仅保存选定的工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5206"/>
+        <location filename="../Configuration.cpp" line="5204"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>是否确实要仅保存当前选择的工作频率? 单击 否 可保存所有.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5233"/>
+        <location filename="../Configuration.cpp" line="5231"/>
         <source>Reset Working Frequencies</source>
         <translation>重置工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5235"/>
+        <location filename="../Configuration.cpp" line="5233"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>您确定要放弃您当前的工作频率并用默认值频率替换它们吗?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5295"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>Save Directory</source>
         <translation>保存目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5311"/>
+        <location filename="../Configuration.cpp" line="5309"/>
         <source>Failed to open connection to rig</source>
         <translation>无法打开与无线电设备的连接</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5554"/>
+        <location filename="../Configuration.cpp" line="5552"/>
         <source>Rig failure</source>
         <translation>无线电设备故障</translation>
     </message>
@@ -2775,7 +2775,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3822"/>
+        <location filename="../mainwindow.cpp" line="3834"/>
         <source>&amp;Yes</source>
         <translation>确定(&amp;Y)</translation>
     </message>
@@ -2786,7 +2786,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3825"/>
+        <location filename="../mainwindow.cpp" line="3837"/>
         <source>&amp;No</source>
         <translation>否(&amp;N)</translation>
     </message>
@@ -2968,12 +2968,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <location filename="../mainwindow.cpp" line="1755"/>
-        <location filename="../mainwindow.cpp" line="3499"/>
-        <location filename="../mainwindow.cpp" line="3508"/>
-        <location filename="../mainwindow.cpp" line="6050"/>
-        <location filename="../mainwindow.cpp" line="6055"/>
-        <location filename="../mainwindow.cpp" line="6089"/>
-        <location filename="../mainwindow.cpp" line="6100"/>
+        <location filename="../mainwindow.cpp" line="3511"/>
+        <location filename="../mainwindow.cpp" line="3520"/>
+        <location filename="../mainwindow.cpp" line="6062"/>
+        <location filename="../mainwindow.cpp" line="6067"/>
+        <location filename="../mainwindow.cpp" line="6101"/>
+        <location filename="../mainwindow.cpp" line="6112"/>
         <source>Band Activity</source>
         <translation>波段活动</translation>
     </message>
@@ -3091,9 +3091,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
-        <location filename="../mainwindow.cpp" line="4662"/>
-        <location filename="../mainwindow.cpp" line="5328"/>
-        <location filename="../mainwindow.cpp" line="5743"/>
+        <location filename="../mainwindow.cpp" line="4674"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
+        <location filename="../mainwindow.cpp" line="5755"/>
         <source>DX Call</source>
         <translation>DX 呼号</translation>
     </message>
@@ -3146,7 +3146,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
-        <location filename="../mainwindow.cpp" line="2959"/>
+        <location filename="../mainwindow.cpp" line="2971"/>
         <source>Hound</source>
         <translation>猎犬</translation>
     </message>
@@ -3356,7 +3356,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2267"/>
-        <location filename="../mainwindow.cpp" line="6056"/>
+        <location filename="../mainwindow.cpp" line="6068"/>
         <source>Rx Frequency</source>
         <translation>接收信息</translation>
     </message>
@@ -3367,7 +3367,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2354"/>
-        <location filename="../mainwindow.cpp" line="6634"/>
+        <location filename="../mainwindow.cpp" line="6646"/>
         <source>&amp;Tune</source>
         <translation>调谐(&amp;T)</translation>
     </message>
@@ -4628,10 +4628,10 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="873"/>
         <location filename="../mainwindow.cpp" line="874"/>
-        <location filename="../mainwindow.cpp" line="6046"/>
-        <location filename="../mainwindow.cpp" line="6047"/>
-        <location filename="../mainwindow.cpp" line="6096"/>
-        <location filename="../mainwindow.cpp" line="6097"/>
+        <location filename="../mainwindow.cpp" line="6058"/>
+        <location filename="../mainwindow.cpp" line="6059"/>
+        <location filename="../mainwindow.cpp" line="6108"/>
+        <location filename="../mainwindow.cpp" line="6109"/>
         <source>Freq   Message</source>
         <translation>频率   信息</translation>
     </message>
@@ -4662,26 +4662,26 @@ list. The list can be maintained in Settings (F2).</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1648"/>
-        <location filename="../mainwindow.cpp" line="2401"/>
-        <location filename="../mainwindow.cpp" line="3531"/>
-        <location filename="../mainwindow.cpp" line="4139"/>
-        <location filename="../mainwindow.cpp" line="4262"/>
-        <location filename="../mainwindow.cpp" line="4496"/>
-        <location filename="../mainwindow.cpp" line="6902"/>
-        <location filename="../mainwindow.cpp" line="7103"/>
+        <location filename="../mainwindow.cpp" line="2413"/>
+        <location filename="../mainwindow.cpp" line="3543"/>
+        <location filename="../mainwindow.cpp" line="4151"/>
+        <location filename="../mainwindow.cpp" line="4274"/>
+        <location filename="../mainwindow.cpp" line="4508"/>
+        <location filename="../mainwindow.cpp" line="6914"/>
+        <location filename="../mainwindow.cpp" line="7115"/>
         <source>File Open Error</source>
         <translation>文件打开出错误</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1649"/>
-        <location filename="../mainwindow.cpp" line="2402"/>
-        <location filename="../mainwindow.cpp" line="3532"/>
-        <location filename="../mainwindow.cpp" line="4140"/>
-        <location filename="../mainwindow.cpp" line="4263"/>
-        <location filename="../mainwindow.cpp" line="4497"/>
-        <location filename="../mainwindow.cpp" line="6903"/>
-        <location filename="../mainwindow.cpp" line="7104"/>
-        <location filename="../mainwindow.cpp" line="7449"/>
+        <location filename="../mainwindow.cpp" line="2414"/>
+        <location filename="../mainwindow.cpp" line="3544"/>
+        <location filename="../mainwindow.cpp" line="4152"/>
+        <location filename="../mainwindow.cpp" line="4275"/>
+        <location filename="../mainwindow.cpp" line="4509"/>
+        <location filename="../mainwindow.cpp" line="6915"/>
+        <location filename="../mainwindow.cpp" line="7116"/>
+        <location filename="../mainwindow.cpp" line="7461"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于附加: %2</translation>
     </message>
@@ -4711,345 +4711,345 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>功率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2512"/>
+        <location filename="../mainwindow.cpp" line="2524"/>
         <source>Subprocess Error</source>
         <translation>子流程出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2513"/>
+        <location filename="../mainwindow.cpp" line="2525"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>子流程失败, 退出代码为 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2515"/>
-        <location filename="../mainwindow.cpp" line="2534"/>
+        <location filename="../mainwindow.cpp" line="2527"/>
+        <location filename="../mainwindow.cpp" line="2546"/>
         <source>Running: %1
 %2</source>
         <translation>运行: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2533"/>
+        <location filename="../mainwindow.cpp" line="2545"/>
         <source>Subprocess error</source>
         <translation>子进程出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2609"/>
+        <location filename="../mainwindow.cpp" line="2621"/>
         <source>Spotted</source>
         <translation>发布Spot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2616"/>
+        <location filename="../mainwindow.cpp" line="2628"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>无法 创建/完全 连接到 Dxsummit 服务器</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2639"/>
+        <location filename="../mainwindow.cpp" line="2651"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>WSJT-X 和相关程序的算法、源代码、外观和感觉, 以及模式FSK441、FT8、JT4、JT6M、JT9、JT65、JTMS、QRA64、ISCAT、MSK144的协议规范是由以下一个或多个作者版权所有(C) 2001-2018:Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q和 WSJT 发展小组的其他成员.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2759"/>
+        <location filename="../mainwindow.cpp" line="2771"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>没有从磁盘读取数据. 文件格式出错误?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2778"/>
         <source>Confirm Delete</source>
         <translation>确认删除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2767"/>
+        <location filename="../mainwindow.cpp" line="2779"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>是否确实要删除所有 *.wav 和 *.c2 文件在
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2808"/>
+        <location filename="../mainwindow.cpp" line="2820"/>
         <source>AutoSeq0</source>
         <translation>自动程序0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2821"/>
+        <location filename="../mainwindow.cpp" line="2833"/>
         <source>AutoSeq1</source>
         <translation>自动程序1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2830"/>
-        <location filename="../mainwindow.cpp" line="2856"/>
+        <location filename="../mainwindow.cpp" line="2842"/>
+        <location filename="../mainwindow.cpp" line="2868"/>
         <source>AutoSeq2</source>
         <translation>自动程序2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2831"/>
-        <location filename="../mainwindow.cpp" line="2852"/>
+        <location filename="../mainwindow.cpp" line="2843"/>
+        <location filename="../mainwindow.cpp" line="2864"/>
         <source>AutoSeq6</source>
         <translation>自动程序6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2840"/>
-        <location filename="../mainwindow.cpp" line="2857"/>
+        <location filename="../mainwindow.cpp" line="2852"/>
+        <location filename="../mainwindow.cpp" line="2869"/>
         <source>AutoSeq3</source>
         <translation>自动程序3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2841"/>
         <location filename="../mainwindow.cpp" line="2853"/>
+        <location filename="../mainwindow.cpp" line="2865"/>
         <source>AutoSeq7</source>
         <translation>自动程序7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2935"/>
+        <location filename="../mainwindow.cpp" line="2947"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>猎犬 发射频率控制不能在正常FT8通讯子波段频率使用.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2943"/>
+        <location filename="../mainwindow.cpp" line="2955"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>猎犬模式 发射频率控制要求 *设置 | 电台页* 把机器控制在 *异频* (要么选择 *电台* 或 *虚假*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2946"/>
+        <location filename="../mainwindow.cpp" line="2958"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>标准FT8子波段不允许 猎犬 发送频率控制要求 *设置 | 电台页* 把机器控制在 *异频* (要么选择 *电台* 或 *虚假*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2954"/>
+        <location filename="../mainwindow.cpp" line="2966"/>
         <source>Hound TX frequency control warning</source>
         <translation>猎犬 发射频率控制警告</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2959"/>
+        <location filename="../mainwindow.cpp" line="2971"/>
         <source>HoundFC</source>
         <translation>猎犬频控</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3020"/>
+        <location filename="../mainwindow.cpp" line="3032"/>
         <source>Keyboard Shortcuts</source>
         <translation>键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3031"/>
+        <location filename="../mainwindow.cpp" line="3043"/>
         <source>Special Mouse Commands</source>
         <translation>滑鼠特殊组合</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3492"/>
+        <location filename="../mainwindow.cpp" line="3504"/>
         <source>Avg=</source>
         <translation>平均=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3492"/>
-        <location filename="../mainwindow.cpp" line="3511"/>
+        <location filename="../mainwindow.cpp" line="3504"/>
+        <location filename="../mainwindow.cpp" line="3523"/>
         <source>Freq  </source>
         <translation>频率  </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3492"/>
-        <location filename="../mainwindow.cpp" line="3511"/>
+        <location filename="../mainwindow.cpp" line="3504"/>
+        <location filename="../mainwindow.cpp" line="3523"/>
         <source>Lag=</source>
         <translation>滞后=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3498"/>
-        <location filename="../mainwindow.cpp" line="3507"/>
+        <location filename="../mainwindow.cpp" line="3510"/>
+        <location filename="../mainwindow.cpp" line="3519"/>
         <source>check time</source>
         <translation>检查时间</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3810"/>
-        <location filename="../mainwindow.cpp" line="3816"/>
+        <location filename="../mainwindow.cpp" line="3822"/>
+        <location filename="../mainwindow.cpp" line="3828"/>
         <source>Confirm change Language</source>
         <translation>确认更改语言</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3812"/>
-        <location filename="../mainwindow.cpp" line="3819"/>
+        <location filename="../mainwindow.cpp" line="3824"/>
+        <location filename="../mainwindow.cpp" line="3831"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>是否一定要将用戶语言介面更改为简体中文, JTDX 将重新启动?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3989"/>
+        <location filename="../mainwindow.cpp" line="4001"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>请选择另一个发射频率. JTDX不会故意在 WSPR 子波段中发射另一种模式.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3994"/>
-        <location filename="../mainwindow.cpp" line="3997"/>
+        <location filename="../mainwindow.cpp" line="4006"/>
+        <location filename="../mainwindow.cpp" line="4009"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR保护波段</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4115"/>
+        <location filename="../mainwindow.cpp" line="4127"/>
         <source>TUNE</source>
         <translation>调谐</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4116"/>
+        <location filename="../mainwindow.cpp" line="4128"/>
         <source>LastTx: </source>
         <translation>最后发射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4330"/>
+        <location filename="../mainwindow.cpp" line="4342"/>
         <source>Tx: TUNE</source>
         <translation>发射: 调谐</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4331"/>
+        <location filename="../mainwindow.cpp" line="4343"/>
         <source>Tx: </source>
         <translation>发射: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4336"/>
+        <location filename="../mainwindow.cpp" line="4348"/>
         <source>Receiving </source>
         <translation>接收 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4389"/>
+        <location filename="../mainwindow.cpp" line="4401"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>功率&lt;br&gt;%1 瓦</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4547"/>
+        <location filename="../mainwindow.cpp" line="4559"/>
         <source>Last Tx: </source>
         <translation>最后发射： </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5429"/>
         <location filename="../mainwindow.cpp" line="5441"/>
-        <location filename="../mainwindow.cpp" line="5454"/>
-        <location filename="../mainwindow.cpp" line="5480"/>
+        <location filename="../mainwindow.cpp" line="5453"/>
+        <location filename="../mainwindow.cpp" line="5466"/>
+        <location filename="../mainwindow.cpp" line="5492"/>
         <source>Add to CALL3.TXT</source>
         <translation>添加到 CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5430"/>
+        <location filename="../mainwindow.cpp" line="5442"/>
         <source>Please enter a valid grid locator</source>
         <translation>请输入有效的网格定位</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5442"/>
+        <location filename="../mainwindow.cpp" line="5454"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于读/写: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5455"/>
+        <location filename="../mainwindow.cpp" line="5467"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于写入: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5478"/>
+        <location filename="../mainwindow.cpp" line="5490"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1 已经在 CALL3.TXT, 你想替换它吗?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5841"/>
+        <location filename="../mainwindow.cpp" line="5853"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>将通联 ADIF 数据发送到辅助 UDP 服务器时出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5841"/>
+        <location filename="../mainwindow.cpp" line="5853"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>写入返回 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5997"/>
+        <location filename="../mainwindow.cpp" line="6009"/>
         <source>Tx WSPR</source>
         <translation>发射 WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6087"/>
+        <location filename="../mainwindow.cpp" line="6099"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6186"/>
         <location filename="../mainwindow.cpp" line="6198"/>
+        <location filename="../mainwindow.cpp" line="6210"/>
         <source>Confirm Erase</source>
         <translation>确认擦除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6187"/>
+        <location filename="../mainwindow.cpp" line="6199"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>是否确实要擦除 ALL.TXT ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6199"/>
+        <location filename="../mainwindow.cpp" line="6211"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>是否确实要擦除通联日志?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6809"/>
+        <location filename="../mainwindow.cpp" line="6821"/>
         <source>Lockd Tx=Rx</source>
         <translation>锁定Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6810"/>
+        <location filename="../mainwindow.cpp" line="6822"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>允许 发射/接收 音频频率异频操作的按钮</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6813"/>
+        <location filename="../mainwindow.cpp" line="6825"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx异频</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6814"/>
+        <location filename="../mainwindow.cpp" line="6826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>按下按钮将发射频率锁定到接收频率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6942"/>
+        <location filename="../mainwindow.cpp" line="6954"/>
         <source>Rig Control Error</source>
         <translation>无线电设备控制出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7016"/>
+        <location filename="../mainwindow.cpp" line="7028"/>
         <source>Tune digital gain</source>
         <translation>调谐数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7017"/>
+        <location filename="../mainwindow.cpp" line="7029"/>
         <source>Transmit digital gain</source>
         <translation>发射数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7036"/>
+        <location filename="../mainwindow.cpp" line="7048"/>
         <source>Prefixes</source>
         <translation>前缀</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7085"/>
-        <location filename="../mainwindow.cpp" line="7086"/>
+        <location filename="../mainwindow.cpp" line="7097"/>
+        <location filename="../mainwindow.cpp" line="7098"/>
         <source>Logd </source>
         <translation>记录 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7309"/>
+        <location filename="../mainwindow.cpp" line="7321"/>
         <source>Network Error</source>
         <translation>网络出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7310"/>
+        <location filename="../mainwindow.cpp" line="7322"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>出错误: %1
 UDP 服务器 %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7448"/>
+        <location filename="../mainwindow.cpp" line="7460"/>
         <source>File Error</source>
         <translation>文件出错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7660"/>
+        <location filename="../mainwindow.cpp" line="7672"/>
         <source>Tx watchdog expired</source>
         <translation>发射监管计时器已过期</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7674"/>
+        <location filename="../mainwindow.cpp" line="7686"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>
@@ -5074,7 +5074,7 @@ UDP 服务器 %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5060"/>
+        <location filename="../Configuration.cpp" line="5058"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -5082,184 +5082,184 @@ UDP 服务器 %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5062"/>
+        <location filename="../Configuration.cpp" line="5060"/>
         <source>Directory:</source>
         <translation>目录:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5063"/>
+        <location filename="../Configuration.cpp" line="5061"/>
         <source>File &amp;name:</source>
         <translation>文件名称(&amp;n):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5064"/>
+        <location filename="../Configuration.cpp" line="5062"/>
         <source>&amp;Open</source>
         <translation>打开(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5065"/>
+        <location filename="../Configuration.cpp" line="5063"/>
         <source>&amp;Choose</source>
         <translation>选择(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5066"/>
+        <location filename="../Configuration.cpp" line="5064"/>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5068"/>
+        <location filename="../Configuration.cpp" line="5066"/>
         <source>All files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5069"/>
+        <location filename="../Configuration.cpp" line="5067"/>
         <source>New Folder</source>
         <translation>新建文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5070"/>
+        <location filename="../Configuration.cpp" line="5068"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5067"/>
+        <location filename="../Configuration.cpp" line="5065"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5071"/>
+        <location filename="../Configuration.cpp" line="5069"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5070"/>
         <source>&amp;Rename</source>
         <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5073"/>
+        <location filename="../Configuration.cpp" line="5071"/>
         <source>Show &amp;hidden files</source>
         <translation>显示隐藏文件(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
+        <location filename="../Configuration.cpp" line="5072"/>
         <source>&amp;New Folder</source>
         <translation>新建文件夹(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5075"/>
+        <location filename="../Configuration.cpp" line="5073"/>
         <source>Look in:</source>
         <translation>查看:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Files of type:</source>
         <translation>文件类型:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5083"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>Go back</source>
         <translation>回去</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
+        <location filename="../Configuration.cpp" line="5083"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>Forward</source>
         <translation>向前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5087"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Go forward</source>
         <translation>前进</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5088"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5089"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>Parent Directory</source>
         <translation>父目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5090"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Go to the parent directory</source>
         <translation>转到父目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5092"/>
+        <location filename="../Configuration.cpp" line="5090"/>
         <source>Create New Folder</source>
         <translation>创建新文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5093"/>
+        <location filename="../Configuration.cpp" line="5091"/>
         <source>Create a New Folder</source>
         <translation>创建新文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5092"/>
         <source>List View</source>
         <translation>列表查看</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5095"/>
+        <location filename="../Configuration.cpp" line="5093"/>
         <source>Change to list view mode</source>
         <translation>更改为列表查看模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5096"/>
+        <location filename="../Configuration.cpp" line="5094"/>
         <source>Detail View</source>
         <translation>详细信息查看</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5097"/>
+        <location filename="../Configuration.cpp" line="5095"/>
         <source>Change to detail view mode</source>
         <translation>更改为详细信息查看模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5098"/>
+        <location filename="../Configuration.cpp" line="5096"/>
         <source>Sidebar</source>
         <translation>侧栏</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5099"/>
+        <location filename="../Configuration.cpp" line="5097"/>
         <source>List of places and bookmarks</source>
         <translation>地点和书签列表</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; 是写入保护.
 是否仍要将其删除?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5078"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>是否确实要删除 &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>Could not delete directory.</source>
         <translation>无法删除目录.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5080"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5268,7 +5268,7 @@ Please verify the correct directory name was given.</source>
 请验证已给出正确的目录名称.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5082"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Recent Places</source>
         <translation>近期的地方</translation>
     </message>
@@ -5276,22 +5276,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5101"/>
+        <location filename="../Configuration.cpp" line="5099"/>
         <source>Name</source>
         <translation>姓名</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5102"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5101"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5104"/>
+        <location filename="../Configuration.cpp" line="5102"/>
         <source>Date Modified</source>
         <translation>修改日期</translation>
     </message>
