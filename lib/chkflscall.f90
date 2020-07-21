@@ -1,10 +1,9 @@
-! last time modified by Igor UA3DJY on 20200214
-
 subroutine chkflscall(call_a,call_b,falsedec)
 
   character*12 call_a,call_b
   logical(1) falsedec,lfound
 
+  if(call_a(1:2).eq.'<.') return
   falsedec=.true.; lfound=.false.
 !print *,"11","'"//call_a//"'","'"//call_b//"'"
   if(call_a.eq.'MYCALL      ' .or. call_a.eq.'CQ          ') then
