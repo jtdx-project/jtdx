@@ -1,7 +1,8 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NPS1=184320,NFR=151680) !NFRAME=1920*79
+  parameter (NPS=180000,NPS1=184320,NFR=151680,NFILT1=3300,NFILT2=3200) !NFRAME=1920*79
   real*4 dd8(nps),dd8m(nps)
+  real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
   complex cw(nps1),cfilt1(nps1),cfilt2(nps1),cfilt3(nps1),cfilt4(nps1),cfilt5(nps1),cfilt6(nps1),cfilt7(nps1),   &
           cfilt8(nps1),cfilt9(nps1),cfilt10(nps1),cfilt11(nps1),cfilt12(nps1),cref1(nfr),cref2(nfr),cref3(nfr),  &
           cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
