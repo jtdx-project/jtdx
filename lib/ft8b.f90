@@ -1164,18 +1164,18 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     endif
 
     if(lsubtract .and. .not.ldupemsg) then
-      if(nthr.eq.1) then; call subtractft81(itone,f1,xdt2)
-      else if(nthr.eq.2) then; call subtractft82(itone,f1,xdt2)
-      else if(nthr.eq.3) then; call subtractft83(itone,f1,xdt2)
-      else if(nthr.eq.4) then; call subtractft84(itone,f1,xdt2)
-      else if(nthr.eq.5) then; call subtractft85(itone,f1,xdt2)
-      else if(nthr.eq.6) then; call subtractft86(itone,f1,xdt2)
-      else if(nthr.eq.7) then; call subtractft87(itone,f1,xdt2)
-      else if(nthr.eq.8) then; call subtractft88(itone,f1,xdt2)
-      else if(nthr.eq.9) then; call subtractft89(itone,f1,xdt2)
-      else if(nthr.eq.10) then; call subtractft810(itone,f1,xdt2)
-      else if(nthr.eq.11) then; call subtractft811(itone,f1,xdt2)
-      else if(nthr.eq.12) then; call subtractft812(itone,f1,xdt2)
+      if(nthr.eq.1) then; call subtractft81(itone,f1,xdt2,swl)
+      else if(nthr.eq.2) then; call subtractft82(itone,f1,xdt2,swl)
+      else if(nthr.eq.3) then; call subtractft83(itone,f1,xdt2,swl)
+      else if(nthr.eq.4) then; call subtractft84(itone,f1,xdt2,swl)
+      else if(nthr.eq.5) then; call subtractft85(itone,f1,xdt2,swl)
+      else if(nthr.eq.6) then; call subtractft86(itone,f1,xdt2,swl)
+      else if(nthr.eq.7) then; call subtractft87(itone,f1,xdt2,swl)
+      else if(nthr.eq.8) then; call subtractft88(itone,f1,xdt2,swl)
+      else if(nthr.eq.9) then; call subtractft89(itone,f1,xdt2,swl)
+      else if(nthr.eq.10) then; call subtractft810(itone,f1,xdt2,swl)
+      else if(nthr.eq.11) then; call subtractft811(itone,f1,xdt2,swl)
+      else if(nthr.eq.12) then; call subtractft812(itone,f1,xdt2,swl)
       endif
     endif
 

@@ -1,10 +1,11 @@
 subroutine cwfilter(swl,first,swlchanged)
 
-  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25,csynccq
+  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25,csynccq, &
+                       NFILT1,NFILT2,endcorr,endcorrswl
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
-  parameter (NFFT=184320,NFILT1=1400,NFILT2=1600)
+  parameter (NFFT=184320)
   real*4 window1(-NFILT1/2:NFILT1/2)
   real*4 window2(-NFILT2/2:NFILT2/2)
   character*37 msgcq25(25),msgsent37
@@ -142,23 +143,29 @@ subroutine cwfilter(swl,first,swlchanged)
 ! Create and normalize the filter
   if(first .or. swlchanged) then
      fac=1.0/float(nfft)
-     sum1=0.0
+     sumw=0.0
      if(.not.swl) then
         do j=-NFILT1/2,NFILT1/2
            window1(j)=cos(pivalue*j/NFILT1)**2
-           sum1=sum1+window1(j)
+           sumw=sumw+window1(j)
         enddo
         cw=0.
-        cw(1:NFILT1+1)=window1/sum1
+        cw(1:NFILT1+1)=window1/sumw
         cw=cshift(cw,NFILT1/2+1)
+        do j=1,NFILT1/2+1
+          endcorr(j)=1.0/(1.0-sum(window1(j-1:NFILT1/2))/sumw)
+        enddo
      else
         do j=-NFILT2/2,NFILT2/2
            window2(j)=cos(pivalue*j/NFILT2)
-           sum1=sum1+window2(j)
+           sumw=sumw+window2(j)
         enddo
         cw=0.
-        cw(1:NFILT2+1)=window2/sum1
+        cw(1:NFILT2+1)=window2/sumw
         cw=cshift(cw,NFILT2/2+1)
+        do j=1,NFILT2/2+1
+          endcorrswl(j)=1.0/(1.0-sum(window2(j-1:NFILT2/2))/sumw)
+        enddo
      endif
      call four2a(cw,NFFT,1,-1,1)
      cw=cw*fac
