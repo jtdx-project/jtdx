@@ -8,8 +8,7 @@ subroutine subtractft87(itone,f0,dt,swl)
   logical(1), intent(in) :: swl
 
   nstart=dt*12000+1
-!  call genft8refsig(itone,cref7,f0)
-  call gen_ft8wavesub(itone,f0,cref7)
+  call gen_ft8wave(itone,79,1920,2.0,12000.0,f0,cref7,xjunk,1,NFRAME)
   do i=1,nframe
     id=nstart-1+i 
     if(id.ge.1.and.id.le.NMAX) then
