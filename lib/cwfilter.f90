@@ -1,7 +1,7 @@
 subroutine cwfilter(swl,first,swlchanged)
 
   use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25,csynccq, &
-                       NFILT1,NFILT2,endcorr,endcorrswl
+                       NFILT1,NFILT2,endcorr,endcorrswl,pstep
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
@@ -11,12 +11,16 @@ subroutine cwfilter(swl,first,swlchanged)
   character*37 msgcq25(25),msgsent37
   integer itone(79)
   integer*1 msgbits(77)
-  real pstep
   logical(1), intent(in) :: swl
   logical, intent(in) :: first,swlchanged
 
 !pushing callsigns from ALLCALL to memory
   if(first) then
+!for sync8d.f90:
+!     fs2=12000.0/NDOWN         !Sample rate after downsampling
+!     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
+!     baud=6.25 ! 1.0/32*dt2     !Keying rate = 1 / Symbol duration
+    pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
     open(24,file=trim(share_dir)//'/ALLCALL7.TXT',status='unknown') ! accepting Australian 7-char callsigns
     do i=1,MAXC
       read(24,1004,end=20) line
@@ -84,12 +88,7 @@ subroutine cwfilter(swl,first,swlchanged)
         if(iand(i,2**j).ne.0) one(i,j)=.true.
       enddo
     enddo
- 
-!for sync8d.f90:
-!     fs2=12000.0/NDOWN         !Sample rate after downsampling
-!     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
-!     baud=6.25 ! 1.0/32*dt2     !Keying rate = 1 / Symbol duration
-    pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
+
     do i=0,6
       phi=0.0
       dphi=pstep*icos7(i)

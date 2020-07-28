@@ -9,12 +9,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,pstep
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
-  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymbr(32),csr(0:7,79)
+  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymbr(32),csr(0:7,79), &
+          csig(0:78,32),z1
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
@@ -1163,19 +1164,41 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       endif
     endif
 
-    if(lsubtract .and. .not.ldupemsg) then
-      if(nthr.eq.1) then; call subtractft81(itone,f1,xdt2,swl)
-      else if(nthr.eq.2) then; call subtractft82(itone,f1,xdt2,swl)
-      else if(nthr.eq.3) then; call subtractft83(itone,f1,xdt2,swl)
-      else if(nthr.eq.4) then; call subtractft84(itone,f1,xdt2,swl)
-      else if(nthr.eq.5) then; call subtractft85(itone,f1,xdt2,swl)
-      else if(nthr.eq.6) then; call subtractft86(itone,f1,xdt2,swl)
-      else if(nthr.eq.7) then; call subtractft87(itone,f1,xdt2,swl)
-      else if(nthr.eq.8) then; call subtractft88(itone,f1,xdt2,swl)
-      else if(nthr.eq.9) then; call subtractft89(itone,f1,xdt2,swl)
-      else if(nthr.eq.10) then; call subtractft810(itone,f1,xdt2,swl)
-      else if(nthr.eq.11) then; call subtractft811(itone,f1,xdt2,swl)
-      else if(nthr.eq.12) then; call subtractft812(itone,f1,xdt2,swl)
+!    if(lsubtract .and. .not.ldupemsg) then
+    if(lsubtract) then
+      noff=10; sync0=0.; syncp=0.; syncm=0.
+      do i=0,78
+        phi=0.0; dphi=pstep*itone(i+1)
+        do j=1,32
+          csig(i,j)=cmplx(cos(phi),sin(phi)) !Waveform
+          phi=mod(phi+dphi,twopi)
+        enddo
+        i21=i0+i*32; z1=0.
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        sync0 = sync0 + real(z1)**2 + aimag(z1)**2
+        i21=i0+i*32+noff; z1=0.
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        syncp = syncp + real(z1)**2 + aimag(z1)**2
+        i21=i21-noff*2; z1=0.
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        syncm = syncm + real(z1)**2 + aimag(z1)**2
+      enddo
+      call peakup(syncm,sync0,syncp,dx)
+      if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif
+      xdt3=xdt+scorr*dt2
+
+      if(nthr.eq.1) then; call subtractft81(itone,f1,xdt3,swl)
+      else if(nthr.eq.2) then; call subtractft82(itone,f1,xdt3,swl)
+      else if(nthr.eq.3) then; call subtractft83(itone,f1,xdt3,swl)
+      else if(nthr.eq.4) then; call subtractft84(itone,f1,xdt3,swl)
+      else if(nthr.eq.5) then; call subtractft85(itone,f1,xdt3,swl)
+      else if(nthr.eq.6) then; call subtractft86(itone,f1,xdt3,swl)
+      else if(nthr.eq.7) then; call subtractft87(itone,f1,xdt3,swl)
+      else if(nthr.eq.8) then; call subtractft88(itone,f1,xdt3,swl)
+      else if(nthr.eq.9) then; call subtractft89(itone,f1,xdt3,swl)
+      else if(nthr.eq.10) then; call subtractft810(itone,f1,xdt3,swl)
+      else if(nthr.eq.11) then; call subtractft811(itone,f1,xdt3,swl)
+      else if(nthr.eq.12) then; call subtractft812(itone,f1,xdt3,swl)
       endif
     endif
 
