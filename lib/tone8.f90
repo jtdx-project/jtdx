@@ -1,11 +1,10 @@
-! last time modified by Igor UA3DJY on 20191118
-
 subroutine tone8(lmycallstd,lhiscallstd)
 
-  use ft8_mod1, only : itone56,idtone56,msg,csynce,twopi,mycall,hiscall
+  use ft8_mod1, only : itone56,idtone56,msg,csynce,mycall,hiscall
+  complex csig0(151680)
   character msg37*37,msgsent37*37,mycall14*14,hiscall14*14
   character*4 rpt(56)
-  integer itone(79)
+  integer itone(79),itone1(79)
   integer*1 msgbits(77)
   logical(1), intent(in) :: lmycallstd,lhiscallstd
 
@@ -28,11 +27,11 @@ subroutine tone8(lmycallstd,lhiscallstd)
 
   if(lhiscallstd .and. lmycallstd) then
     do i=1,56
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
       msg(i)=msg37
       i3=-1; n3=-1
       call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
+      if(i.eq.1) itone1=itone
       idtone56(i,1:29)=itone(8:36)
       idtone56(i,30:58)=itone(44:72)
       itone56(i,1:79)=itone(1:79)
@@ -42,31 +41,27 @@ subroutine tone8(lmycallstd,lhiscallstd)
 
   if(.not.lhiscallstd .and. lmycallstd) then
     do i=1,52
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall14)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall14)//' '//trim(rpt(i))
       i3=-1; n3=-1
       call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
+      if(i.eq.1) itone1=itone
       idtone56(i,1:29)=itone(8:36)
       idtone56(i,30:58)=itone(44:72)
       itone56(i,1:79)=itone(1:79)
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
       msg(i)=msg37
     enddo
     do i=54,56
-      msg37='                                     '
-      msg37=trim(mycall14)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall14)//' '//trim(hiscall)//' '//trim(rpt(i))
       i3=-1; n3=-1
       call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
       idtone56(i,1:29)=itone(8:36)
       idtone56(i,30:58)=itone(44:72)
       itone56(i,1:79)=itone(1:79)
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
       msg(i)=msg37
     enddo
-    msg37='                                     '
-    msg37=trim(mycall14)//' '//trim(hiscall)
+    msg37=''; msg37=trim(mycall14)//' '//trim(hiscall)
     msg(53)=msg37
     i3=-1; n3=-1
     call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
@@ -78,31 +73,27 @@ subroutine tone8(lmycallstd,lhiscallstd)
 
   if(lhiscallstd .and. .not.lmycallstd) then
     do i=1,52
-      msg37='                                     '
-      msg37=trim(mycall14)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall14)//' '//trim(hiscall)//' '//trim(rpt(i))
       i3=-1; n3=-1
       call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
+      if(i.eq.1) itone1=itone
       idtone56(i,1:29)=itone(8:36)
       idtone56(i,30:58)=itone(44:72)
       itone56(i,1:79)=itone(1:79)
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
       msg(i)=msg37
     enddo
     do i=54,56
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall14)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall14)//' '//trim(rpt(i))
       i3=-1; n3=-1
       call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
       idtone56(i,1:29)=itone(8:36)
       idtone56(i,30:58)=itone(44:72)
       itone56(i,1:79)=itone(1:79)
-      msg37='                                     '
-      msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
+      msg37=''; msg37=trim(mycall)//' '//trim(hiscall)//' '//trim(rpt(i))
       msg(i)=msg37
     enddo
-    msg37='                                     '
-    msg37=trim(mycall14)//' '//trim(hiscall)
+    msg37=''; msg37=trim(mycall14)//' '//trim(hiscall)
     msg(53)=msg37
     i3=-1; n3=-1
     call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
@@ -112,19 +103,11 @@ subroutine tone8(lmycallstd,lhiscallstd)
     go to 2
   endif
 
-!for sync8d.f90:
-!     fs2=12000.0/NDOWN         !Sample rate after downsampling
-!     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
-!     baud=6.25 ! 1.0/32*dt2     !Keying rate = 1 / Symbol duration
-2 pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
-  do i=0,18
-    phi=0.0
-    dphi=pstep*itone56(1,i+8)
-    do j=1,32
-      csynce(i,j)=cmplx(cos(phi),sin(phi)) !Waveform for base part of the message
-      phi=mod(phi+dphi,twopi)
-    enddo
-  enddo 
+2 m=13441 ! 7*1920+1
+  call gen_ft8wave(itone1,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
+  do j=0,18
+    do k=1,32; csynce(j,k)=csig0(m); m=m+60; enddo
+  enddo
  
   return
 end subroutine tone8
