@@ -1,13 +1,13 @@
 subroutine cwfilter(swl,first,swlchanged)
 
-  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,icos7,csync,idtone25,csynccq, &
-                       NFILT1,NFILT2,endcorr,endcorrswl,pstep
+  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,csync,idtone25,csynccq, &
+                       NFILT1,NFILT2,endcorr,endcorrswl
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
   parameter (NFFT=184320)
-  real*4 window1(-NFILT1/2:NFILT1/2)
-  real*4 window2(-NFILT2/2:NFILT2/2)
+  complex csig0(151680)
+  real*4 window1(-NFILT1/2:NFILT1/2),window2(-NFILT2/2:NFILT2/2)
   character*37 msgcq25(25),msgsent37
   integer itone(79)
   integer*1 msgbits(77)
@@ -16,11 +16,6 @@ subroutine cwfilter(swl,first,swlchanged)
 
 !pushing callsigns from ALLCALL to memory
   if(first) then
-!for sync8d.f90:
-!     fs2=12000.0/NDOWN         !Sample rate after downsampling
-!     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
-!     baud=6.25 ! 1.0/32*dt2     !Keying rate = 1 / Symbol duration
-    pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
     open(24,file=trim(share_dir)//'/ALLCALL7.TXT',status='unknown') ! accepting Australian 7-char callsigns
     do i=1,MAXC
       read(24,1004,end=20) line
@@ -89,22 +84,6 @@ subroutine cwfilter(swl,first,swlchanged)
       enddo
     enddo
 
-    do i=0,6
-      phi=0.0
-      dphi=pstep*icos7(i)
-      do j=1,32
-        csync(i,j)=cmplx(cos(phi),sin(phi)) !Waveform for 7x7 Costas array
-        phi=mod(phi+dphi,twopi)
-      enddo
-    enddo
-    csynccq(0:7,1:32)=cmplx(1.0,0.0)
-    phi=0.0
-    if(i.lt.8) then; dphi=0.; else; dphi=pstep; endif
-    do j=1,32
-      csynccq(8,j)=cmplx(cos(phi),sin(phi)) !Waveform for 7x7 Costas array
-      phi=mod(phi+dphi,twopi)
-    enddo
-
     msgcq25=''
     msgcq25(2)='CQ 2E0DLA IO92'
     msgcq25(3)='CQ BH3NEB ON81'
@@ -133,6 +112,16 @@ subroutine cwfilter(swl,first,swlchanged)
     do i=2,25
       i3=-1; n3=-1
       call genft8sd(msgcq25(i),i3,n3,msgsent37,msgbits,itone)
+      if(i.eq.2) then
+        call gen_ft8wave(itone,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
+        m=1
+        do j=0,15
+          do k=1,32
+            if(j.lt.7) then; csync(j,k)=csig0(m); else; csynccq(j-7,k)=csig0(m); endif
+            m=m+60
+          enddo
+        enddo
+      endif
       idtone25(i,1:29)=itone(8:36)
       idtone25(i,30:58)=itone(44:72)
     enddo

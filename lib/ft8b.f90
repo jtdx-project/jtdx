@@ -9,13 +9,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,pstep
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
   complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymbr(32),csr(0:7,79), &
-          csig(0:78,32),z1
+          csig(32),csig0(151680),z1
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
@@ -1166,21 +1166,21 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
 !    if(lsubtract .and. .not.ldupemsg) then
     if(lsubtract) then
-      noff=10; sync0=0.; syncp=0.; syncm=0.
+      noff=10; sync0=0.; syncp=0.; syncm=0.; k=1
+      call gen_ft8wave(itone,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
       do i=0,78
-        phi=0.0; dphi=pstep*itone(i+1)
         do j=1,32
-          csig(i,j)=cmplx(cos(phi),sin(phi)) !Waveform
-          phi=mod(phi+dphi,twopi)
+          csig(j)=csig0(k)
+          k=k+60
         enddo
         i21=i0+i*32; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
         sync0 = sync0 + real(z1)**2 + aimag(z1)**2
         i21=i0+i*32+noff; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
         syncp = syncp + real(z1)**2 + aimag(z1)**2
         i21=i21-noff*2; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig(i,1:32)))
+        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
         syncm = syncm + real(z1)**2 + aimag(z1)**2
       enddo
       call peakup(syncm,sync0,syncp,dx)
