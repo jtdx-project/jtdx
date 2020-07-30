@@ -5,7 +5,7 @@ subroutine cwfilter(swl,first,swlchanged)
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
-  parameter (NFFT=184320)
+  parameter (NFFT=180000)
   complex csig0(151680)
   real*4 window1(-NFILT1/2:NFILT1/2),window2(-NFILT2/2:NFILT2/2)
   character*37 msgcq25(25),msgsent37

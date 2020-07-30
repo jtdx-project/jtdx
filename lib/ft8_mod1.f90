@@ -1,10 +1,10 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NPS1=184320,NFR=151680,NFILT1=3380,NFILT2=3200) !NFRAME=1920*79
+  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
   real*4 dd8(nps),dd8m(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
-  complex cw(nps1),cfilt1(nps1),cfilt2(nps1),cfilt3(nps1),cfilt4(nps1),cfilt5(nps1),cfilt6(nps1),cfilt7(nps1),   &
-          cfilt8(nps1),cfilt9(nps1),cfilt10(nps1),cfilt11(nps1),cfilt12(nps1),cref1(nfr),cref2(nfr),cref3(nfr),  &
+  complex cw(nps),cfilt1(nps),cfilt2(nps),cfilt3(nps),cfilt4(nps),cfilt5(nps),cfilt6(nps),cfilt7(nps),   &
+          cfilt8(nps),cfilt9(nps),cfilt10(nps),cfilt11(nps),cfilt12(nps),cref1(nfr),cref2(nfr),cref3(nfr),  &
           cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
           csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:8,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot

@@ -3,7 +3,7 @@ subroutine subtractft812(itone,f0,dt,swl)
   !$ use omp_lib
   use ft8_mod1, only : dd8,cw,cfilt12,cref12,NFILT1,NFILT2,endcorr,endcorrswl
 ! NMAX=15*12000,NFFT=15*12000,NFRAME=1920*79
-  parameter (NFFT=184320,NMAX=180000,NFRAME=151680)
+  parameter (NFFT=180000,NMAX=180000,NFRAME=151680)
   integer itone(79)
   logical(1), intent(in) :: swl
 
