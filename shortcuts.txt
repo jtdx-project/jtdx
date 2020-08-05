@@ -11,6 +11,7 @@
   <tr><td><b>Alt+1-6  </b></td><td>Set now transmission to this number on Tab 1</td></tr>
   <tr><td><b>Ctl+1-6  </b></td><td>Set next transmission to this number on Tab 1</td></tr>
   <tr><td><b>Alt+Ctrl+A    </b></td><td>Clear wanted callsign list</td></tr>
+  <tr><td><b>Alt+B/C  </b></td><td>Switch to FT8/FT4 mode</td></tr>
   <tr><td><b>Alt+D    </b></td><td>Decode again at QSO frequency</td><td><b>Shift+D  </b></td><td>Full decode (both windows)</td></tr>
   <tr><td><b>Alt+E    </b></td><td>Erase</td></tr>
   <tr><td><b>Alt+F    </b></td><td>Toggle bypass all text filters</td><td><b>Ctrl+F   </b></td><td>Edit the free text message box</td></tr>

@@ -16,6 +16,7 @@ class QRegExp;
 class QTcpSocket;
 class QByteArray;
 
+//
 // Ham Radio Deluxe Transceiver Interface
 //
 // Implemented as a Transceiver decorator  because we may want the PTT

@@ -15,7 +15,7 @@ subroutine fil3c(c1,n1,c2,n2)
 ! of 1500 Hz output samples.
 
   parameter (NTAPS=113)
-  parameter (NH=NTAPS/2)
+  parameter (NH=56) ! NH=NTAPS/2
   parameter (NDOWN=8)                !Downsample ratio = 1/8
   complex c1(n1)
   complex c2(n1/NDOWN)

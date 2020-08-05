@@ -104,7 +104,7 @@ extern "C" {
 
 int volatile itone[NUM_ISCAT_SYMBOLS];	//Audio tones for all Tx symbols
 int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
-struct dec_data dec_data;             // for sharing with Fortran
+dec_data_t dec_data;             // for sharing with Fortran
 
 int rc;
 qint32  g_iptt {0};
@@ -603,6 +603,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionCatalan->setActionGroup(languageGroup);
   ui->actionCroatian->setActionGroup(languageGroup);
   ui->actionDanish->setActionGroup(languageGroup);
+  ui->actionDutch->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
@@ -1067,7 +1068,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
-  foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
+  foxgen_(); ui->actionLatvian->setEnabled(false); ui->actionDutch->setEnabled(false);//temporarily disable
 
   styleChanged();
   // this must be the last statement of constructor
@@ -1288,6 +1289,7 @@ void MainWindow::readSettings()
   ui->actionCatalan->setText("Català");
   ui->actionCroatian->setText("Hrvatski");
   ui->actionDanish->setText("Dansk");
+  ui->actionDutch->setText("Nederlands");
   ui->actionSpanish->setText("Español");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
@@ -2243,6 +2245,18 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
     case Qt::Key_Escape:
       haltTx("TX halted via Escape button ");
       break;
+    case Qt::Key_B:
+      if(e->modifiers() & Qt::AltModifier) {
+        on_actionFT8_triggered();
+        return;
+      }
+      break;
+    case Qt::Key_C:
+      if(e->modifiers() & Qt::AltModifier) {
+        on_actionFT4_triggered();
+        return;
+      }
+      break;
     }
 
   QMainWindow::keyPressEvent (e);
@@ -2782,6 +2796,7 @@ void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(tr
 void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(true); set_language("ca_ES"); }
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
 void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
+void MainWindow::on_actionDutch_triggered() { ui->actionDutch->setChecked(true); set_language("nl_NL"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
@@ -3834,6 +3849,7 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="ca_ES") ui->actionCatalan->setChecked(true);
   else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
   else if(m_lang=="da_DK") ui->actionDanish->setChecked(true);
+  else if(m_lang=="nl_NL") ui->actionDutch->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
@@ -4150,7 +4166,7 @@ void MainWindow::guiUpdate()
     }
 
     icw[0] = 0;
-    auto msg_parts = m_currentMessage.split (' ', QString::SkipEmptyParts);
+    auto msg_parts = m_currentMessage.split (' ', SkipEmptyParts);
 /*    if (msg_parts.size () > 2) {
       // clean up short code forms
       msg_parts[0].remove (QChar {'<'});
@@ -4159,7 +4175,7 @@ void MainWindow::guiUpdate()
 
 // m_currentMessageType m_lastMessageType are always 0 in FT8 mode
     auto is_73 = (m_QSOProgress >= ROGER_REPORT || m_ntx==4 || m_ntx==5) && message_is_73 (m_currentMessageType, msg_parts);
-	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', QString::SkipEmptyParts));
+	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', SkipEmptyParts));
     m_sentFirst73 = is_73 && m_lastloggedcall!=m_hisCall
       && (!lastmsg_is73 || (lastmsg_is73 && !m_lastMessageSent.contains(m_hisCall)));
 
@@ -4741,7 +4757,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   }
 
   auto t3 = decodedtext.string ().left(47);
-  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", QString::SkipEmptyParts);
+  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
   if(t4.size () < 6) return;             //Skip the rest if no decoded text
 
 
@@ -6309,11 +6325,13 @@ void MainWindow::band_changed (Frequency f)
     auto const& newband = m_config.bands ()->find (f);
     auto const& oldband = m_config.bands ()->find (m_lastMonitoredFrequency);
     bool cleared=false;
-    if (m_autoEraseBC && (oldband != newband || m_oldmode != m_mode)) { // option: erase both windows if band is changed
-        ui->decodedTextBrowser->clear();
-        ui->decodedTextBrowser2->clear();
-        clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
-        cleared=true;
+    if (oldband != newband || m_oldmode != m_mode) {
+      clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
+      if (m_autoEraseBC) { // option: erase both windows if band is changed
+          ui->decodedTextBrowser->clear();
+          ui->decodedTextBrowser2->clear();
+          cleared=true;
+      }
     }
     m_lastBand.clear ();
     m_bandEdited = false;
@@ -6341,10 +6359,10 @@ void MainWindow::band_changed (Frequency f)
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
         if(stophintTimer.isActive()) stophintTimer.stop();
         dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
+        clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
             ui->decodedTextBrowser->clear();
             ui->decodedTextBrowser2->clear();
-            clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         }
     // Set the attenuation value if options are checked
         QString curBand;
@@ -7045,7 +7063,7 @@ bool MainWindow::shortList(QString callsign)
 
 bool MainWindow::isAutoSeq73(QString const& text)
 {
-  auto parts = text.split (' ', QString::SkipEmptyParts);
+  auto parts = text.split (' ', SkipEmptyParts);
   auto partsSize = parts.size ();
   bool b=((partsSize > 0 && (parts[0] == "73" || parts[0] == "TNX" || parts[0] == "TKS" || parts[0] == "TU"))
        || (partsSize > 1 && (parts[1] == "73" || parts[1] == "TNX" || parts[1] == "TKS" || parts[1] == "TU"))
@@ -7103,20 +7121,20 @@ void MainWindow::writeToALLTXT(QString const& text)
 void MainWindow::setTxMsgBtnColor()
 {
   if(0 == ui->tabWidget->currentIndex ()) {
-    if(m_ntx==1) ui->txb1->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==2) ui->txb2->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==3) ui->txb3->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==4) ui->txb4->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==5) ui->txb5->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_ntx==6) ui->txb6->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    if(m_ntx==1) ui->txb1->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==2) ui->txb2->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==3) ui->txb3->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==4) ui->txb4->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==5) ui->txb5->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==6) ui->txb6->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
   else if(1 == ui->tabWidget->currentIndex ()) {
-    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
-    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet(QString("QPushButton{background: #88ff88}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
 }
 
@@ -7252,10 +7270,10 @@ void MainWindow::replayDecodes ()
   // is not checked
 
   // attempt to parse the decoded text
-  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', QString::SkipEmptyParts))
+  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', SkipEmptyParts))
     {
       if (message.size() >= 4 && message.left (4) != "----") {
-          auto const& parts = message.split (' ', QString::SkipEmptyParts);
+          auto const& parts = message.split (' ', SkipEmptyParts);
           if (parts.size () >= 5 && parts[3].contains ('.')) { // WSPR
               postWSPRDecode (false, parts);
           } else {
@@ -7275,7 +7293,7 @@ void MainWindow::replayDecodes ()
 void MainWindow::postDecode (bool is_new, QString const& message)
 {
   auto const& decode = message.trimmed ();
-  auto const& parts = decode.left (22).split (' ', QString::SkipEmptyParts);
+  auto const& parts = decode.left (22).split (' ', SkipEmptyParts);
   if (parts.size () >= 5) {
       auto has_seconds = parts[0].size () > 4;
       bool low_confidence=(QChar {'*'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1)) || (QChar {'^'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1));

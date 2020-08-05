@@ -64,6 +64,12 @@ class QVariant;
     return QString {mo.enumerator (mo.indexOfEnumerator (#ENUM)).valueToKey (m)}; \
   }
 
+#if QT_VERSION >= QT_VERSION_CHECK (5, 15, 0)
+Qt::SplitBehaviorFlags const SkipEmptyParts = Qt::SkipEmptyParts;
+#else
+QString::SplitBehavior const SkipEmptyParts = QString::SkipEmptyParts;
+#endif
+
 inline
 void throw_qstring (QString const& qs)
 {

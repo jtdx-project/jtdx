@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20200104
-
 module jt9_decode
 
   type :: jt9_decoder
@@ -58,6 +56,11 @@ contains
     this%callback => callback
     ndecoded=0; chint=' '; nsps=6912; ncycles=1
     df3=1500.0/2048.0
+    if(nfqso.lt.nfa) then
+      if(nfsplit.gt.nfa .and. nfsplit.lt.(nfb-18)) then; nfqso=nfsplit
+      else; nfqso=nfa
+      endif
+    endif
     irxf=nint(nfqso/df3)+1
     dec%i=-1; dec%decoded=''
     newdat=newdatin
@@ -65,28 +68,29 @@ contains
     tstep=0.5*nsps/12000.0                      !Half-symbol step (seconds)
     dupe=.false.; rxfreq=.false.; tryhint=.false.
 
-    nf0=0
     nf1=nfa
-
-    if(nmode.eq.65+9) nf1=nfsplit
-    if(nagain .or. nagainfil) then
-       if(nfqso.ge.21) nf1=nfqso-20
-       if(nfqso.lt.21) nf1=nfqso
-       if(nfqso.le.4962) nfb=nfqso+20
-       if(nfqso.gt.4962) nfb=nfqso
+    if(nmode.eq.74) then ! 65+9
+      if(nfsplit.gt.0 .and. nfsplit.lt.4983) then; nf1=nfsplit
+      else; nf1=1
+      endif
+      if(nfb.lt.1 .or. nfb.gt.4982) nfb=4982
     endif
-    ia=max(1,nint((nf1-nf0)/df3))
-    ib=min(NSMAX,nint((nfb-nf0)/df3))
+    if(nagain .or. nagainfil) then
+       if(nfqso.ge.21) nf1=nfqso-20; if(nfqso.lt.21) nf1=nfqso
+       if(nfqso.le.4962) then; nfb=nfqso+20
+       else if(nfqso.gt.4962 .and. nfqso.lt.4983) then; nfb=nfqso
+       else; nfb=4982
+       endif
+    endif
+    ia=max(1,nint(nf1/df3))
+    ib=min(NSMAX,nint(nfb/df3))
     lag1=-int(2.5/tstep + 0.9999)
     lag2=int(5.0/tstep + 0.9999)
 
   do ipass=1,2
-
-!    if(newdat) then
-!       call timer('sync9   ',0)
-       call sync9(nzhsym,lag1,lag2,ia,ib,ccfred,red2)
-!       call timer('sync9   ',1)
-!    endif
+!    call timer('sync9   ',0)
+    call sync9(nzhsym,lag1,lag2,ia,ib,ccfred,red2)
+!    call timer('sync9   ',1)
   
     done=.false.
     ipeak1=0; ipeak2=0; ipeak3=0; ipeak4=0; ipeak5=0
@@ -227,8 +231,8 @@ contains
        if(nqd.ge.1) then
           nfa1=nfqso-2
           nfb1=nfqso+2
-          ia=max(1,nint((nfa1-nf0)/df3))
-          ib=min(NSMAX,nint((nfb1-nf0)/df3))
+          ia=max(1,nint(nfa1/df3))
+          ib=min(NSMAX,nint(nfb1/df3))
           ccfok(ia:ib)=(ccfred(ia:ib).gt.(ccflim-2.0)) .and.               &
                (red2(ia:ib).gt.(red2lim-1.0))
           ia1=ia
@@ -236,8 +240,8 @@ contains
        else
           nfa1=nf1
           nfb1=nfb
-          ia=max(1,nint((nfa1-nf0)/df3))
-          ib=min(NSMAX,nint((nfb1-nf0)/df3))
+          ia=max(1,nint(nfa1/df3))
+          ib=min(NSMAX,nint(nfb1/df3))
           do i=ia,ib
              ccfok(i)=ccfred(i).gt.ccflim .and. red2(i).gt.red2lim
           enddo
@@ -261,7 +265,7 @@ contains
                (ccfred(i).ge.ccflim .and. abs(f-fgood).gt.10.0*df8)) then
 
 !             call timer('softsym ',0)
-             fpk=nf0 + df3*(i-1)
+             fpk=df3*(i-1)
              if(nqd.eq.2) fpk=real(nfqso)
              tryhint=.false.
              if(nqd.eq.2 .and. ipass.eq.2) then

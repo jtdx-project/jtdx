@@ -9,6 +9,11 @@
 
 #define MAX_SCREENSIZE 2048
 
+extern "C" {
+  void flat4_(float swide[], int* iz, int* nflatten);
+}
+extern dec_data dec_data;
+
 CPlotter::CPlotter(QWidget *parent) :                  //CPlotter Constructor
   QFrame {parent},
   m_bScaleOK {false},

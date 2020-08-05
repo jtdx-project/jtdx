@@ -1,12 +1,11 @@
-! This source code file was last time modified by Igor UA3DJY on 20190411
-
 subroutine tonesd(msgd,lcq)
 
-  use ft8_mod1, only : csyncsd,csyncsdcq,twopi,itone76,idtone76,msgsd76
+  use ft8_mod1, only : csyncsd,csyncsdcq,itone76,idtone76,msgsd76
+  complex csig0(151680)
   character, intent(in) :: msgd*37
   character msg37*37,msgsent37*37,c1*12,c2*12,grid*6
   character*4 rpt(75)
-  integer itone(79)
+  integer itone(79),itone1(79)
   integer*1 msgbits(77)
   logical(1), intent(in) :: lcq
   logical(1) lgrid,lr73
@@ -49,6 +48,7 @@ subroutine tonesd(msgd,lcq)
       msgsd76(i)=msg37
       i3=-1; n3=-1
       call genft8sd(msg37,i3,n3,msgsent37,msgbits,itone)
+      if(i.eq.1) itone1=itone
       idtone76(i,1:29)=itone(8:36)
       idtone76(i,30:58)=itone(44:72)
       itone76(i,1:79)=itone(1:79)
@@ -63,28 +63,17 @@ subroutine tonesd(msgd,lcq)
       itone76(76,1:79)=itone(1:79)
   endif
 
-!for sync8d.f90:
-!     fs2=12000.0/NDOWN         !Sample rate after downsampling
-!     dt2=0.005 ! 1/fs2          !Corresponding sample interval = 1 / Sample rate after downsampling
-!     baud=6.25 ! 1.0/32*dt2     !Keying rate = 1 / Symbol duration
-  pstep=0.25d0*atan(1.d0) ! twopi*baud*dt2
+  m=13441 ! 7*1920+1
   if(lcq) then
+    call gen_ft8wave(itone,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
     do i=0,57
-      phi=0.0
-      if(i.lt.29) then; dphi=pstep*itone(i+8); else; dphi=pstep*itone(i+15); endif
-      do j=1,32
-        csyncsdcq(i,j)=cmplx(cos(phi),sin(phi))
-        phi=mod(phi+dphi,twopi)
-      enddo
+      if(i.eq.29) m=m+13440
+      do j=1,32; csyncsdcq(i,j)=csig0(m); m=m+60; enddo
     enddo
   else
+    call gen_ft8wave(itone1,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
     do i=0,18
-      phi=0.0
-      dphi=pstep*itone76(1,i+8)
-      do j=1,32
-        csyncsd(i,j)=cmplx(cos(phi),sin(phi)) !Waveform for base part of the message
-        phi=mod(phi+dphi,twopi)
-      enddo
+      do j=1,32; csyncsd(i,j)=csig0(m); m=m+60; enddo
     enddo
   endif
  

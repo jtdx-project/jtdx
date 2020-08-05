@@ -1,4 +1,3 @@
-
 #include "displaytext.h"
 
 #include <QtGlobal>
@@ -211,7 +210,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 myhisCall_ = hisCall;
                 }
         }
-        auto const& parts = decodedText->message().split (' ', QString::SkipEmptyParts);
+        auto const& parts = decodedText->message().split (' ', SkipEmptyParts);
         checkCall = decodedText->CQersCall(grid,tyyp);
         if(!app_mode.startsWith("FT") && (messageText.contains("2nd-h") || messageText.contains("3rd-h"))) jt65bc = true;
         if (!checkCall.isEmpty ()) {
@@ -890,7 +889,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
         ttime = 3600 * t.mid (0, 2).toUInt () + 60 * t.mid (2, 2).toUInt();
         if (t.mid (4, 2) != "  ") ttime += t.mid (4, 2).toUInt();        
 
-        auto const& parts = txs.at(i).split (' ', QString::SkipEmptyParts);
+        auto const& parts = txs.at(i).split (' ', SkipEmptyParts);
         if (parts.size () > 1) 
           {
             QString param="";

@@ -1,9 +1,10 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NPS1=184320,NFR=151680) !NFRAME=1920*79
+  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
   real*4 dd8(nps),dd8m(nps)
-  complex cw(nps1),cfilt1(nps1),cfilt2(nps1),cfilt3(nps1),cfilt4(nps1),cfilt5(nps1),cfilt6(nps1),cfilt7(nps1),   &
-          cfilt8(nps1),cfilt9(nps1),cfilt10(nps1),cfilt11(nps1),cfilt12(nps1),cref1(nfr),cref2(nfr),cref3(nfr),  &
+  real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
+  complex cw(nps),cfilt1(nps),cfilt2(nps),cfilt3(nps),cfilt4(nps),cfilt5(nps),cfilt6(nps),cfilt7(nps),   &
+          cfilt8(nps),cfilt9(nps),cfilt10(nps),cfilt11(nps),cfilt12(nps),cref1(nfr),cref2(nfr),cref3(nfr),  &
           cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
           csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:8,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot
@@ -15,7 +16,8 @@ module ft8_mod1
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decd,nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles,ncandall
-  logical one(0:511,0:8),lqsomsgdcd
+  integer*1 gen(91,174)
+  logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
   data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
@@ -45,6 +47,7 @@ module ft8_mod1
   data ndxnsaptypes(4,1:14)/11,11,11,13,13,13,14,14,14,12,31,36,35,1/ ! Tx4 RRR,RR73
   data ndxnsaptypes(5,1:14)/14,14,14,13,13,13,1,1,1,12,31,36,35,0/    ! Tx5 73
   data avexdt/0.0/
+  data first_osd/.true./
   
   type odd_struct
     real freq

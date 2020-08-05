@@ -491,9 +491,9 @@ private:
   Q_SLOT void on_newGridBandMode_check_box_clicked(bool checked);
   Q_SLOT void on_newPotential_check_box_clicked(bool checked);
 
-  Q_SLOT void on_eqsluser_edit_editingFinished();
-  Q_SLOT void on_eqslpasswd_edit_editingFinished();
-  Q_SLOT void on_eqslnick_edit_editingFinished();
+  Q_SLOT void on_eqsluser_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslpasswd_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslnick_edit_textEdited(const QString &arg1);
 
   Q_SLOT void on_pbCQmsg_clicked();
   Q_SLOT void on_pbMyCall_clicked();
@@ -677,6 +677,7 @@ private:
   bool enableCallsignFilter_;
   bool do_snr_;
   bool do_pwr_;
+  bool rig_power_;
   bool id_after_73_;
   bool tx_QSY_allowed_;
   bool spot_to_psk_reporter_;
@@ -919,6 +920,7 @@ bool Configuration::enableCountryFilter () const {return m_->enableCountryFilter
 bool Configuration::enableCallsignFilter () const {return m_->enableCallsignFilter_;}
 bool Configuration::do_snr () const {return m_->do_snr_;}
 bool Configuration::do_pwr () const {return m_->do_pwr_;}
+bool Configuration::rig_power () const {return m_->rig_power_;}
 bool Configuration::id_after_73 () const {return m_->id_after_73_;}
 bool Configuration::tx_QSY_allowed () const {return m_->tx_QSY_allowed_;}
 bool Configuration::spot_to_psk_reporter () const
@@ -1791,6 +1793,7 @@ void Configuration::impl::initialize_models ()
   ui_->enableCallsignFilter_check_box->setChecked (enableCallsignFilter_);
   ui_->S_meter_check_box->setChecked (do_snr_);
   ui_->output_power_check_box->setChecked (do_pwr_);
+  ui_->rig_power_check_box->setChecked (rig_power_);
   ui_->sbTopFreq->setValue (ntopfreq65_);
   ui_->sbAnswerCQCounter->setValue (nAnswerCQCounter_);
   ui_->sbAnswerInCallCounter->setValue (nAnswerInCallCounter_);
@@ -1807,11 +1810,13 @@ void Configuration::impl::initialize_models ()
   ui_->dxsummit_check_box->setChecked (spot_to_dxsummit_);
   ui_->preventFalseUDP_check_box->setChecked (prevent_spotting_false_);
   ui_->filterUDP_check_box->setChecked (filterUDP_);
-  ui_->eqsl_check_box->setEnabled (!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ());
-  ui_->eqsl_check_box->setChecked ((!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) && send_to_eqsl_);
   ui_->eqsluser_edit->setText (eqsl_username_);
   ui_->eqslpasswd_edit->setText (eqsl_passwd_);
   ui_->eqslnick_edit->setText (eqsl_nickname_);
+  if(!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setEnabled (true);
+    ui_->eqsl_check_box->setChecked (send_to_eqsl_);
+  }
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
@@ -2076,6 +2081,7 @@ void Configuration::impl::read_settings ()
 
   do_snr_ = settings_->value ("CATRequestSNR", false).toBool ();
   do_pwr_ = settings_->value ("CATRequestPower", false).toBool ();
+  rig_power_ = settings_->value ("RigPower", false).toBool ();
 
   if(settings_->value ("hideAfrica").toString()=="false" || settings_->value ("hideAfrica").toString()=="true")
     hideAfrica_ = settings_->value ("hideAfrica").toBool ();
@@ -2105,7 +2111,7 @@ void Configuration::impl::read_settings ()
     hideSAmerica_ = settings_->value ("hideSAmerica").toBool ();
   else hideSAmerica_ = false;
 
-  save_directory_ = settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ();
+  save_directory_.setPath (settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ());
 
   {
     //
@@ -2178,10 +2184,13 @@ void Configuration::impl::read_settings ()
     filterUDP_ = settings_->value ("ApplyFiltersToUDPmessages").toBool ();
   else filterUDP_ = false;
 
-  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
   eqsl_username_ = settings_->value ("EQSLUser", "").toString ();
   eqsl_passwd_ = settings_->value ("EQSLPasswd", "").toString ();
   eqsl_nickname_ = settings_->value ("EQSLNick", "").toString ();
+  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
+  if(eqsl_username_.isEmpty () || eqsl_passwd_.isEmpty () || eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setChecked (false); ui_->eqsl_check_box->setEnabled (false); send_to_eqsl_=false; 
+  }
   usesched_ = settings_->value ("UseSchedBands", false).toBool ();
   sched_hh_1_ = settings_->value ("Sched_hh_1", "").toString ();
   sched_mm_1_ = settings_->value ("Sched_mm_1", "").toString ();
@@ -2448,6 +2457,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("EnableCallsignFilter", enableCallsignFilter_);
   settings_->setValue ("CATRequestSNR", do_snr_);
   settings_->setValue ("CATRequestPower", do_pwr_);
+  settings_->setValue ("RigPower", rig_power_);
   settings_->setValue ("hideAfrica", hideAfrica_);
   settings_->setValue ("hideAntarctica", hideAntarctica_);
   settings_->setValue ("hideAsia", hideAsia_);
@@ -2825,6 +2835,7 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
 
   result.do_snr = ui_->S_meter_check_box->isChecked ();
   result.do_pwr = ui_->output_power_check_box->isChecked ();
+  result.rig_power = ui_->rig_power_check_box->isChecked ();
   result.baud = ui_->CAT_serial_baud_combo_box->currentText ().toInt ();
   result.data_bits = static_cast<TransceiverFactory::DataBits> (ui_->CAT_data_bits_button_group->checkedId ());
   result.stop_bits = static_cast<TransceiverFactory::StopBits> (ui_->CAT_stop_bits_button_group->checkedId ());
@@ -2994,7 +3005,8 @@ void Configuration::impl::accept ()
   spot_to_dxsummit_ = ui_->dxsummit_check_box->isChecked ();
   prevent_spotting_false_ = ui_->preventFalseUDP_check_box->isChecked ();
   filterUDP_ =  ui_->filterUDP_check_box->isChecked ();
-  send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  if(!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  else send_to_eqsl_ = false;
   eqsl_username_ = ui_->eqsluser_edit->text ();
   eqsl_passwd_ = ui_->eqslpasswd_edit->text ();
   eqsl_nickname_ = ui_->eqslnick_edit->text ();
@@ -3050,6 +3062,7 @@ void Configuration::impl::accept ()
   enableCallsignFilter_ = ui_->enableCallsignFilter_check_box->isChecked ();
   do_snr_ = ui_->S_meter_check_box->isChecked ();
   do_pwr_ = ui_->output_power_check_box->isChecked ();
+  rig_power_ = ui_->rig_power_check_box->isChecked ();
   id_after_73_ = ui_->CW_id_after_73_check_box->isChecked ();
   tx_QSY_allowed_ = ui_->tx_QSY_check_box->isChecked ();
   monitor_off_at_startup_ = ui_->monitor_off_check_box->isChecked ();
@@ -3107,7 +3120,7 @@ void Configuration::impl::accept ()
   TX_messages_ = ui_->TX_messages_check_box->isChecked ();
   hide_TX_messages_ = ui_->hide_TX_messages_check_box->isChecked ();
   data_mode_ = static_cast<DataMode> (ui_->TX_mode_button_group->checkedId ());
-  save_directory_ = ui_->save_path_display_label->text ();
+  save_directory_.setPath (ui_->save_path_display_label->text ());
   decode_at_52s_ = ui_->decode_at_52s_check_box->isChecked ();
   beepOnMyCall_ = ui_->beep_on_my_call_check_box->isChecked();
   beepOnNewCQZ_ = ui_->beep_on_newCQZ_check_box->isChecked();
@@ -3241,22 +3254,22 @@ void Configuration::impl::message_box_critical (QString const& reason, QString c
   mb.exec ();
 }
 
-void Configuration::impl::on_eqsluser_edit_editingFinished()
+void Configuration::impl::on_eqsluser_edit_textEdited(const QString &user)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setEnabled (!user.isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
   ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslpasswd_edit_editingFinished()
+void Configuration::impl::on_eqslpasswd_edit_textEdited(const QString &passwd)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslnick_edit_editingFinished()
+void Configuration::impl::on_eqslnick_edit_textEdited(const QString &nick)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ()) && send_to_eqsl_);  
 }
 
 void Configuration::impl::on_font_push_button_clicked ()
@@ -5009,7 +5022,7 @@ void Configuration::impl::delete_selected_macros (QModelIndexList selected_rows)
 {
   // sort in reverse row order so that we can delete without changing
   // indices underneath us
-  qSort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
+  std::sort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
          {
            return rhs.row () < lhs.row (); // reverse row ordering
          });

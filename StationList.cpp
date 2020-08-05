@@ -14,20 +14,23 @@
 #include <QDataStream>
 #include <QByteArray>
 #include <QDebug>
+#include <QDebugStateSaver>
 
 #include "pimpl_impl.hpp"
 
+#include "Radio.hpp"
 #include "Bands.hpp"
 #include "FrequencyList.hpp"
 
 #if !defined (QT_NO_DEBUG_STREAM)
 QDebug operator << (QDebug debug, StationList::Station const& station)
 {
+  QDebugStateSaver saver {debug};
   debug.nospace () << "Station("
                    << station.band_name_ << ", "
                    << station.offset_ << ", "
                    << station.antenna_description_ << ')';
-  return debug.space ();
+  return debug;
 }
 #endif
 
@@ -141,14 +144,6 @@ bool StationList::remove (Station s)
   return removeRow (row);
 }
 
-namespace
-{
-  bool row_is_higher (QModelIndex const& lhs, QModelIndex const& rhs)
-  {
-    return lhs.row () > rhs.row ();
-  }
-}
-
 bool StationList::removeDisjointRows (QModelIndexList rows)
 {
   bool result {true};
@@ -162,7 +157,10 @@ bool StationList::removeDisjointRows (QModelIndexList rows)
     }
 
   // reverse sort by row
-  qSort (rows.begin (), rows.end (), row_is_higher);
+  std::sort (rows.begin (), rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
+             {
+               return rhs.row () < lhs.row (); // reverse row ordering
+             });
   Q_FOREACH (auto index, rows)
     {
       if (result && !m_->removeRow (index.row ()))
@@ -406,9 +404,16 @@ bool StationList::impl::setData (QModelIndex const& model_index, QVariant const&
 
         case offset_column:
           {
-            stations_[row].offset_ = value.value<FrequencyDelta> ();
-            Q_EMIT dataChanged (model_index, model_index, roles);
-            changed = true;
+            if (value.canConvert<FrequencyDelta> ())
+              {
+                FrequencyDelta offset {qvariant_cast<Radio::FrequencyDelta> (value)};
+                if (offset != stations_[row].offset_)
+                  {
+                    stations_[row].offset_ = offset;
+                    Q_EMIT dataChanged (model_index, model_index, roles);
+                    changed = true;
+                  }
+              }
           }
           break;
 

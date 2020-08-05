@@ -1,5 +1,6 @@
 #include "HRDTransceiver.hpp"
 
+#include <algorithm>
 #include <QHostAddress>
 #include <QByteArray>
 #include <QRegExp>
@@ -9,6 +10,7 @@
 #include <QDir>
 
 #include "NetworkServerLookup.hpp"
+#include "qt_helpers.hpp"
 
 namespace
 {
@@ -36,7 +38,7 @@ struct HRDMessage
     HRDMessage * storage (reinterpret_cast<HRDMessage *> (new char[size]));
     storage->size_ = size ;
     ushort const * pl (payload.utf16 ());
-    qCopy (pl, pl + payload.size () + 1, storage->payload_); // copy terminator too
+    std::copy (pl, pl + payload.size () + 1, storage->payload_); // copy terminator too
     storage->magic_1_ = magic_1_value_;
     storage->magic_2_ = magic_2_value_;
     storage->checksum_ = 0;
@@ -166,7 +168,7 @@ int HRDTransceiver::do_start ()
   HRD_info << "Id: " << id << "\n";
   HRD_info << "Version: " << version << "\n";
 
-  auto radios = send_command ("get radios", false, false).trimmed ().split (',', QString::SkipEmptyParts);
+  auto radios = send_command ("get radios", false, false).trimmed ().split (',', SkipEmptyParts);
   if (radios.isEmpty ())
     {
       TRACE_CAT ("HRDTransceiver", "no rig found");
@@ -177,7 +179,7 @@ int HRDTransceiver::do_start ()
   Q_FOREACH (auto const& radio, radios)
     {
       HRD_info << "\t" << radio << "\n";
-      auto entries = radio.trimmed ().split (':', QString::SkipEmptyParts);
+      auto entries = radio.trimmed ().split (':', SkipEmptyParts);
       radios_.push_back (std::forward_as_tuple (entries[0].toUInt (), entries[1]));
     }
 
@@ -201,11 +203,11 @@ int HRDTransceiver::do_start ()
   HRD_info << "VFO count: " << vfo_count_ << "\n";
   TRACE_CAT ("HRDTransceiver", "vfo count:" << vfo_count_);
 
-  buttons_ = send_command ("get buttons").trimmed ().split (',', QString::SkipEmptyParts).replaceInStrings (" ", "~");
+  buttons_ = send_command ("get buttons").trimmed ().split (',', SkipEmptyParts).replaceInStrings (" ", "~");
   TRACE_CAT ("HRDTransceiver", "HRD Buttons: " << buttons_);
   HRD_info << "Buttons: {" << buttons_.join (", ") << "}\n";
 
-  dropdown_names_ = send_command ("get dropdowns").trimmed ().split (',', QString::SkipEmptyParts);
+  dropdown_names_ = send_command ("get dropdowns").trimmed ().split (',', SkipEmptyParts);
   TRACE_CAT ("HRDTransceiver", "Dropdowns:");
   HRD_info << "Dropdowns:\n";
   Q_FOREACH (auto const& dd, dropdown_names_)
@@ -216,12 +218,12 @@ int HRDTransceiver::do_start ()
       dropdowns_[dd] = selections;
     }
 
-  slider_names_ = send_command ("get sliders").trimmed ().split (',', QString::SkipEmptyParts).replaceInStrings (" ", "~");
+  slider_names_ = send_command ("get sliders").trimmed ().split (',', SkipEmptyParts).replaceInStrings (" ", "~");
   TRACE_CAT ("HRDTransceiver", "Sliders:-");
   HRD_info << "Sliders:\n";
   Q_FOREACH (auto const& s, slider_names_)
     {
-      auto range = send_command ("get slider-range " + current_radio_name + " " + s).trimmed ().split (',', QString::SkipEmptyParts);
+      auto range = send_command ("get slider-range " + current_radio_name + " " + s).trimmed ().split (',', SkipEmptyParts);
       TRACE_CAT ("HRDTransceiver", "\t" << s << ": {" << range.join (", ") << "}");
       HRD_info << "\t" << s << ": {" << range.join (", ") << "}\n";
       sliders_[s] = range;
@@ -235,7 +237,7 @@ int HRDTransceiver::do_start ()
   vfo_A_button_ = find_button (QRegExp ("^(VFO~A|Main)$"));
   vfo_B_button_ = find_button (QRegExp ("^(VFO~B|Sub)$"));
 
-  vfo_toggle_button_ = find_button (QRegExp ("^(A~/~B)$"));
+  vfo_toggle_button_ = find_button (QRegExp ("^(A~/~B|VFO~A/B)$"));
 
   split_mode_button_ = find_button (QRegExp ("^(Spl~On|Spl_On|Split|Split~On)$"));
   split_off_button_ = find_button (QRegExp ("^(Spl~Off|Spl_Off|Split~Off)$"));
@@ -391,17 +393,17 @@ std::vector<int> HRDTransceiver::find_dropdown_selection (int dropdown, QRegExp 
 void HRDTransceiver::map_modes (int dropdown, ModeMap *map)
 {
   // order matters here (both in the map and in the regexps)
-  map->push_back (std::forward_as_tuple (CW, find_dropdown_selection (dropdown, QRegExp ("^(CW|CW\\(N\\))|CWL$"))));
-  map->push_back (std::forward_as_tuple (CW_R, find_dropdown_selection (dropdown, QRegExp ("^(CW-R|CW-R\\(N\\)|CW|CWU)$"))));
+  map->push_back (std::forward_as_tuple (CW, find_dropdown_selection (dropdown, QRegExp ("^(CW|CW\\(N\\)|CW-LSB|CWL)$"))));
+  map->push_back (std::forward_as_tuple (CW_R, find_dropdown_selection (dropdown, QRegExp ("^(CW-R|CW-R\\(N\\)|CW|CW-USB|CWU)$"))));
   map->push_back (std::forward_as_tuple (LSB, find_dropdown_selection (dropdown, QRegExp ("^(LSB\\(N\\)|LSB)$"))));
   map->push_back (std::forward_as_tuple (USB, find_dropdown_selection (dropdown, QRegExp ("^(USB\\(N\\)|USB)$"))));
-  map->push_back (std::forward_as_tuple (DIG_U, find_dropdown_selection (dropdown, QRegExp ("^(DIG|DIGU|DATA-U|PKT-U|DATA|USER-U|USB)$"))));
+  map->push_back (std::forward_as_tuple (DIG_U, find_dropdown_selection (dropdown, QRegExp ("^(DIG|DIGU|DATA-U|PKT-U|DATA|AFSK|USER-U|USB)$"))));
   map->push_back (std::forward_as_tuple (DIG_L, find_dropdown_selection (dropdown, QRegExp ("^(DIG|DIGL|DATA-L|PKT-L|DATA-R|USER-L|LSB)$"))));
   map->push_back (std::forward_as_tuple (FSK, find_dropdown_selection (dropdown, QRegExp ("^(DIG|FSK|RTTY|RTTY-LSB)$"))));
   map->push_back (std::forward_as_tuple (FSK_R, find_dropdown_selection (dropdown, QRegExp ("^(DIG|FSK-R|RTTY-R|RTTY|RTTY-USB)$"))));
   map->push_back (std::forward_as_tuple (AM, find_dropdown_selection (dropdown, QRegExp ("^(AM|DSB|SAM|DRM)$"))));
   map->push_back (std::forward_as_tuple (FM, find_dropdown_selection (dropdown, QRegExp ("^(FM|FM\\(N\\)|FM-N|WFM)$"))));
-  map->push_back (std::forward_as_tuple (DIG_FM, find_dropdown_selection (dropdown, QRegExp ("^(PKT-FM|PKT|FM)$"))));
+  map->push_back (std::forward_as_tuple (DIG_FM, find_dropdown_selection (dropdown, QRegExp ("^(PKT-FM|PKT|DATA\\(FM\\)|FM)$"))));
 
 #if WSJT_TRACE_CAT
   TRACE_CAT ("HRDTransceiver", "for dropdown" << dropdown_names_[dropdown]);
@@ -600,7 +602,7 @@ void HRDTransceiver::do_frequency (Frequency f, MODE m, bool /*no_ignore*/)
   auto fo_string = QString::number (f);
   if (vfo_count_ > 1 && reversed_)
     {
-      auto frequencies = send_command ("get frequencies").trimmed ().split ('-', QString::SkipEmptyParts);
+      auto frequencies = send_command ("get frequencies").trimmed ().split ('-', SkipEmptyParts);
       send_simple_command ("set frequencies-hz " + QString::number (frequencies[0].toUInt ()) + ' ' + fo_string);
     }
   else
@@ -686,14 +688,14 @@ void HRDTransceiver::do_tx_frequency (Frequency tx, MODE mode, bool /*no_ignore*
         {
           Q_ASSERT (vfo_count_ > 1);
 
-          auto frequencies = send_command ("get frequencies").trimmed ().split ('-', QString::SkipEmptyParts);
+          auto frequencies = send_command ("get frequencies").trimmed ().split ('-', SkipEmptyParts);
           send_simple_command ("set frequencies-hz " + fo_string + ' ' + QString::number (frequencies[1].toUInt ()));
         }
       else
         {
           if (vfo_count_ > 1)
             {
-              auto frequencies = send_command ("get frequencies").trimmed ().split ('-', QString::SkipEmptyParts);
+              auto frequencies = send_command ("get frequencies").trimmed ().split ('-', SkipEmptyParts);
               send_simple_command ("set frequencies-hz " + QString::number (frequencies[0].toUInt ()) + ' ' + fo_string);
             }
           else if ((vfo_B_button_ >= 0 && vfo_A_button_ >= 0) || vfo_toggle_button_ >= 0)
@@ -985,7 +987,7 @@ void HRDTransceiver::do_poll ()
 
   if (vfo_count_ > 1)
     {
-      auto frequencies = send_command ("get frequencies", quiet).trimmed ().split ('-', QString::SkipEmptyParts);
+      auto frequencies = send_command ("get frequencies", quiet).trimmed ().split ('-', SkipEmptyParts);
       update_rx_frequency (frequencies[reversed_ ? 1 : 0].toUInt ());
       update_other_frequency (frequencies[reversed_ ? 0 : 1].toUInt ());
     }
@@ -1024,7 +1026,7 @@ QString HRDTransceiver::send_command (QString const& cmd, bool no_debug, bool pr
     {
       auto radio_name = send_command ("get radio", true, current_radio_, true);
       qDebug () << "HRDTransceiver::send_command: radio_name:" << radio_name;
-      auto radio_iter = std::find_if (radios_.begin (), radios_.end (), [this, &radio_name] (RadioMap::value_type const& radio)
+      auto radio_iter = std::find_if (radios_.begin (), radios_.end (), [&radio_name] (RadioMap::value_type const& radio)
                                       {
                                         return std::get<1> (radio) == radio_name;
                                       });
