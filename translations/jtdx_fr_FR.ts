@@ -3313,7 +3313,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Effacer cette liste lors de l&apos;enregistrement du QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2043"/>
@@ -3866,7 +3866,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4293"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de décodage d&apos;appel propre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4395"/>
@@ -6048,7 +6048,7 @@ jjhhmmssAAAA)</translation>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser le style sombre</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
@@ -6186,12 +6186,12 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;mise en marche ou arrêt Automatique du Trx lorsqu&apos;il est reconnue par Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Marche / Arrêt Trx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>

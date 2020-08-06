@@ -113,22 +113,22 @@ Una altra aplicació pot bloquejar el directori</translation>
     <message>
         <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Load ...</source>
-        <translation>Càrrega ...</translation>
+        <translation>&amp;Càrrega ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Save as ...</source>
-        <translation>Guardar com ...</translation>
+        <translation>&amp;Guardar com ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Merge ...</source>
-        <translation>Combinar ...</translation>
+        <translation>&amp;Combinar ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1476"/>
         <source>&amp;Reset</source>
-        <translation>Restablir</translation>
+        <translation>&amp;Restablir</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2708"/>
@@ -6064,7 +6064,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>Fes servir l&apos;estil fosc</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
@@ -6202,12 +6202,12 @@ període tranquil quan es realitza la descodificació.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sol·licita que s&apos;encengui o apagui la potència del equip quan s&apos;admeti a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Potència de l&apos;equip</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
@@ -7030,7 +7030,7 @@ i Locator DX quan s&apos;envia un missatge de text 73 o lliure.</translation>
     <message>
         <location filename="../Configuration.ui" line="2767"/>
         <source>EQSL Password.</source>
-        <translation>Contraseny&amp;a a eQSL.</translation>
+        <translation>Contrasenya a eQSL.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2777"/>
