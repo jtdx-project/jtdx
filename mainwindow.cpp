@@ -3133,6 +3133,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
+  dec_data.params.nlasttx=m_nlasttx;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;
@@ -4126,7 +4127,6 @@ void MainWindow::guiUpdate()
     m_currentMessage = m_curMsgTx;
     if(m_tune) { m_currentMessage = tr("TUNE"); m_currentMessageType = -1; m_nlasttx=0; }
     last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
-    dec_data.params.nlasttx=m_nlasttx;
 	
     if(m_restart && !haltedEmpty) {
       QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
@@ -7018,6 +7018,7 @@ void MainWindow::transmit (double snr)
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   if(stophintTimer.isActive()) stophintTimer.stop();
+  if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
 }
 
 void MainWindow::on_outAttenuation_valueChanged (int a)
