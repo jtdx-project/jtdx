@@ -61,9 +61,7 @@ subroutine cwfilter(swl,first,swlchanged)
     twopi=8.d0*atan(1.d0)
     dt=1.d0/12000.d0
 
-    do i=0,100
-      windowc1(i)=(1.0+cos(i*pivalue/100))/2
-    enddo
+    do i=0,54; windowc1(i)=(1.0+cos(i*pivalue/55))/2; enddo
     facx=1.0/300.0
     do i=0,200
       windowx(i)=(1.0+cos(i*pivalue/200))/2
