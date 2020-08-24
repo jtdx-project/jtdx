@@ -6,7 +6,7 @@
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation type="unfinished">Sáv</translation>
+        <translation>Sáv</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
@@ -308,7 +308,7 @@ Formátum:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation type="unfinished">ország?</translation>
+        <translation>ország?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -2142,7 +2142,7 @@ Formátum:
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation type="unfinished">ALLCALL7.TXT túl rövid vagysérült?</translation>
+        <translation>ALLCALL7.TXT túl rövid vagysérült?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
@@ -2157,7 +2157,7 @@ Formátum:
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished">audio adatvesztés</translation>
+        <translation>audio adatvesztés</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
@@ -3036,7 +3036,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="816"/>
         <source>edit</source>
-        <translation>szerkesztés</translation>
+        <translation type="unfinished">DX jel:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="830"/>
@@ -3047,7 +3047,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>prop</source>
-        <translation type="unfinished">terjedés</translation>
+        <translation type="unfinished">Terj:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="991"/>
@@ -3484,7 +3484,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2814"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktiválja a dekóderek csoportját az illesztett szűrők alapján, FT8 módban aktiválja az FT8AP funkciót&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Növeli a dekódolási módszerek csoportját. FT8 módban aktiválja az FT8AP funkciót&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2828"/>
@@ -3904,22 +3904,22 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4462"/>
         <source>narrow Filter</source>
-        <translation>keskeny sávszűrő</translation>
+        <translation type="unfinished">Keskeny sávban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4470"/>
         <source>decoder sensitivity</source>
-        <translation>dekóder érzékenység</translation>
+        <translation type="unfinished">Dekódolás érzékenysége</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4478"/>
         <source>QSO RX freq sensitivity</source>
-        <translation>QSO RX frekvencia érzékenység</translation>
+        <translation type="unfinished">Érzékenység a vételi frekvencián</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4486"/>
         <source>decoding cycles</source>
-        <translation>dekódolási ciklusok száma</translation>
+        <translation type="unfinished">Dekódolási ciklusok száma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4494"/>
@@ -4040,7 +4040,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4729"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Törli az összes *.wav &amp;&amp; *.c2 fájlt a mentési könyvtárból (SaveDir-ból)</translation>
+        <translation type="unfinished">Az összes wav c2 fájl törlése a mentési könyvtárból (save-ból)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4740"/>
@@ -4130,12 +4130,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4935"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>Törli a wsjtx_log.adi, QSO LOG fájlt  (Véglegesen !!)</translation>
+        <translation type="unfinished">A wsjtx_log.adi, LOG fájl végleges törlése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4940"/>
         <source>Open wsjtx_log.adi</source>
-        <translation>Megnyitja a wsjtx_log.adi fájlt</translation>
+        <translation type="unfinished">A wsjtx_log.adi fájl megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4943"/>
@@ -4201,7 +4201,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5039"/>
         <source>Skip Tx 1</source>
-        <translation>Ugrás Tx 1</translation>
+        <translation>Ugrás Tx 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5047"/>
@@ -4251,7 +4251,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5116"/>
         <source>Open log directory</source>
-        <translation>Megnyitja a Log könyvtárat</translation>
+        <translation type="unfinished">A Log könyvtár megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5124"/>
@@ -4296,12 +4296,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5198"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>A szövegszűrők kikerülése az RX frekvencián</translation>
+        <translation type="unfinished">A szövegszűrők kikapcsolása az RX frekvencián</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5209"/>
         <source>Bypass all text filters</source>
-        <translation>Kikerül minden szöveg szűrőt</translation>
+        <translation type="unfinished">Szöveg szűrés kikapcsolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5212"/>
@@ -4321,7 +4321,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5242"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>A saját hívójelet tartalmazó üzenetek az RX_frekvencia ablakban jelennek meg</translation>
+        <translation type="unfinished">A saját hívójelet tartalmazó üzenetek az RX frekvencia ablakban jelennek meg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5247"/>
@@ -4436,7 +4436,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5479"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>A kőrözött hívójelet tartalmazó üzenetek megjelenítése az RX_frekvencia ablakban</translation>
+        <translation type="unfinished">A figyelt hívójelet tartalmazó üzenetek megjelenítése az RX_frekvencia ablakban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5487"/>
@@ -4446,7 +4446,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5522"/>
         <source>use subpass</source>
-        <translation>használjon alulhaladást</translation>
+        <translation type="unfinished">Részletesebb kódolás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5533"/>
@@ -4456,7 +4456,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5541"/>
         <source>late start of decoder</source>
-        <translation>a dekóder késleltetett indítása</translation>
+        <translation type="unfinished">A dekódolás késleltetett indítása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5549"/>
@@ -4588,7 +4588,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5804"/>
         <source>wideband DX Call search</source>
-        <translation type="unfinished">DX hívójel keresése széles sávban</translation>
+        <translation type="unfinished">Hívójel keresése széles sávban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5812"/>
@@ -5888,7 +5888,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation>S&amp;aját hívójel:</translation>
+        <translation type="unfinished">Hívójel:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
@@ -5898,12 +5898,12 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation>Saját &amp;QTH lokátor:</translation>
+        <translation>QRA lokátor:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation>QTH lokátor (csak az első négy karakterre van szükség).</translation>
+        <translation type="unfinished">QRA lokátor (csak az első négy karakter kötelező).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
@@ -6110,12 +6110,12 @@ az Rx_frekvencia ablakban</translation>
     <message>
         <location filename="../Configuration.ui" line="587"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Egyes adók-ek nem képesek feldolgozni a CAT parancsokat adás közben. Ez azt jelenti, hogy ha ön VFO frekvencia eltolásos módban dolgozik, akkor lehet, hogy törölni kell ezt a lehetőséget.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Egyes adók-ek nem képesek feldolgozni a CAT parancsokat adás közben. Ez azt jelenti, hogy ha ön VFO frekvencia eltolásos módban dolgozik, akkor lehet, hogy törölni kell ezt a lehetőséget.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="590"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Engedélyezi a frekvencia változtatását adás közben</translation>
+        <translation>Engedélyezi a frekvencia változtatását adás közben</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="597"/>
@@ -6187,12 +6187,12 @@ csendes időszakban küldi el, amikor a dekódolás megtörtént.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Rig Be/Ki kapcsolása, ha a Hamlib támogatja a funkciót.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Rig teljesítmény</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
@@ -6539,12 +6539,12 @@ vagy sávszélesség van kiválasztva).</translation>
     <message>
         <location filename="../Configuration.ui" line="1495"/>
         <source>Split Operation</source>
-        <translation type="unfinished">VFO eltolás (Split)</translation>
+        <translation>VFO eltolás (Split)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1501"/>
         <source>Fake It</source>
-        <translation type="unfinished">Hamis</translation>
+        <translation>Hamis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1511"/>
@@ -6792,7 +6792,7 @@ a Stereo-t.</translation>
     <message>
         <location filename="../Configuration.ui" line="2175"/>
         <source>Strict directional CQ operation</source>
-        <translation type="unfinished">Célzott CQ hívás</translation>
+        <translation>Célzott CQ hívás</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2233"/>
@@ -6851,7 +6851,7 @@ Jelölje be ezt a lehetőséget, ha menti az adott és vett riportokat a megjegy
     <message>
         <location filename="../Configuration.ui" line="2368"/>
         <source>d&amp;B reports to comments</source>
-        <translation type="unfinished">d&amp;B riport mentése a megjegyzéshez.</translation>
+        <translation>d&amp;B riport mentése a megjegyzéshez.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2375"/>
@@ -6863,7 +6863,7 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2379"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation type="unfinished"> &amp;DX hívójel és QRA törlése mentéskor.</translation>
+        <translation> &amp;DX hívójel és QRA törlése mentéskor.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2386"/>
@@ -6873,7 +6873,7 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
         <source>Clear DX call and grid on exit</source>
-        <translation type="unfinished">DX hívójel és QRA törlése kilépéskor.</translation>
+        <translation>DX hívójel és QRA törlése kilépéskor.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2396"/>
@@ -6893,12 +6893,12 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2409"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation type="unfinished">A QSO mentésekor megerősítést kér.</translation>
+        <translation>A QSO mentésekor megerősítést kér.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2416"/>
         <source>Enable automatic logging of QSO</source>
-        <translation type="unfinished">QSO automatikus mentése.</translation>
+        <translation>QSO automatikus mentése.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2446"/>
@@ -6961,12 +6961,12 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2622"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az elküldött szöveges üzenetek rögzítését nem lehet letiltani.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az elküldött szöveges üzenetek rögzítését nem lehet letiltani.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2625"/>
         <source>Recording to ALL.TXT</source>
-        <translation type="unfinished">Az ALL.txt fájl mentési beállításai</translation>
+        <translation>Az ALL.txt fájl mentési beállításai</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2647"/>
@@ -6986,17 +6986,17 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2717"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
-        <translation type="unfinished">QSO adatok feltöltésének engedélyezése a http://www.eqsl.cc oldalra.</translation>
+        <translation>QSO adatok feltöltésének engedélyezése a http://www.eqsl.cc oldalra.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2720"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation type="unfinished">&amp;eQSL.cc feltöltés engedélyezése</translation>
+        <translation>&amp;eQSL.cc feltöltés engedélyezése</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>EQSL Username.</source>
-        <translation type="unfinished">eQSL.cc felhasználónév.</translation>
+        <translation>eQSL.cc felhasználónév.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
@@ -7011,7 +7011,7 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     <message>
         <location filename="../Configuration.ui" line="2767"/>
         <source>EQSL Password.</source>
-        <translation type="unfinished">eQSL.cc jelszó:</translation>
+        <translation>eQSL.cc jelszó:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2777"/>
@@ -7027,17 +7027,17 @@ a terjedés és a rendszer teljesítményének értékelésére.</translation>
     <message>
         <location filename="../Configuration.ui" line="2783"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation type="unfinished">DX jelentés engedélyezése a &amp;PSK Reporter oldalra</translation>
+        <translation>DX jelentés engedélyezése a &amp;PSK Reporter oldalra</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2790"/>
         <source>EQSL OTH Nickname.</source>
-        <translation type="unfinished">eQSL.cc QTH neve.</translation>
+        <translation>eQSL.cc QTH neve.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2797"/>
         <source>Enable DXSummit Spotting </source>
-        <translation type="unfinished">DX jelentés engedélyezése a DXSummit oldalra</translation>
+        <translation>DX jelentés engedélyezése a DXSummit oldalra</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2804"/>
@@ -7097,7 +7097,7 @@ a terjedés és a rendszer teljesítményének értékelésére.</translation>
     <message>
         <location filename="../Configuration.ui" line="2937"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation type="unfinished">Engedélyezi a mentett QSO adif formátumban való küldését.</translation>
+        <translation>Engedélyezi a mentett QSO adif formátumban való küldését.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
@@ -7107,7 +7107,7 @@ a terjedés és a rendszer teljesítményének értékelésére.</translation>
     <message>
         <location filename="../Configuration.ui" line="2950"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
-        <translation type="unfinished">Letiltja az azonosíthatatlanhívójelek UDP-n való küldését.</translation>
+        <translation>Letiltja az azonosíthatatlanhívójelek UDP-n való küldését.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2957"/>
@@ -7117,7 +7117,7 @@ a terjedés és a rendszer teljesítményének értékelésére.</translation>
     <message>
         <location filename="../Configuration.ui" line="2960"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation type="unfinished">Szövegszűrők használata az UDP üzenetek küldésekor.</translation>
+        <translation>Szövegszűrők használata az UDP üzenetek küldésekor.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2995"/>
@@ -7190,7 +7190,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="3214"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation type="unfinished">QSO státusz jelzések:</translation>
+        <translation>QSO státusz jelzések:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
@@ -7425,7 +7425,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alapértelmezés szerint a csak a &quot;CQ&quot;-t és a &quot;Saját hívójel&quot;-et tartalmazó üzenetek vannak ellenőrizve, ez a beállítás lehetővé teszi az egyéb DXCC-t, QRA-t, Hívójel-et tartalmazó standard vett üzenetek ellenőrzését is. Az értesítéshez az „Egyéb üzenet” szín használatos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alapértelmezés szerint a csak a &quot;CQ&quot;-t és a Saját hívójelet tartalmazó üzenetek vannak ellenőrizve, ez a beállítás lehetővé teszi az egyéb DXCC-t, QRA-t, Hívójel-et tartalmazó standard vett üzenetek ellenőrzését is. Az értesítéshez az „Egyéb üzenet” szín használatos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3536"/>
@@ -7445,7 +7445,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="3566"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hangjelzést ad, ha a fogadott üzenet tartalmazza a saját hívójelet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hangjelzést ad, ha a fogadott üzenet tartalmazza a saját hívójelet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3569"/>
@@ -7465,7 +7465,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="3609"/>
         <source>blue / my call at QSO</source>
-        <translation type="unfinished">Kék / Saját hívójel a QSO-ban</translation>
+        <translation>Kék / Saját hívójel a QSO-ban</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3645"/>
@@ -7475,7 +7475,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="3648"/>
         <source>red / my call in message</source>
-        <translation type="unfinished">Piros /Saját  hívójel az üzenetben</translation>
+        <translation>Piros /Saját  hívójel az üzenetben</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3658"/>
@@ -7643,7 +7643,7 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="4754"/>
         <source>Being used for CQ and MyCall messages only</source>
-        <translation>Csak CQ és Saját hívójel-t tartalmazó üzenetekhez használható</translation>
+        <translation>Csak CQ és saját hívójelt tartalmazó üzenetekhez használható</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4757"/>
@@ -8249,24 +8249,24 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6646"/>
         <location filename="../Configuration.ui" line="6659"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A széles sávú dekódolási kísérletek száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A széles sávú dekódolási kísérletek száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6649"/>
         <location filename="../Configuration.ui" line="7001"/>
         <source>Number of decoding attempts:</source>
-        <translation type="unfinished">Dekódolási kísérlet:</translation>
+        <translation>Dekódolási kísérlet:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6685"/>
         <location filename="../Configuration.ui" line="6698"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A szélessávú dekódolási folyamatok száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A szélessávú dekódolási folyamatok száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6688"/>
         <source>Number of decoding  passes: </source>
-        <translation type="unfinished">Dekódolási folyamat:</translation>
+        <translation>Dekódolási folyamat:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6718"/>
@@ -8278,19 +8278,19 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6721"/>
         <location filename="../Configuration.ui" line="7037"/>
         <source>RX frequency decoding attempts:</source>
-        <translation type="unfinished">Dekódolási kísérlet az RX frekvencián:</translation>
+        <translation>Dekódolási kísérlet az RX frekvencián:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6757"/>
         <location filename="../Configuration.ui" line="6770"/>
         <location filename="../Configuration.ui" line="6928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ez a DT ablak csak a Hint dekóderekhez használható, amelyek a CALL3 adatbázis CQ üzenetek és &apos;mycall hiscall hisgrid&apos;  adatait veszik alapul. A magasabb értékek növelhetik a hamis dekódolások számát.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Csak a Hint dekóderekhez használható, amelyek a CALL3 adatbázis CQ üzenetek és &apos;mycall hiscall hisgrid&apos;  adatait veszik alapul. A magasabb értékek növelhetik a hamis dekódolások számát.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6760"/>
         <source>Hinted decoding DT range:</source>
-        <translation>Célzott dekódolás DT (szinkronizálás) tartomány:</translation>
+        <translation>DT időintervallum (csak Hint-nél):</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6791"/>
