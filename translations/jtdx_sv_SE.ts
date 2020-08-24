@@ -4869,7 +4869,7 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
         <location filename="../mainwindow.cpp" line="3831"/>
         <location filename="../mainwindow.cpp" line="3838"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation type="unfinished">Är du säker på att byta UI-språk till svenska, JTDX kommer att starta om?</translation>
+        <translation>Är du säker på att byta UI-språk till svenska, JTDX kommer att starta om?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4010"/>
@@ -6594,7 +6594,7 @@ radiogränssnittet beter sig som förväntat.</translation>
     <message>
         <location filename="../Configuration.ui" line="1685"/>
         <source>A&amp;udio</source>
-        <translation></translation>
+        <translation>L&amp;jud</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1688"/>
