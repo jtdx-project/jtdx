@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR" sourcelanguage="en_US">
+<TS version="2.1" language="sv_SE" sourcelanguage="en_US">
 <context>
     <name>Bands</name>
     <message>
         <location filename="../Bands.cpp" line="135"/>
         <source>Band name</source>
-        <translation>Nom de Bande</translation>
+        <translation>Bandnamn</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="136"/>
         <source>Lower frequency limit</source>
-        <translation>Limite inférieure de fréquence</translation>
+        <translation>Nedre frekvensgräns</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Upper frequency limit</source>
-        <translation>Limite supérieure de fréquence</translation>
+        <translation>Övre frekvensgräns</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="199"/>
         <source>Band</source>
-        <translation>Bandes</translation>
+        <translation>Band</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="200"/>
         <source>Lower Limit</source>
-        <translation>Limite inférieure</translation>
+        <translation>Nedre gräns</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="201"/>
         <source>Upper Limit</source>
-        <translation>nom de la bande</translation>
+        <translation>Övre gräns</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../about.ui" line="23"/>
         <source>About JTDX</source>
-        <translation>À propos de JTDX</translation>
+        <translation>Om JTDX</translation>
     </message>
     <message>
         <location filename="../about.ui" line="71"/>
@@ -52,16 +52,11 @@
     <message>
         <location filename="../GetUserId.cpp" line="29"/>
         <source>Callsign</source>
-        <translation>Indicatif</translation>
+        <translation>Anropssignal</translation>
     </message>
 </context>
 <context>
     <name>Configuration::impl</name>
-    <message>
-        <location filename="../Configuration.cpp" line="1221"/>
-        <source>Create temporary directory error: </source>
-        <translation>Créer une erreur de répertoire temporaire: </translation>
-    </message>
     <message>
         <location filename="../Configuration.cpp" line="1205"/>
         <source>&amp;OK</source>
@@ -70,76 +65,82 @@
     <message>
         <location filename="../Configuration.cpp" line="1206"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annulé</translation>
+        <translation>&amp;Annullera</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="1221"/>
+        <source>Create temporary directory error: </source>
+        <translation>Skapa tillfälligt katalogfel: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1227"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
-        <translation>Créer une erreur de répertoire temporaire :
+        <translation>Skapa tillfälligt katalogfel:
 %1
-Une autre application peut être le verrouillage du répertoire</translation>
+En annan applikation kan låsa katalogen</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1244"/>
         <source>Create data directory error: </source>
-        <translation>Créer une erreur de répertoire de données: </translation>
+        <translation>Skapa datakatalogfel: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1253"/>
         <location filename="../Configuration.cpp" line="1264"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
-        <translation>Créer un répertoire</translation>
+        <translatorcomment>Kan inte Skapa katalog</translatorcomment>
+        <translation>Skapa katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1430"/>
         <location filename="../Configuration.cpp" line="1456"/>
         <location filename="../Configuration.cpp" line="1508"/>
         <source>&amp;Delete</source>
-        <translation>S&amp;upprimer</translation>
+        <translation>Radera</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1460"/>
         <location filename="../Configuration.cpp" line="1512"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Insérer ...</translation>
+        <translation>&amp;Föra in ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1464"/>
         <source>&amp;Load ...</source>
-        <translation>&amp;Charger ...</translation>
+        <translation>&amp;Ladda ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1468"/>
         <source>&amp;Save as ...</source>
-        <translation>&amp;Enregistrez comme ...</translation>
+        <translation>&amp;Spara som ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1472"/>
         <source>&amp;Merge ...</source>
-        <translation>&amp;Fusionner ...</translation>
+        <translation>&amp;Sammanfoga ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1476"/>
         <source>&amp;Reset</source>
-        <translation>&amp;Réinitialiser</translation>
+        <translation>&amp;Återställ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2708"/>
         <source>Serial Port:</source>
-        <translation></translation>
+        <translation>Serieport:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2709"/>
         <source>Serial port used for CAT control</source>
-        <translation>Port série utilisé pour le contrôle CAT</translation>
+        <translation>Seriell port som används för CAT-kontroll</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2716"/>
         <source>Network Server:</source>
-        <translation>Serveur de réseau :</translation>
+        <translation>Nätverksserver:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2717"/>
@@ -149,17 +150,17 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation>Nom d&apos;hôte et port du service réseau facultatifs.
-Laisser en blanc pour un défaut raisonnable sur cette machine.
-Formats:
-	hostname:port
-	IPv4-address:port
-	[IPv6-address]:port</translation>
+        <translation>Valfritt värdnamn och port för nätverkstjänst.
+Lämna tomt för en förnuftig standard på den här maskinen.
+format:
+	värdnamn: port
+	IPv4-adress: port
+	[IPv6-adress]: port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2729"/>
         <source>USB Device:</source>
-        <translation>Périphérique USB:</translation>
+        <translation>USB-enhet:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2730"/>
@@ -167,140 +168,140 @@ Formats:
 Leave blank for a sensible default for the rig.
 Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</source>
-        <translation>Identification facultative du dispositif.
-Laisser en blanc pour un défaut raisonnable de l&apos;appareil.
-Format:
-	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
+        <translation>Valfri enhetsidentifiering.
+Lämna tomt för en förnuftig standard för riggen.
+Formatera:
+	[VID [: PID [: VENDOR [: PRODUKT]]]]</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2765"/>
         <source>Invalid audio input device</source>
-        <translation>Dispositif d&apos;entrée audio non valide</translation>
+        <translation>Ogiltig ljudingångsenhet</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2772"/>
         <source>Invalid audio output device</source>
-        <translation>Dispositif de sortie audio non valide</translation>
+        <translation>Ogiltig ljudutgångsenhet</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2778"/>
         <source>Invalid PTT method</source>
-        <translation>Méthode PTT invalide</translation>
+        <translation>Ogiltig PTT-metod</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2788"/>
         <source>Invalid PTT port</source>
-        <translation>PORT PTT incorrect</translation>
+        <translation>Ogiltig PTT-port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3299"/>
         <source>CQ/73 in message</source>
-        <translation>CQ/73 dans le message</translation>
+        <translation>CQ / 73 i meddelandet</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3300"/>
         <source>CQ in message</source>
-        <translation>CQ dans le message</translation>
+        <translation>CQ i meddelande</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4483"/>
         <source>JTDX Decoded Text Font Chooser</source>
-        <translation>Choix de la police de décodage</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5105"/>
-        <source>Load Working Frequencies</source>
-        <translation>Charger les fréquences de travail</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5107"/>
-        <location filename="../Configuration.cpp" line="5138"/>
-        <location filename="../Configuration.cpp" line="5192"/>
-        <source>Frequency files (*.qrg);;All files (*.*)</source>
-        <translation>Fichiers de fréquence (*.qrg);;Tous les fichiers (*.*)</translation>
+        <translation>JTDX Decoded Text Font Choose</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5109"/>
         <location filename="../Configuration.cpp" line="5140"/>
         <source>Cancel</source>
-        <translation>Annuler</translation>
+        <translation>Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
-        <source>Replace Working Frequencies</source>
-        <translation>Remplacer les fréquences de travail</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5124"/>
-        <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation>Êtes-vous sûr de vouloir vous débarrasser de vos fréquences de travail actuelles et les remplacer par celles qui sont chargées ?</translation>
+        <location filename="../Configuration.cpp" line="5105"/>
+        <source>Load Working Frequencies</source>
+        <translation>Ladda arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Merge Working Frequencies</source>
-        <translation>Fusionner les fréquences de travail</translation>
+        <translation>Slå samman arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <location filename="../Configuration.cpp" line="5172"/>
         <location filename="../Configuration.cpp" line="5182"/>
         <source>Not a valid frequencies file</source>
-        <translation>Fichier de fréquences non valide</translation>
+        <translation>Inte en giltig frekvensfil</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5163"/>
         <source>Incorrect file magic</source>
-        <translation>Fichier magique incorrect</translation>
+        <translation>Felaktig magi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5172"/>
         <source>Version is too new</source>
-        <translation>La version est trop récente</translation>
+        <translation>Versionen är för ny</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5182"/>
         <source>Contents corrupt</source>
-        <translation>Contenu corrompu</translation>
+        <translation>Innehållet är skadat</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5192"/>
         <source>Save Working Frequencies</source>
-        <translation>Sauver les fréquences de travail</translation>
+        <translation>Spara arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5202"/>
         <source>Only Save Selected  Working Frequencies</source>
-        <translation>Ne conservez que certaines fréquences de travail</translation>
+        <translation>Spara endast utvalda arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5204"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
-        <translation>Êtes-vous sûr de ne vouloir sauvegarder que les fréquences de travail qui sont actuellement sélectionnées ? Cliquez sur Non pour tout enregistrer.</translation>
+        <translation>Är du säker på att du bara vill spara de arbetsfrekvenser som för närvarande är valda? Klicka på Nej för att spara alla.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5231"/>
         <source>Reset Working Frequencies</source>
-        <translation>Réinitialisation des fréquences de travail</translation>
+        <translation>Återställ arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5233"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
-        <translation>Êtes-vous sûr de vouloir vous débarrasser de vos fréquences de travail actuelles et les remplacer par des fréquences par défaut ?</translation>
+        <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med standardfrekvenser?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5293"/>
         <source>Save Directory</source>
-        <translation>Répertoire de sauvegarde</translation>
+        <translation>Spara katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5309"/>
         <source>Failed to open connection to rig</source>
-        <translation>Impossible d&apos;ouvrir la connexion avec le Trx</translation>
+        <translation>Det gick inte att öppna anslutningen till riggen</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5552"/>
         <source>Rig failure</source>
-        <translation>défaut Trx</translation>
+        <translation>Riggfel</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5192"/>
+        <source>Frequency files (*.qrg);;All files (*.*)</source>
+        <translation>Frekvensfiler (* .qrg) ;; Alla filer (*. *)</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5123"/>
+        <source>Replace Working Frequencies</source>
+        <translation>Byt ut arbetsfrekvenser</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5124"/>
+        <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
+        <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med de laddade frekvenserna?</translation>
     </message>
 </context>
 <context>
@@ -308,1737 +309,1737 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>Quel Pays ??</translation>
+        <translation>Var?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
         <source>Monaco</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Agalega &amp; St. Brandon</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
         <source>Mauritius</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
         <source>Equatorial Guinea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
         <source>Fiji</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="43"/>
         <source>Conway Reef</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of eSwatini</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
         <source>Tunisia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="47"/>
         <source>Vietnam</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="48"/>
         <source>Guinea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="49"/>
         <source>Bouvet</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Peter 1 Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="51"/>
         <source>Azerbaijan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="52"/>
         <source>Georgia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="53"/>
         <source>Montenegro</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="54"/>
         <source>Sri Lanka</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="55"/>
         <source>ITU HQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>United Nations HQ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="57"/>
         <source>Vienna Intl Ctr</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="58"/>
         <source>Timor - Leste</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="59"/>
         <source>Israel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="60"/>
         <source>Libya</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="61"/>
         <source>Cyprus</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="62"/>
         <source>Tanzania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="63"/>
         <source>Nigeria</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="64"/>
         <source>Madagascar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="65"/>
         <source>Mauritania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="66"/>
         <source>Niger</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="67"/>
         <source>Togo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="68"/>
         <source>Samoa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="69"/>
         <source>Uganda</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="70"/>
         <source>Kenya</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="71"/>
         <source>Senegal</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="72"/>
         <source>Jamaica</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="73"/>
         <source>Yemen</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="74"/>
         <source>Lesotho</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="75"/>
         <source>Malawi</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="76"/>
         <source>Algeria</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="77"/>
         <source>Barbados</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="78"/>
         <source>Maldives</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="79"/>
         <source>Guyana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="80"/>
         <source>Croatia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="81"/>
         <source>Ghana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="82"/>
         <source>Malta</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="83"/>
         <source>Zambia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="84"/>
         <source>Kuwait</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Sierra Leone</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
         <source>W. Malaysia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="87"/>
         <source>E. Malaysia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="88"/>
         <source>Nepal</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
         <source>Burundi</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="91"/>
         <source>Singapore</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="92"/>
         <source>Rwanda</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="93"/>
         <source>Trinidad &amp; Tobago</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="94"/>
         <source>Botswana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="95"/>
         <source>Tonga</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="96"/>
         <source>Oman</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="97"/>
         <source>Bhutan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="98"/>
         <source>United Arab Emirates</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="99"/>
         <source>Qatar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="100"/>
         <source>Bahrain</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="101"/>
         <source>Pakistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="102"/>
         <source>Scarborough Reef</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="103"/>
         <source>Taiwan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="104"/>
         <source>Pratas Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="105"/>
         <source>China</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="106"/>
         <source>Nauru</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="107"/>
         <source>Andorra</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="108"/>
         <source>The Gambia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="109"/>
         <source>Bahamas</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="110"/>
         <source>Mozambique</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="111"/>
         <source>Chile</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="112"/>
         <source>San Felix &amp; San Ambrosio</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
         <source>Antarctica</source>
-        <translation>Antartique</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="116"/>
         <source>Cuba</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="117"/>
         <source>Morocco</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="118"/>
         <source>Bolivia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="119"/>
         <source>Portugal</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
         <source>Azores</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
         <source>Uruguay</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
         <source>Sable Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
         <source>Angola</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="126"/>
         <source>Cape Verde</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="127"/>
         <source>Comoros</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="128"/>
         <source>Germany</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="129"/>
         <source>Philippines</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="130"/>
         <source>Eritrea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="131"/>
         <source>Palestine</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
         <source>Niue</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="135"/>
         <source>Bosnia-Herzegovina</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="136"/>
         <source>Spain</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
         <source>Ceuta &amp; Melilla</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="140"/>
         <source>Ireland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="141"/>
         <source>Armenia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="142"/>
         <source>Liberia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="143"/>
         <source>Iran</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="144"/>
         <source>Moldova</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="145"/>
         <source>Estonia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="146"/>
         <source>Ethiopia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="147"/>
         <source>Belarus</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="148"/>
         <source>Kyrgyzstan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="149"/>
         <source>Tajikistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="150"/>
         <source>Turkmenistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="151"/>
         <source>France</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="152"/>
         <source>Guadeloupe</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="153"/>
         <source>Mayotte</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
         <source>New Caledonia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>Chesterfield Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
         <source>Martinique</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="158"/>
         <source>Fr. Polynesia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Marquesas Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
         <source>St. Martin</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
         <source>Juan de Nova, Europa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Crozet Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
         <source>Fr. Guiana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="173"/>
         <source>England</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="174"/>
         <source>Isle of Man</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="175"/>
         <source>N. Ireland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="176"/>
         <source>Jersey</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
         <source>Scotland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="179"/>
         <source>Guernsey</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
         <source>Wales</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Solomon Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
         <source>Temotu Province</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="183"/>
         <source>Hungary</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="184"/>
         <source>Switzerland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="185"/>
         <source>Liechtenstein</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="186"/>
         <source>Ecuador</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
         <source>Haiti</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="189"/>
         <source>Dominican Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="190"/>
         <source>Colombia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
         <source>Rep. of Korea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="194"/>
         <source>Panama</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="195"/>
         <source>Honduras</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="196"/>
         <source>Thailand</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="197"/>
         <source>Vatican City</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="198"/>
         <source>Saudi Arabia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="199"/>
         <source>Italy</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
         <source>Sardinia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="202"/>
         <source>Sicily</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="203"/>
         <source>Djibouti</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="204"/>
         <source>Grenada</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="205"/>
         <source>Guinea-Bissau</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="206"/>
         <source>St. Lucia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="207"/>
         <source>Dominica</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="208"/>
         <source>St. Vincent</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="209"/>
         <source>Japan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="210"/>
         <source>Minami Torishima</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="211"/>
         <source>Ogasawara</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="212"/>
         <source>Mongolia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="213"/>
         <source>Svalbard</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Bear Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="215"/>
         <source>Jan Mayen</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="216"/>
         <source>Jordan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="217"/>
         <source>U.S.A.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="218"/>
         <source>Guantanamo Bay</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
         <source>Baker &amp; Howland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
         <source>Guam</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Johnston Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="223"/>
         <source>Midway Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
         <source>Hawaii</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
         <source>American Samoa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="228"/>
         <source>Swains Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>Wake Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
         <source>Alaska</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Navassa Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
         <source>Puerto Rico</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
         <source>Norway</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="236"/>
         <source>Argentina</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="237"/>
         <source>Luxembourg</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="238"/>
         <source>Lithuania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="239"/>
         <source>Bulgaria</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="240"/>
         <source>Peru</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="241"/>
         <source>Lebanon</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="242"/>
         <source>Austria</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="243"/>
         <source>Finland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="244"/>
         <source>Aland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="245"/>
         <source>Market Reef</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
         <source>Belgium</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="249"/>
         <source>Greenland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
         <source>Denmark</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="252"/>
         <source>Papua New Guinea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="253"/>
         <source>Aruba</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="254"/>
         <source>DPR of Korea</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="255"/>
         <source>Netherlands</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="256"/>
         <source>Curacao</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="257"/>
         <source>Bonaire</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
         <source>Sint Maarten</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="260"/>
         <source>Brazil</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>St. Peter &amp; St. Paul</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Trindade &amp; Martim Vaz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
         <source>Suriname</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="265"/>
         <source>Franz Josef Land</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="266"/>
         <source>Western Sahara</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="267"/>
         <source>Bangladesh</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="268"/>
         <source>Slovenia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="269"/>
         <source>Seychelles</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
         <source>Sweden</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="272"/>
         <source>Poland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="273"/>
         <source>Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="274"/>
         <source>Egypt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="275"/>
         <source>Greece</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="276"/>
         <source>Mount Athos</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="277"/>
         <source>Dodecanese</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="278"/>
         <source>Crete</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="279"/>
         <source>Tuvalu</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>C. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>E. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>Banaba Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
         <source>Somalia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="285"/>
         <source>San Marino</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
         <source>Palau</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="287"/>
         <source>AS Turkey</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="288"/>
         <source>EU Turkey</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="289"/>
         <source>Iceland</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="290"/>
         <source>Guatemala</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="291"/>
         <source>Costa Rica</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="292"/>
         <source>Cocos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="293"/>
         <source>Cameroon</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="294"/>
         <source>Corsica</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
         <source>Gabon</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="298"/>
         <source>Chad</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="299"/>
         <source>Cote d&apos;Ivoire</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="300"/>
         <source>Benin</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="301"/>
         <source>Mali</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>EU Russia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="303"/>
         <source>Kaliningrad</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="304"/>
         <source>AS Russia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="305"/>
         <source>Uzbekistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="306"/>
         <source>Kazakhstan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="307"/>
         <source>Ukraine</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
         <source>Belize</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>St. Kitts &amp; Nevis</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="311"/>
         <source>Namibia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="312"/>
         <source>Micronesia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
         <source>Brunei Darussalam</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="315"/>
         <source>Canada</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="316"/>
         <source>Australia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="317"/>
         <source>Heard Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Macquarie Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Cocos (Keeling) Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Lord Howe Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
         <source>Mellish Reef</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Norfolk Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
         <source>Anguilla</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Montserrat</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="329"/>
         <source>Pitcairn Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Ducie Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>S. Georgia Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
         <source>Bermuda</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="337"/>
         <source>Chagos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="338"/>
         <source>Hong Kong</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="339"/>
         <source>India</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="341"/>
         <source>Lakshadweep Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="342"/>
         <source>Mexico</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="343"/>
         <source>Revillagigedo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="344"/>
         <source>Burkina Faso</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="345"/>
         <source>Cambodia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="346"/>
         <source>Laos</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="347"/>
         <source>Macao</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="348"/>
         <source>Myanmar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="349"/>
         <source>Afghanistan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="350"/>
         <source>Indonesia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="351"/>
         <source>Iraq</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="352"/>
         <source>Vanuatu</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="353"/>
         <source>Syria</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="354"/>
         <source>Latvia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="355"/>
         <source>Nicaragua</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="356"/>
         <source>Romania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="357"/>
         <source>El Salvador</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="358"/>
         <source>Serbia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="359"/>
         <source>Venezuela</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="360"/>
         <source>Aves Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
         <source>Zimbabwe</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Rep. of Kosovo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
         <source>Albania</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="366"/>
         <source>Gibraltar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
         <source>St. Helena</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>Ascension Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="370"/>
         <source>Tristan da Cunha &amp; Gough</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tokelau Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
         <source>New Zealand</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
         <source>Chatham Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="375"/>
         <source>Kermadec Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>N.Z. Subantarctic Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="377"/>
         <source>Paraguay</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>S. Africa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Pr. Edward &amp; Marion Is.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2047,89 +2048,89 @@ Format:
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
-        <translation>Échec de la connexion à DX Lab Suite Commander
+        <translation>Det gick inte att ansluta till DX Lab Suite Commander
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à la fréquence: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt läsfrekvens: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation>DX Lab Suite Commander a envoyé un état TX non reconnu: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt läsfrekvens: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur l&apos;état du TX: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt polling TX-status: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur l&apos;état du TX: </translation>
+        <translation>DX Lab Suite Commander rigg svarade inte på PTT: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à la fréquence d&apos;interrogation: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt pollingfrekvens: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à l&apos;interrogation de la fréquence TX: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt polling TX frekvens: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
-        <translation>DX Lab Suite Commander a envoyé un état fractionné non reconnu: </translation>
+        <translation>DX Lab Suite Commander skickade ett okänt splittringsläge: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
-        <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur le statut partagé: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt polling split status: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation></translation>
+        <translation>DX Lab Suite Commander skickade ett okänt läge: &quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation>Lab Suite Commander n&apos;a pas répondu correctement au mode d&apos;interrogation: </translation>
+        <translation>DX Lab Suite Commander svarade inte korrekt pollinläge: </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
         <source>DX Lab Suite Commander send command failed
 </source>
-        <translation>La commande d&apos;envoi de DX Lab Suite Commander a échoué
+        <translation>DX Lab Suite Commander skicka kommandot misslyckades
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation>DX Lab Suite Commander n&apos;a pas envoyé de commande &quot;%1&quot;: %2
+        <translation>DX Lab Suite Commander kunde inte skicka kommandot &quot;%1&quot;:%2
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation>DX Lab Suite Commander envoyer commande &quot;%1&quot; read reply failed: %2
+        <translation>DX Lab Suite Commander skicka kommandot &quot;%1&quot; läst svar misslyckades:%2
 </translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation>DX Lab Suite Commander réessaie les envois épuisés &quot;%1&quot;</translation>
+        <translation>DX Lab Suite Commander försöker återanvända sändningskommandot &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation>DX Lab Suite Commander a envoyé une fréquence non reconnue</translation>
+        <translation>DX Lab Suite Commander skickade en okänd frekvens</translation>
     </message>
 </context>
 <context>
@@ -2137,32 +2138,32 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="27"/>
         <source>partial loss of data</source>
-        <translation>perte partielle de données</translation>
+        <translation>partiell förlust av data</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation>ALLCALL7.TXT est trop court ou cassé ?</translation>
+        <translation>ALLCALL7.TXT är för kort eller trasig?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
         <source>nQSOProgress</source>
-        <translation>Progression du QSO</translation>
+        <translation>nQSOProgress</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation>signal d&apos;entrée faible valeur efficace</translation>
+        <translation>insignal låg rms</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation>écart audio détecté</translation>
+        <translation>ljudgap upptäckt</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation>nfqso est hors bande passante</translation>
+        <translation>nfqso är ur bandbredd</translation>
     </message>
 </context>
 <context>
@@ -2175,48 +2176,48 @@ Format:
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annulé</translation>
+        <translation>&amp;Avbryt</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation>&amp;Importer...</translation>
+        <translation>&amp;Importera...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Exporter...</translation>
+        <translation>&amp;Exportera...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Supprimer</translation>
+        <translation>&amp;Radera</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="200"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Insérer ...</translation>
+        <translation>&amp;Infoga...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
-        <translation>Insérer &amp;après ...</translation>
+        <translation>Infoga &amp;efter...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
-        <translation>Palette d&apos;importation</translation>
+        <translation>Inportera palett</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
-        <translation>Palettes(*.pal)</translation>
+        <translation>Paletter (* .pal)</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
-        <translation>Palette d&apos;exportation</translation>
+        <translation>Exportera Palett</translation>
     </message>
 </context>
 <context>
@@ -2224,8 +2225,7 @@ Format:
     <message>
         <location filename="../WSPRBandHopping.cpp" line="110"/>
         <source>Gray time:</source>
-        <translatorcomment>band name</translatorcomment>
-        <translation>Le temps gris:</translation>
+        <translation>Gray time:</translation>
     </message>
 </context>
 <context>
@@ -2234,14 +2234,14 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="111"/>
         <location filename="../SampleDownloader/Directory.cpp" line="187"/>
         <source>URL Error</source>
-        <translation>Erreur d&apos;URL</translation>
+        <translation>URL fel</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="112"/>
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation>Erreur d&apos;URL:
+        <translation>Felaktig URL:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -2253,64 +2253,64 @@ Format:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation>Erreur JSON</translation>
+        <translation>JSON Fel</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation>Erreur de syntaxe du fichier de contenu %1 au décalage %2</translation>
+        <translation>Innehållsfil syntaxfel%1 vid teckenförskjutning%2</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation>Le niveau supérieur du fichier de contenu doit être un tableau JSON</translation>
+        <translation>Innehållsfilens toppnivå måste vara en JSON-matris</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation>Erreur de système de fichiers</translation>
+        <translation>Fel i filsystemet</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation>N&apos;a pas réussi à ouvrir &quot;%1&quot;.
-Erreur : %2 - %3</translation>
+        <translation>Failed to open &quot;%1&quot;
+Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation>Les entrées de contenu doivent être un tableau JSON</translation>
+        <translation>Innehållsposter måste vara en JSON-matris</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation>Les entrées de contenu doivent avoir un type valide</translation>
+        <translation>Innehållsposter måste ha en giltig typ</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation>Les entrées de contenu doivent avoir un nom valide</translation>
+        <translation>Innehållsposter måste ha ett giltigt namn</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
         <source>Contents entries must be JSON objects</source>
-        <translation>Les entrées de contenu doivent être des objets JSON</translation>
+        <translation>Innehållsposter måste vara JSON-objekt</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation>Les répertoires de contenu doivent être relatifs et se situer dans  &quot;%1&quot;</translation>
+        <translation>Innehållskataloger måste vara relativa och inom &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Network Error</source>
-        <translation>Erreur de réseau</translation>
+        <translation>Nätverksfel</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation>Authentification requise</translation>
+        <translation>Autentisering krävs</translation>
     </message>
 </context>
 <context>
@@ -2318,7 +2318,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="48"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation>Emulated split mode requires rig to be in simplex mode</translation>
+        <translation>Emulerad delningsläge kräver att rigg ska vara i simplexläge</translation>
     </message>
 </context>
 <context>
@@ -2326,32 +2326,32 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="221"/>
         <source>Add Frequency</source>
-        <translation>Ajouter une fréquence</translation>
+        <translation>Lägg till frekvens</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="226"/>
         <source>IARU &amp;Region:</source>
-        <translation>&amp;Région IARU:</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="227"/>
         <source>&amp;Mode:</source>
-        <translation></translation>
+        <translation>&amp;Mod:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="228"/>
         <source>&amp;Frequency (MHz):</source>
-        <translation>&amp;Fréquence (MHz):</translation>
+        <translation>&amp;Frekvens (MHz):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="234"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annulé</translation>
+        <translation>&amp;Annulera</translation>
     </message>
 </context>
 <context>
@@ -2360,31 +2360,31 @@ Erreur : %2 - %3</translation>
         <location filename="../FrequencyList.cpp" line="506"/>
         <location filename="../FrequencyList.cpp" line="693"/>
         <source>IARU Region</source>
-        <translation>Region IARU</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="527"/>
         <location filename="../FrequencyList.cpp" line="694"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="559"/>
         <location filename="../FrequencyList.cpp" line="695"/>
         <source>Frequency</source>
-        <translation>Frequence</translation>
+        <translation>Frekvens</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="590"/>
         <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
-        <translation>Frequence (MHz)</translation>
+        <translation>Frekvens (MHz)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="613"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation>Mode de la frequence</translation>
+        <translation>Mod Frekvens</translation>
     </message>
 </context>
 <context>
@@ -2394,84 +2394,84 @@ Erreur : %2 - %3</translation>
         <location filename="../HRDTransceiver.cpp" line="151"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
-        <translation>Impossible de se connecter à Ham Radio Deluxe
+        <translation>Det gick inte att ansluta till Ham Radio Deluxe
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="160"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
-        <translation>Impossible d&apos;ouvrir le dossier &quot;%1&quot;: %2.</translation>
+        <translation>Det gick inte att öppna filen &quot;%1&quot;:%2.</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="175"/>
         <location filename="../HRDTransceiver.cpp" line="199"/>
         <source>Ham Radio Deluxe: no rig found</source>
-        <translation>Ham Radio Deluxe : aucun appareil trouvé</translation>
+        <translation>Ham Radio Deluxe: ingen rigg hittades</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="423"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
-        <translation>Ham Radio Deluxe : le Trx ne prend pas en charge le mode de fonctionnement</translation>
+        <translation>Ham Radio Deluxe: rigg stöder inte läge</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="442"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
-        <translation>Ham Radio Deluxe : envoi d&apos;un mode non reconnu</translation>
+        <translation>Ham Radio Deluxe: skickade ett okänt läge</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="477"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
-        <translation>Ham Radio Deluxe : article non trouvé dans la liste déroulante %1</translation>
+        <translation>Ham Radio Deluxe: objektet hittades inte i listan%1</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="521"/>
         <source>Ham Radio Deluxe: button not available</source>
-        <translation>Ham Radio Deluxe : bouton non disponible</translation>
+        <translation>Ham Radio Deluxe: knappen är inte tillgänglig</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="887"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
-        <translation>Ham Radio Deluxe n&apos;a pas répondu comme prévu</translation>
+        <translation>Ham Radio Deluxe svarade inte som förväntat</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1036"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
-        <translation>Ham Radio Deluxe : la plateforme a disparu ou a changé</translation>
+        <translation>Ham Radio Deluxe: rigg har försvunnit eller ändrats</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1051"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
-        <translation>Ham Radio Deluxe envoie la commande &quot;%1&quot; a échoué %2
+        <translation>Ham Radio Deluxe skicka kommandot &quot;%1&quot; misslyckades%2
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1064"/>
         <location filename="../HRDTransceiver.cpp" line="1077"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe : a échoué à écrire la commande &quot;%1&quot;</translation>
+        <translation>Ham Radio Deluxe: misslyckades med att skriva kommandot &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1094"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe a envoyé une réponse invalide à notre commande &quot;%1&quot;</translation>
+        <translation>Ham Radio Deluxe skickade ogiltigt svar på vårt kommando &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1148"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
-        <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; %2
+        <translation>Ham Radio Deluxe misslyckades med att svara på kommandot &quot;%1&quot;%2
 </translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1158"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
-        <translation>Ham Radio Deluxe essaie à nouveau la commande d&apos;envoi épuisée &quot;%1</translation>
+        <translation>Ham Radio Deluxe försöker igen utmattat sändningskommando &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../HRDTransceiver.cpp" line="1171"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
-        <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; comme prévu</translation>
+        <translation>Ham Radio Deluxe svarade inte på kommandot &quot;%1&quot; som förväntat</translation>
     </message>
 </context>
 <context>
@@ -2480,175 +2480,175 @@ Erreur : %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="211"/>
         <location filename="../HamlibTransceiver.cpp" line="289"/>
         <source>Hamlib initialisation error</source>
-        <translation>Erreur d&apos;initialisation de Hamlib</translation>
+        <translation>Hamlib initialiseringsfel</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="251"/>
         <source>Command completed successfully</source>
-        <translation>Commande terminée avec succès</translation>
+        <translation>Kommandot har slutförts</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="252"/>
         <source>Invalid parameter</source>
-        <translation>Paramètre non valide</translation>
+        <translation>Ogiltig parameter</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="253"/>
         <source>Invalid configuration</source>
-        <translation>Configuration non valable</translation>
+        <translation>Ogiltig konfiguration</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Memory shortage</source>
-        <translation>Pénurie de mémoire</translation>
+        <translation>Minnesbrist</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>Feature not implemented</source>
-        <translation>Fonctionnalité non mise en œuvre</translation>
+        <translation>Funktionen är inte implementerad</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Communication timed out</source>
-        <translation>La communication a pris du retard</translation>
+        <translation>Kommunikationen avbröts</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>IO error</source>
-        <translation>Erreur d&apos;OI</translation>
+        <translation>IO fel</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Internal Hamlib error</source>
-        <translation>Erreur interne de Hamlib</translation>
+        <translation>Internt Hamlib-fel</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Protocol error</source>
-        <translation>Erreur de protocole</translation>
+        <translation>Protokollfel</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Command rejected by the rig</source>
-        <translation>Commande rejetée par le Trx</translation>
+        <translation>Kommando avvisad av riggen</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
-        <translation>Commandement effectué, mais arg tronqué, résultat non garanti</translation>
+        <translation>Kommando utförd, men arg trunkerad, resultat inte garanterat</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Feature not available</source>
-        <translation>Fonctionnalité non disponible</translation>
+        <translation>Funktionen är inte tillgänglig</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Target VFO unaccessible</source>
-        <translation>Ciblez le VFO inaccessible</translation>
+        <translation>Vald  VFO unaccessible</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>Communication bus error</source>
-        <translation>Erreur de bus de communication</translation>
+        <translation>Fel i kommunikationsbus</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Communication bus collision</source>
-        <translation>Collision de bus de communication</translation>
+        <translation>Kollision i komunikationsbus</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
-        <translation>Manipulateur NULL Trx ou paramètre de pointeur invalide</translation>
+        <translation>NULL RIG-handtag eller ogiltig pekarparameter</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="267"/>
         <source>Invalid VFO</source>
-        <translation>VFO invalide</translation>
+        <translation>Ogiltig VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="268"/>
         <source>Argument out of domain of func</source>
-        <translation>Argument hors du domaine de la fonction</translation>
+        <translation>Argument utanför domänens funktion</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="316"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
-        <translation>Erreur dans le fichier des paramètres Hamlib : %1 au décalage de caractères %2</translation>
+        <translation>Hamlib-inställningsfilfel:%1 vid teckenförskjutning%2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="322"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
-        <translation>Erreur dans le fichier de paramétrage Hamlib : le niveau supérieur doit être un objet JSON</translation>
+        <translation>Hamlib-inställningsfilfel: toppnivån måste vara ett JSON-objekt</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="334"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
-        <translation>Erreur dans le fichier de configuration Hamlib : config doit être un objet JSON</translation>
+        <translation>Hamlib-inställningsfilfel: config måste vara ett JSON-objekt</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="397"/>
         <source>Unsupported CAT type</source>
-        <translation>Type de CAT non pris en charge</translation>
+        <translation>Osupporterad CAT-typ</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="454"/>
         <source>Hamlib error: %1 while %2</source>
-        <translation>Erreur de Hamlib : %1 et %2</translation>
+        <translation>Hamlib-fel:%1 medan%2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="471"/>
         <source>opening connection to rig</source>
-        <translation>l&apos;ouverture de la connexion au Trx</translation>
+        <translation>öppningsanslutning till rigg</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="532"/>
         <source>getting current frequency</source>
-        <translation>obtenir la fréquence actuelle</translation>
+        <translation>få aktuell frekvens</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="541"/>
         <source>getting current mode</source>
-        <translation>obtenir le mode actuel</translation>
+        <translation>får nuvarande mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="590"/>
         <location filename="../HamlibTransceiver.cpp" line="625"/>
         <source>exchanging VFOs</source>
-        <translation>échange de VFO</translation>
+        <translation>utbyta VFO: er</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="598"/>
         <location filename="../HamlibTransceiver.cpp" line="1155"/>
         <source>getting other VFO frequency</source>
-        <translation>obtenir une autre fréquence VFO</translation>
+        <translation>få annan VFO-frekvens</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="607"/>
         <source>getting other VFO mode</source>
-        <translation>obtenir un autre mode VFO</translation>
+        <translation>få andra VFO-mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="635"/>
         <source>setting current VFO</source>
-        <translation>réglage du VFO actuel</translation>
+        <translation>inställning av aktuell VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="644"/>
         <source>getting frequency</source>
-        <translation>obtenir la fréquence</translation>
+        <translation>få frekvens</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="653"/>
         <source>getting mode</source>
-        <translation>mode d&apos;obtention</translation>
+        <translation>få mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="675"/>
         <location filename="../HamlibTransceiver.cpp" line="1070"/>
         <source>getting current VFO</source>
-        <translation>obtenir le VFO actuel</translation>
+        <translation>få aktuell VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="734"/>
@@ -2656,7 +2656,7 @@ Erreur : %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="756"/>
         <location filename="../HamlibTransceiver.cpp" line="1129"/>
         <source>getting current VFO frequency</source>
-        <translation>obtenir la fréquence actuelle du VFO</translation>
+        <translation>att få aktuell VFO frekvens</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="740"/>
@@ -2666,7 +2666,7 @@ Erreur : %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="870"/>
         <location filename="../HamlibTransceiver.cpp" line="931"/>
         <source>setting frequency</source>
-        <translation>réglage de la fréquence</translation>
+        <translation>Frekvensinställning</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="860"/>
@@ -2674,7 +2674,7 @@ Erreur : %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="1010"/>
         <location filename="../HamlibTransceiver.cpp" line="1023"/>
         <source>getting current VFO mode</source>
-        <translation>obtenir le mode VFO actuel</translation>
+        <translation>få aktuellt VFO-mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="866"/>
@@ -2683,64 +2683,64 @@ Erreur : %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="1016"/>
         <location filename="../HamlibTransceiver.cpp" line="1029"/>
         <source>setting current VFO mode</source>
-        <translation>réglage du mode VFO actuel</translation>
+        <translation>inställning av aktuellt VFO-mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="918"/>
         <location filename="../HamlibTransceiver.cpp" line="987"/>
         <source>setting/unsetting split mode</source>
-        <translation>mise en place/désactivation du mode Split</translation>
+        <translation>inställning / återställning av splitmod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="929"/>
         <location filename="../HamlibTransceiver.cpp" line="969"/>
         <source>setting split mode</source>
-        <translation>réglage du mode Split</translation>
+        <translation>inställning splitmod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="957"/>
         <source>setting split TX frequency and mode</source>
-        <translation>réglage de la fréquence et du mode d&apos;émission fractionnée</translation>
+        <translation>inställning av split TX-frekvens och -mod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="962"/>
         <source>setting split TX frequency</source>
-        <translation>réglage de la fréquence d&apos;émission fractionnée</translation>
+        <translation>inställning av split TX-frekvens</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1034"/>
         <source>getting split TX VFO mode</source>
-        <translation>obtenir le mode VFO TX partagé</translation>
+        <translation>få split TX VFO-lmod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1041"/>
         <source>setting split TX VFO mode</source>
-        <translation>réglage du mode VFO split TX</translation>
+        <translation>inställninjg av  split TX VFO-lmod</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1297"/>
         <source>getting PTT state</source>
-        <translation>obtenir l&apos;état PTT</translation>
+        <translation>får PTT-tillstånd</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1333"/>
         <source>setting PTT on</source>
-        <translation>mettre les PTT sur</translation>
+        <translation>ställa in PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1341"/>
         <source>setting PTT off</source>
-        <translation>déclenchement des PTT</translation>
+        <translation>ställa in PTT</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1353"/>
         <source>setting a configuration item</source>
-        <translation>définition d&apos;un élément de configuration</translation>
+        <translation>ställa in ett konfigurationsobjekt</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="1363"/>
         <source>getting a configuration item</source>
-        <translation>obtenir un élément de configuration</translation>
+        <translation>få ett konfigurationsobjekt</translation>
     </message>
 </context>
 <context>
@@ -2749,7 +2749,7 @@ Erreur : %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation>Region &amp; IARU</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2757,94 +2757,94 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="39"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="40"/>
         <source>Save</source>
-        <translation>Sauver</translation>
+        <translation>Spara</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="41"/>
         <source>Save All</source>
-        <translation>Sauver tout</translation>
+        <translation>Spara allt</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="42"/>
         <source>Open</source>
-        <translation>Ouvrir</translation>
+        <translation>Öppna</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
         <location filename="../mainwindow.cpp" line="3841"/>
         <source>&amp;Yes</source>
-        <translation>&amp;Oui</translation>
+        <translation>&amp;Ja</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="44"/>
         <source>Yes to &amp;All</source>
-        <translation>Oui pour &amp;Tout</translation>
+        <translation>Ja till &amp;Alla</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
         <location filename="../mainwindow.cpp" line="3844"/>
         <source>&amp;No</source>
-        <translation>&amp;Non</translation>
+        <translation>&amp;Nej</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="46"/>
         <source>N&amp;o to All</source>
-        <translation>N&amp;o à tout</translation>
+        <translation>N&amp;ej till Alla</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="47"/>
         <source>Abort</source>
-        <translation>Abandonner</translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="48"/>
         <source>&amp;Retry</source>
-        <translation>&amp;Réessayer</translation>
+        <translation>F&amp;örsök igen</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="49"/>
         <source>Ignore</source>
-        <translation>Ignorer</translation>
+        <translation>Ignorera</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="50"/>
         <source>Close</source>
-        <translation>Fermer</translation>
+        <translation>Stäng</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="51"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annuler</translation>
+        <translation>Annullera</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="52"/>
         <source>Discard</source>
-        <translation>Jeter</translation>
+        <translation>Kassera</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="53"/>
         <source>Help</source>
-        <translation>Aide</translation>
+        <translation>Hjälp</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="54"/>
         <source>Apply</source>
-        <translation>Appliquer</translation>
+        <translation>&amp;Tillämpa</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="55"/>
         <source>Reset</source>
-        <translation>Réinitialiser</translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="56"/>
         <source>Restore Defaults</source>
-        <translation>Restaurer les défauts</translation>
+        <translation>Återställ till standard</translation>
     </message>
 </context>
 <context>
@@ -2852,80 +2852,80 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation>Cliquez sur OK pour confirmer le QSO suivant :</translation>
+        <translation>Klicka på OK för att bekräfta detta QSO:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
         <source>Call</source>
-        <translation>Indicatif</translation>
+        <translation>Anropssignal</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="66"/>
         <source>Start</source>
-        <translation>Démarrer</translation>
+        <translation>Start</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation></translation>
+        <translation>dd/MM/yyyy HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation>Fin</translation>
+        <translation>Slut</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="163"/>
         <source>Band</source>
-        <translation>Bande</translation>
+        <translation>Band</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation>Rpt envoyé</translation>
+        <translation>Rpt Sänt</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
         <source>Rpt Rcvd</source>
-        <translation>Rpt Reçu</translation>
+        <translation>Rpt Mott</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="250"/>
         <source>Grid</source>
-        <translation>Locator</translation>
+        <translation>Grid</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="282"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation>Namn</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation>Puis. TX</translation>
+        <translation>Tx effekt</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
         <location filename="../logqso.ui" line="348"/>
         <location filename="../logqso.ui" line="381"/>
         <source>Retain</source>
-        <translation>Retenir</translation>
+        <translation>Behåll</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation>Commentaires</translation>
+        <translation>Kommentarer</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
-        <translation>Msg. eQSL</translation>
+        <translation>EQSL MSG</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="27"/>
@@ -2935,12 +2935,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../logqso.cpp" line="28"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annuler</translation>
+        <translation>&amp;Annullera</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="201"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation>Ne peut pas ouvrir &quot;%1&quot; pour l&apos;annexe : %2</translation>
+        <translation>Kan inte  öppna &quot;%1&quot; för bilaga:%2</translation>
     </message>
 </context>
 <context>
@@ -2953,19 +2953,18 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg : moyenne cumulée des signaux décodés sur la bande actuelle.&lt;/p&gt;&lt;p&gt;Lag : c&apos;est le retard du décodeur calculé par rapport au début de l&apos;intervalle suivant, les valeurs négatives signifient qu&apos;il y a du temps libre pour augmenter la profondeur de décodage, les valeurs positives sont le retard du décodeur dans le TX ou l&apos;intervalle suivant, ce qui signifie qu&apos;il peut ne pas y avoir suffisamment de ressources CPU pour la profondeur de décodage sélectionnée afin d&apos;assurer une transmission fiable du signal. &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Le décalage dépend de la performance du CPU, des conditions de bruit, de la saturation de la bande et d&apos;autres programmes utilisant l&apos;ordinateur, il peut être diminué en réduisant la largeur de bande de la cascade. Si le décalage est constamment négatif, l&apos;unité centrale gère bien le décodage par intervalles et vous pouvez essayer de rendre le décodage plus agressif pour obtenir plus de décodages. &lt;/p&gt;&lt;p&gt;FT8 : si le décalage est de 0 ... 0,4, vous pouvez toujours utiliser Autoseq 3/7 (la sélection automatique déclenchera le changement de message TX suffisamment tôt pour transmettre le message complet). Si Lag &gt; 0.4 alors vous devriez essayer de diminuer l&apos;agressivité du décodage. Si le décalage est toujours supérieur à 0,4, il faut utiliser Autoseq 2/6 car la réponse à un appel entrant sera partiellement endommagée lors de la transmission dans AutoSeq 3/7. Si le décalage est constamment supérieur à 2, votre processeur ne peut pas fonctionner en FT8 avec les paramètres actuels du décodeur. Bien sûr Vous pouvez surveiller en tant que SWL.&lt;/p&gt;&lt;p&gt;/xx : le nombre de messages décodés dans le dernier intervalle.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Genomsnitt: ackumulerad genomsnittlig DT av avkodade signaler på nuvarande band. &lt;/p&gt; &lt;p&gt; Lag: det är avkodarfördröjning beräknat relativt till början av nästa intervall, negativa värden betyder där är ledig tid tillgänglig för att öka avkodningsdjupet, positiva värden är avkodarens fördröjning till TX eller nästa intervall vilket innebär att det inte finns tillräckligt med CPU-resurser för valt avkodningsdjup för att tillhandahålla tillförlitlig signalöverföring. &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p &gt; Fördröjning beror på CPU-prestanda, brusförhållanden, bandets fullhet och andra program som använder dator, det kan minskas genom att minska bandbredd för vattenfallet. Om Lag är ständigt negativt så hanterar CPU-avkodning av brunnsintervall och du kan försöka göra avkodningen mer aggressiv för att få fler avkodningar. &lt;/p&gt; &lt;p&gt; FT8: om Lag är 0 .. 0,4 kan du fortfarande använda Autoseq 3/7 (Autoselekt utlöser ändring av TX-meddelande tillräckligt tidigt för att överföra hela meddelandet). Om Lag&gt; 0,4 ​​bör du försöka minska avkodnings aggressiviteten. Om fortfarande Lag&gt; 0.4 ska Autoseq 2/6 användas som svar på inkommande samtal kommer delvis att skadas vid överföringen i AutoSeq 3/7. Om ständigt Lag&gt; 2 är din CPU olämplig att använda i FT8 med aktuella avkodarinställningar. Visst Du kan övervaka som SWL. &lt;/p&gt; &lt;p&gt; / xx: antal avkodade meddelanden i sista intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
         <location filename="../mainwindow.ui" line="2189"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation>Hutc           dB            DT           Freq          Message </translation>
+        <translation>UTC           dB            DT           Frekv        Dr </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocs audio perdus. L&apos;intervalle de 15 secondes du FT8 comporte 52 blocs de données audio, le décodeur étant déclenché si les données audio atteignent 51 blocs en mode &quot;SWL/dernière strate du décodeur&quot; ou 50 blocs dans le cas contraire. Sous le système d&apos;exploitation Windows, de nombreux rapports de données audio étaient perdus. Pour le système d&apos;exploitation Windows, une solution de contournement est mise en œuvre pour lancer le décodeur FT8 si au moins 46 des 52 blocs audio reçus. La notification de perte de blocs audio permet à l&apos;utilisateur de savoir qu&apos;il y a un problème dans la configuration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Borttappade ljudblock. FT8 15sec-intervall har 52 block av ljuddata, där avkodaren utlöses om ljuddata nådde 51 block i &quot;SWL / sen strat av dekoder&quot; -lägen eller 50 block på annat sätt. Under Windows OS försvann flera rapporter ljuddata, för Windows OS finns det lösning implementerad för att starta FT8-avkodare om det åtminstone 46 av 52 ljudblock mottogs. Meddelanden om borttappade ljud blockerar låter användaren veta att det är något fel i installationen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;v</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -2977,12 +2976,12 @@ Erreur : %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="6109"/>
         <location filename="../mainwindow.cpp" line="6120"/>
         <source>Band Activity</source>
-        <translation>Activité de la bande</translation>
+        <translation>Bandaktivitet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si la couleur orange ou rouge indique une défaillance du contrôle du Trx, cliquez pour réinitialiser et lire la fréquence de composition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Om det har uppstått en riggkontrollfel klickar du på för att återställa och läsa uppringningsfrekvensen. Orange / röd. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -2992,7 +2991,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="664"/>
         <source>USB dial frequency</source>
-        <translation>Fréquence Trx USB</translation>
+        <translation>USB-sändningsfrekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="686"/>
@@ -3002,94 +3001,95 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="715"/>
         <source>Menu</source>
-        <translation>Menu</translation>
+        <translation>Meny</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="725"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisez ce contrôle pour afficher ou masquer la ligne d&apos;édition du spot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd den här kontrollen för att visa eller dölja platsredigeringsrad &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Spt</source>
-        <translation>Texte cluster</translation>
+        <translation>Spt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>Sélectionnez une bande</translation>
+        <translation>Välj band eller frekvens i MHz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot information field preview.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; DXSummit förhandsvisning av platsinformation för platsinformation. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="801"/>
         <source>info:</source>
+        <translatorcomment>Info:</translatorcomment>
         <translation>Info:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="813"/>
         <location filename="../mainwindow.ui" line="823"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit : mode dans le champ d&apos;information étant repéré automatiquement, l&apos;utilisateur peut ajouter son propre message texte dans le champ d&apos;information. Macros disponibles : #D est pour la distance, #G est pour &quot;Grid1&lt;&gt;Grid2&quot;, #R est pour la valeur du rapport. L&apos;aperçu du champ d&apos;information est disponible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; DXSummit-punktradredigering: läge i informationsfältet som automatiskt upptäcks, användaren kan lägga till eget textmeddelande i informationsfältet. Tillgängliga makron: #D är för distans, #G är för &quot;Grid1 &lt;&gt; Grid2&quot;, #R är för rapportvärde. Förhandsgranskning av informationsfält är tillgängligt. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="816"/>
         <source>edit</source>
-        <translation>Edit</translation>
+        <translation>Redigera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="830"/>
         <location filename="../mainwindow.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of the propagation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Type de propagation.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Typ av utbredning. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>prop</source>
-        <translation>Propag</translation>
+        <translation>Prop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="991"/>
         <source>DX Grid</source>
-        <translation>Locator DX</translation>
+        <translation>DX Grid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1013"/>
         <source>Locator of station to be worked</source>
-        <translation>Locator du contact</translation>
+        <translation>Motstationens lokator</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1032"/>
         <source>Callsign of station to be worked</source>
-        <translation>Indicatif du contact</translation>
+        <translation>Motstationens anropssignal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1051"/>
         <source>Search for callsign in database</source>
-        <translation>Recherche de l&apos;indicatif d&apos;appel dans la base de données</translation>
+        <translation>Sök efter anropssignal i databasen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1054"/>
         <source>&amp;Lookup</source>
-        <translation>Voir &amp;Log</translation>
+        <translation>&amp;Slå upp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1067"/>
         <source>Add callsign and locator to database</source>
-        <translation>Ajouter l&apos;indicatif d&apos;appel et le localisateur à la base de données</translation>
+        <translation>Lägg till anropssignal och locator i databasen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1070"/>
         <source>Add</source>
-        <translation>Add à Call 3</translation>
+        <translation>Lägg till</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliquez avec le bouton gauche de la souris pour envoyer ce contact à dxsummit.fi (Cette fonction doit être activé dans l&apos;onglet &quot;Report&quot; des paramètres). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Klicka med vänster musknapp för att upptäcka DX-samtal till dxsummit.fi (spotting ska vara aktiverat under fliken Rapportering för inställningarna). Klicka med höger musknapp för att lägga till samtalssignal i &quot;Dölj meddelanden från samtalstecken&quot; -filtret. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
@@ -3097,44 +3097,44 @@ Erreur : %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5348"/>
         <location filename="../mainwindow.cpp" line="5763"/>
         <source>DX Call</source>
-        <translation>Indicatif DX</translation>
+        <translation>DX Anrop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1355"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt ;&quot;&gt;01:23:45 &lt;/span&gt;&lt;/p&gt;&lt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p align = &quot;center&quot;&gt; &lt;span style = &quot;font-size: 18pt;&quot;&gt; 01:23:45 &lt;/span&gt;&lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;p&gt;Partage Pair/Impair TX&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Växla TX-minut &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1395"/>
         <source>TX minute</source>
-        <translation>Temps Trans</translation>
+        <translation>Tx minuter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1668"/>
         <source>Audio Rx frequency</source>
-        <translation>Fréquence d&apos;émission audio</translation>
+        <translation>Audio Rx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1531"/>
         <location filename="../mainwindow.ui" line="1674"/>
         <location filename="../mainwindow.ui" line="4195"/>
         <source>  Hz</source>
-        <translation>  Hertz</translation>
+        <translation>  Hz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
         <source>Rx  </source>
-        <translation>RX  </translation>
+        <translation>Rx  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1497"/>
         <source>Toggle Tx mode</source>
-        <translation>Basculer le mode Tx</translation>
+        <translation>Växla Tx-mod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1500"/>
@@ -3144,61 +3144,61 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt; tête/&gt;&gt; corps&gt;&lt;p&gt; Activer le mode DXpedition Hound du FT8. Cliquer avec le bouton droit de la souris pour activer le contrôle de la fréquence d&apos;émission du hound TX. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera FT8 DXpedition Hound-läge. Höger musklick klicka på aktivera hound TX frekvenskontroll. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
         <location filename="../mainwindow.cpp" line="2977"/>
         <source>Hound</source>
-        <translation>Hound</translation>
+        <translation>Hund</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Rapport sur le signal (dB)&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Signalrapport (dB) &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1466"/>
         <source>Report </source>
-        <translation>Report </translation>
+        <translation>Rapport </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1525"/>
         <source>Audio Tx frequency</source>
-        <translation>Fréquence de l&apos;audio Tx</translation>
+        <translation>Audio Tx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1534"/>
         <location filename="../mainwindow.ui" line="4198"/>
         <source>Tx  </source>
-        <translation>TX  </translation>
+        <translation>Tx  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;-tête/&gt;&gt;corps&gt;&lt;p&gt;CAT doit être mis en place via Hamlib, Hamlib prend en charge l&apos;obtention des données du compteur S pour certains émetteurs-récepteurs.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; CAT ska ställas in via Hamlib, Hamlib stöder att få S-mätdata för vissa Tranceiver&apos;s. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1577"/>
         <location filename="../mainwindow.cpp" line="1489"/>
         <location filename="../mainwindow.cpp" line="1962"/>
         <source>S meter</source>
-        <translation>S Metre</translation>
+        <translation>S mätare</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1719"/>
         <source>▲</source>
-        <translation></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1747"/>
         <source>▼</source>
-        <translation></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1762"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Utiliser différentes fréquences Rx/Tx AF ou régler la fréquence Tx sur la fréquence Rx AF.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd olika Rx / Tx AF-frekvenser eller ställ in Tx-frekvensen lika med Rx AF-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1768"/>
@@ -3208,112 +3208,112 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1744"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Régler la fréquence Rx sur la fréquence Tx</translation>
+        <translation>Ställ in Rx-frekvensen till Tx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1596"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Activer le séquençage semi-automatique des messages. En appelant l&apos;opération CQ, la sélection automatique par défaut recherche la réponse avec la priorité la plus élevée. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera halvautomatisk meddelandesekvensering. När du ropar CQ, operation autoselektera som standard och  söker efter svar med högsta prioritet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <location filename="../mainwindow.ui" line="4624"/>
         <source>AutoSeq</source>
-        <translation>Sequ. Auto</translation>
+        <translation>Auto sekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-clic sur les ensembles d&apos;appels TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dubbelklicka på anropsinställnigar TX aktivera &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1640"/>
         <source>AutoTX</source>
-        <translation>TX Auto</translation>
+        <translation>Auto. TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1716"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Régler la fréquence Tx sur la fréquence Rx</translation>
+        <translation>Ställ in Tx-frekvensen till Rx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisez ce contrôle pour afficher ou masquer les lignes d&apos;édition des indicatifs/préfixes recherchés&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd den här kontrollen för att visa eller dölja önskade samtal / prefix redigeringsrader &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1787"/>
         <source>Wanted</source>
-        <translation>Recherche</translation>
+        <translation>Önskad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1803"/>
         <source>Reserved</source>
-        <translation>redervé</translation>
+        <translation>Reserverad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1844"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt;&gt;head/&gt;&lt;body&gt;&lt;p&gt;CAT doit être mis en place via Hamlib, Hamlib permet d&apos;obtenir des données sur la puissance de sortie pour certains émetteurs-récepteurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; CAT ska ställas in via Hamlib, Hamlib stöder inte att få ut effektdata för vissa Tranceiver&apos;s. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1847"/>
         <source> Pwr</source>
-        <translation> Puiss</translation>
+        <translation> Effekt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1869"/>
         <source>Adjust Tx audio level</source>
-        <translation>Ajuster le niveau audio du Tx</translation>
+        <translation>Justera Tx-ljudnivån</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1919"/>
         <location filename="../mainwindow.ui" line="1935"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste séparée par des virgules des indicatifs d&apos;appel recherchés. La sélection automatique sous AutoSeq 1..7 traitera l&apos;indicatif d&apos;appel souhaité en fonction des notifications/priorités choisies, cette fonctionnalité n&apos;est pas prise en charge sous AutoSeq0. Modes non FT8 uniquement : pour les indicatifs composés, l&apos;indicatif de base doit être utilisé dans la liste, parfois l&apos;indicatif de base sera copié à partir du message décodé : lors de l&apos;enregistrement d&apos;un tel QSO, l&apos;utilisateur devra changer l&apos;indicatif du correspondant pour un indicatif composé si nécessaire.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade samtal. Autoselection under AutoSeq 1..7 kommer att behandla önskad samtal enligt valda aviseringar / prioriteringar, denna funktionalitet stöds inte under AutoSeq0. Endast icke-FT8-lägen: för sammansatta samtalssignaler ska bassamtalssignalen användas i listan, ibland kopieras bassamtal från det avkodade meddelandet: vid loggning måste en sådan QSO-användare ändra korrespondentens samtalssignal till sammansatt en om det behövs. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
         <source>callsign:</source>
-        <translation>indicatif:</translation>
+        <translation>Anropssignal:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Effacer l&apos;indicatif d&apos;appel de cette liste lors de l&apos;enregistrement du QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa samtal från denna lista vid loggning av QSO. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1954"/>
         <location filename="../mainwindow.ui" line="2030"/>
         <source>Clr</source>
-        <translation>éffacer</translation>
+        <translation>Rensa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1968"/>
         <location filename="../mainwindow.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste séparée par des virgules des préfixes recherchés. La sélection automatique sous AutoSeq 1..7 traitera le préfixe souhaité en fonction des notifications/priorités choisies, cette fonctionnalité n&apos;est pas prise en charge sous AutoSeq0. Pour les indicatifs composés, le préfixe est reconnu au début de l&apos;indicatif. La fonction Autoselection traite l&apos;indicatif souhaité en fonction des notifications/priorités choisies. Modes non FT8 uniquement : parfois, l&apos;indicatif de base sera copié à partir du message décodé : lors de l&apos;enregistrement de ce QSO, l&apos;utilisateur devra changer l&apos;indicatif du correspondant pour un indicatif composé si nécessaire.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade prefix. Autoselection under AutoSeq 1..7 kommer att behandla önskat prefix enligt de valda aviseringarna / prioriteringarna, denna funktionalitet stöds inte under AutoSeq0. För sammansatta anropssignaler identifieras prefixet i början av anropssignalen. Automatisk val kommer att behandla önskad samtal enligt valda aviseringar / prioriteringar. Endast icke-FT8-lägen: ibland kommer bassamtalet att kopieras från det avkodade meddelandet: vid loggning måste en sådan QSO-användare byta korrespondentens samtal till sammansatt en om det behövs. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1971"/>
         <source>prefix:</source>
-        <translation>Prefixe:</translation>
+        <translation>prefix:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2001"/>
         <location filename="../mainwindow.ui" line="2017"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Comma-separated list of the squares of the searched grid where the four-character grid is only supported. Automatic selection in AutoSeq 1..7 will process the desired grid according to the selected notifications/priorities, this feature is not supported in AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade rutrutor där fyra röda rutnät bara stöds. Autoväljning under AutoSeq 1..7 kommer att behandla önskat rutnät enligt de valda aviseringarna / prioriteringarna, denna funktionalitet stöds inte under AutoSeq0. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2004"/>
         <source>grid:</source>
-        <translation>Locator:</translation>
+        <translation>grid:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Effacer cette liste lors de l&apos;enregistrement du QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa &quot;Grid&quot; från den här listan vid loggning av QSO. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2043"/>
@@ -3334,179 +3334,179 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste séparée par des virgules des pays recherchés : le préfixe du pays principal doit être utilisé dans cette liste. Pour les indicatifs composés, le préfixe est reconnu au début de l&apos;indicatif. La sélection automatique sous AutoSeq 1..7 traitera les pays recherchés en fonction des notifications/priorités choisies, cette fonctionnalité n&apos;est pas prise en charge sous AutoSeq0. Modes non FT8 uniquement : parfois l&apos;indicatif de base sera copié à partir du message décodé : lors de l&apos;enregistrement de ce QSO, l&apos;utilisateur devra changer l&apos;indicatif du correspondant pour en composer un si nécessaire. Liste des principaux préfixes de pays : 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
-3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
-5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
-9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
-CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
-EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
-FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
-HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
-JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
-KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
-PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
-SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
-UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
-VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
-XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
-ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade länder: huvudlandsprefixet ska användas i den här listan. För sammansatta anropssignaler identifieras prefixet i början av anropssignalen. Autoselection under AutoSeq 1..7 kommer att behandla önskat land enligt de valda aviseringarna / prioriteringarna, denna funktion stöds inte under AutoSeq0. Endast icke-FT8-lägen: ibland kommer bassamtalet att kopieras från det avkodade meddelandet: vid loggning måste en sådan QSO-användare byta korrespondentens samtal till sammansatt en om det behövs. Lista över huvudlandsprefix: 1A, 1S, 3A, 3B6,3B8,3B9,3C, 3C0,3D2,3D2 / C, &lt;br&gt;
+3D2 / R, 3DA, 3V, 3W, 3X, 3Y / B, 3Y / P, 4J, 4L, 4O, 4S, 4U1I, 4U1U, * 4U1V, 4W, 4X, 5A, 5B, 5H, 5N, 5R, 5T &lt;br&gt;
+5U, 5V, 5W, 5X, 5Z, 6W, 6Y, 7O, 7P, 7Q, 7X, 8P, 8Q, 8R, 9A, 9G, 9H, 9J, 9K, 9L, 9M2,9M6,9N, 9Q, 9U, 9V, 9X, &lt;br&gt;
+9Y, A2, A3, A4, A5, A6, A7, A9, AP, BS7, BV, BV9P, BY, C2, C3, C5, C6, C9, CE, CE0X, CE0Y, CE0Z, CE9, CM, &lt;br &gt;
+CN, CP, CT, CT3, CU, CX, CY0, CY9, D2, D4, D6, DL, DU, E3, E4, E5 / N, E5 / S, E6, E7, EA, EA6, EA8, EA9, EI &lt;br&gt;
+EK, EL, EP, ER, ES, ET, EU, EX, EY, EZ, F, FG, FH, FJ, FK, FK / C, FM, FO, FO / A, FO / C, FO / M, FP, FR, FS, &lt;br&gt;
+FT / G, FT / J, FT / T, FT / W, FT / X, FT / Z, FW, FY, G, GD, GI, GJ, * GM / S, GM, GU, GW, H4, H40 , HA, HB, HB0, HC, &lt;br&gt;
+HC8, HH, Hl, HK, HK0 / A, HK0 / M, HL, HP, HR, HS, HV, HZ, I, * IG9, IS, * IT9, J2, J3, J5, J6, J7, J8, JA &lt;br&gt;
+JD / M, JD / O, JT, JW, * JW / B, JX, JY, K, KG4, KH0, KH1, KH2, KH3, KH4, KH5, KH6, KH7K, KH8, KH8 / S, KH9, KL &lt;br&gt;
+KP1, KP2, KP4, KP5, LA, LU, LX, LY, LZ, OA, OD, OE, OH, OH0, OJ0, OK, OM, ON, OX, OY, OZ, P2, P4, P5, PA, &lt;br&gt;
+PJ2, PJ4, PJ5, PJ7, PY, PY0F, PY0S, PY0T, PZ, R1FJ, S0, S2, S5, S7, S9, SM, SP, ST, SU, SV, SV / A, SV5, &lt;br&gt;
+SV9, T2, T30, T31, T32, T33, T5, T7, T8, TA, * TA1, TF, TG, TI, Ti9, TJ, TK, TL, TN, TR, TT, TU, TY, TZ, UA &lt;br&gt;
+UA2, UA9, Storbritannien, FN, UR, V2, V3, V4, V5, V6, V7, V8, VE, VK, VK0H, VK0M, VK9C, VK9L, VK9M, VK9N, VK9W, VK9X &lt;br&gt;
+VP2e, VP2M, VP2V, VP5, VP6, VP6 / D, VP8, VP8 / G, VP8 / H, VP8 / O, VP8 / S, VP9, ​​VQ9, VR, VU, VU4, VU7, XE, &lt;br&gt;
+XF4, XT, XU, XW, XX9, XZ, YA, YB Yi, YJ, YK, YL, YN, YO, YS, YU, YV, YV0, Z2, Z3, Z6, Z8, ZA, ZB, ZC4, ZD7 &lt;br&gt;
+ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2061"/>
         <source>country:</source>
-        <translation>Pays:</translation>
+        <translation>Land:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2267"/>
         <location filename="../mainwindow.cpp" line="6076"/>
         <source>Rx Frequency</source>
-        <translation>Frequence RX</translation>
+        <translation>Rx Frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Transmettre un ton pure. La minuterie peut être réglée dans l&apos;onglet Général des paramètres.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Sänd en ren ton. Ställ in timern på fliken Allmänt i inställningarna. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2354"/>
         <location filename="../mainwindow.cpp" line="6654"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Tune HF</translation>
+        <translation>&amp;Justera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2382"/>
         <source>Start monitoring</source>
-        <translation>Départ du moniteur</translation>
+        <translation>Börja övervakning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2396"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Monitor</translation>
+        <translation>&amp;Övervaka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voir les stations déja contactées, action en double dans l&apos;onglet Divers.&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Bypassera alternativet för alla textfilter, duplicerar åtgärden på fliken Diverse. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2441"/>
         <source>Bypass</source>
-        <translation>Bypass</translation>
+        <translation>Passera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2472"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Option QSO AutoSeq en un seul coup&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; QSO &quot;Single shot QSO&quot; Autosekvansval &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2486"/>
         <source>1 QSO</source>
-        <translation></translation>
+        <translation>1 QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2517"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Répondre aux stations déja contactées (B4)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Svara körda B4 AutoSeq-alternativ &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2531"/>
         <source>AnsB4</source>
-        <translation></translation>
+        <translation>SvaraB4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Arrêter le signal d&apos;entrée de surveillance, arrêter la lecture du paquet de fichiers audio wav&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Sluta övervaka insignalen, sluta spela paketet med ljudvågfilerna &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2562"/>
         <source>&amp;Stop</source>
-        <translation></translation>
+        <translation>&amp;Stop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2601"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Décoder à nouveau la période Rx la plus récente ou le dernier fichier audio wav lu pour toute combinaison de boutons en mode Hint/Filtre/SWL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Avkoda igen den senaste Rx-perioden eller senast spelade wav-ljudfil för alla kombinationer av kombinationer av tip / filter / SWL-läge knappar &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2615"/>
         <source>Dec&amp;ode</source>
-        <translation>Déc&amp;odage</translation>
+        <translation>Avk&amp;oda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2643"/>
         <source>Toggle Tx Enable On/Off</source>
-        <translation>Activation duTx</translation>
+        <translation>Växla Tx Aktivering On / Off</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2657"/>
         <source>E&amp;nable Tx</source>
-        <translation>&amp;Marche TX</translation>
+        <translation>A&amp;ktivera Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2685"/>
         <source>Stop transmitting immediately</source>
-        <translation>Stop Trans</translation>
+        <translation>Stoppa sändningen omedelbart</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2688"/>
         <source>&amp;Halt Tx</source>
-        <translation>&amp;Stop TX</translation>
+        <translation>&amp;Stop Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2713"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation>Entrez ce QSO dans le journal de l&apos;ADIF</translation>
+        <translation>Lägg till  detta QSO i ADIF-logg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2716"/>
         <source>Log &amp;QSO</source>
-        <translation>Enreg. &amp;Qso</translation>
+        <translation>Logga &amp;QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2741"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton gauche de la souris : Efface la fenêtre de texte décodé(gauche). Bouton droit de la souris : Effacer la fenêtre de fréquence QSO. Double-clic pour les deux fenêtres.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vänster musknapp: Radera avkodad text (vänster) fönster. Höger musknapp: Radera QSO Frequency fönster. Dubbelklicka för båda fönstren. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2744"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Effacer</translation>
+        <translation>R&amp;adera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2769"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Increase number of decoding attempts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Augmenter le nombre de tentatives de décodage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Öka antalet avkodningsförsök &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2783"/>
         <source>S&amp;WL mode</source>
-        <translation>Mode S&amp;WL</translation>
+        <translation>S&amp;WL-mod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2814"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Active un groupe de décodeurs basés sur les filtres correspondants, en mode FT8 active la fonctionnalité FT8AP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktiverar grupp av avkodare baserat på de matchade filtren, i FT8-läget aktiverar FT8AP-funktionalitet &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2828"/>
         <source>Hint</source>
-        <translation></translation>
+        <translation>Antydan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2859"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 170Hz, FT8 hound mode 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bande passante, FT8 170Hz, FT8 mode chien de chasse 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. Signaux JT65 : décodage 580Hz, 300 Hz pour l&apos;affichage des messages. Le filtre est centré sur le spectre du signal RX. La fonctionnalité de filtre ne peut pas améliorer le décodage du signal, elle est dédiée à une utilisation avec des processeurs lents pour laisser le décodeur terminer le traitement avant la transmission du signal et éviter le changement de message à la transmission. Tous les appels entrants en dehors de la bande passante du filtre seront perdus, n&apos;utilisez la fonctionnalité de filtre que si elle est vraiment nécessaire pour votre CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Bandbredd, FT8 170Hz, FT8 hundläge 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. JT65-signaler: 580Hz avkodning, 300 Hz för visning av meddelanden. Filter är centrerat mot RX-signalspektrum. Filterfunktionalitet kan inte förbättra signalavkodning, den är avsedd för användning med långsamma CPU: er för att låta avkodaren slutbehandla innan signalöverföring och undvika meddelandeändring vid överföring. Alla inkommande samtal från filterbandbredd går förlorade, använd filterfunktion endast om det verkligen behövs för din CPU. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2873"/>
         <source>Filter</source>
-        <translation>Filtre</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2907"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Active la fonctionnalité de compensation de l&apos;AGC. Augmente l&apos;efficacité du décodage si l&apos;AGC est activé dans le récepteur&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktiverar AGC-kompensationsfunktionalitet. Att öka avkodningseffektiviteten om AGC är påslagen i mottagaren &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2921"/>
@@ -3516,12 +3516,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2952"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton gauche de la souris : Effacez les données des fenêtres DX Call et DX Grid. Bouton droit de la souris : Efface les données des fenêtres DX Call, DX Grid, de l&apos;historique des QSO et de la liste noire. CTRL+Bouton droit de la souris : ajouter l&apos;indicatif de la fenêtre DX Call à la liste noire, effacer les données des fenêtres DX Call, DX Grid et de l&apos;historique des QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vänster musknapp: Radera data från DX Call och DX Grid rutor. Höger musknapp: Radera data från DX-samtal, DX-&quot;Gridfönster&quot;, QSO-historik och svartlista. CTRL + Höger musknapp: lägg till samtal från DX-samtalfönster till svartlista, radera data från DX-samtal, DX-&quot;Gridfönster&quot; och QSO-historik. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2955"/>
         <source>Clear D&amp;X</source>
-        <translation>Effacer D&amp;X</translation>
+        <translation>Rensa D&amp;X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3053"/>
@@ -3529,58 +3529,58 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="5845"/>
         <location filename="../mainwindow.ui" line="5869"/>
         <source>1</source>
-        <translation></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3096"/>
         <source>Generate standard messages for minimal QSO</source>
-        <translation>Générer des messages standard pour un QSO minimal</translation>
+        <translation>Generera standard meddelande för mini QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3099"/>
         <source>GenMsgs</source>
-        <translation>Message Gen</translation>
+        <translation>GenMedd</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3128"/>
         <location filename="../mainwindow.ui" line="5566"/>
         <source>CQ</source>
-        <translation></translation>
+        <translation>CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3163"/>
         <location filename="../mainwindow.ui" line="3731"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3166"/>
         <location filename="../mainwindow.ui" line="3734"/>
         <source>DX</source>
-        <translation></translation>
+        <translation>DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3179"/>
         <location filename="../mainwindow.ui" line="3763"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation>Cochez pour générer le message &quot;RRR&quot;, décochez pour générer le message &quot;RR73&quot;.</translation>
+        <translation>Markera för att generera &quot;RRR&quot; -meddelande, avmarkera för att generera &quot;RR73&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3185"/>
         <location filename="../mainwindow.ui" line="3769"/>
         <source>RRR</source>
-        <translation></translation>
+        <translation>RRR</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3198"/>
         <location filename="../mainwindow.ui" line="3817"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cocher pour transmettre sans le  le locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hoppa över sändningsmeddelandet med QTH Grid locator &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3204"/>
         <source>SkipTx1</source>
-        <translation></translation>
+        <translation>Skipp-Tx1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3237"/>
@@ -3590,12 +3590,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3517"/>
         <location filename="../mainwindow.ui" line="3584"/>
         <source>Send this message in next Tx interval</source>
-        <translation></translation>
+        <translation>Skicka detta meddelande i nästa Tx-intervall</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3243"/>
         <source>Ctrl+1</source>
-        <translation></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3268"/>
@@ -3605,62 +3605,62 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3545"/>
         <location filename="../mainwindow.ui" line="3615"/>
         <source>Switch to this Tx message NOW</source>
-        <translation></translation>
+        <translation>Byt till detta Tx-meddelande NU</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3274"/>
         <source>Tx &amp;1</source>
-        <translation></translation>
+        <translation>Tx &amp;1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3277"/>
         <source>Alt+1</source>
-        <translation></translation>
+        <translation>Alt+1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3313"/>
         <source>Ctrl+2</source>
-        <translation></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3338"/>
         <source>Tx &amp;2</source>
-        <translation></translation>
+        <translation>Tx &amp;2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3341"/>
         <source>Alt+2</source>
-        <translation></translation>
+        <translation>Alt+2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3377"/>
         <source>Ctrl+3</source>
-        <translation></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3402"/>
         <source>Tx &amp;3</source>
-        <translation></translation>
+        <translation>Tx &amp;3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3405"/>
         <source>Alt+3</source>
-        <translation></translation>
+        <translation>Alt+3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3441"/>
         <source>Ctrl+4</source>
-        <translation></translation>
+        <translation>Ctrl+4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3466"/>
         <source>Tx &amp;4</source>
-        <translation></translation>
+        <translation>Tx &amp;4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3469"/>
         <source>Alt+4</source>
-        <translation></translation>
+        <translation>Alt+4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3495"/>
@@ -3669,40 +3669,40 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation>Saisissez un message texte libre (13 caractères maximum)
-ou sélectionnez une macro prédéfinie dans la liste déroulante.
- La liste peut être gérée dans les paramètres (F2).
-&quot;Macros&quot;</translation>
+        <translation>Ange ett fritextmeddelande (högst 13 tecken)
+eller välj ett fördefinierat makro från rullgardinslistan.
+Tryck på ENTER för att lägga till aktuell text i det fördefinierade
+lista. Listan kan underhållas i Inställningar (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3523"/>
         <source>Ctrl+5</source>
-        <translation></translation>
+        <translation>Ctrl+5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3548"/>
         <source>Tx &amp;5</source>
-        <translation></translation>
+        <translation>Tx &amp;5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3551"/>
         <source>Alt+5</source>
-        <translation></translation>
+        <translation>Alt+5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3590"/>
         <source>Ctrl+6</source>
-        <translation></translation>
+        <translation>Ctrl+6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3618"/>
         <source>Tx &amp;6</source>
-        <translation></translation>
+        <translation>Tx &amp;6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3621"/>
         <source>Alt+6</source>
-        <translation></translation>
+        <translation>Alt+6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3639"/>
@@ -3711,147 +3711,147 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.ui" line="5853"/>
         <location filename="../mainwindow.ui" line="5877"/>
         <source>2</source>
-        <translation></translation>
+        <translation>2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3693"/>
         <source>CQ </source>
-        <translation></translation>
+        <translation>CQ </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3801"/>
         <source>AnsCQ </source>
-        <translation>Réponse aux CQ</translation>
+        <translation>SvaraCQ </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3823"/>
         <source>SkpGrid</source>
-        <translation>Trans. sans locator</translation>
+        <translation>Skipp-Grid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Générer un message CQ ou CQ directionnel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Generera CQ- eller riktat-CQ-meddelande &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3853"/>
         <source>CQ/CQ DX</source>
-        <translation></translation>
+        <translation>CQ/CQ DX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3878"/>
         <source>Generate message for replying to a CQ</source>
-        <translation>Générer un message pour répondre à un CQ</translation>
+        <translation>Generera meddelande för att svara på ett CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3881"/>
         <source>Grid</source>
-        <translation></translation>
+        <translation>Grid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3906"/>
         <source>Generate message with report</source>
-        <translation>Générer un message avec un report</translation>
+        <translation>Generera meddelande med rapport</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3909"/>
         <source>dB</source>
-        <translation></translation>
+        <translation>dB</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3934"/>
         <source>Generate message with R+report</source>
-        <translation>Générer un message avec R+report</translation>
+        <translation>Generera meddelande med R+raport</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3937"/>
         <source>R+dB</source>
-        <translation></translation>
+        <translation>R+dB</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3962"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Génère un message avec RR73 si la case RRR n&apos;est pas cochée, génère un message RRR si la case RRR est cochée&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Generera meddelande med RR73 om RRR-kryssrutan är avmarkerad, generera RRR-meddelande om RRR-kryssrutan är markerad &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3965"/>
         <source>RRR/RR73</source>
-        <translation></translation>
+        <translation>RRR/RR73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3990"/>
         <source>Generate message with 73</source>
-        <translation>Générer un message avec 73</translation>
+        <translation>Generera meddelande med 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3993"/>
         <source>73</source>
-        <translation></translation>
+        <translation>73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4041"/>
         <source>Send this standard (generated) message</source>
-        <translation>Envoyez ce message standard (généré)</translation>
+        <translation>Skicka det här (genererade) meddelandet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4044"/>
         <source>Gen msg</source>
-        <translation>Message. Gen.</translation>
+        <translation>Gen. medd</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4109"/>
         <source>Send this free-text message (max 13 characters)</source>
-        <translation>Envoyez ce message en texte libre (13 caractères maximum)</translation>
+        <translation>Skicka detta fria textmeddelande (max 13 tecken)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4112"/>
         <source>Free msg</source>
-        <translation>Message libre</translation>
+        <translation>Fritt medd</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4233"/>
         <source>Band Hopping</source>
-        <translation>Saut de bande</translation>
+        <translation>Band Hopping</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4242"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation>Choisissez des groupes et des moments de la journée pour faire du &quot;saut de bandes&quot;.</translation>
+        <translation>Välj band och tider på dagen för bandhoppning.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4245"/>
         <source>Schedule ...</source>
-        <translation>Schedule ...</translation>
+        <translation>Schema ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4259"/>
         <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Téléchargez les messages décodés sur WPRnet.org.</translation>
+        <translation>Ladda upp avkodade meddelanden till WPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4262"/>
         <source>Upload spots</source>
-        <translation>DX ► Cluster</translation>
+        <translation>Ladda up &quot;Spots&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4269"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation>Transmettre pendant la séquence de 2 minutes suivante.</translation>
+        <translation>Sänd under nästa 2-minuters sekvens.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4283"/>
         <source>Tx Next</source>
-        <translation>TX Suivant</translation>
+        <translation>Tx Nästa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4300"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation>Définissez la puissance Tx en dBm (dB au-dessus de 1 mW) dans le cadre de votre message WSPR.</translation>
+        <translation>Ställ in Tx-effekt i dBm (dB över 1 mW) som en del av ditt WSPR-meddelande.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4214"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation>Pourcentage de séquences de 2 minutes consacrées à la transmission. Pourcentage de séquences de 2 minutes consacrées à la transmission.</translation>
+        <translation>Procentandel av 2-minuters sekvenser ägnade åt att sända.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4220"/>
@@ -3866,117 +3866,117 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4293"/>
         <source>No own call decodes</source>
-        <translation>Pas de décodage d&apos;appel propre</translation>
+        <translation>Inga egna anrop avkodas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4395"/>
         <source>File</source>
-        <translation>Dossier</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4413"/>
         <source>View</source>
-        <translation>Voir</translation>
+        <translation>Visa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4420"/>
         <source>Decode</source>
-        <translation>Décodage</translation>
+        <translation>Avkoda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4424"/>
         <source>FT8 threads</source>
-        <translation>Réglages FT8</translation>
+        <translation>FT8-trådar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4442"/>
         <source>JT9 WSPR decoding</source>
-        <translation>Décodage JT9 WSPR</translation>
+        <translation>JT9 WSPR avkodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4450"/>
         <source>FT8 decoding</source>
-        <translation>Décodage FT8</translation>
+        <translation>FT8 avkodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4454"/>
         <source>wideband decoding</source>
-        <translation>décodage à large bande</translation>
+        <translation>bredbandsavkodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4462"/>
         <source>narrow Filter</source>
-        <translation>Filtre étroit</translation>
+        <translation>smalt filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4470"/>
         <source>decoder sensitivity</source>
-        <translation>sensibilité du décodeur</translation>
+        <translation>Avkodningskänslighet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4478"/>
         <source>QSO RX freq sensitivity</source>
-        <translation>Sensibilité de la fréquence QSO RX</translation>
+        <translation>QSO RX frekvenskänslighet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4486"/>
         <source>decoding cycles</source>
-        <translation>cycles de décodage</translation>
+        <translation>avkodningscykler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4494"/>
         <source>SWL decoding cycles</source>
-        <translation>Cycles de décodage SWL</translation>
+        <translation>SWL-avkodningscykler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4514"/>
         <source>FT4 decoding</source>
-        <translation>Décodage FT4</translation>
+        <translation>FT4 avkodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4530"/>
         <source>Save</source>
-        <translation>Sauver</translation>
+        <translation>Spara</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4538"/>
         <source>Language</source>
-        <translation>Langage</translation>
+        <translation>Språk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4562"/>
         <source>Help</source>
-        <translation>Aide</translation>
+        <translation>Hjälp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4578"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4590"/>
         <source>Misc</source>
-        <translation>Divers</translation>
+        <translation>Blandat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4594"/>
         <source>Accept UDP Reply messages</source>
-        <translation>Accepter les messages de réponse UDP</translation>
+        <translation>Acceptera UDP-svarmeddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4628"/>
         <source>Auto RX frequency Filter</source>
-        <translation>Filtre de fréquence Auto RX</translation>
+        <translation>Auto RX frekuens Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4652"/>
         <source>DXpedition</source>
-        <translation>Expédition DX</translation>
+        <translation>DXpedition</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4671"/>
         <source>Exit</source>
-        <translation>Sortir</translation>
+        <translation>Utgång</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4674"/>
@@ -3986,7 +3986,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4685"/>
         <source>Configuration</source>
-        <translation>Configuration</translation>
+        <translation>Konfiguration</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4688"/>
@@ -3997,8 +3997,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4693"/>
         <source>About JTDX</source>
-        <translatorcomment>À propos de JTDX</translatorcomment>
-        <translation>À propos de JTDX</translation>
+        <translation>Om JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4696"/>
@@ -4008,12 +4007,12 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4701"/>
         <source>Waterfall</source>
-        <translation>Chute d&apos;eau</translation>
+        <translation>Vattenfall</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4706"/>
         <source>Open</source>
-        <translation>Ouvrir</translation>
+        <translation>Öppna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4709"/>
@@ -4023,7 +4022,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4714"/>
         <source>Open next in directory</source>
-        <translation>Ouvrir suivant dans le répertoire</translation>
+        <translation>Öppna nästa i katalogen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4717"/>
@@ -4033,7 +4032,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4722"/>
         <source>Decode remaining files in directory</source>
-        <translation>Décoder les fichiers restants dans le répertoire</translation>
+        <translation>Avkoda återstående filer i katalogen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4725"/>
@@ -4043,7 +4042,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4730"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation>Supprimer tous les fichiers *.wav &amp;&amp; *.c2 dans SaveDir</translation>
+        <translation>Radera alla * .wav &amp;&amp; * .c2-filer i SaveDir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4741"/>
@@ -4051,32 +4050,32 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.ui" line="5501"/>
         <location filename="../mainwindow.ui" line="5783"/>
         <source>fast</source>
-        <translation>rapide</translation>
+        <translation>snabb</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4752"/>
         <source>None</source>
-        <translation>Aucune</translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4760"/>
         <source>Save all</source>
-        <translation>Sauvez tout</translation>
+        <translation>Spara allt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4860"/>
         <source>JTDX Web site</source>
-        <translation>Site web du JTDX</translation>
+        <translation>JTDX Webbsida</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4863"/>
         <source>F1</source>
-        <translation>Site web du JTDX</translation>
+        <translation>F1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4868"/>
         <source>Keyboard shortcuts</source>
-        <translation>Raccourcis clavier</translation>
+        <translation>Tangentbord snabbtangenter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4871"/>
@@ -4086,7 +4085,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4876"/>
         <source>Special mouse commands</source>
-        <translation>Commandes spéciales de la souris</translation>
+        <translation>Särskilda muskommandon</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4879"/>
@@ -4101,7 +4100,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4901"/>
         <source>Save decoded</source>
-        <translation>Sauvegarder les décodés</translation>
+        <translation>Spara avkodade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4912"/>
@@ -4110,7 +4109,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.ui" line="5751"/>
         <location filename="../mainwindow.ui" line="5791"/>
         <source>medium</source>
-        <translation>moyen</translation>
+        <translation>medel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4923"/>
@@ -4118,27 +4117,27 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.ui" line="5520"/>
         <location filename="../mainwindow.ui" line="5802"/>
         <source>deep</source>
-        <translation>Profond</translation>
+        <translation>djup</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4931"/>
         <source>Monitor OFF at startup</source>
-        <translation>Moniteur Arret au démarrage</translation>
+        <translation>Övervakning avstängd vid uppstart</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4936"/>
         <source>Erase ALL.TXT</source>
-        <translation>Effacer ALL.TXT</translation>
+        <translation>Radera ALL.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4941"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation>Effacer le fichier QSO LOG wsjtx_log.adi</translation>
+        <translation>Radera QSO LOG-fil wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4946"/>
         <source>Open wsjtx_log.adi</source>
-        <translation>Ouvrez wsjtx_log.adi</translation>
+        <translation>Öppna wsjtx_log.adi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4949"/>
@@ -4149,62 +4148,62 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4957"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation>Convertir le mode de fonctionnement en RTTY</translation>
+        <translation>Konvertera läget till RTTY för loggning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4965"/>
         <source>Log dB reports to Comments</source>
-        <translation>Log dB rapporte à Commentaires</translation>
+        <translation>Logga dB-rapporter till Kommentarer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4973"/>
         <source>Prompt me to log QSO</source>
-        <translation>Me demander d&apos;enregistrer le QSO</translation>
+        <translation>Be mig logga QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4981"/>
         <source>Blank line between decoding periods</source>
-        <translation>Separation entre les périodes de décodage</translation>
+        <translation>Blank linje mellan avkodningsperioder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4989"/>
         <source>Clear DX Call and Grid after logging</source>
-        <translation>Effacer l&apos;appel DX et la grille après l&apos;enregistrement</translation>
+        <translation>Rensa DX-samtal och Grid efter loggning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4997"/>
         <source>Display distance in miles</source>
-        <translation>Afficher la distance en miles</translation>
+        <translation>Visa avstånd i miles</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5005"/>
         <source>Double-click on call sets Tx Enable</source>
-        <translation>Double-cliquez pour activer TX</translation>
+        <translation>Dubbelklicka på Anropsinställningar vid Tx Enable</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5013"/>
         <source>Tx disabled after sending 73</source>
-        <translation>désactivé TX après l&apos;envoi 73</translation>
+        <translation>Tx inaktiverat efter att ha skickat 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5021"/>
         <source>Runaway Tx watchdog</source>
-        <translation>Surveillant</translation>
+        <translation>Runaway Tx &quot;Watchdog&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5029"/>
         <source>Allow multiple instances</source>
-        <translation>Autoriser les instances multiples</translation>
+        <translation>Tillåt flera instanser</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5037"/>
         <source>Tx freq locked to Rx freq</source>
-        <translation>Fréq. de Tx verrouillée à la fréq. de Rx</translation>
+        <translation>Tx freq låst till Rx freq</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5045"/>
         <source>Skip Tx 1</source>
-        <translation>Sauter Tx 1</translation>
+        <translation>Hoppa över Tx 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5053"/>
@@ -4219,32 +4218,32 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5072"/>
         <source>Tx messages to Rx Frequency window</source>
-        <translation>Messages Tx vers la fenêtre de fréquence Rx</translation>
+        <translation>Tx-meddelanden till Rx-frekvensfönstret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5080"/>
         <source>Gray1</source>
-        <translation>Gris1</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5088"/>
         <source>Show DXCC entity and worked B4 status</source>
-        <translation>Indiquer l&apos;entité DXCC et le statut B4 du travail</translation>
+        <translation>Visa DXCC-enhet och fungerade B4-status</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5096"/>
         <source>Astronomical data</source>
-        <translation>Données astronomiques</translation>
+        <translation>Astronomiska data</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5101"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation>Liste restreinte de préfixes et suffixes</translation>
+        <translation>Kort lista med tilläggsprefix och suffix</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5106"/>
         <source>Settings...</source>
-        <translation>Réglages...</translation>
+        <translation>Inställningar...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5117"/>
@@ -4254,22 +4253,22 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5122"/>
         <source>Open log directory</source>
-        <translation>Ouvrir le répertoire des logs</translation>
+        <translation>Öppna loggkatalogen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5130"/>
         <source>Message averaging</source>
-        <translation>Moyenne des messages</translation>
+        <translation>Meddelande i genomsnitt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5147"/>
         <source>Include averaging</source>
-        <translation>Inclure le calcul de la moyenne</translation>
+        <translation>Inkludera medelvärde</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5161"/>
         <source>JT65 hinted decoding</source>
-        <translation>JT65 a suggéré le décodage</translation>
+        <translation>JT65 antydde avkodning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5172"/>
@@ -4279,17 +4278,17 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5177"/>
         <source>Save reference spectrum</source>
-        <translation>Sauvegarder le spectre de référence</translation>
+        <translation>Spara referensspektrum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5182"/>
         <source>&amp;Download Samples ...</source>
-        <translation>&amp;Téléchargez des échantillons ...</translation>
+        <translation>&amp; Ladda ner exempel ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5185"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Téléchargez des exemples de fichiers audio démontrant les différents modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hämta exempel på ljudfiler som visar de olika lägena. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5193"/>
@@ -4299,12 +4298,12 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5204"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>Contournement des filtres de texte sur la fréquence RX</translation>
+        <translation>Passera textfilter på RX-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5215"/>
         <source>Bypass all text filters</source>
-        <translation>Contourner tous les filtres de texte</translation>
+        <translation>Passera alla textfilter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5218"/>
@@ -4314,22 +4313,22 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5226"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation>Afficher les messages décodés à partir des harmoniques JT65</translation>
+        <translation>Visa meddelanden avkodade från JT65-harmonik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5237"/>
         <source>Enable main window popup</source>
-        <translation>Activer le popup de la fenêtre principale</translation>
+        <translation>Aktivera huvudfönster &quot;popup&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5248"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>Messages avec mon indicatif d&apos;appel à la fenêtre de fréquence RX </translation>
+        <translation>Meddelanden med min Signal till RX-frekvensfönstret </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5253"/>
         <source>Copyright notice from WSJT Development Group</source>
-        <translation>Avis de droit d&apos;auteur du Groupe de développement du WSJT</translation>
+        <translation>Upphovsrättsmeddelande från WSJT Development Group</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5267"/>
@@ -4339,67 +4338,67 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5275"/>
         <source>FT8 call first</source>
-        <translation>Appel du FT8 en premier</translation>
+        <translation>FT8 anrop först</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5286"/>
         <source>Call priority and search CQ</source>
-        <translation>Priorité d&apos;appel et recherche CQ</translation>
+        <translation>Anropa prioritet och sök CQ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect recherche de la réponse à la CQ avec des priorités, en cas d&apos;échec, recherche des messages de CQ avec une priorité plus élevée&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Autoselektera sökning efter svar på CQ med prioriteringar, om misslyckades, sök sedan efter CQ-meddelanden med högre prioritet &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5297"/>
         <source>FT8 call last</source>
-        <translation>Dernier appel du FT8</translation>
+        <translation>FT8 anrop sist</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5305"/>
         <source>FT8 manual call</source>
-        <translation>Appel manuel FT8</translation>
+        <translation>FT8 manuellt anrop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5313"/>
         <source>0  Call None</source>
-        <translation>Aucun Appel</translation>
+        <translation>0 Anropa inte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5321"/>
         <source>1  Call first</source>
-        <translation>1 Appel en premier</translation>
+        <translation>1 Anropa först</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5329"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+ Appel et recherche dans les messages CQ</translation>
+        <translation>4+ Anropa och sök via CQ-meddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5337"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2 Appel décodé jusqu&apos;au début de l&apos;intervalle TX</translation>
+        <translation>2 Anropa avkodat tills TX-intervall börjar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5345"/>
         <source>3  Call based on end of decoding</source>
-        <translation>3 Appel basé sur la fin du décodage</translation>
+        <translation>3 Samtal baserat på avslutningen av avkodningen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5353"/>
         <source>Single shot QSO</source>
-        <translation>QSO en un seul coup</translation>
+        <translation>Enskilt QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5361"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>Effacer la fenêtre d&apos;activité de la bande au début du décodage</translation>
+        <translation>Radera bandaktivitetsfönstret vid avkodningens början</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5369"/>
         <source>Answer worked B4 calls</source>
-        <translation>Répondre aux appels B4</translation>
+        <translation>Svara körda B4  anrop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5380"/>
@@ -4424,32 +4423,32 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5431"/>
         <source>Erase both message windows at band change</source>
-        <translation>Effacer les deux fenêtres de message lors du changement de bande</translation>
+        <translation>Radera båda meddelandefönstren vid bandbyte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5469"/>
         <source>deep with 4 passes</source>
-        <translation>profond avec 4 passes</translation>
+        <translation>djupt med 4 pass</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5477"/>
         <source>Max distance instead of best SNR</source>
-        <translation>Distance maximale au lieu du meilleur SNR</translation>
+        <translation>Max distans i stället för bästa SNR</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5485"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation>Messages avec appel souhaité vers la fenêtre de fréquence R</translation>
+        <translation>Meddelanden med önskad Signall till RX-frekvensfönstret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5493"/>
         <source>use low thresholds</source>
-        <translation>utiliser des seuils peu élevés</translation>
+        <translation>använd låga trösklar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5528"/>
         <source>use subpass</source>
-        <translation>utiliser le sous-passement</translation>
+        <translation>använd underpass</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5539"/>
@@ -4459,77 +4458,77 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5547"/>
         <source>late start of decoder</source>
-        <translation>démarrage tardif du décodeur</translation>
+        <translation>sen start av avkodaren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5555"/>
         <source>Call worked B4 callsigns</source>
-        <translation>Appelez les indicatifs B4</translation>
+        <translation>Anropa körda B4 signaler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5574"/>
         <source>CQ and 73</source>
-        <translation>CQ et 73</translation>
+        <translation>CQ och 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5582"/>
         <source>any messages</source>
-        <translation>tout message</translation>
+        <translation>några meddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5590"/>
         <source>Enable</source>
-        <translation>Activer</translation>
+        <translation>Aktivera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5598"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Éteindre le filtre à l&apos;envoi 73</translation>
+        <translation>Stäng av filter när du sänder 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5606"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>Éteindre le filtre à l&apos;obtention de 73</translation>
+        <translation>Stäng av filter vid 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5614"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>Cacher les Faux messages en  FT8</translation>
+        <translation>Dölj FT8-vilseledande-meddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5622"/>
         <source>Display output power</source>
-        <translation>Affichage de la puissance de sortie</translation>
+        <translation>Visa utgångseffekt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5630"/>
         <source>Report message priority</source>
-        <translation>Priorité du message de rapport</translation>
+        <translation>Rapportera meddelandets prioritet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5638"/>
         <source>Enable hound mode</source>
-        <translation>Activer le mode hound</translation>
+        <translation>Aktivera &quot;Hund&quot; mod</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5649"/>
         <source>Use hound TX frequency control</source>
-        <translation>Utiliser le contrôle de la fréquence TX de hound</translation>
+        <translation>Använd frekvensstyrning för hund-TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5657"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>Désactiver le TX après avoir envoyé RRR/RR73/73 en mode manuel</translation>
+        <translation>Inaktivera TX efter att du skickat RRR / RR73 / 73 i manuellt läge</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5668"/>
         <source>Show tooltips in main window</source>
-        <translation>Afficher les infobulles dans la fenêtre principale</translation>
+        <translation>Visa verktygstips i huvudfönstret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5676"/>
         <source>Color Tx message buttons</source>
-        <translation>Boutons de message Tx en couleur</translation>
+        <translation>Färg Tx-meddelandeknappar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5684"/>
@@ -4571,17 +4570,17 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5740"/>
         <source>low</source>
-        <translation>Faible</translation>
+        <translation>låg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5759"/>
         <source>high</source>
-        <translation>Haut</translation>
+        <translation>hög</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5767"/>
         <source>Hide FT contest messages</source>
-        <translation>Cacher les messages du concours FT</translation>
+        <translation>Dölj FT-contestmeddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5775"/>
@@ -4591,42 +4590,42 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5810"/>
         <source>wideband DX Call search</source>
-        <translation>Recherche d&apos;appels DX à large bande</translation>
+        <translation>bredband DX Signalsökning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5818"/>
         <source>6 pass SWL mode</source>
-        <translation>6 passer en mode SWL</translation>
+        <translation>6 passera SWL-läge</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5829"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Indicatif d&apos;appel au presse-papiers au double-clic|autoselect</translation>
+        <translation>Anropssignal till urklippet genom att dubbelklicka | autosel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5837"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>Opération Crossband 160m avec le Japon</translation>
+        <translation>Korsband 160m operation med Japan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5893"/>
         <source>Hide telemetry messages</source>
-        <translation>Masquer les messages de télémétrie</translation>
+        <translation>Dölj telemetri-meddelanden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="457"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation>Vous souhaitez reconfigurer l&apos;interface radio ?</translation>
+        <translation>Vill du konfigurera radiogränssnittet på nytt?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="756"/>
         <source>Error Writing WAV File</source>
-        <translation>Erreur d&apos;écriture du fichier WAV</translation>
+        <translation>Fel vid skrivning av WAV-fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
         <source>Error Killing jtdxjt9.exe Process</source>
-        <translation>Processus d&apos;élimination des erreurs jtdxjt9.exe</translation>
+        <translation>Fel vid stopp av jtdxjt9.exe-processen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="875"/>
@@ -4636,32 +4635,32 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="6116"/>
         <location filename="../mainwindow.cpp" line="6117"/>
         <source>Freq   Message</source>
-        <translation>Freq   Messages</translation>
+        <translation>Frekv. medd</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="898"/>
         <source>KillByName return code: %1</source>
-        <translation>Code de retour KillByName : %1</translation>
+        <translation>KillByName-returkod:%1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>Error removing &quot;%1&quot;</source>
-        <translation>Suppression de l&apos;erreur &quot;%1</translation>
+        <translation>Fel vid borttagning av &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="916"/>
         <source>Click OK to retry</source>
-        <translation>TX Pair</translation>
+        <translation>Klicka på OK för att försöka igen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1600"/>
         <source>TX Even</source>
-        <translation>TX Impair</translation>
+        <translation>TX Jämn</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1607"/>
         <source>TX Odd</source>
-        <translation>TX Impair</translation>
+        <translation>TX Udda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1652"/>
@@ -4673,7 +4672,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="6922"/>
         <location filename="../mainwindow.cpp" line="7124"/>
         <source>File Open Error</source>
-        <translation>Erreur d&apos;ouverture de dossier</translation>
+        <translation>Filöppningsfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1653"/>
@@ -4686,156 +4685,156 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="7125"/>
         <location filename="../mainwindow.cpp" line="7470"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
-        <translation>Ne peut pas ouvrir &quot;%1&quot; pour l&apos;annexe : %2</translation>
+        <translation>Kan inte öppna &quot;%1&quot; för bilaga:%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1708"/>
         <source>lost audio </source>
-        <translation>perte audio </translation>
+        <translation>Förlorat audio </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1792"/>
         <source>Error saving c2 file</source>
-        <translation>Erreur de sauvegarde du fichier c2</translation>
+        <translation>Fel vid sparande av c2-fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1869"/>
         <source>Error in SoundInput</source>
-        <translation>Erreur Entrée son</translation>
+        <translation>Fel i SoundInput</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1873"/>
         <source>Error in SoundOutput</source>
-        <translation>Erreur Sortie son</translation>
+        <translation>Fel i SoundOutput</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1964"/>
         <source>Pwr</source>
-        <translation>Puissance</translation>
+        <translation>Effekt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2528"/>
         <source>Subprocess Error</source>
-        <translation>Erreur de sous-processus</translation>
+        <translation>Delprocessfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2529"/>
         <source>Subprocess failed with exit code %1</source>
-        <translation>Le sous-processus a échoué avec le code de sortie %1</translation>
+        <translation>Delprocessen misslyckades med utgångskoden%1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2531"/>
         <location filename="../mainwindow.cpp" line="2550"/>
         <source>Running: %1
 %2</source>
-        <translation>En cours d&apos;exécution : %1
+        <translation>Running: %1
 %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2549"/>
         <source>Subprocess error</source>
-        <translation>Erreur de sous-processus</translation>
+        <translation>Delprocessfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2625"/>
         <source>Spotted</source>
-        <translation>Envoyé</translation>
+        <translation>&quot;Spotted&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2632"/>
         <source>Can not establish/complete connection to dxsummit server</source>
-        <translation>Impossible d&apos;établir/compléter la connexion au serveur dxsummit</translation>
+        <translation>Kan inte upprätta/slutföra anslutning till dxsummit-server</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2655"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
-        <translation>Les algorithmes, le code source, l&apos;apparence de WSJT-X et des programmes connexes, ainsi que les spécifications du protocole pour les modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 sont Copyright (C) 2001-2018 par un ou plusieurs des auteurs suivants : Joseph Taylor, K1JT ; Bill Somerville, G4WJS ; Steven Franke, K9AN ; Nico Palermo, IV3NWV ; Greg Beam, KI7MT ; Michael Black, W9MDB ; Edson Pereira, PY2SDR ; Philip Karn, KA9Q ; et d&apos;autres membres du groupe de développement du WSJT.</translation>
+        <translation>Algoritmerna, källkoden, utseendet och känslan av WSJT-X och relaterade program och protokollspecifikationerna för lägen FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 är Copyright (C) 2001 -2018 av en eller flera av följande författare: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; och andra medlemmar i WSJT Development Group.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2775"/>
         <source>No data read from disk. Wrong file format?</source>
-        <translation>Aucune donnée n&apos;est lue sur le disque. Mauvais format de fichier ?</translation>
+        <translation>Ingen data läses från hårddisken. Fel filformat?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2782"/>
         <source>Confirm Delete</source>
-        <translation>Confirmer Effacer</translation>
+        <translation>Bekräfta borttag</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2783"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
-        <translation>Êtes-vous sûr de vouloir supprimer tous les fichiers *.wav et *.c2 dans
+        <translation>Är du säker på att du vill ta bort alla * .wav- och * .c2-filer i
 </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2826"/>
         <source>AutoSeq0</source>
-        <translation>Seq. Auto0</translation>
+        <translation>Auto. sekvens0</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2839"/>
         <source>AutoSeq1</source>
-        <translation>Seq. Auto1</translation>
+        <translation>Auto. sekvens1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2848"/>
         <location filename="../mainwindow.cpp" line="2874"/>
         <source>AutoSeq2</source>
-        <translation>Seq. Auto2</translation>
+        <translation>Auto. sekvens2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2849"/>
         <location filename="../mainwindow.cpp" line="2870"/>
         <source>AutoSeq6</source>
-        <translation>Seq. Auto6</translation>
+        <translation>Auto. sekvens6</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2858"/>
         <location filename="../mainwindow.cpp" line="2875"/>
         <source>AutoSeq3</source>
-        <translation>Seq. Auto3</translation>
+        <translation>Auto. sekvens3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2859"/>
         <location filename="../mainwindow.cpp" line="2871"/>
         <source>AutoSeq7</source>
-        <translation>Seq. Auto7</translation>
+        <translation>Auto. sekvens7</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2953"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
-        <translation>Le contrôle de la fréquence du Hound TX n&apos;est pas autorisé dans les sous-bandes standard du FT8.</translation>
+        <translation>Hund TX-frekvensstyrning är inte tillåten i standardbanden FT8.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2961"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Le contrôle de la fréquence TX en mode Hound nécessite un contrôle de la plateforme *Split* (soit *Rig* ou *Fake It* sur l&apos;onglet *Réglages | Radio*)</translation>
+        <translation>Hund mod TX frekvensstyrning kräver * Split * riggkontroll (antingen * Rig * eller * Fake It * på fliken * Inställningar | Radio *.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2964"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation>Le contrôle de la fréquence du Hound TX n&apos;est pas autorisé dans les sous-bandes standard du FT8 et nécessite un contrôle de la plateforme *Split* (soit *Rig* ou *Fake It* sur l&apos;onglet *Settings | Radio*)</translation>
+        <translation>Hund TX-frekvensstyrning är inte tillåten i de vanliga FT8-underbanden och kräver * Split * riggkontroll (antingen * Rig * eller * Fake It * på fliken * Inställningar | Radio *)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2972"/>
         <source>Hound TX frequency control warning</source>
-        <translation>Avertissement sur le contrôle des fréquences de Hound TX</translation>
+        <translation>Varning för Hound TX-frekvensstyrning</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2977"/>
         <source>HoundFC</source>
-        <translation>HoundFC</translation>
+        <translation>HundFC</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3038"/>
         <source>Keyboard Shortcuts</source>
-        <translation>Raccourcis clavier</translation>
+        <translation>Tangentbord snabbtangenter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3049"/>
         <source>Special Mouse Commands</source>
-        <translation>Commandes spéciales pour les souris</translation>
+        <translation>Särskilda Muskommandon</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3511"/>
@@ -4846,57 +4845,57 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="3511"/>
         <location filename="../mainwindow.cpp" line="3530"/>
         <source>Freq  </source>
-        <translation>Frequ.</translation>
+        <translation>Frekv  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3511"/>
         <location filename="../mainwindow.cpp" line="3530"/>
         <source>Lag=</source>
-        <translation>Cpu=</translation>
+        <translation>Lag=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3517"/>
         <location filename="../mainwindow.cpp" line="3526"/>
         <source>check time</source>
-        <translation>l&apos;heure du contrôle</translation>
+        <translation>kontrollera tid</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3829"/>
         <location filename="../mainwindow.cpp" line="3835"/>
         <source>Confirm change Language</source>
-        <translation>Confirmer le changement Langue</translation>
+        <translation>Bekräfta ändra språk</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3831"/>
         <location filename="../mainwindow.cpp" line="3838"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
-        <translation>Vous êtes sûr de changer la langue de l&apos;interface utilisateur pour l&apos;français, JTDX va redémarrer ?</translation>
+        <translation>Är du säker på att byta UI-språk till engelska, JTDX kommer att starta om?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4010"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>Veuillez choisir une autre fréquence Tx. JTDX ne transmettra pas scieamment un autre mode dans la sous-bande WSPR.</translation>
+        <translation>Välj en annan Tx-frekvens. JTDX sänder inte medvetet ett annat läge i WSPR-underbandet.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4015"/>
         <location filename="../mainwindow.cpp" line="4018"/>
         <source>WSPR Guard Band</source>
-        <translation>Bande de garde du WSPR</translation>
+        <translation>WSPR Skydds band</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4136"/>
         <source>TUNE</source>
-        <translation>TUNE</translation>
+        <translation>JUSTERA</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4137"/>
         <source>LastTx: </source>
-        <translation>Dernier Tx: </translation>
+        <translation>SenastTx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4350"/>
         <source>Tx: TUNE</source>
-        <translation>Tx: TUNE</translation>
+        <translation>TX: JUSTERA</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4351"/>
@@ -4906,17 +4905,17 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.cpp" line="4356"/>
         <source>Receiving </source>
-        <translation>Recevoir </translation>
+        <translation>Mottagning </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4409"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation>Pwr&lt;br&gt;%1 W</translation>
+        <translation>Effekt&lt;br&gt;%1 W</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4567"/>
         <source>Last Tx: </source>
-        <translation>Dernier Tx : </translation>
+        <translation>Senast Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5449"/>
@@ -4924,39 +4923,39 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="5474"/>
         <location filename="../mainwindow.cpp" line="5500"/>
         <source>Add to CALL3.TXT</source>
-        <translation>Ajouter à CALL3.TXT</translation>
+        <translation>Lägg till i CALL3.TXT</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5450"/>
         <source>Please enter a valid grid locator</source>
-        <translation>Please enter a valid grid locator</translation>
+        <translation>Vänligen ange en giltig Grid lokator</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5462"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
-        <translation>Impossible d&apos;ouvrir &quot;%1&quot; en lecture/écriture : %2</translation>
+        <translation>Kan inte öppna &quot;%1&quot; för läsning/skrivning:%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5475"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
-        <translation>Ne peut pas ouvrir &quot;%1&quot; pour l&apos;écriture : %2</translation>
+        <translation>Kan inte öppna &quot;%1&quot; för att skriva:%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5498"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
-est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
+finns redan i CALL3.TXT, vill du ersätta det?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5861"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation>Erreur d&apos;envoi de données QSO ADIF à un serveur UDP secondaire</translation>
+        <translation>eller skicka QSO ADIF-data till sekundär UDP-server</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5861"/>
         <source>Write returned &quot;%1&quot;</source>
-        <translation>Écriture retournée &quot;%1</translation>
+        <translation>Skrivningen returnerade &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6017"/>
@@ -4966,96 +4965,96 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6107"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation>    Freq     Drift  Call          Grid    dBm   Dist</translation>
+        <translation>    Frekv    Drift  Signsal    Grid    dBm   Dist</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6206"/>
         <location filename="../mainwindow.cpp" line="6218"/>
         <source>Confirm Erase</source>
-        <translation>Confirmer effacer</translation>
+        <translation>Bekräfta radera</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6207"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation>Êtes-vous sûr de vouloir effacer le fichier ALL.TXT ?</translation>
+        <translation>Är du säker på att du vill radera filen ALL.TXT?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6219"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation>Êtes-vous sûr de vouloir effacer votre LOG QSO ?</translation>
+        <translation>Är du säker på att du vill radera din QSO-LOGG?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6829"/>
         <source>Lockd Tx=Rx</source>
-        <translation>Une frequence Tx / Rx</translation>
+        <translation>Lockd Tx = Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6830"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton poussoir pour permettre l&apos;opération de fractionnement des fréquences Tx/Rx AF.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryck på knappen för att möjliggöra Tx / Rx AF-frekvensdelning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6833"/>
         <source>Tx/Rx Split</source>
-        <translation>Tx/Rx en Split</translation>
+        <translation>Tx/Rx Delat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6834"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton poussoir pour verrouiller la fréquence Tx sur la fréquence Rx AF.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryck på knappen för att låsa Tx-frekvensen till Rx AF-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6962"/>
         <source>Rig Control Error</source>
-        <translation>Erreur de contrôle Trx</translation>
+        <translation>Rig kontrollfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7037"/>
         <source>Tune digital gain</source>
-        <translation>Ajuster le gain numérique</translation>
+        <translation>Justera digital förstärkning</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7038"/>
         <source>Transmit digital gain</source>
-        <translation>Transmettre le gain numérique</translation>
+        <translation>Överför digital förstärkning</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7057"/>
         <source>Prefixes</source>
-        <translation>Prefixes</translation>
+        <translation>Prefixen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7106"/>
         <location filename="../mainwindow.cpp" line="7107"/>
         <source>Logd </source>
-        <translation>Logger </translation>
+        <translation>Loggad </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7330"/>
         <source>Network Error</source>
-        <translation>Erreur de réseau</translation>
+        <translation>Nätverksfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7331"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation>Erreur : %1
-Serveur UDP %2:%3</translation>
+        <translation>Fel:%1
+UDP-server%2:%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7469"/>
         <source>File Error</source>
-        <translation>Erreur de fichier</translation>
+        <translation>Filfel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7681"/>
         <source>Tx watchdog expired</source>
-        <translation>Le temps de surveillance de la Tx a expiré</translation>
+        <translation>Tx &quot;watchdog&quot; utgått</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7695"/>
         <source>WD %1m</source>
-        <translation>WD %1m</translation>
+        <translation>WD%1m</translation>
     </message>
 </context>
 <context>
@@ -5064,7 +5063,7 @@ Serveur UDP %2:%3</translation>
         <location filename="../Modes.cpp" line="56"/>
         <location filename="../Modes.cpp" line="83"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Mod</translation>
     </message>
 </context>
 <context>
@@ -5072,7 +5071,7 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../PollingTransceiver.cpp" line="271"/>
         <source>Unexpected rig error</source>
-        <translation>erreur inattendue</translation>
+        <translation>Oväntat Rigfel</translation>
     </message>
 </context>
 <context>
@@ -5080,7 +5079,7 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5088,94 +5087,94 @@ Serveur UDP %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5060"/>
         <source>Directory:</source>
-        <translation>Répertoire :</translation>
+        <translation>KAtalog:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5061"/>
         <source>File &amp;name:</source>
-        <translation>Fichier &amp;nom :</translation>
+        <translation>Fil&amp;namn:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5062"/>
         <source>&amp;Open</source>
-        <translation>&amp;Ouvrir</translation>
+        <translation>&amp;Öppna</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5063"/>
         <source>&amp;Choose</source>
-        <translation>&amp;Choisir</translation>
+        <translation>&amp;Välj</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5064"/>
         <source>&amp;Save</source>
-        <translation>&amp;Sauver</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.cpp" line="5065"/>
-        <source>Cancel</source>
-        <translation>Annuler</translation>
+        <translation>&amp;Spara</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5066"/>
         <source>All files (*)</source>
-        <translation>Tous les fichiers (*)</translation>
+        <translation>Alla filer (*)</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5067"/>
         <source>New Folder</source>
-        <translation>Nouveau dossier</translation>
+        <translation>Ny katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5068"/>
         <source>Delete</source>
-        <translation>Delete</translation>
+        <translation>Radera</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5065"/>
+        <source>Cancel</source>
+        <translation>Annulera</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5069"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Supprimer</translation>
+        <translation>&amp;Radera</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5070"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Renommer</translation>
+        <translation>&amp;Döp om</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5071"/>
         <source>Show &amp;hidden files</source>
-        <translation>Afficher &amp; fichiers cachés</translation>
+        <translation>Visa &amp;gömda filer</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5072"/>
         <source>&amp;New Folder</source>
-        <translation>&amp;Nouveau dossier</translation>
+        <translation>&amp;Ny katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5073"/>
         <source>Look in:</source>
-        <translation>Regardez :</translation>
+        <translation>Titta i:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5074"/>
         <source>Files of type:</source>
-        <translation>Fichiers de type :</translation>
+        <translation>Filer av typen:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5075"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
-        <translation>Le &quot;%1&quot; est protégé en écriture.
-Voulez-vous quand même l&apos;effacer ?</translation>
+        <translation>&apos;%1&apos; är skrivskyddat.
+Vill du radera det ändå?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5076"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
-        <translation>Êtes-vous sûr de vouloir supprimer &quot;%1&quot; ?</translation>
+        <translation>Är du säker på att du vill ta bort &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5077"/>
         <source>Could not delete directory.</source>
-        <translation>Impossible de supprimer le répertoire.</translation>
+        <translation>Det gick inte att ta bort katalogen.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5078"/>
@@ -5183,98 +5182,98 @@ Voulez-vous quand même l&apos;effacer ?</translation>
 Directory not found.
 Please verify the correct directory name was given.</source>
         <translation>%1
-Répertoire non trouvé.
-Veuillez vérifier que le nom correct du répertoire a été donné.</translation>
+Katalogen hittades inte.
+Kontrollera att rätt katalognamn anges.</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5080"/>
         <source>Recent Places</source>
-        <translation>Lieux récents</translation>
+        <translation>Senaste postioner</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5081"/>
         <source>Back</source>
-        <translation>Retour</translation>
+        <translation>Backa</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5082"/>
         <source>Go back</source>
-        <translation>Revenir en arrière</translation>
+        <translation>Gå bakåt</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5083"/>
         <source>Alt+Left</source>
-        <translation>Alt+Gauche</translation>
+        <translation>Alt+Vänster</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5084"/>
         <source>Forward</source>
-        <translation>Transmettre</translation>
+        <translation>Fram</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5085"/>
         <source>Go forward</source>
-        <translation>Continuer</translation>
+        <translation>Gå frammåt</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5086"/>
         <source>Alt+Right</source>
-        <translation>Alt+Droit</translation>
+        <translation>Alt+Höger</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5087"/>
         <source>Parent Directory</source>
-        <translation>Répertoire des parents</translation>
+        <translation>Övergripande katalog</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5088"/>
         <source>Go to the parent directory</source>
-        <translation>Allez dans le répertoire parent</translation>
+        <translation>Gå till överliggande katalogen</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5089"/>
         <source>Alt+Up</source>
-        <translation>Alt+Haut</translation>
+        <translation>Alt+Upp</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5090"/>
         <source>Create New Folder</source>
-        <translation>Créer un nouveau dossier</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5091"/>
         <source>Create a New Folder</source>
-        <translation>Créer un nouveau dossier</translation>
+        <translation>Skapa en ny mapp</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5092"/>
         <source>List View</source>
-        <translation>Afficher la liste</translation>
+        <translation>List&amp;vy</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5093"/>
         <source>Change to list view mode</source>
-        <translation>Passer au mode de visualisation de la liste</translation>
+        <translation>Byt till listvy</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5094"/>
         <source>Detail View</source>
-        <translation>Vue détaillée</translation>
+        <translation>Detaljerad vy</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5095"/>
         <source>Change to detail view mode</source>
-        <translation>Passer au mode de visualisation des détails</translation>
+        <translation>Byt till detaljvisningsläge</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5096"/>
         <source>Sidebar</source>
-        <translation>Encadré</translation>
+        <translation>Sidebar</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5097"/>
         <source>List of places and bookmarks</source>
-        <translation>Liste des lieux et des signets</translation>
+        <translation>Lista över platser och bokmärken</translation>
     </message>
 </context>
 <context>
@@ -5282,22 +5281,22 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
     <message>
         <location filename="../Configuration.cpp" line="5099"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation>Namn</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5100"/>
         <source>Size</source>
-        <translation>Taille</translation>
+        <translation>Storlek</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5101"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5102"/>
         <source>Date Modified</source>
-        <translation>Date de modification</translation>
+        <translation>Datum ändrat</translation>
     </message>
 </context>
 <context>
@@ -5305,12 +5304,12 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
     <message>
         <location filename="../JTDXMessageBox.cpp" line="91"/>
         <source>Show Details...</source>
-        <translation>Afficher les détails...</translation>
+        <translation>Visa detaljer...</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="92"/>
         <source>Hide Details...</source>
-        <translation>Cacher les détails...</translation>
+        <translation>Dölj detaljer...</translation>
     </message>
 </context>
 <context>
@@ -5318,22 +5317,22 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
     <message>
         <location filename="../main.cpp" line="177"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation>Nom du Trx non valide</translation>
+        <translation>Ogiltigt riggnamn - \ &amp; / inte tillåtet</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="202"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation>Une autre instance peut être en cours, essayer de supprimer le fichier de verrouillage périmé ?</translation>
+        <translation>En annan instans kan köra, försök ta bort inaktuella låsfiler?</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="344"/>
         <source>Unexpected error</source>
-        <translation>Erreur inattendue</translation>
+        <translation>Ovänntat fel</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="14"/>
         <source>User Defined</source>
-        <translation>Défini par l&apos;utilisateur</translation>
+        <translation>Användardefinierad</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="50"/>
@@ -5343,32 +5342,32 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation>Trop de couleurs dans la palette.</translation>
+        <translation>För många färger i paletten.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation>Erreur de lecture du fichier de la palette Cascade &quot;%1:%2&quot; trop de couleurs.</translation>
+        <translation>Fel vid läsning av vattenfallspalettfilen &quot;%1:%2&quot; för många färger.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation>Erreur de lecture du fichier de la palette de cascades &quot;%1:%2&quot; triplet invalide.</translation>
+        <translation>Fel vid läsning av vattenfallspalettfilen &quot;%1:%2&quot; ogiltig triplett.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation>Erreur de lecture du fichier de la palette de cascades &quot;%1:%2&quot; couleur invalide.</translation>
+        <translation>Fel vid läsning av vattenfallspalettfilen &quot;%1:%2&quot; ogiltig färg.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>Erreur d&apos;ouverture du fichier de la palette de cascades &quot;%1&quot; : %2.</translation>
+        <translation>Fel vid öppningen av vattenfallspalettfilen &quot;%1&quot;:%2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="252"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>Erreur d&apos;écriture dans le fichier de la palette de cascades &quot;%1&quot; : %2.</translation>
+        <translation>Fel vid skrivning av vattenfallspalettfilen &quot;%1&quot;:%2.</translation>
     </message>
 </context>
 <context>
@@ -5381,7 +5380,7 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
         <location filename="../SampleDownloader/RemoteFile.cpp" line="254"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="262"/>
         <source>File System Error</source>
-        <translation>Erreur de système de fichiers</translation>
+        <translation>Fel i filsystemet</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="38"/>
@@ -5389,16 +5388,16 @@ Veuillez vérifier que le nom correct du répertoire a été donné.</translatio
 &quot;%1&quot;
 to: &quot;%2&quot;
 Error(%3): %4</source>
-        <translation>Impossible de renommer le fichier :
+        <translation>Kan inte byta namn på fil:
 &quot;%1&quot;
-à : &quot;%2&quot;
-Erreur(%3) : %4</translation>
+till: &quot;%2&quot;
+Fel (%3):%4</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="100"/>
         <source>Cannot delete file:
 &quot;%1&quot;</source>
-        <translation>Ne peut pas supprimer le fichier :
+        <translation>Kan inte radera fil:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5406,23 +5405,23 @@ Erreur(%3) : %4</translation>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="181"/>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="196"/>
         <source>Network Error</source>
-        <translation>Erreur de réseau</translation>
+        <translation>Nätverksfel</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="173"/>
         <source>Too many redirects: %1</source>
-        <translation>Trop de redirections : %1</translation>
+        <translation>För många omdirigeringar:%1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="182"/>
         <source>Redirect not followed: %1</source>
-        <translation>Redirection non suivie : %1</translation>
+        <translation>Omdirigering följdes inte:%1</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="205"/>
         <source>Cannot commit changes to:
 &quot;%1&quot;</source>
-        <translation>Ne peut pas engager de changements :
+        <translation>Kan inte göra ändringar till:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5430,15 +5429,15 @@ Erreur(%3) : %4</translation>
         <source>Cannot open file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation>Impossible d&apos;ouvrir le fichier :
+        <translation>Kan inte öppna filen:
 &quot;%1&quot;
-Erreur(%2) : %3</translation>
+Fel (%2):%3</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/RemoteFile.cpp" line="255"/>
         <source>Cannot make path:
 &quot;%1&quot;</source>
-        <translation>Impossible de faire le chemin :
+        <translation>Kan inte skapa väg:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -5446,9 +5445,9 @@ Erreur(%2) : %3</translation>
         <source>Cannot write to file:
 &quot;%1&quot;
 Error(%2): %3</source>
-        <translation>Ne peut pas écrire dans le fichier :
+        <translation>Kan inte skriva till fil:
 &quot;%1&quot;
-Erreur(%2) : %3</translation>
+Fel (%2):%3</translation>
     </message>
 </context>
 <context>
@@ -5456,7 +5455,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../SampleDownloader.cpp" line="99"/>
         <source>Download Samples</source>
-        <translation>Télécharger des échantillons</translation>
+        <translation>Ladda ner exempel</translation>
     </message>
 </context>
 <context>
@@ -5464,67 +5463,67 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation>Une erreur s&apos;est produite lors de l&apos;ouverture du dispositif d&apos;entrée audio.</translation>
+        <translation>Ett fel vid öppning av ljudingångsenheten har inträffat.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation>Une erreur s&apos;est produite lors de la lecture à partir du périphérique d&apos;entrée audio.</translation>
+        <translation>Ett fel inträffade under läsning från ljudingångsenheten.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation>Les données audio ne sont pas transmises assez rapidement à l&apos;appareil d&apos;entrée audio.</translation>
+        <translation>Ljuddata matas inte till ljudingångsenheten tillräckligt snabbt.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation>Erreur non récupérable, dispositif d&apos;entrée audio non utilisable pour le moment.</translation>
+        <translation>Ej återhämtningsbart fel, ljudingångsenhet inte användbar just nu.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation>Le format audio d&apos;entrée demandé n&apos;est pas valable.</translation>
+        <translation>Det begärda ljudformatet är inte giltigt.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation>Le format audio d&apos;entrée demandé n&apos;est pas pris en charge par l&apos;appareil.</translation>
+        <translation>Det begärda ljudformatet stöds inte på enheten.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation>Échec de l&apos;initialisation du dispositif de dissipation audio</translation>
+        <translation>Det gick inte att initiera ljudenheten</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="128"/>
         <source>Idle</source>
-        <translation>Idle (en veille)</translation>
+        <translation>Idle</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="132"/>
         <source>Receiving</source>
-        <translation>Recevoir</translation>
+        <translation>Mottagning</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="136"/>
         <source>Suspended</source>
-        <translation>Suspendue</translation>
+        <translation>Suspenderad</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="141"/>
         <source>Interrupted</source>
-        <translation>Interrompu</translation>
+        <translation>Avbruten</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="148"/>
         <source>Error</source>
-        <translation>Erreur</translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="152"/>
         <source>Stopped</source>
-        <translation>Arrêté</translation>
+        <translation>Stoppad</translation>
     </message>
 </context>
 <context>
@@ -5532,62 +5531,62 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../soundout.cpp" line="27"/>
         <source>An error opening the audio output device has occurred.</source>
-        <translation>Une erreur d&apos;ouverture du périphérique de sortie audio s&apos;est produite.</translation>
+        <translation>Ett fel uppstod när ljudutgångsenheten öppnades.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="28"/>
         <source>An error occurred during write to the audio output device.</source>
-        <translation>Une erreur s&apos;est produite lors de l&apos;écriture sur le périphérique de sortie audio.</translation>
+        <translation>Ett fel inträffade under skrivning till ljudutmatningsenheten.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="29"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
-        <translation>Les données audio ne sont pas transmises assez rapidement à l&apos;appareil de sortie audio.</translation>
+        <translation>Ljuddata matas inte till ljudutgångsenheten tillräckligt snabbt.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="30"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
-        <translation>Erreur non récupérable, dispositif de sortie audio non utilisable pour le moment.</translation>
+        <translation>Ej återhämtningsbart fel, ljudutmatningsenhet inte användbar just nu.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not valid.</source>
-        <translation>Le format audio de sortie demandé n&apos;est pas valable.</translation>
+        <translation>Det begärda utgångsljudformatet är inte giltigt.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="50"/>
         <source>Requested output audio format is not supported on device.</source>
-        <translation>Le format audio de sortie demandé n&apos;est pas pris en charge par l&apos;appareil.</translation>
+        <translation>Begärt ljudformat stöds inte på enheten.</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="113"/>
         <source>Idle</source>
-        <translation>Idle (en attente)</translation>
+        <translation>Idle</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Sending</source>
-        <translation>Envoi</translation>
+        <translation>Sänder</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Suspended</source>
-        <translation>Suspendue</translation>
+        <translation>Suspenderad</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="117"/>
         <source>Interrupted</source>
-        <translation>Interrompu</translation>
+        <translation>Avbruten</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="119"/>
         <source>Error</source>
-        <translation>Erreur</translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="119"/>
         <source>Stopped</source>
-        <translation>Arrêté</translation>
+        <translation>Stoppad</translation>
     </message>
 </context>
 <context>
@@ -5595,22 +5594,22 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="266"/>
         <source>Add Station</source>
-        <translation>Ajouter une station</translation>
+        <translation>Lägg till ststion</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Band:</source>
-        <translation>&amp;Bande :</translation>
+        <translation>&amp;Band:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="272"/>
         <source>&amp;Offset (MHz):</source>
-        <translation>&amp;Compenser (MHz) :</translation>
+        <translation>&amp;Offset (MHz):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
-        <translation>&amp;Antenne:</translation>
+        <translation>&amp;Antenn:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
@@ -5620,7 +5619,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.cpp" line="280"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annulé</translation>
+        <translation>&amp;Annullera</translation>
     </message>
 </context>
 <context>
@@ -5628,32 +5627,32 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../StationList.cpp" line="294"/>
         <source>Band name</source>
-        <translation>Nom de Bande</translation>
+        <translation>Bandnamn</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="320"/>
         <source>Frequency offset</source>
-        <translation>Décalage de fréquence</translation>
+        <translation>Frequens offset</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="342"/>
         <source>Antenna description</source>
-        <translation>Description antenne</translation>
+        <translation>Antennbeskrivning</translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="364"/>
         <source>Band</source>
-        <translation>Bande</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="365"/>
         <source>Offset</source>
-        <translation>Compensation</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../StationList.cpp" line="366"/>
         <source>Antenna Description</source>
-        <translation>Description antenne</translation>
+        <translation>Antennbeskrivning</translation>
     </message>
 </context>
 <context>
@@ -5661,7 +5660,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../TransceiverBase.cpp" line="15"/>
         <source>Unexpected rig error</source>
-        <translation>Une erreur inattendue</translation>
+        <translation>Oväntat Rigfel</translation>
     </message>
 </context>
 <context>
@@ -5669,22 +5668,22 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="20"/>
         <source>Dialog</source>
-        <translation>Dialoguer</translation>
+        <translation>Dialog</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation>Contrôles</translation>
+        <translation>Kontroller</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation>Barres</translation>
+        <translation>Markör</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
         <source>Compression factor for frequency scale</source>
-        <translation>Facteur de compression pour l&apos;échelle de fréquence</translation>
+        <translation>Kompressionsfaktor för frekvensskala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="191"/>
@@ -5694,7 +5693,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="222"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Décoder JT9 uniquement au-dessus de cette fréquence&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Avkoda JT9 endast ovanför denna frekvens &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="225"/>
@@ -5710,47 +5709,47 @@ Erreur(%2) : %3</translation>
         <location filename="../widegraph.ui" line="258"/>
         <location filename="../widegraph.ui" line="268"/>
         <source>Position of timestamp above each interval line</source>
-        <translation>Position de l&apos;horodatage au-dessus de chaque ligne d&apos;intervalle</translation>
+        <translation>Placering av tidsstämpel ovanför varje intervallinje</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="261"/>
         <source>Timestamp</source>
-        <translation>Horodate</translation>
+        <translation>Tidstämpel</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="272"/>
         <source>Off</source>
-        <translation>Arrêt</translation>
+        <translation>Av</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="277"/>
         <source>Left</source>
-        <translation>Gauche</translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="282"/>
         <source>Right</source>
-        <translation>Droite</translation>
+        <translation>Höger</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="314"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Fréquence au bord gauche de la chute d&apos;eau&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Frekvens vid vattenfallets vänstra kant &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="317"/>
         <source> Hz</source>
-        <translation> Hertz</translation>
+        <translation> Hz</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="320"/>
         <source>Start </source>
-        <translation>Départ </translation>
+        <translation>Start </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="345"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation>Nombre de FFT moyennés (contrôle le taux de défilement des chutes d&apos;eau)</translation>
+        <translation>Antal medelvärden för FFT (kontrollerar rullningshastigheten för vattenfallet)</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="348"/>
@@ -5760,62 +5759,62 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="386"/>
         <source>  Palette </source>
-        <translation>  Palette </translation>
+        <translation>  Palett </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="402"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entrer la définition pour une nouvelle palette de couleurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange definition för en ny färgpalett. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="405"/>
         <source>Adjust...</source>
-        <translation>Ajuster...</translation>
+        <translation>Justera...</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="426"/>
         <source>Select waterfall palette</source>
-        <translation>Sélectionner la palette de cascades</translation>
+        <translation>Välj vattenfall&apos;s palett</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Skala spektrum efter medianvärde. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="459"/>
         <source>Scale</source>
-        <translation>Échelle</translation>
+        <translation>Skala</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="469"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt;&gt;tête/&gt;&lt;corps&gt;&lt;p&gt;Base spectrale plate sur tout l&apos;intervalle affiché.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Flatta den spektrala baslinjen över det visade intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="472"/>
         <source>Flatten</source>
-        <translation>Aplanir</translation>
+        <translation>Platta</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="489"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Sélectionner les données pour l&apos;affichage spectral&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj data för spektralvisning &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="496"/>
         <source>Current</source>
-        <translation>En cours</translation>
+        <translation>Nuvarande</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="501"/>
         <source>Cumulative</source>
-        <translation>Cumulatif</translation>
+        <translation>Kumulativ</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="521"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définir la taille fractionnaire du spectre dans cette fenêtre.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ställ in brottstorleken för spektrum i detta fönster. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="527"/>
@@ -5825,17 +5824,17 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="530"/>
         <source>Spec </source>
-        <translation>Spécif </translation>
+        <translation>Spec </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="581"/>
         <source>Waterfall gain</source>
-        <translation>Gain de la chute d&apos;eau</translation>
+        <translation>Vattenfall förstärkning</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="618"/>
         <source>Spectrum gain</source>
-        <translation>Gain du spectre</translation>
+        <translation>Spektrumförstärkning</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="641"/>
@@ -5843,22 +5842,22 @@ Erreur(%2) : %3</translation>
         <location filename="../widegraph.ui" line="743"/>
         <location filename="../widegraph.ui" line="750"/>
         <source>TextLabel</source>
-        <translation>Étiqu. de text</translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="683"/>
         <source>Waterfall zero</source>
-        <translation>Chute d&apos;eau zéro</translation>
+        <translation>Vattenfall noll</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="720"/>
         <source>Spectrum zero</source>
-        <translation>Spectre zéro</translation>
+        <translation>Spektrum noll</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="29"/>
         <source>Wide Graph</source>
-        <translation>Wide Graph</translation>
+        <translation>Bred graf</translation>
     </message>
 </context>
 <context>
@@ -5866,280 +5865,283 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../Configuration.ui" line="26"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>Sélectionnez l&apos;onglet pour modifier les paramètres de configuration.</translation>
+        <translation>Välj flik för att ändra konfigurationsparametrar.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>Généra&amp;l</translation>
+        <translation>A&amp;llmän</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
         <source>General station details and settings.</source>
-        <translation>Détails et réglages généraux de la station.</translation>
+        <translation>Allmänna stationsinformation och inställningar.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="57"/>
         <source>Station Details</source>
-        <translation>Détails de la Station</translation>
+        <translation>Stationsdetaljer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation>Mon indic&amp;atif:</translation>
+        <translation>Min signal:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
         <source>Station callsign.</source>
-        <translation>Indicatif d&apos;appel de la station.</translation>
+        <translation>Stationens anropssignal.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="108"/>
         <source>M&amp;y Grid:</source>
-        <translation>M&amp;on Locator:</translation>
+        <translation>M&amp;in &quot;Grid&quot;:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation>Localisateur de tête (seuls les quatre premiers caractères sont requis).</translation>
+        <translation>Maidenhead locator (endast de första fyra tecknen krävs).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
         <source>IARU Region:</source>
-        <translation>Region IARU:</translation>
+        <translation>IARU Region:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select your IARU region.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sélectionnez votre région IARU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj din IARU-region. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les indicatifs d&apos;appel composés de type 2 sont ceux dont les préfixes ou les suffixes ne figurent pas dans la liste restreinte autorisée (voir Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;Cette option détermine quels messages générés doivent contenir votre indicatif d&apos;appel composé de type 2 complet plutôt que votre indicatif de base. Elle ne s&apos;applique que si vous avez un indicatif composé de type 2.&lt;/p&gt;&lt;p&gt;Cette option contrôle la manière dont les messages utilisés pour répondre aux appels CQ sont générés. Les messages générés 6 (CQ) et 5 (73) contiendront toujours votre indicatif d&apos;appel complet. Les protocoles JT65 et JT9 autorisent certains messages standard avec votre indicatif complet au détriment d&apos;une autre information comme l&apos;appel DX ou votre localisateur.&lt;/p&gt;&lt;p&gt;Le choix du message 1 omet l&apos;indicatif DX, ce qui peut poser un problème lors de la réponse aux appels CQ. Le choix du message 3 omet également l&apos;indicatif DX et de nombreuses versions de ce logiciel et d&apos;autres logiciels n&apos;extrairont pas le rapport. Choisir ni l&apos;un ni l&apos;autre signifie que votre indicatif complet n&apos;apparaîtra que dans votre message 5 (73), donc votre partenaire QSO n&apos;enregistrera pas le bon indicatif. &lt;/p&gt;&lt;p&gt; Aucune de ces options n&apos;est parfaite, le message 3 est le meilleur mais sachez que votre partenaire QSO peut ne pas enregistrer le rapport que vous lui envoyez. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; sammansatta samtalssignaler av typ 2 är de med prefix eller suffix som inte ingår i den tillåtna kortlistan (se Hjälp- &amp; gt; Add-on prefix och suffix). &lt;/p&gt; &lt;p&gt; Det här alternativet bestämmer vilka genererade meddelanden som ska innehålla ditt sammansatta samtalstecken av typ 2 snarare än ditt bassamtal. Det gäller bara om du har en sammansatt samtalssignal av typ 2. &lt;/p&gt; &lt;p&gt; Det här alternativet styr hur meddelandena som används för att besvara CQ-samtal genereras. Genererade meddelanden 6 (CQ) och 5 (73) kommer alltid att innehålla ditt fulla samtal. Protokollen JT65 och JT9 möjliggör vissa standardmeddelanden med ditt fulla samtal på bekostnad av en annan information som DX-samtalet eller din lokaliserare. &lt;/p&gt; &lt;p&gt; Att välja meddelande 1 utelämnar DX-samtal som kan vara ett problem när du svarar på CQ-samtal. Att välja meddelande 3 utelämnar också DX-anropssignalen och många versioner av denna och annan programvara extraherar inte rapporten. Att välja varken innebär att din fulla samtalssignal bara går med i ditt meddelande 5 (73) så din QSO-partner min loggar fel samtalstecken. &lt;/p&gt; &lt;p&gt; Inget av dessa alternativ är perfekt, meddelandet 3 är bäst men var medveten om din QSO-partner kanske inte loggar rapporten du skickar dem. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
         <source>Full call in Tx1</source>
-        <translation>Appel complet en Tx1</translation>
+        <translation>Fullt &quot;call in&quot; i Tx1</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="157"/>
         <source>Full call in Tx3</source>
-        <translation>Appel complet en Tx3</translation>
+        <translation>Fullt &quot;call in&quot; i Tx3</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="162"/>
         <source>Full call in Tx5 only</source>
-        <translation>Appel complet en Tx5 uniquement</translation>
+        <translation>Fullt &quot;call in&quot; endast i Tx5</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="170"/>
+        <source>Message generation for type 2 compound callsign holders:</source>
+        <translation>Meddelandegenerering för typ 2 sammansatta samtalshållare:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="192"/>
         <source>Logbook filtering</source>
-        <translation>Filtrage du journal de bord</translation>
+        <translation>Loggbokfiltrering</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current callsign</source>
-        <translation>Utilisez l&apos;indicatif d&apos;appel actuel</translation>
+        <translation>Använd aktuell anropssignal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use current grid</source>
-        <translation>Utiliser le locator actuel</translation>
+        <translation>Använd aktuell Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="264"/>
         <source>Filter logbook starting from date/time (YYYYMMDDHHMMSS)</source>
-        <translation>Filtrer le journal de bord à partir de la date/heure (
-jjhhmmssAAAA)</translation>
+        <translation>Filtrear loggbok från datum / tid (ÅÅÅÅMMDDHHMMSS)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="304"/>
         <source>Display</source>
-        <translation>Afficher</translation>
+        <translation>Visa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="343"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation>Définir les caractéristiques de la police pour les zones d&apos;activité de bande et de fréquence d&apos;émission.</translation>
+        <translation>Ställ in teckensnittegenskaperna för områdena Bandaktivitet och Rx frekvens.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
         <source>Decoded Text Font...</source>
-        <translation>Police de texte décodé...</translation>
+        <translation>Avkodat tex teckensnitt ...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="333"/>
         <source>Set the font characteristics for the application.</source>
-        <translation>Définir les caractéristiques de la police pour l&apos;application.</translation>
+        <translation>Ställ in teckensnittets egenskaper för applikationen.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="336"/>
         <source>Application Font...</source>
-        <translatorcomment>Police des Applications</translatorcomment>
-        <translation>Police Application</translation>
+        <translation>Applikationsteckensnitt ...</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Show distance to DX station in miles rather than kilometers.</source>
-        <translation>Indiquer la distance à la station DX en miles plutôt qu&apos;en kilomètres.</translation>
+        <translation>Visa avstånd till DX-station i miles snarare än kilometer.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>Display dista&amp;nce in miles</source>
-        <translation>Afficher la dista&amp;nce en miles</translation>
+        <translation>Visa distans i miles</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>Inclure une ligne de séparation entre les périodes dans la fenêtre d&apos;activité de la bande.</translation>
+        <translation>inkludera en separatorrad mellan perioder i bandaktivitetsfönstret.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="412"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation>&amp;Ligne de séparationentre les périodes de décodage</translation>
+        <translation>&amp;Tom linje mellan avkodningsperioder</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>Ajoutez les noms DXCC aux messages décodés.</translation>
+        <translation>Lägg DXCC-namn till avkodade meddelanden.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show &amp;DXCC names</source>
-        <translation>Afficher les noms des &amp;DXCC</translation>
+        <translation>Visa &amp;DXCC-namn</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="373"/>
         <source>Append prefix instead of name.</source>
-        <translation>Ajoutez le préfixe au lieu du nom.</translation>
+        <translation>Lägg till prefix istället för namn.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>Show &amp;prefix not name</source>
-        <translation>Afficher les &amp;préfixe pas le nom</translation>
+        <translation>Visa &amp;prefix inte namn</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsqu&apos;un message TX est modifié, le message précédent ne sera pas affiché s&apos;il a été transmis pendant moins de 2 secondes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; När TX-meddelandet ändras kommer föregående meddelande inte att visas om det överfördes under mindre än 2 sekunder. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="366"/>
         <source>Hide partially transmitted messages</source>
-        <translation>Cacher les messages partiellement transmis</translation>
+        <translation>Dölj delvis överförda meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="386"/>
         <source>Show outgoing transmitted messages in the Rx frequency window.</source>
-        <translation>Afficher les messages transmis sortants dans la fenêtre de fréquence Rx.</translation>
+        <translation>Visa utgående överförda meddelanden i Rx-frekvensfönstret.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>Messages &amp;Tx à la fenêtre de fréquence Rx</translation>
+        <translation>&amp;Tx-meddelanden till Rx-frekvensfönstret</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation>Utiliser le style sombre</translation>
+        <translation>Använd mörk stil</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
         <source>Behavior</source>
-        <translation>Comportement</translation>
+        <translation>Beteende</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="474"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation>Ne commencez pas le décodage avant d&apos;avoir cliqué sur le bouton du moniteur.</translation>
+        <translation>Börja inte avkoda förrän knappen för övervakning är vald.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="477"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>Arrêt mon&amp;iteur au démarrage</translation>
+        <translation>Mon&amp;itor avstängd vid start</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="503"/>
         <source>Tx watchdog timer</source>
-        <translation>Chronomètre de surveillance Tx</translation>
+        <translation>Tx &quot;watchdog&quot; timer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of minutes before unattended transmissions are aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre de minutes avant que les transmissions non surveillées soient interrompues&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal minuter innan obevakade överföringar avbryts &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="516"/>
         <location filename="../Configuration.ui" line="563"/>
         <source>Disabled</source>
-        <translation>désactivé</translation>
+        <translation>Inaktiverad</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="519"/>
         <source> minutes</source>
-        <translation> minutes</translation>
+        <translation> minuter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="533"/>
         <source>Decode at t = 52 s</source>
-        <translation>Decode at t = 52 s</translation>
+        <translation>Avkoda vid t = 52 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="553"/>
         <source>Tune timer</source>
-        <translation>Minuterie Tune</translation>
+        <translation>&quot;Tune&quot; tid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="560"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of seconds before tune is aborted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Nombre de secondes avant l&apos;interruption de la chanson&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal sekunder innan &quot;Tune&quot; avbryts &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="566"/>
         <source> seconds</source>
-        <translation> Secondes</translation>
+        <translation> sekunder</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="587"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certaines plates-formes ne sont pas capables de traiter les commandes TAO pendant la transmission. Cela signifie que si vous travaillez en mode fractionné, vous devrez peut-être décocher cette option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vissa riggar kan inte bearbeta CAT-kommandon vid överföring. Detta innebär att om du arbetar i splitläge kan du behöva avmarkera detta alternativ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="590"/>
         <source>Allow Tx frequency changes while transmitting</source>
-        <translation>Autoriser les changements de fréquence de Tx pendant l&apos;émission</translation>
+        <translation>Tillåt Tx-frekvensändringar när du sänder</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="597"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;-tête/&gt;&gt;corps&gt;&lt;p&gt;Cochez cette case si vous souhaitez revenir automatiquement à la dernière fréquence surveillée lorsque la surveillance est activée, laissez-la non cochée si vous souhaitez que la fréquence actuelle de la plate-forme soit maintenue.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kontrollera detta om du automatiskt vill återgå till den senaste övervakade frekvensen när monitorn är aktiverad, låt den vara avmarkerad om du vill ha den aktuella riggfrekvensen. &lt;/p&gt; &lt; / body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Monitor returns to last used frequency</source>
-        <translation>Le moniteur revient à la dernière fréquence utilisée</translation>
+        <translation>Övervakningen återgå till den senast använda frekvensen</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="609"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>Envoyez un identifiant CW après chaque 73 ou un SMS gratuit.</translation>
+        <translation>Skicka ett CW-ID efter varje 73 eller fria textmeddelande.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="612"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation>CW ID a&amp;près 73</translation>
+        <translation>CW ID a&amp;fter 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="638"/>
         <source>Periodic CW ID Inter&amp;val:</source>
-        <translation>Inter&amp;valle d&apos;identification CW périodique :</translation>
+        <translation>Periodisk CW ID Inter&amp;vall:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="654"/>
@@ -6147,35 +6149,35 @@ jjhhmmssAAAA)</translation>
 This might be required under your countries licence regulations.
 It will not interfere with other users as it is always sent in the
 quiet period when decoding is done.</source>
-        <translation>Envoyez un identifiant CW périodiquement, toutes les quelques minutes.
-Cela peut être exigé par la réglementation de votre pays en matière de licences.
-Il n&apos;interférera pas avec les autres utilisateurs car il est toujours envoyé dans le
-une période de calme lorsque le décodage est effectué.</translation>
+        <translation>Skicka ett CW-ID regelbundet med några minuter.
+Detta kan krävas enligt dina lands licensregler.
+Det kommer inte att störa andra användare eftersom det alltid skickas i
+tyst period när avkodningen är klar.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="683"/>
         <source>&amp;Radio</source>
-        <translation>&amp;Trx</translation>
+        <translation>&amp;Radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="686"/>
         <source>Radio interface configuration settings.</source>
-        <translation>Paramètres de configuration de l&apos;interface radio.</translation>
+        <translation>Radiogränssnittets konfiguration.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="694"/>
         <source>Rig:</source>
-        <translation>Trx:</translation>
+        <translation>Rig:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="714"/>
         <source>Poll Interval:</source>
-        <translation>Intervalle de sondage:</translation>
+        <translation>Poll intervall:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="724"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Intervalle entre les sondages pour connaître le statut. Des intervalles plus longs signifient que les changements apportés à la plate-forme prendront plus de temps à être détectés.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Intervall för omröstningsrigg för status. Längre intervaller kommer att innebära att ändringar av riggen tar längre tid att upptäckas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="727"/>
@@ -6186,42 +6188,42 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;mise en marche ou arrêt Automatique du Trx lorsqu&apos;il est reconnue par Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär omkopplarens strömförsörjning när den stöds i Hamlib. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation>Marche / Arrêt Trx</translation>
+        <translation>Rig effekt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demander les données du compteur S de l&apos;émetteur-récepteur : Le CAT doit être mis en place via Hamlib, Hamlib permet d&apos;obtenir les données du compteur S pour certains émetteurs-récepteurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär S-mätdata från sändtagaren: CAT ska ställas in via Hamlib, Hamlib stöder inte att få S-mätdata för vissa sändtagare. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="782"/>
         <source>S meter</source>
-        <translation>S Metre</translation>
+        <translation>S mätare</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="811"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demander les données de puissance de sortie de l&apos;émetteur-récepteur : Le CAT doit être configuré via Hamlib, Hamlib permet d&apos;obtenir des données sur la puissance de sortie pour certains émetteurs-récepteurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär utgångseffektdata från sändtagaren: CAT ska ställas in via Hamlib, Hamlib stöder inte att få ut effektdata för vissa sändtagare. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="814"/>
         <source>Output power</source>
-        <translation>Puissance de sortie</translation>
+        <translation>Uteffekt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="842"/>
         <source>Settings that control your CAT interface.</source>
-        <translation>Les paramètres qui contrôlent votre interface CAT.</translation>
+        <translation>Inställningar som styr ditt CAT-gränssnitt.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="845"/>
         <source>CAT Control</source>
-        <translation>Contrôle du Cat</translation>
+        <translation>CAT Kontroll</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="856"/>
@@ -6232,22 +6234,22 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="872"/>
         <source>Serial port used for CAT control.</source>
-        <translation>Serial port used for CAT control.</translation>
+        <translation>Seriell port som används för CAT-kontroll.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="896"/>
         <source>Serial Port Parameters</source>
-        <translation>Paramètres des ports série</translation>
+        <translation>Seriella portparametrar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="913"/>
         <source>Baud Rate:</source>
-        <translation>Vitesse de transmission :</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="929"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation>Débit de données du port série qui doit correspondre au réglage de votre radio.</translation>
+        <translation>Seriell portdatafrekvens som måste matcha inställningen för din radio.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="936"/>
@@ -6292,98 +6294,98 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre de bits de données utilisés pour communiquer avec l&apos;interface CAT de votre radio (généralement huit).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal databitar som används för att kommunicera med din radios CAT-gränssnitt (vanligtvis åtta). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="984"/>
         <source>Data Bits</source>
-        <translation>Bits de données</translation>
+        <translation>Databitar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="996"/>
         <location filename="../Configuration.ui" line="1053"/>
         <location filename="../Configuration.ui" line="1120"/>
         <source>Default</source>
-        <translation>Default</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1009"/>
         <source>Se&amp;ven</source>
-        <translation>Se&amp;pt</translation>
+        <translation>S&amp;ju</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1022"/>
         <source>E&amp;ight</source>
-        <translation>Hu&amp;it</translation>
+        <translation>Å&amp;tta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal stoppbitar som används vid kommunikation med radioens CAT-gränssnitt &lt;/p&gt; &lt;p&gt; (se din radiohandbok för detaljer). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1041"/>
         <source>Stop Bits</source>
-        <translation>Stop Bits</translation>
+        <translation>Stoppbitar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1066"/>
         <source>On&amp;e</source>
-        <translation>On&amp;e</translation>
+        <translation>E&amp;n</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1076"/>
         <source>T&amp;wo</source>
-        <translation>T&amp;wo</translation>
+        <translation>T&amp;vå</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt;&gt;head/&gt;&lt;body&gt;&lt;p&gt;Protocole de contrôle de flux utilisé entre cet ordinateur et l&apos;interface CAT de votre radio (généralement &amp;quot;None&amp;quot ; mais certains exigent &amp;quot;Hardware&amp;quot ;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Flödeskontrollprotokoll som används mellan den här datorn och din radios CAT-gränssnitt (vanligtvis &amp; quot; Ingen &amp; quot; men vissa kräver &quot;hårdvara &amp; quot;). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1095"/>
         <source>Handshake</source>
-        <translation>Poignée de main</translation>
+        <translation>Handskakning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1107"/>
         <source>&amp;None</source>
-        <translation>Aucu&amp;ne</translation>
+        <translation>&amp;Ingen</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1133"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation>Contrôle de flux logiciel (très rare sur les interfaces CAT).</translation>
+        <translation>Programvaruflödeskontroll (mycket sällsynt på CAT-gränssnitt).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1136"/>
         <source>XON/XOFF</source>
-        <translation>Xmarche/Xarrêt</translation>
+        <translation>XON/XOFF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1146"/>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation>Contrôle des flux en utilisant les lignes de contrôle RTS et CTS RS-232
-pas souvent utilisée mais certaines radios en ont la possibilité et 
-quelques une, en particulier certains TRX Kenwood, exigent).</translation>
+        <translation>Flödesreglering med RTS och CTS RS-232 kontrolllinjer
+används inte ofta men vissa radioapparater har det som ett alternativ och
+ett fåtal, särskilt vissa Kenwood-riggar, kräver det).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1151"/>
         <source>&amp;Hardware</source>
-        <translation>Ma&amp;tériel informatique</translation>
+        <translation>Hårdvara</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1164"/>
         <source>Special control of CAT port control lines.</source>
-        <translation>Contrôle spécial des lignes  port  CAT.</translation>
+        <translation>Speciell styrning av CAT-portkontrolllinjer.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1167"/>
         <source>Force Control Lines</source>
-        <translation>Lignes de contrôle des forces</translation>
+        <translation>Tvinga kontrolllinjer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1184"/>
@@ -6394,37 +6396,37 @@ quelques une, en particulier certains TRX Kenwood, exigent).</translation>
         <location filename="../Configuration.ui" line="1200"/>
         <location filename="../Configuration.ui" line="1233"/>
         <source>High</source>
-        <translation>Haut</translation>
+        <translation>Hög</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1205"/>
         <location filename="../Configuration.ui" line="1238"/>
         <source>Low</source>
-        <translation>Bas</translation>
+        <translation>Låg</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1217"/>
         <source>RTS:</source>
-        <translation>Rts:</translation>
+        <translation>RTS:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1270"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation>Comment ce programme active les PTT sur votre Trx</translation>
+        <translation>Hur detta program aktiverar PTT på din radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1273"/>
         <source>PTT Method</source>
-        <translation>méthode PTT</translation>
+        <translation>PTT Metod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1279"/>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation>Certaines radios supportent les PTT via des commandes CAT,
-utilisez cette option si votre radio la prend en charge et que vous n&apos;avez pas
-d&apos;autre interface matérielle pour les PTT.</translation>
+        <translation>Vissa radioapparater stöder PTT via CAT-kommandon,
+använd det här alternativet om din radio stöder det och du inte har något
+andra hårdvarugränssnitt för PTT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1284"/>
@@ -6434,7 +6436,7 @@ d&apos;autre interface matérielle pour les PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt;&gt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisez la ligne de contrôle DTR RS-232 pour basculer le PTT de votre radio, nécessite du matériel pour interfacer la ligne.&lt;/p&gt;&lt;p&gt;Certaines unités d&apos;interface commerciales utilisent également cette méthode.&lt;/p&gt;&lt;p&gt;La ligne de contrôle DTR du port série du CAT peut être utilisée pour cela ou une ligne de contrôle DTR sur un port série différent peut être utilisée.&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd kontrolllinjen RS-232 DTR för att växla radioens PTT, kräver hårdvara för att integrera linjen. &lt;/p&gt; &lt;p&gt; Vissa kommersiella gränssnittsenheter använder också den här metoden. &lt;/p&gt; &lt;p&gt; DTR-kontrollraden i CAT-seriell port kan användas för detta eller en DTR-kontrollrad på en annan seriell port kan användas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1297"/>
@@ -6444,7 +6446,7 @@ d&apos;autre interface matérielle pour les PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pas d&apos;activation des PTT, à la place le VOX automatique de la radio est utilisé pour activer l&apos;émetteur.&lt;/p&gt;&lt;p&gt;Utilisez ceci si vous n&apos;avez pas de matériel d&apos;interface radio.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ingen PTT-aktivering, istället används radioens automatiska VOX för att ställa in sändaren. &lt;/p&gt; &lt;p&gt; Använd det här om du inte har någon hårdvara för radiogränssnitt. &lt;/p&gt; &lt;/ body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1313"/>
@@ -6454,7 +6456,7 @@ d&apos;autre interface matérielle pour les PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1323"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt;&gt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisez la ligne de contrôle RTS RS-232 pour basculer le PTT de votre radio, nécessite du matériel pour interfacer la ligne.&lt;/p&gt;&lt;p&gt;Certains appareils d&apos;interface commerciaux utilisent également cette méthode.&lt;/p&gt;&lt;p&gt;La ligne de contrôle RTS du port série du CAT peut être utilisée pour cela ou une ligne de contrôle RTS sur un port série différent peut être utilisée. Notez que cette option n&apos;est pas disponible sur le port série du CAT lorsque le contrôle de flux matériel est utilisé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd RS-232 RTS-kontrolllinjen för att växla radioens PTT, kräver hårdvara för att integrera linjen. &lt;/p&gt; &lt;p&gt; Vissa kommersiella gränssnittsenheter använder också den här metoden. &lt;/p&gt; &lt;p&gt; RTS-styrlinjen för CAT-seriell port kan användas för detta eller en RTS-kontrolllinje på en annan seriell port kan användas. Observera att det här alternativet inte är tillgängligt på CAT seriell port när hårdvaruflödeskontroll används. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1326"/>
@@ -6464,46 +6466,46 @@ d&apos;autre interface matérielle pour les PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1357"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&gt; tête/&gt;&gt; corps&gt;&lt;p&gt;Sélectionnez le port série RS-232 utilisé pour le contrôle PTT, cette option est disponible lorsque DTR ou RTS est sélectionné ci-dessus comme méthode de transmission.&lt;/p&gt;&lt;p&gt;Ce port peut être le même que celui utilisé pour le contrôle CAT. &lt;/p&gt;&lt;p&gt;Pour certains types d&apos;interface, la valeur spéciale CAT peut être choisie, elle est utilisée pour les interfaces CAT non série qui peuvent contrôler les lignes de commande de port série à distance (OmniRig par exemple).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj den seriella porten RS-232 som används för PTT-kontroll, detta alternativ är tillgängligt när DTR eller RTS väljs ovan som en sändningsmetod. &lt;/p&gt; &lt;p&gt; Denna port kan vara samma som den som används för CAT-kontroll. &lt;/p&gt; &lt;p&gt; För vissa gränssnittstyper kan specialvärdet CAT väljas, detta används för icke-seriella CAT-gränssnitt som kan kontrollera seriella portkontrolllinjer på distans ( OmniRig till exempel). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1388"/>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
-        <translation>Certaines radios peuvent sélectionner l&apos;entrée audio à l&apos;aide d&apos;une commande CAT,
-ce paramètre vous permet de sélectionner l&apos;entrée audio qui sera utilisée
-(s&apos;il est disponible, l&apos;option Arrière/Données est généralement la meilleure).</translation>
+        <translation>Vissa radioapparater kan välja ljudingång med ett CAT-kommando,
+den här inställningen låter dig välja vilken ljudingång som ska användas
+(om det är tillgängligt är alternativet bak / data bäst).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1393"/>
         <source>Transmit Audio Source</source>
-        <translation>Source audio transmission</translation>
+        <translation>Ljudkälla för sändning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1399"/>
         <source>Rear&amp;/Data</source>
-        <translation>Don&amp;née arriere</translation>
+        <translation>&amp;Bakre/Data</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1409"/>
         <source>&amp;Front/Mic</source>
-        <translation>micro en &amp;facade</translation>
+        <translation>&amp;Främre/Mik</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1432"/>
         <source>Modulation mode selected on radio.</source>
-        <translation>Mode de modulation sélectionné à la radio.</translation>
+        <translation>Moduleringsläge valt på radio.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1435"/>
         <source>Mode</source>
-        <translation>Mode</translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1441"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB est généralement le mode de modulation correct, &lt;/p&gt;&lt;p&gt;à moins que la radio n&apos;ait un réglage spécial de mode données ou paquets&lt;/p&gt;&lt;p&gt;pour le fonctionnement AFSK.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; USB är vanligtvis rätt moduleringsläge, &lt;/p&gt; &lt;p&gt; såvida inte radion har en speciell data- eller paketlägeinställning &lt;/p&gt; &lt;p&gt; för AFSK-drift. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1444"/>
@@ -6515,50 +6517,50 @@ ce paramètre vous permet de sélectionner l&apos;entrée audio qui sera utilis�
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation>Ne pas permettre au programme de régler le mode radio
-(non recommandé mais à utiliser si le mauvais mode
-ou la largeur de bande est sélectionnée).</translation>
+        <translation>Låt inte programmet ställa in radioläget
+(rekommenderas inte men använd om fel läge
+eller bandbredd är vald).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1462"/>
         <location filename="../Configuration.ui" line="1521"/>
         <source>None</source>
-        <translation>Aucun</translation>
+        <translation>&amp;Ingen</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1472"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation>S&apos;il est disponible, c&apos;est généralement le mode correct pour ce programme.</translation>
+        <translation>Om detta är tillgängligt är det vanligtvis rätt läge för det här programmet.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1475"/>
         <source>Data/P&amp;kt</source>
-        <translation>Données/P&amp;kt</translation>
+        <translation>Data/P&amp;kt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1495"/>
         <source>Split Operation</source>
-        <translation>Mode Split</translation>
+        <translation>Delad operation</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1501"/>
         <source>Fake It</source>
-        <translation>Faux</translation>
+        <translation>Låtsas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1511"/>
         <source>Rig</source>
-        <translation>TRX</translation>
+        <translation>Rig</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1554"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tentative de connexion à la radio avec ces paramètres.&lt;/p&gt;&lt;p&gt;Le bouton deviendra vert si la connexion est réussie ou rouge s&apos;il y a un problème.&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Försök att ansluta till radion med dessa inställningar. &lt;/p&gt; &lt;p&gt; Knappen blir grön om anslutningen är framgångsrik eller röd om det finns ett problem. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1557"/>
         <source>Test CAT</source>
-        <translation>Test CAT</translation>
+        <translation>Testa CAT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1580"/>
@@ -6567,42 +6569,42 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation>Tentative d&apos;activation de l&apos;émetteur.
-Cliquez à nouveau pour le désactiver. Normalement, aucune puissance ne devrait être
-puisqu&apos;aucun son n&apos;est généré pour le moment.
-Vérifiez que toute indication de Tx sur votre radio et/ou votre
-interface radio se comportent comme prévu.</translation>
+        <translation>Försök att aktivera sändaren.
+Klicka igen för att inaktivera. Normalt bör ingen kraft vara
+ut eftersom det inte skapas något ljud just nu.
+Kontrollera att någon Tx-indikation på din radio och / eller din
+radiogränssnittet beter sig som förväntat.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1598"/>
         <source>Test PTT</source>
-        <translation>Test PTT</translation>
+        <translation>Testa PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1625"/>
         <location filename="../Configuration.ui" line="1635"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
-        <translation>Délai minimum entre l&apos;affirmation du PTT et le début de l&apos;audio Tx.</translation>
+        <translation>Minsta fördröjning mellan påstående om PTT och start av Tx-ljud.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1628"/>
         <source>Tx delay:</source>
-        <translation>Délai TX:</translation>
+        <translation>TX fördröjning:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1685"/>
         <source>A&amp;udio</source>
-        <translation>A&amp;udio</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1688"/>
         <source>Audio interface settings</source>
-        <translation>Paramètres de l&apos;interface audio</translation>
+        <translation>Ljudinterface inställning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1694"/>
         <source>Soundcard</source>
-        <translation>Carte Son</translation>
+        <translation>Ljudkort</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1706"/>
@@ -6611,26 +6613,26 @@ If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
 you will broadcast any systems sounds generated during
 transmitting periods.</source>
-        <translation>Sélectionnez le CODEC audio à utiliser pour la transmission.
-S&apos;il s&apos;agit de votre appareil par défaut pour les sons du système, alors
-veiller à ce que tous les sons du système soient désactivés dans le cas contraire
-vous diffuserez tous les sons du système générés pendant
-les périodes de transmission.</translation>
+        <translation>Välj ljud CODEC som ska användas för sändning.
+Om detta är din standardenhet för systemljud då
+se till att alla systemljud är inaktiverade annars
+du sänder alla systemljud genererade under
+sändningsperioder.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1723"/>
         <source>Select the audio CODEC to use for receiving.</source>
-        <translation>Sélectionnez le CODEC audio à utiliser pour la réception.</translation>
+        <translation>Välj ljud CODEC som ska användas för mottagning.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1730"/>
         <source>&amp;Input:</source>
-        <translation>&amp;Entrée:</translation>
+        <translation>&amp;Ingång:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1740"/>
         <source>Select the channel to use for receiving.</source>
-        <translation>Sélectionnez le canal à utiliser pour la réception.</translation>
+        <translation>Välj kanal som ska användas för mottagning.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1744"/>
@@ -6642,19 +6644,19 @@ les périodes de transmission.</translation>
         <location filename="../Configuration.ui" line="1749"/>
         <location filename="../Configuration.ui" line="1779"/>
         <source>Left</source>
-        <translation>Gauche</translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1754"/>
         <location filename="../Configuration.ui" line="1784"/>
         <source>Right</source>
-        <translation>Droite</translation>
+        <translation>Höger</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1759"/>
         <location filename="../Configuration.ui" line="1789"/>
         <source>Both</source>
-        <translation>Les deux</translation>
+        <translation>Båda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1767"/>
@@ -6662,90 +6664,90 @@ les périodes de transmission.</translation>
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
-        <translation>Sélectionnez le canal audio utilisé pour la transmission.
-À moins que vous n&apos;ayez plusieurs radios connectées sur différents
-vous devrez alors généralement sélectionner les canaux mono ou
-les deux ici.</translation>
+        <translation>Välj ljudkanal som används för överföring.
+Om du inte har flera radioapparater anslutna på olika
+kanaler; då vill du vanligtvis välja mono eller
+båda här.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1797"/>
         <source>Ou&amp;tput:</source>
-        <translation>Sor&amp;tie:</translation>
+        <translation>&amp;Utgång:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1816"/>
         <source>Remember power settings by band and mode</source>
-        <translation>Mémoriser les réglages de puissance par bande et par mode</translation>
+        <translation>Kom ihåg effektinställningar efter band och läge</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1824"/>
         <source>Enable power memory during transmit</source>
-        <translation>Activer la mémoire de puissance pendant la transmission</translation>
+        <translation>Aktivera under sändning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1827"/>
         <source>Transmit</source>
-        <translation>Transmission</translation>
+        <translation>Sändning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1834"/>
         <source>Enable power memory during tuning</source>
-        <translation>Activer la mémoire de puissance pendant le réglage</translation>
+        <translation>Aktivera effektminne under sändning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1837"/>
         <source>Tune</source>
-        <translation>Tune</translation>
+        <translation>Ställ in</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1862"/>
         <source>Audio files save directory</source>
-        <translation>Répertoire de sauvegarde des fichiers audio</translation>
+        <translation>Katalog för att spara ljudfiler</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1868"/>
         <source>Loc&amp;ation:</source>
-        <translation>Loc&amp;alisation:</translation>
+        <translation>Pl&amp;ats:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1884"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation>Chemin vers lequel les fichiers .WAV sont sauvegardés.</translation>
+        <translation>Sökväg där.WAV-filer sparas.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1893"/>
         <source>TextLabel</source>
-        <translation>Étiquette de texte</translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1900"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation>Cliquez pour sélectionner un autre répertoire de sauvegarde pour les fichiers .WAV.</translation>
+        <translation>Klicka för att välja en annan spara katalog för .WAV-filer.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1903"/>
         <source>S&amp;elect</source>
-        <translation>S&amp;election</translation>
+        <translation>V&amp;älj</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1934"/>
         <source>Sequencing</source>
-        <translation>Séquence</translation>
+        <translation>Sekvensiering</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1958"/>
         <source>Message sequencing short scenarios</source>
-        <translation>Séquencement des messages dans des scénarios courts</translation>
+        <translation>Meddelandesekvensering av korta scenarier</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1966"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3 : appeler CQ lorsque le compteur est atteint. AutoSeq 6/7 : recherche dans les messages décodés de tout message &quot;CQ&quot; ou &quot;73&quot; valide, appelle CQ si aucun message de ce type n&apos;est trouvé. Arrêt de la Tx si l&apos;option Single Shot QSO est activée dans l&apos;onglet AutoSeq.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSeq 1..3: ring CQ när räknaren nås. AutoSeq 6/7: söka igenom avkodade meddelanden efter giltigt &apos;CQ&apos; eller &apos;73&apos; meddelande, ring CQ om det inte finns några sådana meddelanden. Stopp Tx om QSO-alternativet Enkel skott är aktiverat på fliken AutoSeq. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>compteurs. Recherchez dans les messages décodés, appelez CQ ou Stop Tx si :</translation>
+        <translation>Räknare. Sök igenom avkodade meddelanden, ropa CQ eller Halt Tx om:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2001"/>
@@ -6753,92 +6755,92 @@ les deux ici.</translation>
         <location filename="../Configuration.ui" line="2066"/>
         <location filename="../Configuration.ui" line="2102"/>
         <source>times</source>
-        <translation>Temps</translation>
+        <translation>gånger</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2014"/>
         <source>called CQ,  received a call and answered</source>
-        <translation>a appelé CQ, a reçu un appel et a répondu</translation>
+        <translation>anropade CQ, fick ett samtal och svarade</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2076"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>envoyé RR73(73) répondant au RRR(RR73) entrant</translation>
+        <translation>skickade RR73 (73) som svar på inkommande RRR (RR73)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation>a répondu au CQ de quelqu&apos;un sans réponse</translation>
+        <translation>svarade på någons CQ utan svar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2128"/>
         <source>sent report answering to incoming report</source>
-        <translation>a envoyé un repport en réponse à un repport entrant</translation>
+        <translation>skickat rapport som svar på inkommande rapport</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2162"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette option est utilisée pour les scénarios de spectres non chevauchants. La Tx sera arrêtée si les spectres ont des fréquences communes sans respecter ce paramètre. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Det här alternativet används för ett överlappande spektorscenario. Tx stoppas om spektra har vanliga frekvenser utan respekt för denna inställning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2165"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Arrêter le TX si l&apos;opérateur que j&apos;ai appelé a répondu à un autre opérateur</translation>
+        <translation>Stoppa TX om operatören jag anropade svarade till annan operatör</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Par défaut, l&apos;autosélection ignore le sens de réception/émission de CQ si un &quot;nouveau message DXCC&quot; valide est décodé, qu&apos;il s&apos;agisse d&apos;un appel entrant ou d&apos;une sélection parmi les messages CQ/73 décodés. Cette option élimine l&apos;exception de &quot;nouveau DXCC&quot; dans l&apos;autosélection pour le traitement de CQ directionnel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Som standard autoselektion ignorerar mottagen / överförd riktning för CQ om det finns ett giltigt &quot;nytt DXCC&quot; -meddelande avkodat, antingen inkommande samtal eller val från avkodade CQ / 73-meddelanden. Detta alternativ eliminerar &quot;nytt DXCC&quot; -undantag i automatisk val för riktad CQ-bearbetning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2175"/>
         <source>Strict directional CQ operation</source>
-        <translation>Fonctionnement strict d&apos;un CQ directionnel</translation>
+        <translation>Strikt riktad CQ-funktion</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2233"/>
         <source>Tx &amp;Macros</source>
-        <translation>&amp;Macros TX</translation>
+        <translation>Tx &amp;Macro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2236"/>
         <source>Canned free text messages setup</source>
-        <translation>Configuration des Messages</translation>
+        <translation>Bevarad inställning av fritextmeddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2242"/>
         <source>&amp;Add</source>
-        <translation>&amp;Ajouter</translation>
+        <translation>&amp;Lägg till</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2249"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 caractères pour un message libre&lt;br&gt;&lt;br&gt;Maximum 17 caractères pour un message directionnel standard CQ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Max 13 tecken för gratis meddelande &lt;br&gt; &lt;br&gt; Max 17 tecken för riktad CQ-standardmeddelande. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2259"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Supprimer</translation>
+        <translation>&amp;Ta bort</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&gt;p&gt;glisser et déposer des objets pour réorganiser l&apos;ordre. Cliquez avec le bouton droit de la souris pour des actions spécifiques à un élément. Cliquer, SHIFT+Cliquer et, CRTL+Cliquer pour sélectionner les éléments. Le symbole @ est remplacé par l&apos;appel DX, &amp; le symbole par l&apos;indicatif de base de l&apos;utilisateur, le symbole # avec le rapport à transmettre, le symbole ^ avec le nom du correspondant récupéré dans le journal où le nom ne doit pas dépasser 7 caractères.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dra och släpp objekt för att ordna om. Högerklicka för artikelspecifika åtgärder. Klicka, SHIFT + Klicka och, CRTL + Klicka för att välja objekt. @ symbol ersätts med DX-samtal, &amp; symbol med användarens basanropssignal, # symbol med rapport som ska överföras, ^ symbol med korrespondentens namn hämtas från loggen där namnet inte får överstiga 7 karaktärer. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2320"/>
         <source>Reportin&amp;g</source>
-        <translation>Repo&amp;rt</translation>
+        <translation>Rapporteri&amp;g</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2323"/>
         <source>Reporting and logging settings</source>
-        <translation>Paramètres de rapport et de journalisation</translation>
+        <translation>Rapportering och loggningsinställningar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2336"/>
         <source>Logging</source>
-        <translation>Enregistrement</translation>
+        <translation>Loggning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2362"/>
@@ -6846,175 +6848,175 @@ les deux ici.</translation>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation>Certains programmes d&apos;enregistrement n&apos;acceptent pas ce type de rapports
-sauvés par ce programme.
-Cochez cette option pour sauvegarder les rapports envoyés et reçus dans le
-champ de commentaires.</translation>
+        <translation>Vissa loggningsprogram accepterar inte typen av rapporter
+sparas av detta program.
+Markera det här alternativet för att spara de skickade och mottagna rapporterna i
+kommentarfält.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2368"/>
         <source>d&amp;B reports to comments</source>
-        <translation>Ajouté D&amp;b aux commentaires</translation>
+        <translation>dB rapporter till kommentarer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2375"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation>Cochez cette option pour forcer la compensation de l&apos;appel DX
-et les champs de la grille DX lors de l&apos;envoi d&apos;un message de 73.</translation>
+        <translation>Markera det här alternativet för att tvinga raderingen av DX-samtalet
+och DX-rutnätfält när ett 73 eller fritextmeddelande skickas.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2379"/>
         <source>Clear &amp;DX call and grid after logging</source>
-        <translation>Effacer l&apos;appel &amp;DX et la grille après l&apos;enregistrement</translation>
+        <translation>Rensa &amp; DX-samtal och rutnät efter loggning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2386"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cochez cette option pour forcer la suppression des champs DX Call et DX Grid en quittant le JTDX. Cette fonctionnalité est destinée aux utilisateurs du logiciel de journal de bord UR5EQF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera det här alternativet för att tvinga rensningen av fälten DX Call och DX Grid när du lämnar JTDX. Denna funktionalitet är avsedd för UR5EQF-programvara för loggboksprogram. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2389"/>
         <source>Clear DX call and grid on exit</source>
-        <translation>Effacer l&apos;appel DX et lle locator à la fin</translation>
+        <translation>Rensa DX-samtal och rutnät vid avstängning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2396"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation>Certains programmes de journalisation n&apos;acceptent pas le JT-65 ou le JT9 comme mode reconnu.</translation>
+        <translation>Vissa loggningsprogram accepterar inte JT-65 eller JT9 som ett erkänt läge.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2399"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>Mode Con&amp;vertion vers RTTY</translation>
+        <translation>Konvertera mod till RTTY</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation>Le programme affichera un dialogue Log QSO partiellement rempli lorsque vous enverrez un message de type 73 ou texte libre.</translation>
+        <translation>Programmet dyker upp en delvis färdig Log QSO-dialog när du skickar ett 73 eller fritextmeddelande.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2409"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>Fenê&amp;tre enregistrement lQSO</translation>
+        <translation>&amp;Kvittera loggning av QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2416"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Activer l&apos;enregistr auto du QSO</translation>
+        <translation>Aktivera automatisk loggning av QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2446"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connexion à un logiciel externe de journal de bord.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Anslutning till extern loggboksprogramvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2449"/>
         <source>Send logged QSO ADIF data</source>
-        <translation>Envoyer les données QSO ADIF enregistrées</translation>
+        <translation>Skicka loggade QSO ADIF-data</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2483"/>
         <location filename="../Configuration.ui" line="2499"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;nom ou adresse du serveur TCP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; TCP-servernamn eller adress &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2486"/>
         <source>TCP server:</source>
-        <translation>Serveur TCP:</translation>
+        <translation>TCP server:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2506"/>
         <location filename="../Configuration.ui" line="2516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numéro de port du serveur TCP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server portnummer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2509"/>
         <source>TCP port:</source>
-        <translation>Port TCP:</translation>
+        <translation>TCP port:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2531"/>
         <source>Enable sending to TCP server</source>
-        <translation>Activer l&apos;envoi vers le serveur TCP</translation>
+        <translation>Aktivera skicka till TCP-server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2556"/>
         <source>2nd UDP server</source>
-        <translation>2ème serveur UDP</translation>
+        <translation>2a UDP-server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2570"/>
         <location filename="../Configuration.ui" line="2580"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;numéro de port du serveur UDP secondaire&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; sekundärt UDP-serverportnummer &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2573"/>
         <source>UDP port:</source>
-        <translation>Port UDP:</translation>
+        <translation>UDP port:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2589"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>Activer l&apos;envoi vers un serveur UDP secondaire</translation>
+        <translation>Aktivera sändning till sekundär UDP-server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2622"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Permet de configurer les données pour l&apos;enregistrement dans le fichier ALL.TXT. L&apos;enregistrement des messages TX ne peut pas être désactivé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Tillåt konfigurering av data för inspelning i filen ALL.TXT. Inspelning av TX-meddelanden kan inte stängas av. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2625"/>
         <source>Recording to ALL.TXT</source>
-        <translation>Enregistrement vers ALL.TXT</translation>
+        <translation>Inspelning till ALL.TXT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2647"/>
         <source>decoded messages</source>
-        <translation>messages décodés</translation>
+        <translation>avkodade meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2654"/>
         <source>decoded and debug messages</source>
-        <translation>messages décodés et de débogage</translation>
+        <translation>avkodade och felsökta meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2696"/>
         <source>Network Services</source>
-        <translation>Services de réseau</translation>
+        <translation>Nätverkstjänster</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2717"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
-        <translation>Le programme peut envoyer les informations QSO enregistrées sur le site web http://www.eqsl.cc.</translation>
+        <translation>Programmet kan skicka inloggad QSO-information till http://www.eqsl.cc webbplats.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2720"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation>Activer l&apos;envoi vers &amp;eQSL</translation>
+        <translation>Aktivera &amp;eQSL-sändning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2740"/>
         <source>EQSL Username.</source>
-        <translation>Nom d&apos;utilisateur EQSL.</translation>
+        <translation>e-QSL Användarnamn.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2747"/>
         <source>U&amp;sername:</source>
-        <translation>Nom d&apos;utili&amp;sateur :</translation>
+        <translation>&amp;Användarnamn:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2757"/>
         <source>P&amp;assword:</source>
-        <translation>Mot de p&amp;asse:</translation>
+        <translation>&amp;Lösenord:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2767"/>
         <source>EQSL Password.</source>
-        <translation>Mot de passe EQSL.</translation>
+        <translation>e-QSL-lösenord.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2777"/>
@@ -7022,152 +7024,151 @@ et les champs de la grille DX lors de l&apos;envoi d&apos;un message de 73.</tra
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>Le programme peut envoyer les coordonnées de votre station et tout
-a décodé des signaux sous forme de spots pour le site web http://pskreporter.info.
-Cette méthode est utilisée pour l&apos;analyse des balises inversées, ce qui est très utile
-pour évaluer la propagation et les performances des systèmes.</translation>
+        <translation>Programmet kan skicka din stationsinformation och alla
+avkodade signaler som platser till webbplatsen http://pskreporter.info.
+Detta används för analys av omvänd beacon, vilket är mycket användbart
+för bedömning av förökning och systemprestanda.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2783"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
-        <translation>Permettre l&apos;envoi sur &amp;PSK reporter</translation>
+        <translation>Aktivera &amp;PSK Reporter Spotting</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2790"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>Surnom EQSL OTH.</translation>
+        <translation>e-QSL OTH Smeknamn.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2797"/>
         <source>Enable DXSummit Spotting </source>
-        <translation>Activer l&apos;envoi sur DXSummit </translation>
+        <translation>Aktivera DXSummit Spotting </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2804"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH s&amp;urnom :</translation>
+        <translation>QTH &amp;Smeknamn:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2817"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connexion UDP primaire à un logiciel externe.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Primär UDP-anslutning till extern programvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2820"/>
         <source>Primary UDP Server</source>
-        <translation>Serveur UDP primaire</translation>
+        <translation>Primär UDP server</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2850"/>
         <source>UDP Server:</source>
-        <translation>Serveur UDP:</translation>
+        <translation>UDP Server:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2866"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nom d&apos;hôte facultatif du service réseau pour recevoir les décodages.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top : 0px ; margin-bottom : 0px ; margin-left : 0px ; margin-right : 0px ; -qt-list-indent : 1 ;&quot;&gt;&lt;li style=&quot; margin-top:12px ; margin-bottom:0px ; margin-left:0px ; margin-right:0px ; -qt-block-indent:0 ; text-indent:0px ;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px ; margin-bottom:0px ; margin-left : 0px ; margin-right:0px ; -qt-block-indent:0 ; text-indent:0px ;&quot;&gt;adresse IPv4&lt;/li&gt;&lt;li style=&quot; margin-top:0px ; margin-bottom:0px ; margin-left:0px ; margin-right:0px ; -qt-block-indent:0 ; text-indent : 0px ;&quot;&gt;adresse IPv6&lt;/li&gt;&lt;li style=&quot; margin-top:0px ; margin-bottom:0px ; margin-left:0px ; margin-right:0px ; -qt-block-indent:0 ; text-indent:0px ;&quot;&gt;adresse IPv4 de groupe de multidiffusion&lt;/li&gt;&lt;li style=&quot; margin-top : 0px ; margin-bottom:0px ; margin-left:0px ; margin-right:0px ; -qt-block-indent:0 ; text-indent:0px ;&quot;&gt;adresse du groupe de multidiffusion IPv6&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;La suppression de ce champ désactivera la diffusion des mises à jour de l&apos;état UDP. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Valfritt värdnamn för nätverkstjänsten för att ta emot avkodningar. &lt;/p&gt; &lt;p&gt; Format: &lt;/p&gt; &lt;ul style = &quot;margin-top: 0px; margin-bottom: 0px; margin-vänster: 0px; margin-höger: 0px; -qt-list-strecksats: 1; &quot;&gt; &lt;li style =&quot; margin-top: 12px; margin-bottom: 0px; margin-left: 0px; margin- höger: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; värdnamn &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin -rätt: 0px; -qt-block-strecksats: 0; text-strecksats: 0px; &quot;&gt; IPv4-adress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left: 0px ; margin-höger: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv6-adress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left : 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv4 multicast-gruppadress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px ; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv6 multicast-gruppadress &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Att rensa det här fältet kommer att inaktivera sändningen av UDP-statusuppdateringar.&lt;/ p &gt;&lt;/ Body&gt;&lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2876"/>
         <source>UDP Server port number:</source>
-        <translation>Numéro de port du serveur UDP :</translation>
+        <translation>UDP Server portnummer:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
         <source>Accept UDP requests</source>
-        <translation>Accepter les demandes UDP</translation>
+        <translation>Acceptera UDP-förfrågningar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2913"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Indiquer l&apos;acceptation d&apos;une demande UDP entrante. L&apos;effet de cette option varie selon le système d&apos;exploitation et le gestionnaire de fenêtres, son but est de notifier l&apos;acceptation d&apos;une demande UDP entrante même si cette demande est minimisée ou cachée.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange godkännande av en inkommande UDP-begäran. Effekten av detta alternativ varierar beroende på operativsystem och fönsterhanterare. Dess avsikt är att meddela godkännandet av en inkommande UDP-begäran även om den här applikationen är minimerad eller dold. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2916"/>
         <source>Notify on accepted UDP request</source>
-        <translation>Notifier l&apos;acceptation de la demande UDP</translation>
+        <translation>Meddela om godkänd UDP-begäran</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2923"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rétablir la fenêtre de minimisée si une demande UDP est acceptée.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>h&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Återställ fönstret från minimerat om en UDP-begäran accepteras. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2926"/>
         <source>Accepted UDP request restores window</source>
-        <translation>Fenêtre de restauration des demandes UDP acceptées</translation>
+        <translation>Accepterad UDP-begäran återställer fönstret</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2937"/>
         <source>Enable sending logged QSO ADIF data</source>
-        <translation>Permettre l&apos;envoi de données QSO ADIF enregistrées</translation>
+        <translation>Aktivera skicka loggade QSO ADIF-data</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2947"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden markerade med frågetecken skickas inte till JTAlert och annan UDP-baserad programvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2950"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
-        <translation>Empêcher le repérage des messages avec les indicatifs d&apos;appel non confirmés via l&apos;UDP</translation>
+        <translation>Förhindra upptäckt av meddelanden med de obekräftade anropssignalerna via UDP</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2957"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Des filtres de texte sélectionnés seront appliqués pour limiter la transmission des messages UDP du JTDX, par exemple les messages de certains continents peuvent être bloqués.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Valda textfilter kommer att tillämpas för att begränsa överföringen av UDP-meddelanden från JTDX, till exempel kan meddelanden från vissa kontinenter blockeras. &lt;/p&gt; &lt;/body&gt; &lt;/ html &gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2960"/>
         <source>Apply text filters to transmission of the UDP messages</source>
-        <translation>Appliquer des filtres de texte à la transmission des messages UDP</translation>
+        <translation>Använd textfilter för överföring av UDP-meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2995"/>
         <source>Frequencies</source>
-        <translation>Fréquences</translation>
+        <translation>Frekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2998"/>
         <source>Default frequencies and band specific station details setup</source>
-        <translation>Fréquences par défaut et configuration des détails de la station par bande</translation>
+        <translation>Standardfrekvenser och bandspecifik stationsinformation</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3004"/>
         <source>Working Frequencies</source>
-        <translation>Fréquences de travail</translation>
+        <translation>Arbetsfrekvenser</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5092"/>
         <source>Reset</source>
-        <translation>Réinitialiser</translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3046"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
-        <translation>Consultez l&apos;annexe C du document WSPR pour savoir comment déterminer ces facteurs pour votre radio.</translation>
+        <translation>Se WSPR-dokumentation Bilaga C för detaljer om hur du bestämmer dessa faktorer för din radio.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3049"/>
         <source>Frequency Calibration</source>
-        <translation>Calibrage de la fréquence</translation>
+        <translation>Frekvenskalibrering</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3058"/>
         <source>Intercept:</source>
-        <translation>Interception :</translation>
+        <translation>Intercept:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <location filename="../Configuration.ui" line="6822"/>
         <source> Hz</source>
-        <translatorcomment> Hz</translatorcomment>
-        <translation></translation>
+        <translation> Hz</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3090"/>
         <source>Slope:</source>
-        <translation>Pente :</translation>
+        <translation>Slope:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3103"/>
@@ -7177,79 +7178,79 @@ pour évaluer la propagation et les performances des systèmes.</translation>
     <message>
         <location filename="../Configuration.ui" line="3146"/>
         <source>Station Information</source>
-        <translation>Informations sur les stations</translation>
+        <translation>Stationsinformation</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3158"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
-        <translation>Les articles peuvent être modifiés.
-Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et de suppression.</translation>
+        <translation>Objekt kan redigeras.
+Högerklicka för att infoga och ta bort alternativ.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3206"/>
         <source>Notifications</source>
-        <translation>Notifications</translation>
+        <translation>Anmälningar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3214"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
-        <translation>Notifications du statut &quot;nouveau&quot; et &quot;travaillé B4</translation>
+        <translation>Statusmeddelanden &quot;Nya&quot; och &quot;körda B4&quot;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3240"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les zones CQ qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3243"/>
         <source>Check and highlight new CQZ</source>
-        <translation>Vérifiez et mettez en évidence les nouvelles CQZ</translation>
+        <translation>Kontrollera och markera ny CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3250"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les zones CQ qui sont nouvelles sur la bande selon les données du fichier journal de wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som är nya i bandet enligt uppgifterna från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3260"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec les zones CQ qui sont nouvelles dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3280"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en évidence avec les zones UIT qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
         <source>Check and highlight new ITUZ</source>
-        <translation>Vérifiez et mettez en évidence la nouvelle ITUZ</translation>
+        <translation>Kontrollera och markera ny ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3290"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en évidence avec les zones de l&apos;UIT qui sont nouvelles sur la bande selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec les zones UIT qui sont nouvelles dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en évidence avec les pays du DXCC qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3323"/>
         <source>Check and highlight new DXCC</source>
-        <translation>Vérifiez et mettez en évidence le nouveau DXCC</translation>
+        <translation>Kontrollera och markera ny DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3330"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les pays DXCC qui sont nouveaux sur la bande selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3253"/>
@@ -7259,12 +7260,12 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
         <location filename="../Configuration.ui" line="3413"/>
         <location filename="../Configuration.ui" line="3453"/>
         <source>per band</source>
-        <translation>par bande</translation>
+        <translation>per band</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages de mise en évidence avec les pays DXCC qui sont nouveaux dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som är nya i läget enligt data från wsjtx_log.adi loggfil. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3263"/>
@@ -7274,27 +7275,22 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
         <location filename="../Configuration.ui" line="3423"/>
         <location filename="../Configuration.ui" line="3463"/>
         <source>per mode</source>
-        <translation>par mode</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="170"/>
-        <source>Message generation for type 2 compound callsign holders:</source>
-        <translation>Génération de messages pour les titulaires d&apos;indicatifs d&apos;appel composés de type 2 :</translation>
+        <translation>per mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entrez le numéro de port de service du serveur UDP auquel JTDX doit envoyer les mises à jour. Si ce numéro est égal à zéro, aucune mise à jour ne sera diffusée. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange serviceportnumret för UDP-servern som JTDX ska skicka uppdateringar till. Om detta är noll kommer inga uppdateringar att sändas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entrez le numéro de port de service du serveur UDP auquel JTDX doit envoyer les mises à jour. Si ce numéro est égal à zéro, aucune mise à jour ne sera diffusée. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Med detta aktiverat kommer JTDX att acceptera vissa förfrågningar tillbaka från en UDP-server som tar emot avkodningsmeddelanden. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3019"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clic droit pour maintenir la liste des fréquences de travail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Högerklicka för att behålla arbetsfrekvenslistan. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3270"/>
@@ -7304,7 +7300,7 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
         <location filename="../Configuration.ui" line="3430"/>
         <location filename="../Configuration.ui" line="3470"/>
         <source>Use also system sound for the notification.</source>
-        <translation>Utilisez également le son du système pour la notification.</translation>
+        <translation>Använd också systemljud för meddelandet.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3273"/>
@@ -7314,204 +7310,203 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
         <location filename="../Configuration.ui" line="3433"/>
         <location filename="../Configuration.ui" line="3473"/>
         <source>Beep as well</source>
-        <translation>Bip aussi</translation>
+        <translation>Pip också</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3360"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des carrés de grille qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutrutor som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3363"/>
         <source>Check and highlight new grids</source>
-        <translation>Vérifier et mettre en évidence les nouveaux locators</translation>
+        <translation>Kontrollera och markera nya Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3370"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des carrés de grille qui sont nouveaux sur la bande selon les données du fichier journal de wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutor med rutnät som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3380"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutrutor som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des préfixes qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3403"/>
         <source>Check and highlight new prefixes</source>
-        <translation>Vérifier et mettre en évidence les nouveaux préfixes</translation>
+        <translation>Kontrollera och markera nya prefix</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3410"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des préfixes qui sont nouveaux sur la bande selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som är nya i bandet enligt data från wsjtx_log.adi loggfil. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des préfixes qui sont nouveaux dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des indicatifs d&apos;appel qui n&apos;existent pas dans le fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3443"/>
         <source>Check and highlight new calls</source>
-        <translation>Vérifier et mettre en évidence les nouveaux appels</translation>
+        <translation>Kontrollera och markera nya signaler</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des indicatifs d&apos;appel qui sont nouveaux sur la bande selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages en surbrillance avec des indicatifs d&apos;appel qui sont nouveaux dans le mode selon les données du fichier journal wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliser la notification de couleur pour les messages avec le DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd färgmeddelande för meddelanden med det bearbetade DXCC, Grid, Call. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3483"/>
         <source>Highlight worked ones</source>
-        <translation>Mettre en évidence deja contactées</translation>
+        <translation>Markera körda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages avec DXCC, Grille, Appel travaillés seront rayés.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call kommer att strikas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages avec travail L&apos;appel sera supprimé&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med fungerade samtal kommer att strikas &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3496"/>
         <source>strike it</source>
-        <translation>Rayer</translation>
+        <translation>slå det</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages avec DXCC, Grid, Call travaillés seront soulignés.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call kommer att betonas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3506"/>
         <source>underline it</source>
-        <translation>Souligner</translation>
+        <translation>understryka det</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les messages avec DXCC, Grid, Call qui ont fonctionné et pour lesquels il n&apos;y a pas de MyCall seront ignorés dans la fenêtre de texte décodé&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call där det inte finns något MyCall kommer att hoppas över i det avkodade textfönstret &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3516"/>
         <source>don&apos;t show it</source>
-        <translation>ne pas montrer</translation>
+        <translation>visa inte</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Inverser le texte&lt;-&gt;couleur de fond pour les messages reçus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Invertera text &lt;-&gt; bakgrundsfärg för mottagna meddelanden &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3526"/>
         <source>Inverse text/background color</source>
-        <translation>Inverser les couleurs du texte et fond</translation>
+        <translation>Omvänd text/bakgrundsfärg</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Par défaut, les messages &apos;CQ&apos; et &apos;MyCall&apos; étant uniquement vérifiés, ce paramètre permet de vérifier également les autres messages standard reçus pour les nouveaux DXCC, Grid, Call. La couleur &quot;Autre message standard&quot; est utilisée pour la notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Som standard kontrolleras bara &apos;CQ&apos; och &apos;MyCall&apos; meddelanden, med denna inställning kan du också kontrollera andra mottagna standardmeddelanden för nya DXCC, Grid, Call. Färg &apos;Annat standardmeddelande&apos; används för meddelandet &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3536"/>
         <source>Highlight other standard messages</source>
-        <translation>Mettre en évidence d&apos;autres messages standard</translation>
+        <translation>Markera andra standardmeddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3556"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliser le son du système pour la notification dès que le premier message est décodé dans l&apos;intervalle RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd systemljud för meddelande så snart det första meddelandet avkodas i RX-intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3559"/>
         <source>Beep on 1st decoded message</source>
-        <translation>Bip sur le premier message décodé</translation>
+        <translation>Pip på det första avkodade meddelandet</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3566"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliser le son du système pour la notification s&apos;il y a un MyCall dans le message reçu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd systemljud för meddelande om min signal finns i det  mottagna meddelandet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3569"/>
         <source>Beep on my call</source>
-        <translation>Bip sur mon appel</translation>
+        <translation>Pip på min signal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3599"/>
         <source>Markers</source>
-        <translation>Marqueurs</translation>
+        <translation>Markörer</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3606"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisez le marqueur bleu pour signaler la présence de mon indicatif dans le message décodé relatif au QSO en cours (l&apos;indicatif de la partie QSO se trouve dans la fenêtre DX Call), les autres appels entrants avec mon indicatif seront suivis du marqueur rouge.&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd blå markör för att meddela om det finns mitt samtal i det avkodade meddelandet som är relaterat till det pågående QSO (QSO-partiets samtal är i DX Call-fönstret), andra inkommande samtal med mitt samtal kommer att följas med den röda markören. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3609"/>
         <source>blue / my call at QSO</source>
-        <translation>bleu / mon appel au QSO</translation>
+        <translation>blå / min signall på QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3645"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliser le marqueur rouge pour signaler la présence de mon indicatif d&apos;appel dans le message décodé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd den röda markören för att meddela om det finns mitt samtal i det avkodade meddelandet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3648"/>
         <source>red / my call in message</source>
-        <translation>rouge / mon appel dans le message</translation>
+        <translation>röd / mitt meddelande</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3658"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliser un marqueur à la fin du message au lieu de la couleur de fond pour les autres notifications de message standard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd markör i slutet av meddelandet istället för bakgrundsfärg till annan standardmeddelande. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3661"/>
         <source>Other standard messages</source>
-        <translation>Autres messages standard</translation>
+        <translation>Andra standardmeddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;En haut du panneau de prévisualisation, il y a des types de messages qui sont vérifiés pour un certain critère, la couleur du texte étant sélectionnée pour chaque type de message.&lt;br&gt;&lt;br&gt;Sur le côté gauche, il y a des critères alloués dans l&apos;ordre hiérarchique, et la couleur de fond étant sélectionnée pour les messages pour chaque critère.&lt;br&gt;&lt;br&gt; La fonctionnalité de notification &quot;Un travaillé&quot; est basée sur le principe résiduel, déclenchée si tous les critères ou critères &quot;Un nouveau&quot; activés ne sont pas remplis. &lt;br&gt;&lt;br&gt; &quot;Couleur inverse&quot; peut être utilisée si l&apos;utilisateur souhaite mettre en évidence les messages CQ et &quot;MyCall&quot; par une couleur de fond spécifique.&lt;br&gt;&lt;br&gt;Pour commencer, un critère peut être choisi et pour les notifications de nouvelle bande/mode, une couleur similaire peut être utilisée avec un niveau de saturation différent, le nombre de critères requis peut être augmenté ultérieurement.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ovanpå förhandsgranskningsfönstret finns det typer av meddelanden som kontrolleras för något kriterium, textfärg väljs för varje typ av meddelande. &lt;br&gt; &lt;br&gt; På vänster sida det finns kriterier som tilldelas i hierarkiorden, och bakgrundsfärg väljs för meddelanden för varje kriterium. &lt;br&gt; &lt;br&gt; &quot;Worked one&quot; -meddelande-funktionalitet är baserat på restprincipen, utlöses om alla aktiverade &apos;New one&apos; kriterier eller kriterium uppfylls inte. &lt;br&gt; &lt;br&gt; &apos;Inverse färg&apos; kan användas om användaren vill markera CQ- och &apos;MyCall&apos; -meddelanden av någon specifik backgroung-färg. &lt;br&gt; &lt;br&gt; För att börja med kan ett kriterium väljas och för meddelanden om nytt band / läge kan användas liknande färg med olika mättnadsnivå, senare kan antalet krävda kriterier ökas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3707"/>
         <location filename="../Configuration.ui" line="6887"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Conseils de configuration&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Konfigureringstips &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3755"/>
         <source>Transmitted message</source>
-        <translation>Message transmis</translation>
+        <translation>Skickat meddelande</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3771"/>
@@ -7563,7 +7558,7 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="3787"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Traiter les messages RR73/73 de la même manière que les messages CQ pour la sélection automatique.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Behandla RR73 / 73-meddelanden på samma sätt som CQ-meddelanden för automatisk val. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3793"/>
@@ -7573,159 +7568,159 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="3806"/>
         <source>CQ/73 in message</source>
-        <translation>CQ/73 dans le message</translation>
+        <translation>CQ/73 i medelande</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3819"/>
         <source>My Call in message</source>
-        <translation>Mon indicatif dans le message</translation>
+        <translation>Min signal i meddelande</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définir la couleur du texte pour les messages non standard (&quot;CQ&quot; et &quot;MyCall&quot;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ställ in textfärg för icke (&apos;CQ&apos; och &apos;MyCall&apos;) standardmeddelanden &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3835"/>
         <source>Other standard message</source>
-        <translation>Autre message standard</translation>
+        <translation>Andra standardmeddelande</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3914"/>
         <source>New CQZ</source>
-        <translation>Nouveau CQZ</translation>
+        <translation>Ny CQZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3984"/>
         <source>New CQZ on Band/Mode</source>
-        <translation>Nouveau CQZ sur la bande/mode</translation>
+        <translation>Ny CQZ på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4054"/>
         <source>New ITUZ</source>
-        <translation>Nouvelle ITUZ</translation>
+        <translation>Ny ITUZ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4124"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation>Nouvelle ITUZ sur la bande/mode</translation>
+        <translation>Ny ITUZ på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4194"/>
         <source>New DXCC</source>
-        <translation>Nouveau DXCC</translation>
+        <translation>Ny DXCC</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4264"/>
         <source>New DXCC on Band/Mode</source>
-        <translation>Nouveau DXCC sur la bande+mode</translation>
+        <translation>Ny DXCC på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4334"/>
         <source>New Grid</source>
-        <translation>Nouveau locator</translation>
+        <translation>Ny Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4404"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Nouveau locator  sur la bande+mode</translation>
+        <translation>Ny Grid på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4474"/>
         <source>New Prefix</source>
-        <translation>Nouveau préfixe</translation>
+        <translation>Nytt Prefix</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4544"/>
         <source>New Prefix on Band/Mode</source>
-        <translation>Nouveau préfixe sur la bande+mode</translation>
+        <translation>Nytt prefix på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4614"/>
         <source>New Call</source>
-        <translation>Nouvel indicatif</translation>
+        <translation>Ny anropssignal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4684"/>
         <source>New Call on Band/Mode</source>
-        <translation>Nouvel appel sur la bande/mode</translation>
+        <translation>Nytt anrop på Band/Mod</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4754"/>
         <source>Being used for CQ and MyCall messages only</source>
-        <translation>Utilisé uniquement pour les messages CQ et MyCall</translation>
+        <translation>Används endast för CQ- och min siglalsl-meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4757"/>
         <source>Worked one</source>
-        <translation>Déja contacté</translation>
+        <translation>Körda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4854"/>
         <source>Filters</source>
-        <translation>Filtres</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4865"/>
         <source>Hide messages from continents</source>
-        <translation>Cacher les messages des continents</translation>
+        <translation>Dölj meddelanden från kontinenter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4877"/>
         <source>Africa</source>
-        <translation>Afrique</translation>
+        <translation>Afrika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4884"/>
         <source>Antarctica</source>
-        <translation>Antartique</translation>
+        <translation>Antarktis</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4891"/>
         <source>Asia</source>
-        <translation>Asie</translation>
+        <translation>Asien</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4898"/>
         <source>Europe</source>
-        <translation>Europe</translation>
+        <translation>Europa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4905"/>
         <source>Oceania</source>
-        <translation>Océanie</translation>
+        <translation>Oceania</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4912"/>
         <source>North America</source>
-        <translation>Amérique du Nord</translation>
+        <translation>Nordamerika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4919"/>
         <source>South America</source>
-        <translation>Amérique du Sud</translation>
+        <translation>Sydamerika</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; &apos;Show DXCC name/prefix&apos; doit être activé dans l&apos;onglet General des paramètres ou dans toute notification &apos;New one&apos; pour que cette fonctionnalité fonctionne. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; &apos;Visa DXCC-namn / prefix&apos; ska aktiveras på fliken Allmänt i inställningarna eller i ett &quot;Nytt&quot; -meddelande för att denna funktion ska fungera. &lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4932"/>
         <source>Hide messages from countries</source>
-        <translation>Cacher les messages des pays</translation>
+        <translation>Dölj meddelanden från länder</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4952"/>
         <location filename="../Configuration.ui" line="5017"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Activer l&apos;option&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera alternativ &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4955"/>
         <location filename="../Configuration.ui" line="5020"/>
         <source>Hide</source>
-        <translation>Cacher</translation>
+        <translation>Göm</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4962"/>
@@ -7746,39 +7741,39 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste de préfixes de pays séparés par des virgules, basée sur le fichier cty.dat.&lt;br&gt;
-Les écarts ne sont pas autorisés. Les valeurs acceptables le sont : 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
-3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
-5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
-9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
-CN,CP,CT,CT3,CU,CX,CY0,CY9,D2,D4,D6,DL,DU,E3,E4,E5/N,E5/S,E6,E7,EA,EA6,EA8,EA9,EI,&lt;br&gt;
-EK,EL,EP,ER,ES,ET,EU,EX,EY,EZ,F,FG,FH,FJ,FK,FK/C,FM,FO,FO/A,FO/C,FO/M,FP,FR,FS,&lt;br&gt;
-FT/G,FT/J,FT/T,FT/W,FT/X,FT/Z,FW,FY,G,GD,GI,GJ,*GM/S,GM,GU,GW,H4,H40,HA,HB,HB0,HC,&lt;br&gt;
-HC8,HH,HI,HK,HK0/A,HK0/M,HL,HP,HR,HS,HV,HZ,I,*IG9,IS,*IT9,J2,J3,J5,J6,J7,J8,JA,&lt;br&gt;
-JD/M,JD/O,JT,JW,*JW/B,JX,JY,K,KG4,KH0,KH1,KH2,KH3,KH4,KH5,KH6,KH7K,KH8,KH8/S,KH9,KL,&lt;br&gt;
-KP1,KP2,KP4,KP5,LA,LU,LX,LY,LZ,OA,OD,OE,OH,OH0,OJ0,OK,OM,ON,OX,OY,OZ,P2,P4,P5,PA,&lt;br&gt;
-PJ2,PJ4,PJ5,PJ7,PY,PY0F,PY0S,PY0T,PZ,R1FJ,S0,S2,S5,S7,S9,SM,SP,ST,SU,SV,SV/A,SV5,&lt;br&gt;
-SV9,T2,T30,T31,T32,T33,T5,T7,T8,TA,*TA1,TF,TG,TI,TI9,TJ,TK,TL,TN,TR,TT,TU,TY,TZ,UA,&lt;br&gt;
-UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,VK9X,&lt;br&gt;
-VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
-XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
-ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över landsprefix baserade på cty.dat-filen. &lt;br&gt;
+Mellanrum är inte tillåtna. Acceptabla värden är: 1A, 1S, 3A, 3B6,3B8,3B9,3C, 3C0,3D2,3D2 / C, &lt;br&gt;
+3D2 / R, 3DA, 3V, 3W, 3X, 3Y / B, 3Y / P, 4J, 4L, 4O, 4S, 4U1I, 4U1U, * 4U1V, 4W, 4X, 5A, 5B, 5H, 5N, 5R, 5T &lt;br&gt;
+5U, 5V, 5W, 5X, 5Z, 6W, 6Y, 7O, 7P, 7Q, 7X, 8P, 8Q, 8R, 9A, 9G, 9H, 9J, 9K, 9L, 9M2,9M6,9N, 9Q, 9U, 9V, 9X, &lt;br&gt;
+9Y, A2, A3, A4, A5, A6, A7, A9, AP, BS7, BV, BV9P, BY, C2, C3, C5, C6, C9, CE, CE0X, CE0Y, CE0Z, CE9, CM, &lt;br &gt;
+CN, CP, CT, CT3, CU, CX, CY0, CY9, D2, D4, D6, DL, DU, E3, E4, E5 / N, E5 / S, E6, E7, EA, EA6, EA8, EA9, EI &lt;br&gt;
+EK, EL, EP, ER, ES, ET, EU, EX, EY, EZ, F, FG, FH, FJ, FK, FK / C, FM, FO, FO / A, FO / C, FO / M, FP, FR, FS, &lt;br&gt;
+FT / G, FT / J, FT / T, FT / W, FT / X, FT / Z, FW, FY, G, GD, GI, GJ, * GM / S, GM, GU, GW, H4, H40 , HA, HB, HB0, HC, &lt;br&gt;
+HC8, HH, Hl, HK, HK0 / A, HK0 / M, HL, HP, HR, HS, HV, HZ, I, * IG9, IS, * IT9, J2, J3, J5, J6, J7, J8, JA &lt;br&gt;
+JD / M, JD / O, JT, JW, * JW / B, JX, JY, K, KG4, KH0, KH1, KH2, KH3, KH4, KH5, KH6, KH7K, KH8, KH8 / S, KH9, KL &lt;br&gt;
+KP1, KP2, KP4, KP5, LA, LU, LX, LY, LZ, OA, OD, OE, OH, OH0, OJ0, OK, OM, ON, OX, OY, OZ, P2, P4, P5, PA, &lt;br&gt;
+PJ2, PJ4, PJ5, PJ7, PY, PY0F, PY0S, PY0T, PZ, R1FJ, S0, S2, S5, S7, S9, SM, SP, ST, SU, SV, SV / A, SV5, &lt;br&gt;
+SV9, T2, T30, T31, T32, T33, T5, T7, T8, TA, * TA1, TF, TG, TI, Ti9, TJ, TK, TL, TN, TR, TT, TU, TY, TZ, UA &lt;br&gt;
+UA2, UA9, Storbritannien, FN, UR, V2, V3, V4, V5, V6, V7, V8, VE, VK, VK0H, VK0M, VK9C, VK9L, VK9M, VK9N, VK9W, VK9X &lt;br&gt;
+VP2e, VP2M, VP2V, VP5, VP6, VP6 / D, VP8, VP8 / G, VP8 / H, VP8 / O, VP8 / S, VP9, ​​VQ9, VR, VU, VU4, VU7, XE, &lt;br&gt;
+XF4, XT, XU, XW, XX9, XZ, YA, YB Yi, YJ, YK, YL, YN, YO, YS, YU, YV, YV0, Z2, Z3, Z6, Z8, ZA, ZB, ZC4, ZD7 &lt;br&gt;
+ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4985"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste claire des pays&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa landslista &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4988"/>
         <location filename="../Configuration.ui" line="5043"/>
         <source>Clear</source>
-        <translation>Effacer</translation>
+        <translation>Klar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5000"/>
         <source>Hide messages from callsigns</source>
-        <translation>Masquer les messages des indicatifs d&apos;appel</translation>
+        <translation>Dölj meddelanden från anropssignaler</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5027"/>
@@ -7786,97 +7781,98 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste d&apos;indicatifs d&apos;appel séparés par des virgules,
-ne sont pas autorisés, l&apos;indicatif de base est
-utilisé pour les indicatifs composés, par exemple :
-AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista med anropssignaler,
+luckor är inte tillåtna, bassamtal ska vara
+används för sammansatta kallsignaler, till exempel:
+AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5040"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste claire des indicatifs d&apos;appel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa samtalslista &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5055"/>
         <source>Show content related messages in RX frequency window </source>
-        <translation>Afficher les messages dans la fenêtre de fréquence RX </translation>
+        <translation>Visa innehållsrelaterade meddelanden i RX-frekvensfönstret </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5072"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Passer les messages gratuits liés au contenu à la fenêtre des messages de fréquence RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vidarebefordra innehållsrelaterade gratismeddelanden till RX-frekvensmeddelandefönstret. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5075"/>
         <source>Enable</source>
-        <translation>Activer</translation>
+        <translation>Möjliggör</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liste de noms de contenu séparés par des virgules.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista med innehållsnamn. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5089"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rétablir la liste des noms de contenu à la valeur par défaut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Återställ lista över innehållsnamn till standardvärde. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5106"/>
         <location filename="../Configuration.ui" line="5129"/>
         <location filename="../Configuration.ui" line="5152"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Filtre sera appliqué à partir de la fréquence RX.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Filter kommer att tillämpas från RX-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5109"/>
         <source>Show CQ messages only</source>
-        <translation>Afficher uniquement les messages CQ</translation>
+        <translation>Visa endast CQ-meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5132"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation>Afficher uniquement les messages CQ/RRR/RR73/73</translation>
+        <translation>Visa endast CQ / RRR / RR73 / 73-meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5155"/>
         <source>Show CQ/RR73/73 messages only</source>
-        <translation>Afficher uniquement les messages CQ/RR73/73</translation>
+        <translation>Visa endast CQ / RRR / RR73 / 73-meddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5177"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cacher les messages libres décodés situés hors de la fréquence RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dölj avkodade gratismeddelanden som ligger utanför RX-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5180"/>
         <source>Hide decoded free messages</source>
-        <translation>Cacher les messages gratuits décodés</translation>
+        <translation>Dölj avkodade fritextmeddelanden</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5187"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
-        <translation>Masquer les messages avec un hachage non associé pour le 2e indicatif d&apos;appel</translation>
+        <translation>Hide messages with not associated hash for 2nd callsign
+Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5210"/>
         <source>Scheduler</source>
-        <translation>Programmeur</translation>
+        <translation>Schemaläggare</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5218"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changement de bande automatique selon un calendrier prédéfini&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Automatisk bandväxling enligt fördefinierat schema &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5221"/>
         <source>Band scheduler configuration</source>
-        <translation>Configuration du programmateur de bande</translation>
+        <translation>Konfiguration av Band schemaläggning</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5231"/>
         <source>hh</source>
-        <translation>hh</translation>
+        <translation>tt</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5241"/>
@@ -7886,7 +7882,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5251"/>
         <source>Band</source>
-        <translation>Bandes</translation>
+        <translation>Band</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5261"/>
@@ -7896,7 +7892,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6292"/>
         <location filename="../Configuration.ui" line="6549"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler définira le mode JT65+JT9 si la fréquence JT65 est sélectionnée.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Schemaläggaren ställer in JT65 + JT9-läge om JT65-frekvensen är vald. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5264"/>
@@ -7915,7 +7911,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6308"/>
         <location filename="../Configuration.ui" line="6446"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Sélectionner l&apos;heure&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj tid &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5289"/>
@@ -8228,142 +8224,142 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6273"/>
         <location filename="../Configuration.ui" line="6530"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&lt;corps&gt;&lt;p&gt;Sélectionner la bande&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj band &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera bandschemaläggare &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6582"/>
         <source>Use band scheduler</source>
-        <translation>Utiliser le programmateur de bande</translation>
+        <translation>Använd bandschemaläggare</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6605"/>
         <source>Advanced</source>
-        <translation>Avancé</translation>
+        <translation>Avancerad</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6615"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paramètres sélectionnables par l&apos;utilisateur pour le décodage JT65.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Parametrar som kan väljas av användare för JT65-avkodning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6618"/>
         <source>JT65 decoding parameters</source>
-        <translation>Paramètres de décodage JT65</translation>
+        <translation>JT65-avkodningsparametrar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6646"/>
         <location filename="../Configuration.ui" line="6659"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définit le nombre de tentatives de décodage pour les passages de décodage à large bande&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för bredbandsavkodningskort &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6649"/>
         <location filename="../Configuration.ui" line="7001"/>
         <source>Number of decoding attempts:</source>
-        <translation>Nombre de tentatives de décodage :</translation>
+        <translation>Antal avkodningsförsök:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6685"/>
         <location filename="../Configuration.ui" line="6698"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre de passes de décodage pour le décodage à large bande&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal avkodningskort för bredbandsavkodning &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6688"/>
         <source>Number of decoding  passes: </source>
-        <translation>Nombre de passages de décodage : </translation>
+        <translation>Antal avkodningspass: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6718"/>
         <location filename="../Configuration.ui" line="6731"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définit le nombre de tentatives de décodage pour les passages de décodage des fréquences RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för RX-frekvensavkodningskort &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6721"/>
         <location filename="../Configuration.ui" line="7037"/>
         <source>RX frequency decoding attempts:</source>
-        <translation>Tentatives de décodage des fréquences RX :</translation>
+        <translation>RX-frekvensavkodningsförsök:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6757"/>
         <location filename="../Configuration.ui" line="6770"/>
         <location filename="../Configuration.ui" line="6928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette fenêtre DT n&apos;est utilisée que pour les décodeurs Hint basés sur les données CALL3 de la fréquence RX et se concentrant sur les messages CQ et &quot;mycall hiscall hisgrid&quot;. Des valeurs plus élevées peuvent augmenter le nombre de faux décodages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Detta DT-fönster används endast för RX-frekvens CALL3 databaserade tipavkodare fokuserade på CQ och &apos;mycall hiscall hisgrid&apos; meddelanden. Högre värden kan öka antalet falska avkoder. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6760"/>
         <source>Hinted decoding DT range:</source>
-        <translation>Indication de la gamme de décodage DT :</translation>
+        <translation>Tips om avkodning av DT-intervall:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activer deux passages de décodage JT65 supplémentaires de masque de fréquence pour les conditions de bande surchargée. Ces passages de décodage sont activés automatiquement s&apos;il y a peu de signaux sur la bande. Utilisez ce paramètre uniquement pour les processeurs rapides. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera ytterligare två frekvensmasker JT65 avkodningskort för överfulla bandförhållanden. Denna avkodning passerar aktiveras automatiskt om det finns få signaler på bandet. Använd den här inställningen endast för snabb CPU. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6797"/>
         <source>Use frequency mask decoding</source>
-        <translation>Utiliser le décodage par masque de fréquence</translation>
+        <translation>Använd avkodning av frekvensmask</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6809"/>
         <location filename="../Configuration.ui" line="6819"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définit le plafond pour le décodage des signaux JT65a, la valeur par défaut est de 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar tak för avkodning av JT65a-signalerna, standardvärdet är 3000 Hz. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6812"/>
         <source>Top decoding frequency: </source>
-        <translation>Fréquence de décodage supérieure : </translation>
+        <translation>Toppavkodningsfrekvens: </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6845"/>
         <location filename="../Configuration.ui" line="6858"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La distorsion du signal dans le chemin RX ou TX peut produire des harmoniques du signal JT65A (JT65B, JT65C etc.) Le décodage des harmoniques du signal JT65A peut améliorer l&apos;efficacité globale du décodage par la soustraction des signaux décodés. La profondeur de décodage est proportionnelle aux ressources CPU nécessaires, réglez-la à 1 pour les CPU lents. Une plus grande valeur de profondeur permettra de décoder plus d&apos;harmoniques. Le décodage JT65B et JT65C est pris en charge. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Signalförvrängning i RX- eller TX-vägen kan ge harmonier av JT65A-signalen (JT65B, JT65C etc.) Avkodning av harmonier av JT65A-signal kan förbättra den totala avkodningseffektiviteten via subtraktion av de avkodade signalerna . Avkodningsdjupet är proportionellt mot de nödvändiga CPU-resurserna, ställ in det på 1 för långsam CPU. Större djupvärde gör det möjligt att avkoda fler harmonier. JT65B- och JT65C-avkodning stöds. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6848"/>
         <source>Harmonics decoding depth:</source>
-        <translation>Profondeur de décodage des harmoniques :</translation>
+        <translation>Harmonic avkodningsdjup:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6884"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les réglages dépendent de la puissance du processeur, essayez d&apos;utiliser le nombre maximum de passages de décodage pour les bandes HF surchargées.&lt;br&gt;&lt;br&gt;Le nombre de passages de décodage peut être réduit pour les bandes HF/VHF faiblement peuplées tandis qu&apos;une augmentation du nombre de tentatives de décodage pourrait apporter une meilleure efficacité de décodage pour les signaux faibles dans ces bandes.&lt;br&gt;&lt;br&gt;Nombre de tentatives de décodage affectant l&apos;efficacité de décodage des signaux à faible RSB : large bande ou fréquence RX un. &lt;br&gt;&lt;br&gt;Nombre de passages de décodage affectant le nombre maximum de signaux pouvant être décodés sur la même fréquence ou situés à proximité les uns des autres avec des spectres largement superposés, il est possible de décoder jusqu&apos;à 4 signaux sur la même fréquence et jusqu&apos;à 7 signaux sur la fréquence de réception si le nombre de passages de décodage est réglé sur 4.&lt;br&gt;&lt;br&gt;Augmenter le nombre de tentatives de décodage à la valeur permettant de terminer le décodage jusqu&apos;à la fin de l&apos;intervalle de minutes de réception.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Inställningarna beror på CPU-effekten, försök att använda maximalt antal avkodningskort för överfulla HF-band. &lt;br&gt; &lt;br&gt; Antal avkodningskort kan minskas för lågbefolkade HF-band / VHF-band medan en ökning av antalet avkodningsförsök kan ge bättre avkodningseffektivitet för de svaga signalerna där. &lt;br&gt; &lt;br&gt; Antal avkodningsförsök som påverkar avkodningseffektiviteten för de låga SNR-signalerna: bredband eller RX-frekvens en. &lt;Br &gt; &lt;br&gt; Antal avkodningskort som påverkar maximalt antal signaler som kan avkodas på samma frekvens eller som ligger nära varandra med i stort sett överlappade spektra, det är möjligt att avkoda upp till 4 signaler på samma frekvens och upp till 7 signaler på RX-frekvensen om antalet avkodningskort är inställt på 4. &lt;br&gt; &lt;br&gt; Öka antalet avkodningsförsök till värdet som gör att avkodningen är klar tills slutet av RX-minutintervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6972"/>
         <source>T10 decoding parameters</source>
-        <translation>Paramètres de décodage T10</translation>
+        <translation>T10-avkodningsparametrar</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6998"/>
         <location filename="../Configuration.ui" line="7008"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définit le nombre de tentatives de décodage pour le décodage T10 à large bande.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för avkodning av bredband T10. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="7034"/>
         <location filename="../Configuration.ui" line="7047"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définit le nombre de tentatives de décodage T10 pour la fréquence RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet T10-avkodningsförsök för RX-frekvens &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="7138"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
-        <translation>Rejeter ou appliquer les changements de configuration, notamment
-la réinitialisation de l&apos;interface radio et l&apos;application de toute
-changements de carte son</translation>
+        <translation>Kassera eller tillämpa konfigurationsändringar inklusive
+återställa radiogränssnittet och tillämpa valfritt
+ljudkort ändras</translation>
     </message>
 </context>
 <context>
@@ -8371,17 +8367,17 @@ changements de carte son</translation>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Fatal error</source>
-        <translation>Erreur fatale</translation>
+        <translation>Allvarligt fel</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>Unexpected fatal error</source>
-        <translation>Une erreur fatale inattendue</translation>
+        <translation>Oväntat allvarligt fel</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="135"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
-        <translation>&lt;style&gt; peut être Fusion (par défaut) ou Windows</translation>
+        <translation>&lt;style&gt; kan vara Fusion (standard) eller Windows</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="136"/>
@@ -8391,12 +8387,12 @@ changements de carte son</translation>
     <message>
         <location filename="../main.cpp" line="140"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
-        <translation>Où &lt;rig-name&gt; est pour le soutien multi-instance.</translation>
+        <translation>Där &lt;rignamn&gt; är stöd för flera instanser.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="141"/>
         <source>rig-name</source>
-        <translation>nom du Trx</translation>
+        <translation>rig-namn</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="145"/>
@@ -8409,12 +8405,12 @@ changements de carte son</translation>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialogue</translation>
+        <translation>Dialog</translation>
     </message>
     <message>
         <location filename="../wf_palette_design_dialog.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double click a color to edit it.&lt;/p&gt;&lt;p&gt;Right click to insert or delete colors.&lt;/p&gt;&lt;p&gt;Colors at the top represent weak signals&lt;/p&gt;&lt;p&gt;and colors at the bottom represent strong&lt;/p&gt;&lt;p&gt;signals. You can have up to 256 colors.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double clic sur une couleur pour l&apos;éditer.&lt;/p&gt;&lt;p&gt;Clic droit pour insérer ou supprimer des couleurs.&lt;/p&gt;&lt;p&gt;Les couleurs du haut représentent les signaux faibles&lt;/p&gt;&lt;p&gt;et les couleurs du bas représentent les signaux forts&lt;/p&gt;&lt;p&gt;. Vous pouvez avoir jusqu&apos;à 256 couleurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dubbelklicka på en färg för att redigera den. &lt;/p&gt; &lt;p&gt; Högerklicka för att infoga eller ta bort färger. &lt;/p&gt; &lt;p&gt; Färger överst representerar svaga signaler &lt;/p&gt; &lt;p&gt; och färger längst ner representerar starka &lt;/p&gt; &lt;p&gt; signaler. Du kan ha upp till 256 färger. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
