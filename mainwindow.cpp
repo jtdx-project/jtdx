@@ -604,6 +604,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionCroatian->setActionGroup(languageGroup);
   ui->actionDanish->setActionGroup(languageGroup);
   ui->actionDutch->setActionGroup(languageGroup);
+  ui->actionHungarian->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
@@ -1294,6 +1295,7 @@ void MainWindow::readSettings()
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
   ui->actionLatvian->setText("Latviski");
+  ui->actionHungarian->setText("Magyar");
   ui->actionPolish->setText("Polski");
   ui->actionPortuguese->setText("Português");
   ui->actionPortuguese_BR->setText("Português BR");
@@ -2797,6 +2799,7 @@ void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(tr
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
 void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
 void MainWindow::on_actionDutch_triggered() { ui->actionDutch->setChecked(true); set_language("nl_NL"); }
+void MainWindow::on_actionHungarian_triggered() { ui->actionHungarian->setChecked(true); set_language("hu_HU"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
@@ -3853,6 +3856,7 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="nl_NL") ui->actionDutch->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
+  else if(m_lang=="hu_HU") ui->actionHungarian->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
   else if(m_lang=="lv_LV") ui->actionLatvian->setChecked(true);
   else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);

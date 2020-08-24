@@ -4546,6 +4546,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionDutch"/>
     <addaction name="actionSpanish"/>
     <addaction name="actionFrench"/>
+    <addaction name="actionHungarian"/>
     <addaction name="actionItalian"/>
     <addaction name="actionLatvian"/>
     <addaction name="actionPolish"/>
@@ -4789,6 +4790,11 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
   </action>
   <action name="actionDutch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionHungarian">
    <property name="checkable">
     <bool>true</bool>
    </property>

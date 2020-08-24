@@ -978,6 +978,7 @@ set (LANGUAGES
   et_EE
   es_ES
   hr_HR
+  hu_HU
   fr_FR
   it_IT
   lv_LV
