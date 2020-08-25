@@ -604,7 +604,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionCroatian->setActionGroup(languageGroup);
   ui->actionDanish->setActionGroup(languageGroup);
   ui->actionDutch->setActionGroup(languageGroup);
+  ui->actionHungarian->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
+  ui->actionSwedish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
   ui->actionLatvian->setActionGroup(languageGroup);
@@ -1291,9 +1293,11 @@ void MainWindow::readSettings()
   ui->actionDanish->setText("Dansk");
   ui->actionDutch->setText("Nederlands");
   ui->actionSpanish->setText("Español");
+  ui->actionSwedish->setText("Svenska");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
   ui->actionLatvian->setText("Latviski");
+  ui->actionHungarian->setText("Magyar");
   ui->actionPolish->setText("Polski");
   ui->actionPortuguese->setText("Português");
   ui->actionPortuguese_BR->setText("Português BR");
@@ -2797,7 +2801,9 @@ void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(tr
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
 void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
 void MainWindow::on_actionDutch_triggered() { ui->actionDutch->setChecked(true); set_language("nl_NL"); }
+void MainWindow::on_actionHungarian_triggered() { ui->actionHungarian->setChecked(true); set_language("hu_HU"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
+void MainWindow::on_actionSwedish_triggered() { ui->actionSwedish->setChecked(true); set_language("sv_SE"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
 void MainWindow::on_actionLatvian_triggered() { ui->actionLatvian->setChecked(true); set_language("lv_LV"); }
@@ -3133,6 +3139,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
+  dec_data.params.nlasttx=m_nlasttx;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;
@@ -3852,11 +3859,13 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="nl_NL") ui->actionDutch->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
+  else if(m_lang=="hu_HU") ui->actionHungarian->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
   else if(m_lang=="lv_LV") ui->actionLatvian->setChecked(true);
   else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);
   else if(m_lang=="pt_PT") ui->actionPortuguese->setChecked(true);
   else if(m_lang=="pt_BR") ui->actionPortuguese_BR->setChecked(true);
+  else if(m_lang=="sv_SE") ui->actionSwedish->setChecked(true);
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
   else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
   else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
@@ -4126,7 +4135,6 @@ void MainWindow::guiUpdate()
     m_currentMessage = m_curMsgTx;
     if(m_tune) { m_currentMessage = tr("TUNE"); m_currentMessageType = -1; m_nlasttx=0; }
     last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
-    dec_data.params.nlasttx=m_nlasttx;
 	
     if(m_restart && !haltedEmpty) {
       QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
@@ -7018,6 +7026,7 @@ void MainWindow::transmit (double snr)
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   if(stophintTimer.isActive()) stophintTimer.stop();
+  if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
 }
 
 void MainWindow::on_outAttenuation_valueChanged (int a)

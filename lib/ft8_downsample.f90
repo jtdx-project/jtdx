@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on 20191105
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine ft8_downsample(newdat,f0,nqso,c1,c2,c3,lhighsens)
 
 ! Downconvert to complex data sampled at 200 Hz ==> 32 samples/symbol
@@ -21,27 +18,23 @@ subroutine ft8_downsample(newdat,f0,nqso,c1,c2,c3,lhighsens)
 ! Data in dd have changed, recompute the long FFT
      x(1:180000)=dd8
      x(180001:NFFT1)=0.                       !Zero-pad the x array
-!possible usage at 2nd decoding attempt
-!do i=1,179999; x(i)=(x(i)+x(i+1))/2; enddo +8% -22CQ +5% -30RR73
      call four2a(cx,NFFT1,1,-1,0)             !r2c FFT to freq domain
      newdat=.false.
      cxx=cx
   endif
 
   df=0.0625 ! 12000.0/NFFT1
-!  baud=6.25 ! 12000.0/1920.
+!  tonewidth=6.25 Hz ! 12000.0/1920.
   i0=nint(f0/df)
-  ft=f0+53.125 ! 8.5*baud
-  it=min(nint(ft/df),96000)
-  fb=f0-9.375  ! 1.5*baud
-  ib=max(1,nint(fb/df))
+  ft=f0+55.75; it=min(nint(ft/df),96000)
+  fb=f0-5.75; ib=max(1,nint(fb/df))
   c1=cmplx(0.0,0.0)
   k=it-ib
   c1(0:k)=cxx(ib:it)
-  c1(0:100)=c1(0:100)*windowc1(100:0:-1)
-  c1(k-100:k)=c1(k-100:k)*windowc1
+  c1(0:54)=c1(0:54)*windowc1(54:0:-1)
+  c1(k-54:k)=c1(k-54:k)*windowc1
   c1=cshift(c1,i0-ib)
-  if(lhighsens) then; c1(0)=c1(0)*1.9; c1(3199)=c1(3199)*1.9; endif
+  if(lhighsens) then; c1(0)=c1(0)*1.93; c1(799)=c1(799)*1.7; c1(800)=c1(800)*1.7; c1(3199)=c1(3199)*1.93; endif
   call four2a(c1,NFFT2,1,1,1)            !c2c FFT back to time domain
   c1=facc1*c1
   if(nqso.gt.1) then; do i=0,3198; c2(i)=c1(i)+c1(i+1); enddo; c2(3199)=c1(3199); c2=c2/2; endif

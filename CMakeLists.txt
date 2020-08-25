@@ -978,6 +978,7 @@ set (LANGUAGES
   et_EE
   es_ES
   hr_HR
+  hu_HU
   fr_FR
   it_IT
   lv_LV
@@ -990,6 +991,7 @@ set (LANGUAGES
   ja_JP
   ca_ES
   da_DK
+  sv_SE
   )
 foreach (lang_ ${LANGUAGES})
   file (TO_NATIVE_PATH translations/jtdx_${lang_}.ts ts_)
