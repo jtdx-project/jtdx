@@ -2749,7 +2749,7 @@ Error: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation></translation>
+        <translation>IARU Region</translation>
     </message>
 </context>
 <context>
@@ -2981,7 +2981,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Om det har uppstått en riggkontrollfel klickar du på för att återställa och läsa uppringningsfrekvensen. Orange / röd. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Om färgen är Orange eller Röd så har det blivit ett Rig kontrollfel, klicka här för att återställa och kontrollera frekvensen. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -3011,7 +3011,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Spt</source>
-        <translation>Spt</translation>
+        <translation>Spot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
@@ -3027,7 +3027,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="801"/>
         <source>info:</source>
         <translatorcomment>Info:</translatorcomment>
-        <translation>Info:</translation>
+        <translation>Information:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="813"/>
@@ -3044,12 +3044,12 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="830"/>
         <location filename="../mainwindow.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of the propagation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Typ av utbredning. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Typ av fortplantning. &lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>prop</source>
-        <translation>Prop</translation>
+        <translation>Fortp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="991"/>
@@ -3074,17 +3074,17 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1054"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Slå upp</translation>
+        <translation>&amp;Sök i databasen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1067"/>
         <source>Add callsign and locator to database</source>
-        <translation>Lägg till anropssignal och locator i databasen</translation>
+        <translation>Lägg till anropssignal och lokator i databasen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1070"/>
         <source>Add</source>
-        <translation>Lägg till</translation>
+        <translation>Lägg till i databasen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
@@ -3117,7 +3117,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1668"/>
         <source>Audio Rx frequency</source>
-        <translation>Audio Rx-frekvens</translation>
+        <translation>Ljud Rx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1531"/>
@@ -3165,7 +3165,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1525"/>
         <source>Audio Tx frequency</source>
-        <translation>Audio Tx-frekvens</translation>
+        <translation>Ljud Tx-frekvens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1534"/>
@@ -3176,7 +3176,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; CAT ska ställas in via Hamlib, Hamlib stöder att få S-mätdata för vissa Tranceiver&apos;s. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; CAT ska ställas in via Hamlib, Hamlib stöder att få S-mätare för vissa Tranceiver&apos;s. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1577"/>
@@ -3270,7 +3270,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1919"/>
         <location filename="../mainwindow.ui" line="1935"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade samtal. Autoselection under AutoSeq 1..7 kommer att behandla önskad samtal enligt valda aviseringar / prioriteringar, denna funktionalitet stöds inte under AutoSeq0. Endast icke-FT8-lägen: för sammansatta samtalssignaler ska bassamtalssignalen användas i listan, ibland kopieras bassamtal från det avkodade meddelandet: vid loggning måste en sådan QSO-användare ändra korrespondentens samtalssignal till sammansatt en om det behövs. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista över önskade samtal. Autoselection under AutoSeq 1..7 kommer att behandla önskad anropssignal enligt valda aviseringar / prioriteringar, denna funktionalitet stöds inte under AutoSeq0. Endast icke-FT8-lägen: för sammansatta anropssignalerr skahuvudanropssignalen användas i listan, ibland kopieras huvudsignall från det avkodade meddelandet: vid loggning måste en sådan QSO-användare ändra korrespondentens samtalssignal till sammansatt en om det behövs. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1922"/>
@@ -3386,7 +3386,7 @@ ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt
     <message>
         <location filename="../mainwindow.ui" line="2427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Bypassera alternativet för alla textfilter, duplicerar åtgärden på fliken Diverse. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Gå förbi alternativet för alla textfilter, duplicerar åtgärden på fliken Diverse. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2441"/>
@@ -3396,7 +3396,7 @@ ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt
     <message>
         <location filename="../mainwindow.ui" line="2472"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; QSO &quot;Single shot QSO&quot; Autosekvansval &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; QSO &quot;Enstaka QSO&quot; Autosekvansval &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2486"/>
@@ -4513,7 +4513,7 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5649"/>
         <source>Use hound TX frequency control</source>
-        <translation>Använd frekvensstyrning för hund-TX</translation>
+        <translation>Använd frekvensstyrning för &quot;Hund&quot;-TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5657"/>
@@ -5079,7 +5079,7 @@ UDP-server%2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5058"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -5594,7 +5594,7 @@ Fel (%2):%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="266"/>
         <source>Add Station</source>
-        <translation>Lägg till ststion</translation>
+        <translation>Lägg till station</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="271"/>
@@ -5754,7 +5754,7 @@ Fel (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="348"/>
         <source>N Avg </source>
-        <translation>N Avg </translation>
+        <translation>N Medel </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="386"/>
@@ -5789,12 +5789,12 @@ Fel (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="469"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Flatta den spektrala baslinjen över det visade intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Platta till den spektrala baslinjen över det visade intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="472"/>
         <source>Flatten</source>
-        <translation>Platta</translation>
+        <translation>Platta till</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="489"/>
@@ -6198,7 +6198,7 @@ tyst period när avkodningen är klar.</translation>
     <message>
         <location filename="../Configuration.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär S-mätdata från sändtagaren: CAT ska ställas in via Hamlib, Hamlib stöder inte att få S-mätdata för vissa sändtagare. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär S-mätdata från trancievers: CAT ska ställas in via Hamlib, Hamlib stöder inte att få S-mätare för vissa trancievers. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="782"/>
@@ -6208,7 +6208,7 @@ tyst period när avkodningen är klar.</translation>
     <message>
         <location filename="../Configuration.ui" line="811"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär utgångseffektdata från sändtagaren: CAT ska ställas in via Hamlib, Hamlib stöder inte att få ut effektdata för vissa sändtagare. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Begär utffekt från tranceivern: CAT ska ställas in via Hamlib, Hamlib stöder inte att få uteffekt för vissa tranceivers. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="814"/>
@@ -7653,7 +7653,7 @@ Högerklicka för att infoga och ta bort alternativ.</translation>
     <message>
         <location filename="../Configuration.ui" line="4757"/>
         <source>Worked one</source>
-        <translation>Körda</translation>
+        <translation>Körda signaler</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4854"/>
