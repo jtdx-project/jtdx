@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on January 18th, 2018
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine filbig(f0,newfft,c4a,n4,sq0,c6a,n2)
 
 ! Filter and downsample the real data in array dd(npts), sampled at 12000 Hz.
@@ -100,7 +97,7 @@ subroutine filbig(f0,newfft,c4a,n4,sq0,c6a,n2)
      call fftwf_execute_dft(plan3,cfilt,cfilt)
      call fftwf_execute_dft(plan4,cfilt2,cfilt2)
 
-     base=real(cfilt(nfft2/2+1))
+     base=real(cfilt(38588)) ! nfft2/2+1
      base2=real(cfilt2(nfft3/2+1))
      do i=1,nfft2
         rfilt(i)=real(cfilt(i))-base
@@ -136,7 +133,7 @@ subroutine filbig(f0,newfft,c4a,n4,sq0,c6a,n2)
 !     i0 is the bin number in ca closest to f0.
 !  call timer('loops   ',0)
   i0=nint(f0*56.) + 1 ! f0/df where delta f = 12000/672000 = 1/56
-  nh=nfft2/2
+  nh=38587 ! nfft2/2
 
   do i=1,nh                                !Copy data into c4a and apply
      j=i0+i-1                              !the filter function

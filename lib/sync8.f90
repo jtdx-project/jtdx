@@ -24,7 +24,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=SQRT(real(cx(i))**2 + aimag(cx(i))**2)
         enddo
@@ -39,7 +39,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=real(cx(i))**2 + aimag(cx(i))**2
         enddo
@@ -54,7 +54,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         x(961:2880)=facx*dd8(ia:ib); x(961)=x(961)*1.9; x(2880)=x(2880)*1.9
         if(j.ne.NHSYM) then; x(2881:3081)=dd8(ib+1:ib+201)*windowx; else; x(2881:3081)=0.; endif
         x(3082:)=0.
-        call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+        call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
         do i=1,NH1
            s(i,j)=abs(real(cx(i))) + abs(aimag(cx(i)))
         enddo
@@ -75,22 +75,26 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         ta=0.; tb=0.; tc=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1) then
+          if(k.gt.0) then
             ta=s(i+nfos*icos7(n),k)
             if(ta.gt.1e-9) then; tall(n+1)=ta*6.0/(sum(s(i:i+nfos6:nfos,k))-ta); else; tall(n+1)=0.; endif
           endif
-          tb=s(i+nfos*icos7(n),k+nssy36)
-            if(tb.gt.1e-9) then; tall(n+17)=tb*6.0/(sum(s(i:i+nfos6:nfos,k+nssy36))-tb); else; tall(n+17)=0.; endif
-          if(k+nssy72.le.NHSYM) then
-            tc=s(i+nfos*icos7(n),k+nssy72)
-            if(tc.gt.1e-9) then; tall(n+24)=tc*6.0/(sum(s(i:i+nfos6:nfos,k+nssy72))-tc); else; tall(n+24)=0.; endif
+          k36=k+nssy36
+          if(k36.gt.0 .and. k36.le.NHSYM) then
+            tb=s(i+nfos*icos7(n),k36)
+            if(tb.gt.1e-9) then; tall(n+17)=tb*6.0/(sum(s(i:i+nfos6:nfos,k36))-tb); else; tall(n+17)=0.; endif
+          endif
+          k72=k+nssy72
+          if(k72.le.NHSYM) then
+            tc=s(i+nfos*icos7(n),k72)
+            if(tc.gt.1e-9) then; tall(n+24)=tc*6.0/(sum(s(i:i+nfos6:nfos,k72))-tc); else; tall(n+24)=0.; endif
           endif
         enddo
         lcq=.false.
         if(ipass.gt.1) then
           do n=7,15
             k=j+jstrt+nssy*n
-            if(k.ge.1) then
+            if(k.gt.0) then
               if(n.lt.15) then
                 tall(n+1)=s(i,k)*6.0/(sum(s(i:i+nfos6:nfos,k))-s(i,k))
               else
@@ -115,11 +119,15 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
         ta=0.; tb=0.; tc=0.; tcq=0.; t0a=0.; t0b=0.; t0c=0.; t0cq=0.
         do n=0,6
           k=j+jstrt+nssy*n
-          if(k.ge.1) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k)) - s(i+nfos*icos7(n)+1,k); endif
-          tb=tb + s(i+nfos*icos7(n),k+nssy36); t0b=t0b + sum(s(i:i+nfos6,k+nssy36)) - s(i+nfos*icos7(n)+1,k+nssy36)
-          if(k+nssy72.le.NHSYM) then
-            tc=tc + s(i+nfos*icos7(n),k+nssy72)
-            t0c=t0c + sum(s(i:i+nfos6,k+nssy72)) - s(i+nfos*icos7(n)+1,k+nssy72)
+          if(k.gt.0) then; ta=ta + s(i+nfos*icos7(n),k); t0a=t0a + sum(s(i:i+nfos6,k)) - s(i+nfos*icos7(n)+1,k); endif
+          k36=k+nssy36
+          if(k36.gt.0 .and. k36.le.NHSYM) then
+            tb=tb + s(i+nfos*icos7(n),k36); t0b=t0b + sum(s(i:i+nfos6,k36)) - s(i+nfos*icos7(n)+1,k36)
+          endif
+          k72=k+nssy72
+          if(k72.le.NHSYM) then
+            tc=tc + s(i+nfos*icos7(n),k72)
+            t0c=t0c + sum(s(i:i+nfos6,k72)) - s(i+nfos*icos7(n)+1,k72)
           endif
         enddo
         do n=7,15

@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20191218
-
 subroutine jt9a()
   use, intrinsic :: iso_c_binding, only: c_f_pointer
   use prog_args
@@ -19,11 +17,10 @@ subroutine jt9a()
   end interface
 
   integer*1 attach_jtdxjt9
-!  integer*1 lock_jt9,unlock_jt9
   integer size_jtdxjt9
 ! Multiple instances:
   character*80 mykey
-  type(dec_data), pointer :: shared_data
+  type(dec_data), pointer, volatile :: shared_data !also makes target volatile
   type(params_block) :: local_params
   logical fileExists
 
@@ -48,6 +45,7 @@ subroutine jt9a()
      call sleep_msec(10)
      go to 10
   endif
+
 
   inquire(file=trim(temp_dir)//'/.quit',exist=fileExists)
   if(fileExists) then

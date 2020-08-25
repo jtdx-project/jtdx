@@ -167,15 +167,15 @@ subroutine multimode_decoder(params)
      endif
 
 !print *,nuserthr,numcores,numthreads
-     call omp_set_dynamic(.true.)
+     call omp_set_dynamic(.false.)
      call omp_set_nested(.true.)
 
      nfa=params%nfa; nfb=params%nfb; nfqso=params%nfqso; nfawide=params%nfa; nfbwide=params%nfb
-     if(params%nfilter) then  ! 150Hz bandwidth for FILTER
+     if(params%nfilter) then  ! 160Hz Filter bandwidth, 580Hz Filter bandwidth in Hound mode
         if(nfqso.lt.nfa .or. nfqso.gt.nfb) then
            write(*,32) nutc,'nfqso is out of bandwidth','d'; 32 format(i6.6,2x,a25,16x,a1); go to 800
         endif
-        if(.not.params%lhound) then; nfa=max(nfa,nfqso-50); nfb=min(nfb,nfqso+50)
+        if(.not.params%lhound) then; nfa=max(nfa,nfqso-60); nfb=min(nfb,nfqso+60)
         else; nfa=max(nfa,nfqso-290); nfb=min(nfb,nfqso+290); endif
         numthreads=min(8,numthreads) ! to do: withdraw limitation when threads are in sync at main passes?
      endif
@@ -183,7 +183,7 @@ subroutine multimode_decoder(params)
         if(nfqso.lt.nfa .or. nfqso.gt.nfb) then
            write(*,64) nutc,'nfqso is out of bandwidth','d'; 64 format(i6.6,2x,a25,16x,a1); go to 800
         endif
-        nfa=max(nfa,nfqso-25) ! 75Hz bandwidth for decode via double click
+        nfa=max(nfa,nfqso-25) ! 50Hz bandwidth for decode via double click
         nfb=min(nfb,nfqso+25)
         numthreads=min(4,numthreads) ! to do: withdraw limitation when threads are in sync at main passes?
      endif

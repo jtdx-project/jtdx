@@ -1,7 +1,6 @@
-! This source code file was last time modified by Igor UA3DJY on 20190404
-
 subroutine ft8sd1(s8,itone,msgd,msg37,lft8sd,lcq)
 
+  use ft8_mod1, only : mycall
   real, intent(in) :: s8(0:7,79)
   real s8_1(0:7,79)
   character msgd*37,msg37*37,msg372*37,msgsent37*37,c1*12,c2*12
@@ -23,7 +22,7 @@ subroutine ft8sd1(s8,itone,msgd,msg37,lft8sd,lcq)
     else
       return
     endif
-    if(len_trim(c1).lt.3 .or. len_trim(c2).lt.3) return
+    if(len_trim(c1).lt.3 .or. len_trim(c2).lt.3 .or. c2.eq.trim(mycall)) return
     if(index(msgd,' RR73').gt.0 .or. index(msgd,' 73').gt.0) lr73=.true.
     if(.not.lr73 .and. (ispc3-ispc2).eq.5 .and. msgd(ispc2+1:ispc2+2).ne.'R+' &
        .and. msgd(ispc2+1:ispc2+2).ne.'R-') lgrid=.true.

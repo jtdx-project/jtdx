@@ -162,7 +162,7 @@ void interleave(unsigned char *sym)
     }
 }
 
-int get_wspr_channel_symbols(char* rawmessage, char* hashtab, unsigned char* symbols) {
+int get_wspr_channel_symbols(char* rawmessage, char* hashtab, char* loctab, unsigned char* symbols) {
     int m=0, ntype=0;
     long unsigned int n=0;
     int i, j, ihash;
@@ -292,7 +292,7 @@ int get_wspr_channel_symbols(char* rawmessage, char* hashtab, unsigned char* sym
     signed char check_data[11];
     memcpy(check_data,data,sizeof(char)*11);
 
-    unpk_(check_data,hashtab,check_call_loc_pow,check_callsign);
+    unpk_(check_data,hashtab,loctab,check_call_loc_pow,check_callsign);
 //    printf("Will decode as: %s\n",check_call_loc_pow);
  
     unsigned int nbytes=11; // The message with tail is packed into almost 11 bytes.

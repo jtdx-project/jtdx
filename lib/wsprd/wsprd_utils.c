@@ -240,10 +240,10 @@ int floatcomp(const void* elem1, const void* elem2)
     return *(const float*)elem1 > *(const float*)elem2;
 }
 
-int unpk_(signed char *message, char *hashtab, char *call_loc_pow, char *callsign)
+int unpk_(signed char *message, char *hashtab, char *loctab, char *call_loc_pow, char *callsign)
 {
     int n1,n2,n3,ndbm,ihash,nadd,noprint=0;
-    char grid[5],grid6[7],cdbm[3];
+    char grid[5],grid6[7],cdbm[4];
     
     unpack50(message,&n1,&n2);
     if( !unpackcall(n1,callsign) ) return 1;
@@ -279,6 +279,7 @@ int unpk_(signed char *message, char *hashtab, char *call_loc_pow, char *callsig
             strncat(call_loc_pow,"\0",1);
             ihash=nhash(callsign,strlen(callsign),(uint32_t)146);
             strcpy(hashtab+ihash*13,callsign);
+            strcpy(loctab+ihash*5,grid);
         } else {
             nadd=nu;
             if( nu > 3 ) nadd=nu-3;
@@ -312,8 +313,8 @@ int unpk_(signed char *message, char *hashtab, char *call_loc_pow, char *callsig
                // not testing 4'th and 5'th chars because of this case: <PA0SKT/2> JO33 40
                // grid is only 4 chars even though this is a hashed callsign...
                //         isalpha(grid6[4]) && isalpha(grid6[5]) ) ) {
-          noprint=1;
-        }
+            noprint=1;
+        } 
         
         ihash=(n2-ntype-64)/128;
         if( strncmp(hashtab+ihash*13,"\0",1) != 0 ) {

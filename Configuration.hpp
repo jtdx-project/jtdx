@@ -130,6 +130,7 @@ public:
   bool enableCallsignFilter() const;
   bool do_snr() const;
   bool do_pwr() const;
+  bool rig_power() const;
   bool id_after_73 () const;
   bool tx_QSY_allowed () const;
   bool spot_to_psk_reporter () const;
@@ -168,6 +169,7 @@ public:
   bool prompt_to_log () const;
   bool autolog () const;
   bool insert_blank () const;
+  bool useDarkStyle () const;
   bool countryName () const;
   bool countryPrefix () const;
   bool callNotif () const;

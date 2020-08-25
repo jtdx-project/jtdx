@@ -16,7 +16,7 @@ Installing JTDX
 
 Binary packages of JTDX are available from the project web site:
 
-       https://jtdx.eu
+       https://jtdx.tech
 
 
 Building from Source
@@ -344,7 +344,7 @@ $ FC=gfortran-mp-9 \
    -D CMAKE_PREFIX_PATH="/opt/local/libexec/qt5;~/hamlib-prefix;/opt/local" \
    -D CMAKE_INSTALL_PREFIX=~/jtdx-prefix \
    -D CMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk \
-   ~/jtddx-prefix/src
+   ~/jtdx-prefix/src
 
 Substitute the  Mac OS X SDK  version you have installed  in the above
 command if you have a different version from 10.15.

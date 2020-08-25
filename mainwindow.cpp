@@ -104,7 +104,7 @@ extern "C" {
 
 int volatile itone[NUM_ISCAT_SYMBOLS];	//Audio tones for all Tx symbols
 int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
-struct dec_data dec_data;             // for sharing with Fortran
+dec_data_t dec_data;             // for sharing with Fortran
 
 int rc;
 qint32  g_iptt {0};
@@ -315,6 +315,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_callToClipboard {true},
   m_rigOk {false},
   m_bandChanged {false},
+  m_useDarkStyle {false},
   m_lostaudio {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
@@ -602,7 +603,10 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionCatalan->setActionGroup(languageGroup);
   ui->actionCroatian->setActionGroup(languageGroup);
   ui->actionDanish->setActionGroup(languageGroup);
+  ui->actionDutch->setActionGroup(languageGroup);
+  ui->actionHungarian->setActionGroup(languageGroup);
   ui->actionSpanish->setActionGroup(languageGroup);
+  ui->actionSwedish->setActionGroup(languageGroup);
   ui->actionFrench->setActionGroup(languageGroup);
   ui->actionItalian->setActionGroup(languageGroup);
   ui->actionLatvian->setActionGroup(languageGroup);
@@ -864,7 +868,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->labAz->setStyleSheet("border: 0px;");
   ui->labDist->setStyleSheet("border: 0px;");
 
-
+  m_useDarkStyle = m_config.useDarkStyle();
   readSettings();		         //Restore user's setup params
 
   QString t;
@@ -958,10 +962,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
 
-  ui->label_4->setStyleSheet("QLabel{background-color: #aabec8}");
-  ui->label_9->setStyleSheet("QLabel{background-color: #aabec8}");
-  ui->label_10->setStyleSheet("QLabel{background-color: #aabec8}");
-
   // this must be done before initializing the mode as some modes need
   // to turn off split on the rig e.g. WSPR
   m_config.transceiver_online ();
@@ -1018,8 +1018,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->TxPowerComboBox->setCurrentIndex(int(0.3*(m_dBm + 30.0)+0.2));
   ui->cbUploadWSPR_Spots->setChecked(m_uploadSpots);
   
-  ui->pbTxLock->setChecked(m_lockTxFreq);
-  on_pbTxLock_clicked(m_lockTxFreq);
+//  ui->pbTxLock->setChecked(m_lockTxFreq);
+//  on_pbTxLock_clicked(m_lockTxFreq);
 
   if(m_mode.left(4)=="WSPR" and m_pctx>0)  {
     QPalette palette {ui->sbTxPercent->palette ()};
@@ -1042,37 +1042,19 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_nlasttx = 6; m_QSOProgress = CALLING;
   ui->rbGenMsg->setChecked(true);
 //
+  if (!m_mode.startsWith ("WSPR")) countQSOs ();
   if(!ui->cbMenus->isChecked()) { ui->cbMenus->setChecked(true); ui->cbMenus->setChecked(false); }
   if(!ui->cbShowWanted->isChecked()) { ui->cbShowWanted->setChecked(true); ui->cbShowWanted->setChecked(false); }
   m_oldmode=m_mode;
   mode_label->setText(m_mode);
   m_lastloggedtime=m_jtdxtime->currentDateTimeUtc2().addSecs(-7*int(m_TRperiod));
-  if (!m_mode.startsWith ("WSPR")) {
-	countQSOs ();
-	if (m_config.prompt_to_log ()) { qso_count_label->setStyleSheet("QLabel{background-color: #99ff99}"); }
-	else if (m_config.autolog ()) { qso_count_label->setStyleSheet("QLabel{background-color: #9999ff}"); }
-	else { qso_count_label->setStyleSheet("QLabel{background-color: #ffffff}"); }
-  }
-  ui->enableTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #dcdcdc;\n 	border-style: solid;\n  border-width: 1px;\n    border-color: #adadad;\n	min-width: 63px;\n	padding: 0px;\n}");
-  setLastLogdLabel();
-
-  if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-  else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-
   QFile f0 {m_dataDir.absoluteFilePath ("CALL3.TXT")};
   if(!f0.exists()) { 
   QFile f1 {m_config.data_dir ().absoluteFilePath ("CALL3.TXT")};
   f1.copy(m_dataDir.absoluteFilePath ("CALL3.TXT"));
   }
-  ui->txrb1->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
-  ui->txrb2->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
-  ui->txrb3->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
-  ui->txrb4->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
-  ui->txrb5->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
-  ui->txrb6->setStyleSheet("QRadioButton::indicator:checked:disabled{ background-color: #222222; width: 6px; height: 6px; border-radius: 3px; margin-left: 3px; }");
   m_lastDisplayFreq=m_lastMonitoredFrequency;
 //  if(m_houndMode) on_AutoTxButton_clicked(true);
-  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffbbbb;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
   m_bMyCallStd=stdCall(m_config.my_callsign ());
 
   if(!m_config.my_callsign().isEmpty()) {
@@ -1088,9 +1070,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
-  foxgen_(); ui->actionLatvian->setEnabled(false); //temporarily disable
+  foxgen_(); ui->actionLatvian->setEnabled(false); ui->actionDutch->setEnabled(false);//temporarily disable
 
-  statusChanged();
+  styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
 }
@@ -1309,10 +1291,13 @@ void MainWindow::readSettings()
   ui->actionCatalan->setText("Català");
   ui->actionCroatian->setText("Hrvatski");
   ui->actionDanish->setText("Dansk");
+  ui->actionDutch->setText("Nederlands");
   ui->actionSpanish->setText("Español");
+  ui->actionSwedish->setText("Svenska");
   ui->actionFrench->setText("Français");
   ui->actionItalian->setText("Italiano");
   ui->actionLatvian->setText("Latviski");
+  ui->actionHungarian->setText("Magyar");
   ui->actionPolish->setText("Polski");
   ui->actionPortuguese->setText("Português");
   ui->actionPortuguese_BR->setText("Português BR");
@@ -1451,7 +1436,6 @@ void MainWindow::readSettings()
   m_dBm=m_settings->value("dBm",37).toInt(); if(!(m_dBm>=-30 && m_dBm<=60)) m_dBm=37;
 
   m_uploadSpots=m_settings->value("UploadSpots",false).toBool();
-  if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet("QCheckBox{background-color: yellow}");
   
   ui->band_hopping_group_box->setChecked (m_settings->value ("BandHopping", false).toBool());
   m_pwrBandTxMemory=m_settings->value("pwrBandTxMemory").toHash();
@@ -1550,40 +1534,40 @@ void MainWindow::setClockStyle(bool reset)
     if(m_mode.startsWith("FT")) {
       if(m_mode=="FT8") {
 		int isecond = second.toInt();
-		if((isecond >= 0 &&  isecond < 15) || (isecond >= 30 &&  isecond < 45)) ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
-        else ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+		if((isecond >= 0 &&  isecond < 15) || (isecond >= 30 &&  isecond < 45)) ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
+        else ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
       }
       else if(m_mode=="FT4") {
-        if(ft4int==0 || ft4int==2 || ft4int==4 || ft4int==6) ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
-        else ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+        if(ft4int==0 || ft4int==2 || ft4int==4 || ft4int==6) ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
+        else ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
       }
     }
     else if(!m_mode.startsWith ("WSPR")) {
-      if((minute.toInt())%2==0)	ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
-      else ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+      if((minute.toInt())%2==0)	ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
+      else ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
     }
 
     if(m_mode.startsWith ("WSPR")) {
-      ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+      ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
       ui->TxMinuteButton->setText("N/A");
-      ui->TxMinuteButton->setStyleSheet("background-color: rgb(210,210,210);"); 
+      ui->TxMinuteButton->setStyleSheet(QString("background: %1").arg(Radio::convert_dark("#d2d2d2",m_useDarkStyle))); 
     }
     m_start=false;
   }
   else {
     if(m_mode=="FT8") {
-      if(second=="00" || second=="30") ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
-	  else if(second=="15" || second=="45") ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+      if(second=="00" || second=="30") ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
+	  else if(second=="15" || second=="45") ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
 	}
     else if(m_mode=="FT4") {
-        if(ft4int==0 || ft4int==2 || ft4int==4 || ft4int==6) ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
-        else ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+        if(ft4int==0 || ft4int==2 || ft4int==4 || ft4int==6) ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
+        else ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
     }
 	else if((m_mode.startsWith("JT") || m_mode=="T10") && second=="00") {
 		if((minute.toInt())%2==0) {
-			ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(150,255,255); color : rgb(20,0,177);");
+			ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color : %2").arg(Radio::convert_dark("#96ffff",m_useDarkStyle),Radio::convert_dark("#1400b1",m_useDarkStyle)));
         } else {
-			ui->labUTC->setStyleSheet("font-size: 18pt; background-color: rgb(255,255,150); color : blue;");
+			ui->labUTC->setStyleSheet(QString("font-size: 18pt;background: %1;color: %2").arg(Radio::convert_dark("#ffff96",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
         }
     }
   }
@@ -1591,15 +1575,15 @@ void MainWindow::setClockStyle(bool reset)
 
 void MainWindow::setAutoSeqButtonStyle(bool checked) {
   if(checked) {
-    if(m_singleshot) { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #0000ff;\n	background-color: #00ff00;\n    border-style: solid;\n	border-width: 1px;\n	border-radius: 5px;\n    border-color: black;\n	min-width: 5em;\n	padding: 3px;\n}"); }
-    else { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #00ff00;\n    border-style: solid;\n	border-width: 1px;\n	border-radius: 5px;\n    border-color: black;\n	min-width: 5em;\n	padding: 3px;\n}"); }
+    if(m_singleshot) { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#0000ff",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
+    else { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
   } else {
     if(m_singleshot) {
-      if(m_mode.startsWith("FT")) { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #0000ff;\n	background-color: #ffbbbb;\n    border-style: solid;\n	border-width: 1px;\n    border-color: gray;\n	min-width: 5em;\n	padding: 3px;\n}"); }
-      else { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #0000ff;\n	background-color: #e0e0e0;\n    border-style: solid;\n	border-width: 1px;\n    border-color: gray;\n	min-width: 5em;\n	padding: 3px;\n}"); }}
+      if(m_mode.startsWith("FT")) { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#0000ff",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+      else { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#0000ff",m_useDarkStyle),Radio::convert_dark("#e0e0e0",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }}
     else { 
-      if(m_mode.startsWith("FT")) { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #ffbbbb;\n    border-style: solid;\n	border-width: 1px;\n    border-color: gray;\n	min-width: 5em;\n	padding: 3px;\n}"); }
-	  else { ui->AutoSeqButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #e0e0e0;\n    border-style: solid;\n	border-width: 1px;\n    border-color: gray;\n	min-width: 5em;\n	padding: 3px;\n}"); }
+      if(m_mode.startsWith("FT")) { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+	  else { ui->AutoSeqButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e0e0e0",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
     }
   }
 }
@@ -1614,19 +1598,19 @@ void MainWindow::setMinButton()
 		else ui->TxMinuteButton->setText("TX 00");
       }
       else ui->TxMinuteButton->setText(tr("TX Even"));
-      ui->TxMinuteButton->setStyleSheet("background-color: rgb(110,255,255);");
+      ui->TxMinuteButton->setStyleSheet(QString("QPushButton {background: %1}").arg(Radio::convert_dark("#96ffff",m_useDarkStyle)));
     } else {
 	  if(m_mode.startsWith("FT")) {
 		if(m_mode=="FT8") ui->TxMinuteButton->setText("TX 15/45");
         else ui->TxMinuteButton->setText("TX 7.5");
       } 
       else ui->TxMinuteButton->setText(tr("TX Odd"));
-      ui->TxMinuteButton->setStyleSheet("background-color: rgb(255,255,150);");
+      ui->TxMinuteButton->setStyleSheet(QString("QPushButton {background: %1}").arg(Radio::convert_dark("#ffff96",m_useDarkStyle)));
     }
   } 
   else {
 	ui->TxMinuteButton->setText("N/A");
-	ui->TxMinuteButton->setStyleSheet("background-color: rgb(190,190,190);");
+	ui->TxMinuteButton->setStyleSheet(QString("QPushButton {background: %1}").arg(Radio::convert_dark("#bebebe",m_useDarkStyle)));
   }
 }
 
@@ -1719,12 +1703,12 @@ void MainWindow::dataSink(qint64 frames)
 //printf("%s lost audio blocks %d \n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss").toStdString().c_str(),nlostaudio);
       quint64 timedelta = m_jtdxtime->currentMSecsSinceEpoch2() - m_mslastMon;
       if(timedelta > 14990) {
-        if(nlostaudio < 3) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
-        else ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+        if(nlostaudio < 3) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
+        else ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8000",m_useDarkStyle)));
         ui->label_6->setText(tr("lost audio ")+QString::number(nlostaudio));
         if(m_config.write_decoded_debug()) writeToALLTXT("Lost audio blocks: " + QString::number(nlostaudio));
       }
-      else ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
+      else ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
       nlostaudio=0; m_lostaudio=true;
     }
     if(!m_diskData && m_mode=="FT8" && ihsym>45 && ihsym<nhsymEStopFT8 && m_delay==0) {
@@ -1772,7 +1756,7 @@ void MainWindow::dataSink(qint64 frames)
 
     if(!m_decoderBusy && m_mode.left(4)!="WSPR") { //Start decoder
       last=now; decode(); 
-      if(!m_lostaudio) { ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}"); ui->label_6->setText(tr("Band Activity")); }
+      if(!m_lostaudio) { ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle))); ui->label_6->setText(tr("Band Activity")); }
     }
     m_delay=0;
 
@@ -1896,6 +1880,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
   // things that might change that we need know about
   m_strictdirCQ = m_config.strictdirCQ ();
   m_callsign = m_config.my_callsign ();
+  m_useDarkStyle = m_config.useDarkStyle();
   m_grid = m_config.my_grid();
   m_callNotif = m_config.callNotif();
   m_gridNotif = m_config.gridNotif();
@@ -1904,6 +1889,10 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 
   if (QDialog::Accepted == m_config.exec ()) {
       if(m_config.write_decoded_debug()) writeToALLTXT("Configuration settings change accepted");
+      if (m_config.useDarkStyle() != m_useDarkStyle) {
+        m_useDarkStyle = m_config.useDarkStyle();
+        styleChanged();
+      }
       if(m_config.my_callsign () != m_callsign) {
         m_bMyCallStd=stdCall(m_config.my_callsign ());
         m_myCallCompound=(!m_config.my_callsign().isEmpty() && m_config.my_callsign().contains("/")); // && !m_config.my_callsign().endsWith("/P") && !m_config.my_callsign().endsWith("/R"));
@@ -1947,7 +1936,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 //           ui->stopTxButton->click (); // halt any transmission
            haltTx("settings change is accepted ");
            enableTx_mode (false);       // switch off EnableTx button
-		   ui->enableTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #ffff76;\n  border-style: solid;\n  border-width: 1px;\n	border-radius: 5px;\n    border-color: black;\n	min-width: 63px;\n	padding: 0px;\n}");
+		   ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff76",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
 		   TxAgainTimer.start(2000);
          }
       }
@@ -1967,8 +1956,8 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 	  setXIT (ui->TxFreqSpinBox->value ());
       update_watchdog_label ();
       if(m_mode != "WSPR-2" && spot_to_dxsummit != m_config.spot_to_dxsummit()) {
-         if(m_config.spot_to_dxsummit() ) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-         else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
+         if(m_config.spot_to_dxsummit() ) { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+         else { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
       }
       if(!m_config.do_snr()) ui->S_meter_label->setText(tr("S meter"));
       ui->S_meter_label->setEnabled(m_config.do_snr());
@@ -2025,9 +2014,9 @@ void MainWindow::on_HoundButton_clicked (bool checked)
 void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
   m_autoTx = checked;
-  if(checked) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n min-width: 5em;\n padding: 3px;\n}");
-  else if(m_autoseq) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n	background-color: #ffbbbb;\n border-style: solid;\n	border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
-  else ui->AutoTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #e0e0e0;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
+  if(checked) ui->AutoTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+  else if(m_autoseq) ui->AutoTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
+  else ui->AutoTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e0e0e0",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
 }
 
 void MainWindow::on_AutoSeqButton_clicked (bool checked)
@@ -2041,10 +2030,10 @@ void MainWindow::on_AutoSeqButton_clicked (bool checked)
       on_rbGenMsg_clicked(true);
       ui->rbGenMsg->setChecked(true);
     }
-    if(!m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #ffbbbb;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n	min-width: 5em;\n padding: 3px;\n}");
+    if(!m_autoTx) ui->AutoTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
   } else {
     enableTab1TXRB(true);
-	if(!m_autoTx) ui->AutoTxButton->setStyleSheet("QPushButton {\n color: #000000;\n background-color: #e0e0e0;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
+	if(!m_autoTx) ui->AutoTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e0e0e0",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
   }
   setAutoSeqButtonStyle(m_autoseq);
 }
@@ -2124,11 +2113,11 @@ void MainWindow::on_enableTxButton_clicked (bool checked)
     ui->sbTxPercent->setPalette(palette);
   }
   if(m_enableTx) {
-	 ui->enableTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #ff3c3c;\n	border-style: solid;\n  border-width: 1px;\n	border-radius: 5px;\n    border-color: black;\n	min-width: 63px;\n	padding: 0px;\n}");
+	 ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ff3c3c",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
   } else {
 // sync TX variables 
      if(!m_transmitting) { m_bTxTime=false; m_tx_when_ready=false; m_restart=false; m_txNext=false; }
-	 ui->enableTxButton->setStyleSheet("QPushButton {\n	color: #000000;\n	background-color: #dcdcdc;\n 	border-style: solid;\n  border-width: 1px;\n    border-color: #adadad;\n	min-width: 63px;\n	padding: 0px;\n}");
+	 ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#dcdcdc",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
   }
 }
 
@@ -2260,6 +2249,18 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
     case Qt::Key_Escape:
       haltTx("TX halted via Escape button ");
       break;
+    case Qt::Key_B:
+      if(e->modifiers() & Qt::AltModifier) {
+        on_actionFT8_triggered();
+        return;
+      }
+      break;
+    case Qt::Key_C:
+      if(e->modifiers() & Qt::AltModifier) {
+        on_actionFT4_triggered();
+        return;
+      }
+      break;
     }
 
   QMainWindow::keyPressEvent (e);
@@ -2335,8 +2336,9 @@ void MainWindow::displayDialFrequency ()
   if (min_offset < 10000u) {
     valid = true;
   }
-
-  update_dynamic_property (ui->labDialFreq, "oob", !valid);
+  update_dynamic_property (ui->labDialFreq, "dark", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->labDialFreq, "darkoob", !valid); 
+  else update_dynamic_property (ui->labDialFreq, "oob", !valid);
   ui->labDialFreq->setText (Radio::pretty_frequency_MHz_string (dial_frequency));
 
   static bool first_freq {true};
@@ -2349,6 +2351,56 @@ void MainWindow::displayDialFrequency ()
     }
     m_commonFT8b=commonFT8b; first_freq=false;
   }
+}
+
+void MainWindow::styleChanged()
+{
+
+  ui->pbTxLock->setChecked(m_lockTxFreq);
+  on_pbTxLock_clicked(m_lockTxFreq);
+  ui->tx5->setStyleSheet(QString("QComboBox {selection-background-color: %1;background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
+  on_directionLineEdit_textChanged(m_cqdir);
+  on_direction1LineEdit_textChanged(m_cqdir);
+  if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet(QString("QCheckBox{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
+  ui->label_4->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aabec8",m_useDarkStyle)));
+  ui->label_9->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aabec8",m_useDarkStyle)));
+  ui->label_10->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aabec8",m_useDarkStyle)));
+  if (!m_mode.startsWith ("WSPR")) {
+	if (m_config.prompt_to_log ()) { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#99ff99",m_useDarkStyle))); }
+	else if (m_config.autolog ()) { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#9999ff",m_useDarkStyle))); }
+	else { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  }
+ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
+ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
+    Radio::convert_dark("#dcdcdc",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
+  setLastLogdLabel();
+
+  if(m_config.spot_to_dxsummit()) {
+    ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset; border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
+      Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+  else {
+    ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
+      Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+//  ui->txrb1->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+//  ui->txrb2->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+//  ui->txrb3->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+//  ui->txrb4->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+//  ui->txrb5->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+//  ui->txrb6->setStyleSheet(QString("QRadioButton::indicator:checked:disabled{background: %1;width: 6px;height: 6px;border-radius: 3px;margin-left: 3px}").arg(Radio::convert_dark("#222222",m_useDarkStyle)));
+  if(m_autoseq && !m_autoTx) ui->AutoTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffbbbb",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
+  else ui->AutoTxButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->tuneButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#ff0000",m_useDarkStyle)));
+  ui->monitorButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->bypassButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->singleQSOButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->AnsB4Button->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->swlButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->filterButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->AGCcButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->hintButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->DecodeButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ffff",m_useDarkStyle)));
+
+  statusUpdate ();
 }
 
 void MainWindow::statusChanged()
@@ -2408,7 +2460,7 @@ void MainWindow::createStatusBar()                           //createStatusBar
   tx_status_label->setAlignment(Qt::AlignVCenter);
   tx_status_label->setContentsMargins(1,1,1,1); //(int left, int top, int right, int bottom)
   tx_status_label->setMinimumSize(QSize(150,20));
-  tx_status_label->setStyleSheet("QLabel{background-color: #00ff00}");
+  tx_status_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   tx_status_label->setFrameStyle(QFrame::Panel | QFrame::Sunken);
   statusBar()->addWidget(tx_status_label);
 
@@ -2569,7 +2621,7 @@ void MainWindow::on_pbSpotDXCall_clicked ()
 //    } else {
 //      printf("Failure : %s\n",reply->errorString().toStdString().c_str());
 //    }
-      ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4ffc4;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}");
+      ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4ffc4",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
       ui->pbSpotDXCall->setText(tr("Spotted"));
       m_spotDXsummit=true;
     } else {
@@ -2640,7 +2692,7 @@ void MainWindow::on_actionOpen_triggered()                     //Open File
     m_path=fname;
     int i1=fname.lastIndexOf("/");
     QString baseName=fname.mid(i1+1);
-    tx_status_label->setStyleSheet("QLabel{background-color: #99ffff}");
+    tx_status_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#99ffff",m_useDarkStyle)));
     tx_status_label->setText(" " + baseName + " ");
     on_stopButton_clicked();
     m_diskData=true;
@@ -2695,7 +2747,7 @@ void MainWindow::on_actionOpen_next_in_directory_triggered()   //Open Next
       m_path=fname;
       int i1=fname.lastIndexOf("/");
       QString baseName=fname.mid(i1+1);
-      tx_status_label->setStyleSheet("QLabel{background-color: #99ffff}");
+      tx_status_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#99ffff",m_useDarkStyle)));
       tx_status_label->setText(" " + baseName + " ");
       m_diskData=true;
       read_wav_file (fname);
@@ -2748,7 +2800,10 @@ void MainWindow::on_actionRussian_triggered() { ui->actionRussian->setChecked(tr
 void MainWindow::on_actionCatalan_triggered() { ui->actionCatalan->setChecked(true); set_language("ca_ES"); }
 void MainWindow::on_actionCroatian_triggered() { ui->actionCroatian->setChecked(true); set_language("hr_HR"); }
 void MainWindow::on_actionDanish_triggered() { ui->actionDanish->setChecked(true); set_language("da_DK"); }
+void MainWindow::on_actionDutch_triggered() { ui->actionDutch->setChecked(true); set_language("nl_NL"); }
+void MainWindow::on_actionHungarian_triggered() { ui->actionHungarian->setChecked(true); set_language("hu_HU"); }
 void MainWindow::on_actionSpanish_triggered() { ui->actionSpanish->setChecked(true); set_language("es_ES"); }
+void MainWindow::on_actionSwedish_triggered() { ui->actionSwedish->setChecked(true); set_language("sv_SE"); }
 void MainWindow::on_actionFrench_triggered() { ui->actionFrench->setChecked(true); set_language("fr_FR"); }
 void MainWindow::on_actionItalian_triggered() { ui->actionItalian->setChecked(true); set_language("it_IT"); }
 void MainWindow::on_actionLatvian_triggered() { ui->actionLatvian->setChecked(true); set_language("lv_LV"); }
@@ -2865,14 +2920,14 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
       }
     }
     ui->HoundButton->setChecked(true);
-    if(defBand) ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
-    else ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+    if(defBand) ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff88",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+    else ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     ui->actionUse_TX_frequency_jumps->setEnabled(true);
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
   else {
     ui->HoundButton->setChecked(false);
-    ui->HoundButton->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #e1e1e1;\n border-style: solid;\n border-width: 1px;\n border-color: #adadad;\n min-width: 5em;\n padding: 3px;\n}");
+    ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
     ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true);
     if(m_wasSkipTx1) { 
       m_skipTx1=true; ui->skipTx1->setChecked(true); ui->skipGrid->setChecked(true);
@@ -3084,6 +3139,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
+  dec_data.params.nlasttx=m_nlasttx;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;
@@ -3235,6 +3291,7 @@ void MainWindow::process_Auto()
     } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && !m_skipTx1)) && m_config.answerInCallCount() && 
         ((!m_transmitting && m_config.nAnswerInCallCounter() <= count) || (m_transmitting && m_config.nAnswerInCallCounter() < count)  || m_reply_other)) {
       clearDX (" cleared, RCALL/SREPORT count reached");
+      m_qsoHistory.calllist(hisCall,rpt.toInt(),time);
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
       grid = m_hisGrid;
@@ -3454,18 +3511,18 @@ void MainWindow::readFromStdout()                             //readFromStdout
         ui->decodedTextLabel->setText("UTC     dB   DT "+tr("Freq  ")+" "+tr("Avg=")+avexdt+" "+tr("Lag=")+slag+"/"+QString::number(m_nDecodes));
         if(m_mode=="FT8") {
           if(!m_lostaudio) {
-            if(navexdt<76) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-            else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
-            else if(navexdt>150) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+            if(navexdt<76) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
+            else if(navexdt>75 && navexdt<151) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
+            else if(navexdt>150) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8000",m_useDarkStyle)));
             if(navexdt>75) ui->label_6->setText(tr("check time"));
             else  ui->label_6->setText(tr("Band Activity"));
           }
           else m_lostaudio=false;
         }
         else if (m_mode=="FT4") {
-          if(navexdt<41) ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
-          else if(navexdt>40 && navexdt<81) ui->label_6->setStyleSheet("QLabel{background-color: #ffff00}");
-          else if(navexdt>80) ui->label_6->setStyleSheet("QLabel{background-color: #ff8000}");
+          if(navexdt<41) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
+          else if(navexdt>40 && navexdt<81) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
+          else if(navexdt>80) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8000",m_useDarkStyle)));
           if(navexdt>40) ui->label_6->setText(tr("check time"));
           else  ui->label_6->setText(tr("Band Activity"));
         }
@@ -3588,7 +3645,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
               ui->TxMinuteButton->setChecked(m_txFirst);
               setMinButton();
             }
-            ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,170,170);");
+            ui->dxCallEntry->setStyleSheet("color: black; background: rgb(255,170,170);");
             statusChanged();
           }
           if(!m_notified) {
@@ -3799,13 +3856,16 @@ void MainWindow::set_language (QString const& lang)
   else if(m_lang=="ca_ES") ui->actionCatalan->setChecked(true);
   else if(m_lang=="hr_HR") ui->actionCroatian->setChecked(true);
   else if(m_lang=="da_DK") ui->actionDanish->setChecked(true);
+  else if(m_lang=="nl_NL") ui->actionDutch->setChecked(true);
   else if(m_lang=="es_ES") ui->actionSpanish->setChecked(true);
   else if(m_lang=="fr_FR") ui->actionFrench->setChecked(true);
+  else if(m_lang=="hu_HU") ui->actionHungarian->setChecked(true);
   else if(m_lang=="it_IT") ui->actionItalian->setChecked(true);
   else if(m_lang=="lv_LV") ui->actionLatvian->setChecked(true);
   else if(m_lang=="pl_PL") ui->actionPolish->setChecked(true);
   else if(m_lang=="pt_PT") ui->actionPortuguese->setChecked(true);
   else if(m_lang=="pt_BR") ui->actionPortuguese_BR->setChecked(true);
+  else if(m_lang=="sv_SE") ui->actionSwedish->setChecked(true);
   else if(m_lang=="zh_CN") ui->actionChinese_simplified->setChecked(true);
   else if(m_lang=="zh_HK") ui->actionChinese_traditional->setChecked(true);
   else if(m_lang=="ja_JP") ui->actionJapanese->setChecked(true);
@@ -4075,7 +4135,6 @@ void MainWindow::guiUpdate()
     m_currentMessage = m_curMsgTx;
     if(m_tune) { m_currentMessage = tr("TUNE"); m_currentMessageType = -1; m_nlasttx=0; }
     last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
-    dec_data.params.nlasttx=m_nlasttx;
 	
     if(m_restart && !haltedEmpty) {
       QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
@@ -4115,7 +4174,7 @@ void MainWindow::guiUpdate()
     }
 
     icw[0] = 0;
-    auto msg_parts = m_currentMessage.split (' ', QString::SkipEmptyParts);
+    auto msg_parts = m_currentMessage.split (' ', SkipEmptyParts);
 /*    if (msg_parts.size () > 2) {
       // clean up short code forms
       msg_parts[0].remove (QChar {'<'});
@@ -4124,7 +4183,7 @@ void MainWindow::guiUpdate()
 
 // m_currentMessageType m_lastMessageType are always 0 in FT8 mode
     auto is_73 = (m_QSOProgress >= ROGER_REPORT || m_ntx==4 || m_ntx==5) && message_is_73 (m_currentMessageType, msg_parts);
-	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', QString::SkipEmptyParts));
+	auto lastmsg_is73 = message_is_73 (m_lastMessageType, m_lastMessageSent.split (' ', SkipEmptyParts));
     m_sentFirst73 = is_73 && m_lastloggedcall!=m_hisCall
       && (!lastmsg_is73 || (lastmsg_is73 && !m_lastMessageSent.contains(m_hisCall)));
 
@@ -4283,17 +4342,17 @@ void MainWindow::guiUpdate()
         progressBar->setValue(0);
     }
 
-    QString cssSafe = "QProgressBar { border: 2px solid grey; border-radius: 5px; background: white; text-align: center; } QProgressBar::chunk { background: #00ff00; width: 1px; }";
-    QString cssTransmit = "QProgressBar { border: 2px solid grey; border-radius: 5px; background: white; text-align: center; } QProgressBar::chunk { background: #ff0000; width: 1px; }";
+    QString cssSafe = QString("QProgressBar { border: 2px solid %1; border-radius: 5px; background: %2; text-align: center; } QProgressBar::chunk { background: %3; width: 1px; }").arg(Radio::convert_dark("#808080",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle));
+    QString cssTransmit = QString("QProgressBar { border: 2px solid %1; border-radius: 5px; background: %2; text-align: center; } QProgressBar::chunk { background: %3; width: 1px; }").arg(Radio::convert_dark("#808080",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#ff0000",m_useDarkStyle));
 
     if(m_transmitting) {
-      tx_status_label->setStyleSheet("QLabel{background-color: #ffff33}");
+      tx_status_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffff33",m_useDarkStyle)));
       if(m_tune) tx_status_label->setText(tr("Tx: TUNE"));
       else tx_status_label->setText(tr("Tx: ") + m_curMsgTx.trimmed());
 	  progressBar->setStyleSheet(cssTransmit);
     } else if(m_monitoring) {
 	  if (!m_txwatchdog) {
-		tx_status_label->setStyleSheet("QLabel{background-color: #00ff00}");
+		tx_status_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
 		QString t=tr("Receiving ");
 		tx_status_label->setText(t);
 	  }
@@ -4621,8 +4680,8 @@ void MainWindow::on_txb6_clicked()                                //txb6
   if(!m_autoseq && m_wasAutoSeq) { m_wasAutoSeq=false; on_AutoSeqButton_clicked(true); }
   if (m_spotDXsummit){
      ui->pbSpotDXCall->setText(tr("DX Call"));
-     if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-     else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
+     if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: 51;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+     else { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
      m_spotDXsummit=false;
   }
   m_ntx=6;
@@ -4706,7 +4765,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   }
 
   auto t3 = decodedtext.string ().left(47);
-  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", QString::SkipEmptyParts);
+  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
   if(t4.size () < 6) return;             //Skip the rest if no decoded text
 
 
@@ -4852,7 +4911,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
       if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
       i1=m_qsoHistory.reset_count(hiscall);
       if (m_callToClipboard) clipboard->setText(hiscall);
-      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
       call_changed = true;
     }
   if (gridOK(hisgrid)) {
@@ -5063,7 +5122,7 @@ void MainWindow::genStdMsgs(QString rpt)                       //genStdMsgs()
   genCQMsg ();
 
   QString hisCall=m_hisCall;
-  ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+  ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
 
   if(hisCall.isEmpty ()) {
     ui->labAz->setText("");
@@ -5289,8 +5348,8 @@ void MainWindow::clearDX (QString reason)
      ui->pbSpotDXCall->setText(tr("DX Call"));
      m_spotDXsummit=false;
   }    
-  if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-  else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
+  if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+  else { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
 
   if(!reason.isEmpty() && m_config.write_decoded_debug()) writeToALLTXT("DX Call " + dxcallclr + reason);
 }
@@ -5301,7 +5360,7 @@ void MainWindow::clearDXfields (QString reason)
   QString dxcallclr=m_hisCall;
   if (!m_hisCall.isEmpty()) ui->dxCallEntry->clear();
   if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
-  ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+  ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
   if(!reason.isEmpty() && m_config.write_decoded_debug()) writeToALLTXT("DX Call " + dxcallclr + reason);
 }
 
@@ -5475,9 +5534,9 @@ void MainWindow::msgtype(QString t, QLineEdit* tx)               //msgtype()
   if(itype==6) text=true;
   QPalette p(tx->palette());
   if(text) {
-    p.setColor(QPalette::Base,"#ffccff");
+    p.setColor(QPalette::Base,Radio::convert_dark("#ffccff",m_useDarkStyle));
   } else {
-    p.setColor(QPalette::Base,Qt::white);
+    p.setColor(QPalette::Base,Radio::convert_dark("#ffffff",m_useDarkStyle));
   }
   tx->setPalette(p);
   auto pos  = tx->cursorPosition ();
@@ -5520,13 +5579,13 @@ void MainWindow::on_tx5_currentTextChanged (QString const& text) //tx5 edited
 //      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    "};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
-      ui->tx5->setStyleSheet("background-color: rgb(123,255,123);color: black;");
+      ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle)));
     } else {
-      if(!text.isEmpty () && text.length() < 14) { ui->tx5->setStyleSheet("background-color: rgb(123,255,123);color: black;"); }
-      else if(text.length() >= 14) { ui->tx5->setStyleSheet("background-color: rgb(255,255,0);color: black;"); }
+      if(!text.isEmpty () && text.length() < 14) { ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle))); }
+      else if(text.length() >= 14) { ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle))); }
       msgtype(text, ui->tx5->lineEdit ());
     }
-  }
+  } else ui->tx5->setStyleSheet(QString("QComboBox {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle)));
 }
 
 void MainWindow::on_tx5_currentIndexChanged(int index)
@@ -5601,9 +5660,9 @@ void MainWindow::on_wantedGrid_textChanged(const QString &wgrid)
 void MainWindow::on_directionLineEdit_textChanged(const QString &dir) //CQ direction changed
 {
   QString cqdirection = dir.toUpper();
-  if(cqdirection.isEmpty ()) { ui->directionLineEdit->setStyleSheet("background-color: rgb(255,255,255);"); }
-  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->directionLineEdit->setStyleSheet("background-color: rgb(255,250,130);"); }
-  else if(cqdirection.length() == 2) { ui->directionLineEdit->setStyleSheet("background-color: rgb(130,255,140);"); }
+  if(cqdirection.isEmpty ()) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
+  else if(cqdirection.length() == 2) { ui->directionLineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
   m_cqdir = cqdirection;
   if (cqdirection.isEmpty ()) { ui->pbCallCQ->setText("CQ"); }
   else if (cqdirection.length() == 2) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
@@ -5619,9 +5678,9 @@ void MainWindow::on_directionLineEdit_textChanged(const QString &dir) //CQ direc
 void MainWindow::on_direction1LineEdit_textChanged(const QString &dir) //CQ direction changed
 {
   QString cqdirection = dir.toUpper();
-  if(cqdirection.isEmpty ()) { ui->direction1LineEdit->setStyleSheet("background-color: rgb(255,255,255);"); }
-  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->direction1LineEdit->setStyleSheet("background-color: rgb(255,250,130);"); }
-  else if(cqdirection.length() == 2) { ui->direction1LineEdit->setStyleSheet("background-color: rgb(130,255,140);"); }
+  if(cqdirection.isEmpty ()) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  else if(cqdirection.length() == 1 || cqdirection.length() > 2) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#fffa82",m_useDarkStyle))); }
+  else if(cqdirection.length() == 2) { ui->direction1LineEdit->setStyleSheet(QString("QLineEdit {background: %1}").arg(Radio::convert_dark("#82ff8c",m_useDarkStyle))); }
   m_cqdir = cqdirection;
   if (cqdirection.isEmpty ()) { ui->pbCallCQ->setText("CQ"); }
   else if (cqdirection.length() == 2) { ui->pbCallCQ->setText("CQ " + m_cqdir); }
@@ -5682,7 +5741,7 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
           } else {
              m_name = "";
           }
-      ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);");
+      ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
       if (logClearDXTimer.isActive()) logClearDXTimer.stop();
       // Refresh Tx macros
       QStringListModel* model1 = m_config.macros();
@@ -5704,8 +5763,8 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
          ui->pbSpotDXCall->setText(tr("DX Call"));
          m_spotDXsummit=false;
       }
-      if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #c4c4ff;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
-      else { ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #aabec8;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}"); }
+      if(m_config.spot_to_dxsummit()) { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
+      else { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
       m_bHisCallStd=stdCall(m_hisCall);
       statusChanged();
   }
@@ -5803,7 +5862,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
   }
   if (m_config.send_to_eqsl())
       Eqsl->upload(m_config.eqsl_username(),m_config.eqsl_passwd(),m_config.eqsl_nickname(),call,mode,QSO_date_on,rpt_sent,m_config.bands ()->find (dial_freq),eqslcomments);
-  ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(127,255,127);");
+  ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#7fff7f",m_useDarkStyle)));
   m_lastloggedcall=call;
   m_lastloggedtime=m_jtdxtime->currentDateTimeUtc2();
   if (m_config.clear_DX () && !logClearDXTimer.isActive() && !m_autoTx && !m_autoseq) logClearDXTimer.start ((qAbs(int(m_TRperiod)-m_nseq))*1000);
@@ -5827,7 +5886,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
       m_wantedGridList.removeAt(wgrididx); ui->wantedGrid->setText(m_wantedGridList.join(","));
     }
   }
-  if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition Hound mode"); ui->dxCallEntry->setStyleSheet("color: black; background-color: rgb(255,255,255);"); }
+  if (m_houndMode && !m_hisCall.isEmpty()) { clearDX (" cleared: QSO logged in DXpedition mode"); ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle))); }
 }
 
 void MainWindow::on_actionJT9_triggered()
@@ -5837,7 +5896,7 @@ void MainWindow::on_actionJT9_triggered()
   switch_mode (Modes::JT9);
   if(m_modeTx!="JT9") on_pbTxMode_clicked();
   m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179;
-  mode_label->setStyleSheet("QLabel{background-color: #ff99cc}");
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff99cc",m_useDarkStyle)));
   ui->actionJT9->setChecked(true);
   ui->pbTxMode->setText("Tx JT9  @");
   ui->pbTxMode->setEnabled(false);
@@ -5853,7 +5912,7 @@ void MainWindow::on_actionT10_triggered()
   switch_mode (Modes::T10);
   m_modeTx="T10";
   m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179;
-  mode_label->setStyleSheet("QLabel{background-color: #aaffff}");
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#aaffff",m_useDarkStyle)));
   ui->actionT10->setChecked(true);
   ui->pbTxMode->setText("Tx T10  +");
   ui->pbTxMode->setEnabled(false);
@@ -5869,7 +5928,7 @@ void MainWindow::on_actionFT4_triggered()
   switch_mode (Modes::FT4);
   m_modeTx="FT4";
   m_hsymStop=21;
-  mode_label->setStyleSheet("QLabel{background-color: #a99ee2}"); //to be changed
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#a99ee2",m_useDarkStyle))); //to be changed
   ui->actionFT4->setChecked(true);
   ui->pbTxMode->setText("Tx FT4 :");
   ui->pbTxMode->setEnabled(false);
@@ -5887,7 +5946,7 @@ void MainWindow::on_actionFT8_triggered()
   switch_mode (Modes::FT8);
   m_modeTx="FT8";
   m_hsymStop=50;
-  mode_label->setStyleSheet("QLabel{background-color: #6699ff}");
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#6699ff",m_useDarkStyle)));
   ui->actionFT8->setChecked(true);
   ui->pbTxMode->setText("Tx FT8 ~");
   ui->pbTxMode->setEnabled(false);
@@ -5911,7 +5970,7 @@ void MainWindow::on_actionJT65_triggered()
   if(m_modeTx!="JT65") on_pbTxMode_clicked();
   m_TRperiod=60.0;
   m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179;
-  mode_label->setStyleSheet("QLabel{background-color: #66ff66}");
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#66ff66",m_useDarkStyle)));
   ui->actionJT65->setChecked(true);
   ui->pbTxMode->setText("Tx JT65  #");
   ui->pbTxMode->setEnabled(false);
@@ -5928,7 +5987,7 @@ void MainWindow::on_actionJT9_JT65_triggered()
   m_modeTx="JT65";
   m_TRperiod=60.0;
   m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179;
-  mode_label->setStyleSheet("QLabel{background-color: #ffff66}");
+  mode_label->setStyleSheet(QString("QLabel{background: #ffff66}").arg(Radio::convert_dark("#ffff66",m_useDarkStyle)));
   ui->actionJT9_JT65->setChecked(true);
   commonActions();
   enableHoundAccess(false);
@@ -5948,7 +6007,7 @@ void MainWindow::on_actionWSPR_2_triggered()
   Q_EMIT FFTSize (m_FFTSize);
   m_hsymStop=396;
   m_toneSpacing=12000.0/8192.0;
-  mode_label->setStyleSheet("QLabel{background-color: #ff66ff}");
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff66ff",m_useDarkStyle)));
   mode_label->setText(m_mode);
   ui->actionWSPR_2->setChecked(true);
   m_wideGraph->setPeriod(m_TRperiod,m_nsps);
@@ -5985,9 +6044,9 @@ void MainWindow::switch_mode (Mode mode)
   }
   if (!m_mode.startsWith ("WSPR")) {
 	countQSOs ();
-	if (m_config.prompt_to_log ()) { qso_count_label->setStyleSheet("QLabel{background-color: #99ff99}"); }
-	else if (m_config.autolog ()) { qso_count_label->setStyleSheet("QLabel{background-color: #9999ff}"); }
-	else { qso_count_label->setStyleSheet("QLabel{background-color: #ffffff}"); }
+	if (m_config.prompt_to_log ()) { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#99ff99",m_useDarkStyle))); }
+	else if (m_config.autolog ()) { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#9999ff",m_useDarkStyle))); }
+	else { qso_count_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
   }
 }
 
@@ -6007,7 +6066,7 @@ void MainWindow::commonActions ()
   if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
   else t = "UTC   dB   DT "+tr("Freq   Message");
   ui->decodedTextLabel->setText(t);
-  ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
+  ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
   ui->label_6->setText(tr("Band Activity"));
   ui->decodedTextLabel2->setText(t);
   m_wideGraph->setPeriod(m_TRperiod,m_nsps);
@@ -6046,7 +6105,7 @@ void MainWindow::WSPR_config(bool b)
   ui->bypassButton->setEnabled(!b); ui->singleQSOButton->setEnabled(!b); ui->AnsB4Button->setEnabled(!b);
   if(b) {
     ui->decodedTextLabel->setText("UTC    dB   DT "+tr("    Freq     Drift  Call          Grid    dBm   Dist"));
-    ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
+    ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
     ui->label_6->setText(tr("Band Activity"));
     if (m_config.is_transceiver_online ()) {
       Q_EMIT m_config.transceiver_tx_frequency (0); // turn off split
@@ -6057,7 +6116,7 @@ void MainWindow::WSPR_config(bool b)
     if (m_mode.startsWith("FT")) t = "UTC     dB   DT "+tr("Freq   Message");
     else t = "UTC   dB   DT "+tr("Freq   Message");
     ui->decodedTextLabel->setText(t);
-    ui->label_6->setStyleSheet("QLabel{background-color: #fdedc5}");
+    ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
     ui->label_6->setText(tr("Band Activity"));
     m_bSimplex = false;
   }
@@ -6240,7 +6299,7 @@ void MainWindow::on_bandComboBox_currentIndexChanged (int index)
     }
   else
     {
-      ui->bandComboBox->lineEdit ()->setStyleSheet ("QLineEdit {color: yellow; background-color : red;}");
+      ui->bandComboBox->lineEdit ()->setStyleSheet (QString("QLineEdit {color: %1; background-color : %2}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle),Radio::convert_dark("#ff0000",m_useDarkStyle)));
       ui->bandComboBox->setCurrentText (m_config.bands ()->oob ());
     }
   displayDialFrequency ();
@@ -6274,11 +6333,13 @@ void MainWindow::band_changed (Frequency f)
     auto const& newband = m_config.bands ()->find (f);
     auto const& oldband = m_config.bands ()->find (m_lastMonitoredFrequency);
     bool cleared=false;
-    if (m_autoEraseBC && (oldband != newband || m_oldmode != m_mode)) { // option: erase both windows if band is changed
-        ui->decodedTextBrowser->clear();
-        ui->decodedTextBrowser2->clear();
-        clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
-        cleared=true;
+    if (oldband != newband || m_oldmode != m_mode) {
+      clearDX (" cleared, triggered by erase both windows option upon band change, new band/mode"); // Request from Boris UX8IW
+      if (m_autoEraseBC) { // option: erase both windows if band is changed
+          ui->decodedTextBrowser->clear();
+          ui->decodedTextBrowser2->clear();
+          cleared=true;
+      }
     }
     m_lastBand.clear ();
     m_bandEdited = false;
@@ -6306,10 +6367,10 @@ void MainWindow::band_changed (Frequency f)
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
         if(stophintTimer.isActive()) stophintTimer.stop();
         dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
+        clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
             ui->decodedTextBrowser->clear();
             ui->decodedTextBrowser2->clear();
-            clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         }
     // Set the attenuation value if options are checked
         QString curBand;
@@ -6442,7 +6503,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)             //mousePressEve
     QString basecall = Radio::base_callsign (m_hisCall);
     if(basecall.length () > 2) {
         m_config.add_callsign_hideFilter (basecall);
-        ui->pbSpotDXCall->setStyleSheet("QPushButton {\n	color: black;\n	background-color: #00ff00;\n border-style: outset;\n border-width: 1px;\n border-color: gray;\n padding: 3px;\n}");
+        ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
     }
   }
 }
@@ -6512,10 +6573,10 @@ void MainWindow::on_freeTextMsg_currentTextChanged (QString const& text)
 //      DecodedText decodedtext {"161545  -4  0.1 1939 & CQ RT9K/4    ",this};
     bool stdfreemsg = decodedtext.isStandardMessage();
     if(stdfreemsg) {
-      ui->freeTextMsg->setStyleSheet("background-color: rgb(123,255,123);color: black;");
+      ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     } else {
-      if(text.length() < 14) { ui->freeTextMsg->setStyleSheet("background-color: rgb(123,255,123);color: black;"); }
-      else if(text.length() >= 14) { ui->freeTextMsg->setStyleSheet("background-color: rgb(255,255,0);color: black;"); }
+      if(text.length() < 14) { ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#7bff7b",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
+      else if(text.length() >= 14) { ui->freeTextMsg->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle))); }
       msgtype(text, ui->freeTextMsg->lineEdit ());
     }
   }
@@ -6620,7 +6681,9 @@ void MainWindow::on_stopTxButton_clicked()                    //Stop Tx
 
 void MainWindow::rigOpen ()
 {
-  update_dynamic_property (ui->readFreq, "state", "warning");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkwarning");
+  else update_dynamic_property (ui->readFreq, "state", "warning");
   m_rigOk=false;
   ui->readFreq->setText ("");
   ui->readFreq->setEnabled (true);
@@ -6765,11 +6828,11 @@ void MainWindow::on_pbTxLock_clicked(bool checked)
   if(checked) {
      ui->pbTxLock->setText(tr("Lockd Tx=Rx"));
 	 ui->pbTxLock->setToolTip(tr("<html><head/><body><p>Push button to allow Tx/Rx AF frequencies split operation.</p></body></html>"));
-     ui->pbTxLock->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #ffff88;\n border-style: solid;\n border-width: 1px;\n border-radius: 5px;\n border-color: black;\n	min-width: 5em;\n padding: 3px;\n}");
+     ui->pbTxLock->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff88",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
   } else {
   	 ui->pbTxLock->setText(tr("Tx/Rx Split"));
      ui->pbTxLock->setToolTip(tr("<html><head/><body><p>Push button to lock Tx frequency to the Rx AF frequency.</p></body></html>"));
-     ui->pbTxLock->setStyleSheet("QPushButton {\n	color: #000000;\n background-color: #00ff00;\n border-style: solid;\n border-width: 1px;\n border-color: gray;\n min-width: 5em;\n padding: 3px;\n}");
+     ui->pbTxLock->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle)));
   }
   m_wideGraph->setLockTxFreq(m_lockTxFreq);
   if(m_lockTxFreq) on_pbR2T_clicked();
@@ -6874,7 +6937,9 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   }
 
   displayDialFrequency ();
-  update_dynamic_property (ui->readFreq, "state", "ok");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkok");
+  else update_dynamic_property (ui->readFreq, "state", "ok");
   m_rigOk=true;
   ui->readFreq->setEnabled (false);
   ui->readFreq->setText (s.split () ? "S" : "");
@@ -6888,7 +6953,9 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
 
 void MainWindow::handle_transceiver_failure (QString const& reason)
 {
-  update_dynamic_property (ui->readFreq, "state", "error");
+  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
+  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkerror");
+  else update_dynamic_property (ui->readFreq, "state", "error");
   m_rigOk=false;
   ui->readFreq->setEnabled (true);
   haltTx("Rig control error: " + reason + " ");
@@ -6959,6 +7026,7 @@ void MainWindow::transmit (double snr)
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   if(stophintTimer.isActive()) stophintTimer.stop();
+  if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
 }
 
 void MainWindow::on_outAttenuation_valueChanged (int a)
@@ -7004,7 +7072,7 @@ bool MainWindow::shortList(QString callsign)
 
 bool MainWindow::isAutoSeq73(QString const& text)
 {
-  auto parts = text.split (' ', QString::SkipEmptyParts);
+  auto parts = text.split (' ', SkipEmptyParts);
   auto partsSize = parts.size ();
   bool b=((partsSize > 0 && (parts[0] == "73" || parts[0] == "TNX" || parts[0] == "TKS" || parts[0] == "TU"))
        || (partsSize > 1 && (parts[1] == "73" || parts[1] == "TNX" || parts[1] == "TKS" || parts[1] == "TU"))
@@ -7035,8 +7103,8 @@ void MainWindow::setHoundAppearance(bool hound)
 
 void MainWindow::setLastLogdLabel()
 {
-  if(m_lastloggedcall.isEmpty()) { lastlogged_label->setText(tr("Logd ")); lastlogged_label->setStyleSheet("QLabel{background-color: #ffffff}"); }
-  else { lastlogged_label->setText(tr("Logd ") + m_lastloggedcall); lastlogged_label->setStyleSheet("QLabel{background-color: #7fff7f}"); }
+  if(m_lastloggedcall.isEmpty()) { lastlogged_label->setText(tr("Logd ")); lastlogged_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffffff",m_useDarkStyle))); }
+  else { lastlogged_label->setText(tr("Logd ") + m_lastloggedcall); lastlogged_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#7fff7f",m_useDarkStyle))); }
 }
 
 void MainWindow::writeToALLTXT(QString const& text)
@@ -7062,20 +7130,20 @@ void MainWindow::writeToALLTXT(QString const& text)
 void MainWindow::setTxMsgBtnColor()
 {
   if(0 == ui->tabWidget->currentIndex ()) {
-    if(m_ntx==1) ui->txb1->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_ntx==2) ui->txb2->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_ntx==3) ui->txb3->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_ntx==4) ui->txb4->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_ntx==5) ui->txb5->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_ntx==6) ui->txb6->setStyleSheet("QPushButton{background-color: #88ff88}");
+    if(m_ntx==1) ui->txb1->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==2) ui->txb2->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==3) ui->txb3->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==4) ui->txb4->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==5) ui->txb5->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_ntx==6) ui->txb6->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
   else if(1 == ui->tabWidget->currentIndex ()) {
-    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet("QPushButton{background-color: #88ff88}");
-    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet("QPushButton{background-color: #88ff88}");
+    if(m_QSOProgress == CALLING) ui->pbCallCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPLYING) ui->pbAnswerCQ->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == REPORT) ui->pbAnswerCaller->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGER_REPORT) ui->pbSendReport->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == ROGERS) ui->pbSendRRR->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
+    else if(m_QSOProgress == SIGNOFF) ui->pbSend73->setStyleSheet(QString("QPushButton{background: %1}").arg(Radio::convert_dark("#88ff88",m_useDarkStyle)));
   }
 }
 
@@ -7211,10 +7279,10 @@ void MainWindow::replayDecodes ()
   // is not checked
 
   // attempt to parse the decoded text
-  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', QString::SkipEmptyParts))
+  Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', SkipEmptyParts))
     {
       if (message.size() >= 4 && message.left (4) != "----") {
-          auto const& parts = message.split (' ', QString::SkipEmptyParts);
+          auto const& parts = message.split (' ', SkipEmptyParts);
           if (parts.size () >= 5 && parts[3].contains ('.')) { // WSPR
               postWSPRDecode (false, parts);
           } else {
@@ -7234,7 +7302,7 @@ void MainWindow::replayDecodes ()
 void MainWindow::postDecode (bool is_new, QString const& message)
 {
   auto const& decode = message.trimmed ();
-  auto const& parts = decode.left (22).split (' ', QString::SkipEmptyParts);
+  auto const& parts = decode.left (22).split (' ', SkipEmptyParts);
   if (parts.size () >= 5) {
       auto has_seconds = parts[0].size () > 4;
       bool low_confidence=(QChar {'*'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1)) || (QChar {'^'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1));
@@ -7455,7 +7523,7 @@ void MainWindow::on_cbUploadWSPR_Spots_toggled(bool b)
 {
   m_uploadSpots=b;
   if(m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet("");
-  if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet("QCheckBox{background-color: yellow}");
+  if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet(QString("QCheckBox{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
 }
 
 void MainWindow::on_WSPRfreqSpinBox_valueChanged(int n)
@@ -7609,7 +7677,7 @@ void MainWindow::txwatchdog (bool triggered)
     {
       m_bTxTime=false;
       if (m_enableTx) enableTx_mode (false);
-      tx_status_label->setStyleSheet ("QLabel{background-color: #ff8080}");
+      tx_status_label->setStyleSheet (QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8080",m_useDarkStyle)));
       tx_status_label->setText (tr("Tx watchdog expired"));
     }
   else

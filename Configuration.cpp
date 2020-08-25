@@ -491,9 +491,9 @@ private:
   Q_SLOT void on_newGridBandMode_check_box_clicked(bool checked);
   Q_SLOT void on_newPotential_check_box_clicked(bool checked);
 
-  Q_SLOT void on_eqsluser_edit_editingFinished();
-  Q_SLOT void on_eqslpasswd_edit_editingFinished();
-  Q_SLOT void on_eqslnick_edit_editingFinished();
+  Q_SLOT void on_eqsluser_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslpasswd_edit_textEdited(const QString &arg1);
+  Q_SLOT void on_eqslnick_edit_textEdited(const QString &arg1);
 
   Q_SLOT void on_pbCQmsg_clicked();
   Q_SLOT void on_pbMyCall_clicked();
@@ -554,7 +554,7 @@ private:
   QDir default_save_directory_;
   QDir save_directory_;
 
-  QFont font_;
+  QFont font_ = QGuiApplication::font ();
   QFont next_font_;
 
   QFont decoded_text_font_;
@@ -677,6 +677,7 @@ private:
   bool enableCallsignFilter_;
   bool do_snr_;
   bool do_pwr_;
+  bool rig_power_;
   bool id_after_73_;
   bool tx_QSY_allowed_;
   bool spot_to_psk_reporter_;
@@ -715,6 +716,7 @@ private:
   bool prompt_to_log_;
   bool autolog_;
   bool insert_blank_;
+  bool useDarkStyle_;
   bool countryName_;
   bool countryPrefix_;
   bool callNotif_;
@@ -918,6 +920,7 @@ bool Configuration::enableCountryFilter () const {return m_->enableCountryFilter
 bool Configuration::enableCallsignFilter () const {return m_->enableCallsignFilter_;}
 bool Configuration::do_snr () const {return m_->do_snr_;}
 bool Configuration::do_pwr () const {return m_->do_pwr_;}
+bool Configuration::rig_power () const {return m_->rig_power_;}
 bool Configuration::id_after_73 () const {return m_->id_after_73_;}
 bool Configuration::tx_QSY_allowed () const {return m_->tx_QSY_allowed_;}
 bool Configuration::spot_to_psk_reporter () const
@@ -960,6 +963,7 @@ bool Configuration::report_in_comments () const {return m_->report_in_comments_;
 bool Configuration::prompt_to_log () const {return m_->prompt_to_log_;}
 bool Configuration::autolog () const {return m_->autolog_;}
 bool Configuration::insert_blank () const {return m_->insert_blank_;}
+bool Configuration::useDarkStyle () const {return m_->useDarkStyle_;}
 bool Configuration::countryName () const {return m_->countryName_;}
 bool Configuration::countryPrefix () const {return m_->countryPrefix_;}
 bool Configuration::callNotif () const {return m_->callNotif_;}
@@ -1545,11 +1549,11 @@ void Configuration::impl::initialize_models ()
   auto pal = ui_->callsign_line_edit->palette ();
   if (my_callsign_.isEmpty ())
     {
-      pal.setColor (QPalette::Base, "#ffccff");
+      pal.setColor (QPalette::Base, Radio::convert_dark("#ffccff",useDarkStyle_));
     }
   else
     {
-      pal.setColor (QPalette::Base, Qt::white);
+      pal.setColor (QPalette::Base, Radio::convert_dark("#ffffff",useDarkStyle_));
     }
   ui_->callsign_line_edit->setPalette (pal);
   ui_->grid_line_edit->setPalette (pal);
@@ -1559,7 +1563,7 @@ void Configuration::impl::initialize_models ()
   ui_->content_line_edit->setText (content_);
   ui_->countries_line_edit->setText (countries_);
   ui_->callsigns_line_edit->setText (callsigns_);
-  ui_->labTx->setStyleSheet(QString("background: %1").arg(color_TxMsg_.name()));
+  ui_->labTx->setStyleSheet(QString("background: %1").arg(Radio::convert_dark(color_TxMsg_.name(),useDarkStyle_)));
   next_txtColor_ = txtColor_;
   next_workedColor_ = workedColor_;
   next_workedStriked_ = workedStriked_;
@@ -1585,139 +1589,139 @@ void Configuration::impl::initialize_models ()
   next_newCallBandMode_ = newCallBandMode_;
   next_newPotential_ = newPotential_;
   if (txtColor_){
-    ui_->labCQ->setStyleSheet(QString("background: %1;color: #ffffff").arg(color_CQ_.name()));
-    ui_->labMyCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(color_MyCall_.name()));
-    ui_->labStandardCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(color_StandardCall_.name()));
-    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZ_.name(),color_CQ_.name()));
-    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZBand_.name(),color_CQ_.name()));
-    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZ_.name(),color_CQ_.name()));
-    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZBand_.name(),color_CQ_.name()));
-    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCC_.name(),color_CQ_.name()));
-    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCCBand_.name(),color_CQ_.name()));
-    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGrid_.name(),color_CQ_.name()));
-    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGridBand_.name(),color_CQ_.name()));
-    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPx_.name(),color_CQ_.name()));
-    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPxBand_.name(),color_CQ_.name()));
-    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCall_.name(),color_CQ_.name()));
-    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCallBand_.name(),color_CQ_.name()));
+    ui_->labCQ->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labMyCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labStandardCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
     if (workedColor_) {
       if (workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       } else if (workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     } else if (workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     }
-    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZ_.name(),color_MyCall_.name()));
-    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZ_.name(),color_MyCall_.name()));
-    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCC_.name(),color_MyCall_.name()));
-    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCCBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGrid_.name(),color_MyCall_.name()));
-    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGridBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPx_.name(),color_MyCall_.name()));
-    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPxBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCall_.name(),color_MyCall_.name()));
-    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCallBand_.name(),color_MyCall_.name()));
-    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZ_.name(),color_StandardCall_.name()));
-    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCQZBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZ_.name(),color_StandardCall_.name()));
-    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewITUZBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCC_.name(),color_StandardCall_.name()));
-    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewDXCCBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGrid_.name(),color_StandardCall_.name()));
-    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewGridBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPx_.name(),color_StandardCall_.name()));
-    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewPxBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCall_.name(),color_StandardCall_.name()));
-    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(color_NewCallBand_.name(),color_StandardCall_.name()));
+    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
   } else {
-    ui_->labCQ->setStyleSheet(QString("background: #ffffff;color: %1").arg(color_CQ_.name()));
-    ui_->labMyCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(color_MyCall_.name()));
-    ui_->labStandardCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(color_StandardCall_.name()));
-    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZ_.name(),color_CQ_.name()));
-    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZBand_.name(),color_CQ_.name()));
-    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZ_.name(),color_CQ_.name()));
-    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZBand_.name(),color_CQ_.name()));
-    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCC_.name(),color_CQ_.name()));
-    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCCBand_.name(),color_CQ_.name()));
-    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGrid_.name(),color_CQ_.name()));
-    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGridBand_.name(),color_CQ_.name()));
-    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPx_.name(),color_CQ_.name()));
-    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPxBand_.name(),color_CQ_.name()));
-    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCall_.name(),color_CQ_.name()));
-    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCallBand_.name(),color_CQ_.name()));
+    ui_->labCQ->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labMyCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labStandardCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
     if (workedColor_) {
       if (workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       } else if (workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(color_WorkedCall_.name(),color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(color_WorkedCall_.name(),color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(color_WorkedCall_.name(),color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     } else if (workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
     }
-    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZ_.name(),color_MyCall_.name()));
-    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZ_.name(),color_MyCall_.name()));
-    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCC_.name(),color_MyCall_.name()));
-    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCCBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGrid_.name(),color_MyCall_.name()));
-    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGridBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPx_.name(),color_MyCall_.name()));
-    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPxBand_.name(),color_MyCall_.name()));
-    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCall_.name(),color_MyCall_.name()));
-    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCallBand_.name(),color_MyCall_.name()));
-    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZ_.name(),color_StandardCall_.name()));
-    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCQZBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZ_.name(),color_StandardCall_.name()));
-    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewITUZBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCC_.name(),color_StandardCall_.name()));
-    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewDXCCBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGrid_.name(),color_StandardCall_.name()));
-    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewGridBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPx_.name(),color_StandardCall_.name()));
-    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewPxBand_.name(),color_StandardCall_.name()));
-    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCall_.name(),color_StandardCall_.name()));
-    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(color_NewCallBand_.name(),color_StandardCall_.name()));
+    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(color_StandardCall_.name(),useDarkStyle_)));
   }
   ui_->labNewCQZ->setVisible(newCQZ_);
   ui_->labNewCQZBand->setVisible(newCQZBandMode_ || newCQZBand_);
@@ -1789,6 +1793,7 @@ void Configuration::impl::initialize_models ()
   ui_->enableCallsignFilter_check_box->setChecked (enableCallsignFilter_);
   ui_->S_meter_check_box->setChecked (do_snr_);
   ui_->output_power_check_box->setChecked (do_pwr_);
+  ui_->rig_power_check_box->setChecked (rig_power_);
   ui_->sbTopFreq->setValue (ntopfreq65_);
   ui_->sbAnswerCQCounter->setValue (nAnswerCQCounter_);
   ui_->sbAnswerInCallCounter->setValue (nAnswerInCallCounter_);
@@ -1805,11 +1810,13 @@ void Configuration::impl::initialize_models ()
   ui_->dxsummit_check_box->setChecked (spot_to_dxsummit_);
   ui_->preventFalseUDP_check_box->setChecked (prevent_spotting_false_);
   ui_->filterUDP_check_box->setChecked (filterUDP_);
-  ui_->eqsl_check_box->setEnabled (!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ());
-  ui_->eqsl_check_box->setChecked ((!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) && send_to_eqsl_);
   ui_->eqsluser_edit->setText (eqsl_username_);
   ui_->eqslpasswd_edit->setText (eqsl_passwd_);
   ui_->eqslnick_edit->setText (eqsl_nickname_);
+  if(!eqsl_username_.isEmpty () && !eqsl_passwd_.isEmpty () && !eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setEnabled (true);
+    ui_->eqsl_check_box->setChecked (send_to_eqsl_);
+  }
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
@@ -1838,6 +1845,7 @@ void Configuration::impl::initialize_models ()
   ui_->prompt_to_log_check_box->setChecked (prompt_to_log_);
   ui_->autolog_check_box->setChecked (autolog_);
   ui_->insert_blank_check_box->setChecked (insert_blank_);
+  ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
   ui_->countryName_check_box->setChecked (countryName_);
   ui_->countryPrefix_check_box->setChecked (countryName_ && countryPrefix_);
   ui_->callNotif_check_box->setChecked (callNotif_);
@@ -2001,16 +2009,13 @@ void Configuration::impl::read_settings ()
   next_color_NewCall_ = color_NewCall_ = settings_->value("colorNewCall","#a0a030").toString();
   next_color_NewCallBand_ = color_NewCallBand_ = settings_->value("colorNewCallBand","#e0e070").toString();
   next_color_WorkedCall_ = color_WorkedCall_ = settings_->value("colorWorkedCall","#00ff00").toString();
+  useDarkStyle_ = settings_->value ("UseDarkStyle", false).toBool ();
 
-  if (next_font_.fromString (settings_->value ("Font", QGuiApplication::font ().toString ()).toString ())
-      && next_font_ != font_)
+  next_font_.fromString (settings_->value ("Font", QGuiApplication::font ().toString ()).toString ());
+  if (next_font_ != font_ || useDarkStyle_)
     {
       font_ = next_font_;
       set_application_font (font_);
-    }
-  else
-    {
-      next_font_ = font_;
     }
 
   if (next_decoded_text_font_.fromString (settings_->value ("DecodedTextFont", "Courier, 10").toString ())
@@ -2076,6 +2081,7 @@ void Configuration::impl::read_settings ()
 
   do_snr_ = settings_->value ("CATRequestSNR", false).toBool ();
   do_pwr_ = settings_->value ("CATRequestPower", false).toBool ();
+  rig_power_ = settings_->value ("RigPower", false).toBool ();
 
   if(settings_->value ("hideAfrica").toString()=="false" || settings_->value ("hideAfrica").toString()=="true")
     hideAfrica_ = settings_->value ("hideAfrica").toBool ();
@@ -2105,7 +2111,7 @@ void Configuration::impl::read_settings ()
     hideSAmerica_ = settings_->value ("hideSAmerica").toBool ();
   else hideSAmerica_ = false;
 
-  save_directory_ = settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ();
+  save_directory_.setPath (settings_->value ("SaveDir", default_save_directory_.absolutePath ()).toString ());
 
   {
     //
@@ -2178,10 +2184,13 @@ void Configuration::impl::read_settings ()
     filterUDP_ = settings_->value ("ApplyFiltersToUDPmessages").toBool ();
   else filterUDP_ = false;
 
-  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
   eqsl_username_ = settings_->value ("EQSLUser", "").toString ();
   eqsl_passwd_ = settings_->value ("EQSLPasswd", "").toString ();
   eqsl_nickname_ = settings_->value ("EQSLNick", "").toString ();
+  send_to_eqsl_ = settings_->value ("EQSLSend", false).toBool ();
+  if(eqsl_username_.isEmpty () || eqsl_passwd_.isEmpty () || eqsl_nickname_.isEmpty ()) {
+    ui_->eqsl_check_box->setChecked (false); ui_->eqsl_check_box->setEnabled (false); send_to_eqsl_=false; 
+  }
   usesched_ = settings_->value ("UseSchedBands", false).toBool ();
   sched_hh_1_ = settings_->value ("Sched_hh_1", "").toString ();
   sched_mm_1_ = settings_->value ("Sched_mm_1", "").toString ();
@@ -2448,6 +2457,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("EnableCallsignFilter", enableCallsignFilter_);
   settings_->setValue ("CATRequestSNR", do_snr_);
   settings_->setValue ("CATRequestPower", do_pwr_);
+  settings_->setValue ("RigPower", rig_power_);
   settings_->setValue ("hideAfrica", hideAfrica_);
   settings_->setValue ("hideAntarctica", hideAntarctica_);
   settings_->setValue ("hideAsia", hideAsia_);
@@ -2531,6 +2541,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("PromptToLog", prompt_to_log_);
   settings_->setValue ("AutoQSOLogging", autolog_);
   settings_->setValue ("InsertBlank", insert_blank_);
+  settings_->setValue ("UseDarkStyle", useDarkStyle_);
   settings_->setValue ("countryName", countryName_);
   settings_->setValue ("countryPrefix", countryPrefix_);
   settings_->setValue ("callsignLogFiltering", callNotif_);
@@ -2824,6 +2835,7 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
 
   result.do_snr = ui_->S_meter_check_box->isChecked ();
   result.do_pwr = ui_->output_power_check_box->isChecked ();
+  result.rig_power = ui_->rig_power_check_box->isChecked ();
   result.baud = ui_->CAT_serial_baud_combo_box->currentText ().toInt ();
   result.data_bits = static_cast<TransceiverFactory::DataBits> (ui_->CAT_data_bits_button_group->checkedId ());
   result.stop_bits = static_cast<TransceiverFactory::StopBits> (ui_->CAT_stop_bits_button_group->checkedId ());
@@ -2874,8 +2886,9 @@ void Configuration::impl::accept ()
   // parameters so extract values from models and make them live
   //
 
-  if (next_font_ != font_)
+  if (next_font_ != font_ || useDarkStyle_ != ui_->useDarkStyle_check_box->isChecked ())
     {
+      useDarkStyle_ = ui_->useDarkStyle_check_box->isChecked ();
       font_ = next_font_;
       set_application_font (font_);
     }
@@ -2992,7 +3005,8 @@ void Configuration::impl::accept ()
   spot_to_dxsummit_ = ui_->dxsummit_check_box->isChecked ();
   prevent_spotting_false_ = ui_->preventFalseUDP_check_box->isChecked ();
   filterUDP_ =  ui_->filterUDP_check_box->isChecked ();
-  send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  if(!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) send_to_eqsl_ = ui_->eqsl_check_box->isChecked ();
+  else send_to_eqsl_ = false;
   eqsl_username_ = ui_->eqsluser_edit->text ();
   eqsl_passwd_ = ui_->eqslpasswd_edit->text ();
   eqsl_nickname_ = ui_->eqslnick_edit->text ();
@@ -3048,6 +3062,7 @@ void Configuration::impl::accept ()
   enableCallsignFilter_ = ui_->enableCallsignFilter_check_box->isChecked ();
   do_snr_ = ui_->S_meter_check_box->isChecked ();
   do_pwr_ = ui_->output_power_check_box->isChecked ();
+  rig_power_ = ui_->rig_power_check_box->isChecked ();
   id_after_73_ = ui_->CW_id_after_73_check_box->isChecked ();
   tx_QSY_allowed_ = ui_->tx_QSY_check_box->isChecked ();
   monitor_off_at_startup_ = ui_->monitor_off_check_box->isChecked ();
@@ -3105,7 +3120,7 @@ void Configuration::impl::accept ()
   TX_messages_ = ui_->TX_messages_check_box->isChecked ();
   hide_TX_messages_ = ui_->hide_TX_messages_check_box->isChecked ();
   data_mode_ = static_cast<DataMode> (ui_->TX_mode_button_group->checkedId ());
-  save_directory_ = ui_->save_path_display_label->text ();
+  save_directory_.setPath (ui_->save_path_display_label->text ());
   decode_at_52s_ = ui_->decode_at_52s_check_box->isChecked ();
   beepOnMyCall_ = ui_->beep_on_my_call_check_box->isChecked();
   beepOnNewCQZ_ = ui_->beep_on_newCQZ_check_box->isChecked();
@@ -3239,22 +3254,22 @@ void Configuration::impl::message_box_critical (QString const& reason, QString c
   mb.exec ();
 }
 
-void Configuration::impl::on_eqsluser_edit_editingFinished()
+void Configuration::impl::on_eqsluser_edit_textEdited(const QString &user)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setEnabled (!user.isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
   ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslpasswd_edit_editingFinished()
+void Configuration::impl::on_eqslpasswd_edit_textEdited(const QString &passwd)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !passwd.isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
 }
 
-void Configuration::impl::on_eqslnick_edit_editingFinished()
+void Configuration::impl::on_eqslnick_edit_textEdited(const QString &nick)
 {
-  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ());  
-  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !ui_->eqslnick_edit->text ().isEmpty ()) && send_to_eqsl_);  
+  ui_->eqsl_check_box->setEnabled (!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ());  
+  ui_->eqsl_check_box->setChecked ((!ui_->eqsluser_edit->text ().isEmpty () && !ui_->eqslpasswd_edit->text ().isEmpty () && !nick.isEmpty ()) && send_to_eqsl_);  
 }
 
 void Configuration::impl::on_font_push_button_clicked ()
@@ -3339,139 +3354,139 @@ void Configuration::impl::on_txtColor_check_box_clicked(bool checked)
 {
   next_txtColor_ = checked;
   if (next_txtColor_){
-    ui_->labCQ->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_CQ_.name()));
-    ui_->labMyCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_MyCall_.name()));
-    ui_->labStandardCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_StandardCall_.name()));
-    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
+    ui_->labCQ->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labMyCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labStandardCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
-    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
   } else {
-    ui_->labCQ->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_CQ_.name()));
-    ui_->labMyCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_MyCall_.name()));
-    ui_->labStandardCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_StandardCall_.name()));
-    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
+    ui_->labCQ->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labMyCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labStandardCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+    ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+    ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
-    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
-    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
-    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+    ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+    ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
   }
 }
 
@@ -3481,58 +3496,58 @@ void Configuration::impl::on_workedColor_check_box_clicked(bool checked)
   if (next_txtColor_) {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   } else {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   }
 }
@@ -3550,58 +3565,58 @@ void Configuration::impl::on_workedStriked_check_box_clicked(bool checked)
   if (next_txtColor_) {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   } else {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   }
 }
@@ -3614,58 +3629,58 @@ void Configuration::impl::on_workedUnderlined_check_box_clicked(bool checked)
   if (next_txtColor_) {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   } else {
     if (next_workedColor_) {
       if (next_workedStriked_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else if (next_workedUnderlined_) {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+        ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     } else if (next_workedStriked_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else if (next_workedUnderlined_) {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     } else {
-      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
-      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
-      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+      ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+      ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+      ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
     }
   }
 }
@@ -3968,67 +3983,67 @@ void Configuration::impl::on_newGridBandMode_check_box_clicked(bool checked)
 
 void Configuration::impl::on_pbCQmsg_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_CQ_, this, "CQ Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)), this, "CQ Messages Color");
   if (new_color.isValid ())
     {
-      next_color_CQ_ = new_color;
+      next_color_CQ_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labCQ->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_CQ_.name()));
-        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
+        ui_->labCQ->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         }
       } else {      
-        ui_->labCQ->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_CQ_.name()));
-        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
+        ui_->labCQ->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
         }
       }
     }
@@ -4036,67 +4051,67 @@ void Configuration::impl::on_pbCQmsg_clicked()
 
 void Configuration::impl::on_pbMyCall_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_MyCall_, this, "My Call Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)), this, "My Call Messages Color");
   if (new_color.isValid ())
     {
-      next_color_MyCall_ = new_color;
+      next_color_MyCall_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labMyCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_MyCall_.name()));
-        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
+        ui_->labMyCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         }
       } else {      
-        ui_->labMyCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_MyCall_.name()));
-        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
+        ui_->labMyCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
         }
       }
     }
@@ -4104,67 +4119,67 @@ void Configuration::impl::on_pbMyCall_clicked()
 
 void Configuration::impl::on_pbStandardCall_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_StandardCall_, this, "Standard Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)), this, "Standard Messages Color");
   if (new_color.isValid ())
     {
-      next_color_StandardCall_ = new_color;
+      next_color_StandardCall_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labStandardCall->setStyleSheet(QString("background: %1;color: #ffffff").arg(next_color_StandardCall_.name()));
-        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+        ui_->labStandardCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         }
       } else {
-        ui_->labStandardCall->setStyleSheet(QString("background: #ffffff;color: %1").arg(next_color_StandardCall_.name()));
-        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
-        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+        ui_->labStandardCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_),Radio::convert_dark("#ffffff",useDarkStyle_)));
+        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
+        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         }
       }
     }
@@ -4172,291 +4187,291 @@ void Configuration::impl::on_pbStandardCall_clicked()
 
 void Configuration::impl::on_pbTxMsg_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_TxMsg_, this, "Tx Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_TxMsg_.name(),useDarkStyle_)), this, "Tx Messages Color");
   if (new_color.isValid ())
     {
-      next_color_TxMsg_ = new_color;
-      ui_->labTx->setStyleSheet(QString("background: %1").arg(next_color_TxMsg_.name()));
+      next_color_TxMsg_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
+      ui_->labTx->setStyleSheet(QString("background: %1").arg(Radio::convert_dark(next_color_TxMsg_.name(),useDarkStyle_)));
     }
 }
 
 void Configuration::impl::on_pbNewCQZ_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewCQZ_, this, "New CQZ Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_)), this, "New CQZ Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewCQZ_ = new_color;
+      next_color_NewCQZ_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZ_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewCQZBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewCQZBand_, this, "New CQZ on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_)), this, "New CQZ on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewCQZBand_ = new_color;
+      next_color_NewCQZBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCQZBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCQZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCQZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewITUZ_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewITUZ_, this, "New ITUZ Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_)), this, "New ITUZ Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewITUZ_ = new_color;
+      next_color_NewITUZ_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
+        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_CQ_.name()));
-        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_MyCall_.name()));
-        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZ_.name(),next_color_StandardCall_.name()));
+        ui_->labNewITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZ->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZ_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewITUZBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewITUZBand_, this, "New ITUZ on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_)), this, "New ITUZ on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewITUZBand_ = new_color;
+      next_color_NewITUZBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewITUZBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScITUZBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewITUZBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewDXCC_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewDXCC_, this, "New DXCC Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_)), this, "New DXCC Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewDXCC_ = new_color;
+      next_color_NewDXCC_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
+        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_CQ_.name()));
-        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_MyCall_.name()));
-        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCC_.name(),next_color_StandardCall_.name()));
+        ui_->labNewDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCC->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCC_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewDXCCBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewDXCCBand_, this, "New DXCC on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_)), this, "New DXCC on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewDXCCBand_ = new_color;
+      next_color_NewDXCCBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewDXCCBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScDXCCBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewDXCCBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewGrid_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewGrid_, this, "New Grid Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_)), this, "New Grid Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewGrid_ = new_color;
+      next_color_NewGrid_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
+        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_CQ_.name()));
-        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_MyCall_.name()));
-        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGrid_.name(),next_color_StandardCall_.name()));
+        ui_->labNewGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScGrid->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGrid_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewGridBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewGridBand_, this, "New Grid on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_)), this, "New Grid on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewGridBand_ = new_color;
+      next_color_NewGridBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewGridBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScGridBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewGridBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewPx_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewPx_, this, "New Prefix Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_)), this, "New Prefix Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewPx_ = new_color;
+      next_color_NewPx_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
+        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_CQ_.name()));
-        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_MyCall_.name()));
-        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPx_.name(),next_color_StandardCall_.name()));
+        ui_->labNewPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScPx->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPx_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewPxBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewPxBand_, this, "New Prefix on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_)), this, "New Prefix on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewPxBand_ = new_color;
+      next_color_NewPxBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewPxBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScPxBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewPxBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewCall_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewCall_, this, "New Call Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_)), this, "New Call Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewCall_ = new_color;
+      next_color_NewCall_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCall_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCall->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbNewCallBand_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_NewCallBand_, this, "New Call on Band/Mode Messages Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_)), this, "New Call on Band/Mode Messages Color");
   if (new_color.isValid ())
     {
-      next_color_NewCallBand_ = new_color;
+      next_color_NewCallBand_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
-        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %2;color: %1").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       } else {
-        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_CQ_.name()));
-        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_MyCall_.name()));
-        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(next_color_NewCallBand_.name(),next_color_StandardCall_.name()));
+        ui_->labNewCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+        ui_->labNewMcCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+        ui_->labNewScCallBand->setStyleSheet(QString("font-weight: bold;background: %1;color: %2").arg(Radio::convert_dark(next_color_NewCallBand_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
       }
     }
 }
 
 void Configuration::impl::on_pbWorkedCall_clicked()
 {
-  auto new_color = QColorDialog::getColor(next_color_WorkedCall_, this, "Worked Call Color");
+  auto new_color = QColorDialog::getColor(QColor(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_)), this, "Worked Call Color");
   if (new_color.isValid ())
     {
-      next_color_WorkedCall_ = new_color;
+      next_color_WorkedCall_ = QColor(Radio::convert_dark(new_color.name(),useDarkStyle_));
       if (next_txtColor_) {
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %2;color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         }
       } else {
         if (next_workedColor_) {
           if (next_workedStriked_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else if (next_workedUnderlined_) {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           } else {
-            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_CQ_.name()));
-            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_MyCall_.name()));
-            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(next_color_WorkedCall_.name(),next_color_StandardCall_.name()));
+            ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+            ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+            ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark(next_color_WorkedCall_.name(),useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
           }
         } else if (next_workedStriked_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: line-through").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else if (next_workedUnderlined_) {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2;text-decoration: underline").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         } else {
-          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_CQ_.name()));
-          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_MyCall_.name()));
-          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg("white",next_color_StandardCall_.name()));
+          ui_->labWorkedCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_CQ_.name(),useDarkStyle_)));
+          ui_->labWorkedMcCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_MyCall_.name(),useDarkStyle_)));
+          ui_->labWorkedScCall->setStyleSheet(QString("background: %1;color: %2").arg(Radio::convert_dark("#ffffff",useDarkStyle_),Radio::convert_dark(next_color_StandardCall_.name(),useDarkStyle_)));
         }
       }
     }
@@ -5007,7 +5022,7 @@ void Configuration::impl::delete_selected_macros (QModelIndexList selected_rows)
 {
   // sort in reverse row order so that we can delete without changing
   // indices underneath us
-  qSort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
+  std::sort (selected_rows.begin (), selected_rows.end (), [] (QModelIndex const& lhs, QModelIndex const& rhs)
          {
            return rhs.row () < lhs.row (); // reverse row ordering
          });
@@ -5658,7 +5673,48 @@ void Configuration::impl::update_audio_channels (QComboBox const * source_combo_
 
 void Configuration::impl::set_application_font (QFont const& font)
 {
-  qApp->setStyleSheet (qApp->styleSheet () + "* {" + font_as_stylesheet (font) + '}');
+//  qApp->setFont (font);
+  QString ss;
+    if (qApp->styleSheet ().size ())
+    {
+      auto sheet = qApp->styleSheet ();
+      if (sheet.startsWith("file:///")) {
+        sheet.remove ("file:///");
+        QFile sf {sheet};
+        if (sf.open (QFile::ReadOnly | QFile::Text)) {
+            ss = sf.readAll () + ss;
+            useDarkStyle_ = true;
+            ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+        }
+      }
+      else if (useDarkStyle_){
+        int lopp = sheet.indexOf("* { font-family:");
+        if (lopp > 0) ss = sheet.mid(0,lopp);
+        else {
+          QFile sf {":/qdarkstyle/style.qss"};
+          if (sf.open (QFile::ReadOnly | QFile::Text))
+            ss = sf.readAll () + ss;
+          else {
+            useDarkStyle_ = false;
+            ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+            ss = "";
+          }
+        }
+      }
+      else 
+        ss = "";
+    }
+    else if (useDarkStyle_) {
+      QFile sf {":/qdarkstyle/style.qss"};
+      if (sf.open (QFile::ReadOnly | QFile::Text))
+        ss = sf.readAll () + ss;
+      else {
+        useDarkStyle_ = false;
+        ui_->useDarkStyle_check_box->setChecked (useDarkStyle_);
+        ss = "";
+      }
+    }
+  qApp->setStyleSheet (ss + "* {" + font_as_stylesheet (font) + '}');
   for (auto& widget : qApp->topLevelWidgets ())
     {
       widget->updateGeometry ();

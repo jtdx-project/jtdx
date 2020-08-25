@@ -172,7 +172,10 @@ private slots:
   void on_actionCatalan_triggered();
   void on_actionCroatian_triggered();
   void on_actionDanish_triggered();
+  void on_actionDutch_triggered();
+  void on_actionHungarian_triggered();
   void on_actionSpanish_triggered();
+  void on_actionSwedish_triggered();
   void on_actionFrench_triggered();
   void on_actionItalian_triggered();
   void on_actionLatvian_triggered();
@@ -590,6 +593,7 @@ private:
   bool m_callToClipboard;
   bool m_rigOk;
   bool m_bandChanged;
+  bool m_useDarkStyle;
   bool m_lostaudio;
   QString m_lang;
   QString m_lastloggedcall;
@@ -752,6 +756,7 @@ private:
   void msgtype(QString t, QLineEdit* tx);
   void stub();
   void statusChanged();
+  void styleChanged();
   bool gridOK(QString g);
   bool gridRR73(QString g);
   bool reportRCVD(QStringList msg);

@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20191121
-
 subroutine getcandidates4(fa,fb,syncmin,nfqso,maxcand,candidate,ncand)
 
   use ft4_mod1, only : dd4
@@ -30,14 +28,13 @@ subroutine getcandidates4(fa,fb,syncmin,nfqso,maxcand,candidate,ncand)
   fac=1.0/300.0
   do j=1,NHSYM
      ia=(j-1)*NSTEP + 1
-!     ib=ia+NFFT1-1
-     ib=ia+2303
+     ib=ia+2303 ! ib=ia+NFFT1-1
      if(ib.gt.NMAX) exit
      x(129:2432)=fac*dd4(ia:ib)!; x(129)=x(129)*1.9; x(2432)=x(2432)*1.9
      if(j.ne.1) then; x(1:128)=fac*dd4(ia-128:ia-1); else; x(1:128)=0.; endif
      if(j.ne.NHSYM) then; x(2433:NFFT1)=fac*dd4(ib+1:ib+128); else; x(2433:NFFT1)=0.; endif
      x(1:128)=x(1:128)*window(1:128); x(2433:NFFT1)=x(2433:NFFT1)*window(129:256)
-     call four2a(x,NFFT1,1,-1,0)              !r2c FFT
+     call four2a(cx,NFFT1,1,-1,0)              !r2c FFT
      s(1:NH1,j)=abs(cx(1:NH1))**2
      savg=savg + s(1:NH1,j)                   !Average spectrum
   enddo

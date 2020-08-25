@@ -1146,11 +1146,11 @@ int main(int argc, char *argv[])
                 // Unpack the decoded message, update the hashtable, apply
                 // sanity checks on grid and power, and return
                 // call_loc_pow string and also callsign (for de-duping).
-                noprint=unpk_(message,hashtab,call_loc_pow,callsign);
+                noprint=unpk_(message,hashtab,loctab,call_loc_pow,callsign);
 
                 // subtract even on last pass
                 if( subtraction && (ipass < npasses ) && !noprint ) {
-                    if( get_wspr_channel_symbols(call_loc_pow, hashtab, channel_symbols) ) {
+                    if( get_wspr_channel_symbols(call_loc_pow, hashtab, loctab, channel_symbols) ) {
                         subtract_signal2(idat, qdat, npoints, f1, shift1, drift1, channel_symbols);
                     } else {
                         break;

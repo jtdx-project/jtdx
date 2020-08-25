@@ -120,7 +120,7 @@
            </widget>
           </item>
           <item row="0" column="5">
-           <widget class="QLabel" name="label_12">
+           <widget class="QLabel" name="label_121">
             <property name="text">
              <string>IARU Region:</string>
             </property>
@@ -327,16 +327,6 @@
             <property name="verticalSpacing">
              <number>3</number>
             </property>
-            <item row="1" column="2">
-             <widget class="QPushButton" name="decoded_text_font_push_button">
-              <property name="toolTip">
-               <string>Set the font characteristics for the Band Activity and Rx Frequency areas.</string>
-              </property>
-              <property name="text">
-               <string>Decoded Text Font...</string>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="2">
              <widget class="QPushButton" name="font_push_button">
               <property name="toolTip">
@@ -344,6 +334,16 @@
               </property>
               <property name="text">
                <string>Application Font...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="decoded_text_font_push_button">
+              <property name="toolTip">
+               <string>Set the font characteristics for the Band Activity and Rx Frequency areas.</string>
+              </property>
+              <property name="text">
+               <string>Decoded Text Font...</string>
               </property>
              </widget>
             </item>
@@ -357,36 +357,13 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="0">
-             <widget class="QCheckBox" name="insert_blank_check_box">
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="hide_TX_messages_check_box">
               <property name="toolTip">
-               <string>Include a separator line between periods in the band activity window.</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
-               <string>&amp;Blank line between decoding periods</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="3" column="0">
-             <widget class="QCheckBox" name="countryName_check_box">
-              <property name="toolTip">
-               <string>Append DXCC names to decoded messages.</string>
-              </property>
-              <property name="text">
-               <string>Show &amp;DXCC names</string>
+               <string>Hide partially transmitted messages</string>
               </property>
              </widget>
             </item>
@@ -397,16 +374,6 @@
               </property>
               <property name="text">
                <string>Show &amp;prefix not name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QCheckBox" name="hide_TX_messages_check_box">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>Hide partially transmitted messages</string>
               </property>
              </widget>
             </item>
@@ -425,6 +392,50 @@
                <bool>false</bool>
               </property>
              </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="countryName_check_box">
+              <property name="toolTip">
+               <string>Append DXCC names to decoded messages.</string>
+              </property>
+              <property name="text">
+               <string>Show &amp;DXCC names</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="insert_blank_check_box">
+              <property name="toolTip">
+               <string>Include a separator line between periods in the band activity window.</string>
+              </property>
+              <property name="text">
+               <string>&amp;Blank line between decoding periods</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_40">
+              <item>
+               <widget class="QCheckBox" name="useDarkStyle_check_box">
+                <property name="text">
+                 <string>Use dark style</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -727,6 +738,35 @@ quiet period when decoding is done.</string>
        </item>
        <item row="0" column="3">
         <layout class="QHBoxLayout" name="horizontalLayout_36">
+         <item>
+          <widget class="QCheckBox" name="rig_power_check_box">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Rig power</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
          <item>
           <widget class="QCheckBox" name="S_meter_check_box">
            <property name="sizePolicy">
@@ -7242,12 +7282,12 @@ soundcard changes</string>
   </connection>
  </connections>
  <buttongroups>
+  <buttongroup name="CAT_stop_bits_button_group"/>
+  <buttongroup name="split_mode_button_group"/>
+  <buttongroup name="TX_mode_button_group"/>
   <buttongroup name="PTT_method_button_group"/>
   <buttongroup name="CAT_data_bits_button_group"/>
-  <buttongroup name="TX_audio_source_button_group"/>
-  <buttongroup name="split_mode_button_group"/>
   <buttongroup name="CAT_handshake_button_group"/>
-  <buttongroup name="CAT_stop_bits_button_group"/>
-  <buttongroup name="TX_mode_button_group"/>
+  <buttongroup name="TX_audio_source_button_group"/>
  </buttongroups>
 </ui>

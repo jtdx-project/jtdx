@@ -1,13 +1,10 @@
-! This source code file was last time modified by Igor UA3DJY on 20181212
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine osd174_91(llr,apmask,ndeep,message77,cw,nhardmin,dmin,nthr)
 !
 ! An ordered-statistics decoder for the (174,91) code.
-! 
+!
+use ft8_mod1, only : first_osd,gen
 integer, parameter:: N=174, K=91, M=N-K
 integer*1 apmask(N),apmaskr(N)
-integer*1 gen(K,N)
 integer*1 genmrb(K,N),g2(N,K)
 integer*1 temp(K),m0(K),me(K),mi(K),misub(K),e2sub(N-K),e2(N-K),ui(N-K)
 integer*1 r2pat(N-K)
@@ -18,8 +15,7 @@ integer*1 message77(77)
 integer indx(N)
 real llr(N),rx(N),absrx(N)
 include "ldpc_174_91_c_generator.f90"
-logical first,reset
-data first/.true./
+logical reset
 
 integer, DIMENSION(:,:), ALLOCATABLE :: indexes
 integer, DIMENSION(:), ALLOCATABLE :: fp
@@ -40,10 +36,9 @@ interface
   end subroutine fetchit91
 end interface
 
-save first,gen
-
 npre1=0; npre2=0; d1=0.
-if( first ) then ! fill the generator matrix
+if(first_osd) then ! fill the generator matrix
+!$omp critical(first_osd)
   gen=0
   do i=1,M
     do j=1,23
@@ -59,7 +54,9 @@ if( first ) then ! fill the generator matrix
   do irow=1,K
     gen(irow,irow)=1
   enddo
-first=.false.
+first_osd=.false.
+!$OMP FLUSH (first_osd,gen)
+!$omp end critical(first_osd)
 endif
 
 rx=llr

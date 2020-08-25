@@ -2,15 +2,14 @@ subroutine gen_ft8wave(itone,nsym,nsps,bt,fsample,f0,cwave,wave,icmplx,nwave)
 !
 ! generate ft8 waveform using Gaussian-filtered frequency pulses.
 !
-
-  parameter(MAX_SECONDS=20)
+  parameter(MAX_SECONDS=20,NTAB=65536)
   real wave(nwave)
-  complex cwave(nwave)
+  complex cwave(nwave),ctab(0:NTAB-1)
   real pulse(23040)
   real dphi(0:(nsym+2)*nsps-1)
   integer itone(nsym)
   data ibt0/0/
-  save pulse,twopi,dt,hmod,ibt0
+  save pulse,twopi,dt,hmod,ibt0,ctab
 
   ibt=nint(10*bt)
   if(ibt0.ne.ibt) then
@@ -23,6 +22,10 @@ subroutine gen_ft8wave(itone,nsym,nsps,bt,fsample,f0,cwave,wave,icmplx,nwave)
         pulse(i)=gfsk_pulse(bt,tt)
      enddo
      ibt0=nint(10*bt)
+     do i=0,NTAB-1
+        phi=i*twopi/NTAB
+        ctab(i)=cmplx(cos(phi),sin(phi))
+     enddo
   endif
 
 ! Compute the smoothed frequency waveform.
@@ -40,16 +43,18 @@ subroutine gen_ft8wave(itone,nsym,nsps,bt,fsample,f0,cwave,wave,icmplx,nwave)
 
 ! Calculate and insert the audio waveform
   phi=0.0
-  dphi = dphi + twopi*f0*dt                          !Shift frequency up by f0
-  wave=0.
-  if (icmplx .ne. 0) cwave=0. ! avoid writing to memory we may not have access to
+  dphi = dphi + twopi*f0*dt                      !Shift frequency up by f0
+  if(icmplx .eq. 0) wave=0.
+  if(icmplx .ne. 0) cwave=0. !Avoid writing to memory we may not have access to
+
   k=0
-  do j=nsps,nsps+nwave-1                             !Don't include dummy symbols
+  do j=nsps,nsps+nwave-1                         !Don't include dummy symbols
      k=k+1
      if(icmplx.eq.0) then
         wave(k)=sin(phi)
      else
-        cwave(k)=cmplx(cos(phi),sin(phi))
+        i=phi*float(NTAB)/twopi
+        cwave(k)=ctab(i)
      endif
      phi=mod(phi+dphi(j),twopi)
   enddo

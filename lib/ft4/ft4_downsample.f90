@@ -1,6 +1,3 @@
-! This source code file was last time modified by Igor UA3DJY on 20191101
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
 subroutine ft4_downsample(newdata,f0,c)
 
    use ft4_mod1, only : dd4 !,llagcc
@@ -34,7 +31,7 @@ subroutine ft4_downsample(newdata,f0,c)
 
    if(newdata) then
       x=dd4
-      call four2a(x,NMAX,1,-1,0)             !r2c FFT to freq domain
+      call four2a(cx,NMAX,1,-1,0)             !r2c FFT to freq domain
    endif
    i0=nint(f0/df)
    c1=0.
