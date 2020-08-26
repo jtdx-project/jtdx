@@ -3130,7 +3130,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liga o modo FT8 DXpedition Hound.Clique do botão direito do rato liga o controlo da frequência de TX de hound.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liga o modo FT8 DXpedition Hound. Clique do botão direito do rato liga o controlo da frequência de TX de hound.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
@@ -6172,12 +6172,12 @@ período de silêncio quando a decodificação é feita.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Solicita a activação / desactivação da potência do equipamento quando suportado no Hamlib. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Potência do  rádio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>

@@ -6199,12 +6199,12 @@ período tranquilo cuando se realiza la decodificación.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pedir el encendido/apagado de la energía del equipo cuando se soporta en Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Potencia del equipo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>

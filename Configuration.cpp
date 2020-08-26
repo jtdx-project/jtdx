@@ -1564,6 +1564,16 @@ void Configuration::impl::initialize_models ()
   ui_->countries_line_edit->setText (countries_);
   ui_->callsigns_line_edit->setText (callsigns_);
   ui_->labTx->setStyleSheet(QString("background: %1").arg(Radio::convert_dark(color_TxMsg_.name(),useDarkStyle_)));
+  ui_->test_PTT_push_button->setStyleSheet(QString("QPushButton:checked { background-color: %1; border-style: outset; border-width: 1px; border-radius: 5px; border-color: %2; min-width: 5em; padding: 3px;}").arg(Radio::convert_dark("#ff0000",useDarkStyle_),Radio::convert_dark("#000000",useDarkStyle_)));
+  ui_->macros_list_view->setStyleSheet(QString("QListView { show-decoration-selected: 1; } "
+"QListView::item:alternate { background: %1; } "
+"QListView::item:selected { border: 1px solid %2; } "
+"QListView::item:selected:!active { background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %3, stop: 1 %4); } "
+"QListView::item:selected:active { background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %5, stop: 1 %6); } "
+"QListView::item:hover { background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %7, stop: 1 %8); }").arg(Radio::convert_dark("#eeeeee",useDarkStyle_),Radio::convert_dark("#6a6ea9",useDarkStyle_),
+Radio::convert_dark("#abafe5",useDarkStyle_),Radio::convert_dark("#8588b2",useDarkStyle_),
+Radio::convert_dark("#6a6ea9",useDarkStyle_),Radio::convert_dark("#888dd9",useDarkStyle_),
+Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDarkStyle_)));
   next_txtColor_ = txtColor_;
   next_workedColor_ = workedColor_;
   next_workedStriked_ = workedStriked_;
