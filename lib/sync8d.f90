@@ -1,4 +1,4 @@
-subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand,laveraging)
+subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand,laveraging,lsd)
 
 ! Compute sync power for a complex, downsampled FT8 signal.
   use ft8_mod1, only : csync,csynce,csyncsd,csyncsdcq,csynccq!,icos7
@@ -9,13 +9,14 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
   complex ctmp(0:31),ctmp1(0:31),ctmp2(0:31),ctmp3(0:31)
   complex z1,z2,z3,z4
   integer, intent(in) :: i0,imainpass,iqso
-  logical(1), intent(in) :: lcq,lcallsstd,lcqcand,laveraging
+  logical(1), intent(in) :: lcq,lcallsstd,lcqcand,laveraging,lsd
   logical(1) lastsync
 
   sync=0.; ctmp=cmplx(0.0,0.0)
-  if(laveraging) then
-    z1=0.; ctmp1=cmplx(0.0,0.0); ctmp2=cmplx(0.0,0.0); ctmp3=cmplx(0.0,0.0)
+  if(laveraging .and. iqso.eq.1 .and. .not.lsd .and. .not.lastsync) then
+    z1=0.
     do i=0,6 ! Sum over 7 Costas frequencies and three Costas arrays
+      ctmp1=cmplx(0.0,0.0); ctmp2=cmplx(0.0,0.0); ctmp3=cmplx(0.0,0.0)
       i1=i0+i*32; i2=i1+36*32; i3=i1+72*32
       csync2=csync(i,1:32)
       if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
@@ -31,16 +32,13 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
       ctmp1=ctmp1+ctmp2+ctmp3; ctmp=ctmp+ctmp1*conjg(csync2)
     enddo
     z1=sum(ctmp)
-    if(.not.lastsync) then
-      if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = SQRT(real(z1)**2 + aimag(z1)**2)
-      else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = real(z1)**2 + aimag(z1)**2
-      else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8)  then; sync = abs(real(z1)) + abs(aimag(z1))
-      endif
-    else
-      sync = real(z1)**2 + aimag(z1)**2
+    if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = SQRT(real(z1)**2 + aimag(z1)**2)
+    else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = real(z1)**2 + aimag(z1)**2
+    else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8)  then; sync = abs(real(z1)) + abs(aimag(z1))
     endif
   else
     do i=0,6 ! Sum over 7 Costas frequencies and three Costas arrays
+      ctmp=cmplx(0.0,0.0)
       i1=i0+i*32; i2=i1+36*32; i3=i1+72*32
       csync2=csync(i,1:32)
       if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
@@ -118,24 +116,45 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
 
   if(lcqcand .and. iqso.eq.1 .and. .not.lastsync) then
     csync3=csynccq
-    ctmp=cmplx(0.0,0.0)
-    do i=0,8
-      csync2=csync3(i,1:32)
-      if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
-      z4=0.; k=i+7
-      i4=i0+k*32
-      if(i4.lt.0 .and. i4.gt.-32) then
-        ibot=abs(i4)-1; itop=30-ibot; ctmp(0:ibot)=0.; ctmp(ibot+1:31)=cd0(0:itop)
-      endif
-      if(i4+31.le.NP2) then
-        if(i4.ge.0) then; z4=sum(cd0(i4:i4+31)*conjg(csync2))
-        else; z4=sum(ctmp*conjg(csync2)); endif
-      endif
+    if(laveraging) then
+      z4=0.; ctmp=cmplx(0.0,0.0); ctmp1=cmplx(0.0,0.0)
+      do i=0,8
+        csync2=csync3(i,1:32)
+        if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
+        i4=i0+(i+7)*32
+        if(i4.lt.0 .and. i4.gt.-32) then
+          ibot=abs(i4)-1; itop=30-ibot; ctmp1(0:ibot)=0.; ctmp1(ibot+1:31)=cd0(0:itop)
+        endif
+        if(i4+31.le.NP2) then
+          if(i4.ge.0) then; ctmp=ctmp+cd0(i4:i4+31)*conjg(csync2)
+          else; ctmp=ctmp+ctmp1*conjg(csync2); endif
+        endif
+      enddo
+      z4=sum(ctmp)
       if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = sync + SQRT(real(z4)**2 + aimag(z4)**2)
+      else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
+      else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
+      endif
+    else
+      do i=0,8
+        ctmp=cmplx(0.0,0.0)
+        csync2=csync3(i,1:32)
+        if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
+        z4=0.
+        i4=i0+(i+7)*32
+        if(i4.lt.0 .and. i4.gt.-32) then
+          ibot=abs(i4)-1; itop=30-ibot; ctmp(0:ibot)=0.; ctmp(ibot+1:31)=cd0(0:itop)
+        endif
+        if(i4+31.le.NP2) then
+          if(i4.ge.0) then; z4=sum(cd0(i4:i4+31)*conjg(csync2))
+          else; z4=sum(ctmp*conjg(csync2)); endif
+        endif
+        if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = sync + SQRT(real(z4)**2 + aimag(z4)**2)
         else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
         else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
-      endif
-    enddo
+        endif
+      enddo
+    endif
   endif
 
   if(.not.lastsync) then
@@ -146,8 +165,7 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
       do i=0,18
         csync2=csync1(i,1:32)
         if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
-        z4=0.; k=i+7
-        i4=i0+k*32
+        z4=0.; i4=i0+(i+7)*32
         if(i4.lt.0 .and. i4.gt.-32) then
           ibot=abs(i4)-1; itop=30-ibot; ctmp(0:ibot)=0.; ctmp(ibot+1:31)=cd0(0:itop)
         endif
@@ -156,8 +174,8 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
           else; z4=sum(ctmp*conjg(csync2)); endif
         endif
         if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = sync + SQRT(real(z4)**2 + aimag(z4)**2)
-          else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
-          else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
+        else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
+        else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
         endif
       enddo
     endif
