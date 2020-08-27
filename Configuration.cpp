@@ -1574,6 +1574,7 @@ void Configuration::impl::initialize_models ()
 Radio::convert_dark("#abafe5",useDarkStyle_),Radio::convert_dark("#8588b2",useDarkStyle_),
 Radio::convert_dark("#6a6ea9",useDarkStyle_),Radio::convert_dark("#888dd9",useDarkStyle_),
 Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDarkStyle_)));
+  ui_->save_path_display_label->setStyleSheet(QString("background-color: %1").arg(Radio::convert_dark("#ffffff",useDarkStyle_)));
   next_txtColor_ = txtColor_;
   next_workedColor_ = workedColor_;
   next_workedStriked_ = workedStriked_;
