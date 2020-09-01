@@ -49,7 +49,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     if(i3.eq.4) then
       islash=index(msg37,'/')
       if(islash.le.0) then
-        callsign=trim(msg37(ispc1+1:)); nlencall=len_trim(callsign); ispccall=index(callsign,' ')
+        callsign=trim(msg37(ispc1+1:)); nlencall=len_trim(callsign); if(nlencall.lt.1) return; ispccall=index(callsign,' ')
 ! CQ 9D6T0GA4 Z space inside callsign of any length: protocol violation, or last char is digit
         if(ispccall.lt.nlencall .or. callsign(nlencall:nlencall).lt.':') then; nbadcrc=1; msg37=''; return; endif
       else
@@ -223,6 +223,7 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     ibrace1=index(msg37,'<.')
     if(index(msg37,'<.').gt.4) then
       callsign=''; callsign=msg37(1:ibrace1-2); islash=index(callsign,'/'); nlencall=len_trim(callsign)
+      if(nlencall.lt.1) return
 ! i3=4 n3=2 '6397X6JN637 <...> RRR' 
 ! 'R 5QCDOIY9 <...> RR73'
       if(index(trim(callsign),' ').gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':')) then
