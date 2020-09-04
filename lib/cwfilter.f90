@@ -113,7 +113,7 @@ subroutine cwfilter(swl,first,swlchanged)
       if(i.eq.2) then
         call gen_ft8wave(itone,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
         m=1
-        do j=0,15
+        do j=0,14
           do k=1,32
             if(j.lt.7) then; csync(j,k)=csig0(m); else; csynccq(j-7,k)=csig0(m); endif
             m=m+60

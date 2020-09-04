@@ -5,9 +5,9 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
 
   parameter(NP2=3199,NDOWN=60)
   complex, intent(in) :: cd0(0:NP2),ctwk(32)
-  complex csync1(0:18,32),csync2(32),csync3(0:8,32)
+  complex csync1(0:18,32),csync2(32)
   complex ctmp(0:31)
-  complex z1,z2,z3,z4,zt1(0:6),zt2(0:6),zt3(0:6)
+  complex z1,z2,z3,z4,zt1(0:6),zt2(0:6),zt3(0:6),zt4(0:7)
   integer, intent(in) :: i0,imainpass,iqso
   logical(1), intent(in) :: lcq,lcallsstd,lcqcand
   logical(1) lastsync
@@ -54,20 +54,26 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
   enddo
 
   if(lcqcand .and. iqso.eq.1 .and. .not.lastsync) then
-    csync3=csynccq
-    do i=0,8
+    zt4=0.
+    do i=0,7
       ctmp=cmplx(0.0,0.0)
-      csync2=csync3(i,1:32)
+      csync2=csynccq(i,1:32)
       if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
-      z4=0.
       i4=i0+(i+7)*32
       if(i4.lt.0 .and. i4.gt.-32) then
         ibot=abs(i4)-1; itop=30-ibot; ctmp(0:ibot)=0.; ctmp(ibot+1:31)=cd0(0:itop)
       endif
       if(i4+31.le.NP2) then
-        if(i4.ge.0) then; z4=sum(cd0(i4:i4+31)*conjg(csync2))
-        else; z4=sum(ctmp*conjg(csync2)); endif
+        if(i4.ge.0) then; zt4(i)=sum(cd0(i4:i4+31)*conjg(csync2))
+        else; zt4(i)=sum(ctmp*conjg(csync2)); endif
       endif
+    enddo
+    do i=0,7
+!      if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8)  then
+!        if(i.lt.7) z4=(zt4(i)+zt4(i+1))/2 ! use i=6 z4 value for i=7
+!      else
+       z4=zt4(i)
+!      endif
       if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = sync + SQRT(real(z4)**2 + aimag(z4)**2)
       else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
       else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
