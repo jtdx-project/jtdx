@@ -53,12 +53,11 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
     endif
   enddo
 
-  if(lcqcand .and. iqso.eq.1 .and. .not.lastsync) then
+  if(itwk.eq.1 .and. lcqcand .and. iqso.eq.1) then
     zt4=0.
     do i=0,7
       ctmp=cmplx(0.0,0.0)
-      csync2=csynccq(i,1:32)
-      if(itwk.eq.1) csync2=ctwk*csync2      !Tweak the frequency
+      csync2=csynccq(i,1:32); csync2=ctwk*csync2      !Tweak the frequency
       i4=i0+(i+7)*32
       if(i4.lt.0 .and. i4.gt.-32) then
         ibot=abs(i4)-1; itop=30-ibot; ctmp(0:ibot)=0.; ctmp(ibot+1:31)=cd0(0:itop)
@@ -69,11 +68,11 @@ subroutine sync8d(cd0,i0,ctwk,itwk,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lc
       endif
     enddo
     do i=0,7
-!      if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8)  then
-!        if(i.lt.7) z4=(zt4(i)+zt4(i+1))/2 ! use i=6 z4 value for i=7
-!      else
+      if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8)  then
+        if(i.lt.7) z4=(zt4(i)+zt4(i+1))/2 ! use i=6 z4 value for i=7
+      else
        z4=zt4(i)
-!      endif
+      endif
       if(imainpass.eq.1 .or. imainpass.eq.5 .or. imainpass.eq.9) then; sync = sync + SQRT(real(z4)**2 + aimag(z4)**2)
       else if(imainpass.eq.2 .or. imainpass.eq.6 .or. imainpass.eq.7) then; sync = sync + real(z4)**2 + aimag(z4)**2
       else if(imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.8) then; sync = sync + abs(real(z4)) + abs(aimag(z4))
