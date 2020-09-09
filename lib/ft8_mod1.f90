@@ -6,7 +6,7 @@ module ft8_mod1
   complex cw(nps),cfilt1(nps),cfilt2(nps),cfilt3(nps),cfilt4(nps),cfilt5(nps),cfilt6(nps),cfilt7(nps),   &
           cfilt8(nps),cfilt9(nps),cfilt10(nps),cfilt11(nps),cfilt12(nps),cref1(nfr),cref2(nfr),cref3(nfr),  &
           cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
-          csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32)
+          csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32),ctwkn(11,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
