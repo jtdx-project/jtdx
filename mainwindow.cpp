@@ -814,7 +814,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   connect(&m_guiTimer, &QTimer::timeout, this, &MainWindow::guiUpdate);
   m_guiTimer.start(100);   //### Don't change the 100 ms! ###
 
-  stophintTimer.setSingleShot(true); connect(&stophintTimer, &QTimer::timeout, this, &MainWindow::stopHint_call3_rxfreq);
   ptt0Timer.setSingleShot(true); connect(&ptt0Timer, &QTimer::timeout, this, &MainWindow::stopTx2);
   ptt1Timer.setSingleShot(true); connect(&ptt1Timer, &QTimer::timeout, this, &MainWindow::startTx2);
   logQSOTimer.setSingleShot(true); connect(&logQSOTimer, &QTimer::timeout, this, &MainWindow::on_logQSOButton_clicked);
@@ -1981,28 +1980,10 @@ void MainWindow::escapeHalt() { haltTx("TX halted via Escape button from widegra
 void MainWindow::filter_on() { if(!m_filter) ui->filterButton->click(); }
 void MainWindow::on_swlButton_clicked (bool checked) { if(checked) m_swl=true; else m_swl=false; }
 void MainWindow::on_AGCcButton_clicked(bool checked) { if(checked) m_agcc=true; else m_agcc=false; }
-// for T10 also DXCall Hint
-void MainWindow::stopHint_call3_rxfreq () { dec_data.params.nstophint=1; }
 
 void MainWindow::on_hintButton_clicked (bool checked)
 {
-  if(checked) m_hint=true; else m_hint=false;
-  dec_data.params.nstophint=1; 
-  if(m_hint) {
-    if(m_modeTx.startsWith("FT"))  {
-      if(!m_hisCall.isEmpty()) {
-        dec_data.params.nstophint=0; //let Hint decoder process non-CQ messages on the RX frequency
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        if(m_modeTx=="FT8") stophintTimer.start(27000); //((2*15-3)*1000) block in 27 seconds
-        if(m_modeTx=="FT4") stophintTimer.start(13500); //block in 13.5 seconds
-      }
-    }
-    else if (m_modeTx=="JT65" or m_modeTx=="JT9" or m_modeTx=="T10")  {
-      dec_data.params.nstophint=0;  //let Hint decoder process non-CQ messages on the RX frequency
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      stophintTimer.start(314000); //((14+5*60)*1000) block in 5 minutes
-    }
-  }
+  m_hint=checked;
 }
 
 void MainWindow::on_HoundButton_clicked (bool checked)
@@ -2303,8 +2284,6 @@ void MainWindow::displayDialFrequency ()
         clearDX (" cleared, triggered by erase both windows option upon band change from transceiver");
       }
       m_qsoHistory.init();
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
       if(m_config.write_decoded_debug()) {
         QString text = startup ? "program startup, m_lastBand: " : "QSO history initialized by band change from transceiver, m_lastBand: ";
         writeToALLTXT(text + m_lastBand + ", current band: " + band_name + ", dial_frequency: " + QString::number(dial_frequency) + ", TX VFO frequency: " + 
@@ -3077,7 +3056,8 @@ void MainWindow::decode()                                       //decode()
   if(!m_dataAvailable or m_TRperiod==0.0) { m_manualDecode=false; return; }
   decodeBusy(true); // shall be second line
   if(m_autoErase) ui->decodedTextBrowser->clear();
-//  printf("%s(%0.1f) Timing decode start\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  if(m_hint && !m_hisCall.isEmpty() && m_enableTx) dec_data.params.nstophint = 0;
+//  printf("%s(%0.1f) Timing decode start: %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),dec_data.params.nstophint);
   m_nDecodes = 0;
   m_reply_me = false;
   m_reply_other = false;
@@ -3475,6 +3455,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
     QByteArray t=proc_jtdxjt9.readLine();
 
     if(t.startsWith("<DecodeFinished>")) {
+      dec_data.params.nstophint=1;
       m_bDecoded = t.mid (20).trimmed ().toInt () > 0;
       int mswait=750.0*m_TRperiod;
       if(!m_diskData) killFileTimer.start (mswait); //Kill in 3/4 of period
@@ -4535,21 +4516,6 @@ void MainWindow::stopTx()
 	  tx_status_label->setText("");
   }
   ptt0Timer.start(200);                //Sequencer delay
-  if(m_hint) {
-    if(m_modeTx.startsWith("FT"))  {
-      if(!m_hisCall.isEmpty()) {
-        dec_data.params.nstophint=0; //let Hint decoder process non-CQ messages on the RX frequency
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        if(m_modeTx=="FT8") stophintTimer.start(27000); //((2*15-3)*1000) block in 27 seconds
-        else if(m_modeTx=="FT4") stophintTimer.start(13500); //block in 13.5 seconds
-      }
-    }
-    else if (m_modeTx=="JT65" or m_modeTx=="JT9" or m_modeTx=="T10")  {
-      dec_data.params.nstophint=0;  //let Hint decoder process non-CQ messages on the RX frequency
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      stophintTimer.start(314000); //((14+5*60)*1000) block in 5 minutes
-    }
-  }
   monitor (true);
   statusUpdate ();
   m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
@@ -6365,8 +6331,6 @@ void MainWindow::band_changed (Frequency f)
     qint64 fDelta = m_lastDisplayFreq - m_freqNominal;
     if (qAbs(fDelta)>1000) {
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
         clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
             ui->decodedTextBrowser->clear();
@@ -7025,7 +6989,6 @@ void MainWindow::transmit (double snr)
     Q_EMIT sendMessage (NUM_WSPR_SYMBOLS,8192.0,ui->TxFreqSpinBox->value()-1.5*12000/8192,m_toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
-  if(stophintTimer.isActive()) stophintTimer.stop();
   if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
 }
 

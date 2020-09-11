@@ -329,7 +329,6 @@ private slots:
   void band_changed (Frequency);
   void monitor (bool);
   void stop_tuning ();
-  void stopHint_call3_rxfreq();
   void stopTuneATU();
   void enableTx_mode(bool);
   void enableTxButton_off();
@@ -647,7 +646,6 @@ private:
 
   QTimer m_guiTimer;
   QTimer ptt1Timer;                 //StartTx delay
-  QTimer stophintTimer;             //Stops propagation non-CQ CALL3 based Hint decoded messages
   QTimer ptt0Timer;                 //StopTx delay
   QTimer logQSOTimer;
   QTimer killFileTimer;
