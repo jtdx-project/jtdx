@@ -5,11 +5,11 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
 !  use timer_module, only: timer
   use packjt77 ! mycall13,dxcall13
-  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,twopi,graymap, &
+  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn
   include 'ft8_params.f90'
   parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
@@ -135,17 +135,14 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
 ! Now peak up in frequency
     i0=nint(xdt2*fs2)
-    smax=0.0
-    do ifr=-5,5                              !Search over +/- 2.5 Hz
-      delf=ifr*0.5
-      dphi=twopi*delf*dt2
-      phi=0.0
-      do i=1,32
-        ctwk(i)=cmplx(cos(phi),sin(phi))
-        phi=mod(phi+dphi,twopi)
-      enddo
+    smax=0.0; kstep=1
+    do ifr=-5,5
+      if(iqso.eq.1 .or. iqso.eq.4) then; ctwk=ctwkw(kstep,:); delf=ifr*0.5 ! Search over +/- 2.5 Hz
+      else; ctwk=ctwkn(kstep,:); delf=ifr*0.25 ! Search over +/- 1.25 Hz
+      endif
       call sync8d(cd0,i0,ctwk,1,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand)
       if(sync.gt.smax) then; smax=sync; delfbest=delf; endif
+      kstep=kstep+1
     enddo
     a=0.0
     a(1)=-delfbest
