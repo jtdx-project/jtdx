@@ -568,7 +568,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Sierra Leone</source>
-        <translation>塞拉里昂</translation>
+        <translation>塞拉利昂</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
@@ -2377,7 +2377,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="590"/>
         <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
-        <translation>頻率 (MHz)</translation>
+        <translation>頻率 (兆赫)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="613"/>
@@ -3015,7 +3015,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>波段選擇 MHz</translation>
+        <translation>波段選擇兆赫</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
@@ -3122,7 +3122,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1674"/>
         <location filename="../mainwindow.ui" line="4195"/>
         <source>  Hz</source>
-        <translation></translation>
+        <translation>  赫兹</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1677"/>
@@ -6047,7 +6047,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>使用深暗色樣式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
@@ -6185,12 +6185,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在 Hamlib 支援時, 請求打開/ 關閉無線電設備電源.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>無線電設備功率</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>

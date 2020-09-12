@@ -568,7 +568,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Sierra Leone</source>
-        <translation>塞阿里昂</translation>
+        <translation>塞拉利昂</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="86"/>
@@ -6047,7 +6047,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>使用深暗色样式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
@@ -6185,12 +6185,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在 Hamlib 支持下, 请求打开/关闭无线电设备电源.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>无线电设备功率</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
