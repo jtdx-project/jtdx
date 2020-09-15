@@ -5331,7 +5331,7 @@ bool Configuration::impl::open_rig (bool force)
     {
       try
         {
-//    printf("%s(%0.1f) Coniguration rig_open, active %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_);
+//    printf("%s(%0.1f) Coniguration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
 
           close_rig ();
 
@@ -5375,8 +5375,8 @@ bool Configuration::impl::open_rig (bool force)
 
           ui_->test_CAT_push_button->setStyleSheet ({});
           rig_active_ = true;
-//    printf("%s(%0.1f) Coniguration rig_open, start transceiver #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_);
           Q_EMIT start_transceiver (++transceiver_command_number_); // start rig on its thread
+          rig_params_ = gather_rig_data ();
           result = true;
         }
       catch (std::exception const& e)
