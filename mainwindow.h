@@ -594,6 +594,7 @@ private:
   bool m_bandChanged;
   bool m_useDarkStyle;
   bool m_lostaudio;
+  bool m_lasthint;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;

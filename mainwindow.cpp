@@ -317,6 +317,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_bandChanged {false},
   m_useDarkStyle {false},
   m_lostaudio {false},
+  m_lasthint {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -2085,6 +2086,8 @@ void MainWindow::on_actionAbout_triggered()                  //Display "About"
 
 void MainWindow::on_enableTxButton_clicked (bool checked)
 {
+  if(m_enableTx && !checked && m_curMsgTx.startsWith(m_hisCall+" ")) m_lasthint=true;
+  if(checked && m_lasthint) m_lasthint=false;
   m_enableTx = checked;
   statusUpdate ();
   if(m_mode.left(4)=="WSPR")  {
@@ -3056,7 +3059,10 @@ void MainWindow::decode()                                       //decode()
   if(!m_dataAvailable or m_TRperiod==0.0) { m_manualDecode=false; return; }
   decodeBusy(true); // shall be second line
   if(m_autoErase) ui->decodedTextBrowser->clear();
-  if(m_hint && !m_hisCall.isEmpty() && m_enableTx) dec_data.params.nstophint = 0;
+  if(m_hint && !m_hisCall.isEmpty() && (m_enableTx || m_lasthint)) {
+    if(m_curMsgTx.startsWith(m_hisCall+" ")) dec_data.params.nstophint = 0; // DxCall matched to last transmitted message
+    if(m_lasthint) m_lasthint=false;
+  }
 //  printf("%s(%0.1f) Timing decode start: %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),dec_data.params.nstophint);
   m_nDecodes = 0;
   m_reply_me = false;
@@ -4530,7 +4536,7 @@ void MainWindow::stopTx2()
     WSPR_scheduling ();
     m_ntr=0;
   }
-  last_tx_label->setText(tr("Last Tx: ") + m_currentMessage.trimmed());
+  last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
 }
 
 void MainWindow::RxQSY()
