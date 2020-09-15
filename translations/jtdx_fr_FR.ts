@@ -4915,10 +4915,6 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">Dernier Tx : </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="5433"/>
         <location filename="../mainwindow.cpp" line="5446"/>

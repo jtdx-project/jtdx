@@ -4912,10 +4912,6 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>功率&lt;br&gt;%1 瓦</translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">最后发射： </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="5433"/>
         <location filename="../mainwindow.cpp" line="5446"/>

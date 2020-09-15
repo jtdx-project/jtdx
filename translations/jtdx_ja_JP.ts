@@ -4878,10 +4878,6 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>受信 </translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">最後の送信： </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5470"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>

@@ -4914,10 +4914,6 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
         <translation>Effekt&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">Senast Tx: </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="5433"/>
         <location filename="../mainwindow.cpp" line="5446"/>

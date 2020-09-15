@@ -4913,10 +4913,6 @@ Nessun dato letto dal disco. Formato file errato?</translation>
         <translation>PWR&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">Ultimo Tx: </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="5433"/>
         <location filename="../mainwindow.cpp" line="5446"/>

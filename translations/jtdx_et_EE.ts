@@ -4932,10 +4932,6 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
         <translation></translation>
     </message>
     <message>
-        <source>Last Tx: </source>
-        <translation type="vanished">Viimane Tx: </translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="5433"/>
         <location filename="../mainwindow.cpp" line="5446"/>
