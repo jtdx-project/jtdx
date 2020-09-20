@@ -6186,7 +6186,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation>无线电设备功率</translation>
+        <translation>设备电源开关</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
