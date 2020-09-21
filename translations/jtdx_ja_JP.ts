@@ -3640,7 +3640,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5313"/>
         <source>0  Call None</source>
-        <translation>0 呼び出し無し</translation>
+        <translation>0 自動応答せず選局は手動</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5321"/>
@@ -3975,7 +3975,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4628"/>
         <source>Auto RX frequency Filter</source>
-        <translation>オートRX 周波数フィルタ</translation>
+        <translation>応答があった場合自動的に周波数フィルタ ON</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4652"/>
@@ -4372,7 +4372,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5353"/>
         <source>Single shot QSO</source>
-        <translation>単一のショットQSO</translation>
+        <translation>1QSO終了後に送信を停止する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5361"/>
@@ -4382,7 +4382,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5369"/>
         <source>Answer worked B4 calls</source>
-        <translation>交信済局に応答</translation>
+        <translation>交信済局にも応答</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5380"/>
@@ -4417,7 +4417,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5477"/>
         <source>Max distance instead of best SNR</source>
-        <translation>最も良いSNRの局ではなく最も遠い局を</translation>
+        <translation>最も良いSNRの局ではなく最も遠い局を優先して応答</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5485"/>
@@ -4447,7 +4447,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5555"/>
         <source>Call worked B4 callsigns</source>
-        <translation>交信済局を呼ぶ</translation>
+        <translation>交信済局でも呼ぶ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5574"/>
@@ -4487,7 +4487,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5630"/>
         <source>Report message priority</source>
-        <translation>メッセージプライオリティを報告</translation>
+        <translation>SNRの良い局に優先して応答する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5638"/>
@@ -6106,12 +6106,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hamlibがサポートしている機種のJTDXと連動したスイッチオンとオフ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>リグ ON/OFF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="782"/>
