@@ -828,7 +828,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Болеарские ост.</translation>
+        <translation>Балеарские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
@@ -1798,7 +1798,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation>Фалклендские ост.</translation>
+        <translation>Фoлклендские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>

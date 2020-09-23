@@ -3067,7 +3067,7 @@ void MainWindow::decode()                                       //decode()
   if(m_autoErase) ui->decodedTextBrowser->clear();
   if(m_hint && !m_hisCall.isEmpty() && (m_enableTx || m_lasthint)) {
     if(m_curMsgTx.startsWith(m_hisCall+" ")) dec_data.params.nstophint = 0; // DxCall matched to last transmitted message
-    if(m_lasthint) m_lasthint=false;
+    m_lasthint=false;
   }
 //  printf("%s(%0.1f) Timing decode start: %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),dec_data.params.nstophint);
   m_nDecodes = 0;
