@@ -279,6 +279,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_processAuto_done {false},
   m_haltTrans {false},
   m_crossbandOptionEnabled {true},
+  m_crossbandHLOptionEnabled {true},
   m_repliedCQ {""},
   m_dxbcallTxHalted {""},
   m_currentQSOcallsign {""},
@@ -1182,6 +1183,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("ColorTxMessageButtons",m_colorTxMsgButtons);
   m_settings->setValue("CallsignToClipboard",m_callToClipboard);
   m_settings->setValue("Crossband160mJA",m_crossbandOptionEnabled);
+  m_settings->setValue("Crossband160mHL",m_crossbandHLOptionEnabled);
   m_settings->setValue("QuickCall",m_autoTx);
   m_settings->setValue("AutoSequence",m_autoseq);
   m_settings->setValue("SpotText",m_spotText);
@@ -1467,6 +1469,9 @@ void MainWindow::readSettings()
 
   m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",true).toBool();
   ui->actionCrossband_160m_JA->setChecked(m_crossbandOptionEnabled);
+
+  m_crossbandHLOptionEnabled=m_settings->value("Crossband160mHL",true).toBool();
+  ui->actionCrossband_160m_HL->setChecked(m_crossbandHLOptionEnabled);
 
   m_autoTx=m_settings->value("QuickCall",false).toBool();
   ui->AutoTxButton->setChecked(m_autoTx);
@@ -2326,7 +2331,7 @@ void MainWindow::displayDialFrequency ()
   static bool first_freq {true};
   if(first_freq && dial_frequency!=0 && dial_frequency!=145000000 && m_mode=="FT8") {
     bool commonFT8b=false;
-    qint32 ft8Freq[]={1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=dial_frequency/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
@@ -2980,6 +2985,7 @@ void MainWindow::on_actionShow_tooltips_main_window_toggled(bool checked) { m_sh
 void MainWindow::on_actionColor_Tx_message_buttons_toggled(bool checked) { m_colorTxMsgButtons = checked; }
 void MainWindow::on_actionCallsign_to_clipboard_toggled(bool checked) { m_callToClipboard = checked; }
 void MainWindow::on_actionCrossband_160m_JA_toggled(bool checked) { m_crossbandOptionEnabled = checked; }
+void MainWindow::on_actionCrossband_160m_HL_toggled(bool checked) { m_crossbandHLOptionEnabled = checked; }
 
 void MainWindow::on_actionShow_messages_decoded_from_harmonics_toggled(bool checked)
 {
@@ -6358,7 +6364,7 @@ void MainWindow::band_changed (Frequency f)
     if(m_mode!="FT8") {
       if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false);
     } else {
-      qint32 ft8Freq[]={1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+      qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
       for(int i=0; i<11; i++) {
         int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
@@ -6735,9 +6741,13 @@ void MainWindow::setXIT(int n, Frequency base)
         // All conditions are met, reset the transceiver Tx dial
         // frequency
         m_freqTxNominal = base + m_XIT;
-        if (m_crossbandOptionEnabled) {
-          if (base == 1908000 && m_m_prefix != "JA") m_freqTxNominal -= 68000;
-          else if (base == 1840000 && m_m_prefix == "JA") m_freqTxNominal += 68000;
+        if (base == 1908000) {
+          if (m_crossbandOptionEnabled && m_m_prefix != "JA") m_freqTxNominal -= 68000;
+        } else if (base == 1810000) {
+          if (m_crossbandHLOptionEnabled && m_m_prefix != "HL") m_freqTxNominal += 30000;
+        } else if (base == 1840000) {
+          if (m_crossbandOptionEnabled && m_m_prefix == "JA") m_freqTxNominal += 68000;
+          if (m_crossbandHLOptionEnabled && m_m_prefix == "HL") m_freqTxNominal -= 30000;
         }
         Q_EMIT m_config.transceiver_tx_frequency (m_freqTxNominal);
 	}

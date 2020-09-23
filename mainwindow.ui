@@ -4618,6 +4618,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionCallsign_to_clipboard"/>
     <addaction name="separator"/>
     <addaction name="actionCrossband_160m_JA"/>
+    <addaction name="actionCrossband_160m_HL"/>
    </widget>
    <widget class="QMenu" name="menuAutoSeq">
     <property name="title">
@@ -5835,6 +5836,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Crossband 160m operation with Japan</string>
+   </property>
+  </action>
+  <action name="actionCrossband_160m_HL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Crossband 160m operation with Korea</string>
    </property>
   </action>
   <action name="actionDecFT8cycles1">

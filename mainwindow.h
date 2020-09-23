@@ -215,6 +215,7 @@ private slots:
   void on_actionColor_Tx_message_buttons_toggled(bool checked);
   void on_actionCallsign_to_clipboard_toggled(bool checked);
   void on_actionCrossband_160m_JA_toggled(bool checked);
+  void on_actionCrossband_160m_HL_toggled(bool checked);
   void on_actionShow_messages_decoded_from_harmonics_toggled(bool checked);
   void on_actionMyCallRXFwindow_toggled(bool checked);
   void on_actionWantedCallRXFwindow_toggled(bool checked);
@@ -555,6 +556,7 @@ private:
   bool	  m_processAuto_done;
   bool    m_haltTrans;
   bool	  m_crossbandOptionEnabled;
+  bool	  m_crossbandHLOptionEnabled;
   QString m_repliedCQ;
   QString m_dxbcallTxHalted;
   QString m_currentQSOcallsign;
