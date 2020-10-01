@@ -81,7 +81,7 @@ contains
         a=0.
         a(1)=real(idf)
         ctwk=1.
-        call twkfreq1(ctwk,2*NSS,fs/2.0,a,ctwk2(:,idf))
+        call twkfreq1(ctwk,0,2*NSS,2*NSS,fs/2.0,a,ctwk2(:,idf))
       enddo
 
       mcq=2*mod(mcq+rvec(1:29),2)-1

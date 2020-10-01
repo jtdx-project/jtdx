@@ -11,10 +11,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn
   include 'ft8_params.f90'
-  parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
-  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
+  complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
@@ -146,7 +145,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     enddo
     a=0.0
     a(1)=-delfbest
-    call twkfreq1(cd0,NP2,fs2,a,cd0)
+    call twkfreq1(cd0,-800,3199,4000,fs2,a,cd0)
     xdt=xdt2
     f1=f10+delfbest                           !Improved estimate of DF
     dfqso=abs(nfqso-f1)
@@ -161,8 +160,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     snrsync=0.
     do k=1,79
       i1=ibest+(k-1)*32
-      csymb=cmplx(0.0,0.0)
-      if(i1.ge.0 .and. i1+31 .le. NP2) csymb=cd0(i1:i1+31)
+      csymb=cd0(i1:i1+31)
       if((k.ge.1 .and. k.le.7) .or. (k.ge.37 .and. k.le.43) .or. (k.ge.73 .and. k.le.79)) then
         call four2a(csymb,32,1,-1,1)
         s81(0:7)=abs(csymb(1:8))
@@ -204,8 +202,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
     do k=1,79
       i1=ibest+(k-1)*32
-      csymb=cmplx(0.0,0.0)
-      if(i1.ge.0 .and. i1+31 .le. NP2) csymb=cd0(i1:i1+31)
+      csymb=cd0(i1:i1+31)
       if(syncav.lt.2.5) then
         csymb(1)=csymb(1)*1.9; csymb(32)=csymb(32)*1.9
         scr=SQRT(abs(csymb(1)))/SQRT(abs(csymb(32)))
@@ -1170,15 +1167,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
           csig(j)=csig0(k)
           k=k+60
         enddo
-        i21=i0+i*32; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        sync0 = sync0 + real(z1)**2 + aimag(z1)**2
-        i21=i0+i*32+noff; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        syncp = syncp + real(z1)**2 + aimag(z1)**2
-        i21=i21-noff*2; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        syncm = syncm + real(z1)**2 + aimag(z1)**2
+        i21=i0+i*32; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); sync0 = sync0 + real(z1)**2 + aimag(z1)**2
+        i21=i0+i*32+noff; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); syncp = syncp + real(z1)**2 + aimag(z1)**2
+        i21=i21-noff*2; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); syncm = syncm + real(z1)**2 + aimag(z1)**2
       enddo
       call peakup(syncm,sync0,syncp,dx)
       if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif

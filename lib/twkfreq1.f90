@@ -1,8 +1,8 @@
-subroutine twkfreq1(ca,npts,fsample,a,cb)
+subroutine twkfreq1(ca,nbot,npts,ntop,fsample,a,cb)
 
   use ft8_mod1, only : twopi
-  complex, intent(in) :: ca(0:npts)
-  complex, intent(out) :: cb(0:npts)
+  complex, intent(in) :: ca(nbot:ntop)
+  complex, intent(out) :: cb(nbot:ntop)
   complex w,wstep
   real a(5)
 
