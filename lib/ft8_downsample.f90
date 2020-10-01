@@ -34,7 +34,9 @@ subroutine ft8_downsample(newdat,f0,nqso,c1,c2,c3,lhighsens)
   c1(0:54)=c1(0:54)*windowc1(54:0:-1)
   c1(k-54:k)=c1(k-54:k)*windowc1
   c1=cshift(c1,i0-ib)
-  if(lhighsens) then; c1(0)=c1(0)*1.93; c1(799)=c1(799)*1.7; c1(800)=c1(800)*1.7; c1(3199)=c1(3199)*1.93; endif
+  if(lhighsens) then; c1(0)=c1(0)*1.93; c1(799)=c1(799)*1.7; c1(800)=c1(800)*1.7; c1(3199)=c1(3199)*1.93
+  else; c1(45)=c1(45)*1.49; c1(54)=c1(54)*1.49; c1(3145)=c1(3145)*1.49; c1(3154)=c1(3154)*1.49
+  endif ! 10346..10347
   call four2a(c1,NFFT2,1,1,1)            !c2c FFT back to time domain
   c1=facc1*c1
   if(nqso.gt.1) then; do i=0,3198; c2(i)=c1(i)+c1(i+1); enddo; c2(3199)=c1(3199); c2=c2/2; endif
