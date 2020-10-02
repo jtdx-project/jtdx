@@ -428,10 +428,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       ((.not.lskiptx1 .and. nlasttx.eq.1) .or. (lskiptx1 .and. nlasttx.eq.2))) lsubptxfreq=.true.
 
     nweak=1
-    if((lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. &
-       imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.6 .or. imainpass.eq.7 .or. imainpass.eq.9)) nweak=2
-! a bit better efficiency on the overcrowded bands, with subpass 7935 without subpass 7948 decodes
-!    if((lft8subpass) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3)) nweak=2
+    if(lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) nweak=2
     do k1=1,nweak
       if(k1.eq.2) cs=csr
       do nsym=1,3
@@ -589,9 +586,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
           apmask=0; iaptype=0
           if(ipass.eq.1) then
             if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
-          else if(ipass.eq.2) then; llrz=llrb
+            if(k1.eq.2 .and. imainpass.gt.1) llrz=llrd
+          else if(ipass.eq.2) then; llrz=llrb; if(k1.eq.2) llrz=llra ! subpass 10661..10670
           else if(ipass.eq.3) then; llrz=llrc
-          else if(ipass.eq.4) then; llrz=llrd
+          else if(ipass.eq.4) then; llrz=llrd ! AP CQ
           endif
         else
           if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) then
