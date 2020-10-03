@@ -319,6 +319,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_useDarkStyle {false},
   m_lostaudio {false},
   m_lasthint {false},
+  m_monitoroff {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -1882,6 +1883,7 @@ void MainWindow::showStatusMessage(const QString& statusMsg)
 
 void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 {
+  if(!m_monitoring && !m_transmitting) m_monitoroff=true;
   // things that might change that we need know about
   m_strictdirCQ = m_config.strictdirCQ ();
   m_callsign = m_config.my_callsign ();
@@ -2057,6 +2059,7 @@ void MainWindow::monitor (bool state)
 {
   ui->monitorButton->setChecked (state);
   if (state) {
+    m_monitoroff=false;
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
@@ -4451,7 +4454,7 @@ void MainWindow::haltTx(QString reason)
 
 void MainWindow::haltTxTuneTimer()
 {
-  if(m_config.write_decoded_debug()) { writeToALLTXT("Halt Tx triggered: tune timer is expired"); m_haltTxWritten=true; }
+  if(m_config.write_decoded_debug()) { writeToALLTXT("Halt Tx triggered: tuning stopped"); m_haltTxWritten=true; }
   on_stopTxButton_clicked();
 }
 
@@ -4528,7 +4531,7 @@ void MainWindow::stopTx()
 	  tx_status_label->setText("");
   }
   ptt0Timer.start(200);                //Sequencer delay
-  monitor (true);
+  if(!m_monitoroff) monitor (true);
   statusUpdate ();
   m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
 }
@@ -6323,7 +6326,7 @@ void MainWindow::band_changed (Frequency f)
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
-    if(!m_transmitting && !m_start2) monitor (true);
+    if(!m_transmitting && !m_start2 && !m_monitoroff) monitor (true);
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {
@@ -6588,6 +6591,7 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   static bool lastChecked = false;
   if (lastChecked == checked) return;
   lastChecked = checked;
+  if(checked && !m_monitoring) m_monitoroff=true;
   if(!checked) m_addtx = -2;
   QString curBand;
   if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
@@ -6615,7 +6619,7 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   } else {
     m_sentFirst73=false;
     itone[0]=0;
-    on_monitorButton_clicked (true);
+//    on_monitorButton_clicked (true);
     m_tune=true;
   }
   Q_EMIT tune (checked);
