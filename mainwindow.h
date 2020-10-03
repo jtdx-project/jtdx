@@ -44,14 +44,13 @@
 #define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
-#define NUM_ISCAT_SYMBOLS 1291             //30*11025/256
 #define NUM_FT8_SYMBOLS 79
 #define NUM_FT4_SYMBOLS 105
 
 #define NUM_CW_SYMBOLS 250
 #define TX_SAMPLE_RATE 48000
 
-extern int volatile itone[NUM_ISCAT_SYMBOLS];   //Audio tones for all Tx symbols
+extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
 extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 
 //--------------------------------------------------------------- MainWindow

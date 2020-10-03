@@ -102,7 +102,7 @@ extern "C" {
   void foxgen_();
 }
 
-int volatile itone[NUM_ISCAT_SYMBOLS];	//Audio tones for all Tx symbols
+int volatile itone[NUM_WSPR_SYMBOLS];	//Audio tones for all Tx symbols
 int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 dec_data_t dec_data;             // for sharing with Fortran
 
