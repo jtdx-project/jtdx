@@ -6563,7 +6563,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>リトライ用カウンター。デコードされたメッセージを探し、設定回数を超えればCQを探すか送信を停止します:</translation>
+        <translation>リトライ用カウンター。デコードされたメッセージを探し、設定回数を超えればCQを出すか送信を停止します:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2001"/>
