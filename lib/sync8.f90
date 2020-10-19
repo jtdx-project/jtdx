@@ -189,30 +189,31 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   ncand=k
 
   fdif0=4.0; if(swl) fdif0=3.0
-!  xdtdelta=0.0
-
+  xdtdelta=0.0
 ! save sync only to the best of near-dupe freqs 
   do i=1,ncand
-     if(i.ge.2) then
-        do j=1,i-1
-           fdiff=abs(candidate0(1,i)-candidate0(1,j))
-!           xdtdelta=abs(candidate0(2,i))-abs(candidate0(2,j)) !!!
-!           if(abs(fdiff).lt.fdif0 .and. xdtdelta.lt.0.1) then !!!
-           if(fdiff.lt.fdif0 .and. abs(candidate0(1,i)-nfqso).gt.3.0) then
-              if(candidate0(3,i).ge.candidate0(3,j)) candidate0(3,j)=0.
-              if(candidate0(3,i).lt.candidate0(3,j)) candidate0(3,i)=0.
-           endif
-        enddo
+    if(i.ge.2) then
+      do j=1,i-1
+        fdiff=abs(candidate0(1,i)-candidate0(1,j))
+        xdtdelta=abs(candidate0(2,i)-candidate0(2,j))
+        if(fdiff.lt.fdif0 .and. abs(candidate0(1,i)-nfqso).gt.3.0) then
+          if(xdtdelta.lt.0.1) then
+            if(candidate0(3,i).ge.candidate0(3,j)) candidate0(3,j)=0.
+            if(candidate0(3,i).lt.candidate0(3,j)) candidate0(3,i)=0.
+          endif
+        endif
+      enddo
 !        write(*,3001) i,candidate0(1,i-1),candidate0(1,i),candidate0(3,i-1),  &
 !             candidate0(3,i)
 !3001    format(i2,4f8.1)
-     endif
+    endif
   enddo
-  
+
 ! Sort by sync
   call indexx(candidate0(3,1:ncand),ncand,indx)
 ! Sort by frequency 
 !  call indexx(candidate0(1,1:ncand),ncand,indx)
+
   k=1
 !Put nfqso at top of list and apply lowest sync threshold for nfqso
   fprev=5004.
