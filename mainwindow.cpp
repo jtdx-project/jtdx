@@ -64,38 +64,38 @@ extern "C" {
   void symspec_(struct dec_data *, int* k, int* ntrperiod, int* nsps,
                 float* px, float s[], float* df3, int* nhsym, int* npts8);
 
-  void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, int len);
+  void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, fortran_charlen_t);
 				
-  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], int len1, int len2);
+  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
-  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], int len1, int len2);
+  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void gen_ft8wave_(int itone[], int* nsym, int* nsps, float* bt, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
   void gen_ft4wave_(int itone[], int* nsym, int* nsps, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
   void gen9_(char* msg, int* ichk, char* msgsent, int itone[],
-               int* itext, int len1, int len2);
+               int* itext, fortran_charlen_t, fortran_charlen_t);
 
   void gen10_(char* msg, int* ichk, char* msgsent, int itone[],
-               int* itext, int len1, int len2);
+               int* itext, fortran_charlen_t, fortran_charlen_t);
 
   void gen65_(char* msg, int* ichk, char* msgsent, int itone[],
-              int* itext, int len1, int len2);
+              int* itext, fortran_charlen_t, fortran_charlen_t);
 
 
-  void genwspr_(char* msg, char* msgsent, int itone[], int len1, int len2);
+  void genwspr_(char* msg, char* msgsent, int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void azdist_(char* MyGrid, char* HisGrid, double* utch, int* nAz, int* nEl,
                int* nDmiles, int* nDkm, int* nHotAz, int* nHotABetter,
-               int len1, int len2);
+               fortran_charlen_t, fortran_charlen_t);
 
-  void morse_(char* msg, int* icw, int* ncw, int len);
+  void morse_(char* msg, int* icw, int* ncw, fortran_charlen_t);
 
   int ptt_(int nport, int ntx, int* iptt, int* nopen);
 
   void wspr_downsample_(short int d2[], int* k);
-  int savec2_(char* fname, int* TR_seconds, double* dial_freq, int len1);
+  int savec2_(char* fname, int* TR_seconds, double* dial_freq, fortran_charlen_t);
 
   void wav12_(short d2[], short d1[], int* nbytes, short* nbitsam2);
 

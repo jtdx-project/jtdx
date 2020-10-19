@@ -324,10 +324,11 @@ MessageClient::MessageClient (QString const& id, QString const& version,
   : QObject {self}
   , m_ {id, version, server_port, this}
 {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
   connect (&*m_, static_cast<void (impl::*) (impl::SocketError)> (&impl::error)
            , [this] (impl::SocketError e)
            {
-#if defined (Q_OS_WIN) && QT_VERSION >= 0x050500
+#if defined (Q_OS_WIN)
              if (e != impl::NetworkError // take this out when Qt 5.5
                                          // stops doing this
                                          // spuriously
@@ -342,6 +343,11 @@ MessageClient::MessageClient (QString const& id, QString const& version,
                  Q_EMIT error (m_->errorString ());
                }
            });
+#else
+  connect (&*m_, &impl::errorOccurred, [this] (impl::SocketError) {
+                                         Q_EMIT error (m_->errorString ());
+                                       });
+#endif
   set_server (server);
 }
 

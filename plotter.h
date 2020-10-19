@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20190724
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 // -*- Mode: C++ -*-
 ///////////////////////////////////////////////////////////////////////////
 // Some code in this file and accompanying files is based on work by
@@ -182,9 +179,5 @@ private slots:
 };
 
 extern QVector<QColor> g_ColorTbl;
-
-extern "C" {
-  void flat4_(float swide[], int* iz, int* nflatten);
-}
 
 #endif // PLOTTER_H
