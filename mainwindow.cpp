@@ -320,6 +320,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_lostaudio {false},
   m_lasthint {false},
   m_monitoroff {false},
+  m_savedRRR {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -6062,7 +6063,16 @@ void MainWindow::commonActions ()
   progressBar->setFormat("%v/"+QString::number(m_TRperiod));
   statusChanged();
   on_spotLineEdit_textChanged(ui->spotLineEdit->text());
-  if(m_mode=="FT4") { if(!m_hint) ui->hintButton->click(); hideFT4Buttons(true); } else hideFT4Buttons(false);
+  if(m_mode=="FT4") {
+    if(m_rrr) { m_savedRRR=m_rrr; ui->rrrCheckBox->click(); }
+    ui->rrrCheckBox->setEnabled(false); ui->rrr1CheckBox->setEnabled(false);
+    if(!m_hint) ui->hintButton->click();
+    hideFT4Buttons(true);
+  }
+  else {
+    ui->rrrCheckBox->setEnabled(true); ui->rrr1CheckBox->setEnabled(true); if(m_savedRRR) ui->rrrCheckBox->click();
+    hideFT4Buttons(false);
+  }
   m_modeChanged=true;
 }
 

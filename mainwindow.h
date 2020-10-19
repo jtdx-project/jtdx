@@ -597,6 +597,7 @@ private:
   bool m_lostaudio;
   bool m_lasthint;
   bool m_monitoroff;
+  bool m_savedRRR;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
