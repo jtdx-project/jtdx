@@ -3558,7 +3558,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       decodeBusy(false); // shall be last line
       return;
     } else {
-      if(t.indexOf(m_baseCall) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
+      if(t.indexOf(m_baseCall.toLatin1()) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
         QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
         if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
           QTextStream out(&f);

@@ -29,7 +29,7 @@ public:
     , clock_ {new QTimer {this}}
   {
     connect (this, &QIODevice::readyRead, this, &MessageServer::impl::pending_datagrams);
-    connect (this, static_cast<void (impl::*) (SocketError)> (&impl::error)
+    connect (this, static_cast<void (impl::*) (SocketError)> (&impl::errorOccurred)
              , [this] (SocketError /* e */)
              {
                Q_EMIT self_->error (errorString ());
