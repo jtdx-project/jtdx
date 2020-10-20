@@ -33,7 +33,8 @@ if(grid(1:1).gt.'@' .and. grid(1:1).lt.'J') then
           (grid(2:2).eq.'K' .and. grid(3:3).gt.'0') .or. (grid(2:2).eq.'N' .and. grid(3:3).gt.'3') .or. &
           (grid(2:2).eq.'Q' .and. grid(4:4).gt.'4') .or. grid(2:2).eq.'R')) then; lchkcall=.true.
 
-  else if(grid(1:1).eq.'H' .and. ((grid(2:2).gt.'@' .and. grid(2:2).lt.'D') .or. (grid(2:2).gt.'D'.and.grid(2:2).lt.'H').or. &
+  else if(grid(1:1).eq.'H' .and. (grid(2:2).eq.'A' .or. (grid(2:2).eq.'B' .and. grid(3:4).ne.'22') .or. & ! LU1ZG in HB22QD
+          grid(2:2).eq.'C' .or. (grid(2:2).gt.'D'.and.grid(2:2).lt.'H') .or. &
           grid(2:2).eq.'J' .or. grid(2:2).eq.'L' .or. grid(2:2).eq.'N' .or. grid(2:2).eq.'O' .or. &
           (grid(2:2).eq.'K' .and. grid(3:3).lt.'7') .or. (grid(2:2).eq.'M' .and. grid(4:4).lt.'6') .or. &
           (grid(2:2).eq.'Q' .and. grid(4:4).gt.'0') .or. grid(2:2).eq.'R')) then; lchkcall=.true.
