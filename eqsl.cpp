@@ -81,9 +81,9 @@ void EQSL::networkReply(QNetworkReply *reply)
 void EQSL::work()
 {
 #if QT_VERSION < QT_VERSION_CHECK (5, 15, 0)
-      if (QNetworkAccessManager::Accessible != network_manager_->networkAccessible ()) {
+      if (QNetworkAccessManager::Accessible != networkManager->networkAccessible ()) {
         // try and recover network access for QNAM
-        network_manager_->setNetworkAccessible (QNetworkAccessManager::Accessible);
+        networkManager->setNetworkAccessible (QNetworkAccessManager::Accessible);
       }
 #endif
     m_in_progress = true;
