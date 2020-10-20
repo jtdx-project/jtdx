@@ -244,7 +244,13 @@ namespace
               QTextStream stream {&file};
               Q_FOREACH (auto colour, colours_)
                 {
-                  stream << colour.red () << ';' << colour.green () << ';' << colour.blue () << endl;
+                  stream << colour.red () << ';' << colour.green () << ';' << colour.blue () <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
                 }
             }
           else

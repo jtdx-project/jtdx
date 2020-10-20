@@ -152,7 +152,13 @@ void LogQSO::accept()
       "," + rptSent + "," + rptRcvd + "," + m_txPower +
       "," + comments + "," + name;
     QTextStream out(&f);
-    out << logEntry << endl;
+    out << logEntry <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f.close();
   }
 
@@ -204,23 +210,53 @@ void LogQSO::accept()
                                   .arg (f2.fileName ()).arg (f2.errorString ()));
       }
     }
-    if(fopen)  { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Connecting to " << m_tcp_server_name << ":" << m_tcp_server_port << endl; }
+    if(fopen)  { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Connecting to " << m_tcp_server_name << ":" << m_tcp_server_port <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
     socket.connectToHost(m_tcp_server_name, m_tcp_server_port);
     if (socket.waitForConnected(1000)) {
       socket.write(myadif2);
-      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Host connected, sent message: " << myadif2 << endl; }
+      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Host connected, sent message: " << myadif2 <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
       if (socket.waitForReadyRead(1000)){
         myadif2 = socket.readAll();
-        if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Received response from host: " << myadif2 << endl; }
+        if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Received response from host: " << myadif2 <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
         if (myadif2.left(3) == "NAK") {
           JTDXMessageBox::critical_message(0, "",myadif2 + " QSO data rejected by external software");
         }
       } else {
-      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Getting response from host is timed out" << endl; }
+      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Getting response from host is timed out" <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
       }  
       socket.close();
     } else {
-      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Host connection timed out" << endl; }
+      if(fopen) { QTextStream out2(&f2); out2 << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")" << " Host connection timed out" <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
       JTDXMessageBox::critical_message(0, "", "TCP QSO data transfer: " + socket.errorString());
     }
     if(fopen) f2.close();

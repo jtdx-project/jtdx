@@ -357,7 +357,13 @@ bool ADIF::addQSOToFile(const QString hisCall, const QString hisGrid, const QStr
     {
         QTextStream out(&f2);
         if (f2.size()==0)
-            out << "WSJT-X ADIF Export<eoh>" << endl;  // new file
+            out << "WSJT-X ADIF Export<eoh>" <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+  // new file
 
         QString t;
         t="<call:" + QString::number(hisCall.length()) + ">" + hisCall;
@@ -384,7 +390,13 @@ bool ADIF::addQSOToFile(const QString hisCall, const QString hisGrid, const QStr
                 ">" + name;
         if (send_to_eqsl) t+=" <eqsl_qsl_sent:1>Y";
         t+=" <eor>";
-        out << t << endl;
+        out << t <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
         f2.close();
     }
     return true;

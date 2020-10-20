@@ -27,6 +27,9 @@
 #include <QButtonGroup>
 #include <QUdpSocket>
 #include <QtMath>
+#if QT_VERSION >= QT_VERSION_CHECK (5, 15, 0)
+#include <QRandomGenerator>
+#endif
 
 #include "revision_utils.hpp"
 #include "qt_helpers.hpp"
@@ -1644,14 +1647,32 @@ void MainWindow::writeHaltTxEvent(QString reason)
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Halt Tx triggered at TX: " << reason << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
               << " MHz  " << m_modeTx
-              << ":  " << m_currentMessage << endl;
+              << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
        } else {
           if(!haltTrans) {
              out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
-                 << "  Halt Tx triggered at RX: " << reason << endl;
+                 << "  Halt Tx triggered at RX: " << reason <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           } else {			  
              out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
-                 << "  Halt Tx triggered at transition from RX to TX: " << reason << endl;
+                 << "  Halt Tx triggered at transition from RX to TX: " << reason <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           }
        }
        f.close();
@@ -2402,7 +2423,13 @@ void MainWindow::statusChanged()
     QTextStream out(&f);
     out << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
         << ";" << m_mode << ";" << m_hisCall << ";"
-        << ui->rptSpinBox->value() << ";" << m_modeTx << endl;
+        << ui->rptSpinBox->value() << ";" << m_modeTx <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f.close();
   } else {
     JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -3538,10 +3565,22 @@ void MainWindow::readFromStdout()                             //readFromStdout
           if (m_RxLog==1) {
             out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss")
                 << "  " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz  "
-                << m_mode << endl;
+                << m_mode << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
             m_RxLog=0;
           }
-          out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_") << t.trimmed() << endl;
+          out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_") << t.trimmed() << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           f.close();
         } else {
           JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -4141,13 +4180,25 @@ void MainWindow::guiUpdate()
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Retransmitting " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
               << " MHz  " << m_modeTx
-              << ":  " << m_currentMessage << endl;
+              << ":  " << m_currentMessage << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           if(m_config.write_decoded_debug()) {
             out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
                 << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
                 << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
                 << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
-                << " Hound mode" << (m_houndMode ? "-On" : "-Off") << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off") << endl;
+                << " Hound mode" << (m_houndMode ? "-On" : "-Off") << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           }
           f.close();
         }
@@ -4264,16 +4315,40 @@ void MainWindow::guiUpdate()
         if(m_config.write_decoded_debug()) {
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  JTDX v" << QCoreApplication::applicationVersion () << revision () <<" Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage << endl << "                   "
+              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl
+#else
+                 Qt::endl
+#endif
+ << "                   "
               << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
               << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
               << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
-              << " Hound mode" << (m_houndMode ? "-On" : "-Off") << endl << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off")
-              << " HaltTxReplyOther" << (m_config.halttxreplyother () ? "-On" : "-Off") << endl; }
+              << " Hound mode" << (m_houndMode ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl
+#else
+                 Qt::endl
+#endif
+ << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off")
+              << " HaltTxReplyOther" << (m_config.halttxreplyother () ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
         else {
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage << endl; }
+              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
         f.close();
       } else {
         JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -4507,7 +4582,13 @@ void MainWindow::startTx2()
           QTextStream out(&f);
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyMMdd hhmm")
               << "  Transmitting " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz:  "
-              << m_currentMessage << "  " + m_mode << endl;
+              << m_currentMessage << "  " + m_mode <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           f.close();
         } else {
           JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -5447,7 +5528,13 @@ void MainWindow::on_addButton_clicked()                       //Add button
   }
   if(f1.size()==0) {
     QTextStream out(&f1);
-    out << "ZZZZZZ" << endl;
+    out << "ZZZZZZ" <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f1.close();
     f1.open(QIODevice::ReadOnly | QIODevice::Text);
   }
@@ -6910,7 +6997,13 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
                   QTextStream out(&f2);
                   out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss")
                       << "  " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz  "
-                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << revision () << endl;
+                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << revision () <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
                   f2.close();
                 } else {
                   JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -7105,13 +7198,25 @@ void MainWindow::writeToALLTXT(QString const& text)
   QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
   if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
      QTextStream out(&f);
-     out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz")  << "(" << m_jtdxtime->GetOffset() << ")" << "  " << text << endl;
+     out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz")  << "(" << m_jtdxtime->GetOffset() << ")" << "  " << text <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
      if(text.endsWith("count reached")) out << "Counters: "
        << "answerCQ" << (m_config.answerCQCount() ? "-On value=" : "-Off value=") << m_config.nAnswerCQCounter()
        << "; answerInCall" << (m_config.answerInCallCount() ? "-On value=" : "-Off value=") << m_config.nAnswerInCallCounter()
        << "; sentRReport" << (m_config.sentRReportCount() ? "-On value=" : "-Off value=") << m_config.nSentRReportCounter()
        << "; sentRR7373" << (m_config.sentRR7373Count() ? "-On value=" : "-Off value=") << m_config.nSentRR7373Counter()
-       << endl;
+       <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
      f.close();
   } else {
      JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -7357,9 +7462,11 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
       ui->DecodeButton->setChecked (false);
       if(m_uploadSpots
          && m_config.is_transceiver_online ()) { // need working rig control
-        float x=qrand()/((double)RAND_MAX + 1.0);
-        int msdelay=20000*x;
-        uploadTimer.start(msdelay);                         //Upload delay
+#if QT_VERSION >= QT_VERSION_CHECK (5, 15, 0)
+        uploadTimer.start(QRandomGenerator::global ()->bounded (0, 20000)); // Upload delay
+#else
+        uploadTimer.start(20000 * qrand()/((double)RAND_MAX + 1.0)); // Upload delay
+#endif
       } else {
         QFile f(QDir::toNativeSeparators(m_dataDir.absolutePath()) + "/wspr_spots.txt");
         if(f.exists()) f.remove();
@@ -7456,7 +7563,13 @@ void MainWindow::WSPR_history(Frequency dialFreq, int ndecodes)
   QFile f {m_dataDir.absoluteFilePath ("WSPR_history.txt")};
   if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
     QTextStream out(&f);
-    out << t1 << endl;
+    out << t1 <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f.close();
   } else {
     JTDXMessageBox::warning_message (this, "", tr ("File Error")
