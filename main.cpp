@@ -24,6 +24,9 @@
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #endif
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+#include <QRandomGenerator>
+#endif
 
 #include "JTDXMessageBox.hpp"
 #include "revision_utils.hpp"
@@ -41,8 +44,12 @@ namespace
     RNGSetup ()
     {
       // one time seed of pseudo RNGs from current time
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+      QRandomGenerator();
+#else
       auto seed = QDateTime::currentMSecsSinceEpoch ();
       qsrand (seed);            // this is good for rand() as well
+#endif
     }
   } seeding;
 
