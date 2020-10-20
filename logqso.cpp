@@ -170,7 +170,9 @@ void LogQSO::accept()
     myadif+=" <TIME_OFF:6>" + m_dateTimeOff.time().toString("hhmmss");
     myadif+=" <RST_SENT:" + QString::number(rptSent.length()) + ">" + rptSent;
     myadif+=" <RST_RCVD:" + QString::number(rptRcvd.length()) + ">" + rptRcvd;
-    myadif+=" <TX_PWR:" + QString::number(m_txPower.length()) + ">" + m_txPower;
+    if (m_txPower.length() >0) {
+       myadif+=" <TX_PWR:" + QString::number(m_txPower.length()) + ">" + m_txPower;
+    }
     if (hisGrid.length() > 3) {
       myadif+=" <GRIDSQUARE:" + QString::number(hisGrid.length()) + ">" + hisGrid;
     }
