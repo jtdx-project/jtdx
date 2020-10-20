@@ -23,9 +23,6 @@ JTDXDateTime::JTDXDateTime(const QDate &date, const QTime &time, Qt::TimeSpec sp
 JTDXDateTime::JTDXDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec) : QDateTime {date,time,spec}
 {}
 
-JTDXDateTime::JTDXDateTime(const QDate &date) : QDateTime {date}
-{}
-
 qint64 JTDXDateTime::currentMSecsSinceEpoch2()
   {
     return offset_ + QDateTime::currentMSecsSinceEpoch();
