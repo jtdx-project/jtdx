@@ -2348,34 +2348,34 @@ Pogreška: %2 - %3</translation>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="507"/>
-        <location filename="../FrequencyList.cpp" line="694"/>
+        <location filename="../FrequencyList.cpp" line="506"/>
+        <location filename="../FrequencyList.cpp" line="693"/>
         <source>IARU Region</source>
         <translation>IARU Regija</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="528"/>
-        <location filename="../FrequencyList.cpp" line="695"/>
+        <location filename="../FrequencyList.cpp" line="527"/>
+        <location filename="../FrequencyList.cpp" line="694"/>
         <source>Mode</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="560"/>
-        <location filename="../FrequencyList.cpp" line="696"/>
+        <location filename="../FrequencyList.cpp" line="559"/>
+        <location filename="../FrequencyList.cpp" line="695"/>
         <source>Frequency</source>
         <translation>Frekvencija</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="591"/>
-        <location filename="../FrequencyList.cpp" line="697"/>
+        <location filename="../FrequencyList.cpp" line="590"/>
+        <location filename="../FrequencyList.cpp" line="696"/>
         <source>Frequency (MHz)</source>
         <translation>Frekvencija (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="614"/>
-        <location filename="../FrequencyList.cpp" line="698"/>
+        <location filename="../FrequencyList.cpp" line="613"/>
+        <location filename="../FrequencyList.cpp" line="697"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Frekvencija</translation>
     </message>
 </context>
 <context>
@@ -2767,7 +2767,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3838"/>
+        <location filename="../mainwindow.cpp" line="3877"/>
         <source>&amp;Yes</source>
         <translation>&amp;Da</translation>
     </message>
@@ -2778,7 +2778,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3841"/>
+        <location filename="../mainwindow.cpp" line="3880"/>
         <source>&amp;No</source>
         <translation>&amp;Ne</translation>
     </message>
@@ -2929,7 +2929,7 @@ Pogreška: %2 - %3</translation>
         <translation>&amp;Cancel</translation>
     </message>
     <message>
-        <location filename="../logqso.cpp" line="203"/>
+        <location filename="../logqso.cpp" line="209"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
@@ -2955,17 +2955,17 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Izgubljeni audio blokovi. FT8 interval od 15 sekundi ima 52 bloka audio podataka, pri čemu se dekoder aktivira ako audio podaci dosegnu 51 blok u načinu rada &quot;SWL / kasni početak dekodera&quot; ili 50 blokova u suprotnom. Pod Windows OS-om bilo je više izvještaja o gubitku audio podataka, za Windows OS implementirano je rješenje za pokretanje FT8 dekodera ako je primljeno najmanje 46 od 52 audio bloka. Obavijest o izgubljenim zvučnim blokovima daje korisniku do znanja da nešto nije u redu u postavljanju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1766"/>
-        <location filename="../mainwindow.cpp" line="3515"/>
-        <location filename="../mainwindow.cpp" line="3524"/>
-        <location filename="../mainwindow.cpp" line="6052"/>
-        <location filename="../mainwindow.cpp" line="6057"/>
-        <location filename="../mainwindow.cpp" line="6100"/>
-        <location filename="../mainwindow.cpp" line="6111"/>
+        <location filename="../mainwindow.cpp" line="1759"/>
+        <location filename="../mainwindow.cpp" line="3518"/>
+        <location filename="../mainwindow.cpp" line="3527"/>
+        <location filename="../mainwindow.cpp" line="6070"/>
+        <location filename="../mainwindow.cpp" line="6075"/>
+        <location filename="../mainwindow.cpp" line="6109"/>
+        <location filename="../mainwindow.cpp" line="6120"/>
         <source>Band Activity</source>
         <translation>Aktivnost na Opsegu</translation>
     </message>
@@ -3083,9 +3083,9 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
-        <location filename="../mainwindow.cpp" line="4664"/>
-        <location filename="../mainwindow.cpp" line="5330"/>
-        <location filename="../mainwindow.cpp" line="5745"/>
+        <location filename="../mainwindow.cpp" line="4745"/>
+        <location filename="../mainwindow.cpp" line="5411"/>
+        <location filename="../mainwindow.cpp" line="5832"/>
         <source>DX Call</source>
         <translation>DX Znak</translation>
     </message>
@@ -3112,7 +3112,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1531"/>
         <location filename="../mainwindow.ui" line="1674"/>
-        <location filename="../mainwindow.ui" line="4195"/>
+        <location filename="../mainwindow.ui" line="4267"/>
         <source>  Hz</source>
         <translation></translation>
     </message>
@@ -3138,7 +3138,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
-        <location filename="../mainwindow.cpp" line="2968"/>
+        <location filename="../mainwindow.cpp" line="2995"/>
         <source>Hound</source>
         <translation></translation>
     </message>
@@ -3159,7 +3159,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1534"/>
-        <location filename="../mainwindow.ui" line="4198"/>
+        <location filename="../mainwindow.ui" line="4270"/>
         <source>Tx  </source>
         <translation></translation>
     </message>
@@ -3170,20 +3170,20 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1577"/>
-        <location filename="../mainwindow.cpp" line="1496"/>
-        <location filename="../mainwindow.cpp" line="1970"/>
+        <location filename="../mainwindow.cpp" line="1489"/>
+        <location filename="../mainwindow.cpp" line="1962"/>
         <source>S meter</source>
         <translation>S metar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1719"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation>▲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1747"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation>▼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1762"/>
@@ -3207,7 +3207,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
-        <location filename="../mainwindow.ui" line="4625"/>
+        <location filename="../mainwindow.ui" line="4697"/>
         <source>AutoSeq</source>
         <translation></translation>
     </message>
@@ -3239,7 +3239,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1803"/>
         <source>Reserved</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezervirano</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1844"/>
@@ -3270,13 +3270,13 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Obriši znak nakon logiranja veze.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1954"/>
         <location filename="../mainwindow.ui" line="2030"/>
         <source>Clr</source>
-        <translation type="unfinished"></translation>
+        <translation>Briši</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1968"/>
@@ -3304,7 +3304,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Očistite polje s ovog popisa nakon logiranja QSO-a.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2043"/>
@@ -3349,7 +3349,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2267"/>
-        <location filename="../mainwindow.cpp" line="6058"/>
+        <location filename="../mainwindow.cpp" line="6145"/>
         <source>Rx Frequency</source>
         <translation>RX Frekvencija</translation>
     </message>
@@ -3360,7 +3360,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2354"/>
-        <location filename="../mainwindow.cpp" line="6644"/>
+        <location filename="../mainwindow.cpp" line="6731"/>
         <source>&amp;Tune</source>
         <translation>&amp;Tune</translation>
     </message>
@@ -3516,147 +3516,147 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <translation>Obriši D&amp;X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3053"/>
-        <location filename="../mainwindow.ui" line="5389"/>
-        <location filename="../mainwindow.ui" line="5854"/>
-        <location filename="../mainwindow.ui" line="5878"/>
+        <location filename="../mainwindow.ui" line="3059"/>
+        <location filename="../mainwindow.ui" line="5461"/>
+        <location filename="../mainwindow.ui" line="5926"/>
+        <location filename="../mainwindow.ui" line="5950"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3096"/>
+        <location filename="../mainwindow.ui" line="3102"/>
         <source>Generate standard messages for minimal QSO</source>
         <translation>Stvorite standardne poruke za minimalni QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3099"/>
+        <location filename="../mainwindow.ui" line="3105"/>
         <source>GenMsgs</source>
         <translation>GenPoruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3128"/>
-        <location filename="../mainwindow.ui" line="5567"/>
+        <location filename="../mainwindow.ui" line="3134"/>
+        <location filename="../mainwindow.ui" line="5639"/>
         <source>CQ</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3163"/>
-        <location filename="../mainwindow.ui" line="3731"/>
+        <location filename="../mainwindow.ui" line="3181"/>
+        <location filename="../mainwindow.ui" line="3803"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podržan je usmjereni CQ, raspon poruka od AA do ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3166"/>
-        <location filename="../mainwindow.ui" line="3734"/>
+        <location filename="../mainwindow.ui" line="3184"/>
+        <location filename="../mainwindow.ui" line="3806"/>
         <source>DX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3179"/>
-        <location filename="../mainwindow.ui" line="3763"/>
+        <location filename="../mainwindow.ui" line="3197"/>
+        <location filename="../mainwindow.ui" line="3835"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
         <translation>Označite za generiranje poruke &quot;RRR&quot;, poništite odabir da biste generirali &apos;RR73&apos;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3185"/>
-        <location filename="../mainwindow.ui" line="3769"/>
+        <location filename="../mainwindow.ui" line="3203"/>
+        <location filename="../mainwindow.ui" line="3841"/>
         <source>RRR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3198"/>
-        <location filename="../mainwindow.ui" line="3817"/>
+        <location filename="../mainwindow.ui" line="3216"/>
+        <location filename="../mainwindow.ui" line="3889"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preskočite odašiljanje QTH lokatora&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3204"/>
+        <location filename="../mainwindow.ui" line="3222"/>
         <source>SkipTx1</source>
         <translation>PreskočiTX1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3237"/>
-        <location filename="../mainwindow.ui" line="3307"/>
-        <location filename="../mainwindow.ui" line="3371"/>
-        <location filename="../mainwindow.ui" line="3435"/>
-        <location filename="../mainwindow.ui" line="3517"/>
-        <location filename="../mainwindow.ui" line="3584"/>
+        <location filename="../mainwindow.ui" line="3267"/>
+        <location filename="../mainwindow.ui" line="3349"/>
+        <location filename="../mainwindow.ui" line="3419"/>
+        <location filename="../mainwindow.ui" line="3489"/>
+        <location filename="../mainwindow.ui" line="3577"/>
+        <location filename="../mainwindow.ui" line="3650"/>
         <source>Send this message in next Tx interval</source>
         <translation>Pošaljite ovu poruku u sljedećem Tx intervalu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3243"/>
+        <location filename="../mainwindow.ui" line="3273"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3268"/>
-        <location filename="../mainwindow.ui" line="3335"/>
-        <location filename="../mainwindow.ui" line="3399"/>
-        <location filename="../mainwindow.ui" line="3463"/>
-        <location filename="../mainwindow.ui" line="3545"/>
-        <location filename="../mainwindow.ui" line="3615"/>
+        <location filename="../mainwindow.ui" line="3298"/>
+        <location filename="../mainwindow.ui" line="3377"/>
+        <location filename="../mainwindow.ui" line="3447"/>
+        <location filename="../mainwindow.ui" line="3517"/>
+        <location filename="../mainwindow.ui" line="3605"/>
+        <location filename="../mainwindow.ui" line="3681"/>
         <source>Switch to this Tx message NOW</source>
         <translation>Prebacite se na ovu Tx poruku SADA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3274"/>
+        <location filename="../mainwindow.ui" line="3304"/>
         <source>Tx &amp;1</source>
         <translation>Tx &amp;1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3277"/>
+        <location filename="../mainwindow.ui" line="3307"/>
         <source>Alt+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3313"/>
+        <location filename="../mainwindow.ui" line="3355"/>
         <source>Ctrl+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3338"/>
+        <location filename="../mainwindow.ui" line="3380"/>
         <source>Tx &amp;2</source>
         <translation>Tx &amp;2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3341"/>
+        <location filename="../mainwindow.ui" line="3383"/>
         <source>Alt+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3377"/>
+        <location filename="../mainwindow.ui" line="3425"/>
         <source>Ctrl+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3402"/>
+        <location filename="../mainwindow.ui" line="3450"/>
         <source>Tx &amp;3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3405"/>
+        <location filename="../mainwindow.ui" line="3453"/>
         <source>Alt+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3441"/>
+        <location filename="../mainwindow.ui" line="3495"/>
         <source>Ctrl+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3466"/>
+        <location filename="../mainwindow.ui" line="3520"/>
         <source>Tx &amp;4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3469"/>
+        <location filename="../mainwindow.ui" line="3523"/>
         <source>Alt+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3495"/>
-        <location filename="../mainwindow.ui" line="4072"/>
+        <location filename="../mainwindow.ui" line="3555"/>
+        <location filename="../mainwindow.ui" line="4144"/>
         <source>Enter a free text message (maximum 13 characters)
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
@@ -3698,10 +3698,10 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3639"/>
-        <location filename="../mainwindow.ui" line="5397"/>
-        <location filename="../mainwindow.ui" line="5400"/>
-        <location filename="../mainwindow.ui" line="5862"/>
-        <location filename="../mainwindow.ui" line="5886"/>
+        <location filename="../mainwindow.ui" line="5396"/>
+        <location filename="../mainwindow.ui" line="5399"/>
+        <location filename="../mainwindow.ui" line="5853"/>
+        <location filename="../mainwindow.ui" line="5877"/>
         <source>2</source>
         <translation></translation>
     </message>
@@ -3858,7 +3858,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4293"/>
         <source>No own call decodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nema dekodiranja vlastitog znaka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4395"/>
@@ -3956,1098 +3956,1097 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Prihvatite UDP odgovore na poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4629"/>
+        <location filename="../mainwindow.ui" line="4628"/>
         <source>Auto RX frequency Filter</source>
         <translation>Automatski filter RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4653"/>
+        <location filename="../mainwindow.ui" line="4652"/>
         <source>DXpedition</source>
         <translation>Dxpedicije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4672"/>
+        <location filename="../mainwindow.ui" line="4671"/>
         <source>Exit</source>
         <translation>Izlaz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4675"/>
+        <location filename="../mainwindow.ui" line="4674"/>
         <source>Alt+F4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4686"/>
+        <location filename="../mainwindow.ui" line="4685"/>
         <source>Configuration</source>
         <translation>Konfiguracija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4689"/>
-        <location filename="../mainwindow.ui" line="5110"/>
+        <location filename="../mainwindow.ui" line="4688"/>
+        <location filename="../mainwindow.ui" line="5109"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4694"/>
+        <location filename="../mainwindow.ui" line="4693"/>
         <source>About JTDX</source>
         <translation>O JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4697"/>
+        <location filename="../mainwindow.ui" line="4696"/>
         <source>Ctrl+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4702"/>
+        <location filename="../mainwindow.ui" line="4701"/>
         <source>Waterfall</source>
         <translation>Vodopad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4707"/>
+        <location filename="../mainwindow.ui" line="4706"/>
         <source>Open</source>
         <translation>Otvori</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4710"/>
+        <location filename="../mainwindow.ui" line="4709"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4715"/>
+        <location filename="../mainwindow.ui" line="4714"/>
         <source>Open next in directory</source>
         <translation>Otvori slijedeći u mapi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4718"/>
+        <location filename="../mainwindow.ui" line="4717"/>
         <source>F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4723"/>
+        <location filename="../mainwindow.ui" line="4722"/>
         <source>Decode remaining files in directory</source>
         <translation>Dekodirajte preostale datoteke u direktoriju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4726"/>
+        <location filename="../mainwindow.ui" line="4725"/>
         <source>Shift+F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4731"/>
+        <location filename="../mainwindow.ui" line="4730"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>Izbrišite sve datoteke * .wav &amp;&amp; * .c2 u SaveDiru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4742"/>
-        <location filename="../mainwindow.ui" line="5440"/>
-        <location filename="../mainwindow.ui" line="5502"/>
-        <location filename="../mainwindow.ui" line="5784"/>
+        <location filename="../mainwindow.ui" line="4741"/>
+        <location filename="../mainwindow.ui" line="5439"/>
+        <location filename="../mainwindow.ui" line="5501"/>
+        <location filename="../mainwindow.ui" line="5783"/>
         <source>fast</source>
         <translation>brzo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4753"/>
+        <location filename="../mainwindow.ui" line="4752"/>
         <source>None</source>
         <translation>Ništa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4761"/>
+        <location filename="../mainwindow.ui" line="4760"/>
         <source>Save all</source>
         <translation>Spremi sve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4861"/>
+        <location filename="../mainwindow.ui" line="4860"/>
         <source>JTDX Web site</source>
         <translation>JTDX Web stranica</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4864"/>
+        <location filename="../mainwindow.ui" line="4863"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4869"/>
+        <location filename="../mainwindow.ui" line="4868"/>
         <source>Keyboard shortcuts</source>
         <translation>Prečaci na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4872"/>
+        <location filename="../mainwindow.ui" line="4871"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4877"/>
+        <location filename="../mainwindow.ui" line="4876"/>
         <source>Special mouse commands</source>
         <translation>Posebne naredbe miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4880"/>
+        <location filename="../mainwindow.ui" line="4879"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4891"/>
+        <location filename="../mainwindow.ui" line="4890"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4902"/>
+        <location filename="../mainwindow.ui" line="4901"/>
         <source>Save decoded</source>
         <translation>Spremi dekodirano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4913"/>
-        <location filename="../mainwindow.ui" line="5448"/>
-        <location filename="../mainwindow.ui" line="5510"/>
-        <location filename="../mainwindow.ui" line="5752"/>
-        <location filename="../mainwindow.ui" line="5792"/>
+        <location filename="../mainwindow.ui" line="4912"/>
+        <location filename="../mainwindow.ui" line="5447"/>
+        <location filename="../mainwindow.ui" line="5509"/>
+        <location filename="../mainwindow.ui" line="5751"/>
+        <location filename="../mainwindow.ui" line="5791"/>
         <source>medium</source>
         <translation>srednje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4924"/>
-        <location filename="../mainwindow.ui" line="5459"/>
-        <location filename="../mainwindow.ui" line="5521"/>
-        <location filename="../mainwindow.ui" line="5803"/>
+        <location filename="../mainwindow.ui" line="4923"/>
+        <location filename="../mainwindow.ui" line="5458"/>
+        <location filename="../mainwindow.ui" line="5520"/>
+        <location filename="../mainwindow.ui" line="5802"/>
         <source>deep</source>
         <translation>duboko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4932"/>
+        <location filename="../mainwindow.ui" line="4931"/>
         <source>Monitor OFF at startup</source>
         <translation>Monitor isključen pri pokretanju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4937"/>
+        <location filename="../mainwindow.ui" line="4936"/>
         <source>Erase ALL.TXT</source>
         <translation>Izbriši ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4942"/>
+        <location filename="../mainwindow.ui" line="4941"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>Izbriši LOG file wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4947"/>
+        <location filename="../mainwindow.ui" line="4946"/>
         <source>Open wsjtx_log.adi</source>
         <translation>Otvori wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4950"/>
-        <location filename="../mainwindow.ui" line="5134"/>
+        <location filename="../mainwindow.ui" line="4949"/>
+        <location filename="../mainwindow.ui" line="5133"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4958"/>
+        <location filename="../mainwindow.ui" line="4957"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>Pretvorite način rada u RTTY za logiranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4966"/>
+        <location filename="../mainwindow.ui" line="4965"/>
         <source>Log dB reports to Comments</source>
         <translation>Logiranje dB raporta u komentare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4974"/>
+        <location filename="../mainwindow.ui" line="4973"/>
         <source>Prompt me to log QSO</source>
         <translation>Zatraži me da logiram QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4982"/>
+        <location filename="../mainwindow.ui" line="4981"/>
         <source>Blank line between decoding periods</source>
         <translation>Prazne linije između perioda dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4990"/>
+        <location filename="../mainwindow.ui" line="4989"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>Očistite DX znak i Lokator nakon logiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4998"/>
+        <location filename="../mainwindow.ui" line="4997"/>
         <source>Display distance in miles</source>
         <translation>Prikaži udaljenost u miljama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5006"/>
+        <location filename="../mainwindow.ui" line="5005"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>Dvaput kliknite na znak aktivira Tx Enable</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5014"/>
+        <location filename="../mainwindow.ui" line="5013"/>
         <source>Tx disabled after sending 73</source>
         <translation>Onemogući TX nakon slanja 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5022"/>
+        <location filename="../mainwindow.ui" line="5021"/>
         <source>Runaway Tx watchdog</source>
         <translation>TX WD tajmer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5030"/>
+        <location filename="../mainwindow.ui" line="5029"/>
         <source>Allow multiple instances</source>
         <translation>Omogući višestruke instance</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5038"/>
+        <location filename="../mainwindow.ui" line="5037"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx frekv zaključan na Rx frekv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5046"/>
+        <location filename="../mainwindow.ui" line="5045"/>
         <source>Skip Tx 1</source>
         <translation>Preskoči TX1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5054"/>
+        <location filename="../mainwindow.ui" line="5053"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5065"/>
+        <location filename="../mainwindow.ui" line="5064"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5073"/>
+        <location filename="../mainwindow.ui" line="5072"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Tx poruke u prozoru Rx Frekvencija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5081"/>
+        <location filename="../mainwindow.ui" line="5080"/>
         <source>Gray1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5089"/>
+        <location filename="../mainwindow.ui" line="5088"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translatorcomment>Prikaži DXCC entitet i rađene B4</translatorcomment>
         <translation>Show DXCC entity and worked B4 status</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5097"/>
+        <location filename="../mainwindow.ui" line="5096"/>
         <source>Astronomical data</source>
         <translation>Astronomski podaci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5102"/>
+        <location filename="../mainwindow.ui" line="5101"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>Kratki popis dodataka i prefiksa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5107"/>
+        <location filename="../mainwindow.ui" line="5106"/>
         <source>Settings...</source>
         <translation>Postavke ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5118"/>
+        <location filename="../mainwindow.ui" line="5117"/>
         <source>JTDX forum</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5123"/>
+        <location filename="../mainwindow.ui" line="5122"/>
         <source>Open log directory</source>
         <translation>Otvori log direktorij</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5131"/>
+        <location filename="../mainwindow.ui" line="5130"/>
         <source>Message averaging</source>
         <translation>Usrednjavanje poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5148"/>
+        <location filename="../mainwindow.ui" line="5147"/>
         <source>Include averaging</source>
         <translation>Dodaj nagovještanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5162"/>
+        <location filename="../mainwindow.ui" line="5161"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 nagovještanje dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5173"/>
+        <location filename="../mainwindow.ui" line="5172"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5178"/>
+        <location filename="../mainwindow.ui" line="5177"/>
         <source>Save reference spectrum</source>
         <translation>Spremite referentni spektar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5183"/>
+        <location filename="../mainwindow.ui" line="5182"/>
         <source>&amp;Download Samples ...</source>
         <translation>&amp;Preuzmi Primjere ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5186"/>
+        <location filename="../mainwindow.ui" line="5185"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preuzmite primjere audio datoteka koje prikazuju različite vrste rada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5194"/>
+        <location filename="../mainwindow.ui" line="5193"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5205"/>
+        <location filename="../mainwindow.ui" line="5204"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>Izostavi tekst filtere na RX frekvenciji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5216"/>
+        <location filename="../mainwindow.ui" line="5215"/>
         <source>Bypass all text filters</source>
         <translation>Izostavi sve tekst filtere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5219"/>
+        <location filename="../mainwindow.ui" line="5218"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5227"/>
+        <location filename="../mainwindow.ui" line="5226"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>Prikažite poruke dekodirane iz JT65 harmonika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5238"/>
+        <location filename="../mainwindow.ui" line="5237"/>
         <source>Enable main window popup</source>
         <translation>Omogući skočni prozor glavnog prozora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5249"/>
+        <location filename="../mainwindow.ui" line="5248"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>Poruke s mojim znakom u prozor frekvencije RX </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5254"/>
+        <location filename="../mainwindow.ui" line="5253"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>Obavijest o autorskim pravima WSJT Development Grupe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5268"/>
+        <location filename="../mainwindow.ui" line="5267"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5276"/>
+        <location filename="../mainwindow.ui" line="5275"/>
         <source>FT8 call first</source>
         <translation>FT8 odgovori prvome</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5287"/>
+        <location filename="../mainwindow.ui" line="5286"/>
         <source>Call priority and search CQ</source>
         <translation>Prioritetni znak i potražite CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5290"/>
+        <location filename="../mainwindow.ui" line="5289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odaberite odabir pretraživanja odgovora na CQ s prioritetima, ako to nije uspjelo, onda tražite CQ poruke s većim prioritetom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5298"/>
+        <location filename="../mainwindow.ui" line="5297"/>
         <source>FT8 call last</source>
         <translation>FT8 ogovorii zadnjem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5306"/>
+        <location filename="../mainwindow.ui" line="5305"/>
         <source>FT8 manual call</source>
         <translation>FT8 ručni odgovor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5314"/>
+        <location filename="../mainwindow.ui" line="5313"/>
         <source>0  Call None</source>
         <translation>0 Ručni odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5322"/>
+        <location filename="../mainwindow.ui" line="5321"/>
         <source>1  Call first</source>
         <translation>1  Odaberi prvog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5330"/>
+        <location filename="../mainwindow.ui" line="5329"/>
         <source>4+ Call and search through CQ messages</source>
         <translation>4+ Pozivanje i pretraživanje CQ poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5338"/>
+        <location filename="../mainwindow.ui" line="5337"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2 Pozovi dekodiranog do početka TX intervala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5346"/>
+        <location filename="../mainwindow.ui" line="5345"/>
         <source>3  Call based on end of decoding</source>
         <translation>3  Poziv na temelju kraja dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5354"/>
+        <location filename="../mainwindow.ui" line="5353"/>
         <source>Single shot QSO</source>
         <translation>Jedan QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5362"/>
+        <location filename="../mainwindow.ui" line="5361"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>Izbriši prozor aktivnosti pri svakom dekodiranju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5370"/>
+        <location filename="../mainwindow.ui" line="5369"/>
         <source>Answer worked B4 calls</source>
         <translation>Odgovaranje na B4 pozive</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5381"/>
+        <location filename="../mainwindow.ui" line="5380"/>
         <source>Auto</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5408"/>
+        <location filename="../mainwindow.ui" line="5407"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5416"/>
+        <location filename="../mainwindow.ui" line="5415"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5424"/>
+        <location filename="../mainwindow.ui" line="5423"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5432"/>
+        <location filename="../mainwindow.ui" line="5431"/>
         <source>Erase both message windows at band change</source>
         <translation>Izbriši oba prozora sa porukama pri promjeni opsega</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5470"/>
+        <location filename="../mainwindow.ui" line="5469"/>
         <source>deep with 4 passes</source>
         <translation>Duboko sa 4 prolaza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5478"/>
+        <location filename="../mainwindow.ui" line="5477"/>
         <source>Max distance instead of best SNR</source>
         <translation>Maksimalna udaljenost umjesto najboljeg SNR-a</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5486"/>
+        <location filename="../mainwindow.ui" line="5485"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>Poruke s traženim znakom u prozor RX frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5494"/>
+        <location filename="../mainwindow.ui" line="5493"/>
         <source>use low thresholds</source>
         <translation>niski prag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5529"/>
+        <location filename="../mainwindow.ui" line="5528"/>
         <source>use subpass</source>
         <translation>koristi subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5540"/>
+        <location filename="../mainwindow.ui" line="5539"/>
         <source>minimum</source>
         <translation>minimalno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5548"/>
+        <location filename="../mainwindow.ui" line="5547"/>
         <source>late start of decoder</source>
         <translation>Kašnjenje početka dekodiranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5556"/>
+        <location filename="../mainwindow.ui" line="5555"/>
         <source>Call worked B4 callsigns</source>
         <translation>Zovi rađene B4 stanice</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5575"/>
+        <location filename="../mainwindow.ui" line="5574"/>
         <source>CQ and 73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5583"/>
+        <location filename="../mainwindow.ui" line="5582"/>
         <source>any messages</source>
         <translation>bilo koje poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5591"/>
+        <location filename="../mainwindow.ui" line="5590"/>
         <source>Enable</source>
         <translation>Omogući</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5599"/>
+        <location filename="../mainwindow.ui" line="5598"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>Isključite filter kad pošaljete 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5607"/>
+        <location filename="../mainwindow.ui" line="5606"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>Isključite filter kad primite 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5615"/>
+        <location filename="../mainwindow.ui" line="5614"/>
         <source>Hide FT8 dupe messages</source>
         <translation>Sakrij FT8 duple poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5623"/>
+        <location filename="../mainwindow.ui" line="5622"/>
         <source>Display output power</source>
         <translation>Prikaz izazne snage</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5631"/>
+        <location filename="../mainwindow.ui" line="5630"/>
         <source>Report message priority</source>
         <translation>Raport kao prioritet poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5639"/>
+        <location filename="../mainwindow.ui" line="5638"/>
         <source>Enable hound mode</source>
         <translation>Omogući hound mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5650"/>
+        <location filename="../mainwindow.ui" line="5649"/>
         <source>Use hound TX frequency control</source>
         <translation>Hound TX kontrola frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5658"/>
+        <location filename="../mainwindow.ui" line="5657"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>Onemogući TX nakon slanja RRR / RR73 / 73 u ručnom načinu rada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5669"/>
+        <location filename="../mainwindow.ui" line="5668"/>
         <source>Show tooltips in main window</source>
         <translation>Prikazivanje savjeta u glavnom prozoru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5677"/>
+        <location filename="../mainwindow.ui" line="5676"/>
         <source>Color Tx message buttons</source>
         <translation>Gumbi Tx  poruka u boji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5685"/>
-        <location filename="../mainwindow.ui" line="5870"/>
-        <location filename="../mainwindow.ui" line="5894"/>
+        <location filename="../mainwindow.ui" line="5684"/>
+        <location filename="../mainwindow.ui" line="5861"/>
+        <location filename="../mainwindow.ui" line="5885"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5693"/>
+        <location filename="../mainwindow.ui" line="5692"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5701"/>
+        <location filename="../mainwindow.ui" line="5700"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5709"/>
+        <location filename="../mainwindow.ui" line="5708"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5717"/>
+        <location filename="../mainwindow.ui" line="5716"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5725"/>
+        <location filename="../mainwindow.ui" line="5724"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5733"/>
+        <location filename="../mainwindow.ui" line="5732"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5741"/>
+        <location filename="../mainwindow.ui" line="5740"/>
         <source>low</source>
         <translation>nisko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5760"/>
+        <location filename="../mainwindow.ui" line="5759"/>
         <source>high</source>
         <translation>visoko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5768"/>
+        <location filename="../mainwindow.ui" line="5767"/>
         <source>Hide FT contest messages</source>
         <translation>Sakrij FT kontest poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5776"/>
+        <location filename="../mainwindow.ui" line="5775"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5811"/>
+        <location filename="../mainwindow.ui" line="5810"/>
         <source>wideband DX Call search</source>
         <translation>Pretraživanje traženog DX znaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5819"/>
+        <location filename="../mainwindow.ui" line="5818"/>
         <source>6 pass SWL mode</source>
         <translation>6 prolaza SWL mod</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5830"/>
+        <location filename="../mainwindow.ui" line="5829"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translation>Pozivni znak u međuspremnik dvoklik | automatski odabir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5838"/>
+        <location filename="../mainwindow.ui" line="5837"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>Crossband rad na 160m sa Japanom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5846"/>
-        <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="5902"/>
+        <location filename="../mainwindow.ui" line="5893"/>
         <source>Hide telemetry messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij telemetrijske poruke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="457"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Želite li ponovno konfigurirati radijsko sučelje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="760"/>
+        <location filename="../mainwindow.cpp" line="756"/>
         <source>Error Writing WAV File</source>
         <translation>Greška pri zapisivanju u WAV datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="900"/>
+        <location filename="../mainwindow.cpp" line="897"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Greška Zatvaram jtdxjt9.exe Process</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="878"/>
-        <location filename="../mainwindow.cpp" line="879"/>
-        <location filename="../mainwindow.cpp" line="6048"/>
-        <location filename="../mainwindow.cpp" line="6049"/>
-        <location filename="../mainwindow.cpp" line="6107"/>
-        <location filename="../mainwindow.cpp" line="6108"/>
+        <location filename="../mainwindow.cpp" line="875"/>
+        <location filename="../mainwindow.cpp" line="876"/>
+        <location filename="../mainwindow.cpp" line="6066"/>
+        <location filename="../mainwindow.cpp" line="6067"/>
+        <location filename="../mainwindow.cpp" line="6116"/>
+        <location filename="../mainwindow.cpp" line="6117"/>
         <source>Freq   Message</source>
         <translation>Freq   Poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="901"/>
+        <location filename="../mainwindow.cpp" line="898"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName povratni kod: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="918"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Pogreška prilikom uklanjanja &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="919"/>
+        <location filename="../mainwindow.cpp" line="916"/>
         <source>Click OK to retry</source>
         <translation>Kliknite OK za ponovni pokušaj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1607"/>
+        <location filename="../mainwindow.cpp" line="1600"/>
         <source>TX Even</source>
         <translation>TX Parne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1614"/>
+        <location filename="../mainwindow.cpp" line="1607"/>
         <source>TX Odd</source>
         <translation>TX Neparne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1659"/>
-        <location filename="../mainwindow.cpp" line="2408"/>
-        <location filename="../mainwindow.cpp" line="3547"/>
-        <location filename="../mainwindow.cpp" line="4156"/>
-        <location filename="../mainwindow.cpp" line="4279"/>
-        <location filename="../mainwindow.cpp" line="4513"/>
-        <location filename="../mainwindow.cpp" line="6916"/>
-        <location filename="../mainwindow.cpp" line="7117"/>
+        <location filename="../mainwindow.cpp" line="1652"/>
+        <location filename="../mainwindow.cpp" line="2417"/>
+        <location filename="../mainwindow.cpp" line="3550"/>
+        <location filename="../mainwindow.cpp" line="4159"/>
+        <location filename="../mainwindow.cpp" line="4282"/>
+        <location filename="../mainwindow.cpp" line="4516"/>
+        <location filename="../mainwindow.cpp" line="6922"/>
+        <location filename="../mainwindow.cpp" line="7124"/>
         <source>File Open Error</source>
         <translation>Greška otvaranja datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1660"/>
-        <location filename="../mainwindow.cpp" line="2409"/>
-        <location filename="../mainwindow.cpp" line="3548"/>
-        <location filename="../mainwindow.cpp" line="4157"/>
-        <location filename="../mainwindow.cpp" line="4280"/>
-        <location filename="../mainwindow.cpp" line="4514"/>
-        <location filename="../mainwindow.cpp" line="6917"/>
-        <location filename="../mainwindow.cpp" line="7118"/>
-        <location filename="../mainwindow.cpp" line="7463"/>
+        <location filename="../mainwindow.cpp" line="1653"/>
+        <location filename="../mainwindow.cpp" line="2418"/>
+        <location filename="../mainwindow.cpp" line="3551"/>
+        <location filename="../mainwindow.cpp" line="4160"/>
+        <location filename="../mainwindow.cpp" line="4283"/>
+        <location filename="../mainwindow.cpp" line="4517"/>
+        <location filename="../mainwindow.cpp" line="6923"/>
+        <location filename="../mainwindow.cpp" line="7125"/>
+        <location filename="../mainwindow.cpp" line="7470"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1715"/>
+        <location filename="../mainwindow.cpp" line="1708"/>
         <source>lost audio </source>
-        <translation type="unfinished"></translation>
+        <translation>gubitak zvuka </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1799"/>
+        <location filename="../mainwindow.cpp" line="1792"/>
         <source>Error saving c2 file</source>
         <translation>Greška snimanja c2 datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1876"/>
+        <location filename="../mainwindow.cpp" line="1869"/>
         <source>Error in SoundInput</source>
         <translation>Greška SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1880"/>
+        <location filename="../mainwindow.cpp" line="1873"/>
         <source>Error in SoundOutput</source>
         <translation>Greška SoundOutput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1972"/>
+        <location filename="../mainwindow.cpp" line="1964"/>
         <source>Pwr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2519"/>
+        <location filename="../mainwindow.cpp" line="2528"/>
         <source>Subprocess Error</source>
         <translation>Greška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2520"/>
+        <location filename="../mainwindow.cpp" line="2529"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Podproces nije uspio s izlaznim kodom %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2522"/>
-        <location filename="../mainwindow.cpp" line="2541"/>
+        <location filename="../mainwindow.cpp" line="2531"/>
+        <location filename="../mainwindow.cpp" line="2550"/>
         <source>Running: %1
 %2</source>
         <translation>Pokrećem: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2540"/>
+        <location filename="../mainwindow.cpp" line="2549"/>
         <source>Subprocess error</source>
         <translation>Pogreška podprocesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2616"/>
+        <location filename="../mainwindow.cpp" line="2625"/>
         <source>Spotted</source>
         <translation>Spotiran</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2623"/>
+        <location filename="../mainwindow.cpp" line="2632"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Nemoguće uspostaviti vezu sa dxsummit serverom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2646"/>
+        <location filename="../mainwindow.cpp" line="2655"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>Algoritmi, izvorni kôd, look-and-feel WSJT-X i srodnih programa i specifikacije protokola za načine FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 su Copyright (C) 2001 -2018. Jedan ili više sljedećih autora: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; i ostali članovi razvojne skupine WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2775"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Nema podataka za čitanje s diska. Pogrešan format datoteke?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2773"/>
+        <location filename="../mainwindow.cpp" line="2782"/>
         <source>Confirm Delete</source>
         <translation>Potvrdi Brisanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2774"/>
+        <location filename="../mainwindow.cpp" line="2783"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Jeste li sigurni da želite obrisati sve *.wav and *.c2 datoteke u
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2817"/>
+        <location filename="../mainwindow.cpp" line="2826"/>
         <source>AutoSeq0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2830"/>
+        <location filename="../mainwindow.cpp" line="2839"/>
         <source>AutoSeq1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2839"/>
-        <location filename="../mainwindow.cpp" line="2865"/>
+        <location filename="../mainwindow.cpp" line="2848"/>
+        <location filename="../mainwindow.cpp" line="2874"/>
         <source>AutoSeq2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2840"/>
-        <location filename="../mainwindow.cpp" line="2861"/>
+        <location filename="../mainwindow.cpp" line="2849"/>
+        <location filename="../mainwindow.cpp" line="2870"/>
         <source>AutoSeq6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2849"/>
-        <location filename="../mainwindow.cpp" line="2866"/>
+        <location filename="../mainwindow.cpp" line="2858"/>
+        <location filename="../mainwindow.cpp" line="2875"/>
         <source>AutoSeq3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2850"/>
-        <location filename="../mainwindow.cpp" line="2862"/>
+        <location filename="../mainwindow.cpp" line="2859"/>
+        <location filename="../mainwindow.cpp" line="2871"/>
         <source>AutoSeq7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2944"/>
+        <location filename="../mainwindow.cpp" line="2953"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Kontrola Hound TX frekvencije  nije dopuštena u standardnim FT8 podpojasima.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2952"/>
+        <location filename="../mainwindow.cpp" line="2961"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hound - Za reguliranje frekvencije TX-a potreban je * Split * za  rig kontrolu (bilo * Rig * ili * Fake It * na kartici * Settings | Radio *.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2955"/>
+        <location filename="../mainwindow.cpp" line="2964"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translatorcomment>Hound TX frekvencija nije dopuštena u standardnim FT8 podpojasima i zahtijeva * Split * rig control (ili * Rig * ili * Fake It * na kartici * Postavke | Radio *.)</translatorcomment>
         <translation>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2963"/>
+        <location filename="../mainwindow.cpp" line="2972"/>
         <source>Hound TX frequency control warning</source>
         <translation>Hound TX upozorenje kontrole frekvencije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2968"/>
+        <location filename="../mainwindow.cpp" line="2977"/>
         <source>HoundFC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3030"/>
+        <location filename="../mainwindow.cpp" line="3038"/>
         <source>Keyboard Shortcuts</source>
         <translation>Prečice na tipkovnici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3041"/>
+        <location filename="../mainwindow.cpp" line="3049"/>
         <source>Special Mouse Commands</source>
         <translation>Posebne naredbe za miša</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3508"/>
+        <location filename="../mainwindow.cpp" line="3511"/>
         <source>Avg=</source>
         <translation>Prosj.=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3508"/>
-        <location filename="../mainwindow.cpp" line="3527"/>
+        <location filename="../mainwindow.cpp" line="3511"/>
+        <location filename="../mainwindow.cpp" line="3530"/>
         <source>Freq  </source>
         <translation>Frekv  </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3508"/>
-        <location filename="../mainwindow.cpp" line="3527"/>
+        <location filename="../mainwindow.cpp" line="3511"/>
+        <location filename="../mainwindow.cpp" line="3530"/>
         <source>Lag=</source>
         <translation>Kasni=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3514"/>
-        <location filename="../mainwindow.cpp" line="3523"/>
+        <location filename="../mainwindow.cpp" line="3517"/>
+        <location filename="../mainwindow.cpp" line="3526"/>
         <source>check time</source>
         <translation>provjeri sat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3826"/>
-        <location filename="../mainwindow.cpp" line="3832"/>
+        <location filename="../mainwindow.cpp" line="3829"/>
+        <location filename="../mainwindow.cpp" line="3835"/>
         <source>Confirm change Language</source>
         <translation>Potvrdi promjenu jezika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3828"/>
-        <location filename="../mainwindow.cpp" line="3835"/>
+        <location filename="../mainwindow.cpp" line="3831"/>
+        <location filename="../mainwindow.cpp" line="3838"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Jeste li sigurni da želite promijeniti jezik sučelja na Hrvatski, JTDX će se ponovo pokrenuti?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4007"/>
+        <location filename="../mainwindow.cpp" line="4010"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Odaberite drugu Tx frekvenciju. JTDX neće svjesno odašiljati drugi mod u WSPR podopsegu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4012"/>
         <location filename="../mainwindow.cpp" line="4015"/>
+        <location filename="../mainwindow.cpp" line="4018"/>
         <source>WSPR Guard Band</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4133"/>
+        <location filename="../mainwindow.cpp" line="4136"/>
         <source>TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4134"/>
-        <location filename="../mainwindow.cpp" line="4549"/>
+        <location filename="../mainwindow.cpp" line="4137"/>
         <source>LastTx: </source>
         <translation>ZadnjiTx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4347"/>
+        <location filename="../mainwindow.cpp" line="4350"/>
         <source>Tx: TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4348"/>
+        <location filename="../mainwindow.cpp" line="4351"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4353"/>
+        <location filename="../mainwindow.cpp" line="4356"/>
         <source>Receiving </source>
         <translation>Primam </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4406"/>
+        <location filename="../mainwindow.cpp" line="4409"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5431"/>
-        <location filename="../mainwindow.cpp" line="5443"/>
-        <location filename="../mainwindow.cpp" line="5456"/>
-        <location filename="../mainwindow.cpp" line="5482"/>
+        <location filename="../mainwindow.cpp" line="4567"/>
+        <source>Last Tx: </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5449"/>
+        <location filename="../mainwindow.cpp" line="5461"/>
+        <location filename="../mainwindow.cpp" line="5474"/>
+        <location filename="../mainwindow.cpp" line="5500"/>
         <source>Add to CALL3.TXT</source>
         <translation>Dodaj u CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5432"/>
+        <location filename="../mainwindow.cpp" line="5450"/>
         <source>Please enter a valid grid locator</source>
         <translation>Upiši valjani lokator polje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5444"/>
+        <location filename="../mainwindow.cpp" line="5462"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Ne može se  otvoriti &quot;%1&quot; za čitanje/pisanje: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5457"/>
+        <location filename="../mainwindow.cpp" line="5475"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se upisao: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5480"/>
+        <location filename="../mainwindow.cpp" line="5498"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5843"/>
+        <location filename="../mainwindow.cpp" line="5861"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Greška prilikom slanja QSO ADIF na drugi UDP server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5843"/>
+        <location filename="../mainwindow.cpp" line="5861"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Greška zapisivanja &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5999"/>
+        <location filename="../mainwindow.cpp" line="6017"/>
         <source>Tx WSPR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6098"/>
+        <location filename="../mainwindow.cpp" line="6107"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Freq     Drift  Znak          Grid    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6197"/>
-        <location filename="../mainwindow.cpp" line="6209"/>
+        <location filename="../mainwindow.cpp" line="6206"/>
+        <location filename="../mainwindow.cpp" line="6218"/>
         <source>Confirm Erase</source>
         <translation>Potvrdi Brisanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6198"/>
+        <location filename="../mainwindow.cpp" line="6207"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Jeste li sigurni da želite izbrisati datoteku ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6210"/>
+        <location filename="../mainwindow.cpp" line="6219"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Jeste li sigurni da želite izbrisati svoj dnevnik veza LOG?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6823"/>
+        <location filename="../mainwindow.cpp" line="6829"/>
         <source>Lockd Tx=Rx</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6824"/>
+        <location filename="../mainwindow.cpp" line="6830"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za omogućavanje rada u Tx / Rx Split načinu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6827"/>
+        <location filename="../mainwindow.cpp" line="6833"/>
         <source>Tx/Rx Split</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6828"/>
+        <location filename="../mainwindow.cpp" line="6834"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za zaključavanje Tx frekvencije na Rx AF frekvenciji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6956"/>
+        <location filename="../mainwindow.cpp" line="6962"/>
         <source>Rig Control Error</source>
         <translation>Greška kontrole RIG</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7030"/>
+        <location filename="../mainwindow.cpp" line="7037"/>
         <source>Tune digital gain</source>
         <translation>Jačina Tune Tona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7031"/>
+        <location filename="../mainwindow.cpp" line="7038"/>
         <source>Transmit digital gain</source>
         <translation>Jačina audio predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7050"/>
+        <location filename="../mainwindow.cpp" line="7057"/>
         <source>Prefixes</source>
         <translation>Prefiksi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7099"/>
-        <location filename="../mainwindow.cpp" line="7100"/>
+        <location filename="../mainwindow.cpp" line="7106"/>
+        <location filename="../mainwindow.cpp" line="7107"/>
         <source>Logd </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7323"/>
+        <location filename="../mainwindow.cpp" line="7330"/>
         <source>Network Error</source>
         <translation>Greška Mreže</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7324"/>
+        <location filename="../mainwindow.cpp" line="7331"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Greška: %1
 UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7462"/>
+        <location filename="../mainwindow.cpp" line="7469"/>
         <source>File Error</source>
         <translation>Greška datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7674"/>
+        <location filename="../mainwindow.cpp" line="7681"/>
         <source>Tx watchdog expired</source>
         <translation>TX Watchdog je istekao</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7695"/>
         <source>WD %1m</source>
         <translation></translation>
     </message>
@@ -5310,17 +5309,17 @@ Provjerite je li dato točno ime imenika.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="177"/>
+        <location filename="../main.cpp" line="184"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Pogrešan rig name - \ &amp; / nije dozvoljeno</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="202"/>
+        <location filename="../main.cpp" line="209"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Možda se pokreće druga instanca, pokušajte ukloniti ustajalu datoteku zaključavanja?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="344"/>
+        <location filename="../main.cpp" line="351"/>
         <source>Unexpected error</source>
         <translation>Neočekivana greška</translation>
     </message>
@@ -5360,7 +5359,7 @@ Provjerite je li dato točno ime imenika.</translation>
         <translation>Pogreška prilikom otvaranja datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../WFPalette.cpp" line="252"/>
+        <location filename="../WFPalette.cpp" line="258"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
         <translation>Pogreška pri pisanju datoteke palete vodopada &quot;%1&quot;: %2.</translation>
     </message>
@@ -6045,7 +6044,7 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristi tamnii stil</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>
@@ -6183,12 +6182,12 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zatražite uključivanje / isključivanje napajanja uređaja kada je podržano u Hamlibu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Rig snaga</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
@@ -8360,37 +8359,37 @@ promjena zvučne kartice</translation>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="77"/>
         <source>Fatal error</source>
         <translation>Neočekivana greška</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="82"/>
         <source>Unexpected fatal error</source>
         <translation>Neočekivana greška uređaja</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="135"/>
+        <location filename="../main.cpp" line="142"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="136"/>
+        <location filename="../main.cpp" line="143"/>
         <source>style</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="140"/>
+        <location filename="../main.cpp" line="147"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Gdje je &lt;rig-name&gt; za podršku za više instanci.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="141"/>
+        <location filename="../main.cpp" line="148"/>
         <source>rig-name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="145"/>
+        <location filename="../main.cpp" line="152"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Datoteke koje se mogu pisati na testnoj lokaciji. Koristite s oprezom samo za testiranje.</translation>
     </message>
