@@ -332,7 +332,7 @@
        </layout>
       </widget>
       <widget class="QWidget" name="layoutWidget1">
-       <layout class="QVBoxLayout" name="verticalLayout_12" stretch="1,5,3">
+       <layout class="QVBoxLayout" name="verticalLayout_12" stretch="1,6,2">
         <property name="spacing">
          <number>2</number>
         </property>
@@ -2317,6 +2317,19 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
              <number>1</number>
             </property>
             <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>1</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="tuneButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -2594,7 +2607,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2636,7 +2649,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2678,7 +2691,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2706,7 +2719,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2734,7 +2747,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2762,7 +2775,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2807,7 +2820,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2852,7 +2865,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2900,7 +2913,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2945,7 +2958,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -3031,6 +3044,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                     <size>
                      <width>0</width>
                      <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>305</height>
                     </size>
                    </property>
                    <property name="tabPosition">
@@ -3159,6 +3178,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <height>0</height>
                             </size>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
                            <property name="toolTip">
                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                            </property>
@@ -3219,6 +3250,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
                            </property>
                            <property name="text">
                             <string/>
@@ -3293,6 +3336,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -3357,6 +3412,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -3420,6 +3481,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
                            </property>
                           </widget>
                          </item>
@@ -3489,6 +3556,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                             <size>
                              <width>0</width>
                              <height>23</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3566,6 +3639,12 @@ list. The list can be maintained in Settings (F2).</string>
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
                            </property>
                            <property name="text">
                             <string/>
@@ -3727,6 +3806,12 @@ list. The list can be maintained in Settings (F2).</string>
                                <height>0</height>
                               </size>
                              </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>30</height>
+                              </size>
+                             </property>
                              <property name="toolTip">
                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                              </property>
@@ -3843,7 +3928,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3899,7 +3984,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3955,7 +4040,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -4018,7 +4103,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>40</height>
+                             <height>30</height>
                             </size>
                            </property>
                           </widget>
@@ -4065,7 +4150,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>40</height>
+                             <height>30</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -4359,7 +4444,7 @@ list. The list can be maintained in Settings (F2).</string>
             <property name="maximumSize">
              <size>
               <width>85</width>
-              <height>350</height>
+              <height>305</height>
              </size>
             </property>
             <property name="frameShape">
@@ -4618,6 +4703,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionCallsign_to_clipboard"/>
     <addaction name="separator"/>
     <addaction name="actionCrossband_160m_JA"/>
+    <addaction name="actionCrossband_160m_HL"/>
    </widget>
    <widget class="QMenu" name="menuAutoSeq">
     <property name="title">
@@ -5835,6 +5921,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Crossband 160m operation with Japan</string>
+   </property>
+  </action>
+  <action name="actionCrossband_160m_HL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Crossband 160m operation with Korea</string>
    </property>
   </action>
   <action name="actionDecFT8cycles1">

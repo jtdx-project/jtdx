@@ -27,6 +27,9 @@
 #include <QButtonGroup>
 #include <QUdpSocket>
 #include <QtMath>
+#if QT_VERSION >= QT_VERSION_CHECK (5, 15, 0)
+#include <QRandomGenerator>
+#endif
 
 #include "revision_utils.hpp"
 #include "qt_helpers.hpp"
@@ -64,45 +67,45 @@ extern "C" {
   void symspec_(struct dec_data *, int* k, int* ntrperiod, int* nsps,
                 float* px, float s[], float* df3, int* nhsym, int* npts8);
 
-  void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, int len);
+  void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, fortran_charlen_t);
 				
-  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], int len1, int len2);
+  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
-  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], int len1, int len2);
+  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void gen_ft8wave_(int itone[], int* nsym, int* nsps, float* bt, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
   void gen_ft4wave_(int itone[], int* nsym, int* nsps, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
   void gen9_(char* msg, int* ichk, char* msgsent, int itone[],
-               int* itext, int len1, int len2);
+               int* itext, fortran_charlen_t, fortran_charlen_t);
 
   void gen10_(char* msg, int* ichk, char* msgsent, int itone[],
-               int* itext, int len1, int len2);
+               int* itext, fortran_charlen_t, fortran_charlen_t);
 
   void gen65_(char* msg, int* ichk, char* msgsent, int itone[],
-              int* itext, int len1, int len2);
+              int* itext, fortran_charlen_t, fortran_charlen_t);
 
 
-  void genwspr_(char* msg, char* msgsent, int itone[], int len1, int len2);
+  void genwspr_(char* msg, char* msgsent, int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void azdist_(char* MyGrid, char* HisGrid, double* utch, int* nAz, int* nEl,
                int* nDmiles, int* nDkm, int* nHotAz, int* nHotABetter,
-               int len1, int len2);
+               fortran_charlen_t, fortran_charlen_t);
 
-  void morse_(char* msg, int* icw, int* ncw, int len);
+  void morse_(char* msg, int* icw, int* ncw, fortran_charlen_t);
 
   int ptt_(int nport, int ntx, int* iptt, int* nopen);
 
   void wspr_downsample_(int d2[], int* k);
-  int savec2_(char* fname, int* TR_seconds, double* dial_freq, int len1);
+  int savec2_(char* fname, int* TR_seconds, double* dial_freq, fortran_charlen_t);
 
   void wav12_(int d2[], int d1[], int* nbytes, int* nbitsam2);
 
   void foxgen_();
 }
 
-int volatile itone[NUM_ISCAT_SYMBOLS];	//Audio tones for all Tx symbols
+int volatile itone[NUM_WSPR_SYMBOLS];	//Audio tones for all Tx symbols
 int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 dec_data_t dec_data;             // for sharing with Fortran
 
@@ -279,6 +282,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_processAuto_done {false},
   m_haltTrans {false},
   m_crossbandOptionEnabled {true},
+  m_crossbandHLOptionEnabled {true},
   m_repliedCQ {""},
   m_dxbcallTxHalted {""},
   m_currentQSOcallsign {""},
@@ -317,6 +321,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_bandChanged {false},
   m_useDarkStyle {false},
   m_lostaudio {false},
+  m_lasthint {false},
+  m_monitoroff {false},
+  m_savedRRR {false},
   m_lang {"en_US"},
   m_lastloggedcall {""},
   m_cqdir {""},
@@ -814,7 +821,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   connect(&m_guiTimer, &QTimer::timeout, this, &MainWindow::guiUpdate);
   m_guiTimer.start(100);   //### Don't change the 100 ms! ###
 
-  stophintTimer.setSingleShot(true); connect(&stophintTimer, &QTimer::timeout, this, &MainWindow::stopHint_call3_rxfreq);
   ptt0Timer.setSingleShot(true); connect(&ptt0Timer, &QTimer::timeout, this, &MainWindow::stopTx2);
   ptt1Timer.setSingleShot(true); connect(&ptt1Timer, &QTimer::timeout, this, &MainWindow::startTx2);
   logQSOTimer.setSingleShot(true); connect(&logQSOTimer, &QTimer::timeout, this, &MainWindow::on_logQSOButton_clicked);
@@ -1182,6 +1188,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("ColorTxMessageButtons",m_colorTxMsgButtons);
   m_settings->setValue("CallsignToClipboard",m_callToClipboard);
   m_settings->setValue("Crossband160mJA",m_crossbandOptionEnabled);
+  m_settings->setValue("Crossband160mHL",m_crossbandHLOptionEnabled);
   m_settings->setValue("QuickCall",m_autoTx);
   m_settings->setValue("AutoSequence",m_autoseq);
   m_settings->setValue("SpotText",m_spotText);
@@ -1468,6 +1475,9 @@ void MainWindow::readSettings()
   m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",true).toBool();
   ui->actionCrossband_160m_JA->setChecked(m_crossbandOptionEnabled);
 
+  m_crossbandHLOptionEnabled=m_settings->value("Crossband160mHL",true).toBool();
+  ui->actionCrossband_160m_HL->setChecked(m_crossbandHLOptionEnabled);
+
   m_autoTx=m_settings->value("QuickCall",false).toBool();
   ui->AutoTxButton->setChecked(m_autoTx);
 
@@ -1637,14 +1647,32 @@ void MainWindow::writeHaltTxEvent(QString reason)
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Halt Tx triggered at TX: " << reason << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
               << " MHz  " << m_modeTx
-              << ":  " << m_currentMessage << endl;
+              << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
        } else {
           if(!haltTrans) {
              out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
-                 << "  Halt Tx triggered at RX: " << reason << endl;
+                 << "  Halt Tx triggered at RX: " << reason <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           } else {			  
              out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
-                 << "  Halt Tx triggered at transition from RX to TX: " << reason << endl;
+                 << "  Halt Tx triggered at transition from RX to TX: " << reason <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           }
        }
        f.close();
@@ -1877,6 +1905,7 @@ void MainWindow::showStatusMessage(const QString& statusMsg)
 
 void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 {
+  if(!m_monitoring && !m_transmitting) m_monitoroff=true;
   // things that might change that we need know about
   m_strictdirCQ = m_config.strictdirCQ ();
   m_callsign = m_config.my_callsign ();
@@ -1981,28 +2010,10 @@ void MainWindow::escapeHalt() { haltTx("TX halted via Escape button from widegra
 void MainWindow::filter_on() { if(!m_filter) ui->filterButton->click(); }
 void MainWindow::on_swlButton_clicked (bool checked) { if(checked) m_swl=true; else m_swl=false; }
 void MainWindow::on_AGCcButton_clicked(bool checked) { if(checked) m_agcc=true; else m_agcc=false; }
-// for T10 also DXCall Hint
-void MainWindow::stopHint_call3_rxfreq () { dec_data.params.nstophint=1; }
 
 void MainWindow::on_hintButton_clicked (bool checked)
 {
-  if(checked) m_hint=true; else m_hint=false;
-  dec_data.params.nstophint=1; 
-  if(m_hint) {
-    if(m_modeTx.startsWith("FT"))  {
-      if(!m_hisCall.isEmpty()) {
-        dec_data.params.nstophint=0; //let Hint decoder process non-CQ messages on the RX frequency
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        if(m_modeTx=="FT8") stophintTimer.start(27000); //((2*15-3)*1000) block in 27 seconds
-        if(m_modeTx=="FT4") stophintTimer.start(13500); //block in 13.5 seconds
-      }
-    }
-    else if (m_modeTx=="JT65" or m_modeTx=="JT9" or m_modeTx=="T10")  {
-      dec_data.params.nstophint=0;  //let Hint decoder process non-CQ messages on the RX frequency
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      stophintTimer.start(314000); //((14+5*60)*1000) block in 5 minutes
-    }
-  }
+  m_hint=checked;
 }
 
 void MainWindow::on_HoundButton_clicked (bool checked)
@@ -2070,6 +2081,7 @@ void MainWindow::monitor (bool state)
 {
   ui->monitorButton->setChecked (state);
   if (state) {
+    m_monitoroff=false;
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
@@ -2104,6 +2116,8 @@ void MainWindow::on_actionAbout_triggered()                  //Display "About"
 
 void MainWindow::on_enableTxButton_clicked (bool checked)
 {
+  if(m_enableTx && !checked && m_curMsgTx.startsWith(m_hisCall+" ")) m_lasthint=true;
+  if(checked && m_lasthint) m_lasthint=false;
   m_enableTx = checked;
   statusUpdate ();
   if(m_mode.left(4)=="WSPR")  {
@@ -2303,8 +2317,6 @@ void MainWindow::displayDialFrequency ()
         clearDX (" cleared, triggered by erase both windows option upon band change from transceiver");
       }
       m_qsoHistory.init();
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
       if(m_config.write_decoded_debug()) {
         QString text = startup ? "program startup, m_lastBand: " : "QSO history initialized by band change from transceiver, m_lastBand: ";
         writeToALLTXT(text + m_lastBand + ", current band: " + band_name + ", dial_frequency: " + QString::number(dial_frequency) + ", TX VFO frequency: " + 
@@ -2344,7 +2356,7 @@ void MainWindow::displayDialFrequency ()
   static bool first_freq {true};
   if(first_freq && dial_frequency!=0 && dial_frequency!=145000000 && m_mode=="FT8") {
     bool commonFT8b=false;
-    qint32 ft8Freq[]={1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=dial_frequency/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
@@ -2411,7 +2423,13 @@ void MainWindow::statusChanged()
     QTextStream out(&f);
     out << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
         << ";" << m_mode << ";" << m_hisCall << ";"
-        << ui->rptSpinBox->value() << ";" << m_modeTx << endl;
+        << ui->rptSpinBox->value() << ";" << m_modeTx <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f.close();
   } else {
     JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -2998,6 +3016,7 @@ void MainWindow::on_actionShow_tooltips_main_window_toggled(bool checked) { m_sh
 void MainWindow::on_actionColor_Tx_message_buttons_toggled(bool checked) { m_colorTxMsgButtons = checked; }
 void MainWindow::on_actionCallsign_to_clipboard_toggled(bool checked) { m_callToClipboard = checked; }
 void MainWindow::on_actionCrossband_160m_JA_toggled(bool checked) { m_crossbandOptionEnabled = checked; }
+void MainWindow::on_actionCrossband_160m_HL_toggled(bool checked) { m_crossbandHLOptionEnabled = checked; }
 
 void MainWindow::on_actionShow_messages_decoded_from_harmonics_toggled(bool checked)
 {
@@ -3077,7 +3096,11 @@ void MainWindow::decode()                                       //decode()
   if(!m_dataAvailable or m_TRperiod==0.0) { m_manualDecode=false; return; }
   decodeBusy(true); // shall be second line
   if(m_autoErase) ui->decodedTextBrowser->clear();
-//  printf("%s(%0.1f) Timing decode start\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  if(m_hint && !m_hisCall.isEmpty() && (m_enableTx || m_lasthint)) {
+    if(m_curMsgTx.startsWith(m_hisCall+" ")) dec_data.params.nstophint = 0; // DxCall matched to last transmitted message
+    m_lasthint=false;
+  }
+//  printf("%s(%0.1f) Timing decode start: %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),dec_data.params.nstophint);
   m_nDecodes = 0;
   m_reply_me = false;
   m_reply_other = false;
@@ -3475,6 +3498,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
     QByteArray t=proc_jtdxjt9.readLine();
 
     if(t.startsWith("<DecodeFinished>")) {
+      dec_data.params.nstophint=1;
       m_bDecoded = t.mid (20).trimmed ().toInt () > 0;
       int mswait=750.0*m_TRperiod;
       if(!m_diskData) killFileTimer.start (mswait); //Kill in 3/4 of period
@@ -3534,17 +3558,29 @@ void MainWindow::readFromStdout()                             //readFromStdout
       decodeBusy(false); // shall be last line
       return;
     } else {
-      if(t.indexOf(m_baseCall) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
+      if(t.indexOf(m_baseCall.toLatin1()) >= 0 || m_config.write_decoded() || m_config.write_decoded_debug()) {
         QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
         if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
           QTextStream out(&f);
           if (m_RxLog==1) {
             out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss")
                 << "  " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz  "
-                << m_mode << endl;
+                << m_mode << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
             m_RxLog=0;
           }
-          out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_") << t.trimmed() << endl;
+          out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_") << t.trimmed() << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           f.close();
         } else {
           JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -4144,13 +4180,25 @@ void MainWindow::guiUpdate()
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Retransmitting " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
               << " MHz  " << m_modeTx
-              << ":  " << m_currentMessage << endl;
+              << ":  " << m_currentMessage << 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           if(m_config.write_decoded_debug()) {
             out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
                 << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
                 << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
                 << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
-                << " Hound mode" << (m_houndMode ? "-On" : "-Off") << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off") << endl;
+                << " Hound mode" << (m_houndMode ? "-On" : "-Off") << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           }
           f.close();
         }
@@ -4267,16 +4315,40 @@ void MainWindow::guiUpdate()
         if(m_config.write_decoded_debug()) {
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  JTDX v" << QCoreApplication::applicationVersion () << revision () <<" Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage << endl << "                   "
+              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl
+#else
+                 Qt::endl
+#endif
+ << "                   "
               << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
               << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
               << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
-              << " Hound mode" << (m_houndMode ? "-On" : "-Off") << endl << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off")
-              << " HaltTxReplyOther" << (m_config.halttxreplyother () ? "-On" : "-Off") << endl; }
+              << " Hound mode" << (m_houndMode ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl
+#else
+                 Qt::endl
+#endif
+ << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off")
+              << " HaltTxReplyOther" << (m_config.halttxreplyother () ? "-On" : "-Off") <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
         else {
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage << endl; }
+              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+ }
         f.close();
       } else {
         JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -4458,7 +4530,7 @@ void MainWindow::haltTx(QString reason)
 
 void MainWindow::haltTxTuneTimer()
 {
-  if(m_config.write_decoded_debug()) { writeToALLTXT("Halt Tx triggered: tune timer is expired"); m_haltTxWritten=true; }
+  if(m_config.write_decoded_debug()) { writeToALLTXT("Halt Tx triggered: tuning stopped"); m_haltTxWritten=true; }
   on_stopTxButton_clicked();
 }
 
@@ -4510,7 +4582,13 @@ void MainWindow::startTx2()
           QTextStream out(&f);
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyMMdd hhmm")
               << "  Transmitting " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz:  "
-              << m_currentMessage << "  " + m_mode << endl;
+              << m_currentMessage << "  " + m_mode <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
           f.close();
         } else {
           JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -4535,22 +4613,7 @@ void MainWindow::stopTx()
 	  tx_status_label->setText("");
   }
   ptt0Timer.start(200);                //Sequencer delay
-  if(m_hint) {
-    if(m_modeTx.startsWith("FT"))  {
-      if(!m_hisCall.isEmpty()) {
-        dec_data.params.nstophint=0; //let Hint decoder process non-CQ messages on the RX frequency
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        if(m_modeTx=="FT8") stophintTimer.start(27000); //((2*15-3)*1000) block in 27 seconds
-        else if(m_modeTx=="FT4") stophintTimer.start(13500); //block in 13.5 seconds
-      }
-    }
-    else if (m_modeTx=="JT65" or m_modeTx=="JT9" or m_modeTx=="T10")  {
-      dec_data.params.nstophint=0;  //let Hint decoder process non-CQ messages on the RX frequency
-      if(stophintTimer.isActive()) stophintTimer.stop();
-      stophintTimer.start(314000); //((14+5*60)*1000) block in 5 minutes
-    }
-  }
-  monitor (true);
+  if(!m_monitoroff) monitor (true);
   statusUpdate ();
   m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
 }
@@ -4564,7 +4627,7 @@ void MainWindow::stopTx2()
     WSPR_scheduling ();
     m_ntr=0;
   }
-  last_tx_label->setText(tr("Last Tx: ") + m_currentMessage.trimmed());
+  last_tx_label->setText(tr("LastTx: ") + m_currentMessage.trimmed());
 }
 
 void MainWindow::RxQSY()
@@ -5408,7 +5471,7 @@ void MainWindow::dxbcallTxHaltedClear ()
 void MainWindow::lookup()                                       //lookup()
 {
   QString hisCall=m_hisCall;
-  if (hisCall.isEmpty ()) return;
+  if (hisCall.isEmpty () || hisCall.endsWith("/MM")) return;
   QFile f {m_dataDir.absoluteFilePath ("CALL3.TXT")};
   if (f.open (QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -5465,7 +5528,13 @@ void MainWindow::on_addButton_clicked()                       //Add button
   }
   if(f1.size()==0) {
     QTextStream out(&f1);
-    out << "ZZZZZZ" << endl;
+    out << "ZZZZZZ" <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f1.close();
     f1.open(QIODevice::ReadOnly | QIODevice::Text);
   }
@@ -6081,7 +6150,16 @@ void MainWindow::commonActions ()
   progressBar->setFormat("%v/"+QString::number(m_TRperiod));
   statusChanged();
   on_spotLineEdit_textChanged(ui->spotLineEdit->text());
-  if(m_mode=="FT4") { if(!m_hint) ui->hintButton->click(); hideFT4Buttons(true); } else hideFT4Buttons(false);
+  if(m_mode=="FT4") {
+    if(m_rrr) { m_savedRRR=m_rrr; ui->rrrCheckBox->click(); }
+    ui->rrrCheckBox->setEnabled(false); ui->rrr1CheckBox->setEnabled(false);
+    if(!m_hint) ui->hintButton->click();
+    hideFT4Buttons(true);
+  }
+  else {
+    ui->rrrCheckBox->setEnabled(true); ui->rrr1CheckBox->setEnabled(true); if(m_savedRRR) ui->rrrCheckBox->click();
+    hideFT4Buttons(false);
+  }
   m_modeChanged=true;
 }
 
@@ -6345,7 +6423,7 @@ void MainWindow::band_changed (Frequency f)
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
-    if(!m_transmitting && !m_start2) monitor (true);
+    if(!m_transmitting && !m_start2 && !m_monitoroff) monitor (true);
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {
@@ -6365,8 +6443,6 @@ void MainWindow::band_changed (Frequency f)
     qint64 fDelta = m_lastDisplayFreq - m_freqNominal;
     if (qAbs(fDelta)>1000) {
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
-        if(stophintTimer.isActive()) stophintTimer.stop();
-        dec_data.params.nstophint=1; //Hint decoder shall now process only CQ messages
         clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
             ui->decodedTextBrowser->clear();
@@ -6388,7 +6464,7 @@ void MainWindow::band_changed (Frequency f)
     if(m_mode!="FT8") {
       if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false);
     } else {
-      qint32 ft8Freq[]={1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+      qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
       for(int i=0; i<11; i++) {
         int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
@@ -6612,6 +6688,7 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   static bool lastChecked = false;
   if (lastChecked == checked) return;
   lastChecked = checked;
+  if(checked && !m_monitoring) m_monitoroff=true;
   if(!checked) m_addtx = -2;
   QString curBand;
   if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
@@ -6639,7 +6716,7 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   } else {
     m_sentFirst73=false;
     itone[0]=0;
-    on_monitorButton_clicked (true);
+//    on_monitorButton_clicked (true);
     m_tune=true;
   }
   Q_EMIT tune (checked);
@@ -6765,9 +6842,13 @@ void MainWindow::setXIT(int n, Frequency base)
         // All conditions are met, reset the transceiver Tx dial
         // frequency
         m_freqTxNominal = base + m_XIT;
-        if (m_crossbandOptionEnabled) {
-          if (base == 1908000 && m_m_prefix != "JA") m_freqTxNominal -= 68000;
-          else if (base == 1840000 && m_m_prefix == "JA") m_freqTxNominal += 68000;
+        if (base == 1908000) {
+          if (m_crossbandOptionEnabled && m_m_prefix != "JA") m_freqTxNominal -= 68000;
+        } else if (base == 1810000) {
+          if (m_crossbandHLOptionEnabled && m_m_prefix != "HL") m_freqTxNominal += 30000;
+        } else if (base == 1840000) {
+          if (m_crossbandOptionEnabled && m_m_prefix == "JA") m_freqTxNominal += 68000;
+          if (m_crossbandHLOptionEnabled && m_m_prefix == "HL") m_freqTxNominal -= 30000;
         }
         Q_EMIT m_config.transceiver_tx_frequency (m_freqTxNominal);
 	}
@@ -6916,7 +6997,13 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
                   QTextStream out(&f2);
                   out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss")
                       << "  " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6) << " MHz  "
-                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << revision () << endl;
+                      << m_mode << " JTDX v" << QCoreApplication::applicationVersion () << revision () <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
                   f2.close();
                 } else {
                   JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -7025,7 +7112,6 @@ void MainWindow::transmit (double snr)
     Q_EMIT sendMessage (NUM_WSPR_SYMBOLS,8192.0,ui->TxFreqSpinBox->value()-1.5*12000/8192,m_toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
-  if(stophintTimer.isActive()) stophintTimer.stop();
   if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
 }
 
@@ -7112,13 +7198,25 @@ void MainWindow::writeToALLTXT(QString const& text)
   QFile f {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
   if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
      QTextStream out(&f);
-     out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz")  << "(" << m_jtdxtime->GetOffset() << ")" << "  " << text << endl;
+     out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz")  << "(" << m_jtdxtime->GetOffset() << ")" << "  " << text <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
      if(text.endsWith("count reached")) out << "Counters: "
        << "answerCQ" << (m_config.answerCQCount() ? "-On value=" : "-Off value=") << m_config.nAnswerCQCounter()
        << "; answerInCall" << (m_config.answerInCallCount() ? "-On value=" : "-Off value=") << m_config.nAnswerInCallCounter()
        << "; sentRReport" << (m_config.sentRReportCount() ? "-On value=" : "-Off value=") << m_config.nSentRReportCounter()
        << "; sentRR7373" << (m_config.sentRR7373Count() ? "-On value=" : "-Off value=") << m_config.nSentRR7373Counter()
-       << endl;
+       <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
      f.close();
   } else {
      JTDXMessageBox::warning_message (this, "", tr ("File Open Error")
@@ -7364,9 +7462,11 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
       ui->DecodeButton->setChecked (false);
       if(m_uploadSpots
          && m_config.is_transceiver_online ()) { // need working rig control
-        float x=qrand()/((double)RAND_MAX + 1.0);
-        int msdelay=20000*x;
-        uploadTimer.start(msdelay);                         //Upload delay
+#if QT_VERSION >= QT_VERSION_CHECK (5, 15, 0)
+        uploadTimer.start(QRandomGenerator::global ()->bounded (0, 20000)); // Upload delay
+#else
+        uploadTimer.start(20000 * qrand()/((double)RAND_MAX + 1.0)); // Upload delay
+#endif
       } else {
         QFile f(QDir::toNativeSeparators(m_dataDir.absolutePath()) + "/wspr_spots.txt");
         if(f.exists()) f.remove();
@@ -7463,7 +7563,13 @@ void MainWindow::WSPR_history(Frequency dialFreq, int ndecodes)
   QFile f {m_dataDir.absoluteFilePath ("WSPR_history.txt")};
   if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
     QTextStream out(&f);
-    out << t1 << endl;
+    out << t1 <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
     f.close();
   } else {
     JTDXMessageBox::warning_message (this, "", tr ("File Error")

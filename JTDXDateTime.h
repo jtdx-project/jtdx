@@ -17,7 +17,6 @@ class JTDXDateTime : public QDateTime
   explicit JTDXDateTime(const QDate &date, const QTime &time, const QTimeZone &timeZone);
   explicit JTDXDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec, int offsetSeconds);
   explicit JTDXDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec = Qt::LocalTime);
-  explicit JTDXDateTime(const QDate &date);
 
   QDateTime currentDateTimeUtc2();
   QDateTime currentDateTime2();

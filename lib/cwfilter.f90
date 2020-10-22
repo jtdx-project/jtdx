@@ -1,7 +1,7 @@
 subroutine cwfilter(swl,first,swlchanged)
 
   use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,csync,idtone25,csynccq, &
-                       NFILT1,NFILT2,endcorr,endcorrswl
+                       NFILT1,NFILT2,endcorr,endcorrswl,ctwkw,ctwkn
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
@@ -113,7 +113,7 @@ subroutine cwfilter(swl,first,swlchanged)
       if(i.eq.2) then
         call gen_ft8wave(itone,79,1920,2.0,12000.0,0.0,csig0,xjunk,1,151680)
         m=1
-        do j=0,15
+        do j=0,14
           do k=1,32
             if(j.lt.7) then; csync(j,k)=csig0(m); else; csynccq(j-7,k)=csig0(m); endif
             m=m+60
@@ -122,6 +122,29 @@ subroutine cwfilter(swl,first,swlchanged)
       endif
       idtone25(i,1:29)=itone(8:36)
       idtone25(i,30:58)=itone(44:72)
+    enddo
+    dt2=0.005 ! fs2=200 Hz
+    k=1
+    do ifr=-5,5                              !Search over +/- 2.5 Hz
+      delf=ifr*0.5
+      dphi=twopi*delf*dt2
+      phi=0.0
+      do i=1,32
+        ctwkw(k,i)=cmplx(cos(phi),sin(phi))
+        phi=mod(phi+dphi,twopi)
+      enddo
+      k=k+1
+    enddo
+    k=1
+    do ifr=-5,5                              !Search over +/- 1.25 Hz
+      delf=ifr*0.25
+      dphi=twopi*delf*dt2
+      phi=0.0
+      do i=1,32
+        ctwkn(k,i)=cmplx(cos(phi),sin(phi))
+        phi=mod(phi+dphi,twopi)
+      enddo
+      k=k+1
     enddo
   endif
 

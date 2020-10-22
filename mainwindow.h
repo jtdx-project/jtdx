@@ -44,14 +44,13 @@
 #define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
-#define NUM_ISCAT_SYMBOLS 1291             //30*11025/256
 #define NUM_FT8_SYMBOLS 79
 #define NUM_FT4_SYMBOLS 105
 
 #define NUM_CW_SYMBOLS 250
 #define TX_SAMPLE_RATE 48000
 
-extern int volatile itone[NUM_ISCAT_SYMBOLS];   //Audio tones for all Tx symbols
+extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
 extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 
 //--------------------------------------------------------------- MainWindow
@@ -215,6 +214,7 @@ private slots:
   void on_actionColor_Tx_message_buttons_toggled(bool checked);
   void on_actionCallsign_to_clipboard_toggled(bool checked);
   void on_actionCrossband_160m_JA_toggled(bool checked);
+  void on_actionCrossband_160m_HL_toggled(bool checked);
   void on_actionShow_messages_decoded_from_harmonics_toggled(bool checked);
   void on_actionMyCallRXFwindow_toggled(bool checked);
   void on_actionWantedCallRXFwindow_toggled(bool checked);
@@ -329,7 +329,6 @@ private slots:
   void band_changed (Frequency);
   void monitor (bool);
   void stop_tuning ();
-  void stopHint_call3_rxfreq();
   void stopTuneATU();
   void enableTx_mode(bool);
   void enableTxButton_off();
@@ -556,6 +555,7 @@ private:
   bool	  m_processAuto_done;
   bool    m_haltTrans;
   bool	  m_crossbandOptionEnabled;
+  bool	  m_crossbandHLOptionEnabled;
   QString m_repliedCQ;
   QString m_dxbcallTxHalted;
   QString m_currentQSOcallsign;
@@ -595,6 +595,9 @@ private:
   bool m_bandChanged;
   bool m_useDarkStyle;
   bool m_lostaudio;
+  bool m_lasthint;
+  bool m_monitoroff;
+  bool m_savedRRR;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
@@ -647,7 +650,6 @@ private:
 
   QTimer m_guiTimer;
   QTimer ptt1Timer;                 //StartTx delay
-  QTimer stophintTimer;             //Stops propagation non-CQ CALL3 based Hint decoded messages
   QTimer ptt0Timer;                 //StopTx delay
   QTimer logQSOTimer;
   QTimer killFileTimer;

@@ -108,7 +108,13 @@ void TraceFile::impl::message_handler (QtMsgType type, QMessageLogContext const&
     *current_stream_
       << QDateTime::currentDateTimeUtc ().toString ("yyyy-MM-ddTHH:mm:ss.zzzZ")
       << '(' << context.file << ':' << context.line /* << ", " << context.function */ << ')'
-      << severity << ": " << msg.trimmed () << endl;
+      << severity << ": " << msg.trimmed () <<
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                 endl;
+#else
+                 Qt::endl;
+#endif
+
   }
 
   if (QtFatalMsg == type)

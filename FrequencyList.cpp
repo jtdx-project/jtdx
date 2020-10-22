@@ -40,6 +40,7 @@ namespace
       {1838000, Modes::JT65, IARURegions::ALL,true}, // squeezed allocations
       {1839000, Modes::JT9, IARURegions::ALL,true},
       {1839500, Modes::T10, IARURegions::ALL,true},
+      {1810000, Modes::FT8, IARURegions::R1,true},
       {1840000, Modes::FT8, IARURegions::ALL,true},
       {1908000, Modes::FT8, IARURegions::R1,true},
 

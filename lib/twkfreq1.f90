@@ -1,11 +1,8 @@
-! This source code file was last time modified by Igor UA3DJY on 20190107
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
-subroutine twkfreq1(ca,npts,fsample,a,cb)
+subroutine twkfreq1(ca,nbot,npts,ntop,fsample,a,cb)
 
   use ft8_mod1, only : twopi
-  complex ca(0:npts)
-  complex cb(0:npts)
+  complex, intent(in) :: ca(nbot:ntop)
+  complex, intent(out) :: cb(nbot:ntop)
   complex w,wstep
   real a(5)
 

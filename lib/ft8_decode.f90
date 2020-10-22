@@ -70,7 +70,7 @@ contains
           then; lastrxmsg(1)%lstate=.false.
     endif
 
-    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.
+    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.!; lthrdecd=.false.
     ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
@@ -166,6 +166,13 @@ contains
       !call timer('sync8   ',0)
       call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread)
       !call timer('sync8   ',1)
+!      if(ipass.eq.1) then
+!        laveraging=.true.
+!        do icand=1,ncand
+!          if(candidate(3,icand).gt.2.1) then; laveraging=.false.; exit; endif
+!        enddo
+!      endif
+!      if(ipass.gt.1 .and. .not.lthrdecd) laveraging=.true.
       do icand=1,ncand
         sync=candidate(3,icand)
         f1=candidate(1,icand)
@@ -244,6 +251,7 @@ contains
                 msg26=msg37(1:26)
                 if(associated(this%callback)) call this%callback(nsnr,xdt,f1,msg26,servis8)
 !  calldt(200:2:-1)%call2=calldt(200-1:1:-1)%call2
+!                lthrdecd=.true.
                 calldt(200:2:-1)=calldt(200-1:1:-1); calldt(1)%call2=call2; calldt(1)%dt=xdt
                 nFT8decd=nFT8decd+1; sumxdt=sumxdt+xdt
               endif

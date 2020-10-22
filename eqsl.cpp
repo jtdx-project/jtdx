@@ -80,10 +80,12 @@ void EQSL::networkReply(QNetworkReply *reply)
 
 void EQSL::work()
 {
-    if (QNetworkAccessManager::Accessible != networkManager->networkAccessible ()) {
-      // try and recover network access for QNAM
-      networkManager->setNetworkAccessible (QNetworkAccessManager::Accessible);
-    }
+#if QT_VERSION < QT_VERSION_CHECK (5, 15, 0)
+      if (QNetworkAccessManager::Accessible != networkManager->networkAccessible ()) {
+        // try and recover network access for QNAM
+        networkManager->setNetworkAccessible (QNetworkAccessManager::Accessible);
+      }
+#endif
     m_in_progress = true;
     QUrl url(EqslUrl);
     QUrlQuery query;
