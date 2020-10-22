@@ -4596,7 +4596,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Operação de banda cruzada em 160m com a Coreia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>

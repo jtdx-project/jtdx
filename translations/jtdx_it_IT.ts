@@ -4613,7 +4613,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Crossban in 160Mt per operare con la Corea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>

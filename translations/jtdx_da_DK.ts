@@ -4613,7 +4613,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Krydsbånds Operation med Korea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>

@@ -3097,7 +3097,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prebaci minute TX sekvence&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prebaci par/neparne TX sekvence&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1395"/>
@@ -3283,7 +3283,7 @@ Pogreška: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis željenih prefiksa odvojen zarezima. Automatski odabir pod AutoSeq 1..7 obrađuje željeni prefiks prema odabranim obavijestima / prioritetima, ova funkcija nije podržana u programu AutoSeq0. Za složene pozivne znakove prefiks se prepoznaje na početku pozivne znake. Automatski odabir obradit će željeni pozivni znak u skladu s odabranim obavijestima / prioritetima. Samo non FT8 modusi: ponekad će osnovni pozivni znak kopirati iz dekodirane poruke: prilikom evidentiranja takvog QSOa korisnik će morati promijeniti pozivni znak korespondenta u složeni, ako je to  potrebno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Popis željenih prefiksa odvojen zarezima. Automatski odabir pod AutoSeq 1..7 obrađuje željeni prefiks prema odabranim obavijestima / prioritetima, ova funkcija nije podržana u programu AutoSeq0. Za složene pozivne znakove prefiks se prepoznaje na početku pozivne znake. Automatski odabir obradit će željeni pozivni znak u skladu s odabranim obavijestima / prioritetima. Samo non FT8 modusi: ponekad će osnovni pozivni znak kopirati iz dekodirane poruke: prilikom evidentiranja takvog QSOa korisnik će morati promijeniti pozivni znak korespondenta u složeni, ako je to  potrebno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1971"/>
@@ -4603,7 +4603,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Crossband rad sa Koreom na 160m</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
@@ -6045,7 +6045,7 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="421"/>
         <source>Use dark style</source>
-        <translation>Koristi tamnii stil</translation>
+        <translation>Koristi tamni stil</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="448"/>

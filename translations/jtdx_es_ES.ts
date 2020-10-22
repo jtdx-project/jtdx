@@ -4615,7 +4615,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Operación de banda cruzada de 160 m con Corea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
