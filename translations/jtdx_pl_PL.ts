@@ -1303,7 +1303,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>Amerykańskie Wyspy Dziewicze</translation>
+        <translation>Amer. Wyspy Dziewicze</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -4608,7 +4608,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Praca crossband na 160m z Korea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
