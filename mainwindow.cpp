@@ -5471,7 +5471,7 @@ void MainWindow::dxbcallTxHaltedClear ()
 void MainWindow::lookup()                                       //lookup()
 {
   QString hisCall=m_hisCall;
-  if (hisCall.isEmpty () || hisCall.endsWith("/MM")) return;
+  if (hisCall.isEmpty () || hisCall.length() > 6 || hisCall.contains("/")) return;
   QFile f {m_dataDir.absoluteFilePath ("CALL3.TXT")};
   if (f.open (QIODevice::ReadOnly | QIODevice::Text))
     {
