@@ -3,7 +3,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,250),candidate(4,260),tall(30),freq
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,450),candidate(4,460),tall(30),freq
   integer jpeak(NH1),indx(NH1),ii(1)
   integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass
   logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2
@@ -13,7 +13,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
 ! Compute symbol spectra, stepping by NSTEP steps.  
   tstep=0.04 ! NSTEP/12000.0                         
   df=3.125 ! 12000.0/NFFT1 , Hz
-  syncq=.false.; redcq=.false.; candidate0(4,1:250)=0.; candidate(4,1:260)=0.
+  syncq=.false.; redcq=.false.; candidate(4,:)=0.
 
   if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
      do j=1,NHSYM
@@ -179,7 +179,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
      else
         if (red(n).lt.1.1) cycle
      endif
-     if(k.lt.250) then; k=k+1; else; exit; endif
+     if(k.lt.450) then; k=k+1; else; exit; endif
 ! being sorted by sync
      candidate0(1,k)=freq
      candidate0(2,k)=(jpeak(n)-1)*tstep
@@ -246,7 +246,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
        candidate(1,k)=candidate0(1,j); candidate(2,k)=candidate0(2,j)
        candidate(3,k)=candidate0(3,j); candidate(4,k)=candidate0(4,j)
        k=k+1
-       if(k.gt.260) exit 
+       if(k.gt.460) exit 
      endif
   enddo
   ncand=k-1

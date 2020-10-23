@@ -36,7 +36,7 @@ contains
     procedure(ft8_decode_callback) :: callback
 !    real sbase(NH1)
 !integer*2 iwave(180000)
-    real candidate(4,260)
+    real candidate(4,460)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ndepth,nft8filtdepth,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
