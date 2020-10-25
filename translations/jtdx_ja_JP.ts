@@ -4594,7 +4594,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>160mバンドでHLとのクロスバンド運用をする</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
@@ -5838,7 +5838,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>設定パラメータを変更するために、タブを選びなさい。</translation>
+        <translation>設定パラメータを変更するにはタブを選択します。しかしリグがCATコントロールである場合は&quot;RIG&quot;なたは&quot;Fake It&quot;が推奨されます。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -5890,7 +5890,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type 2 compound callsigns are those with prefixes or suffixes not included in the allowed shortlist (See Help-&amp;gt;Add-on prefixes and suffixes).&lt;/p&gt;&lt;p&gt;This option determines which generated messages should contain your full type 2 compound call sign rather than your base callsign. It only applies if you have a type 2 compound callsign.&lt;/p&gt;&lt;p&gt;This option controls the way the messages that are used to answer CQ calls are generated. Generated messages 6 (CQ) and 5 (73) will always contain your full callsign. The JT65 and JT9 protocols allow for some standard messages with your full call at the expense of another piece of information such as the DX call or your locator.&lt;/p&gt;&lt;p&gt;Choosing message 1 omits the DX callsign which may be an issue when replying to CQ calls. Choosing message 3 also omits the DX callsign and many versions of this and other software will not extract the report. Choosing neither means that your full callsign only goes in your message 5 (73) so your QSO partner my log the wrong callsign.&lt;/p&gt;&lt;p&gt;None of these options are perfect, message 3 is best but be aware your QSO partner may not log the report you send them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;タイプ2の複合コールサインは、許可されたショートリストに含まれないプリフィックスまたはサフィックスを持つものです（ヘルプ参照-&amp;gt;アドオンのプリフィックスおよびサフィックスを参照してください）。&lt;/p&gt;&lt;p&gt;このオプションは、生成されるメッセージに、ベースコールサインではなく、完全なタイプ2複合コールサインを含める必要があるかどうかを決定します。タイプ2の複合コールサインがある場合にのみ適用されます。&lt;/p&gt;&lt;p&gt;このオプションは、CQコールに応答するために使用されるメッセージの生成方法を制御します。生成されたメッセージ6（CQ）および5（73）には、常に完全なコールサインが含まれます。 JT65およびJT9プロトコルは、DXコールやロケーターなどの別の情報を犠牲にして、完全なコールを伴う標準メッセージを許可します。&lt;/p&gt;&lt;p&gt;メッセージ1を選択すると、問題の可能性があるDXコールサインが省略されます。 CQ呼び出しに応答するとき。メッセージ3を選択すると、DXコールサインも省略され、このソフトウェアや他のソフトウェアの多くのバージョンはレポートを抽出しません。どちらも選択しないということは、完全なコールサインがメッセージ5（73）にのみ含まれることを意味するため、QSOパートナーは間違ったコールサインをログに記録します。&lt;/p&gt;&lt;p&gt;これらのオプションのいずれも完璧ではありません。送信したレポートを記録しない場合があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>JA3TYB&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;タイプ2の複合コールサインは、許可されたショートリストに含まれないプリフィックスまたはサフィックスを持つものです（ヘルプ参照-&amp;gt;アドオンのプリフィックスおよびサフィックスを参照してください）。&lt;/p&gt;&lt;p&gt;このオプションは、生成されるメッセージに、ベースコールサインではなく、完全なタイプ2複合コールサインを含める必要があるかどうかを決定します。タイプ2の複合コールサインがある場合にのみ適用されます。&lt;/p&gt;&lt;p&gt;このオプションは、CQコールに応答するために使用されるメッセージの生成方法を制御します。生成されたメッセージ6（CQ）および5（73）には、常に完全なコールサインが含まれます。 JT65およびJT9プロトコルは、DXコールやロケーターなどの別の情報を犠牲にして、完全なコールを伴う標準メッセージを許可します。&lt;/p&gt;&lt;p&gt;メッセージ1を選択すると、問題の可能性があるDXコールサインが省略されます。 CQ呼び出しに応答するとき。メッセージ3を選択すると、DXコールサインも省略され、このソフトウェアや他のソフトウェアの多くのバージョンはレポートを抽出しません。どちらも選択しないということは、完全なコールサインがメッセージ5（73）にのみ含まれることを意味するため、QSOパートナーは間違ったコールサインをログに記録します。&lt;/p&gt;&lt;p&gt;これらのオプションのいずれも完璧ではありません。送信したレポートを記録しない場合があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="152"/>
@@ -5935,7 +5935,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="304"/>
         <source>Display</source>
-        <translation>ディスプレイ</translation>
+        <translation>表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="343"/>
@@ -6162,7 +6162,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="929"/>
         <source>Serial port data rate which must match the setting of your radio.</source>
-        <translation>無線の設定とシリアルポートのデータレートは一致する必要がある。</translation>
+        <translation>無線の設定とシリアルポートのデータレートは一致する必要があります。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="936"/>
@@ -6301,7 +6301,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1270"/>
         <source>How this program activates the PTT on your radio</source>
-        <translation>このプログラムはどのようにPTTをあなたのラジオで作動させるか</translation>
+        <translation>どのようにPTTをあなたの無線機で作動させるか</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1273"/>
@@ -6352,22 +6352,22 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1393"/>
         <source>Transmit Audio Source</source>
-        <translation>オーディオソースを送信</translation>
+        <translation>送信オーディオ入力選択</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1399"/>
         <source>Rear&amp;/Data</source>
-        <translation>Rear/Data</translation>
+        <translation>背面/データ端子</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1409"/>
         <source>&amp;Front/Mic</source>
-        <translation>Front/Mic</translation>
+        <translation>前面/マイク端子</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1432"/>
         <source>Modulation mode selected on radio.</source>
-        <translation>ラジオで選ばれた変調モード。</translation>
+        <translation>無線機で使用するモード。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1435"/>
@@ -6383,12 +6383,12 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="1462"/>
         <location filename="../Configuration.ui" line="1521"/>
         <source>None</source>
-        <translation>無し</translation>
+        <translation>指定無し</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1472"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
-        <translation>もしその時これが可能であるならば、それは通常このプログラムのための正しいモードである。</translation>
+        <translation>もしこれが使えるのであれば、通常このプログラムのための正しいモードです。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1475"/>
@@ -6636,7 +6636,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2368"/>
         <source>d&amp;B reports to comments</source>
-        <translation>dBをレポートにコメントする</translation>
+        <translation>dBレポートをコメントに追加する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2379"/>
@@ -6651,7 +6651,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2396"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
-        <translation>いくつかのロギングソフトウェアは、モードとしてJT-65またはJT9を認めない。</translation>
+        <translation>いくつかのロギングソフトウェアは、モードとしてJT-65またはJT9を受け付けません。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2399"/>
@@ -6661,7 +6661,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation>あなたが73またはフリーテキストメッセージを送る時には、プログラムは、部分的に完成されたログQSOダイアログをポップアップする。</translation>
+        <translation>73またはフリーテキストメッセージを送信後に、部分的に完成されたログQSOダイアログをポップアップしログにつけるか否か確認します。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2409"/>
@@ -6708,7 +6708,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2556"/>
         <source>2nd UDP server</source>
-        <translation>2番目のUDPサーバー</translation>
+        <translation>第2UDPサーバー</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2570"/>
@@ -6724,7 +6724,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2589"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>第2のUDPサーバーに送ることを可能にする</translation>
+        <translation>第2UDPサーバーへの送信を許可する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2625"/>
@@ -6794,7 +6794,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2820"/>
         <source>Primary UDP Server</source>
-        <translation>主要なUDPサーバー</translation>
+        <translation>UDPサーバー</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2850"/>
@@ -7386,7 +7386,7 @@ this setting allows you to select which audio input will be used
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
-        <translation>プログラムによるラジオモードの設定を許可しない（推奨されませんが、間違ったモードの場合に使用しますまたは帯域幅が選択されています）。</translation>
+        <translation>JTDXによる無線機のモードの設定を許可しない（推奨されません。リグがUSBモードにならないときや、誤った帯域幅が選択されしまう場合にのみ使います）。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1554"/>

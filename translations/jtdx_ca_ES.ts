@@ -2514,7 +2514,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Communication timed out</source>
-        <translation>s&apos;ha acabat el temps en la comunicació</translation>
+        <translation>s&apos;ha acabat el temps de la comunicació</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
@@ -2609,12 +2609,12 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="532"/>
         <source>getting current frequency</source>
-        <translation>obtenint freqüència actual</translation>
+        <translation>mentre obté la freqüència actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="541"/>
         <source>getting current mode</source>
-        <translation>obtenir el mode actual</translation>
+        <translation>mentre obté el mode actual</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="590"/>
@@ -2626,12 +2626,12 @@ Error: %2 - %3</translation>
         <location filename="../HamlibTransceiver.cpp" line="598"/>
         <location filename="../HamlibTransceiver.cpp" line="1155"/>
         <source>getting other VFO frequency</source>
-        <translation>obtenint una altra freqüència de VFO</translation>
+        <translation>obté una altra freqüència de VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="607"/>
         <source>getting other VFO mode</source>
-        <translation>obtenint un altre mode VFO</translation>
+        <translation>obté un altre mode VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="635"/>
@@ -4619,7 +4619,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Operació de banda creuada de 160m amb Corea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
@@ -7430,7 +7430,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="3516"/>
         <source>don&apos;t show it</source>
-        <translation>no ho mostris</translation>
+        <translation>no els mostris</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
