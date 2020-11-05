@@ -2152,7 +2152,7 @@ Formátum:
     <message>
         <location filename="../decodedtext.cpp" line="30"/>
         <source>input signal low rms</source>
-        <translation type="unfinished">bemeneti jelszint túl alacsony</translation>
+        <translation>a bemeneti jelszint túl alacsony</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
@@ -2162,7 +2162,7 @@ Formátum:
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
         <source>nfqso is out of bandwidth</source>
-        <translation type="unfinished">nfqso a sávon kívül van</translation>
+        <translation>nfqso a sávon kívül van</translation>
     </message>
 </context>
 <context>
@@ -2180,12 +2180,12 @@ Formátum:
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished">&amp;Import...</translation>
+        <translation>&amp;Import...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="129"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished">&amp;Export...</translation>
+        <translation>&amp;Export...</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="191"/>
@@ -2748,7 +2748,7 @@ Hiba: %2 - %3</translation>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation type="unfinished">IARU régió</translation>
+        <translation>IARU régió</translation>
     </message>
 </context>
 <context>
@@ -2838,12 +2838,12 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished">Visszaállít</translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="56"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished">Alapértelmezések visszaállítása</translation>
+        <translation>Alapértelmezések visszaállítása</translation>
     </message>
 </context>
 <context>
@@ -2851,7 +2851,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="28"/>
         <source>Click OK to confirm the following QSO:</source>
-        <translation type="unfinished">A QSO mentéséhez kattintson az OK gombra</translation>
+        <translation>A QSO mentéséhez kattintson az OK gombra</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="44"/>
@@ -2861,18 +2861,18 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="66"/>
         <source>Start</source>
-        <translation type="unfinished">QSO kezdés</translation>
+        <translation>QSO kezdés</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation>nn/HH/éééé ÓÓ:pp:ss</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
         <source>End</source>
-        <translation type="unfinished">QSO befejezés</translation>
+        <translation>QSO befejezés</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="134"/>
@@ -2887,7 +2887,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="192"/>
         <source>Rpt Sent</source>
-        <translation type="unfinished">Rpt adott</translation>
+        <translation>Rpt adott</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="221"/>
@@ -2907,24 +2907,24 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../logqso.ui" line="305"/>
         <source>Tx power</source>
-        <translation type="unfinished">Adó teljesítmény:</translation>
+        <translation>Adó teljesítmény:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="315"/>
         <location filename="../logqso.ui" line="348"/>
         <location filename="../logqso.ui" line="381"/>
         <source>Retain</source>
-        <translation type="unfinished">Mentés</translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="334"/>
         <source>Comments</source>
-        <translation type="unfinished">Megjegyzés:</translation>
+        <translation>Megjegyzés:</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="367"/>
         <source>EQSL MSG</source>
-        <translation type="unfinished">eQSL megjegyzés:</translation>
+        <translation>eQSL megjegyzés:</translation>
     </message>
     <message>
         <location filename="../logqso.cpp" line="27"/>
@@ -2990,7 +2990,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="664"/>
         <source>USB dial frequency</source>
-        <translation>Az adó-vevő frekvenciájának megjelenítése USB-üzemmódban</translation>
+        <translation>A VFO frekvenciája USB-üzemmódban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="686"/>
@@ -3000,22 +3000,22 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="715"/>
         <source>Menu</source>
-        <translation>Menü</translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="725"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Megjeleníti vagy elrejti a DX jelentési sorát&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A DX jelentés  sor megjelenítése, vagy elrejtése.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Spt</source>
-        <translation type="unfinished">DX jelentés</translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation type="unfinished">Válassza ki a kívánt sávot vagy a frekvenciát MHz-ben</translation>
+        <translation>Válassza ki a kívánt sávot vagy a frekvenciát MHz-ben</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
@@ -3025,7 +3025,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="801"/>
         <source>info:</source>
-        <translation type="unfinished">Információ:</translation>
+        <translation>Információ:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="813"/>
@@ -3036,7 +3036,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="816"/>
         <source>edit</source>
-        <translation type="unfinished">DX jel:</translation>
+        <translation>DX jel:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="830"/>
@@ -3047,7 +3047,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>prop</source>
-        <translation type="unfinished">Terj:</translation>
+        <translation>Terj:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="991"/>
@@ -3072,12 +3072,12 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1054"/>
         <source>&amp;Lookup</source>
-        <translation type="unfinished">&amp;Keres</translation>
+        <translation>&amp;Keres</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1067"/>
         <source>Add callsign and locator to database</source>
-        <translation type="unfinished">Hívójel és QRA hozzáadása az adatbázishoz</translation>
+        <translation>Hívójel és QRA hozzáadása az adatbázishoz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1070"/>
@@ -3095,7 +3095,7 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="5411"/>
         <location filename="../mainwindow.cpp" line="5832"/>
         <source>DX Call</source>
-        <translation type="unfinished">DX hívójel</translation>
+        <translation>DX hívójel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1355"/>
@@ -3142,13 +3142,13 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bekapcsolja az FT8 DX expedíció Vadász módot. A jobb egérgombbal történő kattintással a Vadász mód szabályozhatja a TX frekvenciáját.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bekapcsolja az FT8 DX expedíció Vadász módot. A jobb egérgombbal történő kattintással a Vadász mód szabályozhatja a TX frekvenciáját.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
         <location filename="../mainwindow.cpp" line="2995"/>
         <source>Hound</source>
-        <translation type="unfinished">Vadász</translation>
+        <translation>Vadász</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
@@ -3201,7 +3201,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1768"/>
         <source>Split Tx/Rx</source>
-        <translation type="unfinished">Osztott Tx/Rx</translation>
+        <translation>Tx/Rx eltolható</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1744"/>
@@ -3217,7 +3217,7 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1610"/>
         <location filename="../mainwindow.ui" line="4710"/>
         <source>AutoSeq</source>
-        <translation type="unfinished">AutoSeq</translation>
+        <translation>AutoSeq</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1626"/>
@@ -3227,7 +3227,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1640"/>
         <source>AutoTX</source>
-        <translation type="unfinished">Auto adás</translation>
+        <translation>Auto adás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1716"/>
@@ -3237,12 +3237,12 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1784"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Megjeleníti vagy elrejti a keresett hívójel/prefixi sorokat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Megjeleníti vagy elrejti a keresett hívójel/prefixi sorokat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1787"/>
         <source>Wanted</source>
-        <translation type="unfinished">Kell</translation>
+        <translation>Figyelés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1803"/>
@@ -3278,7 +3278,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO mentésekor törli a hívójelet a listáról.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO mentésekor törli a hívójelet a listáról.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1954"/>
@@ -3311,7 +3311,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="2024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO mentésekor törli a QRA-t a listáról.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO mentésekor törli a QRA-t a listáról.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2043"/>
@@ -3363,7 +3363,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2353"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adás egyhangú hangszínnel. Az adó hangolására szolgál. A hangolás időzítőjét a Beállítások, Általános fülön állíthatja be.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hangolás. Az adó hangolására szolgál. A hangolás időzítőjét a Beállítások, Általános fülön állíthatja be.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2367"/>
@@ -3389,27 +3389,27 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2454"/>
         <source>Bypass</source>
-        <translation type="unfinished">Sz.szűrő</translation>
+        <translation>Sz.szűrő</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO meghívással AutoSeq opció &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO meghívással AutoSeq opció &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2499"/>
         <source>1 QSO</source>
-        <translation type="unfinished">Meghívás</translation>
+        <translation>Meghívás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2530"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válasz engedélyzése akkor is, ha volt már QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válasz engedélyzése akkor is, ha volt már korábban QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2544"/>
         <source>AnsB4</source>
-        <translation type="unfinished">QSO volt</translation>
+        <translation>Volt QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2572"/>
@@ -3434,12 +3434,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2656"/>
         <source>Toggle Tx Enable On/Off</source>
-        <translation>Tx engedélyezés (Be/Ki)</translation>
+        <translation>Adás (Be/Ki)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2670"/>
         <source>E&amp;nable Tx</source>
-        <translation type="unfinished">&amp;Adás</translation>
+        <translation>&amp;Adás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2698"/>
@@ -3449,17 +3449,17 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2701"/>
         <source>&amp;Halt Tx</source>
-        <translation type="unfinished">Tx Állj</translation>
+        <translation>Tx Állj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2726"/>
         <source>Enter this QSO in ADIF log</source>
-        <translation type="unfinished">QSO mentése az ADIF logba</translation>
+        <translation>QSO mentése az ADIF logba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2729"/>
         <source>Log &amp;QSO</source>
-        <translation type="unfinished">Log &amp;QSO</translation>
+        <translation>Log &amp;QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2754"/>
@@ -3469,7 +3469,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2757"/>
         <source>&amp;Erase</source>
-        <translation type="unfinished">Ablak törlés</translation>
+        <translation>Ablak törlés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2782"/>
@@ -3484,7 +3484,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2827"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Növeli a dekódolási módszerek csoportját. FT8 módban aktiválja az FT8AP funkciót&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Növeli a dekódolási módok számát. FT8 üzemmódban aktiválja az FT8AP funkciót&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2841"/>
@@ -3519,7 +3519,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2968"/>
         <source>Clear D&amp;X</source>
-        <translation type="unfinished">D&amp;X törlés</translation>
+        <translation>D&amp;X törlés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3072"/>
@@ -3561,7 +3561,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3210"/>
         <location filename="../mainwindow.ui" line="3848"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation type="unfinished">Bejelölve RRR, utána 73,  ha nincs bejelölve RR73 küldése.</translation>
+        <translation>Bejelölve RRR, utána 73,  ha nincs bejelölve RR73 küldése.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3216"/>
@@ -3573,12 +3573,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3229"/>
         <location filename="../mainwindow.ui" line="3902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A QRA lokátoros  üzenet kihagyása (QSO kezdés a TX2-vel)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A QRA lokátoros  üzenet kihagyása (QSO kezdés a TX2-vel)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3235"/>
         <source>SkipTx1</source>
-        <translation type="unfinished">Tx2</translation>
+        <translation>Tx2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3280"/>
@@ -3623,7 +3623,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3393"/>
         <source>Tx &amp;2</source>
-        <translation type="unfinished">Tx &amp;2</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3396"/>
@@ -3643,7 +3643,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3466"/>
         <source>Alt+3</source>
-        <translation type="unfinished">Alt+3</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3508"/>
@@ -3884,7 +3884,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4509"/>
         <source>FT8 threads</source>
-        <translation type="unfinished">Az FT8 folyamatok száma</translation>
+        <translation>Az FT8 folyamatok száma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4527"/>
@@ -3899,27 +3899,27 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4539"/>
         <source>wideband decoding</source>
-        <translation type="unfinished">Dekódolás széles sávban</translation>
+        <translation>Dekódolás széles sávban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4547"/>
         <source>narrow Filter</source>
-        <translation type="unfinished">Keskeny sávban</translation>
+        <translation>Dekódolás keskeny sávban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4555"/>
         <source>decoder sensitivity</source>
-        <translation type="unfinished">Dekódolás érzékenysége</translation>
+        <translation>Dekódolás érzékenysége</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4563"/>
         <source>QSO RX freq sensitivity</source>
-        <translation type="unfinished">Érzékenység a vételi frekvencián</translation>
+        <translation>Érzékenység a vételi frekvencián</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4571"/>
         <source>decoding cycles</source>
-        <translation type="unfinished">Dekódolási ciklusok száma</translation>
+        <translation>Dekódolási ciklusok száma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4579"/>
@@ -3969,7 +3969,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4738"/>
         <source>DXpedition</source>
-        <translation type="unfinished">DX expedíció</translation>
+        <translation>DX expedíció</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4757"/>
@@ -4040,7 +4040,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4816"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
-        <translation type="unfinished">Az összes wav c2 fájl törlése a mentési könyvtárból (save-ból)</translation>
+        <translation>Az összes wav c2 fájl törlése a mentési könyvtárból (save-ból)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4827"/>
@@ -4048,7 +4048,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.ui" line="5587"/>
         <location filename="../mainwindow.ui" line="5869"/>
         <source>fast</source>
-        <translation>gyors</translation>
+        <translation>Gyors</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4838"/>
@@ -4107,7 +4107,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.ui" line="5837"/>
         <location filename="../mainwindow.ui" line="5877"/>
         <source>medium</source>
-        <translation>közepes</translation>
+        <translation>Közepes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5009"/>
@@ -4115,7 +4115,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.ui" line="5606"/>
         <location filename="../mainwindow.ui" line="5888"/>
         <source>deep</source>
-        <translation>mély</translation>
+        <translation>Mély</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5017"/>
@@ -4125,17 +4125,17 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5022"/>
         <source>Erase ALL.TXT</source>
-        <translation type="unfinished">Az ALL.txt fájl törlése</translation>
+        <translation>Az ALL.txt fájl törlése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5027"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
-        <translation type="unfinished">A wsjtx_log.adi, LOG fájl végleges törlése</translation>
+        <translation>A wsjtx_log.adi, LOG fájl végleges törlése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5032"/>
         <source>Open wsjtx_log.adi</source>
-        <translation type="unfinished">A wsjtx_log.adi fájl megnyitása</translation>
+        <translation>A wsjtx_log.adi fájl megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5035"/>
@@ -4146,7 +4146,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5043"/>
         <source>Convert mode to RTTY for logging</source>
-        <translation type="unfinished">QSO mentésekor az üzemmódot RTTY-re konvertálja</translation>
+        <translation>QSO mentésekor az üzemmód RTTY-ra konvertálása.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5051"/>
@@ -4156,12 +4156,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5059"/>
         <source>Prompt me to log QSO</source>
-        <translation type="unfinished">QSO mentésekor megerősítést kér.</translation>
+        <translation>QSO mentésekor megerősítés kérése.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5067"/>
         <source>Blank line between decoding periods</source>
-        <translation type="unfinished">Elválasztó vonal a periódusok között</translation>
+        <translation>Elválasztó vonal a periódusok között</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5075"/>
@@ -4251,7 +4251,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5208"/>
         <source>Open log directory</source>
-        <translation type="unfinished">A Log könyvtár megnyitása</translation>
+        <translation>A Log könyvtár megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5216"/>
@@ -4296,12 +4296,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5290"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation type="unfinished">A szövegszűrők kikapcsolása az RX frekvencián</translation>
+        <translation>A szövegszűrők kikapcsolása az RX frekvencián</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5301"/>
         <source>Bypass all text filters</source>
-        <translation type="unfinished">Szöveg szűrés kikapcsolása</translation>
+        <translation>Szövegszűrés kikapcsolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5304"/>
@@ -4316,12 +4316,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5323"/>
         <source>Enable main window popup</source>
-        <translation type="unfinished">Főablak felbukkanó mód engedélyezése</translation>
+        <translation>Főablak felbukkanó mód engedélyezése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5334"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation type="unfinished">A saját hívójelet tartalmazó üzenetek az RX frekvencia ablakban jelennek meg</translation>
+        <translation>A saját hívójelet tartalmazó üzenetek az RX frekvencia ablakban jelenjenek meg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5339"/>
@@ -4386,17 +4386,17 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5439"/>
         <source>Single shot QSO</source>
-        <translation type="unfinished">QSO meghívással (az adás letiltása a 73 adása után)</translation>
+        <translation>QSO meghívással (az adás letiltása a 73 adása után)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5447"/>
         <source>Erase band activity window at start of decoding</source>
-        <translation>Törli a Sáv_aktivitás ablakot a dekódolás kezdetén</translation>
+        <translation>Törölje a Sáv_aktivitás ablakot a dekódolás kezdetekor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5455"/>
         <source>Answer worked B4 calls</source>
-        <translation>Válasz a már korábban QSO-ban levő hívójeleknek (B4) (Lehetővé tesz QSO folytatást)</translation>
+        <translation>Válasz akkior is, ha volt már korábban QSO. (B4)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5466"/>
@@ -4421,7 +4421,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5517"/>
         <source>Erase both message windows at band change</source>
-        <translation>Törli mindkét üzenet ablakot a sávváltáskor</translation>
+        <translation>Sávváltáskor törölje mind a két üzenet ablakot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5555"/>
@@ -4436,32 +4436,32 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5571"/>
         <source>Messages with wanted call to RX frequency window</source>
-        <translation type="unfinished">A figyelt hívójelet tartalmazó üzenetek megjelenítése az RX_frekvencia ablakban</translation>
+        <translation>A figyelt hívójelet tartalmazó üzenetek az RX frekvencia ablakban jelenjenek meg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5579"/>
         <source>use low thresholds</source>
-        <translation>alacsony küszöbértékeket használjon</translation>
+        <translation>Alacsony küszöbérték</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5614"/>
         <source>use subpass</source>
-        <translation type="unfinished">Részletesebb kódolás</translation>
+        <translation>Részletesebb kódolás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5625"/>
         <source>minimum</source>
-        <translation>minimális</translation>
+        <translation>Minimális</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5633"/>
         <source>late start of decoder</source>
-        <translation type="unfinished">A dekódolás késleltetett indítása</translation>
+        <translation>A dekódolás késleltetett indítása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5641"/>
         <source>Call worked B4 callsigns</source>
-        <translation type="unfinished">Hívás engedélyzése akkor is, ha volt már QSO.</translation>
+        <translation>Hívás engedélyzése akkor is, ha volt már QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5660"/>
@@ -4481,12 +4481,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5684"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Kapcsolja KI a szűrőt a 73 küldésekor</translation>
+        <translation>Kapcsolja ki a szűrőt 73 küldésekor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5692"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>Kapcsolja KI a szűrőt, amikor 73-at kap</translation>
+        <translation>Kapcsolja ki a szűrőt 73 vétele után</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5700"/>
@@ -4501,27 +4501,27 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5716"/>
         <source>Report message priority</source>
-        <translation>Riport az üzenet prioritásáról</translation>
+        <translation>A prioritás a riporttól függ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5724"/>
         <source>Enable hound mode</source>
-        <translation type="unfinished">Vadász mód engedélyezése</translation>
+        <translation>Vadász mód engedélyezése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5735"/>
         <source>Use hound TX frequency control</source>
-        <translation type="unfinished">Használja a Vadász módot a TX frekvencia vezérlésére</translation>
+        <translation>Vadász mód használata adáskor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5743"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
-        <translation>Az RRR/RR73/73 manuális üzemmódban történő küldése után kapcsolja ki a TX-t</translation>
+        <translation>Az RRR/RR73/73 manuális üzemmódban történő küldése után kapcsolja ki az adást</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5754"/>
         <source>Show tooltips in main window</source>
-        <translation>Az eszköztippek megjelenítése a főablakban</translation>
+        <translation>A kezelést segítő feliratok jelenjenek meg a főablakban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5762"/>
@@ -4568,12 +4568,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5826"/>
         <source>low</source>
-        <translation>alacsony</translation>
+        <translation>Alacsony</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5845"/>
         <source>high</source>
-        <translation>magas</translation>
+        <translation>Magas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5853"/>
@@ -4588,7 +4588,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5896"/>
         <source>wideband DX Call search</source>
-        <translation type="unfinished">Hívójel keresése széles sávban</translation>
+        <translation>Hívójel keresése széles sávban</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5904"/>
@@ -4598,7 +4598,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5915"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>Partner hívójelét a vágólapra teszi dupla kattintással|automatikus kiválasztás</translation>
+        <translation>A hívójelre történő dupla kattintáskor tegye a vágólapra|automatikus kiválasztás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5923"/>
@@ -4608,7 +4608,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5931"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresztsávos 160m-es összeköttetés Koreával</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5987"/>
@@ -4812,12 +4812,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="2979"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished">A Vadász mód TX frekvencia vezérléséhez osztott VFO szükséges (vagy *Rig* vagy *Hamis* a *Beállítások | Rádió* fülön.)</translation>
+        <translation>A Vadász mód  használatához eltolt  VFO szükséges (vagy *Rig* vagy *Hamis* a * Beállítások | Rádió * menüben.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2982"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
-        <translation type="unfinished">A Vadász TX frekvencia vezérlése nem engedélyezett a szokásos FT8 alsávokban, és osztott VFO vezérlést igényel (vagy *Rig* vagy *Hamis* a * Beállítások | Rádió * fülön.)</translation>
+        <translation>A Vadász adásmód nem engedélyezett a szokásos FT8 frekvenciákon, és eltolt VFO vezérlést igényel (vagy *Rig* vagy *Hamis* a * Beállítások | Rádió * menüben.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2990"/>
@@ -4979,27 +4979,27 @@ már a CALL3.TXT-ben van, szeretné cserélni?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6285"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation type="unfinished">Biztos, hogy törli az ALL.txt fájlt?</translation>
+        <translation>Biztos, hogy törli az ALL.txt fájlt?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6297"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation type="unfinished">Biztos, hogy törli a LOG-ot?</translation>
+        <translation>Biztos, hogy törli a LOG-ot?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6910"/>
         <source>Lockd Tx=Rx</source>
-        <translation>Rögzít Tx=Rx</translation>
+        <translation>Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6911"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás engedélyezéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás engedélyezéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6914"/>
         <source>Tx/Rx Split</source>
-        <translation type="unfinished">Tx/Rx eltolás</translation>
+        <translation>Tx/Rx eltolás</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6915"/>
@@ -5009,7 +5009,7 @@ már a CALL3.TXT-ben van, szeretné cserélni?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7049"/>
         <source>Rig Control Error</source>
-        <translation type="unfinished">Adó  frekvenciavezérlés hiba</translation>
+        <translation>Adó  frekvenciavezérlés hiba</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7123"/>
@@ -5052,7 +5052,7 @@ UDP szerver %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7787"/>
         <source>Tx watchdog expired</source>
-        <translation type="unfinished">Az időzítő lejárt és megszakította az adást.</translation>
+        <translation>Az időzítő lejárt és megszakította az adást.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7801"/>
@@ -5860,7 +5860,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../widegraph.cpp" line="29"/>
         <source>Wide Graph</source>
-        <translation type="unfinished">Széles sávú grafikon</translation>
+        <translation>Széles sávú grafikon</translation>
     </message>
 </context>
 <context>
@@ -5893,7 +5893,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="78"/>
         <source>My C&amp;all:</source>
-        <translation type="unfinished">Hívójel:</translation>
+        <translation>Hívójel:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="88"/>
@@ -5908,7 +5908,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation type="unfinished">QRA lokátor (csak az első négy karakter kötelező).</translation>
+        <translation>QRA lokátor (csak az első négy karakter kötelező).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
@@ -6008,7 +6008,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="412"/>
         <source>&amp;Blank line between decoding periods</source>
-        <translation type="unfinished">Üres sor a  periódusok kö&amp;zött</translation>
+        <translation>Üres sor a  periódusok kö&amp;zött</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="399"/>
@@ -8327,7 +8327,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6848"/>
         <source>Harmonics decoding depth:</source>
-        <translation type="unfinished">Harmonikusok dekódolási mélysége:</translation>
+        <translation>Harmonikusok dekódolási mélysége:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6884"/>
