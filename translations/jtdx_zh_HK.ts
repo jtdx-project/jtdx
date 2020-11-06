@@ -3399,7 +3399,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2499"/>
         <source>1 QSO</source>
-        <translation>1次通聯</translation>
+        <translation>單次通聯</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2530"/>
@@ -4301,7 +4301,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5301"/>
         <source>Bypass all text filters</source>
-        <translation>不使用所有信息過濾</translation>
+        <translation>繞過所有信息篩選</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5304"/>
@@ -4598,7 +4598,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5915"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>雙擊|自動選擇 時調用剪貼板</translation>
+        <translation>雙擊|自動選擇 時對方呼號複製到剪貼簿</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5923"/>
@@ -6043,7 +6043,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>發出訊息在接收信息窗口顯示(&amp;T)</translation>
+        <translation>發出的訊息在接收信息窗口顯示(&amp;T)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="421"/>
@@ -6740,7 +6740,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1966"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 1..3: 呼叫CQ當到達計數器時. 自動程序 6/7: 通過解碼的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此類信息. 如果在 &quot;自動程序&quot; 選項標簽中啟用了 &quot;1次qso&quot; 選項,則停止發射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 1..3: 呼叫CQ當到達計數器時. 自動程序 6/7: 通過解碼的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此類信息. 如果在 &quot;自動程序&quot; 選項標簽中啟用了 &quot;單次通聯&quot; 選項,則停止發射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
@@ -6783,7 +6783,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2165"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>如果我呼叫的電台回應其他人</translation>
+        <translation>如果我呼叫的電台回應其他人則中止發射</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2172"/>
@@ -6854,7 +6854,7 @@ comments field.</source>
     <message>
         <location filename="../Configuration.ui" line="2368"/>
         <source>d&amp;B reports to comments</source>
-        <translation>把d&amp;B報告寫入注釋欄</translation>
+        <translation>把d&amp;B信號報告寫入注釋欄</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2375"/>
@@ -6886,7 +6886,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2399"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>把日誌記錄轉成RTTY模式(&amp;v)</translation>
+        <translation>把日誌記錄轉成&amp;RTTY模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>

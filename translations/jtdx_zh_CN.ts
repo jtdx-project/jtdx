@@ -3399,7 +3399,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2499"/>
         <source>1 QSO</source>
-        <translation>1次通联</translation>
+        <translation>单次通联</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2530"/>
@@ -3995,7 +3995,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4779"/>
         <source>About JTDX</source>
-        <translation>有关 JTDX</translation>
+        <translation>关于 JTDX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4782"/>
@@ -4083,7 +4083,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4962"/>
         <source>Special mouse commands</source>
-        <translation>滑鼠特殊组合</translation>
+        <translation>鼠标特殊组合</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4965"/>
@@ -4301,7 +4301,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5301"/>
         <source>Bypass all text filters</source>
-        <translation>不使用所有信息过滤</translation>
+        <translation>绕过所有信息过滤</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5304"/>
@@ -4321,7 +4321,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5334"/>
         <source>Messages with my callsign to RX frequency window </source>
-        <translation>接收信息窗口显示有我呼号信息 </translation>
+        <translation>接收信息窗口显示有我呼号的信息 </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5339"/>
@@ -4386,7 +4386,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5439"/>
         <source>Single shot QSO</source>
-        <translation>一次通联</translation>
+        <translation>单次通联</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5447"/>
@@ -4598,7 +4598,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5915"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
-        <translation>双击|自动选择 时调用剪贴板</translation>
+        <translation>双击|自动选择 时对方呼号复制到剪贴板</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5923"/>
@@ -5676,7 +5676,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="108"/>
         <source>Bars</source>
-        <translation>标注条</translation>
+        <translation>游标条</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="185"/>
@@ -5822,7 +5822,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="530"/>
         <source>Spec </source>
-        <translation>佔高 </translation>
+        <translation>占高 </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="581"/>
@@ -5873,7 +5873,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation>一般(&amp;l)</translation>
+        <translation>常规(&amp;l)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -6043,7 +6043,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>发出讯息在接收信息窗口显示(&amp;T)</translation>
+        <translation>发出的信息在接收信息窗口显示(&amp;T)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="421"/>
@@ -6740,7 +6740,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1966"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 1..3: 呼叫CQ当到达计数器时. 自动程序 6/7: 通过解码的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此类信息. 如果在 &quot;自动程序&quot; 选项标签中启用了 &quot;1次qso&quot; 选项,则停止发射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 1..3: 呼叫CQ当到达计数器时. 自动程序 6/7: 通过解码的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此类信息. 如果在 &quot;自动程序&quot; 选项标签中启用了 &quot;单次通联&quot; 选项,则停止发射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
@@ -6783,7 +6783,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2165"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>如果我呼叫的电台回应其他人</translation>
+        <translation>如果我呼叫的电台回应其他人则中止发射</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2172"/>
@@ -6854,7 +6854,7 @@ comments field.</source>
     <message>
         <location filename="../Configuration.ui" line="2368"/>
         <source>d&amp;B reports to comments</source>
-        <translation>把d&amp;B报告写入注释栏</translation>
+        <translation>把d&amp;B信号报告写入备注栏</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2375"/>
@@ -6886,7 +6886,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2399"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>把日志记录转成RTTY模式(&amp;v)</translation>
+        <translation>把日志记录转成&amp;RTTY模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2406"/>
