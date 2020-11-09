@@ -1,6 +1,6 @@
-subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
+subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,filter,lft8subpass,lspecial,lcqcand,               &
+                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
 !  use timer_module, only: timer
@@ -20,9 +20,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
-  integer, intent(in) :: nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,napwid,nthr,imainpass,nsec,nft8rxfsens
+  integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
-  logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
+  logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,lwrongcall
@@ -771,7 +771,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
              niterations)
 !        call timer('bpd174_91 ',1)
         dmin=0.0
-        if(((.not.filter .and. ndepth.eq.3) .or. (filter .and. nft8filtdepth.eq.3)) .and. nharderrors.lt.0) then
+        if(nharderrors.lt.0) then
           ndeep=3
           if((dfqso.le.napwid .or. abs(nftx-f1).le.napwid) .and. .not.nagainfil) ndeep=4
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes

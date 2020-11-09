@@ -42,7 +42,7 @@ contains
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lonepass,lcqcand
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -70,7 +70,6 @@ contains
           then; lastrxmsg(1)%lstate=.false.
     endif
 
-ndepth=3; nft8filtdepth=3 ! temporary init
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.!; lthrdecd=.false.
     ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
@@ -116,12 +115,7 @@ ndepth=3; nft8filtdepth=3 ! temporary init
 ! sliding search over +/- 3.5s relative to 0.5s TX start time
     if(lft8latestart .or. swl) then; jzb=-86 + avexdt*25.;  jzt=86 + avexdt*25.; endif
 
-! For now:
-! ndepth=1: no subtraction, 1 pass, belief propagation only
-! ndepth=2: subtraction, 3 passes, belief propagation only
-! ndepth=3: subtraction, 3 passes, bp+osd
     npass=3 ! fallback
-    lonepass=.false.; if((.not.filter .and. ndepth.eq.1) .or. (filter .and. nft8filtdepth.eq.1)) lonepass=.true.
     if(swl) then
       if(nft8swlcycles.eq.1) then; npass=3
       else if(nft8swlcycles.eq.2) then; npass=6
@@ -145,7 +139,6 @@ ndepth=3; nft8filtdepth=3 ! temporary init
       elseif(ipass.eq.3 .or. ipass.eq.6 .or. ipass.eq.9) then
          if(lft8lowth .or. swl) syncmin=1.1
       endif
-      if(lonepass .and. ipass.ne.1 .and. ipass.ne.4 .and. ipass.ne.7) cycle
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
       if(ipass.eq.4 .or. ipass.eq.7) then
 !$omp barrier
@@ -187,9 +180,9 @@ ndepth=3; nft8filtdepth=3 ! temporary init
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,filter,lft8subpass,lspecial,lcqcand,                    &
+                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
         nsnr=nint(xsnr) 
@@ -298,7 +291,7 @@ ndepth=3; nft8filtdepth=3 ! temporary init
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
-    if(.not.lonepass) ncandthr=nint(float(ncandthr)/npass)
+    ncandthr=nint(float(ncandthr)/npass)
 !$omp critical(update_structures)
     ncandall=ncandall+ncandthr
 !$OMP FLUSH (ncandall)

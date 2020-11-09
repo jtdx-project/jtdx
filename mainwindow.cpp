@@ -6020,7 +6020,7 @@ void MainWindow::on_actionFT8_triggered()
   m_TRperiod=15.0;
   commonActions();
   if(!m_hint) ui->hintButton->click();
-  ui->hintButton->setEnabled(false);
+  ui->hintButton->setEnabled(false); ui->candListSpinBox->setEnabled(true);
   enableHoundAccess(true);
 }
 
@@ -6159,6 +6159,7 @@ void MainWindow::commonActions ()
     ui->rrrCheckBox->setEnabled(true); ui->rrr1CheckBox->setEnabled(true); if(m_savedRRR) ui->rrrCheckBox->click();
     if(m_mode!="FT8") ui->hintButton->setEnabled(true);
   }
+  if(m_mode!="FT8") ui->candListSpinBox->setEnabled(false);
   m_modeChanged=true;
 }
 
