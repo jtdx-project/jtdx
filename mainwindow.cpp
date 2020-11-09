@@ -194,8 +194,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_delay {0},
   m_XIT {0},
   m_ndepth {3},
-  m_nFT8depth {3},
-  m_nFT8Filtdepth {3},
+  m_ncandthin {100},
   m_nFT8Cycles {1},
   m_nFT8SWLCycles {1},
   m_nFT8RXfSens {1},
@@ -634,16 +633,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionMediumDecode->setActionGroup(DepthGroup);
   ui->actionDeepestDecode->setActionGroup(DepthGroup);
 
-  QActionGroup* FT8DepthGroup = new QActionGroup(this);
-  ui->actionFT8fast->setActionGroup(FT8DepthGroup);
-  ui->actionFT8medium->setActionGroup(FT8DepthGroup);
-  ui->actionFT8deep->setActionGroup(FT8DepthGroup);
-
-  QActionGroup* FT8FilterDepthGroup = new QActionGroup(this);
-  ui->actionFT8FiltFast->setActionGroup(FT8FilterDepthGroup);
-  ui->actionFT8FiltMedium->setActionGroup(FT8FilterDepthGroup);
-  ui->actionFT8FiltDeep->setActionGroup(FT8FilterDepthGroup);
-
   QActionGroup* FT8CyclesGroup = new QActionGroup(this);
   ui->actionDecFT8cycles1->setActionGroup(FT8CyclesGroup);
   ui->actionDecFT8cycles2->setActionGroup(FT8CyclesGroup);
@@ -726,7 +715,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
+#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
+          &QProcess::error),
+#else
+          (&QProcess::errorOccurred),
+#endif
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
@@ -736,7 +730,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
+#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
+          &QProcess::error),
+#else
+          (&QProcess::errorOccurred),
+#endif
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
@@ -745,7 +744,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
             subProcessFailed (&p1, exitCode, status);
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::errorOccurred),
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)>
+#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
+          &QProcess::error),
+#else
+          (&QProcess::errorOccurred),
+#endif
           [this] (QProcess::ProcessError error) {
             subProcessError (&p3, error);
           });
@@ -1158,8 +1162,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("EraseWindowsAtBandChange",ui->actionEraseWindowsAtBandChange->isChecked());
   m_settings->setValue("ReportMessagePriority",ui->actionReport_message_priority->isChecked());
   m_settings->setValue("NDepth",m_ndepth);
-  m_settings->setValue("NFT8Depth",m_nFT8depth);
-  m_settings->setValue("NFT8FilterDepth",m_nFT8Filtdepth);
+  m_settings->setValue("NCandidateListThinning",m_ncandthin);
   m_settings->setValue("NFT8Cycles",m_nFT8Cycles);
   m_settings->setValue("NFT8SWLCycles",m_nFT8SWLCycles);
   m_settings->setValue("NFT8QSORXfreqSensitivity",m_nFT8RXfSens);
@@ -1374,15 +1377,10 @@ void MainWindow::readSettings()
   else if(m_ndepth==2) ui->actionMediumDecode->setChecked(true);
   else if(m_ndepth==1) ui->actionQuickDecode->setChecked(true);
 
-  m_nFT8depth=m_settings->value("NFT8Depth",3).toInt(); if(!(m_nFT8depth>=1 && m_nFT8depth<=3)) m_nFT8depth=3;
-  if(m_nFT8depth==3) ui->actionFT8deep->setChecked(true);
-  else if(m_nFT8depth==2) ui->actionFT8medium->setChecked(true);
-  else if(m_nFT8depth==1) ui->actionFT8fast->setChecked(true);
-  
-  m_nFT8Filtdepth=m_settings->value("NFT8FilterDepth",3).toInt(); if(!(m_nFT8Filtdepth>=1 && m_nFT8Filtdepth<=3)) m_nFT8Filtdepth=3;
-  if(m_nFT8Filtdepth==3) ui->actionFT8FiltDeep->setChecked(true);
-  else if(m_nFT8Filtdepth==2) ui->actionFT8FiltMedium->setChecked(true);
-  else if(m_nFT8Filtdepth==1) ui->actionFT8FiltFast->setChecked(true);
+  ui->candListSpinBox->setValue(100); // ensure a change is signaled
+  if(m_settings->value("NCandidateListThinning").toInt()>=5 && m_settings->value("NCandidateListThinning").toInt()<=100)
+    ui->candListSpinBox->setValue(m_settings->value("NCandidateListThinning",100).toInt());
+  else ui->candListSpinBox->setValue(100);
 
   m_nFT8Cycles=m_settings->value("NFT8Cycles",1).toInt(); if(!(m_nFT8Cycles>=1 && m_nFT8Cycles<=3)) m_nFT8Cycles=1;
   if(m_nFT8Cycles==1) ui->actionDecFT8cycles1->setChecked(true);
@@ -3138,8 +3136,7 @@ void MainWindow::decode()                                       //decode()
   else if(m_freqNominal < 100000000) dec_data.params.napwid=15;
   else dec_data.params.napwid=50;
   dec_data.params.nmt=m_ft8threads;
-  dec_data.params.nft8depth=m_nFT8depth;
-  dec_data.params.nft8filtdepth=m_nFT8Filtdepth;
+  dec_data.params.ncandthin=m_ncandthin;
   dec_data.params.nft8cycles=m_nFT8Cycles;
   dec_data.params.nft8swlcycles=m_nFT8SWLCycles;
   if(m_houndMode) { dec_data.params.nft8rxfsens=1; } else { dec_data.params.nft8rxfsens=m_nFT8RXfSens; }
@@ -6022,6 +6019,8 @@ void MainWindow::on_actionFT8_triggered()
   on_AutoSeqButton_clicked(true);
   m_TRperiod=15.0;
   commonActions();
+  if(!m_hint) ui->hintButton->click();
+  ui->hintButton->setEnabled(false);
   enableHoundAccess(true);
 }
 
@@ -6154,18 +6153,13 @@ void MainWindow::commonActions ()
     if(m_rrr) { m_savedRRR=m_rrr; ui->rrrCheckBox->click(); }
     ui->rrrCheckBox->setEnabled(false); ui->rrr1CheckBox->setEnabled(false);
     if(!m_hint) ui->hintButton->click();
-    hideFT4Buttons(true);
+    ui->hintButton->setEnabled(false);
   }
   else {
     ui->rrrCheckBox->setEnabled(true); ui->rrr1CheckBox->setEnabled(true); if(m_savedRRR) ui->rrrCheckBox->click();
-    hideFT4Buttons(false);
+    if(m_mode!="FT8") ui->hintButton->setEnabled(true);
   }
   m_modeChanged=true;
-}
-
-void MainWindow::hideFT4Buttons(bool hide)
-{
-  if(hide) ui->hintButton->setEnabled(false); else ui->hintButton->setEnabled(true);
 }
 
 void MainWindow::WSPR_config(bool b)
@@ -6217,17 +6211,11 @@ void MainWindow::on_RxFreqSpinBox_valueChanged(int n)
   statusUpdate ();
 }
 
+void MainWindow::on_candListSpinBox_valueChanged(int n) { m_ncandthin=n; }
+
 void MainWindow::on_actionQuickDecode_triggered() { m_ndepth=1; ui->actionQuickDecode->setChecked(true); }
 void MainWindow::on_actionMediumDecode_triggered() { m_ndepth=2; ui->actionMediumDecode->setChecked(true); }
 void MainWindow::on_actionDeepestDecode_triggered() { m_ndepth=3; ui->actionDeepestDecode->setChecked(true); }
-
-void MainWindow::on_actionFT8fast_triggered() { m_nFT8depth=1; ui->actionFT8fast->setChecked(true); }
-void MainWindow::on_actionFT8medium_triggered() { m_nFT8depth=2; ui->actionFT8medium->setChecked(true); }
-void MainWindow::on_actionFT8deep_triggered() { m_nFT8depth=3; ui->actionFT8deep->setChecked(true); }
-
-void MainWindow::on_actionFT8FiltFast_triggered() { m_nFT8Filtdepth=1; ui->actionFT8FiltFast->setChecked(true); }
-void MainWindow::on_actionFT8FiltMedium_triggered() { m_nFT8Filtdepth=2; ui->actionFT8FiltMedium->setChecked(true); }
-void MainWindow::on_actionFT8FiltDeep_triggered() { m_nFT8Filtdepth=3; ui->actionFT8FiltDeep->setChecked(true); }
 
 void MainWindow::on_actionDecFT8cycles1_triggered() { m_nFT8Cycles=1; ui->actionDecFT8cycles1->setChecked(true); }
 void MainWindow::on_actionDecFT8cycles2_triggered() { m_nFT8Cycles=2; ui->actionDecFT8cycles2->setChecked(true); }

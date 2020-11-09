@@ -1,19 +1,20 @@
-subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread)
+subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter)
 
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,450),candidate(4,460),tall(30),freq
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,450),candidate(4,460),tall(30),freq,rcandthin
   integer jpeak(NH1),indx(NH1),ii(1)
-  integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass
+  integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass,ncandthin
   logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2
-  logical(1), intent(in) :: swl,lqsothread
+  logical(1), intent(in) :: swl,lqsothread,filter
   equivalence (x,cx)
 
 ! Compute symbol spectra, stepping by NSTEP steps.  
   tstep=0.04 ! NSTEP/12000.0                         
   df=3.125 ! 12000.0/NFFT1 , Hz
   syncq=.false.; redcq=.false.; candidate(4,:)=0.
+  rcandthin=ncandthin/100.; if(filter) rcandthin=min(rcandthin*3.0,1.0)
 
   if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
     do j=1,NHSYM
@@ -219,7 +220,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
 ! Sort by frequency 
 !  call indexx(candidate0(1,1:ncand),ncand,indx)
 
-  k=1
+  k=1; ncandfqso=0
 !Put nfqso at top of list and apply lowest sync threshold for nfqso
   fprev=5004.
   do i=ncand,1,-1
@@ -228,7 +229,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
       candidate(1,k)=candidate0(1,j); candidate(2,k)=candidate0(2,j)
       candidate(3,k)=candidate0(3,j); candidate(4,k)=candidate0(4,j)
       fprev=candidate0(1,j)
-      k=k+1
+      k=k+1; ncandfqso=ncandfqso+1
     endif
   enddo
 
@@ -237,11 +238,11 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     candidate(1,k)=float(nfqso)
     candidate(2,k)=5.0 ! xdt
     candidate(3,k)=0.0 ! sync
-    k=k+1
+    k=k+1; ncandfqso=ncandfqso+1
     candidate(1,k)=float(nfqso)
     candidate(2,k)=-5.0
     candidate(3,k)=0.0
-    k=k+1
+    k=k+1; ncandfqso=ncandfqso+1
   endif
 
   do i=ncand,1,-1
@@ -255,6 +256,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     endif
   enddo
   ncand=k-1
+  if(ncand-ncandfqso.gt.1 .and. rcandthin.lt.0.99) ncand=ncandfqso+nint((ncand-ncandfqso)*rcandthin)
 
   return
 end subroutine sync8
