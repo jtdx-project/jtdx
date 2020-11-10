@@ -1118,7 +1118,7 @@ QLabel[darkoob=&quot;true&quot;] {
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,20,0">
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,0,0">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -1789,9 +1789,12 @@ QLabel[darkoob=&quot;true&quot;] {
                </widget>
               </item>
               <item row="2" column="1">
-               <widget class="QPushButton" name="pushButton">
-                <property name="enabled">
-                 <bool>false</bool>
+               <widget class="QSpinBox" name="candListSpinBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="maximumSize">
                  <size>
@@ -1799,8 +1802,26 @@ QLabel[darkoob=&quot;true&quot;] {
                   <height>40</height>
                  </size>
                 </property>
-                <property name="text">
-                 <string>Reserved</string>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and 'minimum' wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="suffix">
+                 <string> %</string>
+                </property>
+                <property name="prefix">
+                 <string>CL  </string>
+                </property>
+                <property name="minimum">
+                 <number>5</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="singleStep">
+                 <number>5</number>
+                </property>
+                <property name="value">
+                 <number>100</number>
                 </property>
                </widget>
               </item>
@@ -4534,22 +4555,6 @@ list. The list can be maintained in Settings (F2).</string>
      <property name="title">
       <string>FT8 decoding</string>
      </property>
-     <widget class="QMenu" name="menuWideband_decoding">
-      <property name="title">
-       <string>wideband decoding</string>
-      </property>
-      <addaction name="actionFT8fast"/>
-      <addaction name="actionFT8medium"/>
-      <addaction name="actionFT8deep"/>
-     </widget>
-     <widget class="QMenu" name="menuNarrow_Filter">
-      <property name="title">
-       <string>narrow Filter</string>
-      </property>
-      <addaction name="actionFT8FiltFast"/>
-      <addaction name="actionFT8FiltMedium"/>
-      <addaction name="actionFT8FiltDeep"/>
-     </widget>
      <widget class="QMenu" name="menuDecoder_sensitivity">
       <property name="title">
        <string>decoder sensitivity</string>
@@ -4582,8 +4587,6 @@ list. The list can be maintained in Settings (F2).</string>
       <addaction name="actionDecFT8SWLcycles2"/>
       <addaction name="actionDecFT8SWLcycles3"/>
      </widget>
-     <addaction name="menuWideband_decoding"/>
-     <addaction name="menuNarrow_Filter"/>
      <addaction name="menuDecoding_cycles"/>
      <addaction name="menuSWL_decoding_cycles"/>
      <addaction name="separator"/>

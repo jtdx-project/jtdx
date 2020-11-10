@@ -264,12 +264,6 @@ private slots:
   void on_actionQuickDecode_triggered();
   void on_actionMediumDecode_triggered();
   void on_actionDeepestDecode_triggered();
-  void on_actionFT8fast_triggered();
-  void on_actionFT8medium_triggered();
-  void on_actionFT8deep_triggered();
-  void on_actionFT8FiltFast_triggered();
-  void on_actionFT8FiltMedium_triggered();
-  void on_actionFT8FiltDeep_triggered();
   void on_actionDecFT8cycles1_triggered();
   void on_actionDecFT8cycles2_triggered();
   void on_actionDecFT8cycles3_triggered();
@@ -318,6 +312,7 @@ private slots:
   void on_readFreq_clicked();
   void on_pbTxMode_clicked();
   void on_RxFreqSpinBox_valueChanged(int n);
+  void on_candListSpinBox_valueChanged(int n);
   void on_pbTxLock_clicked(bool);
   void on_skipTx1_clicked(bool checked);
   void on_skipGrid_clicked(bool checked);
@@ -453,8 +448,7 @@ private:
   qint32  m_timeout;
   qint32  m_XIT;
   qint32  m_ndepth;
-  qint32  m_nFT8depth;
-  qint32  m_nFT8Filtdepth;
+  qint32  m_ncandthin;
   qint32  m_nFT8Cycles;
   qint32  m_nFT8SWLCycles;
   qint32  m_nFT8RXfSens;
@@ -784,7 +778,6 @@ private:
   void enable_DXCC_entity ();
   void switch_mode (Mode);
   void commonActions();
-  void hideFT4Buttons(bool hide);
   void WSPR_scheduling ();
   void setRig ();
   void WSPR_history(Frequency dialFreq, int ndecodes);
