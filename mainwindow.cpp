@@ -1786,7 +1786,7 @@ void MainWindow::dataSink(qint64 frames)
     }
     m_delay=0;
 
-    if(!m_diskData && m_saveWav!=0) { //Save unless "Save None"; may delete later
+    if(!m_diskData && m_saveWav!=0) { //Save unless "Save None"
       if(m_mode.startsWith("FT")) {
         int n=fmod(double(now.time().second()),m_TRperiod);
         if(n<(m_TRperiod/2)) n=n+m_TRperiod;
@@ -3107,7 +3107,7 @@ void MainWindow::decode()                                       //decode()
   if(!m_manualDecode) { m_processAuto_done = false; m_callFirst73 = false; }
   m_used_freq = 0;
   if(m_diskData && !m_mode.startsWith("FT")) dec_data.params.nutc=dec_data.params.nutc/100;
-  if(dec_data.params.newdat==1 && !m_diskData) {
+  if(dec_data.params.newdat==1) {
     m_msDecStarted=m_jtdxtime->currentMSecsSinceEpoch2();
     if(!m_mode.startsWith("FT")) {
       qint64 ms = m_msDecStarted % 86400000;
@@ -3521,11 +3521,21 @@ void MainWindow::readFromStdout()                             //readFromStdout
         countQSOs ();
         m_logInitNeeded=false;
       }
-      QString slag;
+      QString slag="";
+      qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2();
       if(!m_manualDecode && !m_diskData) {
-        qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2(); qint64 periodms=m_TRperiod*1000;
+        qint64 periodms=m_TRperiod*1000;
         qint64 lagms=msDecFin - periodms*((m_msDecStarted / periodms)+1); // rounding to base int
-        float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag >= 0.0) slag="+"+slag;
+        float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag > 0.0) slag="+"+slag;
+      }
+      if(m_diskData && m_mode.startsWith("FT")) { // estimated lag for FT4||FT8 wav file
+        qint64 lagms=msDecFin-m_msDecStarted;
+        if(m_mode=="FT8") {
+          if(m_FT8LateStart || m_swl) lagms-=300; else lagms-=600;
+        } else {
+          lagms-=1430;	
+        }
+        float lag=lagms/1000.0; slag.setNum(lag,'f',2); if(lag > 0.0) slag="+"+slag;
       }
       int navexdt=qAbs(100.*avexdt.toFloat());
       if(m_mode.startsWith("FT")) {
