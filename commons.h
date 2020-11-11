@@ -7,7 +7,7 @@
 
 #ifdef __cplusplus
 #include <cstdbool>
-extern "C" {
+//extern "C" {
 #else
 #include <stdbool.h>
 #endif
@@ -110,6 +110,10 @@ typedef struct dec_data {
 // for unknown reason values of the variables at beginning of dec_data list are being
 // not updated while Decode button is pushed manually, for decoding again keep variables at end
 // of the list
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 extern struct {
   float wave[606720];

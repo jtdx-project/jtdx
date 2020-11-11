@@ -71,7 +71,6 @@ namespace
       {7080000, Modes::FT8, IARURegions::ALL,false},
                                                // up 500Hz to clear
                                                // W1AW code practice QRG
-
       {10131000, Modes::FT8, IARURegions::ALL,false},
       {10133000, Modes::FT8, IARURegions::ALL,false}, {10136000, Modes::FT8, IARURegions::ALL,true},
       {10138000, Modes::JT65, IARURegions::ALL,true},
@@ -146,6 +145,7 @@ namespace
       {222065000, Modes::JT65, IARURegions::R2,true},
 	  
       {432065000, Modes::JT65, IARURegions::ALL,true},
+      {432174000, Modes::FT8, IARURegions::ALL,true},
       {432300000, Modes::WSPR, IARURegions::ALL,true},
       
       {902065000, Modes::JT65, IARURegions::R2,true},

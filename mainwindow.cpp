@@ -715,47 +715,83 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
+#else
+  connect(&proc_jtdxjt9, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+                                                 subProcessError (&proc_jtdxjt9, error);
+                                               });
+#endif
   connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&proc_jtdxjt9, exitCode, status);
+            if (subProcessFailed (&proc_jtdxjt9, exitCode, status))
+              {
+                m_valid = false;          // ensures exit if still
+                                          // constructing
+                QTimer::singleShot (0, this, SLOT (close ()));
+              }
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&p1, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
+#else
+  connect(&p1, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+                                           subProcessError (&p1, error);
+                                         });
+#endif
   connect(&p1, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&p1, exitCode, status);
+            if (subProcessFailed (&p1, exitCode, status))
+              {
+                m_valid = false;          // ensures exit if still
+                                          // constructing
+                QTimer::singleShot (0, this, SLOT (close ()));
+              }
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
-            subProcessError (&p3, error);
-          });
+#else
+  connect(&p3, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+#endif
+#if !defined(Q_OS_WIN)
+                                           if (QProcess::FailedToStart != error)
+#else
+                                           if (QProcess::Crashed != error)
+#endif
+                                             {
+                                               subProcessError (&p3, error);
+                                             }
+                                         });
+  connect(&p3, &QProcess::started, [this] () {
+                                     showStatusMessage (QString {"Started: %1 \"%2\""}.arg (p3.program ()).arg (p3.arguments ().join ("\" \"")));
+                                   });
   connect(&p3, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&p3, exitCode, status);
+#if defined(Q_OS_WIN)
+            // We forgo detecting user_hardware failures with exit
+            // code 1 on Windows. This is because we use CMD.EXE to
+            // run the executable. CMD.EXE returns exit code 1 when it
+            // can't find the target executable.
+            if (exitCode != 1)  // CMD.EXE couldn't find file to execute
+#else
+            // We forgo detecting user_hardware failures with exit
+            // code 127 non-Windows. This is because we use /bin/sh to
+            // run the executable. /bin/sh returns exit code 127 when it
+            // can't find the target executable.
+            if (exitCode != 127)  // /bin/sh couldn't find file to execute
+#endif
+              {
+                subProcessFailed (&p3, exitCode, status);
+              }
           });
 
   // hook up save WAV file exit handling
@@ -2531,7 +2567,7 @@ void MainWindow::createStatusBar()                           //createStatusBar
   statusBar()->addWidget(qso_count_label);
  }
 
-void MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::ExitStatus status)
+bool MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::ExitStatus status)
 {
   if (m_valid && (exit_code || QProcess::NormalExit != status))
     {
@@ -2547,9 +2583,9 @@ void MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::
                                     , tr ("Running: %1\n%2")
                                     .arg (process->program () + ' ' + arguments.join (' '))
                                     .arg (QString {process->readAllStandardError()}));
-      QTimer::singleShot (0, this, SLOT (close ()));
-      m_valid = false;          // ensures exit if still constructing
+      return true;          // ensures exit if still constructing
     }
+  return false;  
 }
 
 void MainWindow::subProcessError (QProcess * process, QProcess::ProcessError)

@@ -793,7 +793,7 @@ private:
                           , QString const& his_grid
                           , JTDXDateTime * jtdxtime) const;
   void read_wav_file (QString const& fname);
-  void subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
+  bool subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
   void subProcessError (QProcess *, QProcess::ProcessError);
   void on_the_minute ();
 };
