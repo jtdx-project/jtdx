@@ -3851,17 +3851,17 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Augmentation de la liste des candidats, cette fonction est dédiée au décodage large bande avec des CPU lents et un réglage &quot;minimum&quot; de la sensibilité du décodeur large bande. Comme la liste des candidats est triée par niveau de synchronisation, les candidats ayant un faible niveau de synchronisation ne seront pas traités par le décodeur pour réduire le temps passé pour le décodage par intervalles. Cette fonction n&apos;est pas appliquée à la fréquence de réception QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>Cpu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>
@@ -4611,7 +4611,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5934"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Crossband 160m operation avec la Koree</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5990"/>
