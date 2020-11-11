@@ -3208,7 +3208,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1744"/>
         <source>Set Rx frequency to Tx Frequency</source>
-        <translation>Establezca la frecuencia Rx en Frecuencia Tx</translation>
+        <translation>Fija la frecuencia Rx a la frecuencia Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1596"/>
@@ -3234,7 +3234,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1716"/>
         <source>Set Tx frequency to Rx Frequency</source>
-        <translation>Establece la frecuencia de transmisión en Frecuencia de recpción</translation>
+        <translation>Fija la frecuencia Tx a la frecuencia Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1784"/>
@@ -3856,17 +3856,17 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reducción de la lista de candidatos, esta característica está dedicada a la decodificación de la banda ancha con CPUs lentas y un ajuste &quot;mínimo&quot; de sensibilidad del decodificador de banda ancha. Dado que la lista de candidatos está ordenada por nivel de sincronización, los candidatos con bajos niveles de sincronización no serán procesados por el decodificador para disminuir el tiempo empleado en la decodificación de intervalos. Esta característica no se aplica a la frecuencia del QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>LC  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>

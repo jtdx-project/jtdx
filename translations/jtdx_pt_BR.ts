@@ -3837,17 +3837,17 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Redução da Lista de Candidatos (RLC): esse recurso é dedicado à decodificação de banda larga com CPUs lentas e configuração de sensibilidade &quot;mínima&quot; do decodificador de banda larga. Uma vez que a lista de candidatos está sendo classificada por nível de sincronização, os candidatos com níveis de sincronização baixos não serão processados pelo decodificador para que  o tempo gasto com a decodificação no intervalo seja reduzido. Este recurso não se aplica à frequência QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>RLC  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>
