@@ -1698,7 +1698,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="306"/>
         <source>Kazakhstan</source>
-        <translation></translation>
+        <translation>Kazakistan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="307"/>
@@ -3854,17 +3854,17 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Diluizione della lista versioni candidate. Questa funzione è dedicata alla decodifica a banda larga con CPU lente e impostazione della sensibilità del decodificatore a banda larga &quot;minima&quot;. Poiché l&apos;elenco delle versioni candidate viene ordinato per livello di sincronizzazione, le versioni candidate con livelli di sincronizzazione bassi non verranno elaborate dal decodificatore per ridurre il tempo impiegato per la decodifica dell&apos;intervallo. Questa funzione non è applicata alla frequenza QSO RX.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>

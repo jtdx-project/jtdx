@@ -3849,17 +3849,17 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kandidat liste udtynding, denne funktion er dedikeret til bredbåndsafkodning med langsom CPU&apos;er og &apos;minimum&apos; indstilling af bredbåndsdekoderfølsomhed. Da Dekodet listen sorteres efter synkroniseringsniveau, behandles Kandidater med lave synkroniseringsniveauer ikke af dekoderen for at reducere tiden brugt til intervaldekodning. Denne funktion anvendes ikke til QSO RX-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>CL  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2045"/>
