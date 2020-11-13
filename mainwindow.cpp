@@ -6003,6 +6003,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
 
 void MainWindow::on_actionJT9_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="JT9";
   WSPR_config(false);
   switch_mode (Modes::JT9);
@@ -6019,6 +6020,7 @@ void MainWindow::on_actionJT9_triggered()
 
 void MainWindow::on_actionT10_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="T10";
   WSPR_config(false);
   switch_mode (Modes::T10);
@@ -6035,6 +6037,7 @@ void MainWindow::on_actionT10_triggered()
 
 void MainWindow::on_actionFT4_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="FT4";
   WSPR_config(false);
   switch_mode (Modes::FT4);
@@ -6053,6 +6056,7 @@ void MainWindow::on_actionFT4_triggered()
 
 void MainWindow::on_actionFT8_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="FT8";
   WSPR_config(false);
   switch_mode (Modes::FT8);
@@ -6072,6 +6076,7 @@ void MainWindow::on_actionFT8_triggered()
 
 void MainWindow::on_actionJT65_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   if(m_mode.startsWith("FT") or m_mode=="T10" or m_mode.left(4)=="WSPR") {
 // If coming from FT,T10 or WSPR mode, pretend temporarily that we're coming
 // from JT9 and click the pbTxMode button
@@ -6094,6 +6099,7 @@ void MainWindow::on_actionJT65_triggered()
 
 void MainWindow::on_actionJT9_JT65_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="JT9+JT65";
   WSPR_config(false);
   switch_mode (Modes::JT65);
