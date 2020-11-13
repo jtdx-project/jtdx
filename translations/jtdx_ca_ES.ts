@@ -3668,10 +3668,6 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translatorcomment>Ingrese un mensaje de texto libre (máximo 13 caracteres)
-o seleccione una macro predefinida de la lista desplegable.
-Presione ENTRAR para agregar el texto actual al predefinido
-lista. La lista se puede mantener en Configuración (F2).</translatorcomment>
         <translation>Introdueix un missatge de text lliure (màxim 13 caràcters)
 o selecciona una macro predefinida de la llista desplegable.
 Prem ENTER per afegir el text actual a la llista
@@ -3859,17 +3855,18 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reducció de la llista de candidats, aquesta característica està dedicada a la descodificació de banda ampla amb CPU lenta i configuració de sensibilitat del descodificador de banda ampla &apos;mínima&apos;. Atès que la llista de candidats que s’ordenen per nivells de sincronització amb candidats amb nivells de sincronització baixos, no es processaran amb el descodificador per disminuir el temps dedicat a la descodificació d’intervals. Aquesta característica no s&apos;aplica a la freqüència de RX QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translatorcomment> %</translatorcomment>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>CL  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>

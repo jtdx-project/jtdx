@@ -1822,7 +1822,7 @@ void MainWindow::dataSink(qint64 frames)
     }
     m_delay=0;
 
-    if(!m_diskData && m_saveWav!=0) { //Save unless "Save None"
+    if(!m_diskData && (m_saveWav!=0 || m_mode.mid (0,4) == "WSPR")) { //Save unless "Save None"
       if(m_mode.startsWith("FT")) {
         int n=fmod(double(now.time().second()),m_TRperiod);
         if(n<(m_TRperiod/2)) n=n+m_TRperiod;
