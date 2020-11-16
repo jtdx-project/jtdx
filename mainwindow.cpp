@@ -2963,7 +2963,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   m_wideGraph->setHoundFilter(m_houndMode);
   if(m_houndMode) {
     bool defBand=false;
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
@@ -2998,7 +2998,7 @@ void MainWindow::on_actionUse_TX_frequency_jumps_toggled(bool checked)
   if(checked) {
 	  bool defBand=false; bool splitOff=false; QString message = "";
 //    Don't allow Hound frequency control in any of the default FT8 sub-bands but 60m
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
