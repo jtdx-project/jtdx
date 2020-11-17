@@ -3837,27 +3837,27 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Redução da lista de candidatos. Esse recurso é dedicado à decodificação de banda larga com CPUs lentos e configuração de sensibilidade &quot;mínima&quot; do decodificador de banda larga. Uma vez que a lista de candidatos é classificada por nível de sincronização, os candidatos com níveis de sincronização baixos não serão processados pelo decodificador para diminuir o tempo gasto para o intervalo de decodificação. Este recurso não se aplica à frequência QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1809"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1812"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation>CL  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4326"/>
         <source>  %</source>
-        <translation></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4329"/>
         <source>Tx Pct </source>
-        <translation></translation>
+        <translation>Tx Pct</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4399"/>
@@ -3957,7 +3957,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4741"/>
         <source>DXpedition</source>
-        <translation></translation>
+        <translation>DXpedition</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4760"/>
@@ -3967,7 +3967,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="4763"/>
         <source>Alt+F4</source>
-        <translation></translation>
+        <translation>Alt+F4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4774"/>
@@ -3978,7 +3978,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
         <location filename="../mainwindow.ui" line="4777"/>
         <location filename="../mainwindow.ui" line="5198"/>
         <source>F2</source>
-        <translation></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4782"/>
@@ -4596,7 +4596,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5934"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Operação de banda cruzada de 160m com a Korea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5990"/>
