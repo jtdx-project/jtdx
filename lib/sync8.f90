@@ -256,7 +256,17 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     endif
   enddo
   ncand=k-1
-  if(ncand-ncandfqso.gt.1 .and. rcandthin.lt.0.99) ncand=ncandfqso+nint((ncand-ncandfqso)*rcandthin)
+  if(ncand-ncandfqso.gt.1 .and. rcandthin.lt.0.99) then
+! applying decoding pass weight factor, derived from number of candidates in each pass
+    if(ipass.eq.1) then; rcandthin=min(rcandthin*1.27,1.0)
+    else if(ipass.eq.2) then
+      if(rcandthin.gt.0.79) then; rcandthin=rcandthin**2
+      else; rcandthin=rcandthin*0.79
+      endif
+    else if(ipass.eq.3) then; rcandthin=min(rcandthin*5.0,1.0)
+    endif
+    ncand=ncandfqso+nint((ncand-ncandfqso)*rcandthin)
+  endif
 
   return
 end subroutine sync8
