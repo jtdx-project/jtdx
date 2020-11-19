@@ -24,6 +24,8 @@
 #define	POLY1	0xf2d05351
 #define	POLY2	0xe4613c47
 
+struct snode *stack;
+
 //Decoder - returns 0 on success, -1 on timeout
 int jelinek(
             unsigned int *metric,	/* Final path metric (returned value) */
