@@ -56,6 +56,7 @@ typedef struct dec_data {
     int nzhsym;
     int ndepth;
     int ncandthin;
+    int ndtcenter;
     int nft8cycles;
     int nft8swlcycles;
     int ntxmode;

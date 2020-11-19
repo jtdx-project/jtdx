@@ -1,11 +1,11 @@
-subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter)
+subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter,ndtcenter)
 
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(5,450),candidate(4,460),tall(30),freq,rcandthin
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(5,450),candidate(4,460),tall(30),freq,rcandthin,dtcenter
   integer jpeak(NH1),indx(NH1),ii(1)
-  integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass,ncandthin
+  integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass,ncandthin,ndtcenter
   logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2,lpass1,lpass2
   logical(1), intent(in) :: swl,lqsothread,filter
   equivalence (x,cx)
@@ -15,6 +15,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   df=3.125 ! 12000.0/NFFT1 , Hz
   syncq=.false.; redcq=.false.; candidate(4,:)=0.
   rcandthin=ncandthin/100.; if(filter) rcandthin=min(rcandthin*3.0,1.0)
+  dtcenter=ndtcenter/100.
 
   if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
     do j=1,NHSYM
@@ -170,7 +171,7 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   if(base.lt.1e-8) base=1.0 ! safe division
   red=red/base
 
-  candidate0=0.; k=0; iz=ib-ia+1; dtcenter=0.0; lpass1=.false.; lpass2=.false.
+  candidate0=0.; k=0; iz=ib-ia+1; lpass1=.false.; lpass2=.false.
   if(rcandthin.lt.0.99) then
     if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then; lpass1=.true.
     else if(ipass.eq.2 .or. ipass.eq.5 .or. ipass.eq.8) then; lpass2=.true.

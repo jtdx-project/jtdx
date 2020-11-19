@@ -20,7 +20,7 @@ module ft8_decode
 
 contains
 
-  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,lapon,nsec, &
+  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,lapon,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
                     nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
 !use wavhdr
@@ -37,7 +37,7 @@ contains
 !    real sbase(NH1)
 !integer*2 iwave(180000)
     real candidate(4,460)
-    integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,nsec,napwid,nthr,numthreads
+    integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
@@ -158,7 +158,7 @@ contains
 !$omp barrier
       endif
       !call timer('sync8   ',0)
-      call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter)
+      call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter,ndtcenter)
       !call timer('sync8   ',1)
 !      if(ipass.eq.1) then
 !        laveraging=.true.
