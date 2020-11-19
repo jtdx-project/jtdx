@@ -176,6 +176,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_modulator {new Modulator {TX_SAMPLE_RATE, NTMAX, m_jtdxtime}},
   m_soundOutput {new SoundOutput},
   m_TRperiod {60.0},
+  m_DTcenter {0.0},
   m_msErase {0},
   m_secBandChanged {0},
   m_secTxStopped {0},
@@ -195,6 +196,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_XIT {0},
   m_ndepth {3},
   m_ncandthin {100},
+  m_nDTcenter {0},
   m_nFT8Cycles {1},
   m_nFT8SWLCycles {1},
   m_nFT8RXfSens {1},
@@ -715,47 +717,83 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   createStatusBar();
 
   connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&proc_jtdxjt9, error);
           });
+#else
+  connect(&proc_jtdxjt9, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+                                                 subProcessError (&proc_jtdxjt9, error);
+                                               });
+#endif
   connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&proc_jtdxjt9, exitCode, status);
+            if (subProcessFailed (&proc_jtdxjt9, exitCode, status))
+              {
+                m_valid = false;          // ensures exit if still
+                                          // constructing
+                QTimer::singleShot (0, this, SLOT (close ()));
+              }
           });
 
   connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
-  connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&p1, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
             subProcessError (&p1, error);
           });
+#else
+  connect(&p1, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+                                           subProcessError (&p1, error);
+                                         });
+#endif
   connect(&p1, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&p1, exitCode, status);
+            if (subProcessFailed (&p1, exitCode, status))
+              {
+                m_valid = false;          // ensures exit if still
+                                          // constructing
+                QTimer::singleShot (0, this, SLOT (close ()));
+              }
           });
 
-  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)>
-#if QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
-          &QProcess::error),
-#else
-          (&QProcess::errorOccurred),
-#endif
+#if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
+  connect(&p3, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
-            subProcessError (&p3, error);
-          });
+#else
+  connect(&p3, &QProcess::errorOccurred, [this] (QProcess::ProcessError error) {
+#endif
+#if !defined(Q_OS_WIN)
+                                           if (QProcess::FailedToStart != error)
+#else
+                                           if (QProcess::Crashed != error)
+#endif
+                                             {
+                                               subProcessError (&p3, error);
+                                             }
+                                         });
+  connect(&p3, &QProcess::started, [this] () {
+                                     showStatusMessage (QString {"Started: %1 \"%2\""}.arg (p3.program ()).arg (p3.arguments ().join ("\" \"")));
+                                   });
   connect(&p3, static_cast<void (QProcess::*) (int, QProcess::ExitStatus)> (&QProcess::finished),
           [this] (int exitCode, QProcess::ExitStatus status) {
-            subProcessFailed (&p3, exitCode, status);
+#if defined(Q_OS_WIN)
+            // We forgo detecting user_hardware failures with exit
+            // code 1 on Windows. This is because we use CMD.EXE to
+            // run the executable. CMD.EXE returns exit code 1 when it
+            // can't find the target executable.
+            if (exitCode != 1)  // CMD.EXE couldn't find file to execute
+#else
+            // We forgo detecting user_hardware failures with exit
+            // code 127 non-Windows. This is because we use /bin/sh to
+            // run the executable. /bin/sh returns exit code 127 when it
+            // can't find the target executable.
+            if (exitCode != 127)  // /bin/sh couldn't find file to execute
+#endif
+              {
+                subProcessFailed (&p3, exitCode, status);
+              }
           });
 
   // hook up save WAV file exit handling
@@ -1163,6 +1201,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("ReportMessagePriority",ui->actionReport_message_priority->isChecked());
   m_settings->setValue("NDepth",m_ndepth);
   m_settings->setValue("NCandidateListThinning",m_ncandthin);
+  m_settings->setValue("DTCenter",m_DTcenter);
   m_settings->setValue("NFT8Cycles",m_nFT8Cycles);
   m_settings->setValue("NFT8SWLCycles",m_nFT8SWLCycles);
   m_settings->setValue("NFT8QSORXfreqSensitivity",m_nFT8RXfSens);
@@ -1377,10 +1416,15 @@ void MainWindow::readSettings()
   else if(m_ndepth==2) ui->actionMediumDecode->setChecked(true);
   else if(m_ndepth==1) ui->actionQuickDecode->setChecked(true);
 
-  ui->candListSpinBox->setValue(100); // ensure a change is signaled
+  ui->candListSpinBox->setValue(5); // ensure a change is signaled
   if(m_settings->value("NCandidateListThinning").toInt()>=5 && m_settings->value("NCandidateListThinning").toInt()<=100)
     ui->candListSpinBox->setValue(m_settings->value("NCandidateListThinning",100).toInt());
   else ui->candListSpinBox->setValue(100);
+
+  ui->DTCenterSpinBox->setValue(0.1); // ensure a change is signaled
+  if(m_settings->value("DTCenter").toDouble()>-2.01 && m_settings->value("DTCenter").toDouble()<2.51)
+    ui->DTCenterSpinBox->setValue(m_settings->value("DTCenter",0.0).toDouble());
+  else ui->DTCenterSpinBox->setValue(0.0);
 
   m_nFT8Cycles=m_settings->value("NFT8Cycles",1).toInt(); if(!(m_nFT8Cycles>=1 && m_nFT8Cycles<=3)) m_nFT8Cycles=1;
   if(m_nFT8Cycles==1) ui->actionDecFT8cycles1->setChecked(true);
@@ -1786,7 +1830,7 @@ void MainWindow::dataSink(qint64 frames)
     }
     m_delay=0;
 
-    if(!m_diskData && m_saveWav!=0) { //Save unless "Save None"
+    if(!m_diskData && (m_saveWav!=0 || m_mode.mid (0,4) == "WSPR")) { //Save unless "Save None"
       if(m_mode.startsWith("FT")) {
         int n=fmod(double(now.time().second()),m_TRperiod);
         if(n<(m_TRperiod/2)) n=n+m_TRperiod;
@@ -2531,7 +2575,7 @@ void MainWindow::createStatusBar()                           //createStatusBar
   statusBar()->addWidget(qso_count_label);
  }
 
-void MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::ExitStatus status)
+bool MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::ExitStatus status)
 {
   if (m_valid && (exit_code || QProcess::NormalExit != status))
     {
@@ -2547,9 +2591,9 @@ void MainWindow::subProcessFailed (QProcess * process, int exit_code, QProcess::
                                     , tr ("Running: %1\n%2")
                                     .arg (process->program () + ' ' + arguments.join (' '))
                                     .arg (QString {process->readAllStandardError()}));
-      QTimer::singleShot (0, this, SLOT (close ()));
-      m_valid = false;          // ensures exit if still constructing
+      return true;          // ensures exit if still constructing
     }
+  return false;  
 }
 
 void MainWindow::subProcessError (QProcess * process, QProcess::ProcessError)
@@ -2927,7 +2971,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   m_wideGraph->setHoundFilter(m_houndMode);
   if(m_houndMode) {
     bool defBand=false;
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
@@ -2962,7 +3006,7 @@ void MainWindow::on_actionUse_TX_frequency_jumps_toggled(bool checked)
   if(checked) {
 	  bool defBand=false; bool splitOff=false; QString message = "";
 //    Don't allow Hound frequency control in any of the default FT8 sub-bands but 60m
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70100};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
@@ -3137,6 +3181,7 @@ void MainWindow::decode()                                       //decode()
   else dec_data.params.napwid=50;
   dec_data.params.nmt=m_ft8threads;
   dec_data.params.ncandthin=m_ncandthin;
+  dec_data.params.ndtcenter=m_nDTcenter;
   dec_data.params.nft8cycles=m_nFT8Cycles;
   dec_data.params.nft8swlcycles=m_nFT8SWLCycles;
   if(m_houndMode) { dec_data.params.nft8rxfsens=1; } else { dec_data.params.nft8rxfsens=m_nFT8RXfSens; }
@@ -5967,6 +6012,7 @@ void MainWindow::acceptQSO2(QDateTime const& QSO_date_off, QString const& call, 
 
 void MainWindow::on_actionJT9_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="JT9";
   WSPR_config(false);
   switch_mode (Modes::JT9);
@@ -5983,6 +6029,7 @@ void MainWindow::on_actionJT9_triggered()
 
 void MainWindow::on_actionT10_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="T10";
   WSPR_config(false);
   switch_mode (Modes::T10);
@@ -5999,6 +6046,7 @@ void MainWindow::on_actionT10_triggered()
 
 void MainWindow::on_actionFT4_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="FT4";
   WSPR_config(false);
   switch_mode (Modes::FT4);
@@ -6017,6 +6065,7 @@ void MainWindow::on_actionFT4_triggered()
 
 void MainWindow::on_actionFT8_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="FT8";
   WSPR_config(false);
   switch_mode (Modes::FT8);
@@ -6030,12 +6079,14 @@ void MainWindow::on_actionFT8_triggered()
   m_TRperiod=15.0;
   commonActions();
   if(!m_hint) ui->hintButton->click();
-  ui->hintButton->setEnabled(false); ui->candListSpinBox->setEnabled(true);
+  ui->hintButton->setEnabled(false); ui->candListSpinBox->setEnabled(true); ui->DTCenterSpinBox->setEnabled(true);
+  ui->DTCenterSpinBox->setVisible(true); ui->pbTxMode->setVisible(false);
   enableHoundAccess(true);
 }
 
 void MainWindow::on_actionJT65_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   if(m_mode.startsWith("FT") or m_mode=="T10" or m_mode.left(4)=="WSPR") {
 // If coming from FT,T10 or WSPR mode, pretend temporarily that we're coming
 // from JT9 and click the pbTxMode button
@@ -6058,6 +6109,7 @@ void MainWindow::on_actionJT65_triggered()
 
 void MainWindow::on_actionJT9_JT65_triggered()
 {
+  if (m_mode=="WSPR-2") killFile();
   m_mode="JT9+JT65";
   WSPR_config(false);
   switch_mode (Modes::JT65);
@@ -6095,7 +6147,8 @@ void MainWindow::on_actionWSPR_2_triggered()
   ui->pbTxMode->setText(tr("Tx WSPR"));
   ui->pbTxMode->setEnabled(false);
   setMinButton();
-  ui->TxMinuteButton->setEnabled(false);
+  ui->TxMinuteButton->setEnabled(false); ui->candListSpinBox->setEnabled(false);
+  ui->DTCenterSpinBox->setEnabled(false); ui->DTCenterSpinBox->setVisible(false);
   setClockStyle(true);
   progressBar->setMaximum(int(m_TRperiod));
   progressBar->setFormat("%v/%m");
@@ -6169,7 +6222,10 @@ void MainWindow::commonActions ()
     ui->rrrCheckBox->setEnabled(true); ui->rrr1CheckBox->setEnabled(true); if(m_savedRRR) ui->rrrCheckBox->click();
     if(m_mode!="FT8") ui->hintButton->setEnabled(true);
   }
-  if(m_mode!="FT8") ui->candListSpinBox->setEnabled(false);
+  if(m_mode!="FT8") {
+    ui->candListSpinBox->setEnabled(false); ui->DTCenterSpinBox->setEnabled(false);
+    ui->DTCenterSpinBox->setVisible(false); ui->pbTxMode->setVisible(true);
+  }
   m_modeChanged=true;
 }
 
@@ -6223,6 +6279,7 @@ void MainWindow::on_RxFreqSpinBox_valueChanged(int n)
 }
 
 void MainWindow::on_candListSpinBox_valueChanged(int n) { m_ncandthin=n; }
+void MainWindow::on_DTCenterSpinBox_valueChanged(double dt) { m_DTcenter=dt; m_nDTcenter=dt*100.0; }
 
 void MainWindow::on_actionQuickDecode_triggered() { m_ndepth=1; ui->actionQuickDecode->setChecked(true); }
 void MainWindow::on_actionMediumDecode_triggered() { m_ndepth=2; ui->actionMediumDecode->setChecked(true); }

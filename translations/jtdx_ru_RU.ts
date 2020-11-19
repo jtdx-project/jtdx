@@ -2775,7 +2775,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3884"/>
+        <location filename="../mainwindow.cpp" line="3929"/>
         <source>&amp;Yes</source>
         <translation>&amp;Да</translation>
     </message>
@@ -2786,7 +2786,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3887"/>
+        <location filename="../mainwindow.cpp" line="3932"/>
         <source>&amp;No</source>
         <translation>&amp;Нет</translation>
     </message>
@@ -2956,7 +2956,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
-        <location filename="../mainwindow.ui" line="2210"/>
+        <location filename="../mainwindow.ui" line="2248"/>
         <source>UTC           dB            DT           Freq          Dr </source>
         <translation></translation>
     </message>
@@ -2967,13 +2967,13 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1785"/>
-        <location filename="../mainwindow.cpp" line="3549"/>
-        <location filename="../mainwindow.cpp" line="3558"/>
-        <location filename="../mainwindow.cpp" line="6148"/>
-        <location filename="../mainwindow.cpp" line="6153"/>
-        <location filename="../mainwindow.cpp" line="6192"/>
-        <location filename="../mainwindow.cpp" line="6203"/>
+        <location filename="../mainwindow.cpp" line="1829"/>
+        <location filename="../mainwindow.cpp" line="3594"/>
+        <location filename="../mainwindow.cpp" line="3603"/>
+        <location filename="../mainwindow.cpp" line="6201"/>
+        <location filename="../mainwindow.cpp" line="6206"/>
+        <location filename="../mainwindow.cpp" line="6248"/>
+        <location filename="../mainwindow.cpp" line="6259"/>
         <source>Band Activity</source>
         <translation></translation>
     </message>
@@ -3091,9 +3091,9 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
-        <location filename="../mainwindow.cpp" line="4752"/>
-        <location filename="../mainwindow.cpp" line="5418"/>
-        <location filename="../mainwindow.cpp" line="5839"/>
+        <location filename="../mainwindow.cpp" line="4797"/>
+        <location filename="../mainwindow.cpp" line="5463"/>
+        <location filename="../mainwindow.cpp" line="5884"/>
         <source>DX Call</source>
         <translation>Позывной DX</translation>
     </message>
@@ -3113,29 +3113,29 @@ Error: %2 - %3</source>
         <translation>TX минута</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1668"/>
+        <location filename="../mainwindow.ui" line="1759"/>
         <source>Audio Rx frequency</source>
         <translation>Частота приема по звуку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1531"/>
-        <location filename="../mainwindow.ui" line="1674"/>
-        <location filename="../mainwindow.ui" line="4301"/>
+        <location filename="../mainwindow.ui" line="1659"/>
+        <location filename="../mainwindow.ui" line="1765"/>
+        <location filename="../mainwindow.ui" line="4339"/>
         <source>  Hz</source>
         <translation>  Гц</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1677"/>
+        <location filename="../mainwindow.ui" line="1768"/>
         <source>Rx  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1497"/>
+        <location filename="../mainwindow.ui" line="1826"/>
         <source>Toggle Tx mode</source>
         <translation>Переключить режим передачи TX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1500"/>
+        <location filename="../mainwindow.ui" line="1829"/>
         <source>Tx JT9 @</source>
         <translation></translation>
     </message>
@@ -3146,7 +3146,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
-        <location filename="../mainwindow.cpp" line="2993"/>
+        <location filename="../mainwindow.cpp" line="3037"/>
         <source>Hound</source>
         <translation></translation>
     </message>
@@ -3161,156 +3161,161 @@ Error: %2 - %3</source>
         <translation>Рапорт </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1525"/>
+        <location filename="../mainwindow.ui" line="1653"/>
         <source>Audio Tx frequency</source>
         <translation>Частота передачи TX по звуку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1534"/>
-        <location filename="../mainwindow.ui" line="4304"/>
+        <location filename="../mainwindow.ui" line="1662"/>
+        <location filename="../mainwindow.ui" line="4342"/>
         <source>Tx  </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1562"/>
+        <location filename="../mainwindow.ui" line="1494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для получения информации CAT должен быть настроен через Hamlib, который поддерживает получение данных S-метра для некоторых трансиверов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1577"/>
-        <location filename="../mainwindow.cpp" line="1497"/>
-        <location filename="../mainwindow.cpp" line="1989"/>
+        <location filename="../mainwindow.ui" line="1509"/>
+        <location filename="../mainwindow.cpp" line="1541"/>
+        <location filename="../mainwindow.cpp" line="2033"/>
         <source>S meter</source>
         <translation>S метр</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1719"/>
+        <location filename="../mainwindow.ui" line="1704"/>
         <source>▲</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1747"/>
+        <location filename="../mainwindow.ui" line="1732"/>
         <source>▼</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1762"/>
+        <location filename="../mainwindow.ui" line="1790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use different Rx/Tx AF frequencies or set Tx frequency equal to Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Используйте разные частоты Rx/Tx AF или установите частоту Tx равной частоте Rx AF.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1768"/>
+        <location filename="../mainwindow.ui" line="1796"/>
         <source>Split Tx/Rx</source>
         <translation>Tx/Rx Сплит</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1744"/>
+        <location filename="../mainwindow.ui" line="1729"/>
         <source>Set Rx frequency to Tx Frequency</source>
         <translation>Установить частоту RX равной TX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1596"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable semi-automatic message sequencing. In calling CQ operation autoselect by default searching for response with the highiest priority.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включить полуавтоматическую последовательность сообщений. При вызове операции CQ autoselect по умолчанию ищет ответ с наивысшим приоритетом&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1610"/>
-        <location filename="../mainwindow.ui" line="4713"/>
+        <location filename="../mainwindow.ui" line="1542"/>
+        <location filename="../mainwindow.ui" line="4751"/>
         <source>AutoSeq</source>
         <translation>АвтоВыбор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1626"/>
+        <location filename="../mainwindow.ui" line="1558"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Кликнете двойным кликом на позывном для активизации вызова.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1640"/>
+        <location filename="../mainwindow.ui" line="1572"/>
         <source>AutoTX</source>
         <translation>АвтоTX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1716"/>
+        <location filename="../mainwindow.ui" line="1701"/>
         <source>Set Tx frequency to Rx Frequency</source>
         <translation>Установить частоту TX равной RX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1784"/>
+        <location filename="../mainwindow.ui" line="1588"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Используйте этот элемент управления, чтобы показать или скрыть строки редактирования отслеживаемого позывного / префикса&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1787"/>
+        <location filename="../mainwindow.ui" line="1591"/>
         <source>Wanted</source>
         <translation>Отслеживать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1865"/>
+        <location filename="../mainwindow.ui" line="1610"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для получения данных о выходной мощности CAT должен быть настроен через Hamlib,который может получать необходимую информацию для некоторых трансиверов.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1868"/>
+        <location filename="../mainwindow.ui" line="1906"/>
         <source> Pwr</source>
         <translation>Мощн.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1890"/>
+        <location filename="../mainwindow.ui" line="1928"/>
         <source>Adjust Tx audio level</source>
         <translation>Регулировка уровня TX по звуку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1940"/>
-        <location filename="../mainwindow.ui" line="1956"/>
+        <location filename="../mainwindow.ui" line="1978"/>
+        <location filename="../mainwindow.ui" line="1994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых позывных.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.Замечание : Для видов связи отличных от FT-8 в списке должен использоваться базовый позывной.Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базвый позывнй на составной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1943"/>
+        <location filename="../mainwindow.ui" line="1981"/>
         <source>callsign:</source>
         <translation>Позывной:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1969"/>
+        <location filename="../mainwindow.ui" line="2007"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить позывной из списка после записи QSO в журнал.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1975"/>
-        <location filename="../mainwindow.ui" line="2051"/>
+        <location filename="../mainwindow.ui" line="2013"/>
+        <location filename="../mainwindow.ui" line="2089"/>
         <source>Clr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1989"/>
-        <location filename="../mainwindow.ui" line="2005"/>
+        <location filename="../mainwindow.ui" line="2027"/>
+        <location filename="../mainwindow.ui" line="2043"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых префиксов.Для составных позывных префикс распознается в начале позывного.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.Замечание : Для видов связи отличных от FT-8: Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывнй на составной. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1992"/>
+        <location filename="../mainwindow.ui" line="2030"/>
         <source>prefix:</source>
         <translation>Префикс:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2022"/>
-        <location filename="../mainwindow.ui" line="2038"/>
+        <location filename="../mainwindow.ui" line="2060"/>
+        <location filename="../mainwindow.ui" line="2076"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите разделенный запятыми список  разыскиваемых QTH локаторов, при этом поддерживается только четыре символа При автоматическом выборе в AutoSeq 1..7 требуемые локаторы будут обрабатываться в соответствии с выбранными уведомлениями / приоритетами. Учтите - эта функция не поддерживается в AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2025"/>
+        <location filename="../mainwindow.ui" line="2063"/>
         <source>grid:</source>
         <translation>Локатор:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2045"/>
+        <location filename="../mainwindow.ui" line="2083"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear grid from this list at logging of the QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить локатор из списка  после ввода QSO в журнал&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2064"/>
-        <location filename="../mainwindow.ui" line="2089"/>
+        <location filename="../mainwindow.ui" line="2102"/>
+        <location filename="../mainwindow.ui" line="2127"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted countries: main country prefix shall be used in this list. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection under AutoSeq 1..7 will process wanted country according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed. List of the main country prefixes: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
@@ -3345,321 +3350,321 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2082"/>
+        <location filename="../mainwindow.ui" line="2120"/>
         <source>country:</source>
         <translation>Страна:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2288"/>
-        <location filename="../mainwindow.cpp" line="6154"/>
+        <location filename="../mainwindow.ui" line="2326"/>
+        <location filename="../mainwindow.cpp" line="6207"/>
         <source>Rx Frequency</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2374"/>
+        <location filename="../mainwindow.ui" line="2412"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transmit a pure tone. Tune timer can be set in General tab of the settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Передача сигнала одного тона. Используется для настройки передатчика.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2388"/>
-        <location filename="../mainwindow.cpp" line="6730"/>
+        <location filename="../mainwindow.ui" line="2426"/>
+        <location filename="../mainwindow.cpp" line="6787"/>
         <source>&amp;Tune</source>
         <translation>&amp;Настр. TX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2416"/>
+        <location filename="../mainwindow.ui" line="2454"/>
         <source>Start monitoring</source>
         <translation>Старт приема</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2430"/>
+        <location filename="../mainwindow.ui" line="2468"/>
         <source>&amp;Monitor</source>
         <translation>&amp;Монитор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2461"/>
+        <location filename="../mainwindow.ui" line="2499"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head&gt;&gt; &lt;body&gt;Обойти все текстовые фильтры. Опция на вкладке Разное. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2475"/>
+        <location filename="../mainwindow.ui" line="2513"/>
         <source>Bypass</source>
         <translation>Без фильт.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2506"/>
+        <location filename="../mainwindow.ui" line="2544"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Одиночное QSO опция AutoSeq;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2520"/>
+        <location filename="../mainwindow.ui" line="2558"/>
         <source>1 QSO</source>
         <translation>Одиноч. QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2551"/>
+        <location filename="../mainwindow.ui" line="2589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ответ ранее сработаному корреспонденту на этом диапазоне, текущим видом. Опция Автовыбора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2565"/>
+        <location filename="../mainwindow.ui" line="2603"/>
         <source>AnsB4</source>
         <translation>Отв.B4</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2593"/>
+        <location filename="../mainwindow.ui" line="2631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop monitoring input signal, stop playing pack of the audio wav files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Останов приема или останов проигрования звуковых файлов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2596"/>
+        <location filename="../mainwindow.ui" line="2634"/>
         <source>&amp;Stop</source>
         <translation>&amp;Стоп</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2635"/>
+        <location filename="../mainwindow.ui" line="2673"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode again most recent Rx period or last played wav audio file for any Hint/Filter/SWL mode buttons combination&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Повторно декодирует последний RX период или последний воспроизводимый звуковой файл (wav) для любой комбинации кнопок  Hint/Filter/SWL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2649"/>
+        <location filename="../mainwindow.ui" line="2687"/>
         <source>Dec&amp;ode</source>
         <translation>Дек&amp;од</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2677"/>
+        <location filename="../mainwindow.ui" line="2715"/>
         <source>Toggle Tx Enable On/Off</source>
         <translation>Включить/Отключить разрешение на передачу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2691"/>
+        <location filename="../mainwindow.ui" line="2729"/>
         <source>E&amp;nable Tx</source>
         <translation>Р&amp;азреш. Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2719"/>
+        <location filename="../mainwindow.ui" line="2757"/>
         <source>Stop transmitting immediately</source>
         <translation>Немедленный останов передачи</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2722"/>
+        <location filename="../mainwindow.ui" line="2760"/>
         <source>&amp;Halt Tx</source>
         <translation>&amp;Стоп Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2747"/>
+        <location filename="../mainwindow.ui" line="2785"/>
         <source>Enter this QSO in ADIF log</source>
         <translation>Предложить записать QSO в лог</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2750"/>
+        <location filename="../mainwindow.ui" line="2788"/>
         <source>Log &amp;QSO</source>
         <translation>&amp;QSO в лог</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2775"/>
+        <location filename="../mainwindow.ui" line="2813"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши вызовет очистку (текста) приемного окна (левого) . Нажатие правой кнопки мыши - очистка окна RX частоты . Двойной клик очистит оба окна. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2778"/>
+        <location filename="../mainwindow.ui" line="2816"/>
         <source>&amp;Erase</source>
         <translation>&amp;Очистить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2803"/>
+        <location filename="../mainwindow.ui" line="2841"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Increase number of decoding attempts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Этот режим предназначен для увеличения попыток декодирования.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2817"/>
+        <location filename="../mainwindow.ui" line="2855"/>
         <source>S&amp;WL mode</source>
         <translation>S&amp;WL режим</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2848"/>
+        <location filename="../mainwindow.ui" line="2886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates group of decoders based on the matched filters, in FT8 mode activates FT8AP functionality&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Активирует группу декодеров основанных на согласованных фильтрах, для моды FT8 активирует FT8AP декодеры.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2862"/>
+        <location filename="../mainwindow.ui" line="2900"/>
         <source>Hint</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2893"/>
+        <location filename="../mainwindow.ui" line="2931"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 170Hz, FT8 hound mode 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Полоса пропускания, FT8: 170Гц, FT8 режим гончей 580Гц, FT4 274Гц, JT9 115Гц, T10 225Гц. Для JT65: ширина полосы пропускания  580Гц, для отображения сообщения на экране - 300 Гц.Фильтрация происходит относительно центра спектра принимаемого сигнала.Функция &quot;Фильтр&quot; не может улучшить декодирование сигнала, она предназначена для использования с медленными ЦП, чтобы позволить декодеру завершить обработку перед передачей сигнала и избежать изменения сообщения при передаче. Все входящие вызовы вне полосы пропускания фильтра будут потеряны, используйте функцию «Фильтр» только в том случае, если это действительно необходимо для вашего процессора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2907"/>
+        <location filename="../mainwindow.ui" line="2945"/>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2941"/>
+        <location filename="../mainwindow.ui" line="2979"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activates AGC compensation functionality. Raising up decoding efficiency if AGC is turned ON in the receiver&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Компенсатор отрабатывания АРУ приемника, сделан для выравнивания уровня шума+синхропоследовательности и улучшения синхронизации декодера со слабыми сигналами при отрабатывании АРУ в приемнике&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2955"/>
+        <location filename="../mainwindow.ui" line="2993"/>
         <source>AGCc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2986"/>
+        <location filename="../mainwindow.ui" line="3024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши вызовет удаление данных из окон Позывной DX и QTH локатор. Нажатие правой - удаление данных из окон Позывной DX , QTH локатор, истории QSO и черного списка. Нажатие CTRL+Правая кнопка мыши вызовет добавит позывной в черный список и удалит информацию из окон Позывной DX, QTH локатор и историю QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2989"/>
+        <location filename="../mainwindow.ui" line="3027"/>
         <source>Clear D&amp;X</source>
         <translation>Очист.D&amp;X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3093"/>
-        <location filename="../mainwindow.ui" line="5477"/>
-        <location filename="../mainwindow.ui" line="5942"/>
-        <location filename="../mainwindow.ui" line="5966"/>
+        <location filename="../mainwindow.ui" line="3131"/>
+        <location filename="../mainwindow.ui" line="5515"/>
+        <location filename="../mainwindow.ui" line="5980"/>
+        <location filename="../mainwindow.ui" line="6004"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3136"/>
+        <location filename="../mainwindow.ui" line="3174"/>
         <source>Generate standard messages for minimal QSO</source>
         <translation>Создание стандартных сообщений для проведения QS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3139"/>
+        <location filename="../mainwindow.ui" line="3177"/>
         <source>GenMsgs</source>
         <translation>СоздСооб</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3168"/>
-        <location filename="../mainwindow.ui" line="5655"/>
+        <location filename="../mainwindow.ui" line="3206"/>
+        <location filename="../mainwindow.ui" line="5693"/>
         <source>CQ</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3215"/>
-        <location filename="../mainwindow.ui" line="3837"/>
+        <location filename="../mainwindow.ui" line="3253"/>
+        <location filename="../mainwindow.ui" line="3875"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите комбинацию букв для направленного CQ. Поддерживаются сочетания от AA до ZZ. Например - SA , будет сформирован вызов на Южную Америку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3218"/>
-        <location filename="../mainwindow.ui" line="3840"/>
+        <location filename="../mainwindow.ui" line="3256"/>
+        <location filename="../mainwindow.ui" line="3878"/>
         <source>DX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3231"/>
-        <location filename="../mainwindow.ui" line="3869"/>
+        <location filename="../mainwindow.ui" line="3269"/>
+        <location filename="../mainwindow.ui" line="3907"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
         <translation>При установленной &quot;галочке&quot; будет
  создано &apos;RRR&apos; сообщение,
 при не установленной &apos;RR73&apos;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3237"/>
-        <location filename="../mainwindow.ui" line="3875"/>
+        <location filename="../mainwindow.ui" line="3275"/>
+        <location filename="../mainwindow.ui" line="3913"/>
         <source>RRR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3250"/>
-        <location filename="../mainwindow.ui" line="3923"/>
+        <location filename="../mainwindow.ui" line="3288"/>
+        <location filename="../mainwindow.ui" line="3961"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skip transmitting message with QTH Grid locator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пропустить TX1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3256"/>
+        <location filename="../mainwindow.ui" line="3294"/>
         <source>SkipTx1</source>
         <translation>ПропTx1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3301"/>
-        <location filename="../mainwindow.ui" line="3383"/>
-        <location filename="../mainwindow.ui" line="3453"/>
-        <location filename="../mainwindow.ui" line="3523"/>
-        <location filename="../mainwindow.ui" line="3611"/>
-        <location filename="../mainwindow.ui" line="3684"/>
+        <location filename="../mainwindow.ui" line="3339"/>
+        <location filename="../mainwindow.ui" line="3421"/>
+        <location filename="../mainwindow.ui" line="3491"/>
+        <location filename="../mainwindow.ui" line="3561"/>
+        <location filename="../mainwindow.ui" line="3649"/>
+        <location filename="../mainwindow.ui" line="3722"/>
         <source>Send this message in next Tx interval</source>
         <translation>Передать это сообщение в следующий интервал передачи</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3307"/>
+        <location filename="../mainwindow.ui" line="3345"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3332"/>
-        <location filename="../mainwindow.ui" line="3411"/>
-        <location filename="../mainwindow.ui" line="3481"/>
-        <location filename="../mainwindow.ui" line="3551"/>
-        <location filename="../mainwindow.ui" line="3639"/>
-        <location filename="../mainwindow.ui" line="3715"/>
+        <location filename="../mainwindow.ui" line="3370"/>
+        <location filename="../mainwindow.ui" line="3449"/>
+        <location filename="../mainwindow.ui" line="3519"/>
+        <location filename="../mainwindow.ui" line="3589"/>
+        <location filename="../mainwindow.ui" line="3677"/>
+        <location filename="../mainwindow.ui" line="3753"/>
         <source>Switch to this Tx message NOW</source>
         <translation>Переключить передачу на это сообщение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3338"/>
+        <location filename="../mainwindow.ui" line="3376"/>
         <source>Tx &amp;1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3341"/>
+        <location filename="../mainwindow.ui" line="3379"/>
         <source>Alt+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3389"/>
+        <location filename="../mainwindow.ui" line="3427"/>
         <source>Ctrl+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3414"/>
+        <location filename="../mainwindow.ui" line="3452"/>
         <source>Tx &amp;2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3417"/>
+        <location filename="../mainwindow.ui" line="3455"/>
         <source>Alt+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3459"/>
+        <location filename="../mainwindow.ui" line="3497"/>
         <source>Ctrl+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3484"/>
+        <location filename="../mainwindow.ui" line="3522"/>
         <source>Tx &amp;3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3487"/>
+        <location filename="../mainwindow.ui" line="3525"/>
         <source>Alt+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3529"/>
+        <location filename="../mainwindow.ui" line="3567"/>
         <source>Ctrl+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3554"/>
+        <location filename="../mainwindow.ui" line="3592"/>
         <source>Tx &amp;4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3557"/>
+        <location filename="../mainwindow.ui" line="3595"/>
         <source>Alt+4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3589"/>
-        <location filename="../mainwindow.ui" line="4178"/>
+        <location filename="../mainwindow.ui" line="3627"/>
+        <location filename="../mainwindow.ui" line="4216"/>
         <source>Enter a free text message (maximum 13 characters)
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
@@ -3671,1392 +3676,1402 @@ list. The list can be maintained in Settings (F2).</source>
  Список можно сохранить в Настройках, нажав F2.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3617"/>
+        <location filename="../mainwindow.ui" line="3655"/>
         <source>Ctrl+5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3642"/>
+        <location filename="../mainwindow.ui" line="3680"/>
         <source>Tx &amp;5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3645"/>
+        <location filename="../mainwindow.ui" line="3683"/>
         <source>Alt+5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3690"/>
+        <location filename="../mainwindow.ui" line="3728"/>
         <source>Ctrl+6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3718"/>
+        <location filename="../mainwindow.ui" line="3756"/>
         <source>Tx &amp;6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3721"/>
+        <location filename="../mainwindow.ui" line="3759"/>
         <source>Alt+6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3739"/>
-        <location filename="../mainwindow.ui" line="5485"/>
-        <location filename="../mainwindow.ui" line="5488"/>
-        <location filename="../mainwindow.ui" line="5950"/>
-        <location filename="../mainwindow.ui" line="5974"/>
+        <location filename="../mainwindow.ui" line="3777"/>
+        <location filename="../mainwindow.ui" line="5523"/>
+        <location filename="../mainwindow.ui" line="5526"/>
+        <location filename="../mainwindow.ui" line="5988"/>
+        <location filename="../mainwindow.ui" line="6012"/>
         <source>2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3793"/>
+        <location filename="../mainwindow.ui" line="3831"/>
         <source>CQ </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3907"/>
+        <location filename="../mainwindow.ui" line="3945"/>
         <source>AnsCQ </source>
         <translation>ОтвCQ </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3929"/>
+        <location filename="../mainwindow.ui" line="3967"/>
         <source>SkpGrid</source>
         <translation>Проп.Лок.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3956"/>
+        <location filename="../mainwindow.ui" line="3994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate CQ or directional CQ message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Формирование CQ или направленного CQ &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3959"/>
+        <location filename="../mainwindow.ui" line="3997"/>
         <source>CQ/CQ DX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3984"/>
+        <location filename="../mainwindow.ui" line="4022"/>
         <source>Generate message for replying to a CQ</source>
         <translation>Формирование сообщения содержащее QTH локатор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3987"/>
+        <location filename="../mainwindow.ui" line="4025"/>
         <source>Grid</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4012"/>
+        <location filename="../mainwindow.ui" line="4050"/>
         <source>Generate message with report</source>
         <translation>Формирование сообщения содержащее рапорт</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4015"/>
+        <location filename="../mainwindow.ui" line="4053"/>
         <source>dB</source>
         <translation>дБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4040"/>
+        <location filename="../mainwindow.ui" line="4078"/>
         <source>Generate message with R+report</source>
         <translation>Формирование сообщения содержащее R+рапорт</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4043"/>
+        <location filename="../mainwindow.ui" line="4081"/>
         <source>R+dB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4068"/>
+        <location filename="../mainwindow.ui" line="4106"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generate message with RR73 if RRR checkbox is unchecked, generate RRR message if RRR checkbox is checked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Формирование сообщения содержащее RR73, если выставлена &quot;галочка&quot; у RRR чекбокса , и сообщение RRR ,если &quot;галочка&quot; не устанвлена&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4071"/>
+        <location filename="../mainwindow.ui" line="4109"/>
         <source>RRR/RR73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4096"/>
+        <location filename="../mainwindow.ui" line="4134"/>
         <source>Generate message with 73</source>
         <translation>Создание сообщений содержащих 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4099"/>
+        <location filename="../mainwindow.ui" line="4137"/>
         <source>73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4147"/>
+        <location filename="../mainwindow.ui" line="4185"/>
         <source>Send this standard (generated) message</source>
         <translation>Передать это стандартное (сгенерированное) сообщение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4150"/>
+        <location filename="../mainwindow.ui" line="4188"/>
         <source>Gen msg</source>
         <translation>Созд.станд. сообщ.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4215"/>
+        <location filename="../mainwindow.ui" line="4253"/>
         <source>Send this free-text message (max 13 characters)</source>
         <translation>Передача любых сообщений  (макс. 13 символов)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4218"/>
+        <location filename="../mainwindow.ui" line="4256"/>
         <source>Free msg</source>
         <translation>Своб. сообщ.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4339"/>
+        <location filename="../mainwindow.ui" line="4377"/>
         <source>Band Hopping</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4348"/>
+        <location filename="../mainwindow.ui" line="4386"/>
         <source>Choose bands and times of day for band-hopping.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4351"/>
+        <location filename="../mainwindow.ui" line="4389"/>
         <source>Schedule ...</source>
         <translation>Расписание</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4365"/>
+        <location filename="../mainwindow.ui" line="4403"/>
         <source>Upload decoded messages to WPRnet.org.</source>
         <translation>Загрузить декодированные сообщения на WPRnet.org.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4368"/>
+        <location filename="../mainwindow.ui" line="4406"/>
         <source>Upload spots</source>
         <translation>Послать спот</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4375"/>
+        <location filename="../mainwindow.ui" line="4413"/>
         <source>Transmit during the next 2-minute sequence.</source>
         <translation>Передача в течение следующей 2-минутной последовательности</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4389"/>
+        <location filename="../mainwindow.ui" line="4427"/>
         <source>Tx Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4406"/>
+        <location filename="../mainwindow.ui" line="4444"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
         <translation type="unfinished">Установите мощность передачи в дБм (дБ больше 1 мВт) ,как часть вашего сообщения WSPR.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4320"/>
+        <location filename="../mainwindow.ui" line="4358"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
         <translation type="unfinished">Процент 2-минутных последовательностей, отведенных  передаче</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1806"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Since candidate list being sorted by sync level candidates with low sync levels will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="1809"/>
+        <location filename="../mainwindow.ui" line="1613"/>
         <source> %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1812"/>
+        <location filename="../mainwindow.ui" line="1616"/>
         <source>CL  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4326"/>
+        <location filename="../mainwindow.ui" line="1842"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1845"/>
+        <source>DT </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1848"/>
+        <source> s</source>
+        <translation type="unfinished"> c</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="4364"/>
         <source>  %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4329"/>
+        <location filename="../mainwindow.ui" line="4367"/>
         <source>Tx Pct </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4399"/>
+        <location filename="../mainwindow.ui" line="4437"/>
         <source>No own call decodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4501"/>
+        <location filename="../mainwindow.ui" line="4539"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4519"/>
+        <location filename="../mainwindow.ui" line="4557"/>
         <source>View</source>
         <translation>Показывать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4526"/>
+        <location filename="../mainwindow.ui" line="4564"/>
         <source>Decode</source>
         <translation>Декодирование</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4530"/>
+        <location filename="../mainwindow.ui" line="4568"/>
         <source>FT8 threads</source>
         <translation>Количество потоков для FT8</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4548"/>
+        <location filename="../mainwindow.ui" line="4586"/>
         <source>JT9 WSPR decoding</source>
         <translation>JT9 WSPR декодирование</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4556"/>
+        <location filename="../mainwindow.ui" line="4594"/>
         <source>FT8 decoding</source>
         <translation>FT8 декодирование</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4560"/>
+        <location filename="../mainwindow.ui" line="4598"/>
         <source>decoder sensitivity</source>
         <translation>Чувствительность декодера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4568"/>
+        <location filename="../mainwindow.ui" line="4606"/>
         <source>QSO RX freq sensitivity</source>
         <translation>QSO RX уровень чувствительности</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4576"/>
+        <location filename="../mainwindow.ui" line="4614"/>
         <source>decoding cycles</source>
         <translation>Кол-во циклов декодирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4584"/>
+        <location filename="../mainwindow.ui" line="4622"/>
         <source>SWL decoding cycles</source>
         <translation>Кол-во циклов декодирования в SWL режиме</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4602"/>
+        <location filename="../mainwindow.ui" line="4640"/>
         <source>FT4 decoding</source>
         <translation>FT4 декодировние</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4618"/>
+        <location filename="../mainwindow.ui" line="4656"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4626"/>
+        <location filename="../mainwindow.ui" line="4664"/>
         <source>Language</source>
         <translation>Язык</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4650"/>
+        <location filename="../mainwindow.ui" line="4688"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4666"/>
+        <location filename="../mainwindow.ui" line="4704"/>
         <source>Mode</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4678"/>
+        <location filename="../mainwindow.ui" line="4716"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4682"/>
+        <location filename="../mainwindow.ui" line="4720"/>
         <source>Accept UDP Reply messages</source>
         <translation>Принимать ответные  UDP сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4717"/>
+        <location filename="../mainwindow.ui" line="4755"/>
         <source>Auto RX frequency Filter</source>
         <translation>Авто фильтр на приемной частоте</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4741"/>
+        <location filename="../mainwindow.ui" line="4779"/>
         <source>DXpedition</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4760"/>
+        <location filename="../mainwindow.ui" line="4798"/>
         <source>Exit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4763"/>
+        <location filename="../mainwindow.ui" line="4801"/>
         <source>Alt+F4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4774"/>
+        <location filename="../mainwindow.ui" line="4812"/>
         <source>Configuration</source>
         <translation>Конфигурация</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4777"/>
-        <location filename="../mainwindow.ui" line="5198"/>
+        <location filename="../mainwindow.ui" line="4815"/>
+        <location filename="../mainwindow.ui" line="5236"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4782"/>
+        <location filename="../mainwindow.ui" line="4820"/>
         <source>About JTDX</source>
         <translation>О JTDX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4785"/>
+        <location filename="../mainwindow.ui" line="4823"/>
         <source>Ctrl+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4790"/>
+        <location filename="../mainwindow.ui" line="4828"/>
         <source>Waterfall</source>
         <translation>Водопад</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4795"/>
+        <location filename="../mainwindow.ui" line="4833"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4798"/>
+        <location filename="../mainwindow.ui" line="4836"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4803"/>
+        <location filename="../mainwindow.ui" line="4841"/>
         <source>Open next in directory</source>
         <translation>Открыть следующий в папке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4806"/>
+        <location filename="../mainwindow.ui" line="4844"/>
         <source>F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4811"/>
+        <location filename="../mainwindow.ui" line="4849"/>
         <source>Decode remaining files in directory</source>
         <translation>Декодировать оставшиеся файлы в папке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4814"/>
+        <location filename="../mainwindow.ui" line="4852"/>
         <source>Shift+F6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4819"/>
+        <location filename="../mainwindow.ui" line="4857"/>
         <source>Delete all *.wav &amp;&amp; *.c2 files in SaveDir</source>
         <translation>Удалить все *.wav &amp;&amp; *.c2 файлыв папке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4830"/>
-        <location filename="../mainwindow.ui" line="5528"/>
-        <location filename="../mainwindow.ui" line="5590"/>
-        <location filename="../mainwindow.ui" line="5872"/>
+        <location filename="../mainwindow.ui" line="4868"/>
+        <location filename="../mainwindow.ui" line="5566"/>
+        <location filename="../mainwindow.ui" line="5628"/>
+        <location filename="../mainwindow.ui" line="5910"/>
         <source>fast</source>
         <translation>Быстрое</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4841"/>
+        <location filename="../mainwindow.ui" line="4879"/>
         <source>None</source>
         <translation>Не сохранять</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4849"/>
+        <location filename="../mainwindow.ui" line="4887"/>
         <source>Save all</source>
         <translation>Сохранить все</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4949"/>
+        <location filename="../mainwindow.ui" line="4987"/>
         <source>JTDX Web site</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4952"/>
+        <location filename="../mainwindow.ui" line="4990"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4957"/>
+        <location filename="../mainwindow.ui" line="4995"/>
         <source>Keyboard shortcuts</source>
         <translation>Горячие клавиши</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4960"/>
+        <location filename="../mainwindow.ui" line="4998"/>
         <source>F3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4965"/>
+        <location filename="../mainwindow.ui" line="5003"/>
         <source>Special mouse commands</source>
         <translation>Управление мышью</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4968"/>
+        <location filename="../mainwindow.ui" line="5006"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4979"/>
+        <location filename="../mainwindow.ui" line="5017"/>
         <source>JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4990"/>
+        <location filename="../mainwindow.ui" line="5028"/>
         <source>Save decoded</source>
         <translation>Сохранить декодированные</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5001"/>
-        <location filename="../mainwindow.ui" line="5536"/>
-        <location filename="../mainwindow.ui" line="5598"/>
-        <location filename="../mainwindow.ui" line="5840"/>
-        <location filename="../mainwindow.ui" line="5880"/>
+        <location filename="../mainwindow.ui" line="5039"/>
+        <location filename="../mainwindow.ui" line="5574"/>
+        <location filename="../mainwindow.ui" line="5636"/>
+        <location filename="../mainwindow.ui" line="5878"/>
+        <location filename="../mainwindow.ui" line="5918"/>
         <source>medium</source>
         <translation>Среднее</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5012"/>
-        <location filename="../mainwindow.ui" line="5547"/>
-        <location filename="../mainwindow.ui" line="5609"/>
-        <location filename="../mainwindow.ui" line="5891"/>
+        <location filename="../mainwindow.ui" line="5050"/>
+        <location filename="../mainwindow.ui" line="5585"/>
+        <location filename="../mainwindow.ui" line="5647"/>
+        <location filename="../mainwindow.ui" line="5929"/>
         <source>deep</source>
         <translation>Глубокое</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5020"/>
+        <location filename="../mainwindow.ui" line="5058"/>
         <source>Monitor OFF at startup</source>
         <translation>Монитор выключен при запуске программы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5025"/>
+        <location filename="../mainwindow.ui" line="5063"/>
         <source>Erase ALL.TXT</source>
         <translation>Удалить ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5030"/>
+        <location filename="../mainwindow.ui" line="5068"/>
         <source>Erase QSO LOG file wsjtx_log.adi</source>
         <translation>Удалить QSO LOG файл wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5035"/>
+        <location filename="../mainwindow.ui" line="5073"/>
         <source>Open wsjtx_log.adi</source>
         <translation>Открыть wsjtx_log.adi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5038"/>
-        <location filename="../mainwindow.ui" line="5222"/>
+        <location filename="../mainwindow.ui" line="5076"/>
+        <location filename="../mainwindow.ui" line="5260"/>
         <source>F7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5046"/>
+        <location filename="../mainwindow.ui" line="5084"/>
         <source>Convert mode to RTTY for logging</source>
         <translation>Преобразовать вид к RTTY для записи в журнал</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5054"/>
+        <location filename="../mainwindow.ui" line="5092"/>
         <source>Log dB reports to Comments</source>
         <translation>Значение дБ добавить в поле Комментарий</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5062"/>
+        <location filename="../mainwindow.ui" line="5100"/>
         <source>Prompt me to log QSO</source>
         <translation>Пригласить ввести QSO в журнал</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5070"/>
+        <location filename="../mainwindow.ui" line="5108"/>
         <source>Blank line between decoding periods</source>
         <translation>Пустая строка между периодами декодирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5078"/>
+        <location filename="../mainwindow.ui" line="5116"/>
         <source>Clear DX Call and Grid after logging</source>
         <translation>Очистить поля Позывной DX и QTH локатор после ввода QSO в журнал</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5086"/>
+        <location filename="../mainwindow.ui" line="5124"/>
         <source>Display distance in miles</source>
         <translation>Показывать расстояние в милях</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5094"/>
+        <location filename="../mainwindow.ui" line="5132"/>
         <source>Double-click on call sets Tx Enable</source>
         <translation>Двойной щелчок на позывном активизирует Tx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5102"/>
+        <location filename="../mainwindow.ui" line="5140"/>
         <source>Tx disabled after sending 73</source>
         <translation>Tx отключается после передачи 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5110"/>
+        <location filename="../mainwindow.ui" line="5148"/>
         <source>Runaway Tx watchdog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5118"/>
+        <location filename="../mainwindow.ui" line="5156"/>
         <source>Allow multiple instances</source>
         <translation>Доступно несколько экземляров</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5126"/>
+        <location filename="../mainwindow.ui" line="5164"/>
         <source>Tx freq locked to Rx freq</source>
         <translation>Tx частота привязана к частоте RX type=&quot;unfinished&quot;&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5134"/>
+        <location filename="../mainwindow.ui" line="5172"/>
         <source>Skip Tx 1</source>
         <translation>Проп. TX 1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5142"/>
+        <location filename="../mainwindow.ui" line="5180"/>
         <source>JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5153"/>
+        <location filename="../mainwindow.ui" line="5191"/>
         <source>JT9+JT65</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5161"/>
+        <location filename="../mainwindow.ui" line="5199"/>
         <source>Tx messages to Rx Frequency window</source>
         <translation>Tx сообщения в Rx Frequency окно</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5169"/>
+        <location filename="../mainwindow.ui" line="5207"/>
         <source>Gray1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5177"/>
+        <location filename="../mainwindow.ui" line="5215"/>
         <source>Show DXCC entity and worked B4 status</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5185"/>
+        <location filename="../mainwindow.ui" line="5223"/>
         <source>Astronomical data</source>
         <translation>Астрономическая дата</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5190"/>
+        <location filename="../mainwindow.ui" line="5228"/>
         <source>Short list of add-on prefixes and suffixes</source>
         <translation>Краткий список дополнительных префиксов и суффиксов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5195"/>
+        <location filename="../mainwindow.ui" line="5233"/>
         <source>Settings...</source>
         <translation>Настройки...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5206"/>
+        <location filename="../mainwindow.ui" line="5244"/>
         <source>JTDX forum</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5211"/>
+        <location filename="../mainwindow.ui" line="5249"/>
         <source>Open log directory</source>
         <translation>Открыть папку лога</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5219"/>
+        <location filename="../mainwindow.ui" line="5257"/>
         <source>Message averaging</source>
         <translation>Усреднение сообщений</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5236"/>
+        <location filename="../mainwindow.ui" line="5274"/>
         <source>Include averaging</source>
         <translation>Включить усреднение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5250"/>
+        <location filename="../mainwindow.ui" line="5288"/>
         <source>JT65 hinted decoding</source>
         <translation>JT65 подсказка декодирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5261"/>
+        <location filename="../mainwindow.ui" line="5299"/>
         <source>WSPR-2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5266"/>
+        <location filename="../mainwindow.ui" line="5304"/>
         <source>Save reference spectrum</source>
         <translation>Сохранить эталонный спектр</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5271"/>
+        <location filename="../mainwindow.ui" line="5309"/>
         <source>&amp;Download Samples ...</source>
         <translation>&amp;Скачать примеры ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5274"/>
+        <location filename="../mainwindow.ui" line="5312"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download sample audio files demonstrating the various modes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загрузка образцы аудиофайлов, демонстрирующих различные режимы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5282"/>
+        <location filename="../mainwindow.ui" line="5320"/>
         <source>T10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5293"/>
+        <location filename="../mainwindow.ui" line="5331"/>
         <source>Bypass text filters on RX frequency</source>
         <translation>Обход
 текстовых фильтров на частоте приема</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5304"/>
+        <location filename="../mainwindow.ui" line="5342"/>
         <source>Bypass all text filters</source>
         <translation>Обход всех текстовых фильтров</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5307"/>
+        <location filename="../mainwindow.ui" line="5345"/>
         <source>Alt+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5315"/>
+        <location filename="../mainwindow.ui" line="5353"/>
         <source>Show messages decoded from JT65 harmonics</source>
         <translation>Показывать декодированные сообщения полученные из JT65 гармоник</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5326"/>
+        <location filename="../mainwindow.ui" line="5364"/>
         <source>Enable main window popup</source>
         <translation>Разрешить режим всплывания главного окна</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5337"/>
+        <location filename="../mainwindow.ui" line="5375"/>
         <source>Messages with my callsign to RX frequency window </source>
         <translation>Показывать сообщения с моим позывным в RX окне </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5342"/>
+        <location filename="../mainwindow.ui" line="5380"/>
         <source>Copyright notice from WSJT Development Group</source>
         <translation>Уведомление об авторских правах от группы разработки WSJT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5356"/>
+        <location filename="../mainwindow.ui" line="5394"/>
         <source>FT8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5364"/>
+        <location filename="../mainwindow.ui" line="5402"/>
         <source>FT8 call first</source>
         <translation>FT8 первый вызов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5375"/>
+        <location filename="../mainwindow.ui" line="5413"/>
         <source>Call priority and search CQ</source>
         <translation>Приоритет вызова и поиск CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5378"/>
+        <location filename="../mainwindow.ui" line="5416"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autoselect searching for response to CQ with priorities, if failed then searching for CQ messages with higher priority&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автоматический выбор поиска ответа на CQ с приоритетами, если не удалось, тогда поиск сообщений CQ с более высоким приоритетом&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5386"/>
+        <location filename="../mainwindow.ui" line="5424"/>
         <source>FT8 call last</source>
         <translation>FT8 последний вызов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5394"/>
+        <location filename="../mainwindow.ui" line="5432"/>
         <source>FT8 manual call</source>
         <translation>FT8 ручной вызов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5402"/>
+        <location filename="../mainwindow.ui" line="5440"/>
         <source>0  Call None</source>
         <translation>0  Ручной выбор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5410"/>
+        <location filename="../mainwindow.ui" line="5448"/>
         <source>1  Call first</source>
         <translation>1  Первый входящий вызов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5418"/>
+        <location filename="../mainwindow.ui" line="5456"/>
         <source>4+ Call and search through CQ messages</source>
         <translation>4+ Поиск сообщений CQ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5426"/>
+        <location filename="../mainwindow.ui" line="5464"/>
         <source>2  Call decoded till start of TX interval</source>
         <translation>2  Все вызовы до начала интервала передачи</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5434"/>
+        <location filename="../mainwindow.ui" line="5472"/>
         <source>3  Call based on end of decoding</source>
         <translation>3  Ожидание декодирования всех сигналов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5442"/>
+        <location filename="../mainwindow.ui" line="5480"/>
         <source>Single shot QSO</source>
         <translation>Одиночное QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5450"/>
+        <location filename="../mainwindow.ui" line="5488"/>
         <source>Erase band activity window at start of decoding</source>
         <translation>Очистить окно активности диапазона при старте декодирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5458"/>
+        <location filename="../mainwindow.ui" line="5496"/>
         <source>Answer worked B4 calls</source>
         <translation>Разрешить повторы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5469"/>
+        <location filename="../mainwindow.ui" line="5507"/>
         <source>Auto</source>
         <translation>Авто</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5496"/>
+        <location filename="../mainwindow.ui" line="5534"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5504"/>
+        <location filename="../mainwindow.ui" line="5542"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5512"/>
+        <location filename="../mainwindow.ui" line="5550"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5520"/>
+        <location filename="../mainwindow.ui" line="5558"/>
         <source>Erase both message windows at band change</source>
         <translation>Очистить все окна сообщений при смене диапазона</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5558"/>
+        <location filename="../mainwindow.ui" line="5596"/>
         <source>deep with 4 passes</source>
         <translation>Глубокое 4 прохода</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5566"/>
+        <location filename="../mainwindow.ui" line="5604"/>
         <source>Max distance instead of best SNR</source>
         <translation>Максимальное расстояние вместо лучшего SNR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5574"/>
+        <location filename="../mainwindow.ui" line="5612"/>
         <source>Messages with wanted call to RX frequency window</source>
         <translation>Показывать сообщения отслеживаемого позывного в  RX окне</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5582"/>
+        <location filename="../mainwindow.ui" line="5620"/>
         <source>use low thresholds</source>
         <translation>Использовать низкие пороговые значения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5617"/>
+        <location filename="../mainwindow.ui" line="5655"/>
         <source>use subpass</source>
         <translation>Использовать subpass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5628"/>
+        <location filename="../mainwindow.ui" line="5666"/>
         <source>minimum</source>
         <translation>Минимальная</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5636"/>
+        <location filename="../mainwindow.ui" line="5674"/>
         <source>late start of decoder</source>
         <translation>Задержаный старт декодера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5644"/>
+        <location filename="../mainwindow.ui" line="5682"/>
         <source>Call worked B4 callsigns</source>
         <translation>Ответ на общий вызов повторных корреспондентов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5663"/>
+        <location filename="../mainwindow.ui" line="5701"/>
         <source>CQ and 73</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5671"/>
+        <location filename="../mainwindow.ui" line="5709"/>
         <source>any messages</source>
         <translation>Любые сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5679"/>
+        <location filename="../mainwindow.ui" line="5717"/>
         <source>Enable</source>
         <translation>Разрешить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5687"/>
+        <location filename="../mainwindow.ui" line="5725"/>
         <source>Switch Filter OFF at sending 73</source>
         <translation>Выключить фильтр при передаче 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5695"/>
+        <location filename="../mainwindow.ui" line="5733"/>
         <source>Switch Filter OFF at getting 73</source>
         <translation>Выключить фильтр при получении 73</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5703"/>
+        <location filename="../mainwindow.ui" line="5741"/>
         <source>Hide FT8 dupe messages</source>
         <translation>Скрыть повторные FT8 сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5711"/>
+        <location filename="../mainwindow.ui" line="5749"/>
         <source>Display output power</source>
         <translation>Показать выходную мощность</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5719"/>
+        <location filename="../mainwindow.ui" line="5757"/>
         <source>Report message priority</source>
         <translation>Приоритет зовущим с рапортом</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5727"/>
+        <location filename="../mainwindow.ui" line="5765"/>
         <source>Enable hound mode</source>
         <translation>Включить режим Hound</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5738"/>
+        <location filename="../mainwindow.ui" line="5776"/>
         <source>Use hound TX frequency control</source>
         <translation>Использовать метод Hound для управление частотой TX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5746"/>
+        <location filename="../mainwindow.ui" line="5784"/>
         <source>Disable TX after sending RRR/RR73/73 in manual mode</source>
         <translation>Отключить TX после передачи  RRR / RR73 / 73 в ручном режиме</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5757"/>
+        <location filename="../mainwindow.ui" line="5795"/>
         <source>Show tooltips in main window</source>
         <translation>Включить подсказки в основном окне</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5765"/>
+        <location filename="../mainwindow.ui" line="5803"/>
         <source>Color Tx message buttons</source>
         <translation>Подсветка кнопок TX сообщений при передаче</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5773"/>
-        <location filename="../mainwindow.ui" line="5958"/>
-        <location filename="../mainwindow.ui" line="5982"/>
+        <location filename="../mainwindow.ui" line="5811"/>
+        <location filename="../mainwindow.ui" line="5996"/>
+        <location filename="../mainwindow.ui" line="6020"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5781"/>
+        <location filename="../mainwindow.ui" line="5819"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5789"/>
+        <location filename="../mainwindow.ui" line="5827"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5797"/>
+        <location filename="../mainwindow.ui" line="5835"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5805"/>
+        <location filename="../mainwindow.ui" line="5843"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5813"/>
+        <location filename="../mainwindow.ui" line="5851"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5821"/>
+        <location filename="../mainwindow.ui" line="5859"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5829"/>
+        <location filename="../mainwindow.ui" line="5867"/>
         <source>low</source>
         <translation>Низкое</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5848"/>
+        <location filename="../mainwindow.ui" line="5886"/>
         <source>high</source>
         <translation>Высокое</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5856"/>
+        <location filename="../mainwindow.ui" line="5894"/>
         <source>Hide FT contest messages</source>
         <translation>Скрыть FT контест сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5864"/>
+        <location filename="../mainwindow.ui" line="5902"/>
         <source>FT4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5899"/>
+        <location filename="../mainwindow.ui" line="5937"/>
         <source>wideband DX Call search</source>
         <translation>Широкополосный поиск DX Call</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5907"/>
+        <location filename="../mainwindow.ui" line="5945"/>
         <source>6 pass SWL mode</source>
         <translation>6 проходов в SWL режиме</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5918"/>
+        <location filename="../mainwindow.ui" line="5956"/>
         <source>Callsign to clipboard at double-click|autoselect</source>
         <translation>Позывной корреспондента в буфер обмена  двойным кликом или при автовыборе</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5926"/>
+        <location filename="../mainwindow.ui" line="5964"/>
         <source>Crossband 160m operation with Japan</source>
         <translation>Работа разнесенными частотами на 160м с Японией</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5934"/>
+        <location filename="../mainwindow.ui" line="5972"/>
         <source>Crossband 160m operation with Korea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5990"/>
+        <location filename="../mainwindow.ui" line="6028"/>
         <source>Hide telemetry messages</source>
         <translatorcomment>Скрыть сообщения телеметрии</translatorcomment>
         <translation>Скрыть телеметрические сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="465"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Вы хотите произвести настройку CAT системы заново?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="767"/>
+        <location filename="../mainwindow.cpp" line="805"/>
         <source>Error Writing WAV File</source>
         <translation>Ошибка записи WAV файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="907"/>
+        <location filename="../mainwindow.cpp" line="945"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Ошибка завершения jtdxjt9.exe процесса</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="885"/>
-        <location filename="../mainwindow.cpp" line="886"/>
-        <location filename="../mainwindow.cpp" line="6144"/>
-        <location filename="../mainwindow.cpp" line="6145"/>
-        <location filename="../mainwindow.cpp" line="6199"/>
-        <location filename="../mainwindow.cpp" line="6200"/>
+        <location filename="../mainwindow.cpp" line="923"/>
+        <location filename="../mainwindow.cpp" line="924"/>
+        <location filename="../mainwindow.cpp" line="6197"/>
+        <location filename="../mainwindow.cpp" line="6198"/>
+        <location filename="../mainwindow.cpp" line="6255"/>
+        <location filename="../mainwindow.cpp" line="6256"/>
         <source>Freq   Message</source>
         <translation>Свободные сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="908"/>
+        <location filename="../mainwindow.cpp" line="946"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName код возврата :%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="925"/>
+        <location filename="../mainwindow.cpp" line="963"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Ошибка удаления &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="964"/>
         <source>Click OK to retry</source>
         <translation>Нажмите OK для повтора</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1608"/>
+        <location filename="../mainwindow.cpp" line="1652"/>
         <source>TX Even</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1615"/>
+        <location filename="../mainwindow.cpp" line="1659"/>
         <source>TX Odd</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1678"/>
-        <location filename="../mainwindow.cpp" line="2433"/>
-        <location filename="../mainwindow.cpp" line="3593"/>
-        <location filename="../mainwindow.cpp" line="4214"/>
-        <location filename="../mainwindow.cpp" line="4361"/>
-        <location filename="../mainwindow.cpp" line="4601"/>
-        <location filename="../mainwindow.cpp" line="7008"/>
-        <location filename="../mainwindow.cpp" line="7221"/>
+        <location filename="../mainwindow.cpp" line="1722"/>
+        <location filename="../mainwindow.cpp" line="2477"/>
+        <location filename="../mainwindow.cpp" line="3638"/>
+        <location filename="../mainwindow.cpp" line="4259"/>
+        <location filename="../mainwindow.cpp" line="4406"/>
+        <location filename="../mainwindow.cpp" line="4646"/>
+        <location filename="../mainwindow.cpp" line="7065"/>
+        <location filename="../mainwindow.cpp" line="7278"/>
         <source>File Open Error</source>
         <translation>Ошибка открытия файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1679"/>
-        <location filename="../mainwindow.cpp" line="2434"/>
-        <location filename="../mainwindow.cpp" line="3594"/>
-        <location filename="../mainwindow.cpp" line="4215"/>
-        <location filename="../mainwindow.cpp" line="4362"/>
-        <location filename="../mainwindow.cpp" line="4602"/>
-        <location filename="../mainwindow.cpp" line="7009"/>
-        <location filename="../mainwindow.cpp" line="7222"/>
-        <location filename="../mainwindow.cpp" line="7575"/>
+        <location filename="../mainwindow.cpp" line="1723"/>
+        <location filename="../mainwindow.cpp" line="2478"/>
+        <location filename="../mainwindow.cpp" line="3639"/>
+        <location filename="../mainwindow.cpp" line="4260"/>
+        <location filename="../mainwindow.cpp" line="4407"/>
+        <location filename="../mainwindow.cpp" line="4647"/>
+        <location filename="../mainwindow.cpp" line="7066"/>
+        <location filename="../mainwindow.cpp" line="7279"/>
+        <location filename="../mainwindow.cpp" line="7632"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Не удается открыть &quot;%1&quot; для добавления: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1734"/>
+        <location filename="../mainwindow.cpp" line="1778"/>
         <source>lost audio </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1818"/>
+        <location filename="../mainwindow.cpp" line="1862"/>
         <source>Error saving c2 file</source>
         <translation>Ошибка сохранения c2 файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1895"/>
+        <location filename="../mainwindow.cpp" line="1939"/>
         <source>Error in SoundInput</source>
         <translation>Ошибка в SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1943"/>
         <source>Error in SoundOutput</source>
         <translation>Ошибка в SoundOutput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1991"/>
+        <location filename="../mainwindow.cpp" line="2035"/>
         <source>Pwr</source>
         <translation>Мощн.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2544"/>
+        <location filename="../mainwindow.cpp" line="2588"/>
         <source>Subprocess Error</source>
         <translation>Ошибка подпроцесса</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="2589"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Сбой подпроцесса с кодом выхода %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2547"/>
-        <location filename="../mainwindow.cpp" line="2566"/>
+        <location filename="../mainwindow.cpp" line="2591"/>
+        <location filename="../mainwindow.cpp" line="2610"/>
         <source>Running: %1
 %2</source>
         <translation>Запуск: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2565"/>
+        <location filename="../mainwindow.cpp" line="2609"/>
         <source>Subprocess error</source>
         <translation>Ошибка подпроцесса</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2641"/>
+        <location filename="../mainwindow.cpp" line="2685"/>
         <source>Spotted</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2648"/>
+        <location filename="../mainwindow.cpp" line="2692"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Не удается установить / завершить соединение с сервером dxsummit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2671"/>
+        <location filename="../mainwindow.cpp" line="2715"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>Авторские права принадлежат (C) 2001, алгоритмы, исходный код, внешний вид WSJT-X и связанных с ним программ и спецификации протокола для режимов FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144. -2018 одним или несколькими из следующих авторов: Джозеф Тейлор, K1JT; Билл Сомервилл, G4WJS; Стивен Франке, K9AN; Нико Палермо, IV3NWV; Грег Бим, KI7MT; Майкл Блэк, W9MDB; Эдсон Перейра, PY2SDR; Филипп Карн, KA9Q; и другие члены группы разработки WSJT.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2791"/>
+        <location filename="../mainwindow.cpp" line="2835"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Нет данных с диска. Неправильный формат файла?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2798"/>
+        <location filename="../mainwindow.cpp" line="2842"/>
         <source>Confirm Delete</source>
         <translation>Подтвердите удаление</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2799"/>
+        <location filename="../mainwindow.cpp" line="2843"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Вы уверены, что хотите удалить все файлы * .wav и * .c2 в
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2842"/>
+        <location filename="../mainwindow.cpp" line="2886"/>
         <source>AutoSeq0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2855"/>
+        <location filename="../mainwindow.cpp" line="2899"/>
         <source>AutoSeq1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2864"/>
-        <location filename="../mainwindow.cpp" line="2890"/>
+        <location filename="../mainwindow.cpp" line="2908"/>
+        <location filename="../mainwindow.cpp" line="2934"/>
         <source>AutoSeq2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2865"/>
-        <location filename="../mainwindow.cpp" line="2886"/>
+        <location filename="../mainwindow.cpp" line="2909"/>
+        <location filename="../mainwindow.cpp" line="2930"/>
         <source>AutoSeq6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2874"/>
-        <location filename="../mainwindow.cpp" line="2891"/>
+        <location filename="../mainwindow.cpp" line="2918"/>
+        <location filename="../mainwindow.cpp" line="2935"/>
         <source>AutoSeq3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
-        <location filename="../mainwindow.cpp" line="2887"/>
+        <location filename="../mainwindow.cpp" line="2919"/>
+        <location filename="../mainwindow.cpp" line="2931"/>
         <source>AutoSeq7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2969"/>
+        <location filename="../mainwindow.cpp" line="3013"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>В стандарттных FT-8 поддиапазонах метод Hound управления TX не допускается.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2977"/>
+        <location filename="../mainwindow.cpp" line="3021"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Метод Hound управления TX требует режим *Split* управления трансивером (опция *Rig* или *Fake It* в *Настройки | Радио*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2980"/>
+        <location filename="../mainwindow.cpp" line="3024"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Метод Hound управления TX не допускается в стандарттных FT-8 поддиапазонах и требует режим *Split* управления трансивером (опция *Rig* или *Fake It* в *Настройки | Радио*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2988"/>
+        <location filename="../mainwindow.cpp" line="3032"/>
         <source>Hound TX frequency control warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2993"/>
+        <location filename="../mainwindow.cpp" line="3037"/>
         <source>HoundFC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3055"/>
+        <location filename="../mainwindow.cpp" line="3099"/>
         <source>Keyboard Shortcuts</source>
         <translation>Горячие клавиши</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3066"/>
+        <location filename="../mainwindow.cpp" line="3110"/>
         <source>Special Mouse Commands</source>
         <translation>Специальные команды мыши</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3542"/>
+        <location filename="../mainwindow.cpp" line="3587"/>
         <source>Avg=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3542"/>
-        <location filename="../mainwindow.cpp" line="3561"/>
+        <location filename="../mainwindow.cpp" line="3587"/>
+        <location filename="../mainwindow.cpp" line="3606"/>
         <source>Freq  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3542"/>
-        <location filename="../mainwindow.cpp" line="3561"/>
+        <location filename="../mainwindow.cpp" line="3587"/>
+        <location filename="../mainwindow.cpp" line="3606"/>
         <source>Lag=</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3548"/>
-        <location filename="../mainwindow.cpp" line="3557"/>
+        <location filename="../mainwindow.cpp" line="3593"/>
+        <location filename="../mainwindow.cpp" line="3602"/>
         <source>check time</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3872"/>
-        <location filename="../mainwindow.cpp" line="3878"/>
+        <location filename="../mainwindow.cpp" line="3917"/>
+        <location filename="../mainwindow.cpp" line="3923"/>
         <source>Confirm change Language</source>
         <translation>Подтверждение изменения языка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3874"/>
-        <location filename="../mainwindow.cpp" line="3881"/>
+        <location filename="../mainwindow.cpp" line="3919"/>
+        <location filename="../mainwindow.cpp" line="3926"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Программа будет автоматически перезапущена, Вы уверены что желаете сменить язык на русский?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4053"/>
+        <location filename="../mainwindow.cpp" line="4098"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Пожалуйста, выберите другую частоту передачи. JTDX не будет передавать другой режим в поддиапазоне WSPR.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4058"/>
-        <location filename="../mainwindow.cpp" line="4061"/>
+        <location filename="../mainwindow.cpp" line="4103"/>
+        <location filename="../mainwindow.cpp" line="4106"/>
         <source>WSPR Guard Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4179"/>
+        <location filename="../mainwindow.cpp" line="4224"/>
         <source>TUNE</source>
         <translation type="unfinished">Настр.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4180"/>
-        <location filename="../mainwindow.cpp" line="4637"/>
+        <location filename="../mainwindow.cpp" line="4225"/>
+        <location filename="../mainwindow.cpp" line="4682"/>
         <source>LastTx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4429"/>
+        <location filename="../mainwindow.cpp" line="4474"/>
         <source>Tx: TUNE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4430"/>
+        <location filename="../mainwindow.cpp" line="4475"/>
         <source>Tx: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4435"/>
+        <location filename="../mainwindow.cpp" line="4480"/>
         <source>Receiving </source>
         <translation>Прием</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4488"/>
+        <location filename="../mainwindow.cpp" line="4533"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Мощн.&lt;br&gt;%1 Вт</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5519"/>
-        <location filename="../mainwindow.cpp" line="5531"/>
-        <location filename="../mainwindow.cpp" line="5550"/>
+        <location filename="../mainwindow.cpp" line="5564"/>
         <location filename="../mainwindow.cpp" line="5576"/>
+        <location filename="../mainwindow.cpp" line="5595"/>
+        <location filename="../mainwindow.cpp" line="5621"/>
         <source>Add to CALL3.TXT</source>
         <translation>Добавить в CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5520"/>
+        <location filename="../mainwindow.cpp" line="5565"/>
         <source>Please enter a valid grid locator</source>
         <translation>Пожалуйста, введите корректный QTH локатор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5532"/>
+        <location filename="../mainwindow.cpp" line="5577"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Невозможно открыть &quot;%1&quot; для чтения/записи: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5551"/>
+        <location filename="../mainwindow.cpp" line="5596"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Невозможно открыть &quot;%1&quot; для записи: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5574"/>
+        <location filename="../mainwindow.cpp" line="5619"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 уже есть в CALL3.TXT, хотите заменить?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5937"/>
+        <location filename="../mainwindow.cpp" line="5982"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Ошибка передачи данных QSO ADIF на альтернативный UDP сервер</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5937"/>
+        <location filename="../mainwindow.cpp" line="5982"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Запись возвращает &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6095"/>
+        <location filename="../mainwindow.cpp" line="6147"/>
         <source>Tx WSPR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6190"/>
+        <location filename="../mainwindow.cpp" line="6246"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6283"/>
-        <location filename="../mainwindow.cpp" line="6295"/>
+        <location filename="../mainwindow.cpp" line="6340"/>
+        <location filename="../mainwindow.cpp" line="6352"/>
         <source>Confirm Erase</source>
         <translation>Подтвердите удаление</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6284"/>
+        <location filename="../mainwindow.cpp" line="6341"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Вы уверены, что хотите удалить файл ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6296"/>
+        <location filename="../mainwindow.cpp" line="6353"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Вы уверены, что хотите стереть свой QSO LOG?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6909"/>
+        <location filename="../mainwindow.cpp" line="6966"/>
         <source>Lockd Tx=Rx</source>
         <translation>Фикс. Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6910"/>
+        <location filename="../mainwindow.cpp" line="6967"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажмите кнопку для включения режима сплит.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6913"/>
+        <location filename="../mainwindow.cpp" line="6970"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx Сплит</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6914"/>
+        <location filename="../mainwindow.cpp" line="6971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажмите кнопку для фиксирования частоты передачи на частоте приема.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7048"/>
+        <location filename="../mainwindow.cpp" line="7105"/>
         <source>Rig Control Error</source>
         <translation>Ошибка управления трансивером</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7122"/>
+        <location filename="../mainwindow.cpp" line="7179"/>
         <source>Tune digital gain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7123"/>
+        <location filename="../mainwindow.cpp" line="7180"/>
         <source>Transmit digital gain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7142"/>
+        <location filename="../mainwindow.cpp" line="7199"/>
         <source>Prefixes</source>
         <translation>Префиксы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7191"/>
-        <location filename="../mainwindow.cpp" line="7192"/>
+        <location filename="../mainwindow.cpp" line="7248"/>
+        <location filename="../mainwindow.cpp" line="7249"/>
         <source>Logd </source>
         <translation>Сохр. </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7427"/>
+        <location filename="../mainwindow.cpp" line="7484"/>
         <source>Network Error</source>
         <translation>Ошибка сети</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7428"/>
+        <location filename="../mainwindow.cpp" line="7485"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Ошибка: %1
 UDP вервер %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7574"/>
+        <location filename="../mainwindow.cpp" line="7631"/>
         <source>File Error</source>
         <translation>Ошибка файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7786"/>
+        <location filename="../mainwindow.cpp" line="7843"/>
         <source>Tx watchdog expired</source>
         <translation>Передача завершена по срабатыванию сторожевого таймера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7800"/>
+        <location filename="../mainwindow.cpp" line="7857"/>
         <source>WD %1m</source>
         <translation type="unfinished"></translation>
     </message>
