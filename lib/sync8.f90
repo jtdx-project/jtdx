@@ -3,10 +3,10 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   use ft8_mod1, only : dd8,windowx,facx,icos7,lagcc,lagccbail,nfawide,nfbwide
   include 'ft8_params.f90'
   complex cx(0:NH1)
-  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(4,450),candidate(4,460),tall(30),freq,rcandthin
+  real s(NH1,NHSYM),x(NFFT1),sync2d(NH1,jzb:jzt),red(NH1),candidate0(5,450),candidate(4,460),tall(30),freq,rcandthin
   integer jpeak(NH1),indx(NH1),ii(1)
   integer, intent(in) :: nfa,nfb,nfqso,jzb,jzt,ipass,ncandthin
-  logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2
+  logical(1) syncq(NH1,jzb:jzt),redcq(NH1),lcq,lcq2,lpass1,lpass2
   logical(1), intent(in) :: swl,lqsothread,filter
   equivalence (x,cx)
 
@@ -170,7 +170,12 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   if(base.lt.1e-8) base=1.0 ! safe division
   red=red/base
 
-  candidate0=0.; k=0; iz=ib-ia+1
+  candidate0=0.; k=0; iz=ib-ia+1; dtcenter=0.0; lpass1=.false.; lpass2=.false.
+  if(rcandthin.lt.0.99) then
+    if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then; lpass1=.true.
+    else if(ipass.eq.2 .or. ipass.eq.5 .or. ipass.eq.8) then; lpass2=.true.
+    endif
+  endif
   call indexx(red(ia:ib),iz,indx)
   do i=1,iz
     n=ia + indx(iz+1-i) - 1
@@ -190,6 +195,13 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
     candidate0(1,k)=freq
     candidate0(2,k)=(jpeak(n)-1)*tstep
     candidate0(3,k)=red(n)
+    if(rcandthin.lt.0.99) then ! candidate thinning option
+      if(lpass2) then
+        candidate0(5,k)=candidate0(3,k)/(abs(candidate0(2,k)-dtcenter)+1.0)**2
+      else
+        candidate0(5,k)=candidate0(3,k)/(abs(candidate0(2,k)-dtcenter)+1.0)
+      endif
+    endif
     if(redcq(n)) candidate0(4,k)=2.
   enddo
   ncand=k
@@ -216,7 +228,11 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   enddo
 
 ! Sort by sync
-  call indexx(candidate0(3,1:ncand),ncand,indx)
+!  call indexx(candidate0(3,1:ncand),ncand,indx)
+  if(rcandthin.gt.0.99) then; call indexx(candidate0(3,1:ncand),ncand,indx)
+! sort by sync value with DT weight
+  else; call indexx(candidate0(5,1:ncand),ncand,indx)
+  endif
 ! Sort by frequency 
 !  call indexx(candidate0(1,1:ncand),ncand,indx)
 
@@ -258,12 +274,12 @@ subroutine sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothr
   ncand=k-1
   if(ncand-ncandfqso.gt.1 .and. rcandthin.lt.0.99) then
 ! applying decoding pass weight factor, derived from number of candidates in each pass
-    if(ipass.eq.1) then; rcandthin=min(rcandthin*1.27,1.0)
-    else if(ipass.eq.2) then
+    if(lpass1) then; rcandthin=min(rcandthin*1.27,1.0)
+    else if(lpass2) then
       if(rcandthin.gt.0.79) then; rcandthin=rcandthin**2
       else; rcandthin=rcandthin*0.79
       endif
-    else if(ipass.eq.3) then; rcandthin=min(rcandthin*5.0,1.0)
+    else; rcandthin=min(rcandthin*5.0,1.0) ! ipass 3,6,9
     endif
     ncand=ncandfqso+nint((ncand-ncandfqso)*rcandthin)
   endif
