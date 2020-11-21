@@ -3252,7 +3252,7 @@ Fejl: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kandidatliste udtynding, denne funktion er dedikeret til bredbåndsafkodning med langsomme CPU&apos;er og &apos;minimum&apos; følsomhedsindstilling for bredbåndsdekoder. Kandidatlisten sorteres efter synkroniseringsmønsterniveau med anvendt DT-vægtfaktor, kandidater med lav værdi behandles ikke af dekoder for at reducere tiden brugt til intervaldekodning. Denne funktion anvendes ikke på QSO RX-frekvens. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3864,17 +3864,18 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; DT-vægtningsfunktionalitet for kandidatlisteudtynding, medianværdien af ​​DT-distribution af dekodede signaler skal indstilles der. Denne værdi afhænger af systemurets synkroniseringsnøjagtighed og af overfyldte bånd er tæt på den gennemsnitlige DT-værdi for dekodede signaler. Korrekt værdi øger afkodningseffektiviteten i kandidatlistens udtyndingsmulighed. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation>DT </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2083"/>
@@ -5694,181 +5695,186 @@ Fejl (%2):%3</translation>
         <translation>Kontroller</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="108"/>
+        <location filename="../widegraph.ui" line="142"/>
         <source>Bars</source>
         <translation>Markør</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="185"/>
+        <location filename="../widegraph.ui" line="152"/>
+        <source>Freq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widegraph.ui" line="197"/>
         <source>Compression factor for frequency scale</source>
         <translation>Kompressionsfaktor til frekvensskala</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="191"/>
+        <location filename="../widegraph.ui" line="203"/>
         <source>Bins/Pixel  </source>
         <translation>Bins/Pixel  </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="222"/>
+        <location filename="../widegraph.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dekoder kun JT9 over denne frekvens&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="225"/>
+        <location filename="../widegraph.ui" line="237"/>
         <source>  JT9</source>
         <translation>  JT9</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="228"/>
+        <location filename="../widegraph.ui" line="240"/>
         <source>JT65  </source>
         <translation>JT56  </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="258"/>
-        <location filename="../widegraph.ui" line="268"/>
+        <location filename="../widegraph.ui" line="270"/>
+        <location filename="../widegraph.ui" line="280"/>
         <source>Position of timestamp above each interval line</source>
         <translation>Position af tidsstempel over hver tidsinterval linje</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="261"/>
+        <location filename="../widegraph.ui" line="273"/>
         <source>Timestamp</source>
         <translation>Tidsstempel</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="272"/>
+        <location filename="../widegraph.ui" line="284"/>
         <source>Off</source>
         <translation>Off</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="277"/>
+        <location filename="../widegraph.ui" line="289"/>
         <source>Left</source>
         <translation>Venstre</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="282"/>
+        <location filename="../widegraph.ui" line="294"/>
         <source>Right</source>
         <translation>Højre</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="314"/>
+        <location filename="../widegraph.ui" line="326"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Frekvens ved venstre kant af vandfaldet &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="317"/>
+        <location filename="../widegraph.ui" line="329"/>
         <source> Hz</source>
         <translation> Hz</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="320"/>
+        <location filename="../widegraph.ui" line="332"/>
         <source>Start </source>
         <translation>Start </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="345"/>
+        <location filename="../widegraph.ui" line="357"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
         <translation>Antal gennemsnitlige FFT&apos;er (kontrollerer vandfaldsrullehastighed)</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="348"/>
+        <location filename="../widegraph.ui" line="360"/>
         <source>N Avg </source>
         <translation>N Avg </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="386"/>
+        <location filename="../widegraph.ui" line="398"/>
         <source>  Palette </source>
         <translation>  Palette </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="402"/>
+        <location filename="../widegraph.ui" line="414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Indtast definition for en ny farvepalet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="405"/>
+        <location filename="../widegraph.ui" line="417"/>
         <source>Adjust...</source>
         <translation>Juster...</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="426"/>
+        <location filename="../widegraph.ui" line="438"/>
         <source>Select waterfall palette</source>
         <translation>Vælg vandfald palette</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="456"/>
+        <location filename="../widegraph.ui" line="468"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Skala spektrum efter medianværdi. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="459"/>
+        <location filename="../widegraph.ui" line="471"/>
         <source>Scale</source>
         <translation>Scale</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="469"/>
+        <location filename="../widegraph.ui" line="481"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kompesering af forstærkning over det fulde viste spektrum af Vandfaldet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="472"/>
+        <location filename="../widegraph.ui" line="484"/>
         <source>Flatten</source>
         <translation>Midling</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="489"/>
+        <location filename="../widegraph.ui" line="501"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vælg data til spektral visning &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="496"/>
+        <location filename="../widegraph.ui" line="508"/>
         <source>Current</source>
         <translation>Currant</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="501"/>
+        <location filename="../widegraph.ui" line="513"/>
         <source>Cumulative</source>
         <translation>Akkumulerede</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="521"/>
+        <location filename="../widegraph.ui" line="533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Indstil brøkstørrelse af spektret i dette vindue. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="527"/>
+        <location filename="../widegraph.ui" line="539"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="530"/>
+        <location filename="../widegraph.ui" line="542"/>
         <source>Spec </source>
         <translation>Spec </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="581"/>
+        <location filename="../widegraph.ui" line="593"/>
         <source>Waterfall gain</source>
         <translation>Vandfald forstærkning</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="618"/>
+        <location filename="../widegraph.ui" line="630"/>
         <source>Spectrum gain</source>
         <translation>Spektrum forstærkning</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="641"/>
-        <location filename="../widegraph.ui" line="648"/>
-        <location filename="../widegraph.ui" line="743"/>
-        <location filename="../widegraph.ui" line="750"/>
+        <location filename="../widegraph.ui" line="653"/>
+        <location filename="../widegraph.ui" line="660"/>
+        <location filename="../widegraph.ui" line="755"/>
+        <location filename="../widegraph.ui" line="762"/>
         <source>TextLabel</source>
         <translation>Tekst Label</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="683"/>
+        <location filename="../widegraph.ui" line="695"/>
         <source>Waterfall zero</source>
         <translation>Vandfald Nul</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="720"/>
+        <location filename="../widegraph.ui" line="732"/>
         <source>Spectrum zero</source>
         <translation>Spectrum Nul</translation>
     </message>

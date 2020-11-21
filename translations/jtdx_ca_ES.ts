@@ -5702,182 +5702,187 @@ Error (%2): %3</translation>
         <translation>Controls</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="108"/>
+        <location filename="../widegraph.ui" line="142"/>
         <source>Bars</source>
         <translation>Barres</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="185"/>
+        <location filename="../widegraph.ui" line="152"/>
+        <source>Freq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widegraph.ui" line="197"/>
         <source>Compression factor for frequency scale</source>
         <translation>Factor de compressió per escala de freqüència</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="191"/>
+        <location filename="../widegraph.ui" line="203"/>
         <source>Bins/Pixel  </source>
         <translation>Bins/Pixel  </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="222"/>
+        <location filename="../widegraph.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decode JT9 only above this frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Descodifica JT9 només per sobre d&apos;aquesta freqüència &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="225"/>
+        <location filename="../widegraph.ui" line="237"/>
         <source>  JT9</source>
         <translation>  JT9</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="228"/>
+        <location filename="../widegraph.ui" line="240"/>
         <source>JT65  </source>
         <translation>JT65  </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="258"/>
-        <location filename="../widegraph.ui" line="268"/>
+        <location filename="../widegraph.ui" line="270"/>
+        <location filename="../widegraph.ui" line="280"/>
         <source>Position of timestamp above each interval line</source>
         <translation>Posició de la marca de temps sobre cada línia d&apos;interval</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="261"/>
+        <location filename="../widegraph.ui" line="273"/>
         <source>Timestamp</source>
         <translation>Data/Hora</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="272"/>
+        <location filename="../widegraph.ui" line="284"/>
         <source>Off</source>
         <translation>Apagat</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="277"/>
+        <location filename="../widegraph.ui" line="289"/>
         <source>Left</source>
         <translation>Esquerra</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="282"/>
+        <location filename="../widegraph.ui" line="294"/>
         <source>Right</source>
         <translation>Dreta</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="314"/>
+        <location filename="../widegraph.ui" line="326"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Freqüència a la vora esquerra de la cascada &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="317"/>
+        <location filename="../widegraph.ui" line="329"/>
         <source> Hz</source>
         <translation> Hz</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="320"/>
+        <location filename="../widegraph.ui" line="332"/>
         <source>Start </source>
         <translation>Inici </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="345"/>
+        <location filename="../widegraph.ui" line="357"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
         <translation>Número promig de FFT (control de la velocitat de desplaçament a la cascada)</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="348"/>
+        <location filename="../widegraph.ui" line="360"/>
         <source>N Avg </source>
         <translation>N Avg </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="386"/>
+        <location filename="../widegraph.ui" line="398"/>
         <source>  Palette </source>
         <translation>  Paleta </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="402"/>
+        <location filename="../widegraph.ui" line="414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter definition for a new color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Introduïu la definició per a una nova paleta de colors. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="405"/>
+        <location filename="../widegraph.ui" line="417"/>
         <source>Adjust...</source>
         <translation>Ajustar...</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="426"/>
+        <location filename="../widegraph.ui" line="438"/>
         <source>Select waterfall palette</source>
         <translation>Selecciona la paleta de la cascada</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="456"/>
+        <location filename="../widegraph.ui" line="468"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale spectrum by median value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Escala l&apos;espectre per valor mig. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="459"/>
+        <location filename="../widegraph.ui" line="471"/>
         <source>Scale</source>
         <translatorcomment>Escala</translatorcomment>
         <translation>Escala</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="469"/>
+        <location filename="../widegraph.ui" line="481"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flatten spectral baseline over the full displayed interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Línia de base espectral plana en tot l&apos;interval mostrat . &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="472"/>
+        <location filename="../widegraph.ui" line="484"/>
         <source>Flatten</source>
         <translation>Aplanar</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="489"/>
+        <location filename="../widegraph.ui" line="501"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select data for spectral display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Seleccionar dades per a la visualització espectrall &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="496"/>
+        <location filename="../widegraph.ui" line="508"/>
         <source>Current</source>
         <translation>Actual</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="501"/>
+        <location filename="../widegraph.ui" line="513"/>
         <source>Cumulative</source>
         <translation>Acumulatiu</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="521"/>
+        <location filename="../widegraph.ui" line="533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set fractional size of spectrum in this window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definiu la mida fraccional de l&apos;espectre en aquesta finestra. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="527"/>
+        <location filename="../widegraph.ui" line="539"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="530"/>
+        <location filename="../widegraph.ui" line="542"/>
         <source>Spec </source>
         <translation>Spec </translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="581"/>
+        <location filename="../widegraph.ui" line="593"/>
         <source>Waterfall gain</source>
         <translation>Guany de la cascada</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="618"/>
+        <location filename="../widegraph.ui" line="630"/>
         <source>Spectrum gain</source>
         <translation>Guany d&apos;espectre</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="641"/>
-        <location filename="../widegraph.ui" line="648"/>
-        <location filename="../widegraph.ui" line="743"/>
-        <location filename="../widegraph.ui" line="750"/>
+        <location filename="../widegraph.ui" line="653"/>
+        <location filename="../widegraph.ui" line="660"/>
+        <location filename="../widegraph.ui" line="755"/>
+        <location filename="../widegraph.ui" line="762"/>
         <source>TextLabel</source>
         <translation>Etiqueta de text</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="683"/>
+        <location filename="../widegraph.ui" line="695"/>
         <source>Waterfall zero</source>
         <translation>Cascada zero</translation>
     </message>
     <message>
-        <location filename="../widegraph.ui" line="720"/>
+        <location filename="../widegraph.ui" line="732"/>
         <source>Spectrum zero</source>
         <translation>Espectre zero</translation>
     </message>
