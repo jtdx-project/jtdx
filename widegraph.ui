@@ -111,6 +111,19 @@
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QCheckBox" name="cbFreq">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Freq</string>
+      </property>
+     </widget>
     </widget>
    </item>
    <item row="2" column="0">
