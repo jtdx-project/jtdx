@@ -3885,7 +3885,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;デコード局リスト間引きオプションのDT重み付け機能では、デコードされた信号のDT分布の中央値を設定する必要があります。この値は、システムのクロック同期精度に依存し、紺座しているバンドではデコードされた信号の平均DT値に近い値となります。この値を正しく設定することで、デコード局リスト間引きオプションのデコード効率を高めることができます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;デコード局リスト間引きオプションのDT重み付け機能では、デコードされた信号のDT分布の中央値を設定する必要があります。この値は、システムのクロック同期精度に依存し、混雑しているバンドではデコードされた信号の平均DT値に近い値となります。この値を正しく設定することで、デコード局リスト間引きオプションのデコード効率を高めることができます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>

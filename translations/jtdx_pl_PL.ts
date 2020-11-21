@@ -3247,7 +3247,7 @@ Błąd: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&quot;Odchudzanie&quot; listy kandydatów do dekodowania, funkcjonalność ta dedykowana jest dla wolnych CPU oraz ustawienia &quot;dekodowanie szerokopasmowe&quot; na &quot;minimum&quot;. Ponieważ lista kandydatów jest sortowana przez &quot;poziom synchronizacji&quot; kandydaci z niskim &quot;poziomem synchronizacji&quot; nie będą przetwarzani przez dekoder w celu skrócenia czasu przeznaczonego na dekodowanie interwału. Ta funkcjonalność nie dotyczy okna &quot;Częstotliwość Rx&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3864,17 +3864,17 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funkcjonalność określania DT dla opcji &quot;odchudzanie&quot; listy kandydatów, wartość pośrednia rozkładu DT dekodowanych sygnałów powinna być ustawiona w tym miejscu. Wartośc ta zależy od dokładności sychronizacli zegara systemowego i na zatłoczonych pasmach jest bliska średniej wartości dekodowanych sygnałów. Właściwa wartość zwiększa efektywność dekodowania w opcji &quot;odchudzanie&quot; listy kandydatów.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
