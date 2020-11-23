@@ -2952,7 +2952,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg (Átlag):a dekódolt jelek felgyülemlett átlagos DT-je (időeltérése) az aktuális sávon.&lt;/p&gt;&lt;p&gt;Lag (Késés): a dekóder késése a következő intervallum kezdetéhez viszonyítva; a negatív értékek azt jelentik, hogy rendelkezésre áll szabad idő a dekódolási mélység növelésére, a pozitív értékek a dekóder késésében  a TX-ben, vagy a következő intervallumban azt jelenti, hogy lehet, hogy nincs elég CPU erőforrás a kiválasztott dekódolási mélységhez, a megbízható jelátvitel biztosításához.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;A késés a CPU teljesítményétől, a zajviszonyoktól, a sáv telitettségétől és a számítógépet használó egyéb programoktól függ; ez csökkenthető a vízesés sávszélességének csökkentésével. Ha a Lag (Késés) folyamatosan negatív, akkor a CPU jól kezeli az intervallumnak a dekódolását, és ezért megpróbálhatja a dekódolást agresszívebbé tenni, hogy több dekódot kapjon.&lt;/p&gt;&lt;p&gt;FT8 esetében: ha a Késés 0 .. 0,4, akkor továbbra is használhatja az Autoseq 3/7-et (az automatikus választás elég korán elindítja a TX üzenet váltását a teljes üzenet továbbításához). Ha a késés &gt; 0,4, akkor meg kell próbálnia csökkenteni a dekódolás agresszivitását. Ha továbbra is a késés &gt; 0,4, akkor az Autoseq 2/6-t kell használni, mivel a bejövő hívásokra való válaszüzenet adáskor részlegesen megsérülhet az AutoSeq 3/7 esetén. Ha folyamatosan a Lag &gt; 2, akkor a CPU nem alkalmas az FT8 működésre a jelenlegi dekódolási beállításokkal. Persze azért mint SWL figyelhet.&lt;/p&gt;&lt;p&gt;A Lag-nál a  /xx: a dekódolt üzenetek száma az utolsó intervallumban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Átl (Átlag):A dekódolt jelek átlagos időeltérése (DT) az aktuális periódusban.&lt;/p&gt;&lt;p&gt;Késés: A dekóder késése a következő periódus kezdetéhez viszonyítva; a negatív értékek azt jelentik, hogy lehetőség van a dekódolási mélység növelésére, a pozitív érték azt jelenti, hogy nincs elég processzor erőforrás a kiválasztott dekódolási mélységhez, a megbízható jelátvitel biztosításához és a dekódolás vége már belecsúszik a következő adási periódusba.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;A késés a processzor teljesítményétől, a zajviszonyoktól, a sáv telitettségétől és a számítógépen futó egyéb programoktól függ; ez csökkenthető a vízesés sávszélességének csökkentésével, a többi, háttérben futó program bezárásával. Ha a késés folyamatosan negatív, akkor a processzor jól kezeli a periódusok dekódolását, és ezért megpróbálhatja a dekódolást agresszívebbé tenni, hogy több dekódolt üzenetet kapjon.&lt;/p&gt;&lt;p&gt;FT8 üzemmódban: ha a Késés kisebb, mint 0,4, akkor továbbra is használhatja az AutoVál 3/7 beállítást, mert időben fog kezdődni a következő adási periódus. Ha a Késés nagyobb, mint 0,4, akkor meg kell próbálni csökkenteni a dekódolás agresszivitását, vagy a szinkronizálási szintet (CL) 100%-ról  kisebbre csökkenteni. Ha a Késés nagyobb, mint 0,4 továbbra is, akkor az AutoVál 2/6 beállítást kell használni, mert az adási periódus késve kezdődik és a válaszüzenet részlegesen megsérülhet az AutoVál 3/7 beállítás esetén. Ha a Késés folyamatosan nagyobb, mint 2, akkor a processzor nem alkalmas az FT8 üzemmód használatára a jelenlegi dekódolási beállításokkal. Persze azért SWL üzemmódban figyelhet.&lt;/p&gt;&lt;p&gt;A Késésnél a /xx: a dekódolt üzenetek számát jelenti az adott vételi periódusban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -2963,7 +2963,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elvesztett audio blokkok. Az FT8 15 másodperces intervalluma 52 audioadat-blokkot tartalmaz; a dekódolás aktiválódik, ha az audioadatok elérték az 51. blokkot a dekódoló &apos;SWL/Késő módjában, vagy az 50. blokkot egyéb esetben. A Windows operációs rendszer alatt, amikor több riport is elveszti az audio adatokat, megoldást találtak az FT8 dekóder elindítására, ha az 52 audioblokkból legalább 46 megérkezett. Az elveszített audioblokkokról itt az értesítés tudatja a felhasználó számára, hogy valami rossz a beállításban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elvesztett audio blokkok. Az FT8 15 másodperces periódusa 52 audio blokkot tartalmaz; SWL/Késleltetett dekódolás üzemben a dekódolás akkor aktiválódik, ha az audio adatok elérték az 51. blokkot , vagy egyéb esetben az 50. blokkot. A Windows operációs rendszer alatt, ha néhány audio blokk elveszik az FT8 dekóder elindul akkor is, ha az 52 audio blokkból legalább 46 megérkezett. Az elveszített audio blokkokról ez az értesítés tudatja a felhasználóval, hogy helytelenek a beállítások.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -2980,7 +2980,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ha a kör narancssárga vagy piros színű, akkor a CAT rendszer nem működik. Ellenőrizze az adó-vevő és a számítógép kapcsolat helyességét, az adó-vevő beállítását, és konfigurálja újra a CAT-ot a JTDX-ben.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ha a kör narancssárga vagy piros színű, akkor a CAT rendszer nem működik. Ellenőrizze az adó-vevő és a számítógép kapcsolatot, az adó-vevő beállítását, és konfigurálja újra a CAT-ot a JTDX-ben.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -3087,7 +3087,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson a bal egérgombbal a gombra, a DX hívójel, Dx_jelentésként elküldéséhez a dxsummit.fi webhelyre. (a Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülén). Kattintson a jobb egérgombbal a gombra, a DX hívójelnek a &apos;Hívójelek üzeneteinek elrejtése&apos; szűrőbe történő adásához.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson ide a bal egérgombbal a hívójel Dx_jelentésként való elküldéséhez a dxsummit.fi webhelyre. (A Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülnél). Kattintson ide a jobb egérgombbal az adott hívójel üzeneteinek elrejtése&apos; szűrő bekapcsolásához..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
@@ -3105,7 +3105,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle TX minute&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson a TX periódus megváltoztatásához&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az adási periódus megváltoztatása.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1395"/>
@@ -3153,7 +3153,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal report (dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelerősség riport(dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelszint riport(dB)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1466"/>
@@ -3174,7 +3174,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A CAT-ot a Hamlib-on keresztül kell beállítani, a Hamlib támogatja az S-méter adatok lekérését egyes adó-vevőkhöz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A CAT Hamlib-on keresztül történő beállításakor egyes adó-vevő típusoknál a Hamlib támogatja az S-méter adatok megjelenítését. .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1509"/>
@@ -3217,12 +3217,12 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1542"/>
         <location filename="../mainwindow.ui" line="4751"/>
         <source>AutoSeq</source>
-        <translation>AutoSeq</translation>
+        <translation>AutoVál</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1558"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Double-click on call sets TX enable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson duplán a hívójelre a TX engedélyezéséhez&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bekapcsolva hívójelre történő dupla kattintáskor engedélyezve van az adás.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1572"/>
@@ -3247,12 +3247,12 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Szélessávú dekódolás esetén lassú processzoroknál a dekódolásra váró  lista szűkítése  minimális  dekóder érzékenységgel. Mivel a szinkronizálási szint adott, a dekódoláshoz szükséges idő rövidítése érdekébe az annál alacsonyabb szintű jeleket a dekóder nem dolgozza fel. A vételi frekvenciára a beállítás nem érvényes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A CAT-ot a Hamlib-on keresztül kell beállítani, a Hamlib támogatja egyes adó-vevők kimeneti teljesítmény-adatainak lekérését.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A CAT Hamlib-en keresztül történő vezérlésekor egyes adó-vevő típusoknál  a Hamlib támogatja a teljesítmény adatok lekérését.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1906"/>
@@ -3268,7 +3268,7 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1978"/>
         <location filename="../mainwindow.ui" line="1994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be a kőrözött hívójelek listáját vesszővel elválasztva. Az AutoSeq 1..7 automatikus választás alatt a kőrözött hívójelek az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoSeq0 nem támogatja. Ha a DX Hívójel ablak üres, és a program nincs adásban, akkor a kőrözött hívójel dekódolásakor sípoló hang hallatszik, a hívójel megjelenik a DX Hívójel ablakban, és szabványos üzenetek generálódnak. Az FT8-tól eltérő módoknál: az összetett hívójeleknél az alaphívójelet kell használni a listában, néha az alaphívójel bemásolódik a dekódolt üzenetből. Mielőtt logoz ilyen QSO partnert, szükség esetén ki kell javítania az alaphívójelét az összetett hívójelére.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be a figyelni kívánt hhívójeleket vesszővel elválasztva. Az AutoVál 1..7 automatikus választás alatt a figyelt hívójelek az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoVál0 nem támogatja. Ha a DX Hívójel ablak üres, és nincs adás, akkor a figyelt hívójel dekódolásakor sípoló hang hallatszik, a hívójel megjelenik a DX Hívójel ablakban, és szabványos üzenetek generálódnak. Az FT8-tól eltérő üzemmódoknál: az összetett hívójeleknél az alap hívójelet kell használni a listában, néha az alap hívójel bemásolódik a dekódolt üzenetből. Az ilyen állomásoknál a LOG-ba történő mentés előtt, szükség esetén ki kell javítani a hívójelet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1981"/>
@@ -3290,7 +3290,7 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="2027"/>
         <location filename="../mainwindow.ui" line="2043"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be a kőrözött prefixek listáját vesszővel elválasztva Az AutoSeq 1..7 automatikus választás alatt a kőrözött prefixek az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoSeq0 nem támogatja. Összetett hívójelek esetén a prefixet a hívójel elején ismeri fel. Ha a DX Hívójel ablak üres, és a program nincs adásban, akkor a kőrözött prefix dekódolásakor sípoló hang hallatszik, a hívójel megjelenik a DX Hívójel ablakban, és szabványos üzenetek generálódnak. Az FT8-tól eltérő módoknál: az összetett hívójeleknél az alaphívójelet kell használni a listában, néha az alaphívójel bemásolódik a dekódolt üzenetből. Mielőtt logoz ilyen QSO partnert, szükség esetén ki kell javítania az alaphívójelét az összetett hívójelére.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be a figyelt prefixeket vesszővel elválasztva Az AutoVál 1..7 automatikus választás alatt a figyelt prefixek az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoVál0 nem támogatja. Összetett hívójelek esetén a prefixet a hívójel elején ismeri fel. Ha a DX Hívójel ablak üres, és nincs adás, akkor a figyelt prefix dekódolásakor sípoló hang hallatszik, a hívójel megjelenik a DX Hívójel ablakban, és szabványos üzenetek generálódnak. Az FT8-tól eltérő módoknál: az összetett hívójeleknél az alap hívójelet kell használni a listában, néha az alap hívójel bemásolódik a dekódolt üzenetből.  Az ilyen állomásoknál a LOG-ba történő mentés előtt, szükség esetén ki kell javítani a hívójelet..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2030"/>
@@ -3301,7 +3301,7 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="2060"/>
         <location filename="../mainwindow.ui" line="2076"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be vesszővel elválasztva a listát a kívánt QRA-lokátorokról, ahol csak négy karakterrács van támogatva. Az AutoSeq 1..7 automatikus választás alatt a kőrözött kockák az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoSeq0 nem támogatja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be vesszővel elválasztva a figyelt QRA lokátorokat.(Csak az első négy karaktert.). Az AutoVál 1..7  alatt a figyelt QRA-k az értesítések/prioritások szerint kerülnek feldolgozásra, ezt a funkciót az AutoVál0 nem támogatja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2063"/>
@@ -3379,7 +3379,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2468"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Monitor</translation>
+        <translation>Vétel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2499"/>
@@ -3394,7 +3394,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2544"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO meghívással AutoSeq opció &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QSO meghívással AutoVál opció &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2558"/>
@@ -3404,7 +3404,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válasz engedélyzése akkor is, ha volt már korábban QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válasz engedélyzése akkor is, ha volt már korábban QSO. AutoVál opció.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2603"/>
@@ -3537,7 +3537,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3177"/>
         <source>GenMsgs</source>
-        <translation>GenMsgs</translation>
+        <translation>ÜzenetGen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3206"/>
@@ -3814,7 +3814,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4386"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation>Válassza ki a sávokat és a napszakokat a sávugráshoz.</translation>
+        <translation>Válassza ki a sávokat és a sávváltások idejét.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4389"/>
@@ -3834,12 +3834,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4413"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation>Adás a következő 2 perces sorozaton belül.</translation>
+        <translation>Adás a következő 2 perces periódusban.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4427"/>
         <source>Tx Next</source>
-        <translation>Tx következik</translation>
+        <translation>Adás következik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4444"/>
@@ -3849,32 +3849,32 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4358"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation>Az adásra fordítható 2 perces sorozatok százalékos aránya.</translation>
+        <translation>A 2 percesadási  periódusok százalékos aránya.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1613"/>
         <source> %</source>
-        <translation type="unfinished"> %</translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT súlyozás funkció a dekódolásra váró  lista szűkítése. A dekódolt jelek medián DT értékét kell itt beállítani.Ez az érték függ a számítógép rendszeridő pontosságától. A túlterhelt sávokon a beállítandó érték közel van az átlagos időeltérés értékéhez. (Lásd Átl=). Az érték helyes beállítása a dekódolásra váró lista szűkítésével növeli a dekódolás hatékonyságát, .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> mp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
@@ -4376,27 +4376,27 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5440"/>
         <source>0  Call None</source>
-        <translation>0  Nincs hívójel</translation>
+        <translation>0  Nincs kiválasztási kritérium</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5448"/>
         <source>1  Call first</source>
-        <translation>1  Első bejövő hívójel</translation>
+        <translation>1  Válasz annak, aki először hívott</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5456"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+ Hívójel keresés a CQ üzenetekben</translation>
+        <translation>4+ CQ hívások keresése és meghívása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5464"/>
         <source>2  Call decoded till start of TX interval</source>
-        <translation>2  A hívójel dekódolva van a TX intervallum kezdete előtt</translation>
+        <translation>2  A hívójel dekódolva van az adási periódus kezdete előtt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5472"/>
         <source>3  Call based on end of decoding</source>
-        <translation>3  Megvárja az összes hívójel dekódolását</translation>
+        <translation>3  Válasz az összes hívójel dekódolása után</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5480"/>
@@ -4446,7 +4446,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5604"/>
         <source>Max distance instead of best SNR</source>
-        <translation>Max. távolság a legjobb SNR helyett</translation>
+        <translation>Maximális távolság a legjobb SNRhelyett</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5612"/>
@@ -4496,7 +4496,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5725"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Kapcsolja ki a szűrőt 73 küldésekor</translation>
+        <translation>A szűrő kikapcsolása 73 küldésekor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5733"/>
@@ -4511,7 +4511,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5749"/>
         <source>Display output power</source>
-        <translation>A kimeneti teljesítmény megjelenítése</translation>
+        <translation>A kimenő teljesítmény megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5757"/>
@@ -4708,7 +4708,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="1778"/>
         <source>lost audio </source>
-        <translation>elveszített audio </translation>
+        <translation>Elvesztett audio blokkok </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1862"/>
@@ -4718,17 +4718,17 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="1939"/>
         <source>Error in SoundInput</source>
-        <translation>Hiba a SoundInput-ban</translation>
+        <translation>Hiba a hang bemeneten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1943"/>
         <source>Error in SoundOutput</source>
-        <translation>Hiba a SoundOutput-ban</translation>
+        <translation>Hiba a hang kimeneten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2035"/>
         <source>Pwr</source>
-        <translation>Power</translation>
+        <translation>Teljesítmény</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2588"/>
@@ -4745,7 +4745,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="2610"/>
         <source>Running: %1
 %2</source>
-        <translation>Futás: %1
+        <translation>Fut: %1
 %2</translation>
     </message>
     <message>
@@ -4793,31 +4793,31 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="2899"/>
         <source>AutoSeq1</source>
-        <translation>AutoSeq1</translation>
+        <translation>AutoVál1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2908"/>
         <location filename="../mainwindow.cpp" line="2934"/>
         <source>AutoSeq2</source>
-        <translation>AutoSeq2</translation>
+        <translation>AutoVál2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2909"/>
         <location filename="../mainwindow.cpp" line="2930"/>
         <source>AutoSeq6</source>
-        <translation>AutoSeq6</translation>
+        <translation>AutoVál6</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2918"/>
         <location filename="../mainwindow.cpp" line="2935"/>
         <source>AutoSeq3</source>
-        <translation>AutoSeq3</translation>
+        <translation>AutoVál3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2919"/>
         <location filename="../mainwindow.cpp" line="2931"/>
         <source>AutoSeq7</source>
-        <translation>AutoSeq7</translation>
+        <translation>AutoVál7</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3013"/>
@@ -4852,7 +4852,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="3110"/>
         <source>Special Mouse Commands</source>
-        <translation>Különleges egérparancsok</translation>
+        <translation>Speciális egérparancsok</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3587"/>
@@ -4869,7 +4869,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="3587"/>
         <location filename="../mainwindow.cpp" line="3606"/>
         <source>Lag=</source>
-        <translation>Késl=</translation>
+        <translation>Késés=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3593"/>
@@ -5019,7 +5019,7 @@ már a CALL3.TXT-ben van, szeretné cserélni?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a Tx frekvencia rögzítéséhez az Rx AF frekvenciához.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás megszűntetéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7105"/>
@@ -5380,7 +5380,7 @@ Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation>Hiba a &quot;%1&quot; vízesés palettafájl megnyitásakorl: %2.</translation>
+        <translation>Hiba a &quot;%1&quot; vízeséspaletta fájl megnyitásakorl: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="258"/>
@@ -6084,7 +6084,7 @@ az Rx_frekvencia ablakban</translation>
     <message>
         <location filename="../Configuration.ui" line="474"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation>A dekódolás csak a Monitor gomb megnyomásakor kezdődik el.</translation>
+        <translation>A dekódolás csak a Vétel gomb megnyomásakor kezdődik el.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="477"/>
@@ -6145,7 +6145,7 @@ az Rx_frekvencia ablakban</translation>
     <message>
         <location filename="../Configuration.ui" line="597"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelölje be ezt, ha automatikusan vissza szeretne térni az utoljára megfigyelt frekvenciára, amikor a monitor engedélyezve van; hagyja bejelölés nélkül, ha azt akarja, hogy a jelenlegi rig frekvencia maradjon.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelölje be, ha automatikusan vissza szeretne térni az utoljára megfigyelt frekvenciára, amikor a vétel engedélyezve van; hagyja bejelölés nélkül, ha azt akarja, hogy a jelenlegi frekvencián maradjon.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
@@ -6222,7 +6222,7 @@ csendes időszakban küldi el, amikor a dekódolás megtörtént.</translation>
     <message>
         <location filename="../Configuration.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S-méter adatok kérése az adó-vevőtől: A CAT-ot a Hamlib-en keresztül kell beállítani; a Hamlib támogatja az S-méter adatok lekérését egyes adó-vevőktől.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S-méter adatok kérése az adó-vevőtől: A CAT Hamlib-en keresztül történő vezérlésekor egyes adó-vevő típusoknál  a Hamlib támogatja az S-méter adatok lekérését.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="782"/>
@@ -6232,7 +6232,7 @@ csendes időszakban küldi el, amikor a dekódolás megtörtént.</translation>
     <message>
         <location filename="../Configuration.ui" line="811"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kimeneti teljesítményadatok kérése az adó-vevőtől: A CAT-ot a Hamlib-on keresztül kell beállítani, a Hamlib támogatja egyes adó-vevőktől a kimeneti teljesítményadatok lekérését.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kimeneti teljesítményadatok kérése az adó-vevőtől: A CAT Hamlib-en keresztül történő vezérlésekor egyes adó-vevő típusoknál  a Hamlib támogatja a teljesítmény adatok lekérését..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="814"/>
@@ -6764,12 +6764,12 @@ a Stereo-t.</translation>
     <message>
         <location filename="../Configuration.ui" line="1966"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: adjon CQ-t, ha a számláló végigért.  AutoSeq 6/7: a dekódolt üzenetekben keressen érvényes &apos;CQ&apos; vagy &apos;73&apos; üzenetet, ha nem található ilyen üzenet, adjon CQ-t.  Tx STOP, ha az Egyetlen_QSO opció engedélyezve van az AutoSeq fülön.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoVál 1..3: adjon CQ-t, ha a számláló végigért.  AutoVál 6/7: a dekódolt üzenetekben keressen &apos;CQ&apos; vagy &apos;73&apos; üzenetet, ha nincsenek ilyen üzenetek, adjon CQ-t.Állítsa meg az adást, ha a Meghívás opció be van kapcsolva..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Számlálók. Keresés a dekódolt üzenetekben, CQ küldése, vagy az adás letiltása, ha:</translation>
+        <translation>Számlálók. CQ hívás, vagy válasz adás letiltása, ha:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2001"/>
@@ -6787,17 +6787,17 @@ a Stereo-t.</translation>
     <message>
         <location filename="../Configuration.ui" line="2076"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
-        <translation>küldött RR73 (73)-t, válaszként a beérkező RRR(RR73)-re</translation>
+        <translation>RR73 (73)-at adott, válaszként a beérkező RRR(RR73)-ra</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2115"/>
         <source>answered to someone&apos;s CQ with no response</source>
-        <translation>válaszolt valakinek a CQ-jára, de választ nem kapott</translation>
+        <translation>Válaszolt valakinek a CQ-jára, de választ nem kapott</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2128"/>
         <source>sent report answering to incoming report</source>
-        <translation>küldött riportot, válaszként a beérkező riportra</translation>
+        <translation>Riportot adott a válaszként a vett riportra</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2162"/>
@@ -6807,7 +6807,7 @@ a Stereo-t.</translation>
     <message>
         <location filename="../Configuration.ui" line="2165"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Adás leáll, ha az operátor, akit hívtam, már válaszolt egy másik állomásnak</translation>
+        <translation>Álljon le az adás, ha a hívott állomás másnak válaszol.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2172"/>
@@ -7044,10 +7044,9 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>A program elküldheti az ön állomásának adatait és az összes
-dekódolt jelet, mint Dx jelentést a http://pskreporter.info webhelyre.
-Ezt fordított jeladó (reverse beacon) elemzésre használják, ami nagyon hasznos
-a terjedés és a rendszer teljesítményének értékelésére.</translation>
+        <translation>A program elküldheti az állomás adatait és a dekódolt adatokat,
+ mint Dx jelentést a http://pskreporter.info webhelyre.
+Ezek az adatok a terjedés és a rendszer lehetőségeinek elemzését segítik.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2783"/>
