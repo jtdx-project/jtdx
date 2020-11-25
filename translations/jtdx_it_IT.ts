@@ -3247,7 +3247,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Assottigliamento delle versioni candidate. Questa funzione è dedicata alla decodifica a banda larga con CPU lente e impostazione della sensibilità del decodificatore a banda larga &quot;minima&quot;. L&apos;elenco delle versioni candidate viene ordinato in base al livello del modello di sincronizzazione con il fattore di peso DT applicato. Le versioni candidate con un valore basso non verranno elaborate dal decodificatore per ridurre il tempo impiegato per la decodifica dell&apos;intervallo. Questa funzione non è applicata alla frequenza QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1704"/>
@@ -3869,17 +3869,17 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funzionalità di ponderazione DT per l&apos;opzione di assottigliamento dell&apos;elenco di candidati, il valore mediano della distribuzione DT dei segnali decodificati deve essere impostato lì. Questo valore dipende dalla precisione della sincronizzazione dell&apos;orologio di sistema e dalle bande sovraffollate è vicino al valore DT medio dei segnali decodificati. Il valore corretto aumenta l&apos;efficienza di decodifica nell&apos;opzione di diradamento dell&apos;elenco di candidati.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
