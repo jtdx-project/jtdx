@@ -169,6 +169,7 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
           if (algo & 128) a_init=-1;
           else a_init=4;
           if (algo & 64) b_init=-1;
+          else if (algo & 256) b_init=8;
           else b_init=4;
           if (myas_active && _data.size() > 0) { //my CQ answers && _CQ.count > 0 
             QSO tt,t;

@@ -4767,6 +4767,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="separator"/>
     <addaction name="actionCallPriorityAndSearchCQ"/>
     <addaction name="actionCallWorkedB4"/>
+    <addaction name="actionCallHigherNewCall"/>
     <addaction name="separator"/>
     <addaction name="actionReport_message_priority"/>
     <addaction name="actionMaxDistance"/>
@@ -5680,6 +5681,14 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Call worked B4 callsigns</string>
+   </property>
+  </action>
+  <action name="actionCallHigherNewCall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Call higher than new calls priority callsigns</string>
    </property>
   </action>
   <action name="actionAcceptUDPCQ">
