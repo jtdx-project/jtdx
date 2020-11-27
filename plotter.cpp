@@ -533,12 +533,19 @@ void CPlotter::leaveEvent(QEvent *event)
     event->ignore();
 }
 
-void CPlotter::mouseMoveEvent (QMouseEvent * event)
+ void CPlotter::mouseMoveEvent (QMouseEvent * event)
 {
     int x = event->x();
     if(x < 0) x = 0;
     if(x>m_Size.width()) x = m_Size.width();
-
+    if(m_freq) {
+      QPoint pos = event->globalPos();
+      QFont font = CPlotter::font ();
+      QString freq=QString::number(int(FreqfromX(x)));
+      int z = font.pointSize()*freq.length()+64/font.pointSize();
+      pos+=QPoint(-z,-10);
+      QToolTip::showText(pos,freq);
+    }
     m_lastMouseX = x;
     update();
 
@@ -603,11 +610,17 @@ void CPlotter::setNsps(double trperiod, int nsps)                    //setNsps
 }
 
 void CPlotter::setBars(bool b)
-{ 
-  setMouseTracking(b);
+{
+  if(!m_freq) setMouseTracking(b);
   m_bars=b;
   DrawOverlay();
   update();
+}
+
+void CPlotter::showFreq(bool b)
+{
+  if(!m_bars) setMouseTracking(b);
+  m_freq=b;
 }
 
 void CPlotter::setTxFreq(int n) { m_txFreq=n; DrawOverlay(); update(); }

@@ -79,6 +79,7 @@ public:
   void setTimestamp(int n);
   void setScale(bool b);
   void setBars(bool b);
+  void showFreq(bool b);
   void setFlatten(bool b);
   void setTol(int n);
   void setRxBand(QString band);
@@ -108,6 +109,7 @@ private:
   bool    m_filter;
   bool    m_houndFilter;
   bool	  m_bars;
+  bool    m_freq;
   float   m_fSpan;
 
   qint32  m_plotZero;

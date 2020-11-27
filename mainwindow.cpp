@@ -1043,6 +1043,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_maxDistance=ui->actionMaxDistance->isChecked();
   m_answerWorkedB4=ui->actionAnswerWorkedB4->isChecked();
   m_callWorkedB4=ui->actionCallWorkedB4->isChecked();
+  m_callHigherNewCall=ui->actionCallHigherNewCall->isChecked();
   m_singleshot=ui->actionSingleShot->isChecked();
   m_autofilter=ui->actionAutoFilter->isChecked();
   if(ui->actionEnable_hound_mode->isChecked()) on_actionEnable_hound_mode_toggled(true);
@@ -1180,6 +1181,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("MaxDistance",ui->actionMaxDistance->isChecked());
   m_settings->setValue("AnswerWorkedB4",ui->actionAnswerWorkedB4->isChecked());
   m_settings->setValue("CallWorkedB4",ui->actionCallWorkedB4->isChecked());
+  m_settings->setValue("CallHigherNewCall",ui->actionCallHigherNewCall->isChecked());
   m_settings->setValue("SingleShotQSO",ui->actionSingleShot->isChecked());
   m_settings->setValue("AutoFilter",ui->actionAutoFilter->isChecked());
   m_settings->setValue("EnableHoundMode",ui->actionEnable_hound_mode->isChecked());  
@@ -1369,6 +1371,7 @@ void MainWindow::readSettings()
   ui->actionMaxDistance->setChecked(m_settings->value("MaxDistance",false).toBool());
   ui->actionAnswerWorkedB4->setChecked(m_settings->value("AnswerWorkedB4",false).toBool());
   ui->actionCallWorkedB4->setChecked(m_settings->value("CallWorkedB4",false).toBool());
+  ui->actionCallHigherNewCall->setChecked(m_settings->value("CallHigherNewCall",false).toBool());
   ui->actionSingleShot->setChecked(m_settings->value("SingleShotQSO",false).toBool());
   ui->actionAutoFilter->setChecked(m_settings->value("AutoFilter",false).toBool());
   ui->actionEnable_hound_mode->setChecked(m_settings->value("EnableHoundMode",false).toBool());
@@ -2950,6 +2953,8 @@ void MainWindow::on_actionAnswerWorkedB4_toggled(bool checked)
 
 void MainWindow::on_actionCallWorkedB4_toggled(bool checked) { m_callWorkedB4=checked; }
 
+void MainWindow::on_actionCallHigherNewCall_toggled(bool checked) { m_callHigherNewCall=checked; }
+
 void MainWindow::on_actionSingleShot_toggled(bool checked)
 {
   m_singleshot=checked;
@@ -3394,6 +3399,7 @@ void MainWindow::process_Auto()
     else { if (m_counter > 0) m_counter -= 1; time=0; } //highiest priority, evaluating response to CQ only
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_answerWorkedB4) time |= 128;
     if ((!m_config.newDXCC() && !m_config.newGrid() && !m_config.newPx() && !m_config.newCall()) || m_callWorkedB4) time |= 64;
+    else if (m_callHigherNewCall) time |= 256;
     if (m_rprtPriority) time |= 16;
     if (m_maxDistance) time |= 32;
     m_status = m_qsoHistory.autoseq(hisCall,grid,rpt,rx,tx,time,count,prio,mode);

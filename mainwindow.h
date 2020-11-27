@@ -189,6 +189,7 @@ private slots:
   void on_actionMaxDistance_toggled(bool checked);
   void on_actionAnswerWorkedB4_toggled(bool checked);
   void on_actionCallWorkedB4_toggled(bool checked);
+  void on_actionCallHigherNewCall_toggled(bool checked);
   void on_actionSingleShot_toggled(bool checked);
   void on_actionAutoFilter_toggled(bool checked);
   void on_actionEnable_hound_mode_toggled(bool checked);
@@ -561,6 +562,7 @@ private:
   bool m_maxDistance;
   bool m_answerWorkedB4;
   bool m_callWorkedB4;
+  bool m_callHigherNewCall;
   bool m_singleshot;
   bool m_autofilter;
   bool m_houndMode;

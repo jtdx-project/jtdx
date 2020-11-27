@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
+    <width>834</width>
     <height>520</height>
    </rect>
   </property>
@@ -86,31 +86,6 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="cbBars">
-      <property name="geometry">
-       <rect>
-        <x>85</x>
-        <y>10</y>
-        <width>65</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>65</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="text">
-       <string>Bars</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
     </widget>
    </item>
    <item row="2" column="0">
@@ -121,7 +96,7 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0,0,0,0,1,0,1,0,0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0">
       <property name="spacing">
        <number>2</number>
       </property>
@@ -144,11 +119,48 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>3</width>
+          <width>2</width>
           <height>20</height>
          </size>
         </property>
        </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QCheckBox" name="cbBars">
+          <property name="maximumSize">
+           <size>
+            <width>65</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Bars</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbFreq">
+          <property name="text">
+           <string>Freq</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_1">
@@ -567,7 +579,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>80</width>
+            <width>65</width>
             <height>0</height>
            </size>
           </property>
@@ -604,7 +616,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>80</width>
+            <width>65</width>
             <height>0</height>
            </size>
           </property>
@@ -669,7 +681,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>80</width>
+            <width>65</width>
             <height>0</height>
            </size>
           </property>
@@ -706,7 +718,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>80</width>
+            <width>65</width>
             <height>0</height>
            </size>
           </property>
@@ -760,7 +772,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>3</width>
+          <width>2</width>
           <height>20</height>
          </size>
         </property>
