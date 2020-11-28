@@ -4489,7 +4489,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicatius superiors als indicatius nous amb prioritat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5714,7 +5714,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Freq</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
