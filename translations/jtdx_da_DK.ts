@@ -4487,7 +4487,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaldesignaler med msg indeholdende CQ eller 73 får højeste  prioritet lige som  nye kaldesignaler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5707,7 +5707,7 @@ Fejl (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekv</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>

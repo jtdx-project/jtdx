@@ -4382,7 +4382,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5457"/>
         <source>4+ Call and search through CQ messages</source>
-        <translation>4+  CQメッセージによる呼び出しと検索</translation>
+        <translation>4+ CQを出し、呼ばれない時はCQ局を検索して呼ぶ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5481"/>
@@ -4467,7 +4467,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>優先度付のない新局のみの場合にはCQを出す</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5707,12 +5707,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="142"/>
         <source>Bars</source>
-        <translation></translation>
+        <translation>バー表示</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>DF表示</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="234"/>
