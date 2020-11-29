@@ -1963,6 +1963,8 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 
   if (QDialog::Accepted == m_config.exec ()) {
       if(m_config.write_decoded_debug()) writeToALLTXT("Configuration settings change accepted");
+      ui->decodedTextBrowser->setConfiguration (&m_config);
+      ui->decodedTextBrowser2->setConfiguration (&m_config);
       if (m_config.useDarkStyle() != m_useDarkStyle) {
         m_useDarkStyle = m_config.useDarkStyle();
         styleChanged();

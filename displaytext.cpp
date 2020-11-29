@@ -23,7 +23,71 @@ DisplayText::DisplayText(QWidget *parent) :
 
 void DisplayText::setConfiguration(Configuration const * config)
 {
-  m_config = config;
+  useDarkStyle_ = config->useDarkStyle();
+  displayCountryName_ = config->countryName();
+  displayCountryPrefix_ = config->countryPrefix();
+  displayNewCQZ_ = config->newCQZ();
+  displayNewCQZBand_ = config->newCQZBand();
+  displayNewCQZBandMode_ = config->newCQZBandMode();
+  displayNewITUZ_ = config->newITUZ();
+  displayNewITUZBand_ = config->newITUZBand();
+  displayNewITUZBandMode_ = config->newITUZBandMode();
+  displayNewDXCC_ = config->newDXCC();
+  displayNewDXCCBand_ = config->newDXCCBand();
+  displayNewDXCCBandMode_ = config->newDXCCBandMode();
+  displayNewGrid_ = config->newGrid();
+  displayNewGridBand_ = config->newGridBand();
+  displayNewGridBandMode_ = config->newGridBandMode();
+  displayNewPx_ = config->newPx();
+  displayNewPxBand_ = config->newPxBand();
+  displayNewPxBandMode_ = config->newPxBandMode();
+  displayNewCall_ = config->newCall();
+  displayNewCallBand_ = config->newCallBand();
+  displayNewCallBandMode_ = config->newCallBandMode();
+  displayPotential_ = config->newPotential();
+  displayTxtColor_ = config->txtColor();
+  displayWorkedColor_ = config->workedColor();
+  displayWorkedStriked_ = config->workedStriked();
+  displayWorkedUnderlined_ = config->workedUnderlined();
+  displayWorkedDontShow_ = config->workedDontShow();
+  beepOnNewCQZ_ = config->beepOnNewCQZ();
+  beepOnNewITUZ_ = config->beepOnNewITUZ();
+  beepOnNewDXCC_ = config->beepOnNewDXCC();
+  beepOnNewGrid_ = config->beepOnNewGrid();
+  beepOnNewPx_ = config->beepOnNewPx();
+  beepOnNewCall_ = config->beepOnNewCall();
+  beepOnMyCall_ = config->beepOnMyCall();
+  RR73Marker_ = config->RR73Marker();
+  otherMessagesMarker_ = config->otherMessagesMarker();
+  enableCountryFilter_ = config->enableCountryFilter();
+  enableCallsignFilter_ = config->enableCallsignFilter();
+  hidefree_ = config->hidefree();
+  showcq_ = config->showcq();
+  showcqrrr73_ = config->showcqrrr73();
+  showcq73_ = config->showcq73();
+  redMarker_ = config->redMarker();
+  blueMarker_ = config->blueMarker();
+  hide_TX_messages_ = config->hide_TX_messages();
+  color_MyCall_ = config->color_MyCall().name();
+  color_CQ_ = config->color_CQ().name();
+  color_StandardCall_ = config->color_StandardCall().name();
+  color_WorkedCall_ = config->color_WorkedCall().name();
+  color_NewCQZ_ = config->color_NewCQZ().name();
+  color_NewCQZBand_ = config->color_NewCQZBand().name();
+  color_NewITUZ_ = config->color_NewITUZ().name();
+  color_NewITUZBand_ = config->color_NewITUZBand().name();
+  color_NewDXCC_ = config->color_NewDXCC().name();
+  color_NewDXCCBand_ = config->color_NewDXCCBand().name();
+  color_NewGrid_ = config->color_NewGrid().name();
+  color_NewGridBand_ = config->color_NewGridBand().name();
+  color_NewPx_ = config->color_NewPx().name();
+  color_NewPxBand_ = config->color_NewPxBand().name();
+  color_NewCall_ = config->color_NewCall().name();
+  color_NewCallBand_ = config->color_NewCallBand().name();
+  hideContinents_ = config->hideContinents();
+  countries_ = config->countries();
+  callsigns_ = config->callsigns();
+   
 }
 void DisplayText::setContentFont(QFont const& font)
 {
@@ -56,10 +120,10 @@ void DisplayText::mouseDoubleClickEvent(QMouseEvent *e)
 
 void DisplayText::insertLineSpacer(QString const& line)
 {
-    appendText (line, "#d3d3d3", "#000000", 0, " ", " ", true);
+    appendText (line, "#d3d3d3", "#000000", 0, " ", "#000000", " ", true);
 }
 
-void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite)
+void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite)
 {
     QString servbg, s;
     if (std_type == 2) servbg = "#ff0000";
@@ -107,9 +171,10 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
         m_charFormat.setFontStrikeOut(false);
         m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
         m_charFormat.setBackground (QColor(Radio::convert_dark(servbg,useDarkStyle_)));
-        m_charFormat.setForeground(QColor(Radio::convert_dark("#000000",useDarkStyle_)));
+        m_charFormat.setForeground(QColor(Radio::convert_dark(servis_color,useDarkStyle_)));
         cursor.insertText (servis.left(1),m_charFormat);
         m_charFormat.setBackground (QColor(Radio::convert_dark("#ffffff",useDarkStyle_)));
+        m_charFormat.setForeground(QColor(Radio::convert_dark("#000000",useDarkStyle_)));
         cursor.insertText (cntry,m_charFormat);
     } else {
         cursor.insertText (text.trimmed(),m_charFormat);
@@ -130,6 +195,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     QString bgColor = "#ffffff";
     QString txtColor = "#000000";
     QString swpColor = "";
+    QString servisColor = "#000000";
     QString messageText;
     bool forceBold = false;
     bool strikethrough = false;
@@ -142,40 +208,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     bool new_marker = false;
     int inotified = 0;
     int std_type = 0;
-    useDarkStyle_ = m_config->useDarkStyle();
-    bool displayCountryName = m_config->countryName();
-    bool displayCountryPrefix = m_config->countryPrefix();
-
-    bool displayNewCQZ = m_config->newCQZ();
-    bool displayNewCQZBand = m_config->newCQZBand();
-    bool displayNewCQZBandMode = m_config->newCQZBandMode();
-    bool displayNewITUZ = m_config->newITUZ();
-    bool displayNewITUZBand = m_config->newITUZBand();
-    bool displayNewITUZBandMode = m_config->newITUZBandMode();
-    bool displayNewDXCC = m_config->newDXCC();
-    bool displayNewDXCCBand = m_config->newDXCCBand();
-    bool displayNewDXCCBandMode = m_config->newDXCCBandMode();
-    bool displayNewGrid = m_config->newGrid();
-    bool displayNewGridBand = m_config->newGridBand();
-    bool displayNewGridBandMode = m_config->newGridBandMode();
-    bool displayNewPx = m_config->newPx();
-    bool displayNewPxBand = m_config->newPxBand();
-    bool displayNewPxBandMode = m_config->newPxBandMode();
-    bool displayNewCall = m_config->newCall();
-    bool displayNewCallBand = m_config->newCallBand();
-    bool displayNewCallBandMode = m_config->newCallBandMode();
-    bool displayPotential = m_config->newPotential();
-    bool displayTxtColor = m_config->txtColor();
-    bool displayWorkedColor = m_config->workedColor();
-    bool displayWorkedStriked = m_config->workedStriked();
-    bool displayWorkedUnderlined = m_config->workedUnderlined();
-    bool displayWorkedDontShow = m_config->workedDontShow();
-    bool beepOnNewCQZ = m_config->beepOnNewCQZ();
-    bool beepOnNewITUZ = m_config->beepOnNewITUZ();
-    bool beepOnNewDXCC = m_config->beepOnNewDXCC();
-    bool beepOnNewGrid = m_config->beepOnNewGrid();
-    bool beepOnNewPx = m_config->beepOnNewPx();
-    bool beepOnNewCall = m_config->beepOnNewCall();
     bool bwantedCall = false;
     bool bwantedPrefix = false;
     bool bwantedGrid = false;
@@ -220,7 +252,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 tyyp = "";
                 if (qAbs(rx_frq - decodedText->frequencyOffset()) < 10 ) {
                     std_type = 2;
-                    txtColor = m_config->color_MyCall().name();
+                    txtColor = color_MyCall_;
                      
                     if (!grid.isEmpty () && grid != "RR73" && hisCall.isEmpty ()) {
                         status = QsoHistory::RCALL;
@@ -259,16 +291,16 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 }
             } else {
                 std_type = 1;
-                txtColor = m_config->color_CQ().name();
+                txtColor = color_CQ_;
                 status = QsoHistory::RCQ;
                 param = grid;
             }
         }
         else if (!myCall.isEmpty () && Radio::base_callsign (decodedText->call()) == myCall) {
                 std_type = 2;
-                txtColor = m_config->color_MyCall().name();
+                txtColor = color_MyCall_;
                 actwind = true;
-                if (m_config->beepOnMyCall()) {
+                if (beepOnMyCall_) {
                     beep = true;
                 }
                 decodedText->deCallAndGrid(checkCall, grid);
@@ -333,7 +365,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                         if (!hisCall.isEmpty () && checkCall.contains(hisCall)) qsoHistory.rx(checkCall,decodedText->frequencyOffset());
                     } else if (!hisCall.isEmpty () && checkCall.contains(hisCall) && qAbs(rx_frq - decodedText->frequencyOffset()) < 10 && decodedText->message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { //nonstandard73 with hisCall
                         std_type = 2;
-                        txtColor = m_config->color_MyCall().name();
+                        txtColor = color_MyCall_;
                         status = QsoHistory::R73;
                         mystatus_ = status;
                     } else if (!hisCall.isEmpty () && checkCall.contains(hisCall)) {
@@ -342,14 +374,14 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     } else {
                         checkCall = "";
                     }
-                    if (!checkCall.isEmpty () && m_config->RR73Marker() && (decodedText->message().contains("RR73") || decodedText->message().contains(" 73"))) {
+                    if (!checkCall.isEmpty () && RR73Marker_ && (decodedText->message().contains("RR73") || decodedText->message().contains(" 73"))) {
                         std_type = 4;
-                        txtColor = m_config->color_CQ().name();
+                        txtColor = color_CQ_;
                         status = QsoHistory::RFIN;
                     }
                 } else if (std_type == 0 && !hisCall.isEmpty () && qAbs(rx_frq - decodedText->frequencyOffset()) < 10 && decodedText->message().contains("73") && mystatus_ >= QsoHistory::RRR && mystatus_ != QsoHistory::FIN) { // nonstandard 73 in my rx
                     std_type = 2;
-                    txtColor = m_config->color_MyCall().name();
+                    txtColor = color_MyCall_;
                     checkCall = hisCall;
                     status = QsoHistory::R73;
                     mystatus_ = status;
@@ -372,9 +404,12 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         bool gridB4BandMode = true;
 
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
-        if (!lotw.isEmpty ()) priority = 1;
-        if (displayPotential && std_type == 3) {
-            txtColor = m_config->color_StandardCall().name();
+        if (!lotw.isEmpty ()) {
+            priority = 1;
+            if (txtColor == color_CQ_) servisColor = txtColor;
+        }
+        if (displayPotential_ && std_type == 3) {
+            txtColor = color_StandardCall_;
         }
         if (app_mode == "JT9+JT65") {
             if (decodedText->isJT9()) {
@@ -385,15 +420,15 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         } else {
             checkMode = app_mode;
         }
-        if (!jt65bc && (displayCountryName || displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx)) {
-            if (!displayNewCQZ && !displayNewITUZ && !displayNewDXCC && displayCountryName && !displayNewCall && !displayNewPx) {
+        if (!jt65bc && (displayCountryName_ || displayNewCQZ_ || displayNewITUZ_ || displayNewDXCC_ || displayNewCall_ || displayNewGrid_ || displayNewPx_)) {
+            if (!displayNewCQZ_ && !displayNewITUZ_ && !displayNewDXCC_ && displayCountryName_ && !displayNewCall_ && !displayNewPx_) {
                         logBook.getDXCC(/*in*/ checkCall, /*out*/ countryName);
                     }
-            if (displayNewCQZ) {
-                if (displayNewCQZBand || displayNewCQZBandMode) {
-                    if (displayNewCQZBand && displayNewCQZBandMode) {
+            if (displayNewCQZ_) {
+                if (displayNewCQZBand_ || displayNewCQZBandMode_) {
+                    if (displayNewCQZBand_ && displayNewCQZBandMode_) {
                         logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewCQZBand){
+                    } else if (displayNewCQZBand_){
                         logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchCQZ(/*in*/checkCall,/*out*/countryName,cqzB4,cqzB4BandMode,/*in*/0,checkMode);
@@ -402,11 +437,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     logBook.matchCQZ(/*in*/ checkCall, /*out*/ countryName, cqzB4 ,cqzB4BandMode);
                 }
             }
-            if (displayNewITUZ) {
-                if (displayNewITUZBand || displayNewITUZBandMode) {
-                    if (displayNewITUZBand && displayNewITUZBandMode) {
+            if (displayNewITUZ_) {
+                if (displayNewITUZBand_ || displayNewITUZBandMode_) {
+                    if (displayNewITUZBand_ && displayNewITUZBandMode_) {
                         logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewITUZBand){
+                    } else if (displayNewITUZBand_){
                         logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchITUZ(/*in*/checkCall,/*out*/countryName,ituzB4,ituzB4BandMode,/*in*/0,checkMode);
@@ -415,11 +450,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     logBook.matchITUZ(/*in*/ checkCall, /*out*/ countryName, ituzB4 ,ituzB4BandMode);
                 }
             }
-            if (displayNewDXCC) {
-                if (displayNewDXCCBand || displayNewDXCCBandMode) {
-                    if (displayNewDXCCBand && displayNewDXCCBandMode) {
+            if (displayNewDXCC_) {
+                if (displayNewDXCCBand_ || displayNewDXCCBandMode_) {
+                    if (displayNewDXCCBand_ && displayNewDXCCBandMode_) {
                         logBook.matchDXCC(/*in*/checkCall,/*out*/countryName,countryB4,countryB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewDXCCBand){
+                    } else if (displayNewDXCCBand_){
                         logBook.matchDXCC(/*in*/checkCall,/*out*/countryName,countryB4,countryB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchDXCC(/*in*/checkCall,/*out*/countryName,countryB4,countryB4BandMode,/*in*/0,checkMode);
@@ -428,11 +463,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     logBook.matchDXCC(/*in*/ checkCall, /*out*/ countryName, countryB4 ,countryB4BandMode);
                 }
             }
-            if (displayNewGrid) {
-                if (displayNewGridBand || displayNewGridBandMode) {
-                    if (displayNewGridBand && displayNewGridBandMode) {
+            if (displayNewGrid_) {
+                if (displayNewGridBand_ || displayNewGridBandMode_) {
+                    if (displayNewGridBand_ && displayNewGridBandMode_) {
                         logBook.matchGrid(/*in*/grid.trimmed(),/*out*/gridB4,gridB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewGridBand) {
+                    } else if (displayNewGridBand_) {
                         logBook.matchGrid(/*in*/grid.trimmed(),/*out*/gridB4,gridB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchGrid(/*in*/grid.trimmed(),/*out*/gridB4,gridB4BandMode,/*in*/0,checkMode);
@@ -441,11 +476,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     logBook.matchGrid(/*in*/ grid.trimmed(), /*out*/ gridB4 ,gridB4BandMode);
                 }
             }
-            if (displayNewPx) {
-                if (displayNewPxBand || displayNewPxBandMode) {
-                    if (displayNewPxBand && displayNewPxBandMode) {
+            if (displayNewPx_) {
+                if (displayNewPxBand_ || displayNewPxBandMode_) {
+                    if (displayNewPxBand_ && displayNewPxBandMode_) {
                         logBook.matchPX(/*in*/checkCall,/*out*/countryName,pxB4,pxB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewPxBand) {
+                    } else if (displayNewPxBand_) {
                         logBook.matchPX(/*in*/checkCall,/*out*/countryName,pxB4,pxB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchPX(/*in*/checkCall,/*out*/countryName,pxB4,pxB4BandMode,/*in*/0,checkMode);
@@ -454,11 +489,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     logBook.matchPX(/*in*/ checkCall, /*out*/ countryName, pxB4 ,pxB4BandMode);
                 }
             }
-            if (displayNewCall) {
-                if (displayNewCallBand || displayNewCallBandMode) {
-                    if (displayNewCallBand && displayNewCallBandMode) {
+            if (displayNewCall_) {
+                if (displayNewCallBand_ || displayNewCallBandMode_) {
+                    if (displayNewCallBand_ && displayNewCallBandMode_) {
                         logBook.matchCall(/*in*/checkCall,/*out*/countryName,callB4,callB4BandMode,/*in*/dialFreq,checkMode);
-                    } else if (displayNewCallBand) {
+                    } else if (displayNewCallBand_) {
                         logBook.matchCall(/*in*/checkCall,/*out*/countryName,callB4,callB4BandMode,/*in*/dialFreq);
                     } else {
                         logBook.matchCall(/*in*/checkCall,/*out*/countryName,callB4,callB4BandMode,/*in*/0,checkMode);
@@ -468,249 +503,249 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 }
             }
 
-            if (displayNewCQZ || displayNewITUZ || displayNewDXCC || displayNewCall || displayNewGrid || displayNewPx) {
+            if (displayNewCQZ_ || displayNewITUZ_ || displayNewDXCC_ || displayNewCall_ || displayNewGrid_ || displayNewPx_) {
 //Worked
-                if ((displayPotential && std_type == 3) || (std_type != 3)) {
-                    if (displayWorkedColor) {
-                        bgColor = m_config->color_WorkedCall().name();
+                if ((displayPotential_ && std_type == 3) || (std_type != 3)) {
+                    if (displayWorkedColor_) {
+                        bgColor = color_WorkedCall_;
                     }
-                    if (displayWorkedStriked) {
+                    if (displayWorkedStriked_) {
                         strikethrough = true;
-                    } else if (displayWorkedUnderlined) {
+                    } else if (displayWorkedUnderlined_) {
                         underlined = true;
                     }
-                } else if (displayWorkedColor && m_config->otherMessagesMarker()) servis += m_config->color_WorkedCall().name();
+                } else if (displayWorkedColor_ && otherMessagesMarker_) servis += color_WorkedCall_;
 
-                if (displayNewCQZ && !cqzB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                if (displayNewCQZ_ && !cqzB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewCQZ().name();
+                        bgColor = color_NewCQZ_;
                         if (!lotw.isEmpty ()) priority = 31;
                         else priority = 30;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewCQZ) {
+                        if (beepOnNewCQZ_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewCQZ().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewCQZ_;
                         if (!lotw.isEmpty ()) priority = 31;
                         else priority = 30;
                         new_marker = true;
                     }
-                } else if ((displayNewCQZBand || displayNewCQZBandMode) && !cqzB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewCQZBand_ || displayNewCQZBandMode_) && !cqzB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewCQZBand().name();
+                        bgColor = color_NewCQZBand_;
                         if (!lotw.isEmpty ()) priority = 29;
                         else priority = 28;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewCQZ) {
+                        if (beepOnNewCQZ_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewCQZBand().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewCQZBand_;
                         if (!lotw.isEmpty ()) priority = 29;
                         else priority = 28;
                         new_marker = true;
                     }
-                } else if (displayNewITUZ && !ituzB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if (displayNewITUZ_ && !ituzB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewITUZ().name();
+                        bgColor = color_NewITUZ_;
                         if (!lotw.isEmpty ()) priority = 27;
                         else priority = 26;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewITUZ) {
+                        if (beepOnNewITUZ_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewITUZ().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewITUZ_;
                         if (!lotw.isEmpty ()) priority = 27;
                         else priority = 26;
                         new_marker = true;
                     }
-                } else if ((displayNewITUZBand || displayNewITUZBandMode) && !ituzB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewITUZBand_ || displayNewITUZBandMode_) && !ituzB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewITUZBand().name();
+                        bgColor = color_NewITUZBand_;
                         if (!lotw.isEmpty ()) priority = 25;
                         else priority = 24;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewITUZ) {
+                        if (beepOnNewITUZ_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewITUZBand().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewITUZBand_;
                         if (!lotw.isEmpty ()) priority = 25;
                         else priority = 24;
                         new_marker = true;
                     }
-                } else if (displayNewDXCC && !countryB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if (displayNewDXCC_ && !countryB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewDXCC().name();
+                        bgColor = color_NewDXCC_;
                         if (!lotw.isEmpty ()) priority = 23;
                         else priority = 22;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewDXCC) {
+                        if (beepOnNewDXCC_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewDXCC().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewDXCC_;
                         if (!lotw.isEmpty ()) priority = 23;
                         else priority = 22;
                         new_marker = true;
                     }
-                } else if ((displayNewDXCCBand || displayNewDXCCBandMode) && !countryB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewDXCCBand_ || displayNewDXCCBandMode_) && !countryB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewDXCCBand().name();
+                        bgColor = color_NewDXCCBand_;
                         if (!lotw.isEmpty ()) priority = 21;
                         else priority = 20;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewDXCC) {
+                        if (beepOnNewDXCC_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewDXCCBand().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewDXCCBand_;
                         if (!lotw.isEmpty ()) priority = 21;
                         else priority = 20;
                         new_marker = true;
                     }
-                } else if (displayNewGrid && !gridB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if (displayNewGrid_ && !gridB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewGrid().name();
+                        bgColor = color_NewGrid_;
                         if (!lotw.isEmpty ()) priority = 16;
                         else priority = 15;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewGrid) {
+                        if (beepOnNewGrid_) {
                             beep = true;
                         }
                     }
-                    else  if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewGrid().name();
+                    else  if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewGrid_;
                         if (!lotw.isEmpty ()) priority = 16;
                         else priority = 15;
                         new_marker = true;
                     }
-                } else if ((displayNewGridBand || displayNewGridBandMode) && !gridB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewGridBand_ || displayNewGridBandMode_) && !gridB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewGridBand().name();
+                        bgColor = color_NewGridBand_;
                         if (!lotw.isEmpty ()) priority = 14;
                         else priority = 13;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewGrid) {
+                        if (beepOnNewGrid_) {
                             beep = true;
                         }
                     }
-                    else if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewGridBand().name();
+                    else if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewGridBand_;
                         if (!lotw.isEmpty ()) priority = 14;
                         else priority = 13;
                         new_marker = true;
                     }
-                } else  if (displayNewPx && !pxB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else  if (displayNewPx_ && !pxB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewPx().name();
+                        bgColor = color_NewPx_;
                         if (!lotw.isEmpty ()) priority = 12;
                         else priority = 11;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewPx) {
+                        if (beepOnNewPx_) {
                             beep = true;
                         }
                     }
-                    else  if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewPx().name();
+                    else  if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewPx_;
                         if (!lotw.isEmpty ()) priority = 12;
                         else priority = 11;
                         new_marker = true;
                     }
-                } else if ((displayNewPxBand || displayNewPxBandMode) && !pxB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewPxBand_ || displayNewPxBandMode_) && !pxB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewPxBand().name();
+                        bgColor = color_NewPxBand_;
                         if (!lotw.isEmpty ()) priority = 10;
                         else priority = 9;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewPx) {
+                        if (beepOnNewPx_) {
                             beep = true;
                         }
                     }
-                    else  if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewPxBand().name();
+                    else  if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewPxBand_;
                         if (!lotw.isEmpty ()) priority = 10;
                         else priority = 9;
                         new_marker = true;
                     }
-                } else  if (displayNewCall && !callB4) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else  if (displayNewCall_ && !callB4) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewCall().name();
+                        bgColor = color_NewCall_;
                         if (!lotw.isEmpty ()) priority = 8;
                         else priority = 7;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewCall) {
+                        if (beepOnNewCall_) {
                             beep = true;
                         }
                     }
-                    else  if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewCall().name();
+                    else  if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewCall_;
                         if (!lotw.isEmpty ()) priority = 8;
                         else priority = 7;
                         new_marker = true;
                     }
-                } else if ((displayNewCallBand || displayNewCallBandMode) && !callB4BandMode) {
-                    if ((displayPotential && std_type == 3) || std_type != 3) {
+                } else if ((displayNewCallBand_ || displayNewCallBandMode_) && !callB4BandMode) {
+                    if ((displayPotential_ && std_type == 3) || std_type != 3) {
                         forceBold = true;
-                        bgColor = m_config->color_NewCallBand().name();
+                        bgColor = color_NewCallBand_;
                         if (!lotw.isEmpty ()) priority = 6;
                         else priority = 5;
                         strikethrough = false;
                         underlined = false;
                         actwind = true;
-                        if (beepOnNewCall) {
+                        if (beepOnNewCall_) {
                             beep = true;
                         }
                     }
-                    else  if (m_config->otherMessagesMarker ()) {
-                        servis = servis.left(1) + m_config->color_NewCallBand().name();
+                    else  if (otherMessagesMarker_) {
+                        servis = servis.left(1) + color_NewCallBand_;
                         if (!lotw.isEmpty ()) priority = 6;
                         else priority = 5;
                         new_marker = true;
                     }
                 } 
-                if (displayWorkedDontShow && std_type != 2 && ((!forceBold && ((displayPotential && std_type == 3) || std_type != 3)) || (!new_marker && m_config->otherMessagesMarker() && std_type == 3))) {
+                if (displayWorkedDontShow_ && std_type != 2 && ((!forceBold && ((displayPotential_ && std_type == 3) || std_type != 3)) || (!new_marker && otherMessagesMarker_ && std_type == 3))) {
                     show_line = false;
                 }
             }
@@ -763,13 +798,13 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         }
          
             
-        if (displayTxtColor && (displayPotential || std_type != 3)) {
+        if (displayTxtColor_ && (displayPotential_ || std_type != 3)) {
             swpColor = bgColor;
             bgColor = txtColor;
             txtColor = swpColor;
         }
-        if (displayCountryName) {
-            if (displayCountryPrefix) {
+        if (displayCountryName_) {
+            if (displayCountryPrefix_) {
                 cntry = items[1];
                 
             } else {
@@ -778,28 +813,28 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             }
         }
         if (!bwantedCall && !bwantedPrefix && !bwantedGrid && !bwantedCountry) {
-            if (m_config->hideContinents().contains(items[0]) && std_type != 2 && !jt65bc) {
+            if (hideContinents_.contains(items[0]) && std_type != 2 && !jt65bc) {
                 show_line = false;
-            } else if (m_config->enableCountryFilter() && std_type != 2 && !jt65bc) {
-                auto countries = m_config->countries ().split(',');
+            } else if (enableCountryFilter_ && std_type != 2 && !jt65bc) {
+                auto countries = countries_.split(',');
                 if (countries.contains(items[1].toUpper()))
                     show_line = false;
             }
-            if (show_line && m_config->enableCallsignFilter() && std_type != 2 && !jt65bc) {
-                auto callsigns = m_config->callsigns ().split(',');
+            if (show_line && enableCallsignFilter_ && std_type != 2 && !jt65bc) {
+                auto callsigns = callsigns_.split(',');
                 if (callsigns.contains(Radio::base_callsign (checkCall)))
                     show_line = false;
             }
         }
     }
     
-    if (show_line && decodedText->isNonStd2() && m_config->hidefree() && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
+    if (show_line && decodedText->isNonStd2() && hidefree_ && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcq() && std_type != 1 && std_type != 2 && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && showcq_ && std_type != 1 && std_type != 2 && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcqrrr73() && std_type != 1 && std_type != 2 && !decodedText->isEnd() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && showcqrrr73_ && std_type != 1 && std_type != 2 && !decodedText->isEnd() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (show_line && m_config->showcq73() && std_type != 1 && std_type != 2 && !decodedText->isFin() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
+    } else if (show_line && showcq73_ && std_type != 1 && std_type != 2 && !decodedText->isFin() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
     } else if (decodedText->isHint()) {
         if(lotw.isEmpty ())
@@ -836,10 +871,10 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             qsoHistory.message(checkCall,status,priority,param,tyyp,countryName.left(2),mpx,c_time,decodedText->report(),decodedText->frequencyOffset(),checkMode);
         } 
         if (std_type == 2) {
-            if(!m_config->redMarker()) std_type = 0;
-            else if(m_config->blueMarker() && !hisCall.isEmpty () && checkCall.contains(hisCall)) std_type = 5;
+            if(!redMarker_) std_type = 0;
+            else if(blueMarker_ && !hisCall.isEmpty () && checkCall.contains(hisCall)) std_type = 5;
         }
-        appendText(messageText, bgColor, txtColor, std_type, servis, cntry, forceBold, strikethrough, underlined, decodedText->isDXped());
+        appendText(messageText, bgColor, txtColor, std_type, servis, servisColor, cntry, forceBold, strikethrough, underlined, decodedText->isDXped());
         wastx_ = false;
     }
         if (notified) inotified |= 1;
@@ -962,8 +997,8 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
             mystatus_ = status;
             qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq,modeTx);
           }
-        if (wastx_ && ttime - last_tx < 2 && m_config->hide_TX_messages())
-            appendText(t,bg,"#000000",0," "," ",false,false,false,false,true);
+        if (wastx_ && ttime - last_tx < 2 && hide_TX_messages_)
+            appendText(t,bg,"#000000",0," ","#000000"," ",false,false,false,false,true);
         else
             appendText(t,bg);
     }
