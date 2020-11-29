@@ -2456,7 +2456,7 @@ ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;
   ui->AGCcButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   ui->hintButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   ui->DecodeButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ffff",m_useDarkStyle)));
-
+  m_wideGraph->setDarkStyle(m_useDarkStyle);
   statusUpdate ();
 }
 

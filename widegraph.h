@@ -41,6 +41,7 @@ public:
   void   setLockTxFreq(bool b);
   void   setFilter(bool b);
   void   setHoundFilter(bool b);
+  void	 setDarkStyle(bool b);
   bool   scale();
   bool   flatten();
   void   setTol(int n);
@@ -117,7 +118,6 @@ private:
   bool   m_bScale;
   bool   m_bFlatten;
   bool   m_bHaveTransmitted;    //Set true at end of a WSPR transmission
-
   JTDXDateTime * m_jtdxtime;
 
   QString m_mode;
