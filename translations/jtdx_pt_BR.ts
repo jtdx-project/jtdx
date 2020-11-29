@@ -4469,7 +4469,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Chamar mais que novos indicativos de chamada prioritária</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5690,7 +5690,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Freq</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
