@@ -5703,7 +5703,7 @@ Error(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Częst.</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
