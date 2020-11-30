@@ -243,6 +243,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 }
         }
         auto const& parts = decodedText->message().split (' ', SkipEmptyParts);
+        if (!hisCall.isEmpty () && messageText.contains(Radio::base_callsign (hisCall))) txtColor = color_StandardCall_;
         checkCall = decodedText->CQersCall(grid,tyyp);
         if(!app_mode.startsWith("FT") && (messageText.contains("2nd-h") || messageText.contains("3rd-h"))) jt65bc = true;
         if (!checkCall.isEmpty ()) {
