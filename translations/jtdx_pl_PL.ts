@@ -4481,7 +4481,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>AutoSeq uwzględni znaki &quot;wyższe&quot; niż &quot;nowy znak&quot;.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
