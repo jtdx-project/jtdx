@@ -4486,7 +4486,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Nominativicon priorità alta nelle nuove chiamate</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5704,7 +5704,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
