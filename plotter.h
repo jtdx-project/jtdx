@@ -75,6 +75,7 @@ public:
   void setLockTxFreq(bool b) {m_lockTxFreq = b;}
   void setFilter(bool b);
   void setHoundFilter(bool b);
+  void setDarkStyle(bool b);
   void setColours(QVector<QColor> const& cl);
   void setTimestamp(int n);
   void setScale(bool b);
@@ -108,6 +109,7 @@ private:
   bool    m_lockTxFreq;
   bool    m_filter;
   bool    m_houndFilter;
+  bool	  m_useDarkStyle;
   bool	  m_bars;
   bool    m_freq;
   float   m_fSpan;
@@ -130,7 +132,7 @@ private:
   QPixmap m_2DPixmap;
   QPixmap m_ScalePixmap;
   QPixmap m_OverlayPixmap;
-
+  QPoint m_pos;
   QSize   m_Size;
   QString m_Str;
   QString m_HDivText[483];
@@ -170,7 +172,7 @@ private:
   qint32  m_startFreq;
   qint32  m_tol;
   qint32  m_lastMouseX;
-
+  qint32  m_lastPaintedX;
   char    m_sutc[6];
 
 private slots:

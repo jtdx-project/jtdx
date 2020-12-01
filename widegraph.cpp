@@ -408,6 +408,11 @@ void WideGraph::setHoundFilter(bool b)
   ui->widePlot->setHoundFilter(b);
 }
 
+void WideGraph::setDarkStyle(bool b)
+{
+  ui->widePlot->setDarkStyle(b);
+}
+
 void WideGraph::setFreq2(int rxFreq, int txFreq)                  //setFreq2
 {
   emit setFreq3(rxFreq,txFreq);

@@ -10,8 +10,6 @@ struct snode {
     unsigned int jpointer;
 };
 
-extern struct snode *stack;
-
 int jelinek(unsigned int *metric,
             unsigned int *cycles,
             unsigned char *data,

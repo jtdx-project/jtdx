@@ -723,6 +723,7 @@ int main(int argc, char *argv[])
     int writec2=0,maxdrift;
     int shift1, lagmin, lagmax, lagstep, ifmin, ifmax, worth_a_try, not_decoded;
     unsigned int nbits=81, stacksize=200000;
+    struct snode *stack=NULL;
     unsigned int npoints, metric, cycles, maxnp;
     float df=375.0/256.0/2;
     float freq0[200],snr0[200],drift0[200],sync0[200];
