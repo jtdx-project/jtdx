@@ -2684,6 +2684,8 @@ void Configuration::impl::set_rig_invariants ()
       ui_->test_PTT_push_button->setEnabled (TransceiverFactory::PTT_method_DTR == ptt_method
                                              || TransceiverFactory::PTT_method_RTS == ptt_method);
       ui_->TX_audio_source_group_box->setEnabled (false);
+      ui_->rig_power_check_box->setChecked (false);
+      ui_->rig_power_check_box->setEnabled (false);
       ui_->S_meter_check_box->setChecked (false);
       ui_->S_meter_check_box->setEnabled (false);
       ui_->output_power_check_box->setChecked (false);
@@ -2697,8 +2699,8 @@ void Configuration::impl::set_rig_invariants ()
          !ui_->rig_combo_box->currentText().startsWith("Ham Radio") && !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-480") &&
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") &&
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
+         ui_->rig_power_check_box->setEnabled (true);
          ui_->S_meter_check_box->setEnabled (true);
-//         if (!ui_->rig_combo_box->currentText().startsWith("Icom ")) ui_->output_power_check_box->setEnabled (true);
          ui_->output_power_check_box->setEnabled (true);
       }
       ui_->test_CAT_push_button->setEnabled (true);
@@ -4525,12 +4527,10 @@ void Configuration::impl::on_rig_combo_box_currentIndexChanged (int /* index */)
      ui_->rig_combo_box->currentText().startsWith("Ham Radio") || ui_->rig_combo_box->currentText().startsWith("Kenwood TS-480") ||
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") ||
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
+     ui_->rig_power_check_box->setChecked (false); ui_->rig_power_check_box->setEnabled (false);
      ui_->S_meter_check_box->setChecked (false); ui_->S_meter_check_box->setEnabled (false);
      ui_->output_power_check_box->setChecked (false); ui_->output_power_check_box->setEnabled (false);
   }
-//  if(ui_->rig_combo_box->currentText().startsWith("Icom ")) {
-//	 ui_->output_power_check_box->setChecked (false); ui_->output_power_check_box->setEnabled (false);
-//  }
 }
 
 void Configuration::impl::on_CAT_data_bits_button_group_buttonClicked (int /* id */)
