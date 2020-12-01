@@ -4487,7 +4487,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation>Kaldesignaler med msg indeholdende CQ eller 73 får højeste  prioritet lige som  nye kaldesignaler</translation>
+        <translation>Kald kun højere  prioritet end nyt kaldesignal </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
