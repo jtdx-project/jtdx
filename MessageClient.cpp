@@ -349,6 +349,8 @@ MessageClient::MessageClient (QString const& id, QString const& version,
 #else
   connect (&*m_, &impl::errorOccurred, [this] (impl::SocketError e)
             {
+              if (e != impl::TemporaryError
+                  && e != impl::ConnectionRefusedError) // not interested in this with UDP socket
               { Q_UNUSED (e); Q_EMIT error (m_->errorString ()); }
             });
 #endif
