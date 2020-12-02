@@ -4488,7 +4488,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Llamar a CQ  con prioridad de notificación superior a nuevo indicativo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5714,7 +5714,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Frec</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
