@@ -4476,7 +4476,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozovi znakove sa većim prioritetom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5698,7 +5698,7 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekv</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
