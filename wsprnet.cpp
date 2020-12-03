@@ -208,10 +208,12 @@ QString WSPRNet::urlEncodeSpot(QHash<QString,QString> const& query)
 void WSPRNet::work()
 {
   if (!urlQueue.isEmpty()) {
-    if (QNetworkAccessManager::Accessible != networkManager->networkAccessible ()) {
-      // try and recover network access for QNAM
-      networkManager->setNetworkAccessible (QNetworkAccessManager::Accessible);
-    }
+#if QT_VERSION < QT_VERSION_CHECK (5, 15, 0)
+      if (QNetworkAccessManager::Accessible != networkManager->networkAccessible ()) {
+        // try and recover network access for QNAM
+        networkManager->setNetworkAccessible (QNetworkAccessManager::Accessible);
+      }
+#endif
     QUrl url(urlQueue.dequeue());
     QNetworkRequest request(url);
     m_outstandingRequests << networkManager->get(request);

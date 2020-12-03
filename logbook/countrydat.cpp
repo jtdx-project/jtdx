@@ -530,8 +530,10 @@ void CountryDat::load()
                     if (!p.isEmpty ()) {
                         _cqz = _removeBrackets(p,"(",")");
                         if (_cqz.isEmpty()) _cqz = cqz;
+                        if (_cqz.size() == 1) _cqz = "0" + _cqz;
                         _ituz = _removeBrackets(p,"[","]");
                         if (_ituz.isEmpty()) _ituz = ituz;
+                        if (_ituz.size() == 1) _ituz = "0" + _ituz;
                         _continent = _removeBrackets(p,"{","}");
                         if (_continent.isEmpty()) _continent = continent;                       
                         _data.insert(p,_continent+','+name+','+_cqz+','+_ituz);

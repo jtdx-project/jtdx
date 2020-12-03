@@ -65,7 +65,7 @@ $ mkdir ../build
 $ cd ../build
 $ ../src/configure --prefix=$HOME/hamlib-prefix \
    --disable-shared --enable-static \
-   --without-cxx-binding --disable-winradio \
+   --without-indi --without-cxx-binding --disable-winradio \
    CFLAGS="-g -O2 -fdata-sections -ffunction-sections" \
    LDFLAGS="-Wl,--gc-sections"
 $ make
@@ -149,7 +149,7 @@ $ mkdir ../build
 $ cd ../build
    ../src/configure --prefix=$HOME/hamlib-prefix \
    --disable-shared --enable-static \
-   --without-cxx-binding --disable-winradio \
+   --without-indi --without-cxx-binding --disable-winradio \
    CC=<path-to-Qt-MinGW-tools>/gcc \
    CXX=<path-to-Qt-MinGW-tools>/g++ \
    CFLAGS="-g -O2 -fdata-sections -ffunction-sections -I<path-to-libusb-1.0>/include" \

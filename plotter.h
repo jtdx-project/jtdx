@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20190724
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 // -*- Mode: C++ -*-
 ///////////////////////////////////////////////////////////////////////////
 // Some code in this file and accompanying files is based on work by
@@ -78,10 +75,12 @@ public:
   void setLockTxFreq(bool b) {m_lockTxFreq = b;}
   void setFilter(bool b);
   void setHoundFilter(bool b);
+  void setDarkStyle(bool b);
   void setColours(QVector<QColor> const& cl);
   void setTimestamp(int n);
   void setScale(bool b);
   void setBars(bool b);
+  void showFreq(bool b);
   void setFlatten(bool b);
   void setTol(int n);
   void setRxBand(QString band);
@@ -110,7 +109,9 @@ private:
   bool    m_lockTxFreq;
   bool    m_filter;
   bool    m_houndFilter;
+  bool	  m_useDarkStyle;
   bool	  m_bars;
+  bool    m_freq;
   float   m_fSpan;
 
   qint32  m_plotZero;
@@ -131,7 +132,7 @@ private:
   QPixmap m_2DPixmap;
   QPixmap m_ScalePixmap;
   QPixmap m_OverlayPixmap;
-
+  QPoint m_pos;
   QSize   m_Size;
   QString m_Str;
   QString m_HDivText[483];
@@ -171,7 +172,7 @@ private:
   qint32  m_startFreq;
   qint32  m_tol;
   qint32  m_lastMouseX;
-
+  qint32  m_lastPaintedX;
   char    m_sutc[6];
 
 private slots:
@@ -182,9 +183,5 @@ private slots:
 };
 
 extern QVector<QColor> g_ColorTbl;
-
-extern "C" {
-  void flat4_(float swide[], int* iz, int* nflatten);
-}
 
 #endif // PLOTTER_H

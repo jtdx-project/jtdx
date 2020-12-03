@@ -332,7 +332,7 @@
        </layout>
       </widget>
       <widget class="QWidget" name="layoutWidget1">
-       <layout class="QVBoxLayout" name="verticalLayout_12" stretch="1,5,3">
+       <layout class="QVBoxLayout" name="verticalLayout_12" stretch="1,6,2">
         <property name="spacing">
          <number>2</number>
         </property>
@@ -1118,7 +1118,7 @@ QLabel[darkoob=&quot;true&quot;] {
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,20,0">
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,0,0">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -1476,74 +1476,6 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="pbTxMode">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Toggle Tx mode</string>
-                </property>
-                <property name="text">
-                 <string>Tx JT9 @</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QSpinBox" name="TxFreqSpinBox">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Audio Tx frequency</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="suffix">
-                 <string>  Hz</string>
-                </property>
-                <property name="prefix">
-                 <string>Tx  </string>
-                </property>
-                <property name="minimum">
-                 <number>200</number>
-                </property>
-                <property name="maximum">
-                 <number>5000</number>
-                </property>
-                <property name="value">
-                 <number>1500</number>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="2">
                <widget class="QLabel" name="S_meter_label">
                 <property name="sizePolicy">
@@ -1644,8 +1576,61 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
-              <item row="4" column="0">
-               <widget class="QSpinBox" name="RxFreqSpinBox">
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="cbShowWanted">
+                <property name="maximumSize">
+                 <size>
+                  <width>110</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Wanted</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="candListSpinBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and 'minimum' wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="suffix">
+                 <string> %</string>
+                </property>
+                <property name="prefix">
+                 <string>CL  </string>
+                </property>
+                <property name="minimum">
+                 <number>5</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="singleStep">
+                 <number>5</number>
+                </property>
+                <property name="value">
+                 <number>100</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QSpinBox" name="TxFreqSpinBox">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>1</horstretch>
@@ -1660,12 +1645,12 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
+                  <width>16777215</width>
                   <height>40</height>
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>Audio Rx frequency</string>
+                 <string>Audio Tx frequency</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -1674,10 +1659,10 @@ QLabel[darkoob=&quot;true&quot;] {
                  <string>  Hz</string>
                 </property>
                 <property name="prefix">
-                 <string>Rx  </string>
+                 <string>Tx  </string>
                 </property>
                 <property name="minimum">
-                 <number>1</number>
+                 <number>200</number>
                 </property>
                 <property name="maximum">
                  <number>5000</number>
@@ -1687,7 +1672,7 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
+              <item row="2" column="0">
                <layout class="QHBoxLayout" name="horizontalLayout_25">
                 <property name="spacing">
                  <number>2</number>
@@ -1750,7 +1735,50 @@ QLabel[darkoob=&quot;true&quot;] {
                 </item>
                </layout>
               </item>
-              <item row="3" column="1">
+              <item row="3" column="0">
+               <widget class="QSpinBox" name="RxFreqSpinBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>110</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Audio Rx frequency</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="suffix">
+                 <string>  Hz</string>
+                </property>
+                <property name="prefix">
+                 <string>Rx  </string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>5000</number>
+                </property>
+                <property name="value">
+                 <number>1500</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
                <widget class="QPushButton" name="pbTxLock">
                 <property name="maximumSize">
                  <size>
@@ -1772,37 +1800,68 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
-               <widget class="QCheckBox" name="cbShowWanted">
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>40</height>
-                 </size>
+              <item row="3" column="1">
+               <layout class="QVBoxLayout" name="verticalLayout_18">
+                <property name="spacing">
+                 <number>0</number>
                 </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Wanted</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="pushButton">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Reserved</string>
-                </property>
-               </widget>
+                <item>
+                 <widget class="QPushButton" name="pbTxMode">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Toggle Tx mode</string>
+                  </property>
+                  <property name="text">
+                   <string>Tx JT9 @</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="DTCenterSpinBox">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="prefix">
+                   <string>DT </string>
+                  </property>
+                  <property name="suffix">
+                   <string> s</string>
+                  </property>
+                  <property name="decimals">
+                   <number>1</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-2.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>2.500000000000000</double>
+                  </property>
+                  <property name="singleStep">
+                   <double>0.100000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -2317,6 +2376,19 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
              <number>1</number>
             </property>
             <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>1</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="tuneButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -2594,7 +2666,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2636,7 +2708,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2678,7 +2750,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2706,7 +2778,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2734,7 +2806,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2762,7 +2834,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2807,7 +2879,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2852,7 +2924,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2900,7 +2972,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -2945,7 +3017,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
               <property name="maximumSize">
                <size>
                 <width>100</width>
-                <height>75</height>
+                <height>60</height>
                </size>
               </property>
               <property name="toolTip">
@@ -3031,6 +3103,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                     <size>
                      <width>0</width>
                      <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>305</height>
                     </size>
                    </property>
                    <property name="tabPosition">
@@ -3159,6 +3237,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <height>0</height>
                             </size>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
                            <property name="toolTip">
                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                            </property>
@@ -3219,6 +3309,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
                            </property>
                            <property name="text">
                             <string/>
@@ -3293,6 +3395,18 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -3357,6 +3471,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -3420,6 +3540,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
                            </property>
                           </widget>
                          </item>
@@ -3489,6 +3615,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</str
                             <size>
                              <width>0</width>
                              <height>23</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3566,6 +3698,12 @@ list. The list can be maintained in Settings (F2).</string>
                              <horstretch>3</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>42</height>
+                            </size>
                            </property>
                            <property name="text">
                             <string/>
@@ -3727,6 +3865,12 @@ list. The list can be maintained in Settings (F2).</string>
                                <height>0</height>
                               </size>
                              </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>30</height>
+                              </size>
+                             </property>
                              <property name="toolTip">
                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                              </property>
@@ -3843,7 +3987,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3899,7 +4043,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -3955,7 +4099,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>75</height>
+                             <height>70</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -4018,7 +4162,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>40</height>
+                             <height>30</height>
                             </size>
                            </property>
                           </widget>
@@ -4065,7 +4209,7 @@ list. The list can be maintained in Settings (F2).</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>40</height>
+                             <height>30</height>
                             </size>
                            </property>
                            <property name="toolTip">
@@ -4359,7 +4503,7 @@ list. The list can be maintained in Settings (F2).</string>
             <property name="maximumSize">
              <size>
               <width>85</width>
-              <height>350</height>
+              <height>305</height>
              </size>
             </property>
             <property name="frameShape">
@@ -4449,22 +4593,6 @@ list. The list can be maintained in Settings (F2).</string>
      <property name="title">
       <string>FT8 decoding</string>
      </property>
-     <widget class="QMenu" name="menuWideband_decoding">
-      <property name="title">
-       <string>wideband decoding</string>
-      </property>
-      <addaction name="actionFT8fast"/>
-      <addaction name="actionFT8medium"/>
-      <addaction name="actionFT8deep"/>
-     </widget>
-     <widget class="QMenu" name="menuNarrow_Filter">
-      <property name="title">
-       <string>narrow Filter</string>
-      </property>
-      <addaction name="actionFT8FiltFast"/>
-      <addaction name="actionFT8FiltMedium"/>
-      <addaction name="actionFT8FiltDeep"/>
-     </widget>
      <widget class="QMenu" name="menuDecoder_sensitivity">
       <property name="title">
        <string>decoder sensitivity</string>
@@ -4497,8 +4625,6 @@ list. The list can be maintained in Settings (F2).</string>
       <addaction name="actionDecFT8SWLcycles2"/>
       <addaction name="actionDecFT8SWLcycles3"/>
      </widget>
-     <addaction name="menuWideband_decoding"/>
-     <addaction name="menuNarrow_Filter"/>
      <addaction name="menuDecoding_cycles"/>
      <addaction name="menuSWL_decoding_cycles"/>
      <addaction name="separator"/>
@@ -4618,6 +4744,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="actionCallsign_to_clipboard"/>
     <addaction name="separator"/>
     <addaction name="actionCrossband_160m_JA"/>
+    <addaction name="actionCrossband_160m_HL"/>
    </widget>
    <widget class="QMenu" name="menuAutoSeq">
     <property name="title">
@@ -4640,6 +4767,7 @@ list. The list can be maintained in Settings (F2).</string>
     <addaction name="separator"/>
     <addaction name="actionCallPriorityAndSearchCQ"/>
     <addaction name="actionCallWorkedB4"/>
+    <addaction name="actionCallHigherNewCall"/>
     <addaction name="separator"/>
     <addaction name="actionReport_message_priority"/>
     <addaction name="actionMaxDistance"/>
@@ -5555,6 +5683,14 @@ list. The list can be maintained in Settings (F2).</string>
     <string>Call worked B4 callsigns</string>
    </property>
   </action>
+  <action name="actionCallHigherNewCall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Call higher than new calls priority callsigns</string>
+   </property>
+  </action>
   <action name="actionAcceptUDPCQ">
    <property name="checkable">
     <bool>true</bool>
@@ -5837,6 +5973,14 @@ list. The list can be maintained in Settings (F2).</string>
     <string>Crossband 160m operation with Japan</string>
    </property>
   </action>
+  <action name="actionCrossband_160m_HL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Crossband 160m operation with Korea</string>
+   </property>
+  </action>
   <action name="actionDecFT8cycles1">
    <property name="checkable">
     <bool>true</bool>
@@ -5909,7 +6053,6 @@ list. The list can be maintained in Settings (F2).</string>
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>TxFreqSpinBox</tabstop>
   <tabstop>genStdMsgsPushButton</tabstop>
   <tabstop>tx1</tabstop>
   <tabstop>tx2</tabstop>

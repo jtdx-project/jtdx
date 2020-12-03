@@ -27,8 +27,8 @@
      integer(c_int) :: kin
      integer(c_int) :: nzhsym
      integer(c_int) :: ndepth
-     integer(c_int) :: nft8depth
-     integer(c_int) :: nft8filtdepth
+     integer(c_int) :: ncandthin
+     integer(c_int) :: ndtcenter
      integer(c_int) :: nft8cycles
      integer(c_int) :: nft8swlcycles
      integer(c_int) :: ntxmode

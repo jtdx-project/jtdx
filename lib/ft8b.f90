@@ -1,29 +1,28 @@
-subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid,lsubtract, &
+subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,filter,lft8subpass,lspecial,lcqcand,               &
+                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
 !  use timer_module, only: timer
   use packjt77 ! mycall13,dxcall13
-  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,twopi,graymap, &
+  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn
   include 'ft8_params.f90'
-  parameter (NP2=3199)
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
-  complex cd0(0:3199),cd1(0:3199),cd2(0:3199),cd3(0:3199),ctwk(32),csymb(32),cs(0:7,79),cs1(0:7),csymbr(32),csr(0:7,79), &
+  complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
-  integer, intent(in) :: nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,napwid,nthr,imainpass,nsec,nft8rxfsens
+  integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens
   logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
-  logical(1), intent(in) :: swl,stophint,filter,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
+  logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,lwrongcall
@@ -135,21 +134,18 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
 ! Now peak up in frequency
     i0=nint(xdt2*fs2)
-    smax=0.0
-    do ifr=-5,5                              !Search over +/- 2.5 Hz
-      delf=ifr*0.5
-      dphi=twopi*delf*dt2
-      phi=0.0
-      do i=1,32
-        ctwk(i)=cmplx(cos(phi),sin(phi))
-        phi=mod(phi+dphi,twopi)
-      enddo
+    smax=0.0; kstep=1
+    do ifr=-5,5
+      if(iqso.eq.1 .or. iqso.eq.4) then; ctwk=ctwkw(kstep,:); delf=ifr*0.5 ! Search over +/- 2.5 Hz
+      else; ctwk=ctwkn(kstep,:); delf=ifr*0.25 ! Search over +/- 1.25 Hz
+      endif
       call sync8d(cd0,i0,ctwk,1,sync,imainpass,lastsync,iqso,lcq,lcallsstd,lcqcand)
       if(sync.gt.smax) then; smax=sync; delfbest=delf; endif
+      kstep=kstep+1
     enddo
     a=0.0
     a(1)=-delfbest
-    call twkfreq1(cd0,NP2,fs2,a,cd0)
+    call twkfreq1(cd0,-800,3199,4000,fs2,a,cd0)
     xdt=xdt2
     f1=f10+delfbest                           !Improved estimate of DF
     dfqso=abs(nfqso-f1)
@@ -164,11 +160,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
     snrsync=0.
     do k=1,79
       i1=ibest+(k-1)*32
-      csymb=cmplx(0.0,0.0)
-      if(i1.ge.0 .and. i1+31 .le. NP2) csymb=cd0(i1:i1+31)
+      csymb=cd0(i1:i1+31)
       if((k.ge.1 .and. k.le.7) .or. (k.ge.37 .and. k.le.43) .or. (k.ge.73 .and. k.le.79)) then
         call four2a(csymb,32,1,-1,1)
-        cs1(0:7)=csymb(1:8)/1e3; s81(0:7)=abs(csymb(1:8))
+        s81(0:7)=abs(csymb(1:8))
         if(k.ge.1 .and. k.le.7) then
           synclev=s81(icos7(k-1)); snoiselev=(sum(s81)-synclev)/7.0
           if(snoiselev.gt.1.E-16) snrsync(k)=synclev/snoiselev
@@ -207,8 +202,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
 
     do k=1,79
       i1=ibest+(k-1)*32
-      csymb=cmplx(0.0,0.0)
-      if(i1.ge.0 .and. i1+31 .le. NP2) csymb=cd0(i1:i1+31)
+      csymb=cd0(i1:i1+31)
       if(syncav.lt.2.5) then
         csymb(1)=csymb(1)*1.9; csymb(32)=csymb(32)*1.9
         scr=SQRT(abs(csymb(1)))/SQRT(abs(csymb(32)))
@@ -434,10 +428,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
       ((.not.lskiptx1 .and. nlasttx.eq.1) .or. (lskiptx1 .and. nlasttx.eq.2))) lsubptxfreq=.true.
 
     nweak=1
-    if((lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. &
-       imainpass.eq.3 .or. imainpass.eq.4 .or. imainpass.eq.6 .or. imainpass.eq.7 .or. imainpass.eq.9)) nweak=2
-! a bit better efficiency on the overcrowded bands, with subpass 7935 without subpass 7948 decodes
-!    if((lft8subpass) .and. srr.lt.2.5 .and. (imainpass.eq.1 .or. imainpass.eq.3)) nweak=2
+    if(lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) nweak=2
     do k1=1,nweak
       if(k1.eq.2) cs=csr
       do nsym=1,3
@@ -595,9 +586,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
           apmask=0; iaptype=0
           if(ipass.eq.1) then
             if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
-          else if(ipass.eq.2) then; llrz=llrb
+            if(k1.eq.2 .and. imainpass.gt.1) llrz=llrd
+          else if(ipass.eq.2) then; llrz=llrb; if(k1.eq.2) llrz=llra ! subpass 10661..10670
           else if(ipass.eq.3) then; llrz=llrc
-          else if(ipass.eq.4) then; llrz=llrd
+          else if(ipass.eq.4) then; llrz=llrd ! AP CQ
           endif
         else
           if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) then
@@ -779,7 +771,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
              niterations)
 !        call timer('bpd174_91 ',1)
         dmin=0.0
-        if(((.not.filter .and. ndepth.eq.3) .or. (filter .and. nft8filtdepth.eq.3)) .and. nharderrors.lt.0) then
+        if(nharderrors.lt.0) then
           ndeep=3
           if((dfqso.le.napwid .or. abs(nftx-f1).le.napwid) .and. .not.nagainfil) ndeep=4
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
@@ -1173,15 +1165,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,ndepth,nft8filtdepth,lapon,napwid
           csig(j)=csig0(k)
           k=k+60
         enddo
-        i21=i0+i*32; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        sync0 = sync0 + real(z1)**2 + aimag(z1)**2
-        i21=i0+i*32+noff; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        syncp = syncp + real(z1)**2 + aimag(z1)**2
-        i21=i21-noff*2; z1=0.
-        if(i21.ge.0 .and. i21+31.le.NP2-1) z1=sum(cd0(i21:i21+31)*conjg(csig))
-        syncm = syncm + real(z1)**2 + aimag(z1)**2
+        i21=i0+i*32; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); sync0 = sync0 + real(z1)**2 + aimag(z1)**2
+        i21=i0+i*32+noff; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); syncp = syncp + real(z1)**2 + aimag(z1)**2
+        i21=i21-noff*2; z1=0.; z1=sum(cd0(i21:i21+31)*conjg(csig)); syncm = syncm + real(z1)**2 + aimag(z1)**2
       enddo
       call peakup(syncm,sync0,syncp,dx)
       if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif

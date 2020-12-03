@@ -5,7 +5,7 @@
 #include "qt_helpers.hpp"
 //#include <QRegularExpression>
 
-extern "C" {  bool stdmsg_(char const * msg, int len_msg); }
+extern "C" {  bool stdmsg_(char const * msg, fortran_charlen_t); }
 
 namespace
 {

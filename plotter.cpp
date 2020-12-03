@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <QVector>
 #include "commons.h"
+#include "Radio.hpp"
 
 #include "moc_plotter.cpp"
 
@@ -40,7 +41,8 @@ CPlotter::CPlotter(QWidget *parent) :                  //CPlotter Constructor
   m_rxFreq {1020},
   m_txFreq {0},
   m_startFreq {0},
-  m_lastMouseX {-1}
+  m_lastMouseX {-1},
+  m_lastPaintedX {-1}
 {
   setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   setFocusPolicy(Qt::StrongFocus);
@@ -106,7 +108,14 @@ void CPlotter::paintEvent(QPaintEvent *)                                // paint
       painter.drawPixmap(m_lastMouseX, 0, m_HoverOverlayPixmap);
     }
   }
-  
+  if(m_freq && m_lastMouseX >= 0 && m_lastMouseX != m_lastPaintedX) {
+    QFont font = CPlotter::font ();
+    QString freq=QString::number(int(FreqfromX(m_lastMouseX)));
+    int z = font.pointSize()*freq.length()+64/font.pointSize();
+    QPoint pos = m_pos + QPoint(-z,-10);
+    QToolTip::showText(pos,freq);
+  }
+  m_lastPaintedX = m_lastMouseX;
   m_paintEventBusy=false;
 }
 
@@ -288,12 +297,12 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
   QFontMetrics metrics(Font);
   Font.setWeight(QFont::Normal);
   painter0.setFont(Font);
-  painter0.setPen(Qt::black);
+  painter0.setPen(Radio::convert_dark("#000000",m_useDarkStyle));
 
   if(m_binsPerPixel < 1) m_binsPerPixel=1;
   m_hdivs = w*df/m_freqPerDiv + 0.9999;
 
-  m_ScalePixmap.fill(Qt::white);
+  m_ScalePixmap.fill(Radio::convert_dark("#ffffff",m_useDarkStyle));
   painter0.drawRect(0, 0, w, 30);
   MakeFrequencyStrs();
 
@@ -492,6 +501,13 @@ void CPlotter::setHoundFilter (bool b)     //set wide filter lines for Hound mod
   if(m_filter) { DrawOverlay(); update(); }
 }  
 
+void CPlotter::setDarkStyle (bool b)     //set wide filter lines for Hound mode
+{
+  m_useDarkStyle=b;
+  DrawOverlay();
+  update();
+}  
+
 void CPlotter::SetRunningState(bool running) { m_Running = running; }
 void CPlotter::setPlotZero(int plotZero) { m_plotZero=plotZero; }
 int CPlotter::plotZero() { return m_plotZero; }
@@ -530,6 +546,7 @@ int CPlotter::rxFreq() { return m_rxFreq; }                      //rxFreq
 void CPlotter::leaveEvent(QEvent *event)
 {
     m_lastMouseX = -1;
+    m_lastPaintedX = -1;
     event->ignore();
 }
 
@@ -538,7 +555,7 @@ void CPlotter::mouseMoveEvent (QMouseEvent * event)
     int x = event->x();
     if(x < 0) x = 0;
     if(x>m_Size.width()) x = m_Size.width();
-
+    if(m_freq) m_pos = event->globalPos();
     m_lastMouseX = x;
     update();
 
@@ -603,11 +620,17 @@ void CPlotter::setNsps(double trperiod, int nsps)                    //setNsps
 }
 
 void CPlotter::setBars(bool b)
-{ 
-  setMouseTracking(b);
+{
+  setMouseTracking(b || m_freq);
   m_bars=b;
   DrawOverlay();
   update();
+}
+
+void CPlotter::showFreq(bool b)
+{
+  setMouseTracking(b || m_bars);
+  m_freq=b;
 }
 
 void CPlotter::setTxFreq(int n) { m_txFreq=n; DrawOverlay(); update(); }

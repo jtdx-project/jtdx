@@ -44,14 +44,13 @@
 #define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
 #define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
-#define NUM_ISCAT_SYMBOLS 1291             //30*11025/256
 #define NUM_FT8_SYMBOLS 79
 #define NUM_FT4_SYMBOLS 105
 
 #define NUM_CW_SYMBOLS 250
 #define TX_SAMPLE_RATE 48000
 
-extern int volatile itone[NUM_ISCAT_SYMBOLS];   //Audio tones for all Tx symbols
+extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
 extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 
 //--------------------------------------------------------------- MainWindow
@@ -190,6 +189,7 @@ private slots:
   void on_actionMaxDistance_toggled(bool checked);
   void on_actionAnswerWorkedB4_toggled(bool checked);
   void on_actionCallWorkedB4_toggled(bool checked);
+  void on_actionCallHigherNewCall_toggled(bool checked);
   void on_actionSingleShot_toggled(bool checked);
   void on_actionAutoFilter_toggled(bool checked);
   void on_actionEnable_hound_mode_toggled(bool checked);
@@ -215,6 +215,7 @@ private slots:
   void on_actionColor_Tx_message_buttons_toggled(bool checked);
   void on_actionCallsign_to_clipboard_toggled(bool checked);
   void on_actionCrossband_160m_JA_toggled(bool checked);
+  void on_actionCrossband_160m_HL_toggled(bool checked);
   void on_actionShow_messages_decoded_from_harmonics_toggled(bool checked);
   void on_actionMyCallRXFwindow_toggled(bool checked);
   void on_actionWantedCallRXFwindow_toggled(bool checked);
@@ -264,12 +265,6 @@ private slots:
   void on_actionQuickDecode_triggered();
   void on_actionMediumDecode_triggered();
   void on_actionDeepestDecode_triggered();
-  void on_actionFT8fast_triggered();
-  void on_actionFT8medium_triggered();
-  void on_actionFT8deep_triggered();
-  void on_actionFT8FiltFast_triggered();
-  void on_actionFT8FiltMedium_triggered();
-  void on_actionFT8FiltDeep_triggered();
   void on_actionDecFT8cycles1_triggered();
   void on_actionDecFT8cycles2_triggered();
   void on_actionDecFT8cycles3_triggered();
@@ -318,6 +313,8 @@ private slots:
   void on_readFreq_clicked();
   void on_pbTxMode_clicked();
   void on_RxFreqSpinBox_valueChanged(int n);
+  void on_candListSpinBox_valueChanged(int n);
+  void on_DTCenterSpinBox_valueChanged(double dt);
   void on_pbTxLock_clicked(bool);
   void on_skipTx1_clicked(bool checked);
   void on_skipGrid_clicked(bool checked);
@@ -329,7 +326,6 @@ private slots:
   void band_changed (Frequency);
   void monitor (bool);
   void stop_tuning ();
-  void stopHint_call3_rxfreq();
   void stopTuneATU();
   void enableTx_mode(bool);
   void enableTxButton_off();
@@ -433,6 +429,7 @@ private:
   QClipboard *clipboard = QGuiApplication::clipboard();
 
   double  m_TRperiod;
+  double  m_DTcenter;
 
   qint64  m_msErase;
   qint64  m_secBandChanged;
@@ -454,8 +451,8 @@ private:
   qint32  m_timeout;
   qint32  m_XIT;
   qint32  m_ndepth;
-  qint32  m_nFT8depth;
-  qint32  m_nFT8Filtdepth;
+  qint32  m_ncandthin;
+  qint32  m_nDTcenter;
   qint32  m_nFT8Cycles;
   qint32  m_nFT8SWLCycles;
   qint32  m_nFT8RXfSens;
@@ -556,6 +553,7 @@ private:
   bool	  m_processAuto_done;
   bool    m_haltTrans;
   bool	  m_crossbandOptionEnabled;
+  bool	  m_crossbandHLOptionEnabled;
   QString m_repliedCQ;
   QString m_dxbcallTxHalted;
   QString m_currentQSOcallsign;
@@ -564,6 +562,7 @@ private:
   bool m_maxDistance;
   bool m_answerWorkedB4;
   bool m_callWorkedB4;
+  bool m_callHigherNewCall;
   bool m_singleshot;
   bool m_autofilter;
   bool m_houndMode;
@@ -595,6 +594,9 @@ private:
   bool m_bandChanged;
   bool m_useDarkStyle;
   bool m_lostaudio;
+  bool m_lasthint;
+  bool m_monitoroff;
+  bool m_savedRRR;
   QString m_lang;
   QString m_lastloggedcall;
   QString m_cqdir;
@@ -647,7 +649,6 @@ private:
 
   QTimer m_guiTimer;
   QTimer ptt1Timer;                 //StartTx delay
-  QTimer stophintTimer;             //Stops propagation non-CQ CALL3 based Hint decoded messages
   QTimer ptt0Timer;                 //StopTx delay
   QTimer logQSOTimer;
   QTimer killFileTimer;
@@ -782,7 +783,6 @@ private:
   void enable_DXCC_entity ();
   void switch_mode (Mode);
   void commonActions();
-  void hideFT4Buttons(bool hide);
   void WSPR_scheduling ();
   void setRig ();
   void WSPR_history(Frequency dialFreq, int ndecodes);
@@ -798,7 +798,7 @@ private:
                           , QString const& his_grid
                           , JTDXDateTime * jtdxtime) const;
   void read_wav_file (QString const& fname);
-  void subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
+  bool subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
   void subProcessError (QProcess *, QProcess::ProcessError);
   void on_the_minute ();
 };

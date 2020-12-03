@@ -93,6 +93,10 @@ WideGraph::WideGraph(QSettings * settings, JTDXDateTime * jtdxtime, QWidget *par
   m_bars=m_settings->value("Bars",true).toBool();
   ui->cbBars->setChecked(m_bars);
   ui->widePlot->setBars(m_bars);
+  
+  m_freq=m_settings->value("Freq",false).toBool();
+  ui->cbFreq->setChecked(m_freq);
+  ui->widePlot->showFreq(m_freq);
 
   m_bScale=m_settings->value("Scale",true).toBool();
   ui->cbScale->setChecked(m_bScale);
@@ -196,6 +200,7 @@ void WideGraph::saveSettings()                                           //saveS
   m_settings->setValue ("Flatten",m_bFlatten);
   m_settings->setValue ("HideControls", ui->controls_widget->isHidden ());
   m_settings->setValue ("Bars", m_bars);
+  m_settings->setValue ("Freq", m_freq);
   m_settings->endGroup ();
 }
 
@@ -403,6 +408,11 @@ void WideGraph::setHoundFilter(bool b)
   ui->widePlot->setHoundFilter(b);
 }
 
+void WideGraph::setDarkStyle(bool b)
+{
+  ui->widePlot->setDarkStyle(b);
+}
+
 void WideGraph::setFreq2(int rxFreq, int txFreq)                  //setFreq2
 {
   emit setFreq3(rxFreq,txFreq);
@@ -491,6 +501,12 @@ void WideGraph::on_cbBars_toggled(bool b)
 {
   m_bars = b;
   ui->widePlot->setBars(m_bars);
+}
+
+void WideGraph::on_cbFreq_toggled(bool b)
+{
+  m_freq = b;
+  ui->widePlot->showFreq(m_freq);
 }
 
 void WideGraph::on_adjust_palette_push_button_clicked (bool)   //Adjust Palette

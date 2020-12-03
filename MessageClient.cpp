@@ -324,24 +324,37 @@ MessageClient::MessageClient (QString const& id, QString const& version,
   : QObject {self}
   , m_ {id, version, server_port, this}
 {
-  connect (&*m_, static_cast<void (impl::*) (impl::SocketError)> (&impl::error)
-           , [this] (impl::SocketError e)
-           {
-#if defined (Q_OS_WIN) && QT_VERSION >= 0x050500
-             if (e != impl::NetworkError // take this out when Qt 5.5
-                                         // stops doing this
-                                         // spuriously
-                 && e != impl::ConnectionRefusedError) // not
-                                                       // interested
-                                                       // in this with
-                                                       // UDP socket
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+#if defined (Q_OS_WIN)
+  connect (&*m_, static_cast<void (impl::*) (impl::SocketError)> (&impl::error), [this] (impl::SocketError e)
+            {
+              if (e != impl::NetworkError // take this out when Qt 5.5 stops doing this spuriously
+                  && e != impl::ConnectionRefusedError) // not interested in this with UDP socket
+                  { Q_EMIT error (m_->errorString ()); }
+            });
 #else
-             Q_UNUSED (e);
+  connect (&*m_, static_cast<void (impl::*) (impl::SocketError)> (&impl::error), [this] (impl::SocketError e)
+            {
+              { Q_UNUSED (e); Q_EMIT error (m_->errorString ()); }
+            });
 #endif
-               {
-                 Q_EMIT error (m_->errorString ());
-               }
-           });
+#else
+#if defined (Q_OS_WIN)
+  connect (&*m_, &impl::errorOccurred, [this] (impl::SocketError e)
+            {
+              if (e != impl::NetworkError // take this out when Qt 5.5 stops doing this spuriously
+                  && e != impl::ConnectionRefusedError) // not interested in this with UDP socket
+                  { Q_EMIT error (m_->errorString ()); }
+            });
+#else
+  connect (&*m_, &impl::errorOccurred, [this] (impl::SocketError e)
+            {
+              if (e != impl::TemporaryError
+                  && e != impl::ConnectionRefusedError) // not interested in this with UDP socket
+              { Q_UNUSED (e); Q_EMIT error (m_->errorString ()); }
+            });
+#endif
+#endif
   set_server (server);
 }
 

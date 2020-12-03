@@ -29,11 +29,13 @@ public:
     , clock_ {new QTimer {this}}
   {
     connect (this, &QIODevice::readyRead, this, &MessageServer::impl::pending_datagrams);
-    connect (this, static_cast<void (impl::*) (SocketError)> (&impl::error)
-             , [this] (SocketError /* e */)
-             {
-               Q_EMIT self_->error (errorString ());
-             });
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+    connect (this, static_cast<void (impl::*) (SocketError)> (&impl::error), [this] (SocketError /* e */)
+             { Q_EMIT self_->error (errorString ()); });
+#else
+    connect (this, static_cast<void (impl::*) (SocketError)> (&impl::errorOccurred), [this] (SocketError /* e */)
+             { Q_EMIT self_->error (errorString ()); });
+#endif
     connect (clock_, &QTimer::timeout, this, &impl::tick);
     clock_->start (NetworkMessage::pulse * 1000);
   }
