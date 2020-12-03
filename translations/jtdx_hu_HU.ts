@@ -6841,8 +6841,8 @@ a Stereo-t.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2249"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Legfeljebb 13 karakter lehet a szabad üzenet hossza.&lt;br&gt;&lt;br&gt;Legfeljebb 17 karakter lehet az irányított CQ standard üzenet hossza.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Legfeljebb 13 karakter lehet a szabad üzenet hossza.&lt;br&gt;&lt;br&gt;Legfeljebb 19 karakter lehet az irányított CQ standard üzenet hossza.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2259"/>

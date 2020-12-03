@@ -6841,8 +6841,8 @@ wtedy zazwyczaj będziesz chciał ustawić tutaj  mono lub oba.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2249"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimum 13 znaków wiadomości z dowolnym tekstem&lt;br&gt;&lt;br&gt;Maksimum 17 znaków dla standardowej wiadomości kierunkowego CQ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimum 13 znaków wiadomości z dowolnym tekstem&lt;br&gt;&lt;br&gt;Maksimum 19 znaków dla standardowej wiadomości kierunkowego CQ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2259"/>

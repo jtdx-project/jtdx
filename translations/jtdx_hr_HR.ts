@@ -6834,8 +6834,8 @@ oboje ovdje.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2249"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 17 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimalno 13 znakova je podržano za slobodnu poruku&lt;br&gt;&lt;br&gt;Maksimalno 17 znakovaje podržano za CQ usmjerenu standardnu ​​poruku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maksimalno 13 znakova je podržano za slobodnu poruku&lt;br&gt;&lt;br&gt;Maksimalno 19 znakovaje podržano za CQ usmjerenu standardnu ​​poruku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2259"/>
