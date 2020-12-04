@@ -195,12 +195,12 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="3312"/>
         <source>CQ/73 in message</source>
-        <translation>メッセージのCQ / 73</translation>
+        <translation>メッセージの中に CQ/73</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="3313"/>
         <source>CQ in message</source>
-        <translation>メッセージのＣＱ</translation>
+        <translation>メッセージにＣＱを含む</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="4496"/>
@@ -5863,7 +5863,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>設定パラメータを変更するにはタブを選択します。しかしリグがCATコントロールである場合は&quot;RIG&quot;なたは&quot;Fake It&quot;が推奨されます。</translation>
+        <translation>設定パラメータを変更するにはタブを選択します。しかしリグがCATコントロールである場合は&quot;RIG&quot;または&quot;Fake It&quot;が推奨されます。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -6596,7 +6596,7 @@ Error(%2): %3</source>
         <location filename="../Configuration.ui" line="2066"/>
         <location filename="../Configuration.ui" line="2102"/>
         <source>times</source>
-        <translation>回数</translation>
+        <translation>回</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2076"/>
@@ -6631,7 +6631,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2236"/>
         <source>Canned free text messages setup</source>
-        <translation></translation>
+        <translation>フリーテキストメッセージの設定</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2242"/>
@@ -7171,7 +7171,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3819"/>
         <source>My Call in message</source>
-        <translation>メッセージの中に私のコールサイン</translation>
+        <translation>メッセージに自局のコールサイン</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3835"/>
