@@ -2433,7 +2433,7 @@ ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").
 ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
     Radio::convert_dark("#dcdcdc",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
   setLastLogdLabel();
-
+  setAutoSeqButtonStyle(m_autoseq);
   if(m_config.spot_to_dxsummit()) {
     ui->pbSpotDXCall->setStyleSheet(QString("QPushButton{color: %1;background: %2;border-style: outset; border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),
       Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
@@ -6125,7 +6125,7 @@ void MainWindow::on_actionJT9_JT65_triggered()
   m_modeTx="JT65";
   m_TRperiod=60.0;
   m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179;
-  mode_label->setStyleSheet(QString("QLabel{background: #ffff66}").arg(Radio::convert_dark("#ffff66",m_useDarkStyle)));
+  mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ffff66",m_useDarkStyle)));
   ui->actionJT9_JT65->setChecked(true);
   commonActions();
   enableHoundAccess(false);
