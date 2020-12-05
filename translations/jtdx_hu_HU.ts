@@ -3087,7 +3087,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson ide a bal egérgombbal a hívójel Dx_jelentésként való elküldéséhez a dxsummit.fi webhelyre. (A Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülnél). Kattintson ide a jobb egérgombbal az adott hívójel üzeneteinek elrejtése&apos; szűrő bekapcsolásához..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson ide a bal egérgombbal a hívójel Dx_jelentésként való elküldéséhez a dxsummit.fi weboldalra. (A Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülnél). Kattintson ide a jobb egérgombbal az adott hívójel üzeneteinek elrejtése&apos; szűrő bekapcsolásához..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
@@ -4078,7 +4078,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="4988"/>
         <source>JTDX Web site</source>
-        <translation>JTDX webhelye</translation>
+        <translation>JTDX weboldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4991"/>
@@ -4251,7 +4251,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5229"/>
         <source>Short list of add-on prefixes and suffixes</source>
-        <translation>A prefixek és suffixok listája</translation>
+        <translation>A prefixek és suffixek listája</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5234"/>
@@ -4411,7 +4411,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5497"/>
         <source>Answer worked B4 calls</source>
-        <translation>Válasz akkior is, ha volt már korábban QSO. (B4)</translation>
+        <translation>Válasz akkor is, ha volt már korábban QSO. (B4)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5508"/>
@@ -4446,7 +4446,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5605"/>
         <source>Max distance instead of best SNR</source>
-        <translation>Maximális távolság a legjobb SNRhelyett</translation>
+        <translation>Maximális távolság a legjobb SNR helyett</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5613"/>
@@ -4481,7 +4481,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>A parter kiválasztásánál nem az új hívójel a fontosabb szempont</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5706,7 +5706,7 @@ Hiba(%2): %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Frekvencia</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
@@ -7049,8 +7049,8 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>A program elküldheti az állomás adatait és a dekódolt adatokat,
- mint Dx jelentést a http://pskreporter.info webhelyre.
+        <translation type="unfinished">A program elküldheti az állomás adatait és a dekódolt adatokat,
+ mint Dx jelentést a http://pskreporter.info weboldalra.
 Ezek az adatok a terjedés és a rendszer lehetőségeinek elemzését segítik.</translation>
     </message>
     <message>
