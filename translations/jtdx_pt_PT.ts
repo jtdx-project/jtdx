@@ -3235,7 +3235,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Redução da lista de candidatos. Esse recurso é dedicado à decodificação de banda larga com CPUs lentos e configuração de sensibilidade &quot;mínima&quot; do decodificador de banda larga. Uma vez que a lista de candidatos é classificada por nível de sincronização, os candidatos com níveis de sincronização baixos não serão processados pelo decodificador para diminuir o tempo gasto para o intervalo de decodificação. Este recurso não se aplica à frequência QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3852,27 +3852,27 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funcionalidade de ponderação DT para opção de diluição da lista de candidatos, o valor médio da distribuição DT de sinais decodificados deve ser definido lá. Este valor depende da precisão da sincronização do relógio do sistema e em bandas superlotadas é próximo ao valor médio do DT dos sinais decodificados. O valor correto aumenta a eficiência de decodificação na opção de diluição da lista de candidatos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation>DT </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
         <source>  %</source>
-        <translation>%</translation>
+        <translation>  %</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4367"/>
         <source>Tx Pct </source>
-        <translation>Tx Pct</translation>
+        <translation>Tx Pct </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4437"/>
@@ -4469,7 +4469,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Chamadas maiores do que novos indicativos de prioridade de chamadas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -5688,7 +5688,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Freq</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
