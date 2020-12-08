@@ -176,7 +176,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_modulator {new Modulator {TX_SAMPLE_RATE, NTMAX, m_jtdxtime}},
   m_soundOutput {new SoundOutput},
   m_TRperiod {60.0},
-  m_DTcenter {0.0},
   m_msErase {0},
   m_secBandChanged {0},
   m_secTxStopped {0},
@@ -196,7 +195,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_XIT {0},
   m_ndepth {3},
   m_ncandthin {100},
-  m_nDTcenter {0},
   m_nFT8Cycles {1},
   m_nFT8SWLCycles {1},
   m_nFT8RXfSens {1},
@@ -1203,7 +1201,8 @@ void MainWindow::writeSettings()
   m_settings->setValue("ReportMessagePriority",ui->actionReport_message_priority->isChecked());
   m_settings->setValue("NDepth",m_ndepth);
   m_settings->setValue("NCandidateListThinning",m_ncandthin);
-  m_settings->setValue("DTCenter",m_DTcenter);
+  qint32 nDTcenter=100 * ui->DTCenterSpinBox->value();
+  m_settings->setValue("DTCenterInt",nDTcenter);
   m_settings->setValue("NFT8Cycles",m_nFT8Cycles);
   m_settings->setValue("NFT8SWLCycles",m_nFT8SWLCycles);
   m_settings->setValue("NFT8QSORXfreqSensitivity",m_nFT8RXfSens);
@@ -1425,8 +1424,8 @@ void MainWindow::readSettings()
   else ui->candListSpinBox->setValue(100);
 
   ui->DTCenterSpinBox->setValue(0.1); // ensure a change is signaled
-  if(m_settings->value("DTCenter").toDouble()>-2.01 && m_settings->value("DTCenter").toDouble()<2.51)
-    ui->DTCenterSpinBox->setValue(m_settings->value("DTCenter",0.0).toDouble());
+  qint32 nDTcenter=m_settings->value("DTCenterInt",0).toInt();
+  if(nDTcenter>-201 && nDTcenter<251) ui->DTCenterSpinBox->setValue(static_cast<double>(nDTcenter/100.));
   else ui->DTCenterSpinBox->setValue(0.0);
 
   m_nFT8Cycles=m_settings->value("NFT8Cycles",1).toInt(); if(!(m_nFT8Cycles>=1 && m_nFT8Cycles<=3)) m_nFT8Cycles=1;
@@ -3188,7 +3187,7 @@ void MainWindow::decode()                                       //decode()
   else dec_data.params.napwid=50;
   dec_data.params.nmt=m_ft8threads;
   dec_data.params.ncandthin=m_ncandthin;
-  dec_data.params.ndtcenter=m_nDTcenter;
+  dec_data.params.ndtcenter=100 * ui->DTCenterSpinBox->value();
   dec_data.params.nft8cycles=m_nFT8Cycles;
   dec_data.params.nft8swlcycles=m_nFT8SWLCycles;
   if(m_houndMode) { dec_data.params.nft8rxfsens=1; } else { dec_data.params.nft8rxfsens=m_nFT8RXfSens; }
@@ -6287,7 +6286,6 @@ void MainWindow::on_RxFreqSpinBox_valueChanged(int n)
 }
 
 void MainWindow::on_candListSpinBox_valueChanged(int n) { m_ncandthin=n; }
-void MainWindow::on_DTCenterSpinBox_valueChanged(double dt) { m_DTcenter=dt; m_nDTcenter=dt*100.0; }
 
 void MainWindow::on_actionQuickDecode_triggered() { m_ndepth=1; ui->actionQuickDecode->setChecked(true); }
 void MainWindow::on_actionMediumDecode_triggered() { m_ndepth=2; ui->actionMediumDecode->setChecked(true); }

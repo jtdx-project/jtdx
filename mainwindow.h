@@ -314,7 +314,6 @@ private slots:
   void on_pbTxMode_clicked();
   void on_RxFreqSpinBox_valueChanged(int n);
   void on_candListSpinBox_valueChanged(int n);
-  void on_DTCenterSpinBox_valueChanged(double dt);
   void on_pbTxLock_clicked(bool);
   void on_skipTx1_clicked(bool checked);
   void on_skipGrid_clicked(bool checked);
@@ -429,7 +428,6 @@ private:
   QClipboard *clipboard = QGuiApplication::clipboard();
 
   double  m_TRperiod;
-  double  m_DTcenter;
 
   qint64  m_msErase;
   qint64  m_secBandChanged;
@@ -452,7 +450,6 @@ private:
   qint32  m_XIT;
   qint32  m_ndepth;
   qint32  m_ncandthin;
-  qint32  m_nDTcenter;
   qint32  m_nFT8Cycles;
   qint32  m_nFT8SWLCycles;
   qint32  m_nFT8RXfSens;

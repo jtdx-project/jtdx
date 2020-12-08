@@ -2042,7 +2042,9 @@ void Configuration::impl::read_settings ()
 
   id_interval_ = settings_->value ("IDint", 0).toInt (); if(!(id_interval_>=0 && id_interval_<=99)) id_interval_=0;
   ntrials_ = settings_->value ("nTrials", 3).toInt (); if(!(ntrials_>=1 && ntrials_<=8)) ntrials_=3;
-  txDelay_ = settings_->value ("TxDelay",0.1).toDouble(); if(!(txDelay_>-0.001 && txDelay_<0.501)) txDelay_=0.1;
+
+  qint32 ntxDelay=settings_->value ("TxDelayInt",100).toInt();
+  txDelay_ = static_cast<double>(ntxDelay/1000.); if(!(txDelay_>-0.001 && txDelay_<0.501)) txDelay_=0.1;
   ntrials10_ = settings_->value ("nTrialsT10", 1).toInt (); if(!(ntrials10_>=1 && ntrials10_<=8)) ntrials10_=1;
   ntrialsrxf10_ = settings_->value ("nTrialsRxFreqT10", 1).toInt (); if(!(ntrialsrxf10_>=1 && ntrialsrxf10_<=3)) ntrialsrxf10_=1;
   npreampass_ = settings_->value ("nPreampass", 4).toInt (); if(!(npreampass_>=2 && npreampass_<=4)) npreampass_=4;
@@ -2440,7 +2442,8 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("DecodedTextFont", decoded_text_font_.toString ());
   settings_->setValue ("IDint", id_interval_);
   settings_->setValue ("nTrials", ntrials_);
-  settings_->setValue ("TxDelay", txDelay_);
+  int ntxDelay=1000*txDelay_;
+  settings_->setValue ("TxDelayInt", ntxDelay);
   settings_->setValue ("nTrialsT10", ntrials10_);
   settings_->setValue ("nTrialsRxFreqT10", ntrialsrxf10_);
   settings_->setValue ("nPreampass", npreampass_);
