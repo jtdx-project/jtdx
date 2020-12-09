@@ -334,22 +334,18 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
   else if(m_modeTx=="T10") bw=9.0*4.0*12000.0/6912.0;
 
   if(m_filter==true) { //Mark Filter Freq with blue
+    QPen pen4(QColor(Radio::convert_dark("#0000ff",m_useDarkStyle)), 2);
+    painter0.setPen(pen4);
     if(m_mode=="FT8") {
-      QPen pen4(Qt::blue, 2);
-      painter0.setPen(pen4);
       if(!m_houndFilter) { x1=XfromFreq(m_rxFreq-60.0); x2=XfromFreq(m_rxFreq+110.0); }
       else { x1=XfromFreq(m_rxFreq-290.0); x2=XfromFreq(m_rxFreq+340.0); }
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
     }
     else if(m_mode=="FT4") {
-      QPen pen4(Qt::blue, 2);
-      painter0.setPen(pen4);
       x1=XfromFreq(m_rxFreq-95.0); x2=XfromFreq(m_rxFreq+179.0);
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
     }
     else if((m_mode=="JT65" or m_mode=="JT9+JT65") and m_modeTx=="JT65") {
-      QPen pen4(Qt::blue, 2);
-      painter0.setPen(pen4);
       x1=XfromFreq(m_rxFreq-200.0); x2=XfromFreq(m_rxFreq+375.0);
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
       QPen pen5(QColor(255,170,127), 4); //Mark Filter show Freq with pink
@@ -358,14 +354,10 @@ void CPlotter::DrawOverlay()                                 //DrawOverlay()
       painter0.drawLine(x1,28,x2,28); painter0.drawLine(x1,26,x2,26);
     }
     else if(m_mode=="JT9") {
-      QPen pen5(Qt::blue, 2);
-      painter0.setPen(pen5);
       x1=XfromFreq(m_rxFreq-50.0); x2=XfromFreq(m_rxFreq+65.6);
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
     }
     else if(m_mode=="T10") {
-      QPen pen4(Qt::blue, 2);
-      painter0.setPen(pen4);
       x1=XfromFreq(m_rxFreq-80.0); x2=XfromFreq(m_rxFreq+142.4);
       painter0.drawLine(x1,23,x1,30); painter0.drawLine(x1,23,x2,23); painter0.drawLine(x2,23,x2,30);
     }

@@ -2042,7 +2042,9 @@ void Configuration::impl::read_settings ()
 
   id_interval_ = settings_->value ("IDint", 0).toInt (); if(!(id_interval_>=0 && id_interval_<=99)) id_interval_=0;
   ntrials_ = settings_->value ("nTrials", 3).toInt (); if(!(ntrials_>=1 && ntrials_<=8)) ntrials_=3;
-  txDelay_ = settings_->value ("TxDelay",0.1).toDouble(); if(!(txDelay_>-0.001 && txDelay_<0.501)) txDelay_=0.1;
+
+  qint32 ntxDelay=settings_->value ("TxDelayInt",100).toInt();
+  txDelay_ = static_cast<double>(ntxDelay/1000.); if(!(txDelay_>-0.001 && txDelay_<0.501)) txDelay_=0.1;
   ntrials10_ = settings_->value ("nTrialsT10", 1).toInt (); if(!(ntrials10_>=1 && ntrials10_<=8)) ntrials10_=1;
   ntrialsrxf10_ = settings_->value ("nTrialsRxFreqT10", 1).toInt (); if(!(ntrialsrxf10_>=1 && ntrialsrxf10_<=3)) ntrialsrxf10_=1;
   npreampass_ = settings_->value ("nPreampass", 4).toInt (); if(!(npreampass_>=2 && npreampass_<=4)) npreampass_=4;
@@ -2440,7 +2442,8 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("DecodedTextFont", decoded_text_font_.toString ());
   settings_->setValue ("IDint", id_interval_);
   settings_->setValue ("nTrials", ntrials_);
-  settings_->setValue ("TxDelay", txDelay_);
+  int ntxDelay=1000*txDelay_;
+  settings_->setValue ("TxDelayInt", ntxDelay);
   settings_->setValue ("nTrialsT10", ntrials10_);
   settings_->setValue ("nTrialsRxFreqT10", ntrialsrxf10_);
   settings_->setValue ("nPreampass", npreampass_);
@@ -2684,6 +2687,8 @@ void Configuration::impl::set_rig_invariants ()
       ui_->test_PTT_push_button->setEnabled (TransceiverFactory::PTT_method_DTR == ptt_method
                                              || TransceiverFactory::PTT_method_RTS == ptt_method);
       ui_->TX_audio_source_group_box->setEnabled (false);
+      ui_->rig_power_check_box->setChecked (false);
+      ui_->rig_power_check_box->setEnabled (false);
       ui_->S_meter_check_box->setChecked (false);
       ui_->S_meter_check_box->setEnabled (false);
       ui_->output_power_check_box->setChecked (false);
@@ -2697,8 +2702,8 @@ void Configuration::impl::set_rig_invariants ()
          !ui_->rig_combo_box->currentText().startsWith("Ham Radio") && !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-480") &&
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") &&
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
+         ui_->rig_power_check_box->setEnabled (true);
          ui_->S_meter_check_box->setEnabled (true);
-//         if (!ui_->rig_combo_box->currentText().startsWith("Icom ")) ui_->output_power_check_box->setEnabled (true);
          ui_->output_power_check_box->setEnabled (true);
       }
       ui_->test_CAT_push_button->setEnabled (true);
@@ -4525,12 +4530,10 @@ void Configuration::impl::on_rig_combo_box_currentIndexChanged (int /* index */)
      ui_->rig_combo_box->currentText().startsWith("Ham Radio") || ui_->rig_combo_box->currentText().startsWith("Kenwood TS-480") ||
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") ||
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
+     ui_->rig_power_check_box->setChecked (false); ui_->rig_power_check_box->setEnabled (false);
      ui_->S_meter_check_box->setChecked (false); ui_->S_meter_check_box->setEnabled (false);
      ui_->output_power_check_box->setChecked (false); ui_->output_power_check_box->setEnabled (false);
   }
-//  if(ui_->rig_combo_box->currentText().startsWith("Icom ")) {
-//	 ui_->output_power_check_box->setChecked (false); ui_->output_power_check_box->setEnabled (false);
-//  }
 }
 
 void Configuration::impl::on_CAT_data_bits_button_group_buttonClicked (int /* id */)
