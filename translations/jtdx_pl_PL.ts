@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1205"/>
+        <location filename="../Configuration.cpp" line="1207"/>
         <source>&amp;OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1206"/>
+        <location filename="../Configuration.cpp" line="1208"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Anuluj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1221"/>
+        <location filename="../Configuration.cpp" line="1223"/>
         <source>Create temporary directory error: </source>
         <translation>Błąd tworzenia katalogu tymczasowego: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1227"/>
+        <location filename="../Configuration.cpp" line="1229"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 Inna aplikacja blokuje dostęp do katalogu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1244"/>
+        <location filename="../Configuration.cpp" line="1246"/>
         <source>Create data directory error: </source>
         <translation>Błąd tworzenia katalogu tymczasowego: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1253"/>
-        <location filename="../Configuration.cpp" line="1264"/>
+        <location filename="../Configuration.cpp" line="1255"/>
+        <location filename="../Configuration.cpp" line="1266"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Nie można utworzyć katalogu &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1430"/>
-        <location filename="../Configuration.cpp" line="1456"/>
-        <location filename="../Configuration.cpp" line="1508"/>
+        <location filename="../Configuration.cpp" line="1432"/>
+        <location filename="../Configuration.cpp" line="1458"/>
+        <location filename="../Configuration.cpp" line="1510"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kasowanie</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1460"/>
-        <location filename="../Configuration.cpp" line="1512"/>
+        <location filename="../Configuration.cpp" line="1462"/>
+        <location filename="../Configuration.cpp" line="1514"/>
         <source>&amp;Insert ...</source>
         <translation>Wstaw&amp;ianie ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1464"/>
+        <location filename="../Configuration.cpp" line="1466"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Wczytanie ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1468"/>
+        <location filename="../Configuration.cpp" line="1470"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Zapisz jako ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1472"/>
+        <location filename="../Configuration.cpp" line="1474"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Połącz ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1476"/>
+        <location filename="../Configuration.cpp" line="1478"/>
         <source>&amp;Reset</source>
         <translation>&amp;Resetuj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2724"/>
+        <location filename="../Configuration.cpp" line="2729"/>
         <source>Serial Port:</source>
         <translation>Port COM:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2725"/>
+        <location filename="../Configuration.cpp" line="2730"/>
         <source>Serial port used for CAT control</source>
         <translation>Port COM używany do sterowania CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2732"/>
+        <location filename="../Configuration.cpp" line="2737"/>
         <source>Network Server:</source>
         <translation>Serwer sieciowy:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2733"/>
+        <location filename="../Configuration.cpp" line="2738"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ Format:
 	[adres_IPv6]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2745"/>
+        <location filename="../Configuration.cpp" line="2750"/>
         <source>USB Device:</source>
         <translation>Urządzenie USB:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2746"/>
+        <location filename="../Configuration.cpp" line="2751"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +173,132 @@ Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2781"/>
+        <location filename="../Configuration.cpp" line="2786"/>
         <source>Invalid audio input device</source>
         <translation>Niewłaściwe urządzenie wejściowe audio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2788"/>
+        <location filename="../Configuration.cpp" line="2793"/>
         <source>Invalid audio output device</source>
         <translation>Niewłaściwe urządzenie wyjściowe audio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2794"/>
+        <location filename="../Configuration.cpp" line="2799"/>
         <source>Invalid PTT method</source>
         <translation>Niewłaściwy sposób sterowania PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2804"/>
+        <location filename="../Configuration.cpp" line="2809"/>
         <source>Invalid PTT port</source>
         <translation>Niewłaściwy port PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3315"/>
+        <location filename="../Configuration.cpp" line="3321"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 w wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3316"/>
+        <location filename="../Configuration.cpp" line="3322"/>
         <source>CQ in message</source>
         <translation>CQ w wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4499"/>
+        <location filename="../Configuration.cpp" line="4505"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>Wybór czcionki tekstu dekodowanego przez JTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
-        <location filename="../Configuration.cpp" line="5154"/>
+        <location filename="../Configuration.cpp" line="5129"/>
+        <location filename="../Configuration.cpp" line="5160"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
-        <location filename="../Configuration.cpp" line="5152"/>
-        <location filename="../Configuration.cpp" line="5206"/>
+        <location filename="../Configuration.cpp" line="5127"/>
+        <location filename="../Configuration.cpp" line="5158"/>
+        <location filename="../Configuration.cpp" line="5212"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Pliki częstotliwości (*.qrg);;Wszystkie pliki (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5119"/>
+        <location filename="../Configuration.cpp" line="5125"/>
         <source>Load Working Frequencies</source>
         <translation>Wczytaj częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5137"/>
+        <location filename="../Configuration.cpp" line="5143"/>
         <source>Replace Working Frequencies</source>
         <translation>Zastąp częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5144"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Czy jesteś pewien, że chcesz usunąć bieżące częstotliwości robocze i zastąpić je wczytanymi?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5150"/>
+        <location filename="../Configuration.cpp" line="5156"/>
         <source>Merge Working Frequencies</source>
         <translation>Połącz częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5177"/>
-        <location filename="../Configuration.cpp" line="5186"/>
-        <location filename="../Configuration.cpp" line="5196"/>
+        <location filename="../Configuration.cpp" line="5183"/>
+        <location filename="../Configuration.cpp" line="5192"/>
+        <location filename="../Configuration.cpp" line="5202"/>
         <source>Not a valid frequencies file</source>
         <translation>Nieprawidłowy plik częstotliwości</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5177"/>
+        <location filename="../Configuration.cpp" line="5183"/>
         <source>Incorrect file magic</source>
         <translation>Błędna magiczna liczba pliku</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5186"/>
+        <location filename="../Configuration.cpp" line="5192"/>
         <source>Version is too new</source>
         <translation>Zbyt nowa wersja</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5196"/>
+        <location filename="../Configuration.cpp" line="5202"/>
         <source>Contents corrupt</source>
         <translation>Uszakodzona zawartość</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5206"/>
+        <location filename="../Configuration.cpp" line="5212"/>
         <source>Save Working Frequencies</source>
         <translation>Zapisz częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5216"/>
+        <location filename="../Configuration.cpp" line="5222"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Zapisz tylko wybrane częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5218"/>
+        <location filename="../Configuration.cpp" line="5224"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Czy jesteś pewien, że chcesz zapisać tylko aktualnie wybrane częstotliwości? Kliknij  No  aby zapisać wszystkie.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5245"/>
+        <location filename="../Configuration.cpp" line="5251"/>
         <source>Reset Working Frequencies</source>
         <translation>Resetowanie częstotliwości roboczych</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5247"/>
+        <location filename="../Configuration.cpp" line="5253"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Czy jesteś pewien, że chcesz usunąć aktualne częstotliwości robocze i zastąpić je częstotliwościami domyślnymi?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5307"/>
+        <location filename="../Configuration.cpp" line="5313"/>
         <source>Save Directory</source>
         <translation>Zapisanie katalogu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5323"/>
+        <location filename="../Configuration.cpp" line="5329"/>
         <source>Failed to open connection to rig</source>
         <translation>Nie udało się otworzyć połączenia z urządzeniem (TRCVR)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5566"/>
+        <location filename="../Configuration.cpp" line="5572"/>
         <source>Rig failure</source>
         <translation>Uszkodzenie urządzenia (TRCVR)</translation>
     </message>
@@ -5097,7 +5097,7 @@ srever UDP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5072"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>OK</source>
         <translation></translation>
     </message>
@@ -5105,184 +5105,184 @@ srever UDP %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5074"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>Directory:</source>
         <translation>Katalog:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5075"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>File &amp;name:</source>
         <translation>&amp;Nazwa pliku:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5076"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>&amp;Open</source>
         <translation>&amp;Otwórz</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5077"/>
+        <location filename="../Configuration.cpp" line="5083"/>
         <source>&amp;Choose</source>
         <translation>&amp;Wybierz</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5078"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>&amp;Save</source>
         <translation>&amp;Zapisz</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5080"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>All files (*)</source>
         <translation>Wszystkie pliki (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5081"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>New Folder</source>
         <translation>Nowy katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5082"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Delete</source>
         <translation>Usuwanie</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5079"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5083"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>&amp;Delete</source>
         <translation>&amp;Usuwanie</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5090"/>
         <source>&amp;Rename</source>
         <translation>Z&amp;mień nazwę</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5085"/>
+        <location filename="../Configuration.cpp" line="5091"/>
         <source>Show &amp;hidden files</source>
         <translation>Pokaż &amp;ukryte pliki</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5092"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Nowy katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5087"/>
+        <location filename="../Configuration.cpp" line="5093"/>
         <source>Look in:</source>
         <translation>Szukaj w:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5088"/>
+        <location filename="../Configuration.cpp" line="5094"/>
         <source>Files of type:</source>
         <translation>Typy plików:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5095"/>
+        <location filename="../Configuration.cpp" line="5101"/>
         <source>Back</source>
         <translation>Poprzedni</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5096"/>
+        <location filename="../Configuration.cpp" line="5102"/>
         <source>Go back</source>
         <translation>Powrót</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5097"/>
+        <location filename="../Configuration.cpp" line="5103"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5098"/>
+        <location filename="../Configuration.cpp" line="5104"/>
         <source>Forward</source>
         <translation>Następny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5099"/>
+        <location filename="../Configuration.cpp" line="5105"/>
         <source>Go forward</source>
         <translation>Idź do przodu</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5100"/>
+        <location filename="../Configuration.cpp" line="5106"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5101"/>
+        <location filename="../Configuration.cpp" line="5107"/>
         <source>Parent Directory</source>
         <translation>Katalog nadrzędny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5102"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>Go to the parent directory</source>
         <translation>Idź do katalogu nadrzędnego</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5109"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5104"/>
+        <location filename="../Configuration.cpp" line="5110"/>
         <source>Create New Folder</source>
         <translation>Utwórz nowy katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5105"/>
+        <location filename="../Configuration.cpp" line="5111"/>
         <source>Create a New Folder</source>
         <translation>Utwórz nowy katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5106"/>
+        <location filename="../Configuration.cpp" line="5112"/>
         <source>List View</source>
         <translation>Widok listy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5113"/>
         <source>Change to list view mode</source>
         <translation>Zmień na widok listy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5114"/>
         <source>Detail View</source>
         <translation>Widok szczegółowy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5115"/>
         <source>Change to detail view mode</source>
         <translation>Zmień na widok szczegółowy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5110"/>
+        <location filename="../Configuration.cpp" line="5116"/>
         <source>Sidebar</source>
         <translation>Pasek boczny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
+        <location filename="../Configuration.cpp" line="5117"/>
         <source>List of places and bookmarks</source>
         <translation>Lista miejsc i zakładek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5089"/>
+        <location filename="../Configuration.cpp" line="5095"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; jest zabezpieczony przed zapisem.
 Czy pomimo tego chcesz usunąć?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5090"/>
+        <location filename="../Configuration.cpp" line="5096"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Czy jesteś pewien, że chcesz usunąć &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
+        <location filename="../Configuration.cpp" line="5097"/>
         <source>Could not delete directory.</source>
         <translation>Nie można usunąć katalogu.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5092"/>
+        <location filename="../Configuration.cpp" line="5098"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5291,7 +5291,7 @@ Nie znaleziono katalogu.
 Upewnić się, że podano właściwą nazwę katalogu.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Recent Places</source>
         <translation>Ostatnie miejsca</translation>
     </message>
@@ -5299,22 +5299,22 @@ Upewnić się, że podano właściwą nazwę katalogu.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5113"/>
+        <location filename="../Configuration.cpp" line="5119"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5120"/>
         <source>Size</source>
         <translation>Wielkość</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5121"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5116"/>
+        <location filename="../Configuration.cpp" line="5122"/>
         <source>Date Modified</source>
         <translation>Data modyfikacji</translation>
     </message>
@@ -7167,7 +7167,17 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
         <translation>Częstotliwości robocze</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5092"/>
+        <location filename="../Configuration.ui" line="3616"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3619"/>
+        <source>Hide hint char</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5102"/>
         <source>Reset</source>
         <translation>Resetuj</translation>
     </message>
@@ -7188,7 +7198,7 @@ co jest użyteczne do szacowania propagacji i osiągów systemu.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
-        <location filename="../Configuration.ui" line="6822"/>
+        <location filename="../Configuration.ui" line="6832"/>
         <source> Hz</source>
         <translation></translation>
     </message>
@@ -7500,257 +7510,257 @@ Prawoklik aby wstawić lub usunąć opcje.</translation>
         <translation>niebieski / mój znak w QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3645"/>
+        <location filename="../Configuration.ui" line="3655"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj czerwonego markera jeżeli mój znak wywoławczy jest w zdekodowanej wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3648"/>
+        <location filename="../Configuration.ui" line="3658"/>
         <source>red / my call in message</source>
         <translation>czerwony / mój znak w wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3658"/>
+        <location filename="../Configuration.ui" line="3668"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj markera na końcu wiadomości zamiast koloru tła dla powiadomień innych standardowych wiadomości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3661"/>
+        <location filename="../Configuration.ui" line="3671"/>
         <source>Other standard messages</source>
         <translation>Inne standardowe wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3704"/>
+        <location filename="../Configuration.ui" line="3714"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Na górze poprzedniego panelu znajdują się typy wiadomości sprawdzanych dla pewnych kryteriów, kolorowany tekst jest wybrany dla każdego typu wiadomości.&lt;br&gt;&lt;br&gt;Po lewej stronie znajdują się kryteria uporządkowane hierarchicznie, oraz kolor tła zostaje wybrany dla wiadomości dla każdego kryterium.&lt;br&gt;&lt;br&gt;Funkcjonalność powiadomienia &apos;Zrobiony&apos; jest oparta na wspierającej zasadzie, włączanej jeżeli wszystkie aktywowane &apos;New one&apos; kryteria lub kryterium nie sa spełnione.&lt;br&gt;&lt;br&gt;&apos;Odwrócenie koloru&apos; może zostac użyte jeżeli użytkownik chciałby podświetlić wiadomości CQ i &apos;MójZnak&apos; jakims specyficznym kolorem tła.&lt;br&gt;&lt;br&gt;Na początek jedno kryterium może zostac wybrane i dla powiadomienia o nowym pasmie/modulacji mozna uzyć podobnego koloru o innym poziomie nasycenia, póżniej ilość pożądanych kryteriów można zwiększyć.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3707"/>
-        <location filename="../Configuration.ui" line="6887"/>
+        <location filename="../Configuration.ui" line="3717"/>
+        <location filename="../Configuration.ui" line="6897"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wskazówki konfiguracyjne&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3755"/>
+        <location filename="../Configuration.ui" line="3765"/>
         <source>Transmitted message</source>
         <translation>Wiadomość nadana</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3771"/>
-        <location filename="../Configuration.ui" line="3854"/>
-        <location filename="../Configuration.ui" line="3876"/>
-        <location filename="../Configuration.ui" line="3898"/>
-        <location filename="../Configuration.ui" line="3930"/>
-        <location filename="../Configuration.ui" line="3949"/>
-        <location filename="../Configuration.ui" line="3968"/>
-        <location filename="../Configuration.ui" line="4000"/>
-        <location filename="../Configuration.ui" line="4019"/>
-        <location filename="../Configuration.ui" line="4038"/>
-        <location filename="../Configuration.ui" line="4070"/>
-        <location filename="../Configuration.ui" line="4089"/>
-        <location filename="../Configuration.ui" line="4108"/>
-        <location filename="../Configuration.ui" line="4140"/>
-        <location filename="../Configuration.ui" line="4159"/>
-        <location filename="../Configuration.ui" line="4178"/>
-        <location filename="../Configuration.ui" line="4210"/>
-        <location filename="../Configuration.ui" line="4229"/>
-        <location filename="../Configuration.ui" line="4248"/>
-        <location filename="../Configuration.ui" line="4280"/>
-        <location filename="../Configuration.ui" line="4299"/>
-        <location filename="../Configuration.ui" line="4318"/>
-        <location filename="../Configuration.ui" line="4350"/>
-        <location filename="../Configuration.ui" line="4369"/>
-        <location filename="../Configuration.ui" line="4388"/>
-        <location filename="../Configuration.ui" line="4420"/>
-        <location filename="../Configuration.ui" line="4439"/>
-        <location filename="../Configuration.ui" line="4458"/>
-        <location filename="../Configuration.ui" line="4490"/>
-        <location filename="../Configuration.ui" line="4509"/>
-        <location filename="../Configuration.ui" line="4528"/>
-        <location filename="../Configuration.ui" line="4560"/>
-        <location filename="../Configuration.ui" line="4579"/>
-        <location filename="../Configuration.ui" line="4598"/>
-        <location filename="../Configuration.ui" line="4630"/>
-        <location filename="../Configuration.ui" line="4649"/>
-        <location filename="../Configuration.ui" line="4668"/>
-        <location filename="../Configuration.ui" line="4700"/>
-        <location filename="../Configuration.ui" line="4719"/>
-        <location filename="../Configuration.ui" line="4738"/>
-        <location filename="../Configuration.ui" line="4773"/>
-        <location filename="../Configuration.ui" line="4792"/>
-        <location filename="../Configuration.ui" line="4811"/>
+        <location filename="../Configuration.ui" line="3781"/>
+        <location filename="../Configuration.ui" line="3864"/>
+        <location filename="../Configuration.ui" line="3886"/>
+        <location filename="../Configuration.ui" line="3908"/>
+        <location filename="../Configuration.ui" line="3940"/>
+        <location filename="../Configuration.ui" line="3959"/>
+        <location filename="../Configuration.ui" line="3978"/>
+        <location filename="../Configuration.ui" line="4010"/>
+        <location filename="../Configuration.ui" line="4029"/>
+        <location filename="../Configuration.ui" line="4048"/>
+        <location filename="../Configuration.ui" line="4080"/>
+        <location filename="../Configuration.ui" line="4099"/>
+        <location filename="../Configuration.ui" line="4118"/>
+        <location filename="../Configuration.ui" line="4150"/>
+        <location filename="../Configuration.ui" line="4169"/>
+        <location filename="../Configuration.ui" line="4188"/>
+        <location filename="../Configuration.ui" line="4220"/>
+        <location filename="../Configuration.ui" line="4239"/>
+        <location filename="../Configuration.ui" line="4258"/>
+        <location filename="../Configuration.ui" line="4290"/>
+        <location filename="../Configuration.ui" line="4309"/>
+        <location filename="../Configuration.ui" line="4328"/>
+        <location filename="../Configuration.ui" line="4360"/>
+        <location filename="../Configuration.ui" line="4379"/>
+        <location filename="../Configuration.ui" line="4398"/>
+        <location filename="../Configuration.ui" line="4430"/>
+        <location filename="../Configuration.ui" line="4449"/>
+        <location filename="../Configuration.ui" line="4468"/>
+        <location filename="../Configuration.ui" line="4500"/>
+        <location filename="../Configuration.ui" line="4519"/>
+        <location filename="../Configuration.ui" line="4538"/>
+        <location filename="../Configuration.ui" line="4570"/>
+        <location filename="../Configuration.ui" line="4589"/>
+        <location filename="../Configuration.ui" line="4608"/>
+        <location filename="../Configuration.ui" line="4640"/>
+        <location filename="../Configuration.ui" line="4659"/>
+        <location filename="../Configuration.ui" line="4678"/>
+        <location filename="../Configuration.ui" line="4710"/>
+        <location filename="../Configuration.ui" line="4729"/>
+        <location filename="../Configuration.ui" line="4748"/>
+        <location filename="../Configuration.ui" line="4783"/>
+        <location filename="../Configuration.ui" line="4802"/>
+        <location filename="../Configuration.ui" line="4821"/>
         <source>K1ABC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3787"/>
+        <location filename="../Configuration.ui" line="3797"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Traktuj wiadomości RR73/73 w taki sam sposób jak wiadomości CQ dla autoselekcji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3793"/>
+        <location filename="../Configuration.ui" line="3803"/>
         <source>RR73/73           </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3806"/>
+        <location filename="../Configuration.ui" line="3816"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 w wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3819"/>
+        <location filename="../Configuration.ui" line="3829"/>
         <source>My Call in message</source>
         <translation>Mój Znak w wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3832"/>
+        <location filename="../Configuration.ui" line="3842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ustaw kolor teksu dla standardowych wiadomości innych niż (&apos;CQ&apos; and &apos;MójZnak&apos;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3835"/>
+        <location filename="../Configuration.ui" line="3845"/>
         <source>Other standard message</source>
         <translation>Inne standardowe wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3914"/>
+        <location filename="../Configuration.ui" line="3924"/>
         <source>New CQZ</source>
         <translation>Nowa CQZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3984"/>
+        <location filename="../Configuration.ui" line="3994"/>
         <source>New CQZ on Band/Mode</source>
         <translation>Nowa CQZ dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4054"/>
+        <location filename="../Configuration.ui" line="4064"/>
         <source>New ITUZ</source>
         <translation>Nowa ITUZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4124"/>
+        <location filename="../Configuration.ui" line="4134"/>
         <source>New ITUZ on Band/Mode</source>
         <translation>Nowa ITUZ dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4194"/>
+        <location filename="../Configuration.ui" line="4204"/>
         <source>New DXCC</source>
         <translation>Nowy DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4264"/>
+        <location filename="../Configuration.ui" line="4274"/>
         <source>New DXCC on Band/Mode</source>
         <translation>Nowy DXCC dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4334"/>
+        <location filename="../Configuration.ui" line="4344"/>
         <source>New Grid</source>
         <translation>Nowy Lokator</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4404"/>
+        <location filename="../Configuration.ui" line="4414"/>
         <source>New Grid on Band/Mode</source>
         <translation>Nowy Lokator dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4474"/>
+        <location filename="../Configuration.ui" line="4484"/>
         <source>New Prefix</source>
         <translation>Nowy Prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4544"/>
+        <location filename="../Configuration.ui" line="4554"/>
         <source>New Prefix on Band/Mode</source>
         <translation>Nowy Prefix dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4614"/>
+        <location filename="../Configuration.ui" line="4624"/>
         <source>New Call</source>
         <translation>Nowy Znak</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4684"/>
+        <location filename="../Configuration.ui" line="4694"/>
         <source>New Call on Band/Mode</source>
         <translation>Nowy Znak dla Pasma/Emisji</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4754"/>
+        <location filename="../Configuration.ui" line="4764"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>Jest używany tylko dla wiadomości CQ oraz MójZnak</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4757"/>
+        <location filename="../Configuration.ui" line="4767"/>
         <source>Worked one</source>
         <translation>Zrobiony</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4854"/>
+        <location filename="../Configuration.ui" line="4864"/>
         <source>Filters</source>
         <translation>Filtry</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4865"/>
+        <location filename="../Configuration.ui" line="4875"/>
         <source>Hide messages from continents</source>
         <translation>Ukryj wiadomości z kontynentów</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4877"/>
+        <location filename="../Configuration.ui" line="4887"/>
         <source>Africa</source>
         <translation>Afryka</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4884"/>
+        <location filename="../Configuration.ui" line="4894"/>
         <source>Antarctica</source>
         <translation>Antarktyka</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4891"/>
+        <location filename="../Configuration.ui" line="4901"/>
         <source>Asia</source>
         <translation>Azja</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4898"/>
+        <location filename="../Configuration.ui" line="4908"/>
         <source>Europe</source>
         <translation>Europa</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4905"/>
+        <location filename="../Configuration.ui" line="4915"/>
         <source>Oceania</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4912"/>
+        <location filename="../Configuration.ui" line="4922"/>
         <source>North America</source>
         <translation>Ameryka Północna</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4919"/>
+        <location filename="../Configuration.ui" line="4929"/>
         <source>South America</source>
         <translation>Ameryka Południowa</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4929"/>
+        <location filename="../Configuration.ui" line="4939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Pokaż nazwę DXCC/prefix&apos; powinno zostać aktywowane w zakładce Ustawienia Ogólne albo jakieś powiadomienie &apos;Nowy&apos; aby ta funckjonalność działała.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4932"/>
+        <location filename="../Configuration.ui" line="4942"/>
         <source>Hide messages from countries</source>
         <translation>Ukryj wiadomości z krajów</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4952"/>
-        <location filename="../Configuration.ui" line="5017"/>
+        <location filename="../Configuration.ui" line="4962"/>
+        <location filename="../Configuration.ui" line="5027"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywuj opcję&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4955"/>
-        <location filename="../Configuration.ui" line="5020"/>
+        <location filename="../Configuration.ui" line="4965"/>
+        <location filename="../Configuration.ui" line="5030"/>
         <source>Hide</source>
         <translation>Ukryj</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4962"/>
+        <location filename="../Configuration.ui" line="4972"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -7787,23 +7797,23 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4985"/>
+        <location filename="../Configuration.ui" line="4995"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wyczyść listę krajów&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4988"/>
-        <location filename="../Configuration.ui" line="5043"/>
+        <location filename="../Configuration.ui" line="4998"/>
+        <location filename="../Configuration.ui" line="5053"/>
         <source>Clear</source>
         <translation>Czyść</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5000"/>
+        <location filename="../Configuration.ui" line="5010"/>
         <source>Hide messages from callsigns</source>
         <translation>Ukryj wiadomości od znaków wywoławczych</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5027"/>
+        <location filename="../Configuration.ui" line="5037"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -7814,161 +7824,143 @@ użyty bazowy znak wywoławczy, na przykład:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5040"/>
+        <location filename="../Configuration.ui" line="5050"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wyczyść listę znaków&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5055"/>
+        <location filename="../Configuration.ui" line="5065"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>Pokaż wiadomości merytoryczne w oknie częstotliwości RX </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5072"/>
+        <location filename="../Configuration.ui" line="5082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Przepisz wiadomości merytoryczne z dowolnym tekstem do okna wiadomości częstotliwości RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5075"/>
+        <location filename="../Configuration.ui" line="5085"/>
         <source>Enable</source>
         <translation>Aktywuj</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5082"/>
+        <location filename="../Configuration.ui" line="5092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lista rozdzielonych przecinkami nazw zawartości.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5089"/>
+        <location filename="../Configuration.ui" line="5099"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resetuj listę nazw zawartości do wartości domyślnej.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5106"/>
-        <location filename="../Configuration.ui" line="5129"/>
-        <location filename="../Configuration.ui" line="5152"/>
+        <location filename="../Configuration.ui" line="5116"/>
+        <location filename="../Configuration.ui" line="5139"/>
+        <location filename="../Configuration.ui" line="5162"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filtr zostanie dodany z częstotliwości RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5109"/>
+        <location filename="../Configuration.ui" line="5119"/>
         <source>Show CQ messages only</source>
         <translation>Pokazuj tylko wiadomości CQ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5132"/>
+        <location filename="../Configuration.ui" line="5142"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>Pokazuj tylko wiadomości CQ/RRR/RR73/73</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5155"/>
+        <location filename="../Configuration.ui" line="5165"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>Pokazuj tylko wiadomości CQ/RR73/73</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5177"/>
+        <location filename="../Configuration.ui" line="5187"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukryj zdekodowane dowolne wiadomości znajdujące się poza częstotliwością RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5180"/>
+        <location filename="../Configuration.ui" line="5190"/>
         <source>Hide decoded free messages</source>
         <translation>Ukryj zdekodowane dowolne wiadomości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5187"/>
+        <location filename="../Configuration.ui" line="5197"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>Ukryj wiadomości nie związane z hash-em drugiego znaku wywoławczego</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5210"/>
+        <location filename="../Configuration.ui" line="5220"/>
         <source>Scheduler</source>
         <translation>Harmonogram</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5218"/>
+        <location filename="../Configuration.ui" line="5228"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatyczne przełączanie pasm zgodnie z predefiniowanym harmonogramem&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5221"/>
+        <location filename="../Configuration.ui" line="5231"/>
         <source>Band scheduler configuration</source>
         <translation>Konfiguracja harmonogramu pasm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5231"/>
+        <location filename="../Configuration.ui" line="5241"/>
         <source>hh</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5241"/>
+        <location filename="../Configuration.ui" line="5251"/>
         <source>mm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5251"/>
+        <location filename="../Configuration.ui" line="5261"/>
         <source>Band</source>
         <translation>Pasmo</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5261"/>
-        <location filename="../Configuration.ui" line="5521"/>
-        <location filename="../Configuration.ui" line="5778"/>
-        <location filename="../Configuration.ui" line="6035"/>
-        <location filename="../Configuration.ui" line="6292"/>
-        <location filename="../Configuration.ui" line="6549"/>
+        <location filename="../Configuration.ui" line="5271"/>
+        <location filename="../Configuration.ui" line="5531"/>
+        <location filename="../Configuration.ui" line="5788"/>
+        <location filename="../Configuration.ui" line="6045"/>
+        <location filename="../Configuration.ui" line="6302"/>
+        <location filename="../Configuration.ui" line="6559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Harmonogram ustawi modulację JT65+JT9 jeżeli wybrana jest częstotliwość JT65.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5264"/>
+        <location filename="../Configuration.ui" line="5274"/>
         <source>JT65+JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5280"/>
-        <location filename="../Configuration.ui" line="5418"/>
-        <location filename="../Configuration.ui" line="5537"/>
-        <location filename="../Configuration.ui" line="5675"/>
-        <location filename="../Configuration.ui" line="5794"/>
-        <location filename="../Configuration.ui" line="5932"/>
-        <location filename="../Configuration.ui" line="6051"/>
-        <location filename="../Configuration.ui" line="6189"/>
-        <location filename="../Configuration.ui" line="6308"/>
-        <location filename="../Configuration.ui" line="6446"/>
+        <location filename="../Configuration.ui" line="5290"/>
+        <location filename="../Configuration.ui" line="5428"/>
+        <location filename="../Configuration.ui" line="5547"/>
+        <location filename="../Configuration.ui" line="5685"/>
+        <location filename="../Configuration.ui" line="5804"/>
+        <location filename="../Configuration.ui" line="5942"/>
+        <location filename="../Configuration.ui" line="6061"/>
+        <location filename="../Configuration.ui" line="6199"/>
+        <location filename="../Configuration.ui" line="6318"/>
+        <location filename="../Configuration.ui" line="6456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz czas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5289"/>
-        <location filename="../Configuration.ui" line="5427"/>
-        <location filename="../Configuration.ui" line="5546"/>
-        <location filename="../Configuration.ui" line="5684"/>
-        <location filename="../Configuration.ui" line="5803"/>
-        <location filename="../Configuration.ui" line="5941"/>
-        <location filename="../Configuration.ui" line="6060"/>
-        <location filename="../Configuration.ui" line="6198"/>
-        <location filename="../Configuration.ui" line="6317"/>
-        <location filename="../Configuration.ui" line="6455"/>
-        <source>00</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5294"/>
-        <location filename="../Configuration.ui" line="5551"/>
-        <location filename="../Configuration.ui" line="5808"/>
-        <location filename="../Configuration.ui" line="6065"/>
-        <location filename="../Configuration.ui" line="6322"/>
-        <source>01</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../Configuration.ui" line="5299"/>
+        <location filename="../Configuration.ui" line="5437"/>
         <location filename="../Configuration.ui" line="5556"/>
+        <location filename="../Configuration.ui" line="5694"/>
         <location filename="../Configuration.ui" line="5813"/>
+        <location filename="../Configuration.ui" line="5951"/>
         <location filename="../Configuration.ui" line="6070"/>
+        <location filename="../Configuration.ui" line="6208"/>
         <location filename="../Configuration.ui" line="6327"/>
-        <source>02</source>
+        <location filename="../Configuration.ui" line="6465"/>
+        <source>00</source>
         <translation></translation>
     </message>
     <message>
@@ -7977,7 +7969,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5818"/>
         <location filename="../Configuration.ui" line="6075"/>
         <location filename="../Configuration.ui" line="6332"/>
-        <source>03</source>
+        <source>01</source>
         <translation></translation>
     </message>
     <message>
@@ -7986,21 +7978,16 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5823"/>
         <location filename="../Configuration.ui" line="6080"/>
         <location filename="../Configuration.ui" line="6337"/>
-        <source>04</source>
+        <source>02</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5314"/>
-        <location filename="../Configuration.ui" line="5432"/>
         <location filename="../Configuration.ui" line="5571"/>
-        <location filename="../Configuration.ui" line="5689"/>
         <location filename="../Configuration.ui" line="5828"/>
-        <location filename="../Configuration.ui" line="5946"/>
         <location filename="../Configuration.ui" line="6085"/>
-        <location filename="../Configuration.ui" line="6203"/>
         <location filename="../Configuration.ui" line="6342"/>
-        <location filename="../Configuration.ui" line="6460"/>
-        <source>05</source>
+        <source>03</source>
         <translation></translation>
     </message>
     <message>
@@ -8009,16 +7996,21 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5833"/>
         <location filename="../Configuration.ui" line="6090"/>
         <location filename="../Configuration.ui" line="6347"/>
-        <source>06</source>
+        <source>04</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5324"/>
+        <location filename="../Configuration.ui" line="5442"/>
         <location filename="../Configuration.ui" line="5581"/>
+        <location filename="../Configuration.ui" line="5699"/>
         <location filename="../Configuration.ui" line="5838"/>
+        <location filename="../Configuration.ui" line="5956"/>
         <location filename="../Configuration.ui" line="6095"/>
+        <location filename="../Configuration.ui" line="6213"/>
         <location filename="../Configuration.ui" line="6352"/>
-        <source>07</source>
+        <location filename="../Configuration.ui" line="6470"/>
+        <source>05</source>
         <translation></translation>
     </message>
     <message>
@@ -8027,7 +8019,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5843"/>
         <location filename="../Configuration.ui" line="6100"/>
         <location filename="../Configuration.ui" line="6357"/>
-        <source>08</source>
+        <source>06</source>
         <translation></translation>
     </message>
     <message>
@@ -8036,21 +8028,16 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5848"/>
         <location filename="../Configuration.ui" line="6105"/>
         <location filename="../Configuration.ui" line="6362"/>
-        <source>09</source>
+        <source>07</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5339"/>
-        <location filename="../Configuration.ui" line="5437"/>
         <location filename="../Configuration.ui" line="5596"/>
-        <location filename="../Configuration.ui" line="5694"/>
         <location filename="../Configuration.ui" line="5853"/>
-        <location filename="../Configuration.ui" line="5951"/>
         <location filename="../Configuration.ui" line="6110"/>
-        <location filename="../Configuration.ui" line="6208"/>
         <location filename="../Configuration.ui" line="6367"/>
-        <location filename="../Configuration.ui" line="6465"/>
-        <source>10</source>
+        <source>08</source>
         <translation></translation>
     </message>
     <message>
@@ -8059,16 +8046,21 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5858"/>
         <location filename="../Configuration.ui" line="6115"/>
         <location filename="../Configuration.ui" line="6372"/>
-        <source>11</source>
+        <source>09</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5349"/>
+        <location filename="../Configuration.ui" line="5447"/>
         <location filename="../Configuration.ui" line="5606"/>
+        <location filename="../Configuration.ui" line="5704"/>
         <location filename="../Configuration.ui" line="5863"/>
+        <location filename="../Configuration.ui" line="5961"/>
         <location filename="../Configuration.ui" line="6120"/>
+        <location filename="../Configuration.ui" line="6218"/>
         <location filename="../Configuration.ui" line="6377"/>
-        <source>12</source>
+        <location filename="../Configuration.ui" line="6475"/>
+        <source>10</source>
         <translation></translation>
     </message>
     <message>
@@ -8077,7 +8069,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5868"/>
         <location filename="../Configuration.ui" line="6125"/>
         <location filename="../Configuration.ui" line="6382"/>
-        <source>13</source>
+        <source>11</source>
         <translation></translation>
     </message>
     <message>
@@ -8086,21 +8078,16 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5873"/>
         <location filename="../Configuration.ui" line="6130"/>
         <location filename="../Configuration.ui" line="6387"/>
-        <source>14</source>
+        <source>12</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5364"/>
-        <location filename="../Configuration.ui" line="5442"/>
         <location filename="../Configuration.ui" line="5621"/>
-        <location filename="../Configuration.ui" line="5699"/>
         <location filename="../Configuration.ui" line="5878"/>
-        <location filename="../Configuration.ui" line="5956"/>
         <location filename="../Configuration.ui" line="6135"/>
-        <location filename="../Configuration.ui" line="6213"/>
         <location filename="../Configuration.ui" line="6392"/>
-        <location filename="../Configuration.ui" line="6470"/>
-        <source>15</source>
+        <source>13</source>
         <translation></translation>
     </message>
     <message>
@@ -8109,16 +8096,21 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5883"/>
         <location filename="../Configuration.ui" line="6140"/>
         <location filename="../Configuration.ui" line="6397"/>
-        <source>16</source>
+        <source>14</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5374"/>
+        <location filename="../Configuration.ui" line="5452"/>
         <location filename="../Configuration.ui" line="5631"/>
+        <location filename="../Configuration.ui" line="5709"/>
         <location filename="../Configuration.ui" line="5888"/>
+        <location filename="../Configuration.ui" line="5966"/>
         <location filename="../Configuration.ui" line="6145"/>
+        <location filename="../Configuration.ui" line="6223"/>
         <location filename="../Configuration.ui" line="6402"/>
-        <source>17</source>
+        <location filename="../Configuration.ui" line="6480"/>
+        <source>15</source>
         <translation></translation>
     </message>
     <message>
@@ -8127,7 +8119,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5893"/>
         <location filename="../Configuration.ui" line="6150"/>
         <location filename="../Configuration.ui" line="6407"/>
-        <source>18</source>
+        <source>16</source>
         <translation></translation>
     </message>
     <message>
@@ -8136,21 +8128,16 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5898"/>
         <location filename="../Configuration.ui" line="6155"/>
         <location filename="../Configuration.ui" line="6412"/>
-        <source>19</source>
+        <source>17</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5389"/>
-        <location filename="../Configuration.ui" line="5447"/>
         <location filename="../Configuration.ui" line="5646"/>
-        <location filename="../Configuration.ui" line="5704"/>
         <location filename="../Configuration.ui" line="5903"/>
-        <location filename="../Configuration.ui" line="5961"/>
         <location filename="../Configuration.ui" line="6160"/>
-        <location filename="../Configuration.ui" line="6218"/>
         <location filename="../Configuration.ui" line="6417"/>
-        <location filename="../Configuration.ui" line="6475"/>
-        <source>20</source>
+        <source>18</source>
         <translation></translation>
     </message>
     <message>
@@ -8159,16 +8146,21 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5908"/>
         <location filename="../Configuration.ui" line="6165"/>
         <location filename="../Configuration.ui" line="6422"/>
-        <source>21</source>
+        <source>19</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5399"/>
+        <location filename="../Configuration.ui" line="5457"/>
         <location filename="../Configuration.ui" line="5656"/>
+        <location filename="../Configuration.ui" line="5714"/>
         <location filename="../Configuration.ui" line="5913"/>
+        <location filename="../Configuration.ui" line="5971"/>
         <location filename="../Configuration.ui" line="6170"/>
+        <location filename="../Configuration.ui" line="6228"/>
         <location filename="../Configuration.ui" line="6427"/>
-        <source>22</source>
+        <location filename="../Configuration.ui" line="6485"/>
+        <source>20</source>
         <translation></translation>
     </message>
     <message>
@@ -8177,25 +8169,25 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5918"/>
         <location filename="../Configuration.ui" line="6175"/>
         <location filename="../Configuration.ui" line="6432"/>
+        <source>21</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5409"/>
+        <location filename="../Configuration.ui" line="5666"/>
+        <location filename="../Configuration.ui" line="5923"/>
+        <location filename="../Configuration.ui" line="6180"/>
+        <location filename="../Configuration.ui" line="6437"/>
+        <source>22</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5414"/>
+        <location filename="../Configuration.ui" line="5671"/>
+        <location filename="../Configuration.ui" line="5928"/>
+        <location filename="../Configuration.ui" line="6185"/>
+        <location filename="../Configuration.ui" line="6442"/>
         <source>23</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5452"/>
-        <location filename="../Configuration.ui" line="5709"/>
-        <location filename="../Configuration.ui" line="5966"/>
-        <location filename="../Configuration.ui" line="6223"/>
-        <location filename="../Configuration.ui" line="6480"/>
-        <source>25</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5457"/>
-        <location filename="../Configuration.ui" line="5714"/>
-        <location filename="../Configuration.ui" line="5971"/>
-        <location filename="../Configuration.ui" line="6228"/>
-        <location filename="../Configuration.ui" line="6485"/>
-        <source>30</source>
         <translation></translation>
     </message>
     <message>
@@ -8204,7 +8196,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5976"/>
         <location filename="../Configuration.ui" line="6233"/>
         <location filename="../Configuration.ui" line="6490"/>
-        <source>35</source>
+        <source>25</source>
         <translation></translation>
     </message>
     <message>
@@ -8213,7 +8205,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5981"/>
         <location filename="../Configuration.ui" line="6238"/>
         <location filename="../Configuration.ui" line="6495"/>
-        <source>40</source>
+        <source>30</source>
         <translation></translation>
     </message>
     <message>
@@ -8222,7 +8214,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5986"/>
         <location filename="../Configuration.ui" line="6243"/>
         <location filename="../Configuration.ui" line="6500"/>
-        <source>45</source>
+        <source>35</source>
         <translation></translation>
     </message>
     <message>
@@ -8231,7 +8223,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5991"/>
         <location filename="../Configuration.ui" line="6248"/>
         <location filename="../Configuration.ui" line="6505"/>
-        <source>50</source>
+        <source>40</source>
         <translation></translation>
     </message>
     <message>
@@ -8240,146 +8232,164 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="5996"/>
         <location filename="../Configuration.ui" line="6253"/>
         <location filename="../Configuration.ui" line="6510"/>
+        <source>45</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5487"/>
+        <location filename="../Configuration.ui" line="5744"/>
+        <location filename="../Configuration.ui" line="6001"/>
+        <location filename="../Configuration.ui" line="6258"/>
+        <location filename="../Configuration.ui" line="6515"/>
+        <source>50</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5492"/>
+        <location filename="../Configuration.ui" line="5749"/>
+        <location filename="../Configuration.ui" line="6006"/>
+        <location filename="../Configuration.ui" line="6263"/>
+        <location filename="../Configuration.ui" line="6520"/>
         <source>55</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5502"/>
-        <location filename="../Configuration.ui" line="5759"/>
-        <location filename="../Configuration.ui" line="6016"/>
-        <location filename="../Configuration.ui" line="6273"/>
-        <location filename="../Configuration.ui" line="6530"/>
+        <location filename="../Configuration.ui" line="5512"/>
+        <location filename="../Configuration.ui" line="5769"/>
+        <location filename="../Configuration.ui" line="6026"/>
+        <location filename="../Configuration.ui" line="6283"/>
+        <location filename="../Configuration.ui" line="6540"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz pasmo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6579"/>
+        <location filename="../Configuration.ui" line="6589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywacja harmonogramu pasm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6582"/>
+        <location filename="../Configuration.ui" line="6592"/>
         <source>Use band scheduler</source>
         <translation>Użyj harmonogramu pasm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6605"/>
+        <location filename="../Configuration.ui" line="6615"/>
         <source>Advanced</source>
         <translation>Zaawansowane</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6615"/>
+        <location filename="../Configuration.ui" line="6625"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Parametry dekodowania JT65 wybierane prze użytkownika.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6618"/>
+        <location filename="../Configuration.ui" line="6628"/>
         <source>JT65 decoding parameters</source>
         <translation>Parametry dekodowania JT65</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6646"/>
-        <location filename="../Configuration.ui" line="6659"/>
+        <location filename="../Configuration.ui" line="6656"/>
+        <location filename="../Configuration.ui" line="6669"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definiuje ilość prób dekodowania dla przebiegów dekodowania szerokopasmowego&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6649"/>
-        <location filename="../Configuration.ui" line="7001"/>
+        <location filename="../Configuration.ui" line="6659"/>
+        <location filename="../Configuration.ui" line="7011"/>
         <source>Number of decoding attempts:</source>
         <translation>Ilość prób dekodowania:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6685"/>
-        <location filename="../Configuration.ui" line="6698"/>
+        <location filename="../Configuration.ui" line="6695"/>
+        <location filename="../Configuration.ui" line="6708"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ilość przebiegów dekodowania dla dekodowania szerokopasmowego&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6688"/>
+        <location filename="../Configuration.ui" line="6698"/>
         <source>Number of decoding  passes: </source>
         <translation>Ilość przebiegów dekodowania: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6718"/>
-        <location filename="../Configuration.ui" line="6731"/>
+        <location filename="../Configuration.ui" line="6728"/>
+        <location filename="../Configuration.ui" line="6741"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definiuje ilość prób dekodowania dla przebiegów dekodowania częstotliwości RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6721"/>
-        <location filename="../Configuration.ui" line="7037"/>
+        <location filename="../Configuration.ui" line="6731"/>
+        <location filename="../Configuration.ui" line="7047"/>
         <source>RX frequency decoding attempts:</source>
         <translation>Ilość prób dekodowania częstotliwości RX:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6757"/>
-        <location filename="../Configuration.ui" line="6770"/>
-        <location filename="../Configuration.ui" line="6928"/>
+        <location filename="../Configuration.ui" line="6767"/>
+        <location filename="../Configuration.ui" line="6780"/>
+        <location filename="../Configuration.ui" line="6938"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To okno DT używane jest tylko dla danych CALL3 częstotliwości RX opartych na dekoderach Hint nastawionych na wiadomości CQ oraz &apos;mójznak jegoznak jegolokator&apos;. Wyższe wartości mogą zwiększyć ilość fałszywych dekodowań.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6760"/>
+        <location filename="../Configuration.ui" line="6770"/>
         <source>Hinted decoding DT range:</source>
         <translation>Zakres DT dla dekodowania Hinted:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6791"/>
+        <location filename="../Configuration.ui" line="6801"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktywuj dwie dodatkowe maski częstotliwości przebiegów dekodowania JT65 dla warunków zatłoczonego pasma. Te przebiegi dekodowania będą aktywowane automatycznie jeżeli jest mniej sygnałów na pasmie. Używać tych ustawień tylko dla szybkich CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6797"/>
+        <location filename="../Configuration.ui" line="6807"/>
         <source>Use frequency mask decoding</source>
         <translation>Dekodowanie z maską częstotliwości</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6809"/>
         <location filename="../Configuration.ui" line="6819"/>
+        <location filename="../Configuration.ui" line="6829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa górny limit dla dekodowania sygnałów JT65a, domyślna wartość to 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6812"/>
+        <location filename="../Configuration.ui" line="6822"/>
         <source>Top decoding frequency: </source>
         <translation>Najwyższa częstotliwość dekodowania: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6845"/>
-        <location filename="../Configuration.ui" line="6858"/>
+        <location filename="../Configuration.ui" line="6855"/>
+        <location filename="../Configuration.ui" line="6868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zniekształcenia sygnału w torze RX lub TX mogą wytwarzać harmoniczne sygnału JT65A (JT65B, JT65C etc.) Dekodowanie harmonicznych sygnału JT65A może poprawić ogólną efektywnośc dekodowania poprzez odejmowanie dekodowanych sygnałów. Głebokość dekodowania jest proporcjonalna do wymaganych zasobów CPU, ustaw to na 1 dla wolnych CPU. Większe wartości głębokości pozwolą dekodować więcej harmonicznych. Wspierane jest dekodowanie JT65B oraz JT65C.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6848"/>
+        <location filename="../Configuration.ui" line="6858"/>
         <source>Harmonics decoding depth:</source>
         <translation>Głębokość dekodowania harmonicznych:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6884"/>
+        <location filename="../Configuration.ui" line="6894"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ustawienia zależą od mocy CPU, próbować użyć maksymalnej liczby przebiegów dekodowania dla zatłoczonych pasm HF.&lt;br&gt;&lt;br&gt;Ilość przebiegów dekodowania może być zmniejszona dla mniej zatłoczonych pasm HF/VHF podczas gdy zwiększenie liczby prób dekodowania może przynieść lepszą efektywność dekodowania dla istniejących słabych sygnałów.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Zwiększyć ilość prób dekodowania do wartości umożliwiającej zakończenie dekodowania do końca interwału minutowego RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6972"/>
+        <location filename="../Configuration.ui" line="6982"/>
         <source>T10 decoding parameters</source>
         <translation>Parametry dekodowania T10</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6998"/>
         <location filename="../Configuration.ui" line="7008"/>
+        <location filename="../Configuration.ui" line="7018"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa ilość prób dekodowania dla szerokopasmowego dekodowania T10.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7034"/>
-        <location filename="../Configuration.ui" line="7047"/>
+        <location filename="../Configuration.ui" line="7044"/>
+        <location filename="../Configuration.ui" line="7057"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Określa ilość prób dekodowania T10 dla częstotliwości RX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7138"/>
+        <location filename="../Configuration.ui" line="7148"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>

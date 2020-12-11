@@ -3611,6 +3611,16 @@ Right click for insert and delete options.</string>
             </widget>
            </item>
            <item row="0" column="6">
+            <widget class="QCheckBox" name="hideHint_check_box">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Hide hint char</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
             <spacer name="horizontalSpacer_19">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -3622,7 +3632,7 @@ Right click for insert and delete options.</string>
               </size>
              </property>
             </spacer>
-           </item>
+	   </item>
            <item row="0" column="2">
             <spacer name="horizontalSpacer_25">
              <property name="orientation">

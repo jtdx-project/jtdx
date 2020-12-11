@@ -725,6 +725,7 @@ private:
   bool RR73Marker_;
   bool redMarker_;
   bool blueMarker_;
+  bool hidehintMarker_;
   bool txtColor_;
   bool workedColor_;
   bool workedStriked_;
@@ -972,6 +973,7 @@ bool Configuration::otherMessagesMarker () const {return m_->otherMessagesMarker
 bool Configuration::RR73Marker () const {return m_->RR73Marker_;}
 bool Configuration::redMarker () const {return m_->redMarker_;}
 bool Configuration::blueMarker () const {return m_->blueMarker_;}
+bool Configuration::hidehintMarker () const {return m_->hidehintMarker_;}
 bool Configuration::txtColor () const {return m_->txtColor_;}
 bool Configuration::workedColor () const {return m_->workedColor_;}
 bool Configuration::workedStriked () const {return m_->workedStriked_;}
@@ -1865,6 +1867,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->RR73_marker_check_box->setChecked (RR73Marker_);
   ui_->redMarker_check_box->setChecked (redMarker_);
   ui_->blueMarker_check_box->setChecked (redMarker_ && blueMarker_);
+  ui_->hideHint_check_box->setChecked (hidehintMarker_);
   ui_->txtColor_check_box->setChecked (txtColor_);
   ui_->workedColor_check_box->setChecked (workedColor_ && (newCQZ_ || newITUZ_ || newDXCC_ || newCall_ || newPx_ || newGrid_));
   ui_->workedStriked_check_box->setChecked (!workedUnderlined_ && workedStriked_ && (newCQZ_ || newITUZ_ || newDXCC_ || newCall_ || newPx_ || newGrid_));
@@ -2347,6 +2350,7 @@ void Configuration::impl::read_settings ()
   on_RR73_marker_check_box_clicked(RR73Marker_);
   redMarker_ = settings_->value ("redMarker", true).toBool ();
   blueMarker_ = settings_->value ("blueMarker", false).toBool ();
+  hidehintMarker_ = settings_->value ("hidehintMarker", false).toBool ();
   clear_DX_ = settings_->value ("ClearCallGrid", false).toBool ();
   clear_DX_exit_ = settings_->value ("ClearCallGridExit", false).toBool ();
   miles_ = settings_->value ("Miles", false).toBool ();
@@ -2564,6 +2568,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("73RR73Marker", RR73Marker_);
   settings_->setValue ("redMarker", redMarker_);
   settings_->setValue ("blueMarker", blueMarker_);
+  settings_->setValue ("hidehintMarker", hidehintMarker_);
   settings_->setValue ("txtColor", txtColor_);
   settings_->setValue ("workedColor", workedColor_);
   settings_->setValue ("workedStriked", workedStriked_);
@@ -3099,6 +3104,7 @@ void Configuration::impl::accept ()
   RR73Marker_ = ui_->RR73_marker_check_box->isChecked ();
   redMarker_ = ui_->redMarker_check_box->isChecked ();
   blueMarker_ = ui_->blueMarker_check_box->isChecked ();
+  hidehintMarker_ = ui_->hideHint_check_box->isChecked ();
   txtColor_ = ui_->txtColor_check_box->isChecked ();
   workedColor_ = ui_->workedColor_check_box->isChecked ();
   workedStriked_ = ui_->workedStriked_check_box->isChecked ();

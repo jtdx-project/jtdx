@@ -178,6 +178,7 @@ public:
   bool RR73Marker () const;
   bool redMarker () const;
   bool blueMarker () const;
+  bool hidehintMarker () const;
   bool txtColor () const;
   bool workedStriked () const;
   bool workedUnderlined () const;
