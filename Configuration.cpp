@@ -1481,7 +1481,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
 
 
   // Schedulers
-  
+
   ui_->bandComboBox_1->setModel(&next_frequencies_);
   ui_->bandComboBox_1->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_2->setModel(&next_frequencies_);
@@ -1830,6 +1830,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
     ui_->eqsl_check_box->setEnabled (true);
     ui_->eqsl_check_box->setChecked (send_to_eqsl_);
   }
+  next_frequencies_.frequency_list (frequencies_.frequency_list ());
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
@@ -1974,7 +1975,6 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
     }
   ui_->region_combo_box->setCurrentIndex (region_);
   next_macros_.setStringList (macros_.stringList ());
-  next_frequencies_.frequency_list (frequencies_.frequency_list ());
   next_stations_.station_list (stations_.station_list ());
 
   set_rig_invariants ();
