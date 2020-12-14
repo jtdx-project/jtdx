@@ -524,11 +524,11 @@ private:
   Q_SLOT void on_hhComboBox_5_currentIndexChanged (int);
   Q_SLOT void on_mmComboBox_5_currentIndexChanged (int);
   
-  Q_SLOT void on_bandComboBox_1_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_2_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_3_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_4_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_5_currentIndexChanged (QString const&);
+  Q_SLOT void on_bandComboBox_1_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_2_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_3_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_4_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_5_currentTextChanged (QString const&);
 
   // typenames used as arguments must match registered type names :(
   Q_SIGNAL void start_transceiver (unsigned seqeunce_number) const;
@@ -1834,23 +1834,23 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
-  ui_->bandComboBox_1->setCurrentText (sched_band_1_);
+  if (sched_band_1_.isEmpty()) ui_->bandComboBox_1->setCurrentIndex (-1); else ui_->bandComboBox_1->setCurrentText (sched_band_1_);
   ui_->band_mix_check_box_1->setChecked (sched_mix_1_);
   ui_->hhComboBox_2->setCurrentText (sched_hh_2_);
   ui_->mmComboBox_2->setCurrentText (sched_mm_2_);
-  ui_->bandComboBox_2->setCurrentText (sched_band_2_);
+  if (sched_band_2_.isEmpty()) ui_->bandComboBox_2->setCurrentIndex (-1); else ui_->bandComboBox_2->setCurrentText (sched_band_2_);
   ui_->band_mix_check_box_2->setChecked (sched_mix_2_);
   ui_->hhComboBox_3->setCurrentText (sched_hh_3_);
   ui_->mmComboBox_3->setCurrentText (sched_mm_3_);
-  ui_->bandComboBox_3->setCurrentText (sched_band_3_);
+  if (sched_band_3_.isEmpty()) ui_->bandComboBox_3->setCurrentIndex (-1); else ui_->bandComboBox_3->setCurrentText (sched_band_3_);
   ui_->band_mix_check_box_3->setChecked (sched_mix_3_);
   ui_->hhComboBox_4->setCurrentText (sched_hh_4_);
   ui_->mmComboBox_4->setCurrentText (sched_mm_4_);
-  ui_->bandComboBox_4->setCurrentText (sched_band_4_);
+  if (sched_band_4_.isEmpty()) ui_->bandComboBox_4->setCurrentIndex (-1); else ui_->bandComboBox_4->setCurrentText (sched_band_4_);
   ui_->band_mix_check_box_4->setChecked (sched_mix_4_);
   ui_->hhComboBox_5->setCurrentText (sched_hh_5_);
   ui_->mmComboBox_5->setCurrentText (sched_mm_5_);
-  ui_->bandComboBox_5->setCurrentText (sched_band_5_);
+  if (sched_band_5_.isEmpty()) ui_->bandComboBox_5->setCurrentIndex (-1); else ui_->bandComboBox_5->setCurrentText (sched_band_5_);
   ui_->band_mix_check_box_5->setChecked (sched_mix_5_);
   ui_->monitor_off_check_box->setChecked (monitor_off_at_startup_);
   ui_->monitor_last_used_check_box->setChecked (monitor_last_used_);
@@ -2231,23 +2231,23 @@ void Configuration::impl::read_settings ()
 
 //check scheduler settings for consistency
   if(sched_hh_1_.isEmpty ()) { sched_mm_1_=""; ui_->mmComboBox_1->setEnabled(false); }
-  if(sched_mm_1_.isEmpty ()) { sched_band_1_=""; ui_->bandComboBox_1->setEnabled(false); }
+  if(sched_mm_1_.isEmpty ()) { sched_band_1_=""; ui_->bandComboBox_1->setCurrentIndex(-1); ui_->bandComboBox_1->setEnabled(false); }
   if(sched_band_1_.isEmpty ()) { ui_->band_mix_check_box_1->setEnabled(false); ui_->band_mix_check_box_1->setChecked (false); sched_hh_2_=""; ui_->hhComboBox_2->setEnabled(false); }
 
   if(sched_hh_2_.isEmpty ()) { sched_mm_2_=""; ui_->mmComboBox_2->setEnabled(false); }
-  if(sched_mm_2_.isEmpty ()) { sched_band_2_=""; ui_->bandComboBox_2->setEnabled(false); }
+  if(sched_mm_2_.isEmpty ()) { sched_band_2_=""; ui_->bandComboBox_2->setCurrentIndex(-1); ui_->bandComboBox_2->setEnabled(false); }
   if(sched_band_2_.isEmpty ()) { ui_->band_mix_check_box_2->setEnabled(false); ui_->band_mix_check_box_2->setChecked (false); sched_hh_3_=""; ui_->hhComboBox_3->setEnabled(false); }
 
   if(sched_hh_3_.isEmpty ()) { sched_mm_3_=""; ui_->mmComboBox_3->setEnabled(false); }
-  if(sched_mm_3_.isEmpty ()) { sched_band_3_=""; ui_->bandComboBox_3->setEnabled(false); }
+  if(sched_mm_3_.isEmpty ()) { sched_band_3_=""; ui_->bandComboBox_3->setCurrentIndex(-1); ui_->bandComboBox_3->setEnabled(false); }
   if(sched_band_3_.isEmpty ()) { ui_->band_mix_check_box_3->setEnabled(false); ui_->band_mix_check_box_3->setChecked (false); sched_hh_4_=""; ui_->hhComboBox_4->setEnabled(false); }
 
   if(sched_hh_4_.isEmpty ()) { sched_mm_4_=""; ui_->mmComboBox_4->setEnabled(false); }
-  if(sched_mm_4_.isEmpty ()) { sched_band_4_=""; ui_->bandComboBox_4->setEnabled(false); }
+  if(sched_mm_4_.isEmpty ()) { sched_band_4_=""; ui_->bandComboBox_4->setCurrentIndex(-1); ui_->bandComboBox_4->setEnabled(false); }
   if(sched_band_4_.isEmpty ()) { ui_->band_mix_check_box_4->setEnabled(false); ui_->band_mix_check_box_4->setChecked (false); sched_hh_5_=""; ui_->hhComboBox_5->setEnabled(false); }
 
   if(sched_hh_5_.isEmpty ()) { sched_mm_5_=""; ui_->mmComboBox_5->setEnabled(false); }
-  if(sched_mm_5_.isEmpty ()) { sched_band_5_=""; ui_->bandComboBox_5->setEnabled(false); }
+  if(sched_mm_5_.isEmpty ()) { sched_band_5_=""; ui_->bandComboBox_5->setCurrentIndex(-1); ui_->bandComboBox_5->setEnabled(false); }
   if(sched_band_5_.isEmpty ()) { ui_->band_mix_check_box_5->setEnabled(false); ui_->band_mix_check_box_5->setChecked (false); }
 
   if(settings_->value ("After73").toString()=="false" || settings_->value ("After73").toString()=="true")
@@ -4677,7 +4677,7 @@ void Configuration::impl::on_mmComboBox_1_currentIndexChanged(int index)
 //  printf("mm1 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_1_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_1_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_1->setCurrentText(text);
@@ -4756,7 +4756,7 @@ void Configuration::impl::on_mmComboBox_2_currentIndexChanged(int index)
 //  printf("mm2 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_2_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_2_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_2->setCurrentText(text);
@@ -4827,7 +4827,7 @@ void Configuration::impl::on_mmComboBox_3_currentIndexChanged(int index)
 //  printf("mm3 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_3_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_3_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_3->setCurrentText(text);
@@ -4898,7 +4898,7 @@ void Configuration::impl::on_mmComboBox_4_currentIndexChanged(int index)
 //  printf("mm4 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_4_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_4_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_4->setCurrentText(text);
@@ -4969,7 +4969,7 @@ void Configuration::impl::on_mmComboBox_5_currentIndexChanged(int index)
 //  printf("mm5 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_5_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_5_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_5->setCurrentText(text);
