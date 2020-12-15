@@ -5935,7 +5935,7 @@ void MainWindow::on_logQSOButton_clicked()                 //Log QSO button
   if (m_hisCall.isEmpty()) return;
   auto currenttime = m_jtdxtime->currentDateTimeUtc2();
   auto dateTimeQSOOff = currenttime;
-  QString rrep,srep;
+  QString rrep,srep,distance;
   unsigned time = 0;
 
   if (!m_houndMode && (m_config.prompt_to_log() || m_config.autolog())) {
@@ -5948,6 +5948,7 @@ void MainWindow::on_logQSOButton_clicked()                 //Log QSO button
   if (qAbs(dateTimeQSOOff.toMSecsSinceEpoch() - m_dateTimeQSOOn.toMSecsSinceEpoch()) > int(m_TRperiod) * 10000) m_dateTimeQSOOn = dateTimeQSOOff;
   bool autolog = false;
   if(m_logqso73) autolog = m_config.autolog();
+  distance=ui->labDist->text();
   if (m_qsoHistory.log_data(m_hisCall,time,rrep,srep) > QsoHistory::SREPORT) {
       if (time > 0 && time < 86400) {
           currenttime.setTime(QTime::fromMSecsSinceStartOfDay(time*1000));
@@ -5955,10 +5956,10 @@ void MainWindow::on_logQSOButton_clicked()                 //Log QSO button
       }
       if (rrep.isEmpty()) rrep=m_rptRcvd;
       if (srep.isEmpty()) srep=m_rptSent;
-      m_logDlg->initLogQSO (m_hisCall, m_hisGrid, m_modeTx, srep, rrep, m_name,
+      m_logDlg->initLogQSO (m_hisCall, m_hisGrid, m_modeTx, srep, rrep, distance, m_name,
                         currenttime, dateTimeQSOOff, m_freqNominal + ui->TxFreqSpinBox->value(),autolog);
   } else { 
-      m_logDlg->initLogQSO (m_hisCall, m_hisGrid, m_modeTx, m_rptSent, m_rptRcvd, m_name,
+      m_logDlg->initLogQSO (m_hisCall, m_hisGrid, m_modeTx, m_rptSent, m_rptRcvd, distance, m_name,
                         m_dateTimeQSOOn, dateTimeQSOOff, m_freqNominal + ui->TxFreqSpinBox->value(),autolog);
   }
   m_logqso73=false;

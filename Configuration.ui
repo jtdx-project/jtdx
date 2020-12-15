@@ -2356,6 +2356,16 @@ QListView::item:hover {
                 <property name="verticalSpacing">
                  <number>3</number>
                 </property>
+                <item row="2" column="0">
+                 <widget class="QCheckBox" name="log_as_RTTY_check_box">
+                  <property name="toolTip">
+                   <string>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</string>
+                  </property>
+                  <property name="text">
+                   <string>Con&amp;vert mode to RTTY</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="3" column="0">
                  <widget class="QCheckBox" name="report_in_comments_check_box">
                   <property name="toolTip">
@@ -2369,34 +2379,13 @@ comments field.</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
-                 <widget class="QCheckBox" name="clear_DX_check_box">
-                  <property name="toolTip">
-                   <string>Check this option to force the clearing of the DX Call
-and DX Grid fields when a 73 or free text message is sent.</string>
-                  </property>
-                  <property name="text">
-                   <string>Clear &amp;DX call and grid after logging</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
+                <item row="6" column="0">
                  <widget class="QCheckBox" name="clear_DX_exit_check_box">
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="text">
                    <string>Clear DX call and grid on exit</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QCheckBox" name="log_as_RTTY_check_box">
-                  <property name="toolTip">
-                   <string>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</string>
-                  </property>
-                  <property name="text">
-                   <string>Con&amp;vert mode to RTTY</string>
                   </property>
                  </widget>
                 </item>
@@ -2410,10 +2399,31 @@ and DX Grid fields when a 73 or free text message is sent.</string>
                   </property>
                  </widget>
                 </item>
+                <item row="5" column="0">
+                 <widget class="QCheckBox" name="clear_DX_check_box">
+                  <property name="toolTip">
+                   <string>Check this option to force the clearing of the DX Call
+and DX Grid fields when a 73 or free text message is sent.</string>
+                  </property>
+                  <property name="text">
+                   <string>Clear &amp;DX call and grid after logging</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="autolog_check_box">
                   <property name="text">
                    <string>Enable automatic logging of QSO</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QCheckBox" name="distance_in_comments_check_box">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Distance to comments</string>
                   </property>
                  </widget>
                 </item>
@@ -3632,7 +3642,7 @@ Right click for insert and delete options.</string>
               </size>
              </property>
             </spacer>
-	   </item>
+           </item>
            <item row="0" column="2">
             <spacer name="horizontalSpacer_25">
              <property name="orientation">
@@ -7293,11 +7303,11 @@ soundcard changes</string>
  </connections>
  <buttongroups>
   <buttongroup name="CAT_stop_bits_button_group"/>
-  <buttongroup name="split_mode_button_group"/>
-  <buttongroup name="TX_mode_button_group"/>
-  <buttongroup name="PTT_method_button_group"/>
-  <buttongroup name="CAT_data_bits_button_group"/>
-  <buttongroup name="CAT_handshake_button_group"/>
   <buttongroup name="TX_audio_source_button_group"/>
+  <buttongroup name="CAT_handshake_button_group"/>
+  <buttongroup name="CAT_data_bits_button_group"/>
+  <buttongroup name="PTT_method_button_group"/>
+  <buttongroup name="TX_mode_button_group"/>
+  <buttongroup name="split_mode_button_group"/>
  </buttongroups>
 </ui>

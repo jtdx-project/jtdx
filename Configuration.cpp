@@ -713,6 +713,7 @@ private:
   bool monitor_last_used_;
   bool log_as_RTTY_;
   bool report_in_comments_;
+  bool distance_in_comments_;
   bool prompt_to_log_;
   bool autolog_;
   bool insert_blank_;
@@ -961,6 +962,7 @@ QString Configuration::sched_mm_5 () const {return m_->sched_mm_5_;}
 QString Configuration::sched_band_5 () const {return m_->sched_band_5_;}
 bool Configuration::sched_mix_5 () const {return m_->sched_mix_5_;}
 bool Configuration::report_in_comments () const {return m_->report_in_comments_;}
+bool Configuration::distance_in_comments () const {return m_->distance_in_comments_;}
 bool Configuration::prompt_to_log () const {return m_->prompt_to_log_;}
 bool Configuration::autolog () const {return m_->autolog_;}
 bool Configuration::insert_blank () const {return m_->insert_blank_;}
@@ -1856,6 +1858,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->monitor_last_used_check_box->setChecked (monitor_last_used_);
   ui_->log_as_RTTY_check_box->setChecked (log_as_RTTY_);
   ui_->report_in_comments_check_box->setChecked (report_in_comments_);
+  ui_->distance_in_comments_check_box->setChecked (distance_in_comments_);
   ui_->prompt_to_log_check_box->setChecked (prompt_to_log_);
   ui_->autolog_check_box->setChecked (autolog_);
   ui_->insert_blank_check_box->setChecked (insert_blank_);
@@ -2283,6 +2286,7 @@ void Configuration::impl::read_settings ()
 
   log_as_RTTY_ = settings_->value ("toRTTY", false).toBool ();
   report_in_comments_ = settings_->value("dBtoComments", false).toBool ();
+  distance_in_comments_ = settings_->value("distanceToComments", false).toBool ();
   rig_params_.rig_name = settings_->value ("Rig", TransceiverFactory::basic_transceiver_name_).toString ();
   rig_is_dummy_ = TransceiverFactory::basic_transceiver_name_ == rig_params_.rig_name;
   rig_params_.network_port = settings_->value ("CATNetworkPort").toString ();
@@ -2547,6 +2551,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("stations", QVariant::fromValue (stations_.station_list ()));
   settings_->setValue ("toRTTY", log_as_RTTY_);
   settings_->setValue ("dBtoComments", report_in_comments_);
+  settings_->setValue ("distanceToComments", distance_in_comments_);
   settings_->setValue ("Rig", rig_params_.rig_name);
   settings_->setValue ("CATNetworkPort", rig_params_.network_port);
   settings_->setValue ("CATUSBPort", rig_params_.usb_port);
@@ -3091,6 +3096,7 @@ void Configuration::impl::accept ()
   type_2_msg_gen_ = static_cast<Type2MsgGen> (ui_->type_2_msg_gen_combo_box->currentIndex ());
   log_as_RTTY_ = ui_->log_as_RTTY_check_box->isChecked ();
   report_in_comments_ = ui_->report_in_comments_check_box->isChecked ();
+  distance_in_comments_ = ui_->distance_in_comments_check_box->isChecked ();
   prompt_to_log_ = ui_->prompt_to_log_check_box->isChecked ();
   autolog_ = ui_->autolog_check_box->isChecked ();
   insert_blank_ = ui_->insert_blank_check_box->isChecked ();
