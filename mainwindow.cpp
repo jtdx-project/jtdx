@@ -1101,17 +1101,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   f1.copy(m_dataDir.absoluteFilePath ("CALL3.TXT"));
   }
   m_lastDisplayFreq=m_lastMonitoredFrequency;
-//  if(m_houndMode) on_AutoTxButton_clicked(true);
   m_bMyCallStd=stdCall(m_config.my_callsign ());
-
-  if(!m_config.my_callsign().isEmpty()) {
-    if(m_bMyCallStd) {
-      if(!ui->skipTx1->isEnabled()) { if(!m_houndMode) ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }
-    } else {
-      if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); }
-      ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
-    }
-  }
+  if(!m_config.my_callsign().isEmpty()) toggle_skipTx1();
   ui->spotMsgLabel->setVisible(false); ui->spotEditLabel->setVisible(false);  ui->spotLineEdit->setVisible(false); ui->propEditLabel->setVisible(false); ui->propLineEdit->setVisible(false);
   ui->genStdMsgsPushButton->click ();
   ui->spotMsgLabel->setTextFormat(Qt::PlainText);
@@ -1970,6 +1961,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       }
       if(m_config.my_callsign () != m_callsign) {
         m_bMyCallStd=stdCall(m_config.my_callsign ());
+        if(!m_config.my_callsign().isEmpty()) toggle_skipTx1();
         m_myCallCompound=(!m_config.my_callsign().isEmpty() && m_config.my_callsign().contains("/")); // && !m_config.my_callsign().endsWith("/P") && !m_config.my_callsign().endsWith("/R"));
         if(!m_config.my_callsign().isEmpty()) {
           if(m_bMyCallStd) {
@@ -4247,9 +4239,10 @@ void MainWindow::guiUpdate()
 #endif
 
           if(m_config.write_decoded_debug()) {
+            QString autoseqa=ui->AutoSeqButton->text(); int indx=autoseqa.length()-1; QString autoseq="AutoSeq"+autoseqa[indx];
             out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
                 << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
-                << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
+                << "Hz " << autoseq << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
                 << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
                 << " Hound mode" << (m_houndMode ? "-On" : "-Off") << " Skip Tx1" << (m_skipTx1 ? "-On" : "-Off") <<
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
@@ -4372,6 +4365,7 @@ void MainWindow::guiUpdate()
       if (f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
         QTextStream out(&f);
         if(m_config.write_decoded_debug()) {
+          QString autoseqa=ui->AutoSeqButton->text(); int indx=autoseqa.length()-1; QString autoseq="AutoSeq"+autoseqa[indx];
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  JTDX v" << QCoreApplication::applicationVersion () << revision () <<" Transmitting " << qSetRealNumberPrecision (12)
               << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
@@ -4382,7 +4376,7 @@ void MainWindow::guiUpdate()
 #endif
  << "                   "
               << "  AF TX/RX " << ui->TxFreqSpinBox->value () << "/" << ui->RxFreqSpinBox->value ()
-              << "Hz " << ui->AutoSeqButton->text () << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
+              << "Hz " << autoseq << (m_autoseq ? "-On" : "-Off") << " AutoTx" 
               << (m_autoTx ? "-On" : "-Off") << " SShotQSO" << (m_singleshot ? "-On" : "-Off")
               << " Hound mode" << (m_houndMode ? "-On" : "-Off") <<
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
@@ -7777,6 +7771,16 @@ void MainWindow::on_the_minute ()
   else { txwatchdog (false); }
   //3...4 minutes to stop AP decoding
   if(!m_transmitting && m_mode=="FT8" && (m_jtdxtime->currentMSecsSinceEpoch2()-m_mslastTX) > 120000) m_lapmyc=0;
+}
+
+void MainWindow::toggle_skipTx1 ()
+{
+  if(m_bMyCallStd) {
+    if(!ui->skipTx1->isEnabled()) { if(!m_houndMode) ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }
+  } else {
+    if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); }
+    ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
+  }
 }
 
 void MainWindow::statusUpdate () const

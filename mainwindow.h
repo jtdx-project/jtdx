@@ -798,6 +798,7 @@ private:
   bool subProcessFailed (QProcess *, int exit_code, QProcess::ExitStatus);
   void subProcessError (QProcess *, QProcess::ProcessError);
   void on_the_minute ();
+  void toggle_skipTx1();
 };
 
 extern int killbyname(const char* progName);
