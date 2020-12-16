@@ -251,7 +251,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5189"/>
         <source>Incorrect file magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Неправильный формат файла</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5198"/>
@@ -334,7 +334,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
         <source>Mauritius</source>
-        <translation>Маврикий&gt;</translation>
+        <translation>Маврикий</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
@@ -409,7 +409,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="53"/>
         <source>Montenegro</source>
-        <translation>Монтегро</translation>
+        <translation>Монтенегро</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="54"/>
@@ -419,12 +419,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="55"/>
         <source>ITU HQ</source>
-        <translation></translation>
+        <translation>Штаб квартира МСЭ</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>United Nations HQ</source>
-        <translation></translation>
+        <translation>Штаб-квартира ООН</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="57"/>
@@ -634,7 +634,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="98"/>
         <source>United Arab Emirates</source>
-        <translation>Обьединенные Арабские Эмираты</translation>
+        <translation>Объединенные Арабские Эмираты</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="99"/>
@@ -804,12 +804,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation>С. ост. Кука</translation>
+        <translation>Сев. ост. Кука</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation>Ю. ост. Кука</translation>
+        <translation>Юж. ост. Кука</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
@@ -934,12 +934,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="158"/>
         <source>Fr. Polynesia</source>
-        <translation>Французская Полинизея</translation>
+        <translation>Французская Полинезея</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation>Австралийские ост.</translation>
+        <translation>Ост.Острал</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
@@ -1019,7 +1019,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="175"/>
         <source>N. Ireland</source>
-        <translation>С.Ирландия</translation>
+        <translation>Сев.Ирландия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="176"/>
@@ -1079,7 +1079,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Galapagos Is.</source>
-        <translation>Галапагоские ост.</translation>
+        <translation>Галапагосские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="188"/>
@@ -1099,7 +1099,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation>Сан Андреси&amp; и Провиденсия</translation>
+        <translation>Сан Андрес&amp; и Провиденсия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
@@ -1144,7 +1144,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation>Аф Италия</translation>
+        <translation>Афр. Италия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
@@ -1234,7 +1234,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="218"/>
         <source>Guantanamo Bay</source>
-        <translation>Гуантанамо</translation>
+        <translation>база Гуантанамо</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
@@ -1244,7 +1244,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
         <source>Baker &amp; Howland Is.</source>
-        <translation>Хауленд и Бейкер</translation>
+        <translation>Ост. Хауленд и Бейкер</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
@@ -1544,17 +1544,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation>Э. Кирибати</translation>
+        <translation>Западное Кирибати</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>C. Kiribati</source>
-        <translation>Ц. Кирибати</translation>
+        <translation>Центр. Кирибати</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>E. Kiribati</source>
-        <translation>В. Кирибати</translation>
+        <translation>Вост. Кирибати</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
@@ -1584,7 +1584,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="288"/>
         <source>EU Turkey</source>
-        <translation>Евр.Турция</translation>
+        <translation>Европ.Турция</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="289"/>
@@ -1619,7 +1619,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation>Ц. Африканская респ.</translation>
+        <translation>Центр. Африканская респ.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
@@ -1804,22 +1804,22 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>S. Georgia Is.</source>
-        <translation>Ост. Ю. Георгия</translation>
+        <translation>Ост. Юж. Георгия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation>Ю.Шетландские ост.</translation>
+        <translation>Юж.Шетландские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation>Ю. Оркнейские ост.</translation>
+        <translation>Юж. Оркнейские ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation>Ю. Сандвичевы ост.</translation>
+        <translation>Юж. Сандвичевы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
@@ -1834,7 +1834,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="338"/>
         <source>Hong Kong</source>
-        <translation>Гон Конг</translation>
+        <translation>Гонконг</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="339"/>
@@ -1954,7 +1954,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
-        <translation>Н. Македония</translation>
+        <translation>Сев. Македония</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
@@ -1964,7 +1964,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation>Респ. Ю. Судан</translation>
+        <translation>Респ. Юж. Судан</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -1979,7 +1979,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation>Британская база на Кипре </translation>
+        <translation>территория базы Великобритании на Кипре </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
@@ -1999,7 +1999,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation>Каймановы острова</translation>
+        <translation>Каймановы ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
@@ -2024,7 +2024,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>N.Z. Subantarctic Is.</source>
-        <translation>Ост. Н.З. Субантарктика</translation>
+        <translation>Новозела́ндские субантаркти́ческие ост.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="377"/>
@@ -2034,7 +2034,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>S. Africa</source>
-        <translation>Ю. Африка</translation>
+        <translation>Южная Африка</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
@@ -2749,7 +2749,7 @@ Error: %2 - %3</source>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation>IARU Регион:</translation>
+        <translation>Регион IARU:</translation>
     </message>
 </context>
 <context>
@@ -2955,7 +2955,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: накопленный средний DT декодированных сигналов на текущем диапазоне.&lt;/p&gt;&lt;p&gt; Lag: это задержка декодирования, вычисленная относительно начала следующего интервала, отрицательные значения означают что имеется запас доступного времени для увеличения глубины декодирования, положительные значения означают что декодирование заходит в интервал передачи либо следующий приемный интервал и  ресурсов процессора недостаточно для выбранной глубины декодирования для обеспечения стабильной передачи сообщений во время QSO.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Задержка зависит от производительности процессора, характера шума,  загруженности диапазона и работы других программ использующих ресурсы процессора, может быть снижена уменьшением полосы частот на водопаде программы. Если задержка постоянно отрицательная то процессор отлично справляется с декдированием интервала и можно увеличить глубину декодирования для получения большего количества декодированных сообщений.&lt;/p&gt;&lt;p&gt;FT8: если задержка находится в диапазоне 0..0.4 секунды то все еще можно использовать режим AutoSeq3/7 (функционал автовыбора при необходимости сменит TX сообщение достаточно рано чтобы передать его полностью). Если задержка более 0.4 секунды то необходимо уменьшить глубину декодирования. Если задержка все еще более 0.4 секунды то придется использовать AutoSeq2/6, так как в режиме 3/7 ответ на входящий вызов будет частично потерян при передаче. Если задержка постоянно больше двух секунд то процессор непригоден для работы в эфире в FT8, при этом все еще можно провести QSO используя функционал частотного фильтра в JTDX либо использовать программу для мониторинга диапазона&lt;/p&gt;&lt;p&gt; /xx: количество декодированных сообщений в последнем интервале.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Средн.: накопленный средний DT декодированных сигналов на текущем диапазоне.&lt;/p&gt;&lt;p&gt; Lag: это задержка декодирования, вычисленная относительно начала следующего интервала, отрицательные значения означают что имеется запас доступного времени для увеличения глубины декодирования, положительные значения означают что декодирование заходит в интервал передачи либо следующий приемный интервал и  ресурсов процессора недостаточно для выбранной глубины декодирования для обеспечения стабильной передачи сообщений во время QSO.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Задержка зависит от производительности процессора, характера шума,  загруженности диапазона и работы других программ использующих ресурсы процессора, может быть снижена уменьшением полосы частот на водопаде программы. Если задержка постоянно отрицательная то процессор отлично справляется с декдированием интервала и можно увеличить глубину декодирования для получения большего количества декодированных сообщений.&lt;/p&gt;&lt;p&gt;FT8: если задержка находится в диапазоне 0..0.4 секунды то все еще можно использовать режим АвтоВыбор3/7 (функционал автовыбора при необходимости сменит TX сообщение достаточно рано чтобы передать его полностью). Если задержка более 0.4 секунды то необходимо уменьшить глубину декодирования. Если задержка все еще более 0.4 секунды то придется использовать АвтоВыбор2/6, так как в режиме 3/7 ответ на входящий вызов будет частично потерян при передаче. Если задержка постоянно больше двух секунд то процессор непригоден для работы в эфире в FT8, при этом все еще можно провести QSO используя функционал частотного фильтра в JTDX либо использовать программу для мониторинга диапазона&lt;/p&gt;&lt;p&gt; /xx: количество декодированных сообщений в последнем интервале.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -2966,7 +2966,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Потерянные аудиоблоки. В  FT8 за 15-секундный интервал должно приходить 52 блока аудиоданных. Декодер запускается, если количество блоков аудиоданных достигло  51 в режимах «SWL / поздний уровень декодера» или 50 блоков в противном случае.При использовании ОС Windows были многочисленные  сообщения о потере аудиоданных, поэтому для ОС Windows в JTDX реализован запуск декодера FT8 если к концу интервала получено не менее 46 аудиоблоков. Уведомление о потере аудиоблоков говорит пользователю о компрессии получаемого сигнала по оси времени, приводящей к нарушению синхронизации декодера с сигналом, дополнительным ошибкам в полученном сигнале на входе декодера и ошибке оценки DT сигнала. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Потерянные аудиоблоки. В  FT8 за 15-секундный интервал должно приходить 52 блока аудиоданных. Декодер запускается, если количество блоков аудиоданных достигло  51 в режимах «SWL / поздний уровень декодера» или 50 блоков в противном случае.&lt;/p&gt;&lt;p&gt;При использовании ОС Windows были многочисленные  сообщения о потере аудиоданных, поэтому для ОС Windows в JTDX реализован запуск декодера FT8 если к концу интервала получено не менее 46 аудиоблоков.&lt;/p&gt;&lt;p&gt;Уведомление о потере аудиоблоков говорит пользователю о компрессии получаемого сигнала по оси времени, приводящей к нарушению синхронизации декодера с сигналом, дополнительным ошибкам в полученном сигнале на входе декодера и ошибке оценки DT сигнала. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -3145,7 +3145,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Левая кнопка мыши включает поддержку проведения QSO для многослотовой передачи сообщений программы MSHV. Нажатием правой кнопки мыши дополнительно включается автоматическое управление частотой передачи( режим гончей FT8 DXpedition, обмен сообщениями с программой WSJT-X).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Левая кнопка мыши включает поддержку проведения QSO для многослотовой передачи сообщений программы MSHV.&lt;/p&gt;&lt;p&gt;Нажатием правой кнопки мыши дополнительно включается автоматическое управление частотой передачи( режим гончей FT8 DXpedition, обмен сообщениями с программой WSJT-X).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1435"/>
@@ -3250,7 +3250,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Прореживание списка кандидатов. Эта опция предназначена для широкополосного декодирования на медленных процессорах при минимальной настройке чувствительности декодера. Список кандидатов сортируется по уровню синхропоследовательности с применением взвешивающего коэффициента DT задержки сигнала, для уменьшения времени потраченного на декодирование кандидаты с наименьшим значением не попадают в список на декодирование. Эта опция не влияет на декодирование сигналов  на приемной частоте QSO. Значение100% - опция отключена.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Прореживание списка кандидатов. Эта опция предназначена для широкополосного декодирования на медленных процессорах при минимальной настройке чувствительности декодера. Список кандидатов сортируется по уровню синхропоследовательности с применением взвешивающего коэффициента DT задержки сигнала, для уменьшения времени потраченного на декодирование кандидаты с наименьшим значением не попадают в список на декодирование.&lt;/p&gt;&lt;p&gt;Эта опция не влияет на декодирование сигналов  на приемной частоте QSO.&lt;/p&gt;&lt;p&gt;Значение100% - опция отключена.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3271,7 +3271,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1978"/>
         <location filename="../mainwindow.ui" line="1994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых позывных.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.Замечание : Для видов связи отличных от FT8 в списке должен использоваться базовый позывной.Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывной на составной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых позывных.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.&lt;/p&gt;&lt;p&gt;Этот функционал не поддерживается в режиме АвтоВыбор0.&lt;/p&gt;&lt;p&gt;Замечание : Для видов связи отличных от FT8 в списке должен использоваться базовый позывной.Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывной на составной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1981"/>
@@ -3293,7 +3293,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="2027"/>
         <location filename="../mainwindow.ui" line="2043"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted prefixes. Autoselection under AutoSeq 1..7 will process wanted prefix according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. For compound callsigns prefix is recognized at beginning of the callsign. Autoselection will process wanted callsign according to the choosen notifications/priorities. Non FT8 modes only: sometimes the base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список отслеживаемых префиксов.Для составных позывных префикс распознается в первой части позывного.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.Замечание : Для видов связи отличных от FT-8: Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывнй на составной. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список отслеживаемых префиксов.Для составных позывных префикс распознается в первой части позывного.Если окно Позывной DX пусто и программа не находится в цикле передачи ,то при декодировании искомого позывного раздастся звуковой сигнал, позывной отобразится в окне Позывной DX и будут сгенериваны стандартные сообщения.&lt;/p&gt;&lt;p&gt;Этот функционал не поддерживается в режиме АвтоВыбор0.&lt;/p&gt;&lt;p&gt;Замечание : Для видов связи отличных от FT-8: Иногда базовый позывной может быть скопирован из декодированного сообщения. Перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывнй на составной. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2030"/>
@@ -3304,7 +3304,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="2060"/>
         <location filename="../mainwindow.ui" line="2076"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите разделенный запятыми список отслеживаемых QTH квадратов, используются четыре первых символа При автоматическом выборе в AutoSeq 1..7 искомые QTH квадраты будут обрабатываться в соответствии с выбранными уведомлениями / приоритетами. Поиск QTH квадратов не поддерживается в режиме AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите разделенный запятыми список отслеживаемых QTH квадратов, используются четыре первых символа При автоматическом выборе в АвтоВыбор 1..7 искомые QTH квадраты будут обрабатываться в соответствии с выбранными уведомлениями / приоритетами.&lt;/p&gt;&lt;p&gt;Поиск QTH квадратов не поддерживается в режиме АвтоВыбор0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2063"/>
@@ -3335,7 +3335,7 @@ UA2,UA9,UK,UN,UR,V2,V3,V4,V5,V6,V7,V8,VE,VK,VK0H,VK0M,VK9C,VK9L,VK9M,VK9N,VK9W,V
 VP2E,VP2M,VP2V,VP5,VP6,VP6/D,VP8,VP8/G,VP8/H,VP8/O,VP8/S,VP9,VQ9,VR,VU,VU4,VU7,XE,&lt;br&gt;
 XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,ZD7,&lt;br&gt;
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых стран, используется основной префикс страны. Для составных позывных префикс распознается в первой части позывного. Автоматический выбор в режимах AutoSeq 1..7 будет обрабатывать нужную страну в соответствии с выбранными уведомлениями / приоритетами, этот функционал не поддержтвается в режиме AutoSeq0. Замечание : Для видов связи отличных от FT8: иногда базовый позывной может быть скопирован из декодированного сообщения: перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывной на составной. Список основных префиксов стран  1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите через запятую список разыскиваемых стран, используется основной префикс страны. Для составных позывных префикс распознается в первой части позывного. Автоматический выбор в режимах АвтоВыбор 1..7 будет обрабатывать нужную страну в соответствии с выбранными уведомлениями / приоритетами, этот функционал не поддержтвается в режиме АтоВыбор0&lt;/p&gt;&lt;p&gt; Замечание : Для видов связи отличных от FT8: иногда базовый позывной может быть скопирован из декодированного сообщения: перед записью такого QSO в журнал, при необхожимости, нужно скорректировать базовый позывной на составной.&lt;/p&gt;&lt;p&gt;Список основных префиксов стран  1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
 5U,5V,5W,5X,5Z,6W,6Y,7O,7P,7Q,7X,8P,8Q,8R,9A,9G,9H,9J,9K,9L,9M2,9M6,9N,9Q,9U,9V,9X,&lt;br&gt;
 9Y,A2,A3,A4,A5,A6,A7,A9,AP,BS7,BV,BV9P,BY,C2,C3,C5,C6,C9,CE,CE0X,CE0Y,CE0Z,CE9,CM,&lt;br&gt;
@@ -3407,7 +3407,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Answer worked B4 AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отвечать ранее сработаному корреспонденту в соответствии с выбранными уведомлениями &quot;новый&quot;. Опция Автовыбора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отвечать ранее сработаному корреспонденту.&lt;p&gt;&lt;/p&gt;Повтор определяется по остаточному принципу после проверки на все выбранные пользователем уведомления(критерии) &quot;новый&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2603"/>
@@ -3517,7 +3517,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши вызовет удаление данных из окон Позывной DX и QTH локатор. Нажатие правой - удаление данных из окон Позывной DX , QTH локатор, истории QSO и черного списка. Нажатие CTRL+Правая кнопка мыши добавит позывной в черный список и удалит информацию из окон Позывной DX, QTH локатор и позывной из истории QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши вызовет удаление данных из окон Позывной DX и QTH локатор.&lt;/p&gt;&lt;p&gt;Нажатие правой - удаление данных из окон Позывной DX , QTH локатор, истории QSO и черного списка.&lt;/p&gt;&lt;p&gt;Нажатие CTRL+Правая кнопка мыши добавит позывной в черный список и удалит информацию из окон Позывной DX, QTH локатор и позывной из истории QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3027"/>
@@ -3552,7 +3552,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3253"/>
         <location filename="../mainwindow.ui" line="3875"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите комбинацию из двух букв для направленного CQ. Поддерживаются сочетания от AA до ZZ. Например - SA , будет сформирован вызов на Южную Америку. Функционал автовыбора в направленном вызове поддерживает сокращения для континентов, основные префиксы стран и произвольные префиксы. Например при передаче CQ JA автовыбор будет искать входящие вызовы из Японии, а при передаче CQ JR автовыбор будет отвечать только на входящие вызовы с префиксом JR.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите комбинацию из двух букв для направленного CQ. Поддерживаются сочетания от AA до ZZ. Например - SA , будет сформирован вызов на Южную Америку.&lt;/p&gt;&lt;p&gt;Функционал автовыбора в направленном вызове поддерживает сокращения для континентов, основные префиксы стран и произвольные префиксы. Например при передаче CQ JA автовыбор будет искать входящие вызовы из Японии, а при передаче CQ JR автовыбор будет отвечать только на входящие вызовы с префиксом JR.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3256"/>
@@ -3839,7 +3839,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4427"/>
         <source>Tx Next</source>
-        <translation type="unfinished"></translation>
+        <translation>След Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4444"/>
@@ -3859,22 +3859,22 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>CL  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использование медианного значения DT для приоритета при формировании списка кандидатов на декодирование в опции прореживания списка кандидатов. Значение зависит от точности синхронизации системных часов, для SDR может зависеть от задержки принимаемого звукового потока. На загруженном диапазоне медианное значение близко к среднему значению DT декодированных сигналов. Правильно выбранное значение повышает эффективность декодирования при использовании опции прореживания списка кандидатов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использование медианного значения DT для приоритета при формировании списка кандидатов на декодирование в опции прореживания списка кандидатов. Значение зависит от точности синхронизации системных часов, для SDR может зависеть от задержки принимаемого звукового потока. На загруженном диапазоне медианное значение близко к среднему значению DT декодированных сигналов.&lt;/p&gt;&lt;p&gt;Правильно выбранное значение повышает эффективность декодирования при использовании опции прореживания списка кандидатов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
         <source> s</source>
-        <translation type="unfinished"> c</translation>
+        <translation> c</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4364"/>
@@ -3984,7 +3984,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4780"/>
         <source>DXpedition</source>
-        <translation>гончая/DXpedition</translation>
+        <translation>Гончая/DXpedition</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4799"/>
@@ -4986,7 +4986,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6248"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6341"/>
@@ -5484,37 +5484,37 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
-        <translation>Произошла ошибка при открытии звуковой карты.</translation>
+        <translation>Произошла ошибка при открытии устройства ввода звука.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
-        <translation>Произошла ошибка во время чтения информации звуковой карты.</translation>
+        <translation>Произошла ошибка во время чтения с устройства ввода звука.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
-        <translation>Аудиоданные не подаются на устройство ввода звука достаточно быстро.</translation>
+        <translation>Звуковой поток подается на устройство ввода звука недостаточно быстро.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
-        <translation>Невосстановимая ошибка,звуковая карта не используется.</translation>
+        <translation>Невосстановимая ошибка,звуковое устройство ввода звука не используется.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
-        <translation>Запрошенный входной аудиоформат неверен.</translation>
+        <translation>Запрошенный формат входного звукового сигнала неправилен.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
-        <translation>Запрошенный входной аудиоформат недействителен.</translation>
+        <translation>Запрошенный формат входящего звукового сигнала не поддерживается на этом устройстве.</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
-        <translation>Не удалось инициализировать звуковую карту</translation>
+        <translation>Не удалось инициализировать звуковое устройство</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="128"/>
@@ -5529,12 +5529,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="136"/>
         <source>Suspended</source>
-        <translation></translation>
+        <translation>Приостановлен</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="141"/>
         <source>Interrupted</source>
-        <translation>Прерванный</translation>
+        <translation>Прерван</translation>
     </message>
     <message>
         <location filename="../soundin.cpp" line="148"/>
@@ -5544,7 +5544,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundin.cpp" line="152"/>
         <source>Stopped</source>
-        <translation>Остановился</translation>
+        <translation>Остановлен</translation>
     </message>
 </context>
 <context>
@@ -6757,7 +6757,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1966"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: при срабатывании счетчика программа передаст сообщение CQ.&lt;/p&gt;&lt;p&gt;AutoSeq 6/7: поиск среди декодированных сообщений &apos;73&apos; и &apos;CQ&apos; по заданным в уведомлениях критериям, будет передано сообщение CQ если удовлетворяющих критериям сообщений 73 и CQ не найдено.&lt;/p&gt;&lt;p&gt;Передача будет отключена если активирована опция одиночного QSO в закладке &apos;АвтоВыбор&apos; основного окна интерфейса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;АвтоВыбор 1..3: при срабатывании счетчика программа передаст сообщение CQ.&lt;/p&gt;&lt;p&gt;АвтоВыбор 6/7: поиск среди декодированных сообщений &apos;73&apos; и &apos;CQ&apos; по заданным в уведомлениях критериям, будет передано сообщение CQ если удовлетворяющих критериям сообщений 73 и CQ не найдено.&lt;/p&gt;&lt;p&gt;Передача будет отключена если активирована опция одиночного QSO в закладке &apos;АвтоВыбор&apos; основного окна интерфейса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1969"/>
@@ -7156,12 +7156,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Не показывать в поле маркера символ уведомления о декодировании сообщения декодером на согласованных фильтрах либо декодером с применением маски известной части сообщения .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3629"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрыть символ Hint</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5112"/>
@@ -7316,12 +7316,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="2423"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добавить расстояние до корреспондента в комментарии ADIF записи QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2426"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавитьрасстояние в комментарии</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2896"/>
@@ -7336,7 +7336,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3029"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Правая кнопкой мыши откроет меню управления списком частот.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Правая кнопка мыши откроет меню управления списком частот.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3280"/>
