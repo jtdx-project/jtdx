@@ -477,7 +477,7 @@ int HamlibTransceiver::do_start ()
   mode_query_works_ = rig_->caps->get_mode;
   split_query_works_ = rig_->caps->get_split_vfo;
   do_snr_ &= (!is_dummy_ && rig_->caps->get_level && ((rig_->caps->has_get_level & RIG_LEVEL_STRENGTH) == RIG_LEVEL_STRENGTH || (rig_->caps->has_get_level & RIG_LEVEL_RAWSTR) == RIG_LEVEL_RAWSTR));
-  do_pwr_ &= (!is_dummy_ && rig_->caps->get_level && (rig_->caps->has_get_level & RIG_LEVEL_RFPOWER_METER) == RIG_LEVEL_RFPOWER_METER);
+  do_pwr_ &= (!is_dummy_ && rig_->caps->get_level && (rig_->caps->has_get_level & RIG_LEVEL_RFPOWER_METER_WATTS) == RIG_LEVEL_RFPOWER_METER_WATTS);
   do_pwr2_ &= (!is_dummy_ && rig_->caps->get_level && (rig_->caps->has_get_level & RIG_LEVEL_RFPOWER) == RIG_LEVEL_RFPOWER);
   tickle_hamlib_ = false;
   get_vfo_works_ = true;
@@ -1224,19 +1224,19 @@ void HamlibTransceiver::do_poll ()
       } else {
           update_level (-60);
           if (do_pwr_) {
-              rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_RFPOWER_METER, &strength);
+              rc = rig_get_level (rig_.data (), RIG_VFO_CURR, RIG_LEVEL_RFPOWER_METER_WATTS, &strength);
               if (RIG_OK == rc) {
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power RFPOWER_METER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+                fprintf(pFile,"%s get power RFPOWER_METER_WATTS %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
                 fclose (pFile);
 #endif
-                update_power (strength.f*100000);
+                update_power (strength.f*1000);
               } else {
-                TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER_METER failed with rc:" << rc << "ignoring");
+                TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER_METER_WATTS failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power RFPOWER_METER failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fprintf(pFile,"%s get power RFPOWER_METER_WATTS failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
                 fclose (pFile);
 #endif
                 update_power (0);
