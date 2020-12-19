@@ -435,6 +435,7 @@ private:
   Q_SLOT void on_force_DTR_combo_box_currentIndexChanged (int);
   Q_SLOT void on_force_RTS_combo_box_currentIndexChanged (int);
   Q_SLOT void on_rig_combo_box_currentIndexChanged (int);
+  Q_SLOT void on_refresh_push_button_clicked ();
   Q_SLOT void on_sound_input_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_sound_output_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_add_macro_push_button_clicked (bool = false);
@@ -4645,6 +4646,24 @@ void Configuration::impl::on_callsigns_line_edit_textChanged (QString const& tex
   auto pos = ui_->callsigns_line_edit->cursorPosition (); ui_->callsigns_line_edit->setText(text.toUpper ()); ui_->callsigns_line_edit->setCursorPosition (pos);
   ui_->enableCallsignFilter_check_box->setChecked(!text.isEmpty ());
   ui_->enableCallsignFilter_check_box->setEnabled(!text.isEmpty ());
+}
+
+void Configuration::impl::on_refresh_push_button_clicked ()
+{
+  //
+  // load combo boxes with audio setup choices
+  //
+  default_audio_input_device_selected_ = load_audio_devices (QAudio::AudioInput, ui_->sound_input_combo_box, &audio_input_device_);
+  default_audio_output_device_selected_ = load_audio_devices (QAudio::AudioOutput, ui_->sound_output_combo_box, &audio_output_device_);
+
+  update_audio_channels (ui_->sound_input_combo_box, ui_->sound_input_combo_box->currentIndex (), ui_->sound_input_channel_combo_box, false);
+  update_audio_channels (ui_->sound_output_combo_box, ui_->sound_output_combo_box->currentIndex (), ui_->sound_output_channel_combo_box, true);
+
+  ui_->sound_input_channel_combo_box->setCurrentIndex (audio_input_channel_);
+  ui_->sound_output_channel_combo_box->setCurrentIndex (audio_output_channel_);
+
+  restart_sound_input_device_ = false;
+  restart_sound_output_device_ = false;
 }
 
 void Configuration::impl::on_sound_input_combo_box_currentTextChanged (QString const& text)
