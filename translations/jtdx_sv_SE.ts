@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1209"/>
+        <location filename="../Configuration.cpp" line="1210"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1210"/>
+        <location filename="../Configuration.cpp" line="1211"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1225"/>
+        <location filename="../Configuration.cpp" line="1226"/>
         <source>Create temporary directory error: </source>
         <translation>Skapa tillfälligt katalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1231"/>
+        <location filename="../Configuration.cpp" line="1232"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,68 +82,68 @@ Another application may be locking the directory</source>
 En annan applikation kan låsa katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1248"/>
+        <location filename="../Configuration.cpp" line="1249"/>
         <source>Create data directory error: </source>
         <translation>Skapa datakatalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1257"/>
-        <location filename="../Configuration.cpp" line="1268"/>
+        <location filename="../Configuration.cpp" line="1258"/>
+        <location filename="../Configuration.cpp" line="1269"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translatorcomment>Kan inte Skapa katalog</translatorcomment>
         <translation>Skapa katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1434"/>
-        <location filename="../Configuration.cpp" line="1460"/>
-        <location filename="../Configuration.cpp" line="1512"/>
+        <location filename="../Configuration.cpp" line="1429"/>
+        <location filename="../Configuration.cpp" line="1455"/>
+        <location filename="../Configuration.cpp" line="1507"/>
         <source>&amp;Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1464"/>
-        <location filename="../Configuration.cpp" line="1516"/>
+        <location filename="../Configuration.cpp" line="1459"/>
+        <location filename="../Configuration.cpp" line="1511"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Föra in ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1468"/>
+        <location filename="../Configuration.cpp" line="1463"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Ladda ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1472"/>
+        <location filename="../Configuration.cpp" line="1467"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Spara som ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1476"/>
+        <location filename="../Configuration.cpp" line="1471"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Sammanfoga ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1480"/>
+        <location filename="../Configuration.cpp" line="1475"/>
         <source>&amp;Reset</source>
         <translation>&amp;Återställ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2734"/>
+        <location filename="../Configuration.cpp" line="2735"/>
         <source>Serial Port:</source>
         <translation>Serieport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2735"/>
+        <location filename="../Configuration.cpp" line="2736"/>
         <source>Serial port used for CAT control</source>
         <translation>Seriell port som används för CAT-kontroll</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2742"/>
+        <location filename="../Configuration.cpp" line="2743"/>
         <source>Network Server:</source>
         <translation>Nätverksserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2743"/>
+        <location filename="../Configuration.cpp" line="2744"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -158,12 +158,12 @@ format:
 	[IPv6-adress]: port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2755"/>
+        <location filename="../Configuration.cpp" line="2756"/>
         <source>USB Device:</source>
         <translation>USB-enhet:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2756"/>
+        <location filename="../Configuration.cpp" line="2757"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -174,132 +174,132 @@ Formatera:
 	[VID [: PID [: VENDOR [: PRODUKT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2791"/>
+        <location filename="../Configuration.cpp" line="2792"/>
         <source>Invalid audio input device</source>
         <translation>Ogiltig ljudingångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2798"/>
+        <location filename="../Configuration.cpp" line="2799"/>
         <source>Invalid audio output device</source>
         <translation>Ogiltig ljudutgångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2804"/>
+        <location filename="../Configuration.cpp" line="2805"/>
         <source>Invalid PTT method</source>
         <translation>Ogiltig PTT-metod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2814"/>
+        <location filename="../Configuration.cpp" line="2815"/>
         <source>Invalid PTT port</source>
         <translation>Ogiltig PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3327"/>
+        <location filename="../Configuration.cpp" line="3328"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 i meddelandet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3328"/>
+        <location filename="../Configuration.cpp" line="3329"/>
         <source>CQ in message</source>
         <translation>CQ i meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4511"/>
+        <location filename="../Configuration.cpp" line="4512"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX Decoded Text Font Choose</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5135"/>
-        <location filename="../Configuration.cpp" line="5166"/>
+        <location filename="../Configuration.cpp" line="5154"/>
+        <location filename="../Configuration.cpp" line="5185"/>
         <source>Cancel</source>
         <translation>Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5131"/>
+        <location filename="../Configuration.cpp" line="5150"/>
         <source>Load Working Frequencies</source>
         <translation>Ladda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5162"/>
+        <location filename="../Configuration.cpp" line="5181"/>
         <source>Merge Working Frequencies</source>
         <translation>Slå samman arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5189"/>
-        <location filename="../Configuration.cpp" line="5198"/>
         <location filename="../Configuration.cpp" line="5208"/>
+        <location filename="../Configuration.cpp" line="5217"/>
+        <location filename="../Configuration.cpp" line="5227"/>
         <source>Not a valid frequencies file</source>
         <translation>Inte en giltig frekvensfil</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5189"/>
+        <location filename="../Configuration.cpp" line="5208"/>
         <source>Incorrect file magic</source>
         <translation>Felaktig magi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5198"/>
+        <location filename="../Configuration.cpp" line="5217"/>
         <source>Version is too new</source>
         <translation>Versionen är för ny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5208"/>
+        <location filename="../Configuration.cpp" line="5227"/>
         <source>Contents corrupt</source>
         <translation>Innehållet är skadat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5218"/>
+        <location filename="../Configuration.cpp" line="5237"/>
         <source>Save Working Frequencies</source>
         <translation>Spara arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5228"/>
+        <location filename="../Configuration.cpp" line="5247"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Spara endast utvalda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5230"/>
+        <location filename="../Configuration.cpp" line="5249"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Är du säker på att du bara vill spara de arbetsfrekvenser som för närvarande är valda? Klicka på Nej för att spara alla.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5257"/>
+        <location filename="../Configuration.cpp" line="5276"/>
         <source>Reset Working Frequencies</source>
         <translation>Återställ arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5259"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med standardfrekvenser?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5319"/>
+        <location filename="../Configuration.cpp" line="5338"/>
         <source>Save Directory</source>
         <translation>Spara katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5335"/>
+        <location filename="../Configuration.cpp" line="5354"/>
         <source>Failed to open connection to rig</source>
         <translation>Det gick inte att öppna anslutningen till riggen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5578"/>
+        <location filename="../Configuration.cpp" line="5597"/>
         <source>Rig failure</source>
         <translation>Riggfel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5133"/>
-        <location filename="../Configuration.cpp" line="5164"/>
-        <location filename="../Configuration.cpp" line="5218"/>
+        <location filename="../Configuration.cpp" line="5152"/>
+        <location filename="../Configuration.cpp" line="5183"/>
+        <location filename="../Configuration.cpp" line="5237"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvensfiler (* .qrg) ;; Alla filer (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5149"/>
+        <location filename="../Configuration.cpp" line="5168"/>
         <source>Replace Working Frequencies</source>
         <translation>Byt ut arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5150"/>
+        <location filename="../Configuration.cpp" line="5169"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med de laddade frekvenserna?</translation>
     </message>
@@ -5098,7 +5098,7 @@ UDP-server%2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5084"/>
+        <location filename="../Configuration.cpp" line="5103"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5106,99 +5106,99 @@ UDP-server%2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5086"/>
+        <location filename="../Configuration.cpp" line="5105"/>
         <source>Directory:</source>
         <translation>KAtalog:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5087"/>
+        <location filename="../Configuration.cpp" line="5106"/>
         <source>File &amp;name:</source>
         <translation>Fil&amp;namn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5088"/>
+        <location filename="../Configuration.cpp" line="5107"/>
         <source>&amp;Open</source>
         <translation>&amp;Öppna</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5089"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>&amp;Choose</source>
         <translation>&amp;Välj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5090"/>
+        <location filename="../Configuration.cpp" line="5109"/>
         <source>&amp;Save</source>
         <translation>&amp;Spara</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5092"/>
+        <location filename="../Configuration.cpp" line="5111"/>
         <source>All files (*)</source>
         <translation>Alla filer (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5093"/>
+        <location filename="../Configuration.cpp" line="5112"/>
         <source>New Folder</source>
         <translation>Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5094"/>
+        <location filename="../Configuration.cpp" line="5113"/>
         <source>Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5091"/>
+        <location filename="../Configuration.cpp" line="5110"/>
         <source>Cancel</source>
         <translation>Annulera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5095"/>
+        <location filename="../Configuration.cpp" line="5114"/>
         <source>&amp;Delete</source>
         <translation>&amp;Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5096"/>
+        <location filename="../Configuration.cpp" line="5115"/>
         <source>&amp;Rename</source>
         <translation>&amp;Döp om</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5097"/>
+        <location filename="../Configuration.cpp" line="5116"/>
         <source>Show &amp;hidden files</source>
         <translation>Visa &amp;gömda filer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5098"/>
+        <location filename="../Configuration.cpp" line="5117"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5099"/>
+        <location filename="../Configuration.cpp" line="5118"/>
         <source>Look in:</source>
         <translation>Titta i:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5100"/>
+        <location filename="../Configuration.cpp" line="5119"/>
         <source>Files of type:</source>
         <translation>Filer av typen:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5101"/>
+        <location filename="../Configuration.cpp" line="5120"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; är skrivskyddat.
 Vill du radera det ändå?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5102"/>
+        <location filename="../Configuration.cpp" line="5121"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Är du säker på att du vill ta bort &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5122"/>
         <source>Could not delete directory.</source>
         <translation>Det gick inte att ta bort katalogen.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5104"/>
+        <location filename="../Configuration.cpp" line="5123"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5207,92 +5207,92 @@ Katalogen hittades inte.
 Kontrollera att rätt katalognamn anges.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5106"/>
+        <location filename="../Configuration.cpp" line="5125"/>
         <source>Recent Places</source>
         <translation>Senaste postioner</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5126"/>
         <source>Back</source>
         <translation>Backa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5127"/>
         <source>Go back</source>
         <translation>Gå bakåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5128"/>
         <source>Alt+Left</source>
         <translation>Alt+Vänster</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5110"/>
+        <location filename="../Configuration.cpp" line="5129"/>
         <source>Forward</source>
         <translation>Fram</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
+        <location filename="../Configuration.cpp" line="5130"/>
         <source>Go forward</source>
         <translation>Gå frammåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5112"/>
+        <location filename="../Configuration.cpp" line="5131"/>
         <source>Alt+Right</source>
         <translation>Alt+Höger</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5113"/>
+        <location filename="../Configuration.cpp" line="5132"/>
         <source>Parent Directory</source>
         <translation>Övergripande katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5133"/>
         <source>Go to the parent directory</source>
         <translation>Gå till överliggande katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5134"/>
         <source>Alt+Up</source>
         <translation>Alt+Upp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5116"/>
+        <location filename="../Configuration.cpp" line="5135"/>
         <source>Create New Folder</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5136"/>
         <source>Create a New Folder</source>
         <translation>Skapa en ny mapp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5118"/>
+        <location filename="../Configuration.cpp" line="5137"/>
         <source>List View</source>
         <translation>List&amp;vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5119"/>
+        <location filename="../Configuration.cpp" line="5138"/>
         <source>Change to list view mode</source>
         <translation>Byt till listvy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5139"/>
         <source>Detail View</source>
         <translation>Detaljerad vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
+        <location filename="../Configuration.cpp" line="5140"/>
         <source>Change to detail view mode</source>
         <translation>Byt till detaljvisningsläge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5122"/>
+        <location filename="../Configuration.cpp" line="5141"/>
         <source>Sidebar</source>
         <translation>Sidebar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5142"/>
         <source>List of places and bookmarks</source>
         <translation>Lista över platser och bokmärken</translation>
     </message>
@@ -5300,22 +5300,22 @@ Kontrollera att rätt katalognamn anges.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5144"/>
         <source>Name</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5145"/>
         <source>Size</source>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5127"/>
+        <location filename="../Configuration.cpp" line="5146"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5128"/>
+        <location filename="../Configuration.cpp" line="5147"/>
         <source>Date Modified</source>
         <translation>Datum ändrat</translation>
     </message>
@@ -6633,7 +6633,7 @@ radiogränssnittet beter sig som förväntat.</translation>
         <translation>Ljudkort</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1706"/>
+        <location filename="../Configuration.ui" line="1729"/>
         <source>Select the audio CODEC to use for transmitting.
 If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
@@ -6646,12 +6646,12 @@ du sänder alla systemljud genererade under
 sändningsperioder.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1723"/>
+        <location filename="../Configuration.ui" line="1706"/>
         <source>Select the audio CODEC to use for receiving.</source>
         <translation>Välj ljud CODEC som ska användas för mottagning.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1730"/>
+        <location filename="../Configuration.ui" line="1713"/>
         <source>&amp;Input:</source>
         <translation>&amp;Ingång:</translation>
     </message>
@@ -6701,175 +6701,175 @@ båda här.</translation>
         <translation>&amp;Utgång:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1816"/>
+        <location filename="../Configuration.ui" line="1826"/>
         <source>Remember power settings by band and mode</source>
         <translation>Kom ihåg effektinställningar efter band och läge</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1824"/>
+        <location filename="../Configuration.ui" line="1834"/>
         <source>Enable power memory during transmit</source>
         <translation>Aktivera under sändning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1827"/>
+        <location filename="../Configuration.ui" line="1837"/>
         <source>Transmit</source>
         <translation>Sändning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1834"/>
+        <location filename="../Configuration.ui" line="1844"/>
         <source>Enable power memory during tuning</source>
         <translation>Aktivera effektminne under sändning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1837"/>
+        <location filename="../Configuration.ui" line="1847"/>
         <source>Tune</source>
         <translation>Ställ in</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1862"/>
+        <location filename="../Configuration.ui" line="1872"/>
         <source>Audio files save directory</source>
         <translation>Katalog för att spara ljudfiler</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1868"/>
+        <location filename="../Configuration.ui" line="1878"/>
         <source>Loc&amp;ation:</source>
         <translation>Pl&amp;ats:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1884"/>
+        <location filename="../Configuration.ui" line="1894"/>
         <source>Path to which .WAV files are saved.</source>
         <translation>Sökväg där.WAV-filer sparas.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1893"/>
+        <location filename="../Configuration.ui" line="1903"/>
         <source>TextLabel</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1900"/>
+        <location filename="../Configuration.ui" line="1910"/>
         <source>Click to select a different save directory for .WAV files.</source>
         <translation>Klicka för att välja en annan spara katalog för .WAV-filer.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1903"/>
+        <location filename="../Configuration.ui" line="1913"/>
         <source>S&amp;elect</source>
         <translation>V&amp;älj</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1934"/>
+        <location filename="../Configuration.ui" line="1944"/>
         <source>Sequencing</source>
         <translation>Sekvensiering</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1958"/>
+        <location filename="../Configuration.ui" line="1968"/>
         <source>Message sequencing short scenarios</source>
         <translation>Meddelandesekvensering av korta scenarier</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1966"/>
+        <location filename="../Configuration.ui" line="1976"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; AutoSeq 1..3: ring CQ när räknaren nås. AutoSeq 6/7: söka igenom avkodade meddelanden efter giltigt &apos;CQ&apos; eller &apos;73&apos; meddelande, ring CQ om det inte finns några sådana meddelanden. Stopp Tx om QSO-alternativet Enkel skott är aktiverat på fliken AutoSeq. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1969"/>
+        <location filename="../Configuration.ui" line="1979"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
         <translation>Räknare. Sök igenom avkodade meddelanden, ropa CQ eller Halt Tx om:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2001"/>
-        <location filename="../Configuration.ui" line="2040"/>
-        <location filename="../Configuration.ui" line="2066"/>
-        <location filename="../Configuration.ui" line="2102"/>
+        <location filename="../Configuration.ui" line="2011"/>
+        <location filename="../Configuration.ui" line="2050"/>
+        <location filename="../Configuration.ui" line="2076"/>
+        <location filename="../Configuration.ui" line="2112"/>
         <source>times</source>
         <translation>gånger</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2014"/>
+        <location filename="../Configuration.ui" line="2024"/>
         <source>called CQ,  received a call and answered</source>
         <translation>anropade CQ, fick ett samtal och svarade</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2076"/>
+        <location filename="../Configuration.ui" line="2086"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
         <translation>skickade RR73 (73) som svar på inkommande RRR (RR73)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2115"/>
+        <location filename="../Configuration.ui" line="2125"/>
         <source>answered to someone&apos;s CQ with no response</source>
         <translation>svarade på någons CQ utan svar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2128"/>
+        <location filename="../Configuration.ui" line="2138"/>
         <source>sent report answering to incoming report</source>
         <translation>skickat rapport som svar på inkommande rapport</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2162"/>
+        <location filename="../Configuration.ui" line="2172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Det här alternativet används för ett överlappande spektorscenario. Tx stoppas om spektra har vanliga frekvenser utan respekt för denna inställning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2165"/>
+        <location filename="../Configuration.ui" line="2175"/>
         <source>Halt TX if operator I called answered to other operator</source>
         <translation>Stoppa TX om operatören jag anropade svarade till annan operatör</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2172"/>
+        <location filename="../Configuration.ui" line="2182"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Som standard autoselektion ignorerar mottagen / överförd riktning för CQ om det finns ett giltigt &quot;nytt DXCC&quot; -meddelande avkodat, antingen inkommande samtal eller val från avkodade CQ / 73-meddelanden. Detta alternativ eliminerar &quot;nytt DXCC&quot; -undantag i automatisk val för riktad CQ-bearbetning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2175"/>
+        <location filename="../Configuration.ui" line="2185"/>
         <source>Strict directional CQ operation</source>
         <translation>Strikt riktad CQ-funktion</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2233"/>
+        <location filename="../Configuration.ui" line="2243"/>
         <source>Tx &amp;Macros</source>
         <translation>Tx &amp;Macro</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2236"/>
+        <location filename="../Configuration.ui" line="2246"/>
         <source>Canned free text messages setup</source>
         <translation>Bevarad inställning av fritextmeddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2242"/>
+        <location filename="../Configuration.ui" line="2252"/>
         <source>&amp;Add</source>
         <translation>&amp;Lägg till</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2249"/>
+        <location filename="../Configuration.ui" line="2259"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Max 13 tecken för gratis meddelande &lt;br&gt; &lt;br&gt; Max 19 tecken för riktad CQ-standardmeddelande. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2259"/>
+        <location filename="../Configuration.ui" line="2269"/>
         <source>&amp;Delete</source>
         <translation>&amp;Ta bort</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2269"/>
+        <location filename="../Configuration.ui" line="2279"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dra och släpp objekt för att ordna om. Högerklicka för artikelspecifika åtgärder. Klicka, SHIFT + Klicka och, CRTL + Klicka för att välja objekt. @ symbol ersätts med DX-samtal, &amp; symbol med användarens basanropssignal, # symbol med rapport som ska överföras, ^ symbol med korrespondentens namn hämtas från loggen där namnet inte får överstiga 7 karaktärer. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2320"/>
+        <location filename="../Configuration.ui" line="2330"/>
         <source>Reportin&amp;g</source>
         <translation>Rapporteri&amp;g</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2323"/>
+        <location filename="../Configuration.ui" line="2333"/>
         <source>Reporting and logging settings</source>
         <translation>Rapportering och loggningsinställningar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2336"/>
+        <location filename="../Configuration.ui" line="2346"/>
         <source>Logging</source>
         <translation>Loggning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2372"/>
+        <location filename="../Configuration.ui" line="2382"/>
         <source>Some logging programs will not accept the type of reports
 saved by this program.
 Check this option to save the sent and received reports in the
@@ -6880,172 +6880,172 @@ Markera det här alternativet för att spara de skickade och mottagna rapportern
 kommentarfält.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2378"/>
+        <location filename="../Configuration.ui" line="2388"/>
         <source>d&amp;B reports to comments</source>
         <translation>dB rapporter till kommentarer</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2405"/>
+        <location filename="../Configuration.ui" line="2415"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
         <translation>Markera det här alternativet för att tvinga raderingen av DX-samtalet
 och DX-rutnätfält när ett 73 eller fritextmeddelande skickas.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2409"/>
+        <location filename="../Configuration.ui" line="2419"/>
         <source>Clear &amp;DX call and grid after logging</source>
         <translation>Rensa &amp; DX-samtal och rutnät efter loggning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2385"/>
+        <location filename="../Configuration.ui" line="2395"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera det här alternativet för att tvinga rensningen av fälten DX Call och DX Grid när du lämnar JTDX. Denna funktionalitet är avsedd för UR5EQF-programvara för loggboksprogram. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2388"/>
+        <location filename="../Configuration.ui" line="2398"/>
         <source>Clear DX call and grid on exit</source>
         <translation>Rensa DX-samtal och rutnät vid avstängning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2362"/>
+        <location filename="../Configuration.ui" line="2372"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
         <translation>Vissa loggningsprogram accepterar inte JT-65 eller JT9 som ett erkänt läge.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2365"/>
+        <location filename="../Configuration.ui" line="2375"/>
         <source>Con&amp;vert mode to RTTY</source>
         <translation>Konvertera mod till RTTY</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2395"/>
+        <location filename="../Configuration.ui" line="2405"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
         <translation>Programmet dyker upp en delvis färdig Log QSO-dialog när du skickar ett 73 eller fritextmeddelande.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2398"/>
+        <location filename="../Configuration.ui" line="2408"/>
         <source>Promp&amp;t me to log QSO</source>
         <translation>&amp;Kvittera loggning av QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2416"/>
+        <location filename="../Configuration.ui" line="2426"/>
         <source>Enable automatic logging of QSO</source>
         <translation>Aktivera automatisk loggning av QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2456"/>
+        <location filename="../Configuration.ui" line="2466"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Anslutning till extern loggboksprogramvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2459"/>
+        <location filename="../Configuration.ui" line="2469"/>
         <source>Send logged QSO ADIF data</source>
         <translation>Skicka loggade QSO ADIF-data</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2493"/>
-        <location filename="../Configuration.ui" line="2509"/>
+        <location filename="../Configuration.ui" line="2503"/>
+        <location filename="../Configuration.ui" line="2519"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; TCP-servernamn eller adress &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2496"/>
+        <location filename="../Configuration.ui" line="2506"/>
         <source>TCP server:</source>
         <translation>TCP server:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2516"/>
         <location filename="../Configuration.ui" line="2526"/>
+        <location filename="../Configuration.ui" line="2536"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server portnummer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2519"/>
+        <location filename="../Configuration.ui" line="2529"/>
         <source>TCP port:</source>
         <translation>TCP port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2541"/>
+        <location filename="../Configuration.ui" line="2551"/>
         <source>Enable sending to TCP server</source>
         <translation>Aktivera skicka till TCP-server</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2566"/>
+        <location filename="../Configuration.ui" line="2576"/>
         <source>2nd UDP server</source>
         <translation>2a UDP-server</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2580"/>
         <location filename="../Configuration.ui" line="2590"/>
+        <location filename="../Configuration.ui" line="2600"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; sekundärt UDP-serverportnummer &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2583"/>
+        <location filename="../Configuration.ui" line="2593"/>
         <source>UDP port:</source>
         <translation>UDP port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2599"/>
+        <location filename="../Configuration.ui" line="2609"/>
         <source>Enable sending to secondary UDP server</source>
         <translation>Aktivera sändning till sekundär UDP-server</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2632"/>
+        <location filename="../Configuration.ui" line="2642"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Tillåt konfigurering av data för inspelning i filen ALL.TXT. Inspelning av TX-meddelanden kan inte stängas av. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2635"/>
+        <location filename="../Configuration.ui" line="2645"/>
         <source>Recording to ALL.TXT</source>
         <translation>Inspelning till ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2657"/>
+        <location filename="../Configuration.ui" line="2667"/>
         <source>decoded messages</source>
         <translation>avkodade meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2664"/>
+        <location filename="../Configuration.ui" line="2674"/>
         <source>decoded and debug messages</source>
         <translation>avkodade och felsökta meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2706"/>
+        <location filename="../Configuration.ui" line="2716"/>
         <source>Network Services</source>
         <translation>Nätverkstjänster</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2727"/>
+        <location filename="../Configuration.ui" line="2737"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
         <translation>Programmet kan skicka inloggad QSO-information till http://www.eqsl.cc webbplats.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2730"/>
+        <location filename="../Configuration.ui" line="2740"/>
         <source>Enable &amp;eQSL sending</source>
         <translation>Aktivera &amp;eQSL-sändning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2750"/>
+        <location filename="../Configuration.ui" line="2760"/>
         <source>EQSL Username.</source>
         <translation>e-QSL Användarnamn.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2757"/>
+        <location filename="../Configuration.ui" line="2767"/>
         <source>U&amp;sername:</source>
         <translation>&amp;Användarnamn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2767"/>
+        <location filename="../Configuration.ui" line="2777"/>
         <source>P&amp;assword:</source>
         <translation>&amp;Lösenord:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2777"/>
+        <location filename="../Configuration.ui" line="2787"/>
         <source>EQSL Password.</source>
         <translation>e-QSL-lösenord.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2787"/>
+        <location filename="../Configuration.ui" line="2797"/>
         <source>The program can send your station details and all
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
@@ -7056,252 +7056,237 @@ Detta används för analys av omvänd beacon, vilket är mycket användbart
 för bedömning av förökning och systemprestanda.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2793"/>
+        <location filename="../Configuration.ui" line="2803"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
         <translation>Aktivera &amp;PSK Reporter Spotting</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2800"/>
+        <location filename="../Configuration.ui" line="2810"/>
         <source>EQSL OTH Nickname.</source>
         <translation>e-QSL OTH Smeknamn.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2807"/>
+        <location filename="../Configuration.ui" line="2817"/>
         <source>Enable DXSummit Spotting </source>
         <translation>Aktivera DXSummit Spotting </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2814"/>
+        <location filename="../Configuration.ui" line="2824"/>
         <source>QTH N&amp;ickname:</source>
         <translation>QTH &amp;Smeknamn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2827"/>
+        <location filename="../Configuration.ui" line="2837"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Primär UDP-anslutning till extern programvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2830"/>
+        <location filename="../Configuration.ui" line="2840"/>
         <source>Primary UDP Server</source>
         <translation>Primär UDP server</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2860"/>
+        <location filename="../Configuration.ui" line="2870"/>
         <source>UDP Server:</source>
         <translation>UDP Server:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2876"/>
+        <location filename="../Configuration.ui" line="2886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Valfritt värdnamn för nätverkstjänsten för att ta emot avkodningar. &lt;/p&gt; &lt;p&gt; Format: &lt;/p&gt; &lt;ul style = &quot;margin-top: 0px; margin-bottom: 0px; margin-vänster: 0px; margin-höger: 0px; -qt-list-strecksats: 1; &quot;&gt; &lt;li style =&quot; margin-top: 12px; margin-bottom: 0px; margin-left: 0px; margin- höger: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; värdnamn &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin -rätt: 0px; -qt-block-strecksats: 0; text-strecksats: 0px; &quot;&gt; IPv4-adress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left: 0px ; margin-höger: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv6-adress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px; margin-left : 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv4 multicast-gruppadress &lt;/li&gt; &lt;li style =&quot; margin-top: 0px; margin-bottom: 0px ; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px; &quot;&gt; IPv6 multicast-gruppadress &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Att rensa det här fältet kommer att inaktivera sändningen av UDP-statusuppdateringar.&lt;/ p &gt;&lt;/ Body&gt;&lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2886"/>
+        <location filename="../Configuration.ui" line="2896"/>
         <source>UDP Server port number:</source>
         <translation>UDP Server portnummer:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2916"/>
+        <location filename="../Configuration.ui" line="2926"/>
         <source>Accept UDP requests</source>
         <translation>Acceptera UDP-förfrågningar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2923"/>
+        <location filename="../Configuration.ui" line="2933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange godkännande av en inkommande UDP-begäran. Effekten av detta alternativ varierar beroende på operativsystem och fönsterhanterare. Dess avsikt är att meddela godkännandet av en inkommande UDP-begäran även om den här applikationen är minimerad eller dold. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2926"/>
+        <location filename="../Configuration.ui" line="2936"/>
         <source>Notify on accepted UDP request</source>
         <translation>Meddela om godkänd UDP-begäran</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2933"/>
+        <location filename="../Configuration.ui" line="2943"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>h&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Återställ fönstret från minimerat om en UDP-begäran accepteras. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2936"/>
+        <location filename="../Configuration.ui" line="2946"/>
         <source>Accepted UDP request restores window</source>
         <translation>Accepterad UDP-begäran återställer fönstret</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2947"/>
+        <location filename="../Configuration.ui" line="2957"/>
         <source>Enable sending logged QSO ADIF data</source>
         <translation>Aktivera skicka loggade QSO ADIF-data</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2957"/>
+        <location filename="../Configuration.ui" line="2967"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden markerade med frågetecken skickas inte till JTAlert och annan UDP-baserad programvara. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2960"/>
+        <location filename="../Configuration.ui" line="2970"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
         <translation>Förhindra upptäckt av meddelanden med de obekräftade anropssignalerna via UDP</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2967"/>
+        <location filename="../Configuration.ui" line="2977"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Valda textfilter kommer att tillämpas för att begränsa överföringen av UDP-meddelanden från JTDX, till exempel kan meddelanden från vissa kontinenter blockeras. &lt;/p&gt; &lt;/body&gt; &lt;/ html &gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2970"/>
+        <location filename="../Configuration.ui" line="2980"/>
         <source>Apply text filters to transmission of the UDP messages</source>
         <translation>Använd textfilter för överföring av UDP-meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3005"/>
+        <location filename="../Configuration.ui" line="3015"/>
         <source>Frequencies</source>
         <translation>Frekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3008"/>
+        <location filename="../Configuration.ui" line="3018"/>
         <source>Default frequencies and band specific station details setup</source>
         <translation>Standardfrekvenser och bandspecifik stationsinformation</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3014"/>
+        <location filename="../Configuration.ui" line="3024"/>
         <source>Working Frequencies</source>
         <translation>Arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3626"/>
+        <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3629"/>
+        <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5112"/>
+        <location filename="../Configuration.ui" line="5122"/>
         <source>Reset</source>
         <translation>Återställ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3056"/>
+        <location filename="../Configuration.ui" line="3066"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
         <translation>Se WSPR-dokumentation Bilaga C för detaljer om hur du bestämmer dessa faktorer för din radio.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3059"/>
+        <location filename="../Configuration.ui" line="3069"/>
         <source>Frequency Calibration</source>
         <translation>Frekvenskalibrering</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3068"/>
+        <location filename="../Configuration.ui" line="3078"/>
         <source>Intercept:</source>
         <translation>Intercept:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3081"/>
-        <location filename="../Configuration.ui" line="6842"/>
+        <location filename="../Configuration.ui" line="3091"/>
+        <location filename="../Configuration.ui" line="6852"/>
         <source> Hz</source>
         <translation> Hz</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3100"/>
+        <location filename="../Configuration.ui" line="3110"/>
         <source>Slope:</source>
         <translation>Slope:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3113"/>
+        <location filename="../Configuration.ui" line="3123"/>
         <source> ppm</source>
         <translation> ppm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3156"/>
+        <location filename="../Configuration.ui" line="3166"/>
         <source>Station Information</source>
         <translation>Stationsinformation</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3168"/>
+        <location filename="../Configuration.ui" line="3178"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
         <translation>Objekt kan redigeras.
 Högerklicka för att infoga och ta bort alternativ.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3216"/>
+        <location filename="../Configuration.ui" line="3226"/>
         <source>Notifications</source>
         <translation>Anmälningar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3224"/>
+        <location filename="../Configuration.ui" line="3234"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
         <translation>Statusmeddelanden &quot;Nya&quot; och &quot;körda B4&quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3250"/>
+        <location filename="../Configuration.ui" line="3260"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3253"/>
+        <location filename="../Configuration.ui" line="3263"/>
         <source>Check and highlight new CQZ</source>
         <translation>Kontrollera och markera ny CQZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3260"/>
+        <location filename="../Configuration.ui" line="3270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som är nya i bandet enligt uppgifterna från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3270"/>
+        <location filename="../Configuration.ui" line="3280"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med CQ-zoner som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3290"/>
+        <location filename="../Configuration.ui" line="3300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3293"/>
+        <location filename="../Configuration.ui" line="3303"/>
         <source>Check and highlight new ITUZ</source>
         <translation>Kontrollera och markera ny ITUZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3300"/>
+        <location filename="../Configuration.ui" line="3310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3310"/>
+        <location filename="../Configuration.ui" line="3320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med ITU-zoner som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3330"/>
+        <location filename="../Configuration.ui" line="3340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3333"/>
+        <location filename="../Configuration.ui" line="3343"/>
         <source>Check and highlight new DXCC</source>
         <translation>Kontrollera och markera ny DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3340"/>
+        <location filename="../Configuration.ui" line="3350"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="3263"/>
-        <location filename="../Configuration.ui" line="3303"/>
-        <location filename="../Configuration.ui" line="3343"/>
-        <location filename="../Configuration.ui" line="3383"/>
-        <location filename="../Configuration.ui" line="3423"/>
-        <location filename="../Configuration.ui" line="3463"/>
-        <source>per band</source>
-        <translation>per band</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="3350"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som är nya i läget enligt data från wsjtx_log.adi loggfil. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3273"/>
@@ -7310,43 +7295,13 @@ Högerklicka för att infoga och ta bort alternativ.</translation>
         <location filename="../Configuration.ui" line="3393"/>
         <location filename="../Configuration.ui" line="3433"/>
         <location filename="../Configuration.ui" line="3473"/>
-        <source>per mode</source>
-        <translation>per mod</translation>
+        <source>per band</source>
+        <translation>per band</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2423"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="2426"/>
-        <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="2896"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange serviceportnumret för UDP-servern som JTDX ska skicka uppdateringar till. Om detta är noll kommer inga uppdateringar att sändas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="2913"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Med detta aktiverat kommer JTDX att acceptera vissa förfrågningar tillbaka från en UDP-server som tar emot avkodningsmeddelanden. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="3029"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Högerklicka för att behålla arbetsfrekvenslistan. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="3280"/>
-        <location filename="../Configuration.ui" line="3320"/>
         <location filename="../Configuration.ui" line="3360"/>
-        <location filename="../Configuration.ui" line="3400"/>
-        <location filename="../Configuration.ui" line="3440"/>
-        <location filename="../Configuration.ui" line="3480"/>
-        <source>Use also system sound for the notification.</source>
-        <translation>Använd också systemljud för meddelandet.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med DXCC-länder som är nya i läget enligt data från wsjtx_log.adi loggfil. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
@@ -7355,421 +7310,476 @@ Högerklicka för att infoga och ta bort alternativ.</translation>
         <location filename="../Configuration.ui" line="3403"/>
         <location filename="../Configuration.ui" line="3443"/>
         <location filename="../Configuration.ui" line="3483"/>
+        <source>per mode</source>
+        <translation>per mod</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1807"/>
+        <source>refresh audio device list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1810"/>
+        <source>Refresh</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="2433"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="2436"/>
+        <source>Distance to comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="2906"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ange serviceportnumret för UDP-servern som JTDX ska skicka uppdateringar till. Om detta är noll kommer inga uppdateringar att sändas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="2923"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Med detta aktiverat kommer JTDX att acceptera vissa förfrågningar tillbaka från en UDP-server som tar emot avkodningsmeddelanden. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3039"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Högerklicka för att behålla arbetsfrekvenslistan. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3290"/>
+        <location filename="../Configuration.ui" line="3330"/>
+        <location filename="../Configuration.ui" line="3370"/>
+        <location filename="../Configuration.ui" line="3410"/>
+        <location filename="../Configuration.ui" line="3450"/>
+        <location filename="../Configuration.ui" line="3490"/>
+        <source>Use also system sound for the notification.</source>
+        <translation>Använd också systemljud för meddelandet.</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="3293"/>
+        <location filename="../Configuration.ui" line="3333"/>
+        <location filename="../Configuration.ui" line="3373"/>
+        <location filename="../Configuration.ui" line="3413"/>
+        <location filename="../Configuration.ui" line="3453"/>
+        <location filename="../Configuration.ui" line="3493"/>
         <source>Beep as well</source>
         <translation>Pip också</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3370"/>
+        <location filename="../Configuration.ui" line="3380"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutrutor som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3373"/>
+        <location filename="../Configuration.ui" line="3383"/>
         <source>Check and highlight new grids</source>
         <translation>Kontrollera och markera nya Grid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3380"/>
+        <location filename="../Configuration.ui" line="3390"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutor med rutnät som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3390"/>
+        <location filename="../Configuration.ui" line="3400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med rutrutor som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3410"/>
+        <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3413"/>
+        <location filename="../Configuration.ui" line="3423"/>
         <source>Check and highlight new prefixes</source>
         <translation>Kontrollera och markera nya prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3420"/>
+        <location filename="../Configuration.ui" line="3430"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som är nya i bandet enligt data från wsjtx_log.adi loggfil. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3430"/>
+        <location filename="../Configuration.ui" line="3440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med prefix som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3450"/>
+        <location filename="../Configuration.ui" line="3460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som inte finns i wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3453"/>
+        <location filename="../Configuration.ui" line="3463"/>
         <source>Check and highlight new calls</source>
         <translation>Kontrollera och markera nya signaler</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3460"/>
+        <location filename="../Configuration.ui" line="3470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som är nya i bandet enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3470"/>
+        <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Markera meddelanden med anropssignaler som är nya i läget enligt data från wsjtx_log.adi-loggfilen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3490"/>
+        <location filename="../Configuration.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd färgmeddelande för meddelanden med det bearbetade DXCC, Grid, Call. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3493"/>
+        <location filename="../Configuration.ui" line="3503"/>
         <source>Highlight worked ones</source>
         <translation>Markera körda</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3500"/>
+        <location filename="../Configuration.ui" line="3510"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call kommer att strikas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3503"/>
+        <location filename="../Configuration.ui" line="3513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med fungerade samtal kommer att strikas &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3506"/>
+        <location filename="../Configuration.ui" line="3516"/>
         <source>strike it</source>
         <translation>slå det</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3513"/>
+        <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call kommer att betonas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3516"/>
+        <location filename="../Configuration.ui" line="3526"/>
         <source>underline it</source>
         <translation>understryka det</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3523"/>
+        <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Meddelanden med bearbetade DXCC, Grid, Call där det inte finns något MyCall kommer att hoppas över i det avkodade textfönstret &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3526"/>
+        <location filename="../Configuration.ui" line="3536"/>
         <source>don&apos;t show it</source>
         <translation>visa inte</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3533"/>
+        <location filename="../Configuration.ui" line="3543"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Invertera text &lt;-&gt; bakgrundsfärg för mottagna meddelanden &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3536"/>
+        <location filename="../Configuration.ui" line="3546"/>
         <source>Inverse text/background color</source>
         <translation>Omvänd text/bakgrundsfärg</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3543"/>
+        <location filename="../Configuration.ui" line="3553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Som standard kontrolleras bara &apos;CQ&apos; och &apos;MyCall&apos; meddelanden, med denna inställning kan du också kontrollera andra mottagna standardmeddelanden för nya DXCC, Grid, Call. Färg &apos;Annat standardmeddelande&apos; används för meddelandet &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3546"/>
+        <location filename="../Configuration.ui" line="3556"/>
         <source>Highlight other standard messages</source>
         <translation>Markera andra standardmeddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3566"/>
+        <location filename="../Configuration.ui" line="3576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd systemljud för meddelande så snart det första meddelandet avkodas i RX-intervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3569"/>
+        <location filename="../Configuration.ui" line="3579"/>
         <source>Beep on 1st decoded message</source>
         <translation>Pip på det första avkodade meddelandet</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3576"/>
+        <location filename="../Configuration.ui" line="3586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd systemljud för meddelande om min signal finns i det  mottagna meddelandet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3579"/>
+        <location filename="../Configuration.ui" line="3589"/>
         <source>Beep on my call</source>
         <translation>Pip på min signal</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3609"/>
+        <location filename="../Configuration.ui" line="3619"/>
         <source>Markers</source>
         <translation>Markörer</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3616"/>
+        <location filename="../Configuration.ui" line="3626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd blå markör för att meddela om det finns mitt samtal i det avkodade meddelandet som är relaterat till det pågående QSO (QSO-partiets samtal är i DX Call-fönstret), andra inkommande samtal med mitt samtal kommer att följas med den röda markören. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3619"/>
+        <location filename="../Configuration.ui" line="3629"/>
         <source>blue / my call at QSO</source>
         <translation>blå / min signall på QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3665"/>
+        <location filename="../Configuration.ui" line="3675"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd den röda markören för att meddela om det finns mitt samtal i det avkodade meddelandet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3668"/>
+        <location filename="../Configuration.ui" line="3678"/>
         <source>red / my call in message</source>
         <translation>röd / mitt meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3678"/>
+        <location filename="../Configuration.ui" line="3688"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Använd markör i slutet av meddelandet istället för bakgrundsfärg till annan standardmeddelande. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3681"/>
+        <location filename="../Configuration.ui" line="3691"/>
         <source>Other standard messages</source>
         <translation>Andra standardmeddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3724"/>
+        <location filename="../Configuration.ui" line="3734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ovanpå förhandsgranskningsfönstret finns det typer av meddelanden som kontrolleras för något kriterium, textfärg väljs för varje typ av meddelande. &lt;br&gt; &lt;br&gt; På vänster sida det finns kriterier som tilldelas i hierarkiorden, och bakgrundsfärg väljs för meddelanden för varje kriterium. &lt;br&gt; &lt;br&gt; &quot;Worked one&quot; -meddelande-funktionalitet är baserat på restprincipen, utlöses om alla aktiverade &apos;New one&apos; kriterier eller kriterium uppfylls inte. &lt;br&gt; &lt;br&gt; &apos;Inverse färg&apos; kan användas om användaren vill markera CQ- och &apos;MyCall&apos; -meddelanden av någon specifik backgroung-färg. &lt;br&gt; &lt;br&gt; För att börja med kan ett kriterium väljas och för meddelanden om nytt band / läge kan användas liknande färg med olika mättnadsnivå, senare kan antalet krävda kriterier ökas. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3727"/>
-        <location filename="../Configuration.ui" line="6907"/>
+        <location filename="../Configuration.ui" line="3737"/>
+        <location filename="../Configuration.ui" line="6917"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Konfigureringstips &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3775"/>
+        <location filename="../Configuration.ui" line="3785"/>
         <source>Transmitted message</source>
         <translation>Skickat meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3791"/>
-        <location filename="../Configuration.ui" line="3874"/>
-        <location filename="../Configuration.ui" line="3896"/>
-        <location filename="../Configuration.ui" line="3918"/>
-        <location filename="../Configuration.ui" line="3950"/>
-        <location filename="../Configuration.ui" line="3969"/>
-        <location filename="../Configuration.ui" line="3988"/>
-        <location filename="../Configuration.ui" line="4020"/>
-        <location filename="../Configuration.ui" line="4039"/>
-        <location filename="../Configuration.ui" line="4058"/>
-        <location filename="../Configuration.ui" line="4090"/>
-        <location filename="../Configuration.ui" line="4109"/>
-        <location filename="../Configuration.ui" line="4128"/>
-        <location filename="../Configuration.ui" line="4160"/>
-        <location filename="../Configuration.ui" line="4179"/>
-        <location filename="../Configuration.ui" line="4198"/>
-        <location filename="../Configuration.ui" line="4230"/>
-        <location filename="../Configuration.ui" line="4249"/>
-        <location filename="../Configuration.ui" line="4268"/>
-        <location filename="../Configuration.ui" line="4300"/>
-        <location filename="../Configuration.ui" line="4319"/>
-        <location filename="../Configuration.ui" line="4338"/>
-        <location filename="../Configuration.ui" line="4370"/>
-        <location filename="../Configuration.ui" line="4389"/>
-        <location filename="../Configuration.ui" line="4408"/>
-        <location filename="../Configuration.ui" line="4440"/>
-        <location filename="../Configuration.ui" line="4459"/>
-        <location filename="../Configuration.ui" line="4478"/>
-        <location filename="../Configuration.ui" line="4510"/>
-        <location filename="../Configuration.ui" line="4529"/>
-        <location filename="../Configuration.ui" line="4548"/>
-        <location filename="../Configuration.ui" line="4580"/>
-        <location filename="../Configuration.ui" line="4599"/>
-        <location filename="../Configuration.ui" line="4618"/>
-        <location filename="../Configuration.ui" line="4650"/>
-        <location filename="../Configuration.ui" line="4669"/>
-        <location filename="../Configuration.ui" line="4688"/>
-        <location filename="../Configuration.ui" line="4720"/>
-        <location filename="../Configuration.ui" line="4739"/>
-        <location filename="../Configuration.ui" line="4758"/>
-        <location filename="../Configuration.ui" line="4793"/>
-        <location filename="../Configuration.ui" line="4812"/>
-        <location filename="../Configuration.ui" line="4831"/>
+        <location filename="../Configuration.ui" line="3801"/>
+        <location filename="../Configuration.ui" line="3884"/>
+        <location filename="../Configuration.ui" line="3906"/>
+        <location filename="../Configuration.ui" line="3928"/>
+        <location filename="../Configuration.ui" line="3960"/>
+        <location filename="../Configuration.ui" line="3979"/>
+        <location filename="../Configuration.ui" line="3998"/>
+        <location filename="../Configuration.ui" line="4030"/>
+        <location filename="../Configuration.ui" line="4049"/>
+        <location filename="../Configuration.ui" line="4068"/>
+        <location filename="../Configuration.ui" line="4100"/>
+        <location filename="../Configuration.ui" line="4119"/>
+        <location filename="../Configuration.ui" line="4138"/>
+        <location filename="../Configuration.ui" line="4170"/>
+        <location filename="../Configuration.ui" line="4189"/>
+        <location filename="../Configuration.ui" line="4208"/>
+        <location filename="../Configuration.ui" line="4240"/>
+        <location filename="../Configuration.ui" line="4259"/>
+        <location filename="../Configuration.ui" line="4278"/>
+        <location filename="../Configuration.ui" line="4310"/>
+        <location filename="../Configuration.ui" line="4329"/>
+        <location filename="../Configuration.ui" line="4348"/>
+        <location filename="../Configuration.ui" line="4380"/>
+        <location filename="../Configuration.ui" line="4399"/>
+        <location filename="../Configuration.ui" line="4418"/>
+        <location filename="../Configuration.ui" line="4450"/>
+        <location filename="../Configuration.ui" line="4469"/>
+        <location filename="../Configuration.ui" line="4488"/>
+        <location filename="../Configuration.ui" line="4520"/>
+        <location filename="../Configuration.ui" line="4539"/>
+        <location filename="../Configuration.ui" line="4558"/>
+        <location filename="../Configuration.ui" line="4590"/>
+        <location filename="../Configuration.ui" line="4609"/>
+        <location filename="../Configuration.ui" line="4628"/>
+        <location filename="../Configuration.ui" line="4660"/>
+        <location filename="../Configuration.ui" line="4679"/>
+        <location filename="../Configuration.ui" line="4698"/>
+        <location filename="../Configuration.ui" line="4730"/>
+        <location filename="../Configuration.ui" line="4749"/>
+        <location filename="../Configuration.ui" line="4768"/>
+        <location filename="../Configuration.ui" line="4803"/>
+        <location filename="../Configuration.ui" line="4822"/>
+        <location filename="../Configuration.ui" line="4841"/>
         <source>K1ABC</source>
         <translation>K1ABC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3807"/>
+        <location filename="../Configuration.ui" line="3817"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Behandla RR73 / 73-meddelanden på samma sätt som CQ-meddelanden för automatisk val. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3813"/>
+        <location filename="../Configuration.ui" line="3823"/>
         <source>RR73/73           </source>
         <translation>RR73/73           </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3826"/>
+        <location filename="../Configuration.ui" line="3836"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 i medelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3839"/>
+        <location filename="../Configuration.ui" line="3849"/>
         <source>My Call in message</source>
         <translation>Min signal i meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3852"/>
+        <location filename="../Configuration.ui" line="3862"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ställ in textfärg för icke (&apos;CQ&apos; och &apos;MyCall&apos;) standardmeddelanden &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3855"/>
+        <location filename="../Configuration.ui" line="3865"/>
         <source>Other standard message</source>
         <translation>Andra standardmeddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3934"/>
+        <location filename="../Configuration.ui" line="3944"/>
         <source>New CQZ</source>
         <translation>Ny CQZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4004"/>
+        <location filename="../Configuration.ui" line="4014"/>
         <source>New CQZ on Band/Mode</source>
         <translation>Ny CQZ på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4074"/>
+        <location filename="../Configuration.ui" line="4084"/>
         <source>New ITUZ</source>
         <translation>Ny ITUZ</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4144"/>
+        <location filename="../Configuration.ui" line="4154"/>
         <source>New ITUZ on Band/Mode</source>
         <translation>Ny ITUZ på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4214"/>
+        <location filename="../Configuration.ui" line="4224"/>
         <source>New DXCC</source>
         <translation>Ny DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4284"/>
+        <location filename="../Configuration.ui" line="4294"/>
         <source>New DXCC on Band/Mode</source>
         <translation>Ny DXCC på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4354"/>
+        <location filename="../Configuration.ui" line="4364"/>
         <source>New Grid</source>
         <translation>Ny Grid</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4424"/>
+        <location filename="../Configuration.ui" line="4434"/>
         <source>New Grid on Band/Mode</source>
         <translation>Ny Grid på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4494"/>
+        <location filename="../Configuration.ui" line="4504"/>
         <source>New Prefix</source>
         <translation>Nytt Prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4564"/>
+        <location filename="../Configuration.ui" line="4574"/>
         <source>New Prefix on Band/Mode</source>
         <translation>Nytt prefix på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4634"/>
+        <location filename="../Configuration.ui" line="4644"/>
         <source>New Call</source>
         <translation>Ny anropssignal</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4704"/>
+        <location filename="../Configuration.ui" line="4714"/>
         <source>New Call on Band/Mode</source>
         <translation>Nytt anrop på Band/Mod</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4774"/>
+        <location filename="../Configuration.ui" line="4784"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>Används endast för CQ- och min siglalsl-meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4777"/>
+        <location filename="../Configuration.ui" line="4787"/>
         <source>Worked one</source>
         <translation>Körda signaler</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4874"/>
+        <location filename="../Configuration.ui" line="4884"/>
         <source>Filters</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4885"/>
+        <location filename="../Configuration.ui" line="4895"/>
         <source>Hide messages from continents</source>
         <translation>Dölj meddelanden från kontinenter</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4897"/>
+        <location filename="../Configuration.ui" line="4907"/>
         <source>Africa</source>
         <translation>Afrika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4904"/>
+        <location filename="../Configuration.ui" line="4914"/>
         <source>Antarctica</source>
         <translation>Antarktis</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4911"/>
+        <location filename="../Configuration.ui" line="4921"/>
         <source>Asia</source>
         <translation>Asien</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4918"/>
+        <location filename="../Configuration.ui" line="4928"/>
         <source>Europe</source>
         <translation>Europa</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4925"/>
+        <location filename="../Configuration.ui" line="4935"/>
         <source>Oceania</source>
         <translation>Oceania</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4932"/>
+        <location filename="../Configuration.ui" line="4942"/>
         <source>North America</source>
         <translation>Nordamerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4939"/>
+        <location filename="../Configuration.ui" line="4949"/>
         <source>South America</source>
         <translation>Sydamerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4949"/>
+        <location filename="../Configuration.ui" line="4959"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; &apos;Visa DXCC-namn / prefix&apos; ska aktiveras på fliken Allmänt i inställningarna eller i ett &quot;Nytt&quot; -meddelande för att denna funktion ska fungera. &lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4952"/>
+        <location filename="../Configuration.ui" line="4962"/>
         <source>Hide messages from countries</source>
         <translation>Dölj meddelanden från länder</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4972"/>
-        <location filename="../Configuration.ui" line="5037"/>
+        <location filename="../Configuration.ui" line="4982"/>
+        <location filename="../Configuration.ui" line="5047"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera alternativ &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4975"/>
-        <location filename="../Configuration.ui" line="5040"/>
+        <location filename="../Configuration.ui" line="4985"/>
+        <location filename="../Configuration.ui" line="5050"/>
         <source>Hide</source>
         <translation>Göm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4982"/>
+        <location filename="../Configuration.ui" line="4992"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -7806,23 +7816,23 @@ XF4, XT, XU, XW, XX9, XZ, YA, YB Yi, YJ, YK, YL, YN, YO, YS, YU, YV, YV0, Z2, Z3
 ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5005"/>
+        <location filename="../Configuration.ui" line="5015"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa landslista &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5008"/>
-        <location filename="../Configuration.ui" line="5063"/>
+        <location filename="../Configuration.ui" line="5018"/>
+        <location filename="../Configuration.ui" line="5073"/>
         <source>Clear</source>
         <translation>Klar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5020"/>
+        <location filename="../Configuration.ui" line="5030"/>
         <source>Hide messages from callsigns</source>
         <translation>Dölj meddelanden från anropssignaler</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5047"/>
+        <location filename="../Configuration.ui" line="5057"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -7833,163 +7843,145 @@ används för sammansatta kallsignaler, till exempel:
 AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5060"/>
+        <location filename="../Configuration.ui" line="5070"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Rensa samtalslista &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5075"/>
+        <location filename="../Configuration.ui" line="5085"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>Visa innehållsrelaterade meddelanden i RX-frekvensfönstret </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5092"/>
+        <location filename="../Configuration.ui" line="5102"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vidarebefordra innehållsrelaterade gratismeddelanden till RX-frekvensmeddelandefönstret. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5095"/>
+        <location filename="../Configuration.ui" line="5105"/>
         <source>Enable</source>
         <translation>Möjliggör</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5102"/>
+        <location filename="../Configuration.ui" line="5112"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kommaseparerad lista med innehållsnamn. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5109"/>
+        <location filename="../Configuration.ui" line="5119"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Återställ lista över innehållsnamn till standardvärde. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5126"/>
-        <location filename="../Configuration.ui" line="5149"/>
-        <location filename="../Configuration.ui" line="5172"/>
+        <location filename="../Configuration.ui" line="5136"/>
+        <location filename="../Configuration.ui" line="5159"/>
+        <location filename="../Configuration.ui" line="5182"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Filter kommer att tillämpas från RX-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5129"/>
+        <location filename="../Configuration.ui" line="5139"/>
         <source>Show CQ messages only</source>
         <translation>Visa endast CQ-meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5152"/>
+        <location filename="../Configuration.ui" line="5162"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>Visa endast CQ / RRR / RR73 / 73-meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5175"/>
+        <location filename="../Configuration.ui" line="5185"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>Visa endast CQ / RRR / RR73 / 73-meddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5197"/>
+        <location filename="../Configuration.ui" line="5207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dölj avkodade gratismeddelanden som ligger utanför RX-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5200"/>
+        <location filename="../Configuration.ui" line="5210"/>
         <source>Hide decoded free messages</source>
         <translation>Dölj avkodade fritextmeddelanden</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5207"/>
+        <location filename="../Configuration.ui" line="5217"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>Hide messages with not associated hash for 2nd callsign
 Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5230"/>
+        <location filename="../Configuration.ui" line="5240"/>
         <source>Scheduler</source>
         <translation>Schemaläggare</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5238"/>
+        <location filename="../Configuration.ui" line="5248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Automatisk bandväxling enligt fördefinierat schema &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5241"/>
+        <location filename="../Configuration.ui" line="5251"/>
         <source>Band scheduler configuration</source>
         <translation>Konfiguration av Band schemaläggning</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5251"/>
+        <location filename="../Configuration.ui" line="5261"/>
         <source>hh</source>
         <translation>tt</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5261"/>
+        <location filename="../Configuration.ui" line="5271"/>
         <source>mm</source>
         <translation>mm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5271"/>
+        <location filename="../Configuration.ui" line="5281"/>
         <source>Band</source>
         <translation>Band</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5281"/>
-        <location filename="../Configuration.ui" line="5541"/>
-        <location filename="../Configuration.ui" line="5798"/>
-        <location filename="../Configuration.ui" line="6055"/>
-        <location filename="../Configuration.ui" line="6312"/>
-        <location filename="../Configuration.ui" line="6569"/>
+        <location filename="../Configuration.ui" line="5291"/>
+        <location filename="../Configuration.ui" line="5551"/>
+        <location filename="../Configuration.ui" line="5808"/>
+        <location filename="../Configuration.ui" line="6065"/>
+        <location filename="../Configuration.ui" line="6322"/>
+        <location filename="../Configuration.ui" line="6579"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Schemaläggaren ställer in JT65 + JT9-läge om JT65-frekvensen är vald. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5284"/>
+        <location filename="../Configuration.ui" line="5294"/>
         <source>JT65+JT9</source>
         <translation>JT65+JT9</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5300"/>
-        <location filename="../Configuration.ui" line="5438"/>
-        <location filename="../Configuration.ui" line="5557"/>
-        <location filename="../Configuration.ui" line="5695"/>
-        <location filename="../Configuration.ui" line="5814"/>
-        <location filename="../Configuration.ui" line="5952"/>
-        <location filename="../Configuration.ui" line="6071"/>
-        <location filename="../Configuration.ui" line="6209"/>
-        <location filename="../Configuration.ui" line="6328"/>
-        <location filename="../Configuration.ui" line="6466"/>
+        <location filename="../Configuration.ui" line="5310"/>
+        <location filename="../Configuration.ui" line="5448"/>
+        <location filename="../Configuration.ui" line="5567"/>
+        <location filename="../Configuration.ui" line="5705"/>
+        <location filename="../Configuration.ui" line="5824"/>
+        <location filename="../Configuration.ui" line="5962"/>
+        <location filename="../Configuration.ui" line="6081"/>
+        <location filename="../Configuration.ui" line="6219"/>
+        <location filename="../Configuration.ui" line="6338"/>
+        <location filename="../Configuration.ui" line="6476"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj tid &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5309"/>
-        <location filename="../Configuration.ui" line="5447"/>
-        <location filename="../Configuration.ui" line="5566"/>
-        <location filename="../Configuration.ui" line="5704"/>
-        <location filename="../Configuration.ui" line="5823"/>
-        <location filename="../Configuration.ui" line="5961"/>
-        <location filename="../Configuration.ui" line="6080"/>
-        <location filename="../Configuration.ui" line="6218"/>
-        <location filename="../Configuration.ui" line="6337"/>
-        <location filename="../Configuration.ui" line="6475"/>
+        <location filename="../Configuration.ui" line="5319"/>
+        <location filename="../Configuration.ui" line="5457"/>
+        <location filename="../Configuration.ui" line="5576"/>
+        <location filename="../Configuration.ui" line="5714"/>
+        <location filename="../Configuration.ui" line="5833"/>
+        <location filename="../Configuration.ui" line="5971"/>
+        <location filename="../Configuration.ui" line="6090"/>
+        <location filename="../Configuration.ui" line="6228"/>
+        <location filename="../Configuration.ui" line="6347"/>
+        <location filename="../Configuration.ui" line="6485"/>
         <source>00</source>
         <translation>00</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5314"/>
-        <location filename="../Configuration.ui" line="5571"/>
-        <location filename="../Configuration.ui" line="5828"/>
-        <location filename="../Configuration.ui" line="6085"/>
-        <location filename="../Configuration.ui" line="6342"/>
-        <source>01</source>
-        <translation>01</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5319"/>
-        <location filename="../Configuration.ui" line="5576"/>
-        <location filename="../Configuration.ui" line="5833"/>
-        <location filename="../Configuration.ui" line="6090"/>
-        <location filename="../Configuration.ui" line="6347"/>
-        <source>02</source>
-        <translation>02</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5324"/>
@@ -7997,8 +7989,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5838"/>
         <location filename="../Configuration.ui" line="6095"/>
         <location filename="../Configuration.ui" line="6352"/>
-        <source>03</source>
-        <translation>03</translation>
+        <source>01</source>
+        <translation>01</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5329"/>
@@ -8006,22 +7998,17 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5843"/>
         <location filename="../Configuration.ui" line="6100"/>
         <location filename="../Configuration.ui" line="6357"/>
-        <source>04</source>
-        <translation>04</translation>
+        <source>02</source>
+        <translation>02</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5334"/>
-        <location filename="../Configuration.ui" line="5452"/>
         <location filename="../Configuration.ui" line="5591"/>
-        <location filename="../Configuration.ui" line="5709"/>
         <location filename="../Configuration.ui" line="5848"/>
-        <location filename="../Configuration.ui" line="5966"/>
         <location filename="../Configuration.ui" line="6105"/>
-        <location filename="../Configuration.ui" line="6223"/>
         <location filename="../Configuration.ui" line="6362"/>
-        <location filename="../Configuration.ui" line="6480"/>
-        <source>05</source>
-        <translation>05</translation>
+        <source>03</source>
+        <translation>03</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5339"/>
@@ -8029,17 +8016,22 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5853"/>
         <location filename="../Configuration.ui" line="6110"/>
         <location filename="../Configuration.ui" line="6367"/>
-        <source>06</source>
-        <translation>06</translation>
+        <source>04</source>
+        <translation>04</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5344"/>
+        <location filename="../Configuration.ui" line="5462"/>
         <location filename="../Configuration.ui" line="5601"/>
+        <location filename="../Configuration.ui" line="5719"/>
         <location filename="../Configuration.ui" line="5858"/>
+        <location filename="../Configuration.ui" line="5976"/>
         <location filename="../Configuration.ui" line="6115"/>
+        <location filename="../Configuration.ui" line="6233"/>
         <location filename="../Configuration.ui" line="6372"/>
-        <source>07</source>
-        <translation>07</translation>
+        <location filename="../Configuration.ui" line="6490"/>
+        <source>05</source>
+        <translation>05</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5349"/>
@@ -8047,8 +8039,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5863"/>
         <location filename="../Configuration.ui" line="6120"/>
         <location filename="../Configuration.ui" line="6377"/>
-        <source>08</source>
-        <translation>08</translation>
+        <source>06</source>
+        <translation>06</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5354"/>
@@ -8056,22 +8048,17 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5868"/>
         <location filename="../Configuration.ui" line="6125"/>
         <location filename="../Configuration.ui" line="6382"/>
-        <source>09</source>
-        <translation>09</translation>
+        <source>07</source>
+        <translation>07</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5359"/>
-        <location filename="../Configuration.ui" line="5457"/>
         <location filename="../Configuration.ui" line="5616"/>
-        <location filename="../Configuration.ui" line="5714"/>
         <location filename="../Configuration.ui" line="5873"/>
-        <location filename="../Configuration.ui" line="5971"/>
         <location filename="../Configuration.ui" line="6130"/>
-        <location filename="../Configuration.ui" line="6228"/>
         <location filename="../Configuration.ui" line="6387"/>
-        <location filename="../Configuration.ui" line="6485"/>
-        <source>10</source>
-        <translation>10</translation>
+        <source>08</source>
+        <translation>08</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5364"/>
@@ -8079,17 +8066,22 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5878"/>
         <location filename="../Configuration.ui" line="6135"/>
         <location filename="../Configuration.ui" line="6392"/>
-        <source>11</source>
-        <translation>11</translation>
+        <source>09</source>
+        <translation>09</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5369"/>
+        <location filename="../Configuration.ui" line="5467"/>
         <location filename="../Configuration.ui" line="5626"/>
+        <location filename="../Configuration.ui" line="5724"/>
         <location filename="../Configuration.ui" line="5883"/>
+        <location filename="../Configuration.ui" line="5981"/>
         <location filename="../Configuration.ui" line="6140"/>
+        <location filename="../Configuration.ui" line="6238"/>
         <location filename="../Configuration.ui" line="6397"/>
-        <source>12</source>
-        <translation>12</translation>
+        <location filename="../Configuration.ui" line="6495"/>
+        <source>10</source>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5374"/>
@@ -8097,8 +8089,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5888"/>
         <location filename="../Configuration.ui" line="6145"/>
         <location filename="../Configuration.ui" line="6402"/>
-        <source>13</source>
-        <translation>13</translation>
+        <source>11</source>
+        <translation>11</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5379"/>
@@ -8106,22 +8098,17 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5893"/>
         <location filename="../Configuration.ui" line="6150"/>
         <location filename="../Configuration.ui" line="6407"/>
-        <source>14</source>
-        <translation>14</translation>
+        <source>12</source>
+        <translation>12</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5384"/>
-        <location filename="../Configuration.ui" line="5462"/>
         <location filename="../Configuration.ui" line="5641"/>
-        <location filename="../Configuration.ui" line="5719"/>
         <location filename="../Configuration.ui" line="5898"/>
-        <location filename="../Configuration.ui" line="5976"/>
         <location filename="../Configuration.ui" line="6155"/>
-        <location filename="../Configuration.ui" line="6233"/>
         <location filename="../Configuration.ui" line="6412"/>
-        <location filename="../Configuration.ui" line="6490"/>
-        <source>15</source>
-        <translation>15</translation>
+        <source>13</source>
+        <translation>13</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5389"/>
@@ -8129,17 +8116,22 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5903"/>
         <location filename="../Configuration.ui" line="6160"/>
         <location filename="../Configuration.ui" line="6417"/>
-        <source>16</source>
-        <translation>16</translation>
+        <source>14</source>
+        <translation>14</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5394"/>
+        <location filename="../Configuration.ui" line="5472"/>
         <location filename="../Configuration.ui" line="5651"/>
+        <location filename="../Configuration.ui" line="5729"/>
         <location filename="../Configuration.ui" line="5908"/>
+        <location filename="../Configuration.ui" line="5986"/>
         <location filename="../Configuration.ui" line="6165"/>
+        <location filename="../Configuration.ui" line="6243"/>
         <location filename="../Configuration.ui" line="6422"/>
-        <source>17</source>
-        <translation>17</translation>
+        <location filename="../Configuration.ui" line="6500"/>
+        <source>15</source>
+        <translation>15</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5399"/>
@@ -8147,8 +8139,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5913"/>
         <location filename="../Configuration.ui" line="6170"/>
         <location filename="../Configuration.ui" line="6427"/>
-        <source>18</source>
-        <translation>18</translation>
+        <source>16</source>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5404"/>
@@ -8156,22 +8148,17 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5918"/>
         <location filename="../Configuration.ui" line="6175"/>
         <location filename="../Configuration.ui" line="6432"/>
-        <source>19</source>
-        <translation>19</translation>
+        <source>17</source>
+        <translation>17</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5409"/>
-        <location filename="../Configuration.ui" line="5467"/>
         <location filename="../Configuration.ui" line="5666"/>
-        <location filename="../Configuration.ui" line="5724"/>
         <location filename="../Configuration.ui" line="5923"/>
-        <location filename="../Configuration.ui" line="5981"/>
         <location filename="../Configuration.ui" line="6180"/>
-        <location filename="../Configuration.ui" line="6238"/>
         <location filename="../Configuration.ui" line="6437"/>
-        <location filename="../Configuration.ui" line="6495"/>
-        <source>20</source>
-        <translation>20</translation>
+        <source>18</source>
+        <translation>18</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5414"/>
@@ -8179,17 +8166,22 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5928"/>
         <location filename="../Configuration.ui" line="6185"/>
         <location filename="../Configuration.ui" line="6442"/>
-        <source>21</source>
-        <translation>21</translation>
+        <source>19</source>
+        <translation>19</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5419"/>
+        <location filename="../Configuration.ui" line="5477"/>
         <location filename="../Configuration.ui" line="5676"/>
+        <location filename="../Configuration.ui" line="5734"/>
         <location filename="../Configuration.ui" line="5933"/>
+        <location filename="../Configuration.ui" line="5991"/>
         <location filename="../Configuration.ui" line="6190"/>
+        <location filename="../Configuration.ui" line="6248"/>
         <location filename="../Configuration.ui" line="6447"/>
-        <source>22</source>
-        <translation>22</translation>
+        <location filename="../Configuration.ui" line="6505"/>
+        <source>20</source>
+        <translation>20</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5424"/>
@@ -8197,26 +8189,26 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5938"/>
         <location filename="../Configuration.ui" line="6195"/>
         <location filename="../Configuration.ui" line="6452"/>
+        <source>21</source>
+        <translation>21</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5429"/>
+        <location filename="../Configuration.ui" line="5686"/>
+        <location filename="../Configuration.ui" line="5943"/>
+        <location filename="../Configuration.ui" line="6200"/>
+        <location filename="../Configuration.ui" line="6457"/>
+        <source>22</source>
+        <translation>22</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5434"/>
+        <location filename="../Configuration.ui" line="5691"/>
+        <location filename="../Configuration.ui" line="5948"/>
+        <location filename="../Configuration.ui" line="6205"/>
+        <location filename="../Configuration.ui" line="6462"/>
         <source>23</source>
         <translation>23</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5472"/>
-        <location filename="../Configuration.ui" line="5729"/>
-        <location filename="../Configuration.ui" line="5986"/>
-        <location filename="../Configuration.ui" line="6243"/>
-        <location filename="../Configuration.ui" line="6500"/>
-        <source>25</source>
-        <translation>25</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="5477"/>
-        <location filename="../Configuration.ui" line="5734"/>
-        <location filename="../Configuration.ui" line="5991"/>
-        <location filename="../Configuration.ui" line="6248"/>
-        <location filename="../Configuration.ui" line="6505"/>
-        <source>30</source>
-        <translation>30</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5482"/>
@@ -8224,8 +8216,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="5996"/>
         <location filename="../Configuration.ui" line="6253"/>
         <location filename="../Configuration.ui" line="6510"/>
-        <source>35</source>
-        <translation>35</translation>
+        <source>25</source>
+        <translation>25</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5487"/>
@@ -8233,8 +8225,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="6001"/>
         <location filename="../Configuration.ui" line="6258"/>
         <location filename="../Configuration.ui" line="6515"/>
-        <source>40</source>
-        <translation>40</translation>
+        <source>30</source>
+        <translation>30</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5492"/>
@@ -8242,8 +8234,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="6006"/>
         <location filename="../Configuration.ui" line="6263"/>
         <location filename="../Configuration.ui" line="6520"/>
-        <source>45</source>
-        <translation>45</translation>
+        <source>35</source>
+        <translation>35</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5497"/>
@@ -8251,8 +8243,8 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="6011"/>
         <location filename="../Configuration.ui" line="6268"/>
         <location filename="../Configuration.ui" line="6525"/>
-        <source>50</source>
-        <translation>50</translation>
+        <source>40</source>
+        <translation>40</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5502"/>
@@ -8260,146 +8252,164 @@ Dölj meddelanden med inte tillhörande hash för 2a signal</translation>
         <location filename="../Configuration.ui" line="6016"/>
         <location filename="../Configuration.ui" line="6273"/>
         <location filename="../Configuration.ui" line="6530"/>
+        <source>45</source>
+        <translation>45</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5507"/>
+        <location filename="../Configuration.ui" line="5764"/>
+        <location filename="../Configuration.ui" line="6021"/>
+        <location filename="../Configuration.ui" line="6278"/>
+        <location filename="../Configuration.ui" line="6535"/>
+        <source>50</source>
+        <translation>50</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="5512"/>
+        <location filename="../Configuration.ui" line="5769"/>
+        <location filename="../Configuration.ui" line="6026"/>
+        <location filename="../Configuration.ui" line="6283"/>
+        <location filename="../Configuration.ui" line="6540"/>
         <source>55</source>
         <translation>55</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5522"/>
-        <location filename="../Configuration.ui" line="5779"/>
-        <location filename="../Configuration.ui" line="6036"/>
-        <location filename="../Configuration.ui" line="6293"/>
-        <location filename="../Configuration.ui" line="6550"/>
+        <location filename="../Configuration.ui" line="5532"/>
+        <location filename="../Configuration.ui" line="5789"/>
+        <location filename="../Configuration.ui" line="6046"/>
+        <location filename="../Configuration.ui" line="6303"/>
+        <location filename="../Configuration.ui" line="6560"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Välj band &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6599"/>
+        <location filename="../Configuration.ui" line="6609"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera bandschemaläggare &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6602"/>
+        <location filename="../Configuration.ui" line="6612"/>
         <source>Use band scheduler</source>
         <translation>Använd bandschemaläggare</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6625"/>
+        <location filename="../Configuration.ui" line="6635"/>
         <source>Advanced</source>
         <translation>Avancerad</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6635"/>
+        <location filename="../Configuration.ui" line="6645"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Parametrar som kan väljas av användare för JT65-avkodning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6638"/>
+        <location filename="../Configuration.ui" line="6648"/>
         <source>JT65 decoding parameters</source>
         <translation>JT65-avkodningsparametrar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6666"/>
-        <location filename="../Configuration.ui" line="6679"/>
+        <location filename="../Configuration.ui" line="6676"/>
+        <location filename="../Configuration.ui" line="6689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för bredbandsavkodningskort &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6669"/>
-        <location filename="../Configuration.ui" line="7021"/>
+        <location filename="../Configuration.ui" line="6679"/>
+        <location filename="../Configuration.ui" line="7031"/>
         <source>Number of decoding attempts:</source>
         <translation>Antal avkodningsförsök:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6705"/>
-        <location filename="../Configuration.ui" line="6718"/>
+        <location filename="../Configuration.ui" line="6715"/>
+        <location filename="../Configuration.ui" line="6728"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Antal avkodningskort för bredbandsavkodning &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6708"/>
+        <location filename="../Configuration.ui" line="6718"/>
         <source>Number of decoding  passes: </source>
         <translation>Antal avkodningspass: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6738"/>
-        <location filename="../Configuration.ui" line="6751"/>
+        <location filename="../Configuration.ui" line="6748"/>
+        <location filename="../Configuration.ui" line="6761"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för RX-frekvensavkodningskort &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6741"/>
-        <location filename="../Configuration.ui" line="7057"/>
+        <location filename="../Configuration.ui" line="6751"/>
+        <location filename="../Configuration.ui" line="7067"/>
         <source>RX frequency decoding attempts:</source>
         <translation>RX-frekvensavkodningsförsök:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6777"/>
-        <location filename="../Configuration.ui" line="6790"/>
-        <location filename="../Configuration.ui" line="6948"/>
+        <location filename="../Configuration.ui" line="6787"/>
+        <location filename="../Configuration.ui" line="6800"/>
+        <location filename="../Configuration.ui" line="6958"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Detta DT-fönster används endast för RX-frekvens CALL3 databaserade tipavkodare fokuserade på CQ och &apos;mycall hiscall hisgrid&apos; meddelanden. Högre värden kan öka antalet falska avkoder. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6780"/>
+        <location filename="../Configuration.ui" line="6790"/>
         <source>Hinted decoding DT range:</source>
         <translation>Tips om avkodning av DT-intervall:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6811"/>
+        <location filename="../Configuration.ui" line="6821"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aktivera ytterligare två frekvensmasker JT65 avkodningskort för överfulla bandförhållanden. Denna avkodning passerar aktiveras automatiskt om det finns få signaler på bandet. Använd den här inställningen endast för snabb CPU. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6817"/>
+        <location filename="../Configuration.ui" line="6827"/>
         <source>Use frequency mask decoding</source>
         <translation>Använd avkodning av frekvensmask</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6829"/>
         <location filename="../Configuration.ui" line="6839"/>
+        <location filename="../Configuration.ui" line="6849"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar tak för avkodning av JT65a-signalerna, standardvärdet är 3000 Hz. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6832"/>
+        <location filename="../Configuration.ui" line="6842"/>
         <source>Top decoding frequency: </source>
         <translation>Toppavkodningsfrekvens: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6865"/>
-        <location filename="../Configuration.ui" line="6878"/>
+        <location filename="../Configuration.ui" line="6875"/>
+        <location filename="../Configuration.ui" line="6888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Signalförvrängning i RX- eller TX-vägen kan ge harmonier av JT65A-signalen (JT65B, JT65C etc.) Avkodning av harmonier av JT65A-signal kan förbättra den totala avkodningseffektiviteten via subtraktion av de avkodade signalerna . Avkodningsdjupet är proportionellt mot de nödvändiga CPU-resurserna, ställ in det på 1 för långsam CPU. Större djupvärde gör det möjligt att avkoda fler harmonier. JT65B- och JT65C-avkodning stöds. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6868"/>
+        <location filename="../Configuration.ui" line="6878"/>
         <source>Harmonics decoding depth:</source>
         <translation>Harmonic avkodningsdjup:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6904"/>
+        <location filename="../Configuration.ui" line="6914"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Inställningarna beror på CPU-effekten, försök att använda maximalt antal avkodningskort för överfulla HF-band. &lt;br&gt; &lt;br&gt; Antal avkodningskort kan minskas för lågbefolkade HF-band / VHF-band medan en ökning av antalet avkodningsförsök kan ge bättre avkodningseffektivitet för de svaga signalerna där. &lt;br&gt; &lt;br&gt; Antal avkodningsförsök som påverkar avkodningseffektiviteten för de låga SNR-signalerna: bredband eller RX-frekvens en. &lt;Br &gt; &lt;br&gt; Antal avkodningskort som påverkar maximalt antal signaler som kan avkodas på samma frekvens eller som ligger nära varandra med i stort sett överlappade spektra, det är möjligt att avkoda upp till 4 signaler på samma frekvens och upp till 7 signaler på RX-frekvensen om antalet avkodningskort är inställt på 4. &lt;br&gt; &lt;br&gt; Öka antalet avkodningsförsök till värdet som gör att avkodningen är klar tills slutet av RX-minutintervallet. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6992"/>
+        <location filename="../Configuration.ui" line="7002"/>
         <source>T10 decoding parameters</source>
         <translation>T10-avkodningsparametrar</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7018"/>
         <location filename="../Configuration.ui" line="7028"/>
+        <location filename="../Configuration.ui" line="7038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet avkodningsförsök för avkodning av bredband T10. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7054"/>
-        <location filename="../Configuration.ui" line="7067"/>
+        <location filename="../Configuration.ui" line="7064"/>
+        <location filename="../Configuration.ui" line="7077"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Definierar antalet T10-avkodningsförsök för RX-frekvens &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7158"/>
+        <location filename="../Configuration.ui" line="7168"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>

@@ -1408,12 +1408,6 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   ui_->split_mode_button_group->setId (ui_->split_emulate_radio_button, TransceiverFactory::split_mode_emulate);
 
   //
-  // setup PTT port combo box drop down content
-  //
-  fill_port_combo_box (ui_->PTT_port_combo_box);
-  ui_->PTT_port_combo_box->addItem ("CAT");
-
-  //
   // setup hooks to keep audio channels aligned with devices
   //
   {
@@ -1551,6 +1545,12 @@ Configuration::impl::~impl ()
 
 void Configuration::impl::initialize_models ()
 {
+  //
+  // setup PTT port combo box drop down content
+  //
+  fill_port_combo_box (ui_->PTT_port_combo_box);
+  ui_->PTT_port_combo_box->addItem ("CAT");
+
   auto pal = ui_->callsign_line_edit->palette ();
   if (my_callsign_.isEmpty ())
     {
@@ -2720,13 +2720,13 @@ void Configuration::impl::set_rig_invariants ()
       ui_->test_CAT_push_button->setEnabled (true);
       ui_->test_PTT_push_button->setEnabled (false);
       ui_->TX_audio_source_group_box->setEnabled (transceiver_factory_.has_CAT_PTT_mic_data (rig) && TransceiverFactory::PTT_method_CAT == ptt_method);
+      if (port_type == TransceiverFactory::Capabilities::serial) fill_port_combo_box (ui_->CAT_port_combo_box);
       if (port_type != last_port_type_)
         {
           last_port_type_ = port_type;
           switch (port_type)
             {
             case TransceiverFactory::Capabilities::serial:
-              fill_port_combo_box (ui_->CAT_port_combo_box);
               ui_->CAT_port_combo_box->setCurrentText (rig_params_.serial_port);
               if (ui_->CAT_port_combo_box->currentText ().isEmpty () && ui_->CAT_port_combo_box->count ())
                 {
