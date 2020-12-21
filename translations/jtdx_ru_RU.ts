@@ -2158,7 +2158,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="31"/>
         <source>audio gap detected</source>
-        <translation type="unfinished"></translation>
+        <translation>неисправность системного звука</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="32"/>
@@ -2378,13 +2378,13 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="591"/>
         <location filename="../FrequencyList.cpp" line="697"/>
         <source>Frequency (MHz)</source>
-        <translation>Частота (mHz)</translation>
+        <translation>Частота (мГц)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="614"/>
         <location filename="../FrequencyList.cpp" line="698"/>
         <source>Mode Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота вида модуляции</translation>
     </message>
 </context>
 <context>
@@ -3189,12 +3189,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1704"/>
         <source>▲</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1732"/>
         <source>▼</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1790"/>
@@ -3854,7 +3854,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1613"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
@@ -4876,7 +4876,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3586"/>
         <location filename="../mainwindow.cpp" line="3605"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3592"/>
@@ -5075,7 +5075,7 @@ UDP сервер %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7868"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -6100,7 +6100,7 @@ RX частоты</translation>
     <message>
         <location filename="../Configuration.ui" line="503"/>
         <source>Tx watchdog timer</source>
-        <translation type="unfinished">Таймер отключения передачи
+        <translation>Таймер отключения передачи
 при отсутствии активности пользователя</translation>
     </message>
     <message>
@@ -7156,7 +7156,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Не показывать в поле маркера символ уведомления о декодировании сообщения декодером на согласованных фильтрах либо декодером с применением маски известной части сообщения .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Не показывать в поле маркера символ уведомления о декодировании сообщения декодером на согласованных фильтрах либо декодером с применением маски известной части сообщения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
@@ -7184,7 +7184,7 @@ http://physics.princeton.edu/pulsar/K1JT/doc/wspr/wspr-main.html#FREQCAL</transl
     <message>
         <location filename="../Configuration.ui" line="3078"/>
         <source>Intercept:</source>
-        <translation type="unfinished">Cмещение:</translation>
+        <translation>Cмещение:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3091"/>
@@ -7195,7 +7195,7 @@ http://physics.princeton.edu/pulsar/K1JT/doc/wspr/wspr-main.html#FREQCAL</transl
     <message>
         <location filename="../Configuration.ui" line="3110"/>
         <source>Slope:</source>
-        <translation type="unfinished">Наклон:</translation>
+        <translation>Наклон:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3123"/>
@@ -7226,7 +7226,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3260"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых CQ зон, которых нет в файле журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку CQ, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3263"/>
@@ -7236,17 +7236,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых CQ зон по диапазонам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку CQ по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3280"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых CQ зон по видам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку CQ по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых ITU зон, которых нет в файле журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку ITU, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3303"/>
@@ -7256,17 +7256,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых ITU зон по диапазонам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку ITU по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых ITU зон по видам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых зон по списку ITU по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых стран DXCC, которых нет в файле журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых стран DXCC, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3343"/>
@@ -7281,7 +7281,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3350"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых DXCC стран по диапазонам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых стран DXCC по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3273"/>
@@ -7296,7 +7296,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3360"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых DXCC стран по видам, в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений от новых стран DXCC по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3283"/>
@@ -7311,17 +7311,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить список звуковых устройств</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить список</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2259"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Максимум 13 символов для любого свободного текстового сообщения&lt;br&gt;JT65 протокол: максимум 17 символов для стандартного направленного CQ сообщения, где направление две буквы.&lt;br&gt;FT8 протокол: максимум 19 символов для стандартного направленного CQ сообщения, где направление от двух до четырех букв.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {13 ?} {19 ?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Максимум 13 символов для любого свободного текстового сообщения&lt;br&gt;JT65 протокол: максимум 17 символов для стандартного направленного CQ сообщения, где направление две буквы.&lt;br&gt;FT8 протокол: максимум 19 символов для стандартного направленного CQ сообщения, где направление от двух до четырех букв.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {13 ?} {19 ?}</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
@@ -7356,7 +7356,7 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3450"/>
         <location filename="../Configuration.ui" line="3490"/>
         <source>Use also system sound for the notification.</source>
-        <translation>Используйте для уведомлений системные звуки.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дополнительно использовать звуковое уведомление. Используются системные звуки операционной системы подаваемые через звуковое устройство выбранное в операционное системе устройством по умолчанию , во избежание создания помех во время передачи не включайте эту опцию если для передачи сигнала в эфир используется звуковое устройство по умолчанию.&lt;p&gt;&lt;/p&gt;Если в операционной системе только одно звуковое устройство то  необходимо отключить системные звуковые уведомления в операционной системе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3293"/>
@@ -7371,7 +7371,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3380"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых qth локаторов в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми QTH квадратами, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3383"/>
@@ -7381,32 +7381,32 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3390"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых qth локаторов по диапазонам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми QTH квадратами по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых qth локаторов по видам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми QTH квадратами по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых префиксов в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми префиксами, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3430"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых префиксов по диапазонам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми префиксами по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых префиксов по видам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми префиксами по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых позывных в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений содержащих новые позывные, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3463"/>
@@ -7416,17 +7416,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых позывных по диапазонам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми позывными по диапазонам, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение новых позывных по видам в соответствии с данными из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение сообщений с новыми позывными по видам модуляции, для проверки используются записи QSO из файла журнала wsjtx_log.adi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Используйте цветовое уведомление о ранее сработанных станциях по DXCC, Grid, Call. Декодированное сообщение проверяется на все выбранные пользователем критерии &quot;новый&quot; и если не удовлетворяет ни одному из них то признается повтором.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Цветовое уведомление о ранее сработанных. Декодированное сообщение проверяется на все выбранные пользователем критерии &quot;новый&quot; и если не удовлетворяет ни одному из них то признается повтором.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3503"/>
@@ -7436,12 +7436,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3510"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сообщения от ранее сработанных DXCC, Grid, Call зачеркнуть.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сообщения от ранее сработанных будут зачеркнуты.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сообщения от ранее сработанных DXCC, Grid, Call зачернуть.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Зачеркнуть сообщения от ранее сработанных.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3516"/>
@@ -7451,7 +7451,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сообщения от ранее сработанных DXCC, Grid, Call подчернуть.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Подчеркнуть сообщения от ранее сработанных.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3526"/>
@@ -7461,7 +7461,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сообщения от ранее сработанных DXCC, Grid, Call , в которых нет моего позывного - скрыть.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Не выводить на экран сообщения от ранее сработанных, за исключением сообщений  в которых есть позывной оператора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3536"/>
@@ -7471,7 +7471,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3543"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Инверсия текста &lt;-&gt;фона цвета для принятых сообщений&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Инверсия цвета текста/фона в уведомлениях по декодированным сообщениям&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3546"/>
@@ -7481,7 +7481,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;По умолчанию проверяется только сообщения «CQ» и «MyCall», этот параметр позволяет также проверять и другие принятые стандартные сообщения для новых DXCC, Grid, Call. Цвет «Другое стандартное сообщение» используется для уведомления&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;По умолчанию проверяются только сообщения CQ и  сообщения содержащие позывной оператора, эта опция позволяет также проверять и другие принятые стандартные сообщения на выбранные пользователем критерии &apos;новый&apos;. Отдельный цвет «Другое стандартное сообщение» используется для уведомления.&lt;p&gt;&lt;/p&gt;При включенной опции RR73/73 для сообщений RR73/73 используются цвета уведомления CQ сообщений.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3556"/>
@@ -7491,7 +7491,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Звуковое уведомление на первое декодированное сообщение в текущем интервале, используется системный звук. Уведомление для мониторинга пустого/открывающегося диапазона.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Звуковое уведомление на первое декодированное сообщение в текущем интервале, используется системный звук. Это уведомление предназначено для мониторинга пустого/открывающегося диапазона.&lt;p&gt;&lt;/p&gt;Используются системные звуки операционной системы подаваемые через звуковое устройство выбранное в операционное системе устройством по умолчанию , во избежание создания помех во время передачи не включайте эту опцию если для передачи сигнала в эфир используется звуковое устройство по умолчанию.&lt;p&gt;&lt;/p&gt;Если в операционной системе только одно звуковое устройство то  необходимо отключить системные звуковые уведомления в операционной системе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3579"/>
@@ -7501,7 +7501,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дать звуковой сигнал, если в сообщении присутствует мой позывной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Подать звуковой сигнал, если в декодированном сообщении присутствует мой позывной.&lt;p&gt;&lt;/p&gt;Используются системные звуки операционной системы подаваемые через звуковое устройство выбранное в операционное системе устройством по умолчанию , во избежание создания помех во время передачи не включайте эту опцию если для передачи сигнала в эфир используется звуковое устройство по умолчанию.&lt;p&gt;&lt;/p&gt;Если в операционной системе только одно звуковое устройство то  необходимо отключить системные звуковые уведомления в операционной системе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3589"/>
@@ -7547,7 +7547,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;В верхней части панели предварительного просмотра находятся типы сообщений, которые проверяются по выбранным  пользователем критериям,  цвет текста выбирается для каждого типа сообщения&lt;br&gt;&lt;br&gt;На левой стороне в столбец в порядке используемого автовыбором приоритета расположены критерии, цвет фона выбирается для сообщений для каждого критерия.&lt;br&gt;&lt;br&gt;Уведомление о &apos;Повторе&apos; работает на остаточном принципе, срабатывает если сообщение не удовлетворяет ни одному из выбранных пользователем критериев &apos;Новый&apos;.&lt;br&gt;&lt;br&gt;Инверсия цвета может применяться если пользователь желает выделить сообщения CQ и сообщения содержащие его позывной цветным фоном.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;В верхней части панели предварительного просмотра находятся типы сообщений, которые проверяются по выбранным  пользователем критериям,  цвет текста выбирается для каждого типа сообщения&lt;br&gt;&lt;br&gt;На левой стороне в столбец в порядке используемого автовыбором приоритета расположены критерии, цвет фона выбирается для сообщений для каждого критерия.&lt;br&gt;&lt;br&gt;Уведомление о &apos;Повторе&apos; работает на остаточном принципе, срабатывает если сообщение не удовлетворяет ни одному из выбранных пользователем критериев &apos;Новый&apos;.&lt;br&gt;&lt;br&gt;Если пользователь желает выделить сообщения CQ и сообщения содержащие его позывной цветным фоном то можно включить опцию инверсии цета текста/фона сообщения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3737"/>
@@ -7610,7 +7610,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3817"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автовыбор среди RR73/73 сообщений в дополнение к CQ сообщениям, опция маркера для RR73/73 сообщений будет игнорироваться.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автовыбор среди RR73/73 сообщений в дополнение к CQ сообщениям. При выборе этой опции уведомление для сообщений RR73/73 будет выполняться тем же цветом фона и текста как для CQ сообщений, то есть для RR73/73 сообщений не будет использоваться уведомление &apos;другие стандартные сообщения&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3823"/>
@@ -7620,7 +7620,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3836"/>
         <source>CQ/73 in message</source>
-        <translation></translation>
+        <translation>CQ/73 в сообщении</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3849"/>
@@ -7645,7 +7645,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4014"/>
         <source>New CQZ on Band/Mode</source>
-        <translation>Новая CQ зона Band/Mode</translation>
+        <translation>Новая CQ зона Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4084"/>
@@ -7655,7 +7655,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4154"/>
         <source>New ITUZ on Band/Mode</source>
-        <translation>Новая ITU зона Band/Mode</translation>
+        <translation>Новая ITU зона Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4224"/>
@@ -7665,7 +7665,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4294"/>
         <source>New DXCC on Band/Mode</source>
-        <translation>Новая DXCC Band/Mode</translation>
+        <translation>Новая DXCC Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4364"/>
@@ -7675,7 +7675,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4434"/>
         <source>New Grid on Band/Mode</source>
-        <translation>Новый локатор Band/Mode</translation>
+        <translation>Новый локатор Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4504"/>
@@ -7685,7 +7685,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4574"/>
         <source>New Prefix on Band/Mode</source>
-        <translation>Новый префикс Band/Mode</translation>
+        <translation>Новый префикс Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4644"/>
@@ -7695,7 +7695,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="4714"/>
         <source>New Call on Band/Mode</source>
-        <translation>Новый позывной Band/Mode</translation>
+        <translation>Новый позывной Диапаз/Вид</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4784"/>
