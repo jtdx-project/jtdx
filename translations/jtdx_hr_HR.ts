@@ -3817,8 +3817,8 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Pošaljite dekodirane poruke na WPRnet.org.</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>Pošaljite dekodirane poruke na WSPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>

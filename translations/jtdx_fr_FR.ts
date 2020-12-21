@@ -3825,8 +3825,8 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Téléchargez les messages décodés sur WPRnet.org.</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>Téléchargez les messages décodés sur WSPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>

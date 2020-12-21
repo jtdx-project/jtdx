@@ -3823,8 +3823,8 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Feltölti a dekódolt üzeneteket a WPRnet.org oldalra.</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>Feltölti a dekódolt üzeneteket a WSPRnet.org oldalra.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>

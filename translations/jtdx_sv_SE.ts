@@ -3825,8 +3825,8 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Ladda upp avkodade meddelanden till WPRnet.org.</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>Ladda upp avkodade meddelanden till WSPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>

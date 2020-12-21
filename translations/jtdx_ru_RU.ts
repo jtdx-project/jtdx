@@ -3823,8 +3823,8 @@ list. The list can be maintained in Settings (F2).</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загрузить декодированные сообщения на WPRnet.org.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загрузить декодированные сообщения на WSPRnet.org.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>

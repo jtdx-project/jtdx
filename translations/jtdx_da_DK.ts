@@ -3823,7 +3823,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
+        <source>Upload decoded messages to WSPRnet.org.</source>
         <translation>Send dekodet meddelse til WSPRnet.org.</translation>
     </message>
     <message>

@@ -3835,8 +3835,8 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
-        <source>Upload decoded messages to WPRnet.org.</source>
-        <translation>Lae dekodeeritud sõnumid WPRnet.org lehele.</translation>
+        <source>Upload decoded messages to WSPRnet.org.</source>
+        <translation>Lae dekodeeritud sõnumid WSPRnet.org lehele.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4406"/>
