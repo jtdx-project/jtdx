@@ -29,7 +29,8 @@ public:
   explicit LogQSO(QSettings *, Configuration const *, JTDXDateTime * jtdxtime, QWidget *parent = 0);
   ~LogQSO();
   void initLogQSO(QString const& hisCall, QString const& hisGrid, QString mode,
-                  QString const& rptSent, QString const& rptRcvd, QString const& name, QDateTime const& dateTimeOn,
+                  QString const& rptSent, QString const& rptRcvd, QString const& distance,
+                  QString const& name, QDateTime const& dateTimeOn,
                   QDateTime const& dateTimeOff, Radio::Frequency dialFreq, bool autologging);
 
 public slots:

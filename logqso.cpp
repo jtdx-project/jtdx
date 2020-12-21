@@ -63,8 +63,8 @@ void LogQSO::storeSettings () const
 }
 
 void LogQSO::initLogQSO(QString const& hisCall, QString const& hisGrid, QString mode,
-                        QString const& rptSent, QString const& rptRcvd, QString const& name,
-                        QDateTime const& dateTimeOn, QDateTime const& dateTimeOff,
+                        QString const& rptSent, QString const& rptRcvd, QString const& distance,
+                        QString const& name, QDateTime const& dateTimeOn, QDateTime const& dateTimeOff,
                         Radio::Frequency dialFreq, bool autologging)
 {
   m_send_to_eqsl=m_config->send_to_eqsl();
@@ -84,6 +84,12 @@ void LogQSO::initLogQSO(QString const& hisCall, QString const& hisGrid, QString 
     QString t=mode;
     if(rptSent!="") t+="  Sent: " + rptSent;
     if(rptRcvd!="") t+="  Rcvd: " + rptRcvd;
+    ui->comments->setText(t);
+  }
+  if(m_config->distance_in_comments()) {
+    QString t=ui->comments->text();
+    if(t.isEmpty()) t="Distance: " + distance;
+    else t+="  Distance: " + distance;
     ui->comments->setText(t);
   }
   if(m_config->log_as_RTTY() and mode.left(3)=="JT9") mode="RTTY";
