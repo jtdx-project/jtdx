@@ -7309,12 +7309,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>värskenda heliseadmete loetelu</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Värskenda</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
