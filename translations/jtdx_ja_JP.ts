@@ -4890,7 +4890,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4224"/>
         <location filename="../mainwindow.cpp" line="4683"/>
         <source>LastTx: </source>
-        <translation></translation>
+        <translation>最終Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4476"/>
@@ -4900,7 +4900,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4481"/>
         <source>Receiving </source>
-        <translation>受信 </translation>
+        <translation>受信中 </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5620"/>
@@ -5863,7 +5863,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>設定パラメータを変更するにはタブを選択します。しかしリグがCATコントロールである場合は&quot;RIG&quot;または&quot;Fake It&quot;が推奨されます。</translation>
+        <translation>設定パラメータを変更するにはタブを選択します。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -6518,12 +6518,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>オーディオデバイスリストのリフレッシュ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>リフレッシュ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1826"/>
@@ -6889,12 +6889,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ヒントデコード使用のマークを表示しない.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>ヒントキャラクター非表示</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7511,12 +7511,12 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADIF QSOレコードのコメントに対応する交信距離を記載します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>交信距離をコメントに記載</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2466"/>

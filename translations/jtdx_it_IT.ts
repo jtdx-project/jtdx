@@ -7168,12 +7168,12 @@ le prestazioni del sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nascondi il carattere del suggerimento nel campo del marcatore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascondi suggerimento</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7316,22 +7316,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>aggiorna l&apos;elenco dei dispositivi audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aggiungi la distanza del corrispondente ai commenti nel record QSO ADIF&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Distanza nei commenti</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
