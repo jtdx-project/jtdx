@@ -5426,67 +5426,67 @@ Error(%2): %3</source>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="23"/>
+        <location filename="../soundin.cpp" line="24"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="27"/>
+        <location filename="../soundin.cpp" line="28"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="31"/>
+        <location filename="../soundin.cpp" line="32"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="35"/>
+        <location filename="../soundin.cpp" line="36"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="64"/>
+        <location filename="../soundin.cpp" line="65"/>
         <source>Requested input audio format is not valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="71"/>
+        <location filename="../soundin.cpp" line="72"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="92"/>
+        <location filename="../soundin.cpp" line="93"/>
         <source>Failed to initialize audio sink device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="127"/>
+        <location filename="../soundin.cpp" line="128"/>
         <source>Idle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="131"/>
+        <location filename="../soundin.cpp" line="132"/>
         <source>Receiving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="135"/>
+        <location filename="../soundin.cpp" line="136"/>
         <source>Suspended</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="140"/>
+        <location filename="../soundin.cpp" line="141"/>
         <source>Interrupted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="147"/>
+        <location filename="../soundin.cpp" line="148"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="151"/>
+        <location filename="../soundin.cpp" line="152"/>
         <source>Stopped</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5494,62 +5494,62 @@ Error(%2): %3</source>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="26"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="28"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="29"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="30"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="48"/>
+        <location filename="../soundout.cpp" line="49"/>
         <source>Requested output audio format is not valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="50"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="112"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Idle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="114"/>
         <source>Sending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Suspended</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="116"/>
+        <location filename="../soundout.cpp" line="117"/>
         <source>Interrupted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="118"/>
+        <location filename="../soundout.cpp" line="119"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="118"/>
+        <location filename="../soundout.cpp" line="119"/>
         <source>Stopped</source>
         <translation type="unfinished"></translation>
     </message>
