@@ -2870,7 +2870,7 @@ Fejl: %2 - %3</translation>
         <location filename="../logqso.ui" line="82"/>
         <location filename="../logqso.ui" line="114"/>
         <source>dd/MM/yyyy HH:mm:ss</source>
-        <translation></translation>
+        <translation>dd/MM/yyyy HH mm ss</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="98"/>
@@ -3489,7 +3489,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2900"/>
         <source>Hint</source>
-        <translation>AP HINT</translation>
+        <translation>Hint</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2931"/>
@@ -3945,7 +3945,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="4622"/>
         <source>SWL decoding cycles</source>
-        <translation>SWR dekoder gennemløb</translation>
+        <translation>SWL dekoder gennemløb</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4640"/>
@@ -7171,12 +7171,12 @@ til vurdering af udbredelsesforhold og systemydelse.</translation>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skjul Hint karakter i dekodet msg.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Skjul Hint karakter</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7319,22 +7319,22 @@ Højreklik for at indsætte eller slette indstillinger.</translation>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>Opfrisk audio device liste</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Opfrisk</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tilføj QSO afstand til kommentarer i ADIF-Log. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Afstand til kommentar feltet</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
