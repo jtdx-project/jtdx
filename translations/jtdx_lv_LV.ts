@@ -313,12 +313,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
         <source>Sov Mil Order of Malta</source>
-        <translation type="unfinished">Neatkarīgais Maltas Bruņinieku ordenis</translation>
+        <translation>Neatkarīgais Maltas Bruņinieku ordenis</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation>Spratlija salas</translation>
+        <translation>Spratlija sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -1213,7 +1213,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Bear Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lāču sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="215"/>
@@ -1248,7 +1248,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
         <source>Guam</source>
-        <translation type="unfinished"></translation>
+        <translation>Guama</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
@@ -1348,7 +1348,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="241"/>
         <source>Lebanon</source>
-        <translation type="unfinished"></translation>
+        <translation>Libāna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="242"/>
@@ -1368,17 +1368,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="245"/>
         <source>Market Reef</source>
-        <translation type="unfinished"></translation>
+        <translation>Merketa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation>Čehija</translation>
+        <translation>Čehijas Rep.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation>Slovākija</translation>
+        <translation>Slovākijas Rep.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1388,7 +1388,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="249"/>
         <source>Greenland</source>
-        <translation type="unfinished"></translation>
+        <translation>Grenlande</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
@@ -1403,7 +1403,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="252"/>
         <source>Papua New Guinea</source>
-        <translation type="unfinished"></translation>
+        <translation>Papua-Jaungvineja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="253"/>
@@ -1413,7 +1413,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="254"/>
         <source>DPR of Korea</source>
-        <translation type="unfinished"></translation>
+        <translation>Korejas TDR</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="255"/>
@@ -1423,17 +1423,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="256"/>
         <source>Curacao</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirasao</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="257"/>
         <source>Bonaire</source>
-        <translation type="unfinished"></translation>
+        <translation>Bonaire</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation type="unfinished"></translation>
+        <translation>Sintēstatiusa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
@@ -1448,7 +1448,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation type="unfinished"></translation>
+        <translation>Fernandu di Noronjas sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
@@ -1463,22 +1463,22 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
         <source>Suriname</source>
-        <translation type="unfinished"></translation>
+        <translation>Surinama</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="265"/>
         <source>Franz Josef Land</source>
-        <translation type="unfinished"></translation>
+        <translation>Franča Jozefa Zeme</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="266"/>
         <source>Western Sahara</source>
-        <translation type="unfinished"></translation>
+        <translation>Rietumsahāra</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="267"/>
         <source>Bangladesh</source>
-        <translation type="unfinished"></translation>
+        <translation>Bangladeša</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="268"/>
@@ -1488,12 +1488,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="269"/>
         <source>Seychelles</source>
-        <translation type="unfinished"></translation>
+        <translation>Seišelu salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation type="unfinished"></translation>
+        <translation>Santome un Prinsipi</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1508,7 +1508,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="273"/>
         <source>Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation>Sudāna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="274"/>
@@ -1523,7 +1523,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="276"/>
         <source>Mount Athos</source>
-        <translation type="unfinished"></translation>
+        <translation>Atona kalns</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="277"/>
@@ -1538,7 +1538,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="279"/>
         <source>Tuvalu</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuvalu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
@@ -1558,7 +1558,8 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>Banaba Is.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>pārbaudit</translatorcomment>
+        <translation>Banana sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
@@ -1573,7 +1574,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
         <source>Palau</source>
-        <translation type="unfinished"></translation>
+        <translation>Palau</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="287"/>
@@ -1593,7 +1594,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="290"/>
         <source>Guatemala</source>
-        <translation type="unfinished"></translation>
+        <translation>Gvatemala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="291"/>
@@ -1603,12 +1604,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="292"/>
         <source>Cocos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokosu Salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="293"/>
         <source>Cameroon</source>
-        <translation type="unfinished"></translation>
+        <translation>Kamerūna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="294"/>
@@ -1618,37 +1619,37 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrālāfrikas Republika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Rep. of the Congo</source>
-        <translation type="unfinished"></translation>
+        <translation>Kongo Republika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
         <source>Gabon</source>
-        <translation type="unfinished"></translation>
+        <translation>Gabona</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="298"/>
         <source>Chad</source>
-        <translation type="unfinished"></translation>
+        <translation>Čada</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="299"/>
         <source>Cote d&apos;Ivoire</source>
-        <translation type="unfinished"></translation>
+        <translation>Kotdivuāra</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="300"/>
         <source>Benin</source>
-        <translation type="unfinished"></translation>
+        <translation>Benina</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="301"/>
         <source>Mali</source>
-        <translation type="unfinished"></translation>
+        <translation>Mali</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="302"/>
@@ -1683,37 +1684,37 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation type="unfinished"></translation>
+        <translation>Antigva un Barbuda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
         <source>Belize</source>
-        <translation type="unfinished"></translation>
+        <translation>Beliza</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>St. Kitts &amp; Nevis</source>
-        <translation type="unfinished"></translation>
+        <translation>Svētā Kristofera un Nevisa sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="311"/>
         <source>Namibia</source>
-        <translation type="unfinished"></translation>
+        <translation>Namībija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="312"/>
         <source>Micronesia</source>
-        <translation type="unfinished"></translation>
+        <translation>Mikronēzija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maršalu salas </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
         <source>Brunei Darussalam</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruneja Darusalama</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="315"/>
@@ -1728,22 +1729,22 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="317"/>
         <source>Heard Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hērda sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Macquarie Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Makvorija sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Cocos (Keeling) Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokosu Salas </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Lord Howe Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lorda Hava sala </translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
@@ -1753,7 +1754,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Norfolk Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Notfolkas sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
@@ -1768,27 +1769,27 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
         <source>Anguilla</source>
-        <translation type="unfinished"></translation>
+        <translation>Angila</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Montserrat</source>
-        <translation type="unfinished"></translation>
+        <translation>Montserata</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Britu Virdžīnu salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tērksas un Kaikosas salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="329"/>
         <source>Pitcairn Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pitkērna salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="330"/>
@@ -1798,32 +1799,32 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Folklenda salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>S. Georgia Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienvidsendviču salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienvidšetlendas salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienvidorkneju salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienvidsendviču Salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
         <source>Bermuda</source>
-        <translation type="unfinished"></translation>
+        <translation>Bermuda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="337"/>
@@ -1843,47 +1844,47 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Andamanu un Nikobaru salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="341"/>
         <source>Lakshadweep Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lakšadvīpa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="342"/>
         <source>Mexico</source>
-        <translation type="unfinished"></translation>
+        <translation>Meksika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="343"/>
         <source>Revillagigedo</source>
-        <translation type="unfinished"></translation>
+        <translation>Reviljahihedo salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="344"/>
         <source>Burkina Faso</source>
-        <translation type="unfinished"></translation>
+        <translation>Burkina Faso</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="345"/>
         <source>Cambodia</source>
-        <translation type="unfinished"></translation>
+        <translation>Kambodža</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="346"/>
         <source>Laos</source>
-        <translation type="unfinished"></translation>
+        <translation>Laosa</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="347"/>
         <source>Macao</source>
-        <translation type="unfinished"></translation>
+        <translation>Makau</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="348"/>
         <source>Myanmar</source>
-        <translation type="unfinished"></translation>
+        <translation>Mjanma</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="349"/>
@@ -1903,7 +1904,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="352"/>
         <source>Vanuatu</source>
-        <translation type="unfinished"></translation>
+        <translation>Vanuatu</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="353"/>
@@ -1918,7 +1919,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="355"/>
         <source>Nicaragua</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikvaragva</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="356"/>
@@ -1928,7 +1929,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="357"/>
         <source>El Salvador</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvadora</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="358"/>
@@ -1943,27 +1944,27 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="360"/>
         <source>Aves Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Avesas sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
         <source>Zimbabwe</source>
-        <translation type="unfinished"></translation>
+        <translation>Zimbabve</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
-        <translation type="unfinished"></translation>
+        <translation>Ziemeļmaķedonija</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Rep. of Kosovo</source>
-        <translation type="unfinished"></translation>
+        <translation>Kosovas Republika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienvidsudāna</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -1973,7 +1974,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="366"/>
         <source>Gibraltar</source>
-        <translation type="unfinished"></translation>
+        <translation>Gibraltārs</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
@@ -1983,17 +1984,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
         <source>St. Helena</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Helēnas sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>Ascension Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Debesbraukšanas sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="370"/>
         <source>Tristan da Cunha &amp; Gough</source>
-        <translation type="unfinished"></translation>
+        <translation>Tristana da Kuņas salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
@@ -2003,7 +2004,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tokelau Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tokelau salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
@@ -2013,22 +2014,22 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
         <source>Chatham Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Četema salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="375"/>
         <source>Kermadec Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kermadeka salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>N.Z. Subantarctic Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaunzēlandes Subantarktikas salas</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="377"/>
         <source>Paraguay</source>
-        <translation type="unfinished"></translation>
+        <translation>Paragvaja</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
@@ -2038,7 +2039,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Pr. Edward &amp; Marion Is.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prinča Edvarda salas</translation>
     </message>
 </context>
 <context>
@@ -2171,7 +2172,7 @@ Formāts:
     <message>
         <location filename="../WFPalette.cpp" line="123"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="126"/>
@@ -2196,23 +2197,23 @@ Formāts:
     <message>
         <location filename="../WFPalette.cpp" line="208"/>
         <source>Insert &amp;after ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <source>Import Palette</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="223"/>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Palettes (*.pal)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="234"/>
         <source>Export Palette</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2253,28 +2254,28 @@ Formāts:
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
         <source>Contents file syntax error %1 at character offset %2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="138"/>
         <source>Contents file top level must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="149"/>
         <source>File System Error</source>
-        <translation type="unfinished">Failu sistēmas kļūda</translation>
+        <translation>Failu sistēmas kļūda</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="150"/>
         <source>Failed to open &quot;%1&quot;
 Error: %2 - %3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="206"/>
         <source>Contents entries must be a JSON array</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
@@ -2312,7 +2313,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../EmulateSplitTransceiver.cpp" line="48"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Lai atdarinātu sadalīšanas režīmu, platformai jābūt vienpusējā režīmā</translation>
     </message>
 </context>
 <context>
@@ -2345,7 +2346,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="235"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2506,7 +2507,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>IO error</source>
-        <translation type="unfinished"></translation>
+        <translation>IO kļuda</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="258"/>
@@ -2556,7 +2557,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="267"/>
         <source>Invalid VFO</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepareizs VFO</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="268"/>
@@ -2959,15 +2960,15 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1822"/>
-        <location filename="../mainwindow.cpp" line="3593"/>
-        <location filename="../mainwindow.cpp" line="3602"/>
-        <location filename="../mainwindow.cpp" line="6203"/>
+        <location filename="../mainwindow.cpp" line="1831"/>
+        <location filename="../mainwindow.cpp" line="3601"/>
+        <location filename="../mainwindow.cpp" line="3610"/>
         <location filename="../mainwindow.cpp" line="6208"/>
-        <location filename="../mainwindow.cpp" line="6250"/>
-        <location filename="../mainwindow.cpp" line="6261"/>
+        <location filename="../mainwindow.cpp" line="6213"/>
+        <location filename="../mainwindow.cpp" line="6255"/>
+        <location filename="../mainwindow.cpp" line="6266"/>
         <source>Band Activity</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
@@ -2982,7 +2983,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="664"/>
         <source>USB dial frequency</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="686"/>
@@ -5074,190 +5075,190 @@ UDP server %2:%3</source>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5105"/>
+        <location filename="../Configuration.cpp" line="5074"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalogs:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5106"/>
+        <location filename="../Configuration.cpp" line="5075"/>
         <source>File &amp;name:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5076"/>
         <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5077"/>
         <source>&amp;Choose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5078"/>
         <source>&amp;Save</source>
         <translation>&amp;Saglabāt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5110"/>
+        <location filename="../Configuration.cpp" line="5079"/>
         <source>Cancel</source>
         <translation>Acelt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
+        <location filename="../Configuration.cpp" line="5080"/>
         <source>All files (*)</source>
         <translation>Visi faili (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5112"/>
+        <location filename="../Configuration.cpp" line="5081"/>
         <source>New Folder</source>
         <translation>Jauna mape</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5113"/>
+        <location filename="../Configuration.cpp" line="5082"/>
         <source>Delete</source>
         <translation>Dzēst</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5083"/>
         <source>&amp;Delete</source>
         <translation>&amp;Dzēst</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5084"/>
         <source>&amp;Rename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5116"/>
+        <location filename="../Configuration.cpp" line="5085"/>
         <source>Show &amp;hidden files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5086"/>
         <source>&amp;New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5118"/>
+        <location filename="../Configuration.cpp" line="5087"/>
         <source>Look in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ieskaties:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5119"/>
+        <location filename="../Configuration.cpp" line="5088"/>
         <source>Files of type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5089"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
+        <location filename="../Configuration.cpp" line="5090"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5122"/>
+        <location filename="../Configuration.cpp" line="5091"/>
         <source>Could not delete directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5092"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5094"/>
         <source>Recent Places</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5095"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5127"/>
+        <location filename="../Configuration.cpp" line="5096"/>
         <source>Go back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5128"/>
+        <location filename="../Configuration.cpp" line="5097"/>
         <source>Alt+Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5129"/>
+        <location filename="../Configuration.cpp" line="5098"/>
         <source>Forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5130"/>
+        <location filename="../Configuration.cpp" line="5099"/>
         <source>Go forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5131"/>
+        <location filename="../Configuration.cpp" line="5100"/>
         <source>Alt+Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5132"/>
+        <location filename="../Configuration.cpp" line="5101"/>
         <source>Parent Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5133"/>
+        <location filename="../Configuration.cpp" line="5102"/>
         <source>Go to the parent directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5134"/>
+        <location filename="../Configuration.cpp" line="5103"/>
         <source>Alt+Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5135"/>
+        <location filename="../Configuration.cpp" line="5104"/>
         <source>Create New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5136"/>
+        <location filename="../Configuration.cpp" line="5105"/>
         <source>Create a New Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5137"/>
+        <location filename="../Configuration.cpp" line="5106"/>
         <source>List View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5107"/>
         <source>Change to list view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5139"/>
+        <location filename="../Configuration.cpp" line="5108"/>
         <source>Detail View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5140"/>
+        <location filename="../Configuration.cpp" line="5109"/>
         <source>Change to detail view mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5141"/>
+        <location filename="../Configuration.cpp" line="5110"/>
         <source>Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5142"/>
+        <location filename="../Configuration.cpp" line="5111"/>
         <source>List of places and bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5329,32 +5330,32 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../WFPalette.cpp" line="55"/>
         <source>Too many colours in palette.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="258"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5543,17 +5544,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../soundout.cpp" line="114"/>
         <source>Sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūta</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="115"/>
         <source>Suspended</source>
-        <translation type="unfinished">Suspendēts</translation>
+        <translation>Suspendēts</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="117"/>
         <source>Interrupted</source>
-        <translation type="unfinished">pārtraukt</translation>
+        <translation>pārtraukt</translation>
     </message>
     <message>
         <location filename="../soundout.cpp" line="119"/>
@@ -5586,12 +5587,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="273"/>
         <source>&amp;Antenna:</source>
-        <translation>&amp;Antena:</translation>
+        <translation>&amp;Antēna:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="279"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="280"/>
