@@ -3247,7 +3247,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單變薄, 此功能專用於頻寬頻解碼與慢 CPU 和&quot;最小&quot;寬頻解碼器靈敏度設置. 按應用的 DT 權重因數的同步模式級別對候選清單進行排序, 低值候選者將不由解碼器處理, 以減少間隔解碼所花費的時間. 此功能不應用於 QSO RX 頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單細化, 該特性專用於慢速中央處理器的寬頻帶解碼和&quot;最小&quot;寬頻帶解碼器靈敏度設置. 按應用的 DT 權重因數的同步模式級別對候選清單進行排序, 低值候選者將不由解碼器處理, 以減少間隔解碼所花費的時間. 此功能不應用於通聯接收頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3859,17 +3859,17 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1616"/>
         <source>CL  </source>
-        <translation></translation>
+        <translation>帶寬  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單精簡選項的 DT 加權功能, 應設置解碼信號的 DT 分佈的中位數. 此值取決於系統時鐘同步精度, 並且過度擁擠的頻段接近解碼信號的平均 DT 值. 正確的值提高了候選清單精簡選項中的解碼效率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單精簡選項的 時差 加權功能, 應設置解碼信號的 時差 分佈的中位數. 此值取決於系統時鐘同步精度, 並且過度擁擠的頻段接近解碼信號的平均 時差 值. 正確的值提高了候選清單精簡選項中的解碼效率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation></translation>
+        <translation>時差 </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
@@ -4316,7 +4316,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5343"/>
         <source>Bypass all text filters</source>
-        <translation>繞過所有信息篩選</translation>
+        <translation>繞過所有信息過濾</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5346"/>
@@ -4401,7 +4401,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5481"/>
         <source>Single shot QSO</source>
-        <translation>一次通聯</translation>
+        <translation>單次通聯</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5489"/>
@@ -4481,7 +4481,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation>呼叫高於新呼叫優先順序呼號</translation>
+        <translation>呼叫優先呼號高於新呼叫的呼號</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -4628,7 +4628,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5981"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation>與韓國160米跨波段通聯</translation>
+        <translation>與韓國的160米跨波段通聯</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6037"/>
@@ -7165,12 +7165,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在標記欄位中隱藏提示字元.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>隱藏提示字元</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7313,22 +7313,22 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新音訊設備清單</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;將距離添加到日志的通聯記錄註釋中.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>距離添加到註釋中</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
@@ -8307,7 +8307,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6676"/>
         <location filename="../Configuration.ui" line="6689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義寬帶解碼路解碼嘗試次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義寬頻帶解碼過程的解碼嘗試次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6679"/>
@@ -8319,7 +8319,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6715"/>
         <location filename="../Configuration.ui" line="6728"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;寬帶解碼的解碼通過次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;寬頻帶解碼的解碼通過次數&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6718"/>
@@ -8385,7 +8385,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6914"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設置取決於 CPU 功率, 嘗試對過度擁擠的HF頻段使用最大解碼通道數.&lt;br&gt;&lt;br&gt;對於低稠密的HF/VHF頻帶, 解碼遍數可以減少, 而解碼嘗試次數的增加可以為那里的弱信號帶來更好的解碼效率.&lt;br&gt;&lt;br&gt;影響低信噪比信號解碼效率的解碼嘗試次數:寬帶或接收頻率.&lt;br&gt;&lt;br&gt;解碼遍數影響可以在相同頻率上解碼的信號的最大數量, 或者在頻譜重疊很大的情況下彼此接近, 如果解碼遍數設置為4, 則可以在相同頻率上解碼多達4個信號, 在接收頻率上解碼多達7個信號.&lt;br&gt;&lt;br&gt;將解碼嘗試次數增加到允許解碼完成的值, 直到接收分鐘間隔結束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設置取決於 CPU 功率, 嘗試對過度擁擠的HF頻段使用最大解碼通道數.&lt;br&gt;&lt;br&gt;對於低稠密的HF/VHF頻帶, 解碼遍數可以減少, 而解碼嘗試次數的增加可以為那里的弱信號帶來更好的解碼效率.&lt;br&gt;&lt;br&gt;影響低信噪比信號解碼效率的解碼嘗試次數:寬頻帶或接收頻率.&lt;br&gt;&lt;br&gt;解碼遍數影響可以在相同頻率上解碼的信號的最大數量, 或者在頻譜重疊很大的情況下彼此接近, 如果解碼遍數設置為4, 則可以在相同頻率上解碼多達4個信號, 在接收頻率上解碼多達7個信號.&lt;br&gt;&lt;br&gt;將解碼嘗試次數增加到允許解碼完成的值, 直到接收分鐘間隔結束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="7002"/>
@@ -8396,7 +8396,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="7028"/>
         <location filename="../Configuration.ui" line="7038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義寬帶 T10 解碼嘗試次數.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定義寬頻帶 T10 解碼嘗試次數.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="7064"/>

@@ -3247,7 +3247,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候选列表细化，此功能专用于低速CPU和“最小”宽带解码器灵敏度设置的宽带解码。利用DT加权因子按同步模式级别对候选列表进行排序，解码器不会处理低值的候选列表，以减少间隔解码所花费的时间。此特性不适用于QSO RX频率。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候选列表细化, 该特性专用于慢速中央处理器的宽带解码和 &apos;最小&apos; 和宽带解码器灵敏度设置. 候选列表通过同步模式级别和应用的权重因子进行排序, 解码器不会处理低值的候选, 以减少间隔解码所花费的时间. 此特性不适用于通联的接收频率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1903"/>
@@ -3864,12 +3864,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1842"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT加权功能用于候选列表细化选项，应在此处设置解码信号DT分布的中值。这个值取决于系统时钟同步精度和过度拥挤的频带接近解码信号的平均DT值。正确的值可以提高候选列表细化选项的解码效率。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;时差加权功能用于候选列表细化选项, 应在此处设置解码信号时差分布的中值. 这个值取决于系统时钟同步精度和过度拥挤的频带接近解码信号的平均时差值. 正确的值可以提高候选列表细化选项的解码效率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1845"/>
         <source>DT </source>
-        <translation></translation>
+        <translation>时差 </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
@@ -4481,7 +4481,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5691"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation>高于新呼叫优先级的呼叫</translation>
+        <translation>优先选择新呼号发来的呼叫</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5710"/>
@@ -4623,12 +4623,12 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5973"/>
         <source>Crossband 160m operation with Japan</source>
-        <translation>与日本的160米跨波段通联</translation>
+        <translation>与日本的160米跨波段操作</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5981"/>
         <source>Crossband 160m operation with Korea</source>
-        <translation>与韩国160m的跨波段操作</translation>
+        <translation>与韩国的160米跨波段操作</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6037"/>
@@ -7165,12 +7165,12 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在标记字段中隐藏提示字符。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏提示字符</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7313,22 +7313,22 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新音频设备列表</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在ADIF通联记录的备注中添加与对方电台的距离。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>将距离信息添加到备注中</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
