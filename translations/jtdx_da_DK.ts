@@ -320,7 +320,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation>Spratly Is.</translation>
+        <translation>Spratly Øerne.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -340,7 +340,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation>Rodriguez Is.</translation>
+        <translation>Rodriguez.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
@@ -350,7 +350,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation>Annobon Is.</translation>
+        <translation>Annobon.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
@@ -365,12 +365,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation>Rotuma Is.</translation>
+        <translation>Rotuma.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of eSwatini</source>
-        <translation>Kingdom of eSwatini</translation>
+        <translation>Kongeringet Eswatini</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -395,7 +395,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Peter 1 Is.</source>
-        <translation>Peter 1 Is.</translation>
+        <translation>Peter 1&apos;s Ø.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="51"/>
@@ -830,12 +830,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Balearic Is.</translation>
+        <translation>Baleariske Øer</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation>Kanariske Is.</translation>
+        <translation>Kanariske Øer.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
@@ -900,7 +900,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="151"/>
         <source>France</source>
-        <translation>Frankring</translation>
+        <translation>Frankrig</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="152"/>
@@ -1030,7 +1030,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>Shetland Is.</source>
-        <translation>Shetland I.</translation>
+        <translation>Shetlands Øerne.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="178"/>
@@ -1110,7 +1110,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
         <source>Rep. of Korea</source>
-        <translation>Rep. of Korea</translation>
+        <translation>Korea</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="194"/>
@@ -1240,7 +1240,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>Mariana Is.</source>
-        <translation>Marian Is.</translation>
+        <translation>Nordmarianerne.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
@@ -1305,7 +1305,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>US Virgin Is.</translation>
+        <translation>US Jomfru Øer.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1375,12 +1375,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Czech Rep.</source>
-        <translation>Tjekkiet Rep.</translation>
+        <translation>Tjekkiet.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation>Slovakiet Rep.</translation>
+        <translation>Slovakiet.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1395,7 +1395,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation>Færøerne Is.</translation>
+        <translation>Færøerne.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1435,12 +1435,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation>Sab &amp; St. Eustatius</translation>
+        <translation>Saba &amp; St. Eustatius</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
         <source>Sint Maarten</source>
-        <translation>Sint Maarten</translation>
+        <translation>St. Maarten</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="260"/>
@@ -1620,12 +1620,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation>C. Afrikanske Rep.</translation>
+        <translation>Central Afrikanske Rep.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Rep. of the Congo</source>
-        <translation>Rep. of the Congo</translation>
+        <translation>Congo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
@@ -1780,7 +1780,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation>Britisk Virgin Is.</translation>
+        <translation>Britisk Jomfru Øer.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
@@ -1895,7 +1895,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="350"/>
         <source>Indonesia</source>
-        <translation></translation>
+        <translation>Indonesien</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="351"/>
@@ -1925,7 +1925,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="356"/>
         <source>Romania</source>
-        <translation>Romænien</translation>
+        <translation>Rumænien</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="357"/>
@@ -1955,17 +1955,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>N. Macedonia</source>
-        <translation>N. Makedonien</translation>
+        <translation>Nordmakedonien</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Rep. of Kosovo</source>
-        <translation>Rep. of Kosovo</translation>
+        <translation>Kosovo</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation>Rep. of S. Sudan</translation>
+        <translation>Syd Sudan</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -2035,7 +2035,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>S. Africa</source>
-        <translation>S. Afrika</translation>
+        <translation>Sydafrika</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
