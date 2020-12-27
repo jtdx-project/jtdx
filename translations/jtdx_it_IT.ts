@@ -2970,7 +2970,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If orange or red there has been a rig control failure, click to reset and read the dial frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;arancione o il rosso indicano che si è verificato un errore nel controllo del&apos; RTX, cliccare per resettare e leggere la frequenza di chiamata.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;arancione o il rosso indicano che si è verificato un errore nel controllo dell&apos;RTX, cliccare per resettare e leggere la frequenza di chiamata.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -3929,12 +3929,12 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="4598"/>
         <source>decoder sensitivity</source>
-        <translation>sensività decodificazione</translation>
+        <translation>sensibilità decodificazione</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4606"/>
         <source>QSO RX freq sensitivity</source>
-        <translation>sensibilità freq  RX</translation>
+        <translation>sensibilità freq RX per QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4614"/>
