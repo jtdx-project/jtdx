@@ -5446,14 +5446,14 @@ void Configuration::impl::set_cached_mode ()
 void Configuration::impl::transceiver_frequency (Frequency f)
 {
   cached_rig_state_.online (true); // we want the rig online
+  bool mode_change = ((data_mode_ == data_mode_USB && cached_rig_state_.mode() != Transceiver::USB) || (data_mode_ == data_mode_data && cached_rig_state_.mode() != Transceiver::DIG_U));
   set_cached_mode ();
-  
   // apply any offset & calibration
   // we store the offset here for use in feedback from the rig, we
   // cannot absolutely determine if the offset should apply but by
   // simply picking an offset when the Rx frequency is set and
   // sticking to it we get sane behaviour
-  if (current_offset_ != stations_.offset (f) || cached_rig_state_.frequency() != apply_calibration (f + current_offset_))
+  if (current_offset_ != stations_.offset (f) || cached_rig_state_.frequency() != apply_calibration (f + current_offset_) || mode_change)
   {
     current_offset_ = stations_.offset (f);
     cached_rig_state_.frequency (apply_calibration (f + current_offset_));
