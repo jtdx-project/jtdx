@@ -2394,7 +2394,7 @@ void MainWindow::displayDialFrequency ()
   static bool first_freq {true};
   if(first_freq && dial_frequency!=0 && dial_frequency!=145000000 && m_mode=="FT8") {
     bool commonFT8b=false;
-    qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
+    qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=dial_frequency/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
@@ -2969,7 +2969,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   m_wideGraph->setHoundFilter(m_houndMode);
   if(m_houndMode) {
     bool defBand=false;
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
@@ -3004,7 +3004,7 @@ void MainWindow::on_actionUse_TX_frequency_jumps_toggled(bool checked)
   if(checked) {
 	  bool defBand=false; bool splitOff=false; QString message = "";
 //    Don't allow Hound frequency control in any of the default FT8 sub-bands but 60m
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
+    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
     for(int i=0; i<11; i++) {
       int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) {
@@ -6521,7 +6521,7 @@ void MainWindow::band_changed (Frequency f)
     if(m_mode!="FT8") {
       if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false);
     } else {
-      qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,50313,70154};
+      qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
       for(int i=0; i<11; i++) {
         int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
@@ -7047,7 +7047,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
             {
               m_lastDialFreq = m_freqNominal;
               m_secBandChanged=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
-              if((s.frequency () < 30000000u || (s.frequency () > 30000000u && !m_config.tx_QSY_allowed ()))  && m_mode.left(4)!="WSPR") {
+//              if((s.frequency () < 30000000u || (s.frequency () > 30000000u && !m_config.tx_QSY_allowed ()))  && m_mode.left(4)!="WSPR") {
                 // Write freq changes to ALL.TXT.
                 QFile f2 {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
                 if (f2.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
@@ -7067,7 +7067,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
                                                , tr ("Cannot open \"%1\" for append: %2")
                                                .arg (f2.fileName ()).arg (f2.errorString ()));
                 }
-              }
+//              }
 
               if (m_config.spot_to_psk_reporter ()) {
                 pskSetLocal ();

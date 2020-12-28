@@ -4,32 +4,32 @@
 <context>
     <name>Bands</name>
     <message>
-        <location filename="../Bands.cpp" line="135"/>
+        <location filename="../Bands.cpp" line="136"/>
         <source>Band name</source>
         <translation>波段名称</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="136"/>
+        <location filename="../Bands.cpp" line="137"/>
         <source>Lower frequency limit</source>
         <translation>频率下限</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="137"/>
+        <location filename="../Bands.cpp" line="138"/>
         <source>Upper frequency limit</source>
         <translation>频率上限</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="199"/>
+        <location filename="../Bands.cpp" line="200"/>
         <source>Band</source>
         <translation>波段</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="200"/>
+        <location filename="../Bands.cpp" line="201"/>
         <source>Lower Limit</source>
         <translation>下限</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="201"/>
+        <location filename="../Bands.cpp" line="202"/>
         <source>Upper Limit</source>
         <translation>上限</translation>
     </message>
@@ -2356,32 +2356,32 @@ Error: %2 - %3</source>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="507"/>
-        <location filename="../FrequencyList.cpp" line="694"/>
+        <location filename="../FrequencyList.cpp" line="513"/>
+        <location filename="../FrequencyList.cpp" line="700"/>
         <source>IARU Region</source>
         <translation>IARU 区域</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="528"/>
-        <location filename="../FrequencyList.cpp" line="695"/>
+        <location filename="../FrequencyList.cpp" line="534"/>
+        <location filename="../FrequencyList.cpp" line="701"/>
         <source>Mode</source>
         <translation>模式</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="560"/>
-        <location filename="../FrequencyList.cpp" line="696"/>
+        <location filename="../FrequencyList.cpp" line="566"/>
+        <location filename="../FrequencyList.cpp" line="702"/>
         <source>Frequency</source>
         <translation>频率</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="591"/>
-        <location filename="../FrequencyList.cpp" line="697"/>
+        <location filename="../FrequencyList.cpp" line="597"/>
+        <location filename="../FrequencyList.cpp" line="703"/>
         <source>Frequency (MHz)</source>
         <translation>频率 (兆赫)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="614"/>
-        <location filename="../FrequencyList.cpp" line="698"/>
+        <location filename="../FrequencyList.cpp" line="620"/>
+        <location filename="../FrequencyList.cpp" line="704"/>
         <source>Mode Frequency</source>
         <translation>模式 频率</translation>
     </message>
@@ -5353,7 +5353,7 @@ Please verify the correct directory name was given.</source>
         <translation>用户定义</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="50"/>
+        <location filename="../Bands.cpp" line="51"/>
         <source>OOB</source>
         <translation></translation>
     </message>

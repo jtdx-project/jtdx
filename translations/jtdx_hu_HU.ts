@@ -4,32 +4,32 @@
 <context>
     <name>Bands</name>
     <message>
-        <location filename="../Bands.cpp" line="135"/>
+        <location filename="../Bands.cpp" line="136"/>
         <source>Band name</source>
         <translation>Sáv</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="136"/>
+        <location filename="../Bands.cpp" line="137"/>
         <source>Lower frequency limit</source>
         <translation>Alsó frekvenciahatár</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="137"/>
+        <location filename="../Bands.cpp" line="138"/>
         <source>Upper frequency limit</source>
         <translation>Felső frekvenciahatár</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="199"/>
+        <location filename="../Bands.cpp" line="200"/>
         <source>Band</source>
         <translation>Sáv</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="200"/>
+        <location filename="../Bands.cpp" line="201"/>
         <source>Lower Limit</source>
         <translation>Alsó határ</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="201"/>
+        <location filename="../Bands.cpp" line="202"/>
         <source>Upper Limit</source>
         <translation>Felső határ</translation>
     </message>
@@ -2356,32 +2356,32 @@ Hiba: %2 - %3</translation>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="507"/>
-        <location filename="../FrequencyList.cpp" line="694"/>
+        <location filename="../FrequencyList.cpp" line="513"/>
+        <location filename="../FrequencyList.cpp" line="700"/>
         <source>IARU Region</source>
         <translation>IARU Region</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="528"/>
-        <location filename="../FrequencyList.cpp" line="695"/>
+        <location filename="../FrequencyList.cpp" line="534"/>
+        <location filename="../FrequencyList.cpp" line="701"/>
         <source>Mode</source>
         <translation>Üzemmód</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="560"/>
-        <location filename="../FrequencyList.cpp" line="696"/>
+        <location filename="../FrequencyList.cpp" line="566"/>
+        <location filename="../FrequencyList.cpp" line="702"/>
         <source>Frequency</source>
         <translation>Frekvencia</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="591"/>
-        <location filename="../FrequencyList.cpp" line="697"/>
+        <location filename="../FrequencyList.cpp" line="597"/>
+        <location filename="../FrequencyList.cpp" line="703"/>
         <source>Frequency (MHz)</source>
         <translation>Frekvencia (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="614"/>
-        <location filename="../FrequencyList.cpp" line="698"/>
+        <location filename="../FrequencyList.cpp" line="620"/>
+        <location filename="../FrequencyList.cpp" line="704"/>
         <source>Mode Frequency</source>
         <translation>Üzemmód frekvencia</translation>
     </message>
@@ -5358,7 +5358,7 @@ Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
         <translation>Egyéni beállítások</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="50"/>
+        <location filename="../Bands.cpp" line="51"/>
         <source>OOB</source>
         <translation>OOB</translation>
     </message>
