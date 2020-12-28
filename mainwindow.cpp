@@ -7047,7 +7047,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
             {
               m_lastDialFreq = m_freqNominal;
               m_secBandChanged=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
-              if((s.frequency () < 30000000u || (s.frequency () > 30000000u && !m_config.tx_QSY_allowed ()))  && m_mode.left(4)!="WSPR") {
+//              if((s.frequency () < 30000000u || (s.frequency () > 30000000u && !m_config.tx_QSY_allowed ()))  && m_mode.left(4)!="WSPR") {
                 // Write freq changes to ALL.TXT.
                 QFile f2 {m_dataDir.absoluteFilePath (m_jtdxtime->currentDateTimeUtc2().toString("yyyyMM_")+"ALL.TXT")};
                 if (f2.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
@@ -7067,7 +7067,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
                                                , tr ("Cannot open \"%1\" for append: %2")
                                                .arg (f2.fileName ()).arg (f2.errorString ()));
                 }
-              }
+//              }
 
               if (m_config.spot_to_psk_reporter ()) {
                 pskSetLocal ();
