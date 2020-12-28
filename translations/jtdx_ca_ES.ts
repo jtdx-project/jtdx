@@ -4,35 +4,35 @@
 <context>
     <name>Bands</name>
     <message>
-        <location filename="../Bands.cpp" line="135"/>
+        <location filename="../Bands.cpp" line="136"/>
         <source>Band name</source>
         <translatorcomment>Nom de la banda</translatorcomment>
         <translation>Nom de la banda</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="136"/>
+        <location filename="../Bands.cpp" line="137"/>
         <source>Lower frequency limit</source>
         <translatorcomment>Límit inferior de freqüència</translatorcomment>
         <translation>Límit inferior de freqüència</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="137"/>
+        <location filename="../Bands.cpp" line="138"/>
         <source>Upper frequency limit</source>
         <translatorcomment>Límit superior de freqüència</translatorcomment>
         <translation>Límit superior de freqüència</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="199"/>
+        <location filename="../Bands.cpp" line="200"/>
         <source>Band</source>
         <translation>Banda</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="200"/>
+        <location filename="../Bands.cpp" line="201"/>
         <source>Lower Limit</source>
         <translation>Límit inferior</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="201"/>
+        <location filename="../Bands.cpp" line="202"/>
         <source>Upper Limit</source>
         <translation>Límit superior</translation>
     </message>
@@ -2361,32 +2361,32 @@ Error: %2 - %3</translation>
 <context>
     <name>FrequencyList_v2::impl</name>
     <message>
-        <location filename="../FrequencyList.cpp" line="507"/>
-        <location filename="../FrequencyList.cpp" line="694"/>
+        <location filename="../FrequencyList.cpp" line="513"/>
+        <location filename="../FrequencyList.cpp" line="700"/>
         <source>IARU Region</source>
         <translation>Regió IARU</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="528"/>
-        <location filename="../FrequencyList.cpp" line="695"/>
+        <location filename="../FrequencyList.cpp" line="534"/>
+        <location filename="../FrequencyList.cpp" line="701"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="560"/>
-        <location filename="../FrequencyList.cpp" line="696"/>
+        <location filename="../FrequencyList.cpp" line="566"/>
+        <location filename="../FrequencyList.cpp" line="702"/>
         <source>Frequency</source>
         <translation>Freqüència</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="591"/>
-        <location filename="../FrequencyList.cpp" line="697"/>
+        <location filename="../FrequencyList.cpp" line="597"/>
+        <location filename="../FrequencyList.cpp" line="703"/>
         <source>Frequency (MHz)</source>
         <translation>Freqüència (MHz)</translation>
     </message>
     <message>
-        <location filename="../FrequencyList.cpp" line="614"/>
-        <location filename="../FrequencyList.cpp" line="698"/>
+        <location filename="../FrequencyList.cpp" line="620"/>
+        <location filename="../FrequencyList.cpp" line="704"/>
         <source>Mode Frequency</source>
         <translation>Mode de Freqüència</translation>
     </message>
@@ -5363,7 +5363,7 @@ Verifica el nom del directori correcte.</translation>
         <translation>Definit per l&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../Bands.cpp" line="50"/>
+        <location filename="../Bands.cpp" line="51"/>
         <source>OOB</source>
         <translatorcomment>OOB?????</translatorcomment>
         <translation>OOB</translation>

@@ -64,7 +64,8 @@ namespace
       {7038600, Modes::WSPR, IARURegions::ALL,true},
       {7047500, Modes::FT4, IARURegions::ALL,true}, // provisional - moved
       {7056000, Modes::FT8, IARURegions::ALL,false},
-      {7071000, Modes::FT8, IARURegions::ALL,false}, {7074000, Modes::FT8, IARURegions::ALL,true},
+      {7071000, Modes::FT8, IARURegions::ALL,false},
+      {7074000, Modes::FT8, IARURegions::ALL,true},
       {7076000, Modes::JT65, IARURegions::ALL,true},
       {7078000, Modes::JT9, IARURegions::ALL,true},
       {7079000, Modes::T10, IARURegions::ALL,true},
@@ -72,7 +73,8 @@ namespace
                                                // up 500Hz to clear
                                                // W1AW code practice QRG
       {10131000, Modes::FT8, IARURegions::ALL,false},
-      {10133000, Modes::FT8, IARURegions::ALL,false}, {10136000, Modes::FT8, IARURegions::ALL,true},
+      {10133000, Modes::FT8, IARURegions::ALL,false},
+      {10136000, Modes::FT8, IARURegions::ALL,true},
       {10138000, Modes::JT65, IARURegions::ALL,true},
       {10138700, Modes::WSPR, IARURegions::ALL,true},
       {10140000, Modes::JT9, IARURegions::ALL,true},
@@ -81,7 +83,8 @@ namespace
       {10143000, Modes::FT8, IARURegions::ALL,false},
 
       {14095600, Modes::WSPR, IARURegions::ALL,true},
-      {14071000, Modes::FT8, IARURegions::ALL,false}, {14074000, Modes::FT8, IARURegions::ALL,true},
+      {14071000, Modes::FT8, IARURegions::ALL,false},
+      {14074000, Modes::FT8, IARURegions::ALL,true},
       {14076000, Modes::JT65, IARURegions::ALL,true},
       {14078000, Modes::JT9, IARURegions::ALL,true},
       {14079000, Modes::T10, IARURegions::ALL,true},
@@ -120,6 +123,8 @@ namespace
       {28124600, Modes::WSPR, IARURegions::ALL,true},
       {28180000, Modes::FT4, IARURegions::ALL,true},
 
+      {40680000, Modes::FT8, IARURegions::R1,true},
+
       {50276000, Modes::JT65, IARURegions::R2,true},
       {50276000, Modes::JT65, IARURegions::R3,true},
       {50293000, Modes::WSPR, IARURegions::R2,true},
@@ -127,7 +132,8 @@ namespace
       {50310000, Modes::JT65, IARURegions::ALL,true},
       {50312000, Modes::JT9, IARURegions::ALL,true},
       {50312500, Modes::T10, IARURegions::ALL,true},
-      {50310000, Modes::FT8, IARURegions::ALL,false}, {50313000, Modes::FT8, IARURegions::ALL,true},
+      {50310000, Modes::FT8, IARURegions::ALL,false},
+      {50313000, Modes::FT8, IARURegions::ALL,true},
       {50318000, Modes::FT4, IARURegions::ALL,true}, // provisional
       {50323000, Modes::FT8, IARURegions::ALL,true},
       
