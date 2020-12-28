@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200207
-
 #ifndef CONFIGURATION_HPP_
 #define CONFIGURATION_HPP_
 
@@ -166,6 +164,7 @@ public:
   bool monitor_last_used () const;
   bool log_as_RTTY () const;
   bool report_in_comments () const;
+  bool distance_in_comments () const;
   bool prompt_to_log () const;
   bool autolog () const;
   bool insert_blank () const;
@@ -178,6 +177,7 @@ public:
   bool RR73Marker () const;
   bool redMarker () const;
   bool blueMarker () const;
+  bool hidehintMarker () const;
   bool txtColor () const;
   bool workedStriked () const;
   bool workedUnderlined () const;

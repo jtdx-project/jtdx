@@ -85,6 +85,7 @@ private:
     bool showcq73_;
     bool redMarker_;
     bool blueMarker_;
+    bool hidehintMarker_;
     bool hide_TX_messages_;
     QsoHistory::Status mystatus_ = QsoHistory::NONE;
     unsigned max_r_time = 0;

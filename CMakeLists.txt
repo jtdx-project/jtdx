@@ -1,4 +1,8 @@
+if (WIN32)
+cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
+else ()
 cmake_minimum_required (VERSION 3.9 FATAL_ERROR)
+endif ()
 
 if (APPLE)
   #

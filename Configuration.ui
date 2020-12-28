@@ -1695,6 +1695,29 @@ radio interface behave as expected.</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="1" column="1">
+           <widget class="QComboBox" name="sound_input_combo_box">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>Select the audio CODEC to use for receiving.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="sound_input_label">
+            <property name="text">
+             <string>&amp;Input:</string>
+            </property>
+            <property name="buddy">
+             <cstring>sound_input_combo_box</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
            <widget class="QComboBox" name="sound_output_combo_box">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1711,30 +1734,7 @@ transmitting periods.</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="sound_input_combo_box">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>1</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="toolTip">
-             <string>Select the audio CODEC to use for receiving.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="sound_input_label">
-            <property name="text">
-             <string>&amp;Input:</string>
-            </property>
-            <property name="buddy">
-             <cstring>sound_input_combo_box</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
+          <item row="1" column="2">
            <widget class="QComboBox" name="sound_input_channel_combo_box">
             <property name="toolTip">
              <string>Select the channel to use for receiving.</string>
@@ -1761,7 +1761,7 @@ transmitting periods.</string>
             </item>
            </widget>
           </item>
-          <item row="1" column="2">
+          <item row="2" column="2">
            <widget class="QComboBox" name="sound_output_channel_combo_box">
             <property name="toolTip">
              <string>Select the audio channel used for transmission.
@@ -1791,13 +1791,23 @@ both here.</string>
             </item>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="sound_output_label">
             <property name="text">
              <string>Ou&amp;tput:</string>
             </property>
             <property name="buddy">
              <cstring>sound_output_combo_box</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="refresh_push_button">
+            <property name="toolTip">
+             <string>refresh audio device list</string>
+            </property>
+            <property name="text">
+             <string>Refresh</string>
             </property>
            </widget>
           </item>
@@ -2356,6 +2366,16 @@ QListView::item:hover {
                 <property name="verticalSpacing">
                  <number>3</number>
                 </property>
+                <item row="2" column="0">
+                 <widget class="QCheckBox" name="log_as_RTTY_check_box">
+                  <property name="toolTip">
+                   <string>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</string>
+                  </property>
+                  <property name="text">
+                   <string>Con&amp;vert mode to RTTY</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="3" column="0">
                  <widget class="QCheckBox" name="report_in_comments_check_box">
                   <property name="toolTip">
@@ -2369,34 +2389,13 @@ comments field.</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
-                 <widget class="QCheckBox" name="clear_DX_check_box">
-                  <property name="toolTip">
-                   <string>Check this option to force the clearing of the DX Call
-and DX Grid fields when a 73 or free text message is sent.</string>
-                  </property>
-                  <property name="text">
-                   <string>Clear &amp;DX call and grid after logging</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
+                <item row="6" column="0">
                  <widget class="QCheckBox" name="clear_DX_exit_check_box">
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="text">
                    <string>Clear DX call and grid on exit</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QCheckBox" name="log_as_RTTY_check_box">
-                  <property name="toolTip">
-                   <string>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</string>
-                  </property>
-                  <property name="text">
-                   <string>Con&amp;vert mode to RTTY</string>
                   </property>
                  </widget>
                 </item>
@@ -2410,10 +2409,31 @@ and DX Grid fields when a 73 or free text message is sent.</string>
                   </property>
                  </widget>
                 </item>
+                <item row="5" column="0">
+                 <widget class="QCheckBox" name="clear_DX_check_box">
+                  <property name="toolTip">
+                   <string>Check this option to force the clearing of the DX Call
+and DX Grid fields when a 73 or free text message is sent.</string>
+                  </property>
+                  <property name="text">
+                   <string>Clear &amp;DX call and grid after logging</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="autolog_check_box">
                   <property name="text">
                    <string>Enable automatic logging of QSO</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QCheckBox" name="distance_in_comments_check_box">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Distance to comments</string>
                   </property>
                  </widget>
                 </item>
@@ -3611,6 +3631,16 @@ Right click for insert and delete options.</string>
             </widget>
            </item>
            <item row="0" column="6">
+            <widget class="QCheckBox" name="hideHint_check_box">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Hide hint char</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
             <spacer name="horizontalSpacer_19">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -7282,12 +7312,12 @@ soundcard changes</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="CAT_stop_bits_button_group"/>
-  <buttongroup name="split_mode_button_group"/>
-  <buttongroup name="TX_mode_button_group"/>
-  <buttongroup name="PTT_method_button_group"/>
   <buttongroup name="CAT_data_bits_button_group"/>
-  <buttongroup name="CAT_handshake_button_group"/>
+  <buttongroup name="TX_mode_button_group"/>
+  <buttongroup name="CAT_stop_bits_button_group"/>
   <buttongroup name="TX_audio_source_button_group"/>
+  <buttongroup name="split_mode_button_group"/>
+  <buttongroup name="CAT_handshake_button_group"/>
+  <buttongroup name="PTT_method_button_group"/>
  </buttongroups>
 </ui>

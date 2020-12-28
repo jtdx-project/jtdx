@@ -67,6 +67,7 @@ void DisplayText::setConfiguration(Configuration const * config)
   showcq73_ = config->showcq73();
   redMarker_ = config->redMarker();
   blueMarker_ = config->blueMarker();
+  hidehintMarker_ = config->hidehintMarker();
   hide_TX_messages_ = config->hide_TX_messages();
   color_MyCall_ = config->color_MyCall().name();
   color_CQ_ = config->color_CQ().name();
@@ -407,7 +408,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
         if (!lotw.isEmpty ()) {
             priority = 1;
-            if (txtColor == color_CQ_) servisColor = txtColor;
         }
         if (displayPotential_ && std_type == 3) {
             txtColor = color_StandardCall_;
@@ -837,7 +837,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         show_line = false;
     } else if (show_line && showcq73_ && std_type != 1 && std_type != 2 && !decodedText->isFin() && qAbs(rx_frq-decodedText->frequencyOffset()) >10 && !jt65bc) {
         show_line = false;
-    } else if (decodedText->isHint()) {
+    } else if (!hidehintMarker_ && decodedText->isHint()) {
         if(lotw.isEmpty ())
             servis = "*" + servis.mid(1); // hinted decode
         else

@@ -4400,7 +4400,7 @@ list. The list can be maintained in Settings (F2).</string>
                       <item>
                        <widget class="QCheckBox" name="cbUploadWSPR_Spots">
                         <property name="toolTip">
-                         <string>Upload decoded messages to WPRnet.org.</string>
+                         <string>Upload decoded messages to WSPRnet.org.</string>
                         </property>
                         <property name="text">
                          <string>Upload spots</string>

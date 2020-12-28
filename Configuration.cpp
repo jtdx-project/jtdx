@@ -435,6 +435,7 @@ private:
   Q_SLOT void on_force_DTR_combo_box_currentIndexChanged (int);
   Q_SLOT void on_force_RTS_combo_box_currentIndexChanged (int);
   Q_SLOT void on_rig_combo_box_currentIndexChanged (int);
+  Q_SLOT void on_refresh_push_button_clicked ();
   Q_SLOT void on_sound_input_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_sound_output_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_add_macro_push_button_clicked (bool = false);
@@ -524,11 +525,11 @@ private:
   Q_SLOT void on_hhComboBox_5_currentIndexChanged (int);
   Q_SLOT void on_mmComboBox_5_currentIndexChanged (int);
   
-  Q_SLOT void on_bandComboBox_1_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_2_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_3_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_4_currentIndexChanged (QString const&);
-  Q_SLOT void on_bandComboBox_5_currentIndexChanged (QString const&);
+  Q_SLOT void on_bandComboBox_1_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_2_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_3_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_4_currentTextChanged (QString const&);
+  Q_SLOT void on_bandComboBox_5_currentTextChanged (QString const&);
 
   // typenames used as arguments must match registered type names :(
   Q_SIGNAL void start_transceiver (unsigned seqeunce_number) const;
@@ -713,6 +714,7 @@ private:
   bool monitor_last_used_;
   bool log_as_RTTY_;
   bool report_in_comments_;
+  bool distance_in_comments_;
   bool prompt_to_log_;
   bool autolog_;
   bool insert_blank_;
@@ -725,6 +727,7 @@ private:
   bool RR73Marker_;
   bool redMarker_;
   bool blueMarker_;
+  bool hidehintMarker_;
   bool txtColor_;
   bool workedColor_;
   bool workedStriked_;
@@ -960,6 +963,7 @@ QString Configuration::sched_mm_5 () const {return m_->sched_mm_5_;}
 QString Configuration::sched_band_5 () const {return m_->sched_band_5_;}
 bool Configuration::sched_mix_5 () const {return m_->sched_mix_5_;}
 bool Configuration::report_in_comments () const {return m_->report_in_comments_;}
+bool Configuration::distance_in_comments () const {return m_->distance_in_comments_;}
 bool Configuration::prompt_to_log () const {return m_->prompt_to_log_;}
 bool Configuration::autolog () const {return m_->autolog_;}
 bool Configuration::insert_blank () const {return m_->insert_blank_;}
@@ -972,6 +976,7 @@ bool Configuration::otherMessagesMarker () const {return m_->otherMessagesMarker
 bool Configuration::RR73Marker () const {return m_->RR73Marker_;}
 bool Configuration::redMarker () const {return m_->redMarker_;}
 bool Configuration::blueMarker () const {return m_->blueMarker_;}
+bool Configuration::hidehintMarker () const {return m_->hidehintMarker_;}
 bool Configuration::txtColor () const {return m_->txtColor_;}
 bool Configuration::workedColor () const {return m_->workedColor_;}
 bool Configuration::workedStriked () const {return m_->workedStriked_;}
@@ -1403,12 +1408,6 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   ui_->split_mode_button_group->setId (ui_->split_emulate_radio_button, TransceiverFactory::split_mode_emulate);
 
   //
-  // setup PTT port combo box drop down content
-  //
-  fill_port_combo_box (ui_->PTT_port_combo_box);
-  ui_->PTT_port_combo_box->addItem ("CAT");
-
-  //
   // setup hooks to keep audio channels aligned with devices
   //
   {
@@ -1479,7 +1478,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
 
 
   // Schedulers
-  
+
   ui_->bandComboBox_1->setModel(&next_frequencies_);
   ui_->bandComboBox_1->setModelColumn(FrequencyList_v2::mode_frequency_mhz_column);
   ui_->bandComboBox_2->setModel(&next_frequencies_);
@@ -1546,6 +1545,12 @@ Configuration::impl::~impl ()
 
 void Configuration::impl::initialize_models ()
 {
+  //
+  // setup PTT port combo box drop down content
+  //
+  fill_port_combo_box (ui_->PTT_port_combo_box);
+  ui_->PTT_port_combo_box->addItem ("CAT");
+
   auto pal = ui_->callsign_line_edit->palette ();
   if (my_callsign_.isEmpty ())
     {
@@ -1828,31 +1833,33 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
     ui_->eqsl_check_box->setEnabled (true);
     ui_->eqsl_check_box->setChecked (send_to_eqsl_);
   }
+  next_frequencies_.frequency_list (frequencies_.frequency_list ());
   ui_->UseSched_check_box->setChecked (usesched_);
   ui_->hhComboBox_1->setCurrentText (sched_hh_1_);
   ui_->mmComboBox_1->setCurrentText (sched_mm_1_);
-  ui_->bandComboBox_1->setCurrentText (sched_band_1_);
+  if (sched_band_1_.isEmpty()) ui_->bandComboBox_1->setCurrentIndex (-1); else ui_->bandComboBox_1->setCurrentText (sched_band_1_);
   ui_->band_mix_check_box_1->setChecked (sched_mix_1_);
   ui_->hhComboBox_2->setCurrentText (sched_hh_2_);
   ui_->mmComboBox_2->setCurrentText (sched_mm_2_);
-  ui_->bandComboBox_2->setCurrentText (sched_band_2_);
+  if (sched_band_2_.isEmpty()) ui_->bandComboBox_2->setCurrentIndex (-1); else ui_->bandComboBox_2->setCurrentText (sched_band_2_);
   ui_->band_mix_check_box_2->setChecked (sched_mix_2_);
   ui_->hhComboBox_3->setCurrentText (sched_hh_3_);
   ui_->mmComboBox_3->setCurrentText (sched_mm_3_);
-  ui_->bandComboBox_3->setCurrentText (sched_band_3_);
+  if (sched_band_3_.isEmpty()) ui_->bandComboBox_3->setCurrentIndex (-1); else ui_->bandComboBox_3->setCurrentText (sched_band_3_);
   ui_->band_mix_check_box_3->setChecked (sched_mix_3_);
   ui_->hhComboBox_4->setCurrentText (sched_hh_4_);
   ui_->mmComboBox_4->setCurrentText (sched_mm_4_);
-  ui_->bandComboBox_4->setCurrentText (sched_band_4_);
+  if (sched_band_4_.isEmpty()) ui_->bandComboBox_4->setCurrentIndex (-1); else ui_->bandComboBox_4->setCurrentText (sched_band_4_);
   ui_->band_mix_check_box_4->setChecked (sched_mix_4_);
   ui_->hhComboBox_5->setCurrentText (sched_hh_5_);
   ui_->mmComboBox_5->setCurrentText (sched_mm_5_);
-  ui_->bandComboBox_5->setCurrentText (sched_band_5_);
+  if (sched_band_5_.isEmpty()) ui_->bandComboBox_5->setCurrentIndex (-1); else ui_->bandComboBox_5->setCurrentText (sched_band_5_);
   ui_->band_mix_check_box_5->setChecked (sched_mix_5_);
   ui_->monitor_off_check_box->setChecked (monitor_off_at_startup_);
   ui_->monitor_last_used_check_box->setChecked (monitor_last_used_);
   ui_->log_as_RTTY_check_box->setChecked (log_as_RTTY_);
   ui_->report_in_comments_check_box->setChecked (report_in_comments_);
+  ui_->distance_in_comments_check_box->setChecked (distance_in_comments_);
   ui_->prompt_to_log_check_box->setChecked (prompt_to_log_);
   ui_->autolog_check_box->setChecked (autolog_);
   ui_->insert_blank_check_box->setChecked (insert_blank_);
@@ -1865,6 +1872,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->RR73_marker_check_box->setChecked (RR73Marker_);
   ui_->redMarker_check_box->setChecked (redMarker_);
   ui_->blueMarker_check_box->setChecked (redMarker_ && blueMarker_);
+  ui_->hideHint_check_box->setChecked (hidehintMarker_);
   ui_->txtColor_check_box->setChecked (txtColor_);
   ui_->workedColor_check_box->setChecked (workedColor_ && (newCQZ_ || newITUZ_ || newDXCC_ || newCall_ || newPx_ || newGrid_));
   ui_->workedStriked_check_box->setChecked (!workedUnderlined_ && workedStriked_ && (newCQZ_ || newITUZ_ || newDXCC_ || newCall_ || newPx_ || newGrid_));
@@ -1971,7 +1979,6 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
     }
   ui_->region_combo_box->setCurrentIndex (region_);
   next_macros_.setStringList (macros_.stringList ());
-  next_frequencies_.frequency_list (frequencies_.frequency_list ());
   next_stations_.station_list (stations_.station_list ());
 
   set_rig_invariants ();
@@ -2228,23 +2235,23 @@ void Configuration::impl::read_settings ()
 
 //check scheduler settings for consistency
   if(sched_hh_1_.isEmpty ()) { sched_mm_1_=""; ui_->mmComboBox_1->setEnabled(false); }
-  if(sched_mm_1_.isEmpty ()) { sched_band_1_=""; ui_->bandComboBox_1->setEnabled(false); }
+  if(sched_mm_1_.isEmpty ()) { sched_band_1_=""; ui_->bandComboBox_1->setCurrentIndex(-1); ui_->bandComboBox_1->setEnabled(false); }
   if(sched_band_1_.isEmpty ()) { ui_->band_mix_check_box_1->setEnabled(false); ui_->band_mix_check_box_1->setChecked (false); sched_hh_2_=""; ui_->hhComboBox_2->setEnabled(false); }
 
   if(sched_hh_2_.isEmpty ()) { sched_mm_2_=""; ui_->mmComboBox_2->setEnabled(false); }
-  if(sched_mm_2_.isEmpty ()) { sched_band_2_=""; ui_->bandComboBox_2->setEnabled(false); }
+  if(sched_mm_2_.isEmpty ()) { sched_band_2_=""; ui_->bandComboBox_2->setCurrentIndex(-1); ui_->bandComboBox_2->setEnabled(false); }
   if(sched_band_2_.isEmpty ()) { ui_->band_mix_check_box_2->setEnabled(false); ui_->band_mix_check_box_2->setChecked (false); sched_hh_3_=""; ui_->hhComboBox_3->setEnabled(false); }
 
   if(sched_hh_3_.isEmpty ()) { sched_mm_3_=""; ui_->mmComboBox_3->setEnabled(false); }
-  if(sched_mm_3_.isEmpty ()) { sched_band_3_=""; ui_->bandComboBox_3->setEnabled(false); }
+  if(sched_mm_3_.isEmpty ()) { sched_band_3_=""; ui_->bandComboBox_3->setCurrentIndex(-1); ui_->bandComboBox_3->setEnabled(false); }
   if(sched_band_3_.isEmpty ()) { ui_->band_mix_check_box_3->setEnabled(false); ui_->band_mix_check_box_3->setChecked (false); sched_hh_4_=""; ui_->hhComboBox_4->setEnabled(false); }
 
   if(sched_hh_4_.isEmpty ()) { sched_mm_4_=""; ui_->mmComboBox_4->setEnabled(false); }
-  if(sched_mm_4_.isEmpty ()) { sched_band_4_=""; ui_->bandComboBox_4->setEnabled(false); }
+  if(sched_mm_4_.isEmpty ()) { sched_band_4_=""; ui_->bandComboBox_4->setCurrentIndex(-1); ui_->bandComboBox_4->setEnabled(false); }
   if(sched_band_4_.isEmpty ()) { ui_->band_mix_check_box_4->setEnabled(false); ui_->band_mix_check_box_4->setChecked (false); sched_hh_5_=""; ui_->hhComboBox_5->setEnabled(false); }
 
   if(sched_hh_5_.isEmpty ()) { sched_mm_5_=""; ui_->mmComboBox_5->setEnabled(false); }
-  if(sched_mm_5_.isEmpty ()) { sched_band_5_=""; ui_->bandComboBox_5->setEnabled(false); }
+  if(sched_mm_5_.isEmpty ()) { sched_band_5_=""; ui_->bandComboBox_5->setCurrentIndex(-1); ui_->bandComboBox_5->setEnabled(false); }
   if(sched_band_5_.isEmpty ()) { ui_->band_mix_check_box_5->setEnabled(false); ui_->band_mix_check_box_5->setChecked (false); }
 
   if(settings_->value ("After73").toString()=="false" || settings_->value ("After73").toString()=="true")
@@ -2280,6 +2287,7 @@ void Configuration::impl::read_settings ()
 
   log_as_RTTY_ = settings_->value ("toRTTY", false).toBool ();
   report_in_comments_ = settings_->value("dBtoComments", false).toBool ();
+  distance_in_comments_ = settings_->value("distanceToComments", false).toBool ();
   rig_params_.rig_name = settings_->value ("Rig", TransceiverFactory::basic_transceiver_name_).toString ();
   rig_is_dummy_ = TransceiverFactory::basic_transceiver_name_ == rig_params_.rig_name;
   rig_params_.network_port = settings_->value ("CATNetworkPort").toString ();
@@ -2347,6 +2355,7 @@ void Configuration::impl::read_settings ()
   on_RR73_marker_check_box_clicked(RR73Marker_);
   redMarker_ = settings_->value ("redMarker", true).toBool ();
   blueMarker_ = settings_->value ("blueMarker", false).toBool ();
+  hidehintMarker_ = settings_->value ("hidehintMarker", false).toBool ();
   clear_DX_ = settings_->value ("ClearCallGrid", false).toBool ();
   clear_DX_exit_ = settings_->value ("ClearCallGridExit", false).toBool ();
   miles_ = settings_->value ("Miles", false).toBool ();
@@ -2543,6 +2552,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("stations", QVariant::fromValue (stations_.station_list ()));
   settings_->setValue ("toRTTY", log_as_RTTY_);
   settings_->setValue ("dBtoComments", report_in_comments_);
+  settings_->setValue ("distanceToComments", distance_in_comments_);
   settings_->setValue ("Rig", rig_params_.rig_name);
   settings_->setValue ("CATNetworkPort", rig_params_.network_port);
   settings_->setValue ("CATUSBPort", rig_params_.usb_port);
@@ -2564,6 +2574,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("73RR73Marker", RR73Marker_);
   settings_->setValue ("redMarker", redMarker_);
   settings_->setValue ("blueMarker", blueMarker_);
+  settings_->setValue ("hidehintMarker", hidehintMarker_);
   settings_->setValue ("txtColor", txtColor_);
   settings_->setValue ("workedColor", workedColor_);
   settings_->setValue ("workedStriked", workedStriked_);
@@ -2709,13 +2720,13 @@ void Configuration::impl::set_rig_invariants ()
       ui_->test_CAT_push_button->setEnabled (true);
       ui_->test_PTT_push_button->setEnabled (false);
       ui_->TX_audio_source_group_box->setEnabled (transceiver_factory_.has_CAT_PTT_mic_data (rig) && TransceiverFactory::PTT_method_CAT == ptt_method);
+      if (port_type == TransceiverFactory::Capabilities::serial) fill_port_combo_box (ui_->CAT_port_combo_box);
       if (port_type != last_port_type_)
         {
           last_port_type_ = port_type;
           switch (port_type)
             {
             case TransceiverFactory::Capabilities::serial:
-              fill_port_combo_box (ui_->CAT_port_combo_box);
               ui_->CAT_port_combo_box->setCurrentText (rig_params_.serial_port);
               if (ui_->CAT_port_combo_box->currentText ().isEmpty () && ui_->CAT_port_combo_box->count ())
                 {
@@ -3086,6 +3097,7 @@ void Configuration::impl::accept ()
   type_2_msg_gen_ = static_cast<Type2MsgGen> (ui_->type_2_msg_gen_combo_box->currentIndex ());
   log_as_RTTY_ = ui_->log_as_RTTY_check_box->isChecked ();
   report_in_comments_ = ui_->report_in_comments_check_box->isChecked ();
+  distance_in_comments_ = ui_->distance_in_comments_check_box->isChecked ();
   prompt_to_log_ = ui_->prompt_to_log_check_box->isChecked ();
   autolog_ = ui_->autolog_check_box->isChecked ();
   insert_blank_ = ui_->insert_blank_check_box->isChecked ();
@@ -3099,6 +3111,7 @@ void Configuration::impl::accept ()
   RR73Marker_ = ui_->RR73_marker_check_box->isChecked ();
   redMarker_ = ui_->redMarker_check_box->isChecked ();
   blueMarker_ = ui_->blueMarker_check_box->isChecked ();
+  hidehintMarker_ = ui_->hideHint_check_box->isChecked ();
   txtColor_ = ui_->txtColor_check_box->isChecked ();
   workedColor_ = ui_->workedColor_check_box->isChecked ();
   workedStriked_ = ui_->workedStriked_check_box->isChecked ();
@@ -4635,6 +4648,24 @@ void Configuration::impl::on_callsigns_line_edit_textChanged (QString const& tex
   ui_->enableCallsignFilter_check_box->setEnabled(!text.isEmpty ());
 }
 
+void Configuration::impl::on_refresh_push_button_clicked ()
+{
+  //
+  // load combo boxes with audio setup choices
+  //
+  default_audio_input_device_selected_ = load_audio_devices (QAudio::AudioInput, ui_->sound_input_combo_box, &audio_input_device_);
+  default_audio_output_device_selected_ = load_audio_devices (QAudio::AudioOutput, ui_->sound_output_combo_box, &audio_output_device_);
+
+  update_audio_channels (ui_->sound_input_combo_box, ui_->sound_input_combo_box->currentIndex (), ui_->sound_input_channel_combo_box, false);
+  update_audio_channels (ui_->sound_output_combo_box, ui_->sound_output_combo_box->currentIndex (), ui_->sound_output_channel_combo_box, true);
+
+  ui_->sound_input_channel_combo_box->setCurrentIndex (audio_input_channel_);
+  ui_->sound_output_channel_combo_box->setCurrentIndex (audio_output_channel_);
+
+  restart_sound_input_device_ = false;
+  restart_sound_output_device_ = false;
+}
+
 void Configuration::impl::on_sound_input_combo_box_currentTextChanged (QString const& text)
 {
   default_audio_input_device_selected_ = QAudioDeviceInfo::defaultInputDevice ().deviceName () == text;
@@ -4671,7 +4702,7 @@ void Configuration::impl::on_mmComboBox_1_currentIndexChanged(int index)
 //  printf("mm1 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_1_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_1_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_1->setCurrentText(text);
@@ -4750,7 +4781,7 @@ void Configuration::impl::on_mmComboBox_2_currentIndexChanged(int index)
 //  printf("mm2 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_2_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_2_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_2->setCurrentText(text);
@@ -4821,7 +4852,7 @@ void Configuration::impl::on_mmComboBox_3_currentIndexChanged(int index)
 //  printf("mm3 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_3_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_3_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_3->setCurrentText(text);
@@ -4892,7 +4923,7 @@ void Configuration::impl::on_mmComboBox_4_currentIndexChanged(int index)
 //  printf("mm4 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_4_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_4_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_4->setCurrentText(text);
@@ -4963,7 +4994,7 @@ void Configuration::impl::on_mmComboBox_5_currentIndexChanged(int index)
 //  printf("mm5 changed %d\n",index);
 }
 
-void Configuration::impl::on_bandComboBox_5_currentIndexChanged(QString const& text)
+void Configuration::impl::on_bandComboBox_5_currentTextChanged(QString const& text)
 {
   if (!text.isEmpty ()){
       ui_->bandComboBox_5->setCurrentText(text);
@@ -5415,14 +5446,14 @@ void Configuration::impl::set_cached_mode ()
 void Configuration::impl::transceiver_frequency (Frequency f)
 {
   cached_rig_state_.online (true); // we want the rig online
+  bool mode_change = ((data_mode_ == data_mode_USB && cached_rig_state_.mode() != Transceiver::USB) || (data_mode_ == data_mode_data && cached_rig_state_.mode() != Transceiver::DIG_U));
   set_cached_mode ();
-  
   // apply any offset & calibration
   // we store the offset here for use in feedback from the rig, we
   // cannot absolutely determine if the offset should apply but by
   // simply picking an offset when the Rx frequency is set and
   // sticking to it we get sane behaviour
-  if (current_offset_ != stations_.offset (f) || cached_rig_state_.frequency() != apply_calibration (f + current_offset_))
+  if (current_offset_ != stations_.offset (f) || cached_rig_state_.frequency() != apply_calibration (f + current_offset_) || mode_change)
   {
     current_offset_ = stations_.offset (f);
     cached_rig_state_.frequency (apply_calibration (f + current_offset_));
