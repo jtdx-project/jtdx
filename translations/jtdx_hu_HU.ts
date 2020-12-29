@@ -3087,7 +3087,7 @@ Hiba: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson ide a bal egérgombbal a hívójel Dx_jelentésként való elküldéséhez a dxsummit.fi weboldalra. (A Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülnél). Kattintson ide a jobb egérgombbal az adott hívójel üzeneteinek elrejtése&apos; szűrő bekapcsolásához..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson ide a bal egérgombbal a hívójel Dx_jelentésként való elküldéséhez a dxsummit.fi weboldalra. (A Dx_jelentés küldést engedélyezni kell a Beállítások, Riport fülnél). Kattintson ide a jobb egérgombbal az adott hívójel üzeneteinek elrejtése&apos; szűrő bekapcsolásához..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1108"/>
@@ -7049,7 +7049,7 @@ egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation type="unfinished">A program elküldheti az állomás adatait és a dekódolt adatokat,
+        <translation>A program elküldheti az állomás adatait és a dekódolt adatokat,
  mint Dx jelentést a http://pskreporter.info weboldalra.
 Ezek az adatok a terjedés és a rendszer lehetőségeinek elemzését segítik.</translation>
     </message>
@@ -7166,12 +7166,12 @@ Ezek az adatok a terjedés és a rendszer lehetőségeinek elemzését segítik.
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Hint jel elrejtése</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Hint jel elrejtése</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7314,22 +7314,22 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio eszköz lista frissítése</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Frissítés</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Távolság beillesztése a megjegyzésekhez</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Távolság beillesztése a megjegyzésekhez</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
