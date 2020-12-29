@@ -5907,7 +5907,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation>Selecciona la pestanya per a canviar els paràmetres de configuració.</translation>
+        <translation>Selecciona la pestanya per a canviar els paràmetres de la configuració.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -6225,12 +6225,12 @@ període tranquil quan es realitza la descodificació.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on/off rig power when supported in  Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sol·licita que s&apos;encengui o apagui la potència del equip quan s&apos;admeti a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sol·licita que s&apos;encengui o s&apos;apagui l&apos;equip quan s&apos;admeti a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>Rig power</source>
-        <translation>Potència de l&apos;equip</translation>
+        <translation>Alimentació de l&apos;equip</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
@@ -7179,12 +7179,12 @@ per avaluar la propagació i el rendiment del sistema MOLT RECOMANAT.</translati
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Amaga el caràcter de suggeriment al marcador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Amaga el caràcter de suggeriment</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5122"/>
@@ -7327,22 +7327,22 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="1807"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>actualitza la llista de dispositius d’àudio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1810"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualitza</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2433"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Afegeix la distància amb el corresponsal als comentaris del registre ADIF de QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2436"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Distància als comentaris</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2906"/>
