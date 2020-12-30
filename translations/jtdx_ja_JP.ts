@@ -6889,7 +6889,10 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3636"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ヒントデコード使用のマークを表示しない.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ヒントデコード使用のマークを表示しない.&#x3000;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;°：LoTWヒントデコード&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;*&#x3000;：単なるヒントデコード&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3639"/>
@@ -7054,17 +7057,17 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3510"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みDXCC グリッド コールサインのメッセージがストライキされます.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みDXCC グリッド コールサインのメッセージには取り消し線が引かれます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みコールサインのメッセージがストライキされます&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;交信済みコールサインのメッセージには取り消し線が引かれます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3516"/>
         <source>strike it</source>
-        <translation></translation>
+        <translation>取り消し線</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3523"/>
