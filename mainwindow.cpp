@@ -2365,6 +2365,7 @@ void MainWindow::displayDialFrequency ()
     ui->bandComboBox->setCurrentText (band_name);
     m_wideGraph->setRxBand (band_name);
     m_lastBand = band_name;
+    band_changed(dial_frequency);
   }
   // search working frequencies for one we are within 10kHz of (1 Mhz
   // of on VHF and up)
