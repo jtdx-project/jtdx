@@ -1507,7 +1507,7 @@ void MainWindow::readSettings()
   m_callToClipboard=m_settings->value("CallsignToClipboard",true).toBool();
   ui->actionCallsign_to_clipboard->setChecked(m_callToClipboard);
 
-  m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",true).toBool();
+  m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",false).toBool();
   ui->actionCrossband_160m_JA->setChecked(m_crossbandOptionEnabled);
 
   m_crossbandHLOptionEnabled=m_settings->value("Crossband160mHL",true).toBool();
@@ -2367,8 +2367,7 @@ void MainWindow::displayDialFrequency ()
     m_lastBand = band_name;
     band_changed(dial_frequency);
   }
-  // search working frequencies for one we are within 10kHz of (1 Mhz
-  // of on VHF and up)
+  // search working frequencies for one we are within 10kHz of (1 Mhz of on VHF and up)
   bool valid {false};
   quint64 min_offset {99999999};
   for (auto const& item : *m_config.frequencies ())
