@@ -2360,12 +2360,19 @@ void MainWindow::displayDialFrequency ()
         writeToALLTXT(text + m_lastBand + ", current band: " + band_name + ", dial_frequency: " + QString::number(dial_frequency) + ", TX VFO frequency: " + 
         QString::number(m_rigState.tx_frequency ()) + ", RX VFO frequency: " + QString::number(m_rigState.frequency ()));
       }
+      // Set the attenuation value if options are checked
+      QString curBand;
+      if (m_config.pwrBandTxMemory() && !m_tune) {
+          if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
+          else { curBand = ui->bandComboBox->currentText()+m_mode; }
+          if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); }
+          else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
+      }
       startup=false;
     }
     ui->bandComboBox->setCurrentText (band_name);
     m_wideGraph->setRxBand (band_name);
     m_lastBand = band_name;
-    band_changed(dial_frequency);
   }
   // search working frequencies for one we are within 10kHz of (1 Mhz of on VHF and up)
   bool valid {false};
