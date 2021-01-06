@@ -72,7 +72,7 @@ unsigned long readc2file(char *ptr_to_infile, float *idat, float *qdat,
     float *buffer;
     double dfreq;
     int i,ntrmin;
-    char *c2file[15];
+    char c2file[15];
     FILE* fp;
     
     fp = fopen(ptr_to_infile,"rb");
@@ -850,11 +850,13 @@ int main(int argc, char *argv[])
                 return 1;
         }
     }
-    
-    if( stackdecoder ) {
-        stack=calloc(stacksize,sizeof(struct snode));
+
+    if( access(data_dir, R_OK | W_OK)) {
+      fprintf(stderr, "Error: inaccessible data directory: '%s'\n", data_dir);
+      usage();
+      return EXIT_FAILURE;
     }
-    
+
     if( optind+1 > argc) {
         usage();
         return 1;
@@ -862,6 +864,9 @@ int main(int argc, char *argv[])
         ptr_to_infile=argv[optind];
     }
     
+    if( stackdecoder ) {
+        stack=calloc(stacksize,sizeof(struct snode));
+    }
     // setup metric table
     for(i=0; i<256; i++) {
         mettab[0][i]=round( 10*(metric_tables[2][i]-bias) );
