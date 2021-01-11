@@ -492,18 +492,7 @@ set (wsjt_FSRCS
   lib/subtract10.f90
   lib/subtract65.f90
   lib/ft4/subtractft4.f90
-  lib/subtractft81.f90
-  lib/subtractft82.f90
-  lib/subtractft83.f90
-  lib/subtractft84.f90
-  lib/subtractft85.f90
-  lib/subtractft86.f90
-  lib/subtractft87.f90
-  lib/subtractft88.f90
-  lib/subtractft89.f90
-  lib/subtractft810.f90
-  lib/subtractft811.f90
-  lib/subtractft812.f90
+  lib/ft8v2/subtractft8.f90
   lib/sun.f90
   lib/symspec.f90
   lib/symspec10.f90

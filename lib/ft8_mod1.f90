@@ -3,9 +3,7 @@ module ft8_mod1
   parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
   real*4 dd8(nps),dd8m(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
-  complex cw(nps),cfilt1(nps),cfilt2(nps),cfilt3(nps),cfilt4(nps),cfilt5(nps),cfilt6(nps),cfilt7(nps),   &
-          cfilt8(nps),cfilt9(nps),cfilt10(nps),cfilt11(nps),cfilt12(nps),csync(0:6,32),csynce(0:18,32),  &
-          csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32),ctwkn(11,32)
+  complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32),ctwkn(11,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
