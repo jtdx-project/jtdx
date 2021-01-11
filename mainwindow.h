@@ -207,6 +207,18 @@ private slots:
   void on_actionMT10_triggered();
   void on_actionMT11_triggered();
   void on_actionMT12_triggered();
+  void on_actionMT13_triggered();
+  void on_actionMT14_triggered();
+  void on_actionMT15_triggered();
+  void on_actionMT16_triggered();
+  void on_actionMT17_triggered();
+  void on_actionMT18_triggered();
+  void on_actionMT19_triggered();
+  void on_actionMT20_triggered();
+  void on_actionMT21_triggered();
+  void on_actionMT22_triggered();
+  void on_actionMT23_triggered();
+  void on_actionMT24_triggered();
   void on_actionAcceptUDPCQ_triggered();
   void on_actionAcceptUDPCQ73_triggered();
   void on_actionAcceptUDPAny_triggered();

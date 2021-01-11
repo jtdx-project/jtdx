@@ -4580,6 +4580,18 @@ list. The list can be maintained in Settings (F2).</string>
      <addaction name="actionMT10"/>
      <addaction name="actionMT11"/>
      <addaction name="actionMT12"/>
+     <addaction name="actionMT13"/>
+     <addaction name="actionMT14"/>
+     <addaction name="actionMT15"/>
+     <addaction name="actionMT16"/>
+     <addaction name="actionMT17"/>
+     <addaction name="actionMT18"/>
+     <addaction name="actionMT19"/>
+     <addaction name="actionMT20"/>
+     <addaction name="actionMT21"/>
+     <addaction name="actionMT22"/>
+     <addaction name="actionMT23"/>
+     <addaction name="actionMT24"/>
     </widget>
     <widget class="QMenu" name="menuJT9_decoding">
      <property name="title">
@@ -6035,6 +6047,102 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Hide telemetry messages</string>
+   </property>
+  </action>
+  <action name="actionMT13">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>13</string>
+   </property>
+  </action>
+  <action name="actionMT14">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>14</string>
+   </property>
+  </action>
+  <action name="actionMT15">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>15</string>
+   </property>
+  </action>
+  <action name="actionMT16">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>16</string>
+   </property>
+  </action>
+  <action name="actionMT17">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+  </action>
+  <action name="actionMT18">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>18</string>
+   </property>
+  </action>
+  <action name="actionMT19">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>19</string>
+   </property>
+  </action>
+  <action name="actionMT20">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="actionMT21">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>21</string>
+   </property>
+  </action>
+  <action name="actionMT22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>22</string>
+   </property>
+  </action>
+  <action name="actionMT23">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>23</string>
+   </property>
+  </action>
+  <action name="actionMT24">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>24</string>
    </property>
   </action>
  </widget>
