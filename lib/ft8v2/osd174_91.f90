@@ -55,7 +55,6 @@ if(first_osd) then ! fill the generator matrix
     gen(irow,irow)=1
   enddo
 first_osd=.false.
-!$OMP FLUSH (first_osd,gen)
 !$omp end critical(first_osd)
 endif
 

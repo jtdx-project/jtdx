@@ -152,7 +152,6 @@ contains
             dd8(1)=dd8m(1)
             do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
           endif
-!$OMP FLUSH (dd8)
 !$omp end critical(change_dd8)
         endif
 !$omp barrier
@@ -249,7 +248,6 @@ contains
                 calldt(200:2:-1)=calldt(200-1:1:-1); calldt(1)%call2=call2; calldt(1)%dt=xdt
                 nFT8decd=nFT8decd+1; sumxdt=sumxdt+xdt
               endif
-!$OMP FLUSH (ndecodes,allmessages,allsnrs,allfreq)
 !$omp end critical(update_arrays)
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
@@ -294,19 +292,16 @@ contains
     ncandthr=nint(float(ncandthr)/npass)
 !$omp critical(update_structures)
     ncandall=ncandall+ncandthr
-!$OMP FLUSH (ncandall)
     if(nmsgloc.gt.0) then
       if(nsec.eq.0 .or. nsec.eq.30) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
-!$OMP FLUSH (nmsg,even)
       endif
       if(nsec.eq.15 .or. nsec.eq.45) then
         odd(nmsg+1:nmsg+nmsgloc)%msg=oddtmp(1:nmsgloc)%msg; odd(nmsg+1:nmsg+nmsgloc)%freq=oddtmp(1:nmsgloc)%freq
         odd(nmsg+1:nmsg+nmsgloc)%dt=oddtmp(1:nmsgloc)%dt; odd(nmsg+1:nmsg+nmsgloc)%lstate=oddtmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
-!$OMP FLUSH (nmsg,odd)
       endif
     endif
 !$omp end critical(update_structures)
