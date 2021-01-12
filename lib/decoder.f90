@@ -165,7 +165,7 @@ subroutine multimode_decoder(params)
        else if(numcores.gt.20 .and. numcores.lt.30) then; numthreads=numcores-5
        else if(numcores.gt.29) then; numthreads=24
        endif
-     else if(nuserthr.gt.0 .and. nuserthr.le.12) then
+     else if(nuserthr.gt.0 .and. nuserthr.lt.25) then
 ! number of threads shall not exceed number of logical cores
        if(numcores.ge.nuserthr) then; numthreads=nuserthr; else; numthreads=numcores; endif
      endif
