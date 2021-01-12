@@ -142,18 +142,15 @@ contains
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
       if(ipass.eq.4 .or. ipass.eq.7) then
 !$omp barrier
-        if(nthr.eq.1) then
-!$omp critical(change_dd8)
-          if(ipass.eq.4) then
-            dd8m=dd8
-            do i=1,179999; dd8(i)=(dd8(i)+dd8(i+1))/2; enddo
-          endif
-          if(ipass.eq.7) then
-            dd8(1)=dd8m(1)
-            do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
-          endif
-!$omp end critical(change_dd8)
+!$omp single
+        if(ipass.eq.4) then
+          dd8m=dd8
+          do i=1,179999; dd8(i)=(dd8(i)+dd8(i+1))/2; enddo
+        else
+          dd8(1)=dd8m(1)
+          do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
         endif
+!$omp end single
 !$omp barrier
       endif
       !call timer('sync8   ',0)
