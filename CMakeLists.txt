@@ -733,14 +733,10 @@ find_program(ETAGS etags)
 #
 # Boost
 #
-set (Boost_NO_SYSTEM_PATHS TRUE)
-if (Boost_NO_SYSTEM_PATHS)
-  set (BOOST_ROOT ${PROJECT_SOURCE_DIR}/boost)
+if (WIN32)
+  set (Boost_USE_STATIC_LIBS OFF)
 endif ()
 find_package (Boost 1.63 REQUIRED)
-if (Boost_FOUND)
-  include_directories (${Boost_INCLUDE_DIRS})
-endif ()
 
 #
 # OpenMP
