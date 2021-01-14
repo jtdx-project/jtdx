@@ -1,8 +1,4 @@
-if (WIN32)
-cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
-else ()
 cmake_minimum_required (VERSION 3.9 FATAL_ERROR)
-endif ()
 
 if (APPLE)
   #
@@ -754,7 +750,7 @@ find_package (OpenMP)
 #
 # fftw3 single precision library
 #
-find_package (FFTW3 COMPONENTS double single threads REQUIRED)
+find_package (FFTW3 COMPONENTS single threads REQUIRED)
 
 #
 # libhamlib setup
