@@ -1,4 +1,4 @@
-subroutine ft8_downsample(newdat,f0,nqso,c0,c2,c3,lhighsens)
+subroutine ft8_downsample(newdat,f0,nqso,c0,c2,c3,lhighsens,lsubtracted)
 
 ! Downconvert to complex data sampled at 200 Hz ==> 32 samples/symbol
   use ft8_mod1, only : dd8,windowc1,facc1
@@ -11,15 +11,16 @@ subroutine ft8_downsample(newdat,f0,nqso,c0,c2,c3,lhighsens)
   real, intent(in) :: f0
   integer, intent(in) :: nqso
   logical(1), intent(in) :: lhighsens
+  logical(1) lsubtracted
   equivalence (x,cx)
   save cxx
 
-  if(newdat) then
+  if(newdat .or. lsubtracted) then
 ! Data in dd have changed, recompute the long FFT
      x(1:180000)=dd8
      x(180001:NFFT1)=0.                       !Zero-pad the x array
      call four2a(cx,NFFT1,1,-1,0)             !r2c FFT to freq domain
-     newdat=.false.
+     newdat=.false.; lsubtracted=.false.
      cxx=cx
   endif
 

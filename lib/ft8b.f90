@@ -2,7 +2,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
                 nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
-                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
+                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
 !  use timer_module, only: timer
   use packjt77 ! mycall13,dxcall13
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
@@ -25,7 +25,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,lwrongcall
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
+             lwrongcall,lsubtracted
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -73,7 +74,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
   endif
 
   !call timer('ft8_down',0)
-  call ft8_downsample(newdat,f1,nqso,cd0,cd2,cd3,lhighsens)   !Mix f1 to baseband and downsample
+  call ft8_downsample(newdat,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted)   !Mix f1 to baseband and downsample
   !call timer('ft8_down',1)
 
   lsd=.false.; isd=1; lcq=.false.
@@ -1172,20 +1173,10 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
       call peakup(syncm,sync0,syncp,dx)
       if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif
       xdt3=xdt+scorr*dt2
-
-      if(nthr.eq.1) then; call subtractft81(itone,f1,xdt3,swl)
-      else if(nthr.eq.2) then; call subtractft82(itone,f1,xdt3,swl)
-      else if(nthr.eq.3) then; call subtractft83(itone,f1,xdt3,swl)
-      else if(nthr.eq.4) then; call subtractft84(itone,f1,xdt3,swl)
-      else if(nthr.eq.5) then; call subtractft85(itone,f1,xdt3,swl)
-      else if(nthr.eq.6) then; call subtractft86(itone,f1,xdt3,swl)
-      else if(nthr.eq.7) then; call subtractft87(itone,f1,xdt3,swl)
-      else if(nthr.eq.8) then; call subtractft88(itone,f1,xdt3,swl)
-      else if(nthr.eq.9) then; call subtractft89(itone,f1,xdt3,swl)
-      else if(nthr.eq.10) then; call subtractft810(itone,f1,xdt3,swl)
-      else if(nthr.eq.11) then; call subtractft811(itone,f1,xdt3,swl)
-      else if(nthr.eq.12) then; call subtractft812(itone,f1,xdt3,swl)
-      endif
+!$omp critical(subtraction)
+      call subtractft8(itone,f1,xdt3,swl)
+!$omp end critical(subtraction)
+      lsubtracted=.true. ! inside current thread
     endif
 
     if(lhidehash .and. index(msg37,'<...>').gt.6) then; nbadcrc=1; msg37=''; msg37_2=''; endif

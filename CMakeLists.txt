@@ -1,8 +1,4 @@
-if (WIN32)
-cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
-else ()
 cmake_minimum_required (VERSION 3.9 FATAL_ERROR)
-endif ()
 
 if (APPLE)
   #
@@ -492,18 +488,7 @@ set (wsjt_FSRCS
   lib/subtract10.f90
   lib/subtract65.f90
   lib/ft4/subtractft4.f90
-  lib/subtractft81.f90
-  lib/subtractft82.f90
-  lib/subtractft83.f90
-  lib/subtractft84.f90
-  lib/subtractft85.f90
-  lib/subtractft86.f90
-  lib/subtractft87.f90
-  lib/subtractft88.f90
-  lib/subtractft89.f90
-  lib/subtractft810.f90
-  lib/subtractft811.f90
-  lib/subtractft812.f90
+  lib/ft8v2/subtractft8.f90
   lib/sun.f90
   lib/symspec.f90
   lib/symspec10.f90
@@ -748,14 +733,10 @@ find_program(ETAGS etags)
 #
 # Boost
 #
-set (Boost_NO_SYSTEM_PATHS TRUE)
-if (Boost_NO_SYSTEM_PATHS)
-  set (BOOST_ROOT ${PROJECT_SOURCE_DIR}/boost)
+if (WIN32)
+  set (Boost_USE_STATIC_LIBS OFF)
 endif ()
 find_package (Boost 1.63 REQUIRED)
-if (Boost_FOUND)
-  include_directories (${Boost_INCLUDE_DIRS})
-endif ()
 
 #
 # OpenMP
@@ -765,7 +746,7 @@ find_package (OpenMP)
 #
 # fftw3 single precision library
 #
-find_package (FFTW3 COMPONENTS double single threads REQUIRED)
+find_package (FFTW3 COMPONENTS single threads REQUIRED)
 
 #
 # libhamlib setup

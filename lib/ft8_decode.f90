@@ -42,7 +42,7 @@ contains
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -70,7 +70,7 @@ contains
           then; lastrxmsg(1)%lstate=.false.
     endif
 
-    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.!; lthrdecd=.false.
+    lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
     ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
@@ -142,19 +142,15 @@ contains
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
       if(ipass.eq.4 .or. ipass.eq.7) then
 !$omp barrier
-        if(nthr.eq.1) then
-!$omp critical(change_dd8)
-          if(ipass.eq.4) then
-            dd8m=dd8
-            do i=1,179999; dd8(i)=(dd8(i)+dd8(i+1))/2; enddo
-          endif
-          if(ipass.eq.7) then
-            dd8(1)=dd8m(1)
-            do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
-          endif
-!$OMP FLUSH (dd8)
-!$omp end critical(change_dd8)
+!$omp single
+        if(ipass.eq.4) then
+          dd8m=dd8
+          do i=1,179999; dd8(i)=(dd8(i)+dd8(i+1))/2; enddo
+        else
+          dd8(1)=dd8m(1)
+          do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
         endif
+!$omp end single
 !$omp barrier
       endif
       !call timer('sync8   ',0)
@@ -184,7 +180,7 @@ contains
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
-                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens)
+                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
         nsnr=nint(xsnr) 
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
@@ -249,7 +245,6 @@ contains
                 calldt(200:2:-1)=calldt(200-1:1:-1); calldt(1)%call2=call2; calldt(1)%dt=xdt
                 nFT8decd=nFT8decd+1; sumxdt=sumxdt+xdt
               endif
-!$OMP FLUSH (ndecodes,allmessages,allsnrs,allfreq)
 !$omp end critical(update_arrays)
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
@@ -294,19 +289,16 @@ contains
     ncandthr=nint(float(ncandthr)/npass)
 !$omp critical(update_structures)
     ncandall=ncandall+ncandthr
-!$OMP FLUSH (ncandall)
     if(nmsgloc.gt.0) then
       if(nsec.eq.0 .or. nsec.eq.30) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
-!$OMP FLUSH (nmsg,even)
       endif
       if(nsec.eq.15 .or. nsec.eq.45) then
         odd(nmsg+1:nmsg+nmsgloc)%msg=oddtmp(1:nmsgloc)%msg; odd(nmsg+1:nmsg+nmsgloc)%freq=oddtmp(1:nmsgloc)%freq
         odd(nmsg+1:nmsg+nmsgloc)%dt=oddtmp(1:nmsgloc)%dt; odd(nmsg+1:nmsg+nmsgloc)%lstate=oddtmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
-!$OMP FLUSH (nmsg,odd)
       endif
     endif
 !$omp end critical(update_structures)

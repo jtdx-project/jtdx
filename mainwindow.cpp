@@ -678,7 +678,19 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   ui->actionMT10->setActionGroup(FT8threadsGroup);
   ui->actionMT11->setActionGroup(FT8threadsGroup);
   ui->actionMT12->setActionGroup(FT8threadsGroup);
-  
+  ui->actionMT13->setActionGroup(FT8threadsGroup);
+  ui->actionMT14->setActionGroup(FT8threadsGroup);
+  ui->actionMT15->setActionGroup(FT8threadsGroup);
+  ui->actionMT16->setActionGroup(FT8threadsGroup);
+  ui->actionMT17->setActionGroup(FT8threadsGroup);
+  ui->actionMT18->setActionGroup(FT8threadsGroup);
+  ui->actionMT19->setActionGroup(FT8threadsGroup);
+  ui->actionMT20->setActionGroup(FT8threadsGroup);
+  ui->actionMT21->setActionGroup(FT8threadsGroup);
+  ui->actionMT22->setActionGroup(FT8threadsGroup);
+  ui->actionMT23->setActionGroup(FT8threadsGroup);
+  ui->actionMT24->setActionGroup(FT8threadsGroup);
+
   QActionGroup* AcceptUDPGroup = new QActionGroup(this);
   ui->actionAcceptUDPCQ->setActionGroup(AcceptUDPGroup);
   ui->actionAcceptUDPCQ73->setActionGroup(AcceptUDPGroup);
@@ -1280,7 +1292,7 @@ void MainWindow::readSettings()
   m_settings->beginGroup("Common");
 
   m_ft8threads=m_settings->value("FT8threads",0).toInt();
-  if(!(m_ft8threads>=0 && m_ft8threads<=12)) m_ft8threads=0;
+  if(!(m_ft8threads>=0 && m_ft8threads<25)) m_ft8threads=0;
   if(m_ft8threads==0) ui->actionMTAuto->setChecked(true);
   else if(m_ft8threads==1) ui->actionMT1->setChecked(true);
   else if(m_ft8threads==2) ui->actionMT2->setChecked(true);
@@ -1294,6 +1306,18 @@ void MainWindow::readSettings()
   else if(m_ft8threads==10) ui->actionMT10->setChecked(true);
   else if(m_ft8threads==11) ui->actionMT11->setChecked(true);
   else if(m_ft8threads==12) ui->actionMT12->setChecked(true);
+  else if(m_ft8threads==13) ui->actionMT13->setChecked(true);
+  else if(m_ft8threads==14) ui->actionMT14->setChecked(true);
+  else if(m_ft8threads==15) ui->actionMT15->setChecked(true);
+  else if(m_ft8threads==16) ui->actionMT16->setChecked(true);
+  else if(m_ft8threads==17) ui->actionMT17->setChecked(true);
+  else if(m_ft8threads==18) ui->actionMT18->setChecked(true);
+  else if(m_ft8threads==19) ui->actionMT19->setChecked(true);
+  else if(m_ft8threads==20) ui->actionMT20->setChecked(true);
+  else if(m_ft8threads==21) ui->actionMT21->setChecked(true);
+  else if(m_ft8threads==22) ui->actionMT22->setChecked(true);
+  else if(m_ft8threads==23) ui->actionMT23->setChecked(true);
+  else if(m_ft8threads==24) ui->actionMT24->setChecked(true);
 
   m_acceptUDP=m_settings->value("AcceptUDPReplyMessages",1).toInt(); if(!(m_acceptUDP>=1 && m_acceptUDP<=3)) m_acceptUDP=1;
   if(m_acceptUDP==1) ui->actionAcceptUDPCQ->setChecked(true);
@@ -1507,7 +1531,7 @@ void MainWindow::readSettings()
   m_callToClipboard=m_settings->value("CallsignToClipboard",true).toBool();
   ui->actionCallsign_to_clipboard->setChecked(m_callToClipboard);
 
-  m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",true).toBool();
+  m_crossbandOptionEnabled=m_settings->value("Crossband160mJA",false).toBool();
   ui->actionCrossband_160m_JA->setChecked(m_crossbandOptionEnabled);
 
   m_crossbandHLOptionEnabled=m_settings->value("Crossband160mHL",true).toBool();
@@ -2360,14 +2384,21 @@ void MainWindow::displayDialFrequency ()
         writeToALLTXT(text + m_lastBand + ", current band: " + band_name + ", dial_frequency: " + QString::number(dial_frequency) + ", TX VFO frequency: " + 
         QString::number(m_rigState.tx_frequency ()) + ", RX VFO frequency: " + QString::number(m_rigState.frequency ()));
       }
+      // Set the attenuation value if options are checked
+      QString curBand;
+      if (m_config.pwrBandTxMemory() && !m_tune) {
+          if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
+          else { curBand = ui->bandComboBox->currentText()+m_mode; }
+          if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); }
+          else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
+      }
       startup=false;
     }
     ui->bandComboBox->setCurrentText (band_name);
     m_wideGraph->setRxBand (band_name);
     m_lastBand = band_name;
   }
-  // search working frequencies for one we are within 10kHz of (1 Mhz
-  // of on VHF and up)
+  // search working frequencies for one we are within 10kHz of (1 Mhz of on VHF and up)
   bool valid {false};
   quint64 min_offset {99999999};
   for (auto const& item : *m_config.frequencies ())
@@ -3048,6 +3079,18 @@ void MainWindow::on_actionMT9_triggered() { m_ft8threads=9; }
 void MainWindow::on_actionMT10_triggered() { m_ft8threads=10; }
 void MainWindow::on_actionMT11_triggered() { m_ft8threads=11; }
 void MainWindow::on_actionMT12_triggered() { m_ft8threads=12; }
+void MainWindow::on_actionMT13_triggered() { m_ft8threads=13; }
+void MainWindow::on_actionMT14_triggered() { m_ft8threads=14; }
+void MainWindow::on_actionMT15_triggered() { m_ft8threads=15; }
+void MainWindow::on_actionMT16_triggered() { m_ft8threads=16; }
+void MainWindow::on_actionMT17_triggered() { m_ft8threads=17; }
+void MainWindow::on_actionMT18_triggered() { m_ft8threads=18; }
+void MainWindow::on_actionMT19_triggered() { m_ft8threads=19; }
+void MainWindow::on_actionMT20_triggered() { m_ft8threads=20; }
+void MainWindow::on_actionMT21_triggered() { m_ft8threads=21; }
+void MainWindow::on_actionMT22_triggered() { m_ft8threads=22; }
+void MainWindow::on_actionMT23_triggered() { m_ft8threads=23; }
+void MainWindow::on_actionMT24_triggered() { m_ft8threads=24; }
 void MainWindow::on_actionAcceptUDPCQ_triggered() { m_acceptUDP=1; }
 void MainWindow::on_actionAcceptUDPCQ73_triggered() { m_acceptUDP=2; }
 void MainWindow::on_actionAcceptUDPAny_triggered() { m_acceptUDP=3; }
