@@ -36,7 +36,7 @@ contains
     procedure(ft8_decode_callback) :: callback
 !    real sbase(NH1)
 !integer*2 iwave(180000)
-    real candidate(4,460)
+    real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
@@ -131,7 +131,7 @@ contains
     endif
     syncmin=1.5
     do ipass=1,npass
-      newdat1=.true.; lsubtract=.true.
+      newdat1=.true.; lsubtract=.true.; npos=0
       if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
         if(lft8lowth .or. swl) syncmin=1.225
       elseif(ipass.eq.2 .or. ipass.eq.5 .or. ipass.eq.8) then
@@ -176,7 +176,7 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
