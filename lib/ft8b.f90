@@ -1,6 +1,6 @@
-subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
+subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
+                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,nfa,nfb,numthreads,   &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
 !  use timer_module, only: timer
@@ -9,7 +9,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,ftopthr,fbotthr
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -20,8 +20,8 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
-  integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens
-  logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
+  integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens,nfa,nfb,numthreads
+  logical newdat1,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
@@ -74,7 +74,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
   endif
 
   !call timer('ft8_down',0)
-  call ft8_downsample(newdat,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted,npos,freqsub)   !Mix f1 to baseband and downsample
+  call ft8_downsample(newdat1,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted,npos,freqsub,nthr,numthreads)   !Mix f1 to baseband and downsample
   !call timer('ft8_down',1)
 
   lsd=.false.; isd=1; lcq=.false.
@@ -1175,6 +1175,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
       xdt3=xdt+scorr*dt2
 !$omp critical(subtraction)
       call subtractft8(itone,f1,xdt3,swl)
+      if(abs(real(nfa)-f1).lt.50.) then
+        if(f1.lt.fbotthr(nthr)) fbotthr(nthr)=f1 ! 10500
+!        if(abs(f1-fbotthr(nthr)).gt.1.) fbotthr(nthr)=f1 ! 10496
+      else if(abs(real(nfb)-f1).lt.50.) then
+        if(ftopthr(nthr).lt.5000. .and. f1.gt.ftopthr(nthr)) ftopthr(nthr)=f1
+!        if(abs(f1-ftopthr(nthr)).gt.1.) ftopthr(nthr)=f1
+      endif
 !$omp end critical(subtraction)
       lsubtracted=.true. ! inside current thread
       if(npos.lt.200) then; npos=npos+1; freqsub(npos)=f1; endif

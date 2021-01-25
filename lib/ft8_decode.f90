@@ -64,7 +64,7 @@ contains
 
     this%callback => callback
 
-    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
+    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0; newdat1=.true.
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
       elseif(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -131,7 +131,7 @@ contains
     endif
     syncmin=1.5
     do ipass=1,npass
-      newdat1=.true.; lsubtract=.true.; npos=0
+      lsubtract=.true.; npos=0
       if(ipass.eq.1 .or. ipass.eq.4 .or. ipass.eq.7) then
         if(lft8lowth .or. swl) syncmin=1.225
       elseif(ipass.eq.2 .or. ipass.eq.5 .or. ipass.eq.8) then
@@ -151,6 +151,7 @@ contains
           do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
         endif
 !$omp end single
+        newdat1=.true.
 !$omp barrier
       endif
       !call timer('sync8   ',0)
@@ -178,7 +179,7 @@ contains
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
         call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
+                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,nfa,nfb,numthreads,        &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
         nsnr=nint(xsnr) 
