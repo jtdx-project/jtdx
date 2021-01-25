@@ -827,6 +827,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     show_line = false;
             }
         }
+        else if (!bwantedCall && enableCallsignFilter_ && std_type != 2 && !jt65bc) {
+            auto callsigns = callsigns_.split(',');
+            if (callsigns.contains(Radio::base_callsign (checkCall)))
+                show_line = false;
+        }
     }
     
     if (show_line && decodedText->isNonStd2() && hidefree_ && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
