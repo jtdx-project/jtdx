@@ -1173,9 +1173,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
       call peakup(syncm,sync0,syncp,dx)
       if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif
       xdt3=xdt+scorr*dt2
-!$omp critical(subtraction)
       call subtractft8(itone,f1,xdt3,swl)
-!$omp end critical(subtraction)
       lsubtracted=.true. ! inside current thread
       if(npos.lt.200) then; npos=npos+1; freqsub(npos)=f1; endif
     endif
