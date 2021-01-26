@@ -1,15 +1,15 @@
-subroutine ft8_downsample(newdat1,f0,nqso,c0,c2,c3,lhighsens,lsubtracted,npos,freqsub,nthr,numthreads)
+subroutine ft8_downsample(newdat,f0,nqso,c0,c2,c3,lhighsens,lsubtracted,npos,freqsub)
 
 ! Downconvert to complex data sampled at 200 Hz ==> 32 samples/symbol
-  use ft8_mod1, only : dd8,windowc1,facc1,ftopthr,fbotthr,flasttopthr,flastbotthr
+  use ft8_mod1, only : dd8,windowc1,facc1
   parameter (NFFT1=192000,NFFT2=3200)      !192000/60 = 3200
   
-  logical newdat1
+  logical newdat
   complex, intent(out) :: c0(-800:4000),c2(-800:4000),c3(-800:4000)
   complex cx(0:96000),cxx(0:96000),c1(0:3199) ! 0:NFFT1/2
   real x(NFFT1)
   real, intent(in) :: f0
-  integer, intent(in) :: nqso,nthr,numthreads
+  integer, intent(in) :: nqso
   real freqsub(200)
   logical(1), intent(in) :: lhighsens
   logical(1) lsubtracted,ldofft
@@ -17,44 +17,18 @@ subroutine ft8_downsample(newdat1,f0,nqso,c0,c2,c3,lhighsens,lsubtracted,npos,fr
   save cxx
 
   ldofft=.false.
-! what approach is better in ft8b - last closer freq or last any freq?
-! last closer freq rarely triggering big FFT, 2..3 times per wav file
-  if(nthr.gt.1 .and. nthr.lt.numthreads) then
-    if(abs(fbotthr(nthr+1)-f0).lt.50. .and. abs(fbotthr(nthr+1)-flasttopthr(nthr)).gt.1.) then
-!print *,nthr,fbotthr(nthr+1),flasttopthr(nthr)
-!print *,"dofft"
-      ldofft=.true.; lsubtracted=.false.; flasttopthr(nthr)=fbotthr(nthr+1)
-    else if(abs(ftopthr(nthr-1)-f0).lt.50. .and. abs(ftopthr(nthr-1)-flastbotthr(nthr)).gt.1.) then
-!print *,nthr,ftopthr(nthr-1),flastbotthr(nthr)
-!print *,"dofft"
-      ldofft=.true.; lsubtracted=.false.; flastbotthr(nthr)=ftopthr(nthr-1)
-    endif
-  else if(nthr.eq.1) then
-    if(abs(fbotthr(2)-f0).lt.50. .and. abs(fbotthr(2)-flasttopthr(nthr)).gt.1.) then
-!print *,nthr,fbotthr(nthr+1),flasttopthr(nthr)
-!print *,"dofft"
-      ldofft=.true.; lsubtracted=.false.; flasttopthr(nthr)=fbotthr(nthr+1)
-    endif
-  else if(nthr.eq.numthreads) then
-    if(abs(ftopthr(nthr-1)-f0).lt.50. .and. abs(ftopthr(nthr-1)-flastbotthr(nthr)).gt.1.) then
-!print *,nthr,ftopthr(nthr-1),flastbotthr(nthr)
-!print *,"dofft"
-      ldofft=.true.; lsubtracted=.false.; flastbotthr(nthr)=ftopthr(nthr-1)
-    endif
-  endif
-
   if(lsubtracted) then
     do i=1,npos
       if(abs(f0-freqsub(i)).lt.50.) then; ldofft=.true.; lsubtracted=.false.; exit; endif
     enddo
   endif
 
-  if(newdat1 .or. ldofft) then
+  if(newdat .or. ldofft) then
 ! Data in dd have changed, recompute the long FFT
      x(1:180000)=dd8
      x(180001:NFFT1)=0.                       !Zero-pad the x array
      call four2a(cx,NFFT1,1,-1,0)             !r2c FFT to freq domain
-     newdat1=.false.; ldofft=.false.; npos=0
+     newdat=.false.; ldofft=.false.; npos=0
      cxx=cx
   endif
 
