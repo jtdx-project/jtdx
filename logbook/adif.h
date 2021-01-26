@@ -53,11 +53,30 @@ class ADIF
 
         QHash<QString, int> _counts;
         QMultiHash<QString, QSO> _data;
-        QMultiHash<QString, QSO> _cqzWorked;
-        QMultiHash<QString, QSO> _ituzWorked;
-        QMultiHash<QString, QSO> _countriesWorked;
-        QMultiHash<QString, QSO> _gridsWorked;
-        QMultiHash<QString, QSO> _pxsWorked;
+        QHash<QString, int> _cqzWorked;
+        QHash<QString, int> _ituzWorked;
+        QHash<QString, int> _countriesWorked;
+        QHash<QString, int> _gridsWorked;
+        QHash<QString, int> _pxsWorked;
+        QHash<QString, int> _callsWorked;
+        QHash<QString, int> _cqzbandWorked;
+        QHash<QString, int> _ituzbandWorked;
+        QHash<QString, int> _countriesbandWorked;
+        QHash<QString, int> _gridsbandWorked;
+        QHash<QString, int> _pxsbandWorked;
+        QHash<QString, int> _callsbandWorked;
+        QHash<QString, int> _cqzmodeWorked;
+        QHash<QString, int> _ituzmodeWorked;
+        QHash<QString, int> _countriesmodeWorked;
+        QHash<QString, int> _gridsmodeWorked;
+        QHash<QString, int> _pxsmodeWorked;
+        QHash<QString, int> _callsmodeWorked;
+        QHash<QString, int> _cqzbandmodeWorked;
+        QHash<QString, int> _ituzbandmodeWorked;
+        QHash<QString, int> _countriesbandmodeWorked;
+        QHash<QString, int> _gridsbandmodeWorked;
+        QHash<QString, int> _pxsbandmodeWorked;
+        QHash<QString, int> _callsbandmodeWorked;
         QString _filename;
         CountryDat _countries;
 
