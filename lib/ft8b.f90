@@ -1,4 +1,4 @@
-subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
+subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
                 nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
@@ -21,7 +21,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens
-  logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
+  logical newdat1,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
@@ -74,7 +74,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqs
   endif
 
   !call timer('ft8_down',0)
-  call ft8_downsample(newdat,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted,npos,freqsub)   !Mix f1 to baseband and downsample
+  call ft8_downsample(newdat1,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted,npos,freqsub)   !Mix f1 to baseband and downsample
   !call timer('ft8_down',1)
 
   lsd=.false.; isd=1; lcq=.false.
