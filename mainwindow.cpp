@@ -1001,7 +1001,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
       , "-r", QDir::toNativeSeparators (m_config.data_dir ().absolutePath ())
       };
   QProcessEnvironment env {QProcessEnvironment::systemEnvironment ()};
-  env.insert ("OMP_STACKSIZE", "4M");
+  env.insert ("OMP_STACKSIZE", "5M");
   proc_jtdxjt9.setProcessEnvironment (env);
   proc_jtdxjt9.start(QDir::toNativeSeparators (m_appDir) + QDir::separator () +
           "jtdxjt9", jt9_args, QIODevice::ReadWrite | QIODevice::Unbuffered);
