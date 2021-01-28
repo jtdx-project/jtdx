@@ -225,7 +225,6 @@ if(numthreads.eq.2) then
 !!!  !$omp parallel sections num_threads(2) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(2) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(2) ! needed to get OMP barrier working properly
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfa,nfmid,params%ncandthin,params%ndtcenter, &
@@ -246,7 +245,6 @@ if(numthreads.eq.3) then
 !!!  !$omp parallel sections num_threads(3) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(3) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(3)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfa,nfmid1,params%ncandthin,params%ndtcenter, &
@@ -274,7 +272,6 @@ if(numthreads.eq.4) then
 !!!  !$omp parallel sections num_threads(4) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(4) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(4)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid1+1,nfmid2,params%ncandthin,params%ndtcenter, &
@@ -308,7 +305,6 @@ if(numthreads.eq.5) then
 !!!  !$omp parallel sections num_threads(5) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(5) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(5)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid2+1,nfmid3,params%ncandthin,params%ndtcenter, &
@@ -348,7 +344,6 @@ if(numthreads.eq.6) then
 !!!  !$omp parallel sections num_threads(6) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(6) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(6)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid2+1,nfmid3,params%ncandthin,params%ndtcenter, &
@@ -394,7 +389,6 @@ if(numthreads.eq.7) then
 !!!  !$omp parallel sections num_threads(7) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(7) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(7)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid3+1,nfmid4,params%ncandthin,params%ndtcenter, &
@@ -447,7 +441,6 @@ if(numthreads.eq.8) then
 !!!  !$omp parallel sections num_threads(8) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(8) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(8)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid3+1,nfmid4,params%ncandthin,params%ndtcenter, &
@@ -506,7 +499,6 @@ if(numthreads.eq.9) then
 !!!  !$omp parallel sections num_threads(9) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(9) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(9)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid4+1,nfmid5,params%ncandthin,params%ndtcenter, &
@@ -571,7 +563,6 @@ if(numthreads.eq.10) then
 !!!  !$omp parallel sections num_threads(10) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(10) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(10)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid4+1,nfmid5,params%ncandthin,params%ndtcenter, &
@@ -642,7 +633,6 @@ if(numthreads.eq.11) then
 !!!  !$omp parallel sections num_threads(11) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(11) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(11)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid5+1,nfmid6,params%ncandthin,params%ndtcenter, &
@@ -719,7 +709,6 @@ if(numthreads.eq.12) then
 !!!  !$omp parallel sections num_threads(12) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(12) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(12)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid5+1,nfmid6,params%ncandthin,params%ndtcenter, &
@@ -803,7 +792,6 @@ if(numthreads.eq.13) then
 !!!  !$omp parallel sections num_threads(13) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(13) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(13)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid5+1,nfmid6,params%ncandthin,params%ndtcenter, &
@@ -893,7 +881,6 @@ if(numthreads.eq.14) then
 !!!  !$omp parallel sections num_threads(14) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(14) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(14)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid6+1,nfmid7,params%ncandthin,params%ndtcenter, &
@@ -989,7 +976,6 @@ if(numthreads.eq.15) then
 !!!  !$omp parallel sections num_threads(15) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(15) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(15)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid6+1,nfmid7,params%ncandthin,params%ndtcenter, &
@@ -1091,7 +1077,6 @@ if(numthreads.eq.16) then
 !!!  !$omp parallel sections num_threads(16) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(16) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(16)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid7+1,nfmid8,params%ncandthin,params%ndtcenter, &
@@ -1200,7 +1185,6 @@ if(numthreads.eq.17) then
 !!!  !$omp parallel sections num_threads(17) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(17) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(17)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid7+1,nfmid8,params%ncandthin,params%ndtcenter, &
@@ -1315,7 +1299,6 @@ if(numthreads.eq.18) then
 !!!  !$omp parallel sections num_threads(18) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(18) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(18)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid8+1,nfmid9,params%ncandthin,params%ndtcenter, &
@@ -1436,7 +1419,6 @@ if(numthreads.eq.19) then
 !!!  !$omp parallel sections num_threads(19) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(19) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(19)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid8+1,nfmid9,params%ncandthin,params%ndtcenter, &
@@ -1563,7 +1545,6 @@ if(numthreads.eq.20) then
 !!!  !$omp parallel sections num_threads(20) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(20) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(20)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid9+1,nfmid10,params%ncandthin,params%ndtcenter, &
@@ -1697,7 +1678,6 @@ if(numthreads.eq.21) then
 !!!  !$omp parallel sections num_threads(21) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(21) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(21)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid9+1,nfmid10,params%ncandthin,params%ndtcenter, &
@@ -1837,7 +1817,6 @@ if(numthreads.eq.22) then
 !!!  !$omp parallel sections num_threads(22) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(22) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(22)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid10+1,nfmid11,params%ncandthin,params%ndtcenter, &
@@ -1983,7 +1962,6 @@ if(numthreads.eq.23) then
 !!!  !$omp parallel sections num_threads(23) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(23) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(23)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid10+1,nfmid11,params%ncandthin,params%ndtcenter, &
@@ -2135,7 +2113,6 @@ if(numthreads.eq.24) then
 !!!  !$omp parallel sections num_threads(24) copyin(/timer_private/) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd,first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(24) shared(ndecoded,dd8,allmessages,allsnrs,allfreq,ncandall,nmsg,even,odd,lqsomsgdcd), &
   !$omp& shared(first_osd,gen,ihash22,nzhash,calls10,calls12,calls22) if(.true.) !iif() needed on Mac
-     call omp_set_num_threads(24)
   !$omp section
      call my_ft8%decode(ft8_decoded,params%nQSOProgress,nfqso,params%nft8rxfsens,  &
           params%nftx,nutc,nfmid11+1,nfmid12,params%ncandthin,params%ndtcenter, &

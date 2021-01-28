@@ -14,6 +14,7 @@ subroutine subtractft8(itone,f0,dt,swl)
   integer itone(79)
   logical(1), intent(in) :: swl
   save cfilt
+  !$omp threadprivate(cfilt)
 
   nstart=dt*12000+1
   call gen_ft8wave(itone,79,1920,2.0,12000.0,f0,cref,xjunk,1,NFRAME)
@@ -40,6 +41,7 @@ subroutine subtractft8(itone,f0,dt,swl)
      j=nstart+i-1
      if(j.ge.1 .and. j.le.NMAX) dd8(j)=dd8(j)-2*REAL(cfilt(i)*cref(i))
   enddo
+!$omp flush(dd8)
 
   return
 end subroutine subtractft8

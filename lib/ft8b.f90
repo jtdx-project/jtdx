@@ -1,4 +1,4 @@
-subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
+subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
                 nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
@@ -15,13 +15,13 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
   character*37 msgsrcvd(130)
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1
-  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7)
+  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
   integer itone(79),ip(1),ka(1)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,imainpass,nsec,nft8rxfsens
-  logical newdat,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
+  logical newdat1,lsubtract,lapon,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
@@ -74,7 +74,7 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
   endif
 
   !call timer('ft8_down',0)
-  call ft8_downsample(newdat,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted)   !Mix f1 to baseband and downsample
+  call ft8_downsample(newdat1,f1,nqso,cd0,cd2,cd3,lhighsens,lsubtracted,npos,freqsub)   !Mix f1 to baseband and downsample
   !call timer('ft8_down',1)
 
   lsd=.false.; isd=1; lcq=.false.
@@ -1173,10 +1173,9 @@ subroutine ft8b(newdat,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract, &
       call peakup(syncm,sync0,syncp,dx)
       if(abs(dx).gt.1.0) then; scorr=0.; else; scorr=real(noff)*dx; endif
       xdt3=xdt+scorr*dt2
-!$omp critical(subtraction)
       call subtractft8(itone,f1,xdt3,swl)
-!$omp end critical(subtraction)
       lsubtracted=.true. ! inside current thread
+      if(npos.lt.200) then; npos=npos+1; freqsub(npos)=f1; endif
     endif
 
     if(lhidehash .and. index(msg37,'<...>').gt.6) then; nbadcrc=1; msg37=''; msg37_2=''; endif
