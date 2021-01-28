@@ -29,7 +29,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     endif
 
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(lhiscallstd .and. i3.ne.1 .or. .not.lhiscallstd .and. i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
     read(c77,'(77i1)',err=1) apcqsym(1:77)
@@ -42,7 +42,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     endif
 
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
     read(c77,'(58i1)',err=1) apsym(1:58)
@@ -54,7 +54,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     if(len(trim(hisbcall)).gt.2 .and. len(trim(mybcall)).gt.2) then
       msg=trim(mybcall)//' '//trim(hisbcall)//' -15'
       call pack77(msg,i3,n3,c77)
-      call unpack77(c77,1,msgchk,unpk77_success)
+      call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
       if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
       read(c77,'(58i1)',err=1) apsym(1:58)
@@ -67,7 +67,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     msg=trim(mycall)//' RR73; '//trim(mycall)//' <'//trim(hiscallt)//'> -16'
     i3=0; n3=1
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     i1=0; i1=index(msgchk,'<'); if(i1.lt.15) return
     if(i3.ne.0 .or. msg(1:i1).ne.msgchk(1:i1) .or. .not.unpk77_success) return
@@ -78,7 +78,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
   if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
     msg=trim(mycall)//' <'//trim(hiscall)//'> -16' ! report, rreport
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) return
     read(c77,'(58i1)',err=1) apsymdxns1(1:58)
@@ -86,7 +86,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
     msg='<'//trim(mycall)//'> '//trim(hiscall)//' RR73'
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
     read(c77,'(58i1)',err=1) apsymdxns2(1:58)
@@ -95,7 +95,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 ! now nonstandard DXCall searching
     msg='<W9XYZ> '//trim(hiscall)//' RR73'
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
     read(c77,'(77i1)',err=1) apsymdxnsrr73(1:77)
@@ -103,7 +103,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
     msg='<W9XYZ> '//trim(hiscall)//' 73'
     call pack77(msg,i3,n3,c77)
-    call unpack77(c77,1,msgchk,unpk77_success)
+    call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
     read(c77,'(77i1)',err=1) apsymdxns73(1:77)

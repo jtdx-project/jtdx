@@ -208,7 +208,7 @@ subroutine multimode_decoder(params)
        odd%lstate=.false.
      endif
      nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0
-
+     call fillhash(numthreads,.false.)
 !do i=9595,9605; print *,i,dd8(i); enddo ! check wav files processing
 
 !     call timer('decft8  ',0)
@@ -2276,7 +2276,7 @@ endif
        else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
        endif
      endif
-
+     call fillhash(numthreads,.true.)
 !     call timer('decft8  ',1)
      go to 800
   endif
@@ -2291,6 +2291,7 @@ endif
       endif
     endif
     llagcc=params%nagcc; nFT4decd=0; sumxdt=0.0
+    call fillhash(1,.false.)
 !    call timer('decft4  ',0)
     call my_ft4%decode(ft4_decoded,params%nQSOProgress,nfqso,nfa,nfb,params%nft4depth, &
          params%nstophint,mycall,hiscall,params%nswl)
@@ -2303,6 +2304,7 @@ endif
       else if(nFT4decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT4decd)/2
       endif
     endif
+    call fillhash(1,.true.)
     go to 800
   endif
 
