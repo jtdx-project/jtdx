@@ -124,7 +124,7 @@ subroutine save_hash_txcall(c13,n10,n12,n22)
   return 
 end subroutine save_hash_txcall
 
-subroutine save_hash_call(c13,n10,n12,n22,nthr)
+subroutine save_hash_call(c13,nthr)
 
   character*13 c13,cw
   integer, intent(in) :: nthr
@@ -143,11 +143,6 @@ subroutine save_hash_call(c13,n10,n12,n22,nthr)
     last_calls(nposition+1)=cw
 !print *,nthr,nlast_calls(nthr),nposition+1,last_calls(nposition+1)
   endif
-
-! probably lines below not needed
-  n10=ihashcall(cw,10)
-  n12=ihashcall(cw,12)
-  n22=ihashcall(cw,22)
 
   return 
 end subroutine save_hash_call
@@ -410,7 +405,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
         if(.not.unpkg4_success) unpk77_success=.false.
         write(crpt,'(i3)') idbm
         msg=trim(call_1)//' '//grid4//' '//trim(adjustl(crpt))
-        if (unpk77_success) call save_hash_call(call_1,n10,n12,n22,nthr) !### Is this OK here? ###
+        if (unpk77_success) call save_hash_call(call_1,nthr) !### Is this OK here? ###
 
      else if(itype.eq.2) then
 ! WSPR Type 2
@@ -431,7 +426,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
            enddo
            msg=trim(adjustl(cpfx))//'/'//trim(call_1)//' '//trim(adjustl(crpt))
            call_1a=trim(adjustl(cpfx))//'/'//trim(call_1)
-           call save_hash_call(call_1a,n10,n12,n22,nthr)  !### Is this OK here? ###
+           call save_hash_call(call_1a,nthr)  !### Is this OK here? ###
         else
 ! Suffix
            npfx=npfx-nzzz
@@ -450,7 +445,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
            endif
            msg=trim(call_1)//'/'//trim(adjustl(cpfx))//' '//trim(adjustl(crpt))
            call_1a=trim(call_1)//'/'//trim(adjustl(cpfx))
-           call save_hash_call(call_1a,n10,n12,n22,nthr)  !### Is this OK here? ###
+           call save_hash_call(call_1a,nthr)  !### Is this OK here? ###
         endif
         
      else if(itype.eq.3) then
@@ -1551,7 +1546,7 @@ subroutine add_call_to_recent_calls(callsign,nthr)
   endif
 
 ! Make sure that callsign is hashed
-  call save_hash_call(callsign,n10,n12,n22,nthr)
+  call save_hash_call(callsign,nthr)
 
   return
 end subroutine add_call_to_recent_calls
