@@ -349,6 +349,7 @@ set (wsjt_FSRCS
   lib/fil3c.f90
   lib/fil4.f90
   lib/filbig.f90
+  lib/fillhash.f90
   lib/filt8.f90
   lib/filterscq.f90
   lib/filterscq2.f90

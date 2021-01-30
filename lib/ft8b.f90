@@ -824,9 +824,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         if(i3.gt.4 .or. (i3.eq.0 .and. n3.gt.5)) cycle
 !print *,i3,n3,iaptype
         mycall13=mycall//' '; dxcall13=hiscall//' '
-!$omp critical(unpack77)
-        call unpack77(c77,1,msg37,unpk77_success)
-!$omp end critical(unpack77)
+        call unpack77(c77,1,msg37,unpk77_success,nthr)
         if(.not.unpk77_success) then
           if(lqsothread .and. lapon .and. (.not.lhound .and. iaptype.ge.3 .or. lhound .and. &
              (iaptype.eq.21 .or. iaptype.eq.23)) .and. .not.lsdone) then
