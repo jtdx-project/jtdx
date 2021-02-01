@@ -2748,6 +2748,19 @@ Error: %2 - %3</translation>
     </message>
 </context>
 <context>
+    <name>HelpTextWindow</name>
+    <message>
+        <location filename="../HelpTextWindow.cpp" line="19"/>
+        <source>Cannot open &quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../HelpTextWindow.cpp" line="20"/>
+        <source>&quot; for reading:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>IARURegions</name>
     <message>
         <location filename="../IARURegions.cpp" line="58"/>
