@@ -108,7 +108,7 @@ void ADIF::load(const QString mycall,const QString mygrid,const QString mydate)
                 (mydate.isEmpty () || mytime.toLongLong() >= mydate.toLongLong())) {
                 QSO q;
                 q.call = _extractField(record,"CALL:");
-                q.band = _extractField(record,"BAND:");
+                q.band = _extractField(record,"BAND:").lower();
                 q.mode = _extractField(record,"MODE:");
                 if (q.mode == "MFSK") q.mode = _extractField(record,"SUBMODE:");
                 if (q.mode.left(3) == "JT9") q.mode = "JT9";
