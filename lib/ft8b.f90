@@ -4,7 +4,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens, &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
 !  use timer_module, only: timer
-  use packjt77 ! mycall13,dxcall13
+  use packjt77, only : unpack77
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldt,incall,lqsomsgdcd,mycalllen1,msgroot, &
                        msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
@@ -823,7 +823,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         read(c77(75:77),'(b3)') i3
         if(i3.gt.4 .or. (i3.eq.0 .and. n3.gt.5)) cycle
 !print *,i3,n3,iaptype
-        mycall13=mycall//' '; dxcall13=hiscall//' '
         call unpack77(c77,1,msg37,unpk77_success,nthr)
         if(.not.unpk77_success) then
           if(lqsothread .and. lapon .and. (.not.lhound .and. iaptype.ge.3 .or. lhound .and. &

@@ -21,11 +21,11 @@ module ft4_decode
 
 contains
 
-  subroutine decode(this,callback,nQSOProgress,nfqso,nfa,nfb,ndepth,stophint,mycall,hiscall,swl)
+  subroutine decode(this,callback,nQSOProgress,nfqso,nfa,nfb,ndepth,stophint,swl)
 !    use timer_module, only: timer
     use packjt77
     use ft4_mod1, only : nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry
-    use ft8_mod1, only : sumxdt,avexdt
+    use ft8_mod1, only : sumxdt,avexdt,mycall,hiscall
     include 'ft4/ft4_params.f90'
     class(ft4_decoder), intent(inout) :: this
     procedure(ft4_decode_callback) :: callback
@@ -33,7 +33,7 @@ contains
     character message*37,msg26*26,msgsent*37,msg37_2*37
     character c77*77
     character*37 decodes(100)
-    character*12 mycall,hiscall,mycall0,hiscall0,call_a,call_b
+    character*12 mycall0,hiscall0,call_a,call_b
     character*4 servis4
     complex cd2(0:NDMAX-1)                  !Complex waveform
     complex cb(0:NDMAX-1)
@@ -66,7 +66,7 @@ contains
       mycall0,hiscall0,ctwk2
 
     this%callback => callback
-    dxcall13=hiscall; mycall13=mycall; mycalllen1=len_trim(mycall)+1
+    mycalllen1=len_trim(mycall)+1
     smax=0.; smax1=0.; nd1=0 ! smax init value shall be increased to 1.+ ?
 
     if(first) then

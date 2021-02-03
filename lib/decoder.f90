@@ -2294,7 +2294,7 @@ endif
     call fillhash(1,.false.)
 !    call timer('decft4  ',0)
     call my_ft4%decode(ft4_decoded,params%nQSOProgress,nfqso,nfa,nfb,params%nft4depth, &
-         params%nstophint,mycall,hiscall,params%nswl)
+         params%nstophint,params%nswl)
 !    call timer('decft4  ',1)
     if(params%ndelay.eq.0) then
       if(nFT4decd.gt.5) then; avexdt=(avexdt+sumxdt/nFT4decd)/2

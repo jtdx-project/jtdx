@@ -1,6 +1,7 @@
 subroutine fillhash(numthreads,lfill)
 
-  use packjt77
+  use packjt77 ! also setting mycall13,dxcall13
+  use ft8_mod1, only : mycall,hiscall
   integer, intent(in) :: numthreads
   logical, intent(in) :: lfill
   character*13 cw
@@ -18,7 +19,7 @@ subroutine fillhash(numthreads,lfill)
         if(n12.ge.0 .and. n12 .le. 4095 .and. cw.ne.mycall13) calls12(n12)=cw
 
         n22=ihashcall(cw,22)
-        if(any(ihash22.eq.n22)) then   ! If entry exists, make sure callsign is the most recently received one 
+        if(any(ihash22.eq.n22)) then   ! If entry exists, make sure callsign is the most recently received one
           where(ihash22.eq.n22) calls22=cw
           go to 900
         endif
@@ -36,7 +37,27 @@ subroutine fillhash(numthreads,lfill)
     enddo
   else
     nlast_calls=0
+    mycall13=mycall//' '; dxcall13=hiscall//' '
+    if(mycall13.ne.mycall13_0) then
+      if(len(trim(mycall13)).gt.2) then
+        mycall13_set=.true.
+        mycall13_0=mycall13
+        call save_hash_txcall(mycall13,hashmy10,hashmy12,hashmy22,.true.)
+!print *,mycall13,hashmy10,hashmy12,hashmy22
+      else
+        mycall13_set=.false.
+      endif
+    endif
+
+    if(dxcall13.ne.dxcall13_0) then
+      if(len(trim(dxcall13)).gt.2) then
+        dxcall13_set=.true.
+        dxcall13_0=dxcall13
+        hashdx10=ihashcall(dxcall13,10)
+!print *,dxcall13,hashdx10
+      endif
+    endif
   endif
-  
+
   return
 end subroutine fillhash

@@ -9,6 +9,12 @@ module packjt77
   character (len=13), dimension(1:840) :: last_calls=''
   character (len=13) :: mycall13=''
   character (len=13) :: dxcall13=''
+  character (len=13) :: mycall13_0=''
+  character (len=13) :: dxcall13_0=''
+  integer hashmy10,hashmy12,hashmy22,hashdx10
+  logical :: dxcall13_set=.false.
+  logical :: mycall13_set=.false.
+
   integer, dimension(1:MAXHASH) :: ihash22=-1
   integer, dimension(1:24) :: nlast_calls=0
   integer, dimension(1:25) :: nthrindex=(/0,200,300,370,420,460,500,530,560,590,610,630,650,670,690,710, &
@@ -83,9 +89,10 @@ integer function ihashcall(c0,m)
   return
 end function ihashcall
 
-subroutine save_hash_txcall(c13,n10,n12,n22)
+subroutine save_hash_txcall(c13,n10,n12,n22,lhashit)
 
   character*13 c13,cw
+  logical, intent(in) :: lhashit
 
   cw=c13 
   if(cw(1:1).eq.' ' .or. cw(1:5).eq.'<...>') return
@@ -94,32 +101,30 @@ subroutine save_hash_txcall(c13,n10,n12,n22)
   if(i.gt.0) cw(i:)='         '
   if(len(trim(cw)) .lt. 3) return
 
-  n10=ihashcall(cw,10)
-  if(n10.ge.0 .and. n10 .le. 1023 .and. cw.ne.mycall13) then
-    calls10(n10)=cw
-  endif
-
   n12=ihashcall(cw,12)
-  if(n12.ge.0 .and. n12 .le. 4095 .and. cw.ne.mycall13) then
-    calls12(n12)=cw
-  endif
+  if(n12.ge.0 .and. n12 .le. 4095 .and. cw.ne.mycall13) calls12(n12)=cw
 
-  n22=ihashcall(cw,22)
-  if(any(ihash22.eq.n22)) then   ! If entry exists, make sure callsign is the most recently received one 
-    where(ihash22.eq.n22) calls22=cw
-    go to 1900
-  endif
+  if(lhashit) then
+    n10=ihashcall(cw,10)
+    if(n10.ge.0 .and. n10 .le. 1023 .and. cw.ne.mycall13) calls10(n10)=cw
+
+    n22=ihashcall(cw,22)
+    if(any(ihash22.eq.n22)) then   ! If entry exists, make sure callsign is the most recently received one
+      where(ihash22.eq.n22) calls22=cw
+      go to 1900
+    endif
 
 ! New entry: move table down, making room for new one at the top
-  ihash22(nzhash:2:-1)=ihash22(nzhash-1:1:-1)
+    ihash22(nzhash:2:-1)=ihash22(nzhash-1:1:-1)
 
 ! Add the new entry
-  calls22(nzhash:2:-1)=calls22(nzhash-1:1:-1)
-  ihash22(1)=n22
-  calls22(1)=cw
-  if(nzhash.lt.MAXHASH) nzhash=nzhash+1
+    calls22(nzhash:2:-1)=calls22(nzhash-1:1:-1)
+    ihash22(1)=n22
+    calls22(1)=cw
+    if(nzhash.lt.MAXHASH) nzhash=nzhash+1
 
 1900 continue
+  endif
 
   return 
 end subroutine save_hash_txcall
@@ -240,7 +245,6 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
   character*77 c77
   character*37 msg
   character*13 call_1,call_2,call_3,call_1a
-  character*13 mycall13_0,dxcall13_0
   character*11 c11
   character*3 crpt,cntx,cpfx
   character*3 cmult(NUSCAN)
@@ -249,9 +253,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
   character*3 csec(NSEC)
   character*38 c
   character*36 a2
-  integer hashmy10,hashmy12,hashmy22,hashdx10 !,hashdx12,hashdx22
   logical unpk28_success,unpk77_success,unpkg4_success
-  logical dxcall13_set,mycall13_set
   integer, intent(in) :: nthr
 
   data a2/'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'/,nzzz/46656/
@@ -274,33 +276,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
        "SD ","TN ","TX ","UT ","VT ","VA ","WA ","WV ","WI ","WY ",  &
        "NB ","NS ","QC ","ON ","MB ","SK ","AB ","BC ","NWT","NF ",  &
        "LB ","NU ","YT ","PEI","DC "/
-  data dxcall13_set/.false./
-  data mycall13_set/.false./
-  data mycall13_0/''/
-  data dxcall13_0/''/
 
-  save hashmy10,hashmy12,hashmy22,hashdx10 !,hashdx12,hashdx22
-!$omp threadprivate(hashmy10,hashmy12,hashmy22,hashdx10)
-
-  if(mycall13.ne.mycall13_0) then
-    if(len(trim(mycall13)).gt.2) then
-       mycall13_set=.true.
-       mycall13_0=mycall13
-       call save_hash_txcall(mycall13,hashmy10,hashmy12,hashmy22)
-    else
-       mycall13_set=.false.
-    endif
-  endif
-
-  if(dxcall13.ne.dxcall13_0) then
-    if(len(trim(dxcall13)).gt.2) then
-      dxcall13_set=.true.
-      dxcall13_0=dxcall13
-      hashdx10=ihashcall(dxcall13,10)
-!      hashdx12=ihashcall(dxcall13,12)
-!      hashdx22=ihashcall(dxcall13,22)
-    endif
-  endif
   unpk77_success=.true.
 
 ! Check for bad data
@@ -715,7 +691,7 @@ subroutine pack28(c13,n28)
 
 ! Check for <...> callsign
   if(c13(1:1).eq.'<')then
-     call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
+!!!     call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
      i2=index(c13,'>')
      c13=c13(2:i2-1)
      n22=ihashcall(c13,22)
@@ -743,7 +719,7 @@ subroutine pack28(c13,n28)
   if(iarea.lt.2 .or. iarea.gt.3 .or. nplet.eq.0 .or.       &
        npdig.ge.iarea-1 .or. nslet.gt.3) then
 ! Treat this as a nonstandard callsign: compute its 22-bit hash
-     call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
+!!!     call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
      n22=ihashcall(c13,22)
      n28=NTOKENS + n22
      go to 900
@@ -751,7 +727,7 @@ subroutine pack28(c13,n28)
   
   n=len(trim(c13))
 ! This is a standard callsign
-  call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
+!!!  call save_hash_txcall(c13,n10,n12,n22)   !Save callsign in hash table
   if(iarea.eq.2) callsign=' '//c13(1:5)
   if(iarea.eq.3) callsign=c13(1:6)
   i1=index(a1,callsign(1:1))-1
@@ -925,7 +901,7 @@ subroutine pack77_01(nwords,w,i3,n3,c77)
   n3=1
   call pack28(w(1),n28a)
   call pack28(w(3),n28b)
-  call save_hash_txcall(w(4),n10,n12,n22)
+!!!  call save_hash_txcall(w(4),n10,n12,n22)
   i2=index(w(4),'>')
   c13=w(4)(2:i2-1)
   n10=ihashcall(c13,10)
@@ -1340,16 +1316,16 @@ subroutine pack77_4(nwords,w,i3,n3,c77)
         iflip=0
         n12=0
         c11=adjustr(call_2(1:11))
-        call save_hash_txcall(w(2),n10,n12,n22)
+        call save_hash_txcall(w(2),n10,n12,n22,.false.)
      else if(w(1)(1:1).eq.'<') then
         iflip=0
         i3=4
-        call save_hash_txcall(w(1),n10,n12,n22)
+        call save_hash_txcall(w(1),n10,n12,n22,.false.)
         c11=adjustr(call_2(1:11))
      else if(w(2)(1:1).eq.'<') then
         iflip=1
         i3=4
-        call save_hash_txcall(w(2),n10,n12,n22)
+        call save_hash_txcall(w(2),n10,n12,n22,.false.)
         c11=adjustr(call_1(1:11))
      endif
      n58=0
@@ -1405,12 +1381,12 @@ subroutine pack77_5(nwords,w,i3,n3,c77)
   i3=5
   n3=0
 
-  call save_hash_txcall(w(1),n10,n12,n22)
+!!!  call save_hash_txcall(w(1),n10,n12,n22)
   i2=index(w(1),'>')
   c13=w(1)(2:i2-1)
   n12=ihashcall(c13,12)
 
-  call save_hash_txcall(w(2),n10a,n12a,n22)
+!!!  call save_hash_txcall(w(2),n10a,n12a,n22)
   i2=index(w(2),'>')
   c13=w(2)(2:i2-1)
   n22=ihashcall(c13,22)

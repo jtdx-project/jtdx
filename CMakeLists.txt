@@ -448,7 +448,6 @@ set (wsjt_FSRCS
   lib/morse.f90
   lib/move.f90
   lib/msgparser.f90
-  lib/ft8v2/my_hash.f90
   lib/options.f90
   lib/osd174.f90
   lib/ft8v2/osd174_91.f90
