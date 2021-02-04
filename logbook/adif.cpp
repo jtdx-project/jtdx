@@ -104,7 +104,7 @@ void ADIF::load(const QString mycall,const QString mygrid,const QString mydate)
             QString mytime = _extractField(record,"QSO_DATE:")+_extractField(record,"TIME_ON:");
             while (mytime.length() < 14) mytime += "0";
             if ((mycall.isEmpty () || _extractField(record,"STATION_CALLSIGN:") == mycall) && 
-                (mygrid.isEmpty () || mygrid.left(4) == _extractField(record,"MY_GRIDSQUARE:").left(4)) && 
+                (mygrid.isEmpty () || mygrid.left(4) == _extractField(record,"MY_GRIDSQUARE:").left(4).toUpper()) && 
                 (mydate.isEmpty () || mytime.toLongLong() >= mydate.toLongLong())) {
                 QSO q;
                 q.call = _extractField(record,"CALL:");
