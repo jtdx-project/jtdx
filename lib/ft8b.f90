@@ -908,11 +908,13 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     endif
     if(iaptype.gt.34) then ! DX Call searching false iaptype 35,36: 'CS7CYU/R FO5QB 73', 'T57KWP/R FO5QB RR73'
       ispc1=index(msg37,' ')
-      if(ispc1.gt.5 .and. msg37((ispc1-2):(ispc1-1)).eq.'/R') then
-        call_a=''; call_a=msg37(1:(ispc1-3))
-        lfound=.false.
-        call searchcalls(call_a,"            ",lfound)
-        if(.not.lfound) then; nbadcrc=1; msg37=''; return; endif
+      if(ispc1.gt.5) then
+        if(msg37((ispc1-2):(ispc1-1)).eq.'/R') then ! have to cascade it to prevent getting out of index range
+          call_a=''; call_a=msg37(1:(ispc1-3))
+          lfound=.false.
+          call searchcalls(call_a,"            ",lfound)
+          if(.not.lfound) then; nbadcrc=1; msg37=''; return; endif
+        endif
       endif
     else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. &
            ((iaptype.eq.1 .or. iaptype.eq.4) .and. xsnr.lt.-18.5)) then
@@ -991,11 +993,13 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 ! /P has i3.eq.2 .and. n3.eq.0
     if(iaptype.eq.0 .and. i3.eq.1 .and. n3.eq.0 .and. index(msg37,'/R ').gt.3) then
       ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      call_a=''; call_b=''
-      if(msg37(ispc1-2:ispc1-1).eq.'/R') then; call_a=msg37(1:ispc1-3); else; call_a=msg37(1:ispc1-1); endif
-      if(msg37(ispc2-2:ispc2-1).eq.'/R') then; call_b=msg37(ispc1+1:ispc2-3); else; call_b=msg37(ispc1+1:ispc2-1); endif
-      falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      if(ispc1.gt.3 .and. ispc2.gt.6) then
+        call_a=''; call_b=''
+        if(msg37(ispc1-2:ispc1-1).eq.'/R') then; call_a=msg37(1:ispc1-3); else; call_a=msg37(1:ispc1-1); endif
+        if(msg37(ispc2-2:ispc2-1).eq.'/R') then; call_b=msg37(ispc1+1:ispc2-3); else; call_b=msg37(ispc1+1:ispc2-1); endif
+        falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
     endif
 
 ! -23 -0.5 2533 ~ <...> W LKNQZG2K4 RR73  invalid message, iaptype=0 this type of message is not allowed for transmission with RR73   
@@ -1056,7 +1060,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 ! EA1AHY PW1BSL R GR47 *  i3=1 n3=1 mycall
     if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
       ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
-      if(msg37(ispc2:ispc3).eq.' R ') then 
+      if(msg37(ispc2:ispc3).eq.' R ' .and. ispc1.gt.3) then
         call_a=''; call_b=''
         if(msg37(1:ispc1-1).eq.trim(mycall)) then
           call_a='CQ          '
@@ -1081,9 +1085,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 ! 6W6VIV EY8MM 73
 ! 6Y9KOZ EY8MM RR73
     if(iaptype.ge.35 .and. (xsnr.lt.-21.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0)) then
-      ispc1=index(msg37,' '); call_b=''; call_b=msg37(1:ispc1-1)
-      falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      ispc1=index(msg37,' ')
+      if(ispc1.gt.1) then
+        call_b=''; call_b=msg37(1:ispc1-1)
+        falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
     endif
 
 4   ldupemsg=.false.
@@ -1096,9 +1103,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         lasthcall=hiscall; lastrxmsg(1)%lastmsg=msg37; lastrxmsg(1)%xdt=xdt-0.5; lastrxmsg(1)%lstate=.true.
         lqsomsgdcd=.true.
 !$OMP FLUSH (lqsomsgdcd)
-      else if(.not.lft8s .and. msg37(1:mycalllen1).ne.trim(mycall)//' ' .and. &
-              index(msg37,' '//trim(hiscall)//' ').gt.0) then
-        lrepliedother=.true.
+      else if(.not.lft8s .and. mycalllen1.gt.2) then
+        if(msg37(1:mycalllen1).ne.trim(mycall)//' ' .and. index(msg37,' '//trim(hiscall)//' ').gt.0) then
+          lrepliedother=.true.
+        endif
       endif
     endif
     if(len_trim(hiscall).gt.3 .and. .not.lqsomsgdcd) then
@@ -1115,10 +1123,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
       endif
     endif
 
-    if(.not.ldupemsg .and. msg37(1:mycalllen1).eq.trim(mycall)//' ') then
+    if(mycalllen1.gt.2) then
+      if(.not.ldupemsg .and. msg37(1:mycalllen1).eq.trim(mycall)//' ') then
 !$omp critical(update_incall)
-      incall(20:2:-1)=incall(20-1:1:-1); incall(1)%msg=msg37; incall(1)%xdt=xdt-0.5
+        incall(20:2:-1)=incall(20-1:1:-1); incall(1)%msg=msg37; incall(1)%xdt=xdt-0.5
 !$omp end critical(update_incall)
+      endif
     endif
 
     ldupeft8sd=.false.
