@@ -69,9 +69,9 @@ extern "C" {
 
   void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, fortran_charlen_t);
 				
-  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
+  void genft8_(char* msg, int* i3, int* n3, int* ntxhash, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
-  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
+  void genft4_(char* msg, int* ichk, int* ntxhash, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void gen_ft8wave_(int itone[], int* nsym, int* nsps, float* bt, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
@@ -4241,14 +4241,14 @@ void MainWindow::guiUpdate()
     else {
       int len1=22;
       if(m_modeTx=="FT8") {
-        int i3=0; int n3=0; char ft8msgbits[77];
-        genft8_(message,&i3,&n3,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
+        int i3=0; int n3=0; char ft8msgbits[77]; int ntxhash=1;
+        genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
         int nsym=79; int nsps=4*1920; float fsample=48000.0; float bt=2.0; float f0=ui->TxFreqSpinBox->value() - m_XIT; int icmplx=0; int nwave=nsym*nsps;
         gen_ft8wave_(const_cast<int *>(itone),&nsym,&nsps,&bt,&fsample,&f0,foxcom_.wave,foxcom_.wave,&icmplx,&nwave);
       }
       else if(m_modeTx=="FT4") {
-        int ichk=0; char ft4msgbits[77];
-        genft4_(message, &ichk, msgsent, const_cast<char *> (ft4msgbits),const_cast<int *>(itone),37,37);
+        int ichk=0; char ft4msgbits[77]; int ntxhash=1;
+        genft4_(message, &ichk, &ntxhash, msgsent, const_cast<char *> (ft4msgbits),const_cast<int *>(itone),37,37);
         int nsym=103; int nsps=4*576; float fsample=48000.0; float f0=ui->TxFreqSpinBox->value() - m_XIT; int nwave=(nsym+2)*nsps; int icmplx=0;
         gen_ft4wave_(const_cast<int *>(itone),&nsym,&nsps,&fsample,&f0,foxcom_.wave,foxcom_.wave,&icmplx,&nwave);
       }

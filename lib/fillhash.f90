@@ -42,7 +42,7 @@ subroutine fillhash(numthreads,lfill)
       if(len(trim(mycall13)).gt.2) then
         mycall13_set=.true.
         mycall13_0=mycall13
-        call save_hash_txcall(mycall13,hashmy10,hashmy12,hashmy22,.true.)
+        call save_hash_mycall(mycall13,hashmy10,hashmy12,hashmy22)
 !print *,mycall13,hashmy10,hashmy12,hashmy22
       else
         mycall13_set=.false.

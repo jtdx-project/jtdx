@@ -27,7 +27,7 @@ function stdmsg(msg0)
   msg1=msg0
   i3=-1
   n3=-1
-  call pack77(msg1,i3,n3,c77)
+  call pack77(msg1,i3,n3,c77,0)
   stdmsg=(i3.gt.0 .or. n3.gt.0)
 
 !###

@@ -1,4 +1,4 @@
-subroutine genft4(msg0,ichk,msgsent,msgbits,i4tone)
+subroutine genft4(msg0,ichk,ntxhash,msgsent,msgbits,i4tone)
 
 ! Encode an FT4  message
 ! Input:
@@ -48,8 +48,12 @@ subroutine genft4(msg0,ichk,msgsent,msgbits,i4tone)
 
   i3=-1
   n3=-1
-  call pack77(message,i3,n3,c77)
-  call unpack77(c77,0,msgsent,unpk77_success,25) !Unpack to get msgsent
+  call pack77(message,i3,n3,c77,ntxhash)
+  if(ntxhash.eq.1) then
+    call unpack77(c77,0,msgsent,unpk77_success,26) !TX message, unpack to get msgsent, use TX hash tables and do not save RX hash values
+  else
+    call unpack77(c77,0,msgsent,unpk77_success,25) !service message, unpack to get msgsent. Do not save hash values
+  endif
 
   if(ichk.eq.1) go to 999
   read(c77,'(77i1)',err=1) msgbits

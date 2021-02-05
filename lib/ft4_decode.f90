@@ -118,7 +118,7 @@ contains
       if(len(trim(hiscall0)).lt.3) then; hiscall0=mycall; nohiscall=.true.; endif
       message=trim(mycall)//' '//trim(hiscall0)//' RR73'
       i3=-1; n3=-1
-      call pack77(message,i3,n3,c77); call unpack77(c77,1,msgsent,unpk77_success,1)
+      call pack77(message,i3,n3,c77,1); call unpack77(c77,1,msgsent,unpk77_success,1)
       if(i3.ne.1 .or. (message.ne.msgsent) .or. .not.unpk77_success) go to 10
       read(c77,'(77i1)') message77
       message77=mod(message77+rvec,2)

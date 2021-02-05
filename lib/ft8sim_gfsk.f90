@@ -66,8 +66,8 @@ program ft8sim_gfsk
   ! Source-encode, then get itone()
   i3=-1
   n3=-1
-  call pack77(msg37,i3,n3,c77)
-  call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
+  call pack77(msg37,i3,n3,c77,1)
+  call genft8(msg37,i3,n3,1,msgsent37,msgbits,itone)
   call gen_ft8wave(itone,NN,NSPS,bt,fs,f0,cwave,xjunk,1,NWAVE)  !Generate complex cwave
 
   write(*,*)  
