@@ -27,7 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
-                         oddcopy,evencopy,nFT8decd,sumxdt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -202,15 +202,16 @@ contains
             ldupe=.false.
             if(msg37(1:6).eq."      ") ldupe=.true. 
             if(.not.ldupe .and. ndecodes.gt.0) then
-              do id=1,ndecodes
+              do idec=1,ndecodes
                 if(lhideft8dupes) then
-                  if(msg37.eq.allmessages(id) .and. (nsnr.le.allsnrs(id) .or. &
-                     (nsnr.gt.allsnrs(id) .and. abs(allfreq(id)-f1).lt.45.0))) then
+                  if(msg37.eq.allmessages(idec) .and. (nsnr.le.allsnrs(idec) .or. &
+                     (nsnr.gt.allsnrs(idec) .and. abs(allfreq(idec)-f1).lt.45.0))) then
                     ldupe=.true.; exit
                   endif
                 else
-                  if(msg37.eq.allmessages(id) .and. ((nsnr.le.allsnrs(id) .and. abs(allfreq(id)-f1).lt.45.0) &
-                     .or. (nsnr.gt.allsnrs(id) .and. abs(allfreq(id)-f1).lt.45.0 .and. numthreads.ne.1))) then
+                  if(msg37.eq.allmessages(idec) .and. ((nsnr.le.allsnrs(idec) .and. &
+                     abs(allfreq(idec)-f1).lt.45.0) .or. (nsnr.gt.allsnrs(idec) .and. &
+                     abs(allfreq(idec)-f1).lt.45.0 .and. numthreads.ne.1))) then
                     ldupe=.true.; exit
                   endif
                 endif
@@ -219,10 +220,8 @@ contains
             if(.not.ldupe) then
               if(.not.lFreeText .and. k.eq.1) call extract_call(msg37,call2)
 !$omp critical(update_arrays)
-              ndecodes=ndecodes+1
-              allmessages(ndecodes)=msg37
-              allsnrs(ndecodes)=nsnr
-              allfreq(ndecodes)=f1
+              ndecodes=ndecodes+1; allmessages(ndecodes)=msg37; allsnrs(ndecodes)=nsnr; allfreq(ndecodes)=f1
+!$omp end critical(update_arrays)
               if(.not.lhidemsg) then
                 if(iaptype.eq.0) then
                   if(.not.lFreeText .or. lspecial) servis8=' '
@@ -243,9 +242,9 @@ contains
 !  calldt(200:2:-1)%call2=calldt(200-1:1:-1)%call2
 !                lthrdecd=.true.
                 calldt(200:2:-1,nthr)=calldt(200-1:1:-1,nthr); calldt(1,nthr)%call2=call2; calldt(1,nthr)%dt=xdt
-                nFT8decd=nFT8decd+1; sumxdt=sumxdt+xdt
+                nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
-!$omp end critical(update_arrays)
+
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
                 if(nsec.eq.0 .or. nsec.eq.30) then

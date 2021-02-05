@@ -25,7 +25,7 @@ contains
 !    use timer_module, only: timer
     use packjt77
     use ft4_mod1, only : nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry
-    use ft8_mod1, only : sumxdt,avexdt,mycall,hiscall
+    use ft8_mod1, only : sumxdtt,avexdt,mycall,hiscall
     include 'ft4/ft4_params.f90'
     class(ft4_decoder), intent(inout) :: this
     procedure(ft4_decode_callback) :: callback
@@ -387,7 +387,7 @@ contains
                 if(lFreeText) then; if(abs(nfqso-nint(f1)).le.10) then; servis4=','; else; servis4='.'; endif; endif
                 if(.not.lhidemsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
               endif
-              nFT4decd=nFT4decd+1; sumxdt=sumxdt+xdt
+              nFT4decd=nFT4decd+1; sumxdtt(1)=sumxdtt(1)+xdt
               exit
             endif
           enddo !Sequence estimation
