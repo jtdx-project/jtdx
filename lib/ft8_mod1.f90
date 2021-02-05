@@ -86,11 +86,17 @@ module ft8_mod1
   type (lastrxmsg_struct) lastrxmsg(1)
   data lastrxmsg%lstate/.false./
 
-  type callsigndt_struct
+  type callsigndtodd_struct
     real dt
     character*12 call2
-  end type callsigndt_struct
-  type (callsigndt_struct) calldt(200,24)
+  end type callsigndtodd_struct
+  type (callsigndtodd_struct) calldtodd(150)
+
+  type callsigndteven_struct
+    real dt
+    character*12 call2
+  end type callsigndteven_struct
+  type (callsigndteven_struct) calldteven(150)
 
   type incall_struct
     real xdt

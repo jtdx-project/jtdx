@@ -26,7 +26,7 @@ contains
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
-    use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldt,incall, &
+    use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
@@ -42,7 +42,7 @@ contains
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -70,6 +70,11 @@ contains
           then; lastrxmsg(1)%lstate=.false.
     endif
 
+    levenint=.false.; loddint=.false.
+    if(nsec.eq.0 .or. nsec.eq.30) then; levenint=.true.
+    elseif(nsec.eq.15 .or. nsec.eq.45) then; loddint=.true.
+    endif
+
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
     ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
@@ -87,14 +92,14 @@ contains
 
       if(.not.lastrxmsg(1)%lstate) then
 ! calling someone, lastrxmsg still not valid
-        if(nsec.eq.0 .or. nsec.eq.30) then
+        if(levenint) then
           do i=1,130
             if(.not.evencopy(i)%lstate) cycle
             if(index(evencopy(i)%msg,' '//trim(hiscall)//' ').gt.1) then
               lastrxmsg(1)%lastmsg=evencopy(i)%msg; lastrxmsg(1)%xdt=evencopy(i)%dt; lastrxmsg(1)%lstate=.true.; exit
             endif
           enddo
-        elseif(nsec.eq.15 .or. nsec.eq.45) then
+        elseif(loddint) then
           do i=1,130
             if(.not.oddcopy(i)%lstate) cycle
               if(index(oddcopy(i)%msg,' '//trim(hiscall)//' ').gt.1) then
@@ -156,13 +161,6 @@ contains
       !call timer('sync8   ',0)
       call sync8(nfa,nfb,syncmin,nfqso,candidate,ncand,jzb,jzt,swl,ipass,lqsothread,ncandthin,filter,ndtcenter)
       !call timer('sync8   ',1)
-!      if(ipass.eq.1) then
-!        laveraging=.true.
-!        do icand=1,ncand
-!          if(candidate(3,icand).gt.2.1) then; laveraging=.false.; exit; endif
-!        enddo
-!      endif
-!      if(ipass.gt.1 .and. .not.lthrdecd) laveraging=.true.
       do icand=1,ncand
         sync=candidate(3,icand)
         f1=candidate(1,icand)
@@ -179,7 +177,7 @@ contains
         call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
-                  i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,nsec,lft8sd,i3,n3,nft8rxfsens,  &
+                  i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
         nsnr=nint(xsnr) 
         xdt=xdt-0.5
@@ -221,6 +219,14 @@ contains
               if(.not.lFreeText .and. k.eq.1) call extract_call(msg37,call2)
 !$omp critical(update_arrays)
               ndecodes=ndecodes+1; allmessages(ndecodes)=msg37; allsnrs(ndecodes)=nsnr; allfreq(ndecodes)=f1
+              if(.not.lhidemsg) then
+ ! simulated wav tests affected, structure contains data for at least previous and current even|odd intervals
+                if(levenint) then
+                  calldteven(150:2:-1)=calldteven(150-1:1:-1); calldteven(1)%call2=call2; calldteven(1)%dt=xdt
+                else if(loddint) then
+                  calldtodd(150:2:-1)=calldtodd(150-1:1:-1); calldtodd(1)%call2=call2; calldtodd(1)%dt=xdt
+                endif
+              endif
 !$omp end critical(update_arrays)
               if(.not.lhidemsg) then
                 if(iaptype.eq.0) then
@@ -239,19 +245,16 @@ contains
 !print *,msg37
                 msg26=msg37(1:26)
                 if(associated(this%callback)) call this%callback(nsnr,xdt,f1,msg26,servis8)
-!  calldt(200:2:-1)%call2=calldt(200-1:1:-1)%call2
-!                lthrdecd=.true.
-                calldt(200:2:-1,nthr)=calldt(200-1:1:-1,nthr); calldt(1,nthr)%call2=call2; calldt(1,nthr)%dt=xdt
                 nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
 
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
-                if(nsec.eq.0 .or. nsec.eq.30) then
+                if(levenint) then
                   eventmp(nmsgloc)%msg=msg37; eventmp(nmsgloc)%freq=f1
                   eventmp(nmsgloc)%dt=xdt; eventmp(nmsgloc)%lstate=.true.
                 endif
-                if(nsec.eq.15 .or. nsec.eq.45) then
+                if(loddint) then
                   oddtmp(nmsgloc)%msg=msg37; oddtmp(nmsgloc)%freq=f1
                   oddtmp(nmsgloc)%dt=xdt; oddtmp(nmsgloc)%lstate=.true.
                 endif
@@ -263,11 +266,11 @@ contains
                    msg37(1:ispc1-1).ne.trim(mycall) .and. nmsgloc.lt.130 .and. index(msg37,'<').le.0) then
                   if(index(msg37,'/').gt.0 .and. msg37(1:3).ne.'CQ ') go to 4 ! compound not supported
                   nmsgloc=nmsgloc+1
-                  if(nsec.eq.0 .or. nsec.eq.30) then
+                  if(levenint) then
                     eventmp(nmsgloc)%msg=msg37; eventmp(nmsgloc)%freq=f1
                     eventmp(nmsgloc)%dt=xdt; eventmp(nmsgloc)%lstate=.true.
                   endif
-                  if(nsec.eq.15 .or. nsec.eq.45) then
+                  if(loddint) then
                     oddtmp(nmsgloc)%msg=msg37; oddtmp(nmsgloc)%freq=f1
                     oddtmp(nmsgloc)%dt=xdt; oddtmp(nmsgloc)%lstate=.true.
                   endif
@@ -289,12 +292,12 @@ contains
 !$omp critical(update_structures)
     ncandall=ncandall+ncandthr
     if(nmsgloc.gt.0) then
-      if(nsec.eq.0 .or. nsec.eq.30) then
+      if(levenint) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
       endif
-      if(nsec.eq.15 .or. nsec.eq.45) then
+      if(loddint) then
         odd(nmsg+1:nmsg+nmsgloc)%msg=oddtmp(1:nmsgloc)%msg; odd(nmsg+1:nmsg+nmsgloc)%freq=oddtmp(1:nmsgloc)%freq
         odd(nmsg+1:nmsg+nmsgloc)%dt=oddtmp(1:nmsgloc)%dt; odd(nmsg+1:nmsg+nmsgloc)%lstate=oddtmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
