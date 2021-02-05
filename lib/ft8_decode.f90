@@ -242,7 +242,7 @@ contains
                 if(associated(this%callback)) call this%callback(nsnr,xdt,f1,msg26,servis8)
 !  calldt(200:2:-1)%call2=calldt(200-1:1:-1)%call2
 !                lthrdecd=.true.
-                calldt(200:2:-1)=calldt(200-1:1:-1); calldt(1)%call2=call2; calldt(1)%dt=xdt
+                calldt(200:2:-1,nthr)=calldt(200-1:1:-1,nthr); calldt(1,nthr)%call2=call2; calldt(1,nthr)%dt=xdt
                 nFT8decd=nFT8decd+1; sumxdt=sumxdt+xdt
               endif
 !$omp end critical(update_arrays)

@@ -53,8 +53,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         if(lastrxmsg(1)%lstate) then; xdt0=lastrxmsg(1)%xdt; nqso=2; lvirtual2=.true.; endif
         if(.not.lastrxmsg(1)%lstate) then
           do i=1,200
-            if(trim(calldt(i)%call2).eq.trim(hiscall)) then
-              xdt0=calldt(i)%dt; nqso=3; lvirtual2=.true.; exit
+            if(trim(calldt(i,nthr)%call2).eq.trim(hiscall)) then
+              xdt0=calldt(i,nthr)%dt; nqso=3; lvirtual2=.true.; exit
             endif
           enddo
         endif
@@ -64,8 +64,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         if(lastrxmsg(1)%lstate) then; xdt0=lastrxmsg(1)%xdt; nqso=3; lvirtual3=.true.; endif
         if(.not.lastrxmsg(1)%lstate) then
           do i=1,200
-            if(trim(calldt(i)%call2).eq.trim(hiscall)) then
-              xdt0=calldt(i)%dt; nqso=3; lvirtual3=.true.; exit
+            if(trim(calldt(i,nthr)%call2).eq.trim(hiscall)) then
+              xdt0=calldt(i,nthr)%dt; nqso=3; lvirtual3=.true.; exit
             endif
           enddo
         endif

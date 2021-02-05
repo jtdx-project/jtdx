@@ -90,7 +90,7 @@ module ft8_mod1
     real dt
     character*12 call2
   end type callsigndt_struct
-  type (callsigndt_struct) calldt(200)
+  type (callsigndt_struct) calldt(200,24)
 
   type incall_struct
     real xdt
