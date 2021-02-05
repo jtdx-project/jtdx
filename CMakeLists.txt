@@ -50,8 +50,8 @@ message (STATUS "Building ${CMAKE_PROJECT_NAME}-${wsjtx_VERSION}")
 # project information
 #
 set (PROJECT_NAME "JTDX")
-set (PROJECT_VENDOR "Igor Chernikov, UA3DJY")
-set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>")
+set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Järve, ES1JA")
+set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
 set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
 set (PROJECT_HOMEPAGE http://jtdx.tech/)
 set (PROJECT_MANUAL index.php/videos-guides)
