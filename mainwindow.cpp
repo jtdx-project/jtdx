@@ -4475,10 +4475,10 @@ void MainWindow::guiUpdate()
       } 
 
     m_transmitting = true;
+    if (!m_config.tx_QSY_allowed ()) ui->TxFreqSpinBox->setDisabled(true);
     m_transmittedQSOProgress = m_QSOProgress;
     transmitDisplay (true);
     if(m_filter) {
-//    if (m_autofilter && m_autoseq && m_filter) {
       if(m_FilterState==2) { if(m_QSOProgress == CALLING) autoFilter (false); } // switch filter off at getting 73
       else if(m_FilterState==1) { if (m_QSOProgress == SIGNOFF || (!m_rrr && m_QSOProgress == ROGERS)) autoFilter (false); } // switch filter off at sending 73
     }
@@ -4694,7 +4694,6 @@ void MainWindow::startTx2()
       }
       return;
     }
-//  }
   if(m_config.write_decoded_debug()) writeToALLTXT("MainWindow::startTx2() failed to start modulator: m_modulator is active");
 }
 
@@ -4703,6 +4702,7 @@ void MainWindow::stopTx()
   Q_EMIT endTransmitMessage ();
   m_btxok = false;
   m_transmitting = false;
+  ui->TxFreqSpinBox->setDisabled(false);
   g_iptt=0;
   if (!m_txwatchdog) {
 	  tx_status_label->setStyleSheet("");
@@ -6907,7 +6907,6 @@ void MainWindow::on_pbTxMode_clicked()
 
 void MainWindow::setXIT(int n, Frequency base)
 {
-  if (m_transmitting && !m_config.tx_QSY_allowed ()) return;
   
   if(m_mode=="JT9+JT65") {
 	if(m_wideGraph->Fmin() <= m_config.ntopfreq65()) {
@@ -6955,6 +6954,7 @@ void MainWindow::setXIT(int n, Frequency base)
   }
   //Now set the audio Tx freq
   Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+  if(m_transmitting) m_restart=true;
 }
 
 void MainWindow::setRxFreq4(int rxFreq)
