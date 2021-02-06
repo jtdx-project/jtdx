@@ -21,11 +21,11 @@ module ft4_decode
 
 contains
 
-  subroutine decode(this,callback,nQSOProgress,nfqso,nfa,nfb,ndepth,stophint,mycall,hiscall,swl)
+  subroutine decode(this,callback,nQSOProgress,nfqso,nfa,nfb,ndepth,stophint,swl)
 !    use timer_module, only: timer
     use packjt77
     use ft4_mod1, only : nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry
-    use ft8_mod1, only : sumxdt,avexdt
+    use ft8_mod1, only : sumxdtt,avexdt,mycall,hiscall
     include 'ft4/ft4_params.f90'
     class(ft4_decoder), intent(inout) :: this
     procedure(ft4_decode_callback) :: callback
@@ -33,7 +33,7 @@ contains
     character message*37,msg26*26,msgsent*37,msg37_2*37
     character c77*77
     character*37 decodes(100)
-    character*12 mycall,hiscall,mycall0,hiscall0,call_a,call_b
+    character*12 mycall0,hiscall0,call_a,call_b
     character*4 servis4
     complex cd2(0:NDMAX-1)                  !Complex waveform
     complex cb(0:NDMAX-1)
@@ -66,7 +66,7 @@ contains
       mycall0,hiscall0,ctwk2
 
     this%callback => callback
-    dxcall13=hiscall; mycall13=mycall; mycalllen1=len_trim(mycall)+1
+    mycalllen1=len_trim(mycall)+1
     smax=0.; smax1=0.; nd1=0 ! smax init value shall be increased to 1.+ ?
 
     if(first) then
@@ -118,7 +118,7 @@ contains
       if(len(trim(hiscall0)).lt.3) then; hiscall0=mycall; nohiscall=.true.; endif
       message=trim(mycall)//' '//trim(hiscall0)//' RR73'
       i3=-1; n3=-1
-      call pack77(message,i3,n3,c77); call unpack77(c77,1,msgsent,unpk77_success,1)
+      call pack77(message,i3,n3,c77,1); call unpack77(c77,1,msgsent,unpk77_success,1)
       if(i3.ne.1 .or. (message.ne.msgsent) .or. .not.unpk77_success) go to 10
       read(c77,'(77i1)') message77
       message77=mod(message77+rvec,2)
@@ -387,7 +387,7 @@ contains
                 if(lFreeText) then; if(abs(nfqso-nint(f1)).le.10) then; servis4=','; else; servis4='.'; endif; endif
                 if(.not.lhidemsg) call this%callback(nsnr,xdt,f1,msg26,servis4)
               endif
-              nFT4decd=nFT4decd+1; sumxdt=sumxdt+xdt
+              nFT4decd=nFT4decd+1; sumxdtt(1)=sumxdtt(1)+xdt
               exit
             endif
           enddo !Sequence estimation

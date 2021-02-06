@@ -69,9 +69,9 @@ extern "C" {
 
   void four2a_(_Complex float *, int * nfft, int * ndim, int * isign, int * iform, fortran_charlen_t);
 				
-  void genft8_(char* msg, int* i3, int* n3, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
+  void genft8_(char* msg, int* i3, int* n3, int* ntxhash, char* msgsent, char ft8msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
-  void genft4_(char* msg, int* ichk, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
+  void genft4_(char* msg, int* ichk, int* ntxhash, char* msgsent, char ft4msgbits[], int itone[], fortran_charlen_t, fortran_charlen_t);
 
   void gen_ft8wave_(int itone[], int* nsym, int* nsps, float* bt, float* fsample, float* f0, float xjunk[], float wave[], int* icmplx, int* nwave);
 
@@ -1001,7 +1001,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
       , "-r", QDir::toNativeSeparators (m_config.data_dir ().absolutePath ())
       };
   QProcessEnvironment env {QProcessEnvironment::systemEnvironment ()};
-  env.insert ("OMP_STACKSIZE", "5M");
+  env.insert ("OMP_STACKSIZE", "6M");
   proc_jtdxjt9.setProcessEnvironment (env);
   proc_jtdxjt9.start(QDir::toNativeSeparators (m_appDir) + QDir::separator () +
           "jtdxjt9", jt9_args, QIODevice::ReadWrite | QIODevice::Unbuffered);
@@ -4241,14 +4241,14 @@ void MainWindow::guiUpdate()
     else {
       int len1=22;
       if(m_modeTx=="FT8") {
-        int i3=0; int n3=0; char ft8msgbits[77];
-        genft8_(message,&i3,&n3,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
+        int i3=0; int n3=0; char ft8msgbits[77]; int ntxhash=1;
+        genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
         int nsym=79; int nsps=4*1920; float fsample=48000.0; float bt=2.0; float f0=ui->TxFreqSpinBox->value() - m_XIT; int icmplx=0; int nwave=nsym*nsps;
         gen_ft8wave_(const_cast<int *>(itone),&nsym,&nsps,&bt,&fsample,&f0,foxcom_.wave,foxcom_.wave,&icmplx,&nwave);
       }
       else if(m_modeTx=="FT4") {
-        int ichk=0; char ft4msgbits[77];
-        genft4_(message, &ichk, msgsent, const_cast<char *> (ft4msgbits),const_cast<int *>(itone),37,37);
+        int ichk=0; char ft4msgbits[77]; int ntxhash=1;
+        genft4_(message, &ichk, &ntxhash, msgsent, const_cast<char *> (ft4msgbits),const_cast<int *>(itone),37,37);
         int nsym=103; int nsps=4*576; float fsample=48000.0; float f0=ui->TxFreqSpinBox->value() - m_XIT; int nwave=(nsym+2)*nsps; int icmplx=0;
         gen_ft4wave_(const_cast<int *>(itone),&nsym,&nsps,&fsample,&f0,foxcom_.wave,foxcom_.wave,&icmplx,&nwave);
       }
@@ -4475,10 +4475,10 @@ void MainWindow::guiUpdate()
       } 
 
     m_transmitting = true;
+    if (!m_config.tx_QSY_allowed ()) ui->TxFreqSpinBox->setDisabled(true);
     m_transmittedQSOProgress = m_QSOProgress;
     transmitDisplay (true);
     if(m_filter) {
-//    if (m_autofilter && m_autoseq && m_filter) {
       if(m_FilterState==2) { if(m_QSOProgress == CALLING) autoFilter (false); } // switch filter off at getting 73
       else if(m_FilterState==1) { if (m_QSOProgress == SIGNOFF || (!m_rrr && m_QSOProgress == ROGERS)) autoFilter (false); } // switch filter off at sending 73
     }
@@ -4694,7 +4694,6 @@ void MainWindow::startTx2()
       }
       return;
     }
-//  }
   if(m_config.write_decoded_debug()) writeToALLTXT("MainWindow::startTx2() failed to start modulator: m_modulator is active");
 }
 
@@ -4703,6 +4702,7 @@ void MainWindow::stopTx()
   Q_EMIT endTransmitMessage ();
   m_btxok = false;
   m_transmitting = false;
+  ui->TxFreqSpinBox->setDisabled(false);
   g_iptt=0;
   if (!m_txwatchdog) {
 	  tx_status_label->setStyleSheet("");
@@ -6907,7 +6907,6 @@ void MainWindow::on_pbTxMode_clicked()
 
 void MainWindow::setXIT(int n, Frequency base)
 {
-  if (m_transmitting && !m_config.tx_QSY_allowed ()) return;
   
   if(m_mode=="JT9+JT65") {
 	if(m_wideGraph->Fmin() <= m_config.ntopfreq65()) {
@@ -6955,6 +6954,7 @@ void MainWindow::setXIT(int n, Frequency base)
   }
   //Now set the audio Tx freq
   Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+  if(m_transmitting) m_restart=true;
 }
 
 void MainWindow::setRxFreq4(int rxFreq)

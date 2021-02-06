@@ -50,8 +50,8 @@ message (STATUS "Building ${CMAKE_PROJECT_NAME}-${wsjtx_VERSION}")
 # project information
 #
 set (PROJECT_NAME "JTDX")
-set (PROJECT_VENDOR "Igor Chernikov, UA3DJY")
-set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>")
+set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Järve, ES1JA")
+set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
 set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
 set (PROJECT_HOMEPAGE http://jtdx.tech/)
 set (PROJECT_MANUAL index.php/videos-guides)
@@ -448,7 +448,6 @@ set (wsjt_FSRCS
   lib/morse.f90
   lib/move.f90
   lib/msgparser.f90
-  lib/ft8v2/my_hash.f90
   lib/options.f90
   lib/osd174.f90
   lib/ft8v2/osd174_91.f90
@@ -1149,8 +1148,8 @@ if (${OPENMP_FOUND} OR APPLE)
        PROPERTIES
 ##       COMPILE_FLAGS "${OpenMP_C_FLAGS}"
 ##       LINK_FLAGS "${OpenMP_C_FLAGS}"
-#      LINK_FLAGS -Wl,--stack,8388608
-       LINK_FLAGS -Wl,--stack,4194304
+#       LINK_FLAGS -Wl,--stack,8388608
+       LINK_FLAGS -Wl,--stack,16777216
 ##       Fortran_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/fortran_modules_omp
       )
   endif ()
@@ -1521,6 +1520,7 @@ else ()
     # Derive the correct filename for a Debian package because the DEB
     # generator doesn't do this correctly at present.
     #
+    STRING(REPLACE "_" "-" CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
     find_program (DPKG_PROGRAM dpkg DOC "dpkg program of Debian-based systems")
     if (DPKG_PROGRAM)
       execute_process (
@@ -1543,11 +1543,11 @@ endif ()
 
 set (CPACK_DEBIAN_PACKAGE_DESCRIPTION "${PROJECT_DESCRIPTION}")
 set (CPACK_DEBIAN_PACKAGE_HOMEPAGE "${PROJECT_HOMEPAGE}")
-set (CPACK_DEBIAN_PACKAGE_DEPENDS "libgfortran3 (>=4.8.2), libqt5serialport5 (>=5.2), libqt5multimedia5-plugins (>=5.2), libqt5widgets5 (>=5.2), libusb-1.0, libudev, libc6 (>=2.19)")
+set (CPACK_DEBIAN_PACKAGE_DEPENDS "libgfortran5 (>=8.3) | libgfortran4 (>=7.3) | libgfortran3 (>=6.3), libfftw3-single3 (>=3.3), libgomp1 (>=6), libqt5serialport5 (>=5.7), libqt5multimedia5-plugins (>=5.7), libqt5widgets5 (>=5.7), libqt5network5 (>=5.7), libqt5printsupport5 (>=5.7), libusb-1.0-0 (>=1.0.21)")
 set (CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 
 set (CPACK_RPM_PACKAGE_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})
-set (CPACK_RPM_PACKAGE_REQUIRES "qt5-qtserialport >= 5.2, qt5-qtmultimedia >= 5.2, libusb-1.0, libudev, glibc >= 2, libgfortran >= 4.8.2")
+set (CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.9, qt5-qtserialport >= 5.9, qt5-qtmultimedia >= 5.9, qt5-qtsvg >= 5.9, libusbx >= 1.0.22, libgfortran >= 7, libgomp >= 7, fftw-libs-single >= 3.3")
 set (CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION /usr/share/pixmaps /usr/share/applications /usr/share/man /usr/share/man1)
 
 configure_file ("${PROJECT_SOURCE_DIR}/CMakeCPackOptions.cmake.in"

@@ -16,8 +16,8 @@ HelpTextWindow::HelpTextWindow (QString const& title, QString const& file_name, 
   if (!source.open (QIODevice::ReadOnly | QIODevice::Text))
     {
       JTDXMessageBox::warning_message (this, QApplication::applicationName ()
-                            , "Cannot open \"" + source.fileName ()
-                            + "\" for reading:" + source.errorString ());
+                            , tr("Cannot open \"") + source.fileName ()
+                            + tr("\" for reading:") + source.errorString ());
       return;
     }
   setText (QTextStream {&source}.readAll ());

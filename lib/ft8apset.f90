@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20191207
-
 subroutine ft8apset(lmycallstd,lhiscallstd)
 
   use packjt77
@@ -28,7 +26,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     else; msg='CQ '//trim(hiscall) 
     endif
 
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(lhiscallstd .and. i3.ne.1 .or. .not.lhiscallstd .and. i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
@@ -41,7 +39,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     else ; msg=trim(mycall)//' <'//trim(hiscallt)//'> -15' !!! to rework it for hash masks
     endif
 
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
@@ -53,7 +51,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 ! standard messages from Fox, always base callsigns
     if(len(trim(hisbcall)).gt.2 .and. len(trim(mybcall)).gt.2) then
       msg=trim(mybcall)//' '//trim(hisbcall)//' -15'
-      call pack77(msg,i3,n3,c77)
+      call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
       if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
@@ -66,7 +64,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 ! special messages
     msg=trim(mycall)//' RR73; '//trim(mycall)//' <'//trim(hiscallt)//'> -16'
     i3=0; n3=1
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     i1=0; i1=index(msgchk,'<'); if(i1.lt.15) return
@@ -77,7 +75,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
   if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
     msg=trim(mycall)//' <'//trim(hiscall)//'> -16' ! report, rreport
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) return
@@ -85,7 +83,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     apsymdxns1=2*apsymdxns1-1
 
     msg='<'//trim(mycall)//'> '//trim(hiscall)//' RR73'
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
@@ -94,7 +92,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
 ! now nonstandard DXCall searching
     msg='<W9XYZ> '//trim(hiscall)//' RR73'
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
@@ -102,7 +100,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     apsymdxnsrr73=2*apsymdxnsrr73-1
 
     msg='<W9XYZ> '//trim(hiscall)//' 73'
-    call pack77(msg,i3,n3,c77)
+    call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
     if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return

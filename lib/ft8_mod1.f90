@@ -7,10 +7,10 @@ module ft8_mod1
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
-  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(64),smycnr(64),pivalue,facx,twopi,facc1,dt,sumxdt,avexdt
+  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(64),smycnr(64),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58), &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
-          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decd,nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
+          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles,ncandall
   integer*1 gen(91,174)
@@ -86,11 +86,17 @@ module ft8_mod1
   type (lastrxmsg_struct) lastrxmsg(1)
   data lastrxmsg%lstate/.false./
 
-  type callsigndt_struct
+  type callsigndtodd_struct
     real dt
     character*12 call2
-  end type callsigndt_struct
-  type (callsigndt_struct) calldt(200)
+  end type callsigndtodd_struct
+  type (callsigndtodd_struct) calldtodd(150)
+
+  type callsigndteven_struct
+    real dt
+    character*12 call2
+  end type callsigndteven_struct
+  type (callsigndteven_struct) calldteven(150)
 
   type incall_struct
     real xdt

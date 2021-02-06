@@ -17,8 +17,10 @@ include "ldpc_174_91_c_generator.f90"
 logical first
 data first/.true./
 save first,gen
+!$omp threadprivate(first,gen)
 
 if( first ) then ! fill the generator matrix
+  first=.false.
   gen=0
   do i=1,M
     do j=1,23
@@ -31,7 +33,6 @@ if( first ) then ! fill the generator matrix
         enddo
     enddo
   enddo
-first=.false.
 endif
 
 ! Add 14-bit CRC to form 91-bit message+CRC14
