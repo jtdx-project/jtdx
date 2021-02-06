@@ -1148,8 +1148,8 @@ if (${OPENMP_FOUND} OR APPLE)
        PROPERTIES
 ##       COMPILE_FLAGS "${OpenMP_C_FLAGS}"
 ##       LINK_FLAGS "${OpenMP_C_FLAGS}"
-#      LINK_FLAGS -Wl,--stack,8388608
-       LINK_FLAGS -Wl,--stack,4194304
+#       LINK_FLAGS -Wl,--stack,8388608
+       LINK_FLAGS -Wl,--stack,16777216
 ##       Fortran_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/fortran_modules_omp
       )
   endif ()
