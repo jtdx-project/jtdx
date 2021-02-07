@@ -23,7 +23,7 @@ namespace
 
 #include "moc_HRDTransceiver.cpp"
 
-void HRDTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, int id)
+void HRDTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, unsigned id)
 {
   (*registry)[HRD_transceiver_name] = TransceiverFactory::Capabilities (id, TransceiverFactory::Capabilities::network, true, true /* maybe */);
 }

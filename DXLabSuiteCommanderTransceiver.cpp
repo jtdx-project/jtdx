@@ -36,7 +36,7 @@ namespace
   }
 }
 
-void DXLabSuiteCommanderTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, int id)
+void DXLabSuiteCommanderTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, unsigned id)
 {
   (*registry)[commander_transceiver_name] = TransceiverFactory::Capabilities {id, TransceiverFactory::Capabilities::network, true};
 }

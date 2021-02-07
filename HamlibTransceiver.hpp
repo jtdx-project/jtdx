@@ -28,7 +28,7 @@ class HamlibTransceiver final
   static void register_transceivers (TransceiverFactory::Transceivers *);
   static void unregister_transceivers ();
 
-  explicit HamlibTransceiver (int model_number, TransceiverFactory::ParameterPack const&,
+  explicit HamlibTransceiver (unsigned model_number, TransceiverFactory::ParameterPack const&,
                               QObject * parent = nullptr);
   explicit HamlibTransceiver (TransceiverFactory::PTTMethod ptt_type, QString const& ptt_port,
                               QObject * parent = nullptr);
@@ -49,7 +49,7 @@ class HamlibTransceiver final
   Transceiver::MODE map_mode (rmode_t) const;
   rmode_t map_mode (Transceiver::MODE mode) const;
   std::tuple<vfo_t, vfo_t> get_vfos (bool for_split) const;
-
+  unsigned model_;
   struct RIGDeleter {static void cleanup (RIG *);};
   QScopedPointer<RIG, RIGDeleter> rig_;
 

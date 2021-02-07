@@ -30,7 +30,7 @@ class HRDTransceiver final
   Q_OBJECT
 
 public:
-  static void register_transceivers (TransceiverFactory::Transceivers *, int id);
+  static void register_transceivers (TransceiverFactory::Transceivers *, unsigned id);
 
   // takes ownership of wrapped Transceiver
   explicit HRDTransceiver (std::unique_ptr<TransceiverBase> wrapped

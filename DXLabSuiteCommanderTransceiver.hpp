@@ -24,7 +24,7 @@ class DXLabSuiteCommanderTransceiver final
   Q_OBJECT;                     // for translation context
 
 public:
-  static void register_transceivers (TransceiverFactory::Transceivers *, int id);
+  static void register_transceivers (TransceiverFactory::Transceivers *, unsigned id);
 
   // takes ownership of wrapped Transceiver
   explicit DXLabSuiteCommanderTransceiver (std::unique_ptr<TransceiverBase> wrapped,
