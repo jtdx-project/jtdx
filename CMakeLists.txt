@@ -64,7 +64,7 @@ set (PROJECT_DESCRIPTION "${PROJECT_SUMMARY_DESCRIPTION}
  and HF bands, as well as the popular mode JT65. Both modes were
  designed for making reliable, confirmed QSOs under extreme
  weak-signal conditions. They use nearly identical message structure
- and source encoding. JT65 was designed for EME (“moonbounce”) on the
+ and source encoding. JT65 was designed for EME ('moonbounce') on the
  VHF/UHF bands and has also proved very effective for worldwide QRP
  communication at HF; in contrast, JT9 is optimized for HF and lower
  frequencies. JT9 is about 2 dB more sensitive than JT65A while using
@@ -74,7 +74,7 @@ set (PROJECT_DESCRIPTION "${PROJECT_SUMMARY_DESCRIPTION}
  As many as 100 JT9 signals can fit into the same space, without
  overlap.
  .
- ${PROJECT_NAME} offers a “bi-lingual“ operating mode in which you can transmit
+ ${PROJECT_NAME} offers a 'bi-lingual' operating mode in which you can transmit
  and receive JT65 and JT9 signals, switching between modes
  automatically as needed. Displayed bandwidth can be as large as 5
  kHz. If your receiver has as upper-sideband filter at least 4 kHz
