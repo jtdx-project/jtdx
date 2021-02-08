@@ -106,6 +106,8 @@ int main(int argc, char *argv[])
   // Multiple instances:
   QSharedMemory mem_jtdxjt9;
 
+  auto const env = QProcessEnvironment::systemEnvironment ();
+
   ExceptionCatchingApplication a(argc, argv);
   if (has_style) a.setStyle("Fusion");
   try
@@ -331,7 +333,7 @@ int main(int argc, char *argv[])
                                              ).toBool () ? 1u : 4u;
         }
 
-        MainWindow w(multiple, &settings, &mem_jtdxjt9, downSampleFactor, new QNetworkAccessManager {&a});
+        MainWindow w(multiple, &settings, &mem_jtdxjt9, downSampleFactor, new QNetworkAccessManager {&a}, env);
         w.show();
 
         QObject::connect (&a, SIGNAL (lastWindowClosed()), &a, SLOT (quit()));

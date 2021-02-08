@@ -6,6 +6,7 @@
 #include <fftw3.h>
 #include <thread>
 
+#include <QProcessEnvironment>
 #include <QLineEdit>
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
@@ -127,6 +128,8 @@ namespace
   QRegularExpression dxCall_alphabet {"[A-Za-z0-9/]*"};
   QRegularExpression dxGrid_alphabet {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}"};
   QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{2}|\d{3}))|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
+  constexpr int default_rx_audio_buffer_frames {-1}; // lets Qt decide
+  constexpr int default_tx_audio_buffer_frames {-1}; // lets Qt decide
 
   bool message_is_73 (int type, QStringList const& msg_parts)
   {
@@ -148,11 +151,12 @@ namespace
 //--------------------------------------------------- MainWindow constructor
 MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdmem,
                        unsigned downSampleFactor, QNetworkAccessManager * network_manager,
-                       QWidget *parent) :
+                       QProcessEnvironment const& env, QWidget *parent) :
   QMainWindow(parent),
   m_exitCode {0},
   m_jtdxtime {new JTDXDateTime()},
 
+  m_env {env},
   m_dataDir {QStandardPaths::writableLocation (QStandardPaths::DataLocation)},
   m_valid {true},
   m_revision {revision ()},
@@ -175,6 +179,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_soundInput {new SoundInput},
   m_modulator {new Modulator {TX_SAMPLE_RATE, NTMAX, m_jtdxtime}},
   m_soundOutput {new SoundOutput},
+  m_rx_audio_buffer_frames {0},
+  m_tx_audio_buffer_frames {0},
   m_TRperiod {60.0},
   m_msErase {0},
   m_secBandChanged {0},
@@ -414,8 +420,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_dateTimeQSOOn {m_jtdxtime->currentDateTimeUtc2()},
   m_status {QsoHistory::NONE},
   mem_jtdxjt9 {shdmem},
-  m_msAudioOutputBuffered (0u),
-  m_framesAudioInputBuffered (RX_SAMPLE_RATE / 10),
   m_downSampleFactor (downSampleFactor),
   m_audioThreadPriority (QThread::HighPriority),
 //  m_audioThreadPriority (QThread::HighestPriority),
@@ -473,6 +477,11 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_modulator->moveToThread (&m_audioThread);
   m_soundInput->moveToThread (&m_audioThread);
   m_detector->moveToThread (&m_audioThread);
+  bool ok;
+  auto buffer_size = env.value ("JTDX_RX_AUDIO_BUFFER_FRAMES", "0").toInt (&ok);
+  m_rx_audio_buffer_frames = ok && buffer_size ? buffer_size : default_rx_audio_buffer_frames;
+  buffer_size = env.value ("JTDX_TX_AUDIO_BUFFER_FRAMES", "0").toInt (&ok);
+  m_tx_audio_buffer_frames = ok && buffer_size ? buffer_size : default_tx_audio_buffer_frames;
 
   // hook up sound output stream slots & signals and disposal
   connect (this, &MainWindow::initializeAudioOutputStream, m_soundOutput, &SoundOutput::setFormat);
@@ -1000,9 +1009,9 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
       , "-t", QDir::toNativeSeparators (m_config.temp_dir ().absolutePath ())
       , "-r", QDir::toNativeSeparators (m_config.data_dir ().absolutePath ())
       };
-  QProcessEnvironment env {QProcessEnvironment::systemEnvironment ()};
-  env.insert ("OMP_STACKSIZE", "6M");
-  proc_jtdxjt9.setProcessEnvironment (env);
+  QProcessEnvironment new_env {m_env};
+  new_env.insert  ("OMP_STACKSIZE", "6M");
+  proc_jtdxjt9.setProcessEnvironment (new_env);
   proc_jtdxjt9.start(QDir::toNativeSeparators (m_appDir) + QDir::separator () +
           "jtdxjt9", jt9_args, QIODevice::ReadWrite | QIODevice::Unbuffered);
 
@@ -1013,9 +1022,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  QThread::currentThread()->setPriority(QThread::HighPriority);
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
-
-  Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_framesAudioInputBuffered, m_detector, m_downSampleFactor, m_config.audio_input_channel ());
-  Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (), AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_msAudioOutputBuffered);
+  if (!m_config.audio_input_device ().isNull ()) {
+    Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector, m_downSampleFactor, m_config.audio_input_channel ());
+  }
+  if (!m_config.audio_output_device ().isNull ()) {
+    Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (), AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
+  }
   Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
 
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
@@ -1560,15 +1572,6 @@ void MainWindow::readSettings()
   dec_data.params.nstophint=1;
   m_nlasttx=0;
   m_delay=0;
-
-  // use these initialisation settings to tune the audio o/p buffer
-  // size and audio thread priority
-//  m_settings->beginGroup ("Tune");
-//  m_msAudioOutputBuffered = m_settings->value ("Audio/OutputBufferMs").toInt ();
-//  m_framesAudioInputBuffered = m_settings->value ("Audio/InputBufferFrames", RX_SAMPLE_RATE / 10).toInt ();
-//  m_framesAudioInputBuffered = m_settings->value ("Audio/InputBufferFrames", RX_SAMPLE_RATE * 2).toInt ();
-//  m_audioThreadPriority = static_cast<QThread::Priority> (m_settings->value ("Audio/ThreadPriority", QThread::HighPriority).toInt () % 8);
-//  m_settings->endGroup ();
 }
 
 void MainWindow::setDecodedTextFont (QFont const& font)
@@ -2012,17 +2015,14 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
         pskSetLocal ();
       }
 
-      if(m_config.restart_audio_input ()) {
-        Q_EMIT startAudioInputStream (m_config.audio_input_device (),
-                                      m_framesAudioInputBuffered, m_detector,
-                                      m_downSampleFactor,
-                                      m_config.audio_input_channel ());
+      if(m_config.restart_audio_input () && !m_config.audio_input_device ().isNull ()) {
+        Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector,
+                                      m_downSampleFactor, m_config.audio_input_channel ());
       }
 
-      if(m_config.restart_audio_output ()) {
+      if(m_config.restart_audio_output () && !m_config.audio_output_device ().isNull ()) {
         Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (),
-           AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2,
-                                            m_msAudioOutputBuffered);
+           AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
         if(m_transmitting || g_iptt==1) {
 //           ui->stopTxButton->click (); // halt any transmission
            haltTx("settings change is accepted ");

@@ -1,6 +1,3 @@
-// This source code file was last time modified by Igor UA3DJY on 20190226
-// All changes are shown in the patch file coming together with the full JTDX source code.
-
 #include "soundin.h"
 
 #include <QAudioDeviceInfo>
@@ -82,7 +79,7 @@ void SoundInput::start(QAudioDeviceInfo const& device, int framesPerBuffer, Audi
 
   connect (m_stream.data(), &QAudioInput::stateChanged, this, &SoundInput::handleStateChanged);
 
-  m_stream->setBufferSize (m_stream->format ().bytesForFrames (framesPerBuffer));
+  if (framesPerBuffer > 0) { m_stream->setBufferSize (m_stream->format ().bytesForFrames (framesPerBuffer)); }
   if (sink->initialize (QIODevice::WriteOnly, channel))
     {
       m_stream->start (sink);
