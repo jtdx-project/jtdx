@@ -74,7 +74,7 @@ OmniRig::RigParamX OmniRigTransceiver::map_mode (MODE mode)
   return OmniRig::PM_SSB_U; // quieten compiler grumble
 }
 
-void OmniRigTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, int id1, int id2)
+void OmniRigTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, unsigned id1, unsigned id2)
 {
   (*registry)[OmniRig_transceiver_one_name] = TransceiverFactory::Capabilities {
     id1

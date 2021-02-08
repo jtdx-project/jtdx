@@ -2983,7 +2983,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1846"/>
+        <location filename="../mainwindow.cpp" line="1849"/>
         <location filename="../mainwindow.cpp" line="3636"/>
         <location filename="../mainwindow.cpp" line="3645"/>
         <location filename="../mainwindow.cpp" line="6246"/>
@@ -3194,7 +3194,7 @@ Error: %2 - %3</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1509"/>
-        <location filename="../mainwindow.cpp" line="1558"/>
+        <location filename="../mainwindow.cpp" line="1570"/>
         <location filename="../mainwindow.cpp" line="2053"/>
         <source>S meter</source>
         <translation>S метр</translation>
@@ -4711,23 +4711,23 @@ list. The list can be maintained in Settings (F2).</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Вы хотите произвести настройку CAT системы заново?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="815"/>
+        <location filename="../mainwindow.cpp" line="824"/>
         <source>Error Writing WAV File</source>
         <translation>Ошибка записи WAV файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="955"/>
+        <location filename="../mainwindow.cpp" line="964"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Ошибка завершения jtdxjt9.exe процесса</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="933"/>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="942"/>
+        <location filename="../mainwindow.cpp" line="943"/>
         <location filename="../mainwindow.cpp" line="6242"/>
         <location filename="../mainwindow.cpp" line="6243"/>
         <location filename="../mainwindow.cpp" line="6300"/>
@@ -4736,32 +4736,32 @@ list. The list can be maintained in Settings (F2).</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="956"/>
+        <location filename="../mainwindow.cpp" line="965"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName код возврата :%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="973"/>
+        <location filename="../mainwindow.cpp" line="982"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Ошибка удаления &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="983"/>
         <source>Click OK to retry</source>
         <translation>Нажмите OK для повтора</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1669"/>
+        <location filename="../mainwindow.cpp" line="1672"/>
         <source>TX Even</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1676"/>
+        <location filename="../mainwindow.cpp" line="1679"/>
         <source>TX Odd</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1739"/>
+        <location filename="../mainwindow.cpp" line="1742"/>
         <location filename="../mainwindow.cpp" line="2504"/>
         <location filename="../mainwindow.cpp" line="3680"/>
         <location filename="../mainwindow.cpp" line="4302"/>
@@ -4773,7 +4773,7 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>Ошибка открытия файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1740"/>
+        <location filename="../mainwindow.cpp" line="1743"/>
         <location filename="../mainwindow.cpp" line="2505"/>
         <location filename="../mainwindow.cpp" line="3681"/>
         <location filename="../mainwindow.cpp" line="4303"/>
@@ -4786,22 +4786,22 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>Не удается открыть &quot;%1&quot; для добавления: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1795"/>
+        <location filename="../mainwindow.cpp" line="1798"/>
         <source>lost audio </source>
         <translation>потери звука </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1879"/>
+        <location filename="../mainwindow.cpp" line="1882"/>
         <source>Error saving c2 file</source>
         <translation>Ошибка сохранения c2 файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1956"/>
+        <location filename="../mainwindow.cpp" line="1959"/>
         <source>Error in SoundInput</source>
         <translation>Ошибка в SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1960"/>
+        <location filename="../mainwindow.cpp" line="1963"/>
         <source>Error in SoundOutput</source>
         <translation>Ошибка в SoundOutput</translation>
     </message>
@@ -5409,17 +5409,17 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="184"/>
+        <location filename="../main.cpp" line="186"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Неверное имя трансивера - \ &amp; / не допускается</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="209"/>
+        <location filename="../main.cpp" line="211"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Возможно запущен другой экземпляр программы, попробуйте удалить устаревший файл блокировки?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="351"/>
+        <location filename="../main.cpp" line="353"/>
         <source>Unexpected error</source>
         <translation>Непредвиденная ошибка</translation>
     </message>
@@ -5555,67 +5555,67 @@ Error(%2): %3</source>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="21"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>Произошла ошибка при открытии устройства ввода звука.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="25"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>Произошла ошибка во время чтения с устройства ввода звука.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="29"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>Звуковой поток подается на устройство ввода звука недостаточно быстро.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="33"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>Невосстановимая ошибка,звуковое устройство ввода звука не используется.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="62"/>
         <source>Requested input audio format is not valid.</source>
         <translation>Запрошенный формат входного звукового сигнала неправилен.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="69"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>Запрошенный формат входящего звукового сигнала не поддерживается на этом устройстве.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="90"/>
         <source>Failed to initialize audio sink device</source>
         <translation>Не удалось инициализировать звуковое устройство</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="125"/>
         <source>Idle</source>
         <translation>Ожидание</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="129"/>
         <source>Receiving</source>
         <translation>Прием</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="133"/>
         <source>Suspended</source>
         <translation>Приостановлен</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="138"/>
         <source>Interrupted</source>
         <translation>Прерван</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="145"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="149"/>
         <source>Stopped</source>
         <translation>Остановлен</translation>
     </message>
@@ -5623,62 +5623,62 @@ Error(%2): %3</source>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="24"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>Произошла ошибка при открытиии звуковой карты.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="25"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>Ошибка записи информации в звуковую карту.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>Аудиоданные не подаются на звуковую карту достаточно быстро.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>Невосстановимая ошибка, звуковая карта в настоящее время не используется.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="45"/>
         <source>Requested output audio format is not valid.</source>
         <translation>Запрошенный выходной аудиоформат недействителен.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="46"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation>Запрошенный формат вывода звука не поддерживается на устройстве.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="109"/>
         <source>Idle</source>
         <translation>Ожидание</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="110"/>
         <source>Sending</source>
         <translation>Отправка</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="111"/>
         <source>Suspended</source>
         <translation>Подвешенный</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Interrupted</source>
         <translation>Прерванный</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Stopped</source>
         <translation>Останов</translation>
     </message>
@@ -8498,27 +8498,27 @@ soundcard changes</source>
         <translation>Непредвиденная фатальная ошибка</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="142"/>
+        <location filename="../main.cpp" line="144"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>&lt;стиль может быть Fusion (по умолчанию) или Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="143"/>
+        <location filename="../main.cpp" line="145"/>
         <source>style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="147"/>
+        <location filename="../main.cpp" line="149"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Где &lt;rig-name&gt;для поддержки нескольких экземпляров.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="148"/>
+        <location filename="../main.cpp" line="150"/>
         <source>rig-name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="152"/>
+        <location filename="../main.cpp" line="154"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Записываемые файлы в тестовом месте. Используйте с осторожностью, только для тестирования.</translation>
     </message>

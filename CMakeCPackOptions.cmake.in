@@ -62,7 +62,7 @@ VIAddVersionKey /LANG=0 \"Comments\" \"@PROJECT_DESCRIPTION@\"
 VIAddVersionKey /LANG=0 \"CompanyName\" \"@PROJECT_VENDOR@\"
 VIAddVersionKey /LANG=0 \"LegalCopyright\" \"@PROJECT_COPYRIGHT@\"
 VIAddVersionKey /LANG=0 \"FileDescription\" \"@PROJECT_NAME@ Installer\"
-VIAddVersionKey /LANG=0 \"FileVersion\" \"v@WSJTX_VERSION_MAJOR@.@WSJTX_VERSION_MINOR@.@WSJTX_VERSION_PATCH@.@WSJTX_VERSION_IS_RELEASE@\""
+VIAddVersionKey /LANG=0 \"FileVersion\" \"v@WSJTX_VERSION_MAJOR@.@WSJTX_VERSION_MINOR@.@WSJTX_VERSION_SUB@.@WSJTX_VERSION_IS_RELEASE@\""
     )
 endif ()
 

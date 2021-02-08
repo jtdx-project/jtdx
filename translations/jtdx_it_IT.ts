@@ -2970,7 +2970,7 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1846"/>
+        <location filename="../mainwindow.cpp" line="1849"/>
         <location filename="../mainwindow.cpp" line="3636"/>
         <location filename="../mainwindow.cpp" line="3645"/>
         <location filename="../mainwindow.cpp" line="6246"/>
@@ -3181,7 +3181,7 @@ Errore: %2 -%3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1509"/>
-        <location filename="../mainwindow.cpp" line="1558"/>
+        <location filename="../mainwindow.cpp" line="1570"/>
         <location filename="../mainwindow.cpp" line="2053"/>
         <source>S meter</source>
         <translation>S meter</translation>
@@ -4714,18 +4714,18 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Vuoi riconfigurare l&apos;interfaccia radio?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="815"/>
+        <location filename="../mainwindow.cpp" line="824"/>
         <source>Error Writing WAV File</source>
         <translation>Errore durante la scrittura del file WAV</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="933"/>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="942"/>
+        <location filename="../mainwindow.cpp" line="943"/>
         <location filename="../mainwindow.cpp" line="6242"/>
         <location filename="../mainwindow.cpp" line="6243"/>
         <location filename="../mainwindow.cpp" line="6300"/>
@@ -4734,37 +4734,37 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <translation>Freq Messaggio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="955"/>
+        <location filename="../mainwindow.cpp" line="964"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Errore durante la chiusura di jtdxjt9.exe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="956"/>
+        <location filename="../mainwindow.cpp" line="965"/>
         <source>KillByName return code: %1</source>
         <translation>Codice di ritorno KillByName:%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="973"/>
+        <location filename="../mainwindow.cpp" line="982"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Errore durante la rimozione &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="983"/>
         <source>Click OK to retry</source>
         <translation>Clicca su OK per tornare indietro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1669"/>
+        <location filename="../mainwindow.cpp" line="1672"/>
         <source>TX Even</source>
         <translation>TX min pari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1676"/>
+        <location filename="../mainwindow.cpp" line="1679"/>
         <source>TX Odd</source>
         <translation>TX min dispari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1739"/>
+        <location filename="../mainwindow.cpp" line="1742"/>
         <location filename="../mainwindow.cpp" line="2504"/>
         <location filename="../mainwindow.cpp" line="3680"/>
         <location filename="../mainwindow.cpp" line="4302"/>
@@ -4776,7 +4776,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <translation>Errore Apertura File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1740"/>
+        <location filename="../mainwindow.cpp" line="1743"/>
         <location filename="../mainwindow.cpp" line="2505"/>
         <location filename="../mainwindow.cpp" line="3681"/>
         <location filename="../mainwindow.cpp" line="4303"/>
@@ -4789,22 +4789,22 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
         <translation>Impossibile aprire &quot;%1 per appendere: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1795"/>
+        <location filename="../mainwindow.cpp" line="1798"/>
         <source>lost audio </source>
         <translation>Blocchi Audio persi: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1879"/>
+        <location filename="../mainwindow.cpp" line="1882"/>
         <source>Error saving c2 file</source>
         <translation>Errore durante il salvataggio del file c2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1956"/>
+        <location filename="../mainwindow.cpp" line="1959"/>
         <source>Error in SoundInput</source>
         <translation>Errore ingresso scheda Sonora</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1960"/>
+        <location filename="../mainwindow.cpp" line="1963"/>
         <source>Error in SoundOutput</source>
         <translation>Errore uscita scheda Sonora</translation>
     </message>
@@ -5408,17 +5408,17 @@ Verificare che il nome della cartella sia corretto.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="184"/>
+        <location filename="../main.cpp" line="186"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Nome RTX non valido - \ &amp; / non consentito</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="209"/>
+        <location filename="../main.cpp" line="211"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>È in esecuzione un&apos;altra istanza del programma, provare a rimuoverla?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="351"/>
+        <location filename="../main.cpp" line="353"/>
         <source>Unexpected error</source>
         <translation>Errore inaspettato</translation>
     </message>
@@ -5555,67 +5555,67 @@ Errore (%2):%3</translation>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="21"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>Si è verificato un errore durante l&apos;apertura del dispositivo di input audio.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="25"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>Si è verificato un errore durante la lettura dal dispositivo di ingresso audio.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="29"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>I dati audio non vengono inviati al dispositivo di input audio abbastanza velocemente.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="33"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>Errore non recuperabile, dispositivo di input audio non utilizzabile in questo momento.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="62"/>
         <source>Requested input audio format is not valid.</source>
         <translation>Il formato audio di input richiesto non è valido.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="69"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>Il formato audio di input richiesto non è supportato dal dispositivo.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="90"/>
         <source>Failed to initialize audio sink device</source>
         <translation>Impossibile inizializzare il dispositivo audio</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="125"/>
         <source>Idle</source>
         <translation>Inattivo</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="129"/>
         <source>Receiving</source>
         <translation>Ricevente</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="133"/>
         <source>Suspended</source>
         <translation>Sospeso</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="138"/>
         <source>Interrupted</source>
         <translation>Interrotto</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="145"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="149"/>
         <source>Stopped</source>
         <translation>Fermato</translation>
     </message>
@@ -5623,62 +5623,62 @@ Errore (%2):%3</translation>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="24"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>Si è verificato un errore durante l&apos;apertura del dispositivo di uscita audio.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="25"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>Si è verificato un errore durante l&apos;utilizzo del dispositivo di uscita audio.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>I dati audio non vengono inviati abbastanza velocemente al dispositivo di uscita audio.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>Errore non recuperabile, dispositivo di uscita audio non utilizzabile in questo momento.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="45"/>
         <source>Requested output audio format is not valid.</source>
         <translation>Il formato audio di uscita richiesto non è valido.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="46"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation>Il formato audio di uscita richiesto non è supportato dal dispositivo.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="109"/>
         <source>Idle</source>
         <translation>Inattivo</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="110"/>
         <source>Sending</source>
         <translation>Invio</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="111"/>
         <source>Suspended</source>
         <translation>Sospeso</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Interrupted</source>
         <translation>Interrotto</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Stopped</source>
         <translation>Fermato</translation>
     </message>
@@ -8503,27 +8503,27 @@ modifiche alla scheda audio</translation>
         <translation>Errore fatale inaspettato</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="142"/>
+        <location filename="../main.cpp" line="144"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation>&lt;style&gt; può essere Fusion (impostazione predefinita) o Windows</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="143"/>
+        <location filename="../main.cpp" line="145"/>
         <source>style</source>
         <translation>Stile</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="147"/>
+        <location filename="../main.cpp" line="149"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>&lt;rig-name&gt; è per più istanze.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="148"/>
+        <location filename="../main.cpp" line="150"/>
         <source>rig-name</source>
         <translation>nome RTX</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="152"/>
+        <location filename="../main.cpp" line="154"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>File scrivibili nella posizione del test. Usare con cautela, solo per test.</translation>
     </message>

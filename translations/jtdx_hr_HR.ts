@@ -2972,7 +2972,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1846"/>
+        <location filename="../mainwindow.cpp" line="1849"/>
         <location filename="../mainwindow.cpp" line="3636"/>
         <location filename="../mainwindow.cpp" line="3645"/>
         <location filename="../mainwindow.cpp" line="6246"/>
@@ -3183,7 +3183,7 @@ Pogreška: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1509"/>
-        <location filename="../mainwindow.cpp" line="1558"/>
+        <location filename="../mainwindow.cpp" line="1570"/>
         <location filename="../mainwindow.cpp" line="2053"/>
         <source>S meter</source>
         <translation>S metar</translation>
@@ -4704,23 +4704,23 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Želite li ponovno konfigurirati radijsko sučelje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="815"/>
+        <location filename="../mainwindow.cpp" line="824"/>
         <source>Error Writing WAV File</source>
         <translation>Greška pri zapisivanju u WAV datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="955"/>
+        <location filename="../mainwindow.cpp" line="964"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Greška Zatvaram jtdxjt9.exe Process</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="933"/>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="942"/>
+        <location filename="../mainwindow.cpp" line="943"/>
         <location filename="../mainwindow.cpp" line="6242"/>
         <location filename="../mainwindow.cpp" line="6243"/>
         <location filename="../mainwindow.cpp" line="6300"/>
@@ -4729,32 +4729,32 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Freq   Poruka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="956"/>
+        <location filename="../mainwindow.cpp" line="965"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName povratni kod: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="973"/>
+        <location filename="../mainwindow.cpp" line="982"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Pogreška prilikom uklanjanja &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="983"/>
         <source>Click OK to retry</source>
         <translation>Kliknite OK za ponovni pokušaj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1669"/>
+        <location filename="../mainwindow.cpp" line="1672"/>
         <source>TX Even</source>
         <translation>TX Parne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1676"/>
+        <location filename="../mainwindow.cpp" line="1679"/>
         <source>TX Odd</source>
         <translation>TX Neparne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1739"/>
+        <location filename="../mainwindow.cpp" line="1742"/>
         <location filename="../mainwindow.cpp" line="2504"/>
         <location filename="../mainwindow.cpp" line="3680"/>
         <location filename="../mainwindow.cpp" line="4302"/>
@@ -4766,7 +4766,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Greška otvaranja datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1740"/>
+        <location filename="../mainwindow.cpp" line="1743"/>
         <location filename="../mainwindow.cpp" line="2505"/>
         <location filename="../mainwindow.cpp" line="3681"/>
         <location filename="../mainwindow.cpp" line="4303"/>
@@ -4779,22 +4779,22 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1795"/>
+        <location filename="../mainwindow.cpp" line="1798"/>
         <source>lost audio </source>
         <translation>gubitak zvuka </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1879"/>
+        <location filename="../mainwindow.cpp" line="1882"/>
         <source>Error saving c2 file</source>
         <translation>Greška snimanja c2 datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1956"/>
+        <location filename="../mainwindow.cpp" line="1959"/>
         <source>Error in SoundInput</source>
         <translation>Greška SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1960"/>
+        <location filename="../mainwindow.cpp" line="1963"/>
         <source>Error in SoundOutput</source>
         <translation>Greška SoundOutput</translation>
     </message>
@@ -5403,17 +5403,17 @@ Provjerite je li dato točno ime imenika.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="184"/>
+        <location filename="../main.cpp" line="186"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
         <translation>Pogrešan rig name - \ &amp; / nije dozvoljeno</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="209"/>
+        <location filename="../main.cpp" line="211"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
         <translation>Možda se pokreće druga instanca, pokušajte ukloniti ustajalu datoteku zaključavanja?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="351"/>
+        <location filename="../main.cpp" line="353"/>
         <source>Unexpected error</source>
         <translation>Neočekivana greška</translation>
     </message>
@@ -5549,67 +5549,67 @@ Greška(%2): %3</translation>
 <context>
     <name>SoundInput</name>
     <message>
-        <location filename="../soundin.cpp" line="24"/>
+        <location filename="../soundin.cpp" line="21"/>
         <source>An error opening the audio input device has occurred.</source>
         <translation>Došlo je do pogreške prilikom otvaranja audio ulaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="28"/>
+        <location filename="../soundin.cpp" line="25"/>
         <source>An error occurred during read from the audio input device.</source>
         <translation>Došlo je do pogreške tijekom čitanja s audio ulaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="32"/>
+        <location filename="../soundin.cpp" line="29"/>
         <source>Audio data not being fed to the audio input device fast enough.</source>
         <translation>Audio podaci ne dolaze na audio ulazni uređaj dovoljno brzo.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="36"/>
+        <location filename="../soundin.cpp" line="33"/>
         <source>Non-recoverable error, audio input device not usable at this time.</source>
         <translation>Pogreška koja se ne može povratiti, uređaj za unos zvuka trenutno nije upotrebljiv.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="65"/>
+        <location filename="../soundin.cpp" line="62"/>
         <source>Requested input audio format is not valid.</source>
         <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="72"/>
+        <location filename="../soundin.cpp" line="69"/>
         <source>Requested input audio format is not supported on device.</source>
         <translation>Zatraženi ulazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="93"/>
+        <location filename="../soundin.cpp" line="90"/>
         <source>Failed to initialize audio sink device</source>
         <translation>Inicijalizacija uređaja nije uspjela</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="128"/>
+        <location filename="../soundin.cpp" line="125"/>
         <source>Idle</source>
         <translation>Čekam</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="132"/>
+        <location filename="../soundin.cpp" line="129"/>
         <source>Receiving</source>
         <translation>Prijem</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="136"/>
+        <location filename="../soundin.cpp" line="133"/>
         <source>Suspended</source>
         <translation>Suspendiran</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="141"/>
+        <location filename="../soundin.cpp" line="138"/>
         <source>Interrupted</source>
         <translation>Prekinut</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="148"/>
+        <location filename="../soundin.cpp" line="145"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../soundin.cpp" line="152"/>
+        <location filename="../soundin.cpp" line="149"/>
         <source>Stopped</source>
         <translation>Zaustavljen</translation>
     </message>
@@ -5617,62 +5617,62 @@ Greška(%2): %3</translation>
 <context>
     <name>SoundOutput</name>
     <message>
-        <location filename="../soundout.cpp" line="27"/>
+        <location filename="../soundout.cpp" line="24"/>
         <source>An error opening the audio output device has occurred.</source>
         <translation>Došlo je do pogreške prilikom otvaranja audio izlaznog uređaja.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="28"/>
+        <location filename="../soundout.cpp" line="25"/>
         <source>An error occurred during write to the audio output device.</source>
         <translation>Došlo je do pogreške tijekom pisanja na izlazni audio uređaj.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="29"/>
+        <location filename="../soundout.cpp" line="26"/>
         <source>Audio data not being fed to the audio output device fast enough.</source>
         <translation>Audio podaci se ne isporučuju na izlazni audio uređaj dovoljno brzo.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="30"/>
+        <location filename="../soundout.cpp" line="27"/>
         <source>Non-recoverable error, audio output device not usable at this time.</source>
         <translation>Pogreška koja se ne može popraviti, uređaj za izlaz zvuka trenutačno nije upotrebljiv.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="49"/>
+        <location filename="../soundout.cpp" line="45"/>
         <source>Requested output audio format is not valid.</source>
         <translation>Zatraženi ulazni audio format nije važeći.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="50"/>
+        <location filename="../soundout.cpp" line="46"/>
         <source>Requested output audio format is not supported on device.</source>
         <translation>Zatraženi izlazni audio format nije podržan na uređaju.</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="113"/>
+        <location filename="../soundout.cpp" line="109"/>
         <source>Idle</source>
         <translation>Čekanje</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="114"/>
+        <location filename="../soundout.cpp" line="110"/>
         <source>Sending</source>
         <translation>Slanje</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="115"/>
+        <location filename="../soundout.cpp" line="111"/>
         <source>Suspended</source>
         <translation>Suspendiran</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="117"/>
+        <location filename="../soundout.cpp" line="113"/>
         <source>Interrupted</source>
         <translation>Prekid</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../soundout.cpp" line="119"/>
+        <location filename="../soundout.cpp" line="115"/>
         <source>Stopped</source>
         <translation>Zaustavljen</translation>
     </message>
@@ -8498,27 +8498,27 @@ promjena zvučne kartice</translation>
         <translation>Neočekivana greška uređaja</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="142"/>
+        <location filename="../main.cpp" line="144"/>
         <source>&lt;style&gt; can be Fusion (default) or Windows</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="143"/>
+        <location filename="../main.cpp" line="145"/>
         <source>style</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="147"/>
+        <location filename="../main.cpp" line="149"/>
         <source>Where &lt;rig-name&gt; is for multi-instance support.</source>
         <translation>Gdje je &lt;rig-name&gt; za podršku za više instanci.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="148"/>
+        <location filename="../main.cpp" line="150"/>
         <source>rig-name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="152"/>
+        <location filename="../main.cpp" line="154"/>
         <source>Writable files in test location.  Use with caution, for testing only.</source>
         <translation>Datoteke koje se mogu pisati na testnoj lokaciji. Koristite s oprezom samo za testiranje.</translation>
     </message>
