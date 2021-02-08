@@ -23,7 +23,7 @@ namespace
 {
   enum				// supported non-hamlib radio interfaces
     {
-      NonHamlibBaseId = 9899
+      NonHamlibBaseId = 99899
       , CommanderId
       , HRDId
       , OmniRigOneId

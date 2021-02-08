@@ -1520,7 +1520,7 @@ else ()
     # Derive the correct filename for a Debian package because the DEB
     # generator doesn't do this correctly at present.
     #
-    STRING(REPLACE "_" "-" CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
+#    STRING(REPLACE "_" "-" CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
     find_program (DPKG_PROGRAM dpkg DOC "dpkg program of Debian-based systems")
     if (DPKG_PROGRAM)
       execute_process (
