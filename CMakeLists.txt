@@ -711,6 +711,9 @@ endif (APPLE)
 #
 # find some useful tools
 #
+include (generate_version_info)
+
+
 find_program(CTAGS ctags)
 find_program(ETAGS etags)
 
@@ -1093,13 +1096,28 @@ target_link_libraries (jt65code wsjt_fort wsjt_cxx)
 add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
-add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90)
+generate_version_info (wsprd_VERSION_RESOURCES
+  NAME wsprd
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "WSPR mode decoder"
+  )
+add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
+
 target_include_directories (wsprd PRIVATE ${FFTW3_INCLUDE_DIRS})
 target_link_libraries (wsprd ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
-add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc)
+# build the jt9 slow mode decoder driver
+generate_version_info (jtdxjt9_VERSION_RESOURCES
+  NAME jtdxjt9
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "jtdxjt9 - JTDX slow mode decoder"
+  )
+
+add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc ${jtdjt9_VERSION_RESOURCES})
 if (${OPENMP_FOUND} OR APPLE)
   if (APPLE)
     # On  Mac  we don't  have  working  OpenMP  support in  the  C/C++
@@ -1143,12 +1161,19 @@ else (${OPENMP_FOUND} OR APPLE)
 endif (${OPENMP_FOUND} OR APPLE)
 
 # build the main application
+generate_version_info (jtdx_VERSION_RESOURCES
+  NAME jtdx
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  )
+
 add_executable (jtdx MACOSX_BUNDLE
   ${wsjtx_CXXSRCS}
   ${wsjtx_GENUISRCS}
   jtdx.rc
   ${WSJTX_ICON_FILE}
   ${wsjtx_RESOURCES_RCC}
+  ${jtdx_VERSION_RESOURCES}
   )
 
 if (WSJT_CREATE_WINMAIN)
@@ -1202,9 +1227,17 @@ add_executable (message_aggregator
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
+generate_version_info (udp_daemon_VERSION_RESOURCES
+  NAME udp_daemon
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "Example WSJT-X UDP Message Protocol daemon"
+  )
+
 add_executable (udp_daemon
   ${UDPDaemon_CXXSRCS}
   jtdx.rc
+  ${udp_daemon_VERSION_RESOURCES}
   )
 target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
 
