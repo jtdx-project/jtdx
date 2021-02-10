@@ -2417,9 +2417,8 @@ void MainWindow::displayDialFrequency ()
   if (min_offset < 10000u) {
     valid = true;
   }
-  update_dynamic_property (ui->labDialFreq, "dark", m_useDarkStyle);
-  if (m_useDarkStyle) update_dynamic_property (ui->labDialFreq, "darkoob", !valid); 
-  else update_dynamic_property (ui->labDialFreq, "oob", !valid);
+  if (valid) ui->labDialFreq->setStyleSheet(QString("QLabel {font-family: MS Shell Dlg 2;font-size: 18pt;background: %1;color: %2;}").arg(Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
+  else ui->labDialFreq->setStyleSheet(QString("QLabel {font-family: MS Shell Dlg 2;font-size: 18pt;background: %1;color: %2;}").arg(Radio::convert_dark("#ff0000",m_useDarkStyle),Radio::convert_dark("#0000ff",m_useDarkStyle)));
   ui->labDialFreq->setText (Radio::pretty_frequency_MHz_string (dial_frequency));
 
   static bool first_freq {true};
@@ -6858,9 +6857,7 @@ void MainWindow::on_stopTxButton_clicked()                    //Stop Tx
 
 void MainWindow::rigOpen ()
 {
-  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
-  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkwarning");
-  else update_dynamic_property (ui->readFreq, "state", "warning");
+  ui->readFreq->setStyleSheet(ui->readFreq->styleSheet().left(230)+QString("background: %1;\n color: %2;\n}").arg(Radio::convert_dark("#ffa500",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
   m_rigOk=false;
   ui->readFreq->setText ("");
   ui->readFreq->setEnabled (true);
@@ -7124,9 +7121,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   }
 
   displayDialFrequency ();
-  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
-  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkok");
-  else update_dynamic_property (ui->readFreq, "state", "ok");
+  ui->readFreq->setStyleSheet(ui->readFreq->styleSheet().left(230)+QString("background: %1;\n color: %2;\n}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
   m_rigOk=true;
   ui->readFreq->setEnabled (false);
   ui->readFreq->setText (s.split () ? "S" : "");
@@ -7140,9 +7135,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
 
 void MainWindow::handle_transceiver_failure (QString const& reason)
 {
-  update_dynamic_property (ui->readFreq, "dark1", m_useDarkStyle);
-  if (m_useDarkStyle) update_dynamic_property (ui->readFreq, "state", "darkerror");
-  else update_dynamic_property (ui->readFreq, "state", "error");
+  ui->readFreq->setStyleSheet(ui->readFreq->styleSheet().left(230)+QString("background: %1;\n color: %2;\n}").arg(Radio::convert_dark("#ff0000",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
   m_rigOk=false;
   ui->readFreq->setEnabled (true);
   haltTx("Rig control error: " + reason + " ");
