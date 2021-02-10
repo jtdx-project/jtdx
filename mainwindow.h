@@ -58,6 +58,7 @@ namespace Ui {
   class MainWindow;
 }
 
+class QProcessEnvironment;
 class QSettings;
 class QNetworkAccessManager;
 class QLineEdit;
@@ -91,7 +92,7 @@ public:
   // Multiple instances: call MainWindow() with *thekey
   explicit MainWindow(bool multiple, QSettings *, QSharedMemory *shdmem,
                       unsigned downSampleFactor, QNetworkAccessManager * network_manager,
-                      QWidget *parent = 0);
+                      QProcessEnvironment const&, QWidget *parent = 0);
   ~MainWindow();
 
 public slots:
@@ -399,6 +400,7 @@ private:
   void hideMenus (bool b);
 
   JTDXDateTime * m_jtdxtime;
+  QProcessEnvironment const& m_env;
   QDir m_dataDir;
   bool m_valid;
   QString m_revision;
@@ -436,6 +438,8 @@ private:
   SoundInput * m_soundInput;
   Modulator * m_modulator;
   SoundOutput * m_soundOutput;
+  int m_rx_audio_buffer_frames;
+  int m_tx_audio_buffer_frames;
   QThread m_audioThread;
   QClipboard *clipboard = QGuiApplication::clipboard();
 
@@ -713,8 +717,6 @@ private:
   QsoHistory m_qsoHistory;
   QsoHistory m_qsoHistory2;
   QString m_QSOText {""};
-  unsigned m_msAudioOutputBuffered;
-  unsigned m_framesAudioInputBuffered;
   unsigned m_downSampleFactor;
   QThread::Priority m_audioThreadPriority;
   bool m_bandEdited;

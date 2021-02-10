@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.9 FATAL_ERROR)
+cmake_minimum_required (VERSION 3.7.2 FATAL_ERROR)
 
 if (APPLE)
   #
@@ -50,39 +50,23 @@ message (STATUS "Building ${CMAKE_PROJECT_NAME}-${wsjtx_VERSION}")
 # project information
 #
 set (PROJECT_NAME "JTDX")
-set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Järve, ES1JA")
-set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
-set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
+if (WIN32)
+  set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Jarve, ES1JA")
+  set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Jarve <arvo.jarve@eesti.ee>")
+  set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Jarve, ES1JA.")
+else ()
+  set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Järve, ES1JA")
+  set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
+  set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
+endif (WIN32)
 set (PROJECT_HOMEPAGE http://jtdx.tech/)
 set (PROJECT_MANUAL index.php/videos-guides)
 set (PROJECT_MANUAL_DIRECTORY_URL http://jtdx.tech/)
 set (PROJECT_SAMPLES_URL http://jtdx.tech/public_html/downloads/)
 set (PROJECT_SAMPLES_UPLOAD_DEST frs.sourceforge.net:/home/frs/project/wsjt/)
-set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - JT9 and JT65 Modes for LF, MF and HF Amateur Radio.")
-set (PROJECT_DESCRIPTION "${PROJECT_SUMMARY_DESCRIPTION}
- ${PROJECT_NAME} implements JT9, a new mode designed especially for the LF, MF,
- and HF bands, as well as the popular mode JT65. Both modes were
- designed for making reliable, confirmed QSOs under extreme
- weak-signal conditions. They use nearly identical message structure
- and source encoding. JT65 was designed for EME (“moonbounce”) on the
- VHF/UHF bands and has also proved very effective for worldwide QRP
- communication at HF; in contrast, JT9 is optimized for HF and lower
- frequencies. JT9 is about 2 dB more sensitive than JT65A while using
- less than 10% of the bandwidth. World-wide QSOs are possible with
- power levels of a few watts and compromise antennas. A 2 kHz slice
- of spectrum is essentially full when occupied by ten JT65 signals.
- As many as 100 JT9 signals can fit into the same space, without
- overlap.
- .
- ${PROJECT_NAME} offers a “bi-lingual“ operating mode in which you can transmit
- and receive JT65 and JT9 signals, switching between modes
- automatically as needed. Displayed bandwidth can be as large as 5
- kHz. If your receiver has as upper-sideband filter at least 4 kHz
- wide, you can have all the typical JT65 and JT9 activity on screen at
- once, available for making QSOs with a click of the mouse. Even with
- standard SSB-width IF filters, switching between JT65 and JT9 modes
- is quick and convenient. Be sure to read the online ${PROJECT_NAME} User's
- Guide.")
+set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - Digital Modes for Amateur Radio.")
+set (PROJECT_DESCRIPTION "JTDX: Digital Modes for Weak Signal Communications in Amateur Radio")
+#set (CMAKE_PROJECT_DESCRIPTION ${PROJECT_DESCRIPTION})
 
 set (CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMake/Modules ${CMAKE_MODULE_PATH})
 
@@ -669,6 +653,8 @@ if (APPLE)
     DEPENDS ${ICONSRCS}
     COMMENT "Building Icons"
     )
+else ()
+  set (WSJTX_ICON_FILE icons/windows-icons/jtdx.ico)
 endif (APPLE)
 
 set_source_files_properties (${WSJTX_ICON_FILE} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
@@ -727,6 +713,9 @@ endif (APPLE)
 #
 # find some useful tools
 #
+include (generate_version_info)
+
+
 find_program(CTAGS ctags)
 find_program(ETAGS etags)
 
@@ -1109,13 +1098,28 @@ target_link_libraries (jt65code wsjt_fort wsjt_cxx)
 add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
-add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90)
+generate_version_info (wsprd_VERSION_RESOURCES
+  NAME wsprd
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "WSPR mode decoder"
+  )
+add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
+
 target_include_directories (wsprd PRIVATE ${FFTW3_INCLUDE_DIRS})
 target_link_libraries (wsprd ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
-add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc)
+# build the jt9 slow mode decoder driver
+generate_version_info (jtdxjt9_VERSION_RESOURCES
+  NAME jtdxjt9
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "jtdxjt9 - JTDX slow mode decoder"
+  )
+
+add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc ${jtdjt9_VERSION_RESOURCES})
 if (${OPENMP_FOUND} OR APPLE)
   if (APPLE)
     # On  Mac  we don't  have  working  OpenMP  support in  the  C/C++
@@ -1159,12 +1163,19 @@ else (${OPENMP_FOUND} OR APPLE)
 endif (${OPENMP_FOUND} OR APPLE)
 
 # build the main application
+generate_version_info (jtdx_VERSION_RESOURCES
+  NAME jtdx
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  )
+
 add_executable (jtdx MACOSX_BUNDLE
   ${wsjtx_CXXSRCS}
   ${wsjtx_GENUISRCS}
   jtdx.rc
   ${WSJTX_ICON_FILE}
   ${wsjtx_RESOURCES_RCC}
+  ${jtdx_VERSION_RESOURCES}
   )
 
 if (WSJT_CREATE_WINMAIN)
@@ -1218,9 +1229,17 @@ add_executable (message_aggregator
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
+generate_version_info (udp_daemon_VERSION_RESOURCES
+  NAME udp_daemon
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "Example WSJT-X UDP Message Protocol daemon"
+  )
+
 add_executable (udp_daemon
   ${UDPDaemon_CXXSRCS}
   jtdx.rc
+  ${udp_daemon_VERSION_RESOURCES}
   )
 target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
 
@@ -1502,9 +1521,10 @@ endif (NOT is_debug_build)
 #
 # packaging
 #
+set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/package_description.txt")
 set (CPACK_MONOLITHIC_INSTALL 1)
-#set (CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
-set (CPACK_PACKAGE_NAME JTDX)
+set (CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
+#set (CPACK_PACKAGE_NAME JTDX)
 set (CPACK_PACKAGE_VERSION_MAJOR ${WSJTX_VERSION_MAJOR})
 set (CPACK_PACKAGE_VERSION_MINOR ${WSJTX_VERSION_MINOR})
 set (CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})

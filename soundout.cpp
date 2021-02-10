@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200124
-
 #include "soundout.h"
 
 #include <QAudioDeviceInfo>
@@ -33,10 +31,9 @@ bool SoundOutput::audioError () const
   return result;
 }
 
-void SoundOutput::setFormat (QAudioDeviceInfo const& device, unsigned channels, unsigned msBuffered)
+void SoundOutput::setFormat (QAudioDeviceInfo const& device, unsigned channels, int frames_buffered)
 {
   Q_ASSERT (0 < channels && channels < 3);
-  m_msBuffered = msBuffered;
   QAudioFormat format (device.preferredFormat ());
 //  qDebug () << "Preferred audio output format:" << format;
   format.setChannelCount (channels);
@@ -47,7 +44,7 @@ void SoundOutput::setFormat (QAudioDeviceInfo const& device, unsigned channels, 
   format.setByteOrder (QAudioFormat::Endian (QSysInfo::ByteOrder));
   if(!format.isValid ()) Q_EMIT error (tr ("Requested output audio format is not valid."));
   if(!device.isFormatSupported (format)) Q_EMIT error (tr ("Requested output audio format is not supported on device."));
-
+  m_framesBuffered = frames_buffered;
 //  qDebug () << "Selected audio output format:" << format;
   m_stream.reset (new QAudioOutput (device, format));
   audioError ();
@@ -72,7 +69,7 @@ void SoundOutput::restart (QIODevice * source)
   // we have to set this before every start on the stream because the
   // Windows implementation seems to forget the buffer size after a
   // stop.
-  m_stream->setBufferSize (m_stream->format().bytesForDuration((m_msBuffered ? m_msBuffered : MS_BUFFERED) * 1000));
+    if (m_framesBuffered > 0) { m_stream->setBufferSize (m_stream->format().bytesForFrames (m_framesBuffered)); }
   //  qDebug() << "B" << m_stream->bufferSize() <<
   //  m_stream->periodSize() << m_stream->notifyInterval();
   m_stream->setCategory ("production");

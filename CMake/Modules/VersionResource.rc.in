@@ -1,0 +1,73 @@
+#include "VersionInfo_@PRODUCT_NAME@.h"
+
+#ifdef RC_INVOKED
+
+#if defined (__MINGW64__) || defined (__MINGW32__)
+    /* MinGW-w64 or MinGW */
+    #if defined (__has_include) && __has_include (<windres.h>)
+        #include <windres.h>
+    #else
+        #include <afxres.h>
+        #include <winresrc.h>
+    #endif
+#else
+    /* MSVC, Windows SDK */
+    #include <winres.h>
+#endif
+
+#ifndef _NDEBUG
+#define PRODUCT_DEBUGFLAG 0x0L
+#else
+#define PRODUCT_DEBUGFLAG VS_FF_DEBUG
+#endif
+
+#ifdef SCS_VERSION_IS_DIRTY
+#define PRODUCT_SPECIALFLAG VS_FF_SPECIALBUILD
+#else
+#define PRODUCT_SPECIALFLAG 0x0L
+#endif
+
+#if PRODUCT_PRERELEASE
+#define PRODUCT_PRERELEASEFLAG VS_FF_PRERELEASE
+#else
+#define PRODUCT_PRERELEASEFLAG 0x0L
+#endif
+
+IDI_ICON1	    ICON DISCARDABLE PRODUCT_ICON
+
+LANGUAGE	    LANG_ENGLISH, SUBLANG_NEUTRAL
+
+VS_VERSION_INFO	    VERSIONINFO
+FILEVERSION	    FILE_VERSION_RESOURCE
+PRODUCTVERSION	    PRODUCT_VERSION_RESOURCE
+FILEFLAGSMASK	    VS_FFI_FILEFLAGSMASK
+FILEFLAGS	    (PRODUCT_DEBUGFLAG | PRODUCT_SPECIALFLAG | PRODUCT_PRERELEASEFLAG)
+FILEOS		    VOS_NT_WINDOWS32
+FILETYPE	    VFT_APP
+FILESUBTYPE	    0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+	BLOCK "040904b0"
+	BEGIN
+	    VALUE "Comments", PRODUCT_COMMENTS
+	    VALUE "CompanyName", PRODUCT_VENDOR_NAME
+	    VALUE "FileDescription", PRODUCT_FILE_DESCRIPTION
+	    VALUE "FileVersion", FILE_VERSION_RESOURCE_STR
+	    VALUE "LegalCopyright", PRODUCT_LEGAL_COPYRIGHT
+	    VALUE "ProductName", PRODUCT_BUNDLE
+	    VALUE "ProductVersion", PRODUCT_VERSION_RESOURCE_STR
+	    VALUE "InternalName", PRODUCT_INTERNAL_NAME
+	    VALUE "OriginalFileName", PRODUCT_ORIGINAL_FILENAME
+#if SCS_VERSION_IS_DIRTY
+	    VALUE "SpecialBuild", SCS_VERSION_STR "\0"
+#endif
+	END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+	VALUE "Translation", 0x0409, 0x04b  /* en-US Unicode */
+    END
+END
+
+#endif

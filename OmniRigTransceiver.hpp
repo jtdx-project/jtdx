@@ -26,7 +26,7 @@ class OmniRigTransceiver final
   Q_OBJECT;
 
 public:
-  static void register_transceivers (TransceiverFactory::Transceivers *, int id1, int id2);
+  static void register_transceivers (TransceiverFactory::Transceivers *, unsigned id1, unsigned id2);
 
   enum RigNumber {One = 1, Two};
 
