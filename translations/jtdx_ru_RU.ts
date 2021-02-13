@@ -2748,12 +2748,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HelpTextWindow.cpp" line="19"/>
         <source>Cannot open &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно открыть &quot;</translation>
     </message>
     <message>
         <location filename="../HelpTextWindow.cpp" line="20"/>
         <source>&quot; for reading:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot; для чтения:</translation>
     </message>
 </context>
 <context>
@@ -3253,12 +3253,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1556"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Используйте этот элемент управления, чтобы показать или скрыть строки редактирования отслеживаемого позывного/префикса/QTH квадрата/страны&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Этот элемент управления показывает или скрывает строки редактирования искомых позывного/префикса/QTH квадрата/страны. Функционал работает при заполнении строк независимо от того скрыты или показываются эти строки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1559"/>
         <source>Wanted</source>
-        <translation>Отслеживать</translation>
+        <translation>Поиск</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1578"/>
