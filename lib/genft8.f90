@@ -15,7 +15,7 @@ subroutine genft8(msg,i3,n3,ntxhash,msgsent,msgbits,itone)
   if(ntxhash.eq.1) then
     call unpack77(c77,0,msgsent,unpk77_success,26) !TX message, unpack to get msgsent, use TX hash tables and do not save RX hash values
   else
-    call unpack77(c77,0,msgsent,unpk77_success,25) !service message, unpack to get msgsent. Do not save hash values
+    call unpack77(c77,0,msgsent,unpk77_success,27) !service message, unpack to get msgsent. Do not save hash values
   endif
   read(c77,'(77i1)',err=1) msgbits
   if(unpk77_success) go to 2
