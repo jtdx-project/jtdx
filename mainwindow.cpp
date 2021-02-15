@@ -1133,12 +1133,11 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
   foxgen_(); ui->actionLatvian->setEnabled(false); ui->actionDutch->setEnabled(false);//temporarily disable
+
 // make sure TX hash tables are filled in at first message transmission
-  if(m_mode.startsWith("FT")) {
-    char message[38]="CQ QQ1QQQ KO85                       ";char msgsent[38]; char ft8msgbits[77];
-	int i3=0; int n3=0; int ntxhash=1;
-    genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
-  }
+  char message[38]="CQ QQ1QQQ KO85                       ";char msgsent[38]; char ft8msgbits[77];
+  int i3=0; int n3=0; int ntxhash=1;
+  genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
   styleChanged();
   // this must be the last statement of constructor
