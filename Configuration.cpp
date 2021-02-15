@@ -1947,7 +1947,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
       ui_->force_RTS_combo_box->setCurrentIndex (0);
     }
   ui_->TX_audio_source_button_group->button (rig_params_.audio_source)->setChecked (true);
-  ui_->CAT_poll_interval_spin_box->setValue (rig_params_.poll_interval);
+  ui_->CAT_poll_interval_spin_box->setValue (rig_params_.poll_interval & 0x7fff);
   ui_->udp_server_line_edit->setText (udp_server_name_);
   ui_->udp_server_port_spin_box->setValue (udp_server_port_);
   ui_->accept_udp_requests_check_box->setChecked (accept_udp_requests_);
@@ -2611,7 +2611,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("CATForceRTS", rig_params_.force_rts);
   settings_->setValue ("RTS", rig_params_.rts_high);
   settings_->setValue ("TXAudioSource", QVariant::fromValue (rig_params_.audio_source));
-  settings_->setValue ("Polling", rig_params_.poll_interval);
+  settings_->setValue ("Polling", rig_params_.poll_interval & 0x7fff);
   settings_->setValue ("SplitMode", QVariant::fromValue (rig_params_.split_mode));
   settings_->setValue ("Decode52", decode_at_52s_);
   settings_->setValue ("BeepOnMyCall", beepOnMyCall_);
@@ -2860,9 +2860,6 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
       break;
     }
 
-  result.do_snr = ui_->S_meter_check_box->isChecked ();
-  result.do_pwr = ui_->output_power_check_box->isChecked ();
-  result.rig_power = ui_->rig_power_check_box->isChecked ();
   result.baud = ui_->CAT_serial_baud_combo_box->currentText ().toInt ();
   result.data_bits = static_cast<TransceiverFactory::DataBits> (ui_->CAT_data_bits_button_group->checkedId ());
   result.stop_bits = static_cast<TransceiverFactory::StopBits> (ui_->CAT_stop_bits_button_group->checkedId ());
@@ -2872,6 +2869,9 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
   result.force_rts = ui_->force_RTS_combo_box->isEnabled () && ui_->force_RTS_combo_box->currentIndex () > 0;
   result.rts_high = ui_->force_RTS_combo_box->isEnabled () && 1 == ui_->force_RTS_combo_box->currentIndex ();
   result.poll_interval = ui_->CAT_poll_interval_spin_box->value ();
+  if(ui_->S_meter_check_box->isChecked ()) result.poll_interval |= do__snr;
+  if(ui_->output_power_check_box->isChecked ()) result.poll_interval |= do__pwr;
+  if(ui_->rig_power_check_box->isChecked ()) result.poll_interval |= rig__power;
   result.ptt_type = static_cast<TransceiverFactory::PTTMethod> (ui_->PTT_method_button_group->checkedId ());
   result.ptt_port = ui_->PTT_port_combo_box->currentText ();
   result.audio_source = static_cast<TransceiverFactory::TXAudioSource> (ui_->TX_audio_source_button_group->checkedId ());

@@ -18,7 +18,7 @@ namespace
 
 PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
   : TransceiverBase {parent}
-  , interval_ {poll_interval * 1000}
+  , interval_ {(poll_interval & 0x7fff) * 1000}
   , poll_timer_ {nullptr}
   , ft4_mode_ {false}
   , fast_mode_ {interval_ == 500}
@@ -27,7 +27,7 @@ PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
 {
 #if JTDX_DEBUG_TO_FILE
 FILE * pFile = fopen (debug_file_.c_str(),"a");
-fprintf (pFile,"%s Polling Tranceiver created interval %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),poll_interval);
+fprintf (pFile,"%s Polling Tranceiver created interval %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),poll_interval & 0x7fff);
 fclose (pFile);
 #endif
 }

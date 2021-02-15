@@ -345,9 +345,9 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
             }
         }
 
-      if (params.rig_power) { set_conf ("auto_power_on","1"); }
-      if (params.do_snr) do_snr_ = true;
-      if (params.do_pwr) { do_pwr_ = true; do_pwr2_ = true; }
+      if (params.poll_interval & rig__power) { set_conf ("auto_power_on","1"); }
+      if (params.poll_interval & do__snr) do_snr_ = true;
+      if (params.poll_interval & do__pwr) { do_pwr_ = true; do_pwr2_ = true; }
       
       switch (rig_get_caps_int (model_, RIG_CAPS_PORT_TYPE))
         {
