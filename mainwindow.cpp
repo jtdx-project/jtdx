@@ -3510,12 +3510,30 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::RCALL: {
+        if(!m_enableTx && m_autoseq && m_callMode>2) {
+          quint64 delta;
+          if(m_mode=="FT8") { if(m_txFirst) delta=19000; else delta=4000; }
+          else if(m_mode=="FT4") { if(m_txFirst) delta=10000; else delta=2000; }
+          else { delta=70000; }
+          if(m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<delta) {
+            txwatchdog (false); enableTx_mode(true);
+          }
+        }
         on_txb2_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx2->text());
-		if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
+        if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         break;
       }
       case QsoHistory::RREPORT: {
+        if(!m_enableTx && m_autoseq && m_callMode>2) {
+          quint64 delta;
+          if(m_mode=="FT8") { if(m_txFirst) delta=19000; else delta=4000; }
+          else if(m_mode=="FT4") { if(m_txFirst) delta=10000; else delta=2000; }
+          else { delta=70000; }
+          if(m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<delta) {
+            txwatchdog (false); enableTx_mode(true);
+          }
+        }
         if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         on_txb3_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx3->text());
@@ -3735,12 +3753,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       if (!decodedtext.isDebug()) m_nDecodes ++;
       auto decodedtextmsg = decodedtext.message();
       bool mycallinmsg = false;
-      if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) {
-        mycallinmsg = true;
-        if(!m_enableTx && m_autoseq && m_callMode>2 && m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<3000) {
-          txwatchdog (false); enableTx_mode(true);
-        }
-      }
+      if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) mycallinmsg = true;
 
       // extract de
       QString deCall="";
