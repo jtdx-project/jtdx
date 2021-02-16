@@ -1139,6 +1139,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   int i3=0; int n3=0; int ntxhash=1;
   genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
+  m_msTXwatchdogTriggered=m_jtdxtime->currentMSecsSinceEpoch2()-3000;
+
   styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
@@ -3733,67 +3735,18 @@ void MainWindow::readFromStdout()                             //readFromStdout
       if (!decodedtext.isDebug()) m_nDecodes ++;
       auto decodedtextmsg = decodedtext.message();
       bool mycallinmsg = false;
-      if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) mycallinmsg = true;
+      if (!m_baseCall.isEmpty () && Radio::base_callsign (decodedtext.call()) == m_baseCall) {
+        mycallinmsg = true;
+        if(!m_enableTx && m_autoseq && m_callMode>2 && m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<3000) {
+          txwatchdog (false); enableTx_mode(true);
+        }
+      }
 
       // extract de
       QString deCall="";
       QString grid="";
       decodedtext.deCallAndGrid(/*out*/deCall,grid);
       if (!m_hisCall.isEmpty() && !deCall.isEmpty() && Radio::base_callsign (m_hisCall) == Radio::base_callsign (deCall)) ui->RxFreqSpinBox->setValue (decodedtext.frequencyOffset());
-
-/*      bool bwantedCall=false;
-      if(m_hisCall.isEmpty ()) { // run this code only if not in the QSO
-        bool bwantedPrefix=false;
-        if(!m_wantedPrefixList.startsWith("") && !deCall.isEmpty()) {  // empty list has size==1, list with one item also has size==1
-          int listsize=m_wantedPrefixList.size();
-          QString wprefix;
-          for(int i=0; i<listsize; i++) {
-            wprefix=m_wantedPrefixList.at(i);
-            if(!wprefix.isEmpty() && deCall.startsWith(wprefix)) { bwantedPrefix=true; break; }
-          }
-        }
-
-        if(bwantedPrefix || (m_wantedCall.length() > 2 && !deCall.isEmpty() && 
-		   (m_wantedCallList.indexOf(Radio::base_callsign (deCall)) >= 0 || m_wantedCallList.indexOf(deCall) >= 0))) {
-          bwantedCall=true;
-          if(!m_transmitting && m_hisCall.isEmpty ()) {
-//            if(m_config.write_decoded_debug()) {
-              if(m_enableTx) {
-                if(bwantedPrefix) writeToALLTXT("Wanted prefix to DX Call: " + deCall + ", EnableTx is active, will halt Tx");
-                else writeToALLTXT("Wanted callsign to DX Call: " + deCall + ", EnableTx is active, will halt Tx");
-              }
-              else {
-                if(bwantedPrefix) writeToALLTXT("Wanted prefix to DX Call: " + deCall + ", EnableTx is off");
-                else writeToALLTXT("Wanted callsign to DX Call: " + deCall + ", EnableTx is off");
-              }
-//            }
-//            if(m_enableTx) haltTx("TX halted: wanted callsign/prefix found after CQ message transmission ");
-            ui->dxCallEntry->setText(deCall);  
-            if (logClearDXTimer.isActive()) logClearDXTimer.stop();
-            QString rpt = decodedtext.report();
-            ui->rptSpinBox->setValue(rpt.toInt());
-            genStdMsgs(rpt);
-            int nmod=decodedtext.timeInSeconds () % (2*m_TRperiod);
-            if(m_txFirst != (nmod!=0)) {
-              m_txFirst=(nmod!=0);
-              ui->TxMinuteButton->setChecked(m_txFirst);
-              setMinButton();
-            }
-            ui->dxCallEntry->setStyleSheet("color: black; background: rgb(255,170,170);");
-            statusChanged();
-          }
-          if(!m_notified) {
-            if(m_windowPopup) {
-		  	  this->showNormal();
-			  this->raise();
-              QApplication::setActiveWindow(this);
-            }
-            QApplication::beep();
-            m_notified=true;
-          }
-        }
-      }
-*/
       if (!deCall.isEmpty() && !m_reply_me && Radio::base_callsign (deCall) == Radio::base_callsign (m_hisCall)) {
           if (mycallinmsg) {
              m_reply_me = true;
@@ -3805,12 +3758,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       }      
       //Left (Band activity) window
       bool bypassRxfFilters = false;
-// notified
-// 0  m_notified = false, show_line = false
-// 1  m_notified = true, show_line = false
-// 2  m_notified = false, show_line = true
-// 3  m_notified = true, show_line = true
-	  int notified = 2;
+      int notified = 2;
       notified = ui->decodedTextBrowser->displayDecodedText (&decodedtext
                                                     , m_baseCall
                                                     , Radio::base_callsign (m_hisCall)
@@ -7891,6 +7839,7 @@ void MainWindow::txwatchdog (bool triggered)
     {
       m_bTxTime=false;
       if (m_enableTx) enableTx_mode (false);
+      m_msTXwatchdogTriggered=m_jtdxtime->currentMSecsSinceEpoch2();
       tx_status_label->setStyleSheet (QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8080",m_useDarkStyle)));
       tx_status_label->setText (tr("Tx watchdog expired"));
     }
