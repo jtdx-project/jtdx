@@ -27,7 +27,8 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall, &
+                         nincallthr
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -66,7 +67,7 @@ contains
 
     oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
-      elseif(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
+    else if(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
     endif
 
@@ -76,15 +77,17 @@ contains
     endif
 
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
-    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1
+    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
 
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
+
     if(lqsothread .and. lapon .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
 ! got incoming call
-      do i=1,20
+      do i=1,30
+        if(incall(i)%msg(1:1).eq." ") exit
         if(index(incall(i)%msg,(trim(mycall)//' '//trim(hiscall))).eq.1) then
           lastrxmsg(1)%lastmsg=incall(i)%msg; lastrxmsg(1)%xdt=incall(i)%xdt; lastrxmsg(1)%lstate=.true.; exit
         endif
