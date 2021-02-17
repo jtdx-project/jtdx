@@ -454,7 +454,6 @@ private:
   quint64  m_lastDisplayFreq;
   quint64  m_mslastTX;
   quint64  m_mslastMon;
-  quint64  m_msTXwatchdogTriggered;
 
   qint32  m_waterfallAvg;
   qint32  m_ntx;

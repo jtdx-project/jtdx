@@ -1139,8 +1139,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   int i3=0; int n3=0; int ntxhash=1;
   genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
-  m_msTXwatchdogTriggered=m_jtdxtime->currentMSecsSinceEpoch2()-3000;
-
   styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
@@ -3510,30 +3508,14 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::RCALL: {
-        if(!m_enableTx && m_autoseq && m_callMode>2) {
-          quint64 delta;
-          if(m_mode=="FT8") { if(m_txFirst) delta=19000; else delta=4000; }
-          else if(m_mode=="FT4") { if(m_txFirst) delta=10000; else delta=2000; }
-          else { delta=70000; }
-          if(m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<delta) {
-            txwatchdog (false); enableTx_mode(true);
-          }
-        }
+        if(m_enableTx && m_autoseq && m_callMode>0) txwatchdog (false);
         on_txb2_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx2->text());
         if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         break;
       }
       case QsoHistory::RREPORT: {
-        if(!m_enableTx && m_autoseq && m_callMode>2) {
-          quint64 delta;
-          if(m_mode=="FT8") { if(m_txFirst) delta=19000; else delta=4000; }
-          else if(m_mode=="FT4") { if(m_txFirst) delta=10000; else delta=2000; }
-          else { delta=70000; }
-          if(m_jtdxtime->currentMSecsSinceEpoch2()-m_msTXwatchdogTriggered<delta) {
-            txwatchdog (false); enableTx_mode(true);
-          }
-        }
+        if(m_enableTx && m_autoseq && m_callMode>0) txwatchdog (false);
         if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         on_txb3_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx3->text());
@@ -7852,7 +7834,6 @@ void MainWindow::txwatchdog (bool triggered)
     {
       m_bTxTime=false;
       if (m_enableTx) enableTx_mode (false);
-      m_msTXwatchdogTriggered=m_jtdxtime->currentMSecsSinceEpoch2();
       tx_status_label->setStyleSheet (QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff8080",m_useDarkStyle)));
       tx_status_label->setText (tr("Tx watchdog expired"));
     }
