@@ -2515,10 +2515,12 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)  //eventFilter()
 {
   switch (event->type())
     {
+    case QEvent::WindowActivate:
+      txwatchdog (false);
+      break;
     case QEvent::KeyPress:
       // fall through
     case QEvent::MouseButtonPress:
-      // reset the Tx watchdog
       txwatchdog (false);
       break;
 
