@@ -363,7 +363,7 @@ end subroutine boxit91
 
 subroutine fetchit91(indexes,fp,np,reset,e2,ntau,i1,i2,nthr)
   integer indexes(:,:),fp(0:),np(:)
-  integer lastpat(64),inext(64) ! up to 64 threads in FT8 decoding
+  integer lastpat(24),inext(24)
   integer*1 e2(1:ntau)
   logical reset
   save lastpat,inext

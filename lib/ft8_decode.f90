@@ -27,7 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,dd8m,nft8cycles,nft8swlcycles,ncandall, &
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandall, &
                          nincallthr
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
@@ -37,6 +37,7 @@ contains
     procedure(ft8_decode_callback) :: callback
 !    real sbase(NH1)
 !integer*2 iwave(180000)
+    real, DIMENSION(:), ALLOCATABLE :: dd8m
     real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
@@ -77,7 +78,7 @@ contains
     endif
 
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
-    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0
+    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
@@ -148,17 +149,26 @@ contains
          if(lft8lowth .or. swl) syncmin=1.1
       endif
       if(ipass.gt.5 .or. (ipass.eq.3 .and. npass.eq.3 .and. .not.swl)) lsubtract=.false.
-      if(ipass.eq.4 .or. ipass.eq.7) then
+      if(ipass.eq.4) then
 !$omp barrier
 !$omp single
-        if(ipass.eq.4) then
-          dd8m=dd8
+          if(npass.eq.9) then ! 3 decoding cycles
+            nallocthr=nthr
+            allocate(dd8m(180000), STAT = nAllocateStatus1)
+            if(nAllocateStatus1.ne.0) STOP "Not enough memory"
+            dd8m=dd8
+          endif
           do i=1,179999; dd8(i)=(dd8(i)+dd8(i+1))/2; enddo
-        else
+!$omp end single
+!$omp barrier
+      else if(ipass.eq.7) then
+!$omp barrier
+        if(nthr.eq.nallocthr) then
           dd8(1)=dd8m(1)
           do i=2,180000; dd8(i)=(dd8m(i-1)+dd8m(i))/2; enddo
+          deallocate (dd8m, STAT = nDeAllocateStatus1)
+          if (nDeAllocateStatus1.ne.0) print *, 'failed to release memory'
         endif
-!$omp end single
 !$omp barrier
       endif
       !call timer('sync8   ',0)

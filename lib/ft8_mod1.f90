@@ -1,13 +1,13 @@
 module ft8_mod1
 
   parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
-  real*4 dd8(nps),dd8m(nps)
+  real*4 dd8(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
   complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32),ctwkn(11,32)
   character*37 allmessages(200),msgsd76(76),msg(56),msgroot,msgincall(174)
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
-  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(64),smycnr(64),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt, &
+  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(24),smycnr(24),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt, &
        xdtincall(174)
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58), &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
