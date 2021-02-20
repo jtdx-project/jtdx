@@ -1453,12 +1453,12 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>St. Peter &amp; St. Paul</source>
-        <translation type="unfinished"></translation>
+        <translation>Sv. Pētera un Sv. Pāvila sala</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Trindade &amp; Martim Vaz</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
@@ -1543,17 +1543,17 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>C. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>E. Kiribati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
@@ -1748,7 +1748,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
         <source>Mellish Reef</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
@@ -1978,7 +1978,7 @@ Formāts:
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
@@ -2958,13 +2958,13 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
-        <location filename="../mainwindow.ui" line="2216"/>
+        <location filename="../mainwindow.ui" line="2248"/>
         <source>UTC           dB            DT           Freq          Dr </source>
-        <translation type="unfinished"></translation>
+        <translation>UTC           dB            DT           Freq          Dr </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
@@ -5248,37 +5248,37 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5125"/>
         <source>Recent Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Nesenās vietas</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5126"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Atpakaļ</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5127"/>
         <source>Go back</source>
-        <translation type="unfinished"></translation>
+        <translation>Atgriezties</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5128"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5129"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Uz priekšu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5130"/>
         <source>Go forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Ej uz priekšu</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5131"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5132"/>
@@ -5293,22 +5293,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5134"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Up</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5135"/>
         <source>Create New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Izveidot Jaunu Folderi</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5136"/>
         <source>Create a New Folder</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5137"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Saraksta skats</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5138"/>
@@ -5318,22 +5318,22 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../Configuration.cpp" line="5139"/>
         <source>Detail View</source>
-        <translation type="unfinished"></translation>
+        <translation>Detalizēts skats</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5140"/>
         <source>Change to detail view mode</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5141"/>
         <source>Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5142"/>
         <source>List of places and bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5376,19 +5376,19 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="186"/>
+        <location filename="../main.cpp" line="184"/>
         <source>Invalid rig name - \ &amp; / not allowed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="211"/>
+        <location filename="../main.cpp" line="209"/>
         <source>Another instance may be running, try to remove stale lock file?</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="353"/>
+        <location filename="../main.cpp" line="351"/>
         <source>Unexpected error</source>
-        <translation type="unfinished"></translation>
+        <translation>Negaidīta kļūda</translation>
     </message>
     <message>
         <location filename="../widegraph.cpp" line="14"/>
