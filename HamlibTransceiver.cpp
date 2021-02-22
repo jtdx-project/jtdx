@@ -449,7 +449,7 @@ void HamlibTransceiver::error_check (int ret_code, QString const& doing) const
       TRACE_CAT_POLL ("HamlibTransceiver", "error:" << rigerror (ret_code));
 #if JTDX_DEBUG_TO_FILE
       FILE * pFile = fopen (debug_file_.c_str(),"a");
-      fprintf (pFile,"%s Tranceiver error %s doing %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rigerror (ret_code),doing.toStdString().c_str());
+      fprintf (pFile,"%s Tranceiver error %s doing %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rigerror (ret_code),doing.toStdString().c_str());
       fclose (pFile);
 #endif
       
@@ -457,16 +457,16 @@ void HamlibTransceiver::error_check (int ret_code, QString const& doing) const
     }
 }
 
-int HamlibTransceiver::do_start ()
+int HamlibTransceiver::do_start (JTDXDateTime * jtdxtime)
 {
   TRACE_CAT ("HamlibTransceiver",
              QString::fromLatin1 (rig_get_caps_cptr (model_, RIG_CAPS_MFG_NAME_CPTR)).trimmed ()
              << QString::fromLatin1 (rig_get_caps_cptr (model_, RIG_CAPS_MODEL_NAME_CPTR)).trimmed ());
-
+m_jtdxtime = jtdxtime;
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  auto ms = QDateTime::currentMSecsSinceEpoch();
-  fprintf(pFile,"%s Transceiver open %s %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_get_caps_cptr (model_, RIG_CAPS_MFG_NAME_CPTR),rig_get_caps_cptr (model_, RIG_CAPS_MODEL_NAME_CPTR));
+  auto ms = m_jtdxtime->currentMSecsSinceEpoch2();
+  fprintf(pFile,"%s Transceiver open %s %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_get_caps_cptr (model_, RIG_CAPS_MFG_NAME_CPTR),rig_get_caps_cptr (model_, RIG_CAPS_MODEL_NAME_CPTR));
   fclose (pFile);
 #endif
 //  QThread::msleep (50);
@@ -487,7 +487,7 @@ int HamlibTransceiver::do_start ()
 //printf("rig id %d do_snr_ %d caps %0lx do_pwr_ %d do_pwr2_ %d\n",model_,do_snr_,rig_get_caps_int (model_, RIG_CAPS_HAS_GET_LEVEL),do_pwr_,do_pwr2_);
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transceiver opened\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fprintf(pFile,"%s Transceiver opened\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
 //  QThread::msleep (50);
@@ -512,7 +512,7 @@ int HamlibTransceiver::do_start ()
 
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transceiver get_vfo\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fprintf(pFile,"%s Transceiver get_vfo\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
   if ((WSJT_RIG_NONE_CAN_SPLIT || !is_dummy_)
@@ -536,7 +536,7 @@ int HamlibTransceiver::do_start ()
           TRACE_CAT ("HamlibTransceiver", "current frequency =" << f1);
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s Transceiver start current VFO=%f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f1);
+          fprintf(pFile,"%s Transceiver start current VFO=%f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),f1);
           fclose (pFile);
 #endif
 
@@ -544,7 +544,7 @@ int HamlibTransceiver::do_start ()
           TRACE_CAT ("HamlibTransceiver", "current mode =" << rig_strrmode (m) << "bw =" << w);
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
+          fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
           fclose (pFile);
 #endif
 
@@ -553,7 +553,7 @@ int HamlibTransceiver::do_start ()
               TRACE_CAT ("HamlibTransceiver", "rig_vfo_op TOGGLE");
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
               fclose (pFile);
 #endif
               rc = rig_vfo_op (rig_.data (), RIG_VFO_CURR, RIG_OP_TOGGLE);
@@ -563,7 +563,7 @@ int HamlibTransceiver::do_start ()
               TRACE_CAT ("HamlibTransceiver", "rig_set_vfo to other VFO");
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Transceiver start rig_set_vfo to other VFO\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fprintf(pFile,"%s Transceiver start rig_set_vfo to other VFO\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
               fclose (pFile);
 #endif
               rc = rig_set_vfo (rig_.data (), rig_->state.vfo_list & RIG_VFO_B ? RIG_VFO_B : RIG_VFO_SUB);
@@ -574,7 +574,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_vfo_op TOGGLE");
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+                  fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
                   fclose (pFile);
 #endif
                   rc = rig_vfo_op (rig_.data (), RIG_VFO_CURR, RIG_OP_TOGGLE);
@@ -602,7 +602,7 @@ int HamlibTransceiver::do_start ()
               TRACE_CAT ("HamlibTransceiver", "rig_get_freq other frequency =" << f2);
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Transceiver start other VFO=%f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f2);
+              fprintf(pFile,"%s Transceiver start other VFO=%f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),f2);
               fclose (pFile);
 #endif
 
@@ -610,7 +610,7 @@ int HamlibTransceiver::do_start ()
               TRACE_CAT ("HamlibTransceiver", "rig_get_mode other mode =" << rig_strrmode (mb) << "bw =" << wb);
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Transceiver start other mode=%s bw=%ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (mb),wb);
+              fprintf(pFile,"%s Transceiver start other mode=%s bw=%ld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (mb),wb);
               fclose (pFile);
 #endif
 
@@ -621,7 +621,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_vfo_op TOGGLE");
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+                  fprintf(pFile,"%s Transceiver start rig_vfo_op TOGGLE\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
                   fclose (pFile);
 #endif
                   error_check (rig_vfo_op (rig_.data (), RIG_VFO_CURR, RIG_OP_TOGGLE), tr ("exchanging VFOs"));
@@ -631,7 +631,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_set_vfo A/MAIN");
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start rig_set_vfo A/MAIN\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+                  fprintf(pFile,"%s Transceiver start rig_set_vfo A/MAIN\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
                   fclose (pFile);
 #endif
                   error_check (rig_set_vfo (rig_.data (), rig_->state.vfo_list & RIG_VFO_A ? RIG_VFO_A : RIG_VFO_MAIN), tr ("setting current VFO"));
@@ -648,7 +648,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_get_freq frequency =" << f1);
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start VFO=%f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f1);
+                  fprintf(pFile,"%s Transceiver start VFO=%f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),f1);
                   fclose (pFile);
 #endif
 
@@ -656,7 +656,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_get_mode mode =" << rig_strrmode (m) << "bw =" << w);
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
+                  fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
                   fclose (pFile);
 #endif
 
@@ -678,7 +678,7 @@ int HamlibTransceiver::do_start ()
               TRACE_CAT ("HamlibTransceiver", "rig_get_vfo current VFO = " << rig_strvfo (v));
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Transceiver start integer VFO=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),v);
+              fprintf(pFile,"%s Transceiver start integer VFO=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),v);
               fclose (pFile);
 #endif
             }
@@ -692,7 +692,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_get_mode current mode =" << rig_strrmode (m) << "bw =" << w);
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
+                  fprintf(pFile,"%s Transceiver start current mode=%s bw=%ld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
                   fclose (pFile);
 #endif
                 }
@@ -705,7 +705,7 @@ int HamlibTransceiver::do_start ()
                   TRACE_CAT ("HamlibTransceiver", "rig_get_mode can't do on this rig");
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Transceiver start rig_get_mode can't do on this rig\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+                  fprintf(pFile,"%s Transceiver start rig_get_mode can't do on this rig\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
                   fclose (pFile);
 #endif
                 }
@@ -774,7 +774,7 @@ int HamlibTransceiver::do_start ()
   TRACE_CAT ("HamlibTransceiver", "exit" << state () << "reversed =" << reversed_ << "resolution = " << resolution);
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transceiver start exit %d reversed=%d resolution=%d %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,resolution,QDateTime::currentMSecsSinceEpoch()-ms);
+  fprintf(pFile,"%s Transceiver start exit %d reversed=%d resolution=%d %lld ms.\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,resolution,m_jtdxtime->currentMSecsSinceEpoch2()-ms);
   fclose (pFile);
 #endif
   return resolution;
@@ -800,8 +800,8 @@ void HamlibTransceiver::do_stop ()
   TRACE_CAT ("HamlibTransceiver", "state:" << state () << "reversed =" << reversed_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  auto ms = QDateTime::currentMSecsSinceEpoch();
-  fprintf(pFile,"%s Transceiver stop state %d reversed=%d %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,QDateTime::currentMSecsSinceEpoch()-ms);
+  auto ms = m_jtdxtime->currentMSecsSinceEpoch2();
+  fprintf(pFile,"%s Transceiver stop state %d reversed=%d %lld ms.\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,m_jtdxtime->currentMSecsSinceEpoch2()-ms);
   fclose (pFile);
 #endif
 }
@@ -1062,8 +1062,8 @@ void HamlibTransceiver::do_poll ()
   split_t s;
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  auto ms = QDateTime::currentMSecsSinceEpoch();
-  fprintf(pFile,"%s poll start\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+  auto ms = m_jtdxtime->currentMSecsSinceEpoch2();
+  fprintf(pFile,"%s poll start\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
   if (get_vfo_works_ && rig_get_function_ptr (model_, RIG_FUNCTION_GET_VFO))
@@ -1073,7 +1073,7 @@ void HamlibTransceiver::do_poll ()
       TRACE_CAT_POLL ("HamlibTransceiver", "VFO =" << rig_strvfo (v));
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s poll current VFO=%s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strvfo (v));
+      fprintf(pFile,"%s poll current VFO=%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strvfo (v));
       fclose (pFile);
 #endif
       reversed_ = RIG_VFO_B == v;
@@ -1089,7 +1089,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_split_vfo split = " << s << " VFO = " << rig_strvfo (v));
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s poll split true\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s poll split true\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           update_split (true);
@@ -1103,7 +1103,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_split_vfo split = " << s << " VFO = " << rig_strvfo (v));
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s poll split false\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s poll split false\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           update_split (false);
@@ -1116,7 +1116,7 @@ void HamlibTransceiver::do_poll ()
           // just report how we see it based on prior commands
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s poll split not works\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s poll split not works\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           split_query_works_ = false;
@@ -1133,7 +1133,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_freq frequency =" << f);
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s update frequency %f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
+          fprintf(pFile,"%s update frequency %f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
           fclose (pFile);
 #endif
           update_rx_frequency (f);
@@ -1159,7 +1159,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_freq other VFO =" << f);
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s update other frequency %f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
+          fprintf(pFile,"%s update other frequency %f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),f);
           fclose (pFile);
 #endif
           update_other_frequency (f);
@@ -1182,7 +1182,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_mode mode =" << rig_strrmode (m) << "bw =" << w);
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s get mode %s bw %ld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
+          fprintf(pFile,"%s get mode %s bw %ld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rig_strrmode (m),w);
           fclose (pFile);
 #endif
           update_mode (map_mode (m));
@@ -1192,7 +1192,7 @@ void HamlibTransceiver::do_poll ()
           TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_mode mode failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s get mode failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+          fprintf(pFile,"%s get mode failed %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
           fclose (pFile);
 #endif
         }
@@ -1209,7 +1209,7 @@ void HamlibTransceiver::do_poll ()
               if (RIG_OK == rc) {
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get level %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.i);
+                fprintf(pFile,"%s get level %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.i);
                 fclose (pFile);
 #endif
                 update_level (strength.i);
@@ -1217,7 +1217,7 @@ void HamlibTransceiver::do_poll ()
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get level failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fprintf(pFile,"%s get level failed %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
                 fclose (pFile);
 #endif
                 update_level (-60);
@@ -1230,7 +1230,7 @@ void HamlibTransceiver::do_poll ()
               if (RIG_OK == rc) {
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power RFPOWER_METER_WATTS %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+                fprintf(pFile,"%s get power RFPOWER_METER_WATTS %.3f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
                 fclose (pFile);
 #endif
                 update_power (strength.f*1000);
@@ -1238,7 +1238,7 @@ void HamlibTransceiver::do_poll ()
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER_METER_WATTS failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power RFPOWER_METER_WATTS failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fprintf(pFile,"%s get power RFPOWER_METER_WATTS failed %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
                 fclose (pFile);
 #endif
                 update_power (0);
@@ -1249,21 +1249,21 @@ void HamlibTransceiver::do_poll ()
               if (RIG_OK == rc) {
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power RFPOWER %.3f\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
+                fprintf(pFile,"%s get power RFPOWER %.3f\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),strength.f);
                 fclose (pFile);
 #endif
                 unsigned int mwpower;
                 rc = rig_power2mW(rig_.data (),&mwpower,strength.f,f,m);
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get mwatts %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),mwpower);
+                fprintf(pFile,"%s get mwatts %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),mwpower);
                 fclose (pFile);
 #endif
                 if (RIG_OK != rc) {
                   TRACE_CAT_POLL ("HamlibTransceiver", "rig_power2mW failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s get power rig_power2mW failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                  fprintf(pFile,"%s get power rig_power2mW failed %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
                   fclose (pFile);    
 #endif
                   mwpower=0;
@@ -1274,7 +1274,7 @@ void HamlibTransceiver::do_poll ()
                 TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RFPOWER failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
                 pFile = fopen (debug_file_.c_str(),"a");
-                fprintf(pFile,"%s get power failed %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
+                fprintf(pFile,"%s get power failed %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rc);
                 fclose (pFile);
 #endif
                 update_power (0);
@@ -1289,7 +1289,7 @@ void HamlibTransceiver::do_poll ()
       auto rc = rig_get_ptt (rig_.data (), RIG_VFO_CURR, &p);
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s get ptt %d %d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),p,rc);
+      fprintf(pFile,"%s get ptt %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),p,rc);
       fclose (pFile);
 #endif
       if (-RIG_ENAVAIL != rc && -RIG_ENIMPL != rc) // may fail if
@@ -1303,7 +1303,7 @@ void HamlibTransceiver::do_poll ()
     }
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s poll end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch()-ms);
+  fprintf(pFile,"%s poll end %lld ms.\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->currentMSecsSinceEpoch2()-ms);
   fclose (pFile);
 #endif
 #if !WSJT_TRACE_CAT_POLLS

@@ -2,7 +2,6 @@
 
 #include <exception>
 
-#include <QDateTime>
 #include <QString>
 #include <QTimer>
 #include <QThread>
@@ -15,15 +14,31 @@ namespace
   auto const unexpected = TransceiverBase::tr ("Unexpected rig error");
 }
 
-void TransceiverBase::start (unsigned sequence_number) noexcept
+void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetime) noexcept
 {
   QString message;
   try
     {
       last_sequence_number_ = sequence_number;
+      jtdxtime_ = jtdxdatetime;
+#if JTDX_DEBUG_TO_FILE
+      FILE * pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
       may_update u {this, true};
       shutdown ();
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever start shutdown done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
       startup ();
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever start done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
     }
   catch (std::exception const& e)
     {
@@ -45,9 +60,9 @@ void TransceiverBase::set (TransceiverState const& s,
   TRACE_CAT ("TransceiverBase", "#:" << sequence_number << s);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transiever set state %d #:%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
+  fprintf(pFile,"%s Transiever set state %d #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
   fclose (pFile);
-  auto ms = QDateTime::currentMSecsSinceEpoch();
+  auto ms = jtdxtime_->currentMSecsSinceEpoch2();
 #endif
   QString message;
   try
@@ -59,7 +74,7 @@ void TransceiverBase::set (TransceiverState const& s,
         {
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s Transceiver shutdown",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s Transceiver shutdown",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           shutdown ();
@@ -68,13 +83,13 @@ void TransceiverBase::set (TransceiverState const& s,
         {
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s restart shutdown ",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s restart shutdown ",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           shutdown ();
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf(pFile,"%s start",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf(pFile,"%s start",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
           startup ();
@@ -83,10 +98,108 @@ void TransceiverBase::set (TransceiverState const& s,
         {
           bool ptt_on {false};
           bool ptt_off {false};
+          if (requested_.blocksize() != s.blocksize()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing blocksize=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.blocksize());
+            fclose (pFile);
+#endif
+            do_blocksize (s.blocksize());
+            requested_.blocksize (s.blocksize ());
+          }
+          if (requested_.period() != s.period()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing period=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.period());
+            fclose (pFile);
+#endif
+            do_period (s.period());
+            requested_.period (s.period ());
+          }
+          if (requested_.spread() != s.spread()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing spread=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.spread());
+            fclose (pFile);
+#endif
+            do_spread (s.spread());
+            requested_.spread (s.spread ());
+          }
+          if (requested_.nsym() != s.nsym()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing nsym=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.nsym());
+            fclose (pFile);
+#endif
+            do_nsym (s.nsym());
+            requested_.nsym (s.nsym ());
+          }
+          if (requested_.trfrequency() != s.trfrequency()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing trfrequency=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.trfrequency());
+            fclose (pFile);
+#endif
+            do_trfrequency (s.trfrequency());
+            requested_.trfrequency (s.trfrequency ());
+          }
+          if (requested_.volume() != s.volume()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing volume=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.volume());
+            fclose (pFile);
+#endif
+            do_txvolume (s.volume());
+            requested_.volume (s.volume ());
+          }
+          if (requested_.audio() != s.audio()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.audio());
+            fclose (pFile);
+#endif
+            do_audio (s.audio());
+            requested_.audio (s.audio ());
+          }
+          if (requested_.tx_audio() != s.tx_audio()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing tx_audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.audio());
+#endif
+            if (s.tx_audio()) {
+              do_modulator_start(s.symbolslength (), s.framespersymbol (), s.trfrequency (), s.tonespacing (), s.synchronize (),s.dbsnr (), s.trperiod ());
+              requested_.symbolslength(s.symbolslength ());
+              requested_.framespersymbol(s.framespersymbol ());
+              requested_.trfrequency(s.trfrequency ());
+              requested_.tonespacing(s.tonespacing ());
+              requested_.synchronize(s.synchronize ());
+              requested_.dbsnr(s.dbsnr ());
+              requested_.trperiod(s.trperiod ());
+            } else {
+              do_modulator_stop(s.quick ());
+              requested_.quick (s.quick ());
+            }
+
+#if JTDX_DEBUG_TO_FILE
+            fclose (pFile);
+#endif
+            requested_.tx_audio (s.tx_audio ());
+          }
+
+
+          if (requested_.tune() != s.tune()) {
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing tune=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.tune());
+            fclose (pFile);
+#endif
+            do_tune (s.tune());
+            requested_.tune (s.tune ());
+          }
           if (requested_.ft4_mode() != s.ft4_mode()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
-            fprintf(pFile,"%s Timing ft4_mode=%d\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.ft4_mode());
+            fprintf(pFile,"%s Timing ft4_mode=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.ft4_mode());
             fclose (pFile);
 #endif
             do_post_ft4_mode (s.ft4_mode());
@@ -101,7 +214,7 @@ void TransceiverBase::set (TransceiverState const& s,
             {
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Timing ptt_off\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fprintf(pFile,"%s Timing ptt_off\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
               fclose (pFile);
 #endif
               do_ptt (false);
@@ -115,10 +228,10 @@ void TransceiverBase::set (TransceiverState const& s,
                    || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
                   || ptt_off))       // or just returned to rx
             {
-              auto ms2 = QDateTime::currentMSecsSinceEpoch();
+              auto ms2 = jtdxtime_->currentMSecsSinceEpoch2();
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Timing do_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+              fprintf(pFile,"%s Timing do_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
               fclose (pFile);
 #endif
               do_frequency (s.frequency (), s.mode (), ptt_off);
@@ -127,7 +240,7 @@ void TransceiverBase::set (TransceiverState const& s,
               // record what actually changed
               requested_.frequency (actual_.frequency ());
               requested_.mode (actual_.mode ());
-              set_freq_time = QDateTime::currentMSecsSinceEpoch() - ms2;
+              set_freq_time = jtdxtime_->currentMSecsSinceEpoch2() - ms2;
             }
           if (!s.tx_frequency ()
               || (s.tx_frequency () > 10000 // ignore bogus startup values
@@ -140,7 +253,7 @@ void TransceiverBase::set (TransceiverState const& s,
                 {
 #if JTDX_DEBUG_TO_FILE
                   pFile = fopen (debug_file_.c_str(),"a");
-                  fprintf(pFile,"%s Timing do_tx_frequency %lld\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
+                  fprintf(pFile,"%s Timing do_tx_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
                   fclose (pFile);
 #endif
                   do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
@@ -155,7 +268,7 @@ void TransceiverBase::set (TransceiverState const& s,
             {
 #if JTDX_DEBUG_TO_FILE
               pFile = fopen (debug_file_.c_str(),"a");
-              fprintf(pFile,"%s Timing ptt_on\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+              fprintf(pFile,"%s Timing ptt_on\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
               fclose (pFile);
 #endif
               do_ptt (true);
@@ -170,13 +283,13 @@ void TransceiverBase::set (TransceiverState const& s,
         } else {
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
-          fprintf (pFile,"%s NOT ONLINE\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fprintf (pFile,"%s NOT ONLINE\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
           fclose (pFile);
 #endif
         }
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s Transiever set end %lld ms.\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),QDateTime::currentMSecsSinceEpoch() - ms);
+      fprintf(pFile,"%s Transiever set end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
       fclose (pFile);
 #endif
     }
@@ -193,7 +306,7 @@ void TransceiverBase::set (TransceiverState const& s,
     {
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
-      fprintf(pFile,"%s Transiever set message %s\n",QDateTime::currentDateTimeUtc().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+      fprintf(pFile,"%s Transiever set message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
       fclose (pFile);
 #endif
       offline (message);
@@ -203,13 +316,29 @@ void TransceiverBase::set (TransceiverState const& s,
 void TransceiverBase::startup ()
 {
   QString message;
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Transiever startup\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+  auto ms = jtdxtime_->currentMSecsSinceEpoch2();
+#endif
   try
     {
       actual_.online (true);
       requested_.online (true);
-      auto res = do_start ();
-      do_post_start ();
+      auto res = do_start (jtdxtime_);
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Timing do_start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+      fclose (pFile);
+#endif
+      do_post_start (jtdxtime_);
       Q_EMIT resolution (res);
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever startup end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
+      fclose (pFile);
+#endif
     }
   catch (std::exception const& e)
     {
@@ -221,24 +350,45 @@ void TransceiverBase::startup ()
     }
   if (!message.isEmpty ())
     {
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      fprintf(pFile,"%s Transiever startup message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+      fclose (pFile);
+#endif
       offline (message);
     }
 }
 
 void TransceiverBase::shutdown ()
 {
-  may_update u {this};
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Transiever shutdown\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+  auto ms = jtdxtime_->currentMSecsSinceEpoch2();
+#endif
   if (requested_.online ())
     {
+      may_update u {this};
       try
         {
           // try and ensure PTT isn't left set
           do_ptt (false);
+#if JTDX_DEBUG_TO_FILE
+          pFile = fopen (debug_file_.c_str(),"a");
+          fprintf(pFile,"%s Timing do_ptt:0\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+          fclose (pFile);
+#endif
           do_post_ptt (false);
           if (requested_.split ())
             {
               // try and reset split mode
               do_tx_frequency (0, UNK, true);
+#if JTDX_DEBUG_TO_FILE
+            pFile = fopen (debug_file_.c_str(),"a");
+            fprintf(pFile,"%s Timing do_tx_freq:0\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+            fclose (pFile);
+#endif
               do_post_tx_frequency (0, UNK);
             }
         }
@@ -248,14 +398,29 @@ void TransceiverBase::shutdown ()
         }
     }
   do_stop ();
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Timing do_stop\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   do_post_stop ();
   actual_ = TransceiverState {};
   requested_ = TransceiverState {};
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Transiever shutdown end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
+  fclose (pFile);
+#endif
 }
 
 void TransceiverBase::stop () noexcept
 {
   QString message;
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  fprintf(pFile,"%s Transiever stop\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   try
     {
       shutdown ();

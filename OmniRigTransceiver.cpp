@@ -118,10 +118,11 @@ bool OmniRigTransceiver::await_notification_with_timeout (int timeout)
   return 1 == el.exec ();       // wait for notify or timer
 }
 
-int OmniRigTransceiver::do_start ()
+int OmniRigTransceiver::do_start (JTDXDateTime * jtdxtime)
 {
   TRACE_CAT ("OmniRigTransceiver", "starting");
-  if (wrapped_) wrapped_->start (0);
+  m_jtdxtime = jtdxtime;
+  if (wrapped_) wrapped_->start (0,m_jtdxtime);
 
   CoInitializeEx (nullptr, 0 /*COINIT_APARTMENTTHREADED*/); // required because Qt only does this for GUI thread
 

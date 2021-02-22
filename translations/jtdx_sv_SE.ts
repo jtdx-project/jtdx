@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1210"/>
+        <location filename="../Configuration.cpp" line="1333"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1211"/>
+        <location filename="../Configuration.cpp" line="1334"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1226"/>
+        <location filename="../Configuration.cpp" line="1349"/>
         <source>Create temporary directory error: </source>
         <translation>Skapa tillfälligt katalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1232"/>
+        <location filename="../Configuration.cpp" line="1355"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,68 +82,83 @@ Another application may be locking the directory</source>
 En annan applikation kan låsa katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1249"/>
+        <location filename="../Configuration.cpp" line="1372"/>
         <source>Create data directory error: </source>
         <translation>Skapa datakatalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1258"/>
-        <location filename="../Configuration.cpp" line="1269"/>
+        <location filename="../Configuration.cpp" line="1381"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translatorcomment>Kan inte Skapa katalog</translatorcomment>
         <translation>Skapa katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1429"/>
-        <location filename="../Configuration.cpp" line="1455"/>
-        <location filename="../Configuration.cpp" line="1507"/>
+        <location filename="../Configuration.cpp" line="1552"/>
+        <location filename="../Configuration.cpp" line="1578"/>
+        <location filename="../Configuration.cpp" line="1630"/>
         <source>&amp;Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1459"/>
-        <location filename="../Configuration.cpp" line="1511"/>
+        <location filename="../Configuration.cpp" line="1582"/>
+        <location filename="../Configuration.cpp" line="1634"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Föra in ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1463"/>
+        <location filename="../Configuration.cpp" line="1586"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Ladda ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1467"/>
+        <location filename="../Configuration.cpp" line="1590"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Spara som ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1471"/>
+        <location filename="../Configuration.cpp" line="1594"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Sammanfoga ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1475"/>
+        <location filename="../Configuration.cpp" line="1598"/>
         <source>&amp;Reset</source>
         <translation>&amp;Återställ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2735"/>
+        <location filename="../Configuration.cpp" line="2864"/>
         <source>Serial Port:</source>
         <translation>Serieport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2736"/>
+        <location filename="../Configuration.cpp" line="2865"/>
         <source>Serial port used for CAT control</source>
         <translation>Seriell port som används för CAT-kontroll</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2743"/>
+        <location filename="../Configuration.cpp" line="2872"/>
+        <source>TCI Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="2873"/>
+        <source>Optional hostname and port of TCI service.
+Leave blank for a sensible default on this machine.
+Formats:
+	hostname:port
+	IPv4-address:port
+	[IPv6-address]:port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="2885"/>
         <source>Network Server:</source>
         <translation>Nätverksserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2744"/>
+        <location filename="../Configuration.cpp" line="2886"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -158,12 +173,12 @@ format:
 	[IPv6-adress]: port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2756"/>
+        <location filename="../Configuration.cpp" line="2898"/>
         <source>USB Device:</source>
         <translation>USB-enhet:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2757"/>
+        <location filename="../Configuration.cpp" line="2899"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -174,132 +189,132 @@ Formatera:
 	[VID [: PID [: VENDOR [: PRODUKT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2792"/>
+        <location filename="../Configuration.cpp" line="2934"/>
         <source>Invalid audio input device</source>
         <translation>Ogiltig ljudingångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2799"/>
+        <location filename="../Configuration.cpp" line="2941"/>
         <source>Invalid audio output device</source>
         <translation>Ogiltig ljudutgångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2805"/>
+        <location filename="../Configuration.cpp" line="2947"/>
         <source>Invalid PTT method</source>
         <translation>Ogiltig PTT-metod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2815"/>
+        <location filename="../Configuration.cpp" line="2957"/>
         <source>Invalid PTT port</source>
         <translation>Ogiltig PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3328"/>
+        <location filename="../Configuration.cpp" line="3481"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 i meddelandet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3329"/>
+        <location filename="../Configuration.cpp" line="3482"/>
         <source>CQ in message</source>
         <translation>CQ i meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4512"/>
+        <location filename="../Configuration.cpp" line="4665"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX Decoded Text Font Choose</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5154"/>
-        <location filename="../Configuration.cpp" line="5185"/>
+        <location filename="../Configuration.cpp" line="5311"/>
+        <location filename="../Configuration.cpp" line="5342"/>
         <source>Cancel</source>
         <translation>Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5150"/>
+        <location filename="../Configuration.cpp" line="5307"/>
         <source>Load Working Frequencies</source>
         <translation>Ladda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5181"/>
+        <location filename="../Configuration.cpp" line="5338"/>
         <source>Merge Working Frequencies</source>
         <translation>Slå samman arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5208"/>
-        <location filename="../Configuration.cpp" line="5217"/>
-        <location filename="../Configuration.cpp" line="5227"/>
+        <location filename="../Configuration.cpp" line="5365"/>
+        <location filename="../Configuration.cpp" line="5374"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>Not a valid frequencies file</source>
         <translation>Inte en giltig frekvensfil</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5208"/>
+        <location filename="../Configuration.cpp" line="5365"/>
         <source>Incorrect file magic</source>
         <translation>Felaktig magi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5217"/>
+        <location filename="../Configuration.cpp" line="5374"/>
         <source>Version is too new</source>
         <translation>Versionen är för ny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5227"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>Contents corrupt</source>
         <translation>Innehållet är skadat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5237"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Save Working Frequencies</source>
         <translation>Spara arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5247"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Spara endast utvalda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5249"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Är du säker på att du bara vill spara de arbetsfrekvenser som för närvarande är valda? Klicka på Nej för att spara alla.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5276"/>
+        <location filename="../Configuration.cpp" line="5433"/>
         <source>Reset Working Frequencies</source>
         <translation>Återställ arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5278"/>
+        <location filename="../Configuration.cpp" line="5435"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med standardfrekvenser?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5338"/>
+        <location filename="../Configuration.cpp" line="5495"/>
         <source>Save Directory</source>
         <translation>Spara katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5354"/>
+        <location filename="../Configuration.cpp" line="5511"/>
         <source>Failed to open connection to rig</source>
         <translation>Det gick inte att öppna anslutningen till riggen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5597"/>
+        <location filename="../Configuration.cpp" line="5900"/>
         <source>Rig failure</source>
         <translation>Riggfel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5152"/>
-        <location filename="../Configuration.cpp" line="5183"/>
-        <location filename="../Configuration.cpp" line="5237"/>
+        <location filename="../Configuration.cpp" line="5309"/>
+        <location filename="../Configuration.cpp" line="5340"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvensfiler (* .qrg) ;; Alla filer (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5168"/>
+        <location filename="../Configuration.cpp" line="5325"/>
         <source>Replace Working Frequencies</source>
         <translation>Byt ut arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5169"/>
+        <location filename="../Configuration.cpp" line="5326"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med de laddade frekvenserna?</translation>
     </message>
@@ -2045,90 +2060,90 @@ Formatera:
 <context>
     <name>DXLabSuiteCommanderTransceiver</name>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="72"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
         <translation>Det gick inte att ansluta till DX Lab Suite Commander
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="128"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt läsfrekvens: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="175"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt läsfrekvens: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="181"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt polling TX-status: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="189"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
         <translation>DX Lab Suite Commander rigg svarade inte på PTT: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="275"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt pollingfrekvens: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="296"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt polling TX frekvens: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="315"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
         <translation>DX Lab Suite Commander skickade ett okänt splittringsläge: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="321"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt polling split status: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="377"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
         <translation>DX Lab Suite Commander skickade ett okänt läge: &quot;</translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="384"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
         <translation>DX Lab Suite Commander svarade inte korrekt pollinläge: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="401"/>
         <source>DX Lab Suite Commander send command failed
 </source>
         <translation>DX Lab Suite Commander skicka kommandot misslyckades
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="413"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
         <translation>DX Lab Suite Commander kunde inte skicka kommandot &quot;%1&quot;:%2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="430"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
         <translation>DX Lab Suite Commander skicka kommandot &quot;%1&quot; läst svar misslyckades:%2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="441"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
         <translation>DX Lab Suite Commander försöker återanvända sändningskommandot &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="504"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
         <translation>DX Lab Suite Commander skickade en okänd frekvens</translation>
     </message>
@@ -2316,7 +2331,7 @@ Error: %2 - %3</translation>
 <context>
     <name>EmulateSplitTransceiver</name>
     <message>
-        <location filename="../EmulateSplitTransceiver.cpp" line="48"/>
+        <location filename="../EmulateSplitTransceiver.cpp" line="50"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
         <translation>Emulerad delningsläge kräver att rigg ska vara i simplexläge</translation>
     </message>
@@ -2324,32 +2339,32 @@ Error: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="221"/>
+        <location filename="../Configuration.cpp" line="219"/>
         <source>Add Frequency</source>
         <translation>Lägg till frekvens</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="226"/>
+        <location filename="../Configuration.cpp" line="224"/>
         <source>IARU &amp;Region:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="227"/>
+        <location filename="../Configuration.cpp" line="225"/>
         <source>&amp;Mode:</source>
         <translation>&amp;Mod:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="228"/>
+        <location filename="../Configuration.cpp" line="226"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Frekvens (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="234"/>
+        <location filename="../Configuration.cpp" line="232"/>
         <source>&amp;OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="235"/>
+        <location filename="../Configuration.cpp" line="233"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annulera</translation>
     </message>
@@ -2390,86 +2405,86 @@ Error: %2 - %3</translation>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="126"/>
-        <location filename="../HRDTransceiver.cpp" line="151"/>
+        <location filename="../HRDTransceiver.cpp" line="127"/>
+        <location filename="../HRDTransceiver.cpp" line="152"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>Det gick inte att ansluta till Ham Radio Deluxe
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="160"/>
+        <location filename="../HRDTransceiver.cpp" line="161"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>Det gick inte att öppna filen &quot;%1&quot;:%2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="175"/>
-        <location filename="../HRDTransceiver.cpp" line="199"/>
+        <location filename="../HRDTransceiver.cpp" line="176"/>
+        <location filename="../HRDTransceiver.cpp" line="200"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe: ingen rigg hittades</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="423"/>
+        <location filename="../HRDTransceiver.cpp" line="424"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe: rigg stöder inte läge</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="442"/>
+        <location filename="../HRDTransceiver.cpp" line="443"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation>Ham Radio Deluxe: skickade ett okänt läge</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="477"/>
+        <location filename="../HRDTransceiver.cpp" line="478"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation>Ham Radio Deluxe: objektet hittades inte i listan%1</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="521"/>
+        <location filename="../HRDTransceiver.cpp" line="522"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe: knappen är inte tillgänglig</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="887"/>
+        <location filename="../HRDTransceiver.cpp" line="888"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>Ham Radio Deluxe svarade inte som förväntat</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1036"/>
+        <location filename="../HRDTransceiver.cpp" line="1037"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe: rigg har försvunnit eller ändrats</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1051"/>
+        <location filename="../HRDTransceiver.cpp" line="1052"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>Ham Radio Deluxe skicka kommandot &quot;%1&quot; misslyckades%2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1064"/>
-        <location filename="../HRDTransceiver.cpp" line="1077"/>
+        <location filename="../HRDTransceiver.cpp" line="1065"/>
+        <location filename="../HRDTransceiver.cpp" line="1078"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe: misslyckades med att skriva kommandot &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1094"/>
+        <location filename="../HRDTransceiver.cpp" line="1095"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe skickade ogiltigt svar på vårt kommando &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1148"/>
+        <location filename="../HRDTransceiver.cpp" line="1149"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>Ham Radio Deluxe misslyckades med att svara på kommandot &quot;%1&quot;%2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1158"/>
+        <location filename="../HRDTransceiver.cpp" line="1159"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe försöker igen utmattat sändningskommando &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1171"/>
+        <location filename="../HRDTransceiver.cpp" line="1172"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>Ham Radio Deluxe svarade inte på kommandot &quot;%1&quot; som förväntat</translation>
     </message>
@@ -2789,7 +2804,7 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3920"/>
+        <location filename="../mainwindow.cpp" line="3962"/>
         <source>&amp;Yes</source>
         <translation>&amp;Ja</translation>
     </message>
@@ -2800,7 +2815,7 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3923"/>
+        <location filename="../mainwindow.cpp" line="3965"/>
         <source>&amp;No</source>
         <translation>&amp;Nej</translation>
     </message>
@@ -2981,13 +2996,13 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1854"/>
-        <location filename="../mainwindow.cpp" line="3644"/>
-        <location filename="../mainwindow.cpp" line="3653"/>
-        <location filename="../mainwindow.cpp" line="6195"/>
-        <location filename="../mainwindow.cpp" line="6200"/>
-        <location filename="../mainwindow.cpp" line="6242"/>
-        <location filename="../mainwindow.cpp" line="6253"/>
+        <location filename="../mainwindow.cpp" line="1869"/>
+        <location filename="../mainwindow.cpp" line="3686"/>
+        <location filename="../mainwindow.cpp" line="3695"/>
+        <location filename="../mainwindow.cpp" line="6245"/>
+        <location filename="../mainwindow.cpp" line="6250"/>
+        <location filename="../mainwindow.cpp" line="6292"/>
+        <location filename="../mainwindow.cpp" line="6303"/>
         <source>Band Activity</source>
         <translation>Bandaktivitet</translation>
     </message>
@@ -3106,9 +3121,9 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1076"/>
-        <location filename="../mainwindow.cpp" line="4790"/>
-        <location filename="../mainwindow.cpp" line="5456"/>
-        <location filename="../mainwindow.cpp" line="5877"/>
+        <location filename="../mainwindow.cpp" line="4838"/>
+        <location filename="../mainwindow.cpp" line="5504"/>
+        <location filename="../mainwindow.cpp" line="5925"/>
         <source>DX Call</source>
         <translation>DX Anrop</translation>
     </message>
@@ -3161,7 +3176,7 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1403"/>
-        <location filename="../mainwindow.cpp" line="3072"/>
+        <location filename="../mainwindow.cpp" line="3115"/>
         <source>Hound</source>
         <translation>Hund</translation>
     </message>
@@ -3193,8 +3208,8 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="1575"/>
-        <location filename="../mainwindow.cpp" line="2058"/>
+        <location filename="../mainwindow.cpp" line="1590"/>
+        <location filename="../mainwindow.cpp" line="2098"/>
         <source>S meter</source>
         <translation>S mätare</translation>
     </message>
@@ -3371,7 +3386,7 @@ ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2294"/>
-        <location filename="../mainwindow.cpp" line="6201"/>
+        <location filename="../mainwindow.cpp" line="6251"/>
         <source>Rx Frequency</source>
         <translation>Rx Frekvens</translation>
     </message>
@@ -3382,7 +3397,7 @@ ZD8, ZD9, ZF, ZK3, ZL, ZL7, ZL8, ZL9, ZP, ZS, ZS8 &lt;/ p&gt; &lt;/ body&gt; &lt
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2394"/>
-        <location filename="../mainwindow.cpp" line="6780"/>
+        <location filename="../mainwindow.cpp" line="6833"/>
         <source>&amp;Tune</source>
         <translation>&amp;Justera</translation>
     </message>
@@ -4711,442 +4726,442 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="467"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Vill du konfigurera radiogränssnittet på nytt?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="824"/>
+        <location filename="../mainwindow.cpp" line="828"/>
         <source>Error Writing WAV File</source>
         <translation>Fel vid skrivning av WAV-fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="964"/>
+        <location filename="../mainwindow.cpp" line="970"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Fel vid stopp av jtdxjt9.exe-processen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="942"/>
-        <location filename="../mainwindow.cpp" line="943"/>
-        <location filename="../mainwindow.cpp" line="6191"/>
-        <location filename="../mainwindow.cpp" line="6192"/>
-        <location filename="../mainwindow.cpp" line="6249"/>
-        <location filename="../mainwindow.cpp" line="6250"/>
+        <location filename="../mainwindow.cpp" line="948"/>
+        <location filename="../mainwindow.cpp" line="949"/>
+        <location filename="../mainwindow.cpp" line="6241"/>
+        <location filename="../mainwindow.cpp" line="6242"/>
+        <location filename="../mainwindow.cpp" line="6299"/>
+        <location filename="../mainwindow.cpp" line="6300"/>
         <source>Freq   Message</source>
         <translation>Frekv. medd</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="965"/>
+        <location filename="../mainwindow.cpp" line="971"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName-returkod:%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="982"/>
+        <location filename="../mainwindow.cpp" line="988"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Fel vid borttagning av &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="983"/>
+        <location filename="../mainwindow.cpp" line="989"/>
         <source>Click OK to retry</source>
         <translation>Klicka på OK för att försöka igen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1677"/>
+        <location filename="../mainwindow.cpp" line="1692"/>
         <source>TX Even</source>
         <translation>TX Jämn</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1684"/>
+        <location filename="../mainwindow.cpp" line="1699"/>
         <source>TX Odd</source>
         <translation>TX Udda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1747"/>
-        <location filename="../mainwindow.cpp" line="2508"/>
-        <location filename="../mainwindow.cpp" line="3688"/>
-        <location filename="../mainwindow.cpp" line="4251"/>
-        <location filename="../mainwindow.cpp" line="4399"/>
-        <location filename="../mainwindow.cpp" line="4639"/>
-        <location filename="../mainwindow.cpp" line="7056"/>
-        <location filename="../mainwindow.cpp" line="7265"/>
+        <location filename="../mainwindow.cpp" line="1762"/>
+        <location filename="../mainwindow.cpp" line="2551"/>
+        <location filename="../mainwindow.cpp" line="3730"/>
+        <location filename="../mainwindow.cpp" line="4293"/>
+        <location filename="../mainwindow.cpp" line="4441"/>
+        <location filename="../mainwindow.cpp" line="4686"/>
+        <location filename="../mainwindow.cpp" line="7110"/>
+        <location filename="../mainwindow.cpp" line="7326"/>
         <source>File Open Error</source>
         <translation>Filöppningsfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1748"/>
-        <location filename="../mainwindow.cpp" line="2509"/>
-        <location filename="../mainwindow.cpp" line="3689"/>
-        <location filename="../mainwindow.cpp" line="4252"/>
-        <location filename="../mainwindow.cpp" line="4400"/>
-        <location filename="../mainwindow.cpp" line="4640"/>
-        <location filename="../mainwindow.cpp" line="7057"/>
-        <location filename="../mainwindow.cpp" line="7266"/>
-        <location filename="../mainwindow.cpp" line="7619"/>
+        <location filename="../mainwindow.cpp" line="1763"/>
+        <location filename="../mainwindow.cpp" line="2552"/>
+        <location filename="../mainwindow.cpp" line="3731"/>
+        <location filename="../mainwindow.cpp" line="4294"/>
+        <location filename="../mainwindow.cpp" line="4442"/>
+        <location filename="../mainwindow.cpp" line="4687"/>
+        <location filename="../mainwindow.cpp" line="7111"/>
+        <location filename="../mainwindow.cpp" line="7327"/>
+        <location filename="../mainwindow.cpp" line="7680"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan inte öppna &quot;%1&quot; för bilaga:%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1803"/>
+        <location filename="../mainwindow.cpp" line="1818"/>
         <source>lost audio </source>
         <translation>Förlorat audio </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1887"/>
+        <location filename="../mainwindow.cpp" line="1902"/>
         <source>Error saving c2 file</source>
         <translation>Fel vid sparande av c2-fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1964"/>
+        <location filename="../mainwindow.cpp" line="1979"/>
         <source>Error in SoundInput</source>
         <translation>Fel i SoundInput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1968"/>
+        <location filename="../mainwindow.cpp" line="1983"/>
         <source>Error in SoundOutput</source>
         <translation>Fel i SoundOutput</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2060"/>
+        <location filename="../mainwindow.cpp" line="2100"/>
         <source>Pwr</source>
         <translation>Effekt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2621"/>
+        <location filename="../mainwindow.cpp" line="2664"/>
         <source>Subprocess Error</source>
         <translation>Delprocessfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2622"/>
+        <location filename="../mainwindow.cpp" line="2665"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Delprocessen misslyckades med utgångskoden%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2624"/>
-        <location filename="../mainwindow.cpp" line="2643"/>
+        <location filename="../mainwindow.cpp" line="2667"/>
+        <location filename="../mainwindow.cpp" line="2686"/>
         <source>Running: %1
 %2</source>
         <translation>Running: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2642"/>
+        <location filename="../mainwindow.cpp" line="2685"/>
         <source>Subprocess error</source>
         <translation>Delprocessfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2718"/>
+        <location filename="../mainwindow.cpp" line="2761"/>
         <source>Spotted</source>
         <translation>&quot;Spotted&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2725"/>
+        <location filename="../mainwindow.cpp" line="2768"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Kan inte upprätta/slutföra anslutning till dxsummit-server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2748"/>
+        <location filename="../mainwindow.cpp" line="2791"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>Algoritmerna, källkoden, utseendet och känslan av WSJT-X och relaterade program och protokollspecifikationerna för lägen FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 är Copyright (C) 2001 -2018 av en eller flera av följande författare: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; och andra medlemmar i WSJT Development Group.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2868"/>
+        <location filename="../mainwindow.cpp" line="2911"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Ingen data läses från hårddisken. Fel filformat?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2918"/>
         <source>Confirm Delete</source>
         <translation>Bekräfta borttag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2876"/>
+        <location filename="../mainwindow.cpp" line="2919"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Är du säker på att du vill ta bort alla * .wav- och * .c2-filer i
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2919"/>
+        <location filename="../mainwindow.cpp" line="2962"/>
         <source>AutoSeq0</source>
         <translation>Auto. sekvens0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2932"/>
+        <location filename="../mainwindow.cpp" line="2975"/>
         <source>AutoSeq1</source>
         <translation>Auto. sekvens1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2941"/>
-        <location filename="../mainwindow.cpp" line="2967"/>
+        <location filename="../mainwindow.cpp" line="2984"/>
+        <location filename="../mainwindow.cpp" line="3010"/>
         <source>AutoSeq2</source>
         <translation>Auto. sekvens2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2942"/>
-        <location filename="../mainwindow.cpp" line="2963"/>
+        <location filename="../mainwindow.cpp" line="2985"/>
+        <location filename="../mainwindow.cpp" line="3006"/>
         <source>AutoSeq6</source>
         <translation>Auto. sekvens6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2951"/>
-        <location filename="../mainwindow.cpp" line="2968"/>
+        <location filename="../mainwindow.cpp" line="2994"/>
+        <location filename="../mainwindow.cpp" line="3011"/>
         <source>AutoSeq3</source>
         <translation>Auto. sekvens3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2952"/>
-        <location filename="../mainwindow.cpp" line="2964"/>
+        <location filename="../mainwindow.cpp" line="2995"/>
+        <location filename="../mainwindow.cpp" line="3007"/>
         <source>AutoSeq7</source>
         <translation>Auto. sekvens7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3048"/>
+        <location filename="../mainwindow.cpp" line="3091"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>Hund TX-frekvensstyrning är inte tillåten i standardbanden FT8.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3056"/>
+        <location filename="../mainwindow.cpp" line="3099"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hund mod TX frekvensstyrning kräver * Split * riggkontroll (antingen * Rig * eller * Fake It * på fliken * Inställningar | Radio *.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3059"/>
+        <location filename="../mainwindow.cpp" line="3102"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>Hund TX-frekvensstyrning är inte tillåten i de vanliga FT8-underbanden och kräver * Split * riggkontroll (antingen * Rig * eller * Fake It * på fliken * Inställningar | Radio *)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3067"/>
+        <location filename="../mainwindow.cpp" line="3110"/>
         <source>Hound TX frequency control warning</source>
         <translation>Varning för Hound TX-frekvensstyrning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3072"/>
+        <location filename="../mainwindow.cpp" line="3115"/>
         <source>HoundFC</source>
         <translation>HundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3146"/>
+        <location filename="../mainwindow.cpp" line="3189"/>
         <source>Keyboard Shortcuts</source>
         <translation>Tangentbord snabbtangenter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3157"/>
+        <location filename="../mainwindow.cpp" line="3200"/>
         <source>Special Mouse Commands</source>
         <translation>Särskilda Muskommandon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
         <source>Avg=</source>
         <translation>Avg=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
-        <location filename="../mainwindow.cpp" line="3656"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
+        <location filename="../mainwindow.cpp" line="3698"/>
         <source>Freq  </source>
         <translation>Frekv  </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
-        <location filename="../mainwindow.cpp" line="3656"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
+        <location filename="../mainwindow.cpp" line="3698"/>
         <source>Lag=</source>
         <translation>Lag=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3643"/>
-        <location filename="../mainwindow.cpp" line="3652"/>
+        <location filename="../mainwindow.cpp" line="3685"/>
+        <location filename="../mainwindow.cpp" line="3694"/>
         <source>check time</source>
         <translation>kontrollera tid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3908"/>
-        <location filename="../mainwindow.cpp" line="3914"/>
+        <location filename="../mainwindow.cpp" line="3950"/>
+        <location filename="../mainwindow.cpp" line="3956"/>
         <source>Confirm change Language</source>
         <translation>Bekräfta ändra språk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3910"/>
-        <location filename="../mainwindow.cpp" line="3917"/>
+        <location filename="../mainwindow.cpp" line="3952"/>
+        <location filename="../mainwindow.cpp" line="3959"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Är du säker på att byta UI-språk till svenska, JTDX kommer att starta om?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4089"/>
+        <location filename="../mainwindow.cpp" line="4131"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Välj en annan Tx-frekvens. JTDX sänder inte medvetet ett annat läge i WSPR-underbandet.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4094"/>
-        <location filename="../mainwindow.cpp" line="4097"/>
+        <location filename="../mainwindow.cpp" line="4136"/>
+        <location filename="../mainwindow.cpp" line="4139"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR Skydds band</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4215"/>
+        <location filename="../mainwindow.cpp" line="4257"/>
         <source>TUNE</source>
         <translation>JUSTERA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4216"/>
-        <location filename="../mainwindow.cpp" line="4675"/>
+        <location filename="../mainwindow.cpp" line="4258"/>
+        <location filename="../mainwindow.cpp" line="4723"/>
         <source>LastTx: </source>
         <translation>SenastTx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4467"/>
+        <location filename="../mainwindow.cpp" line="4509"/>
         <source>Tx: TUNE</source>
         <translation>TX: JUSTERA</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4468"/>
+        <location filename="../mainwindow.cpp" line="4510"/>
         <source>Tx: </source>
         <translation>Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4473"/>
+        <location filename="../mainwindow.cpp" line="4515"/>
         <source>Receiving </source>
         <translation>Mottagning </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4526"/>
+        <location filename="../mainwindow.cpp" line="4568"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Effekt&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5557"/>
-        <location filename="../mainwindow.cpp" line="5569"/>
-        <location filename="../mainwindow.cpp" line="5588"/>
-        <location filename="../mainwindow.cpp" line="5614"/>
+        <location filename="../mainwindow.cpp" line="5605"/>
+        <location filename="../mainwindow.cpp" line="5617"/>
+        <location filename="../mainwindow.cpp" line="5636"/>
+        <location filename="../mainwindow.cpp" line="5662"/>
         <source>Add to CALL3.TXT</source>
         <translation>Lägg till i CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5558"/>
+        <location filename="../mainwindow.cpp" line="5606"/>
         <source>Please enter a valid grid locator</source>
         <translation>Vänligen ange en giltig Grid lokator</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5570"/>
+        <location filename="../mainwindow.cpp" line="5618"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Kan inte öppna &quot;%1&quot; för läsning/skrivning:%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5589"/>
+        <location filename="../mainwindow.cpp" line="5637"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Kan inte öppna &quot;%1&quot; för att skriva:%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5612"/>
+        <location filename="../mainwindow.cpp" line="5660"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 finns redan i CALL3.TXT, vill du ersätta det?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5976"/>
+        <location filename="../mainwindow.cpp" line="6024"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>eller skicka QSO ADIF-data till sekundär UDP-server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5976"/>
+        <location filename="../mainwindow.cpp" line="6024"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Skrivningen returnerade &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6141"/>
+        <location filename="../mainwindow.cpp" line="6190"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6240"/>
+        <location filename="../mainwindow.cpp" line="6290"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Frekv    Drift  Signsal    Grid    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6333"/>
-        <location filename="../mainwindow.cpp" line="6345"/>
+        <location filename="../mainwindow.cpp" line="6384"/>
+        <location filename="../mainwindow.cpp" line="6396"/>
         <source>Confirm Erase</source>
         <translation>Bekräfta radera</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6334"/>
+        <location filename="../mainwindow.cpp" line="6385"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Är du säker på att du vill radera filen ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6346"/>
+        <location filename="../mainwindow.cpp" line="6397"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Är du säker på att du vill radera din QSO-LOGG?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6957"/>
+        <location filename="../mainwindow.cpp" line="7011"/>
         <source>Lockd Tx=Rx</source>
         <translation>Lockd Tx = Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6958"/>
+        <location filename="../mainwindow.cpp" line="7012"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryck på knappen för att möjliggöra Tx / Rx AF-frekvensdelning. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6961"/>
+        <location filename="../mainwindow.cpp" line="7015"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx Delat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6962"/>
+        <location filename="../mainwindow.cpp" line="7016"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryck på knappen för att låsa Tx-frekvensen till Rx AF-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7092"/>
+        <location filename="../mainwindow.cpp" line="7146"/>
         <source>Rig Control Error</source>
         <translation>Rig kontrollfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7166"/>
+        <location filename="../mainwindow.cpp" line="7226"/>
         <source>Tune digital gain</source>
         <translation>Justera digital förstärkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7167"/>
+        <location filename="../mainwindow.cpp" line="7227"/>
         <source>Transmit digital gain</source>
         <translation>Överför digital förstärkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7186"/>
+        <location filename="../mainwindow.cpp" line="7247"/>
         <source>Prefixes</source>
         <translation>Prefixen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7235"/>
-        <location filename="../mainwindow.cpp" line="7236"/>
+        <location filename="../mainwindow.cpp" line="7296"/>
+        <location filename="../mainwindow.cpp" line="7297"/>
         <source>Logd </source>
         <translation>Loggad </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7471"/>
+        <location filename="../mainwindow.cpp" line="7532"/>
         <source>Network Error</source>
         <translation>Nätverksfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7472"/>
+        <location filename="../mainwindow.cpp" line="7533"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Fel:%1
 UDP-server%2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7618"/>
+        <location filename="../mainwindow.cpp" line="7679"/>
         <source>File Error</source>
         <translation>Filfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7840"/>
+        <location filename="../mainwindow.cpp" line="7901"/>
         <source>Tx watchdog expired</source>
         <translation>Tx &quot;watchdog&quot; utgått</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7854"/>
+        <location filename="../mainwindow.cpp" line="7915"/>
         <source>WD %1m</source>
         <translation>WD%1m</translation>
     </message>
@@ -5163,7 +5178,7 @@ UDP-server%2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="271"/>
+        <location filename="../PollingTransceiver.cpp" line="272"/>
         <source>Unexpected rig error</source>
         <translation>Oväntat Rigfel</translation>
     </message>
@@ -5171,7 +5186,7 @@ UDP-server%2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5260"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5179,99 +5194,99 @@ UDP-server%2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5105"/>
+        <location filename="../Configuration.cpp" line="5262"/>
         <source>Directory:</source>
         <translation>KAtalog:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5106"/>
+        <location filename="../Configuration.cpp" line="5263"/>
         <source>File &amp;name:</source>
         <translation>Fil&amp;namn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5264"/>
         <source>&amp;Open</source>
         <translation>&amp;Öppna</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5265"/>
         <source>&amp;Choose</source>
         <translation>&amp;Välj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5266"/>
         <source>&amp;Save</source>
         <translation>&amp;Spara</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
+        <location filename="../Configuration.cpp" line="5268"/>
         <source>All files (*)</source>
         <translation>Alla filer (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5112"/>
+        <location filename="../Configuration.cpp" line="5269"/>
         <source>New Folder</source>
         <translation>Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5113"/>
+        <location filename="../Configuration.cpp" line="5270"/>
         <source>Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5110"/>
+        <location filename="../Configuration.cpp" line="5267"/>
         <source>Cancel</source>
         <translation>Annulera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5271"/>
         <source>&amp;Delete</source>
         <translation>&amp;Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5272"/>
         <source>&amp;Rename</source>
         <translation>&amp;Döp om</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5116"/>
+        <location filename="../Configuration.cpp" line="5273"/>
         <source>Show &amp;hidden files</source>
         <translation>Visa &amp;gömda filer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5274"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5118"/>
+        <location filename="../Configuration.cpp" line="5275"/>
         <source>Look in:</source>
         <translation>Titta i:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5119"/>
+        <location filename="../Configuration.cpp" line="5276"/>
         <source>Files of type:</source>
         <translation>Filer av typen:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5277"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; är skrivskyddat.
 Vill du radera det ändå?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Är du säker på att du vill ta bort &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5122"/>
+        <location filename="../Configuration.cpp" line="5279"/>
         <source>Could not delete directory.</source>
         <translation>Det gick inte att ta bort katalogen.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5280"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5280,92 +5295,92 @@ Katalogen hittades inte.
 Kontrollera att rätt katalognamn anges.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5282"/>
         <source>Recent Places</source>
         <translation>Senaste postioner</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5283"/>
         <source>Back</source>
         <translation>Backa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5127"/>
+        <location filename="../Configuration.cpp" line="5284"/>
         <source>Go back</source>
         <translation>Gå bakåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5128"/>
+        <location filename="../Configuration.cpp" line="5285"/>
         <source>Alt+Left</source>
         <translation>Alt+Vänster</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5129"/>
+        <location filename="../Configuration.cpp" line="5286"/>
         <source>Forward</source>
         <translation>Fram</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5130"/>
+        <location filename="../Configuration.cpp" line="5287"/>
         <source>Go forward</source>
         <translation>Gå frammåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5131"/>
+        <location filename="../Configuration.cpp" line="5288"/>
         <source>Alt+Right</source>
         <translation>Alt+Höger</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5132"/>
+        <location filename="../Configuration.cpp" line="5289"/>
         <source>Parent Directory</source>
         <translation>Övergripande katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5133"/>
+        <location filename="../Configuration.cpp" line="5290"/>
         <source>Go to the parent directory</source>
         <translation>Gå till överliggande katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5134"/>
+        <location filename="../Configuration.cpp" line="5291"/>
         <source>Alt+Up</source>
         <translation>Alt+Upp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5135"/>
+        <location filename="../Configuration.cpp" line="5292"/>
         <source>Create New Folder</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5136"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>Create a New Folder</source>
         <translation>Skapa en ny mapp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5137"/>
+        <location filename="../Configuration.cpp" line="5294"/>
         <source>List View</source>
         <translation>List&amp;vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5295"/>
         <source>Change to list view mode</source>
         <translation>Byt till listvy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5139"/>
+        <location filename="../Configuration.cpp" line="5296"/>
         <source>Detail View</source>
         <translation>Detaljerad vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5140"/>
+        <location filename="../Configuration.cpp" line="5297"/>
         <source>Change to detail view mode</source>
         <translation>Byt till detaljvisningsläge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5141"/>
+        <location filename="../Configuration.cpp" line="5298"/>
         <source>Sidebar</source>
         <translation>Sidebar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5142"/>
+        <location filename="../Configuration.cpp" line="5299"/>
         <source>List of places and bookmarks</source>
         <translation>Lista över platser och bokmärken</translation>
     </message>
@@ -5373,22 +5388,22 @@ Kontrollera att rätt katalognamn anges.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5144"/>
+        <location filename="../Configuration.cpp" line="5301"/>
         <source>Name</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5145"/>
+        <location filename="../Configuration.cpp" line="5302"/>
         <source>Size</source>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5146"/>
+        <location filename="../Configuration.cpp" line="5303"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
+        <location filename="../Configuration.cpp" line="5304"/>
         <source>Date Modified</source>
         <translation>Datum ändrat</translation>
     </message>
@@ -5686,32 +5701,32 @@ Fel (%2):%3</translation>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="266"/>
+        <location filename="../Configuration.cpp" line="264"/>
         <source>Add Station</source>
         <translation>Lägg till station</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="271"/>
+        <location filename="../Configuration.cpp" line="269"/>
         <source>&amp;Band:</source>
         <translation>&amp;Band:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="272"/>
+        <location filename="../Configuration.cpp" line="270"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Offset (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="273"/>
+        <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="279"/>
+        <location filename="../Configuration.cpp" line="277"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="280"/>
+        <location filename="../Configuration.cpp" line="278"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annullera</translation>
     </message>
@@ -5750,9 +5765,80 @@ Fel (%2):%3</translation>
     </message>
 </context>
 <context>
+    <name>TCITransceiver</name>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="231"/>
+        <source>TCI websocket error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="318"/>
+        <source>TCI SDR could not be switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="319"/>
+        <source>TCI SDR is not switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="328"/>
+        <source>TCI Audio could not be switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="335"/>
+        <source>TCI could not be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="762"/>
+        <source>TCI failed to set ptt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="769"/>
+        <source>TCI should use PTT via CAT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="796"/>
+        <source>TCI failed set rxfreq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="801"/>
+        <location filename="../TCITransceiver.cpp" line="809"/>
+        <location filename="../TCITransceiver.cpp" line="875"/>
+        <source>TCI failed set mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="837"/>
+        <source>TCI failed set txfreq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="842"/>
+        <location filename="../TCITransceiver.cpp" line="856"/>
+        <source>TCI failed set split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1012"/>
+        <source>TCI sent an unrecognized frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1052"/>
+        <source>TCI modulator not Idle</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TransceiverBase</name>
     <message>
-        <location filename="../TransceiverBase.cpp" line="15"/>
+        <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
         <translation>Oväntat Rigfel</translation>
     </message>

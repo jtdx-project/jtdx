@@ -4464,7 +4464,7 @@ list. The list can be maintained in Settings (F2).</string>
             </property>
             <property name="minimumSize">
              <size>
-              <width>68</width>
+              <width>75</width>
               <height>0</height>
              </size>
             </property>

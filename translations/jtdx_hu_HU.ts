@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1210"/>
+        <location filename="../Configuration.cpp" line="1333"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1211"/>
+        <location filename="../Configuration.cpp" line="1334"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1226"/>
+        <location filename="../Configuration.cpp" line="1349"/>
         <source>Create temporary directory error: </source>
         <translation>Hiba az ideiglenes könyvtár létrehozásakor: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1232"/>
+        <location filename="../Configuration.cpp" line="1355"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,82 @@ Another application may be locking the directory</source>
 Lehet, hogy egy másik alkalmazás használja a könyvtárat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1249"/>
+        <location filename="../Configuration.cpp" line="1372"/>
         <source>Create data directory error: </source>
         <translation>Hiba az adatkönyvtár létrehozásakor: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1258"/>
-        <location filename="../Configuration.cpp" line="1269"/>
+        <location filename="../Configuration.cpp" line="1381"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Könyvtár létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1429"/>
-        <location filename="../Configuration.cpp" line="1455"/>
-        <location filename="../Configuration.cpp" line="1507"/>
+        <location filename="../Configuration.cpp" line="1552"/>
+        <location filename="../Configuration.cpp" line="1578"/>
+        <location filename="../Configuration.cpp" line="1630"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1459"/>
-        <location filename="../Configuration.cpp" line="1511"/>
+        <location filename="../Configuration.cpp" line="1582"/>
+        <location filename="../Configuration.cpp" line="1634"/>
         <source>&amp;Insert ...</source>
         <translation>Be&amp;illesztés ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1463"/>
+        <location filename="../Configuration.cpp" line="1586"/>
         <source>&amp;Load ...</source>
         <translation>Betö&amp;ltés ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1467"/>
+        <location filename="../Configuration.cpp" line="1590"/>
         <source>&amp;Save as ...</source>
         <translation>Menté&amp;s másként ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1471"/>
+        <location filename="../Configuration.cpp" line="1594"/>
         <source>&amp;Merge ...</source>
         <translation>Össze&amp;vonás ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1475"/>
+        <location filename="../Configuration.cpp" line="1598"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2735"/>
+        <location filename="../Configuration.cpp" line="2864"/>
         <source>Serial Port:</source>
         <translation>Soros port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2736"/>
+        <location filename="../Configuration.cpp" line="2865"/>
         <source>Serial port used for CAT control</source>
         <translation>A CAT vezérléshez használt soros port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2743"/>
+        <location filename="../Configuration.cpp" line="2872"/>
+        <source>TCI Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="2873"/>
+        <source>Optional hostname and port of TCI service.
+Leave blank for a sensible default on this machine.
+Formats:
+	hostname:port
+	IPv4-address:port
+	[IPv6-address]:port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="2885"/>
         <source>Network Server:</source>
         <translation>Hálózati szerver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2744"/>
+        <location filename="../Configuration.cpp" line="2886"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +172,12 @@ Formátumok:
 	[IPv6-cím]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2756"/>
+        <location filename="../Configuration.cpp" line="2898"/>
         <source>USB Device:</source>
         <translation>USB eszköz:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2757"/>
+        <location filename="../Configuration.cpp" line="2899"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -173,132 +188,132 @@ Formátum:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2792"/>
+        <location filename="../Configuration.cpp" line="2934"/>
         <source>Invalid audio input device</source>
         <translation>Helytelen hangkártya kiválasztása a bemenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2799"/>
+        <location filename="../Configuration.cpp" line="2941"/>
         <source>Invalid audio output device</source>
         <translation>Helytelen hangkártya kiválasztása a kimenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2805"/>
+        <location filename="../Configuration.cpp" line="2947"/>
         <source>Invalid PTT method</source>
         <translation>Helytelen PTT-módszer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2815"/>
+        <location filename="../Configuration.cpp" line="2957"/>
         <source>Invalid PTT port</source>
         <translation>Helytelen PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3328"/>
+        <location filename="../Configuration.cpp" line="3481"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3329"/>
+        <location filename="../Configuration.cpp" line="3482"/>
         <source>CQ in message</source>
         <translation>CQ az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4512"/>
+        <location filename="../Configuration.cpp" line="4665"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>A JTDX dekódolt szövegének betűtípus választása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5154"/>
-        <location filename="../Configuration.cpp" line="5185"/>
+        <location filename="../Configuration.cpp" line="5311"/>
+        <location filename="../Configuration.cpp" line="5342"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5150"/>
+        <location filename="../Configuration.cpp" line="5307"/>
         <source>Load Working Frequencies</source>
         <translation>Munkafrekvenciák betöltése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5181"/>
+        <location filename="../Configuration.cpp" line="5338"/>
         <source>Merge Working Frequencies</source>
         <translation>Munkafrekvenciák összevonása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5208"/>
-        <location filename="../Configuration.cpp" line="5217"/>
-        <location filename="../Configuration.cpp" line="5227"/>
+        <location filename="../Configuration.cpp" line="5365"/>
+        <location filename="../Configuration.cpp" line="5374"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>Not a valid frequencies file</source>
         <translation>Helytelen frekvenciafájl</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5208"/>
+        <location filename="../Configuration.cpp" line="5365"/>
         <source>Incorrect file magic</source>
         <translation>Helytelen fájl verzió</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5217"/>
+        <location filename="../Configuration.cpp" line="5374"/>
         <source>Version is too new</source>
         <translation>A verzió nagyon új</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5227"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>Contents corrupt</source>
         <translation>A tartalom sérült</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5237"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Save Working Frequencies</source>
         <translation>Munkafrekvenciák mentése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5247"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Csak a kiválasztott munkafrekvenciákat mentse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5249"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Biztos benne, hogy csak a jelenleg kiválasztott munkafrekvenciákat szeretné menteni? Az összes mentéséhez kattintson a Nem gombra.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5276"/>
+        <location filename="../Configuration.cpp" line="5433"/>
         <source>Reset Working Frequencies</source>
         <translation>Alaphelyzetbe állítja a munkafrekvenciákat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5278"/>
+        <location filename="../Configuration.cpp" line="5435"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat az alapértelmezettekkel?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5338"/>
+        <location filename="../Configuration.cpp" line="5495"/>
         <source>Save Directory</source>
         <translation>Mentés a könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5354"/>
+        <location filename="../Configuration.cpp" line="5511"/>
         <source>Failed to open connection to rig</source>
         <translation>Hiba a rig-hez való csatlakozáskor</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5597"/>
+        <location filename="../Configuration.cpp" line="5900"/>
         <source>Rig failure</source>
         <translation>Rig hiba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5152"/>
-        <location filename="../Configuration.cpp" line="5183"/>
-        <location filename="../Configuration.cpp" line="5237"/>
+        <location filename="../Configuration.cpp" line="5309"/>
+        <location filename="../Configuration.cpp" line="5340"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvencia fájlok (*.qrg);;Minden fájl (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5168"/>
+        <location filename="../Configuration.cpp" line="5325"/>
         <source>Replace Working Frequencies</source>
         <translation>Munkafrekvenciák kicserélése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5169"/>
+        <location filename="../Configuration.cpp" line="5326"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat a betöltöttekkel?</translation>
     </message>
@@ -2044,90 +2059,90 @@ Formátum:
 <context>
     <name>DXLabSuiteCommanderTransceiver</name>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="71"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="72"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
         <translation>Nem sikerült csatlakozni a DX Lab Suite Commanderhez
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="127"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="128"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen a beolvasott frekvenciára: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="174"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="175"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
         <translation>A DX Lab Suite Commander felismerhetetlen TX állapotot küldött: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="180"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="181"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen a TX állapot lekérdezésre: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="188"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="189"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
         <translation>A DX Lab Suite Commander rig nem válaszol a PTT-re: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="274"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="275"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen a frekvencia lekérdezésre: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="295"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="296"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen a TX frekvencia lekérdezésre: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="314"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="315"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
         <translation>A DX Lab Suite Commander felismerhetetlen osztott (split) állapotot küldött: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="320"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="321"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen a split állapot lekérdezésre: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="376"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="377"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
         <translation>A DX Lab Suite Commander felismerhetetlen üzemmódot küldött: &quot;</translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="383"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="384"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
         <translation>A DX Lab Suite Commander nem válaszol helyesen az üzemmód lekérdezésre: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="400"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="401"/>
         <source>DX Lab Suite Commander send command failed
 </source>
         <translation>A DX Lab Suite Commander parancs küldés sikertelen
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="412"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="413"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
         <translation>A DX Lab Suite Commander sikertelenül küldte a &quot;%1&quot;parancsot: %2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="429"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="430"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
         <translation>A DX Lab Suite Commander elküldött &quot;%1&quot; parancsának olvasása sikertelen:%2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="440"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="441"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
         <translation>A DX Lab Suite Commander újra megkísérli elküldeni a &quot;%1&quot; parancsot</translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="503"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="504"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
         <translation>A DX Lab Suite Commander felismerhetetlen frekvenciát küldött</translation>
     </message>
@@ -2315,7 +2330,7 @@ Hiba: %2 - %3</translation>
 <context>
     <name>EmulateSplitTransceiver</name>
     <message>
-        <location filename="../EmulateSplitTransceiver.cpp" line="48"/>
+        <location filename="../EmulateSplitTransceiver.cpp" line="50"/>
         <source>Emulated split mode requires rig to be in simplex mode</source>
         <translation>Emulált split üzemmódhoz a rig-nek simplex módban kell lennie</translation>
     </message>
@@ -2323,32 +2338,32 @@ Hiba: %2 - %3</translation>
 <context>
     <name>FrequencyDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="221"/>
+        <location filename="../Configuration.cpp" line="219"/>
         <source>Add Frequency</source>
         <translation>Frekvencia hozzáadása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="226"/>
+        <location filename="../Configuration.cpp" line="224"/>
         <source>IARU &amp;Region:</source>
         <translation>IARU &amp;Region:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="227"/>
+        <location filename="../Configuration.cpp" line="225"/>
         <source>&amp;Mode:</source>
         <translation>Ü&amp;zemmód:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="228"/>
+        <location filename="../Configuration.cpp" line="226"/>
         <source>&amp;Frequency (MHz):</source>
         <translation>&amp;Frekvencia (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="234"/>
+        <location filename="../Configuration.cpp" line="232"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="235"/>
+        <location filename="../Configuration.cpp" line="233"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>
@@ -2389,86 +2404,86 @@ Hiba: %2 - %3</translation>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="126"/>
-        <location filename="../HRDTransceiver.cpp" line="151"/>
+        <location filename="../HRDTransceiver.cpp" line="127"/>
+        <location filename="../HRDTransceiver.cpp" line="152"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>Nem sikerült csatlakozni a Ham Radio Deluxe-hoz
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="160"/>
+        <location filename="../HRDTransceiver.cpp" line="161"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>Nem sikerült megnyitni a &quot;%1&quot; fájlt: %2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="175"/>
-        <location filename="../HRDTransceiver.cpp" line="199"/>
+        <location filename="../HRDTransceiver.cpp" line="176"/>
+        <location filename="../HRDTransceiver.cpp" line="200"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe: rig nem található</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="423"/>
+        <location filename="../HRDTransceiver.cpp" line="424"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe: a rig nem támogatja a módot</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="442"/>
+        <location filename="../HRDTransceiver.cpp" line="443"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation>Ham Radio Deluxe: felismerhetetlen módot küldött</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="477"/>
+        <location filename="../HRDTransceiver.cpp" line="478"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation>Ham Radio Deluxe: az elem nem található a %1 legördülő listában</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="521"/>
+        <location filename="../HRDTransceiver.cpp" line="522"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe: a gomb nem elérhető</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="887"/>
+        <location filename="../HRDTransceiver.cpp" line="888"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>A Ham Radio Deluxe nem válaszol a várt módon</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1036"/>
+        <location filename="../HRDTransceiver.cpp" line="1037"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe: a rig ki van kapcsolva, vagy megváltozott</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1051"/>
+        <location filename="../HRDTransceiver.cpp" line="1052"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>A Ham Radio Deluxe &quot;%1&quot; parancs küldése sikertelen %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1064"/>
-        <location filename="../HRDTransceiver.cpp" line="1077"/>
+        <location filename="../HRDTransceiver.cpp" line="1065"/>
+        <location filename="../HRDTransceiver.cpp" line="1078"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe: &quot;%1&quot; parancs megírása nem sikerült</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1094"/>
+        <location filename="../HRDTransceiver.cpp" line="1095"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>A Ham Radio Deluxe érvénytelen választ küldött a &quot;%1&quot; parancsunkra</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1148"/>
+        <location filename="../HRDTransceiver.cpp" line="1149"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>A Ham Radio Deluxe nem válaszolt a &quot;%1&quot; %2 parancsra
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1158"/>
+        <location filename="../HRDTransceiver.cpp" line="1159"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>A Ham Radio Deluxe újra sikertelenül küldte a &quot;%1&quot; parancsot</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1171"/>
+        <location filename="../HRDTransceiver.cpp" line="1172"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>A Ham Radio Deluxe a várt módon nem válaszol a (z) &quot;%1&quot; parancsra</translation>
     </message>
@@ -2788,7 +2803,7 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="43"/>
-        <location filename="../mainwindow.cpp" line="3920"/>
+        <location filename="../mainwindow.cpp" line="3962"/>
         <source>&amp;Yes</source>
         <translation>I&amp;gen</translation>
     </message>
@@ -2799,7 +2814,7 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="45"/>
-        <location filename="../mainwindow.cpp" line="3923"/>
+        <location filename="../mainwindow.cpp" line="3965"/>
         <source>&amp;No</source>
         <translation>&amp;Nem</translation>
     </message>
@@ -2980,13 +2995,13 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
-        <location filename="../mainwindow.cpp" line="1854"/>
-        <location filename="../mainwindow.cpp" line="3644"/>
-        <location filename="../mainwindow.cpp" line="3653"/>
-        <location filename="../mainwindow.cpp" line="6195"/>
-        <location filename="../mainwindow.cpp" line="6200"/>
-        <location filename="../mainwindow.cpp" line="6242"/>
-        <location filename="../mainwindow.cpp" line="6253"/>
+        <location filename="../mainwindow.cpp" line="1869"/>
+        <location filename="../mainwindow.cpp" line="3686"/>
+        <location filename="../mainwindow.cpp" line="3695"/>
+        <location filename="../mainwindow.cpp" line="6245"/>
+        <location filename="../mainwindow.cpp" line="6250"/>
+        <location filename="../mainwindow.cpp" line="6292"/>
+        <location filename="../mainwindow.cpp" line="6303"/>
         <source>Band Activity</source>
         <translation>Sáv_aktivítás</translation>
     </message>
@@ -3104,9 +3119,9 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1076"/>
-        <location filename="../mainwindow.cpp" line="4790"/>
-        <location filename="../mainwindow.cpp" line="5456"/>
-        <location filename="../mainwindow.cpp" line="5877"/>
+        <location filename="../mainwindow.cpp" line="4838"/>
+        <location filename="../mainwindow.cpp" line="5504"/>
+        <location filename="../mainwindow.cpp" line="5925"/>
         <source>DX Call</source>
         <translation>DX hívójel</translation>
     </message>
@@ -3159,7 +3174,7 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1403"/>
-        <location filename="../mainwindow.cpp" line="3072"/>
+        <location filename="../mainwindow.cpp" line="3115"/>
         <source>Hound</source>
         <translation>Vadász</translation>
     </message>
@@ -3191,8 +3206,8 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1477"/>
-        <location filename="../mainwindow.cpp" line="1575"/>
-        <location filename="../mainwindow.cpp" line="2058"/>
+        <location filename="../mainwindow.cpp" line="1590"/>
+        <location filename="../mainwindow.cpp" line="2098"/>
         <source>S meter</source>
         <translation>S méter</translation>
     </message>
@@ -3369,7 +3384,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2294"/>
-        <location filename="../mainwindow.cpp" line="6201"/>
+        <location filename="../mainwindow.cpp" line="6251"/>
         <source>Rx Frequency</source>
         <translation>Rx_frekvencia</translation>
     </message>
@@ -3380,7 +3395,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2394"/>
-        <location filename="../mainwindow.cpp" line="6780"/>
+        <location filename="../mainwindow.cpp" line="6833"/>
         <source>&amp;Tune</source>
         <translation>&amp;Hangolás</translation>
     </message>
@@ -4709,303 +4724,303 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="467"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Do you want to reconfigure the radio interface?</source>
         <translation>Szeretné újrakonfigurálni a rádió interfészt?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="824"/>
+        <location filename="../mainwindow.cpp" line="828"/>
         <source>Error Writing WAV File</source>
         <translation>Hiba a WAV fájl írásakor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="964"/>
+        <location filename="../mainwindow.cpp" line="970"/>
         <source>Error Killing jtdxjt9.exe Process</source>
         <translation>Hiba történt a jtdxjt9.exe folyamat leállításakor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="942"/>
-        <location filename="../mainwindow.cpp" line="943"/>
-        <location filename="../mainwindow.cpp" line="6191"/>
-        <location filename="../mainwindow.cpp" line="6192"/>
-        <location filename="../mainwindow.cpp" line="6249"/>
-        <location filename="../mainwindow.cpp" line="6250"/>
+        <location filename="../mainwindow.cpp" line="948"/>
+        <location filename="../mainwindow.cpp" line="949"/>
+        <location filename="../mainwindow.cpp" line="6241"/>
+        <location filename="../mainwindow.cpp" line="6242"/>
+        <location filename="../mainwindow.cpp" line="6299"/>
+        <location filename="../mainwindow.cpp" line="6300"/>
         <source>Freq   Message</source>
         <translation>Frekv. üzenet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="965"/>
+        <location filename="../mainwindow.cpp" line="971"/>
         <source>KillByName return code: %1</source>
         <translation>KillByName visszatérési kód: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="982"/>
+        <location filename="../mainwindow.cpp" line="988"/>
         <source>Error removing &quot;%1&quot;</source>
         <translation>Hiba a &quot;%1&quot; eltávolításakor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="983"/>
+        <location filename="../mainwindow.cpp" line="989"/>
         <source>Click OK to retry</source>
         <translation>Kattintson az OK-ra az újrapróbálkozáshoz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1677"/>
+        <location filename="../mainwindow.cpp" line="1692"/>
         <source>TX Even</source>
         <translation>TX perc páros</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1684"/>
+        <location filename="../mainwindow.cpp" line="1699"/>
         <source>TX Odd</source>
         <translation>TX perc páratlan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1747"/>
-        <location filename="../mainwindow.cpp" line="2508"/>
-        <location filename="../mainwindow.cpp" line="3688"/>
-        <location filename="../mainwindow.cpp" line="4251"/>
-        <location filename="../mainwindow.cpp" line="4399"/>
-        <location filename="../mainwindow.cpp" line="4639"/>
-        <location filename="../mainwindow.cpp" line="7056"/>
-        <location filename="../mainwindow.cpp" line="7265"/>
+        <location filename="../mainwindow.cpp" line="1762"/>
+        <location filename="../mainwindow.cpp" line="2551"/>
+        <location filename="../mainwindow.cpp" line="3730"/>
+        <location filename="../mainwindow.cpp" line="4293"/>
+        <location filename="../mainwindow.cpp" line="4441"/>
+        <location filename="../mainwindow.cpp" line="4686"/>
+        <location filename="../mainwindow.cpp" line="7110"/>
+        <location filename="../mainwindow.cpp" line="7326"/>
         <source>File Open Error</source>
         <translation>Fájl megnyitási hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1748"/>
-        <location filename="../mainwindow.cpp" line="2509"/>
-        <location filename="../mainwindow.cpp" line="3689"/>
-        <location filename="../mainwindow.cpp" line="4252"/>
-        <location filename="../mainwindow.cpp" line="4400"/>
-        <location filename="../mainwindow.cpp" line="4640"/>
-        <location filename="../mainwindow.cpp" line="7057"/>
-        <location filename="../mainwindow.cpp" line="7266"/>
-        <location filename="../mainwindow.cpp" line="7619"/>
+        <location filename="../mainwindow.cpp" line="1763"/>
+        <location filename="../mainwindow.cpp" line="2552"/>
+        <location filename="../mainwindow.cpp" line="3731"/>
+        <location filename="../mainwindow.cpp" line="4294"/>
+        <location filename="../mainwindow.cpp" line="4442"/>
+        <location filename="../mainwindow.cpp" line="4687"/>
+        <location filename="../mainwindow.cpp" line="7111"/>
+        <location filename="../mainwindow.cpp" line="7327"/>
+        <location filename="../mainwindow.cpp" line="7680"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; -t a hozzáadáshoz: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1803"/>
+        <location filename="../mainwindow.cpp" line="1818"/>
         <source>lost audio </source>
         <translation>Elvesztett audio blokkok </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1887"/>
+        <location filename="../mainwindow.cpp" line="1902"/>
         <source>Error saving c2 file</source>
         <translation>Hiba a c2 fájl mentésekor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1964"/>
+        <location filename="../mainwindow.cpp" line="1979"/>
         <source>Error in SoundInput</source>
         <translation>Hiba a hang bemeneten</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1968"/>
+        <location filename="../mainwindow.cpp" line="1983"/>
         <source>Error in SoundOutput</source>
         <translation>Hiba a hang kimeneten</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2060"/>
+        <location filename="../mainwindow.cpp" line="2100"/>
         <source>Pwr</source>
         <translation>Teljesítmény</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2621"/>
+        <location filename="../mainwindow.cpp" line="2664"/>
         <source>Subprocess Error</source>
         <translation>Alfolyamat hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2622"/>
+        <location filename="../mainwindow.cpp" line="2665"/>
         <source>Subprocess failed with exit code %1</source>
         <translation>Az alfolyamat meghiúsult a %1 kilépési kóddal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2624"/>
-        <location filename="../mainwindow.cpp" line="2643"/>
+        <location filename="../mainwindow.cpp" line="2667"/>
+        <location filename="../mainwindow.cpp" line="2686"/>
         <source>Running: %1
 %2</source>
         <translation>Fut: %1
 %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2642"/>
+        <location filename="../mainwindow.cpp" line="2685"/>
         <source>Subprocess error</source>
         <translation>Alfolyamat hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2718"/>
+        <location filename="../mainwindow.cpp" line="2761"/>
         <source>Spotted</source>
         <translation>Dx_jelentés küldés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2725"/>
+        <location filename="../mainwindow.cpp" line="2768"/>
         <source>Can not establish/complete connection to dxsummit server</source>
         <translation>Nem lehet létrehozni/teljes kapcsolatot létesíteni a dxsummit szerverrel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2748"/>
+        <location filename="../mainwindow.cpp" line="2791"/>
         <source>The algorithms, source code, look-and-feel of WSJT-X and related programs, and protocol specifications for the modes FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 are Copyright (C) 2001-2018 by one or more of the following authors: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; and other members of the WSJT Development Group.</source>
         <translation>A WSJT-X és a kapcsolódó programok algoritmusai, forráskódja, megjelenése, valamint az FSK441, FT8, JT4, JT6M, JT9, JT65, JTMS, QRA64, ISCAT, MSK144 üzemmódok protokoll-specifikációi Copyright (C) 2001-2018 a következő szerzők közül egy vagy több szerzője: Joseph Taylor, K1JT; Bill Somerville, G4WJS; Steven Franke, K9AN; Nico Palermo, IV3NWV; Greg Beam, KI7MT; Michael Black, W9MDB; Edson Pereira, PY2SDR; Philip Karn, KA9Q; és a WSJT Fejlesztési Csoport többi tagja.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2868"/>
+        <location filename="../mainwindow.cpp" line="2911"/>
         <source>No data read from disk. Wrong file format?</source>
         <translation>Nincs olvasható adat a lemezen. Rossz a fájl formátuma?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2875"/>
+        <location filename="../mainwindow.cpp" line="2918"/>
         <source>Confirm Delete</source>
         <translation>Törlés megerősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2876"/>
+        <location filename="../mainwindow.cpp" line="2919"/>
         <source>Are you sure you want to delete all *.wav and *.c2 files in
 </source>
         <translation>Biztos benne, hogy törölni szeretné az összes *.wav és *.c2 fájlt
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2919"/>
+        <location filename="../mainwindow.cpp" line="2962"/>
         <source>AutoSeq0</source>
         <translation>AutoSeq0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2932"/>
+        <location filename="../mainwindow.cpp" line="2975"/>
         <source>AutoSeq1</source>
         <translation>AutoVál1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2941"/>
-        <location filename="../mainwindow.cpp" line="2967"/>
+        <location filename="../mainwindow.cpp" line="2984"/>
+        <location filename="../mainwindow.cpp" line="3010"/>
         <source>AutoSeq2</source>
         <translation>AutoVál2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2942"/>
-        <location filename="../mainwindow.cpp" line="2963"/>
+        <location filename="../mainwindow.cpp" line="2985"/>
+        <location filename="../mainwindow.cpp" line="3006"/>
         <source>AutoSeq6</source>
         <translation>AutoVál6</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2951"/>
-        <location filename="../mainwindow.cpp" line="2968"/>
+        <location filename="../mainwindow.cpp" line="2994"/>
+        <location filename="../mainwindow.cpp" line="3011"/>
         <source>AutoSeq3</source>
         <translation>AutoVál3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2952"/>
-        <location filename="../mainwindow.cpp" line="2964"/>
+        <location filename="../mainwindow.cpp" line="2995"/>
+        <location filename="../mainwindow.cpp" line="3007"/>
         <source>AutoSeq7</source>
         <translation>AutoVál7</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3048"/>
+        <location filename="../mainwindow.cpp" line="3091"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands.</source>
         <translation>A Hound TX frekvencia vezérlése nem engedélyezett a szokásos FT8 alsávokban.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3056"/>
+        <location filename="../mainwindow.cpp" line="3099"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>A Vadász mód  használatához eltolt  VFO szükséges (vagy *Rig* vagy *Hamis* a * Beállítások | Rádió * menüben.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3059"/>
+        <location filename="../mainwindow.cpp" line="3102"/>
         <source>Hound TX frequency control is not allowed in the standard FT8 sub-bands and requires *Split* rig control (either *Rig* or *Fake It* on the *Settings | Radio* tab.)</source>
         <translation>A Vadász adásmód nem engedélyezett a szokásos FT8 frekvenciákon, és eltolt VFO vezérlést igényel (vagy *Rig* vagy *Hamis* a * Beállítások | Rádió * menüben.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3067"/>
+        <location filename="../mainwindow.cpp" line="3110"/>
         <source>Hound TX frequency control warning</source>
         <translation>A Hound TX frekvencia vezérlésének figyelmeztetése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3072"/>
+        <location filename="../mainwindow.cpp" line="3115"/>
         <source>HoundFC</source>
         <translation>HoundFC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3146"/>
+        <location filename="../mainwindow.cpp" line="3189"/>
         <source>Keyboard Shortcuts</source>
         <translation>Gyorsbillentyűk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3157"/>
+        <location filename="../mainwindow.cpp" line="3200"/>
         <source>Special Mouse Commands</source>
         <translation>Speciális egérparancsok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
         <source>Avg=</source>
         <translation>Átl=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
-        <location filename="../mainwindow.cpp" line="3656"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
+        <location filename="../mainwindow.cpp" line="3698"/>
         <source>Freq  </source>
         <translation>Frekv </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3637"/>
-        <location filename="../mainwindow.cpp" line="3656"/>
+        <location filename="../mainwindow.cpp" line="3679"/>
+        <location filename="../mainwindow.cpp" line="3698"/>
         <source>Lag=</source>
         <translation>Késés=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3643"/>
-        <location filename="../mainwindow.cpp" line="3652"/>
+        <location filename="../mainwindow.cpp" line="3685"/>
+        <location filename="../mainwindow.cpp" line="3694"/>
         <source>check time</source>
         <translation>idő ellenőrzés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3908"/>
-        <location filename="../mainwindow.cpp" line="3914"/>
+        <location filename="../mainwindow.cpp" line="3950"/>
+        <location filename="../mainwindow.cpp" line="3956"/>
         <source>Confirm change Language</source>
         <translation>A nyelvváltozás megerősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3910"/>
-        <location filename="../mainwindow.cpp" line="3917"/>
+        <location filename="../mainwindow.cpp" line="3952"/>
+        <location filename="../mainwindow.cpp" line="3959"/>
         <source>Are You sure to change UI Language to English, JTDX will restart?</source>
         <translation>Biztos, hogy magyarra változtatja a felületet, a JTDX-et újraindítja?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4089"/>
+        <location filename="../mainwindow.cpp" line="4131"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Kérjük, válasszon másik Tx frekvenciát. A JTDX szándékosan nem kapcsol adásra egy másik üzemmódban a WSPR alsávban.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4094"/>
-        <location filename="../mainwindow.cpp" line="4097"/>
+        <location filename="../mainwindow.cpp" line="4136"/>
+        <location filename="../mainwindow.cpp" line="4139"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR Védett Sáv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4215"/>
+        <location filename="../mainwindow.cpp" line="4257"/>
         <source>TUNE</source>
         <translation>HANGOLÁS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4216"/>
-        <location filename="../mainwindow.cpp" line="4675"/>
+        <location filename="../mainwindow.cpp" line="4258"/>
+        <location filename="../mainwindow.cpp" line="4723"/>
         <source>LastTx: </source>
         <translation>UtolsóTx:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4467"/>
+        <location filename="../mainwindow.cpp" line="4509"/>
         <source>Tx: TUNE</source>
         <translation>Tx: HANGOLÁS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4468"/>
+        <location filename="../mainwindow.cpp" line="4510"/>
         <source>Tx: </source>
         <translation>Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4473"/>
+        <location filename="../mainwindow.cpp" line="4515"/>
         <source>Receiving </source>
         <translation>Vétel </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4526"/>
+        <location filename="../mainwindow.cpp" line="4568"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
@@ -5014,141 +5029,141 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <translation type="obsolete">Utolsó Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5557"/>
-        <location filename="../mainwindow.cpp" line="5569"/>
-        <location filename="../mainwindow.cpp" line="5588"/>
-        <location filename="../mainwindow.cpp" line="5614"/>
+        <location filename="../mainwindow.cpp" line="5605"/>
+        <location filename="../mainwindow.cpp" line="5617"/>
+        <location filename="../mainwindow.cpp" line="5636"/>
+        <location filename="../mainwindow.cpp" line="5662"/>
         <source>Add to CALL3.TXT</source>
         <translation>Hozzáadás a CALL3.TXT-hez</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5558"/>
+        <location filename="../mainwindow.cpp" line="5606"/>
         <source>Please enter a valid grid locator</source>
         <translation>Adjon meg egy érvényes QRA lokátort</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5570"/>
+        <location filename="../mainwindow.cpp" line="5618"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot;, olvasáshoz/íráshoz: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5589"/>
+        <location filename="../mainwindow.cpp" line="5637"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; íráshoz: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5612"/>
+        <location filename="../mainwindow.cpp" line="5660"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 már a CALL3.TXT-ben van, szeretné cserélni?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5976"/>
+        <location filename="../mainwindow.cpp" line="6024"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Hiba történt a QSO ADIF adatok küldésekor a másodlagos UDP kiszolgálóra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5976"/>
+        <location filename="../mainwindow.cpp" line="6024"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Írás visszajött &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6141"/>
+        <location filename="../mainwindow.cpp" line="6190"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6240"/>
+        <location filename="../mainwindow.cpp" line="6290"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Freq     Drift  Call          Grid    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6333"/>
-        <location filename="../mainwindow.cpp" line="6345"/>
+        <location filename="../mainwindow.cpp" line="6384"/>
+        <location filename="../mainwindow.cpp" line="6396"/>
         <source>Confirm Erase</source>
         <translation>Törlés megerősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6334"/>
+        <location filename="../mainwindow.cpp" line="6385"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Biztos, hogy törli az ALL.txt fájlt?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6346"/>
+        <location filename="../mainwindow.cpp" line="6397"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Biztos, hogy törli a LOG-ot?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6957"/>
+        <location filename="../mainwindow.cpp" line="7011"/>
         <source>Lockd Tx=Rx</source>
         <translation>Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6958"/>
+        <location filename="../mainwindow.cpp" line="7012"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás engedélyezéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6961"/>
+        <location filename="../mainwindow.cpp" line="7015"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx eltolás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6962"/>
+        <location filename="../mainwindow.cpp" line="7016"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás megszűntetéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7092"/>
+        <location filename="../mainwindow.cpp" line="7146"/>
         <source>Rig Control Error</source>
         <translation>Adó  frekvenciavezérlés hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7166"/>
+        <location filename="../mainwindow.cpp" line="7226"/>
         <source>Tune digital gain</source>
         <translation>Hangolás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7167"/>
+        <location filename="../mainwindow.cpp" line="7227"/>
         <source>Transmit digital gain</source>
         <translation>Adás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7186"/>
+        <location filename="../mainwindow.cpp" line="7247"/>
         <source>Prefixes</source>
         <translation>Prefixek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7235"/>
-        <location filename="../mainwindow.cpp" line="7236"/>
+        <location filename="../mainwindow.cpp" line="7296"/>
+        <location filename="../mainwindow.cpp" line="7297"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7471"/>
+        <location filename="../mainwindow.cpp" line="7532"/>
         <source>Network Error</source>
         <translation>Hálózati hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7472"/>
+        <location filename="../mainwindow.cpp" line="7533"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Hiba: %1
 UDP szerver %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7618"/>
+        <location filename="../mainwindow.cpp" line="7679"/>
         <source>File Error</source>
         <translation>Fájlhiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7840"/>
+        <location filename="../mainwindow.cpp" line="7901"/>
         <source>Tx watchdog expired</source>
         <translation>Az időzítő lejárt és megszakította az adást.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7854"/>
+        <location filename="../mainwindow.cpp" line="7915"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5165,7 +5180,7 @@ UDP szerver %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="271"/>
+        <location filename="../PollingTransceiver.cpp" line="272"/>
         <source>Unexpected rig error</source>
         <translation>Váratlan rig hiba</translation>
     </message>
@@ -5173,7 +5188,7 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5103"/>
+        <location filename="../Configuration.cpp" line="5260"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5181,99 +5196,99 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5105"/>
+        <location filename="../Configuration.cpp" line="5262"/>
         <source>Directory:</source>
         <translation>Könyvtár:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5106"/>
+        <location filename="../Configuration.cpp" line="5263"/>
         <source>File &amp;name:</source>
         <translation>Fájl&amp;név:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5107"/>
+        <location filename="../Configuration.cpp" line="5264"/>
         <source>&amp;Open</source>
         <translation>Megny&amp;it</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5108"/>
+        <location filename="../Configuration.cpp" line="5265"/>
         <source>&amp;Choose</source>
         <translation>&amp;Választás</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5109"/>
+        <location filename="../Configuration.cpp" line="5266"/>
         <source>&amp;Save</source>
         <translation>Menté&amp;s</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5111"/>
+        <location filename="../Configuration.cpp" line="5268"/>
         <source>All files (*)</source>
         <translation>Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5112"/>
+        <location filename="../Configuration.cpp" line="5269"/>
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5113"/>
+        <location filename="../Configuration.cpp" line="5270"/>
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5110"/>
+        <location filename="../Configuration.cpp" line="5267"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5114"/>
+        <location filename="../Configuration.cpp" line="5271"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5115"/>
+        <location filename="../Configuration.cpp" line="5272"/>
         <source>&amp;Rename</source>
         <translation>Átn&amp;evez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5116"/>
+        <location filename="../Configuration.cpp" line="5273"/>
         <source>Show &amp;hidden files</source>
         <translation>Rejtett &amp;fájlok mutatása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5117"/>
+        <location filename="../Configuration.cpp" line="5274"/>
         <source>&amp;New Folder</source>
         <translation>Új &amp;mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5118"/>
+        <location filename="../Configuration.cpp" line="5275"/>
         <source>Look in:</source>
         <translation>Betekintés:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5119"/>
+        <location filename="../Configuration.cpp" line="5276"/>
         <source>Files of type:</source>
         <translation>Fájltípusok:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5120"/>
+        <location filename="../Configuration.cpp" line="5277"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>A &apos;%1&apos; írásvédett.
 Szeretné törölni?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5121"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Biztosan törli a &apos;%1&apos; fájlt?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5122"/>
+        <location filename="../Configuration.cpp" line="5279"/>
         <source>Could not delete directory.</source>
         <translation>Nem sikerült törölni a könyvtárat.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5123"/>
+        <location filename="../Configuration.cpp" line="5280"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5282,92 +5297,92 @@ A könyvtár nem található.
 Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5125"/>
+        <location filename="../Configuration.cpp" line="5282"/>
         <source>Recent Places</source>
         <translation>Legutóbbi helyek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5126"/>
+        <location filename="../Configuration.cpp" line="5283"/>
         <source>Back</source>
         <translation>Vissza</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5127"/>
+        <location filename="../Configuration.cpp" line="5284"/>
         <source>Go back</source>
         <translation>Visszatér</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5128"/>
+        <location filename="../Configuration.cpp" line="5285"/>
         <source>Alt+Left</source>
         <translation>Alt+Bal</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5129"/>
+        <location filename="../Configuration.cpp" line="5286"/>
         <source>Forward</source>
         <translation>Előre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5130"/>
+        <location filename="../Configuration.cpp" line="5287"/>
         <source>Go forward</source>
         <translation>Folytat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5131"/>
+        <location filename="../Configuration.cpp" line="5288"/>
         <source>Alt+Right</source>
         <translation>Alt+Jobb</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5132"/>
+        <location filename="../Configuration.cpp" line="5289"/>
         <source>Parent Directory</source>
         <translation>Szülő könyvtár</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5133"/>
+        <location filename="../Configuration.cpp" line="5290"/>
         <source>Go to the parent directory</source>
         <translation>Menjen a szülő könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5134"/>
+        <location filename="../Configuration.cpp" line="5291"/>
         <source>Alt+Up</source>
         <translation>Alt+Fel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5135"/>
+        <location filename="../Configuration.cpp" line="5292"/>
         <source>Create New Folder</source>
         <translation>Új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5136"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>Create a New Folder</source>
         <translation>Egy új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5137"/>
+        <location filename="../Configuration.cpp" line="5294"/>
         <source>List View</source>
         <translation>Lista nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5138"/>
+        <location filename="../Configuration.cpp" line="5295"/>
         <source>Change to list view mode</source>
         <translation>Váltás lista nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5139"/>
+        <location filename="../Configuration.cpp" line="5296"/>
         <source>Detail View</source>
         <translation>Részletes nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5140"/>
+        <location filename="../Configuration.cpp" line="5297"/>
         <source>Change to detail view mode</source>
         <translation>Váltás a részletes nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5141"/>
+        <location filename="../Configuration.cpp" line="5298"/>
         <source>Sidebar</source>
         <translation>Oldalsáv</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5142"/>
+        <location filename="../Configuration.cpp" line="5299"/>
         <source>List of places and bookmarks</source>
         <translation>Helyek és könyvjelzők listája</translation>
     </message>
@@ -5375,22 +5390,22 @@ Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5144"/>
+        <location filename="../Configuration.cpp" line="5301"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5145"/>
+        <location filename="../Configuration.cpp" line="5302"/>
         <source>Size</source>
         <translation>Méret</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5146"/>
+        <location filename="../Configuration.cpp" line="5303"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5147"/>
+        <location filename="../Configuration.cpp" line="5304"/>
         <source>Date Modified</source>
         <translation>Módosítás dátuma</translation>
     </message>
@@ -5688,32 +5703,32 @@ Hiba(%2): %3</translation>
 <context>
     <name>StationDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="266"/>
+        <location filename="../Configuration.cpp" line="264"/>
         <source>Add Station</source>
         <translation>Állomás hozzáadása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="271"/>
+        <location filename="../Configuration.cpp" line="269"/>
         <source>&amp;Band:</source>
         <translation>&amp;Sáv:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="272"/>
+        <location filename="../Configuration.cpp" line="270"/>
         <source>&amp;Offset (MHz):</source>
         <translation>&amp;Eltolás (MHz):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="273"/>
+        <location filename="../Configuration.cpp" line="271"/>
         <source>&amp;Antenna:</source>
         <translation>&amp;Antenna:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="279"/>
+        <location filename="../Configuration.cpp" line="277"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="280"/>
+        <location filename="../Configuration.cpp" line="278"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>
@@ -5752,9 +5767,80 @@ Hiba(%2): %3</translation>
     </message>
 </context>
 <context>
+    <name>TCITransceiver</name>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="231"/>
+        <source>TCI websocket error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="318"/>
+        <source>TCI SDR could not be switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="319"/>
+        <source>TCI SDR is not switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="328"/>
+        <source>TCI Audio could not be switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="335"/>
+        <source>TCI could not be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="762"/>
+        <source>TCI failed to set ptt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="769"/>
+        <source>TCI should use PTT via CAT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="796"/>
+        <source>TCI failed set rxfreq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="801"/>
+        <location filename="../TCITransceiver.cpp" line="809"/>
+        <location filename="../TCITransceiver.cpp" line="875"/>
+        <source>TCI failed set mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="837"/>
+        <source>TCI failed set txfreq</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="842"/>
+        <location filename="../TCITransceiver.cpp" line="856"/>
+        <source>TCI failed set split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1012"/>
+        <source>TCI sent an unrecognized frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1052"/>
+        <source>TCI modulator not Idle</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TransceiverBase</name>
     <message>
-        <location filename="../TransceiverBase.cpp" line="15"/>
+        <location filename="../TransceiverBase.cpp" line="14"/>
         <source>Unexpected rig error</source>
         <translation>Váratlan rig hiba</translation>
     </message>

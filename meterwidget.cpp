@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on March 12th, 2017
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200221
 
 // Simple bargraph meter
 // Implemented by Edson Pereira PY2SDR

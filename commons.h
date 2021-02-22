@@ -120,6 +120,20 @@ extern struct {
   float wave[606720];
 } foxcom_;
 
+#define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
+#define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
+#define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
+#define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
+#define NUM_FT8_SYMBOLS 79
+#define NUM_FT4_SYMBOLS 105
+
+#define NUM_CW_SYMBOLS 250
+#define TX_SAMPLE_RATE 48000
+
+extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
+extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
+
+
 #ifdef __cplusplus
 }
 #endif

@@ -7,6 +7,7 @@
 #include "Radio.hpp"
 #include "IARURegions.hpp"
 #include "AudioDevice.hpp"
+#include "TransceiverFactory.hpp"
 #include "Transceiver.hpp"
 #include "JTDXDateTime.h"
 
@@ -89,7 +90,7 @@ public:
   // re-opened if they return true.
   bool restart_audio_input () const;
   bool restart_audio_output () const;
-
+  bool restart_tci () const;
   QString my_callsign () const;
   QString my_grid () const;
   QString timeFrom () const;
@@ -268,6 +269,9 @@ public:
   bool pwrBandTxMemory () const;
   bool pwrBandTuneMemory () const;
 
+  // This method queries Port typ.
+  TransceiverFactory::Capabilities::PortType current_port_type () const;
+
   // This method queries if a CAT and PTT connection is operational.
   bool is_transceiver_online () const;
 
@@ -277,7 +281,7 @@ public:
 
   // check if a real rig is configured
   bool is_dummy_rig () const;
-
+  bool is_tci () const;
   // Frequency resolution of the rig
   //
   //  0 - 1Hz
@@ -314,7 +318,47 @@ public:
   //
   Q_SLOT void transceiver_ft4_mode (bool = false);
 
-  // Attempt to (re-)synchronise transceiver state.
+  // Set/unset Audio streaming for TCI.
+  //
+  Q_SLOT void transceiver_audio (bool = false);
+
+  // Set/unset Tune for TCI.
+  //
+  Q_SLOT void transceiver_tune (bool = false);
+
+  // Set period for TCI audio
+  //
+  Q_SLOT void transceiver_period (double = 15.0);
+
+  // Set blocksize for TCI audio.
+  //
+  Q_SLOT void transceiver_blocksize (qint32 = 6912 / 2);
+
+  // Set modulation start TCI audio
+  //
+  Q_SLOT void transceiver_modulator_start (unsigned = 79, double = 1920.0, double = 1500.0, double = -3.0, bool = true, double = 99., double = 60.0);
+
+  // Set modulation start TCI audio
+  //
+  Q_SLOT void transceiver_modulator_stop (bool = false);
+
+  // Set spread for TCI audio
+  //
+  Q_SLOT void transceiver_spread (double = 0.0);
+
+  // Set nsym for TCI audio
+  //
+  Q_SLOT void transceiver_nsym (int = 79);
+
+  // Set trfrequency for TCI audio
+  //
+  Q_SLOT void transceiver_trfrequency (double = 1500.0);
+
+  // Set txvolume for TCI audio
+  //
+  Q_SLOT void transceiver_txvolume (double = 0);
+
+    // Attempt to (re-)synchronise transceiver state.
   //
   // Force signal guarantees either a transceiver_update or a
   // transceiver_failure signal.
@@ -345,6 +389,8 @@ public:
 
   // signals a change in one of the TransceiverState members
   Q_SIGNAL void transceiver_update (Transceiver::TransceiverState const&) const;
+  Q_SIGNAL void transceiver_TCIframesWritten (qint64) const;
+  Q_SIGNAL void transceiver_TCImodActive (bool) const;
 
   // Signals a failure of a control rig CAT or PTT connection.
   //

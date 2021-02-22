@@ -32,7 +32,7 @@ public:
                                            int poll_interval, QObject * parent = nullptr);
 
 protected:
-  int do_start () override;
+  int do_start (JTDXDateTime*) override;
   void do_stop () override;
   void do_frequency (Frequency, MODE, bool no_ignore) override;
   void do_tx_frequency (Frequency, MODE, bool no_ignore) override;
@@ -54,6 +54,7 @@ private:
   QString server_;
   QTcpSocket * commander_;
   QLocale locale_;
+  JTDXDateTime * m_jtdxtime;
 };
 
 #endif

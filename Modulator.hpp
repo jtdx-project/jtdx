@@ -1,5 +1,4 @@
-// This source code file was last time modified by Igor UA3DJY on 20190716
-// All changes are shown in the patch file coming together with the full JTDX source code.
+// last time modified by Igor UA3DJY on 20200128
 
 #ifndef MODULATOR_HPP__
 #define MODULATOR_HPP__
