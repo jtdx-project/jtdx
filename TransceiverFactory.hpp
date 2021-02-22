@@ -30,7 +30,7 @@ public:
   //
   struct Capabilities
   {
-    enum PortType {none, serial, network, usb};
+    enum PortType {none, serial, network, usb, tci};
 
     explicit Capabilities (unsigned model_number = 0
                            , PortType port_type = none
@@ -76,6 +76,12 @@ public:
   enum SplitMode {split_mode_none, split_mode_rig, split_mode_emulate};
   Q_ENUM (SplitMode)
 
+  #define do__snr  0x10000
+  #define do__pwr  0x20000
+  #define rig__power 0x40000
+  #define tci_audio 0x80000
+  #define tci_agcc 0x100000
+
   TransceiverFactory ();
   ~TransceiverFactory ();
 
@@ -99,6 +105,7 @@ public:
     QString serial_port;        // serial port device name or empty
     QString network_port;       // hostname:port or empty
     QString usb_port;           // [vid[:pid[:vendor[:product]]]]
+    QString tci_port;           // hostname:port or empty
     int baud;
     DataBits data_bits;
     StopBits stop_bits;
@@ -107,9 +114,6 @@ public:
     bool dtr_high;              // to power interface
     bool force_rts;
     bool rts_high;              // to power interface
-    bool do_snr;
-    bool do_pwr;
-    bool rig_power;		// control rig_power when supported
     PTTMethod ptt_type;         // "CAT" | "DTR" | "RTS" | "VOX"
     TXAudioSource audio_source; // some rigs allow audio routing
                                 // to Mic/Data connector
@@ -125,6 +129,7 @@ public:
         && rhs.serial_port == serial_port
         && rhs.network_port == network_port
         && rhs.usb_port == usb_port
+        && rhs.tci_port == tci_port
         && rhs.baud == baud
         && rhs.data_bits == data_bits
         && rhs.stop_bits == stop_bits
@@ -133,9 +138,6 @@ public:
         && rhs.dtr_high == dtr_high
         && rhs.force_rts == force_rts
         && rhs.rts_high == rts_high
-        && rhs.do_snr == do_snr
-        && rhs.do_pwr == do_pwr
-        && rhs.rig_power == rig_power
         && rhs.ptt_type == ptt_type
         && rhs.audio_source == audio_source
         && rhs.split_mode == split_mode

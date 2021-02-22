@@ -852,6 +852,9 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     } else if (!lotw.isEmpty ()) {
         servis = "•" + servis.mid(1); // lotw 
     }
+    if (bypassAllFilters || bypassRxfFilters) {
+            show_line = true;
+    }
     if (show_line) {
         if (actwind) {
             if (windowPopup && window != NULL) {
@@ -864,9 +867,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             QApplication::beep();
 			notified = true;
         }
-    }
-    if (bypassAllFilters || bypassRxfFilters) {
-            show_line = true;
     }
     if (jt65bc) {
         bgColor = "#ffffff";

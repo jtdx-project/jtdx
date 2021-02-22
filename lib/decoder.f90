@@ -12,7 +12,8 @@ subroutine multimode_decoder(params)
   use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,   &
                        evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,nFT8decdt,sumxdtt,avexdt, &
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
-                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandall
+                       lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandall,nincallthr,incall,msgincall,xdtincall, &
+                       maskincallthr
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
   use packjt77, only : lcommonft8b,ihash22,calls12,calls22
 
@@ -2256,26 +2257,33 @@ if(numthreads.eq.24) then
   !$omp end parallel sections
 endif
 
-     if(nsec.eq.0 .or. nsec.eq.30) even(nmsg+1:130)%lstate=.false.
-     if(nsec.eq.15 .or. nsec.eq.45) odd(nmsg+1:130)%lstate=.false.
+    do i=1,numthreads
+      do m=1,nincallthr(i)
+      nindex=maskincallthr(i)+m
+      incall(30:2:-1)=incall(30-1:1:-1); incall(1)%msg=msgincall(nindex); incall(1)%xdt=xdtincall(nindex)
+      enddo
+    enddo
+
+    if(nsec.eq.0 .or. nsec.eq.30) even(nmsg+1:130)%lstate=.false.
+    if(nsec.eq.15 .or. nsec.eq.45) odd(nmsg+1:130)%lstate=.false.
 
 !do i=1,nmsg
 !  if(nsec.eq.0 .or. nsec.eq.30) print *, even(i)%msg
 !  if(nsec.eq.15 .or. nsec.eq.45) print *, odd(i)%msg
 !enddo
 
-     nFT8decd=sum(nFT8decdt(1:numthreads)); sumxdt=sum(sumxdtt(1:numthreads))
-     if(params%ndelay.eq.0) then
-       if(nFT8decd.gt.5) then; avexdt=(avexdt+sumxdt/nFT8decd)/2
-       else if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
-       else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
-       else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
-       else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
-       endif
-     endif
-     call fillhash(numthreads,.true.)
+    nFT8decd=sum(nFT8decdt(1:numthreads)); sumxdt=sum(sumxdtt(1:numthreads))
+    if(params%ndelay.eq.0) then
+      if(nFT8decd.gt.5) then; avexdt=(avexdt+sumxdt/nFT8decd)/2
+      else if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
+      else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
+      else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
+      else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
+      endif
+    endif
+    call fillhash(numthreads,.true.)
 !     call timer('decft8  ',1)
-     go to 800
+    go to 800
   endif
 
   if(params%nmode.eq.4) then

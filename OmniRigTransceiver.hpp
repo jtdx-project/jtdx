@@ -33,7 +33,7 @@ public:
   // takes ownership of wrapped Transceiver
   explicit OmniRigTransceiver (std::unique_ptr<TransceiverBase> wrapped, RigNumber, TransceiverFactory::PTTMethod ptt_type, QString const& ptt_port, QObject * parent = nullptr);
 
-  int do_start () override;
+  int do_start (JTDXDateTime*) override;
   void do_stop () override;
   void do_frequency (Frequency, MODE, bool no_ignore) override;
   void do_tx_frequency (Frequency, MODE, bool no_ignore) override;
@@ -67,6 +67,7 @@ private:
   QScopedPointer<QTimer> offline_timer_;
   bool send_update_signal_;
   bool reversed_;   // some rigs can reverse VFOs
+  JTDXDateTime * m_jtdxtime;
 };
 
 #endif

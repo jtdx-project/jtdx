@@ -257,6 +257,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_reply_me {false},
   m_reply_other {false},
   m_reply_CQ73 {false},
+  m_tci_mod_active {false},
+  m_tci {false},
   m_counter {0},
   m_currentMessageType {-1},
   m_currentMessage {""},
@@ -459,6 +461,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_optimizingProgress.setAutoReset (false);
   m_optimizingProgress.setMinimumDuration (15000); // only show after 15s delay
 
+  m_tci = m_config.is_tci();
   // Closedown.
   connect (ui->actionExit, &QAction::triggered, this, &QMainWindow::close);
 
@@ -510,6 +513,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   // hook up the detector signals, slots and disposal
   connect (this, &MainWindow::FFTSize, m_detector, &Detector::setBlockSize);
+  
   connect(m_detector, &Detector::framesWritten, this, &MainWindow::dataSink,Qt::QueuedConnection);
   connect (&m_audioThread, &QThread::finished, m_detector, &QObject::deleteLater);
 
@@ -847,6 +851,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   // hook up configuration signals
   connect (&m_config, &Configuration::transceiver_update, this, &MainWindow::handle_transceiver_update);
+  connect (&m_config, &Configuration::transceiver_TCIframesWritten, this, &MainWindow::dataSink);
+  connect (&m_config, &Configuration::transceiver_TCImodActive, this, &MainWindow::tci_mod_active);
   connect (&m_config, &Configuration::transceiver_failure, this, &MainWindow::handle_transceiver_failure);
   connect (&m_config, &Configuration::udp_server_changed, m_messageClient, &MessageClient::set_server);
   connect (&m_config, &Configuration::udp_server_port_changed, m_messageClient, &MessageClient::set_server_port);
@@ -1022,13 +1028,20 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  QThread::currentThread()->setPriority(QThread::HighPriority);
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
-  if (!m_config.audio_input_device ().isNull ()) {
-    Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector, m_downSampleFactor, m_config.audio_input_channel ());
+
+//  printf ("is_tci: %d downsampleFactor %d\n",m_tci,m_downSampleFactor);
+  if (m_tci) {
+    Q_EMIT m_config.transceiver_period(double(NTMAX));
+  } else {
+    if (!m_config.audio_input_device ().isNull ()) {
+      Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector, m_downSampleFactor, m_config.audio_input_channel ());
+    }
+    if (!m_config.audio_output_device ().isNull ()) {
+      Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (), AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
+    }
   }
-  if (!m_config.audio_output_device ().isNull ()) {
-    Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (), AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
-  }
-  Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+//  if (m_tci) Q_EMIT m_config.transceiver_trfrequency(ui->TxFreqSpinBox->value () - m_XIT); 
+//  else Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
 
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
 
@@ -1059,7 +1072,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   if(m_mode!="FT8") { ui->actionEnable_hound_mode->setChecked(false); ui->actionEnable_hound_mode->setEnabled(false); }
 
-  Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+  if (m_tci) Q_EMIT m_config.transceiver_trfrequency(ui->TxFreqSpinBox->value () - m_XIT);
+  else Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
   ui->actionCallPriorityAndSearchCQ->setEnabled(m_callMode==2 || m_callMode==3);
   m_callPrioCQ=ui->actionCallPriorityAndSearchCQ->isChecked() && (m_callMode==2 || m_callMode==3);
   m_maxDistance=ui->actionMaxDistance->isChecked();
@@ -1101,7 +1115,8 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   setStopHSym();
   
   progressBar->setMaximum(int(m_TRperiod));
-  m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
+  if (m_tci) Q_EMIT m_config.transceiver_period(m_TRperiod);
+  else m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
   connect( wsprNet, SIGNAL(uploadStatus(QString)), this, SLOT(uploadResponse(QString)));
 
 //  setting up CQ message on init
@@ -1133,6 +1148,11 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_mslastTX = m_jtdxtime->currentMSecsSinceEpoch2();
   m_multInst=QApplication::applicationName ().length()>4;
   foxgen_(); ui->actionLatvian->setEnabled(false); ui->actionDutch->setEnabled(false);//temporarily disable
+
+// make sure TX hash tables are filled in at first message transmission
+  char message[38]="CQ QQ1QQQ KO85                       ";char msgsent[38]; char ft8msgbits[77];
+  int i3=0; int n3=0; int ntxhash=1;
+  genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
   styleChanged();
   // this must be the last statement of constructor
@@ -1785,7 +1805,7 @@ void MainWindow::dataSink(qint64 frames)
   else if(m_swl || m_FT8LateStart) nhsymEStopFT8 = 51;
 
 // let Win users to decode some intervals if some frames were dropped in system audio
-#if defined(Q_OS_WIN)
+//#if defined(Q_OS_WIN)
   if(!m_diskData && m_mode=="FT8") {
     if(ihsym==1) nlostaudio=52-ihsymlast;
     ihsymlast=ihsym;
@@ -1809,7 +1829,7 @@ void MainWindow::dataSink(qint64 frames)
       } 
     }
   }
-#endif
+//#endif
 
   int ihsymdelay=0;
   if(m_delay > 0) {
@@ -2014,24 +2034,49 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       if(m_config.spot_to_psk_reporter ()) {
         pskSetLocal ();
       }
+      bool was_monitoring = m_monitoring;
+      if (m_monitoring && (m_config.restart_tci () || m_tci != m_config.is_tci())) on_monitorButton_clicked (false);
+      if (!m_config.is_tci()) {
+        //here computer soundcard
+        if((m_config.restart_audio_input () || m_tci) && !m_config.audio_input_device ().isNull ()) {
+          Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector,
+                                        m_downSampleFactor, m_config.audio_input_channel ());
+        }
 
-      if(m_config.restart_audio_input () && !m_config.audio_input_device ().isNull ()) {
-        Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector,
-                                      m_downSampleFactor, m_config.audio_input_channel ());
-      }
-
-      if(m_config.restart_audio_output () && !m_config.audio_output_device ().isNull ()) {
-        Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (),
-           AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
+        if((m_config.restart_audio_output () || m_tci) && !m_config.audio_output_device ().isNull ()) {
+          Q_EMIT initializeAudioOutputStream (m_config.audio_output_device (),
+             AudioDevice::Mono == m_config.audio_output_channel () ? 1 : 2, m_tx_audio_buffer_frames);
+          if(m_transmitting || g_iptt==1) {
+  //           ui->stopTxButton->click (); // halt any transmission
+             haltTx("settings change is accepted ");
+             enableTx_mode (false);       // switch off EnableTx button
+             ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff76",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+             TxAgainTimer.start(2000);
+           }
+        }
+        if (m_tci) {
+          Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+          m_modulator->setPeriod(m_TRperiod);
+        }
+      } else {
         if(m_transmitting || g_iptt==1) {
 //           ui->stopTxButton->click (); // halt any transmission
            haltTx("settings change is accepted ");
            enableTx_mode (false);       // switch off EnableTx button
-		   ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff76",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
-		   TxAgainTimer.start(2000);
+           ui->enableTxButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 63px;padding: 0px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff76",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
+           TxAgainTimer.start(2000);
          }
+        
+        Q_EMIT m_config.transceiver_period(double(NTMAX));
+        Q_EMIT m_config.transceiver_trfrequency(ui->TxFreqSpinBox->value () - m_XIT);
+        Q_EMIT m_config.transceiver_period(m_TRperiod);
       }
 
+      if (was_monitoring && (m_config.restart_tci () || m_tci != m_config.is_tci()) && !m_monitoring && !m_transmitting && g_iptt!=1 ) {
+        m_tci = m_config.is_tci();
+        on_monitorButton_clicked (true);
+      } else m_tci = m_config.is_tci();
+ 
       displayDialFrequency ();
 
       if(m_mode=="FT8") on_actionFT8_triggered();
@@ -2147,7 +2192,8 @@ void MainWindow::monitor (bool state)
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
-      Q_EMIT resumeAudioInputStream ();
+      if (m_tci) Q_EMIT m_config.transceiver_audio(true);
+      else Q_EMIT resumeAudioInputStream ();
       QDateTime  currentTime = m_jtdxtime->currentDateTimeUtc2 (); // decode part of interval
       QString curtime=currentTime.toString("ss.zzz");
       curtime.remove(2,1); curtime.remove(3,2);
@@ -2165,7 +2211,8 @@ void MainWindow::monitor (bool state)
       m_addtx=0;
     }
   } else {
-    Q_EMIT suspendAudioInputStream ();
+    if (m_tci) Q_EMIT m_config.transceiver_audio(false);
+    else Q_EMIT suspendAudioInputStream ();
   }
   m_monitoring = state;
   if(m_monitoring && m_txbColorSet) { resetTxMsgBtnColor(); m_txbColorSet=false; }
@@ -2370,7 +2417,8 @@ void MainWindow::displayDialFrequency ()
       m_rigState.tx_frequency () : m_rigState.frequency ()};
   // lookup band
   auto const& band_name = m_config.bands ()->find (dial_frequency);
-  if(m_lastBand != band_name) {
+//  printf("last band %s curband %s band %s freq %lld\n",m_lastBand.toStdString().c_str(),ui->bandComboBox->currentText().toStdString().c_str(),band_name.toStdString().c_str(),dial_frequency);
+  if(m_lastBand != band_name && ui->bandComboBox->currentText() != band_name) {
     // only change this when necessary as we get called a lot and it
     // would trash any user input to the band combo box line edit
     if(!m_lastBand.isEmpty() && !band_name.isEmpty()) { // handle loss of the poll response from transceiver where dial_frequency==0
@@ -2387,17 +2435,17 @@ void MainWindow::displayDialFrequency ()
       // Set the attenuation value if options are checked
       QString curBand;
       if (m_config.pwrBandTxMemory() && !m_tune) {
-          if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
-          else { curBand = ui->bandComboBox->currentText()+m_mode; }
-          if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); }
+          if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = band_name+m_modeTx; }
+          else { curBand = band_name+m_mode; }
+          if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt());/* printf("set power from freq %s %s %d\n",m_lastBand.toStdString().c_str(),curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
           else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
       }
       startup=false;
     }
     ui->bandComboBox->setCurrentText (band_name);
     m_wideGraph->setRxBand (band_name);
-    m_lastBand = band_name;
   }
+  m_lastBand = band_name;
   // search working frequencies for one we are within 10kHz of (1 Mhz of on VHF and up)
   bool valid {false};
   quint64 min_offset {99999999};
@@ -2510,10 +2558,12 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)  //eventFilter()
 {
   switch (event->type())
     {
+    case QEvent::WindowActivate:
+      txwatchdog (false);
+      break;
     case QEvent::KeyPress:
       // fall through
     case QEvent::MouseButtonPress:
-      // reset the Tx watchdog
       txwatchdog (false);
       break;
 
@@ -3470,7 +3520,7 @@ void MainWindow::process_Auto()
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx6->text());
     }
   }
-//  printf("process_Auto: %s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),mode.toStdString().c_str(),m_status,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
+//  printf("%s(%0.1f) process_Auto: %s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),m_hisCall.toStdString().c_str(),hisCall.toStdString().c_str(),m_lastloggedcall.toStdString().c_str(),mode.toStdString().c_str(),m_status,prio,ui->TxFreqSpinBox->value (),m_used_freq,m_callMode,m_callPrioCQ,m_reply_other,m_reply_me,counters2);
 
   if (rx > 0 && rx != ui->RxFreqSpinBox->value ()) ui->RxFreqSpinBox->setValue (rx);
   //if (tx > 0 && tx != ui->TxFreqSpinBox->value ()) ui->TxFreqSpinBox->setValue (tx);
@@ -3503,12 +3553,14 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::RCALL: {
+        if(m_enableTx && m_autoseq && m_callMode>0) txwatchdog (false);
         on_txb2_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx2->text());
-		if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
+        if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         break;
       }
       case QsoHistory::RREPORT: {
+        if(m_enableTx && m_autoseq && m_callMode>0) txwatchdog (false);
         if(m_autofilter && m_enableTx && !m_filter) autoFilter (true);
         on_txb3_clicked();
         if(ui->tabWidget->currentIndex()==1) ui->genMsg->setText(ui->tx3->text());
@@ -3579,7 +3631,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
 {
   while(proc_jtdxjt9.canReadLine()) {
     QByteArray t=proc_jtdxjt9.readLine();
-
     if(t.startsWith("<DecodeFinished>")) {
       dec_data.params.nstophint=1;
       m_bDecoded = t.mid (20).trimmed ().toInt () > 0;
@@ -3735,60 +3786,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
       QString grid="";
       decodedtext.deCallAndGrid(/*out*/deCall,grid);
       if (!m_hisCall.isEmpty() && !deCall.isEmpty() && Radio::base_callsign (m_hisCall) == Radio::base_callsign (deCall)) ui->RxFreqSpinBox->setValue (decodedtext.frequencyOffset());
-
-/*      bool bwantedCall=false;
-      if(m_hisCall.isEmpty ()) { // run this code only if not in the QSO
-        bool bwantedPrefix=false;
-        if(!m_wantedPrefixList.startsWith("") && !deCall.isEmpty()) {  // empty list has size==1, list with one item also has size==1
-          int listsize=m_wantedPrefixList.size();
-          QString wprefix;
-          for(int i=0; i<listsize; i++) {
-            wprefix=m_wantedPrefixList.at(i);
-            if(!wprefix.isEmpty() && deCall.startsWith(wprefix)) { bwantedPrefix=true; break; }
-          }
-        }
-
-        if(bwantedPrefix || (m_wantedCall.length() > 2 && !deCall.isEmpty() && 
-		   (m_wantedCallList.indexOf(Radio::base_callsign (deCall)) >= 0 || m_wantedCallList.indexOf(deCall) >= 0))) {
-          bwantedCall=true;
-          if(!m_transmitting && m_hisCall.isEmpty ()) {
-//            if(m_config.write_decoded_debug()) {
-              if(m_enableTx) {
-                if(bwantedPrefix) writeToALLTXT("Wanted prefix to DX Call: " + deCall + ", EnableTx is active, will halt Tx");
-                else writeToALLTXT("Wanted callsign to DX Call: " + deCall + ", EnableTx is active, will halt Tx");
-              }
-              else {
-                if(bwantedPrefix) writeToALLTXT("Wanted prefix to DX Call: " + deCall + ", EnableTx is off");
-                else writeToALLTXT("Wanted callsign to DX Call: " + deCall + ", EnableTx is off");
-              }
-//            }
-//            if(m_enableTx) haltTx("TX halted: wanted callsign/prefix found after CQ message transmission ");
-            ui->dxCallEntry->setText(deCall);  
-            if (logClearDXTimer.isActive()) logClearDXTimer.stop();
-            QString rpt = decodedtext.report();
-            ui->rptSpinBox->setValue(rpt.toInt());
-            genStdMsgs(rpt);
-            int nmod=decodedtext.timeInSeconds () % (2*m_TRperiod);
-            if(m_txFirst != (nmod!=0)) {
-              m_txFirst=(nmod!=0);
-              ui->TxMinuteButton->setChecked(m_txFirst);
-              setMinButton();
-            }
-            ui->dxCallEntry->setStyleSheet("color: black; background: rgb(255,170,170);");
-            statusChanged();
-          }
-          if(!m_notified) {
-            if(m_windowPopup) {
-		  	  this->showNormal();
-			  this->raise();
-              QApplication::setActiveWindow(this);
-            }
-            QApplication::beep();
-            m_notified=true;
-          }
-        }
-      }
-*/
       if (!deCall.isEmpty() && !m_reply_me && Radio::base_callsign (deCall) == Radio::base_callsign (m_hisCall)) {
           if (mycallinmsg) {
              m_reply_me = true;
@@ -3800,12 +3797,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
       }      
       //Left (Band activity) window
       bool bypassRxfFilters = false;
-// notified
-// 0  m_notified = false, show_line = false
-// 1  m_notified = true, show_line = false
-// 2  m_notified = false, show_line = true
-// 3  m_notified = true, show_line = true
-	  int notified = 2;
+      int notified = 2;
       notified = ui->decodedTextBrowser->displayDecodedText (&decodedtext
                                                     , m_baseCall
                                                     , Radio::base_callsign (m_hisCall)
@@ -4650,12 +4642,17 @@ void MainWindow::startTx2()
 //    if(i==1) QThread::currentThread()->msleep(5);
 //    else if(i>1) QThread::currentThread()->msleep(10);
 //    printf("%s(%0.1f) Timing modulator",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
-    if (!m_modulator->isActive ()) { // TODO - not thread safe
+    bool modulator_active;
+    bool tci_active = m_tci;
+    if (tci_active) modulator_active=m_tci_mod_active;
+    else modulator_active=m_modulator->isActive ();
+    if (!modulator_active) { // TODO - not thread safe
       double fSpread=0.0;
       double snr=99.0;
       QString t=ui->tx5->currentText();
       if(t.left(1)=="#") fSpread=t.mid(1,5).toDouble();
-      m_modulator->setSpread(fSpread); // TODO - not thread safe
+      if (tci_active) Q_EMIT m_config.transceiver_spread(fSpread);
+      else m_modulator->setSpread(fSpread); // TODO - not thread safe
       t=ui->tx6->text();
       if(t.left(1)=="#") snr=t.mid(1,5).toDouble();
       if(snr>0.0 or snr < -50.0) snr=99.0;
@@ -4698,7 +4695,8 @@ void MainWindow::startTx2()
 
 void MainWindow::stopTx()
 {
-  Q_EMIT endTransmitMessage ();
+  if (m_tci) Q_EMIT m_config.transceiver_modulator_stop();
+  else Q_EMIT endTransmitMessage ();
   m_btxok = false;
   m_transmitting = false;
   ui->TxFreqSpinBox->setDisabled(false);
@@ -6174,11 +6172,12 @@ void MainWindow::on_actionWSPR_2_triggered()
   switch_mode (Modes::WSPR);
   m_modeTx="WSPR-2";                                    //### not needed ?? ###
   m_TRperiod=120.0;
-  m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
-  m_detector->setPeriod(m_TRperiod);  // TODO - not thread safe
+  if (m_tci) Q_EMIT m_config.transceiver_period(m_TRperiod); // TODO - not thread safe
+  else {  m_modulator->setPeriod(m_TRperiod); m_detector->setPeriod(m_TRperiod); }// TODO - not thread safe
   m_nsps=6912;                   //For symspec only
   m_FFTSize = m_nsps / 2;
-  Q_EMIT FFTSize (m_FFTSize);
+  if (m_tci) Q_EMIT m_config.transceiver_blocksize (m_FFTSize);
+  else Q_EMIT FFTSize (m_FFTSize);
   m_hsymStop=396;
   m_toneSpacing=12000.0/8192.0;
   mode_label->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#ff66ff",m_useDarkStyle)));
@@ -6231,7 +6230,8 @@ void MainWindow::commonActions ()
 //  m_detector->setPeriod(m_TRperiod);   // TODO - not thread safe
   m_nsps=6912;                   //For symspec only
   m_FFTSize = m_nsps / 2;
-  Q_EMIT FFTSize (m_FFTSize);
+  if (m_tci) Q_EMIT m_config.transceiver_blocksize(m_FFTSize);
+  else Q_EMIT FFTSize (m_FFTSize);
   m_toneSpacing=0.0;
   m_wideGraph->setMode(m_mode);
   m_wideGraph->setModeTx(m_modeTx);
@@ -6245,8 +6245,8 @@ void MainWindow::commonActions ()
   ui->label_6->setText(tr("Band Activity"));
   ui->decodedTextLabel2->setText(t);
   m_wideGraph->setPeriod(m_TRperiod,m_nsps);
-  m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
-  m_detector->setPeriod(m_TRperiod);  // TODO - not thread safe
+  if (m_tci) Q_EMIT m_config.transceiver_period(m_TRperiod); // TODO - not thread safe
+  else {m_modulator->setPeriod(m_TRperiod); m_detector->setPeriod(m_TRperiod); }  // TODO - not thread safe
   ui->label_6->setText(tr("Band Activity"));
   ui->label_7->setText(tr("Rx Frequency"));
   ui->TxMinuteButton->setEnabled(true);
@@ -6311,7 +6311,8 @@ void MainWindow::on_TxFreqSpinBox_valueChanged(int n)
 //  if(n<200 && (!m_rigOk || ui->readFreq->text()!="S")) n=200;
   m_wideGraph->setTxFreq(n);
   if(m_lockTxFreq) ui->RxFreqSpinBox->setValue(n);
-  Q_EMIT transmitFrequency (n - m_XIT);
+  if (m_tci) Q_EMIT m_config.transceiver_trfrequency(n - m_XIT);
+  else Q_EMIT transmitFrequency (n - m_XIT);
   statusUpdate ();
 }
 
@@ -6518,7 +6519,7 @@ void MainWindow::band_changed (Frequency f)
           cleared=true;
       }
     }
-    m_lastBand.clear ();
+//    m_lastBand.clear ();
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
@@ -6540,7 +6541,7 @@ void MainWindow::band_changed (Frequency f)
     setRig ();
     setXIT (ui->TxFreqSpinBox->value ());
     qint64 fDelta = m_lastDisplayFreq - m_freqNominal;
-    if (qAbs(fDelta)>1000) {
+    if (qAbs(fDelta)>1000000) {
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
         clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW
         if (m_autoEraseBC && !cleared) { // option: erase both windows if band is changed
@@ -6550,11 +6551,12 @@ void MainWindow::band_changed (Frequency f)
     // Set the attenuation value if options are checked
         QString curBand;
         if (m_config.pwrBandTxMemory() && !m_tune) {
-            if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
-            else { curBand = ui->bandComboBox->currentText()+m_mode; }
-            if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); }
+            if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = m_config.bands ()->find (m_freqNominal)+m_modeTx; }
+            else { curBand = m_config.bands ()->find (m_freqNominal)+m_mode; }
+            if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt());/* printf("set power from bandchange % lld %lld %s %d\n",m_lastDisplayFreq,m_freqNominal,curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
             else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
         }
+        ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
     }
     m_lastDisplayFreq=m_freqNominal;
     m_oldmode=m_mode;
@@ -6818,7 +6820,8 @@ void MainWindow::on_tuneButton_clicked (bool checked)
 //    on_monitorButton_clicked (true);
     m_tune=true;
   }
-  Q_EMIT tune (checked);
+  if (m_tci) Q_EMIT m_config.transceiver_tune(checked);
+  else Q_EMIT tune (checked);
   if(checked && m_config.tunetimer() && !m_tuneup) StopTuneTimer.start(m_config.tunetimer()*1000); // shall not start at WSPR band hopping
 }
 
@@ -6933,7 +6936,7 @@ void MainWindow::setXIT(int n, Frequency base)
   m_XIT = 0;
   if (!m_bSimplex) {
     // m_bSimplex is false, so we can use split mode if requested
-    if (m_config.split_mode ()) m_XIT=(n/500)*500 - 1500;
+    if (m_config.split_mode ()) m_XIT = (n/500)*500 - 1500;
     if ((m_monitoring || m_transmitting) && m_config.is_transceiver_online () && m_config.split_mode ()) {
         // All conditions are met, reset the transceiver Tx dial
         // frequency
@@ -6950,7 +6953,8 @@ void MainWindow::setXIT(int n, Frequency base)
 	}
   }
   //Now set the audio Tx freq
-  Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
+  if (m_tci) Q_EMIT m_config.transceiver_trfrequency(ui->TxFreqSpinBox->value () - m_XIT);
+  else Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
   if(m_transmitting) m_restart=true;
 }
 
@@ -7178,31 +7182,37 @@ void MainWindow::transmit (double snr)
   if (m_modeTx == "FT8") {
 //    toneSpacing=12000.0/1920.0;
     toneSpacing=-3.0; //GFSK wave
-    Q_EMIT sendMessage (NUM_FT8_SYMBOLS,1920.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_FT8_SYMBOLS,1920.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_FT8_SYMBOLS,1920.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   else if (m_modeTx == "FT4") {
     toneSpacing=-2.0;                     //Transmit a pre-computed, filtered waveform.
-    Q_EMIT sendMessage (NUM_FT4_SYMBOLS,576.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_FT4_SYMBOLS,576.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_FT4_SYMBOLS,576.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   else if (m_modeTx == "JT65") {
     toneSpacing=11025.0/4096.0;
-    Q_EMIT sendMessage (NUM_JT65_SYMBOLS,4096.0*12000.0/11025.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_JT65_SYMBOLS,4096.0*12000.0/11025.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_JT65_SYMBOLS,4096.0*12000.0/11025.0,ui->TxFreqSpinBox->value()-m_XIT,toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   else if (m_modeTx == "JT9") {
     double sps=m_nsps; m_toneSpacing=12000.0/6912.0;
-    Q_EMIT sendMessage (NUM_JT9_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT, m_toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_JT9_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT, m_toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_JT9_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT, m_toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   else if (m_modeTx == "T10") {
     double sps=m_nsps; m_toneSpacing=4.0*12000.0/6912.0;
-    Q_EMIT sendMessage (NUM_T10_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT,m_toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_T10_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT,m_toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_T10_SYMBOLS,sps,ui->TxFreqSpinBox->value()-m_XIT,m_toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   else if (m_mode=="WSPR-2") {
-    Q_EMIT sendMessage (NUM_WSPR_SYMBOLS,8192.0,ui->TxFreqSpinBox->value()-1.5*12000/8192,m_toneSpacing,m_soundOutput,
+    if (m_tci) Q_EMIT m_config.transceiver_modulator_start(NUM_WSPR_SYMBOLS,8192.0,ui->TxFreqSpinBox->value()-1.5*12000/8192,m_toneSpacing,true,snr,m_TRperiod);
+    else Q_EMIT sendMessage (NUM_WSPR_SYMBOLS,8192.0,ui->TxFreqSpinBox->value()-1.5*12000/8192,m_toneSpacing,m_soundOutput,
                         m_config.audio_output_channel(),true,snr,m_TRperiod);
   }
   if(m_nlasttx==0 && !m_tune) m_nlasttx=m_ntx;
@@ -7228,7 +7238,8 @@ void MainWindow::on_outAttenuation_valueChanged (int a)
       qDebug () << "Tune=" << QString::number(a);
   }
   // Updating attenuation for tuning is done in stop_tuning
-  Q_EMIT outAttenuationChanged (dBAttn);
+  if (m_tci) Q_EMIT m_config.transceiver_txvolume(dBAttn);
+  else Q_EMIT outAttenuationChanged (dBAttn);
 }
 
 void MainWindow::on_actionShort_list_of_add_on_prefixes_and_suffixes_triggered()
@@ -7362,7 +7373,7 @@ void MainWindow::pskSetLocal ()
   QString antenna_description;
   if (!matches.isEmpty ()) antenna_description = stations->index (matches.first ().row (), StationList::description_column).data ().toString ();
   // qDebug() << "To PSKreporter: local station details";
-  psk_Reporter->setLocalStation(m_config.my_callsign (), m_config.my_grid (), antenna_description, QString {"JTDX v" + version() + " " + revision()}.simplified ());
+  psk_Reporter->setLocalStation(m_config.my_callsign (), m_config.my_grid (), antenna_description, QString {"JTDX v" + version() + (m_tci ? " tci " : " ") + revision()}.simplified ());
 }
 
 void MainWindow::transmitDisplay (bool transmitting)

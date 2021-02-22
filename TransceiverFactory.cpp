@@ -3,6 +3,7 @@
 #include <QMetaType>
 
 #include "HamlibTransceiver.hpp"
+#include "TCITransceiver.hpp"
 #include "DXLabSuiteCommanderTransceiver.hpp"
 #include "HRDTransceiver.hpp"
 #include "EmulateSplitTransceiver.hpp"
@@ -24,6 +25,7 @@ namespace
   enum				// supported non-hamlib radio interfaces
     {
       NonHamlibBaseId = 99899
+      , TCIId
       , CommanderId
       , HRDId
       , OmniRigOneId
@@ -34,6 +36,7 @@ namespace
 TransceiverFactory::TransceiverFactory ()
 {
   HamlibTransceiver::register_transceivers (&transceivers_);
+  TCITransceiver::register_transceivers (&transceivers_, TCIId);
   DXLabSuiteCommanderTransceiver::register_transceivers (&transceivers_, CommanderId);
   HRDTransceiver::register_transceivers (&transceivers_, HRDId);
   
@@ -85,6 +88,19 @@ std::unique_ptr<Transceiver> TransceiverFactory::create (ParameterPack const& pa
   std::unique_ptr<Transceiver> result;
   switch (supported_transceivers ()[params.rig_name].model_number_)
     {
+    case TCIId:
+      {
+        std::unique_ptr<TransceiverBase> basic_transceiver;
+
+        // wrap the basic Transceiver object instance with a decorator object that talks to TCI Commander
+        result.reset (new TCITransceiver {std::move (basic_transceiver), params.tci_port, PTT_method_CAT == params.ptt_type, params.poll_interval});
+        if (target_thread)
+          {
+            result->moveToThread (target_thread);
+          }
+      }
+      break;
+
     case CommanderId:
       {
         std::unique_ptr<TransceiverBase> basic_transceiver;

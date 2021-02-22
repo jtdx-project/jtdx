@@ -40,18 +40,6 @@
 #include "qsohistory.h"
 #include "JTDXDateTime.h"
 
-#define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
-#define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
-#define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
-#define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
-#define NUM_FT8_SYMBOLS 79
-#define NUM_FT4_SYMBOLS 105
-
-#define NUM_CW_SYMBOLS 250
-#define TX_SAMPLE_RATE 48000
-
-extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
-extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 
 //--------------------------------------------------------------- MainWindow
 namespace Ui {
@@ -100,6 +88,7 @@ public slots:
   void showSoundOutError(const QString& errorMsg);
   void showStatusMessage(const QString& statusMsg);
   void dataSink(qint64 frames);
+  void tci_mod_active(bool on) {m_tci_mod_active = on;}
   void diskDat();
   void freezeDecode(int n);
   void guiUpdate();
@@ -454,7 +443,6 @@ private:
   quint64  m_lastDisplayFreq;
   quint64  m_mslastTX;
   quint64  m_mslastMon;
-//  quint64  m_msDecoderStarted;
 
   qint32  m_waterfallAvg;
   qint32  m_ntx;
@@ -535,6 +523,8 @@ private:
   bool    m_reply_me;
   bool	  m_reply_other;
   bool	  m_reply_CQ73;
+  bool	  m_tci_mod_active;
+  bool    m_tci;
   qint32  m_counter;
   qint32  m_currentMessageType;
   QString m_currentMessage;

@@ -15,6 +15,8 @@ EmulateSplitTransceiver::EmulateSplitTransceiver (std::unique_ptr<Transceiver> w
   // Connect other signals of wrapped Transceiver object to our
   // parent matching signals.
   connect (wrapped_.get (), &Transceiver::resolution, this, &Transceiver::resolution);
+  connect (wrapped_.get (), &Transceiver::tciframeswritten, this, &Transceiver::tciframeswritten);
+  connect (wrapped_.get (), &Transceiver::tci_mod_active, this, &Transceiver::tci_mod_active);
   connect (wrapped_.get (), &Transceiver::finished, this, &Transceiver::finished);
   connect (wrapped_.get (), &Transceiver::failure, this, &Transceiver::failure);
 }

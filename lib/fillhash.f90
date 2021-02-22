@@ -54,6 +54,9 @@ subroutine fillhash(numthreads,lfill)
         dxcall13_set=.true.
         dxcall13_0=dxcall13
         hashdx10=ihashcall(dxcall13,10)
+! make sure new DX Call is stored in hash tables prior to decoding
+! it is needed if manually callsign set in DX Call window was not decoded before
+        call save_hash_call(dxcall13,1)
 !print *,dxcall13,hashdx10
       endif
     endif

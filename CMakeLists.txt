@@ -194,6 +194,7 @@ set (wsjt_qt_CXXSRCS
   TransceiverFactory.cpp
   PollingTransceiver.cpp
   HamlibTransceiver.cpp
+  TCITransceiver.cpp
   HRDTransceiver.cpp
   DXLabSuiteCommanderTransceiver.cpp
   NetworkMessage.cpp
@@ -754,7 +755,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 #
 
 # Widgets finds its own dependencies.
-find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools REQUIRED)
+find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools WebSockets REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -1065,7 +1066,7 @@ endif (${OPENMP_FOUND} OR APPLE)
 
 # build a library of package Qt functionality
 add_library (wsjt_qt STATIC ${wsjt_qt_CXXSRCS} ${wsjt_qt_GENUISRCS} ${GENAXSRCS})
-target_link_libraries (wsjt_qt Qt5::Widgets Qt5::Network)
+target_link_libraries (wsjt_qt Qt5::Widgets Qt5::Network Qt5::WebSockets)
 target_include_directories (wsjt_qt BEFORE PRIVATE ${hamlib_INCLUDE_DIRS})
 if (WIN32)
   target_link_libraries (wsjt_qt Qt5::AxContainer Qt5::AxBase)

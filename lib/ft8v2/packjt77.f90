@@ -38,7 +38,7 @@ subroutine hash10(n10,c13,nthr)
 
   c13='<...>'
   if(n10.lt.0 .or. n10.gt.1023) return
-  if(nthr.eq.26) then ! TX message
+  if(nthr.gt.25) then ! TX message
     if(len(trim(txcalls10(n10))).gt.0) then
       c13=txcalls10(n10)
       c13='<'//trim(c13)//'>'
@@ -60,7 +60,7 @@ subroutine hash12(n12,c13,nthr)
   
   c13='<...>'
   if(n12.lt.0 .or. n12.gt.4095) return
-  if(nthr.eq.26) then ! TX message
+  if(nthr.gt.25) then ! TX message
     if(len(trim(txcalls12(n12))).gt.0) then
       c13=txcalls12(n12)
       c13='<'//trim(c13)//'>'
@@ -71,6 +71,7 @@ subroutine hash12(n12,c13,nthr)
       c13='<'//trim(c13)//'>'
     endif
   endif
+
   return
 
 end subroutine hash12
@@ -82,7 +83,7 @@ subroutine hash22(n22,c13,nthr)
   integer, intent(in) :: nthr
   
   c13='<...>'
-  if(nthr.eq.26) then ! TX message
+  if(nthr.gt.25) then ! TX message
     do i=1,nztxhash
       if(itxhash22(i).eq.n22) then
         c13=txcalls22(i)

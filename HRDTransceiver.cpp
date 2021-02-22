@@ -109,10 +109,11 @@ HRDTransceiver::HRDTransceiver (std::unique_ptr<TransceiverBase> wrapped
 {
 }
 
-int HRDTransceiver::do_start ()
+int HRDTransceiver::do_start (JTDXDateTime * jtdxtime)
 {
   TRACE_CAT ("HRDTransceiver", "starting");
-  if (wrapped_) wrapped_->start (0);
+  m_jtdxtime = jtdxtime;
+  if (wrapped_) wrapped_->start (0,m_jtdxtime);
 
   auto server_details = network_server_lookup (server_, 7809u);
   if (!hrd_)

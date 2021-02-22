@@ -34,7 +34,7 @@ class HamlibTransceiver final
                               QObject * parent = nullptr);
 
  private:
-  int do_start () override;
+  int do_start (JTDXDateTime*) override;
   void do_stop () override;
   void do_frequency (Frequency, MODE, bool no_ignore) override;
   void do_tx_frequency (Frequency, MODE, bool no_ignore) override;
@@ -72,7 +72,7 @@ class HamlibTransceiver final
   bool do_pwr2_;
   bool tickle_hamlib_;          // Hamlib requires a
                                 // rig_set_split_vfo() call to
-                                // establish the Tx VFO
+  JTDXDateTime * m_jtdxtime;                                // establish the Tx VFO
   bool get_vfo_works_;          // Net rigctl promises what it can't deliver
   bool set_vfo_works_;          // More rigctl promises which it can't deliver
   std::string debug_file_;
