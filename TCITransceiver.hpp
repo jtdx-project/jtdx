@@ -159,19 +159,19 @@ protected:
   
   void rig_power (bool on);
   void stream_audio (bool on);
-  void store (float * source, size_t numFrames, qint16 * dest)
+  void store (float * source, size_t numFrames, qint32 * dest)
   {
-    static constexpr float K = 0x7FFF;
+    static constexpr float K = 0x7FFFFFFF;
     for (size_t i {0}; i < numFrames; ++i) {
-       dest[i] = static_cast<int16_t>(K*source[i*2]);
+       dest[i] = static_cast<int32_t>(K*source[i*2]);
     }
 
   }
 
-  float * load (qint16 sample, float * dest)
+  float * load (qint32 const sample, float * dest)
   
   {
-    static constexpr float K = 1.0/0x7FFF;
+    static constexpr float K = 1.0/0x7FFFFFFF;
     float value  = (K*static_cast<float>(sample));
     *dest++ = value;
     *dest++ = value;
@@ -252,7 +252,7 @@ private:
   qint32 m_samplesPerFFT;       // after any down sampling
   qint32 m_ns;
   static size_t const max_buffer_size {7 * 512};
-  QScopedArrayPointer<short> m_buffer; // de-interleaved sample buffer
+  QScopedArrayPointer<int> m_buffer; // de-interleaved sample buffer
   // big enough for all the
   // samples for one increment of
   // data (a signals worth) at
@@ -261,8 +261,8 @@ private:
   quint32 writeAudioData (float * data, qint32 maxSize);
   static size_t const bytesPerFrame = 2;
   // from Modulator
-  quint16 readAudioData (float * data, qint32 maxSize);
-  qint16 postProcessSample (qint16 sample) const;
+  quint32 readAudioData (float * data, qint32 maxSize);
+  qint32 postProcessSample (qint32 sample) const;
   bool m_quickClose = false;
 
   unsigned m_symbolsLength;
@@ -283,7 +283,7 @@ private:
   double m_TRperiod;
 
   qint64 m_silentFrames;
-  qint16 m_ramp;
+  qint32 m_ramp;
   ModulatorState m_state;
 
   bool m_tuning;

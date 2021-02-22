@@ -99,13 +99,14 @@ static const QString CmdMute("mute");
 }
 
 extern "C" {
-  void   fil4_(qint16*, qint32*, qint16*, qint32*, float*);
+  void   fil4_(qint32*, qint32*, qint32*, qint32*, float*);
 }
 extern dec_data dec_data;
 
 extern float gran();		// Noise generator (for tests only)
 
-#define RAMP_INCREMENT 64  // MUST be an integral factor of 2^16
+//#define RAMP_INCREMENT 64  // MUST be an integral factor of 2^16
+#define RAMP_INCREMENT 65536  // MUST be an integral factor of 2^16
 
 #if defined (WSJT_SOFT_KEYING)
 # define SOFT_KEYING WSJT_SOFT_KEYING
@@ -141,7 +142,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , tci_loop3_ {nullptr}
   , m_downSampleFactor {4}
   , m_buffer ((m_downSampleFactor > 1) ?
-              new short [max_buffer_size * m_downSampleFactor] : nullptr)
+              new int [max_buffer_size * m_downSampleFactor] : nullptr)
   , m_quickClose {false}
   , m_phi {0.0}
   , m_toneSpacing {0.0}
@@ -541,7 +542,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
     } else if (pStream->type == TxChrono &&  pStream->receiver == 0){
         int ssize = AudioHeaderSize+pStream->length*sizeof(float)*2;
 //        printf("%s(%0.1f) TxChrono ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
-        quint16 tehtud;
+        quint32 tehtud;
         if (m_tx1.size() != ssize) m_tx1.resize(ssize);
         Data_Stream * pOStream1 = (Data_Stream*)(m_tx1.data());
         pOStream1->receiver = pStream->receiver;
@@ -1059,7 +1060,7 @@ void TCITransceiver::do_modulator_start (unsigned symbolsLength, double framesPe
   m_addNoise = dBSNR < 0.;
   m_nsps = framesPerSymbol;
   m_trfrequency = frequency;
-  m_amp = std::numeric_limits<qint16>::max ();
+  m_amp = std::numeric_limits<qint32>::max ();
   m_toneSpacing = toneSpacing;
   m_TRperiod=TRperiod;
   unsigned delay_ms=1000;
@@ -1114,7 +1115,7 @@ void TCITransceiver::do_modulator_stop (bool quick)
   tx_audio_ = false;
 }
 
-quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
+quint32 TCITransceiver::readAudioData (float * data, qint32 maxSize)
 {
   double toneFrequency=1500.0;
   if(m_nsps==6) {
@@ -1151,7 +1152,7 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
     case Active:
       {
         unsigned int isym=0;
-        qint16 sample=0;
+        qint32 sample=0;
         if(!m_tuning) isym=m_ic/(4.0*m_nsps);            // Actual fsample=48000
 		bool slowCwId=((isym >= m_symbolsLength) && (icw[0] > 0));
         m_nspd=2560;                 // 22.5 WPM
@@ -1167,13 +1168,13 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
             m_phi += m_dphi;
             if (m_phi > m_twoPi) m_phi -= m_twoPi;
             sample=0;
-            float amp=32767.0;
+            float amp=2147483647.0;
             float x=0.0;
             if(m_ramp!=0) {
               x=qSin(float(m_phi));
               if(SOFT_KEYING) {
                 amp=qAbs(qint32(m_ramp));
-                if(amp>32767.0) amp=32767.0;
+                if(amp>2147483647.0) amp=2147483647.0;
               }
               sample=round(amp*x);
             }
@@ -1188,7 +1189,7 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
             }
 
             // adjust ramp
-            if ((m_ramp != 0 && m_ramp != std::numeric_limits<qint16>::min ()) || level != m_cwLevel) {
+            if ((m_ramp != 0 && m_ramp != std::numeric_limits<qint32>::min ()) || level != m_cwLevel) {
               // either ramp has terminated at max/min or direction has changed
               m_ramp += RAMP_INCREMENT; // ramp
             }
@@ -1254,7 +1255,7 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
             sample=qRound(m_amp*qSin(m_phi));
           }
           //transmit from a precomputed FT8 wave[] array:
-          if(!m_tuning and (m_toneSpacing < 0.0)) { m_amp=32767.0; sample=qRound(m_amp*foxcom_.wave[m_ic]); }
+          if(!m_tuning and (m_toneSpacing < 0.0)) { m_amp=2147483647.0; sample=qRound(m_amp*foxcom_.wave[m_ic]); }
           samples = load (postProcessSample (sample), samples);
           ++framesGenerated; ++m_ic;
         }
@@ -1288,15 +1289,15 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
   return 0;
 }
 
-qint16 TCITransceiver::postProcessSample (qint16 sample) const
+qint32 TCITransceiver::postProcessSample (qint32 sample) const
 {
   if (m_addNoise) {  // Test frame, we'll add noise
     qint32 s = m_fac * (gran () + sample * m_snr / 32768.0);
-    if (s > std::numeric_limits<qint16>::max ()) {
-      s = std::numeric_limits<qint16>::max ();
+    if (s > std::numeric_limits<qint32>::max ()) {
+      s = std::numeric_limits<qint32>::max ();
     }
-    if (s < std::numeric_limits<qint16>::min ()) {
-      s = std::numeric_limits<qint16>::min ();
+    if (s < std::numeric_limits<qint32>::min ()) {
+      s = std::numeric_limits<qint32>::min ();
     }
     sample = s;
   }
