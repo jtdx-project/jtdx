@@ -444,6 +444,7 @@ private:
   Q_SLOT void on_force_RTS_combo_box_currentIndexChanged (int);
   Q_SLOT void on_rig_combo_box_currentIndexChanged (int);
   Q_SLOT void on_refresh_push_button_clicked ();
+  Q_SLOT void on_tci_audio_check_box_clicked(bool checked);
   Q_SLOT void on_sound_input_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_sound_output_combo_box_currentTextChanged (QString const&);
   Q_SLOT void on_add_macro_push_button_clicked (bool = false);
@@ -692,6 +693,7 @@ private:
   bool do_pwr_;
   bool rig_power_;
   bool rig_power_off_;
+  bool tci_audio_;
   bool id_after_73_;
   bool tx_QSY_allowed_;
   bool spot_to_psk_reporter_;
@@ -939,6 +941,7 @@ bool Configuration::do_snr () const {return m_->do_snr_;}
 bool Configuration::do_pwr () const {return m_->do_pwr_;}
 bool Configuration::rig_power () const {return m_->rig_power_;}
 bool Configuration::rig_power_off () const {return m_->rig_power_off_;}
+bool Configuration::tci_audio () const {return m_->tci_audio_;}
 bool Configuration::id_after_73 () const {return m_->id_after_73_;}
 bool Configuration::tx_QSY_allowed () const {return m_->tx_QSY_allowed_;}
 bool Configuration::spot_to_psk_reporter () const
@@ -1937,6 +1940,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->output_power_check_box->setChecked (do_pwr_);
   ui_->rig_power_check_box->setChecked (rig_power_);
   ui_->rig_power_off_check_box->setChecked (rig_power_off_);
+  ui_->tci_audio_check_box->setChecked (tci_audio_);
   ui_->sbTopFreq->setValue (ntopfreq65_);
   ui_->sbAnswerCQCounter->setValue (nAnswerCQCounter_);
   ui_->sbAnswerInCallCounter->setValue (nAnswerInCallCounter_);
@@ -2230,7 +2234,7 @@ void Configuration::impl::read_settings ()
   do_pwr_ = settings_->value ("CATRequestPower", false).toBool ();
   rig_power_ = settings_->value ("RigPower", false).toBool ();
   rig_power_off_ = settings_->value ("RigPower_off", rig_power_).toBool ();
-
+  tci_audio_ = settings_->value ("TCIAudio", is_tci_).toBool ();
   if(settings_->value ("hideAfrica").toString()=="false" || settings_->value ("hideAfrica").toString()=="true")
     hideAfrica_ = settings_->value ("hideAfrica").toBool ();
   else hideAfrica_ = false;
@@ -2612,6 +2616,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("CATRequestPower", do_pwr_);
   settings_->setValue ("RigPower", rig_power_);
   settings_->setValue ("RigPower_off", rig_power_off_);
+  settings_->setValue ("TCIAudio", tci_audio_);
   settings_->setValue ("hideAfrica", hideAfrica_);
   settings_->setValue ("hideAntarctica", hideAntarctica_);
   settings_->setValue ("hideAsia", hideAsia_);
@@ -2787,6 +2792,7 @@ void Configuration::impl::set_rig_invariants ()
   auto is_hw_handshake = ui_->CAT_handshake_group_box->isEnabled ()
     && TransceiverFactory::handshake_hardware == static_cast<TransceiverFactory::Handshake> (ui_->CAT_handshake_button_group->checkedId ());
   is_tci_ = ui_->rig_combo_box->currentText().startsWith("TCI Cli");
+  ui_->tci_audio_check_box->setVisible(is_tci_);
   ui_->test_CAT_push_button->setStyleSheet ({});
 
   ui_->CAT_poll_interval_label->setEnabled (!asynchronous_CAT);
@@ -3252,6 +3258,7 @@ void Configuration::impl::accept ()
   do_pwr_ = ui_->output_power_check_box->isChecked ();
   rig_power_ = ui_->rig_power_check_box->isChecked ();
   rig_power_off_ = ui_->rig_power_off_check_box->isChecked ();
+  tci_audio_ = ui_->tci_audio_check_box->isChecked ();
   id_after_73_ = ui_->CW_id_after_73_check_box->isChecked ();
   tx_QSY_allowed_ = ui_->tx_QSY_check_box->isChecked ();
   monitor_off_at_startup_ = ui_->monitor_off_check_box->isChecked ();
@@ -4831,6 +4838,11 @@ void Configuration::impl::on_refresh_push_button_clicked ()
   restart_tci_device_ = false;
 }
 
+void Configuration::impl::on_tci_audio_check_box_clicked(bool checked)
+{
+  tci_audio_ = checked;
+}
+
 void Configuration::impl::on_sound_input_combo_box_currentTextChanged (QString const& text)
 {
   default_audio_input_device_selected_ = QAudioDeviceInfo::defaultInputDevice ().deviceName () == text;
@@ -5532,7 +5544,7 @@ bool Configuration::impl::open_rig (bool force)
         {
 //    printf("%s(%0.1f) Coniguration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
 
-          if (is_tci_ && rig_active_) restart_tci_device_ = true; 
+          if (is_tci_ && rig_active_ && tci_audio_) restart_tci_device_ = true; 
           close_rig ();
 
           // create a new Transceiver object
@@ -5942,14 +5954,14 @@ bool Configuration::impl::load_audio_devices (QAudio::Mode mode, QComboBox * com
   using std::copy;
   using std::back_inserter;
 
-//  printf("load audio devices: tci:%d\n",is_tci_);
+//  printf("load audio devices: tci:%d %d %d\n",is_tci_,tci_audio_,ui_->tci_audio_check_box->isChecked());
   bool result {false};
 
   combo_box->clear ();
 
   int current_index = -1;
   int default_index = -1;
-  if (is_tci_) {
+  if (is_tci_ && tci_audio_) {
     default_index = 0;
     QList<QVariant> channel_counts;
     QList<int> scc({1});

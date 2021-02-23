@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1335"/>
+        <location filename="../Configuration.cpp" line="1338"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1336"/>
+        <location filename="../Configuration.cpp" line="1339"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1351"/>
+        <location filename="../Configuration.cpp" line="1354"/>
         <source>Create temporary directory error: </source>
         <translation>Hiba az ideiglenes könyvtár létrehozásakor: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1357"/>
+        <location filename="../Configuration.cpp" line="1360"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 Lehet, hogy egy másik alkalmazás használja a könyvtárat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1374"/>
+        <location filename="../Configuration.cpp" line="1377"/>
         <source>Create data directory error: </source>
         <translation>Hiba az adatkönyvtár létrehozásakor: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1383"/>
-        <location filename="../Configuration.cpp" line="1394"/>
+        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1397"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Könyvtár létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1554"/>
-        <location filename="../Configuration.cpp" line="1580"/>
-        <location filename="../Configuration.cpp" line="1632"/>
+        <location filename="../Configuration.cpp" line="1557"/>
+        <location filename="../Configuration.cpp" line="1583"/>
+        <location filename="../Configuration.cpp" line="1635"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1584"/>
-        <location filename="../Configuration.cpp" line="1636"/>
+        <location filename="../Configuration.cpp" line="1587"/>
+        <location filename="../Configuration.cpp" line="1639"/>
         <source>&amp;Insert ...</source>
         <translation>Be&amp;illesztés ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1588"/>
+        <location filename="../Configuration.cpp" line="1591"/>
         <source>&amp;Load ...</source>
         <translation>Betö&amp;ltés ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1592"/>
+        <location filename="../Configuration.cpp" line="1595"/>
         <source>&amp;Save as ...</source>
         <translation>Menté&amp;s másként ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1596"/>
+        <location filename="../Configuration.cpp" line="1599"/>
         <source>&amp;Merge ...</source>
         <translation>Össze&amp;vonás ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1600"/>
+        <location filename="../Configuration.cpp" line="1603"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2872"/>
+        <location filename="../Configuration.cpp" line="2878"/>
         <source>Serial Port:</source>
         <translation>Soros port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2873"/>
+        <location filename="../Configuration.cpp" line="2879"/>
         <source>Serial port used for CAT control</source>
         <translation>A CAT vezérléshez használt soros port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2880"/>
+        <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2881"/>
+        <location filename="../Configuration.cpp" line="2887"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -152,12 +152,12 @@ Formats:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2893"/>
+        <location filename="../Configuration.cpp" line="2899"/>
         <source>Network Server:</source>
         <translation>Hálózati szerver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2894"/>
+        <location filename="../Configuration.cpp" line="2900"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -172,12 +172,12 @@ Formátumok:
 	[IPv6-cím]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2906"/>
+        <location filename="../Configuration.cpp" line="2912"/>
         <source>USB Device:</source>
         <translation>USB eszköz:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2907"/>
+        <location filename="../Configuration.cpp" line="2913"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -188,132 +188,132 @@ Formátum:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2942"/>
+        <location filename="../Configuration.cpp" line="2948"/>
         <source>Invalid audio input device</source>
         <translation>Helytelen hangkártya kiválasztása a bemenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2949"/>
+        <location filename="../Configuration.cpp" line="2955"/>
         <source>Invalid audio output device</source>
         <translation>Helytelen hangkártya kiválasztása a kimenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2955"/>
+        <location filename="../Configuration.cpp" line="2961"/>
         <source>Invalid PTT method</source>
         <translation>Helytelen PTT-módszer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2965"/>
+        <location filename="../Configuration.cpp" line="2971"/>
         <source>Invalid PTT port</source>
         <translation>Helytelen PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3491"/>
+        <location filename="../Configuration.cpp" line="3498"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3492"/>
+        <location filename="../Configuration.cpp" line="3499"/>
         <source>CQ in message</source>
         <translation>CQ az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4675"/>
+        <location filename="../Configuration.cpp" line="4682"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>A JTDX dekódolt szövegének betűtípus választása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5319"/>
-        <location filename="../Configuration.cpp" line="5350"/>
+        <location filename="../Configuration.cpp" line="5331"/>
+        <location filename="../Configuration.cpp" line="5362"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5315"/>
+        <location filename="../Configuration.cpp" line="5327"/>
         <source>Load Working Frequencies</source>
         <translation>Munkafrekvenciák betöltése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5346"/>
+        <location filename="../Configuration.cpp" line="5358"/>
         <source>Merge Working Frequencies</source>
         <translation>Munkafrekvenciák összevonása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5373"/>
-        <location filename="../Configuration.cpp" line="5382"/>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Not a valid frequencies file</source>
         <translation>Helytelen frekvenciafájl</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5373"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>Incorrect file magic</source>
         <translation>Helytelen fájl verzió</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Version is too new</source>
         <translation>A verzió nagyon új</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Contents corrupt</source>
         <translation>A tartalom sérült</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Save Working Frequencies</source>
         <translation>Munkafrekvenciák mentése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Csak a kiválasztott munkafrekvenciákat mentse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5426"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Biztos benne, hogy csak a jelenleg kiválasztott munkafrekvenciákat szeretné menteni? Az összes mentéséhez kattintson a Nem gombra.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5441"/>
+        <location filename="../Configuration.cpp" line="5453"/>
         <source>Reset Working Frequencies</source>
         <translation>Alaphelyzetbe állítja a munkafrekvenciákat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5443"/>
+        <location filename="../Configuration.cpp" line="5455"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat az alapértelmezettekkel?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5503"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Save Directory</source>
         <translation>Mentés a könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5519"/>
+        <location filename="../Configuration.cpp" line="5531"/>
         <source>Failed to open connection to rig</source>
         <translation>Hiba a rig-hez való csatlakozáskor</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5908"/>
+        <location filename="../Configuration.cpp" line="5920"/>
         <source>Rig failure</source>
         <translation>Rig hiba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5317"/>
-        <location filename="../Configuration.cpp" line="5348"/>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5329"/>
+        <location filename="../Configuration.cpp" line="5360"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvencia fájlok (*.qrg);;Minden fájl (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5333"/>
+        <location filename="../Configuration.cpp" line="5345"/>
         <source>Replace Working Frequencies</source>
         <translation>Munkafrekvenciák kicserélése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5334"/>
+        <location filename="../Configuration.cpp" line="5346"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat a betöltöttekkel?</translation>
     </message>
@@ -5188,7 +5188,7 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5268"/>
+        <location filename="../Configuration.cpp" line="5280"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5196,99 +5196,99 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5270"/>
+        <location filename="../Configuration.cpp" line="5282"/>
         <source>Directory:</source>
         <translation>Könyvtár:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5271"/>
+        <location filename="../Configuration.cpp" line="5283"/>
         <source>File &amp;name:</source>
         <translation>Fájl&amp;név:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5272"/>
+        <location filename="../Configuration.cpp" line="5284"/>
         <source>&amp;Open</source>
         <translation>Megny&amp;it</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5273"/>
+        <location filename="../Configuration.cpp" line="5285"/>
         <source>&amp;Choose</source>
         <translation>&amp;Választás</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5274"/>
+        <location filename="../Configuration.cpp" line="5286"/>
         <source>&amp;Save</source>
         <translation>Menté&amp;s</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5276"/>
+        <location filename="../Configuration.cpp" line="5288"/>
         <source>All files (*)</source>
         <translation>Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5277"/>
+        <location filename="../Configuration.cpp" line="5289"/>
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5278"/>
+        <location filename="../Configuration.cpp" line="5290"/>
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5275"/>
+        <location filename="../Configuration.cpp" line="5287"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5279"/>
+        <location filename="../Configuration.cpp" line="5291"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5280"/>
+        <location filename="../Configuration.cpp" line="5292"/>
         <source>&amp;Rename</source>
         <translation>Átn&amp;evez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5281"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>Show &amp;hidden files</source>
         <translation>Rejtett &amp;fájlok mutatása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5282"/>
+        <location filename="../Configuration.cpp" line="5294"/>
         <source>&amp;New Folder</source>
         <translation>Új &amp;mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5283"/>
+        <location filename="../Configuration.cpp" line="5295"/>
         <source>Look in:</source>
         <translation>Betekintés:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5284"/>
+        <location filename="../Configuration.cpp" line="5296"/>
         <source>Files of type:</source>
         <translation>Fájltípusok:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5285"/>
+        <location filename="../Configuration.cpp" line="5297"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>A &apos;%1&apos; írásvédett.
 Szeretné törölni?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5286"/>
+        <location filename="../Configuration.cpp" line="5298"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Biztosan törli a &apos;%1&apos; fájlt?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5287"/>
+        <location filename="../Configuration.cpp" line="5299"/>
         <source>Could not delete directory.</source>
         <translation>Nem sikerült törölni a könyvtárat.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5288"/>
+        <location filename="../Configuration.cpp" line="5300"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5297,92 +5297,92 @@ A könyvtár nem található.
 Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5290"/>
+        <location filename="../Configuration.cpp" line="5302"/>
         <source>Recent Places</source>
         <translation>Legutóbbi helyek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5291"/>
+        <location filename="../Configuration.cpp" line="5303"/>
         <source>Back</source>
         <translation>Vissza</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5292"/>
+        <location filename="../Configuration.cpp" line="5304"/>
         <source>Go back</source>
         <translation>Visszatér</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5293"/>
+        <location filename="../Configuration.cpp" line="5305"/>
         <source>Alt+Left</source>
         <translation>Alt+Bal</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5294"/>
+        <location filename="../Configuration.cpp" line="5306"/>
         <source>Forward</source>
         <translation>Előre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5295"/>
+        <location filename="../Configuration.cpp" line="5307"/>
         <source>Go forward</source>
         <translation>Folytat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5296"/>
+        <location filename="../Configuration.cpp" line="5308"/>
         <source>Alt+Right</source>
         <translation>Alt+Jobb</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5297"/>
+        <location filename="../Configuration.cpp" line="5309"/>
         <source>Parent Directory</source>
         <translation>Szülő könyvtár</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5298"/>
+        <location filename="../Configuration.cpp" line="5310"/>
         <source>Go to the parent directory</source>
         <translation>Menjen a szülő könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5299"/>
+        <location filename="../Configuration.cpp" line="5311"/>
         <source>Alt+Up</source>
         <translation>Alt+Fel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5300"/>
+        <location filename="../Configuration.cpp" line="5312"/>
         <source>Create New Folder</source>
         <translation>Új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5301"/>
+        <location filename="../Configuration.cpp" line="5313"/>
         <source>Create a New Folder</source>
         <translation>Egy új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5302"/>
+        <location filename="../Configuration.cpp" line="5314"/>
         <source>List View</source>
         <translation>Lista nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5303"/>
+        <location filename="../Configuration.cpp" line="5315"/>
         <source>Change to list view mode</source>
         <translation>Váltás lista nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5304"/>
+        <location filename="../Configuration.cpp" line="5316"/>
         <source>Detail View</source>
         <translation>Részletes nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5305"/>
+        <location filename="../Configuration.cpp" line="5317"/>
         <source>Change to detail view mode</source>
         <translation>Váltás a részletes nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5306"/>
+        <location filename="../Configuration.cpp" line="5318"/>
         <source>Sidebar</source>
         <translation>Oldalsáv</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5307"/>
+        <location filename="../Configuration.cpp" line="5319"/>
         <source>List of places and bookmarks</source>
         <translation>Helyek és könyvjelzők listája</translation>
     </message>
@@ -5390,22 +5390,22 @@ Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5309"/>
+        <location filename="../Configuration.cpp" line="5321"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5310"/>
+        <location filename="../Configuration.cpp" line="5322"/>
         <source>Size</source>
         <translation>Méret</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5311"/>
+        <location filename="../Configuration.cpp" line="5323"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5312"/>
+        <location filename="../Configuration.cpp" line="5324"/>
         <source>Date Modified</source>
         <translation>Módosítás dátuma</translation>
     </message>
@@ -6851,175 +6851,175 @@ a Stereo-t.</translation>
         <translation>Kimene&amp;t:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1842"/>
+        <location filename="../Configuration.ui" line="1858"/>
         <source>Remember power settings by band and mode</source>
         <translation>Teljesítmény beállítása sáv és üzemmód szerint</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1850"/>
+        <location filename="../Configuration.ui" line="1866"/>
         <source>Enable power memory during transmit</source>
         <translation>Engedélyezi a teljesítmény memóriát az adás során</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1853"/>
+        <location filename="../Configuration.ui" line="1869"/>
         <source>Transmit</source>
         <translation>Adás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1860"/>
+        <location filename="../Configuration.ui" line="1876"/>
         <source>Enable power memory during tuning</source>
         <translation>Engedélyezi a teljesítmény memóriát a hangolás közben</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1863"/>
+        <location filename="../Configuration.ui" line="1879"/>
         <source>Tune</source>
         <translation>Hangolás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1888"/>
+        <location filename="../Configuration.ui" line="1904"/>
         <source>Audio files save directory</source>
         <translation>Audio fájlok mentése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1894"/>
+        <location filename="../Configuration.ui" line="1910"/>
         <source>Loc&amp;ation:</source>
         <translation>H&amp;ely:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1910"/>
+        <location filename="../Configuration.ui" line="1926"/>
         <source>Path to which .WAV files are saved.</source>
         <translation>A .WAV fájlok mentésének elérési útja.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1919"/>
+        <location filename="../Configuration.ui" line="1935"/>
         <source>TextLabel</source>
         <translation>Szövegcímke</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1926"/>
+        <location filename="../Configuration.ui" line="1942"/>
         <source>Click to select a different save directory for .WAV files.</source>
         <translation>Válasszon egy másik könyvtárt a .WAV fájlok mentéséhez.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1929"/>
+        <location filename="../Configuration.ui" line="1945"/>
         <source>S&amp;elect</source>
         <translation>Válas&amp;ztás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1960"/>
+        <location filename="../Configuration.ui" line="1976"/>
         <source>Sequencing</source>
         <translation>Kiválasztás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1984"/>
+        <location filename="../Configuration.ui" line="2000"/>
         <source>Message sequencing short scenarios</source>
         <translation>Üzenet kiválasztásii lehetőségek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1992"/>
+        <location filename="../Configuration.ui" line="2008"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoVál 1..3: adjon CQ-t, ha a számláló végigért.  AutoVál 6/7: a dekódolt üzenetekben keressen &apos;CQ&apos; vagy &apos;73&apos; üzenetet, ha nincsenek ilyen üzenetek, adjon CQ-t.Állítsa meg az adást, ha a Meghívás opció be van kapcsolva..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1995"/>
+        <location filename="../Configuration.ui" line="2011"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
         <translation>Számlálók. CQ hívás, vagy válasz adás letiltása, ha:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2027"/>
-        <location filename="../Configuration.ui" line="2066"/>
-        <location filename="../Configuration.ui" line="2092"/>
-        <location filename="../Configuration.ui" line="2128"/>
+        <location filename="../Configuration.ui" line="2043"/>
+        <location filename="../Configuration.ui" line="2082"/>
+        <location filename="../Configuration.ui" line="2108"/>
+        <location filename="../Configuration.ui" line="2144"/>
         <source>times</source>
         <translation>alkalommal</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2040"/>
+        <location filename="../Configuration.ui" line="2056"/>
         <source>called CQ,  received a call and answered</source>
         <translation>CQ-t adott, vett egy hívást és válaszolt rá</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2102"/>
+        <location filename="../Configuration.ui" line="2118"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
         <translation>RR73 (73)-at adott, válaszként a beérkező RRR(RR73)-ra</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2141"/>
+        <location filename="../Configuration.ui" line="2157"/>
         <source>answered to someone&apos;s CQ with no response</source>
         <translation>Válaszolt valakinek a CQ-jára, de választ nem kapott</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2154"/>
+        <location filename="../Configuration.ui" line="2170"/>
         <source>sent report answering to incoming report</source>
         <translation>Riportot adott a válaszként a vett riportra</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2188"/>
+        <location filename="../Configuration.ui" line="2204"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ez az opció egy nem átfedő spektrumú kapcsolat esetén használható, a Tx letiltására. Ha a spektrumok azonos frekvenciájúak, akkor e beállítástól függetlenül.a Tx letiltódik.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2191"/>
+        <location filename="../Configuration.ui" line="2207"/>
         <source>Halt TX if operator I called answered to other operator</source>
         <translation>Álljon le az adás, ha a hívott állomás másnak válaszol.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2198"/>
+        <location filename="../Configuration.ui" line="2214"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alapértelmezés szerint az automatikus választás figyelmen kívül hagyja a CQ vett/adott irányát, ha van egy &apos;új DXCC&apos; ország üzenet dekódolva: akár bejövő hívójel, akár választás dekódolt CQ/73 üzenetből.. Ez az opció lehetővé teszi, hogy figyelmen kívül hagyja az új DXCC országot, ha az nem felel meg az operátor által küldött CQ hívás irányának, vagy ha az operátor hívójele nem egyezik az új DXCC országbeli partner által küldött CQ hívás irányával.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2201"/>
+        <location filename="../Configuration.ui" line="2217"/>
         <source>Strict directional CQ operation</source>
         <translation>Célzott CQ hívás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2259"/>
+        <location filename="../Configuration.ui" line="2275"/>
         <source>Tx &amp;Macros</source>
         <translation>Tx &amp;Makrók</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2262"/>
+        <location filename="../Configuration.ui" line="2278"/>
         <source>Canned free text messages setup</source>
         <translation>Tetszőleges szabad szöveges üzenetek beállítása</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2268"/>
+        <location filename="../Configuration.ui" line="2284"/>
         <source>&amp;Add</source>
         <translation>Hozzá&amp;ad</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2275"/>
+        <location filename="../Configuration.ui" line="2291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Legfeljebb 13 karakter lehet a szabad üzenet hossza.&lt;br&gt;&lt;br&gt;Legfeljebb 19 karakter lehet az irányított CQ standard üzenet hossza.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2285"/>
+        <location filename="../Configuration.ui" line="2301"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2295"/>
+        <location filename="../Configuration.ui" line="2311"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használja a húzza és ejtse technológiát az üzenet sorrend rendezéséhez.. Az elemmel kapcsolatos konkrét műveletekhez kattintson a jobb gombbal az elemre. SHIFT+Kattintás és, CRTL+Kattintás az elemek kiválasztásához. A @ szimbólum helyettesíti a DX hívójelét, &amp; szimbólum a felhasználónak az alaphívójelét, # szimbólum az adási riportot, ^ a szimbólum a logból lekérdezett operátor nevét, ahol a név nem haladhatja meg a 7 karaktert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2346"/>
+        <location filename="../Configuration.ui" line="2362"/>
         <source>Reportin&amp;g</source>
         <translation>R&amp;iport</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2349"/>
+        <location filename="../Configuration.ui" line="2365"/>
         <source>Reporting and logging settings</source>
         <translation>Riport és Log beállítások</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2362"/>
+        <location filename="../Configuration.ui" line="2378"/>
         <source>Logging</source>
         <translation>Log használat</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2398"/>
+        <location filename="../Configuration.ui" line="2414"/>
         <source>Some logging programs will not accept the type of reports
 saved by this program.
 Check this option to save the sent and received reports in the
@@ -7028,172 +7028,172 @@ comments field.</source>
 Jelölje be ezt a lehetőséget, ha menti az adott és vett riportokat a megjegyzés mezőbe.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2404"/>
+        <location filename="../Configuration.ui" line="2420"/>
         <source>d&amp;B reports to comments</source>
         <translation>d&amp;B riport mentése a megjegyzéshez.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2431"/>
+        <location filename="../Configuration.ui" line="2447"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
         <translation>Jelölje be ezt az opciót a DX hívójel és DX QRA mezők törléséhez,
 egy 73 vagy szabad szöveges üzenet küldésekor.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2435"/>
+        <location filename="../Configuration.ui" line="2451"/>
         <source>Clear &amp;DX call and grid after logging</source>
         <translation> &amp;DX hívójel és QRA törlése mentéskor.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2411"/>
+        <location filename="../Configuration.ui" line="2427"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelölje be ezt az opciót a DX hívójel és DX QRA mezők törléséhez, amikor kilép a JTDX-ből. Ez a funkció az UR5EQF log szoftver felhasználói számára készült.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2414"/>
+        <location filename="../Configuration.ui" line="2430"/>
         <source>Clear DX call and grid on exit</source>
         <translation>DX hívójel és QRA törlése kilépéskor.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2388"/>
+        <location filename="../Configuration.ui" line="2404"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
         <translation>Egyes logozó programok nem fogadják el a JT-65 vagy a JT9-et, mint egy elfogadott üzemmódot.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2391"/>
+        <location filename="../Configuration.ui" line="2407"/>
         <source>Con&amp;vert mode to RTTY</source>
         <translation>Üzemmód kon&amp;vertálása RTTY-re</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2421"/>
+        <location filename="../Configuration.ui" line="2437"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
         <translation>A program egy részben kitöltött Log felugró párbeszédablakot jelenít meg, amikor a QSO-ban 73-at, vagy szabad szöveges üzenetet küld.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2424"/>
+        <location filename="../Configuration.ui" line="2440"/>
         <source>Promp&amp;t me to log QSO</source>
         <translation>A QSO mentésekor megerősítést kér.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2442"/>
+        <location filename="../Configuration.ui" line="2458"/>
         <source>Enable automatic logging of QSO</source>
         <translation>QSO automatikus mentése.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2482"/>
+        <location filename="../Configuration.ui" line="2498"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Csatlakozás külső logozó szoftverhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2485"/>
+        <location filename="../Configuration.ui" line="2501"/>
         <source>Send logged QSO ADIF data</source>
         <translation>QSO adatátvitel ADIF formátumban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2519"/>
         <location filename="../Configuration.ui" line="2535"/>
+        <location filename="../Configuration.ui" line="2551"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP szerver neve vagy címe&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2522"/>
+        <location filename="../Configuration.ui" line="2538"/>
         <source>TCP server:</source>
         <translation>TCP szerver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2542"/>
-        <location filename="../Configuration.ui" line="2552"/>
+        <location filename="../Configuration.ui" line="2558"/>
+        <location filename="../Configuration.ui" line="2568"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP szerver port száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2545"/>
+        <location filename="../Configuration.ui" line="2561"/>
         <source>TCP port:</source>
         <translation>TCP port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2567"/>
+        <location filename="../Configuration.ui" line="2583"/>
         <source>Enable sending to TCP server</source>
         <translation>Engedélyezi a küldést a TCP szerverre</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2592"/>
+        <location filename="../Configuration.ui" line="2608"/>
         <source>2nd UDP server</source>
         <translation>2. UDP szerver</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2606"/>
-        <location filename="../Configuration.ui" line="2616"/>
+        <location filename="../Configuration.ui" line="2622"/>
+        <location filename="../Configuration.ui" line="2632"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;másodlagos UDP szerver port száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2609"/>
+        <location filename="../Configuration.ui" line="2625"/>
         <source>UDP port:</source>
         <translation>UDP port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2625"/>
+        <location filename="../Configuration.ui" line="2641"/>
         <source>Enable sending to secondary UDP server</source>
         <translation>Engedélyezi a küldést a másodlagos UDP szerverre</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2658"/>
+        <location filename="../Configuration.ui" line="2674"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az elküldött szöveges üzenetek rögzítését nem lehet letiltani.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2661"/>
+        <location filename="../Configuration.ui" line="2677"/>
         <source>Recording to ALL.TXT</source>
         <translation>Az ALL.txt fájl mentési beállításai</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2683"/>
+        <location filename="../Configuration.ui" line="2699"/>
         <source>decoded messages</source>
         <translation>Dekódolt üzenetek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2690"/>
+        <location filename="../Configuration.ui" line="2706"/>
         <source>decoded and debug messages</source>
         <translation>Dekódolt és hibakeresési üzenetek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2732"/>
+        <location filename="../Configuration.ui" line="2748"/>
         <source>Network Services</source>
         <translation>Hálózati szolgáltatások</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2753"/>
+        <location filename="../Configuration.ui" line="2769"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
         <translation>QSO adatok feltöltésének engedélyezése a http://www.eqsl.cc oldalra.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2756"/>
+        <location filename="../Configuration.ui" line="2772"/>
         <source>Enable &amp;eQSL sending</source>
         <translation>&amp;eQSL.cc feltöltés engedélyezése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2776"/>
+        <location filename="../Configuration.ui" line="2792"/>
         <source>EQSL Username.</source>
         <translation>eQSL.cc felhasználónév.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2783"/>
+        <location filename="../Configuration.ui" line="2799"/>
         <source>U&amp;sername:</source>
         <translation>Felha&amp;sználónév:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2793"/>
+        <location filename="../Configuration.ui" line="2809"/>
         <source>P&amp;assword:</source>
         <translation>&amp;Jelszó:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2803"/>
+        <location filename="../Configuration.ui" line="2819"/>
         <source>EQSL Password.</source>
         <translation>eQSL.cc jelszó:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2813"/>
+        <location filename="../Configuration.ui" line="2829"/>
         <source>The program can send your station details and all
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
@@ -7203,260 +7203,260 @@ for assessing propagation and system performance.</source>
 Ezek az adatok a terjedés és a rendszer lehetőségeinek elemzését segítik.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2819"/>
+        <location filename="../Configuration.ui" line="2835"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
         <translation>DX jelentés engedélyezése a &amp;PSK Reporter oldalra</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2826"/>
+        <location filename="../Configuration.ui" line="2842"/>
         <source>EQSL OTH Nickname.</source>
         <translation>eQSL.cc QTH neve.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2833"/>
+        <location filename="../Configuration.ui" line="2849"/>
         <source>Enable DXSummit Spotting </source>
         <translation>DX jelentés engedélyezése a DXSummit oldalra</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2840"/>
+        <location filename="../Configuration.ui" line="2856"/>
         <source>QTH N&amp;ickname:</source>
         <translation>QTH Ni&amp;ckname:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2853"/>
+        <location filename="../Configuration.ui" line="2869"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elsődleges UDP kapcsolat a külső szoftverrel.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2856"/>
+        <location filename="../Configuration.ui" line="2872"/>
         <source>Primary UDP Server</source>
         <translation>Elsődleges UDP szerver</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2886"/>
+        <location filename="../Configuration.ui" line="2902"/>
         <source>UDP Server:</source>
         <translation>UDP Szerver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2902"/>
+        <location filename="../Configuration.ui" line="2918"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hálózati szolgáltatás opcionális hostneve a dekódolások fogadásához.&lt;/p&gt;&lt;p&gt;Formátumok:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostnév&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 cim&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 cím&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast csoport cím&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast csoport cím&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ennek a mezőnek a törlése letiltja az UDP-állapot frissítések továbbítását.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2912"/>
+        <location filename="../Configuration.ui" line="2928"/>
         <source>UDP Server port number:</source>
         <translation>UDP szerver portszáma:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2942"/>
+        <location filename="../Configuration.ui" line="2958"/>
         <source>Accept UDP requests</source>
         <translation>Fogadja el az UDP kéréseket</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2949"/>
+        <location filename="../Configuration.ui" line="2965"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jelezze a bejövő UDP kérés elfogadását. Ennek az opciónak a hatása az operációs rendszertől és az ablakkezelőtől függően változhat, célja az, hogy értesítsen a bejövő UDP kérés elfogadásáról, még akkor is, ha ezt az alkalmazást minimalizálják vagy elrejtik.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2952"/>
+        <location filename="../Configuration.ui" line="2968"/>
         <source>Notify on accepted UDP request</source>
         <translation>Értesítsen az elfogadott UDP kérésről</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2959"/>
+        <location filename="../Configuration.ui" line="2975"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Visszaállítja az ablakot a minimalizáltból, ha egy UDP kérés elfogadásra kerül.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2962"/>
+        <location filename="../Configuration.ui" line="2978"/>
         <source>Accepted UDP request restores window</source>
         <translation>Az elfogadott UDP kérés visszaállítja az ablakot</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2973"/>
+        <location filename="../Configuration.ui" line="2989"/>
         <source>Enable sending logged QSO ADIF data</source>
         <translation>Engedélyezi a mentett QSO adif formátumban való küldését.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2983"/>
+        <location filename="../Configuration.ui" line="2999"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A kérdőjellel megjelölt üzenetek nem kerülnek továbbításra a JTAlert és más UDP alapú szoftverek számára.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2986"/>
+        <location filename="../Configuration.ui" line="3002"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
         <translation>Letiltja az azonosíthatatlanhívójelek UDP-n való küldését.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2993"/>
+        <location filename="../Configuration.ui" line="3009"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A kiválasztott szövegszűrők szolgálnak a JTDX-ből származó UDP üzenetek továbbításának korlátozására, például egyes kontinensektől származó üzenetek blokkolhatók.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2996"/>
+        <location filename="../Configuration.ui" line="3012"/>
         <source>Apply text filters to transmission of the UDP messages</source>
         <translation>Szövegszűrők használata az UDP üzenetek küldésekor.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3031"/>
+        <location filename="../Configuration.ui" line="3047"/>
         <source>Frequencies</source>
         <translation>Frekvenciák</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3034"/>
+        <location filename="../Configuration.ui" line="3050"/>
         <source>Default frequencies and band specific station details setup</source>
         <translation>Az alapértelmezett frekvenciák és egy adott frekvenciasáv paramétereinek beállítása</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3040"/>
+        <location filename="../Configuration.ui" line="3056"/>
         <source>Working Frequencies</source>
         <translation>Munkafrekvenciák</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3652"/>
+        <location filename="../Configuration.ui" line="3668"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>Hint jel elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3655"/>
+        <location filename="../Configuration.ui" line="3671"/>
         <source>Hide hint char</source>
         <translation>Hint jel elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5138"/>
+        <location filename="../Configuration.ui" line="5154"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3082"/>
+        <location filename="../Configuration.ui" line="3098"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
         <translation>Lásd a WSPR dokumentációjának C. függelékét a rádiójához tartozó ezen tényezők meghatározásának részleteiről.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3085"/>
+        <location filename="../Configuration.ui" line="3101"/>
         <source>Frequency Calibration</source>
         <translation>Frekvencia kalibrálás</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3094"/>
+        <location filename="../Configuration.ui" line="3110"/>
         <source>Intercept:</source>
         <translation>Intercept:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3107"/>
-        <location filename="../Configuration.ui" line="6868"/>
+        <location filename="../Configuration.ui" line="3123"/>
+        <location filename="../Configuration.ui" line="6884"/>
         <source> Hz</source>
         <translation> Hz</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3126"/>
+        <location filename="../Configuration.ui" line="3142"/>
         <source>Slope:</source>
         <translation>Slope:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3139"/>
+        <location filename="../Configuration.ui" line="3155"/>
         <source> ppm</source>
         <translation> ppm</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3182"/>
+        <location filename="../Configuration.ui" line="3198"/>
         <source>Station Information</source>
         <translation>Állomásinformációk</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3194"/>
+        <location filename="../Configuration.ui" line="3210"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
         <translation>Az elemek szerkeszthetők.
 A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhetők.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3242"/>
+        <location filename="../Configuration.ui" line="3258"/>
         <source>Notifications</source>
         <translation>Értesítések</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3250"/>
+        <location filename="../Configuration.ui" line="3266"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
         <translation>QSO státusz jelzések:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3276"/>
+        <location filename="../Configuration.ui" line="3292"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan CQ zónákat, amelyek még nincsenek a wsjtx_log.adi naplófájlban..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3279"/>
+        <location filename="../Configuration.ui" line="3295"/>
         <source>Check and highlight new CQZ</source>
         <translation>Új CQ zóna</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3286"/>
+        <location filename="../Configuration.ui" line="3302"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan CQ zónákat, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3296"/>
+        <location filename="../Configuration.ui" line="3312"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan CQ zónákat, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3316"/>
+        <location filename="../Configuration.ui" line="3332"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan ITU zónákat, amelyek még nincsenek a wsjtx_log.adi logfájlban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3319"/>
+        <location filename="../Configuration.ui" line="3335"/>
         <source>Check and highlight new ITUZ</source>
         <translation>Új ITU zóna</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3326"/>
+        <location filename="../Configuration.ui" line="3342"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan ITU zónákat, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3336"/>
+        <location filename="../Configuration.ui" line="3352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan ITU zónákat, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3356"/>
+        <location filename="../Configuration.ui" line="3372"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan DXCC országokat, amelyek még nincsenek a wsjtx_log.adi logfájlban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3359"/>
+        <location filename="../Configuration.ui" line="3375"/>
         <source>Check and highlight new DXCC</source>
         <translation>Új DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3366"/>
+        <location filename="../Configuration.ui" line="3382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan DXCC országokat, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3289"/>
-        <location filename="../Configuration.ui" line="3329"/>
-        <location filename="../Configuration.ui" line="3369"/>
-        <location filename="../Configuration.ui" line="3409"/>
-        <location filename="../Configuration.ui" line="3449"/>
-        <location filename="../Configuration.ui" line="3489"/>
+        <location filename="../Configuration.ui" line="3305"/>
+        <location filename="../Configuration.ui" line="3345"/>
+        <location filename="../Configuration.ui" line="3385"/>
+        <location filename="../Configuration.ui" line="3425"/>
+        <location filename="../Configuration.ui" line="3465"/>
+        <location filename="../Configuration.ui" line="3505"/>
         <source>per band</source>
         <translation>sávonként</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3376"/>
+        <location filename="../Configuration.ui" line="3392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan DXCC országokat, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3299"/>
-        <location filename="../Configuration.ui" line="3339"/>
-        <location filename="../Configuration.ui" line="3379"/>
-        <location filename="../Configuration.ui" line="3419"/>
-        <location filename="../Configuration.ui" line="3459"/>
-        <location filename="../Configuration.ui" line="3499"/>
+        <location filename="../Configuration.ui" line="3315"/>
+        <location filename="../Configuration.ui" line="3355"/>
+        <location filename="../Configuration.ui" line="3395"/>
+        <location filename="../Configuration.ui" line="3435"/>
+        <location filename="../Configuration.ui" line="3475"/>
+        <location filename="../Configuration.ui" line="3515"/>
         <source>per mode</source>
         <translation>üzemmódonként</translation>
     </message>
@@ -7491,462 +7491,472 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
         <translation>Frissítés</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2449"/>
+        <location filename="../Configuration.ui" line="1839"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1842"/>
+        <source>Use TCI Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="2465"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>Távolság beillesztése a megjegyzésekhez</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2452"/>
+        <location filename="../Configuration.ui" line="2468"/>
         <source>Distance to comments</source>
         <translation>Távolság beillesztése a megjegyzésekhez</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2922"/>
+        <location filename="../Configuration.ui" line="2938"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Írja be az UDP szerver portszámát,amelyre a JTDX frissítéseket küld. Ha ez nulla, akkor a frissítések nem kerülnek továbbításra.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2939"/>
+        <location filename="../Configuration.ui" line="2955"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ennek engedélyezésével a JTDX elfogad bizonyos viszontkéréseket a dekódoló üzeneteket fogadó UDP szervertől.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3055"/>
+        <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kattintson a jobb gombbal a munkafrekvenciák listájának módosításához.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3306"/>
-        <location filename="../Configuration.ui" line="3346"/>
-        <location filename="../Configuration.ui" line="3386"/>
-        <location filename="../Configuration.ui" line="3426"/>
-        <location filename="../Configuration.ui" line="3466"/>
-        <location filename="../Configuration.ui" line="3506"/>
+        <location filename="../Configuration.ui" line="3322"/>
+        <location filename="../Configuration.ui" line="3362"/>
+        <location filename="../Configuration.ui" line="3402"/>
+        <location filename="../Configuration.ui" line="3442"/>
+        <location filename="../Configuration.ui" line="3482"/>
+        <location filename="../Configuration.ui" line="3522"/>
         <source>Use also system sound for the notification.</source>
         <translation>Használja a rendszer hangjait az értesítésekhez.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3309"/>
-        <location filename="../Configuration.ui" line="3349"/>
-        <location filename="../Configuration.ui" line="3389"/>
-        <location filename="../Configuration.ui" line="3429"/>
-        <location filename="../Configuration.ui" line="3469"/>
-        <location filename="../Configuration.ui" line="3509"/>
+        <location filename="../Configuration.ui" line="3325"/>
+        <location filename="../Configuration.ui" line="3365"/>
+        <location filename="../Configuration.ui" line="3405"/>
+        <location filename="../Configuration.ui" line="3445"/>
+        <location filename="../Configuration.ui" line="3485"/>
+        <location filename="../Configuration.ui" line="3525"/>
         <source>Beep as well</source>
         <translation>Hangjelzés is</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3396"/>
+        <location filename="../Configuration.ui" line="3412"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan QRA kockákat, amelyek még nincsenek a wsjtx_log.adi logfájlban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3399"/>
+        <location filename="../Configuration.ui" line="3415"/>
         <source>Check and highlight new grids</source>
         <translation>Új QRA kocka</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3406"/>
+        <location filename="../Configuration.ui" line="3422"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan QRA kockákat, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3416"/>
+        <location filename="../Configuration.ui" line="3432"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan QRA kockákat, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3436"/>
+        <location filename="../Configuration.ui" line="3452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan prefixeket, amelyek még nincsenek a wsjtx_log.adi logfájlban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3439"/>
+        <location filename="../Configuration.ui" line="3455"/>
         <source>Check and highlight new prefixes</source>
         <translation>Új prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3446"/>
+        <location filename="../Configuration.ui" line="3462"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan prefixeket, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3456"/>
+        <location filename="../Configuration.ui" line="3472"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan prefixeket, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3476"/>
+        <location filename="../Configuration.ui" line="3492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan hívójeleket, amelyek még nincsenek a wsjtx_log.adi logfájlban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3479"/>
+        <location filename="../Configuration.ui" line="3495"/>
         <source>Check and highlight new calls</source>
         <translation>Új hívójel</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3486"/>
+        <location filename="../Configuration.ui" line="3502"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan hívójeleket, amelyek újak a sávban a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3496"/>
+        <location filename="../Configuration.ui" line="3512"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kiemelten jelöli az olyan hívójeleket, amelyek új üzemmódban vannak a wsjtx_log.adi logfájl adatai szerint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3516"/>
+        <location filename="../Configuration.ui" line="3532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használjon színes értesítéseket a korábban már a DXCC-vel, QRA-val, Hívójellel volt újabb QSO esetén.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3519"/>
+        <location filename="../Configuration.ui" line="3535"/>
         <source>Highlight worked ones</source>
         <translation>Korábban már volt QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3526"/>
+        <location filename="../Configuration.ui" line="3542"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A korábban már a DXCC-vel, QRA-val, Hívójellel volt újabb QSO esetén áthúzott felirattal lesz jelölve.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3529"/>
+        <location filename="../Configuration.ui" line="3545"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A korábban már a Hívójellel volt újabb QSO esetén áthúzott felirattal lesz jelölve.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3532"/>
+        <location filename="../Configuration.ui" line="3548"/>
         <source>strike it</source>
         <translation>áthúzva</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3539"/>
+        <location filename="../Configuration.ui" line="3555"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A korábban már a DXCC-vel, QRA-val, Hívójellel volt újabb QSO esetén aláhúzott felirattal lesz jelölve.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3542"/>
+        <location filename="../Configuration.ui" line="3558"/>
         <source>underline it</source>
         <translation>aláhúzva</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3549"/>
+        <location filename="../Configuration.ui" line="3565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A korábban már a DXCC-vel, QRA-val, Hívójellel volt újabb QSO esetén, azok az üzenetek, amelyekben nincs Saját hívójel, átugrásra kerülnek a dekódolt szövegablakban&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3552"/>
+        <location filename="../Configuration.ui" line="3568"/>
         <source>don&apos;t show it</source>
         <translation>ne mutasd</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3559"/>
+        <location filename="../Configuration.ui" line="3575"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invertálja a vett üzenetek szövegszínét &lt;-&gt; háttérszínét&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3562"/>
+        <location filename="../Configuration.ui" line="3578"/>
         <source>Inverse text/background color</source>
         <translation>Inverz szöveg/háttérszín</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3569"/>
+        <location filename="../Configuration.ui" line="3585"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alapértelmezés szerint a csak a &quot;CQ&quot;-t és a Saját hívójelet tartalmazó üzenetek vannak ellenőrizve, ez a beállítás lehetővé teszi az egyéb DXCC-t, QRA-t, Hívójel-et tartalmazó standard vett üzenetek ellenőrzését is. Az értesítéshez az „Egyéb üzenet” szín használatos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3572"/>
+        <location filename="../Configuration.ui" line="3588"/>
         <source>Highlight other standard messages</source>
         <translation>Egyéb üzenet kiemelten jelölése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3592"/>
+        <location filename="../Configuration.ui" line="3608"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használja a rendszer hangját az értesítéshez, amint az első üzenet dekódolva van az RX intervallumban.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3595"/>
+        <location filename="../Configuration.ui" line="3611"/>
         <source>Beep on 1st decoded message</source>
         <translation>Hangjelzés az első dekódolt üzenetkor</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3602"/>
+        <location filename="../Configuration.ui" line="3618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hangjelzést ad, ha a fogadott üzenet tartalmazza a saját hívójelet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3605"/>
+        <location filename="../Configuration.ui" line="3621"/>
         <source>Beep on my call</source>
         <translation>Hangjelzés a saját hívójelnél</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3635"/>
+        <location filename="../Configuration.ui" line="3651"/>
         <source>Markers</source>
         <translation>Jelölések:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3642"/>
+        <location filename="../Configuration.ui" line="3658"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használva a kék jelölést, értesülhet, hogy szerepel-e a saját hívójele a folyamatban lévő QSO-val kapcsolatos dekódolt üzenetben (a QSO partner hívójele a DX_hívójel ablakban van), a hívójelét tartalmazó többi üzenet piros színű lesz..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3645"/>
+        <location filename="../Configuration.ui" line="3661"/>
         <source>blue / my call at QSO</source>
         <translation>Kék / Saját hívójel a QSO-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3691"/>
+        <location filename="../Configuration.ui" line="3707"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használva a piros jelölést, értesülhet, ha szerepel a saját hívójele a dekódolt üzenetben.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3694"/>
+        <location filename="../Configuration.ui" line="3710"/>
         <source>red / my call in message</source>
         <translation>Piros /Saját  hívójel az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3704"/>
+        <location filename="../Configuration.ui" line="3720"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az üzenet végét jelölje meg egy jelölővel, a háttér szín helyett .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3707"/>
+        <location filename="../Configuration.ui" line="3723"/>
         <source>Other standard messages</source>
         <translation>Egyéb standard üzenetek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3750"/>
+        <location filename="../Configuration.ui" line="3766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az előnézeti kis panelok tetején vannak olyan üzenettípusok, amelyek bizonyos kritériumok alapján ellenőrizve lettek, ezáltal kiválasztva az egyes üzenettípusokhoz a szöveg színét.&lt;br&gt;&lt;br&gt;A bal oldali oszlopban vannak hierarchia sorrendben felsorolva a feltételek, és ezen kritériumoknak megfelelő üzenetekhez a háttér szín kiválasztható itt a kis panelra kattintva.&lt;br&gt;&lt;br&gt;A lista alján a „Volt már QSO” értesítési funkció a maradék elven alapul, amely akkor aktiválódik, ha az összes aktivált „Új” kritérium nem teljesül.&lt;br&gt;&lt;br&gt;Az &apos;inverz szín&apos; akkor használható, ha a felhasználó szeretné kiemelni a CQ és a &apos;Saját hívójel&apos; üzeneteket egy adottt háttérszínnel.&lt;br&gt;&lt;br&gt;A kezdésnek válassza ki az egyik kritériumot, és az új sáv/üzemmód értesítés hasonló színekkel használható, esetleg eltérő színtelítettséggel, és később a kritériumok száma növelhető.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3753"/>
-        <location filename="../Configuration.ui" line="6933"/>
+        <location filename="../Configuration.ui" line="3769"/>
+        <location filename="../Configuration.ui" line="6949"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfigurációs tanácsok&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3801"/>
+        <location filename="../Configuration.ui" line="3817"/>
         <source>Transmitted message</source>
         <translation>Adott üzenet</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3817"/>
-        <location filename="../Configuration.ui" line="3900"/>
-        <location filename="../Configuration.ui" line="3922"/>
-        <location filename="../Configuration.ui" line="3944"/>
-        <location filename="../Configuration.ui" line="3976"/>
-        <location filename="../Configuration.ui" line="3995"/>
-        <location filename="../Configuration.ui" line="4014"/>
-        <location filename="../Configuration.ui" line="4046"/>
-        <location filename="../Configuration.ui" line="4065"/>
-        <location filename="../Configuration.ui" line="4084"/>
-        <location filename="../Configuration.ui" line="4116"/>
-        <location filename="../Configuration.ui" line="4135"/>
-        <location filename="../Configuration.ui" line="4154"/>
-        <location filename="../Configuration.ui" line="4186"/>
-        <location filename="../Configuration.ui" line="4205"/>
-        <location filename="../Configuration.ui" line="4224"/>
-        <location filename="../Configuration.ui" line="4256"/>
-        <location filename="../Configuration.ui" line="4275"/>
-        <location filename="../Configuration.ui" line="4294"/>
-        <location filename="../Configuration.ui" line="4326"/>
-        <location filename="../Configuration.ui" line="4345"/>
-        <location filename="../Configuration.ui" line="4364"/>
-        <location filename="../Configuration.ui" line="4396"/>
-        <location filename="../Configuration.ui" line="4415"/>
-        <location filename="../Configuration.ui" line="4434"/>
-        <location filename="../Configuration.ui" line="4466"/>
-        <location filename="../Configuration.ui" line="4485"/>
-        <location filename="../Configuration.ui" line="4504"/>
-        <location filename="../Configuration.ui" line="4536"/>
-        <location filename="../Configuration.ui" line="4555"/>
-        <location filename="../Configuration.ui" line="4574"/>
-        <location filename="../Configuration.ui" line="4606"/>
-        <location filename="../Configuration.ui" line="4625"/>
-        <location filename="../Configuration.ui" line="4644"/>
-        <location filename="../Configuration.ui" line="4676"/>
-        <location filename="../Configuration.ui" line="4695"/>
-        <location filename="../Configuration.ui" line="4714"/>
-        <location filename="../Configuration.ui" line="4746"/>
-        <location filename="../Configuration.ui" line="4765"/>
-        <location filename="../Configuration.ui" line="4784"/>
-        <location filename="../Configuration.ui" line="4819"/>
-        <location filename="../Configuration.ui" line="4838"/>
-        <location filename="../Configuration.ui" line="4857"/>
+        <location filename="../Configuration.ui" line="3833"/>
+        <location filename="../Configuration.ui" line="3916"/>
+        <location filename="../Configuration.ui" line="3938"/>
+        <location filename="../Configuration.ui" line="3960"/>
+        <location filename="../Configuration.ui" line="3992"/>
+        <location filename="../Configuration.ui" line="4011"/>
+        <location filename="../Configuration.ui" line="4030"/>
+        <location filename="../Configuration.ui" line="4062"/>
+        <location filename="../Configuration.ui" line="4081"/>
+        <location filename="../Configuration.ui" line="4100"/>
+        <location filename="../Configuration.ui" line="4132"/>
+        <location filename="../Configuration.ui" line="4151"/>
+        <location filename="../Configuration.ui" line="4170"/>
+        <location filename="../Configuration.ui" line="4202"/>
+        <location filename="../Configuration.ui" line="4221"/>
+        <location filename="../Configuration.ui" line="4240"/>
+        <location filename="../Configuration.ui" line="4272"/>
+        <location filename="../Configuration.ui" line="4291"/>
+        <location filename="../Configuration.ui" line="4310"/>
+        <location filename="../Configuration.ui" line="4342"/>
+        <location filename="../Configuration.ui" line="4361"/>
+        <location filename="../Configuration.ui" line="4380"/>
+        <location filename="../Configuration.ui" line="4412"/>
+        <location filename="../Configuration.ui" line="4431"/>
+        <location filename="../Configuration.ui" line="4450"/>
+        <location filename="../Configuration.ui" line="4482"/>
+        <location filename="../Configuration.ui" line="4501"/>
+        <location filename="../Configuration.ui" line="4520"/>
+        <location filename="../Configuration.ui" line="4552"/>
+        <location filename="../Configuration.ui" line="4571"/>
+        <location filename="../Configuration.ui" line="4590"/>
+        <location filename="../Configuration.ui" line="4622"/>
+        <location filename="../Configuration.ui" line="4641"/>
+        <location filename="../Configuration.ui" line="4660"/>
+        <location filename="../Configuration.ui" line="4692"/>
+        <location filename="../Configuration.ui" line="4711"/>
+        <location filename="../Configuration.ui" line="4730"/>
+        <location filename="../Configuration.ui" line="4762"/>
+        <location filename="../Configuration.ui" line="4781"/>
+        <location filename="../Configuration.ui" line="4800"/>
+        <location filename="../Configuration.ui" line="4835"/>
+        <location filename="../Configuration.ui" line="4854"/>
+        <location filename="../Configuration.ui" line="4873"/>
         <source>K1ABC</source>
         <translation>K1ABC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3833"/>
+        <location filename="../Configuration.ui" line="3849"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az RR73/73 üzeneteket kezelje ugyanúgy, mint a CQ üzeneteket az automatikus kiválasztáshoz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3839"/>
+        <location filename="../Configuration.ui" line="3855"/>
         <source>RR73/73           </source>
         <translation>RR73/73           </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3852"/>
+        <location filename="../Configuration.ui" line="3868"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3865"/>
+        <location filename="../Configuration.ui" line="3881"/>
         <source>My Call in message</source>
         <translation>Saját hívójel az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3878"/>
+        <location filename="../Configuration.ui" line="3894"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Beállítja a szöveg színét a nem szabványos (&apos;CQ&apos;-t és &apos;Saját hívójel&apos;-et nem tartalmazó) üzenetek számára&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3881"/>
+        <location filename="../Configuration.ui" line="3897"/>
         <source>Other standard message</source>
         <translation>Egyéb standard üzenet</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3960"/>
+        <location filename="../Configuration.ui" line="3976"/>
         <source>New CQZ</source>
         <translation>Új CQ zóna</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4030"/>
+        <location filename="../Configuration.ui" line="4046"/>
         <source>New CQZ on Band/Mode</source>
         <translation>Új CQ zóna Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4100"/>
+        <location filename="../Configuration.ui" line="4116"/>
         <source>New ITUZ</source>
         <translation>Új ITU zóna</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4170"/>
+        <location filename="../Configuration.ui" line="4186"/>
         <source>New ITUZ on Band/Mode</source>
         <translation>Új ITU zóna Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4240"/>
+        <location filename="../Configuration.ui" line="4256"/>
         <source>New DXCC</source>
         <translation>Új DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4310"/>
+        <location filename="../Configuration.ui" line="4326"/>
         <source>New DXCC on Band/Mode</source>
         <translation>Új DXCC Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4380"/>
+        <location filename="../Configuration.ui" line="4396"/>
         <source>New Grid</source>
         <translation>Új QRA kocka</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4450"/>
+        <location filename="../Configuration.ui" line="4466"/>
         <source>New Grid on Band/Mode</source>
         <translation>Új QRA Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4520"/>
+        <location filename="../Configuration.ui" line="4536"/>
         <source>New Prefix</source>
         <translation>Új Prefix</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4590"/>
+        <location filename="../Configuration.ui" line="4606"/>
         <source>New Prefix on Band/Mode</source>
         <translation>Új Prefix Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4660"/>
+        <location filename="../Configuration.ui" line="4676"/>
         <source>New Call</source>
         <translation>Új Hívójel</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4730"/>
+        <location filename="../Configuration.ui" line="4746"/>
         <source>New Call on Band/Mode</source>
         <translation>Új Hívójel Sáv/Üzemmód-ban</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4800"/>
+        <location filename="../Configuration.ui" line="4816"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>Csak CQ és saját hívójelt tartalmazó üzenetekhez használható</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4803"/>
+        <location filename="../Configuration.ui" line="4819"/>
         <source>Worked one</source>
         <translation>Volt már QSO</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4900"/>
+        <location filename="../Configuration.ui" line="4916"/>
         <source>Filters</source>
         <translation>Szűrők</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4911"/>
+        <location filename="../Configuration.ui" line="4927"/>
         <source>Hide messages from continents</source>
         <translation>Kontinensek üzeneteinek elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4923"/>
+        <location filename="../Configuration.ui" line="4939"/>
         <source>Africa</source>
         <translation>Afrika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4930"/>
+        <location filename="../Configuration.ui" line="4946"/>
         <source>Antarctica</source>
         <translation>Antarktisz</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4937"/>
+        <location filename="../Configuration.ui" line="4953"/>
         <source>Asia</source>
         <translation>Ázsia</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4944"/>
+        <location filename="../Configuration.ui" line="4960"/>
         <source>Europe</source>
         <translation>Európa</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4951"/>
+        <location filename="../Configuration.ui" line="4967"/>
         <source>Oceania</source>
         <translation>Óceánia</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4958"/>
+        <location filename="../Configuration.ui" line="4974"/>
         <source>North America</source>
         <translation>Észak Amerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4965"/>
+        <location filename="../Configuration.ui" line="4981"/>
         <source>South America</source>
         <translation>Dél Amerika</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4975"/>
+        <location filename="../Configuration.ui" line="4991"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A &apos;DXCC név/prefix megjelenítése&apos; menüpontot kell aktiválni a menü Beállítások, Általános fülén vagy az Értesítések fülön bármely „Új” állapotjelzés opciót, hogy ez a funkció működjön.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4978"/>
+        <location filename="../Configuration.ui" line="4994"/>
         <source>Hide messages from countries</source>
         <translation>Országok üzeneteinek elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4998"/>
-        <location filename="../Configuration.ui" line="5063"/>
+        <location filename="../Configuration.ui" line="5014"/>
+        <location filename="../Configuration.ui" line="5079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Engedélyező opció&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5001"/>
-        <location filename="../Configuration.ui" line="5066"/>
+        <location filename="../Configuration.ui" line="5017"/>
+        <location filename="../Configuration.ui" line="5082"/>
         <source>Hide</source>
         <translation>Elrejt</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5008"/>
+        <location filename="../Configuration.ui" line="5024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -7983,23 +7993,23 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5031"/>
+        <location filename="../Configuration.ui" line="5047"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Törli az országlistát&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5034"/>
-        <location filename="../Configuration.ui" line="5089"/>
+        <location filename="../Configuration.ui" line="5050"/>
+        <location filename="../Configuration.ui" line="5105"/>
         <source>Clear</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5046"/>
+        <location filename="../Configuration.ui" line="5062"/>
         <source>Hide messages from callsigns</source>
         <translation>Hívójelek üzeneteinek elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5073"/>
+        <location filename="../Configuration.ui" line="5089"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -8010,572 +8020,572 @@ az összetett hívójelekhez, például:
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5086"/>
+        <location filename="../Configuration.ui" line="5102"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Törli a hívójel listát&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5101"/>
+        <location filename="../Configuration.ui" line="5117"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>A tartalommal kapcsolatos üzenetek megjelenítése az RX frekvencia ablakban </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5118"/>
+        <location filename="../Configuration.ui" line="5134"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Továbbítja a tartalommal kapcsolatos szabad üzeneteket az RX_frekvencia üzenetek ablakba.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5121"/>
+        <location filename="../Configuration.ui" line="5137"/>
         <source>Enable</source>
         <translation>Engedélyez</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5128"/>
+        <location filename="../Configuration.ui" line="5144"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A tartalom nevek vesszővel elválasztott listája.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5135"/>
+        <location filename="../Configuration.ui" line="5151"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Visszaállítja a tartalom nevek listáját az alapértelmezett értékre.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5152"/>
-        <location filename="../Configuration.ui" line="5175"/>
-        <location filename="../Configuration.ui" line="5198"/>
+        <location filename="../Configuration.ui" line="5168"/>
+        <location filename="../Configuration.ui" line="5191"/>
+        <location filename="../Configuration.ui" line="5214"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A szűrő az RX frekvencián kívül kerül alkalmazásra.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5155"/>
+        <location filename="../Configuration.ui" line="5171"/>
         <source>Show CQ messages only</source>
         <translation>Csak a CQ üzenetek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5178"/>
+        <location filename="../Configuration.ui" line="5194"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>Csak a CQ/RRR/RR73/73 üzenetek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5201"/>
+        <location filename="../Configuration.ui" line="5217"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>Csak a CQ/RR73/73 üzenetek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5223"/>
+        <location filename="../Configuration.ui" line="5239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elrejti a dekódolt szabad üzeneteket, amelyek kívül esnek az RX frekvencián.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5226"/>
+        <location filename="../Configuration.ui" line="5242"/>
         <source>Hide decoded free messages</source>
         <translation>Dekódolt szabad üzenetek elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5233"/>
+        <location filename="../Configuration.ui" line="5249"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>A 2. hívójelhez nem társított maradék üzenetek elrejtése</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5256"/>
+        <location filename="../Configuration.ui" line="5272"/>
         <source>Scheduler</source>
         <translation>Ütemező</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5264"/>
+        <location filename="../Configuration.ui" line="5280"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatikus sávváltás előre meghatározott ütemezés szerint&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5267"/>
+        <location filename="../Configuration.ui" line="5283"/>
         <source>Band scheduler configuration</source>
         <translation>Sávváltási ütemterv</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5277"/>
+        <location filename="../Configuration.ui" line="5293"/>
         <source>hh</source>
         <translation>óra</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5287"/>
+        <location filename="../Configuration.ui" line="5303"/>
         <source>mm</source>
         <translation>perc</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5297"/>
+        <location filename="../Configuration.ui" line="5313"/>
         <source>Band</source>
         <translation>Sáv</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5307"/>
-        <location filename="../Configuration.ui" line="5567"/>
-        <location filename="../Configuration.ui" line="5824"/>
-        <location filename="../Configuration.ui" line="6081"/>
-        <location filename="../Configuration.ui" line="6338"/>
-        <location filename="../Configuration.ui" line="6595"/>
+        <location filename="../Configuration.ui" line="5323"/>
+        <location filename="../Configuration.ui" line="5583"/>
+        <location filename="../Configuration.ui" line="5840"/>
+        <location filename="../Configuration.ui" line="6097"/>
+        <location filename="../Configuration.ui" line="6354"/>
+        <location filename="../Configuration.ui" line="6611"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ha a JT65 frekvenciája van kiválasztva, az Ütemező a JT65 + JT9 módot állítja be.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5310"/>
+        <location filename="../Configuration.ui" line="5326"/>
         <source>JT65+JT9</source>
         <translation>JT65+JT9</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5326"/>
-        <location filename="../Configuration.ui" line="5464"/>
-        <location filename="../Configuration.ui" line="5583"/>
-        <location filename="../Configuration.ui" line="5721"/>
-        <location filename="../Configuration.ui" line="5840"/>
-        <location filename="../Configuration.ui" line="5978"/>
-        <location filename="../Configuration.ui" line="6097"/>
-        <location filename="../Configuration.ui" line="6235"/>
-        <location filename="../Configuration.ui" line="6354"/>
-        <location filename="../Configuration.ui" line="6492"/>
+        <location filename="../Configuration.ui" line="5342"/>
+        <location filename="../Configuration.ui" line="5480"/>
+        <location filename="../Configuration.ui" line="5599"/>
+        <location filename="../Configuration.ui" line="5737"/>
+        <location filename="../Configuration.ui" line="5856"/>
+        <location filename="../Configuration.ui" line="5994"/>
+        <location filename="../Configuration.ui" line="6113"/>
+        <location filename="../Configuration.ui" line="6251"/>
+        <location filename="../Configuration.ui" line="6370"/>
+        <location filename="../Configuration.ui" line="6508"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válassza ki az időt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5335"/>
-        <location filename="../Configuration.ui" line="5473"/>
-        <location filename="../Configuration.ui" line="5592"/>
-        <location filename="../Configuration.ui" line="5730"/>
-        <location filename="../Configuration.ui" line="5849"/>
-        <location filename="../Configuration.ui" line="5987"/>
-        <location filename="../Configuration.ui" line="6106"/>
-        <location filename="../Configuration.ui" line="6244"/>
-        <location filename="../Configuration.ui" line="6363"/>
-        <location filename="../Configuration.ui" line="6501"/>
+        <location filename="../Configuration.ui" line="5351"/>
+        <location filename="../Configuration.ui" line="5489"/>
+        <location filename="../Configuration.ui" line="5608"/>
+        <location filename="../Configuration.ui" line="5746"/>
+        <location filename="../Configuration.ui" line="5865"/>
+        <location filename="../Configuration.ui" line="6003"/>
+        <location filename="../Configuration.ui" line="6122"/>
+        <location filename="../Configuration.ui" line="6260"/>
+        <location filename="../Configuration.ui" line="6379"/>
+        <location filename="../Configuration.ui" line="6517"/>
         <source>00</source>
         <translation>00</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5340"/>
-        <location filename="../Configuration.ui" line="5597"/>
-        <location filename="../Configuration.ui" line="5854"/>
-        <location filename="../Configuration.ui" line="6111"/>
-        <location filename="../Configuration.ui" line="6368"/>
+        <location filename="../Configuration.ui" line="5356"/>
+        <location filename="../Configuration.ui" line="5613"/>
+        <location filename="../Configuration.ui" line="5870"/>
+        <location filename="../Configuration.ui" line="6127"/>
+        <location filename="../Configuration.ui" line="6384"/>
         <source>01</source>
         <translation>01</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5345"/>
-        <location filename="../Configuration.ui" line="5602"/>
-        <location filename="../Configuration.ui" line="5859"/>
-        <location filename="../Configuration.ui" line="6116"/>
-        <location filename="../Configuration.ui" line="6373"/>
+        <location filename="../Configuration.ui" line="5361"/>
+        <location filename="../Configuration.ui" line="5618"/>
+        <location filename="../Configuration.ui" line="5875"/>
+        <location filename="../Configuration.ui" line="6132"/>
+        <location filename="../Configuration.ui" line="6389"/>
         <source>02</source>
         <translation>02</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5350"/>
-        <location filename="../Configuration.ui" line="5607"/>
-        <location filename="../Configuration.ui" line="5864"/>
-        <location filename="../Configuration.ui" line="6121"/>
-        <location filename="../Configuration.ui" line="6378"/>
+        <location filename="../Configuration.ui" line="5366"/>
+        <location filename="../Configuration.ui" line="5623"/>
+        <location filename="../Configuration.ui" line="5880"/>
+        <location filename="../Configuration.ui" line="6137"/>
+        <location filename="../Configuration.ui" line="6394"/>
         <source>03</source>
         <translation>03</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5355"/>
-        <location filename="../Configuration.ui" line="5612"/>
-        <location filename="../Configuration.ui" line="5869"/>
-        <location filename="../Configuration.ui" line="6126"/>
-        <location filename="../Configuration.ui" line="6383"/>
+        <location filename="../Configuration.ui" line="5371"/>
+        <location filename="../Configuration.ui" line="5628"/>
+        <location filename="../Configuration.ui" line="5885"/>
+        <location filename="../Configuration.ui" line="6142"/>
+        <location filename="../Configuration.ui" line="6399"/>
         <source>04</source>
         <translation>04</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5360"/>
-        <location filename="../Configuration.ui" line="5478"/>
-        <location filename="../Configuration.ui" line="5617"/>
-        <location filename="../Configuration.ui" line="5735"/>
-        <location filename="../Configuration.ui" line="5874"/>
-        <location filename="../Configuration.ui" line="5992"/>
-        <location filename="../Configuration.ui" line="6131"/>
-        <location filename="../Configuration.ui" line="6249"/>
-        <location filename="../Configuration.ui" line="6388"/>
-        <location filename="../Configuration.ui" line="6506"/>
+        <location filename="../Configuration.ui" line="5376"/>
+        <location filename="../Configuration.ui" line="5494"/>
+        <location filename="../Configuration.ui" line="5633"/>
+        <location filename="../Configuration.ui" line="5751"/>
+        <location filename="../Configuration.ui" line="5890"/>
+        <location filename="../Configuration.ui" line="6008"/>
+        <location filename="../Configuration.ui" line="6147"/>
+        <location filename="../Configuration.ui" line="6265"/>
+        <location filename="../Configuration.ui" line="6404"/>
+        <location filename="../Configuration.ui" line="6522"/>
         <source>05</source>
         <translation>05</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5365"/>
-        <location filename="../Configuration.ui" line="5622"/>
-        <location filename="../Configuration.ui" line="5879"/>
-        <location filename="../Configuration.ui" line="6136"/>
-        <location filename="../Configuration.ui" line="6393"/>
+        <location filename="../Configuration.ui" line="5381"/>
+        <location filename="../Configuration.ui" line="5638"/>
+        <location filename="../Configuration.ui" line="5895"/>
+        <location filename="../Configuration.ui" line="6152"/>
+        <location filename="../Configuration.ui" line="6409"/>
         <source>06</source>
         <translation>06</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5370"/>
-        <location filename="../Configuration.ui" line="5627"/>
-        <location filename="../Configuration.ui" line="5884"/>
-        <location filename="../Configuration.ui" line="6141"/>
-        <location filename="../Configuration.ui" line="6398"/>
+        <location filename="../Configuration.ui" line="5386"/>
+        <location filename="../Configuration.ui" line="5643"/>
+        <location filename="../Configuration.ui" line="5900"/>
+        <location filename="../Configuration.ui" line="6157"/>
+        <location filename="../Configuration.ui" line="6414"/>
         <source>07</source>
         <translation>07</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5375"/>
-        <location filename="../Configuration.ui" line="5632"/>
-        <location filename="../Configuration.ui" line="5889"/>
-        <location filename="../Configuration.ui" line="6146"/>
-        <location filename="../Configuration.ui" line="6403"/>
+        <location filename="../Configuration.ui" line="5391"/>
+        <location filename="../Configuration.ui" line="5648"/>
+        <location filename="../Configuration.ui" line="5905"/>
+        <location filename="../Configuration.ui" line="6162"/>
+        <location filename="../Configuration.ui" line="6419"/>
         <source>08</source>
         <translation>08</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5380"/>
-        <location filename="../Configuration.ui" line="5637"/>
-        <location filename="../Configuration.ui" line="5894"/>
-        <location filename="../Configuration.ui" line="6151"/>
-        <location filename="../Configuration.ui" line="6408"/>
+        <location filename="../Configuration.ui" line="5396"/>
+        <location filename="../Configuration.ui" line="5653"/>
+        <location filename="../Configuration.ui" line="5910"/>
+        <location filename="../Configuration.ui" line="6167"/>
+        <location filename="../Configuration.ui" line="6424"/>
         <source>09</source>
         <translation>09</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5385"/>
-        <location filename="../Configuration.ui" line="5483"/>
-        <location filename="../Configuration.ui" line="5642"/>
-        <location filename="../Configuration.ui" line="5740"/>
-        <location filename="../Configuration.ui" line="5899"/>
-        <location filename="../Configuration.ui" line="5997"/>
-        <location filename="../Configuration.ui" line="6156"/>
-        <location filename="../Configuration.ui" line="6254"/>
-        <location filename="../Configuration.ui" line="6413"/>
-        <location filename="../Configuration.ui" line="6511"/>
+        <location filename="../Configuration.ui" line="5401"/>
+        <location filename="../Configuration.ui" line="5499"/>
+        <location filename="../Configuration.ui" line="5658"/>
+        <location filename="../Configuration.ui" line="5756"/>
+        <location filename="../Configuration.ui" line="5915"/>
+        <location filename="../Configuration.ui" line="6013"/>
+        <location filename="../Configuration.ui" line="6172"/>
+        <location filename="../Configuration.ui" line="6270"/>
+        <location filename="../Configuration.ui" line="6429"/>
+        <location filename="../Configuration.ui" line="6527"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5390"/>
-        <location filename="../Configuration.ui" line="5647"/>
-        <location filename="../Configuration.ui" line="5904"/>
-        <location filename="../Configuration.ui" line="6161"/>
-        <location filename="../Configuration.ui" line="6418"/>
+        <location filename="../Configuration.ui" line="5406"/>
+        <location filename="../Configuration.ui" line="5663"/>
+        <location filename="../Configuration.ui" line="5920"/>
+        <location filename="../Configuration.ui" line="6177"/>
+        <location filename="../Configuration.ui" line="6434"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5395"/>
-        <location filename="../Configuration.ui" line="5652"/>
-        <location filename="../Configuration.ui" line="5909"/>
-        <location filename="../Configuration.ui" line="6166"/>
-        <location filename="../Configuration.ui" line="6423"/>
+        <location filename="../Configuration.ui" line="5411"/>
+        <location filename="../Configuration.ui" line="5668"/>
+        <location filename="../Configuration.ui" line="5925"/>
+        <location filename="../Configuration.ui" line="6182"/>
+        <location filename="../Configuration.ui" line="6439"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5400"/>
-        <location filename="../Configuration.ui" line="5657"/>
-        <location filename="../Configuration.ui" line="5914"/>
-        <location filename="../Configuration.ui" line="6171"/>
-        <location filename="../Configuration.ui" line="6428"/>
+        <location filename="../Configuration.ui" line="5416"/>
+        <location filename="../Configuration.ui" line="5673"/>
+        <location filename="../Configuration.ui" line="5930"/>
+        <location filename="../Configuration.ui" line="6187"/>
+        <location filename="../Configuration.ui" line="6444"/>
         <source>13</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5405"/>
-        <location filename="../Configuration.ui" line="5662"/>
-        <location filename="../Configuration.ui" line="5919"/>
-        <location filename="../Configuration.ui" line="6176"/>
-        <location filename="../Configuration.ui" line="6433"/>
+        <location filename="../Configuration.ui" line="5421"/>
+        <location filename="../Configuration.ui" line="5678"/>
+        <location filename="../Configuration.ui" line="5935"/>
+        <location filename="../Configuration.ui" line="6192"/>
+        <location filename="../Configuration.ui" line="6449"/>
         <source>14</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5410"/>
-        <location filename="../Configuration.ui" line="5488"/>
-        <location filename="../Configuration.ui" line="5667"/>
-        <location filename="../Configuration.ui" line="5745"/>
-        <location filename="../Configuration.ui" line="5924"/>
-        <location filename="../Configuration.ui" line="6002"/>
-        <location filename="../Configuration.ui" line="6181"/>
-        <location filename="../Configuration.ui" line="6259"/>
-        <location filename="../Configuration.ui" line="6438"/>
-        <location filename="../Configuration.ui" line="6516"/>
+        <location filename="../Configuration.ui" line="5426"/>
+        <location filename="../Configuration.ui" line="5504"/>
+        <location filename="../Configuration.ui" line="5683"/>
+        <location filename="../Configuration.ui" line="5761"/>
+        <location filename="../Configuration.ui" line="5940"/>
+        <location filename="../Configuration.ui" line="6018"/>
+        <location filename="../Configuration.ui" line="6197"/>
+        <location filename="../Configuration.ui" line="6275"/>
+        <location filename="../Configuration.ui" line="6454"/>
+        <location filename="../Configuration.ui" line="6532"/>
         <source>15</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5415"/>
-        <location filename="../Configuration.ui" line="5672"/>
-        <location filename="../Configuration.ui" line="5929"/>
-        <location filename="../Configuration.ui" line="6186"/>
-        <location filename="../Configuration.ui" line="6443"/>
+        <location filename="../Configuration.ui" line="5431"/>
+        <location filename="../Configuration.ui" line="5688"/>
+        <location filename="../Configuration.ui" line="5945"/>
+        <location filename="../Configuration.ui" line="6202"/>
+        <location filename="../Configuration.ui" line="6459"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5420"/>
-        <location filename="../Configuration.ui" line="5677"/>
-        <location filename="../Configuration.ui" line="5934"/>
-        <location filename="../Configuration.ui" line="6191"/>
-        <location filename="../Configuration.ui" line="6448"/>
+        <location filename="../Configuration.ui" line="5436"/>
+        <location filename="../Configuration.ui" line="5693"/>
+        <location filename="../Configuration.ui" line="5950"/>
+        <location filename="../Configuration.ui" line="6207"/>
+        <location filename="../Configuration.ui" line="6464"/>
         <source>17</source>
         <translation>17</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5425"/>
-        <location filename="../Configuration.ui" line="5682"/>
-        <location filename="../Configuration.ui" line="5939"/>
-        <location filename="../Configuration.ui" line="6196"/>
-        <location filename="../Configuration.ui" line="6453"/>
+        <location filename="../Configuration.ui" line="5441"/>
+        <location filename="../Configuration.ui" line="5698"/>
+        <location filename="../Configuration.ui" line="5955"/>
+        <location filename="../Configuration.ui" line="6212"/>
+        <location filename="../Configuration.ui" line="6469"/>
         <source>18</source>
         <translation>18</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5430"/>
-        <location filename="../Configuration.ui" line="5687"/>
-        <location filename="../Configuration.ui" line="5944"/>
-        <location filename="../Configuration.ui" line="6201"/>
-        <location filename="../Configuration.ui" line="6458"/>
+        <location filename="../Configuration.ui" line="5446"/>
+        <location filename="../Configuration.ui" line="5703"/>
+        <location filename="../Configuration.ui" line="5960"/>
+        <location filename="../Configuration.ui" line="6217"/>
+        <location filename="../Configuration.ui" line="6474"/>
         <source>19</source>
         <translation>19</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5435"/>
-        <location filename="../Configuration.ui" line="5493"/>
-        <location filename="../Configuration.ui" line="5692"/>
-        <location filename="../Configuration.ui" line="5750"/>
-        <location filename="../Configuration.ui" line="5949"/>
-        <location filename="../Configuration.ui" line="6007"/>
-        <location filename="../Configuration.ui" line="6206"/>
-        <location filename="../Configuration.ui" line="6264"/>
-        <location filename="../Configuration.ui" line="6463"/>
-        <location filename="../Configuration.ui" line="6521"/>
+        <location filename="../Configuration.ui" line="5451"/>
+        <location filename="../Configuration.ui" line="5509"/>
+        <location filename="../Configuration.ui" line="5708"/>
+        <location filename="../Configuration.ui" line="5766"/>
+        <location filename="../Configuration.ui" line="5965"/>
+        <location filename="../Configuration.ui" line="6023"/>
+        <location filename="../Configuration.ui" line="6222"/>
+        <location filename="../Configuration.ui" line="6280"/>
+        <location filename="../Configuration.ui" line="6479"/>
+        <location filename="../Configuration.ui" line="6537"/>
         <source>20</source>
         <translation>20</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5440"/>
-        <location filename="../Configuration.ui" line="5697"/>
-        <location filename="../Configuration.ui" line="5954"/>
-        <location filename="../Configuration.ui" line="6211"/>
-        <location filename="../Configuration.ui" line="6468"/>
+        <location filename="../Configuration.ui" line="5456"/>
+        <location filename="../Configuration.ui" line="5713"/>
+        <location filename="../Configuration.ui" line="5970"/>
+        <location filename="../Configuration.ui" line="6227"/>
+        <location filename="../Configuration.ui" line="6484"/>
         <source>21</source>
         <translation>21</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5445"/>
-        <location filename="../Configuration.ui" line="5702"/>
-        <location filename="../Configuration.ui" line="5959"/>
-        <location filename="../Configuration.ui" line="6216"/>
-        <location filename="../Configuration.ui" line="6473"/>
+        <location filename="../Configuration.ui" line="5461"/>
+        <location filename="../Configuration.ui" line="5718"/>
+        <location filename="../Configuration.ui" line="5975"/>
+        <location filename="../Configuration.ui" line="6232"/>
+        <location filename="../Configuration.ui" line="6489"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5450"/>
-        <location filename="../Configuration.ui" line="5707"/>
-        <location filename="../Configuration.ui" line="5964"/>
-        <location filename="../Configuration.ui" line="6221"/>
-        <location filename="../Configuration.ui" line="6478"/>
+        <location filename="../Configuration.ui" line="5466"/>
+        <location filename="../Configuration.ui" line="5723"/>
+        <location filename="../Configuration.ui" line="5980"/>
+        <location filename="../Configuration.ui" line="6237"/>
+        <location filename="../Configuration.ui" line="6494"/>
         <source>23</source>
         <translation>23</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5498"/>
-        <location filename="../Configuration.ui" line="5755"/>
-        <location filename="../Configuration.ui" line="6012"/>
-        <location filename="../Configuration.ui" line="6269"/>
-        <location filename="../Configuration.ui" line="6526"/>
+        <location filename="../Configuration.ui" line="5514"/>
+        <location filename="../Configuration.ui" line="5771"/>
+        <location filename="../Configuration.ui" line="6028"/>
+        <location filename="../Configuration.ui" line="6285"/>
+        <location filename="../Configuration.ui" line="6542"/>
         <source>25</source>
         <translation>25</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5503"/>
-        <location filename="../Configuration.ui" line="5760"/>
-        <location filename="../Configuration.ui" line="6017"/>
-        <location filename="../Configuration.ui" line="6274"/>
-        <location filename="../Configuration.ui" line="6531"/>
+        <location filename="../Configuration.ui" line="5519"/>
+        <location filename="../Configuration.ui" line="5776"/>
+        <location filename="../Configuration.ui" line="6033"/>
+        <location filename="../Configuration.ui" line="6290"/>
+        <location filename="../Configuration.ui" line="6547"/>
         <source>30</source>
         <translation>30</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5508"/>
-        <location filename="../Configuration.ui" line="5765"/>
-        <location filename="../Configuration.ui" line="6022"/>
-        <location filename="../Configuration.ui" line="6279"/>
-        <location filename="../Configuration.ui" line="6536"/>
+        <location filename="../Configuration.ui" line="5524"/>
+        <location filename="../Configuration.ui" line="5781"/>
+        <location filename="../Configuration.ui" line="6038"/>
+        <location filename="../Configuration.ui" line="6295"/>
+        <location filename="../Configuration.ui" line="6552"/>
         <source>35</source>
         <translation>35</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5513"/>
-        <location filename="../Configuration.ui" line="5770"/>
-        <location filename="../Configuration.ui" line="6027"/>
-        <location filename="../Configuration.ui" line="6284"/>
-        <location filename="../Configuration.ui" line="6541"/>
+        <location filename="../Configuration.ui" line="5529"/>
+        <location filename="../Configuration.ui" line="5786"/>
+        <location filename="../Configuration.ui" line="6043"/>
+        <location filename="../Configuration.ui" line="6300"/>
+        <location filename="../Configuration.ui" line="6557"/>
         <source>40</source>
         <translation>40</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5518"/>
-        <location filename="../Configuration.ui" line="5775"/>
-        <location filename="../Configuration.ui" line="6032"/>
-        <location filename="../Configuration.ui" line="6289"/>
-        <location filename="../Configuration.ui" line="6546"/>
+        <location filename="../Configuration.ui" line="5534"/>
+        <location filename="../Configuration.ui" line="5791"/>
+        <location filename="../Configuration.ui" line="6048"/>
+        <location filename="../Configuration.ui" line="6305"/>
+        <location filename="../Configuration.ui" line="6562"/>
         <source>45</source>
         <translation>45</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5523"/>
-        <location filename="../Configuration.ui" line="5780"/>
-        <location filename="../Configuration.ui" line="6037"/>
-        <location filename="../Configuration.ui" line="6294"/>
-        <location filename="../Configuration.ui" line="6551"/>
+        <location filename="../Configuration.ui" line="5539"/>
+        <location filename="../Configuration.ui" line="5796"/>
+        <location filename="../Configuration.ui" line="6053"/>
+        <location filename="../Configuration.ui" line="6310"/>
+        <location filename="../Configuration.ui" line="6567"/>
         <source>50</source>
         <translation>50</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5528"/>
-        <location filename="../Configuration.ui" line="5785"/>
-        <location filename="../Configuration.ui" line="6042"/>
-        <location filename="../Configuration.ui" line="6299"/>
-        <location filename="../Configuration.ui" line="6556"/>
+        <location filename="../Configuration.ui" line="5544"/>
+        <location filename="../Configuration.ui" line="5801"/>
+        <location filename="../Configuration.ui" line="6058"/>
+        <location filename="../Configuration.ui" line="6315"/>
+        <location filename="../Configuration.ui" line="6572"/>
         <source>55</source>
         <translation>55</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5548"/>
-        <location filename="../Configuration.ui" line="5805"/>
-        <location filename="../Configuration.ui" line="6062"/>
-        <location filename="../Configuration.ui" line="6319"/>
-        <location filename="../Configuration.ui" line="6576"/>
+        <location filename="../Configuration.ui" line="5564"/>
+        <location filename="../Configuration.ui" line="5821"/>
+        <location filename="../Configuration.ui" line="6078"/>
+        <location filename="../Configuration.ui" line="6335"/>
+        <location filename="../Configuration.ui" line="6592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válasszon egy sávot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6625"/>
+        <location filename="../Configuration.ui" line="6641"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A sávváltási ütemterv aktiválása&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6628"/>
+        <location filename="../Configuration.ui" line="6644"/>
         <source>Use band scheduler</source>
         <translation>Ütemezés aktiválása</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6651"/>
+        <location filename="../Configuration.ui" line="6667"/>
         <source>Advanced</source>
         <translation>Haladó</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6661"/>
+        <location filename="../Configuration.ui" line="6677"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A felhasználó által választható paraméterek a JT65 dekódoláshoz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6664"/>
+        <location filename="../Configuration.ui" line="6680"/>
         <source>JT65 decoding parameters</source>
         <translation>JT65 dekódoló paraméterek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6692"/>
-        <location filename="../Configuration.ui" line="6705"/>
+        <location filename="../Configuration.ui" line="6708"/>
+        <location filename="../Configuration.ui" line="6721"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A széles sávú dekódolási kísérletek száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6695"/>
-        <location filename="../Configuration.ui" line="7047"/>
+        <location filename="../Configuration.ui" line="6711"/>
+        <location filename="../Configuration.ui" line="7063"/>
         <source>Number of decoding attempts:</source>
         <translation>Dekódolási kísérlet:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6731"/>
-        <location filename="../Configuration.ui" line="6744"/>
+        <location filename="../Configuration.ui" line="6747"/>
+        <location filename="../Configuration.ui" line="6760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A szélessávú dekódolási folyamatok száma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6734"/>
+        <location filename="../Configuration.ui" line="6750"/>
         <source>Number of decoding  passes: </source>
         <translation>Dekódolási folyamat:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6764"/>
-        <location filename="../Configuration.ui" line="6777"/>
+        <location filename="../Configuration.ui" line="6780"/>
+        <location filename="../Configuration.ui" line="6793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Meghatározza az RX frekvencián a dekódoló-utak dekódolási kísérleteinek a számát&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6767"/>
-        <location filename="../Configuration.ui" line="7083"/>
+        <location filename="../Configuration.ui" line="6783"/>
+        <location filename="../Configuration.ui" line="7099"/>
         <source>RX frequency decoding attempts:</source>
         <translation>Dekódolási kísérlet az RX frekvencián:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6803"/>
-        <location filename="../Configuration.ui" line="6816"/>
-        <location filename="../Configuration.ui" line="6974"/>
+        <location filename="../Configuration.ui" line="6819"/>
+        <location filename="../Configuration.ui" line="6832"/>
+        <location filename="../Configuration.ui" line="6990"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Csak a Hint dekóderekhez használható, amelyek a CALL3 adatbázis CQ üzenetek és &apos;mycall hiscall hisgrid&apos;  adatait veszik alapul. A magasabb értékek növelhetik a hamis dekódolások számát.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6806"/>
+        <location filename="../Configuration.ui" line="6822"/>
         <source>Hinted decoding DT range:</source>
         <translation>DT időintervallum (csak Hint-nél):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6837"/>
+        <location filename="../Configuration.ui" line="6853"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A túlzsúfolt sáv körülményeihez aktiváljon két további JT65 dekódoló-út frekvencia-maszkot. Ez a dekódoló-út automatikusan aktiválódik, ha kevés jel van a sávban. Ezt a beállítást csak gyors CPU-hoz használja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6843"/>
+        <location filename="../Configuration.ui" line="6859"/>
         <source>Use frequency mask decoding</source>
         <translation>Frekvenciamaszk dekódolás használata</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6855"/>
-        <location filename="../Configuration.ui" line="6865"/>
+        <location filename="../Configuration.ui" line="6871"/>
+        <location filename="../Configuration.ui" line="6881"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Meghatározza a JT65a jelek dekódolásának felső határát, az alapértelmezett érték 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6858"/>
+        <location filename="../Configuration.ui" line="6874"/>
         <source>Top decoding frequency: </source>
         <translation>Felső dekódolási frekvencia: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6891"/>
-        <location filename="../Configuration.ui" line="6904"/>
+        <location filename="../Configuration.ui" line="6907"/>
+        <location filename="../Configuration.ui" line="6920"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A jel torzulása az RX vagy a TX útvonalon a JT65A jel harmonikusait hozhatja létre (JT65B, JT65C stb.). A JT65A jel harmonikusainak dekódolása, a dekódolt jelek kivonásával javíthatja az általános dekódolási hatékonyságot. A dekódolási mélység arányos a szükséges CPU-erőforrásokkal; lassabb CPU esetén állítsa ezt 1-re. A nagyobb mélység érték lehetővé teszi több harmonikus dekódolását. A JT65B és JT65C dekódolás támogatott.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6894"/>
+        <location filename="../Configuration.ui" line="6910"/>
         <source>Harmonics decoding depth:</source>
         <translation>Harmonikusok dekódolási mélysége:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6930"/>
+        <location filename="../Configuration.ui" line="6946"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A beállítások a CPU teljesítményétől függenek, törekedjen a maximális dekódoló-út számot használni a túlzsúfolt HF sávokban.&lt;br&gt;&lt;br&gt;A kevésbé használt HF/VHF sávok esetében a dekódoló-utak száma csökkenthető, míg a dekódolási kísérletek számának növelése jobb dekódolási hatékonyságot eredményezhet a gyenge jelek számára.&lt;br&gt;&lt;br&gt;Az alacsony SNR jelek dekódolási hatékonyságát befolyásolja a dekódolási kísérletek száma: széles sávú vagy RX frekvenciájú.&lt;br&gt;&lt;br&gt;A dekódoló-utak számát befolyásolja az azonos frekvencián, vagy az egymáshoz közel elhelyezkedő, és nagymértékben átfedésben levő spektrumú dekódolandó jelek maximális száma; így lehetséges akár 4 jel dekódolása ugyanazon a frekvencián és legfeljebb 7 jel az RX frekvencián, ha a dekódoló-utak száma 4-re van állítva.&lt;br&gt;&lt;br&gt;Növelje a dekódolási kísérletek számát arra az értékre, amely még lehetővé teszi a dekódolás befejezését az RX perc intervallum végéig.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7018"/>
+        <location filename="../Configuration.ui" line="7034"/>
         <source>T10 decoding parameters</source>
         <translation>T10 dekódoló paraméterek</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7044"/>
-        <location filename="../Configuration.ui" line="7054"/>
+        <location filename="../Configuration.ui" line="7060"/>
+        <location filename="../Configuration.ui" line="7070"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Meghatározza a szélessávú T10 dekódolás dekódolási kísérleteinek számát.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7080"/>
-        <location filename="../Configuration.ui" line="7093"/>
+        <location filename="../Configuration.ui" line="7096"/>
+        <location filename="../Configuration.ui" line="7109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Meghatározza a T10 dekódolási kísérleteinek számát az RX frekvenciához.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7184"/>
+        <location filename="../Configuration.ui" line="7200"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>

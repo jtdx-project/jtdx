@@ -461,7 +461,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_optimizingProgress.setAutoReset (false);
   m_optimizingProgress.setMinimumDuration (15000); // only show after 15s delay
 
-  m_tci = m_config.is_tci();
+  m_tci = m_config.tci_audio() && m_config.is_tci();
   // Closedown.
   connect (ui->actionExit, &QAction::triggered, this, &QMainWindow::close);
 
@@ -2035,8 +2035,8 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
         pskSetLocal ();
       }
       bool was_monitoring = m_monitoring;
-      if (m_monitoring && (m_config.restart_tci () || m_tci != m_config.is_tci())) on_monitorButton_clicked (false);
-      if (!m_config.is_tci()) {
+      if (m_monitoring && (m_config.restart_tci () || m_tci != (m_config.tci_audio() && m_config.is_tci()))) on_monitorButton_clicked (false);
+      if (!(m_config.tci_audio() && m_config.is_tci())) {
         //here computer soundcard
         if((m_config.restart_audio_input () || m_tci) && !m_config.audio_input_device ().isNull ()) {
           Q_EMIT startAudioInputStream (m_config.audio_input_device (), m_rx_audio_buffer_frames, m_detector,
@@ -2072,10 +2072,10 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
         Q_EMIT m_config.transceiver_period(m_TRperiod);
       }
 
-      if (was_monitoring && (m_config.restart_tci () || m_tci != m_config.is_tci()) && !m_monitoring && !m_transmitting && g_iptt!=1 ) {
-        m_tci = m_config.is_tci();
+      if (was_monitoring && (m_config.restart_tci () || m_tci != (m_config.tci_audio() && m_config.is_tci())) && !m_monitoring && !m_transmitting && g_iptt!=1 ) {
+        m_tci = m_config.tci_audio() && m_config.is_tci();
         on_monitorButton_clicked (true);
-      } else m_tci = m_config.is_tci();
+      } else m_tci = m_config.tci_audio() && m_config.is_tci();
  
       displayDialFrequency ();
 
