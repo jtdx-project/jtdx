@@ -132,6 +132,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , do_snr_ {(poll_interval & do__snr) == do__snr}
   , do_pwr_ {(poll_interval & do__pwr) == do__pwr}
   , rig_power_ {(poll_interval & rig__power) == rig__power}
+  , rig_power_off_ {(poll_interval & rig__power_off) == rig__power_off}
   , commander_ {nullptr}
   , tci_timer1_ {nullptr}
   , tci_loop1_ {nullptr}
@@ -307,7 +308,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   requested_stream_audio_ = false;
   stream_audio_ = false;
   _power_ = false;
-//  printf ("%s(%0.1f) TCI open %s rig_power:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,do_snr_,do_pwr_);
+//  printf ("%s(%0.1f) TCI open %s rig_power:%d rig_power_off:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,rig_power_off_,do_snr_,do_pwr_);
   commander_->open (url_);
   mysleep1 (1500);
   if (tci_Ready) {
@@ -340,7 +341,7 @@ void TCITransceiver::do_stop ()
 //  printf ("TCI close\n");
   if (stream_audio_ && tci_Ready) {stream_audio (false); mysleep1(500);// printf ("TCI audio closed\n");
 }
-  if (_power_ && rig_power_ && tci_Ready) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
+  if (_power_ && rig_power_off_ && tci_Ready) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
 }
   tci_Ready = false;
   if (commander_)
