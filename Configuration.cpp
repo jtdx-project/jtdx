@@ -691,6 +691,7 @@ private:
   bool do_snr_;
   bool do_pwr_;
   bool rig_power_;
+  bool rig_power_off_;
   bool id_after_73_;
   bool tx_QSY_allowed_;
   bool spot_to_psk_reporter_;
@@ -937,6 +938,7 @@ bool Configuration::enableCallsignFilter () const {return m_->enableCallsignFilt
 bool Configuration::do_snr () const {return m_->do_snr_;}
 bool Configuration::do_pwr () const {return m_->do_pwr_;}
 bool Configuration::rig_power () const {return m_->rig_power_;}
+bool Configuration::rig_power_off () const {return m_->rig_power_off_;}
 bool Configuration::id_after_73 () const {return m_->id_after_73_;}
 bool Configuration::tx_QSY_allowed () const {return m_->tx_QSY_allowed_;}
 bool Configuration::spot_to_psk_reporter () const
@@ -1934,6 +1936,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->S_meter_check_box->setChecked (do_snr_);
   ui_->output_power_check_box->setChecked (do_pwr_);
   ui_->rig_power_check_box->setChecked (rig_power_);
+  ui_->rig_power_off_check_box->setChecked (rig_power_off_);
   ui_->sbTopFreq->setValue (ntopfreq65_);
   ui_->sbAnswerCQCounter->setValue (nAnswerCQCounter_);
   ui_->sbAnswerInCallCounter->setValue (nAnswerInCallCounter_);
@@ -2226,6 +2229,7 @@ void Configuration::impl::read_settings ()
   do_snr_ = settings_->value ("CATRequestSNR", false).toBool ();
   do_pwr_ = settings_->value ("CATRequestPower", false).toBool ();
   rig_power_ = settings_->value ("RigPower", false).toBool ();
+  rig_power_off_ = settings_->value ("RigPower_off", rig_power_).toBool ();
 
   if(settings_->value ("hideAfrica").toString()=="false" || settings_->value ("hideAfrica").toString()=="true")
     hideAfrica_ = settings_->value ("hideAfrica").toBool ();
@@ -2607,6 +2611,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("CATRequestSNR", do_snr_);
   settings_->setValue ("CATRequestPower", do_pwr_);
   settings_->setValue ("RigPower", rig_power_);
+  settings_->setValue ("RigPower_off", rig_power_off_);
   settings_->setValue ("hideAfrica", hideAfrica_);
   settings_->setValue ("hideAntarctica", hideAntarctica_);
   settings_->setValue ("hideAsia", hideAsia_);
@@ -2828,7 +2833,9 @@ void Configuration::impl::set_rig_invariants ()
                                              || TransceiverFactory::PTT_method_RTS == ptt_method);
       ui_->TX_audio_source_group_box->setEnabled (false);
       ui_->rig_power_check_box->setChecked (false);
+      ui_->rig_power_off_check_box->setChecked (false);
       ui_->rig_power_check_box->setEnabled (false);
+      ui_->rig_power_off_check_box->setEnabled (false);
       ui_->S_meter_check_box->setChecked (false);
       ui_->S_meter_check_box->setEnabled (false);
       ui_->output_power_check_box->setChecked (false);
@@ -2843,6 +2850,7 @@ void Configuration::impl::set_rig_invariants ()
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") &&
          !ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
          ui_->rig_power_check_box->setEnabled (true);
+         ui_->rig_power_off_check_box->setEnabled (true);
          ui_->S_meter_check_box->setEnabled (true);
          ui_->output_power_check_box->setEnabled (true);
       }
@@ -3024,6 +3032,7 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
   if(ui_->S_meter_check_box->isChecked ()) result.poll_interval |= do__snr;
   if(ui_->output_power_check_box->isChecked ()) result.poll_interval |= do__pwr;
   if(ui_->rig_power_check_box->isChecked ()) result.poll_interval |= rig__power;
+  if(ui_->rig_power_off_check_box->isChecked ()) result.poll_interval |= rig__power_off;
   result.ptt_type = static_cast<TransceiverFactory::PTTMethod> (ui_->PTT_method_button_group->checkedId ());
   result.ptt_port = ui_->PTT_port_combo_box->currentText ();
   result.audio_source = static_cast<TransceiverFactory::TXAudioSource> (ui_->TX_audio_source_button_group->checkedId ());
@@ -3242,6 +3251,7 @@ void Configuration::impl::accept ()
   do_snr_ = ui_->S_meter_check_box->isChecked ();
   do_pwr_ = ui_->output_power_check_box->isChecked ();
   rig_power_ = ui_->rig_power_check_box->isChecked ();
+  rig_power_off_ = ui_->rig_power_off_check_box->isChecked ();
   id_after_73_ = ui_->CW_id_after_73_check_box->isChecked ();
   tx_QSY_allowed_ = ui_->tx_QSY_check_box->isChecked ();
   monitor_off_at_startup_ = ui_->monitor_off_check_box->isChecked ();
@@ -4697,11 +4707,9 @@ void Configuration::impl::on_rig_combo_box_currentIndexChanged (int /* index */)
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-850") ||
      ui_->rig_combo_box->currentText().startsWith("Kenwood TS-870")) {
      ui_->rig_power_check_box->setChecked (false); ui_->rig_power_check_box->setEnabled (false);
+     ui_->rig_power_off_check_box->setChecked (false); ui_->rig_power_off_check_box->setEnabled (false);
      ui_->S_meter_check_box->setChecked (false); ui_->S_meter_check_box->setEnabled (false);
      ui_->output_power_check_box->setChecked (false); ui_->output_power_check_box->setEnabled (false);
-  }
-  else if(ui_->rig_combo_box->currentText().startsWith("TCI Cli")) {
-     ui_->rig_power_check_box->setChecked (false); ui_->rig_power_check_box->setEnabled (false);
   }
 }
 

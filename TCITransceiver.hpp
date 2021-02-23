@@ -194,6 +194,7 @@ private:
   bool do_snr_;
   bool do_pwr_;
   bool rig_power_;
+  bool rig_power_off_;
   bool _power_;
   QWebSocket * commander_;
   QLocale locale_;

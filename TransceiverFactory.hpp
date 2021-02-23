@@ -79,8 +79,9 @@ public:
   #define do__snr  0x10000
   #define do__pwr  0x20000
   #define rig__power 0x40000
-  #define tci_audio 0x80000
-  #define tci_agcc 0x100000
+  #define rig__power_off 0x80000
+  #define tci__audio 0x100000
+  #define tci__agcc 0x200000
 
   TransceiverFactory ();
   ~TransceiverFactory ();
