@@ -775,7 +775,8 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
   TRACE_CAT ("TCITransceiver", f << state ());
   auto f_string = frequency_to_string (f);
 //  printf ("%s(%0.1f) TCI do_frequency:%s current_frequency:%s mode:%s current_mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),rx_frequency_.toStdString().c_str(),map_mode(m).toStdString().c_str(),requested_mode_.toStdString().c_str(),no_ignore,busy_rx_frequency_);
-  if (busy_rx_frequency_ || !tci_Ready || no_ignore) return;
+  if  (tci_Ready && busy_rx_frequency_ && no_ignore) printf ("%s(%0.1f) TCI do_frequency critical no_ignore set vfo will be missed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  if (busy_rx_frequency_ || !tci_Ready) return;
   else  busy_rx_frequency_ = true;
   requested_mode_ = map_mode (m);
   if (rx_frequency_ != f_string && requested_rx_frequency_ != f_string) {
@@ -817,7 +818,8 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
   TRACE_CAT ("TCITransceiver", tx << state ());
   auto f_string = frequency_to_string (tx);
 //  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
-  if (busy_other_frequency_ || !tci_Ready || no_ignore) return;
+  if  (tci_Ready && busy_other_frequency_ && no_ignore) printf ("%s(%0.1f) TCI do_txfrequency critical no_ignore set tx vfo will be missed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+  if (busy_other_frequency_ || !tci_Ready) return;
   else  busy_other_frequency_ = true;
   requested_mode_ = map_mode (mode);
   if (tx)
