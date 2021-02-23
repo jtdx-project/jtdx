@@ -5815,35 +5815,35 @@ Error(%2): %3</source>
         <translation>TCI korral peab PTT olema defineeritud üle CAT-i</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="796"/>
+        <location filename="../TCITransceiver.cpp" line="797"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI Rx sageduse seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="801"/>
-        <location filename="../TCITransceiver.cpp" line="809"/>
-        <location filename="../TCITransceiver.cpp" line="875"/>
+        <location filename="../TCITransceiver.cpp" line="802"/>
+        <location filename="../TCITransceiver.cpp" line="810"/>
+        <location filename="../TCITransceiver.cpp" line="877"/>
         <source>TCI failed set mode</source>
         <translation>TCI modulatsiooni seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="837"/>
+        <location filename="../TCITransceiver.cpp" line="839"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI Tx sageduse seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="842"/>
-        <location filename="../TCITransceiver.cpp" line="856"/>
+        <location filename="../TCITransceiver.cpp" line="844"/>
+        <location filename="../TCITransceiver.cpp" line="858"/>
         <source>TCI failed set split</source>
         <translation>TCI spliti seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1012"/>
+        <location filename="../TCITransceiver.cpp" line="1014"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI saatis tundmatu sageduse</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1052"/>
+        <location filename="../TCITransceiver.cpp" line="1054"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulaator pole valmis</translation>
     </message>
