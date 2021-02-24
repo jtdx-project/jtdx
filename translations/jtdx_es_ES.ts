@@ -140,7 +140,7 @@ Otra aplicación puede estar bloqueando el directorio</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Servidor TCI:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -150,7 +150,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de host y puerto opcionales del servicio TCI.
+Déjelo en blanco para que sea un valor por defecto razonable en esta máquina.
+Formatos:
+	nombre de host:puerto
+	Dirección IPv4:puerto
+	dirección IPv6]:puerto</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -5779,70 +5784,70 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error en el websocket del TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI de SDR no se ha podido activar</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI de SDR no está activado</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI de Audio no se ha podido activar</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI no se pudo abrir</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI no pudo activar el ptt</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI debe utilizar PTT a través de CAT</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI falló al establecer frecuencia RX</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI no pudo ajustar el modo</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI falló al establecer frecuencia TX</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI no pudo activar el “split”</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>El TCI envió una frecuencia no reconocida</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>El modulador del TCI no está inactivo</translation>
     </message>
 </context>
 <context>
@@ -7477,22 +7482,22 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Solicita que se encienda el equipo cuando sea compatible con Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>On</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Solicita la desconexión del equipo cuando es compatible con Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Off encendido</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
@@ -7507,12 +7512,12 @@ Haga clic derecho para insertar y eliminar opciones.</translation>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utiliza TCI Audio cuando esté disponible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar TCI Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>
