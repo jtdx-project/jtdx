@@ -2437,7 +2437,7 @@ void MainWindow::displayDialFrequency ()
       if (m_config.pwrBandTxMemory() && !m_tune) {
           if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = band_name+m_modeTx; }
           else { curBand = band_name+m_mode; }
-          if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt());/* printf("set power from freq %s %s %d\n",m_lastBand.toStdString().c_str(),curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
+          if (m_pwrBandTxMemory.contains(curBand)) { m_PwrBandSetOK = false; ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); m_PwrBandSetOK = true;/* printf("set power from freq %s %s %d\n",m_lastBand.toStdString().c_str(),curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
           else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
       }
       startup=false;
@@ -6553,7 +6553,7 @@ void MainWindow::band_changed (Frequency f)
         if (m_config.pwrBandTxMemory() && !m_tune) {
             if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = m_config.bands ()->find (m_freqNominal)+m_modeTx; }
             else { curBand = m_config.bands ()->find (m_freqNominal)+m_mode; }
-            if (m_pwrBandTxMemory.contains(curBand)) { ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt());/* printf("set power from bandchange % lld %lld %s %d\n",m_lastDisplayFreq,m_freqNominal,curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
+            if (m_pwrBandTxMemory.contains(curBand)) { m_PwrBandSetOK = false; ui->outAttenuation->setValue(m_pwrBandTxMemory[curBand].toInt()); m_PwrBandSetOK = true;/* printf("set power from bandchange % lld %lld %s %d\n",m_lastDisplayFreq,m_freqNominal,curBand.toStdString().c_str(),m_pwrBandTxMemory[curBand].toInt());*/}
             else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
         }
         ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
