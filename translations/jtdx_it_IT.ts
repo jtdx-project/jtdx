@@ -139,7 +139,7 @@ Probabile che un&apos;altra applicazione stia usando la cartella</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Server TCI: </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -149,7 +149,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome host e porta opzionali del servizio TCI.
+Lascia vuoto per un valore predefinito ragionevole su questa macchina.
+Formati:
+	hostname:port
+	IPv4-address:port
+	[IPv6-address]:port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -2762,12 +2767,12 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../HelpTextWindow.cpp" line="19"/>
         <source>Cannot open &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire &quot;</translation>
     </message>
     <message>
         <location filename="../HelpTextWindow.cpp" line="20"/>
         <source>&quot; for reading:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot; per leggere:</translation>
     </message>
 </context>
 <context>
@@ -5769,70 +5774,70 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore websocket TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile attivare TCI SDR</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR non è attivato</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile attivare TCI Audio</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aprire TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI non è riuscito a impostare il ptt</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI dovrebbe utilizzare PTT tramite CAT</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI non è riuscito a impostare freqRx</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI non è riuscito a impostare il modo</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI non è riuscito a impostare freqTx</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI non è riuscito a impostare lo split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha inviato una frequenza non riconosciuta</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulatore TCI inattivo</translation>
     </message>
 </context>
 <context>
@@ -6055,7 +6060,7 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../Configuration.ui" line="35"/>
         <source>Select tab to change configuration parameters.</source>
-        <translation> Selezionare per modificare  i parametri di configurazione. </translation>
+        <translation> Selezionare per modificare i parametri di configurazione. </translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="42"/>
@@ -7465,22 +7470,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi l&apos;accensione dell&apos;RTx quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Acceso</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi lo spegnimento dell&apos;RTx quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>RTx spento</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
@@ -7495,12 +7500,12 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Usa il TCI Audio quando disponibile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa il TCI Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>

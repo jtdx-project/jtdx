@@ -149,7 +149,7 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI サーバー:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -159,7 +159,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>オプションのTCIサービスのホスト名とポート。
+このマシンの適切なデフォルトの場合は空白のままにします。
+フォーマット：
+       →        ホスト名：ポート
+       →        IPv4-address：port
+       →       [IPv6-address]：port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2900"/>
@@ -172,9 +177,9 @@ Formats:
         <translation>オプションのネットワークサービスのホスト名とポート。
 このマシンの適切なデフォルトの場合は空白のままにします。
 フォーマット：
-ホスト名：ポート
-IPv4-address：port
-[IPv6-address]：port</translation>
+       →      ホスト名：ポート
+       →      IPv4-address：port
+       →      [IPv6-address]：port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2913"/>
@@ -2761,12 +2766,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../HelpTextWindow.cpp" line="19"/>
         <source>Cannot open &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>開けません &quot;</translation>
     </message>
     <message>
         <location filename="../HelpTextWindow.cpp" line="20"/>
         <source>&quot; for reading:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot; 読み取り専用:</translation>
     </message>
 </context>
 <context>
@@ -5736,70 +5741,70 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI websocket エラー</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR could の電源が入りません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR の電源が入っていません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIオーディオの電源が入りません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIを開くことができません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIのPTTを設定するのに失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIはPTTをCAT経由で行います</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIは受信周波数の設定に失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIはモードの設定に失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIは送信周波数の設定に失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIはスプリットの設定に失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIは認識されていない周波数を送信しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIモジュラーはアイドルではありません</translation>
     </message>
 </context>
 <context>
@@ -6677,12 +6682,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCIオーディオが使用可能な場合それを使用する。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIオーディオを使用する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1858"/>
@@ -7673,22 +7678,22 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hamlibでサポートされている場合リグの電源をオンにします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>リグ電源オン</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hamlibでサポートされている場合リグの電源をオフにします。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>リグ電源オフ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>

@@ -143,7 +143,7 @@ Una altra aplicació pot bloquejar el directori</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Servidor TCI:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -153,7 +153,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom d&apos;amfitrió i port opcional del servei TCI.
+Deixa-ho en blanc per obtenir un valor predeterminat raonable en aquesta màquina.
+Formats:
+	nom d&apos;amfitrió:port
+	Adreça-IPv4:port
+	[Adreça-IPv6]:port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -1163,7 +1168,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation>Italia Africana</translation>
+        <translation>Itàlia Africana</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
@@ -2614,7 +2619,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="457"/>
         <source>Hamlib error: %1 while %2</source>
-        <translation>Error de Hamlib: %1 mentre %2</translation>
+        <translation>Error de Hamlib: %1 amb la %2</translation>
     </message>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="474"/>
@@ -5779,70 +5784,70 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de connexió web TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha pogut activar TCI SDR</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR no està activat</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha pogut activar l&apos;àudio TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha pogut obrir TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI no ha pogut configurar el ptt</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI s&apos;ha d’utilitzar PTT mitjançant CAT</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha fallat en establir la freqüència de RX</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha fallat en el mode de configuració</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha fallat en establir la freqüència de TX</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha fallat en la configuració split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI ha enviat una freqüència no reconeguda</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulador TCI no inactiu</translation>
     </message>
 </context>
 <context>
@@ -7476,22 +7481,22 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Encen l’alimentació del equip quan s’admet a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Encès</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apaga l&apos;alimentació del equip si s&apos;admet a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar l&apos;equip</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
@@ -7506,12 +7511,12 @@ Fes clic dret per inserir i eliminar opcions.</translation>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilitza l&apos;àudio TCI quan estigui disponible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilitza l&apos;àudio TCI</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>
