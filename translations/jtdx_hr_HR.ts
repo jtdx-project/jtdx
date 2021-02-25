@@ -139,7 +139,7 @@ Drugi program možda koristi direktorij</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI Server:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -149,7 +149,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Slobodni odabir hostname i port TCI servisa.
+Ostavite prazno za standardne zadane postavke.
+Formati:
+	hostname:port
+	IPv4-address:port
+	[IPv6-address]:port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -2754,12 +2759,12 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../HelpTextWindow.cpp" line="19"/>
         <source>Cannot open &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../HelpTextWindow.cpp" line="20"/>
         <source>&quot; for reading:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5763,70 +5768,70 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI websocket greška</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR nije se mogao uključiti</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR nije uključen</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI Audio nije se moguće uključiti</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI se nije moguće otvoriti</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti ptt</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI bi trebao koristiti PTT putem CAT-a</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti rxfreq</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti način rada</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti txfreq</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI je poslao neprepoznatu frekvenciju</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI modulator nije u praznom hodu</translation>
     </message>
 </context>
 <context>
@@ -7459,22 +7464,22 @@ Kliknite desnom tipkom miša za umetanje i brisanje opcija.</translation>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zatražite pokretanje Radija ako je podržan u Hamlibu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>On</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zatražite isključivanje Radija ako je podržano u Hamlibu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Isključi Radio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
@@ -7489,12 +7494,12 @@ Kliknite desnom tipkom miša za umetanje i brisanje opcija.</translation>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Koristite TCI Audio kad je dostupan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristite TCI Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>
