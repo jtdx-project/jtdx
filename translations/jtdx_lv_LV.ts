@@ -2067,27 +2067,27 @@ Formāts:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="128"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="175"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="181"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="189"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="275"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="296"/>
@@ -2107,40 +2107,40 @@ Formāts:
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="377"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="384"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="401"/>
         <source>DX Lab Suite Commander send command failed
 </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="413"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="430"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="441"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="504"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2251,7 +2251,7 @@ Formāts:
         <location filename="../SampleDownloader/Directory.cpp" line="188"/>
         <source>Invalid URL:
 &quot;%1&quot;</source>
-        <translation>URL kķuda:
+        <translation>URL kļūda:
 &quot;%1&quot;</translation>
     </message>
     <message>
@@ -2263,7 +2263,7 @@ Formāts:
         <location filename="../SampleDownloader/Directory.cpp" line="223"/>
         <location filename="../SampleDownloader/Directory.cpp" line="230"/>
         <source>JSON Error</source>
-        <translation>JSON Kļuda</translation>
+        <translation>JSON Kļūda</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="131"/>
@@ -2294,22 +2294,22 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="212"/>
         <source>Contents entries must have a valid type</source>
-        <translation type="unfinished"></translation>
+        <translation>Satura ierakstiem ir jābūt derīgam tipam</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="218"/>
         <source>Contents entries must have a valid name</source>
-        <translation type="unfinished"></translation>
+        <translation>Satura ierakstiem ir jābūt derīgam nosaukumam</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="224"/>
         <source>Contents entries must be JSON objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Satura ierakstiem jābūt JSON objektiem</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="231"/>
         <source>Contents directories must be relative and within &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Satura direktorijiem jābūt relatīviem, un tie nedrīkst pārsniegt &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
@@ -2319,7 +2319,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../SampleDownloader/Directory.cpp" line="298"/>
         <source>Authentication required</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepieciešama autentifikācija</translation>
     </message>
 </context>
 <context>
@@ -3068,7 +3068,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="801"/>
         <source>prop</source>
-        <translation type="unfinished"></translation>
+        <translation>prop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="959"/>
@@ -6018,7 +6018,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="42"/>
         <source>Genera&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="45"/>
@@ -6279,7 +6279,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="612"/>
         <source>CW ID a&amp;fter 73</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="638"/>
@@ -6307,7 +6307,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="694"/>
         <source>Rig:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rig:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="714"/>
