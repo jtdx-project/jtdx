@@ -139,7 +139,7 @@ Une autre application peut être le verrouillage du répertoire</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serveur TCI:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -149,7 +149,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom d&apos;hôte et port du service TCI en option.
+Laisser en blanc pour un défaut raisonnable sur cette machine.
+Formats :
+	nom d&apos;hôte:port
+	Adresse IPv4 : port
+	[adresse IPv6]:port</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -2763,12 +2768,12 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../HelpTextWindow.cpp" line="19"/>
         <source>Cannot open &quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne peut pas s&apos;ouvrir&quot;.</translation>
     </message>
     <message>
         <location filename="../HelpTextWindow.cpp" line="20"/>
         <source>&quot; for reading:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot; pour la lecture :</translation>
     </message>
 </context>
 <context>
@@ -3277,7 +3282,9 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1578"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La liste des candidats est réduite, cette fonction est dédiée au décodage large bande avec des processeurs lents et un réglage &quot;minimum&quot; de la sensibilité du décodeur large bande. La liste des candidats étant triée par niveau de modèle de synchronisation avec le facteur de pondération DT appliqué, les candidats ayant une faible valeur ne seront pas traités par le décodeur pour réduire le temps passé pour le décodage par intervalles. Cette fonction n&apos;est pas appliquée à la fréquence de réception QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+
+Traduit avec www.DeepL.com/Translator (version gratuite)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1871"/>
@@ -3894,7 +3901,9 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1810"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fonction de pondération DT pour l&apos;option d&apos;éclaircissement de la liste des candidats, la valeur médiane de la distribution DT des signaux décodés doit y être définie. Cette valeur dépend de la précision de la synchronisation de l&apos;horloge du système et des bandes surchargées est proche de la valeur DT moyenne des signaux décodés. Une valeur correcte augmente l&apos;efficacité du décodage dans l&apos;option d&apos;éclaircissement de la liste candidate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+
+Traduit avec www.DeepL.com/Translator (version gratuite)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1813"/>
@@ -5770,70 +5779,70 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="232"/>
         <source>TCI websocket error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur dans la base de données du TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="319"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="320"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR n&apos;est pas allumé</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="329"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI Audio n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="336"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Le TCI n&apos;a pas pu être ouvert</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="763"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI n&apos;a pas réussi à mettre en place le ptt</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="770"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI devrait utiliser les PTT via le CAT</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="798"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI a échoué set rxfreq</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="803"/>
         <location filename="../TCITransceiver.cpp" line="811"/>
         <location filename="../TCITransceiver.cpp" line="878"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Le TCI a échoué en mode set</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="840"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI a échoué set txfreq</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="859"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>Le TCI a échoué dans sa tentative de partage</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1015"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI a envoyé une fréquence non reconnue</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1055"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Le modulateur TCI n&apos;est pas inactif</translation>
     </message>
 </context>
 <context>
