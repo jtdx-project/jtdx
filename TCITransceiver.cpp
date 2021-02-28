@@ -644,7 +644,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
     qDebug () << "dropped " << maxSize / bytesPerFrame - framesAccepted
                 << " frames of data on the floor!"
                 << dec_data.params.kin << mstr;
-    printf("%s(%0.1f) dropped %ld frames of data %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),maxSize / bytesPerFrame - framesAccepted,dec_data.params.kin,mstr);
+//    printf("%s(%0.1f) dropped %ld frames of data %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),maxSize / bytesPerFrame - framesAccepted,dec_data.params.kin,mstr);
     }
 
     for (unsigned remaining = framesAccepted; remaining; ) {
