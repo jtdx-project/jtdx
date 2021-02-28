@@ -65,6 +65,7 @@ class TransceiverBase
 protected:
   TransceiverBase (QObject * parent)
     : Transceiver {parent}
+    , jtdxtime_ {nullptr}
     , last_sequence_number_ {0}
     , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
   {}
@@ -148,7 +149,6 @@ private:
   void startup ();
   void shutdown ();
   bool maybe_low_resolution (Frequency low_res, Frequency high_res);
-  qint64 set_freq_time = 0;
   JTDXDateTime * jtdxtime_;
   // use this convenience class to notify in update methods
   class may_update

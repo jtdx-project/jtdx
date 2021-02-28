@@ -106,6 +106,7 @@ OmniRigTransceiver::OmniRigTransceiver (std::unique_ptr<TransceiverBase> wrapped
   , writable_params_ {0}
   , send_update_signal_ {false}
   , reversed_ {false}
+  , m_jtdxtime {nullptr}
 {
 }
 

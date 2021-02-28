@@ -49,6 +49,7 @@ DXLabSuiteCommanderTransceiver::DXLabSuiteCommanderTransceiver (std::unique_ptr<
   , use_for_ptt_ {use_for_ptt}
   , server_ {address}
   , commander_ {nullptr}
+  , m_jtdxtime {nullptr}
 {
 }
 

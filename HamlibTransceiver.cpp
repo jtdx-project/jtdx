@@ -203,6 +203,7 @@ HamlibTransceiver::HamlibTransceiver (TransceiverFactory::PTTMethod ptt_type, QS
   , do_pwr_ {false}
   , do_pwr2_ {false}
   , tickle_hamlib_ {false}
+  , m_jtdxtime {nullptr}
   , get_vfo_works_ {true}
   , set_vfo_works_ {true}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
@@ -282,6 +283,7 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
   , do_pwr_ {false}
   , do_pwr2_ {false}
   , tickle_hamlib_ {false}
+  , m_jtdxtime {nullptr}
   , get_vfo_works_ {true}
   , set_vfo_works_ {true}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
@@ -801,8 +803,7 @@ void HamlibTransceiver::do_stop ()
   TRACE_CAT ("HamlibTransceiver", "state:" << state () << "reversed =" << reversed_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  auto ms = m_jtdxtime->currentMSecsSinceEpoch2();
-  fprintf(pFile,"%s Transceiver stop state %d reversed=%d %lld ms.\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,m_jtdxtime->currentMSecsSinceEpoch2()-ms);
+  fprintf(pFile,"Transceiver stop state %d reversed=%d\n",state ().online(),reversed_);
   fclose (pFile);
 #endif
 }

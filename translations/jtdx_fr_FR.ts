@@ -2064,90 +2064,90 @@ Format:
 <context>
     <name>DXLabSuiteCommanderTransceiver</name>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="72"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="73"/>
         <source>Failed to connect to DX Lab Suite Commander
 </source>
         <translation>Échec de la connexion à DX Lab Suite Commander
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="128"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="129"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly reading frequency: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à la fréquence: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="175"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="176"/>
         <source>DX Lab Suite Commander sent an unrecognised TX state: </source>
         <translation>DX Lab Suite Commander a envoyé un état TX non reconnu: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="181"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="182"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX status: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur l&apos;état du TX: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="189"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="190"/>
         <source>DX Lab Suite Commander rig did not respond to PTT: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur l&apos;état du TX: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="275"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="276"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling frequency: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à la fréquence d&apos;interrogation: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="296"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="297"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling TX frequency: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement à l&apos;interrogation de la fréquence TX: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="315"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="316"/>
         <source>DX Lab Suite Commander sent an unrecognised split state: </source>
         <translation>DX Lab Suite Commander a envoyé un état fractionné non reconnu: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="321"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="322"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling split status: </source>
         <translation>DX Lab Suite Commander n&apos;a pas répondu correctement au sondage sur le statut partagé: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="377"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="378"/>
         <source>DX Lab Suite Commander sent an unrecognised mode: &quot;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="384"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="385"/>
         <source>DX Lab Suite Commander didn&apos;t respond correctly polling mode: </source>
         <translation>Lab Suite Commander n&apos;a pas répondu correctement au mode d&apos;interrogation: </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="401"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="402"/>
         <source>DX Lab Suite Commander send command failed
 </source>
         <translation>La commande d&apos;envoi de DX Lab Suite Commander a échoué
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="413"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="414"/>
         <source>DX Lab Suite Commander failed to send command &quot;%1&quot;: %2
 </source>
         <translation>DX Lab Suite Commander n&apos;a pas envoyé de commande &quot;%1&quot;: %2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="430"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="431"/>
         <source>DX Lab Suite Commander send command &quot;%1&quot; read reply failed: %2
 </source>
         <translation>DX Lab Suite Commander envoyer commande &quot;%1&quot; read reply failed: %2
 </translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="441"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="442"/>
         <source>DX Lab Suite Commander retries exhausted sending command &quot;%1&quot;</source>
         <translation>DX Lab Suite Commander réessaie les envois épuisés &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="504"/>
+        <location filename="../DXLabSuiteCommanderTransceiver.cpp" line="505"/>
         <source>DX Lab Suite Commander sent an unrecognized frequency</source>
         <translation>DX Lab Suite Commander a envoyé une fréquence non reconnue</translation>
     </message>
@@ -2410,86 +2410,86 @@ Erreur : %2 - %3</translation>
 <context>
     <name>HRDTransceiver</name>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="127"/>
-        <location filename="../HRDTransceiver.cpp" line="152"/>
+        <location filename="../HRDTransceiver.cpp" line="128"/>
+        <location filename="../HRDTransceiver.cpp" line="153"/>
         <source>Failed to connect to Ham Radio Deluxe
 </source>
         <translation>Impossible de se connecter à Ham Radio Deluxe
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="161"/>
+        <location filename="../HRDTransceiver.cpp" line="162"/>
         <source>Failed to open file &quot;%1&quot;: %2.</source>
         <translation>Impossible d&apos;ouvrir le dossier &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="176"/>
-        <location filename="../HRDTransceiver.cpp" line="200"/>
+        <location filename="../HRDTransceiver.cpp" line="177"/>
+        <location filename="../HRDTransceiver.cpp" line="201"/>
         <source>Ham Radio Deluxe: no rig found</source>
         <translation>Ham Radio Deluxe : aucun appareil trouvé</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="424"/>
+        <location filename="../HRDTransceiver.cpp" line="425"/>
         <source>Ham Radio Deluxe: rig doesn&apos;t support mode</source>
         <translation>Ham Radio Deluxe : le Trx ne prend pas en charge le mode de fonctionnement</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="443"/>
+        <location filename="../HRDTransceiver.cpp" line="444"/>
         <source>Ham Radio Deluxe: sent an unrecognised mode</source>
         <translation>Ham Radio Deluxe : envoi d&apos;un mode non reconnu</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="478"/>
+        <location filename="../HRDTransceiver.cpp" line="479"/>
         <source>Ham Radio Deluxe: item not found in %1 dropdown list</source>
         <translation>Ham Radio Deluxe : article non trouvé dans la liste déroulante %1</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="522"/>
+        <location filename="../HRDTransceiver.cpp" line="523"/>
         <source>Ham Radio Deluxe: button not available</source>
         <translation>Ham Radio Deluxe : bouton non disponible</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="888"/>
+        <location filename="../HRDTransceiver.cpp" line="889"/>
         <source>Ham Radio Deluxe didn&apos;t respond as expected</source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu comme prévu</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1037"/>
+        <location filename="../HRDTransceiver.cpp" line="1038"/>
         <source>Ham Radio Deluxe: rig has disappeared or changed</source>
         <translation>Ham Radio Deluxe : la plateforme a disparu ou a changé</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1052"/>
+        <location filename="../HRDTransceiver.cpp" line="1053"/>
         <source>Ham Radio Deluxe send command &quot;%1&quot; failed %2
 </source>
         <translation>Ham Radio Deluxe envoie la commande &quot;%1&quot; a échoué %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1065"/>
-        <location filename="../HRDTransceiver.cpp" line="1078"/>
+        <location filename="../HRDTransceiver.cpp" line="1066"/>
+        <location filename="../HRDTransceiver.cpp" line="1079"/>
         <source>Ham Radio Deluxe: failed to write command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe : a échoué à écrire la commande &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1095"/>
+        <location filename="../HRDTransceiver.cpp" line="1096"/>
         <source>Ham Radio Deluxe sent an invalid reply to our command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe a envoyé une réponse invalide à notre commande &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1149"/>
+        <location filename="../HRDTransceiver.cpp" line="1150"/>
         <source>Ham Radio Deluxe failed to reply to command &quot;%1&quot; %2
 </source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; %2
 </translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1159"/>
+        <location filename="../HRDTransceiver.cpp" line="1160"/>
         <source>Ham Radio Deluxe retries exhausted sending command &quot;%1&quot;</source>
         <translation>Ham Radio Deluxe essaie à nouveau la commande d&apos;envoi épuisée &quot;%1</translation>
     </message>
     <message>
-        <location filename="../HRDTransceiver.cpp" line="1172"/>
+        <location filename="../HRDTransceiver.cpp" line="1173"/>
         <source>Ham Radio Deluxe didn&apos;t respond to command &quot;%1&quot; as expected</source>
         <translation>Ham Radio Deluxe n&apos;a pas répondu à la commande &quot;%1&quot; comme prévu</translation>
     </message>
@@ -2497,268 +2497,268 @@ Erreur : %2 - %3</translation>
 <context>
     <name>HamlibTransceiver</name>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="212"/>
-        <location filename="../HamlibTransceiver.cpp" line="291"/>
+        <location filename="../HamlibTransceiver.cpp" line="213"/>
+        <location filename="../HamlibTransceiver.cpp" line="293"/>
         <source>Hamlib initialisation error</source>
         <translation>Erreur d&apos;initialisation de Hamlib</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="253"/>
+        <location filename="../HamlibTransceiver.cpp" line="254"/>
         <source>Command completed successfully</source>
         <translation>Commande terminée avec succès</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="254"/>
+        <location filename="../HamlibTransceiver.cpp" line="255"/>
         <source>Invalid parameter</source>
         <translation>Paramètre non valide</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="255"/>
+        <location filename="../HamlibTransceiver.cpp" line="256"/>
         <source>Invalid configuration</source>
         <translation>Configuration non valable</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="256"/>
+        <location filename="../HamlibTransceiver.cpp" line="257"/>
         <source>Memory shortage</source>
         <translation>Pénurie de mémoire</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="257"/>
+        <location filename="../HamlibTransceiver.cpp" line="258"/>
         <source>Feature not implemented</source>
         <translation>Fonctionnalité non mise en œuvre</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="258"/>
+        <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Communication timed out</source>
         <translation>La communication a pris du retard</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="259"/>
+        <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>IO error</source>
         <translation>Erreur d&apos;OI</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="260"/>
+        <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Internal Hamlib error</source>
         <translation>Erreur interne de Hamlib</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="261"/>
+        <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Protocol error</source>
         <translation>Erreur de protocole</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="262"/>
+        <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Command rejected by the rig</source>
         <translation>Commande rejetée par le Trx</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="263"/>
+        <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
         <translation>Commandement effectué, mais arg tronqué, résultat non garanti</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="264"/>
+        <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>Feature not available</source>
         <translation>Fonctionnalité non disponible</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="265"/>
+        <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Target VFO unaccessible</source>
         <translation>Ciblez le VFO inaccessible</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <location filename="../HamlibTransceiver.cpp" line="267"/>
         <source>Communication bus error</source>
         <translation>Erreur de bus de communication</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="267"/>
+        <location filename="../HamlibTransceiver.cpp" line="268"/>
         <source>Communication bus collision</source>
         <translation>Collision de bus de communication</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="268"/>
+        <location filename="../HamlibTransceiver.cpp" line="269"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
         <translation>Manipulateur NULL Trx ou paramètre de pointeur invalide</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="269"/>
+        <location filename="../HamlibTransceiver.cpp" line="270"/>
         <source>Invalid VFO</source>
         <translation>VFO invalide</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="270"/>
+        <location filename="../HamlibTransceiver.cpp" line="271"/>
         <source>Argument out of domain of func</source>
         <translation>Argument hors du domaine de la fonction</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="318"/>
+        <location filename="../HamlibTransceiver.cpp" line="320"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
         <translation>Erreur dans le fichier des paramètres Hamlib : %1 au décalage de caractères %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="324"/>
+        <location filename="../HamlibTransceiver.cpp" line="326"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
         <translation>Erreur dans le fichier de paramétrage Hamlib : le niveau supérieur doit être un objet JSON</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="336"/>
+        <location filename="../HamlibTransceiver.cpp" line="338"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
         <translation>Erreur dans le fichier de configuration Hamlib : config doit être un objet JSON</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="400"/>
+        <location filename="../HamlibTransceiver.cpp" line="402"/>
         <source>Unsupported CAT type</source>
         <translation>Type de CAT non pris en charge</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="457"/>
+        <location filename="../HamlibTransceiver.cpp" line="459"/>
         <source>Hamlib error: %1 while %2</source>
         <translation>Erreur de Hamlib : %1 et %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="474"/>
+        <location filename="../HamlibTransceiver.cpp" line="476"/>
         <source>opening connection to rig</source>
         <translation>l&apos;ouverture de la connexion au Trx</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="535"/>
+        <location filename="../HamlibTransceiver.cpp" line="537"/>
         <source>getting current frequency</source>
         <translation>obtenir la fréquence actuelle</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="544"/>
+        <location filename="../HamlibTransceiver.cpp" line="546"/>
         <source>getting current mode</source>
         <translation>obtenir le mode actuel</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="593"/>
-        <location filename="../HamlibTransceiver.cpp" line="628"/>
+        <location filename="../HamlibTransceiver.cpp" line="595"/>
+        <location filename="../HamlibTransceiver.cpp" line="630"/>
         <source>exchanging VFOs</source>
         <translation>échange de VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="601"/>
-        <location filename="../HamlibTransceiver.cpp" line="1158"/>
+        <location filename="../HamlibTransceiver.cpp" line="603"/>
+        <location filename="../HamlibTransceiver.cpp" line="1159"/>
         <source>getting other VFO frequency</source>
         <translation>obtenir une autre fréquence VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="610"/>
+        <location filename="../HamlibTransceiver.cpp" line="612"/>
         <source>getting other VFO mode</source>
         <translation>obtenir un autre mode VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="638"/>
+        <location filename="../HamlibTransceiver.cpp" line="640"/>
         <source>setting current VFO</source>
         <translation>réglage du VFO actuel</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="647"/>
+        <location filename="../HamlibTransceiver.cpp" line="649"/>
         <source>getting frequency</source>
         <translation>obtenir la fréquence</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="656"/>
+        <location filename="../HamlibTransceiver.cpp" line="658"/>
         <source>getting mode</source>
         <translation>mode d&apos;obtention</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="678"/>
-        <location filename="../HamlibTransceiver.cpp" line="1073"/>
+        <location filename="../HamlibTransceiver.cpp" line="680"/>
+        <location filename="../HamlibTransceiver.cpp" line="1074"/>
         <source>getting current VFO</source>
         <translation>obtenir le VFO actuel</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="737"/>
-        <location filename="../HamlibTransceiver.cpp" line="745"/>
-        <location filename="../HamlibTransceiver.cpp" line="759"/>
-        <location filename="../HamlibTransceiver.cpp" line="1132"/>
+        <location filename="../HamlibTransceiver.cpp" line="739"/>
+        <location filename="../HamlibTransceiver.cpp" line="747"/>
+        <location filename="../HamlibTransceiver.cpp" line="761"/>
+        <location filename="../HamlibTransceiver.cpp" line="1133"/>
         <source>getting current VFO frequency</source>
         <translation>obtenir la fréquence actuelle du VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="743"/>
-        <location filename="../HamlibTransceiver.cpp" line="758"/>
-        <location filename="../HamlibTransceiver.cpp" line="765"/>
-        <location filename="../HamlibTransceiver.cpp" line="855"/>
-        <location filename="../HamlibTransceiver.cpp" line="873"/>
-        <location filename="../HamlibTransceiver.cpp" line="934"/>
+        <location filename="../HamlibTransceiver.cpp" line="745"/>
+        <location filename="../HamlibTransceiver.cpp" line="760"/>
+        <location filename="../HamlibTransceiver.cpp" line="767"/>
+        <location filename="../HamlibTransceiver.cpp" line="856"/>
+        <location filename="../HamlibTransceiver.cpp" line="874"/>
+        <location filename="../HamlibTransceiver.cpp" line="935"/>
         <source>setting frequency</source>
         <translation>réglage de la fréquence</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="863"/>
-        <location filename="../HamlibTransceiver.cpp" line="941"/>
-        <location filename="../HamlibTransceiver.cpp" line="1013"/>
-        <location filename="../HamlibTransceiver.cpp" line="1026"/>
+        <location filename="../HamlibTransceiver.cpp" line="864"/>
+        <location filename="../HamlibTransceiver.cpp" line="942"/>
+        <location filename="../HamlibTransceiver.cpp" line="1014"/>
+        <location filename="../HamlibTransceiver.cpp" line="1027"/>
         <source>getting current VFO mode</source>
         <translation>obtenir le mode VFO actuel</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="869"/>
-        <location filename="../HamlibTransceiver.cpp" line="878"/>
-        <location filename="../HamlibTransceiver.cpp" line="947"/>
-        <location filename="../HamlibTransceiver.cpp" line="1019"/>
-        <location filename="../HamlibTransceiver.cpp" line="1032"/>
+        <location filename="../HamlibTransceiver.cpp" line="870"/>
+        <location filename="../HamlibTransceiver.cpp" line="879"/>
+        <location filename="../HamlibTransceiver.cpp" line="948"/>
+        <location filename="../HamlibTransceiver.cpp" line="1020"/>
+        <location filename="../HamlibTransceiver.cpp" line="1033"/>
         <source>setting current VFO mode</source>
         <translation>réglage du mode VFO actuel</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="921"/>
-        <location filename="../HamlibTransceiver.cpp" line="990"/>
+        <location filename="../HamlibTransceiver.cpp" line="922"/>
+        <location filename="../HamlibTransceiver.cpp" line="991"/>
         <source>setting/unsetting split mode</source>
         <translation>mise en place/désactivation du mode Split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="932"/>
-        <location filename="../HamlibTransceiver.cpp" line="972"/>
+        <location filename="../HamlibTransceiver.cpp" line="933"/>
+        <location filename="../HamlibTransceiver.cpp" line="973"/>
         <source>setting split mode</source>
         <translation>réglage du mode Split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="960"/>
+        <location filename="../HamlibTransceiver.cpp" line="961"/>
         <source>setting split TX frequency and mode</source>
         <translation>réglage de la fréquence et du mode d&apos;émission fractionnée</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="965"/>
+        <location filename="../HamlibTransceiver.cpp" line="966"/>
         <source>setting split TX frequency</source>
         <translation>réglage de la fréquence d&apos;émission fractionnée</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1037"/>
+        <location filename="../HamlibTransceiver.cpp" line="1038"/>
         <source>getting split TX VFO mode</source>
         <translation>obtenir le mode VFO TX partagé</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1044"/>
+        <location filename="../HamlibTransceiver.cpp" line="1045"/>
         <source>setting split TX VFO mode</source>
         <translation>réglage du mode VFO split TX</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1300"/>
+        <location filename="../HamlibTransceiver.cpp" line="1301"/>
         <source>getting PTT state</source>
         <translation>obtenir l&apos;état PTT</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1336"/>
+        <location filename="../HamlibTransceiver.cpp" line="1337"/>
         <source>setting PTT on</source>
         <translation>mettre les PTT sur</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1344"/>
+        <location filename="../HamlibTransceiver.cpp" line="1345"/>
         <source>setting PTT off</source>
         <translation>déclenchement des PTT</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1356"/>
+        <location filename="../HamlibTransceiver.cpp" line="1357"/>
         <source>setting a configuration item</source>
         <translation>définition d&apos;un élément de configuration</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1366"/>
+        <location filename="../HamlibTransceiver.cpp" line="1367"/>
         <source>getting a configuration item</source>
         <translation>obtenir un élément de configuration</translation>
     </message>
@@ -5188,7 +5188,7 @@ Serveur UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="272"/>
+        <location filename="../PollingTransceiver.cpp" line="297"/>
         <source>Unexpected rig error</source>
         <translation>erreur inattendue</translation>
     </message>
@@ -5777,70 +5777,191 @@ Erreur(%2) : %3</translation>
 <context>
     <name>TCITransceiver</name>
     <message>
-        <location filename="../TCITransceiver.cpp" line="232"/>
-        <source>TCI websocket error</source>
-        <translation>Erreur dans la base de données du TCI</translation>
+        <location filename="../TCITransceiver.cpp" line="131"/>
+        <source>ConnectionRefused</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="319"/>
+        <location filename="../TCITransceiver.cpp" line="132"/>
+        <source>RemoteHostClosed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="133"/>
+        <source>HostNotFound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="134"/>
+        <source>SocketAccess</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="135"/>
+        <source>SocketResource</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="136"/>
+        <source>SocketTimeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="137"/>
+        <source>DatagramTooLarge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="138"/>
+        <source>Network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="139"/>
+        <source>AddressInUse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="140"/>
+        <source>SocketAddressNotAvailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="141"/>
+        <source>UnsupportedSocketOperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="142"/>
+        <source>UnfinishedSocketOperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="143"/>
+        <source>ProxyAuthenticationRequired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="144"/>
+        <source>SslHandshakeFailed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="145"/>
+        <source>ProxyConnectionRefused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="146"/>
+        <source>ProxyConnectionClosed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="147"/>
+        <source>ProxyConnectionTimeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="148"/>
+        <source>ProxyNotFound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="149"/>
+        <source>ProxyProtocol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="150"/>
+        <source>Operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="151"/>
+        <source>SslInternal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="152"/>
+        <source>SslInvalidUserData</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="153"/>
+        <source>Temporary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="154"/>
+        <source>UnknownSocket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="257"/>
+        <source>TCI websocket error: %1</source>
+        <translation>Erreur dans la base de données du TCI: %1</translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="343"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="320"/>
+        <location filename="../TCITransceiver.cpp" line="344"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR n&apos;est pas allumé</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="329"/>
+        <location filename="../TCITransceiver.cpp" line="353"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="336"/>
+        <location filename="../TCITransceiver.cpp" line="360"/>
+        <location filename="../TCITransceiver.cpp" line="913"/>
         <source>TCI could not be opened</source>
         <translation>Le TCI n&apos;a pas pu être ouvert</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="763"/>
+        <location filename="../TCITransceiver.cpp" line="790"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI n&apos;a pas réussi à mettre en place le ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="770"/>
+        <location filename="../TCITransceiver.cpp" line="797"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI devrait utiliser les PTT via le CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="798"/>
+        <location filename="../TCITransceiver.cpp" line="825"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI a échoué set rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="803"/>
-        <location filename="../TCITransceiver.cpp" line="811"/>
-        <location filename="../TCITransceiver.cpp" line="878"/>
+        <location filename="../TCITransceiver.cpp" line="830"/>
+        <location filename="../TCITransceiver.cpp" line="838"/>
+        <location filename="../TCITransceiver.cpp" line="905"/>
         <source>TCI failed set mode</source>
         <translation>Le TCI a échoué en mode set</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="840"/>
+        <location filename="../TCITransceiver.cpp" line="867"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI a échoué set txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="845"/>
-        <location filename="../TCITransceiver.cpp" line="859"/>
+        <location filename="../TCITransceiver.cpp" line="872"/>
+        <location filename="../TCITransceiver.cpp" line="886"/>
         <source>TCI failed set split</source>
         <translation>Le TCI a échoué dans sa tentative de partage</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1015"/>
+        <location filename="../TCITransceiver.cpp" line="1038"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI a envoyé une fréquence non reconnue</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1055"/>
+        <location filename="../TCITransceiver.cpp" line="1078"/>
         <source>TCI modulator not Idle</source>
         <translation>Le modulateur TCI n&apos;est pas inactif</translation>
     </message>
