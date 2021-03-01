@@ -5892,71 +5892,71 @@ Errore (%2):%3</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="257"/>
+        <location filename="../TCITransceiver.cpp" line="258"/>
         <source>TCI websocket error: %1</source>
         <translation>Errore websocket TCI: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="343"/>
+        <location filename="../TCITransceiver.cpp" line="344"/>
         <source>TCI SDR could not be switched on</source>
         <translation>Non è stato possibile attivare TCI SDR</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="344"/>
+        <location filename="../TCITransceiver.cpp" line="345"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR non è attivato</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="353"/>
+        <location filename="../TCITransceiver.cpp" line="354"/>
         <source>TCI Audio could not be switched on</source>
         <translation>Non è stato possibile attivare TCI Audio</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="360"/>
-        <location filename="../TCITransceiver.cpp" line="913"/>
+        <location filename="../TCITransceiver.cpp" line="364"/>
+        <location filename="../TCITransceiver.cpp" line="921"/>
         <source>TCI could not be opened</source>
         <translation>Impossibile aprire TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="790"/>
+        <location filename="../TCITransceiver.cpp" line="797"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI non è riuscito a impostare il ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="797"/>
+        <location filename="../TCITransceiver.cpp" line="804"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI dovrebbe utilizzare PTT tramite CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="825"/>
+        <location filename="../TCITransceiver.cpp" line="832"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI non è riuscito a impostare freqRx</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="830"/>
-        <location filename="../TCITransceiver.cpp" line="838"/>
-        <location filename="../TCITransceiver.cpp" line="905"/>
+        <location filename="../TCITransceiver.cpp" line="837"/>
+        <location filename="../TCITransceiver.cpp" line="845"/>
+        <location filename="../TCITransceiver.cpp" line="912"/>
         <source>TCI failed set mode</source>
         <translation>TCI non è riuscito a impostare il modo</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="867"/>
+        <location filename="../TCITransceiver.cpp" line="874"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI non è riuscito a impostare freqTx</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="872"/>
-        <location filename="../TCITransceiver.cpp" line="886"/>
+        <location filename="../TCITransceiver.cpp" line="879"/>
+        <location filename="../TCITransceiver.cpp" line="893"/>
         <source>TCI failed set split</source>
         <translation>TCI non è riuscito a impostare lo split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1038"/>
+        <location filename="../TCITransceiver.cpp" line="1046"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI ha inviato una frequenza non riconosciuta</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1078"/>
+        <location filename="../TCITransceiver.cpp" line="1086"/>
         <source>TCI modulator not Idle</source>
         <translation>Modulatore TCI inattivo</translation>
     </message>

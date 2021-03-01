@@ -152,6 +152,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   tr("SslInvalidUserData"),
   tr("Temporary"),
   tr("UnknownSocket") }
+  , error_ {""}
   , server_ {address}
   , do_snr_ {(poll_interval & do__snr) == do__snr}
   , do_pwr_ {(poll_interval & do__pwr) == do__pwr}
@@ -254,7 +255,7 @@ void TCITransceiver::onError(QAbstractSocket::SocketError err)
 {
 //qDebug() << "WebInThread::onError";
 //    printf("%s(%0.1f) TCI error:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),err);
-    throw error {tr ("TCI websocket error: %1").arg (errortable.at (err))};
+    error_ = tr ("TCI websocket error: %1").arg (errortable.at (err));
 }
 
 int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
@@ -357,7 +358,13 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     TRACE_CAT ("TCITransceiver", "started");
 //    printf("%s(%0.1f) TCI Transceiver started\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
     return 0;
-  } else throw error {tr ("TCI could not be opened")};
+  } else {
+//    printf("%s(%0.1f) TCI Transceiver not started %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),error_.toStdString().c_str());
+    if (error_.isEmpty())
+      throw error {tr ("TCI could not be opened")};
+    else
+      throw error {error_};
+  }
 }
 
 void TCITransceiver::do_stop ()
@@ -910,7 +917,8 @@ void TCITransceiver::do_mode (MODE m)
 void TCITransceiver::do_poll ()
 {
 //  printf("%s(%0.1f) TCI do_poll split:%d ptt:%d rx_busy:%d tx_busy:%d level:%d power:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),state ().split (),state (). ptt (),busy_rx_frequency_,busy_other_frequency_,level_,power_);
-  if (!tci_Ready) throw error {tr ("TCI could not be opened")};
+  if (!error_.isEmpty()) throw error {error_};
+  else if (!tci_Ready) throw error {tr ("TCI could not be opened")};
   update_rx_frequency (string_to_frequency (rx_frequency_));
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_split (split_);

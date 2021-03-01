@@ -191,6 +191,7 @@ private:
   std::unique_ptr<TransceiverBase> wrapped_; // may be null
   bool use_for_ptt_;
   QStringList errortable;
+  QString error_;
   QString server_;
   bool do_snr_;
   bool do_pwr_;
