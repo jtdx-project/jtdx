@@ -139,7 +139,7 @@ Une autre application peut être le verrouillage du répertoire</translation>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation>Serveur TCI:</translation>
+        <translation>Serveur TCI :</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -328,7 +328,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="33"/>
         <source>where?</source>
-        <translation>Quel Pays ??</translation>
+        <translation>Locator ? ?</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="34"/>
@@ -3283,8 +3283,7 @@ Erreur : %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1578"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La liste des candidats est réduite, cette fonction est dédiée au décodage large bande avec des processeurs lents et un réglage &quot;minimum&quot; de la sensibilité du décodeur large bande. La liste des candidats étant triée par niveau de modèle de synchronisation avec le facteur de pondération DT appliqué, les candidats ayant une faible valeur ne seront pas traités par le décodeur pour réduire le temps passé pour le décodage par intervalles. Cette fonction n&apos;est pas appliquée à la fréquence de réception QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-
-Traduit avec www.DeepL.com/Translator (version gratuite)</translation>
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1871"/>
@@ -3902,8 +3901,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.ui" line="1810"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fonction de pondération DT pour l&apos;option d&apos;éclaircissement de la liste des candidats, la valeur médiane de la distribution DT des signaux décodés doit y être définie. Cette valeur dépend de la précision de la synchronisation de l&apos;horloge du système et des bandes surchargées est proche de la valeur DT moyenne des signaux décodés. Une valeur correcte augmente l&apos;efficacité du décodage dans l&apos;option d&apos;éclaircissement de la liste candidate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-
-Traduit avec www.DeepL.com/Translator (version gratuite)</translation>
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1813"/>
@@ -4521,7 +4519,7 @@ Traduit avec www.DeepL.com/Translator (version gratuite)</translation>
     <message>
         <location filename="../mainwindow.ui" line="5671"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation type="unfinished"></translation>
+        <translation>Appeler plus haut que les nouveaux indicatifs d&apos;appel prioritaires</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5690"/>
@@ -7445,12 +7443,12 @@ pour évaluer la propagation et les performances des systèmes.</translation>
     <message>
         <location filename="../Configuration.ui" line="3668"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cacher le caractère d&apos;indice dans le champ de marquage.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3671"/>
         <source>Hide hint char</source>
-        <translation type="unfinished"></translation>
+        <translation>Cacher les indices</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5154"/>
@@ -7599,7 +7597,7 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demande de mise en marche du TRX lorsqu&apos;il est soutenue à Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
@@ -7609,42 +7607,42 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demande de couper l&apos;alimentation de la plate-forme lorsqu&apos;elle est soutenue à Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrêt du Trx</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
         <source>refresh audio device list</source>
-        <translation type="unfinished"></translation>
+        <translation>rafraîchir la liste des appareils audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1826"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Rafraîchir</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCI Audio lorsque disponible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser TCI Audio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2465"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajouter la distance pour correspondre aux commentaires dans l&apos;enregistrement ADIF QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2468"/>
         <source>Distance to comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance dans les commentaires</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2938"/>
