@@ -203,6 +203,7 @@ HamlibTransceiver::HamlibTransceiver (TransceiverFactory::PTTMethod ptt_type, QS
   , do_pwr_ {false}
   , do_pwr2_ {false}
   , tickle_hamlib_ {false}
+  , m_jtdxtime {nullptr}
   , get_vfo_works_ {true}
   , set_vfo_works_ {true}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
@@ -282,6 +283,7 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
   , do_pwr_ {false}
   , do_pwr2_ {false}
   , tickle_hamlib_ {false}
+  , m_jtdxtime {nullptr}
   , get_vfo_works_ {true}
   , set_vfo_works_ {true}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
@@ -485,7 +487,7 @@ m_jtdxtime = jtdxtime;
   tickle_hamlib_ = false;
   get_vfo_works_ = true;
   set_vfo_works_ = true;
-//printf("rig id %d do_snr_ %d caps %0lx do_pwr_ %d do_pwr2_ %d\n",model_,do_snr_,rig_get_caps_int (model_, RIG_CAPS_HAS_GET_LEVEL),do_pwr_,do_pwr2_);
+//printf("rig id %d do_snr_ %d caps %llx do_pwr_ %d do_pwr2_ %d\n",model_,do_snr_,rig_get_caps_int (model_, RIG_CAPS_HAS_GET_LEVEL),do_pwr_,do_pwr2_);
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
   fprintf(pFile,"%s Transceiver opened\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
@@ -801,8 +803,7 @@ void HamlibTransceiver::do_stop ()
   TRACE_CAT ("HamlibTransceiver", "state:" << state () << "reversed =" << reversed_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  auto ms = m_jtdxtime->currentMSecsSinceEpoch2();
-  fprintf(pFile,"%s Transceiver stop state %d reversed=%d %lld ms.\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),state ().online(),reversed_,m_jtdxtime->currentMSecsSinceEpoch2()-ms);
+  fprintf(pFile,"Transceiver stop state %d reversed=%d\n",state ().online(),reversed_);
   fclose (pFile);
 #endif
 }

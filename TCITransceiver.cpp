@@ -129,6 +129,31 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   : PollingTransceiver {poll_interval, parent}
   , wrapped_ {std::move (wrapped)}
   , use_for_ptt_ {use_for_ptt}
+  , errortable {tr("ConnectionRefused"),
+  tr("RemoteHostClosed"),
+  tr("HostNotFound"),
+  tr("SocketAccess"),
+  tr("SocketResource"),
+  tr("SocketTimeout"),
+  tr("DatagramTooLarge"),
+  tr("Network"),
+  tr("AddressInUse"),
+  tr("SocketAddressNotAvailable"),
+  tr("UnsupportedSocketOperation"),
+  tr("UnfinishedSocketOperation"),
+  tr("ProxyAuthenticationRequired"),
+  tr("SslHandshakeFailed"),
+  tr("ProxyConnectionRefused"),
+  tr("ProxyConnectionClosed"),
+  tr("ProxyConnectionTimeout"),
+  tr("ProxyNotFound"),
+  tr("ProxyProtocol"),
+  tr("Operation"),
+  tr("SslInternal"),
+  tr("SslInvalidUserData"),
+  tr("Temporary"),
+  tr("UnknownSocket") }
+  , error_ {""}
   , server_ {address}
   , do_snr_ {(poll_interval & do__snr) == do__snr}
   , do_pwr_ {(poll_interval & do__pwr) == do__pwr}
@@ -141,6 +166,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , tci_loop2_ {nullptr}
   , tci_timer3_ {nullptr}
   , tci_loop3_ {nullptr}
+  , m_jtdxtime {nullptr}
   , m_downSampleFactor {4}
   , m_buffer ((m_downSampleFactor > 1) ?
               new int [max_buffer_size * m_downSampleFactor] : nullptr)
@@ -230,13 +256,12 @@ void TCITransceiver::onError(QAbstractSocket::SocketError err)
 {
 //qDebug() << "WebInThread::onError";
 //    printf("%s(%0.1f) TCI error:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),err);
-    throw error {tr ("TCI websocket error")+QString(err)};
+    error_ = tr ("TCI websocket error: %1").arg (errortable.at (err));
 }
 
 int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 {
 //  QThread::currentThread()->setPriority(QThread::HighPriority);
-//  if (tci_Ready) do_stop()
 //  printf("do_start tci_Ready:%d\n",tci_Ready);
   TRACE_CAT ("TCITransceiver", "starting");
   m_jtdxtime = jtdxtime;
@@ -334,7 +359,13 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     TRACE_CAT ("TCITransceiver", "started");
 //    printf("%s(%0.1f) TCI Transceiver started\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
     return 0;
-  } else throw error {tr ("TCI could not be opened")};
+  } else {
+//    printf("%s(%0.1f) TCI Transceiver not started %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),error_.toStdString().c_str());
+    if (error_.isEmpty())
+      throw error {tr ("TCI could not be opened")};
+    else
+      throw error {error_};
+  }
 }
 
 void TCITransceiver::do_stop ()
@@ -483,7 +514,10 @@ void TCITransceiver::onMessageReceived(const QString &str)
         case Cmd_Stop:
 //          printf("%s(%0.1f) CmdStop : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
           _power_ = false;
-          tci_done1();
+          if (tci_timer1_->isActive()) tci_done1();
+          else {
+            tci_Ready = false;
+          }
           break;	
         case Cmd_Tune:
 //          printf("%s(%0.1f) CmdTune : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
@@ -618,7 +652,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
     qDebug () << "dropped " << maxSize / bytesPerFrame - framesAccepted
                 << " frames of data on the floor!"
                 << dec_data.params.kin << mstr;
-    printf("%s(%0.1f) dropped %ld frames of data %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),maxSize / bytesPerFrame - framesAccepted,dec_data.params.kin,mstr);
+//    printf("%s(%0.1f) dropped %ld frames of data %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),maxSize / bytesPerFrame - framesAccepted,dec_data.params.kin,mstr);
     }
 
     for (unsigned remaining = framesAccepted; remaining; ) {
@@ -694,7 +728,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
 {
   TRACE_CAT ("TCITransceiver", on << state ());
 //  printf ("%s(%0.1f) TCI stream_audio:%d stream_audio_:%d requested_stream_audio_:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,stream_audio_,requested_stream_audio_);
-  if (on != stream_audio_) {
+  if (on != stream_audio_ && tci_Ready) {
     requested_stream_audio_ = on;
     if (on) {
       const QString cmd = CmdAudioStart + SmDP + "0" + SmTZ;
@@ -727,7 +761,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
 
   void TCITransceiver::do_txvolume (qreal volume)
 {
-  TRACE_CAT ("TCITransceiver", period << state ());
+  TRACE_CAT ("TCITransceiver", volume << state ());
   QString drive = QString::number(round(100 - volume * 2.2222222));
 //  printf ("%s(%0.1f) TCI do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
   if (busy_drive_ || !tci_Ready || requested_drive_ == drive || drive_ == drive) return;
@@ -883,12 +917,9 @@ void TCITransceiver::do_mode (MODE m)
 
 void TCITransceiver::do_poll ()
 {
-//#if WSJT_TRACE_CAT && WSJT_TRACE_CAT_POLLS
-//  bool quiet {false};
-//#else
-//  bool quiet {true};
-//#endif
 //  printf("%s(%0.1f) TCI do_poll split:%d ptt:%d rx_busy:%d tx_busy:%d level:%d power:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),state ().split (),state (). ptt (),busy_rx_frequency_,busy_other_frequency_,level_,power_);
+  if (!error_.isEmpty()) throw error {error_};
+  else if (!tci_Ready) throw error {tr ("TCI could not be opened")};
   update_rx_frequency (string_to_frequency (rx_frequency_));
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_split (split_);

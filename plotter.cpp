@@ -17,6 +17,7 @@ extern dec_data dec_data;
 
 CPlotter::CPlotter(QWidget *parent) :                  //CPlotter Constructor
   QFrame {parent},
+  m_jtdxtime {nullptr},
   m_bScaleOK {false},
   m_filter {false},
   m_fSpan {2000.0},

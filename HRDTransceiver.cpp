@@ -106,6 +106,7 @@ HRDTransceiver::HRDTransceiver (std::unique_ptr<TransceiverBase> wrapped
   , ptt_button_ {-1}
   , alt_ptt_button_ {-1}
   , reversed_ {false}
+  , m_jtdxtime {nullptr}
 {
 }
 
