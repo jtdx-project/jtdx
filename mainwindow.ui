@@ -1477,7 +1477,7 @@
                  <string>S meter</string>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignLeft</set>
                 </property>
                </widget>
               </item>

@@ -170,4 +170,32 @@ QString convert_dark(QString const& color, bool useDarkStyle)
     return res;
 }
 
+QString convert_Smeter(int level, bool dBm)
+  {
+  if (dBm)
+    return QString {"%1 dBm"}.arg (level-73);
+  else {
+    if (level < -54) return QString {"S0-%1dB"}.arg (-level-54);
+    else if (level == -54) return "S0";
+    else if (level < -48) return QString {"S0+%1dB"}.arg (level+54);
+    else if (level == -48) return "S1";
+    else if (level < -42) return QString {"S1+%1dB"}.arg (level+48);
+    else if (level == -42) return "S2";
+    else if (level < -36) return QString {"S2+%1dB"}.arg (level+42);
+    else if (level == -36) return "S3";
+    else if (level < -30) return QString {"S3+%1dB"}.arg (level+36);
+    else if (level == -30) return "S4";
+    else if (level < -24) return QString {"S4+%1dB"}.arg (level+30);
+    else if (level == -24) return "S5";
+    else if (level < -18) return QString {"S5+%1dB"}.arg (level+24);
+    else if (level <= -18) return "S6";
+    else if (level < -12) return QString {"S6+%1dB"}.arg (level+18);
+    else if (level == -12) return "S7";
+    else if (level < -6) return QString {"S7+%1dB"}.arg (level+12);
+    else if (level == -6) return "S8";
+    else if (level < 0) return QString {"S8+%1dB"}.arg (level+6);
+    else if (level == 0) return "S9";
+    else return QString {"S9+%1dB"}.arg (level);
+    }
+  }
 }

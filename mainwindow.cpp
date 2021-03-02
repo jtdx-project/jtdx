@@ -1586,7 +1586,7 @@ void MainWindow::readSettings()
 
   m_settings->endGroup();
   
-  if(m_config.do_snr()) ui->S_meter_label->setText("dBm");
+  if(m_config.do_snr()) ui->S_meter_label->setText("S0");
   else ui->S_meter_label->setText(tr("S meter"));
   ui->S_meter_label->setEnabled(m_config.do_snr());
   dec_data.params.nstophint=1;
@@ -4561,12 +4561,6 @@ void MainWindow::guiUpdate()
     m_sec0=nsec;
     if(!m_monitoring and !m_diskData) ui->signal_meter_widget->setValue(0);
     displayDialFrequency ();
-    if(m_config.do_snr()) {
-        ui->S_meter_label->setText(QString {"%1 dBm"}.arg (m_rigState.level()-73));
-    }
-    if(m_config.do_pwr()) {
-        ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(m_rigState.power()/1000.)));
-    }    
     if (m_geometry_restored > 0) { m_geometry_restored -=1; if (m_geometry_restored == 0) restoreGeometry (m_geometry);}
 //workaround to recover decoding in case if .lock deletion event is not received by proc_jtdxjt9, Decode button hung up issue
 /*    quint64 timeout=76000; 
@@ -7067,6 +7061,12 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
       }
       m_tx_when_ready = false;
     }
+  if(m_config.do_snr() && m_rigState.level() != s.level()) {
+      ui->S_meter_label->setText(Radio::convert_Smeter(s.level()));
+  }
+  if(m_config.do_pwr() && m_rigState.power() != s.power()) {
+      ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(s.power()/1000.)));
+  }    
   m_rigState = s;
   auto old_freqNominal = m_freqNominal;
   m_freqNominal = s.frequency ();
