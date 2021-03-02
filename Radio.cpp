@@ -170,12 +170,11 @@ QString convert_dark(QString const& color, bool useDarkStyle)
     return res;
 }
 
-QString convert_Smeter(int level, bool dBm)
+QString convert_Smeter(int level, bool Sunits)
   {
-  if (dBm)
-    return QString {"%1 dBm"}.arg (level-73);
-  else {
+  if (Sunits) {
     if (level < -54) return QString {"S0-%1dB"}.arg (-level-54);
+    else if (level == -54) return "S0";
     else if (level == -54) return "S0";
     else if (level < -48) return QString {"S0+%1dB"}.arg (level+54);
     else if (level == -48) return "S1";
@@ -197,5 +196,7 @@ QString convert_Smeter(int level, bool dBm)
     else if (level == 0) return "S9";
     else return QString {"S9+%1dB"}.arg (level);
     }
+    else
+      return QString {"%1 dBm"}.arg (level-73);
   }
 }

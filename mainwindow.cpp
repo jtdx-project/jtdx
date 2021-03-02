@@ -5237,8 +5237,7 @@ void MainWindow::ScrollBarPosition(int n) { m_position=n; }
 
 void MainWindow::on_S_meter_button_clicked(bool checked)
 {
-  if(checked) ui->S_meter_button->setText("S0");
-  else ui->S_meter_button->setText("dBm");
+  ui->S_meter_button->setText(Radio::convert_Smeter(m_rigState.level(),checked));
 }
 
 void MainWindow::genCQMsg ()
@@ -7074,8 +7073,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
       m_tx_when_ready = false;
     }
   if(m_config.do_snr() && m_rigState.level() != s.level()) {
-      if(ui->S_meter_button->isChecked()) ui->S_meter_button->setText(Radio::convert_Smeter(s.level()));
-      else ui->S_meter_button->setText(QString {"%1 dBm"}.arg (s.level()-73));
+      ui->S_meter_button->setText(Radio::convert_Smeter(s.level(),ui->S_meter_button->isChecked()));
   }
   if(m_config.do_pwr() && m_rigState.power() != s.power()) {
       ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(s.power()/1000.)));
