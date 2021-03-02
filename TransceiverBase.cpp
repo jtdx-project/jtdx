@@ -459,11 +459,11 @@ void TransceiverBase::shutdown ()
   }
   fclose (pFile);
 #endif
-  may_update u {this};
   if (requested_.online ())
     {
       try
         {
+  may_update u {this};
           // try and ensure PTT isn't left set
           do_ptt (false);
 #if JTDX_DEBUG_TO_FILE

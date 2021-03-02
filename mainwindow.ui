@@ -1444,43 +1444,6 @@
                 </property>
                </widget>
               </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="S_meter_label">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>1</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>0</number>
-                </property>
-                <property name="text">
-                 <string>S meter</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
               <item row="4" column="2">
                <widget class="QPushButton" name="AutoSeqButton">
                 <property name="enabled">
@@ -1830,6 +1793,22 @@
                  </widget>
                 </item>
                </layout>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="S_meter_button">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>S meter</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { Text-align:left; }</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>

@@ -48,7 +48,7 @@ namespace Radio
   QString striped_prefix (QString);
   // Darkstyle Color
   QString convert_dark(QString const& color, bool useDarkStyle);
-
+  QString convert_Smeter(int level, bool Sunits = true);
 }
 
 Q_DECLARE_METATYPE (Radio::Frequency);

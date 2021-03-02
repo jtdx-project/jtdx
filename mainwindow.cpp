@@ -1273,6 +1273,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("ClearWCallAtLog",ui->cbClearCallsign->isChecked ());
   m_settings->setValue("ClearWGridAtLog",ui->cbClearGrid->isChecked ());
   m_settings->setValue("NoOwnCallWSPR",ui->cbNoOwnCall->isChecked());
+  m_settings->setValue("SMeterUnits",ui->S_meter_button->isChecked());
   m_settings->endGroup();
 }
 
@@ -1584,11 +1585,16 @@ void MainWindow::readSettings()
   ui->cbClearGrid->setChecked (m_settings->value ("ClearWGridAtLog",true).toBool());
   ui->cbNoOwnCall->setChecked(m_settings->value("NoOwnCallWSPR",false).toBool());
 
+  ui->S_meter_button->setChecked (m_settings->value ("SMeterUnits",true).toBool());
+
   m_settings->endGroup();
   
-  if(m_config.do_snr()) ui->S_meter_label->setText("dBm");
-  else ui->S_meter_label->setText(tr("S meter"));
-  ui->S_meter_label->setEnabled(m_config.do_snr());
+  if(m_config.do_snr()) {
+    if(ui->S_meter_button->isChecked()) ui->S_meter_button->setText("S0");
+    else ui->S_meter_button->setText("dBm");
+  }
+  else ui->S_meter_button->setText(tr("S meter"));
+  ui->S_meter_button->setEnabled(m_config.do_snr());
   dec_data.params.nstophint=1;
   m_nlasttx=0;
   m_delay=0;
@@ -2095,8 +2101,8 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
          if(m_config.spot_to_dxsummit() ) { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#c4c4ff",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
          else { ui->pbSpotDXCall->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: outset;border-width: 1px;border-color: %3;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#aabec8",m_useDarkStyle),Radio::convert_dark("#808080",m_useDarkStyle))); }
       }
-      if(!m_config.do_snr()) ui->S_meter_label->setText(tr("S meter"));
-      ui->S_meter_label->setEnabled(m_config.do_snr());
+      if(!m_config.do_snr()) ui->S_meter_button->setText(tr("S meter"));
+      ui->S_meter_button->setEnabled(m_config.do_snr());
       if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
   }
@@ -4561,12 +4567,6 @@ void MainWindow::guiUpdate()
     m_sec0=nsec;
     if(!m_monitoring and !m_diskData) ui->signal_meter_widget->setValue(0);
     displayDialFrequency ();
-    if(m_config.do_snr()) {
-        ui->S_meter_label->setText(QString {"%1 dBm"}.arg (m_rigState.level()-73));
-    }
-    if(m_config.do_pwr()) {
-        ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(m_rigState.power()/1000.)));
-    }    
     if (m_geometry_restored > 0) { m_geometry_restored -=1; if (m_geometry_restored == 0) restoreGeometry (m_geometry);}
 //workaround to recover decoding in case if .lock deletion event is not received by proc_jtdxjt9, Decode button hung up issue
 /*    quint64 timeout=76000; 
@@ -5234,6 +5234,11 @@ bool MainWindow::stdCall(QString const& w)
 }
 
 void MainWindow::ScrollBarPosition(int n) { m_position=n; }
+
+void MainWindow::on_S_meter_button_clicked(bool checked)
+{
+  ui->S_meter_button->setText(Radio::convert_Smeter(m_rigState.level(),checked));
+}
 
 void MainWindow::genCQMsg ()
 {
@@ -7067,6 +7072,12 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
       }
       m_tx_when_ready = false;
     }
+  if(m_config.do_snr() && m_rigState.level() != s.level()) {
+      ui->S_meter_button->setText(Radio::convert_Smeter(s.level(),ui->S_meter_button->isChecked()));
+  }
+  if(m_config.do_pwr() && m_rigState.power() != s.power()) {
+      ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(s.power()/1000.)));
+  }    
   m_rigState = s;
   auto old_freqNominal = m_freqNominal;
   m_freqNominal = s.frequency ();
