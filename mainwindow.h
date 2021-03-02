@@ -361,6 +361,7 @@ private slots:
   void logChanged();
   bool stdCall(QString const& w);
   void ScrollBarPosition(int n);
+  void on_S_meter_button_clicked(bool checked);
 
 private:
   Q_SIGNAL void initializeAudioOutputStream (QAudioDeviceInfo,
