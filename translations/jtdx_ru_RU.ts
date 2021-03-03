@@ -139,7 +139,7 @@ Another application may be locking the directory</source>
     <message>
         <location filename="../Configuration.cpp" line="2886"/>
         <source>TCI Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI сервер:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2887"/>
@@ -149,7 +149,12 @@ Formats:
 	hostname:port
 	IPv4-address:port
 	[IPv6-address]:port</source>
-        <translation type="unfinished"></translation>
+        <translation>Опционально имя хоста и номер порта TCI сервера.
+Можно оставить поля пустыми чтобы использовать значения по умолчанию на этом компьютере.
+Поддерживаемый формат:
+	имя_хоста:порт
+	IPv4-адрес:порт
+	[IPv6-адрес]:порт</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2899"/>
@@ -3278,7 +3283,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Эта кнопка позволяет выбрать показания в единицах S-метра либо в дБм. Для работы этого функционала управление CAT должно быть с использованием Hamlib, для некоторых моделей трансиверов передача показаний S-метра через CAT может не поддерживаться.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
@@ -5769,191 +5774,191 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>ОтказаноСоединении</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>УдаленныйХостЗакрыт</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>ХостНеНайден</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетДоступ</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетРесурс</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетТаймаут</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>ДатаграммаСлишкомВелика</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Сеть</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>АдресИспользуется</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетАдресНедоступен</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетОперацияНеПоддерживается</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>СокетОперацияНезавершена</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>ТребуетсяПроксиАутенфикация</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>СбойУстановкиSslСоединения</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>ОтказВПроксиСоединении</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>ПроксиСоединениеЗакрыто</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>ТаймаутПроксиСоединения</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>ПроксиНеНайден</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>ПроксиПротокол</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Работа</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>SslВнутренний</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>SslНеверныеДанныеПользователя</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>Временный</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>НеизвестныйСокет</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>
         <source>TCI websocket error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI websocket ошибка: %1</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="344"/>
         <source>TCI SDR could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно включить TCI SDR</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="345"/>
         <source>TCI SDR is not switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI SDR не включен</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="354"/>
         <source>TCI Audio could not be switched on</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно включить TCI звук</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="364"/>
         <location filename="../TCITransceiver.cpp" line="921"/>
         <source>TCI could not be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно открыть TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="797"/>
         <source>TCI failed to set ptt</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбой управления PTT через TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="804"/>
         <source>TCI should use PTT via CAT</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI должен использовать PTT через CAT</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="832"/>
         <source>TCI failed set rxfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбой установки RX частоты через TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="837"/>
         <location filename="../TCITransceiver.cpp" line="845"/>
         <location filename="../TCITransceiver.cpp" line="912"/>
         <source>TCI failed set mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбой установки вида модуляции через TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="874"/>
         <source>TCI failed set txfreq</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбой установки TX частоты через TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="879"/>
         <location filename="../TCITransceiver.cpp" line="893"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбой установки разноса частот через TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1046"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI отправил нераспознаваемую частоту</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1086"/>
         <source>TCI modulator not Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI модулятор уже используется</translation>
     </message>
 </context>
 <context>
@@ -7581,22 +7586,22 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Запрос включить питание трансивера если поддерживается в Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Вкл</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Запрос выключить питание трансивера если поддерживается в Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
+        <translation>Выкл питание</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>
@@ -7611,12 +7616,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="1839"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Подача звука через TCI интерфейс если последний доступен.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1842"/>
         <source>Use TCI Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Звук через TCI</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2291"/>
