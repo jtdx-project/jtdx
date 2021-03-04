@@ -6562,6 +6562,7 @@ void MainWindow::band_changed (Frequency f)
             else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
         }
         ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
+        m_wideGraph->setRxBand (m_config.bands ()->find (m_freqNominal));
     }
     m_lastDisplayFreq=m_freqNominal;
     m_oldmode=m_mode;

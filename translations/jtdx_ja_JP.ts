@@ -3306,7 +3306,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;このボタンで、S-meterかdBmの表示の選択ができます。CAT は Hamlib または TCI を介して設定し、S-meter を動作させる必要がありますが、リグによってはサポートされていない場合があります。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1853"/>
@@ -5741,122 +5741,122 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>接続が拒否されました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>リモートホスト終了</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>ホストが見つかりません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>ソケット&#x3000;アクセス</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>ソケットリソース</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>ソケットタイムアウト</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>データグラムが大きすぎます</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>ネットワーク</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>アドレス使用中</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>ソケットアドレス使用不可</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>サポートされていないソケットオペレーション</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>終了していないソケットオペレーション</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>プロキシ認証が必要</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>Sslのハンドシェイクが失敗しました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>プロキシ接続が拒否されました</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>プロキシ接続終了</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>プロキシ接続タイムアウト</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>プロキシが見つかりません</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>プログラム&#x3000;プロコトル</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>オペレーション</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ssl 内部</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>Ssl 無効なユーザデータ</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>一時的</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>不明なソケット</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>

@@ -3209,7 +3209,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.cpp" line="1596"/>
         <location filename="../mainwindow.cpp" line="2104"/>
         <source>S meter</source>
-        <translation>S 表</translation>
+        <translation>電平表</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1635"/>
@@ -3280,7 +3280,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;該按鈕提供了電平單位和dBm之間的選擇. CAT 應設置通過 Hamlib 或 TCI 以電平表工作，某些無線電設備可能不支援.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
@@ -5061,7 +5061,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6029"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
-        <translation>將通聯 ADIF 數據發送到輔助 UDP 服務器時出錯誤</translation>
+        <translation>將通聯 ADIF 數據發送到輔助 UDP 服務器時錯誤</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6029"/>
@@ -5771,122 +5771,122 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>連接被拒絕</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>遠端主機已關閉</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>未找到主機</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket訪問</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket資源</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket超時</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>數據圖太大</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>網絡</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>位址在使用</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket位址不可用</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>不支持的Socket操作</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>未完成的Socket操作</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>需要代理身份驗證</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL握手失敗</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>代理連接被拒絕</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>代理連接已關閉</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>代理連接超時</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>代理未找到</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>代理協定</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>操作</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL內部</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL無效用戶數據</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>臨時</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>未知Socket</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>
@@ -6496,12 +6496,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="795"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求S表數據: CAT 應通過 Hamlib 設置,Hamlib 確實支持為某些收發器獲取S表數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求電平表數據: CAT 應通過 Hamlib 設置,Hamlib 確實支持為某些收發器獲取電平表數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
         <source>S meter</source>
-        <translation>S 表</translation>
+        <translation>電平表</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="827"/>

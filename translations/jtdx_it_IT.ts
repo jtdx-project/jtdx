@@ -3290,7 +3290,7 @@ Errore: %2 -%3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il pulsante consente di scegliere tra unità S-meter e dBm. Il CAT deve essere impostato tramite Hamlib o TCI per far funzionare S-meter, alcuni RTx potrebbero non essere supportati.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1853"/>
@@ -5774,122 +5774,122 @@ Errore (%2):%3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>ConnessioneRifiutata</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>HostRemotoChiuso</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>HostNonTrovato</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>AccessoSocket</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>RisorsaSocket</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>SocketFuoritempo</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>DatagrammaTroppoGrande</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Rete</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>IndirizzoInUso</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>IndirizzoSocketNonDisponibile</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>OperazioneSocketNonSupportata</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>OperazioneSocketNonFinita</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>AutenticazioneProxyRichiesta</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>ConnessioneSslFallita</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>ConnessioneProxyRifiutata</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>ConnessioneProxyChiusa</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>ConnessioneProxyFuoritempo</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>ProxyNonTrovato</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>ProtocolloProxy</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Operanione</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>SslInterno</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>DatiSslNonValidi</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>Temporaneo</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>SocketSconosciuto</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>
@@ -7591,22 +7591,22 @@ Fare clic con il tasto destro per inserire ed eliminare le opzioni.</translation
     <message>
         <location filename="../Configuration.ui" line="750"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch on rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi l&apos;accensione dell&apos;RTx quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi l&apos;accensione dell&apos;RTx all&apos;avvio di JTDX quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
         <source>On</source>
-        <translation>Acceso</translation>
+        <translation>Accendi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request switch off rig power when supported in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi lo spegnimento dell&apos;RTx quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Richiedi lo spegnimento dell&apos;RTx alla chiudura di JTDX quando supportato in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="769"/>
         <source>Off Rig power</source>
-        <translation>RTx spento</translation>
+        <translation>Spengi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1823"/>

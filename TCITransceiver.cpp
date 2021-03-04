@@ -324,7 +324,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   rx_frequency_ = "";
   requested_other_frequency_ = "";
   other_frequency_ = "";
-  level_ = -77;
+  level_ = -54;
   power_ = 0;
   m_bufferPos = 0;
   m_downSampleFactor =4;
@@ -791,8 +791,11 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
         sendTextMessage(cmd);
         mysleep3(1000);
         busy_PTT_ = false;
-        if (requested_PTT_ == PTT_) update_PTT(PTT_);
-        else {
+        if (requested_PTT_ == PTT_) {
+          update_PTT(PTT_);
+          if (PTT_ && do_snr_) update_level (-54);
+          else { power_ = 0; if (do_pwr_) update_power (0);}
+        } else {
 //          printf ("%s(%0.1f) TCI failed set ptt %d->%d}n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
           throw error {tr ("TCI failed to set ptt")};
         }
@@ -923,8 +926,8 @@ void TCITransceiver::do_poll ()
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_split (split_);
   update_mode (get_mode());
-  if (do_pwr_) update_power (power_ * 100);
-  if (do_snr_) {
+  if (do_pwr_ && PTT_) update_power (power_ * 100);
+  if (do_snr_ && !PTT_) {
       update_level (level_);
       const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
       sendTextMessage(cmd);
