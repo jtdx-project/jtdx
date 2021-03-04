@@ -3272,7 +3272,7 @@ Pogreška: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tipka omogućuje odabir između jedinica S-metra i dBm. CAT će biti postavljen putem Hamliba ili TCI-ja kako bi S-metar radio, nekI ređaji ne podržavaju tu opciju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
@@ -5768,122 +5768,122 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>Vezaodbijena</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>RemoteHostZatvoren</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>Hostnijepronađen</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Pristuppriključku</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>PriključniIzvor</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>IstekPriključka</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>Datagramjeprevelik</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Mreža</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresauupotrebi</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>AdresaPrikjlučkaNiJeDostupna</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>NepodržaniRadPrilkučka</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>NedovršenaSocketOperacija</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>PotrebnajeProvjeraAutentičnostiProxyja</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>SSRukovanjeNeuspješno</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>ProxyVezaJeOdbijena</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>ProxyVezaJeZatvorena</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>ProxyVezaJeIstekla</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxynijepronađen</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>ProxyProtocol</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Djelovanje</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>SslInterni</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>Sslnevažećikorisničkipodaci</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>Privremeno</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>NepoznatiPriključak</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>
