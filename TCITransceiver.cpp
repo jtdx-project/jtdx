@@ -444,13 +444,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
 //            printf("%s(%0.1f) Cmd_VFO : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
             if(args.at(0)=="0" && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
-              if (requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
+              if (requested_rx_frequency_.isEmpty() || !busy_rx_frequency_) {requested_rx_frequency_ = rx_frequency_; }
               if (tci_Ready) {
                 if (requested_mode_ == mode_) tci_done1();
               }
             }
             else if (args.at(0)=="0" && args.at(1) == "1") {
-              if (requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
+              if (requested_other_frequency_.isEmpty() || !busy_other_frequency_) requested_other_frequency_ = other_frequency_;
               other_frequency_ = args.at(2);
               if (tci_Ready) {
                 if (split_ == requested_split_) tci_done2();
