@@ -206,7 +206,7 @@ void PollingTransceiver::handle_timeout ()
   if (m_jtdxtime == nullptr) {
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"             %d Poll start retries=%d fast_mode=%d ft4_mode=%d\n",sec,retries_,fast_mode_,ft4_mode_);
+  fprintf(pFile,"             Poll start retries=%d fast_mode=%d ft4_mode=%d\n",retries_,fast_mode_,ft4_mode_);
   fclose (pFile);
 #endif
   offline ("Polling destroyed");
