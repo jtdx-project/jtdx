@@ -4705,15 +4705,22 @@ void MainWindow::stopTx()
 	  tx_status_label->setStyleSheet("");
 	  tx_status_label->setText("");
   }
-  ptt0Timer.start(200);                //Sequencer delay
-  if(!m_monitoroff) monitor (true);
-  statusUpdate ();
-  m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  if (m_tci) ptt0Timer.start(0); else {
+    ptt0Timer.start(200);                //Sequencer delay
+    if(!m_monitoroff) monitor (true);
+    statusUpdate ();
+    m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  }
 }
 
 void MainWindow::stopTx2()
 {
   Q_EMIT m_config.transceiver_ptt (false);      //Lower PTT
+  if (m_tci) {
+    if(!m_monitoroff) monitor (true);
+    statusUpdate ();
+    m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  }
 //  QThread::currentThread()->setPriority(QThread::HighPriority);
   if(m_mode.left(4)=="WSPR" and m_ntr==-1 and !m_tuneup) {
     m_wideGraph->setWSPRtransmitted();
