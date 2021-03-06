@@ -27,7 +27,7 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandall, &
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
                          nincallthr
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
@@ -302,21 +302,20 @@ contains
 ! write(10) h,iwave
 ! close(10)
     ncandthr=nint(float(ncandthr)/npass)
-!$omp critical(update_structures)
-    ncandall=ncandall+ncandthr
+    ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
     if(nmsgloc.gt.0) then
+!$omp critical(update_structures)
       if(levenint) then
         even(nmsg+1:nmsg+nmsgloc)%msg=eventmp(1:nmsgloc)%msg; even(nmsg+1:nmsg+nmsgloc)%freq=eventmp(1:nmsgloc)%freq
         even(nmsg+1:nmsg+nmsgloc)%dt=eventmp(1:nmsgloc)%dt; even(nmsg+1:nmsg+nmsgloc)%lstate=eventmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
-      endif
-      if(loddint) then
+      else if(loddint) then
         odd(nmsg+1:nmsg+nmsgloc)%msg=oddtmp(1:nmsgloc)%msg; odd(nmsg+1:nmsg+nmsgloc)%freq=oddtmp(1:nmsgloc)%freq
         odd(nmsg+1:nmsg+nmsgloc)%dt=oddtmp(1:nmsgloc)%dt; odd(nmsg+1:nmsg+nmsgloc)%lstate=oddtmp(1:nmsgloc)%lstate
         nmsg=nmsg+nmsgloc
       endif
-    endif
 !$omp end critical(update_structures)
+    endif
 !print *,'out',lastrxmsg(1)%lstate
 !print *,lastrxmsg(1)%lastmsg
     return
