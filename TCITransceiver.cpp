@@ -582,7 +582,7 @@ void TCITransceiver::onBinaryReceived(const QByteArray &data)
             hdr.ariff[1]='I';
             hdr.ariff[2]='F';
             hdr.ariff[3]='F';
-            hdr.nchunk=36 + 2*npts;
+            hdr.nchunk=36 + 4*npts;
             hdr.awave[0]='W';
             hdr.awave[1]='A';
             hdr.awave[2]='V';
@@ -595,14 +595,14 @@ void TCITransceiver::onBinaryReceived(const QByteArray &data)
             hdr.nfmt2=1;
             hdr.nchan2=1;
             hdr.nsamrate=48000;
-            hdr.nbytesec=2*48000;
-            hdr.nbytesam2=2;
-            hdr.nbitsam2=16;
+            hdr.nbytesec=4*48000;
+            hdr.nbytesam2=4;
+            hdr.nbitsam2=32;
             hdr.adata[0]='d';
             hdr.adata[1]='a';
             hdr.adata[2]='t';
             hdr.adata[3]='a';
-            hdr.ndata=2*npts;
+            hdr.ndata=4*npts;
             fwrite(&hdr,sizeof(hdr),1,wavptr_);
           }
 
@@ -668,10 +668,10 @@ qDebug() << "Audio" << data.size() << pStream->length;
         }
 #if JTDX_DEBUG_TO_FILE
         if (wavptr_ != NULL) {
-          static constexpr float K = 0x7FFF;
+          static constexpr float K = 0x7FFFFFFF;
           for (size_t i = 0; i < pOStream1->length; i+=2) {
-            qint16 value = static_cast<int16_t>(K*pOStream1->data[i]);
-            fwrite(&value,2,1,wavptr_);
+            qint32 value = static_cast<int32_t>(K*pOStream1->data[i]);
+            fwrite(&value,4,1,wavptr_);
           }
         }
 #endif
