@@ -140,7 +140,7 @@ void savewav(QString fname, int ntrperiod)
     hdr.ariff[1]='I';
     hdr.ariff[2]='F';
     hdr.ariff[3]='F';
-    hdr.nchunk=36 + 2*npts;
+    hdr.nchunk=36 + 4*npts;
     hdr.awave[0]='W';
     hdr.awave[1]='A';
     hdr.awave[2]='V';
@@ -153,19 +153,19 @@ void savewav(QString fname, int ntrperiod)
     hdr.nfmt2=1;
     hdr.nchan2=1;
     hdr.nsamrate=12000;
-    hdr.nbytesec=2*12000;
-    hdr.nbytesam2=2;
+    hdr.nbytesec=4*12000;
+    hdr.nbytesam2=4;
     hdr.nbitsam2=32;
     hdr.adata[0]='d';
     hdr.adata[1]='a';
     hdr.adata[2]='t';
     hdr.adata[3]='a';
-    hdr.ndata=2*npts;
+    hdr.ndata=4*npts;
 
     fwrite(&hdr,sizeof(hdr),1,fp);
 //    memcpy(dec_data.d2,buf,2*npts);
 //    fwrite(buf,2,npts,fp);
-    fwrite(dec_data.d2,2,npts,fp);
+    fwrite(dec_data.d2,4,npts,fp);
     fclose(fp);
   }
 //  free(buf);
