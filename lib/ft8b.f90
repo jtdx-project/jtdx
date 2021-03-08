@@ -15,8 +15,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
-          csig(32),csig0(151680),z1
-  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200)
+          csig(32),csig0(151680),z1,csymb256(256)
+  real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200), &
+       s256(0:7)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
@@ -27,7 +28,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted
+             lwrongcall,lsubtracted,lcqsignal
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -443,6 +444,23 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
       lsdone=.true.; nbadcrc=1; cycle
     endif
 
+    i1=ibest+224 ! 7*32
+    csymb256=cd0(i1:i1+255)
+    call four2a(csymb256,256,1,-1,1)
+    s256(0:7)=abs(csymb256(1:8))
+    iscq=0
+    do k11=8,16
+      ip=maxloc(s8(:,k11))
+      if(k11.lt.16) then
+        if(ip(1).eq.1) iscq=iscq+1
+      else
+        if(ip(1).eq.2) iscq=iscq+1
+      endif
+    enddo
+    lcqsignal=.false.
+    ip(1)=maxloc(s256,1)
+    if(ip(1).eq.1 .or. iscq.gt.3) lcqsignal=.true.
+
     lsubptxfreq=.false.
     if(lapon .and. lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
       ((.not.lskiptx1 .and. nlasttx.eq.1) .or. (lskiptx1 .and. nlasttx.eq.2))) lsubptxfreq=.true.
@@ -632,17 +650,17 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                 scqlev=0.; do i4=1,9; scqlev=scqlev+s8(idtone25(2,i4),i4+7); enddo
                 snoiselev=(sum(s8(0:7,8:16))-scqlev)/7.0
                 scqnr(nthr)=scqlev/snoiselev
-                if(scqnr(nthr).lt.1.0) cycle
+                if(scqnr(nthr).lt.1.0 .and. .not.lcqsignal) cycle
                 llrz=llrc
               endif
               if(swl .and. ipass.eq.11) llrz=llrc
               if(ipass.eq.13) then
                 if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
-                  if(scqnr(nthr).gt.1.2) then; llrz=llrb; else; cycle; endif
+                  if(scqnr(nthr).gt.1.2  .or. lcqsignal) then; llrz=llrb; else; cycle; endif
                 endif
                 if(swl) llrz=llrb
                 if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) then
-                  if(scqnr(nthr).gt.1.3) then; llrz=llrb; else; cycle; endif
+                  if(scqnr(nthr).gt.1.3 .or. lcqsignal) then; llrz=llrb; else; cycle; endif
                 endif
               endif
             endif

@@ -3285,7 +3285,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El botó permet triar entre unitats de S-meter i dBm. El CAT s’instal·larà mitjançant Hamlib o TCI per fer funcionar el S-meter, és possible que alguns equips no siguin compatibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
@@ -3533,7 +3533,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2878"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bandwidth, FT8 170Hz, FT8 hound mode 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. JT65 signals: 580Hz decoding, 300 Hz for displaying messages. Filter is centered to the RX signal spectrum. Filter functionality can not improve signal decoding, it is dedicated for use with slow CPUs to let decoder finish processing before signal transmission and avoid message change at transmission. All incoming calls out of Filter bandwidth will be lost, use Filter functionaly only if it is really needed for your CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ample de banda, FT8 170Hz, modes FT8 hound 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. Senyals JT65: descodificació de 580Hz, 300 Hz per mostrar missatges. El filtre està centrat en l&apos;espectre de senyal RX.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ample de banda, FT8 170Hz, modes FT8 hound 580Hz, FT4 274Hz, JT9 115Hz, T10 225Hz. Senyals JT65: descodificació de 580Hz, 300 Hz per mostrar missatges. El filtre està centrat en l&apos;espectre del senyal de RX.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2892"/>
@@ -4352,7 +4352,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5291"/>
         <source>Bypass text filters on RX frequency</source>
-        <translation>Ometre filtres de text en freqüència RX</translation>
+        <translation>Ometre filtres de text en freqüència de RX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5302"/>
@@ -4367,7 +4367,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5313"/>
         <source>Show messages decoded from JT65 harmonics</source>
-        <translation>Mostrar missatges descodificats d&apos;harmònics JT65</translation>
+        <translation>Mostrar els missatges descodificats d&apos;harmònics JT65</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5324"/>
@@ -4452,7 +4452,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5456"/>
         <source>Answer worked B4 calls</source>
-        <translation>Respon trucades treballades B4</translation>
+        <translation>Respon a les trucades treballades B4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5467"/>
@@ -4552,7 +4552,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5709"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>Amagar els missatges FT8 duplicats</translation>
+        <translation>Amagar els missatges de FT8 duplicats</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5717"/>
@@ -4582,7 +4582,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5763"/>
         <source>Show tooltips in main window</source>
-        <translation>Mostra informació sobre les eines a la finestra principal</translation>
+        <translation>Mostra la informació sobre les eines a la finestra principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5771"/>
@@ -4639,7 +4639,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5862"/>
         <source>Hide FT contest messages</source>
-        <translation>Amagar els missatges del concurs FT</translation>
+        <translation>Amagar els missatges de concurs FT</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5870"/>
@@ -4674,7 +4674,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5996"/>
         <source>Hide telemetry messages</source>
-        <translation>Amaga els missatges de telemetria</translation>
+        <translation>Amagar els missatges de telemetria</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6004"/>
@@ -5784,122 +5784,122 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexió rebutjada</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>Amfitrió remot tancat</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>Amfitrió no trobat</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Accés al sòcol</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>Recurs de sòcol</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d&apos;espera del sòcol</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>Datagram massa gran</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Xarxa</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>Adreça en ús</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;adreça del sòcol no està disponible</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Operació de sòcol no admesa</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Operació de socket sense acabar</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>Es requereix autenticació de servidor intermediari</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>el col·loqui Ssl ha fallat</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>S&apos;ha rebutjat la connexió de servidor intermediari</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexió del servidor intermediari tancada</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d&apos;espera de connexió de servidor intermediari</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha trobat el servidor intermediari</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Protocol intermediari (Proxy)</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Operació</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ssl intern</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>Dades d&apos;usuari SSL no vàlids</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>Temporal</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket desconegut</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="258"/>
@@ -8198,17 +8198,17 @@ EA3RDG,EA3URO,1C0CAT &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5171"/>
         <source>Show CQ messages only</source>
-        <translation>Mostra només missatges CQ</translation>
+        <translation>Mostrar només missatges CQ</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5194"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
-        <translation>Mostra només missatges CQ / RRR / RR73 / 73</translation>
+        <translation>Mostrar només missatges CQ / RRR / RR73 / 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5217"/>
         <source>Show CQ/RR73/73 messages only</source>
-        <translation>Mostra només missatges CQ / RR73 / 73</translation>
+        <translation>Mostrar només missatges CQ / RR73 / 73</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5239"/>

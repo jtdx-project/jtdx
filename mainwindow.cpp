@@ -4705,15 +4705,22 @@ void MainWindow::stopTx()
 	  tx_status_label->setStyleSheet("");
 	  tx_status_label->setText("");
   }
-  ptt0Timer.start(200);                //Sequencer delay
-  if(!m_monitoroff) monitor (true);
-  statusUpdate ();
-  m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  if (m_tci) ptt0Timer.start(0); else {
+    ptt0Timer.start(200);                //Sequencer delay
+    if(!m_monitoroff) monitor (true);
+    statusUpdate ();
+    m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  }
 }
 
 void MainWindow::stopTx2()
 {
   Q_EMIT m_config.transceiver_ptt (false);      //Lower PTT
+  if (m_tci) {
+    if(!m_monitoroff) monitor (true);
+    statusUpdate ();
+    m_secTxStopped=m_jtdxtime->currentMSecsSinceEpoch2()/1000;
+  }
 //  QThread::currentThread()->setPriority(QThread::HighPriority);
   if(m_mode.left(4)=="WSPR" and m_ntr==-1 and !m_tuneup) {
     m_wideGraph->setWSPRtransmitted();
@@ -6562,6 +6569,7 @@ void MainWindow::band_changed (Frequency f)
             else { m_pwrBandTxMemory[curBand] = ui->outAttenuation->value(); }
         }
         ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
+        m_wideGraph->setRxBand (m_config.bands ()->find (m_freqNominal));
     }
     m_lastDisplayFreq=m_freqNominal;
     m_oldmode=m_mode;
@@ -6941,7 +6949,7 @@ void MainWindow::setXIT(int n, Frequency base)
   m_XIT = 0;
   if (!m_bSimplex) {
     // m_bSimplex is false, so we can use split mode if requested
-    if (m_config.split_mode ()) m_XIT = (n/500)*500 - 1500;
+    if (m_config.split_mode ()) {if (m_tci) m_XIT = n - 1500; else m_XIT = (n/500)*500 - 1500;}
     if ((m_monitoring || m_transmitting) && m_config.is_transceiver_online () && m_config.split_mode ()) {
         // All conditions are met, reset the transceiver Tx dial
         // frequency

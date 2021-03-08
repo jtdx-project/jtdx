@@ -166,6 +166,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , tci_loop2_ {nullptr}
   , tci_timer3_ {nullptr}
   , tci_loop3_ {nullptr}
+  , wavptr_ {nullptr} 
   , m_jtdxtime {nullptr}
   , m_downSampleFactor {4}
   , m_buffer ((m_downSampleFactor > 1) ?
@@ -180,6 +181,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , m_j0 {-1}
   , m_toneFrequency0 {1500.0}
   , debug_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString()}
+  , wav_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("tx.wav").toStdString()}
 {
     m_samplesPerFFT = 6912 / 2;
     m_period = 15.0;
@@ -325,7 +327,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   rx_frequency_ = "";
   requested_other_frequency_ = "";
   other_frequency_ = "";
-  level_ = -77;
+  level_ = -54;
   power_ = 0;
   m_bufferPos = 0;
   m_downSampleFactor =4;
@@ -445,13 +447,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
 //            printf("%s(%0.1f) Cmd_VFO : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
             if(args.at(0)=="0" && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
-              if (requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
+              if (requested_rx_frequency_.isEmpty() || !busy_rx_frequency_) {requested_rx_frequency_ = rx_frequency_; }
               if (tci_Ready) {
                 if (requested_mode_ == mode_) tci_done1();
               }
             }
             else if (args.at(0)=="0" && args.at(1) == "1") {
-              if (requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
+              if (requested_other_frequency_.isEmpty() || !busy_other_frequency_) requested_other_frequency_ = other_frequency_;
               other_frequency_ = args.at(2);
               if (tci_Ready) {
                 if (split_ == requested_split_) tci_done2();
@@ -555,6 +557,64 @@ void TCITransceiver::onBinaryReceived(const QByteArray &data)
     if (pStream->type != last_type) {
 //        printf ("%s(%0.1f) binary resceived type=%d last_type=%d %d samplerate %d stream_size %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),pStream->type,last_type,data.size(),pStream->sampleRate,pStream->length);
         last_type = pStream->type;
+#if JTDX_DEBUG_TO_FILE
+        if (last_type == TxChrono) { // audio transmit starts
+          struct {
+            char ariff[4];         //ChunkID:    "RIFF"
+            int nchunk;            //ChunkSize: 36+SubChunk2Size
+            char awave[4];         //Format: "WAVE"
+            char afmt[4];          //Subchunk1ID: "fmt "
+            int lenfmt;            //Subchunk1Size: 16
+            short int nfmt2;       //AudioFormat: 1
+            short int nchan2;      //NumChannels: 1
+            int nsamrate;          //SampleRate: 12000
+            int nbytesec;          //ByteRate: SampleRate*NumChannels*BitsPerSample/8
+            short int nbytesam2;   //BlockAlign: NumChannels*BitsPerSample/8
+            short int nbitsam2;    //BitsPerSample: 16
+            char adata[4];         //Subchunk2ID: "data"
+            int ndata;             //Subchunk2Size: numSamples*NumChannels*BitsPerSample/8
+          } hdr;
+          int npts=static_cast<int>(m_period) * 48000;
+          wavptr_ = fopen(wav_file_.c_str(),"wb");
+          if (wavptr_  != NULL) {
+            // Write a WAV header
+            hdr.ariff[0]='R';
+            hdr.ariff[1]='I';
+            hdr.ariff[2]='F';
+            hdr.ariff[3]='F';
+            hdr.nchunk=36 + 2*npts;
+            hdr.awave[0]='W';
+            hdr.awave[1]='A';
+            hdr.awave[2]='V';
+            hdr.awave[3]='E';
+            hdr.afmt[0]='f';
+            hdr.afmt[1]='m';
+            hdr.afmt[2]='t';
+            hdr.afmt[3]=' ';
+            hdr.lenfmt=16;
+            hdr.nfmt2=1;
+            hdr.nchan2=1;
+            hdr.nsamrate=48000;
+            hdr.nbytesec=2*48000;
+            hdr.nbytesam2=2;
+            hdr.nbitsam2=16;
+            hdr.adata[0]='d';
+            hdr.adata[1]='a';
+            hdr.adata[2]='t';
+            hdr.adata[3]='a';
+            hdr.ndata=2*npts;
+            fwrite(&hdr,sizeof(hdr),1,wavptr_);
+          }
+
+
+        }
+        else if (last_type == RxAudioStream) { // audio switched back to resceive
+          if (wavptr_ != NULL) {
+            fclose(wavptr_);
+            wavptr_ = nullptr;
+          }
+        }
+#endif
     }
     if (pStream->type == Iq_Stream){
         bool tx = false;
@@ -606,6 +666,15 @@ qDebug() << "Audio" << data.size() << pStream->length;
 //        else if (tehtud == 0) {
 //          for (size_t i = 0; i < pStream->length; i++) pOStream1->data[i] = 0;
         }
+#if JTDX_DEBUG_TO_FILE
+        if (wavptr_ != NULL) {
+          static constexpr float K = 0x7FFF;
+          for (size_t i = 0; i < pOStream1->length; i+=2) {
+            qint16 value = static_cast<int16_t>(K*pOStream1->data[i]);
+            fwrite(&value,2,1,wavptr_);
+          }
+        }
+#endif
         if (commander_->sendBinaryMessage(m_tx1) != m_tx1.size()) printf("%s(%0.1f) Sent 1 loaded failed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
     }
 }
@@ -792,8 +861,11 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
         sendTextMessage(cmd);
         mysleep3(1000);
         busy_PTT_ = false;
-        if (requested_PTT_ == PTT_) update_PTT(PTT_);
-        else {
+        if (requested_PTT_ == PTT_) {
+          update_PTT(PTT_);
+          if (PTT_ && do_snr_) update_level (-54);
+          else { power_ = 0; if (do_pwr_) update_power (0);}
+        } else {
 //          printf ("%s(%0.1f) TCI failed set ptt %d->%d}n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
           throw error {tr ("TCI failed to set ptt")};
         }
@@ -924,8 +996,8 @@ void TCITransceiver::do_poll ()
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_split (split_);
   update_mode (get_mode());
-  if (do_pwr_) update_power (power_ * 100);
-  if (do_snr_) {
+  if (do_pwr_ && PTT_) update_power (power_ * 100);
+  if (do_snr_ && !PTT_) {
       update_level (level_);
       const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
       sendTextMessage(cmd);
