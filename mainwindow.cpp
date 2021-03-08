@@ -6949,7 +6949,7 @@ void MainWindow::setXIT(int n, Frequency base)
   m_XIT = 0;
   if (!m_bSimplex) {
     // m_bSimplex is false, so we can use split mode if requested
-    if (m_config.split_mode ()) m_XIT = (n/500)*500 - 1500;
+    if (m_config.split_mode ()) {if (m_tci) m_XIT = n - 1500; else m_XIT = (n/500)*500 - 1500;}
     if ((m_monitoring || m_transmitting) && m_config.is_transceiver_online () && m_config.split_mode ()) {
         // All conditions are met, reset the transceiver Tx dial
         // frequency

@@ -171,7 +171,7 @@ protected:
   float * load (qint16 sample, float * dest)
   
   {
-    static constexpr float K = 1.0/0x7FFF;
+    static constexpr float K = 0.999/0x7FFF;
     float value  = (K*static_cast<float>(sample));
     *dest++ = value;
     *dest++ = value;
@@ -212,7 +212,7 @@ private:
   bool freq_mode;  
   QUrl url_;
   quint32 audioSampleRate;
-
+  FILE * wavptr_;
   QByteArray t_iqData;
   int trxA;
   int trxB;
@@ -307,6 +307,7 @@ private:
   bool Stream2_loaded;
   quint32 last_type;  
   std::string debug_file_;
+  std::string wav_file_;
 };
 
 #endif
