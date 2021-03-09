@@ -688,7 +688,7 @@ m_jtdxtime = jtdxtime;
 
           reversed_ = RIG_VFO_B == v;
 
-          if (mode_query_works_ && !(rig_get_caps_int (model_, RIG_CAPS_TARGETABLE_VFO) & (RIG_TARGETABLE_MODE | RIG_TARGETABLE_PURE)))
+          if (mode_query_works_ && !(rig_get_caps_int (model_, RIG_CAPS_TARGETABLE_VFO) & (RIG_TARGETABLE_MODE)))
             {
               if (RIG_OK == rig_get_mode (rig_.data (), RIG_VFO_CURR, &m, &w))
                 {
@@ -1143,7 +1143,7 @@ void HamlibTransceiver::do_poll ()
 
       if ((WSJT_RIG_NONE_CAN_SPLIT || !is_dummy_)
           && state ().split ()
-          && (rig_get_caps_int (model_, RIG_CAPS_TARGETABLE_VFO) & (RIG_TARGETABLE_FREQ | RIG_TARGETABLE_PURE))
+          && (rig_get_caps_int (model_, RIG_CAPS_TARGETABLE_VFO) & (RIG_TARGETABLE_FREQ))
           && !one_VFO_)
         {
           // only read "other" VFO if in split, this allows rigs like
