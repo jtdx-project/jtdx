@@ -3008,10 +3008,10 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="1875"/>
         <location filename="../mainwindow.cpp" line="3692"/>
         <location filename="../mainwindow.cpp" line="3701"/>
-        <location filename="../mainwindow.cpp" line="6250"/>
-        <location filename="../mainwindow.cpp" line="6255"/>
-        <location filename="../mainwindow.cpp" line="6297"/>
-        <location filename="../mainwindow.cpp" line="6308"/>
+        <location filename="../mainwindow.cpp" line="6257"/>
+        <location filename="../mainwindow.cpp" line="6262"/>
+        <location filename="../mainwindow.cpp" line="6304"/>
+        <location filename="../mainwindow.cpp" line="6315"/>
         <source>Band Activity</source>
         <translation>Activitat a la banda</translation>
     </message>
@@ -3129,9 +3129,9 @@ Error: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1076"/>
-        <location filename="../mainwindow.cpp" line="4838"/>
-        <location filename="../mainwindow.cpp" line="5509"/>
-        <location filename="../mainwindow.cpp" line="5930"/>
+        <location filename="../mainwindow.cpp" line="4845"/>
+        <location filename="../mainwindow.cpp" line="5516"/>
+        <location filename="../mainwindow.cpp" line="5937"/>
         <source>DX Call</source>
         <translation>Indicatiu DX</translation>
     </message>
@@ -3395,7 +3395,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2273"/>
-        <location filename="../mainwindow.cpp" line="6256"/>
+        <location filename="../mainwindow.cpp" line="6263"/>
         <source>Rx Frequency</source>
         <translation>Freqüència RX</translation>
     </message>
@@ -3406,7 +3406,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2373"/>
-        <location filename="../mainwindow.cpp" line="6838"/>
+        <location filename="../mainwindow.cpp" line="6846"/>
         <source>&amp;Tune</source>
         <translation>&amp;Sintonitzar</translation>
     </message>
@@ -4754,10 +4754,10 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="948"/>
         <location filename="../mainwindow.cpp" line="949"/>
-        <location filename="../mainwindow.cpp" line="6246"/>
-        <location filename="../mainwindow.cpp" line="6247"/>
-        <location filename="../mainwindow.cpp" line="6304"/>
-        <location filename="../mainwindow.cpp" line="6305"/>
+        <location filename="../mainwindow.cpp" line="6253"/>
+        <location filename="../mainwindow.cpp" line="6254"/>
+        <location filename="../mainwindow.cpp" line="6311"/>
+        <location filename="../mainwindow.cpp" line="6312"/>
         <source>Freq   Message</source>
         <translation>Frec..Missatge</translation>
     </message>
@@ -4793,8 +4793,8 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <location filename="../mainwindow.cpp" line="4299"/>
         <location filename="../mainwindow.cpp" line="4447"/>
         <location filename="../mainwindow.cpp" line="4686"/>
-        <location filename="../mainwindow.cpp" line="7121"/>
-        <location filename="../mainwindow.cpp" line="7337"/>
+        <location filename="../mainwindow.cpp" line="7129"/>
+        <location filename="../mainwindow.cpp" line="7345"/>
         <source>File Open Error</source>
         <translation>Error d&apos;obertura d&apos;arxiu</translation>
     </message>
@@ -4805,9 +4805,9 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <location filename="../mainwindow.cpp" line="4300"/>
         <location filename="../mainwindow.cpp" line="4448"/>
         <location filename="../mainwindow.cpp" line="4687"/>
-        <location filename="../mainwindow.cpp" line="7122"/>
-        <location filename="../mainwindow.cpp" line="7338"/>
-        <location filename="../mainwindow.cpp" line="7691"/>
+        <location filename="../mainwindow.cpp" line="7130"/>
+        <location filename="../mainwindow.cpp" line="7346"/>
+        <location filename="../mainwindow.cpp" line="7699"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per afegir: %2</translation>
     </message>
@@ -5013,7 +5013,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4264"/>
-        <location filename="../mainwindow.cpp" line="4723"/>
+        <location filename="../mainwindow.cpp" line="4730"/>
         <source>LastTx: </source>
         <translation>Últim TX: </translation>
     </message>
@@ -5034,146 +5034,146 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <translation>Rebent </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7079"/>
+        <location filename="../mainwindow.cpp" line="7087"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5610"/>
-        <location filename="../mainwindow.cpp" line="5622"/>
-        <location filename="../mainwindow.cpp" line="5641"/>
-        <location filename="../mainwindow.cpp" line="5667"/>
+        <location filename="../mainwindow.cpp" line="5617"/>
+        <location filename="../mainwindow.cpp" line="5629"/>
+        <location filename="../mainwindow.cpp" line="5648"/>
+        <location filename="../mainwindow.cpp" line="5674"/>
         <source>Add to CALL3.TXT</source>
         <translation>Afegir a CALL3.TXT</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5611"/>
+        <location filename="../mainwindow.cpp" line="5618"/>
         <source>Please enter a valid grid locator</source>
         <translation>Posa una quadrícula locator vàlida</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5623"/>
+        <location filename="../mainwindow.cpp" line="5630"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per a lectura / escriptura: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5642"/>
+        <location filename="../mainwindow.cpp" line="5649"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>No es pot obrir &quot;%1&quot; per escriptura: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5665"/>
+        <location filename="../mainwindow.cpp" line="5672"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 ja està en CALL3.TXT, el vols reemplaçar?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6029"/>
+        <location filename="../mainwindow.cpp" line="6036"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Error a l&apos;enviar dades ADIF QSO a servidor UDP secundari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6029"/>
+        <location filename="../mainwindow.cpp" line="6036"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>L&apos;escriptura ha retornat &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6195"/>
+        <location filename="../mainwindow.cpp" line="6202"/>
         <source>Tx WSPR</source>
         <translation>TX WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6295"/>
+        <location filename="../mainwindow.cpp" line="6302"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Frec     Desv.  Ind.          Loc.    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6389"/>
-        <location filename="../mainwindow.cpp" line="6401"/>
+        <location filename="../mainwindow.cpp" line="6396"/>
+        <location filename="../mainwindow.cpp" line="6408"/>
         <source>Confirm Erase</source>
         <translation>Confirmar Esborrar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6390"/>
+        <location filename="../mainwindow.cpp" line="6397"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Estàs segur de que vols eliminar l&apos;arxiu ALL.TXT?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6402"/>
+        <location filename="../mainwindow.cpp" line="6409"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Estàs segur de que vols eliminar el teu log de QSO&apos;s?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7016"/>
+        <location filename="../mainwindow.cpp" line="7024"/>
         <source>Lockd Tx=Rx</source>
         <translation>Bloca TX=RX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7017"/>
+        <location filename="../mainwindow.cpp" line="7025"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prem el botó per permetre l&apos;operació &quot;Split&quot; de freqüències TX/RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7020"/>
+        <location filename="../mainwindow.cpp" line="7028"/>
         <source>Tx/Rx Split</source>
         <translation>TX/RX Split</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7021"/>
+        <location filename="../mainwindow.cpp" line="7029"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prem el botó per bloquejar la freqüència de TX a la freqüència de RX. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7157"/>
+        <location filename="../mainwindow.cpp" line="7165"/>
         <source>Rig Control Error</source>
         <translation>Error de control del equip</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7237"/>
+        <location filename="../mainwindow.cpp" line="7245"/>
         <source>Tune digital gain</source>
         <translation>Guany de TUNE digital</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7238"/>
+        <location filename="../mainwindow.cpp" line="7246"/>
         <source>Transmit digital gain</source>
         <translation>Guany de transmissió digital</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7258"/>
+        <location filename="../mainwindow.cpp" line="7266"/>
         <source>Prefixes</source>
         <translation>Prefixes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7307"/>
-        <location filename="../mainwindow.cpp" line="7308"/>
+        <location filename="../mainwindow.cpp" line="7315"/>
+        <location filename="../mainwindow.cpp" line="7316"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7543"/>
+        <location filename="../mainwindow.cpp" line="7551"/>
         <source>Network Error</source>
         <translation>Error de xarxa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7544"/>
+        <location filename="../mainwindow.cpp" line="7552"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Error: %1
 Servidor UDP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7690"/>
+        <location filename="../mainwindow.cpp" line="7698"/>
         <source>File Error</source>
         <translation>Error d&apos;arxiu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7912"/>
+        <location filename="../mainwindow.cpp" line="7920"/>
         <source>Tx watchdog expired</source>
         <translation>Temporitzador WD de temps de TX ha expirat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7926"/>
+        <location filename="../mainwindow.cpp" line="7934"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5190,7 +5190,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="297"/>
+        <location filename="../PollingTransceiver.cpp" line="293"/>
         <source>Unexpected rig error</source>
         <translation>Error inesperat de l&apos;equip</translation>
     </message>
@@ -5902,71 +5902,71 @@ Error (%2): %3</translation>
         <translation>Socket desconegut</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="258"/>
+        <location filename="../TCITransceiver.cpp" line="260"/>
         <source>TCI websocket error: %1</source>
         <translation>Error de connexió web TCI: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="344"/>
+        <location filename="../TCITransceiver.cpp" line="346"/>
         <source>TCI SDR could not be switched on</source>
         <translation>No s&apos;ha pogut activar TCI SDR</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="345"/>
+        <location filename="../TCITransceiver.cpp" line="347"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR no està activat</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="354"/>
+        <location filename="../TCITransceiver.cpp" line="356"/>
         <source>TCI Audio could not be switched on</source>
         <translation>No s&apos;ha pogut activar l&apos;àudio TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="364"/>
-        <location filename="../TCITransceiver.cpp" line="921"/>
+        <location filename="../TCITransceiver.cpp" line="366"/>
+        <location filename="../TCITransceiver.cpp" line="993"/>
         <source>TCI could not be opened</source>
         <translation>No s&apos;ha pogut obrir TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="797"/>
+        <location filename="../TCITransceiver.cpp" line="869"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI no ha pogut configurar el ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="804"/>
+        <location filename="../TCITransceiver.cpp" line="876"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI s&apos;ha d’utilitzar PTT mitjançant CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="832"/>
+        <location filename="../TCITransceiver.cpp" line="904"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI ha fallat en establir la freqüència de RX</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="837"/>
-        <location filename="../TCITransceiver.cpp" line="845"/>
-        <location filename="../TCITransceiver.cpp" line="912"/>
+        <location filename="../TCITransceiver.cpp" line="909"/>
+        <location filename="../TCITransceiver.cpp" line="917"/>
+        <location filename="../TCITransceiver.cpp" line="984"/>
         <source>TCI failed set mode</source>
         <translation>TCI ha fallat en el mode de configuració</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="874"/>
+        <location filename="../TCITransceiver.cpp" line="946"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI ha fallat en establir la freqüència de TX</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="879"/>
-        <location filename="../TCITransceiver.cpp" line="893"/>
+        <location filename="../TCITransceiver.cpp" line="951"/>
+        <location filename="../TCITransceiver.cpp" line="965"/>
         <source>TCI failed set split</source>
         <translation>TCI ha fallat en la configuració split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1046"/>
+        <location filename="../TCITransceiver.cpp" line="1118"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI ha enviat una freqüència no reconeguda</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1086"/>
+        <location filename="../TCITransceiver.cpp" line="1158"/>
         <source>TCI modulator not Idle</source>
         <translation>Modulador TCI no inactiu</translation>
     </message>
