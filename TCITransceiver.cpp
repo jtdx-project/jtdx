@@ -538,7 +538,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
 
 void TCITransceiver::sendTextMessage(const QString &message)
 {
-    commander_->sendTextMessage(message);
+    if (inConnected) commander_->sendTextMessage(message);
 }
 
 
@@ -675,7 +675,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
           }
         }
 #endif
-        if (commander_->sendBinaryMessage(m_tx1) != m_tx1.size()) printf("%s(%0.1f) Sent 1 loaded failed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+        if (!inConnected || commander_->sendBinaryMessage(m_tx1) != m_tx1.size()) printf("%s(%0.1f) Sent 1 loaded failed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
     }
 }
 
@@ -1290,6 +1290,7 @@ quint32 TCITransceiver::readAudioData (float * data, qint32 maxSize)
               ++m_ic;
             } else {
               m_state = Idle;
+//              printf("%s(%0.1f) TCI modulator Idle1 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
               Q_EMIT tci_mod_active(m_state != Idle);
               return framesGenerated * bytesPerFrame;
             }
@@ -1371,6 +1372,7 @@ quint32 TCITransceiver::readAudioData (float * data, qint32 maxSize)
           if (icw[0] == 0) {
             // no CW ID to send
             m_state = Idle;
+//            printf("%s(%0.1f) TCI modulator Idle2 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
             Q_EMIT tci_mod_active(m_state != Idle);
             return framesGenerated * bytesPerFrame;
           }
@@ -1379,6 +1381,7 @@ quint32 TCITransceiver::readAudioData (float * data, qint32 maxSize)
 
         m_frequency0 = m_trfrequency;
         // done for this chunk - continue on next call
+//        if (samples != end && framesGenerated) printf("%s(%0.1f) TCI modulator Idle3 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
         while (samples != end) { // pad block with silence
           samples = load (0, samples);
           ++framesGenerated;
