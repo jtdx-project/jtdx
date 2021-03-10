@@ -372,14 +372,14 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 void TCITransceiver::do_stop ()
 {
 //  printf ("TCI close\n");
-  if (stream_audio_ && tci_Ready) {stream_audio (false); mysleep1(500);// printf ("TCI audio closed\n");
-}
-  if (_power_ && rig_power_off_ && tci_Ready) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
-}
+  if (stream_audio_ && tci_Ready && inConnected) {stream_audio (false); mysleep1(500);// printf ("TCI audio closed\n");
+  }
+  if (_power_ && rig_power_off_ && tci_Ready && inConnected) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
+  }
   tci_Ready = false;
   if (commander_)
     {
-      commander_->close(QWebSocketProtocol::CloseCodeNormal,"end");
+      if (inConnected) commander_->close(QWebSocketProtocol::CloseCodeNormal,"end");
       delete commander_, commander_ = nullptr;
     }
   if (tci_timer1_)
@@ -849,11 +849,12 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
   void TCITransceiver::do_ptt (bool on)
 {
   TRACE_CAT ("TCITransceiver", on << state ());
-//  printf ("%s(%0.1f) TCI do_ptt:%d PTT_:%d requested_PTT_:%d state:%d use_for_ptt:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,PTT_,requested_PTT_,state().ptt(),use_for_ptt_);
+//  printf ("%s(%0.1f) TCI do_ptt:%d PTT_:%d requested_PTT_:%d busy_PTT_:%d state:%d use_for_ptt:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,PTT_,requested_PTT_,busy_PTT_,state().ptt(),use_for_ptt_);
   if (use_for_ptt_)
     {
       if (on != PTT_) {
-        if (busy_PTT_ || !tci_Ready) return;
+        if (!inConnected){ PTT_ = on; update_PTT(on); return; }
+        else if (busy_PTT_ || !tci_Ready) return;
         else busy_PTT_ = true;
         requested_PTT_ = on;
         const QString cmd = CmdTrx + SmDP + "0" + SmCM + (on ? "true" : "false") + SmTZ;
