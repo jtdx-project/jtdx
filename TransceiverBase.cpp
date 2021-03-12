@@ -17,18 +17,18 @@ namespace
 void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetime) noexcept
 {
   QString message;
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"Transiever start\n");
+  else
+    fprintf(pFile,"%s Transiever start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   try
     {
       last_sequence_number_ = sequence_number;
       jtdxtime_ = jtdxdatetime;
-#if JTDX_DEBUG_TO_FILE
-      FILE * pFile = fopen (debug_file_.c_str(),"a");
-      if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever start\n");
-      else
-        fprintf(pFile,"%s Transiever start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
-      fclose (pFile);
-#endif
       may_update u {this, true};
       shutdown ();
 #if JTDX_DEBUG_TO_FILE
@@ -40,14 +40,6 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
       fclose (pFile);
 #endif
       startup ();
-#if JTDX_DEBUG_TO_FILE
-      pFile = fopen (debug_file_.c_str(),"a");
-      if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever start done\n");
-      else
-        fprintf(pFile,"%s Transiever start done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
-      fclose (pFile);
-#endif
     }
   catch (std::exception const& e)
     {
@@ -59,8 +51,24 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
     }
   if (!message.isEmpty ())
     {
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      if (jtdxtime_ == nullptr)
+        fprintf(pFile,"Transiever start message %s\n",message.toStdString().c_str());
+      else
+        fprintf(pFile,"%s Transiever start message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+      fclose (pFile);
+#endif
       offline (message);
     }
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"Transiever start done\n");
+  else
+    fprintf(pFile,"%s Transiever start done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
 }
 
 void TransceiverBase::set (TransceiverState const& s,
@@ -89,9 +97,9 @@ void TransceiverBase::set (TransceiverState const& s,
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
           if (jtdxtime_ == nullptr)
-            fprintf(pFile,"Transceiver shutdown");
+            fprintf(pFile,"Transceiver shutdown #:%d ",sequence_number);
           else
-            fprintf(pFile,"%s Transceiver shutdown",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+            fprintf(pFile,"%s Transceiver shutdown #:%d ",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
           fclose (pFile);
 #endif
           shutdown ();
@@ -101,117 +109,124 @@ void TransceiverBase::set (TransceiverState const& s,
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
           if (jtdxtime_ == nullptr)
-            fprintf(pFile," restart shutdown ");
+            fprintf(pFile," restart shutdown #:%d ",sequence_number);
           else
-            fprintf(pFile,"%s restart shutdown ",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+            fprintf(pFile,"%s restart shutdown #:%d ",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
           fclose (pFile);
 #endif
           shutdown ();
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
           if (jtdxtime_ == nullptr)
-            fprintf(pFile," start");
+            fprintf(pFile," start #:%d",sequence_number);
           else
-            fprintf(pFile,"%s start",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+            fprintf(pFile,"%s start #:%d",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
           fclose (pFile);
 #endif
           startup ();
         }
       if (requested_.online ())
         {
-          bool ptt_on {false};
-          bool ptt_off {false};
+          bool audio_cmd {false};
           if (requested_.blocksize() != s.blocksize()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"blocksize=%d\n",s.blocksize());
+              fprintf(pFile,"#:%d blocksize=%d\n",sequence_number,s.blocksize());
             else
-              fprintf(pFile,"%s Timing blocksize=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.blocksize());
+              fprintf(pFile,"%s Timing #:%d blocksize=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.blocksize());
             fclose (pFile);
 #endif
             do_blocksize (s.blocksize());
+            audio_cmd = true;
             requested_.blocksize (s.blocksize ());
           }
           if (requested_.period() != s.period()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"period=%0.1f\n",s.period());
+              fprintf(pFile,"#:%d period=%0.1f\n",sequence_number,s.period());
             else
-              fprintf(pFile,"%s Timing period=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.period());
+              fprintf(pFile,"%s Timing #:%d period=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.period());
             fclose (pFile);
 #endif
             do_period (s.period());
+            audio_cmd = true;
             requested_.period (s.period ());
           }
           if (requested_.spread() != s.spread()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"spread=%0.1f\n",s.spread());
+              fprintf(pFile,"#:%d spread=%0.1f\n",sequence_number,s.spread());
             else
-              fprintf(pFile,"%s Timing spread=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.spread());
+              fprintf(pFile,"%s Timing #:%d spread=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.spread());
             fclose (pFile);
 #endif
             do_spread (s.spread());
+            audio_cmd = true;
             requested_.spread (s.spread ());
           }
           if (requested_.nsym() != s.nsym()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"nsym=%d\n",s.nsym());
+              fprintf(pFile,"#:%d nsym=%d\n",sequence_number,s.nsym());
             else
-              fprintf(pFile,"%s Timing nsym=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.nsym());
+              fprintf(pFile,"%s Timing #:%d nsym=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.nsym());
             fclose (pFile);
 #endif
             do_nsym (s.nsym());
+            audio_cmd = true;
             requested_.nsym (s.nsym ());
           }
           if (requested_.trfrequency() != s.trfrequency()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"trfrequency=%0.1f\n",s.trfrequency());
+              fprintf(pFile,"#:%d trfrequency=%0.1f\n",sequence_number,s.trfrequency());
             else
-              fprintf(pFile,"%s Timing trfrequency=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.trfrequency());
+              fprintf(pFile,"%s Timing #:%d trfrequency=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.trfrequency());
             fclose (pFile);
 #endif
             do_trfrequency (s.trfrequency());
+            audio_cmd = true;
             requested_.trfrequency (s.trfrequency ());
           }
           if (requested_.volume() != s.volume()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"volume=%0.1f\n",s.volume());
+              fprintf(pFile,"#:%d volume=%0.1f\n",sequence_number,s.volume());
             else
-              fprintf(pFile,"%s Timing volume=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.volume());
+              fprintf(pFile,"%s Timing #:%d volume=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.volume());
             fclose (pFile);
 #endif
             do_txvolume (s.volume());
+            audio_cmd = true;
             requested_.volume (s.volume ());
           }
           if (requested_.audio() != s.audio()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"audio=%d\n",s.audio());
+              fprintf(pFile,"#:%d audio=%d\n",sequence_number,s.audio());
             else
-              fprintf(pFile,"%s Timing audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.audio());
+              fprintf(pFile,"%s Timing #:%d audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.audio());
             fclose (pFile);
 #endif
             do_audio (s.audio());
+            audio_cmd = true;
             requested_.audio (s.audio ());
           }
           if (requested_.tx_audio() != s.tx_audio()) {
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"tx_audio=%d\n",s.tx_audio());
+              fprintf(pFile,"#:%d tx_audio=%d\n",sequence_number,s.tx_audio());
             else
-              fprintf(pFile,"%s Timing tx_audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.tx_audio());
+              fprintf(pFile,"%s Timing #:%d tx_audio=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.tx_audio());
+            fclose (pFile);
 #endif
             if (s.tx_audio()) {
               do_modulator_start(s.symbolslength (), s.framespersymbol (), s.trfrequency (), s.tonespacing (), s.synchronize (),s.dbsnr (), s.trperiod ());
@@ -226,10 +241,8 @@ void TransceiverBase::set (TransceiverState const& s,
               do_modulator_stop(s.quick ());
               requested_.quick (s.quick ());
             }
+            audio_cmd = true;
 
-#if JTDX_DEBUG_TO_FILE
-            fclose (pFile);
-#endif
             requested_.tx_audio (s.tx_audio ());
           }
 
@@ -238,129 +251,126 @@ void TransceiverBase::set (TransceiverState const& s,
 #if JTDX_DEBUG_TO_FILE
             pFile = fopen (debug_file_.c_str(),"a");
             if (jtdxtime_ == nullptr)
-              fprintf(pFile,"tune=%d\n",s.tune());
+              fprintf(pFile,"#:%d tune=%d\n",sequence_number,s.tune());
             else
-              fprintf(pFile,"%s Timing tune=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.tune());
+              fprintf(pFile,"%s Timing #:%d tune=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.tune());
             fclose (pFile);
 #endif
             do_tune (s.tune());
+            audio_cmd = true;
             requested_.tune (s.tune ());
           }
-          if (requested_.ft4_mode() != s.ft4_mode()) {
-#if JTDX_DEBUG_TO_FILE
-            pFile = fopen (debug_file_.c_str(),"a");
-            if (jtdxtime_ == nullptr)
-              fprintf(pFile,"ft4_mode=%d\n",s.ft4_mode());
-            else
-              fprintf(pFile,"%s Timing ft4_mode=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.ft4_mode());
-            fclose (pFile);
-#endif
-            do_post_ft4_mode (s.ft4_mode());
-            requested_.ft4_mode (s.ft4_mode ());
+          if (!audio_cmd) {
+            bool ptt_on {false};
+            bool ptt_off {false};
+            if (requested_.ft4_mode() != s.ft4_mode()) {
+  #if JTDX_DEBUG_TO_FILE
+              pFile = fopen (debug_file_.c_str(),"a");
+              if (jtdxtime_ == nullptr)
+                fprintf(pFile,"#:%d ft4_mode=%d\n",sequence_number,s.ft4_mode());
+              else
+                fprintf(pFile,"%s Timing #:%d ft4_mode=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.ft4_mode());
+              fclose (pFile);
+  #endif
+              do_post_ft4_mode (s.ft4_mode());
+              requested_.ft4_mode (s.ft4_mode ());
+            }
+            if (s.ptt () != requested_.ptt ())
+              {
+                ptt_on = s.ptt ();
+                ptt_off = !s.ptt ();
+              }
+            if (ptt_off)
+              {
+  #if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file_.c_str(),"a");
+                if (jtdxtime_ == nullptr)
+                  fprintf(pFile,"#:%d ptt_off\n",sequence_number);
+                else
+                  fprintf(pFile,"%s Timing #:%d ptt_off\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
+                fclose (pFile);
+  #endif
+                do_ptt (false);
+                do_post_ptt (false);
+  //              QThread::msleep (100); // some rigs cannot process CAT
+  //                                     // commands while switching from
+  //                                     // Tx to Rx
+              }
+            if (s.frequency ()    // ignore bogus zero frequencies
+                && ((s.frequency () != requested_.frequency () // and QSY
+                     || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
+                    || ptt_off))       // or just returned to rx
+              {
+  #if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file_.c_str(),"a");
+                if (jtdxtime_ == nullptr)
+                  fprintf(pFile,"#:%d do_frequency %lld\n",sequence_number,s.frequency ());
+                else
+                  fprintf(pFile,"%s Timing #:%d do_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.frequency ());
+                fclose (pFile);
+  #endif
+                do_frequency (s.frequency (), s.mode (), ptt_off);
+                do_post_frequency (s.frequency (), s.mode ());
+
+                // record what actually changed
+                requested_.frequency (actual_.frequency ());
+                requested_.mode (actual_.mode ());
+              }
+            if (!s.tx_frequency ()
+                || (s.tx_frequency () > 10000 // ignore bogus startup values
+                    && s.tx_frequency () < std::numeric_limits<Frequency>::max () - 10000))
+              {
+                if ((s.tx_frequency () != requested_.tx_frequency () // and QSY
+                     || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
+                    // || s.split () != requested_.split ())) // or split change
+                    || (s.tx_frequency () && ptt_on)) // or about to tx split
+                  {
+  #if JTDX_DEBUG_TO_FILE
+                    pFile = fopen (debug_file_.c_str(),"a");
+                    if (jtdxtime_ == nullptr)
+                      fprintf(pFile,"#:%d do_tx_frequency %lld\n",sequence_number,s.tx_frequency ());
+                    else
+                      fprintf(pFile,"%s Timing #:%d do_tx_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.tx_frequency ());
+                    fclose (pFile);
+  #endif
+                    do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
+                    do_post_tx_frequency (s.tx_frequency (), s.mode ());
+
+                    // record what actually changed
+                    requested_.tx_frequency (actual_.tx_frequency ());
+                    requested_.split (actual_.split ());
+                  }
+              }
+            if (ptt_on)
+              {
+  #if JTDX_DEBUG_TO_FILE
+                pFile = fopen (debug_file_.c_str(),"a");
+                if (jtdxtime_ == nullptr)
+                  fprintf(pFile,"#:%d ptt_on\n",sequence_number);
+                else
+                  fprintf(pFile,"%s Timing #:%d ptt_on\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
+                fclose (pFile);
+  #endif
+                do_ptt (true);
+                do_post_ptt (true);
+  //              QThread::msleep (100 + ms); // some rigs cannot process CAT
+                                       // commands while switching from
+                                       // Rx to Tx
+              }
+
+            // record what actually changed
+            if (ptt_on || ptt_off) requested_.ptt (actual_.ptt ());
           }
-          if (s.ptt () != requested_.ptt ())
-            {
-              ptt_on = s.ptt ();
-              ptt_off = !s.ptt ();
-            }
-          if (ptt_off)
-            {
-#if JTDX_DEBUG_TO_FILE
-              pFile = fopen (debug_file_.c_str(),"a");
-              if (jtdxtime_ == nullptr)
-                fprintf(pFile,"ptt_off\n");
-              else
-                fprintf(pFile,"%s Timing ptt_off\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
-              fclose (pFile);
-#endif
-              do_ptt (false);
-              do_post_ptt (false);
-              QThread::msleep (100); // some rigs cannot process CAT
-                                     // commands while switching from
-                                     // Tx to Rx
-            }
-          if (s.frequency ()    // ignore bogus zero frequencies
-              && ((s.frequency () != requested_.frequency () // and QSY
-                   || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
-                  || ptt_off))       // or just returned to rx
-            {
-#if JTDX_DEBUG_TO_FILE
-              pFile = fopen (debug_file_.c_str(),"a");
-              if (jtdxtime_ == nullptr)
-                fprintf(pFile,"do_frequency %lld\n",s.frequency ());
-              else
-                fprintf(pFile,"%s Timing do_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
-              fclose (pFile);
-#endif
-              do_frequency (s.frequency (), s.mode (), ptt_off);
-              do_post_frequency (s.frequency (), s.mode ());
-
-              // record what actually changed
-              requested_.frequency (actual_.frequency ());
-              requested_.mode (actual_.mode ());
-            }
-          if (!s.tx_frequency ()
-              || (s.tx_frequency () > 10000 // ignore bogus startup values
-                  && s.tx_frequency () < std::numeric_limits<Frequency>::max () - 10000))
-            {
-              if ((s.tx_frequency () != requested_.tx_frequency () // and QSY
-                   || (s.mode () != UNK && s.mode () != requested_.mode ())) // or mode change
-                  // || s.split () != requested_.split ())) // or split change
-                  || (s.tx_frequency () && ptt_on)) // or about to tx split
-                {
-#if JTDX_DEBUG_TO_FILE
-                  pFile = fopen (debug_file_.c_str(),"a");
-                  if (jtdxtime_ == nullptr)
-                    fprintf(pFile,"do_tx_frequency %lld\n",s.frequency ());
-                  else
-                    fprintf(pFile,"%s Timing do_tx_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.frequency ());
-                  fclose (pFile);
-#endif
-                  do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
-                  do_post_tx_frequency (s.tx_frequency (), s.mode ());
-
-                  // record what actually changed
-                  requested_.tx_frequency (actual_.tx_frequency ());
-                  requested_.split (actual_.split ());
-                }
-            }
-          if (ptt_on)
-            {
-#if JTDX_DEBUG_TO_FILE
-              pFile = fopen (debug_file_.c_str(),"a");
-              if (jtdxtime_ == nullptr)
-                fprintf(pFile,"ptt_on\n");
-              else
-                fprintf(pFile,"%s Timing ptt_on\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
-              fclose (pFile);
-#endif
-              do_ptt (true);
-              do_post_ptt (true);
-//              QThread::msleep (100 + ms); // some rigs cannot process CAT
-                                     // commands while switching from
-                                     // Rx to Tx
-            }
-
-          // record what actually changed
-          requested_.ptt (actual_.ptt ());
         } else {
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");
           if (jtdxtime_ == nullptr)
-            fprintf (pFile,"NOT ONLINE\n");
+            fprintf (pFile,"#:%d NOT ONLINE\n",sequence_number);
           else
-            fprintf (pFile,"%s NOT ONLINE\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+            fprintf (pFile,"%s #:%d NOT ONLINE\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
           fclose (pFile);
 #endif
         }
-#if JTDX_DEBUG_TO_FILE
-      pFile = fopen (debug_file_.c_str(),"a");
-      if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever set end\n");
-      else
-        fprintf(pFile,"%s Transiever set end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
-      fclose (pFile);
-#endif
     }
   catch (std::exception const& e)
     {
@@ -376,13 +386,21 @@ void TransceiverBase::set (TransceiverState const& s,
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever set message %s\n",message.toStdString().c_str());
+        fprintf(pFile,"#:%d set message %s\n",sequence_number,message.toStdString().c_str());
       else
-        fprintf(pFile,"%s Transiever set message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+        fprintf(pFile,"%s #:%d set message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,message.toStdString().c_str());
       fclose (pFile);
 #endif
       offline (message);
     }
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      if (jtdxtime_ == nullptr)
+        fprintf(pFile,"Transiever set %d #:%d end\n",s.online(),sequence_number);
+      else
+        fprintf(pFile,"%s Transiever set %d #:%d end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number,jtdxtime_->currentMSecsSinceEpoch2() - ms);
+      fclose (pFile);
+#endif
 }
 
 void TransceiverBase::startup ()
@@ -414,14 +432,6 @@ void TransceiverBase::startup ()
 #endif
       do_post_start (jtdxtime_);
       Q_EMIT resolution (res);
-#if JTDX_DEBUG_TO_FILE
-      pFile = fopen (debug_file_.c_str(),"a");
-      if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever startup end\n");
-      else
-        fprintf(pFile,"%s Transiever startup end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
-      fclose (pFile);
-#endif
     }
   catch (std::exception const& e)
     {
@@ -443,6 +453,14 @@ void TransceiverBase::startup ()
 #endif
       offline (message);
     }
+#if JTDX_DEBUG_TO_FILE
+      pFile = fopen (debug_file_.c_str(),"a");
+      if (jtdxtime_ == nullptr)
+        fprintf(pFile,"Transiever startup end\n");
+      else
+        fprintf(pFile,"%s Transiever startup end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
+      fclose (pFile);
+#endif
 }
 
 void TransceiverBase::shutdown ()
@@ -459,11 +477,19 @@ void TransceiverBase::shutdown ()
   }
   fclose (pFile);
 #endif
+  may_update u {this};
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"may_update\n");
+  else
+    fprintf(pFile,"%s Timing may_update\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   if (requested_.online ())
     {
       try
         {
-  may_update u {this};
           // try and ensure PTT isn't left set
           do_ptt (false);
 #if JTDX_DEBUG_TO_FILE
@@ -550,6 +576,14 @@ void TransceiverBase::stop () noexcept
     {
       Q_EMIT finished ();
     }
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"Transiever stop end\n");
+  else
+    fprintf(pFile,"%s Transiever stop end\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
 }
 
 void TransceiverBase::update_rx_frequency (Frequency rx)
@@ -605,6 +639,14 @@ void TransceiverBase::update_complete (bool force_signal)
 
 void TransceiverBase::offline (QString const& reason)
 {
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"Transiever offline %s\n",reason.toStdString().c_str());
+  else
+    fprintf(pFile,"%s Transiever offline %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),reason.toStdString().c_str());
+  fclose (pFile);
+#endif
   Q_EMIT failure (reason);
   try
     {

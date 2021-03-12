@@ -276,6 +276,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   if (!commander_)
     {
       commander_ = new QWebSocket {}; // QObject takes ownership
+//      printf ("commander created");
       connect(commander_,SIGNAL(connected()),this,SLOT(onConnected()));
       connect(commander_,SIGNAL(disconnected()),this,SLOT(onDisconnected()));
       connect(commander_,SIGNAL(binaryMessageReceived(QByteArray)),this,SLOT(onBinaryReceived(QByteArray)));
@@ -373,14 +374,14 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 void TCITransceiver::do_stop ()
 {
 //  printf ("TCI close\n");
-  if (stream_audio_ && tci_Ready) {stream_audio (false); mysleep1(500);// printf ("TCI audio closed\n");
-}
-  if (_power_ && rig_power_off_ && tci_Ready) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
-}
+  if (stream_audio_ && tci_Ready && inConnected) {stream_audio (false); mysleep1(500);// printf ("TCI audio closed\n");
+  }
+  if (_power_ && rig_power_off_ && tci_Ready && inConnected) {rig_power(false); mysleep1(500);// printf ("TCI power down\n");
+  }
   tci_Ready = false;
   if (commander_)
     {
-      commander_->close(QWebSocketProtocol::CloseCodeNormal,"end");
+      if (inConnected) commander_->close(QWebSocketProtocol::CloseCodeNormal,"end");
       delete commander_, commander_ = nullptr;
     }
   if (tci_timer1_)
@@ -850,11 +851,13 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
   void TCITransceiver::do_ptt (bool on)
 {
   TRACE_CAT ("TCITransceiver", on << state ());
-//  printf ("%s(%0.1f) TCI do_ptt:%d PTT_:%d requested_PTT_:%d state:%d use_for_ptt:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,PTT_,requested_PTT_,state().ptt(),use_for_ptt_);
+//  printf ("%s(%0.1f) TCI do_ptt:%d PTT_:%d requested_PTT_:%d busy_PTT_:%d state:%d use_for_ptt:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,PTT_,requested_PTT_,busy_PTT_,state().ptt(),use_for_ptt_);
   if (use_for_ptt_)
     {
       if (on != PTT_) {
-        if (busy_PTT_ || !tci_Ready) return;
+        if (!inConnected && !error_.isEmpty()) throw error {error_};
+//        if (!inConnected){ PTT_ = on; update_PTT(on); return; }
+        else if (busy_PTT_ || !tci_Ready) return;
         else busy_PTT_ = true;
         requested_PTT_ = on;
         const QString cmd = CmdTrx + SmDP + "0" + SmCM + (on ? "true" : "false") + SmTZ;
@@ -989,8 +992,8 @@ void TCITransceiver::do_mode (MODE m)
 
 void TCITransceiver::do_poll ()
 {
-//  printf("%s(%0.1f) TCI do_poll split:%d ptt:%d rx_busy:%d tx_busy:%d level:%d power:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),state ().split (),state (). ptt (),busy_rx_frequency_,busy_other_frequency_,level_,power_);
-  if (!error_.isEmpty()) throw error {error_};
+//  if (!inConnected) printf("%s(%0.1f) TCI do_poll |%s| split:%d ptt:%d rx_busy:%d tx_busy:%d level:%d power:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),error_.toStdString().c_str(),state ().split (),state (). ptt (),busy_rx_frequency_,busy_other_frequency_,level_,power_);
+  if (!inConnected && !error_.isEmpty()) throw error {error_};
   else if (!tci_Ready) throw error {tr ("TCI could not be opened")};
   update_rx_frequency (string_to_frequency (rx_frequency_));
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
@@ -1196,7 +1199,7 @@ void TCITransceiver::do_modulator_start (unsigned symbolsLength, double framesPe
   }
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-//  fprintf (pFile,"delay_ms=%d audioSampleRate=%d mstr=%d mstr2 = %d m_ic=%d m_silentFrames=%lld \n",delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames);
+  fprintf (pFile,"delay_ms=%d audioSampleRate=%d mstr=%d mstr2 = %d m_ic=%d m_silentFrames=%lld \n",delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames);
   fclose (pFile);
 #endif
   m_state = (synchronize && m_silentFrames) ?
@@ -1207,6 +1210,7 @@ void TCITransceiver::do_modulator_start (unsigned symbolsLength, double framesPe
 
 void TCITransceiver::do_tune (bool newState)
 {
+//  printf("%s(%0.1f) TCI modulator tune %d ->%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),m_tuning,newState);
   m_tuning = newState;
   if (!m_tuning) do_modulator_stop (true);
 }

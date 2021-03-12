@@ -1175,7 +1175,6 @@ void Configuration::transceiver_period (double period)
   qDebug () << "Configuration::transceiver_period:" << period << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_period %0.1f\n",period);
   m_->transceiver_period (period);
 }
 
@@ -1185,7 +1184,6 @@ void Configuration::transceiver_blocksize (qint32 blocksize)
   qDebug () << "Configuration::transceiver_blocksize:" << blocksize << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_blocksize :%d\n",blocksize);
   m_->transceiver_blocksize (blocksize);
 }
 
@@ -1196,7 +1194,6 @@ void Configuration::transceiver_modulator_start(unsigned symbolslength, double f
   qDebug () << "Configuration::transceiver_modulator_start:" << symbolslength << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_modulator_start :%d %0.1f %0.1f %0.1f %d%0.1f %0.1f\n",symbolslength,framespersymbol,trfrequency,tonespacing,synchronize,dbsnr,trperiod);
   m_->transceiver_modulator_start(symbolslength,framespersymbol,trfrequency,tonespacing,synchronize,dbsnr,trperiod);
 }
 
@@ -1215,7 +1212,6 @@ void Configuration::transceiver_spread (double spread)
   qDebug () << "Configuration::transceiver_spread:" << spread << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_spread %0.1f\n",spread);
   m_->transceiver_spread (spread);
 }
 
@@ -1225,7 +1221,6 @@ void Configuration::transceiver_nsym (qint32 nsym)
   qDebug () << "Configuration::transceiver_nsym:" << nsym << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_nsym :%d\n",nsym);
   m_->transceiver_nsym (nsym);
 }
 
@@ -1235,7 +1230,6 @@ void Configuration::transceiver_trfrequency (double trfrequency)
   qDebug () << "Configuration::transceiver_trfrequency:" << trfrequency << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_trfrequency %0.1f\n",trfrequency);
   m_->transceiver_trfrequency (trfrequency);
 }
 
@@ -1245,7 +1239,6 @@ void Configuration::transceiver_txvolume (qreal txvolume)
   qDebug () << "Configuration::transceiver_txvolume:" << txvolume << m_->cached_rig_state_;
 #endif
 
-//  printf ("Configuration::transceiver_txvolume %0.1f\n",txvolume);
   m_->transceiver_txvolume (txvolume);
 }
 
@@ -3411,7 +3404,7 @@ void Configuration::impl::reject ()
         }
       else
         {
-//          printf("%s(%0.1f) Coniguration impl_reject close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+          printf("%s(%0.1f) Coniguration impl_reject close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
           close_rig ();
         }
     }
@@ -5542,7 +5535,7 @@ bool Configuration::impl::open_rig (bool force)
     {
       try
         {
-//    printf("%s(%0.1f) Coniguration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
+    printf("%s(%0.1f) Coniguration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
 
           if (is_tci_ && rig_active_ && tci_audio_) restart_tci_device_ = true; 
           close_rig ();
@@ -5561,7 +5554,7 @@ bool Configuration::impl::open_rig (bool force)
           //
           // these connections cross the thread boundary
           rig_connections_ << connect (rig.get (), &Transceiver::resolution, this, [=] (int resolution) {
-//              printf("Configuration resolution from rig %d\n",resolution);
+              printf("Configuration resolution from rig %d\n",resolution);
               rig_resolution_ = resolution;
             });
           rig_connections_ << connect (rig.get (), &Transceiver::tciframeswritten, this, &Configuration::impl::handle_transceiver_tciframeswritten);
@@ -5590,6 +5583,7 @@ bool Configuration::impl::open_rig (bool force)
 
           ui_->test_CAT_push_button->setStyleSheet ({});
           rig_active_ = true;
+    printf("%s(%0.1f) Coniguration rig_open, start transceiver #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1);
           Q_EMIT start_transceiver (++transceiver_command_number_,jtdxtime_); // start rig on its thread
           rig_params_ = gather_rig_data ();
           result = true;
@@ -5639,7 +5633,7 @@ void Configuration::impl::transceiver_frequency (Frequency f)
     current_offset_ = stations_.offset (f);
     cached_rig_state_.frequency (apply_calibration (f + current_offset_));
 
-//    printf("%s(%0.1f) Coniguration transceiver_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),f);
+    printf("%s(%0.1f) Coniguration #:%d transceiver_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5669,7 +5663,7 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
             cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
           }
 
-//        printf("%s(%0.1f) Coniguration transceiver_tx_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),f);
+        printf("%s(%0.1f) Coniguration #:%d transceiver_tx_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
         Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
       }
     }
@@ -5681,7 +5675,7 @@ void Configuration::impl::transceiver_mode (MODE m)
   if (cached_rig_state_.mode() != m)
   {
     cached_rig_state_.mode (m);
-//    printf("%s(%0.1f) Coniguration mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),m);
+    printf("%s(%0.1f) Coniguration #:%d mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,m);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5691,7 +5685,7 @@ void Configuration::impl::transceiver_ptt (bool on)
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
   cached_rig_state_.ptt (on);
-//  printf("%s(%0.1f) Coniguration ptt: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+  printf("%s(%0.1f) Coniguration #:%d ptt: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
@@ -5702,7 +5696,7 @@ void Configuration::impl::transceiver_ft4_mode (bool on)
   if (cached_rig_state_.ft4_mode() != on)
   {
     cached_rig_state_.ft4_mode (on);
-//    printf("%s(%0.1f) Coniguration ft4_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+    printf("%s(%0.1f) Coniguration #:%d ft4_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5714,7 +5708,7 @@ void Configuration::impl::transceiver_audio (bool on)
   if (cached_rig_state_.audio() != on)
   {
     cached_rig_state_.audio (on);
-//    printf("%s(%0.1f) Coniguration audio: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+    printf("%s(%0.1f) Coniguration #:%d audio: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5726,7 +5720,7 @@ void Configuration::impl::transceiver_tune (bool on)
   if (cached_rig_state_.tune() != on)
   {
     cached_rig_state_.tune (on);
-//    printf("%s(%0.1f) Coniguration tune: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+    printf("%s(%0.1f) Coniguration #:%d tune: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5735,9 +5729,9 @@ void Configuration::impl::transceiver_period (double period)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration period: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),period,cached_rig_state_.period());
   if (cached_rig_state_.period() != period)
   {
+    printf("%s(%0.1f) Coniguration #:%d period: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,period,cached_rig_state_.period());
     cached_rig_state_.period (period);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5747,9 +5741,9 @@ void Configuration::impl::transceiver_blocksize (qint32 blocksize)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration blocksize: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),blocksize,cached_rig_state_.blocksize());
   if (cached_rig_state_.blocksize() != blocksize)
   {
+    printf("%s(%0.1f) Coniguration #:%d blocksize: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,blocksize,cached_rig_state_.blocksize());
     cached_rig_state_.blocksize (blocksize);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5759,9 +5753,9 @@ void Configuration::impl::transceiver_spread (double spread)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration spread: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),spread,cached_rig_state_.spread());
   if (cached_rig_state_.spread() != spread)
   {
+    printf("%s(%0.1f) Coniguration #:%d spread: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,spread,cached_rig_state_.spread());
     cached_rig_state_.spread (spread);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5771,9 +5765,9 @@ void Configuration::impl::transceiver_nsym (int nsym)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration nsym: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),nsym,cached_rig_state_.nsym());
   if (cached_rig_state_.nsym() != nsym)
   {
+    printf("%s(%0.1f) Coniguration #:%d nsym: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,nsym,cached_rig_state_.nsym());
     cached_rig_state_.nsym (nsym);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5783,9 +5777,9 @@ void Configuration::impl::transceiver_trfrequency (double trfrequency)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration trfrequency: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),trfrequency,cached_rig_state_.trfrequency());
   if (cached_rig_state_.trfrequency() != trfrequency)
   {
+    printf("%s(%0.1f) Coniguration #:%d trfrequency: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,trfrequency,cached_rig_state_.trfrequency());
     cached_rig_state_.trfrequency (trfrequency);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5795,9 +5789,9 @@ void Configuration::impl::transceiver_txvolume (double txvolume)
 {
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
-//  printf("%s(%0.1f) Coniguration txvolume: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),txvolume,cached_rig_state_.volume());
   if (cached_rig_state_.volume() != txvolume)
   {
+//    printf("%s(%0.1f) Coniguration #:%d txvolume: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,txvolume,cached_rig_state_.volume());
     cached_rig_state_.volume (txvolume);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5817,7 +5811,7 @@ void Configuration::impl::transceiver_modulator_start (unsigned symbolslength, d
     cached_rig_state_.synchronize (synchronize);
     cached_rig_state_.dbsnr (dbsnr);
     cached_rig_state_.trperiod (trperiod);
-//    printf("%s(%0.1f) Coniguration modulator_start: symbolslength=%d framespersymbol=%0.1f frequency=%0.1f tonespacing=%0.1f synchronize= %d dbsnr=%0.1f trperiod=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),symbolslength,framespersymbol,frequency,tonespacing,synchronize,dbsnr,trperiod);
+//    printf("%s(%0.1f) Coniguration #:%d modulator_start: symbolslength=%d framespersymbol=%0.1f frequency=%0.1f tonespacing=%0.1f synchronize= %d dbsnr=%0.1f trperiod=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,symbolslength,framespersymbol,frequency,tonespacing,synchronize,dbsnr,trperiod);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 //  else printf("%s(%0.1f) Coniguration modulator_start: WAS ALLREADY RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
@@ -5831,7 +5825,7 @@ void Configuration::impl::transceiver_modulator_stop (bool on)
   {
     cached_rig_state_.tx_audio (false);
     cached_rig_state_.quick (on);
-//    printf("%s(%0.1f) Coniguration modulator_stop: quick=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),on);
+//    printf("%s(%0.1f) Coniguration #:%d modulator_stop: quick=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 //  else printf("%s(%0.1f) Coniguration modulator_stop: WAS NOT RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
@@ -5884,7 +5878,7 @@ void Configuration::impl::handle_transceiver_update (TransceiverState const& sta
     }
   else
     {
-//      printf("%s(%0.1f) Coniguration transceiver_update close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//      printf("%s(%0.1f) Coniguration #:%d %d transceiver_update close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),sequence_number,transceiver_command_number_);
       close_rig ();
     }
 
@@ -5935,7 +5929,7 @@ void Configuration::impl::close_rig ()
     {
       ui_->test_CAT_push_button->setStyleSheet ("QPushButton {background-color: red;}");
       Q_EMIT stop_transceiver ();
-      if (is_tci_) QThread::msleep (200);
+//      if (is_tci_) QThread::msleep (200);
       for (auto const& connection: rig_connections_)
         {
           disconnect (connection);
