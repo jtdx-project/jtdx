@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1338"/>
+        <location filename="../Configuration.cpp" line="1331"/>
         <source>&amp;OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1339"/>
+        <location filename="../Configuration.cpp" line="1332"/>
         <source>&amp;Cancel</source>
         <translation>О&amp;тменить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1354"/>
+        <location filename="../Configuration.cpp" line="1347"/>
         <source>Create temporary directory error: </source>
         <translation>Ошибка создания временной папки: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1360"/>
+        <location filename="../Configuration.cpp" line="1353"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 Другое приложение может блокировать папку</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1377"/>
+        <location filename="../Configuration.cpp" line="1370"/>
         <source>Create data directory error: </source>
         <translation>Ошибка создания папки данных: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1386"/>
-        <location filename="../Configuration.cpp" line="1397"/>
+        <location filename="../Configuration.cpp" line="1379"/>
+        <location filename="../Configuration.cpp" line="1390"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>Создание папки</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1557"/>
-        <location filename="../Configuration.cpp" line="1583"/>
-        <location filename="../Configuration.cpp" line="1635"/>
+        <location filename="../Configuration.cpp" line="1550"/>
+        <location filename="../Configuration.cpp" line="1576"/>
+        <location filename="../Configuration.cpp" line="1628"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1587"/>
-        <location filename="../Configuration.cpp" line="1639"/>
+        <location filename="../Configuration.cpp" line="1580"/>
+        <location filename="../Configuration.cpp" line="1632"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Вставить ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1591"/>
+        <location filename="../Configuration.cpp" line="1584"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Загрузить...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1595"/>
+        <location filename="../Configuration.cpp" line="1588"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Сохранить как ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1599"/>
+        <location filename="../Configuration.cpp" line="1592"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Обьединить ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1603"/>
+        <location filename="../Configuration.cpp" line="1596"/>
         <source>&amp;Reset</source>
         <translation>&amp;Сброс</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2878"/>
+        <location filename="../Configuration.cpp" line="2871"/>
         <source>Serial Port:</source>
         <translation>COM порт:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2879"/>
+        <location filename="../Configuration.cpp" line="2872"/>
         <source>Serial port used for CAT control</source>
         <translation>Com порт для управления CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2886"/>
+        <location filename="../Configuration.cpp" line="2879"/>
         <source>TCI Server:</source>
         <translation>TCI сервер:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2887"/>
+        <location filename="../Configuration.cpp" line="2880"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ Formats:
 	[IPv6-адрес]:порт</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2899"/>
+        <location filename="../Configuration.cpp" line="2892"/>
         <source>Network Server:</source>
         <translation>Сетевой сервер:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2900"/>
+        <location filename="../Configuration.cpp" line="2893"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -178,12 +178,12 @@ Formats:
 	[IPv6-адрес]:порт</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2912"/>
+        <location filename="../Configuration.cpp" line="2905"/>
         <source>USB Device:</source>
         <translation>USB устройство:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2913"/>
+        <location filename="../Configuration.cpp" line="2906"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -194,132 +194,132 @@ Format:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2948"/>
+        <location filename="../Configuration.cpp" line="2941"/>
         <source>Invalid audio input device</source>
         <translation>Некорректный выбор звуковой карты для входа</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2955"/>
+        <location filename="../Configuration.cpp" line="2948"/>
         <source>Invalid audio output device</source>
         <translation>Некорректный выбор звуковой карты для выхода</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2961"/>
+        <location filename="../Configuration.cpp" line="2954"/>
         <source>Invalid PTT method</source>
         <translation>Некорректный метод PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2971"/>
+        <location filename="../Configuration.cpp" line="2964"/>
         <source>Invalid PTT port</source>
         <translation>Некорректный PTT порт</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3498"/>
+        <location filename="../Configuration.cpp" line="3491"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 в сообщении</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3499"/>
+        <location filename="../Configuration.cpp" line="3492"/>
         <source>CQ in message</source>
         <translation>CQ в сообщении</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4682"/>
+        <location filename="../Configuration.cpp" line="4675"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX Выбор шрифта декодированного текста</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5331"/>
-        <location filename="../Configuration.cpp" line="5362"/>
+        <location filename="../Configuration.cpp" line="5324"/>
+        <location filename="../Configuration.cpp" line="5355"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5329"/>
-        <location filename="../Configuration.cpp" line="5360"/>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5322"/>
+        <location filename="../Configuration.cpp" line="5353"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>&gt;Файл частот (*.qrg);;All files (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5327"/>
+        <location filename="../Configuration.cpp" line="5320"/>
         <source>Load Working Frequencies</source>
         <translation>Загрузить рабочие частоты</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5345"/>
+        <location filename="../Configuration.cpp" line="5338"/>
         <source>Replace Working Frequencies</source>
         <translation>Заменить рабочие частоты</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5346"/>
+        <location filename="../Configuration.cpp" line="5339"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Вы уверены, что хотите сбросить текущие рабочие частоты и заменить их загруженными?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5358"/>
+        <location filename="../Configuration.cpp" line="5351"/>
         <source>Merge Working Frequencies</source>
         <translation>Обьединить рабочие частоты</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
-        <location filename="../Configuration.cpp" line="5394"/>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Not a valid frequencies file</source>
         <translation>Некорректный файл частот</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5378"/>
         <source>Incorrect file magic</source>
         <translation>Неправильный формат файла</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>Version is too new</source>
         <translation>Версия в отработке</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Contents corrupt</source>
         <translation>Контент обрезан</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Save Working Frequencies</source>
         <translation>Сохранить рабочие частоты</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5424"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Сохранить только выбранные рабочие частоты</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5426"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Вы уверены, что хотите сохранить только рабочие частоты, которые выбраны в данный момент? Нажмите Нет, чтобы сохранить все.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5453"/>
+        <location filename="../Configuration.cpp" line="5446"/>
         <source>Reset Working Frequencies</source>
         <translation>Сброс рабочих частот</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5455"/>
+        <location filename="../Configuration.cpp" line="5448"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Вы уверены, что хотите сбросить текущие рабочие частоты и заменить их значениями по умолчанию?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5515"/>
+        <location filename="../Configuration.cpp" line="5508"/>
         <source>Save Directory</source>
         <translation>Сохранить папку</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5531"/>
+        <location filename="../Configuration.cpp" line="5524"/>
         <source>Failed to open connection to rig</source>
         <translation>Ошибка подключения к трансиверу</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5920"/>
+        <location filename="../Configuration.cpp" line="5914"/>
         <source>Rig failure</source>
         <translation>Трансивер не отвечает</translation>
     </message>
@@ -5191,7 +5191,7 @@ UDP сервер %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5280"/>
+        <location filename="../Configuration.cpp" line="5273"/>
         <source>OK</source>
         <translation></translation>
     </message>
@@ -5199,184 +5199,184 @@ UDP сервер %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5282"/>
+        <location filename="../Configuration.cpp" line="5275"/>
         <source>Directory:</source>
         <translation>Папка</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5283"/>
+        <location filename="../Configuration.cpp" line="5276"/>
         <source>File &amp;name:</source>
         <translation>Имя файла</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5284"/>
+        <location filename="../Configuration.cpp" line="5277"/>
         <source>&amp;Open</source>
         <translation>&amp;Открыть</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5285"/>
+        <location filename="../Configuration.cpp" line="5278"/>
         <source>&amp;Choose</source>
         <translation>&amp;Выбор</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5286"/>
+        <location filename="../Configuration.cpp" line="5279"/>
         <source>&amp;Save</source>
         <translation>&amp;Звук.файлы</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5288"/>
+        <location filename="../Configuration.cpp" line="5281"/>
         <source>All files (*)</source>
         <translation>Все файды (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5289"/>
+        <location filename="../Configuration.cpp" line="5282"/>
         <source>New Folder</source>
         <translation>Новая папка</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5290"/>
+        <location filename="../Configuration.cpp" line="5283"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5287"/>
+        <location filename="../Configuration.cpp" line="5280"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5291"/>
+        <location filename="../Configuration.cpp" line="5284"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5292"/>
+        <location filename="../Configuration.cpp" line="5285"/>
         <source>&amp;Rename</source>
         <translation>Переименовать</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5293"/>
+        <location filename="../Configuration.cpp" line="5286"/>
         <source>Show &amp;hidden files</source>
         <translation>Показать скрытые &amp;файлы</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5294"/>
+        <location filename="../Configuration.cpp" line="5287"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Новая папка</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5295"/>
+        <location filename="../Configuration.cpp" line="5288"/>
         <source>Look in:</source>
         <translation>Посмотреть внутрь:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5296"/>
+        <location filename="../Configuration.cpp" line="5289"/>
         <source>Files of type:</source>
         <translation>Тип файлов:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5303"/>
+        <location filename="../Configuration.cpp" line="5296"/>
         <source>Back</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5304"/>
+        <location filename="../Configuration.cpp" line="5297"/>
         <source>Go back</source>
         <translation>Вернуться</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5305"/>
+        <location filename="../Configuration.cpp" line="5298"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5306"/>
+        <location filename="../Configuration.cpp" line="5299"/>
         <source>Forward</source>
         <translation>Вперед</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5307"/>
+        <location filename="../Configuration.cpp" line="5300"/>
         <source>Go forward</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5308"/>
+        <location filename="../Configuration.cpp" line="5301"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5309"/>
+        <location filename="../Configuration.cpp" line="5302"/>
         <source>Parent Directory</source>
         <translation>Родителькая папка</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5310"/>
+        <location filename="../Configuration.cpp" line="5303"/>
         <source>Go to the parent directory</source>
         <translation>Перейти в родительскую папку</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5311"/>
+        <location filename="../Configuration.cpp" line="5304"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5312"/>
+        <location filename="../Configuration.cpp" line="5305"/>
         <source>Create New Folder</source>
         <translation>Создать новую папку</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5313"/>
+        <location filename="../Configuration.cpp" line="5306"/>
         <source>Create a New Folder</source>
         <translation>Создать новую папку</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5314"/>
+        <location filename="../Configuration.cpp" line="5307"/>
         <source>List View</source>
         <translation>Список просмотра</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5315"/>
+        <location filename="../Configuration.cpp" line="5308"/>
         <source>Change to list view mode</source>
         <translation>Перейти в режим просмотра списка</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5316"/>
+        <location filename="../Configuration.cpp" line="5309"/>
         <source>Detail View</source>
         <translation>Детальный просмотр</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5317"/>
+        <location filename="../Configuration.cpp" line="5310"/>
         <source>Change to detail view mode</source>
         <translation>Перейти в режим детального просмотра</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5318"/>
+        <location filename="../Configuration.cpp" line="5311"/>
         <source>Sidebar</source>
         <translation>Боковая панель</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5319"/>
+        <location filename="../Configuration.cpp" line="5312"/>
         <source>List of places and bookmarks</source>
         <translation>Список мест и закладок</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5297"/>
+        <location filename="../Configuration.cpp" line="5290"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; защищен от записи.
 Вы хотите удалить его в любом случае?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5298"/>
+        <location filename="../Configuration.cpp" line="5291"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Вы уверены, что хотите удалить &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5299"/>
+        <location filename="../Configuration.cpp" line="5292"/>
         <source>Could not delete directory.</source>
         <translation>Не удалось удалить папку.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5300"/>
+        <location filename="../Configuration.cpp" line="5293"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5385,7 +5385,7 @@ Please verify the correct directory name was given.</source>
 Пожалуйста, убедитесь, что указано правильное имя папки.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5302"/>
+        <location filename="../Configuration.cpp" line="5295"/>
         <source>Recent Places</source>
         <translation>Recent Places</translation>
     </message>
@@ -5393,22 +5393,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5321"/>
+        <location filename="../Configuration.cpp" line="5314"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5322"/>
+        <location filename="../Configuration.cpp" line="5315"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5323"/>
+        <location filename="../Configuration.cpp" line="5316"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5324"/>
+        <location filename="../Configuration.cpp" line="5317"/>
         <source>Date Modified</source>
         <translation>Дата изменения</translation>
     </message>
@@ -5892,71 +5892,71 @@ Error(%2): %3</source>
         <translation>НеизвестныйСокет</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="260"/>
+        <location filename="../TCITransceiver.cpp" line="275"/>
         <source>TCI websocket error: %1</source>
         <translation>TCI websocket ошибка: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="346"/>
+        <location filename="../TCITransceiver.cpp" line="377"/>
         <source>TCI SDR could not be switched on</source>
         <translation>Невозможно включить TCI SDR</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="347"/>
+        <location filename="../TCITransceiver.cpp" line="378"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR не включен</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="356"/>
+        <location filename="../TCITransceiver.cpp" line="387"/>
         <source>TCI Audio could not be switched on</source>
         <translation>Невозможно включить TCI звук</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="366"/>
-        <location filename="../TCITransceiver.cpp" line="993"/>
+        <location filename="../TCITransceiver.cpp" line="407"/>
+        <location filename="../TCITransceiver.cpp" line="1297"/>
         <source>TCI could not be opened</source>
         <translation>Невозможно открыть TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="869"/>
+        <location filename="../TCITransceiver.cpp" line="1097"/>
         <source>TCI failed to set ptt</source>
         <translation>Сбой управления PTT через TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="876"/>
+        <location filename="../TCITransceiver.cpp" line="1104"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI должен использовать PTT через CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="904"/>
+        <location filename="../TCITransceiver.cpp" line="1154"/>
         <source>TCI failed set rxfreq</source>
         <translation>Сбой установки RX частоты через TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="909"/>
-        <location filename="../TCITransceiver.cpp" line="917"/>
-        <location filename="../TCITransceiver.cpp" line="984"/>
+        <location filename="../TCITransceiver.cpp" line="1164"/>
+        <location filename="../TCITransceiver.cpp" line="1177"/>
+        <location filename="../TCITransceiver.cpp" line="1281"/>
         <source>TCI failed set mode</source>
         <translation>Сбой установки вида модуляции через TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="946"/>
+        <location filename="../TCITransceiver.cpp" line="1223"/>
         <source>TCI failed set txfreq</source>
         <translation>Сбой установки TX частоты через TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="951"/>
-        <location filename="../TCITransceiver.cpp" line="965"/>
+        <location filename="../TCITransceiver.cpp" line="1233"/>
+        <location filename="../TCITransceiver.cpp" line="1252"/>
         <source>TCI failed set split</source>
         <translation>Сбой установки разноса частот через TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1118"/>
+        <location filename="../TCITransceiver.cpp" line="1422"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI отправил нераспознаваемую частоту</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1158"/>
+        <location filename="../TCITransceiver.cpp" line="1462"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI модулятор уже используется</translation>
     </message>
