@@ -41,7 +41,7 @@ subroutine subtractft8(itone,f0,dt,swl)
      j=nstart+i-1
      if(j.ge.1 .and. j.le.NMAX) dd8(j)=dd8(j)-2*REAL(cfilt(i)*cref(i))
   enddo
-!$omp flush(dd8)
+!!!$omp flush(dd8) ! makes no difference in number of decoded messages
 
   return
 end subroutine subtractft8
