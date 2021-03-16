@@ -158,6 +158,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
   , do_pwr_ {(poll_interval & do__pwr) == do__pwr}
   , rig_power_ {(poll_interval & rig__power) == rig__power}
   , rig_power_off_ {(poll_interval & rig__power_off) == rig__power_off}
+  , tci_audio_ {(poll_interval & tci__audio) == tci__audio}
   , commander_ {nullptr}
   , tci_timer1_ {nullptr}
   , tci_loop1_ {nullptr}
@@ -361,10 +362,10 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   requested_stream_audio_ = false;
   stream_audio_ = false;
   _power_ = false;
-//  printf ("%s(%0.1f) TCI open %s rig_power:%d rig_power_off:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,rig_power_off_,do_snr_,do_pwr_);
+//  printf ("%s(%0.1f) TCI open %s rig_power:%d rig_power_off:%d tci_audio:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,rig_power_off_,tci_audio_,do_snr_,do_pwr_);
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI open %s rig_power:%d rig_power_off:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,rig_power_off_,do_snr_,do_pwr_);
+  fprintf (pFile,"%s(%0.1f) TCI open %s rig_power:%d rig_power_off:%d tci_audio:%d do_snr:%d do_pwr:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),url_.toString().toStdString().c_str(),rig_power_,rig_power_off_,tci_audio_,do_snr_,do_pwr_);
   fclose (pFile);
 #endif
   commander_->open (url_);
@@ -381,7 +382,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
         const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
         sendTextMessage(cmd);
     }
-    if (!stream_audio_) {
+    if (tci_audio_) {
         stream_audio (true);
         mysleep1(500);
         if (!stream_audio_) throw error {tr ("TCI Audio could not be switched on")};
