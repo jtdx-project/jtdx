@@ -13,36 +13,18 @@ BEGIN:
 There are some system matters you must deal with first.  Open a Terminal window
 by going to Applications->Utilities and clicking on Terminal.
 
-Along with this ReadMe file there is a file:   sysctl.conf.   Drag this file to your Desktop.
+Along with this ReadMe file there is a file:  com.jtdx.sysctl.plist  which must be copied to a
+system area by typing this line in the Terminal window and then pressing the Return key.
 
-JTDX makes use of a block of memory which is shared between different parts of
-the code.  The normal allocation of shared memory on a Mac is insufficient and this 
-has to be increased.   You should use a Mac editor to examine sysctl.conf.
+      sudo  cp  /Volumes/JTDX/com.jtdx.sysctl.plist  /Library/LaunchDaemons
 
-There are two important parameters that you need to consider.  shmmax determines the
-amount of shared memory that must be allocated for WSJT-X to operate.  This is 14680064 (14MB)
-and this is defined in the sysctl.conf file and should not be changed.  
-
-It is possible to run more than one instance of JTDX simultaneously.  See 
-"Section 14. Platform Dependencies" in the User Guide.  The second important parameter 
-shmall=17920 determines how many instances are permitted.  This is calculated as: 
-  (shmall x 4096/14680064) = 5.
-The sysctl.conf file is configured to permit up to 5 instances of jtdx to run simultaneously.
-If this limitation is acceptable then you can continue to install the sysctl.conf file without making any
-alterations.  Otherwise you must edit the file to increase shmall according to this calculation.
-
-Now move this file into place for the system to use by typing: (Note this assumes that
-you really did drag this file to your Desktop as required earlier.)
-
-  sudo cp $HOME/Desktop/sysctl.conf /etc/
-  sudo chmod 664 /etc/sysctl.conf
-  sudo chown  root:wheel  /etc/sysctl.conf
-
-and then reboot your Mac.  This is necessary to install the changes.  After the
+you will be asked for your normal password because authorisation is needed to copy this file.
+(Your password will not be echoed but press the Return key when completed.)
+Now re-boot your Mac. This is necessary to install the changes.  After the
 reboot you should re-open the Terminal window as before and you can check that the
 change has been made by typing:
 
-  sysctl -a | grep sysv.shm
+      sysctl -a | grep sysv.shm
 
 If shmmax is not shown as 14680064 then contact me since JTDX will fail to load with
 an error message: "Unable to create shared memory segment".
@@ -50,7 +32,8 @@ an error message: "Unable to create shared memory segment".
 You are now finished with system changes.  You should make certain that NO error messages
 have been produced during these steps.   You can now close the Terminal window.  It will
 not be necessary to repeat this procedure again, even when you download an updated
-version of JTDX.
+version of JTDX.  It might be necessary if you upgrade macOS.
+
 
 NEXT:
 
@@ -99,3 +82,29 @@ and tips.
 Please email me if you have problems.
 
 --- Arvo ES1JA     (es1ja@es1ja@homeunix.com)
+
+Addendum:  Information about com.jtdx.sysctl.plist and multiple instances of JTDX.
+
+JTDX makes use of a block of memory which is shared between different parts of
+the code.  The normal allocation of shared memory on a Mac is insufficient and this 
+has to be increased.  The com.wsjtx.sysctl.plist file is used for this purpose.  You can 
+use a Mac editor to examine the file.  (Do not use another editor - the file 
+would probably be corrupted.)
+
+It is possible to run multiple instances of WSJT-X simultaneously.  If you wish to run more
+instances simultaneously, the shmall parameter in the com.jtdx.sysctl.plist file needs to be
+modified as follows.
+
+The shmall parameter determines the amount of shared memory which is allocated in 4096 byte pages
+with 14MB (14680064) required for each instance.   The shmall parameter is calculated as: 
+(n * 14680064)/4096  where 'n' is the number of instances required to run simultaneously.
+Remember to reboot your Mac afterwards.
+
+Note that the shmmax parameter remains unchanged.  This is the maximum amount of shared memory that
+any one instance is allowed to request from the total shared memory allocation and should not
+be changed.
+
+If two instances of WSJT-X are running, it is likely that you might need additional
+audio devices, from two rigs for example.  Visit Audio MIDI Setup and create an Aggregate Device
+which will allow you to specify more than one interface.  I recommend you consult Apple's guide
+on combining multiple audio interfaces which is at https://support.apple.com/en-us/HT202000.  
