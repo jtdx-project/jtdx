@@ -83,7 +83,7 @@
          <number>1</number>
         </property>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="9,2">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -198,7 +198,7 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>70</width>
+              <width>30</width>
               <height>16</height>
              </size>
             </property>
@@ -1799,11 +1799,11 @@
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
-                <property name="text">
-                 <string>S meter</string>
-                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton { Text-align:left; }</string>
+                </property>
+                <property name="text">
+                 <string>S meter</string>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
