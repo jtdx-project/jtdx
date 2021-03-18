@@ -157,6 +157,7 @@ protected:
                      double toneSpacing, bool synchronize = true, double dBSNR = 99., double TRperiod=60.0) override;
   void do_modulator_stop(bool quick = false) override;
   
+  void rig_split ();
   void rig_power (bool on);
   void stream_audio (bool on);
   void store (float * source, size_t numFrames, qint16 * dest)
@@ -223,6 +224,7 @@ private:
 // CAT internal variables
   QString requested_mode_;
   QString mode_;
+  QString offline_requested_rx_frequency_;
   QString requested_rx_frequency_;
   QString rx_frequency_;
   QString requested_other_frequency_;
