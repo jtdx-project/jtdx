@@ -201,8 +201,7 @@ int main(int argc, char *argv[])
       // disallow multiple instances with same instance key
       QLockFile instance_lock {QDir {QStandardPaths::writableLocation (QStandardPaths::TempLocation)}.absoluteFilePath (a.applicationName () + ".lock")};
       instance_lock.setStaleLockTime (0);
-      auto ok = false;
-      while (!(ok = instance_lock.tryLock ()))
+      while (!instance_lock.tryLock ())
         {
           if (QLockFile::LockFailedError == instance_lock.error ())
             {
@@ -224,6 +223,10 @@ int main(int argc, char *argv[])
                 default:
                   throw std::runtime_error {"Multiple instances must have unique rig names"};
                 }
+            }
+          else
+            {
+              throw std::runtime_error {"Failed to access lock file"};
             }
         }
 #endif
