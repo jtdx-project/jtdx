@@ -3032,6 +3032,7 @@ TransceiverFactory::ParameterPack Configuration::impl::gather_rig_data ()
   if(ui_->output_power_check_box->isChecked ()) result.poll_interval |= do__pwr;
   if(ui_->rig_power_check_box->isChecked ()) result.poll_interval |= rig__power;
   if(ui_->rig_power_off_check_box->isChecked ()) result.poll_interval |= rig__power_off;
+  if(is_tci_ && ui_->tci_audio_check_box->isChecked ()) result.poll_interval |= tci__audio;
   result.ptt_type = static_cast<TransceiverFactory::PTTMethod> (ui_->PTT_method_button_group->checkedId ());
   result.ptt_port = ui_->PTT_port_combo_box->currentText ();
   result.audio_source = static_cast<TransceiverFactory::TXAudioSource> (ui_->TX_audio_source_button_group->checkedId ());

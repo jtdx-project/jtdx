@@ -1312,7 +1312,7 @@ install (FILES
 if (APPLE)
     install (FILES
         Darwin/ReadMe.txt
-        Darwin/sysctl.conf
+        Darwin/com.jtdx.sysctl.plist
         DESTINATION .
         #COMPONENT runtime
     )

@@ -309,6 +309,8 @@ void TransceiverBase::set (TransceiverState const& s,
                   fprintf(pFile,"%s Timing #:%d do_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.frequency ());
                 fclose (pFile);
   #endif
+                requested_.frequency (s.frequency ());
+                requested_.mode (s.mode ());
                 do_frequency (s.frequency (), s.mode (), ptt_off);
                 do_post_frequency (s.frequency (), s.mode ());
 
@@ -316,7 +318,7 @@ void TransceiverBase::set (TransceiverState const& s,
                 requested_.frequency (actual_.frequency ());
                 requested_.mode (actual_.mode ());
               }
-            if (!s.tx_frequency ()
+            else if (!s.tx_frequency ()
                 || (s.tx_frequency () > 10000 // ignore bogus startup values
                     && s.tx_frequency () < std::numeric_limits<Frequency>::max () - 10000))
               {
@@ -333,6 +335,8 @@ void TransceiverBase::set (TransceiverState const& s,
                       fprintf(pFile,"%s Timing #:%d do_tx_frequency %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number,s.tx_frequency ());
                     fclose (pFile);
   #endif
+                    requested_.tx_frequency (s.tx_frequency ());
+                    requested_.split (s.tx_frequency () != 0);
                     do_tx_frequency (s.tx_frequency (), s.mode (), ptt_on);
                     do_post_tx_frequency (s.tx_frequency (), s.mode ());
 

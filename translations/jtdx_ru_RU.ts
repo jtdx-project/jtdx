@@ -4808,7 +4808,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="1824"/>
         <source>lost audio </source>
-        <translation>потери звука </translation>
+        <translation>потери </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1908"/>

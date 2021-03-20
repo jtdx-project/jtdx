@@ -56,7 +56,7 @@ void PollingTransceiver::start_timer ()
       poll_timer_->start (interval_);
 #if JTDX_DEBUG_TO_FILE
       if (m_jtdxtime == nullptr)
-        fprintf(pFile,"             Poll timer started\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+        fprintf(pFile,"             Poll timer started\n");
       else
         fprintf(pFile,"%s Poll timer started\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
       fclose (pFile);
