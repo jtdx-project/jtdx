@@ -456,6 +456,8 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                       }
                       if (tyyp == "CQ" || tyyp == "LP")
                         t.tyyp = "";
+                      else if (tyyp == "ASIA")
+                        t.tyyp = "AS";
                       else
                         t.tyyp = tyyp;
                       t.continent = continent.trimmed();

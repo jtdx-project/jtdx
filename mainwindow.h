@@ -7,7 +7,6 @@
 #else
 #include <QtGui>
 #endif
-#include <QTranslator>
 #include <QThread>
 #include <QTimer>
 #include <QList>
@@ -398,11 +397,6 @@ private:
   QSettings * m_settings;
 
   QScopedPointer<Ui::MainWindow> ui;
-
-//  bool m_olek;
-//  bool m_olek2;
-//  QTranslator m_translator_from_resources;
-//  QTranslator m_translator_from_files;
 
   // other windows
   Configuration m_config;
