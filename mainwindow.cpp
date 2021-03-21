@@ -175,7 +175,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   //m_dialFreq {std::numeric_limits<Radio::Frequency>::max ()},
   m_dialFreqRxWSPR {0},
   m_detector {new Detector {RX_SAMPLE_RATE, double(NTMAX), m_jtdxtime , downSampleFactor}},
-  m_FFTSize {6192 / 2},         // conservative value to avoid buffer overruns
+  m_FFTSize {6912 / 2},         // conservative value to avoid buffer overruns
   m_soundInput {new SoundInput},
   m_modulator {new Modulator {TX_SAMPLE_RATE, NTMAX, m_jtdxtime}},
   m_soundOutput {new SoundOutput},
@@ -4104,7 +4104,7 @@ void MainWindow::guiUpdate()
     QFile f(m_appDir + "/txboth");
     if(f.exists() and fmod(tsec,m_TRperiod)<49.96) m_bTxTime=true; //<(1.0 + 85.0*m_nsps/12000.0)
 
-// Don't transmit another mode in the 30 m WSPR sub-band
+// Don't transmit another mode in the WSPR sub-band
     Frequency onAirFreq = m_freqNominal + ui->TxFreqSpinBox->value();
     auto mhz = onAirFreq / 1000000;
     Frequency f_from = 0;
@@ -5074,7 +5074,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
       if (!m_hisGrid.isEmpty()) ui->dxGridEntry->clear();
       i1=m_qsoHistory.reset_count(hiscall);
       if (m_callToClipboard) clipboard->setText(hiscall);
-      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet(QString("color: %1; background: %2").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
+      ui->dxCallEntry->setText(hiscall); ui->dxCallEntry->setStyleSheet(QString("QLineEdit {color: %1; background: %2}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffffff",m_useDarkStyle)));
       call_changed = true;
     }
   if (gridOK(hisgrid)) {

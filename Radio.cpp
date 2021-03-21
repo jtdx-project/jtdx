@@ -175,7 +175,6 @@ QString convert_Smeter(int level, bool Sunits)
   if (Sunits) {
     if (level < -54) return QString {"S0-%1dB"}.arg (-level-54);
     else if (level == -54) return "S0";
-    else if (level == -54) return "S0";
     else if (level < -48) return QString {"S0+%1dB"}.arg (level+54);
     else if (level == -48) return "S1";
     else if (level < -42) return QString {"S1+%1dB"}.arg (level+48);

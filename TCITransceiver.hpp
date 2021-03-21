@@ -176,7 +176,7 @@ protected:
     float value  = (K*static_cast<float>(sample));
     *dest++ = value;
     *dest++ = value;
-    
+      
     return dest;
   }
   enum ModulatorState {Synchronizing, Active, Idle};
@@ -224,7 +224,6 @@ private:
 // CAT internal variables
   QString requested_mode_;
   QString mode_;
-  QString offline_requested_rx_frequency_;
   QString requested_rx_frequency_;
   QString rx_frequency_;
   QString requested_other_frequency_;
