@@ -1130,12 +1130,11 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
 void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
 {
   TRACE_CAT ("TCITransceiver", f << state ());
-  requested_rx_frequency_ = frequency_to_string (f);
-  requested_mode_ = map_mode (m);
-//  printf ("%s(%0.1f) TCI do_frequency:%s current_frequency:%s mode:%s current_mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),requested_rx_frequency_.toStdString().c_str(),rx_frequency_.toStdString().c_str(),requested_mode_.toStdString().c_str(),mode_.toStdString().c_str(),no_ignore,busy_rx_frequency_);
+  auto f_string = frequency_to_string (f);
+//  printf ("%s(%0.1f) TCI do_frequency:%s current_frequency:%s mode:%s current_mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),rx_frequency_.toStdString().c_str(),map_mode(m).toStdString().c_str(),requested_mode_.toStdString().c_str(),no_ignore,busy_rx_frequency_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI do_frequency:%s current_frequency:%s mode:%s current_mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),requested_rx_frequency_.toStdString().c_str(),rx_frequency_.toStdString().c_str(),requested_mode_.toStdString().c_str(),mode_.toStdString().c_str(),no_ignore,busy_rx_frequency_);
+  fprintf (pFile,"%s(%0.1f) TCI do_frequency:%s current_frequency:%s mode:%s current_mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),rx_frequency_.toStdString().c_str(),map_mode(m).toStdString().c_str(),requested_mode_.toStdString().c_str(),no_ignore,busy_rx_frequency_);
   fclose (pFile);
 #endif
   if  (tci_Ready && busy_rx_frequency_ && no_ignore) {
@@ -1146,7 +1145,12 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
     fclose (pFile);
 #endif
   }
-  if (tci_Ready && !busy_rx_frequency_) {
+  if (busy_rx_frequency_) return;
+  else {
+    requested_rx_frequency_ = f_string;
+    requested_mode_ = map_mode (m);
+  }
+  if (tci_Ready) {
     busy_rx_frequency_ = true;
     if (rx_frequency_ != requested_rx_frequency_) {
       const QString cmd = CmdVFO + SmDP + "0" + SmCM + "0" + SmCM + requested_rx_frequency_ + SmTZ;
@@ -1208,11 +1212,11 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
 void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
 {
   TRACE_CAT ("TCITransceiver", tx << state ());
-  requested_other_frequency_ = frequency_to_string (tx);
-//  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),requested_other_frequency_.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
+  auto f_string = frequency_to_string (tx);
+//  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),requested_other_frequency_.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
+  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
   fclose (pFile);
 #endif
   if  (tci_Ready && busy_other_frequency_ && no_ignore) {
@@ -1223,11 +1227,14 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
     fclose (pFile);
 #endif
   }
+  if (busy_other_frequency_) return;
+  requested_other_frequency_ = f_string;
   requested_mode_ = map_mode (mode);
+  busy_other_frequency_ = true;
   if (tx)
     {
       requested_split_ = true;
-      if (tci_Ready && !busy_other_frequency_) {
+      if (tci_Ready) {
         if (abs(other_frequency_.toInt()-requested_other_frequency_.toInt()) > 1000000) mysleep2(500);
         if (requested_split_ != split_) rig_split();
         if (other_frequency_ != requested_other_frequency_) {
