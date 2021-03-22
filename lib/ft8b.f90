@@ -1201,7 +1201,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               if((ispc3-ispc2).eq.5) then
                 grid=msg37(ispc2+1:ispc3-1)
  ! grid can not be txed, invalid message:
-                if(i3.eq.4 .and. len_trim(grid).eq.4) then; print *,"invalid message"; nbadcrc=1; msg37=''; return; endif
+                if(i3.eq.4 .and. len_trim(grid).eq.4) then; nbadcrc=1; msg37=''; return; endif
                 call_b=''; call_b=msg37((ispc1+1):(ispc2-3))
                 call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
                 if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
@@ -1210,6 +1210,26 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   call chkflscall('CQ          ',call_b,falsedec)
                   if(falsedec) then; nbadcrc=1; msg37=''; return; endif
                 endif
+              endif
+            endif
+          endif
+        endif
+      endif
+    endif
+
+! -10 0.2 2106 ~ ES6DO M11VSM/R FE69       *England ! false FT8 AP decode
+    if(i3.eq.1 .and. iaptype.eq.2) then
+      if(index(msg37,'/R').gt.10) then
+        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+        if(ispc2.gt.12) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2
+          if(msg37((ispc2-2):(ispc2-1)).eq.'/R') then
+            if((ispc3-ispc2).eq.5) then
+              grid=msg37(ispc2+1:ispc3-1)
+              if(grid(2:2).gt."@" .and. grid(2:2).lt."S") then
+                call_b=''; call_b=msg37((ispc1+1):(ispc2-3))
+                call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
+                if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
               endif
             endif
           endif
