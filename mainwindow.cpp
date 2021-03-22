@@ -3534,7 +3534,7 @@ void MainWindow::process_Auto()
     if(!grid.isEmpty() && m_hisGrid.left(4) != grid) {
        ui->dxGridEntry->setText(grid);
     }
-    if (time >= 0 && time < 86400 && m_status < QsoHistory::R73) {
+    if (time < 86400 && m_status < QsoHistory::R73) {
       m_dateTimeQSOOn = m_jtdxtime->currentDateTimeUtc2();
       m_dateTimeQSOOn.setTime(QTime::fromMSecsSinceStartOfDay(time*1000));
       if (m_jtdxtime->currentDateTimeUtc2() < m_dateTimeQSOOn) m_dateTimeQSOOn = m_dateTimeQSOOn.addSecs(-86400);
@@ -6002,7 +6002,7 @@ void MainWindow::on_logQSOButton_clicked()                 //Log QSO button
   if(m_logqso73) autolog = m_config.autolog();
   distance=ui->labDist->text();
   if (m_qsoHistory.log_data(m_hisCall,time,rrep,srep) > QsoHistory::SREPORT) {
-      if (time >= 0 && time < 86400) {
+      if (time < 86400) {
           currenttime.setTime(QTime::fromMSecsSinceStartOfDay(time*1000));
           if (dateTimeQSOOff < currenttime) currenttime = currenttime.addSecs(-86400);
       }
