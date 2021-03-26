@@ -1084,8 +1084,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_autofilter=ui->actionAutoFilter->isChecked();
   if(ui->actionEnable_hound_mode->isChecked()) on_actionEnable_hound_mode_toggled(true);
   m_wideGraph->setFilter(m_filter);
-  if(m_houndMode) { if(ui->actionUse_TX_frequency_jumps->isChecked()) on_actionUse_TX_frequency_jumps_toggled(true); }
-  else { ui->actionUse_TX_frequency_jumps->setChecked(false); on_actionUse_TX_frequency_jumps_toggled(false); ui->actionUse_TX_frequency_jumps->setEnabled(false); }
+  ui->actionUse_TX_frequency_jumps->setEnabled(false);
   m_showHarmonics=ui->actionShow_messages_decoded_from_harmonics->isChecked();
   m_showMyCallMsgRxWindow=ui->actionMyCallRXFwindow->isChecked();
   m_showWantedCallRxWindow=ui->actionWantedCallRXFwindow->isChecked();
@@ -1218,7 +1217,6 @@ void MainWindow::writeSettings()
   m_settings->setValue("SingleShotQSO",ui->actionSingleShot->isChecked());
   m_settings->setValue("AutoFilter",ui->actionAutoFilter->isChecked());
   m_settings->setValue("EnableHoundMode",ui->actionEnable_hound_mode->isChecked());  
-  m_settings->setValue("UseHoundTxFrequencyJumps",ui->actionUse_TX_frequency_jumps->isChecked()); 
   m_settings->setValue("ShowHarmonics",ui->actionShow_messages_decoded_from_harmonics->isChecked());
   m_settings->setValue("HideFTContestMessages",ui->actionHide_FT_contest_messages->isChecked());
   m_settings->setValue("HideTelemetryMessages",ui->actionHide_telemetry_messages->isChecked());
@@ -1422,10 +1420,6 @@ void MainWindow::readSettings()
   ui->actionSingleShot->setChecked(m_settings->value("SingleShotQSO",false).toBool());
   ui->actionAutoFilter->setChecked(m_settings->value("AutoFilter",false).toBool());
   ui->actionEnable_hound_mode->setChecked(m_settings->value("EnableHoundMode",false).toBool());
-
-  if(m_settings->value("UseHoundTxFrequencyJumps").toString()!="false" && m_settings->value("UseHoundTxFrequencyJumps").toString()!="true") 
-    ui->actionUse_TX_frequency_jumps->setChecked(false);
-  else ui->actionUse_TX_frequency_jumps->setChecked(m_settings->value("UseHoundTxFrequencyJumps").toBool());
 
   ui->actionShow_messages_decoded_from_harmonics->setChecked(m_settings->value("ShowHarmonics",false).toBool());
 
@@ -2129,11 +2123,7 @@ void MainWindow::on_hintButton_clicked (bool checked)
   m_hint=checked;
 }
 
-void MainWindow::on_HoundButton_clicked (bool checked)
-{
-  ui->actionEnable_hound_mode->setChecked(checked);
-  on_actionEnable_hound_mode_toggled(checked);
-}
+void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked); }
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
@@ -2484,6 +2474,20 @@ void MainWindow::displayDialFrequency ()
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
     }
     m_commonFT8b=commonFT8b; first_freq=false;
+    if (m_houndMode) {
+    // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
+      QString message = "";
+      if(!m_config.split_mode() && !m_commonFT8b) {
+        message =  tr ("Hound mode TX frequency control requires"
+                                                            " *Split* rig control (either *Rig* or *Fake It* set"
+                                                            " in the *Settings | Radio* tab.)");
+        JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
+        ui->actionEnable_hound_mode->setChecked(false);
+      } else {
+        m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+        ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
+      }
+    }
   }
 }
 
@@ -3051,26 +3055,26 @@ void MainWindow::on_actionAutoFilter_toggled(bool checked)
 
 void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
 {
+// Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
+  QString message = "";
+  if(checked && !m_config.split_mode() && !m_commonFT8b) {
+    message =  tr ("Hound mode TX frequency control requires"
+                                                        " *Split* rig control (either *Rig* or *Fake It* set"
+                                                        " in the *Settings | Radio* tab.)");
+    JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
+    ui->actionEnable_hound_mode->setChecked(false);
+    return;
+  }
+  m_houndTXfreqJumps=checked && !m_commonFT8b && m_config.split_mode();
+  ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
   m_houndMode=checked;
   m_wideGraph->setHoundFilter(m_houndMode);
+  ui->HoundButton->setChecked(m_houndMode);
   if(m_houndMode) {
-    bool defBand=false;
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-    for(int i=0; i<11; i++) {
-      int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
-      if(qAbs(kHzdiff) < 3) {
-        defBand=true;
-        break;
-      }
-    }
-    ui->HoundButton->setChecked(true);
-    if(defBand) ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#ffff88",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
-    else ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
-    ui->actionUse_TX_frequency_jumps->setEnabled(true);
+    ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
   else {
-    ui->HoundButton->setChecked(false);
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
     ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true);
     if(m_wasSkipTx1) { 
@@ -3079,46 +3083,8 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
       if(ui->genMsg->text() == ui->tx1->text()) ui->genMsg->setText(ui->tx2->text());
       m_wasSkipTx1=false;
 	}
-    if(m_houndTXfreqJumps) ui->actionUse_TX_frequency_jumps->setChecked(false);
-    ui->actionUse_TX_frequency_jumps->setEnabled(false); }
-  ui->HoundButton->setChecked(m_houndMode);
-  setHoundAppearance(m_houndMode);
-}
-
-void MainWindow::on_actionUse_TX_frequency_jumps_toggled(bool checked)
-{
-  if(checked) {
-	  bool defBand=false; bool splitOff=false; QString message = "";
-//    Don't allow Hound frequency control in any of the default FT8 sub-bands but 60m
-    qint32 ft8Freq[]={1840,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-    for(int i=0; i<11; i++) {
-      int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
-      if(qAbs(kHzdiff) < 3) {
-        message = tr ("Hound TX frequency control is not allowed"
-                      " in the standard FT8 sub-bands.");
-      defBand=true;
-      break;
-      }
-    }
-//    Don't allow Hound frequency control if VFO Split mode is switched off
-    if(!m_config.split_mode()) {
-      if(!defBand) { message =  tr ("Hound mode TX frequency control requires"
-                                    " *Split* rig control (either *Rig* or *Fake It* on"
-                                    " the *Settings | Radio* tab.)"); }
-      else { message =  tr ("Hound TX frequency control is not allowed"
-                            " in the standard FT8 sub-bands and requires"
-                            " *Split* rig control (either *Rig* or *Fake It* on"
-                            " the *Settings | Radio* tab.)"); }		  
-      splitOff=true;
-    }
-    if(defBand || splitOff) {
-      ui->actionUse_TX_frequency_jumps->setChecked(false); // this will call again this method
-      JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
-      return;
-    }
   }
-  m_houndTXfreqJumps=checked;
-  if(m_houndTXfreqJumps) ui->HoundButton->setText(tr("HoundFC")); else ui->HoundButton->setText(tr("Hound"));
+  setHoundAppearance(m_houndMode);
 }
 
 void MainWindow::on_actionMTAuto_triggered() { m_ft8threads=0; }
@@ -6584,6 +6550,20 @@ void MainWindow::band_changed (Frequency f)
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
       }
       m_commonFT8b=commonFT8b;
+      if (m_houndMode) {
+      // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
+        QString message = "";
+        if(!m_config.split_mode() && !m_commonFT8b) {
+          message =  tr ("Hound mode TX frequency control requires"
+                                                              " *Split* rig control (either *Rig* or *Fake It* set"
+                                                              " in the *Settings | Radio* tab.)");
+          JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
+          ui->actionEnable_hound_mode->setChecked(false);
+        } else {
+          m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+          ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
+        }
+      }
     }
     m_lastloggedtime=m_lastloggedtime.addSecs(-7*int(m_TRperiod));
     m_lastloggedcall.clear(); setLastLogdLabel();
@@ -6667,10 +6647,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event)             //mousePressEve
           m_qsoHistory.remove(m_hisCall);    
       clearDX (" cleared and erased from QSO history by right mouse button click, user action");
     }   
-  }
-
-  if(m_houndMode && ui->HoundButton->hasFocus() && (event->button() & Qt::RightButton)) {
-    if(!m_houndTXfreqJumps) ui->actionUse_TX_frequency_jumps->setChecked(true); else ui->actionUse_TX_frequency_jumps->setChecked(false);
   }
   
   if(ui->EraseButton->hasFocus() && (event->button() & Qt::RightButton)) {
@@ -6866,7 +6842,7 @@ void MainWindow::on_stopTxButton_clicked()                    //Stop Tx
   if(!m_transmitting && g_iptt==1) m_haltTrans=true;
   if (m_haltTxWritten) m_haltTxWritten=false;
   else writeHaltTxEvent("Halt Tx button clicked ");
-  if(m_skipTx1 && !m_hisCall.isEmpty() && (m_ntx==2 || m_QSOProgress==REPORT)) m_qsoHistory.remove(m_hisCall);
+  if(m_transmitting && m_skipTx1 && !m_hisCall.isEmpty() && (m_ntx==2 || m_QSOProgress==REPORT)) m_qsoHistory.remove(m_hisCall);
 // sync TX variables, RX scenario is covered in on_enableTxButton_clicked ()
   m_bTxTime=false; m_tx_when_ready=false; m_transmitting=false; m_restart=false; m_txNext=false;
 }
@@ -7294,7 +7270,7 @@ void MainWindow::enableHoundAccess(bool b)
 {
   if(b) { ui->actionEnable_hound_mode->setEnabled(true); ui->HoundButton->setEnabled(true); }
   else { ui->actionEnable_hound_mode->setChecked(false); ui->actionEnable_hound_mode->setEnabled(false); ui->HoundButton->setEnabled(false);
-         ui->actionUse_TX_frequency_jumps->setChecked(false); ui->actionUse_TX_frequency_jumps->setEnabled(false); 
+         ui->actionUse_TX_frequency_jumps->setChecked(false);
   }
 }
 

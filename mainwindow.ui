@@ -1386,7 +1386,7 @@
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton:checked {
