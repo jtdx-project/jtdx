@@ -1217,8 +1217,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
       endif
     endif
 
-! -10 0.2 2106 ~ ES6DO M11VSM/R FE69       *England ! false FT8 AP decode
-    if(i3.eq.1 .and. iaptype.eq.2) then
+! -10 0.2 2106 ~ ES6DO M11VSM/R FE69       *England ! false FT8 AP type 2 decode
+    if(iaptype.eq.2) then ! checking high SNR signals
       if(index(msg37,'/R').gt.10) then
         ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
         if(ispc2.gt.12) then
