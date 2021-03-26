@@ -3881,7 +3881,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Включение режима гончей  FT8 DX экспедиции. В этом режиме на общих FT8 диапазонах поддерживается функционал многоответа MSHV, на специально выделенных частотах DX экспедиций поддерживается функционал гончей WSJT-X с управлением частотой передачи.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4834,7 +4834,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3061"/>
         <location filename="../mainwindow.cpp" line="6557"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Для автоматического управления частотой в режиме гончей необходимо активировать разнос частот (используя два гетеродина либо эмуляцию на одном гетеродине) в закладке Радио настроек конфигурации</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2674"/>
