@@ -2998,10 +2998,10 @@ Hiba: %2 - %3</translation>
         <location filename="../mainwindow.cpp" line="1869"/>
         <location filename="../mainwindow.cpp" line="3658"/>
         <location filename="../mainwindow.cpp" line="3667"/>
-        <location filename="../mainwindow.cpp" line="6223"/>
-        <location filename="../mainwindow.cpp" line="6228"/>
-        <location filename="../mainwindow.cpp" line="6270"/>
-        <location filename="../mainwindow.cpp" line="6281"/>
+        <location filename="../mainwindow.cpp" line="6236"/>
+        <location filename="../mainwindow.cpp" line="6241"/>
+        <location filename="../mainwindow.cpp" line="6283"/>
+        <location filename="../mainwindow.cpp" line="6294"/>
         <source>Band Activity</source>
         <translation>Sáv_aktivítás</translation>
     </message>
@@ -3119,9 +3119,9 @@ Hiba: %2 - %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1076"/>
-        <location filename="../mainwindow.cpp" line="4811"/>
-        <location filename="../mainwindow.cpp" line="5482"/>
-        <location filename="../mainwindow.cpp" line="5903"/>
+        <location filename="../mainwindow.cpp" line="4824"/>
+        <location filename="../mainwindow.cpp" line="5495"/>
+        <location filename="../mainwindow.cpp" line="5916"/>
         <source>DX Call</source>
         <translation>DX hívójel</translation>
     </message>
@@ -3378,7 +3378,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2273"/>
-        <location filename="../mainwindow.cpp" line="6229"/>
+        <location filename="../mainwindow.cpp" line="6242"/>
         <source>Rx Frequency</source>
         <translation>Rx_frekvencia</translation>
     </message>
@@ -3389,7 +3389,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2373"/>
-        <location filename="../mainwindow.cpp" line="6822"/>
+        <location filename="../mainwindow.cpp" line="6835"/>
         <source>&amp;Tune</source>
         <translation>&amp;Hangolás</translation>
     </message>
@@ -4740,10 +4740,10 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="948"/>
         <location filename="../mainwindow.cpp" line="949"/>
-        <location filename="../mainwindow.cpp" line="6219"/>
-        <location filename="../mainwindow.cpp" line="6220"/>
-        <location filename="../mainwindow.cpp" line="6277"/>
-        <location filename="../mainwindow.cpp" line="6278"/>
+        <location filename="../mainwindow.cpp" line="6232"/>
+        <location filename="../mainwindow.cpp" line="6233"/>
+        <location filename="../mainwindow.cpp" line="6290"/>
+        <location filename="../mainwindow.cpp" line="6291"/>
         <source>Freq   Message</source>
         <translation>Frekv. üzenet</translation>
     </message>
@@ -4776,11 +4776,11 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="1762"/>
         <location filename="../mainwindow.cpp" line="2561"/>
         <location filename="../mainwindow.cpp" line="3702"/>
-        <location filename="../mainwindow.cpp" line="4265"/>
-        <location filename="../mainwindow.cpp" line="4413"/>
-        <location filename="../mainwindow.cpp" line="4652"/>
-        <location filename="../mainwindow.cpp" line="7105"/>
-        <location filename="../mainwindow.cpp" line="7321"/>
+        <location filename="../mainwindow.cpp" line="4278"/>
+        <location filename="../mainwindow.cpp" line="4426"/>
+        <location filename="../mainwindow.cpp" line="4665"/>
+        <location filename="../mainwindow.cpp" line="7118"/>
+        <location filename="../mainwindow.cpp" line="7334"/>
         <source>File Open Error</source>
         <translation>Fájl megnyitási hiba</translation>
     </message>
@@ -4788,12 +4788,12 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="1763"/>
         <location filename="../mainwindow.cpp" line="2562"/>
         <location filename="../mainwindow.cpp" line="3703"/>
-        <location filename="../mainwindow.cpp" line="4266"/>
-        <location filename="../mainwindow.cpp" line="4414"/>
-        <location filename="../mainwindow.cpp" line="4653"/>
-        <location filename="../mainwindow.cpp" line="7106"/>
-        <location filename="../mainwindow.cpp" line="7322"/>
-        <location filename="../mainwindow.cpp" line="7675"/>
+        <location filename="../mainwindow.cpp" line="4279"/>
+        <location filename="../mainwindow.cpp" line="4427"/>
+        <location filename="../mainwindow.cpp" line="4666"/>
+        <location filename="../mainwindow.cpp" line="7119"/>
+        <location filename="../mainwindow.cpp" line="7335"/>
+        <location filename="../mainwindow.cpp" line="7688"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; -t a hozzáadáshoz: %2</translation>
     </message>
@@ -4825,7 +4825,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="2481"/>
         <location filename="../mainwindow.cpp" line="3061"/>
-        <location filename="../mainwindow.cpp" line="6557"/>
+        <location filename="../mainwindow.cpp" line="6570"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4921,7 +4921,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
     <message>
         <location filename="../mainwindow.cpp" line="2484"/>
         <location filename="../mainwindow.cpp" line="3064"/>
-        <location filename="../mainwindow.cpp" line="6560"/>
+        <location filename="../mainwindow.cpp" line="6573"/>
         <source>Hound TX frequency control warning</source>
         <translation>A Hound TX frekvencia vezérlésének figyelmeztetése</translation>
     </message>
@@ -4971,44 +4971,55 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <translation>Biztos, hogy magyarra változtatja a felületet, a JTDX-et újraindítja?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4103"/>
+        <location filename="../mainwindow.cpp" line="4104"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
         <translation>Kérjük, válasszon másik Tx frekvenciát. A JTDX szándékosan nem kapcsol adásra egy másik üzemmódban a WSPR alsávban.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4108"/>
-        <location filename="../mainwindow.cpp" line="4111"/>
+        <location filename="../mainwindow.cpp" line="4109"/>
+        <location filename="../mainwindow.cpp" line="4112"/>
         <source>WSPR Guard Band</source>
         <translation>WSPR Védett Sáv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4229"/>
+        <location filename="../mainwindow.cpp" line="4115"/>
+        <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4120"/>
+        <location filename="../mainwindow.cpp" line="4123"/>
+        <source>FT8 F/H Tx Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4242"/>
         <source>TUNE</source>
         <translation>HANGOLÁS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4230"/>
-        <location filename="../mainwindow.cpp" line="4696"/>
+        <location filename="../mainwindow.cpp" line="4243"/>
+        <location filename="../mainwindow.cpp" line="4709"/>
         <source>LastTx: </source>
         <translation>UtolsóTx:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4481"/>
+        <location filename="../mainwindow.cpp" line="4494"/>
         <source>Tx: TUNE</source>
         <translation>Tx: HANGOLÁS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4482"/>
+        <location filename="../mainwindow.cpp" line="4495"/>
         <source>Tx: </source>
         <translation>Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4487"/>
+        <location filename="../mainwindow.cpp" line="4500"/>
         <source>Receiving </source>
         <translation>Vétel </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7063"/>
+        <location filename="../mainwindow.cpp" line="7076"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
@@ -5017,141 +5028,141 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <translation type="obsolete">Utolsó Tx: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5583"/>
-        <location filename="../mainwindow.cpp" line="5595"/>
-        <location filename="../mainwindow.cpp" line="5614"/>
-        <location filename="../mainwindow.cpp" line="5640"/>
+        <location filename="../mainwindow.cpp" line="5596"/>
+        <location filename="../mainwindow.cpp" line="5608"/>
+        <location filename="../mainwindow.cpp" line="5627"/>
+        <location filename="../mainwindow.cpp" line="5653"/>
         <source>Add to CALL3.TXT</source>
         <translation>Hozzáadás a CALL3.TXT-hez</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5584"/>
+        <location filename="../mainwindow.cpp" line="5597"/>
         <source>Please enter a valid grid locator</source>
         <translation>Adjon meg egy érvényes QRA lokátort</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5596"/>
+        <location filename="../mainwindow.cpp" line="5609"/>
         <source>Cannot open &quot;%1&quot; for read/write: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot;, olvasáshoz/íráshoz: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5615"/>
+        <location filename="../mainwindow.cpp" line="5628"/>
         <source>Cannot open &quot;%1&quot; for writing: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; íráshoz: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5638"/>
+        <location filename="../mainwindow.cpp" line="5651"/>
         <source>%1
 is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>%1
 már a CALL3.TXT-ben van, szeretné cserélni?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6002"/>
+        <location filename="../mainwindow.cpp" line="6015"/>
         <source>Error sending QSO ADIF data to secondary UDP server</source>
         <translation>Hiba történt a QSO ADIF adatok küldésekor a másodlagos UDP kiszolgálóra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6002"/>
+        <location filename="../mainwindow.cpp" line="6015"/>
         <source>Write returned &quot;%1&quot;</source>
         <translation>Írás visszajött &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6168"/>
+        <location filename="../mainwindow.cpp" line="6181"/>
         <source>Tx WSPR</source>
         <translation>Tx WSPR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6268"/>
+        <location filename="../mainwindow.cpp" line="6281"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
         <translation>    Freq     Drift  Call          Grid    dBm   Dist</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6362"/>
-        <location filename="../mainwindow.cpp" line="6374"/>
+        <location filename="../mainwindow.cpp" line="6375"/>
+        <location filename="../mainwindow.cpp" line="6387"/>
         <source>Confirm Erase</source>
         <translation>Törlés megerősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6363"/>
+        <location filename="../mainwindow.cpp" line="6376"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
         <translation>Biztos, hogy törli az ALL.txt fájlt?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6375"/>
+        <location filename="../mainwindow.cpp" line="6388"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
         <translation>Biztos, hogy törli a LOG-ot?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7000"/>
+        <location filename="../mainwindow.cpp" line="7013"/>
         <source>Lockd Tx=Rx</source>
         <translation>Tx=Rx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7001"/>
+        <location filename="../mainwindow.cpp" line="7014"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás engedélyezéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7004"/>
+        <location filename="../mainwindow.cpp" line="7017"/>
         <source>Tx/Rx Split</source>
         <translation>Tx/Rx eltolás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7005"/>
+        <location filename="../mainwindow.cpp" line="7018"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás megszűntetéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7141"/>
+        <location filename="../mainwindow.cpp" line="7154"/>
         <source>Rig Control Error</source>
         <translation>Adó  frekvenciavezérlés hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7221"/>
+        <location filename="../mainwindow.cpp" line="7234"/>
         <source>Tune digital gain</source>
         <translation>Hangolás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7222"/>
+        <location filename="../mainwindow.cpp" line="7235"/>
         <source>Transmit digital gain</source>
         <translation>Adás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7242"/>
+        <location filename="../mainwindow.cpp" line="7255"/>
         <source>Prefixes</source>
         <translation>Prefixek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7291"/>
-        <location filename="../mainwindow.cpp" line="7292"/>
+        <location filename="../mainwindow.cpp" line="7304"/>
+        <location filename="../mainwindow.cpp" line="7305"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7527"/>
+        <location filename="../mainwindow.cpp" line="7540"/>
         <source>Network Error</source>
         <translation>Hálózati hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7528"/>
+        <location filename="../mainwindow.cpp" line="7541"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Hiba: %1
 UDP szerver %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7674"/>
+        <location filename="../mainwindow.cpp" line="7687"/>
         <source>File Error</source>
         <translation>Fájlhiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7896"/>
+        <location filename="../mainwindow.cpp" line="7909"/>
         <source>Tx watchdog expired</source>
         <translation>Az időzítő lejárt és megszakította az adást.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7910"/>
+        <location filename="../mainwindow.cpp" line="7923"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>

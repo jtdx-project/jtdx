@@ -4094,22 +4094,35 @@ void MainWindow::guiUpdate()
         case 70: {f_from = 70092370; f_to = 70092620; break;}
         default: {f_from = 0;  f_to = 0; break;}
     }
-    if (f_from >0 and (onAirFreq > f_from and onAirFreq < f_to) and m_mode.left(4)!="WSPR") {
+    if ((f_from >0 and (onAirFreq > f_from and onAirFreq < f_to) and m_mode.left(4)!="WSPR") || (m_houndTXfreqJumps &&  ui->TxFreqSpinBox->value() < 1000 && ui->txrb1->isChecked())) {
       m_bTxTime=false;
 //      if (m_tune) stop_tuning ();
       if (m_enableTx) enableTx_mode (false);
       if(onAirFreq!=onAirFreq0) {
         onAirFreq0=onAirFreq;
-        auto const& message1 = tr ("Please choose another Tx frequency."
+        if (onAirFreq > f_from and onAirFreq < f_to) {
+          auto const& message1 = tr ("Please choose another Tx frequency."
                                   " JTDX will not knowingly transmit another"
                                   " mode in the WSPR sub-band.");
 #if QT_VERSION >= 0x050400
-        QTimer::singleShot (0, [=] { // don't block guiUpdate
+          QTimer::singleShot (0, [=] { // don't block guiUpdate
             JTDXMessageBox::warning_message (this, "", tr ("WSPR Guard Band"), message1);
           });
 #else
-        JTDXMessageBox::warning_message (this, "", tr ("WSPR Guard Band"), message1);
+          JTDXMessageBox::warning_message (this, "", tr ("WSPR Guard Band"), message1);
 #endif
+        } else {
+          auto const& message1 = tr ("Please choose another Tx frequency."
+                                  " JTDX will not allow to Call below 1000 Hz"
+                                  " in DXped mode.");
+#if QT_VERSION >= 0x050400
+          QTimer::singleShot (0, [=] { // don't block guiUpdate
+            JTDXMessageBox::warning_message (this, "", tr ("FT8 F/H Tx Guard"), message1);
+          });
+#else
+          JTDXMessageBox::warning_message (this, "", tr ("FT8 F/H Tx Guard"), message1);
+#endif
+        }
       }
     }
 
