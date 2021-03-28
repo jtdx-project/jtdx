@@ -6938,7 +6938,7 @@ void MainWindow::setXIT(int n, Frequency base)
   
   if (!base) base = m_freqNominal;
   m_XIT = 0;
-  if (!m_bSimplex) {
+  if (!m_bSimplex && base) {
     // m_bSimplex is false, so we can use split mode if requested
     if (m_config.split_mode ()) {if (m_tci) m_XIT = n - 1500; else m_XIT = (n/500)*500 - 1500;}
     if ((m_monitoring || m_transmitting) && m_config.is_transceiver_online () && m_config.split_mode ()) {
