@@ -2466,10 +2466,12 @@ void MainWindow::displayDialFrequency ()
   ui->labDialFreq->setText (Radio::pretty_frequency_MHz_string (dial_frequency));
 
   static bool first_freq {true};
-  if(first_freq && dial_frequency!=0 && dial_frequency!=145000000 && m_mode=="FT8") {
+  static Frequency first_value {145000000};
+  if(((first_freq && dial_frequency!=0 && dial_frequency!=145000000) || (first_value != m_lastDialFreq)) && m_mode=="FT8") {
+    first_value = m_lastDialFreq;
     bool commonFT8b=false;
     qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-    for(int i=0; i<11; i++) {
+    for(long unsigned int i=0; i < sizeof (ft8Freq) / sizeof (ft8Freq[0]); i++) {
       int kHzdiff=dial_frequency/1000 - ft8Freq[i];
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
     }
@@ -6558,7 +6560,7 @@ void MainWindow::band_changed (Frequency f)
       if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false);
     } else {
       qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-      for(int i=0; i<11; i++) {
+      for(long unsigned int i=0; i < sizeof (ft8Freq) / sizeof (ft8Freq[0]); i++) {
         int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
       }
