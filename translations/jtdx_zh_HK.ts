@@ -3881,7 +3881,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用FT8 DX遠征獵犬模式, MSHV 在常用的 FT8 頻段中使用多回答模式, WSJT-X 設置頻率控制下用遠征獵犬模式並在特殊的DX遠征頻段上使用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4832,7 +4832,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3063"/>
         <location filename="../mainwindow.cpp" line="6572"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>獵犬模式 發射頻率控制需要在電台設置卡內 *異頻操作* 裡, 選擇 (要麼 *無線電設備* 或 *虛假*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2676"/>
@@ -5028,13 +5028,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>請選擇另一個發射頻率. JTDX 將不允許在 DX遠征模式下低於 1000 Hz 的發射呼叫。.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F/H 發射警衛</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5599"/>
