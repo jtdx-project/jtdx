@@ -182,7 +182,6 @@ private slots:
   void on_actionSingleShot_toggled(bool checked);
   void on_actionAutoFilter_toggled(bool checked);
   void on_actionEnable_hound_mode_toggled(bool checked);
-  void on_actionUse_TX_frequency_jumps_toggled(bool checked);
   void on_actionMTAuto_triggered();
   void on_actionMT1_triggered();
   void on_actionMT2_triggered();
