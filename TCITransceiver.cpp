@@ -1418,6 +1418,7 @@ QString TCITransceiver::frequency_to_string (Frequency f) const
   f_string = f_string.simplified().remove(' ');
 //  printf ("frequency_to_string2 %s\n",f_string.toStdString().c_str());
   f_string = f_string.replace(",","");
+  f_string = f_string.replace(".","");
 //  printf ("frequency_to_string3 %s\n",f_string.toStdString().c_str());
   return f_string;
   
