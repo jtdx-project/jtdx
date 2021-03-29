@@ -481,19 +481,19 @@ void TransceiverBase::shutdown ()
   }
   fclose (pFile);
 #endif
+  may_update u {this};
+#if JTDX_DEBUG_TO_FILE
+  pFile = fopen (debug_file_.c_str(),"a");
+  if (jtdxtime_ == nullptr)
+    fprintf(pFile,"may_update\n");
+  else
+    fprintf(pFile,"%s Timing may_update\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fclose (pFile);
+#endif
   if (requested_.online ())
     {
       try
         {
-          may_update u {this};
-#if JTDX_DEBUG_TO_FILE
-          pFile = fopen (debug_file_.c_str(),"a");
-          if (jtdxtime_ == nullptr)
-            fprintf(pFile,"may_update\n");
-          else
-            fprintf(pFile,"%s Timing may_update\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
-          fclose (pFile);
-#endif
           // try and ensure PTT isn't left set
           do_ptt (false);
 #if JTDX_DEBUG_TO_FILE

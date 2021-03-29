@@ -5929,8 +5929,8 @@ void Configuration::impl::close_rig ()
   if (rig_active_)
     {
       ui_->test_CAT_push_button->setStyleSheet ("QPushButton {background-color: red;}");
-      Q_EMIT stop_transceiver ();
 //      if (is_tci_) QThread::msleep (200);
+      Q_EMIT stop_transceiver ();
       for (auto const& connection: rig_connections_)
         {
           disconnect (connection);

@@ -370,6 +370,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 #endif
   commander_->open (url_);
   mysleep1 (1500);
+  mysleep1 (50);
   if (tci_Ready) {
     if (!_power_) {
       if (rig_power_) {
@@ -389,7 +390,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     }
     if (!requested_rx_frequency_.isEmpty()) do_frequency(string_to_frequency (requested_rx_frequency_),get_mode(true),false);
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
-    else if (requested_split_ != split_) {rig_split(); split_ = requested_split_; mysleep2(100);}
+    else if (requested_split_ != split_) {/*printf("splt from start %d\n",requested_split_);*/ rig_split(); split_ = requested_split_; mysleep2(100);}
     do_poll ();
 
     TRACE_CAT ("TCITransceiver", "started");
@@ -421,7 +422,7 @@ void TCITransceiver::do_stop ()
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
   fprintf (pFile,"TCI close\n");
 #endif
-  if (stream_audio_ && tci_Ready && inConnected) {
+  if (stream_audio_ && tci_Ready && inConnected && _power_) {
     stream_audio (false);
     mysleep1(500);
 //    printf ("TCI audio closed\n");
@@ -429,12 +430,12 @@ void TCITransceiver::do_stop ()
     fprintf (pFile,"TCI audio closed\n");
 #endif
   }
-  if (tci_Ready && inConnected) {
+  if (tci_Ready && inConnected && _power_) {
     requested_split_ = false;
     requested_other_frequency_ = "";
-    if (requested_split_ != split_) {rig_split(); mysleep2(100);}
+    if (requested_split_ != split_) {rig_split(); mysleep2(200);}
   }
-  if (_power_ && rig_power_off_ && tci_Ready && inConnected) {
+  if (_power_ && rig_power_off_ && tci_Ready && inConnected && _power_) {
     rig_power(false);
     mysleep1(500);
 //    printf ("TCI power down\n");
@@ -673,18 +674,15 @@ void TCITransceiver::onMessageReceived(const QString &str)
             tci_Ready = false;
           }
           break;	
-        case Cmd_Tune:
-//          printf("%s(%0.1f) CmdTune : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
+        case Cmd_Ready:
+//          printf("%s(%0.1f) CmdReady : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");  
-          fprintf (pFile,"%s(%0.1f) CmdTune : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
+          fprintf (pFile,"%s(%0.1f) CmdReady : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
           fclose (pFile);
 #endif
-            if(args.at(0)=="1" && !tci_Ready) {
-              tci_Ready = true;
-//              printf ("cmdtyne1 done1\n");
-              tci_done1();
-            }
+          tci_Ready = true;
+          tci_done1();
           break;	
         
         default:
@@ -1098,7 +1096,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
       if (on != PTT_) {
         if (!inConnected && !error_.isEmpty()) throw error {error_};
 //        if (!inConnected){ PTT_ = on; update_PTT(on); return; }
-        else if (busy_PTT_ || !tci_Ready) return;
+        else if (busy_PTT_ || !tci_Ready || !_power_) return;
         else busy_PTT_ = true;
         requested_PTT_ = on;
         const QString cmd = CmdTrx + SmDP + "0" + SmCM + (on ? "true" : "false") + SmTZ;
@@ -1150,7 +1148,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
     requested_rx_frequency_ = f_string;
     requested_mode_ = map_mode (m);
   }
-  if (tci_Ready) {
+  if (tci_Ready && _power_) {
     busy_rx_frequency_ = true;
     if (rx_frequency_ != requested_rx_frequency_) {
       const QString cmd = CmdVFO + SmDP + "0" + SmCM + "0" + SmCM + requested_rx_frequency_ + SmTZ;
@@ -1234,7 +1232,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
   if (tx)
     {
       requested_split_ = true;
-      if (tci_Ready) {
+      if (tci_Ready && _power_) {
         if (abs(other_frequency_.toInt()-requested_other_frequency_.toInt()) > 1000000) mysleep2(500);
         if (requested_split_ != split_) rig_split();
         if (other_frequency_ != requested_other_frequency_) {
@@ -1260,7 +1258,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
     }
   else {
     requested_split_ = false;
-    if (tci_Ready && !busy_other_frequency_) {
+    if (tci_Ready && _power_ && !busy_other_frequency_) {
       requested_other_frequency_ = "";
       if (requested_split_ != split_) rig_split();
       update_other_frequency (tx);
@@ -1444,41 +1442,43 @@ auto TCITransceiver::string_to_frequency (QString s) const -> Frequency
 void TCITransceiver::mysleep1 (int ms)
 {
 //  tci_timer1->setSingleShot(true);
-//  printf("%s(%0.1f) TCI sleep1 start %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),ms);
+//  printf("%s(%0.1f) TCI sleep1 start %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),ms,tci_timer1_->isActive());
   tci_timer1_->start(ms);
   tci_loop1_->exec();
-//  printf("%s(%0.1f) TCI sleep1 end %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer1_->isActive());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
   fprintf (pFile,"%s(%0.1f) TCI sleep1 %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer1_->isActive());
   fclose (pFile);
 #endif
+//  printf("%s(%0.1f) TCI sleep1 end %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer1_->isActive());
   if (tci_timer1_->isActive() && tci_Ready) tci_timer1_->stop();
 }
 void TCITransceiver::mysleep2 (int ms)
 {
 //  tci_timer2->setSingleShot(true);
+//  printf("%s(%0.1f) TCI sleep2 start %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),ms,tci_timer2_->isActive());
   tci_timer2_->start(ms);
   tci_loop2_->exec();
-//  printf("%s(%0.1f) TCI sleep2 %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer2_->isActive());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
   fprintf (pFile,"%s(%0.1f) TCI sleep2 %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer2_->isActive());
   fclose (pFile);
 #endif
+//  printf("%s(%0.1f) TCI sleep1 end %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer2_->isActive());
   if (tci_timer2_->isActive()) tci_timer2_->stop();
 }
 void TCITransceiver::mysleep3 (int ms)
 {
 //  tci_timer3->setSingleShot(true);
+//  printf("%s(%0.1f) TCI sleep3 start %d %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),ms,tci_timer3_->isActive());
   tci_timer3_->start(ms);
   tci_loop3_->exec();
-//  printf("%s(%0.1f) TCI sleep3 %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer3_->isActive());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
   fprintf (pFile,"%s(%0.1f) TCI sleep3 %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer3_->isActive());
   fclose (pFile);
 #endif
+//  printf("%s(%0.1f) TCI sleep3 end %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_timer3_->isActive());
   if (tci_timer3_->isActive()) tci_timer3_->stop();
 }
 // Modulator part
