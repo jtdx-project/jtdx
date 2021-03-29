@@ -3286,7 +3286,7 @@ Error: %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1853"/>
         <source> Pwr</source>
-        <translation> Pot.</translation>
+        <translation> Pot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1875"/>
@@ -3888,7 +3888,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activar el modo DXpedition Hound del FT8. El modo de multirespuesta MSHV es compatible con las bandas comunes del FT8, el modo de DXpedición WSJT-X con control de frecuencia es compatible con las frecuencias especiales de DXpedición.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4833,14 +4833,14 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2100"/>
         <source>Pwr</source>
-        <translation>Pot.</translation>
+        <translation>Pwr</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2483"/>
         <location filename="../mainwindow.cpp" line="3063"/>
         <location filename="../mainwindow.cpp" line="6572"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>El control de la frecuencia de transmisión del modo sabueso requiere el control del equipo *Split* (ya sea *Equipo* o *Fake It* configurado en la pestaña *Ajustes | Radio*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2676"/>
@@ -5037,13 +5037,13 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija otra frecuencia de transmisión. JTDX no permitirá llamar por debajo de 1000 Hz en modo DXpedición.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F/H Guardia de Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5599"/>
