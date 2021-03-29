@@ -5030,13 +5030,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста выберите другую звуковую частоту передачи. JTDX не позволит вызывать корреспондета в режиме DX-экспедиции на частотах ниже 1000 Гц.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>Защита от вызова в участке частот DX экспедиции</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5599"/>
