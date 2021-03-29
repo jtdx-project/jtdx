@@ -596,8 +596,8 @@ set (TOP_LEVEL_RESOURCES
   shortcuts.txt
   mouse_commands.txt
   prefixes.txt
-  cty.dat
   lotw-user-activity.csv
+  icons/Darwin/jtdx.iconset/icon_128x128.png
   contrib/decpasses.png
   contrib/dtrange.png
   )
@@ -1299,6 +1299,8 @@ install (FILES
   )
 
 install (FILES
+  cty.dat
+  cty.dat_copyright.txt
   contrib/Ephemeris/JPLEPH
   contrib/CallDB/ALLCALL7.TXT
   contrib/CallDB/CALL3.TXT
