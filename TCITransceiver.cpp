@@ -377,7 +377,10 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
         rig_power(true);
         mysleep1(500);
         if(!_power_) throw error {tr ("TCI SDR could not be switched on")};
-      } else throw error {tr ("TCI SDR is not switched on")};
+      } else {
+        tci_Ready = false;
+        throw error {tr ("TCI SDR is not switched on")};
+      }
     }
     if (do_snr_) {
         const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
@@ -386,7 +389,10 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     if (tci_audio_) {
         stream_audio (true);
         mysleep1(500);
-        if (!stream_audio_) throw error {tr ("TCI Audio could not be switched on")};
+        if (!stream_audio_) {
+          tci_Ready = false;
+          throw error {tr ("TCI Audio could not be switched on")};
+        }
     }
     if (!requested_rx_frequency_.isEmpty()) do_frequency(string_to_frequency (requested_rx_frequency_),get_mode(true),false);
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
@@ -1114,6 +1120,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
           fprintf (pFile,"%s(%0.1f) TCI failed set ptt %d->%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
           fclose (pFile);
 #endif
+          tci_Ready = false;
           throw error {tr ("TCI failed to set ptt")};
         }
       } else update_PTT(on); 
@@ -1174,6 +1181,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
         fprintf (pFile,"%s(%0.1f) TCI failed set rxfreq:%s->%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),rx_frequency_.toStdString().c_str(),requested_rx_frequency_.toStdString().c_str());
         fclose (pFile);
 #endif
+        tci_Ready = false;
         throw error {tr ("TCI failed set rxfreq")};
       }
       if (requested_mode_.isEmpty() || requested_mode_ == mode_) update_mode (m);
@@ -1184,6 +1192,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
         fprintf (pFile,"%s(%0.1f) TCI failed set mode %s->%s",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),mode_.toStdString().c_str(),requested_mode_.toStdString().c_str());
         fclose (pFile);
 #endif
+        tci_Ready = false;
         throw error {tr ("TCI failed set mode")};
       }
     } else if (!requested_mode_.isEmpty() && requested_mode_ != mode_) {
@@ -1197,6 +1206,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
         fprintf (pFile,"%s(%0.1f) TCI failed set mode %s->%s",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),mode_.toStdString().c_str(),requested_mode_.toStdString().c_str());
         fclose (pFile);
 #endif
+        tci_Ready = false;
         throw error {tr ("TCI failed set mode")};
       }
     } 
@@ -1248,6 +1258,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
             fprintf (pFile,"%s(%0.1f) TCI failed set txfreq:%s->%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),other_frequency_.toStdString().c_str(),requested_other_frequency_.toStdString().c_str());
             fclose (pFile);
 #endif
+            tci_Ready = false;
             throw error {tr ("TCI failed set txfreq")};
           }
         }
@@ -1293,6 +1304,7 @@ void TCITransceiver::do_mode (MODE m)
       fprintf (pFile,"%s(%0.1f) TCI failed set mode %s->%s",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),mode_.toStdString().c_str(),requested_mode_.toStdString().c_str());
       fclose (pFile);
 #endif
+      tci_Ready = false;
       throw error {tr ("TCI failed set mode")};
     }
   }
