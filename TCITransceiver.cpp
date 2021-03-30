@@ -1108,10 +1108,10 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
           if (PTT_ && do_snr_) update_level (-54);
           else { power_ = 0; if (do_pwr_) update_power (0);}
         } else {
-//          printf ("%s(%0.1f) TCI failed set ptt %d->%d}n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
+//          printf ("%s(%0.1f) TCI failed set ptt %d->%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
 #if JTDX_DEBUG_TO_FILE
           FILE * pFile = fopen (debug_file_.c_str(),"a");  
-          fprintf (pFile,"%s(%0.1f) TCI failed set ptt %d->%d}n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
+          fprintf (pFile,"%s(%0.1f) TCI failed set ptt %d->%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
           fclose (pFile);
 #endif
           throw error {tr ("TCI failed to set ptt")};
