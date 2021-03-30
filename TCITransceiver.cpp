@@ -568,9 +568,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
             if(args.at(0)=="0" && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
               if (requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
-              if (busy_rx_frequency_) {
-                if (requested_mode_ == mode_ && requested_rx_frequency_ == rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
-              }
+              if (busy_rx_frequency_ && (requested_mode_ == mode_ || requested_mode_.isEmpty()) && requested_rx_frequency_ == rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
             }
             else if (args.at(0)=="0" && args.at(1) == "1") {
               other_frequency_ = args.at(2);
