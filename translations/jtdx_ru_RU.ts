@@ -65,7 +65,7 @@
     <message>
         <location filename="../Configuration.cpp" line="1332"/>
         <source>&amp;Cancel</source>
-        <translation>О&amp;тменить</translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1347"/>
@@ -98,33 +98,33 @@ Another application may be locking the directory</source>
         <location filename="../Configuration.cpp" line="1576"/>
         <location filename="../Configuration.cpp" line="1628"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1580"/>
         <location filename="../Configuration.cpp" line="1632"/>
         <source>&amp;Insert ...</source>
-        <translation>&amp;Вставить ...</translation>
+        <translation>Вставить ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1584"/>
         <source>&amp;Load ...</source>
-        <translation>&amp;Загрузить...</translation>
+        <translation>Загрузить...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1588"/>
         <source>&amp;Save as ...</source>
-        <translation>&amp;Сохранить как ...</translation>
+        <translation>Сохранить как ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1592"/>
         <source>&amp;Merge ...</source>
-        <translation>&amp;Обьединить ...</translation>
+        <translation>Обьединить ...</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1596"/>
         <source>&amp;Reset</source>
-        <translation>&amp;Сброс</translation>
+        <translation>Сброс</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="2871"/>
@@ -339,7 +339,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>Spratly Is.</source>
-        <translation>Ост. Спратли</translation>
+        <translation>Спратли о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="36"/>
@@ -349,7 +349,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Agalega &amp; St. Brandon</source>
-        <translation>Ост. Агалега Сент Брандон</translation>
+        <translation>Ост. Агалега и Св.Брандон</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
@@ -359,7 +359,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation>Ост. Родригес</translation>
+        <translation>Родригес о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
@@ -369,7 +369,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Annobon Is.</source>
-        <translation>Ост. Аннобон</translation>
+        <translation>Аннобон о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="42"/>
@@ -384,7 +384,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Rotuma Is.</source>
-        <translation>Ост. Ротума</translation>
+        <translation>Ротума о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
@@ -414,7 +414,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Peter 1 Is.</source>
-        <translation>Ост. Петра 1</translation>
+        <translation>Петра 1 o.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="51"/>
@@ -684,7 +684,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="104"/>
         <source>Pratas Is.</source>
-        <translation>Ост. Пратас</translation>
+        <translation>Пратас о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="105"/>
@@ -724,17 +724,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="112"/>
         <source>San Felix &amp; San Ambrosio</source>
-        <translation>Сан Феликс &amp; Сан Амбросио</translation>
+        <translation>Сан Феликс и Сан Амбросио</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Easter Is.</source>
-        <translation>Ост. Пасхи</translation>
+        <translation>Пасхи о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation>Ост. Хуан Фернандес</translation>
+        <translation>Хуан Фернандес о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -764,12 +764,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation>Мадейра</translation>
+        <translation>Мадейра о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
         <source>Azores</source>
-        <translation>Азорские ост.</translation>
+        <translation>Азорские о-ва</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="122"/>
@@ -779,12 +779,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="123"/>
         <source>Sable Is.</source>
-        <translation>Ост. Сейбл</translation>
+        <translation>Сейбл о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>St. Paul Is.</source>
-        <translation>Ост. Сятого Павла</translation>
+        <translation>Св.Павла о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="125"/>
@@ -824,12 +824,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>N. Cook Is.</source>
-        <translation>Сев. ост. Кука</translation>
+        <translation>Сев.Кука о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>S. Cook Is.</source>
-        <translation>Юж. ост. Кука</translation>
+        <translation>Юж.Кука о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="134"/>
@@ -849,17 +849,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Балеарские ост.</translation>
+        <translation>Балеарские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Canary Is.</source>
-        <translation>Канарские ост.</translation>
+        <translation>Канарские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
         <source>Ceuta &amp; Melilla</source>
-        <translation>Сеута &amp; Мелилья</translation>
+        <translation>Сеута и Мелилья</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="140"/>
@@ -934,7 +934,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>St. Barthelemy</source>
-        <translation>Сен-Бартелеми </translation>
+        <translation>Св.Бартелеми</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="155"/>
@@ -944,7 +944,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>Chesterfield Is.</source>
-        <translation>Apx. Честерфилд</translation>
+        <translation>Честерфилд о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="157"/>
@@ -959,12 +959,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation>Ост.Острал</translation>
+        <translation>Острал о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation>Ост. Клиппертон</translation>
+        <translation>Клиппертон о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
@@ -974,12 +974,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation>Сен-Пьер &amp; и Микелон </translation>
+        <translation>Сен-Пьер и Микелон</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Reunion Is.</source>
-        <translation>Ост. Реюньон</translation>
+        <translation>Реюньон о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="164"/>
@@ -989,7 +989,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation>Ост. Глорьезы</translation>
+        <translation>Глорьезы о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
@@ -999,27 +999,27 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation>Ост. Тромлен</translation>
+        <translation>Тромлен о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Crozet Is.</source>
-        <translation>Ост. Крозе</translation>
+        <translation>Крозе о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation>Ост. Кергелен</translation>
+        <translation>Кергелен о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>Apx. ост. Амстердам и Сен-Поль</translation>
+        <translation>Амстердам и Сен-Поль о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation>Уоллис &amp;и Футуна</translation>
+        <translation>Уоллис и Футуна о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
@@ -1064,7 +1064,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
         <source>Wales</source>
-        <translation>Уэльс </translation>
+        <translation>Уэльс</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="181"/>
@@ -1119,12 +1119,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation>Сан Андрес&amp; и Провиденсия</translation>
+        <translation>Сан Андрес и Провиденсия</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Malpelo Is.</source>
-        <translation>Ост. Мальпело</translation>
+        <translation>Мальпело о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="193"/>
@@ -1234,7 +1234,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Bear Is.</source>
-        <translation>Ост. Медвежий</translation>
+        <translation>Медвежий о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="215"/>
@@ -1249,7 +1249,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="217"/>
         <source>U.S.A.</source>
-        <translation>США</translation>
+        <translation>С.Ш.А.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="218"/>
@@ -1264,7 +1264,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="220"/>
         <source>Baker &amp; Howland Is.</source>
-        <translation>Ост. Хауленд и Бейкер</translation>
+        <translation>Хауленд и Бейкер о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
@@ -1274,17 +1274,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Johnston Is.</source>
-        <translation>Атолл Джонстон</translation>
+        <translation>Джонстон о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="223"/>
         <source>Midway Is.</source>
-        <translation>Ост. Мидуэй</translation>
+        <translation>Мидуэй о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation>Пальмира &amp;и Джарвис</translation>
+        <translation>Пальмира и Джарвис о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
@@ -1294,7 +1294,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation>Атолл Куре</translation>
+        <translation>Куре о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
@@ -1304,12 +1304,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="228"/>
         <source>Swains Is.</source>
-        <translation>Ост. Суэйнс</translation>
+        <translation>Суэйнс о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>Wake Is.</source>
-        <translation>Ост. Уэйк</translation>
+        <translation>Уэйк о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
@@ -1319,12 +1319,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Navassa Is.</source>
-        <translation>Ост. Навасса </translation>
+        <translation>Навасса о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>Виргинские Ост.</translation>
+        <translation>Виргинские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1334,7 +1334,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation>Ост. Десечео</translation>
+        <translation>Десечео о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
@@ -1399,7 +1399,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Slovak Rep.</source>
-        <translation>Респ. Словакия</translation>
+        <translation>Словацкая Респ.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="248"/>
@@ -1414,7 +1414,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Faroe Is.</source>
-        <translation>Фарерские ост.</translation>
+        <translation>Фарерские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="251"/>
@@ -1454,7 +1454,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation>Синт-Эстатиус &amp;и Саба</translation>
+        <translation>Св.Эстатиус и Саба</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
@@ -1474,12 +1474,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>St. Peter &amp; St. Paul</source>
-        <translation>Святой Петр &amp; Святой Павел</translation>
+        <translation>Святой Петр и Святой Павел</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Trindade &amp; Martim Vaz</source>
-        <translation>Триндади &amp;э Мартин Вас</translation>
+        <translation>Триндади и Мартин Вас</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
@@ -1509,12 +1509,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="269"/>
         <source>Seychelles</source>
-        <translation>Сейшельские Ост.</translation>
+        <translation>Сейшелы</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation>Сан-Томе &amp;и Принсипи</translation>
+        <translation>Сан-Томе и Принсипи</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1579,7 +1579,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>Banaba Is.</source>
-        <translation>Ост. Банаба</translation>
+        <translation>Банаба о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="284"/>
@@ -1659,7 +1659,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="299"/>
         <source>Cote d&apos;Ivoire</source>
-        <translation>Кот-д&apos;’Ивуар </translation>
+        <translation>Кот-д&apos;’Ивуар</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="300"/>
@@ -1704,7 +1704,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation>Антигуа &amp; и Барбуда</translation>
+        <translation>Антигуа и Барбуда</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
@@ -1714,7 +1714,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>St. Kitts &amp; Nevis</source>
-        <translation>Сент-Китс &amp; и Невис</translation>
+        <translation>Сент-Китс и Невис</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="311"/>
@@ -1749,22 +1749,22 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="317"/>
         <source>Heard Is.</source>
-        <translation>Ост. Херд</translation>
+        <translation>Херд о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Macquarie Is.</source>
-        <translation>Ост. Маккуори</translation>
+        <translation>Маккуори о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Cocos (Keeling) Is.</source>
-        <translation>Кокосовые (Килинг) ост.</translation>
+        <translation>Кокосовые (Килинг) о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Lord Howe Is.</source>
-        <translation>Лорд-Хау</translation>
+        <translation>Лорд-Хау о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="321"/>
@@ -1774,17 +1774,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Norfolk Is.</source>
-        <translation>Ост. Норфолк</translation>
+        <translation>Норфолк о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation>Ост. Уиллис</translation>
+        <translation>Уиллис о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>Ост. Рождества</translation>
+        <translation>Рождества о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -1799,47 +1799,47 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation>Ост. Британская Вирджиния</translation>
+        <translation>Британская Вирджиния о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Turks &amp; Caicos Is.</source>
-        <translation>Ост. Тёркс &amp; и Кайкос</translation>
+        <translation>Тёркс и Кайкос о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="329"/>
         <source>Pitcairn Is.</source>
-        <translation>Ост. Питкэрн</translation>
+        <translation>Питкэрн о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Ducie Is.</source>
-        <translation>Ост. Дьюси</translation>
+        <translation>Дьюси о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Falkland Is.</source>
-        <translation>Фoлклендские ост.</translation>
+        <translation>Фoлклендские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>S. Georgia Is.</source>
-        <translation>Ост. Юж. Георгия</translation>
+        <translation>Юж. Георгия о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>S. Shetland Is.</source>
-        <translation>Юж.Шетландские ост.</translation>
+        <translation>Юж.Шетландские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Orkney Is.</source>
-        <translation>Юж. Оркнейские ост.</translation>
+        <translation>Юж. Оркнейские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation>Юж. Сандвичевы ост.</translation>
+        <translation>Юж. Сандвичевы о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
@@ -1849,7 +1849,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="337"/>
         <source>Chagos Is.</source>
-        <translation>Ост. Чагос</translation>
+        <translation>Чагос о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="338"/>
@@ -1864,12 +1864,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation>Андаманские &amp; Никобарские ост.</translation>
+        <translation>Андаманские и Никобарские о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="341"/>
         <source>Lakshadweep Is.</source>
-        <translation>Ост. Лакшадвип</translation>
+        <translation>Лакшадвип о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="342"/>
@@ -1964,7 +1964,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="360"/>
         <source>Aves Is.</source>
-        <translation>Ост. Авес</translation>
+        <translation>Авес о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
@@ -1999,32 +1999,32 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation>территория базы Великобритании на Кипре </translation>
+        <translation>территория базы Великобритании на Кипре</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
         <source>St. Helena</source>
-        <translation>Ост. Святой Елены</translation>
+        <translation>Св.Елена</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>Ascension Is.</source>
-        <translation>Ост. Вознесения</translation>
+        <translation>Вознесения о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="370"/>
         <source>Tristan da Cunha &amp; Gough</source>
-        <translation>Ост. Тристан да Кунья &amp; Гоф</translation>
+        <translation>Тристан да Кунья и Гоф</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Cayman Is.</source>
-        <translation>Каймановы ост.</translation>
+        <translation>Каймановы о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tokelau Is.</source>
-        <translation>Ост. Токелау</translation>
+        <translation>Токелау о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
@@ -2034,17 +2034,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
         <source>Chatham Is.</source>
-        <translation>Ост. Чатем</translation>
+        <translation>Чатем о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="375"/>
         <source>Kermadec Is.</source>
-        <translation>Ост. Кермадек</translation>
+        <translation>Кермадек о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>N.Z. Subantarctic Is.</source>
-        <translation>Новозела́ндские субантаркти́ческие ост.</translation>
+        <translation>Новозела́ндские Субантаркти́ческие о.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="377"/>
@@ -2054,12 +2054,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>S. Africa</source>
-        <translation>Южная Африка</translation>
+        <translation>Юж.Африка</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Pr. Edward &amp; Marion Is.</source>
-        <translation>Ост. Прица Эдуарда &amp;и Марион</translation>
+        <translation>Принца Эдуарда и Марион о.</translation>
     </message>
 </context>
 <context>
@@ -2163,7 +2163,7 @@ Format:
     <message>
         <location filename="../decodedtext.cpp" line="28"/>
         <source>ALLCALL7.TXT is too short or broken?</source>
-        <translation>ALLCALL7.TXT слишком короткий или поврежден</translation>
+        <translation>ALLCALL7.TXT слишком короткий или поврежден?</translation>
     </message>
     <message>
         <location filename="../decodedtext.cpp" line="29"/>
@@ -2398,7 +2398,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="597"/>
         <location filename="../FrequencyList.cpp" line="703"/>
         <source>Frequency (MHz)</source>
-        <translation>Частота (мГц)</translation>
+        <translation>Частота (МГц)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="620"/>
@@ -2782,7 +2782,7 @@ Error: %2 - %3</source>
         <location filename="../IARURegions.cpp" line="58"/>
         <location filename="../IARURegions.cpp" line="85"/>
         <source>IARU Region</source>
-        <translation>Регион IARU:</translation>
+        <translation>Регион IARU</translation>
     </message>
 </context>
 <context>
@@ -3051,7 +3051,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="718"/>
         <source>Select operating band or frequency in MHz</source>
-        <translation>Выбор рабочего диапазона или частоты в мГц</translation>
+        <translation>Выбор рабочего диапазона или частоты в МГц</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
@@ -3419,7 +3419,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2460"/>
         <source>Bypass</source>
-        <translation>Без фильт.</translation>
+        <translation>БезФильтр</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2491"/>
@@ -3567,7 +3567,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3124"/>
         <source>GenMsgs</source>
-        <translation>СоздСооб</translation>
+        <translation>СоздСообщ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3153"/>
@@ -3697,7 +3697,13 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ввод свободного сообщения (не более 13 символов), либо можно выбрать  из выпадающего списка заранее созданное свободное сообщение. Нажмите ENTER для добавления текущего текста в список заранее созданных сообщений. Список можно отредактировать в Настройках, нажав кнопку F2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Ввод свободного сообщения (не более 13 символов),
+либо можно выбрать  из выпадающего списка заранее
+созданное свободное сообщение.
+Нажмите ENTER для добавления текущего текста
+в список заранее созданных сообщений.
+Список можно отредактировать в Настройках,
+нажав кнопку F2.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3602"/>
@@ -3751,7 +3757,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3914"/>
         <source>SkpGrid</source>
-        <translation>Проп.Лок.</translation>
+        <translation>ПропЛок</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3941"/>
@@ -3821,7 +3827,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4135"/>
         <source>Gen msg</source>
-        <translation>Станд.сообщ.</translation>
+        <translation>СоздСообщ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4200"/>
@@ -3831,7 +3837,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4203"/>
         <source>Free msg</source>
-        <translation>Своб.сообщ.</translation>
+        <translation>СвобСообщ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4324"/>
@@ -3841,17 +3847,19 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4333"/>
         <source>Choose bands and times of day for band-hopping.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбрать диапазоны и время дня для переключения диапазонов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Выбрать диапазоны и время дня
+для переключения диапазонов.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4336"/>
         <source>Schedule ...</source>
-        <translation>Расписание</translation>
+        <translation>Расписание ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4350"/>
         <source>Upload decoded messages to WSPRnet.org.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загрузить декодированные сообщения на WSPRnet.org.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Загрузить декодированные
+сообщения на WSPRnet.org.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4353"/>
@@ -3861,7 +3869,8 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4360"/>
         <source>Transmit during the next 2-minute sequence.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Передача в течение следующей 2-минутной последовательности.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Передача в течение следующей
+двухминутной последовательности.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4374"/>
@@ -3871,17 +3880,18 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4391"/>
         <source>Set Tx power in dBm (dB above 1 mW) as part of your WSPR message.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите мощность передатчика в дБм (относительно 1 мВт) ,для передачи в Вашем WSPR сообщении.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Укажите мощность передатчика в дБм (относительно 1 мВт)
+для передачи в Вашем WSPR сообщении.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4305"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Скважность интервалов передачи/приема&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Скважность интервалов передачи/приема.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>Включение режима гончей  FT8 DX экспедиции. В этом режиме на общих FT8 диапазонах поддерживается функционал многоответа MSHV, на специально выделенных частотах DX экспедиций поддерживается функционал гончей WSJT-X с управлением частотой передачи.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включение режима гончей  FT8 DX экспедиции. В этом режиме на общих FT8 диапазонах поддерживается функционал многоответа MSHV, на специально выделенных частотах DX экспедиций поддерживается функционал гончей WSJT-X с управлением частотой передачи.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -5200,27 +5210,27 @@ UDP сервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5276"/>
         <source>Directory:</source>
-        <translation>Папка</translation>
+        <translation>Папка:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5277"/>
         <source>File &amp;name:</source>
-        <translation>Имя файла</translation>
+        <translation>Имя файла:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5278"/>
         <source>&amp;Open</source>
-        <translation>&amp;Открыть</translation>
+        <translation>Открыть</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5279"/>
         <source>&amp;Choose</source>
-        <translation>&amp;Выбор</translation>
+        <translation>Выбор</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5280"/>
         <source>&amp;Save</source>
-        <translation>&amp;Звук.файлы</translation>
+        <translation>Звук.файлы</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5282"/>
@@ -5245,7 +5255,7 @@ UDP сервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5285"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5286"/>
@@ -5260,7 +5270,7 @@ UDP сервер %2:%3</translation>
     <message>
         <location filename="../Configuration.cpp" line="5288"/>
         <source>&amp;New Folder</source>
-        <translation>&amp;Новая папка</translation>
+        <translation>Новая папка</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5289"/>
@@ -5717,7 +5727,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.cpp" line="270"/>
         <source>&amp;Offset (MHz):</source>
-        <translation>&amp;Смещение (мГц):</translation>
+        <translation>&amp;Смещение (МГц):</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="271"/>
@@ -5972,7 +5982,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="83"/>
         <source>Controls</source>
-        <translation>Управл.</translation>
+        <translation>Управл</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="142"/>
@@ -6128,7 +6138,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="542"/>
         <source>Spec </source>
-        <translation>Спек.</translation>
+        <translation>Спектр </translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="593"/>
@@ -6209,7 +6219,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QTH локатор , необходимо четыре первых символа.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>QTH локатор , не менее четырех первых символов.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
@@ -6274,7 +6284,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="343"/>
         <source>Set the font characteristics for the Band Activity and Rx Frequency areas.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберите шрифт для показа сообщений в окне диапазона и окне приемной частоты.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Выберите шрифт для показа сообщений
+в окне диапазона и окне приемной частоты.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="346"/>
@@ -6304,7 +6315,8 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Include a separator line between periods in the band activity window.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Показ разделительной строки между интервалами в окне диапазона.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Показ разделительной строки
+между интервалами в окне диапазона.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="412"/>
@@ -6320,12 +6332,13 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="402"/>
         <source>Show &amp;DXCC names</source>
-        <translation>Показывать &amp;название страны</translation>
+        <translation>Показывать название страны</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="373"/>
         <source>Append prefix instead of name.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добавить префикс страны вместо названия к декодированному сообщению.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Добавить префикс страны вместо названия
+к декодированному сообщению.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
@@ -6352,7 +6365,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="389"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>&amp;Показывать TX сообщения в окне 
+        <translation>Показывать TX сообщения в окне 
 RX частоты</translation>
     </message>
     <message>
@@ -6368,7 +6381,8 @@ RX частоты</translation>
     <message>
         <location filename="../Configuration.ui" line="474"/>
         <source>Don&apos;t start decoding until the monitor button is clicked.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Декодирование не начнется пока не будет включена кнопка Монитор.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Декодирование не начнется пока не будет
+включена кнопка Монитор.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="477"/>
@@ -6440,7 +6454,8 @@ RX частоты</translation>
     <message>
         <location filename="../Configuration.ui" line="609"/>
         <source>Send a CW ID after every 73 or free text message.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;JT65: Передать свой позывной в CW после сообщения 73 или свободного текстового сообщения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>JT65: Передать свой позывной в CW после сообщения 73
+или свободного текстового сообщения.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="612"/>
@@ -6610,12 +6625,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1025"/>
         <source>Se&amp;ven</source>
-        <translation>Се&amp;мь</translation>
+        <translation>Семь</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1038"/>
         <source>E&amp;ight</source>
-        <translation>Вос&amp;емь</translation>
+        <translation>Восемь</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1054"/>
@@ -6630,12 +6645,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1082"/>
         <source>On&amp;e</source>
-        <translation>О&amp;дин</translation>
+        <translation>Один</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1092"/>
         <source>T&amp;wo</source>
-        <translation>Д&amp;ва</translation>
+        <translation>Два</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1108"/>
@@ -6655,7 +6670,9 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1149"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Программное управление потоком передачи данных через последовательный порт. Применяется крайне редко на CAT интерфейсе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Программное управление потоком передачи
+данных через последовательный порт.
+Применяется крайне редко на CAT интерфейсе.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1152"/>
@@ -6667,7 +6684,11 @@ quiet period when decoding is done.</source>
         <source>Flow control using the RTS and CTS RS-232 control lines
 not often used but some radios have it as an option and 
 a few, particularly some Kenwood rigs, require it).</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Аппаратное управление потоком передачи данных с использованием линий RTS и CTS RS-232, применяется не часто, но некоторые трансиверы имеют его в качестве опции и немногие, в том числе некоторые Kenwood, требуют этого управления.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Аппаратное управление потоком передачи данных
+с использованием линий RTS и CTS RS-232,
+применяется редко, но некоторые трансиверы имеют
+его в качестве опции и немногие, в том числе
+некоторые Kenwood, требуют этого управления.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1167"/>
@@ -6721,7 +6742,10 @@ a few, particularly some Kenwood rigs, require it).</source>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Некоторые трансиверы поддерживают управление PTT через команды CAT, используйте эту опцию, если Ваше радио поддерживает ее  и у Вас нет другого аппаратного интерфейса для управления PTT.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Некоторые трансиверы поддерживают управление PTT
+через команды CAT, используйте эту опцию, если Ваше
+радио поддерживает ее  и у Вас нет другого аппаратного
+интерфейса для управления PTT.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1300"/>
@@ -6863,7 +6887,11 @@ Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
 Check that any Tx indication on your radio and/or your
 radio interface behave as expected.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажмите кнопку для проверки работы PTT. Нажмите еще раз, чтобы отключить PTT.Проверьте, что индикация передачи на Вашем трансивере и / или интерфейсе отрабатывает соответственно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Нажмите кнопку для проверки работы PTT.
+Нажмите еще раз, чтобы отключить PTT.
+Проверьте, что индикация передачи на Вашем
+трансивере и / или интерфейсе отрабатывает
+соответственно.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1614"/>
@@ -6874,7 +6902,10 @@ radio interface behave as expected.</source>
         <location filename="../Configuration.ui" line="1641"/>
         <location filename="../Configuration.ui" line="1651"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Минимальная задержка между включением PTT и подачей звукового сигнала. Используется для защиты контактов выходного реле передатчика от &apos;горячего&apos; включения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Минимальная задержка между включением PTT
+и подачей звукового сигнала. Используется для
+защиты контактов выходного реле передатчика
+от &apos;горячего&apos; включения.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1644"/>
@@ -6884,7 +6915,7 @@ radio interface behave as expected.</source>
     <message>
         <location filename="../Configuration.ui" line="1701"/>
         <source>A&amp;udio</source>
-        <translation>З&amp;вук</translation>
+        <translation>Звук</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1704"/>
@@ -6903,7 +6934,13 @@ If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
 you will broadcast any systems sounds generated during
 transmitting periods.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбор аудиокодека для передачи. Если это звуковое устройство установлено в операционной системе устройством по умолчанию, то убедитесь, что все системные звуки отключены, в противном случае Вы будете передавать в эфир любые системные звуки, генерируемые во время интервалов передачи.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Выбор аудиокодека для передачи.
+Если это звуковое устройство установлено
+в операционной системе устройством по умолчанию,
+то убедитесь, что все системные звуки отключены,
+в противном случае Вы будете передавать в эфир
+любые системные звуки, генерируемые во время
+интервалов передачи.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1722"/>
@@ -6913,7 +6950,7 @@ transmitting periods.</source>
     <message>
         <location filename="../Configuration.ui" line="1729"/>
         <source>&amp;Input:</source>
-        <translation>&amp;Прием сигналов:</translation>
+        <translation>Прием:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1756"/>
@@ -6950,12 +6987,15 @@ transmitting periods.</source>
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
 both here.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбор канала, используемого для передачи. Обычно используется моно либо оба канала, если у Вас несколько передатчиков то можно использовать левый и правый каналы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Выбор канала, используемого для передачи.
+Обычно используется моно либо оба канала,
+если у Вас несколько передатчиков то можно
+использовать левый и правый каналы.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1813"/>
         <source>Ou&amp;tput:</source>
-        <translation>&amp;Выдача сигналов:</translation>
+        <translation>Передача:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1858"/>
@@ -6965,7 +7005,8 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1866"/>
         <source>Enable power memory during transmit</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Разрешить сохранение уровня звука при передаче сообщений&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Запоминать уровень звука
+при передаче сообщений</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1869"/>
@@ -6975,7 +7016,8 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1876"/>
         <source>Enable power memory during tuning</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Разрешить сохранение уровня звука при настройке передатчика&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Запоминать уровень звука
+при настройке передатчика</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1879"/>
@@ -6990,12 +7032,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1910"/>
         <source>Loc&amp;ation:</source>
-        <translation>Р&amp;асположение:</translation>
+        <translation>Расположение:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1926"/>
         <source>Path to which .WAV files are saved.</source>
-        <translation>Путь для сохранения  .WAV файлов.</translation>
+        <translation>Путь для сохранения .WAV файлов.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1935"/>
@@ -7005,12 +7047,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="1942"/>
         <source>Click to select a different save directory for .WAV files.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбор папки для записи аудио .wav файлов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Выбор папки для записи аудио .wav файлов.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1945"/>
         <source>S&amp;elect</source>
-        <translation>В&amp;ыбор</translation>
+        <translation>Выбор</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1976"/>
@@ -7083,7 +7125,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2275"/>
         <source>Tx &amp;Macros</source>
-        <translation>Tx &amp;макросы</translation>
+        <translation>Tx макросы</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2278"/>
@@ -7093,12 +7135,12 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2284"/>
         <source>&amp;Add</source>
-        <translation>&amp;Добавить</translation>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2301"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2311"/>
@@ -7108,7 +7150,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2362"/>
         <source>Reportin&amp;g</source>
-        <translation>&amp;Лог</translation>
+        <translation>Лог</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2365"/>
@@ -7126,18 +7168,23 @@ both here.</source>
 saved by this program.
 Check this option to save the sent and received reports in the
 comments field.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Некоторые логи не принимают рапорт в децибелах. Эта опция позволяет сохранить отправленный и полученный рапорт в поле комментариев.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Некоторые логи не принимают рапорт в децибелах.
+Эта опция позволяет сохранить отправленный
+и полученный рапорт в поле комментариев.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
         <source>d&amp;B reports to comments</source>
-        <translation>До&amp;бавить рапорт в комментарии</translation>
+        <translation>Добавить рапорт в комментарии</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2447"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автоматическая очистка полей &quot;Позывной DX&quot; и &apos;QTH локатор при внесении QSO в лог. Эта опция не применяется при использовании автопоследовательности сообщений.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Автоматическая очистка полей &quot;Позывной DX&quot;
+и &apos;QTH локатор при внесении QSO в лог.
+Эта опция не применяется при использовании
+автопоследовательности сообщений.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2451"/>
@@ -7170,19 +7217,20 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2437"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Программа откроет частично заполненное диалоговое окно внесения QSO в лог когда Вы отправите 73 или свободное текстовое сообщение.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Программа откроет частично заполненное
+диалоговое окно внесения QSO в лог
+когда Вы отправите 73 или свободное
+текстовое сообщение.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2440"/>
         <source>Promp&amp;t me to log QSO</source>
-        <translation>Выда&amp;ть приглашение внести QSO в 
-лог</translation>
+        <translation>Приглашение внести QSO в лог</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2458"/>
         <source>Enable automatic logging of QSO</source>
-        <translation>Автоматическое внесение  QSO в 
-лог</translation>
+        <translation>Автомат.внесение QSO в лог</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2498"/>
@@ -7192,7 +7240,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2501"/>
         <source>Send logged QSO ADIF data</source>
-        <translation>Передача данных QSO в ADIF формате</translation>
+        <translation>Передача ADIF записи QSO</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2535"/>
@@ -7219,8 +7267,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2583"/>
         <source>Enable sending to TCP server</source>
-        <translation>Разрешить передачу
-на TCP сервер</translation>
+        <translation>Вкл. передачу на TCP сервер</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2608"/>
@@ -7241,7 +7288,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2641"/>
         <source>Enable sending to secondary UDP server</source>
-        <translation>Разрешить передачу
+        <translation>Включить передачу
 на 2-ой UDP сервер</translation>
     </message>
     <message>
@@ -7262,8 +7309,8 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2706"/>
         <source>decoded and debug messages</source>
-        <translation>Декодированные и отладочные
-сообщения</translation>
+        <translation>Декодированные сообщения
+и диагностика</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2748"/>
@@ -7288,12 +7335,12 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2799"/>
         <source>U&amp;sername:</source>
-        <translation>И&amp;мя пользователя:</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2809"/>
         <source>P&amp;assword:</source>
-        <translation>П&amp;ароль:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2819"/>
@@ -7317,7 +7364,11 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2842"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Условное название QTH пользователя на eQSL. Сервис позволяет использовать разные eQSL карточки в зависимости от выбранного пользователем условного названия QTH.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Условное название QTH пользователя
+на eQSL сервере.
+Можно использовать разные eQSL карточки
+в зависимости от выбранного пользователем
+условного названия QTH.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2849"/>
@@ -7328,7 +7379,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="2856"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>Усл&amp;овное название QTH:</translation>
+        <translation>Условное название QTH:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2869"/>
@@ -7479,7 +7530,11 @@ http://physics.princeton.edu/pulsar/K1JT/doc/wspr/wspr-main.html#FREQCAL</transl
         <location filename="../Configuration.ui" line="3210"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Информация для отображения на сайте pskreporter.info Элементы могут быть отредактированы. Используйте правую кнопку мыши для добавления/удаления строк.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Информация для отображения
+на сайте pskreporter.info
+Элементы могут быть отредактированы.
+Используйте правую кнопку мыши
+для добавления/удаления строк.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3258"/>
@@ -7654,7 +7709,16 @@ Right click for insert and delete options.</source>
         <location filename="../Configuration.ui" line="3482"/>
         <location filename="../Configuration.ui" line="3522"/>
         <source>Use also system sound for the notification.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дополнительно использовать звуковое уведомление. Используются системные звуки операционной системы подаваемые через звуковое устройство выбранное в операционное системе устройством по умолчанию , во избежание создания помех во время передачи не включайте эту опцию если для передачи сигнала в эфир используется звуковое устройство по умолчанию.&lt;p&gt;&lt;/p&gt;Если в операционной системе только одно звуковое устройство то  необходимо отключить системные звуковые уведомления в операционной системе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Дополнительно использовать звуковое уведомление.
+Используются системные звуки операционной системы
+подаваемые через звуковое устройство выбранное
+в операционное системе устройством по умолчанию ,
+во избежание создания помех во время передачи
+не включайте эту опцию если для передачи сигнала
+в эфир используется звуковое устройство по умолчанию.
+Если в операционной системе только одно звуковое
+устройство то  необходимо отключить системные
+звуковые уведомления в операционной системе.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3325"/>
@@ -7809,7 +7873,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="3651"/>
         <source>Markers</source>
-        <translation>Маркеры:</translation>
+        <translation>Маркеры</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3658"/>
@@ -8574,7 +8638,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6335"/>
         <location filename="../Configuration.ui" line="6592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбирите диапазон&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберите диапазон&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6641"/>
@@ -8589,7 +8653,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="6667"/>
         <source>Advanced</source>
-        <translation>Расш.</translation>
+        <translation>Настр. JT65/T10</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6677"/>
