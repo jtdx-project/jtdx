@@ -3921,7 +3921,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4384"/>
         <source>No own call decodes</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Исключить вывод на экран сообщения декодированного из своего сигнала&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>Не декодировать свой сигнал</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4486"/>
