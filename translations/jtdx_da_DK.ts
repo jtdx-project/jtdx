@@ -3879,7 +3879,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multiankanal mode er understøttet på normale FT8 frekvenser, WSJT-X DXpedition mode  med frekvens kontrol understøttest når der køres denne mode på andre frekvenser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4836,7 +4836,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <location filename="../mainwindow.cpp" line="3063"/>
         <location filename="../mainwindow.cpp" line="6572"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hound mode TX frekvens kontrol kræver *Split* Radio kontrol (enten *Rig* eller *Fake It*flueben sat i *Indstilinger| Radio* fanen.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2676"/>
@@ -5032,13 +5032,13 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg venligst en anden Tx frekvens. JTDX tillader IKKE TX under 1000Hz i DXped mode</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F/H Tx ADVARSEL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5599"/>

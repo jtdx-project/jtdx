@@ -531,7 +531,7 @@ endif
             (callsign(2:2).gt.'6' .and. callsign(2:2).lt.':')) then
       if((grid(1:3).eq.'PM3' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'9') .or. &
          (grid(1:3).eq.'PM4' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'9') .or. &
-         grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57') lgvalid=.true.
+         grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57' .or. grid(1:4).eq.'GC07') lgvalid=.true. ! DT8A in GC07OS South Shetland Islands
 
 ! Philippines 4D,4E,4F,4G,4H,4I,DU,DV,DW,DX,DY,DZ
       else if(callsign(2:2).gt.'T' .and. callsign(2:2).lt.'[') then
@@ -870,7 +870,7 @@ endif
     else if(callsign(1:2).eq.'HL') then
       if((grid(1:3).eq.'PM3' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'9') .or. &
          (grid(1:3).eq.'PM4' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'9') .or. &
-         grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57') lgvalid=.true.
+         grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57' .or. grid(1:4).eq.'GC07') lgvalid=.true. ! DT8A in GC07OS South Shetland Islands
 
 ! Colombia 5J,5K,HJ,HK
     else if(callsign(1:2).eq.'HK' .or. callsign(1:2).eq.'HJ') then
@@ -2967,7 +2967,7 @@ endif
       else if(callsign(1:1).eq.'6' .and. callsign(2:2).gt.'J' .and. callsign(2:2).lt.'O') then
         if((grid(1:3).eq.'PM3' .and. grid(4:4).gt.'2' .and. grid(4:4).lt.'9') .or. &
            (grid(1:3).eq.'PM4' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'9') .or. &
-           grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57') lgvalid=.true.
+           grid(1:4).eq.'PM24' .or. grid(1:4).eq.'PM57' .or. grid(1:4).eq.'GC07') lgvalid=.true. ! DT8A in GC07OS South Shetland Islands
 
 ! Senegal 6V,6W
       else if(callsign(1:2).eq.'6V' .or. callsign(1:2).eq.'6W') then

@@ -3907,7 +3907,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;FT8 DXpedition Houndモードを有効にします。MSHVマルチアンサーモードは一般的なFT8バンドでサポートされており、周波数制御を伴うWSJT-X DXpeditionモードは特別なDXpedition周波数でサポートされています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1541"/>
@@ -4813,7 +4813,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3063"/>
         <location filename="../mainwindow.cpp" line="6572"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>HoundモードのTX周波数制御には、「Splitc操作」設定が必要です（設定&gt;無線機タブで「Rig」または「Fake It」のいずれかを設定）</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2676"/>
@@ -4965,13 +4965,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>他のTx周波数を選択してください。JTDXはDXpedモードで1000Hz以下のCallを許可しません。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F/H Tx ガード</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4244"/>

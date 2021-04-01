@@ -485,7 +485,6 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_rx_audio_buffer_frames = ok && buffer_size ? buffer_size : default_rx_audio_buffer_frames;
   buffer_size = env.value ("JTDX_TX_AUDIO_BUFFER_FRAMES", "0").toInt (&ok);
   m_tx_audio_buffer_frames = ok && buffer_size ? buffer_size : default_tx_audio_buffer_frames;
-
   // hook up sound output stream slots & signals and disposal
   connect (this, &MainWindow::initializeAudioOutputStream, m_soundOutput, &SoundOutput::setFormat);
   connect (m_soundOutput, &SoundOutput::error, this, &MainWindow::showSoundOutError);
@@ -2470,9 +2469,8 @@ void MainWindow::displayDialFrequency ()
   if(((first_freq && dial_frequency!=0 && dial_frequency!=145000000) || (first_value != m_lastDialFreq)) && m_mode=="FT8") {
     first_value = m_lastDialFreq;
     bool commonFT8b=false;
-    qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-    for(long unsigned int i=0; i < sizeof (ft8Freq) / sizeof (ft8Freq[0]); i++) {
-      int kHzdiff=dial_frequency/1000 - ft8Freq[i];
+    for(long unsigned int i=0; i < sizeof (m_ft8Freq) / sizeof (m_ft8Freq[0]); i++) {
+      int kHzdiff=dial_frequency/1000 - m_ft8Freq[i];
       if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
     }
     m_commonFT8b=commonFT8b; first_freq=false;
@@ -6559,9 +6557,8 @@ void MainWindow::band_changed (Frequency f)
     if(m_mode!="FT8") {
       if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false);
     } else {
-      qint32 ft8Freq[]={1810,1840,1908,3573,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
-      for(long unsigned int i=0; i < sizeof (ft8Freq) / sizeof (ft8Freq[0]); i++) {
-        int kHzdiff=m_freqNominal/1000 - ft8Freq[i];
+      for(long unsigned int i=0; i < sizeof (m_ft8Freq) / sizeof (m_ft8Freq[0]); i++) {
+        int kHzdiff=m_freqNominal/1000 - m_ft8Freq[i];
         if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
       }
       m_commonFT8b=commonFT8b;

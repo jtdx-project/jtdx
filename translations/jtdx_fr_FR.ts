@@ -3277,7 +3277,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le bouton permet de choisir entre les unités S-mètre et dBm. Le CAT doit être configuré via Hamlib ou TCI pour que le S-mètre fonctionne, certains Trx peuvent ne pas être supportés.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
@@ -3884,7 +3884,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Active le mode FT8 DXpedition Hound. Le mode multiréponse MSHV est supporté dans les bandes FT8 communes, le mode DXpedition WSJT-X avec contrôle de fréquence est supporté sur les fréquences spéciales DXpedition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4837,7 +4837,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="3063"/>
         <location filename="../mainwindow.cpp" line="6572"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Le contrôle de la fréquence TX en mode Hound nécessite le contrôle du Trx *Split* (soit *Rig*, soit *Fake It* dans l&apos;onglet *Réglages | Radio*).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2676"/>
@@ -5033,13 +5033,13 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.cpp" line="4117"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez choisir une autre fréquence Tx. JTDX ne permet pas d&apos;appeler en dessous de 1000 Hz en mode DXexpédition.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4122"/>
         <location filename="../mainwindow.cpp" line="4125"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F/H Garde Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5599"/>
@@ -5776,122 +5776,122 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="131"/>
         <source>ConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion Refusée</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="132"/>
         <source>RemoteHostClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>Hôte distant fermé</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="133"/>
         <source>HostNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>Hôte non trouvé</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="134"/>
         <source>SocketAccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès aux prises</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="135"/>
         <source>SocketResource</source>
-        <translation type="unfinished"></translation>
+        <translation>PrisesRessource</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="136"/>
         <source>SocketTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Délai d&apos;attente des prises</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="137"/>
         <source>DatagramTooLarge</source>
-        <translation type="unfinished"></translation>
+        <translation>Datagramme trop grand</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="138"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Réseau</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="139"/>
         <source>AddressInUse</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse en cours d&apos;utilisation</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="140"/>
         <source>SocketAddressNotAvailable</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;adresse de prise n&apos;est pas disponible</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="141"/>
         <source>UnsupportedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonctionnement des prises non supportés</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="142"/>
         <source>UnfinishedSocketOperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonctionnement des prises non terminées</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="143"/>
         <source>ProxyAuthenticationRequired</source>
-        <translation type="unfinished"></translation>
+        <translation>Authentification du proxy requise</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="144"/>
         <source>SslHandshakeFailed</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec de la secousse ssl</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="145"/>
         <source>ProxyConnectionRefused</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion par proxy refusée</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="146"/>
         <source>ProxyConnectionClosed</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion Proxy fermée</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="147"/>
         <source>ProxyConnectionTimeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Délai de connexion du proxy</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="148"/>
         <source>ProxyNotFound</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxy non trouvé</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="149"/>
         <source>ProxyProtocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Protocole Proxy</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="150"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Opération</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SslInternal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ssl interne</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="152"/>
         <source>SslInvalidUserData</source>
-        <translation type="unfinished"></translation>
+        <translation>Ssl Données utilisateur invalides</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="153"/>
         <source>Temporary</source>
-        <translation type="unfinished"></translation>
+        <translation>Temporaire</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="154"/>
         <source>UnknownSocket</source>
-        <translation type="unfinished"></translation>
+        <translation>Prise inconnue</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="276"/>
