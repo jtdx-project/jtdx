@@ -398,6 +398,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
     else if (requested_split_ != split_) {/*printf("splt from start %d\n",requested_split_);*/ rig_split(); split_ = requested_split_; mysleep2(100);}
     do_poll ();
+    if (stream_audio_) do_audio(true);
 
     TRACE_CAT ("TCITransceiver", "started");
 //    printf("%s(%0.1f) TCI Transceiver started\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
