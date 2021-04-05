@@ -172,7 +172,7 @@ protected:
   float * load (qint16 sample, float * dest)
   
   {
-    static constexpr float K = 0.999/0x7FFF;
+    static constexpr float K = 0.499/0x7FFF;
     float value  = (K*static_cast<float>(sample));
     *dest++ = value;
     *dest++ = value;
