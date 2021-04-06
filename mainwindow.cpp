@@ -2468,6 +2468,7 @@ void MainWindow::displayDialFrequency ()
   static Frequency first_value {145000000};
   if(((first_freq && dial_frequency!=0 && dial_frequency!=145000000) || (first_value != m_lastDialFreq)) && m_mode=="FT8") {
     first_value = m_lastDialFreq;
+    if(first_freq) dial_frequency = m_freqNominal;
     bool commonFT8b=false;
     for(long unsigned int i=0; i < sizeof (m_ft8Freq) / sizeof (m_ft8Freq[0]); i++) {
       int kHzdiff=dial_frequency/1000 - m_ft8Freq[i];
