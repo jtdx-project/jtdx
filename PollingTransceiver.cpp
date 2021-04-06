@@ -172,7 +172,7 @@ void PollingTransceiver::do_post_ft4_mode (bool p)
       // update polling style
       next_state_.ft4_mode (p);
       ft4_mode_ = p && (interval_ == 1000 || fast_mode_);
-      if (interval_ == 1000 && !fast_mode_) do_post_start (m_jtdxtime);
+      if (interval_ == 1000 && !fast_mode_ && m_jtdxtime != nullptr) do_post_start (m_jtdxtime);
 }
 
 void PollingTransceiver::do_post_ptt (bool p)
