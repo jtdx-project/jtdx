@@ -13,12 +13,13 @@
 
 namespace
 {
-  unsigned const polls_to_stabilize {2};
+  unsigned const polls_to_stabilize {3};
 }
 
 PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
   : TransceiverBase {parent}
   , interval_ {(poll_interval & 0x7fff) * 1000}
+//  , interval_ {500}
   , poll_timer_ {nullptr}
   , ft4_mode_ {false}
   , fast_mode_ {interval_ == 500}
@@ -89,19 +90,26 @@ void PollingTransceiver::do_post_start (JTDXDateTime * jtdxtime)
     fprintf (pFile,"%s Poll start ms %lld %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),ms,sec);
   fclose (pFile);
 #endif
-  if (fast_mode_)
-    if (ms <= 500)
-      QThread::msleep (500-ms);
-    else
-      QThread::msleep (1000-ms);
-  else if (ft4_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11))
-    QThread::msleep (1000-ms);
-  else
-    if (ms <= 500)
-      QThread::msleep (500-ms);
-    else
-      QThread::msleep (1500-ms);
-
+  if (fast_mode_) {
+    if (ms < 240)
+      QThread::msleep (240 - ms);
+    else if (ms > 270 && ms < 740 )
+      QThread::msleep (740 - ms);
+    else if (ms > 770)
+      QThread::msleep (1240 - ms);
+  }
+  else if (ft4_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11)) {
+    if (ms < 740)
+      QThread::msleep (740-ms);
+    else if (ms > 770)
+      QThread::msleep (1740-ms);
+  }
+  else {
+    if (ms < 240)
+      QThread::msleep (240-ms);
+    else if (ms > 270)
+      QThread::msleep (1240-ms);
+  }
   start_timer ();
   if (!next_state_.online ())
     {
@@ -172,7 +180,7 @@ void PollingTransceiver::do_post_ft4_mode (bool p)
       // update polling style
       next_state_.ft4_mode (p);
       ft4_mode_ = p && (interval_ == 1000 || fast_mode_);
-      if (interval_ == 1000 && !fast_mode_) do_post_start (m_jtdxtime);
+      if (interval_ == 1000 && !fast_mode_ && m_jtdxtime != nullptr) do_post_start (m_jtdxtime);
 }
 
 void PollingTransceiver::do_post_ptt (bool p)
@@ -182,7 +190,7 @@ void PollingTransceiver::do_post_ptt (bool p)
       // update expected state with new PTT and set poll count
       next_state_.ptt (p);
       retries_ = polls_to_stabilize;
-      retries_ = 1;             // fast feedback on PTT
+//      retries_ = 0;             // fast feedback on PTT
     }
 }
 
@@ -217,23 +225,18 @@ void PollingTransceiver::handle_timeout ()
         auto ms = m_jtdxtime->currentMSecsSinceEpoch2() % 1000;
 #if JTDX_DEBUG_TO_FILE
         FILE * pFile = fopen (debug_file_.c_str(),"a");
-        fprintf(pFile,"%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_);
+        fprintf(pFile,"%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d sec=%d ms=%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_,sec,ms);
         fclose (pFile);
 #endif
         if (!ft4_mode_ && !fast_mode_) {
-          if (ms < 125) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
-          else if (ms < 250) {poll_timer_->stop (); QThread::msleep (500 - ms); poll_timer_->start (interval_);}
-          else if (ms > 875) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
-          else if (ms > 750) {poll_timer_->stop (); QThread::msleep (1500 - ms); poll_timer_->start (interval_);}
+          if (ms < 240) {poll_timer_->stop (); QThread::msleep (240 - ms); poll_timer_->start (interval_);}
+          else if (ms > 270) {poll_timer_->stop (); QThread::msleep (1240 - ms); poll_timer_->start (interval_);}
         } else if (!fast_mode_) {
-          if ((sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11 || sec == 12) && ms > 250 && ms < 750) {
-            if (ms > 375 && ms < 625) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
-            else {poll_timer_->stop (); QThread::msleep (1000 - ms); poll_timer_->start (interval_);}
-          } else if (sec == 13 || sec == 14 || sec == 0 || sec == 1 || sec == 2 || sec == 3 || sec == 14) {
-            if (ms < 125) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
-            else if (ms < 250) {poll_timer_->stop (); QThread::msleep (500 - ms); poll_timer_->start (interval_);}
-            else if (ms > 875) {poll_timer_->stop (); QThread::msleep (500); poll_timer_->start (interval_);}
-            else if (ms > 750) {poll_timer_->stop (); QThread::msleep (1500 - ms); poll_timer_->start (interval_);}
+          if ((sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11 || sec == 12) && ms < 740) {
+            poll_timer_->stop (); QThread::msleep (740 - ms); poll_timer_->start (interval_);
+          } else if (sec == 13 || sec == 14 || sec == 0 || sec == 1 || sec == 2 || sec == 3 || sec == 4 || sec == 5) {
+            if (ms < 240) {poll_timer_->stop (); QThread::msleep (240 - ms); poll_timer_->start (interval_);}
+            else if (ms > 270) {poll_timer_->stop (); QThread::msleep (1240 - ms); poll_timer_->start (interval_);}
           }
         }
         do_poll ();              // tell sub-classes to update our state

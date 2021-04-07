@@ -58,6 +58,8 @@ subroutine fillhash(numthreads,lfill)
 ! it is needed if manually callsign set in DX Call window was not decoded before
         call save_hash_call(dxcall13,1)
 !print *,dxcall13,hashdx10
+      else
+        dxcall13_set=.false.
       endif
     endif
   endif

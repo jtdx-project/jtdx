@@ -525,7 +525,7 @@ void TransceiverBase::shutdown ()
           // don't care about exceptions
         }
     }
-  printf("Transiever shutdow b4 dostop()\n");
+//  printf("Transiever shutdow b4 dostop()\n");
   do_stop ();
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
