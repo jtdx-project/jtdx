@@ -3076,8 +3076,8 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   if(m_houndMode) {
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
-    ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
-    if(!m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(true);
+    ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
+    if(!m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(true); }
   else {
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
     ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true);
