@@ -252,12 +252,12 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="5339"/>
         <source>Replace Working Frequencies</source>
-        <translation>Substitueix les freqüències de treball</translation>
+        <translation>Substituïu les freqüències de treball</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5340"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
-        <translation>Segur que vols descartar les teves freqüències de treball actuals i reemplaçar-les per les carregades?</translation>
+        <translation>Segur que vols descartar les vostres freqüències de treball actuals i reemplaçar-les per les carregades?</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5352"/>
@@ -3887,7 +3887,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activa el mode FT8 DXpedition Hound. El mode de resposta múltiple MSHV és compatible amb bandes FT8 comunes, el mode DXpedition WSJT-X amb el control de freqüència és compatible amb les freqüències especials DXpedition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Habilita el mode FT8 DXpedition Hound. El mode de resposta múltiple MSHV és compatible amb les bandes FT8 comunes, el mode WSJT-X DXpedition amb control de freqüència és compatible amb les freqüències especials de DXpedition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4758,7 +4758,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <location filename="../mainwindow.cpp" line="6296"/>
         <location filename="../mainwindow.cpp" line="6297"/>
         <source>Freq   Message</source>
-        <translation>Freq...Missatge</translation>
+        <translation>Frec..Missatge</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="970"/>
@@ -4833,14 +4833,14 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="2099"/>
         <source>Pwr</source>
-        <translation>Pwr</translation>
+        <translation>Pot</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2482"/>
         <location filename="../mainwindow.cpp" line="3064"/>
         <location filename="../mainwindow.cpp" line="6575"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation>El control de freqüència de TX en mode Hound requereix un control de l&apos;equip *Split* (ja sigui *Equip* o *Falseja-ho* establert a la * Configuració | Pestanya Ràdio *.)</translation>
+        <translation>El control de freqüència de TX del mode Hound requereix un control de l&apos;equip *Split* (ja sigui *Equip* o *Falseja-jo* configurat a la pestanya *Configuració | Ràdio*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2677"/>
@@ -5037,13 +5037,13 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4121"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation>Selecciona una altra freqüència de TX. JTDX no permet transmetre per sota de 1000 Hz en mode DXped.</translation>
+        <translation>Tria una altra freqüència de TX. JTDX no permetrà transmetre per sota de 1000 Hz en mode DXped.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4126"/>
         <location filename="../mainwindow.cpp" line="4129"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation>Vigilar la TX del F/H del FT8</translation>
+        <translation>FT8 F/H TX Vigilància</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
