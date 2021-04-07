@@ -3385,13 +3385,13 @@ void MainWindow::process_Auto()
     }
     if (m_houndMode ) { //WSJT-X Fox will drop QSO if R+Report from Hound is not decoded after three attempts 
       if (m_status == QsoHistory::SRREPORT || m_status == QsoHistory::RREPORT) {
-        if(count > 3) {
+        if(count > (m_transmitting ? 4 : 3)) {
           haltTx("DXpQSO failed after three TX of R+REPORT message ");
           count = m_qsoHistory.reset_count(hisCall,QsoHistory::RCQ);
           ui->TxFreqSpinBox->setValue (m_lastCallingFreq);
           m_status = QsoHistory::RCQ;
          } else if (m_houndTXfreqJumps && rx > 199 && rx < 1000) {
-          if (count == 1) {
+          if (count == (m_transmitting ? 2 : 1)) {
              ui->TxFreqSpinBox->setValue (rx);
            } else if (rx < 600) {
              ui->TxFreqSpinBox->setValue (rx+300);
