@@ -2478,16 +2478,16 @@ void MainWindow::displayDialFrequency ()
     if (m_houndMode) {
     // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
       QString message = "";
-      if(!m_config.split_mode() && !m_commonFT8b) {
+      if(!m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
         message =  tr ("Hound mode TX frequency control requires"
                                                             " *Split* rig control (either *Rig* or *Fake It* set"
                                                             " in the *Settings | Radio* tab.)");
         JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
         ui->actionEnable_hound_mode->setChecked(false);
       } else {
-        m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+        m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
         ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
-        if(m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(false);
+        if(m_commonFT8b || m_config.rig_name() == "None") ui->actionUse_TX_frequency_jumps->setEnabled(false);
         else ui->actionUse_TX_frequency_jumps->setEnabled(true);
       }
     }
@@ -3060,7 +3060,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
 {
 // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
   QString message = "";
-  if(checked && !m_config.split_mode() && !m_commonFT8b) {
+  if(checked && !m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
     message =  tr ("Hound mode TX frequency control requires"
                                                         " *Split* rig control (either *Rig* or *Fake It* set"
                                                         " in the *Settings | Radio* tab.)");
@@ -3068,7 +3068,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
     ui->actionEnable_hound_mode->setChecked(false);
     return;
   }
-  m_houndTXfreqJumps=checked && !m_commonFT8b && m_config.split_mode();
+  m_houndTXfreqJumps=checked && !m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
   ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
   m_houndMode=checked;
   m_wideGraph->setHoundFilter(m_houndMode);
@@ -3077,7 +3077,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
-    if(!m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(true); }
+    if(!m_commonFT8b && m_config.rig_name() != "None") ui->actionUse_TX_frequency_jumps->setEnabled(true); }
   else {
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
     ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true);
@@ -6571,16 +6571,16 @@ void MainWindow::band_changed (Frequency f)
       if (m_houndMode) {
       // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
         QString message = "";
-        if(!m_config.split_mode() && !m_commonFT8b) {
+        if(!m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
           message =  tr ("Hound mode TX frequency control requires"
                                                               " *Split* rig control (either *Rig* or *Fake It* set"
                                                               " in the *Settings | Radio* tab.)");
           JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
           ui->actionEnable_hound_mode->setChecked(false);
         } else {
-          m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+          m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
           ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
-          if(m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(false);
+          if(m_commonFT8b || m_config.rig_name() == "None") ui->actionUse_TX_frequency_jumps->setEnabled(false);
           else ui->actionUse_TX_frequency_jumps->setEnabled(true);
         }
       }
