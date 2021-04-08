@@ -593,9 +593,6 @@ set (message_aggregator_STYLESHEETS
   )
 
 set (TOP_LEVEL_RESOURCES
-  shortcuts.txt
-  mouse_commands.txt
-  prefixes.txt
   cty.dat
   lotw-user-activity.csv
   icons/Darwin/jtdx.iconset/icon_128x128.png
