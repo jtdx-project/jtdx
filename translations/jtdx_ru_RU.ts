@@ -3851,7 +3851,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4353"/>
         <source>Upload spots</source>
-        <translation>Послать спот</translation>
+        <translation>Отправлять споты</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4360"/>
@@ -5028,7 +5028,35 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing=1&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F1       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Онлайн руководство&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F1  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;О JTDX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F2       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Открыть настройки&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F3       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Показать список горячих клавиш&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F4       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Очистить DX позывной/квадрат и TX сообщения&lt;/td&gt;&lt;td&gt;&lt;b&gt;Alt+F4   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Выход из программы&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F5       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Показать специальные команды мыши&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F6       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Открыть следующий файл в папке&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Декодировать остальные файлы  в папке&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F7       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Открыть лог назначенной в операционной системе программой&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F11      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Уменьшить RX частоту на 1 Гц&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Уменьшить RX и TX частоты на 1 Гц&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F12      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Увеличить RX частоту на 1 Гц&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Увеличить RX и TX частоты на 1 Гц&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Переключить передачу сообщения на этот номер в закладке Tab 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctl+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Установить передачу следующего сообщения на этот номер в закладке Tab 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Очистить список искомых позывных&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Перейти в FT8/FT4&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Повторить декодирование на частоте QSO&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Полное декодирование&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Очистить окно активности диапазона&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Обход всех текстовых фильтров&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Редактировать свободное сообщение&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Создать стандартные сообщения&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Прервать передачу / Halt TX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctrl+L   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Искать позывной в базе и создать стандартные сообщения&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+M    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Управление кнопкой Монитор / Monitor&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+N    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Разрешить передачу / Enable TX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Q    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;QSO в лог / Log QSO&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+S    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Остановить прием / Stop monitoring&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+T    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Настройка / Tune&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Сохранить последний*.wav файл&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Фильтр, управление с основного окна и окна водопада&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Прервать передачу&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3210"/>
@@ -5070,19 +5098,56 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=5&gt;
+  &lt;tr&gt;
+    &lt;th align=&quot;right&quot;&gt;Щелчок на&lt;/th&gt;
+    &lt;th align=&quot;left&quot;&gt;Действие&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Водопад:&lt;/td&gt;
+    &lt;td&gt;Выставляет RX частоту.&lt;br/&gt;
+        Двойной щелчок - выставляет RX частоту и декодирует на ней.&lt;br/&gt;
+        CTRL+щелчок - выставляет RX и Tx частоту.&lt;br/&gt;
+        В режиме &quot;TX/RX разнос&quot;:&lt;br/&gt;
+        левая кнопка выставляет RX частоту&lt;br/&gt;
+        ALT+левая кнопка выставляет RX частоту и включает Фильтр&lt;br/&gt;
+        правая кнопка выставляет TX частоту
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Декодированный текст:&lt;/td&gt;
+    &lt;td&gt;Двойной щелчок на сообщении копирует второй позывной в окно &quot;DX позывной&quot;,&lt;br/&gt;
+        локатор в окно &quot;QTH локатор&quot;, меняет RX (и Tx) частоты к&lt;br/&gt;
+        частоте декодированного сигнала, создает стандартные сообщения.&lt;br/&gt;
+        Если в сообщении первый позывной Ваш то TX частота меняется&lt;br/&gt;
+        удержанием кнопки CTRL во время двойного щелчка.&lt;br/&gt;&lt;br/&gt;
+        ALT+двойной щелчок дополнительно прервет передачу если кнопка &quot;Разрешить TX&quot; включена.&lt;br/&gt;&lt;br/&gt;
+        CTRL+ALT+двойной щелчок лишь занесет второй позывной из декодированного сообщения&lt;br/&gt;
+        в список искомых позывных.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Кнопка Очистить:&lt;/td&gt;
+    &lt;td&gt;Щелчок правой кнопкой очистит окно сообщений приемной частоты QSO.&lt;br/&gt;
+        Щелчок левой кнопкой очистит окно активности диапазона.&lt;br/&gt;
+        Двойной щелчок левой или правой кнопкий очистит окно сообщений приемной частоты QSO&lt;br/&gt;
+        и окно активности диапазона.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3726"/>
         <location filename="../mainwindow.cpp" line="3745"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag=</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3732"/>
         <location filename="../mainwindow.cpp" line="3741"/>
         <source>check time</source>
-        <translation type="unfinished"></translation>
+        <translation>время</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4190"/>
@@ -5099,17 +5164,17 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4318"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <source>LastTx: </source>
-        <translation type="unfinished"></translation>
+        <translation>ПослдTx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4569"/>
         <source>Tx: TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx: Настройка</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4570"/>
         <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5672"/>
@@ -5146,12 +5211,12 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6256"/>
         <source>Tx WSPR</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx WSPR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6356"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
+        <translation>    Частота  Уход  Позывной     Квадрат  дБм  Расстояние</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6450"/>
@@ -5240,7 +5305,7 @@ UDP сервер %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="8025"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation>WD %1m</translation>
     </message>
 </context>
 <context>
