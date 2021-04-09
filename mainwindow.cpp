@@ -2411,6 +2411,7 @@ void MainWindow::displayDialFrequency ()
   static bool startup=true;
   Frequency dial_frequency {m_rigState.ptt () && m_rigState.split () ?
       m_rigState.tx_frequency () : m_rigState.frequency ()};
+  if(m_monitoroff && m_config.rig_name()=="None") dial_frequency=m_freqNominal;
   // lookup band
   auto const& band_name = m_config.bands ()->find (dial_frequency);
 //  printf("last band %s curband %s band %s freq %lld\n",m_lastBand.toStdString().c_str(),ui->bandComboBox->currentText().toStdString().c_str(),band_name.toStdString().c_str(),dial_frequency);
