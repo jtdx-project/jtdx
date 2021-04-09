@@ -1043,6 +1043,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  else Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
 
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
+  if(m_config.monitor_off_at_startup()) m_monitoroff=true;
 
   // this must be done before initializing the mode as some modes need
   // to turn off split on the rig e.g. WSPR
@@ -1986,7 +1987,6 @@ void MainWindow::showStatusMessage(const QString& statusMsg)
 
 void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 {
-  if(!m_monitoring && !m_transmitting) m_monitoroff=true;
   // things that might change that we need know about
   m_strictdirCQ = m_config.strictdirCQ ();
   m_callsign = m_config.my_callsign ();
@@ -2098,6 +2098,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       ui->S_meter_button->setEnabled(m_config.do_snr());
       if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
+      ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
   }
 }
 
@@ -2156,6 +2157,7 @@ void MainWindow::on_monitorButton_clicked (bool checked)
   if (!m_transmitting)
     {
       auto prior = m_monitoring;
+      m_monitoroff = !checked;
       monitor (checked);
 
       if (checked && !prior)
@@ -2183,7 +2185,6 @@ void MainWindow::monitor (bool state)
 {
   ui->monitorButton->setChecked (state);
   if (state) {
-    m_monitoroff=false;
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
@@ -6865,7 +6866,6 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   static bool lastChecked = false;
   if (lastChecked == checked) return;
   lastChecked = checked;
-  if(checked && !m_monitoring) m_monitoroff=true;
   if(!checked) m_addtx = -2;
   QString curBand;
   if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
