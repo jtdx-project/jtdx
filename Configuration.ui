@@ -3068,7 +3068,7 @@ for assessing propagation and system performance.</string>
              <enum>Qt::ActionsContextMenu</enum>
             </property>
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="dragDropMode">
              <enum>QAbstractItemView::DragOnly</enum>
@@ -7344,12 +7344,12 @@ soundcard changes</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="CAT_data_bits_button_group"/>
-  <buttongroup name="TX_mode_button_group"/>
   <buttongroup name="CAT_stop_bits_button_group"/>
   <buttongroup name="TX_audio_source_button_group"/>
+  <buttongroup name="PTT_method_button_group"/>
+  <buttongroup name="CAT_data_bits_button_group"/>
+  <buttongroup name="TX_mode_button_group"/>
   <buttongroup name="split_mode_button_group"/>
   <buttongroup name="CAT_handshake_button_group"/>
-  <buttongroup name="PTT_method_button_group"/>
  </buttongroups>
 </ui>
