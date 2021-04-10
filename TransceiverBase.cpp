@@ -20,9 +20,9 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever start\n");
+    fprintf(pFile,"Transceiver start\n");
   else
-    fprintf(pFile,"%s Transiever start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
   try
@@ -34,9 +34,9 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever start shutdown done\n");
+        fprintf(pFile,"Transceiver start shutdown done\n");
       else
-        fprintf(pFile,"%s Transiever start shutdown done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+        fprintf(pFile,"%s Transceiver start shutdown done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
       fclose (pFile);
 #endif
       startup ();
@@ -54,9 +54,9 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever start message %s\n",message.toStdString().c_str());
+        fprintf(pFile,"Transceiver start message %s\n",message.toStdString().c_str());
       else
-        fprintf(pFile,"%s Transiever start message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+        fprintf(pFile,"%s Transceiver start message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
       fclose (pFile);
 #endif
       offline (message);
@@ -64,9 +64,9 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever start done\n");
+    fprintf(pFile,"Transceiver start done\n");
   else
-    fprintf(pFile,"%s Transiever start done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver start done\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
 }
@@ -79,9 +79,9 @@ void TransceiverBase::set (TransceiverState const& s,
   long long ms = 0;
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever set state %d #:%d\n",s.online(),sequence_number);
+    fprintf(pFile,"Transceiver set state %d #:%d\n",s.online(),sequence_number);
   else {
-    fprintf(pFile,"%s Transiever set state %d #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
+    fprintf(pFile,"%s Transceiver set state %d #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number);
     ms = jtdxtime_->currentMSecsSinceEpoch2();
   }
   fclose (pFile);
@@ -400,9 +400,9 @@ void TransceiverBase::set (TransceiverState const& s,
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever set %d #:%d end\n",s.online(),sequence_number);
+        fprintf(pFile,"Transceiver set %d #:%d end\n",s.online(),sequence_number);
       else
-        fprintf(pFile,"%s Transiever set %d #:%d end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number,jtdxtime_->currentMSecsSinceEpoch2() - ms);
+        fprintf(pFile,"%s Transceiver set %d #:%d end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),s.online(),sequence_number,jtdxtime_->currentMSecsSinceEpoch2() - ms);
       fclose (pFile);
 #endif
 }
@@ -414,9 +414,9 @@ void TransceiverBase::startup ()
   long long ms = 0;
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever startup\n");
+    fprintf(pFile,"Transceiver startup\n");
   else {
-    fprintf(pFile,"%s Transiever startup\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver startup\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
     ms = jtdxtime_->currentMSecsSinceEpoch2();
   }
   fclose (pFile);
@@ -450,9 +450,9 @@ void TransceiverBase::startup ()
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever startup message %s\n",message.toStdString().c_str());
+        fprintf(pFile,"Transceiver startup message %s\n",message.toStdString().c_str());
       else
-        fprintf(pFile,"%s Transiever startup message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
+        fprintf(pFile,"%s Transceiver startup message %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),message.toStdString().c_str());
       fclose (pFile);
 #endif
       offline (message);
@@ -460,9 +460,9 @@ void TransceiverBase::startup ()
 #if JTDX_DEBUG_TO_FILE
       pFile = fopen (debug_file_.c_str(),"a");
       if (jtdxtime_ == nullptr)
-        fprintf(pFile,"Transiever startup end\n");
+        fprintf(pFile,"Transceiver startup end\n");
       else
-        fprintf(pFile,"%s Transiever startup end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
+        fprintf(pFile,"%s Transceiver startup end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
       fclose (pFile);
 #endif
 }
@@ -473,10 +473,10 @@ void TransceiverBase::shutdown ()
   long long ms = 0;
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr) {
-    fprintf(pFile,"Transiever shutdown\n");
+    fprintf(pFile,"Transceiver shutdown\n");
   }
   else {
-    fprintf(pFile,"%s Transiever shutdown\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver shutdown\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
     ms = jtdxtime_->currentMSecsSinceEpoch2();
   }
   fclose (pFile);
@@ -525,7 +525,7 @@ void TransceiverBase::shutdown ()
           // don't care about exceptions
         }
     }
-//  printf("Transiever shutdow b4 dostop()\n");
+//  printf("Transceiver shutdow b4 dostop()\n");
   do_stop ();
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
@@ -541,9 +541,9 @@ void TransceiverBase::shutdown ()
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever shutdown end\n");
+    fprintf(pFile,"Transceiver shutdown end\n");
   else
-    fprintf(pFile,"%s Transiever shutdown end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
+    fprintf(pFile,"%s Transceiver shutdown end %lld ms.\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->currentMSecsSinceEpoch2() - ms);
   fclose (pFile);
 #endif
 //  jtdxtime_ = nullptr;
@@ -555,9 +555,9 @@ void TransceiverBase::stop () noexcept
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever stop\n");
+    fprintf(pFile,"Transceiver stop\n");
   else
-    fprintf(pFile,"%s Transiever stop\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver stop\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
   try
@@ -583,9 +583,9 @@ void TransceiverBase::stop () noexcept
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever stop end\n");
+    fprintf(pFile,"Transceiver stop end\n");
   else
-    fprintf(pFile,"%s Transiever stop end\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver stop end\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
   fclose (pFile);
 #endif
 }
@@ -646,9 +646,9 @@ void TransceiverBase::offline (QString const& reason)
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transiever offline %s\n",reason.toStdString().c_str());
+    fprintf(pFile,"Transceiver offline %s\n",reason.toStdString().c_str());
   else
-    fprintf(pFile,"%s Transiever offline %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),reason.toStdString().c_str());
+    fprintf(pFile,"%s Transceiver offline %s\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),reason.toStdString().c_str());
   fclose (pFile);
 #endif
   Q_EMIT failure (reason);

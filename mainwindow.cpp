@@ -1043,6 +1043,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 //  else Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
 
   enable_DXCC_entity ();  // sets text window proportions and (re)inits the logbook
+  if(m_config.monitor_off_at_startup()) m_monitoroff=true;
 
   // this must be done before initializing the mode as some modes need
   // to turn off split on the rig e.g. WSPR
@@ -1986,7 +1987,6 @@ void MainWindow::showStatusMessage(const QString& statusMsg)
 
 void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 {
-  if(!m_monitoring && !m_transmitting) m_monitoroff=true;
   // things that might change that we need know about
   m_strictdirCQ = m_config.strictdirCQ ();
   m_callsign = m_config.my_callsign ();
@@ -2098,6 +2098,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       ui->S_meter_button->setEnabled(m_config.do_snr());
       if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
+      ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
   }
 }
 
@@ -2156,6 +2157,7 @@ void MainWindow::on_monitorButton_clicked (bool checked)
   if (!m_transmitting)
     {
       auto prior = m_monitoring;
+      m_monitoroff = !checked;
       monitor (checked);
 
       if (checked && !prior)
@@ -2183,7 +2185,6 @@ void MainWindow::monitor (bool state)
 {
   ui->monitorButton->setChecked (state);
   if (state) {
-    m_monitoroff=false;
     m_diskData = false;	// no longer reading WAV files
     if (!m_monitoring) {
       m_mslastMon=m_jtdxtime->currentMSecsSinceEpoch2();
@@ -2410,6 +2411,7 @@ void MainWindow::displayDialFrequency ()
   static bool startup=true;
   Frequency dial_frequency {m_rigState.ptt () && m_rigState.split () ?
       m_rigState.tx_frequency () : m_rigState.frequency ()};
+  if(m_monitoroff && m_config.rig_name()=="None") dial_frequency=m_freqNominal;
   // lookup band
   auto const& band_name = m_config.bands ()->find (dial_frequency);
 //  printf("last band %s curband %s band %s freq %lld\n",m_lastBand.toStdString().c_str(),ui->bandComboBox->currentText().toStdString().c_str(),band_name.toStdString().c_str(),dial_frequency);
@@ -2478,16 +2480,16 @@ void MainWindow::displayDialFrequency ()
     if (m_houndMode) {
     // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
       QString message = "";
-      if(!m_config.split_mode() && !m_commonFT8b) {
+      if(!m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
         message =  tr ("Hound mode TX frequency control requires"
                                                             " *Split* rig control (either *Rig* or *Fake It* set"
                                                             " in the *Settings | Radio* tab.)");
         JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
         ui->actionEnable_hound_mode->setChecked(false);
       } else {
-        m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+        m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
         ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
-        if(m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(false);
+        if(m_commonFT8b || m_config.rig_name() == "None") ui->actionUse_TX_frequency_jumps->setEnabled(false);
         else ui->actionUse_TX_frequency_jumps->setEnabled(true);
       }
     }
@@ -3060,7 +3062,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
 {
 // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
   QString message = "";
-  if(checked && !m_config.split_mode() && !m_commonFT8b) {
+  if(checked && !m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
     message =  tr ("Hound mode TX frequency control requires"
                                                         " *Split* rig control (either *Rig* or *Fake It* set"
                                                         " in the *Settings | Radio* tab.)");
@@ -3068,7 +3070,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
     ui->actionEnable_hound_mode->setChecked(false);
     return;
   }
-  m_houndTXfreqJumps=checked && !m_commonFT8b && m_config.split_mode();
+  m_houndTXfreqJumps=checked && !m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
   ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
   m_houndMode=checked;
   m_wideGraph->setHoundFilter(m_houndMode);
@@ -3076,8 +3078,8 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
   if(m_houndMode) {
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-radius: 5px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#00ff00",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle)));
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); m_wasSkipTx1=true; }
-    ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false); }
-    if(!m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(true);
+    ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
+    if(!m_commonFT8b && m_config.rig_name() != "None") ui->actionUse_TX_frequency_jumps->setEnabled(true); }
   else {
     ui->HoundButton->setStyleSheet(QString("QPushButton {color: %1;background: %2;border-style: solid;border-width: 1px;border-color: %3;min-width: 5em;padding: 3px}").arg(Radio::convert_dark("#000000",m_useDarkStyle),Radio::convert_dark("#e1e1e1",m_useDarkStyle),Radio::convert_dark("#adadad",m_useDarkStyle)));
     ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true);
@@ -3164,7 +3166,37 @@ void MainWindow::on_actionKeyboard_shortcuts_triggered()
   if(!m_shortcuts) {
     QFont font;
     font.setPointSize (10);
-    m_shortcuts.reset (new HelpTextWindow {tr ("Keyboard Shortcuts"), ":/shortcuts.txt", font});
+    m_shortcuts.reset (new HelpTextWindow {tr ("Keyboard Shortcuts"),
+                                               //: Keyboard shortcuts help window contents
+                                               tr (R"(<table cellspacing=1>
+  <tr><td><b>F1       </b></td><td>Online User's Guide</td><td><b>Ctrl+F1  </b></td><td>About JTDX</td></tr>
+  <tr><td><b>F2       </b></td><td>Open configuration window</td></tr>
+  <tr><td><b>F3       </b></td><td>Display keyboard shortcuts</td></tr>
+  <tr><td><b>F4       </b></td><td>Clear DX Call/Grid and Tx messages</td><td><b>Alt+F4   </b></td><td>Exit program</td></tr>
+  <tr><td><b>F5       </b></td><td>Display special mouse commands</td></tr>
+  <tr><td><b>F6       </b></td><td>Open next file in directory</td><td><b>Shift+F6 </b></td><td>Decode all remaining files in directory</td></tr>
+  <tr><td><b>F7       </b></td><td>Open log by assigned in the operating system viewer</td></tr>
+  <tr><td><b>F11      </b></td><td>Move Rx frequency down 1 Hz</td><td><b>Ctrl+F11 </b></td><td>Move Rx and Tx frequencies down 1 Hz</td></tr>
+  <tr><td><b>F12      </b></td><td>Move Rx frequency up 1 Hz</td><td><b>Ctrl+F12 </b></td><td>Move Rx and Tx frequencies up 1 Hz</td></tr>
+  <tr><td><b>Alt+1-6  </b></td><td>Set now transmission to this number on Tab 1</td></tr>
+  <tr><td><b>Ctl+1-6  </b></td><td>Set next transmission to this number on Tab 1</td></tr>
+  <tr><td><b>Alt+Ctrl+A    </b></td><td>Clear wanted callsign list</td></tr>
+  <tr><td><b>Alt+B/C  </b></td><td>Switch to FT8/FT4 mode</td></tr>
+  <tr><td><b>Alt+D    </b></td><td>Decode again at QSO frequency</td><td><b>Shift+D  </b></td><td>Full decode (both windows)</td></tr>
+  <tr><td><b>Alt+E    </b></td><td>Erase</td></tr>
+  <tr><td><b>Alt+F    </b></td><td>Toggle bypass all text filters</td><td><b>Ctrl+F   </b></td><td>Edit the free text message box</td></tr>
+  <tr><td><b>Alt+G    </b></td><td>Generate standard messages</td></tr>
+  <tr><td><b>Alt+H    </b></td><td>Halt Tx</td></tr>
+  <tr><td><b>Ctrl+L   </b></td><td>Lookup callsign in database, generate standard messages</td></tr>
+  <tr><td><b>Alt+M    </b></td><td>Monitor</td></tr>
+  <tr><td><b>Alt+N    </b></td><td>Enable Tx</td></tr>
+  <tr><td><b>Alt+Q    </b></td><td>Log QSO</td></tr>
+  <tr><td><b>Alt+S    </b></td><td>Stop monitoring</td></tr>
+  <tr><td><b>Alt+T    </b></td><td>Tune</td></tr>
+  <tr><td><b>Alt+V    </b></td><td>Save the most recently completed *.wav file</td></tr>
+  <tr><td><b>Alt+Z    </b></td><td>Filter, this shortcut is being supported in main UI and widegraph UI</td></tr>
+  <tr><td><b>Esc    </b></td><td>Halt Tx</td></tr>
+</table>)"), font});
   }
   m_shortcuts->showNormal ();
   m_shortcuts->raise ();
@@ -3175,7 +3207,44 @@ void MainWindow::on_actionSpecial_mouse_commands_triggered()
   if(!m_mouseCmnds) {
     QFont font;
     font.setPointSize (10);
-    m_mouseCmnds.reset (new HelpTextWindow {tr ("Special Mouse Commands"), ":/mouse_commands.txt", font});
+    m_mouseCmnds.reset (new HelpTextWindow {tr ("Special Mouse Commands"),tr(R"(<table cellpadding=5>
+  <tr>
+    <th align="right">Click on</th>
+    <th align="left">Action</th>
+  </tr>
+  <tr>
+    <td align="right">Waterfall:</td>
+    <td>Set Rx frequency.<br/>
+        Double-click to set Rx frequency and decode there.<br/>
+        Ctrl-click to set Rx and Tx frequencies.<br/>
+        Unlocked TX=RX:<br/>
+        use left button to set RX frequency<br/>
+        use ALT+left button to set RX frequency and switch on Filter<br/>
+        use right button to set TX frequency
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Decoded text:</td>
+    <td>Double-click to copy second callsign to Dx Call,<br/>
+        locator to Dx Grid; change Rx and Tx frequencies to<br/>
+        decoded signal's frequency; generate standard messages.<br/>
+        If first callsign is your own, Tx frequency is not<br/>
+        changed unless CTRL is held down when double-clicking.<br/><br/>
+        ALT+double-click will also halt Tx if Enable Tx button is active.<br/><br/>
+        CTRL+ALT+double-click will only add second callsign from decoded<br/>
+        message into wanted callsign list.
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Erase button:</td>
+    <td>Click right button to erase QSO window.<br/>
+        Click left button to erase Band Activity window.<br/>
+        Double-click left or right button to erase QSO <br/>
+        and Band Activity windows.
+    </td>
+  </tr>
+</table>
+)"), font});
   }
   m_mouseCmnds->showNormal ();
   m_mouseCmnds->raise ();
@@ -6571,16 +6640,16 @@ void MainWindow::band_changed (Frequency f)
       if (m_houndMode) {
       // Don't allow Hound frequency control in common FT8 bands if VFO Split mode is switched off
         QString message = "";
-        if(!m_config.split_mode() && !m_commonFT8b) {
+        if(!m_config.split_mode() && !m_commonFT8b && m_config.rig_name() != "None") {
           message =  tr ("Hound mode TX frequency control requires"
                                                               " *Split* rig control (either *Rig* or *Fake It* set"
                                                               " in the *Settings | Radio* tab.)");
           JTDXMessageBox::warning_message (this, "", tr ("Hound TX frequency control warning"), message);
           ui->actionEnable_hound_mode->setChecked(false);
         } else {
-          m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode();
+          m_houndTXfreqJumps=!m_commonFT8b && m_config.split_mode() && m_config.rig_name() != "None";
           ui->actionUse_TX_frequency_jumps->setChecked(m_houndTXfreqJumps);
-          if(m_commonFT8b) ui->actionUse_TX_frequency_jumps->setEnabled(false);
+          if(m_commonFT8b || m_config.rig_name() == "None") ui->actionUse_TX_frequency_jumps->setEnabled(false);
           else ui->actionUse_TX_frequency_jumps->setEnabled(true);
         }
       }
@@ -6798,7 +6867,6 @@ void MainWindow::on_tuneButton_clicked (bool checked)
   static bool lastChecked = false;
   if (lastChecked == checked) return;
   lastChecked = checked;
-  if(checked && !m_monitoring) m_monitoroff=true;
   if(!checked) m_addtx = -2;
   QString curBand;
   if (m_mode == "JT9+JT65" && m_modeTx == "JT65") { curBand = ui->bandComboBox->currentText()+m_modeTx; }
@@ -7259,7 +7327,34 @@ void MainWindow::on_outAttenuation_valueChanged (int a)
 
 void MainWindow::on_actionShort_list_of_add_on_prefixes_and_suffixes_triggered()
 {
-  if (!m_prefixes) m_prefixes.reset (new HelpTextWindow {tr ("Prefixes"), ":/prefixes.txt", {"Courier", 10}});
+  if (!m_prefixes) m_prefixes.reset (new HelpTextWindow {tr ("Prefixes"), R"(Short-list of Add-On DXCC Prefixes:
+
+ 1A    1S    3A    3B6   3B8   3B9   3C    3C0   3D2   3D2C  3D2R  3DA   3V    3W    3X   
+ 3Y    3YB   3YP   4J    4L    4S    4U1I  4U1U  4W    4X    5A    5B    5H    5N    5R   
+ 5T    5U    5V    5W    5X    5Z    6W    6Y    7O    7P    7Q    7X    8P    8Q    8R   
+ 9A    9G    9H    9J    9K    9L    9M2   9M6   9N    9Q    9U    9V    9X    9Y    A2   
+ A3    A4    A5    A6    A7    A9    AP    BS7   BV    BV9   BY    C2    C3    C5    C6   
+ C9    CE    CE0X  CE0Y  CE0Z  CE9   CM    CN    CP    CT    CT3   CU    CX    CY0   CY9  
+ D2    D4    D6    DL    DU    E3    E4    EA    EA6   EA8   EA9   EI    EK    EL    EP   
+ ER    ES    ET    EU    EX    EY    EZ    F     FG    FH    FJ    FK    FKC   FM    FO   
+ FOA   FOC   FOM   FP    FR    FRG   FRJ   FRT   FT5W  FT5X  FT5Z  FW    FY    M     MD   
+ MI    MJ    MM    MU    MW    H4    H40   HA    HB    HB0   HC    HC8   HH    HI    HK   
+ HK0A  HK0M  HL    HM    HP    HR    HS    HV    HZ    I     IS    IS0   J2    J3    J5   
+ J6    J7    J8    JA    JDM   JDO   JT    JW    JX    JY    K     KG4   KH0   KH1   KH2  
+ KH3   KH4   KH5   KH5K  KH6   KH7   KH8   KH9   KL    KP1   KP2   KP4   KP5   LA    LU   
+ LX    LY    LZ    OA    OD    OE    OH    OH0   OJ0   OK    OM    ON    OX    OY    OZ   
+ P2    P4    PA    PJ2   PJ7   PY    PY0F  PT0S  PY0T  PZ    R1F   R1M   S0    S2    S5   
+ S7    S9    SM    SP    ST    SU    SV    SVA   SV5   SV9   T2    T30   T31   T32   T33  
+ T5    T7    T8    T9    TA    TF    TG    TI    TI9   TJ    TK    TL    TN    TR    TT   
+ TU    TY    TZ    UA    UA2   UA9   UK    UN    UR    V2    V3    V4    V5    V6    V7   
+ V8    VE    VK    VK0H  VK0M  VK9C  VK9L  VK9M  VK9N  VK9W  VK9X  VP2E  VP2M  VP2V  VP5  
+ VP6   VP6D  VP8   VP8G  VP8H  VP8O  VP8S  VP9   VQ9   VR    VU    VU4   VU7   XE    XF4  
+ XT    XU    XW    XX9   XZ    YA    YB    YI    YJ    YK    YL    YN    YO    YS    YU   
+ YV    YV0   Z2    Z3    ZA    ZB    ZC4   ZD7   ZD8   ZD9   ZF    ZK1N  ZK1S  ZK2   ZK3
+ ZL    ZL7   ZL8   ZL9   ZP    ZS    ZS8   KC4   E5
+
+Short-list of Add-on Suffixes:    /0 /1 /2 /3 /4 /5 /6 /7 /8 /9 /A /P
+)", {"Courier", 10}});
   m_prefixes->showNormal();
   m_prefixes->raise ();
 }

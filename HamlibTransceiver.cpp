@@ -452,7 +452,7 @@ void HamlibTransceiver::error_check (int ret_code, QString const& doing) const
       TRACE_CAT_POLL ("HamlibTransceiver", "error:" << rigerror (ret_code));
 #if JTDX_DEBUG_TO_FILE
       FILE * pFile = fopen (debug_file_.c_str(),"a");
-      fprintf (pFile,"%s Tranceiver error %s doing %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rigerror (ret_code),doing.toStdString().c_str());
+      fprintf (pFile,"%s Transceiver error %s doing %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),rigerror (ret_code),doing.toStdString().c_str());
       fclose (pFile);
 #endif
       
