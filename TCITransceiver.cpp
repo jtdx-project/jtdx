@@ -382,10 +382,6 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
         throw error {tr ("TCI SDR is not switched on")};
       }
     }
-    if (do_snr_) {
-        const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
-        sendTextMessage(cmd);
-    }
     if (tci_audio_) {
         stream_audio (true);
         mysleep1(500);
@@ -393,6 +389,10 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
           tci_Ready = false;
           throw error {tr ("TCI Audio could not be switched on")};
         }
+    }
+    if (do_snr_) {
+        const QString cmd = CmdSmeter + SmDP + "0" + SmCM + "0" +  SmTZ;
+        sendTextMessage(cmd);
     }
     if (!requested_rx_frequency_.isEmpty()) do_frequency(string_to_frequency (requested_rx_frequency_),get_mode(true),false);
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
