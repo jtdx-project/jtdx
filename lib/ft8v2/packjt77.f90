@@ -924,8 +924,8 @@ subroutine split77(msg,nwords,nw,w)
      endif
      j=j+1                                      !Index in msg
      n=n+1                                      !Index in word
+     if(c.ge.'a' .and. c.le.'z') c=char(ichar(c)-32)  !Force upper case
      msg(j:j)=c
-     if(c.ge.'a' .and. c.le.'z') msg(j:j)=char(ichar(c)-32)  !Force upper case
      if(n.le.13) w(k)(n:n)=c                    !Copy character c into word
      c0=c
   enddo
