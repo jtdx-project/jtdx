@@ -4128,7 +4128,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4963"/>
         <source>Special mouse commands</source>
-        <translation>特別なマウス操作</translation>
+        <translation>スペシャル・マウス・コマンド</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4966"/>
@@ -4935,7 +4935,35 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing=&quot;1&quot;&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;F1 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;オンライン・ユーザー・ガイド&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Ctrl+F1 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;JTDXについて&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F2 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;設定ウィンドウを開く&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F3 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;キーボード・ショートカットの表示&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F4 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;DXコール/グリッドおよびTxメッセージのクリア&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Alt+F4 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;プログラムの終了&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F5 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;スペシャル・マウス・コマンドの表示&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F6 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;ディレクトリ内の次のファイルを開く&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Shift+F6 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;ディレクトリ内の残りのすべてのファイルをデコードする&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F7 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;OSのビューアでログを開く&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F11 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Rxの周波数を1Hz下に移動&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Ctrl+F11 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;RxおよびTxの周波数を1Hz下に移動&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;F12 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Rxの周波数を1Hz上に移動&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Ctrl+F12 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;RxとTxの周波数を1Hz上に移動&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+1-6  &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;タブ1でこの番号を今の送信に設定する&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Ctl+1-6 &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;タブ1でこの番号を次の送信に設定する&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+Ctrl+A &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;wanted コールサインリストをクリアする&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+B/C &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;FT8とFT4のモードに切り替え&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+D &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;QSO周波数を再度デコード&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Shift+D &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;全てを再デコード(両ウィンドウ)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+E &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;消去&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+F &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;すべてのテキストフィルタをバイパスするかどうかを切り替える&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Ctrl+F &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;フリーテキストメッセージボックスを編集する&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+G &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;標準的なメッセージの生成&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+H &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;送信停止&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Ctrl+L &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;データベースでコールサインを検索し、標準メッセージを生成する&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+M &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;モニター&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+N &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;送信開始&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+Q &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;ログに記載&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+S &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;モニターの停止&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+T &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;チューン&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;
+  &lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+V &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;直近に完成した*.wavファイルを保存する&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Alt+Z &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;フィルタ、このショートカットはメインUIとワイドグラフUIでサポートされています&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Esc &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;送信停止&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3240"/>
@@ -4982,7 +5010,38 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=&quot;5&quot;&gt;
+  &lt;tbody&gt;&lt;tr&gt;
+    &lt;th style=&quot;text-align:right&quot;&gt;クリックする場所&lt;/th&gt;
+    &lt;th style=&quot;text-align:left&quot;&gt;動作&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;text-align:right&quot;&gt;ウォーターフォール：&lt;/td&gt;
+    &lt;td&gt;Rx周波数の設定。&lt;br&gt;
+        ダブルクリックでRxの周波数を設定し、そこをデコードします。&lt;br&gt;
+        Ctrlキーを押しながらクリックすると、RxとTxの周波数を設定できます。&lt;br&gt;
+        TX=RXのロック解除:&lt;br&gt;
+        左ボタンでRXの周波数を設定&lt;br&gt;
+        ALT+左ボタンでRXの周波数を設定し、Filterをオンにする&lt;br&gt;
+        右ボタンでTX周波数を設定
+    &lt;/td&gt; &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;text-align:right&quot;&gt;デコードされたテキスト：&lt;/td&gt;
+    &lt;td&gt;ダブルクリックで2つ目のコールサインをDx Callにコピー&lt;br&gt;
+        ロケーターをDx Gridにコピーし、RxとTxの周波数をデコードされた&lt;br&gt;信号の周波数に変更し、標準メッセージを生成します。&lt;br&gt;
+        最初のコールサインが自分のものである場合、Tx周波数は&lt;br&gt;CTRLを押しながらでないと変更されません。&lt;br&gt;
+        また、ALT+ダブルクリックは、Enable Txボタンがアクティブな場合、Txを停止します。&lt;br&gt;
+        CTRL+ALT+ダブルクリックで、デコードされた&lt;br&gt;メッセージから2つ目のコールサインを希望するコールサインリストに追加します。
+    &lt;/td&gt; &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;text-align:right&quot;&gt;消去ボタン：&lt;/td&gt;
+    &lt;td&gt;右ボタンでQSOウィンドウを消去します。&lt;br&gt;
+        左のボタンをクリックすると、バンド・アクティビティ・ウィンドウが消去されます&lt;br&gt;
+        左または右のボタンをダブルクリックすると、QSO&lt;br&gt;とバンド・アクティビティ・ウィンドウが消去されます。
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3756"/>
@@ -4993,13 +5052,13 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="3756"/>
         <location filename="../mainwindow.cpp" line="3775"/>
         <source>Freq  </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3756"/>
         <location filename="../mainwindow.cpp" line="3775"/>
         <source>Lag=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3762"/>
@@ -5050,7 +5109,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4600"/>
         <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4605"/>
@@ -5066,7 +5125,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6386"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6480"/>
@@ -7348,7 +7407,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;右クリックすると、使用中の周波数リストが維持されます。リセットオプションでは、周波数リストをデフォルト値に戻すことができます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3315"/>
