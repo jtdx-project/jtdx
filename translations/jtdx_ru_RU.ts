@@ -3095,7 +3095,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1022"/>
         <source>&amp;Lookup</source>
-        <translation>&amp;Поиск</translation>
+        <translation>Поиск</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1035"/>
@@ -3386,7 +3386,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="2373"/>
         <location filename="../mainwindow.cpp" line="6910"/>
         <source>&amp;Tune</source>
-        <translation>&amp;Настр. TX</translation>
+        <translation>Настр. &amp;TX</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2401"/>
@@ -3396,7 +3396,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2415"/>
         <source>&amp;Monitor</source>
-        <translation>&amp;Монитор</translation>
+        <translation>Монитор</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2446"/>
@@ -3436,7 +3436,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2581"/>
         <source>&amp;Stop</source>
-        <translation>&amp;Стоп</translation>
+        <translation>Стоп</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2620"/>
@@ -3446,7 +3446,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2634"/>
         <source>Dec&amp;ode</source>
-        <translation>Дек&amp;од</translation>
+        <translation>Декод</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2662"/>
@@ -3456,7 +3456,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2676"/>
         <source>E&amp;nable Tx</source>
-        <translation>Р&amp;азреш. Tx</translation>
+        <translation>Разреш. Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2704"/>
@@ -3466,7 +3466,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2707"/>
         <source>&amp;Halt Tx</source>
-        <translation>&amp;Стоп Tx</translation>
+        <translation>Стоп Tx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2732"/>
@@ -3481,12 +3481,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши очистит сообщения в окне диапазона . Нажатие правой кнопки мыши - очистка окна приемной частоты . Двойной щелчок кнопкой очистит оба окна. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажатие левой кнопки мыши очистит сообщения в окне активности диапазона . Нажатие правой кнопки мыши - очистка окна приемной частоты . Двойной щелчок кнопкой очистит оба окна. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2763"/>
         <source>&amp;Erase</source>
-        <translation>&amp;Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2788"/>
@@ -7603,7 +7603,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Меню управления списком частот появляется при щелчке правой кнопокй мыши. Ресет позволяет сбросить список частот на значения по умолчанию, в том числе если список частот пустой.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3668"/>
