@@ -2305,16 +2305,20 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
       return;
     case Qt::Key_E:
       if(e->modifiers() & Qt::ShiftModifier) {
-          m_txFirst=false;
-          ui->TxMinuteButton->setChecked(m_txFirst);
-          setMinButton();
-          return;
+        m_txFirst=false;
+        ui->TxMinuteButton->setChecked(m_txFirst);
+        setMinButton();
+        return;
       }
-      else if (e->modifiers() & Qt::ControlModifier) {
-          m_txFirst=true;
-          ui->TxMinuteButton->setChecked(m_txFirst);
-          setMinButton();
-          return;
+      if(e->modifiers() & Qt::ControlModifier) {
+        m_txFirst=true;
+        ui->TxMinuteButton->setChecked(m_txFirst);
+        setMinButton();
+        return;
+      }
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        ui->EraseButton->click();
+        return;
       }
       break;
     case Qt::Key_F:
@@ -2346,10 +2350,18 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
         genStdMsgs(m_rpt);
         return;
       }
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        lookup();
+        return;
+      }
       break;
     case Qt::Key_O:
       if(!m_menus && e->modifiers() & Qt::ControlModifier) {
         QTimer::singleShot (0, this, SLOT (on_actionOpen_triggered()));
+        return;
+      }
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        ui->DecodeButton->click();
         return;
       }
       break;
@@ -2377,6 +2389,24 @@ void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
     case Qt::Key_C:
       if(e->modifiers() & Qt::AltModifier) {
         on_actionFT4_triggered();
+        return;
+      }
+      break;
+    case Qt::Key_M:
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        ui->monitorButton->click();
+        return;
+      }
+      break;
+    case Qt::Key_N:
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        ui->enableTxButton->click();
+        return;
+      }
+      break;
+    case Qt::Key_S:
+      if(e->modifiers() & Qt::AltModifier && m_lang=="ru_RU") {
+        ui->stopButton->click();
         return;
       }
       break;
