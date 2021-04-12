@@ -3862,7 +3862,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Omogućite način rada FT8 DXpedition Hound. Način višestrukog odgovora MSHV podržan je u uobičajenim FT8 opsezima, WSJT-X DXpedition način s kontrolom frekvencije podržan je na posebnim DXpedition frekvencijama.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4814,7 +4814,7 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="3096"/>
         <location filename="../mainwindow.cpp" line="6674"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Za kontrolu frekvencije TX načina rada Hound potrebna je * Split * kontrola uređaja (ili * Rig * ili * Fake It * postavljena u * Postavkama | Radio * kartica.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2709"/>
@@ -4949,7 +4949,35 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing=1&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F1       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Mrežni korisnički priručnik&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F1  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;O JTDX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F2       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Otvorite menu za konfiguraciju&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F3       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Prikaz prečaca na tipkovnici&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F4       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Očistite DX znak / lokator i Tx poruke&lt;/td&gt;&lt;td&gt;&lt;b&gt;Alt+F4   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Izlaz iz programa&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F5       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Prikažite posebne naredbe miša&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F6       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Otvorite sljedeću datoteku u direktoriju&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Dekodirajte sve preostale datoteke u direktoriju&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F7       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Otvorite log u dodijeljenom pregledniku operativnog sustava&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F11      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Pomaknite Rx frekvenciju za 1 Hz&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Pomaknite Rx i Tx frekvencije niže za 1 Hz&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F12      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Pomaknite Rx frekvenciju više za 1 Hz&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Pomaknite Rx i Tx frekvencije više za 1 Hz&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Sada postavite prijenos na ovaj broj na TAB 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctl+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Postavite sljedeći prijenos na ovaj broj na TAB 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Očistite popis traženih pozivnih znakova&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Prebacivanje sa FT8 / FT4&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Dekodirajte ponovo na frekvenciji QSOa&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Potpuno dekodiranje (oba prozora)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Obriši&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Uključi / zaobiđi sve tekstualne filtre&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Uredite polje s besplatnim tekstualnim porukama&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Generirajte standardne poruke&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;ZaustaviTx&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctrl+L   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Potražite pozivni znak u bazi podataka, generirajte standardne poruke&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+M    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Monitor&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+N    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Omogući Tx&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Q    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Logiraj QSO&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+S    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Zaustavi monitoring&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+T    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tune&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spremite najnoviju datoteku * .wav&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Filter, ovaj je prečac  je podržan u glavnom korisničkom meniju i sučelju širokog grafičkog prikaza&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Zaustavi Tx&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3240"/>
@@ -4996,7 +5024,44 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=5&gt;
+  &lt;tr&gt;
+    &lt;th align=&quot;right&quot;&gt;Kliknite&lt;/th&gt;
+    &lt;th align=&quot;left&quot;&gt;Akcija&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Vodopad:&lt;/td&gt;
+    &lt;td&gt;Postavi Rx frkvenciju.&lt;br/&gt;
+        Dvaput kliknite da biste postavili Rx frekvenciju i tamo dekodirali.&lt;br/&gt;
+        Ctrl-klik za postavljanje Rx i Tx frekvencija.&lt;br/&gt;
+        Otključano TX = RX:&lt;br/&gt;
+        koristite lijevu tipku za podešavanje RX frekvencije&lt;br/&gt;
+        koristite ALT + lijevi gumb za postavljanje RX frekvencije i uključivanje filtra&lt;br/&gt;
+        upotrijebite desni gumb miša za podešavanje frekvencije predaje
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Dekodirani tekst:&lt;/td&gt;
+    &lt;td&gt;Dvaput kliknite kako biste kopirali drugi pozivni znak u Dx Call,&lt;br/&gt;
+        lokator do Dx Grid; promijenite Rx i Tx frekvencije u&lt;br/&gt;
+        frekvenciju dekodiranog signala; generirati standardne poruke.&lt;br/&gt;
+        Ako je prvi pozivni znak vaš vlastiti, Tx frekvencija nije&lt;br/&gt;
+       promijenjena ukoliko se CTRL ne drži kad se dvoklikne.&lt;br/&gt;&lt;br/&gt;
+       ALT + dvostruki klik također će zaustaviti Tx ako je gumb Enable Tx aktivan.&lt;br/&gt;&lt;br/&gt;
+        CTRL + ALT + dvostruki klik dodati će samo drugi pozivni znak iz dekodirane&lt;br/&gt;
+        poruke na popis željenih pozivnih znakova.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Gumb za brisanje:&lt;/td&gt;
+    &lt;td&gt;Kliknite desni gumb za brisanje prozora QSOa.&lt;br/&gt;
+        Kliknite lijevi gumb za brisanje prozora Band Activity.&lt;br/&gt;
+        Dvaput kliknite lijevi ili desni gumb da biste izbrisali QSO &lt;br/&gt;
+       i Band Activity prozore.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3756"/>
@@ -5042,23 +5107,23 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="4214"/>
         <location filename="../mainwindow.cpp" line="4217"/>
         <source>WSPR Guard Band</source>
-        <translation type="unfinished"></translation>
+        <translation>WSPR Zaštićeni pojas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4220"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberite drugu frekvenciju TXa. JTDX neće dopustiti pozivanje ispod 1000 Hz u DXped načinu.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4225"/>
         <location filename="../mainwindow.cpp" line="4228"/>
         <source>FT8 F/H Tx Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>FT8 F / H Tx Stražar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4347"/>
         <source>TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation>TUNE</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4348"/>
@@ -5069,12 +5134,12 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4599"/>
         <source>Tx: TUNE</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx: TUNE</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4600"/>
         <source>Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Tx: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4605"/>
@@ -5124,7 +5189,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6286"/>
         <source>Tx WSPR</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx WSPR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6386"/>
@@ -5150,7 +5215,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7118"/>
         <source>Lockd Tx=Rx</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključaj Tx=Rx</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7119"/>
@@ -5160,7 +5225,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7122"/>
         <source>Tx/Rx Split</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx/Rx Split</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7123"/>
@@ -5170,7 +5235,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7181"/>
         <source>Pwr&lt;br&gt;%1 W</source>
-        <translation type="unfinished"></translation>
+        <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7259"/>
@@ -5196,7 +5261,7 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
         <location filename="../mainwindow.cpp" line="7436"/>
         <location filename="../mainwindow.cpp" line="7437"/>
         <source>Logd </source>
-        <translation type="unfinished"></translation>
+        <translation>Logd </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7672"/>
@@ -5223,7 +5288,7 @@ UDP server %2:%3</translation>
     <message>
         <location filename="../mainwindow.cpp" line="8055"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation>WD %1m</translation>
     </message>
 </context>
 <context>
@@ -7492,7 +7557,7 @@ za procjenu rasprostiranja i performansi sustava.</translation>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Desni klik za uređivanje popisa radnih frekvencija. Opcija poništavanja omogućuje vraćanje popisa frekvencija na zadane vrijednosti.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3668"/>
