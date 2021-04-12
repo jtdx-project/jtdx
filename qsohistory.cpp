@@ -178,12 +178,14 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
             dist = 0;
             Rrep = "-60";
             bool mycall = false;
+            bool lastcalled = false;
             foreach(QString key,_data.keys()) {
               on_black=_blackdata.value(key,0);
               tt=_data[key];
-              if (on_black == 0 && tt.time == max_r_time && !tt.continent.isEmpty() && 
+              if (on_black == 0 && tt.time == max_r_time && !tt.continent.isEmpty() && (!lastcalled || tt.time == tt.b_time) &&
                   (tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT || tt.status == RRR || tt.status == RRR73 || 
                     ((tt.status == RCQ || tt.status == RFIN) && !mycall && ((tt.priority > 16 && tt.priority < 20))))) {
+                if (!lastcalled && tt.time == tt.b_time) priority = a_init;
                 if (tt.priority > priority || 
                       (priority > a_init && (((tt.status == RCALL || tt.status == RREPORT || tt.status == RRREPORT) && !mycall) || (tt.priority == priority &&
                          ((!(algo & 32) && ((!(algo & 16) && !tt.s_rep.isEmpty () && tt.s_rep.toInt() > rep.toInt())
@@ -192,6 +194,7 @@ QsoHistory::Status QsoHistory::autoseq(QString &callsign, QString &grid, QString
                           || (algo & 32 && tt.distance > dist)))))) {
                   if(_CQ.tyyp.isEmpty () || (_strictdirCQ && (tt.priority > 16 || (tt.priority > 1 && tt.priority < 5))) || _CQ.tyyp == tt.continent || _CQ.tyyp == tt.mpx || tt.call.startsWith(_CQ.tyyp) || (_CQ.tyyp == "DX" && tt.continent != mycontinent_)) {
                     t = tt;
+                    if (tt.time == tt.b_time) lastcalled = true;
                     if (tt.status == RCALL || tt.status == RREPORT) mycall = true;
                     priority = tt.priority;
                     prio = tt.priority;

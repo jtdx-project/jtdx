@@ -5966,7 +5966,7 @@ Error(%2): %3</source>
         <translation>TCI SDR 未打開</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI 音訊無法打開</translation>
     </message>

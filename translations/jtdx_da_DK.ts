@@ -5970,7 +5970,7 @@ Fejl (%2):%3</translation>
         <translation>TCI SDR er ikke ON</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio kan ikke skifte til ON</translation>
     </message>

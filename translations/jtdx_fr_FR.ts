@@ -5972,7 +5972,7 @@ Erreur(%2) : %3</translation>
         <translation>TCI SDR n&apos;est pas allumé</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio n&apos;a pas pu être mis en marche</translation>
     </message>

@@ -5969,7 +5969,7 @@ Errore (%2):%3</translation>
         <translation>TCI SDR non è attivato</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>Non è stato possibile attivare TCI Audio</translation>
     </message>

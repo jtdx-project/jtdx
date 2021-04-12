@@ -5962,7 +5962,7 @@ Greška(%2): %3</translation>
         <translation>TCI SDR nije uključen</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio nije se moguće uključiti</translation>
     </message>

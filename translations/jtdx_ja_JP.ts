@@ -5936,7 +5936,7 @@ Error(%2): %3</source>
         <translation>TCI SDR の電源が入っていません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCIオーディオの電源が入りません</translation>
     </message>

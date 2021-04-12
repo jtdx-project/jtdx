@@ -5953,7 +5953,7 @@ Erro (%2):%3</translation>
         <translation>SDR TCI não está ligado</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>Audio TCI não pôde ser ligado</translation>
     </message>

@@ -6039,7 +6039,7 @@ Error(%2): %3</source>
         <translation>TCI SDR pole sisse lülitatud</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="394"/>
+        <location filename="../TCITransceiver.cpp" line="390"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Heli ei saa sisse lülitada</translation>
     </message>
