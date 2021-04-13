@@ -2350,7 +2350,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../Configuration.cpp" line="224"/>
         <source>IARU &amp;Region:</source>
-        <translation>IA&amp;RU 区域:</translation>
+        <translation>IA&amp;RU 分区:</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="225"/>
@@ -3483,7 +3483,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2763"/>
         <source>&amp;Erase</source>
-        <translation>擦除窗口(&amp;E)</translation>
+        <translation>清空窗口(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2788"/>
@@ -4950,12 +4950,49 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=5&gt;
+  &lt;tr&gt;
+    &lt;th align=&quot;right&quot;&gt;点击&lt;/th&gt;
+    &lt;th align=&quot;left&quot;&gt;动作&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;瀑布图:&lt;/td&gt;
+    &lt;td&gt;设置 Rx 频率.&lt;br/&gt;
+        按两下以设置 Rx 频率并在当前位置解码.&lt;br/&gt;
+        点击以设置 Rx 和 Tx 频率.&lt;br/&gt;
+        开启 TX=RX:&lt;br/&gt;
+        点击左键设置RX频率&lt;br/&gt;
+        使用ALT+左键设置RX频率并打开筛检程序&lt;br/&gt;
+        点击右键设置TX频率
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;解码文字:&lt;/td&gt;
+    &lt;td&gt;点击两下将第二个呼号复制到 Dx 呼号框,&lt;br/&gt;
+        定位器到Dx网格;将Rx和Tx频率更改为&lt;br/&gt;
+        解码信号的频率;生成标准信息.&lt;br/&gt;
+        如果第一个呼叫信号是您自己的. 则 Tx 频率不会更改&lt;br/&gt;
+        除非 CTRL 在双击时被按住.&lt;br/&gt;&lt;br/&gt;
+        如果启用 Tx 按钮处于活动状态, ALT+点击两下也将停止 Tx.&lt;br/&gt;&lt;br/&gt;
+        CTRL+ALT+按两下只会添加解码后的第二个呼号&lt;br/&gt;
+        将消息添加到渴望的呼号清单中.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;擦除按钮:&lt;/td&gt;
+    &lt;td&gt;点击右键以擦除QSO窗口(右侧窗口).&lt;br/&gt;
+        点击左键以擦除波段活动窗口(左侧窗口).&lt;br/&gt;
+        按两键或右键以擦除 QSO &lt;br/&gt;
+        和波段活动视窗.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8055"/>
         <source>WD %1m</source>
-        <translation type="unfinished"></translation>
+        <translation>WD %1分钟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2517"/>
@@ -5091,7 +5128,35 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing=1&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F1       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在线使用指南&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F1  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;About JTDX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F2       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;打开配置视窗&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F3       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;显示键盘快捷方式&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F4       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;清除 DX 呼叫/网格和 Tx 信息&lt;/td&gt;&lt;td&gt;&lt;b&gt;Alt+F4   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;退出程式&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F5       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;显示特殊的滑鼠命令&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F6       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在目录中打开下一个档&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;解码目录中的所有剩余文档&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F7       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在操作系统分配的查看器中打开日志&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F11      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;移动Rx频率下降1赫兹&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;移动Rx和Tx频率下降1赫兹&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F12      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;移动Rx频率上升1 赫兹&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;移动Rx和Tx频率上升1 赫兹&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;立即在 Tab 1 上设置传输到此号码&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctl+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在Tab 1上将下一个传输到此号码&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;清除渴望清单&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;切换到 FT8/FT4 模式&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在QSO频率再次解码&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;完全解码 (两个视窗)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;擦除&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;切换绕过所有文本过滤器&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;编辑自定义文本信息框&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;生成标准信息&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;停止 Tx&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctrl+L   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;查找资料库中的呼号, 生成标准信息&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+M    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;监听&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+N    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;启用发射&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Q    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;记录通联&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+S    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;停止监听&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+T    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;调谐&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;保存最近完成的*.wav 文档&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;过滤, 此快捷方式在主窗口和宽图窗口中支持&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;停止发射&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4220"/>
@@ -5143,7 +5208,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="6386"/>
         <source>    Freq     Drift  Call          Grid    dBm   Dist</source>
-        <translation type="unfinished"></translation>
+        <translation>    频率     漂移  呼号          网格    dBm   距离</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6480"/>
@@ -7496,7 +7561,7 @@ for assessing propagation and system performance.</source>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;右键点击一下以维护工作频率清单. 重置选项允许将频率清单恢复到预设值.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3668"/>
