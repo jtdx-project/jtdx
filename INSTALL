@@ -64,7 +64,7 @@ $ ./bootstrap
 $ mkdir ../build
 $ cd ../build
 $ ../src/configure --prefix=$HOME/hamlib-prefix \
-   --disable-shared --enable-static \
+   --disable-shared --enable-static --without-readline \
    --without-indi --without-cxx-binding --disable-winradio \
    CFLAGS="-g -O2 -fdata-sections -ffunction-sections" \
    LDFLAGS="-Wl,--gc-sections"
@@ -235,6 +235,8 @@ $ ../src/configure \
    --disable-shared \
    --disable-winradio \
    --prefix=$HOME/hamlib-prefix \
+   --without-readline \
+   --without-indi \
    CFLAGS="-g -O2 -mmacosx-version-min=10.13 -I/opt/local/include" \
    LIBUSB_LIBS="-L/opt/local/lib -lusb-1.0"
 $ make
