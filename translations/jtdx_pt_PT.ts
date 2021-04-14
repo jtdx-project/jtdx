@@ -3244,7 +3244,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1541"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Redução da lista de candidatos. Esse recurso é dedicado à decodificação de banda larga com CPUs lentos e configuração de sensibilidade &quot;mínima&quot; do decodificador de banda larga. Uma vez que a lista de candidatos é classificada por nível de sincronização, os candidatos com níveis de sincronização baixos não serão processados pelo decodificador para diminuir o tempo gasto para o intervalo de decodificação. Este recurso não se aplica à frequência QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Redução da lista de candidatos. Esse recurso é dedicado à descodificação de banda larga com CPUs lentos e configuração de sensibilidade &quot;mínima&quot; do descodificador de banda larga. Uma vez que a lista de candidatos é classificada por nível de sincronização, os candidatos com níveis de sincronização baixos não serão processados pelo descodificador para diminuir o tempo gasto para o intervalo de descodificação. Este recurso não se aplica à frequência QSO RX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
@@ -3871,7 +3871,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1773"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funcionalidade de ponderação DT para opção de diluição da lista de candidatos, o valor médio da distribuição DT de sinais decodificados deve ser definido lá. Este valor depende da precisão da sincronização do relógio do sistema e em bandas superlotadas é próximo ao valor médio do DT dos sinais decodificados. O valor correto aumenta a eficiência de decodificação na opção de diluição da lista de candidatos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funcionalidade de ponderação DT para opção de diluição da lista de candidatos, o valor médio da distribuição DT de sinais descodificados deve ser definido lá. Este valor depende da precisão da sincronização do relógio do sistema e em bandas superlotadas é próximo ao valor médio do DT dos sinais descodificados. O valor correto aumenta a eficiência de descodificação na opção de diluição da lista de candidatos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1776"/>
@@ -5032,7 +5032,35 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing = 1&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F1 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Guia do usuário on-line &lt;/td&gt; &lt;td&gt; &lt;b&gt; Ctrl + F1 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Sobre JTDX &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F2 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Abrir janela de configuração &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F3 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Exibir atalhos do teclado &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F4 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Limpar mensagens DX / Grid e Tx &lt;/td&gt; &lt;td&gt; &lt;b&gt; Alt + F4 &lt;/b&gt; &lt;/td&gt; &lt;td&gt; Sair do programa &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F5 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Exibir comandos especiais do mouse &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F6 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Abre o próximo arquivo no diretório &lt;/td&gt; &lt;td&gt; &lt;b&gt; Shift + F6 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Decodifique todos os arquivos restantes no diretório &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F7 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Abrir registro atribuído no visualizador do sistema operacional &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F11 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Mova a frequência Rx 1 Hz para baixo &lt;/td&gt; &lt;td&gt; &lt;b&gt; Ctrl + F11 &lt;/b&gt; &lt;/td&gt; &lt;td &gt; Mova as frequências Rx e Tx para baixo 1 Hz &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; F12 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Mova a frequência Rx para cima 1 Hz &lt;/td&gt; &lt;td&gt; &lt;b&gt; Ctrl + F12 &lt;/b&gt; &lt;/td&gt; &lt;td &gt; Mova as frequências Rx e Tx até 1 Hz &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + 1-6 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Defina agora a transmissão para este número na guia 1 &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Ctl + 1-6 &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Defina a próxima transmissão para este número na guia 1 &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + Ctrl + A &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Limpar lista de indicativos procurados &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + B / C &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Mudar para o modo FT8 / FT4 &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + D &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Decodifique novamente na frequência QSO &lt;/td&gt; &lt;td&gt; &lt;b&gt; Shift + D &lt;/b&gt; &lt;/td&gt; &lt; td&gt; Decodificação completa (ambas as janelas) &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + E &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Erase&lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + F &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Alternar para ignorar todos os filtros de texto &lt;/td&gt; &lt;td&gt; &lt;b&gt; Ctrl + F &lt;/b&gt; &lt;/td&gt; &lt; td&gt; Edite a caixa de mensagem de texto livre &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + G &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Gerar mensagens padrão &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + H &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Halt Tx &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Ctrl + L &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Consultar o indicativo no banco de dados, gerar mensagens padrão &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + M &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Monitor&lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + N &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Habilitar Tx &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + Q &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Registrar QSO &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + S &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Pare o monitoramento &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + T &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tune&lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + V &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Salvar o arquivo * .wav concluído mais recentemente &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Alt + Z &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Filtro, este atalho é compatível com a IU principal e a IU widegraph &lt;/td&gt; &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; &lt;b&gt; Esc &lt;/b&gt;&lt;/td&gt; &lt;td&gt; Halt Tx &lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3240"/>
@@ -5074,7 +5102,44 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;tabela cellpadding = 5&gt;
+  &lt;tr&gt;
+    &lt;th align = &quot;right&quot;&gt; Clique em &lt;/th&gt;
+    &lt;th align = &quot;left&quot;&gt; Ação &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align = &quot;right&quot;&gt; Cachoeira: &lt;/td&gt;
+    &lt;td&gt; Defina a frequência Rx. &lt;br/&gt;
+        Clique duas vezes para definir a frequência Rx e descodificar lá. &lt;br/&gt;
+        Clique com a tecla Ctrl pressionada para definir as frequências Rx e Tx. &lt;br/&gt;
+        TX desbloqueado = RX: &lt;br/&gt;
+        use o botão esquerdo para definir a frequência RX &lt;br/&gt;
+        use ALT + botão esquerdo para definir a frequência RX e ligar o filtro &lt;br/&gt;
+        use o botão direito para definir a frequência de TX
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align = &quot;right&quot;&gt; Texto descodificado: &lt;/td&gt;
+    &lt;td&gt; Clique duas vezes para copiar o segundo indicativo para Dx Call, &lt;br/&gt;
+        localizador para Dx Grid; alterar as frequências Rx e Tx para &lt;br/&gt;
+        frequência do sinal descodificado; gerar mensagens padrão. &lt;br/&gt;
+        Se o primeiro indicativo for seu, a frequência Tx não é &lt;br/&gt;
+        alterado, a menos que CTRL seja pressionado ao clicar duas vezes. &lt;br/&gt; &lt;br/&gt;
+        ALT + clique duplo também interromperá o Tx se o botão Ativar Tx estiver ativo. &lt;br/&gt; &lt;br/&gt;
+        CTRL + ALT + clique duplo adicionará apenas um segundo indicativo de descodificado &lt;br/&gt;
+        mensagem na lista de indicativos procurados.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align = &quot;right&quot;&gt; Botão Apagar: &lt;/td&gt;
+    &lt;td&gt; Clique com o botão direito para apagar a janela do QSO. &lt;br/&gt;
+        Clique com o botão esquerdo para apagar a janela Atividade da banda. &lt;br/&gt;
+        Clique duas vezes no botão esquerdo ou direito para apagar QSO &lt;br/&gt;
+        e janelas de atividade da banda.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4220"/>
@@ -7365,8 +7430,8 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation>O programa pode enviar detalhes da sua estação e todos
-sinais decodificados como pontos no site http://pskreporter.info.
+        <translation type="unfinished">O programa pode enviar detalhes da sua estação e todos
+sinais descodificados como pontos no site http://pskreporter.info.
 Isso é usado para análise de beacon reverso, o que é muito útil
 para avaliar a propagação e o desempenho do sistema.</translation>
     </message>
@@ -7483,7 +7548,7 @@ para avaliar a propagação e o desempenho do sistema.</translation>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Clique com o botão direito para manter a lista de frequências de trabalho. A opção de redefinição permite trazer a lista de frequência de volta aos valores padrão. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3668"/>
