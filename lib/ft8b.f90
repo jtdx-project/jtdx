@@ -10,14 +10,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                        msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
-                       maskincallthr
+                       maskincallthr,ctwk256
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1,csymb256(256)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200), &
-       s256(0:7)
+       s256(0:8)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
@@ -445,9 +445,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     endif
 
     i1=ibest+224 ! 7*32
-    csymb256=cd0(i1:i1+255)
+    csymb256=cd0(i1:i1+255)*ctwk256
     call four2a(csymb256,256,1,-1,1)
-    s256(0:7)=abs(csymb256(1:8))
+    s256(0:8)=abs(csymb256(1:9))
     iscq=0
     do k11=8,16
       ip=maxloc(s8(:,k11))
@@ -459,7 +459,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     enddo
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
-    if(ip(1).eq.1 .or. iscq.gt.3) lcqsignal=.true.
+    if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
 
     lsubptxfreq=.false.
     if(lapon .and. lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
