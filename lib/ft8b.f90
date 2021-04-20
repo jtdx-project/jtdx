@@ -28,7 +28,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal
+             lwrongcall,lsubtracted,lcqsignal,loutapwid
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -618,6 +618,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         endif
       else; npasses=4; endif ! drop AP masks for special messages if there is no TX activity
 
+      loutapwid=.false.; loutapwid=abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid
+
       do ipass=1,npasses
         if(.not.swl .and. ipass.eq.4) cycle
         if(ipass.lt.5) then
@@ -637,9 +639,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
             if(stophint .and. iaptype.gt.2 .and. iaptype.lt.31) cycle
             if(lft8sdec .and. iaptype.ge.3 .and. iaptype.lt.31) cycle !already decoded
 
-            if(iaptype.ge.3 .and. iaptype.lt.31 .and. (abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid)) cycle
+            if(iaptype.ge.3 .and. iaptype.lt.31 .and. loutapwid) cycle
             if(iaptype.gt.30 .and. (.not.lenabledxcsearch .or. len(trim(hiscall)).lt.3)) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
-            if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. (abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid)) cycle ! only RX freq DX Call searching
+            if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
             if(iaptype.ge.2 .and. iaptype.lt.31 .and. apsym(1).gt.1) cycle  ! No, or nonstandard, mycall 
             if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, dxcall
 
@@ -718,12 +720,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.15) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
             if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
-            if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. (abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid)) cycle ! only RX freq DX Call searching
+            if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
 
 !!!        if(stophint .and. iaptype.gt.0 .and. iaptype.lt.5) cycle !!! to check stophint functionality
 !        if(lft8sdec .and. iaptype.gt.0 .and. iaptype.lt.5) cycle ! already decoded ! but may be false FT8S decode
 
-            if(iaptype.gt.1 .and. iaptype.lt.15 .and. abs(f1-nfqso).gt.napwid .and. abs(f1-nftx).gt.napwid) cycle
+            if(iaptype.gt.1 .and. iaptype.lt.15 .and. loutapwid) cycle
 
             if(ipass.eq.5 .or. ipass.eq.8 .or. ipass.eq.11) then; llrz=llra
             else if(ipass.eq.6 .or. ipass.eq.9 .or. ipass.eq.12) then; llrz=llrb
