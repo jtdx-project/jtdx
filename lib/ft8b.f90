@@ -470,23 +470,23 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     do k1=1,nweak
       if(k1.eq.2) cs=csr
       do nsym=1,3
-        nt=2**(3*nsym)
+        nt=2**(3*nsym)-1
         do ihalf=1,2
           do k=1,29,nsym
-            if(ihalf.eq.1) ks=k+7
-            if(ihalf.eq.2) ks=k+43
-            do i=0,nt-1
+            if(ihalf.eq.1) then; ks=k+7
+            else; ks=k+43
+            endif
+            ks1=ks+1; ks2=ks+2
+            do i=0,nt
               i1=i/64
               i2=iand(i,63)/8
               i33=iand(i,7)
               if(nsym.eq.1) then
                 s2(i)=abs(cs(graymap(i33),ks))
               elseif(nsym.eq.2) then
-                s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks+1))
-              elseif(nsym.eq.3) then
-                s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks+1)+cs(graymap(i33),ks+2))
+                s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))
               else
-                print*,"Error - nsym must be 1, 2, or 3."
+                s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
               endif
             enddo
             if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
@@ -503,11 +503,11 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
             i32=1+(k-1)*3+(ihalf-1)*87
             if(nsym.eq.1) ibmax=2; if(nsym.eq.2) ibmax=5; if(nsym.eq.3) ibmax=8
             do ib=0,ibmax
-              bm=maxval(s2(0:nt-1),one(0:nt-1,ibmax-ib)) - maxval(s2(0:nt-1),.not.one(0:nt-1,ibmax-ib))
+              bm=maxval(s2(0:nt),one(0:nt,ibmax-ib)) - maxval(s2(0:nt),.not.one(0:nt,ibmax-ib))
               if(i32+ib .gt.174) cycle
               if(nsym.eq.1) then
                 bmeta(i32+ib)=bm
-                den=max(maxval(s2(0:nt-1),one(0:nt-1,ibmax-ib)),maxval(s2(0:nt-1),.not.one(0:nt-1,ibmax-ib)))
+                den=max(maxval(s2(0:nt),one(0:nt,ibmax-ib)),maxval(s2(0:nt),.not.one(0:nt,ibmax-ib)))
                 if(den.gt.0.0) then; cm=bm/den; else; cm=0.0; endif
                 bmetd(i32+ib)=cm
               elseif(nsym.eq.2) then
