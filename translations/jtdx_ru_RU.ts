@@ -4054,7 +4054,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4793"/>
         <source>Open</source>
-        <translation>Открыть</translation>
+        <translation>Открыть звуковой .wav файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4796"/>
