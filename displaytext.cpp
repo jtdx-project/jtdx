@@ -827,6 +827,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     show_line = false;
             }
         }
+        else if (!bwantedCall && enableCallsignFilter_ && std_type != 2 && !jt65bc) {
+            auto callsigns = callsigns_.split(',');
+            if (callsigns.contains(Radio::base_callsign (checkCall)))
+                show_line = false;
+        }
     }
     
     if (show_line && decodedText->isNonStd2() && hidefree_ && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
@@ -847,6 +852,9 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     } else if (!lotw.isEmpty ()) {
         servis = "•" + servis.mid(1); // lotw 
     }
+    if (bypassAllFilters || bypassRxfFilters) {
+            show_line = true;
+    }
     if (show_line) {
         if (actwind) {
             if (windowPopup && window != NULL) {
@@ -859,9 +867,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             QApplication::beep();
 			notified = true;
         }
-    }
-    if (bypassAllFilters || bypassRxfFilters) {
-            show_line = true;
     }
     if (jt65bc) {
         bgColor = "#ffffff";

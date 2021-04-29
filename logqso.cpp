@@ -80,14 +80,14 @@ void LogQSO::initLogQSO(QString const& hisCall, QString const& hisGrid, QString 
   if (ui->cbTxPower->isChecked ()) ui->txPower->setText(m_txPower);
   if (ui->cbComments->isChecked ()) ui->comments->setText(m_comments);
   if (ui->cbEqslComments->isChecked ()) ui->eqslcomments->setText(m_eqslcomments);
+  QString t="";
   if(m_config->report_in_comments()) {
-    QString t=mode;
+    t=mode;
     if(rptSent!="") t+="  Sent: " + rptSent;
     if(rptRcvd!="") t+="  Rcvd: " + rptRcvd;
     ui->comments->setText(t);
   }
   if(m_config->distance_in_comments()) {
-    QString t=ui->comments->text();
     if(t.isEmpty()) t="Distance: " + distance;
     else t+="  Distance: " + distance;
     ui->comments->setText(t);

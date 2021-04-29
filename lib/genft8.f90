@@ -1,7 +1,4 @@
-! This source code file was last time modified by Igor UA3DJY on 20190226
-! All changes are shown in the patch file coming together with the full JTDX source code.
-
-subroutine genft8(msg,i3,n3,msgsent,msgbits,itone)
+subroutine genft8(msg,i3,n3,ntxhash,msgsent,msgbits,itone)
 
 ! Encode an FT8 message, producing array itone().
   
@@ -14,8 +11,12 @@ subroutine genft8(msg,i3,n3,msgsent,msgbits,itone)
 
   i3=-1
   n3=-1
-  call pack77(msg,i3,n3,c77)
-  call unpack77(c77,0,msgsent,unpk77_success)
+  call pack77(msg,i3,n3,c77,ntxhash)
+  if(ntxhash.eq.1) then
+    call unpack77(c77,0,msgsent,unpk77_success,26) !TX message, unpack to get msgsent, use TX hash tables and do not save RX hash values
+  else
+    call unpack77(c77,0,msgsent,unpk77_success,27) !service message, unpack to get msgsent. Do not save hash values
+  endif
   read(c77,'(77i1)',err=1) msgbits
   if(unpk77_success) go to 2
 1 msgbits=0

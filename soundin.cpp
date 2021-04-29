@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200124
-
 #include "soundin.h"
 
 #include <QAudioDeviceInfo>
@@ -81,7 +79,7 @@ void SoundInput::start(QAudioDeviceInfo const& device, int framesPerBuffer, Audi
 
   connect (m_stream.data(), &QAudioInput::stateChanged, this, &SoundInput::handleStateChanged);
 
-  m_stream->setBufferSize (m_stream->format ().bytesForFrames (framesPerBuffer));
+  if (framesPerBuffer > 0) { m_stream->setBufferSize (m_stream->format ().bytesForFrames (framesPerBuffer)); }
   if (sink->initialize (QIODevice::WriteOnly, channel))
     {
       m_stream->start (sink);

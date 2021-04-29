@@ -1,5 +1,3 @@
-! last time modified by Igor UA3DJY on 20191118
-
 subroutine tone8myc()
 
   use ft8_mod1, only : idtonemyc,mycall
@@ -9,7 +7,7 @@ subroutine tone8myc()
 
   msg37=''; msg37=trim(mycall)//' AA1AAA FN25'
   i3=-1; n3=-1
-  call genft8(msg37,i3,n3,msgsent37,msgbits,itone)
+  call genft8(msg37,i3,n3,0,msgsent37,msgbits,itone)
   idtonemyc(1:29)=itone(8:36); idtonemyc(30:58)=itone(44:72)
  
   return

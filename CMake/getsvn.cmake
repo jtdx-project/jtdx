@@ -1,4 +1,5 @@
 message (STATUS "Checking for revision information")
+file (WRITE "${OUTPUT_DIR}/scs_version.h.txt" "/* SCS version information */\n\n")
 if (EXISTS "${SOURCE_DIR}/.svn")
   message (STATUS "Checking for Subversion revision information")
   find_package (Subversion QUIET REQUIRED)
@@ -17,13 +18,14 @@ if (EXISTS "${SOURCE_DIR}/.svn")
   if (__svn_changes)
     message (STATUS "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
     set (MY_WC_LAST_CHANGED_REV "${MY_WC_LAST_CHANGED_REV}-dirty")
+    file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION_IS_DIRTY 1\n")
     foreach (__svn_change ${__svn_changes})
       message (STATUS "${__svn_change}")
     endforeach (__svn_change ${__svn_changes})
   endif (__svn_changes)
   message (STATUS "${SOURCE_DIR} contains a .svn and is revision ${MY_WC_LAST_CHANGED_REV}")
   # write a file with the SCS_VERSION define
-  file (WRITE "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION r${MY_WC_LAST_CHANGED_REV}\n")
+  file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION r${MY_WC_LAST_CHANGED_REV}\n#define SCS_VERSION_STR \"r${MY_WC_LAST_CHANGED_REV}\"\n")
 elseif (EXISTS "${SOURCE_DIR}/.git")
   if (EXISTS "${SOURCE_DIR}/.git/svn/.metadata")  # try git-svn
     message (STATUS "Checking for Subversion revision information using git-svn")
@@ -43,9 +45,10 @@ elseif (EXISTS "${SOURCE_DIR}/.git")
     if ((NOT ${__git_svn_status} EQUAL 0) OR __svn_changes)
       message (STATUS "Source tree based on revision ${MY_WC_LAST_CHANGED_REV} appears to have local changes")
       set (MY_WC_LAST_CHANGED_REV "${MY_WC_LAST_CHANGED_REV}-dirty")
+      file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION_IS_DIRTY 1\n")
     endif ()
     # write a file with the SVNVERSION define
-    file (WRITE "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION r${MY_WC_LAST_CHANGED_REV}\n")
+    file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION r${MY_WC_LAST_CHANGED_REV}\n#define SCS_VERSION_STR \"r${MY_WC_LAST_CHANGED_REV}\"\n")
   else ()
     #
     # try git
@@ -58,16 +61,17 @@ elseif (EXISTS "${SOURCE_DIR}/.git")
     if ("${GIT_DIRTY}" STREQUAL "DIRTY")
       message (STATUS "Source tree based on revision ${GIT_REFSPEC} ${GIT_SHA1} appears to have local changes")
       set (GIT_SHA1 "${GIT_SHA1}-dirty")
+      file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION_IS_DIRTY 1\n")
       execute_process (COMMAND ${GIT_EXECUTABLE} --git-dir=${SOURCE_DIR}/.git --work-tree=${SOURCE_DIR} status
 	ERROR_QUIET
 	OUTPUT_STRIP_TRAILING_WHITESPACE)
     endif ()
     message (STATUS "refspec: ${GIT_REFSPEC} - SHA1: ${GIT_SHA1}")
-    file (WRITE "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION ${GIT_SHA1}\n")
+    file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION ${GIT_SHA1}\n#define SCS_VERSION_STR \"${GIT_SHA1}\"\n")
   endif ()
 else()
   message (STATUS "No SCS found")
-  file (WRITE "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION\n")
+  file (APPEND "${OUTPUT_DIR}/scs_version.h.txt" "#define SCS_VERSION 000000\n#define SCS_VERSION_STR \"000000\"\n")
 endif ()
 
 # copy the file to the final header only if the version changes

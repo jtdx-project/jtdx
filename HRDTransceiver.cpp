@@ -23,7 +23,7 @@ namespace
 
 #include "moc_HRDTransceiver.cpp"
 
-void HRDTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, int id)
+void HRDTransceiver::register_transceivers (TransceiverFactory::Transceivers * registry, unsigned id)
 {
   (*registry)[HRD_transceiver_name] = TransceiverFactory::Capabilities (id, TransceiverFactory::Capabilities::network, true, true /* maybe */);
 }
@@ -106,13 +106,15 @@ HRDTransceiver::HRDTransceiver (std::unique_ptr<TransceiverBase> wrapped
   , ptt_button_ {-1}
   , alt_ptt_button_ {-1}
   , reversed_ {false}
+  , m_jtdxtime {nullptr}
 {
 }
 
-int HRDTransceiver::do_start ()
+int HRDTransceiver::do_start (JTDXDateTime * jtdxtime)
 {
   TRACE_CAT ("HRDTransceiver", "starting");
-  if (wrapped_) wrapped_->start (0);
+  m_jtdxtime = jtdxtime;
+  if (wrapped_) wrapped_->start (0,m_jtdxtime);
 
   auto server_details = network_server_lookup (server_, 7809u);
   if (!hrd_)

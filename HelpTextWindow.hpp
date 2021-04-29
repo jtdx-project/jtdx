@@ -9,8 +9,9 @@ class QString;
 class HelpTextWindow final
   : public QLabel
 {
+ Q_OBJECT;
 public:
-  HelpTextWindow (QString const& title, QString const& file_name, QFont const& = QFont {}, QWidget * parent = nullptr);
+  HelpTextWindow (QString const& title, QString const& text, QFont const& = QFont {}, QWidget * parent = nullptr);
 };
 
 #endif

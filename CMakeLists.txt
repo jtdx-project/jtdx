@@ -1,8 +1,4 @@
-if (WIN32)
-cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
-else ()
-cmake_minimum_required (VERSION 3.9 FATAL_ERROR)
-endif ()
+cmake_minimum_required (VERSION 3.7.2 FATAL_ERROR)
 
 if (APPLE)
   #
@@ -54,39 +50,23 @@ message (STATUS "Building ${CMAKE_PROJECT_NAME}-${wsjtx_VERSION}")
 # project information
 #
 set (PROJECT_NAME "JTDX")
-set (PROJECT_VENDOR "Igor Chernikov, UA3DJY")
-set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>")
-set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
+if (WIN32)
+  set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Jarve, ES1JA")
+  set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Jarve <arvo.jarve@eesti.ee>")
+  set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Jarve, ES1JA.")
+else ()
+  set (PROJECT_VENDOR "Igor Chernikov, UA3DJY and Arvo Järve, ES1JA")
+  set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
+  set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
+endif (WIN32)
 set (PROJECT_HOMEPAGE http://jtdx.tech/)
 set (PROJECT_MANUAL index.php/videos-guides)
 set (PROJECT_MANUAL_DIRECTORY_URL http://jtdx.tech/)
 set (PROJECT_SAMPLES_URL http://jtdx.tech/public_html/downloads/)
 set (PROJECT_SAMPLES_UPLOAD_DEST frs.sourceforge.net:/home/frs/project/wsjt/)
-set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - JT9 and JT65 Modes for LF, MF and HF Amateur Radio.")
-set (PROJECT_DESCRIPTION "${PROJECT_SUMMARY_DESCRIPTION}
- ${PROJECT_NAME} implements JT9, a new mode designed especially for the LF, MF,
- and HF bands, as well as the popular mode JT65. Both modes were
- designed for making reliable, confirmed QSOs under extreme
- weak-signal conditions. They use nearly identical message structure
- and source encoding. JT65 was designed for EME (“moonbounce”) on the
- VHF/UHF bands and has also proved very effective for worldwide QRP
- communication at HF; in contrast, JT9 is optimized for HF and lower
- frequencies. JT9 is about 2 dB more sensitive than JT65A while using
- less than 10% of the bandwidth. World-wide QSOs are possible with
- power levels of a few watts and compromise antennas. A 2 kHz slice
- of spectrum is essentially full when occupied by ten JT65 signals.
- As many as 100 JT9 signals can fit into the same space, without
- overlap.
- .
- ${PROJECT_NAME} offers a “bi-lingual“ operating mode in which you can transmit
- and receive JT65 and JT9 signals, switching between modes
- automatically as needed. Displayed bandwidth can be as large as 5
- kHz. If your receiver has as upper-sideband filter at least 4 kHz
- wide, you can have all the typical JT65 and JT9 activity on screen at
- once, available for making QSOs with a click of the mouse. Even with
- standard SSB-width IF filters, switching between JT65 and JT9 modes
- is quick and convenient. Be sure to read the online ${PROJECT_NAME} User's
- Guide.")
+set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - Digital Modes for Amateur Radio.")
+set (PROJECT_DESCRIPTION "JTDX: Digital Modes for Weak Signal Communications in Amateur Radio")
+#set (CMAKE_PROJECT_DESCRIPTION ${PROJECT_DESCRIPTION})
 
 set (CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMake/Modules ${CMAKE_MODULE_PATH})
 
@@ -214,6 +194,7 @@ set (wsjt_qt_CXXSRCS
   TransceiverFactory.cpp
   PollingTransceiver.cpp
   HamlibTransceiver.cpp
+  TCITransceiver.cpp
   HRDTransceiver.cpp
   DXLabSuiteCommanderTransceiver.cpp
   NetworkMessage.cpp
@@ -353,6 +334,7 @@ set (wsjt_FSRCS
   lib/fil3c.f90
   lib/fil4.f90
   lib/filbig.f90
+  lib/fillhash.f90
   lib/filt8.f90
   lib/filterscq.f90
   lib/filterscq2.f90
@@ -451,7 +433,6 @@ set (wsjt_FSRCS
   lib/morse.f90
   lib/move.f90
   lib/msgparser.f90
-  lib/ft8v2/my_hash.f90
   lib/options.f90
   lib/osd174.f90
   lib/ft8v2/osd174_91.f90
@@ -492,18 +473,7 @@ set (wsjt_FSRCS
   lib/subtract10.f90
   lib/subtract65.f90
   lib/ft4/subtractft4.f90
-  lib/subtractft81.f90
-  lib/subtractft82.f90
-  lib/subtractft83.f90
-  lib/subtractft84.f90
-  lib/subtractft85.f90
-  lib/subtractft86.f90
-  lib/subtractft87.f90
-  lib/subtractft88.f90
-  lib/subtractft89.f90
-  lib/subtractft810.f90
-  lib/subtractft811.f90
-  lib/subtractft812.f90
+  lib/ft8v2/subtractft8.f90
   lib/sun.f90
   lib/symspec.f90
   lib/symspec10.f90
@@ -623,11 +593,9 @@ set (message_aggregator_STYLESHEETS
   )
 
 set (TOP_LEVEL_RESOURCES
-  shortcuts.txt
-  mouse_commands.txt
-  prefixes.txt
   cty.dat
   lotw-user-activity.csv
+  icons/Darwin/jtdx.iconset/icon_128x128.png
   contrib/decpasses.png
   contrib/dtrange.png
   )
@@ -684,6 +652,8 @@ if (APPLE)
     DEPENDS ${ICONSRCS}
     COMMENT "Building Icons"
     )
+else ()
+  set (WSJTX_ICON_FILE icons/windows-icons/jtdx.ico)
 endif (APPLE)
 
 set_source_files_properties (${WSJTX_ICON_FILE} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
@@ -742,20 +712,19 @@ endif (APPLE)
 #
 # find some useful tools
 #
+include (generate_version_info)
+
+
 find_program(CTAGS ctags)
 find_program(ETAGS etags)
 
 #
 # Boost
 #
-set (Boost_NO_SYSTEM_PATHS TRUE)
-if (Boost_NO_SYSTEM_PATHS)
-  set (BOOST_ROOT ${PROJECT_SOURCE_DIR}/boost)
+if (WIN32)
+  set (Boost_USE_STATIC_LIBS OFF)
 endif ()
 find_package (Boost 1.63 REQUIRED)
-if (Boost_FOUND)
-  include_directories (${Boost_INCLUDE_DIRS})
-endif ()
 
 #
 # OpenMP
@@ -765,7 +734,7 @@ find_package (OpenMP)
 #
 # fftw3 single precision library
 #
-find_package (FFTW3 COMPONENTS double single threads REQUIRED)
+find_package (FFTW3 COMPONENTS single threads REQUIRED)
 
 #
 # libhamlib setup
@@ -784,7 +753,7 @@ message (STATUS "hamlib_LIBRARY_DIRS: ${hamlib_LIBRARY_DIRS}")
 #
 
 # Widgets finds its own dependencies.
-find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools REQUIRED)
+find_package (Qt5 COMPONENTS Widgets SerialPort Multimedia LinguistTools WebSockets REQUIRED)
 
 if (WIN32)
   add_definitions (-DQT_NEEDS_QTMAIN)
@@ -1095,7 +1064,7 @@ endif (${OPENMP_FOUND} OR APPLE)
 
 # build a library of package Qt functionality
 add_library (wsjt_qt STATIC ${wsjt_qt_CXXSRCS} ${wsjt_qt_GENUISRCS} ${GENAXSRCS})
-target_link_libraries (wsjt_qt Qt5::Widgets Qt5::Network)
+target_link_libraries (wsjt_qt Qt5::Widgets Qt5::Network Qt5::WebSockets)
 target_include_directories (wsjt_qt BEFORE PRIVATE ${hamlib_INCLUDE_DIRS})
 if (WIN32)
   target_link_libraries (wsjt_qt Qt5::AxContainer Qt5::AxBase)
@@ -1128,13 +1097,28 @@ target_link_libraries (jt65code wsjt_fort wsjt_cxx)
 add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
-add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90)
+generate_version_info (wsprd_VERSION_RESOURCES
+  NAME wsprd
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "WSPR mode decoder"
+  )
+add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
+
 target_include_directories (wsprd PRIVATE ${FFTW3_INCLUDE_DIRS})
 target_link_libraries (wsprd ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
-add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc)
+# build the jt9 slow mode decoder driver
+generate_version_info (jtdxjt9_VERSION_RESOURCES
+  NAME jtdxjt9
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "jtdxjt9 - JTDX slow mode decoder"
+  )
+
+add_executable (jtdxjt9 lib/jt9.f90 lib/jt9a.f90 ${jt9_CXXSRCS} jtdx.rc ${jtdjt9_VERSION_RESOURCES})
 if (${OPENMP_FOUND} OR APPLE)
   if (APPLE)
     # On  Mac  we don't  have  working  OpenMP  support in  the  C/C++
@@ -1167,8 +1151,8 @@ if (${OPENMP_FOUND} OR APPLE)
        PROPERTIES
 ##       COMPILE_FLAGS "${OpenMP_C_FLAGS}"
 ##       LINK_FLAGS "${OpenMP_C_FLAGS}"
-#      LINK_FLAGS -Wl,--stack,8388608
-       LINK_FLAGS -Wl,--stack,4194304
+#       LINK_FLAGS -Wl,--stack,8388608
+       LINK_FLAGS -Wl,--stack,16777216
 ##       Fortran_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/fortran_modules_omp
       )
   endif ()
@@ -1178,12 +1162,19 @@ else (${OPENMP_FOUND} OR APPLE)
 endif (${OPENMP_FOUND} OR APPLE)
 
 # build the main application
+generate_version_info (jtdx_VERSION_RESOURCES
+  NAME jtdx
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  )
+
 add_executable (jtdx MACOSX_BUNDLE
   ${wsjtx_CXXSRCS}
   ${wsjtx_GENUISRCS}
   jtdx.rc
   ${WSJTX_ICON_FILE}
   ${wsjtx_RESOURCES_RCC}
+  ${jtdx_VERSION_RESOURCES}
   )
 
 if (WSJT_CREATE_WINMAIN)
@@ -1237,9 +1228,17 @@ add_executable (message_aggregator
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
+generate_version_info (udp_daemon_VERSION_RESOURCES
+  NAME udp_daemon
+  BUNDLE ${PROJECT_BUNDLE_NAME}
+  ICON ${WSJTX_ICON_FILE}
+  FILE_DESCRIPTION "Example WSJT-X UDP Message Protocol daemon"
+  )
+
 add_executable (udp_daemon
   ${UDPDaemon_CXXSRCS}
   jtdx.rc
+  ${udp_daemon_VERSION_RESOURCES}
   )
 target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
 
@@ -1298,6 +1297,8 @@ install (FILES
   )
 
 install (FILES
+  cty.dat
+  cty.dat_copyright.txt
   contrib/Ephemeris/JPLEPH
   contrib/CallDB/ALLCALL7.TXT
   contrib/CallDB/CALL3.TXT
@@ -1311,7 +1312,7 @@ install (FILES
 if (APPLE)
     install (FILES
         Darwin/ReadMe.txt
-        Darwin/sysctl.conf
+        Darwin/com.jtdx.sysctl.plist
         DESTINATION .
         #COMPONENT runtime
     )
@@ -1521,9 +1522,10 @@ endif (NOT is_debug_build)
 #
 # packaging
 #
+set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/package_description.txt")
 set (CPACK_MONOLITHIC_INSTALL 1)
-#set (CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
-set (CPACK_PACKAGE_NAME JTDX)
+set (CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
+#set (CPACK_PACKAGE_NAME JTDX)
 set (CPACK_PACKAGE_VERSION_MAJOR ${WSJTX_VERSION_MAJOR})
 set (CPACK_PACKAGE_VERSION_MINOR ${WSJTX_VERSION_MINOR})
 set (CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
@@ -1539,6 +1541,7 @@ else ()
     # Derive the correct filename for a Debian package because the DEB
     # generator doesn't do this correctly at present.
     #
+#    STRING(REPLACE "_" "-" CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
     find_program (DPKG_PROGRAM dpkg DOC "dpkg program of Debian-based systems")
     if (DPKG_PROGRAM)
       execute_process (
@@ -1561,11 +1564,11 @@ endif ()
 
 set (CPACK_DEBIAN_PACKAGE_DESCRIPTION "${PROJECT_DESCRIPTION}")
 set (CPACK_DEBIAN_PACKAGE_HOMEPAGE "${PROJECT_HOMEPAGE}")
-set (CPACK_DEBIAN_PACKAGE_DEPENDS "libgfortran3 (>=4.8.2), libqt5serialport5 (>=5.2), libqt5multimedia5-plugins (>=5.2), libqt5widgets5 (>=5.2), libusb-1.0, libudev, libc6 (>=2.19)")
+set (CPACK_DEBIAN_PACKAGE_DEPENDS "libgfortran5 (>=8.3) | libgfortran4 (>=7.3) | libgfortran3 (>=6.3), libfftw3-single3 (>=3.3), libgomp1 (>=6), libqt5serialport5 (>=5.7), libqt5multimedia5-plugins (>=5.7), libqt5widgets5 (>=5.7), libqt5network5 (>=5.7), libqt5printsupport5 (>=5.7), libusb-1.0-0 (>=1.0.21)")
 set (CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 
 set (CPACK_RPM_PACKAGE_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})
-set (CPACK_RPM_PACKAGE_REQUIRES "qt5-qtserialport >= 5.2, qt5-qtmultimedia >= 5.2, libusb-1.0, libudev, glibc >= 2, libgfortran >= 4.8.2")
+set (CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.9, qt5-qtserialport >= 5.9, qt5-qtmultimedia >= 5.9, qt5-qtsvg >= 5.9, libusbx >= 1.0.22, libgfortran >= 7, libgomp >= 7, fftw-libs-single >= 3.3")
 set (CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION /usr/share/pixmaps /usr/share/applications /usr/share/man /usr/share/man1)
 
 configure_file ("${PROJECT_SOURCE_DIR}/CMakeCPackOptions.cmake.in"

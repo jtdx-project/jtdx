@@ -83,7 +83,7 @@
          <number>1</number>
         </property>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="9,2">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -198,7 +198,7 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>70</width>
+              <width>30</width>
               <height>16</height>
              </size>
             </property>
@@ -402,8 +402,6 @@
  font-family: helvetica;
  font-size: 9pt;
  font-weight: bold;
- background-color: white;
- color: black;
  border-style: solid;
  border-width:1px;
  border-radius:10px;
@@ -412,28 +410,8 @@
  max-height:20px;
  min-width:20px;
  min-height:20px;
-}
-QPushButton[state=&quot;error&quot;] {
- background-color: red;
-}
-QPushButton[state=&quot;warning&quot;] {
- background-color: orange;
-}
-QPushButton[state=&quot;ok&quot;] {
- background-color: #00ff00;
-}
-QPushButton[dark1=&quot;true&quot;] {
- background-color: #19232d;
- color: #e6dcd2;
-}
-QPushButton[state=&quot;darkerror&quot;] {
- background-color: #19dcd2;
-}
-QPushButton[state=&quot;darkwarning&quot;] {
- background-color: #1976d2;
-}
-QPushButton[state=&quot;darkok&quot;] {
- background-color: #e623d2;
+ background-color: white;
+ color: black;
 }</string>
                     </property>
                     <property name="text">
@@ -667,18 +645,8 @@ QPushButton[state=&quot;darkok&quot;] {
                    <string notr="true">QLabel {
   font-family: MS Shell Dlg 2;
   font-size: 18pt;
-   color : blue;
-   background-color : rgb(225, 225, 225);
-}
-QLabel[oob=&quot;true&quot;] {
-  background-color: red;
-}
-QLabel[dark=&quot;true&quot;] {
-  color : #e6dc2d;
-  background-color : #073d33;
-}
-QLabel[darkoob=&quot;true&quot;] {
-  background-color : #19dcd2;
+  background-color : rgb(225, 225, 225);
+  color : blue;
 }
 </string>
                   </property>
@@ -1418,7 +1386,7 @@ QLabel[darkoob=&quot;true&quot;] {
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. Right mouse button click enable hound TX frequency control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton:checked {
@@ -1473,43 +1441,6 @@ QLabel[darkoob=&quot;true&quot;] {
                 </property>
                 <property name="value">
                  <number>-15</number>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="S_meter_label">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>1</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>0</number>
-                </property>
-                <property name="text">
-                 <string>S meter</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -1862,6 +1793,22 @@ QLabel[darkoob=&quot;true&quot;] {
                  </widget>
                 </item>
                </layout>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="S_meter_button">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { Text-align:left; }</string>
+                </property>
+                <property name="text">
+                 <string>S meter</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -4580,6 +4527,18 @@ list. The list can be maintained in Settings (F2).</string>
      <addaction name="actionMT10"/>
      <addaction name="actionMT11"/>
      <addaction name="actionMT12"/>
+     <addaction name="actionMT13"/>
+     <addaction name="actionMT14"/>
+     <addaction name="actionMT15"/>
+     <addaction name="actionMT16"/>
+     <addaction name="actionMT17"/>
+     <addaction name="actionMT18"/>
+     <addaction name="actionMT19"/>
+     <addaction name="actionMT20"/>
+     <addaction name="actionMT21"/>
+     <addaction name="actionMT22"/>
+     <addaction name="actionMT23"/>
+     <addaction name="actionMT24"/>
     </widget>
     <widget class="QMenu" name="menuJT9_decoding">
      <property name="title">
@@ -6035,6 +5994,102 @@ list. The list can be maintained in Settings (F2).</string>
    </property>
    <property name="text">
     <string>Hide telemetry messages</string>
+   </property>
+  </action>
+  <action name="actionMT13">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>13</string>
+   </property>
+  </action>
+  <action name="actionMT14">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>14</string>
+   </property>
+  </action>
+  <action name="actionMT15">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>15</string>
+   </property>
+  </action>
+  <action name="actionMT16">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>16</string>
+   </property>
+  </action>
+  <action name="actionMT17">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+  </action>
+  <action name="actionMT18">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>18</string>
+   </property>
+  </action>
+  <action name="actionMT19">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>19</string>
+   </property>
+  </action>
+  <action name="actionMT20">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="actionMT21">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>21</string>
+   </property>
+  </action>
+  <action name="actionMT22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>22</string>
+   </property>
+  </action>
+  <action name="actionMT23">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>23</string>
+   </property>
+  </action>
+  <action name="actionMT24">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>24</string>
    </property>
   </action>
  </widget>

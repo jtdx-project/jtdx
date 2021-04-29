@@ -60,9 +60,9 @@ program ft4sim
   ! Source-encode, then get itone()
   i3=-1
   n3=-1
-  call pack77(msg37,i3,n3,c77)
+  call pack77(msg37,i3,n3,c77,1)
   read(c77,'(77i1)') msgbits
-  call genft4(msg37,0,msgsent37,msgbits,itone)
+  call genft4(msg37,0,1,msgsent37,msgbits,itone)
   write(*,*)  
   write(*,'(a9,a37,3x,a7,i1,a1,i1)') 'Message: ',msgsent37,'i3.n3: ',i3,'.',n3
   write(*,1000) f0,xdt,txt,snrdb

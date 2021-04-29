@@ -7,7 +7,6 @@
 #else
 #include <QtGui>
 #endif
-#include <QTranslator>
 #include <QThread>
 #include <QTimer>
 #include <QList>
@@ -40,24 +39,13 @@
 #include "qsohistory.h"
 #include "JTDXDateTime.h"
 
-#define NUM_JT65_SYMBOLS 126               //63 data + 63 sync
-#define NUM_JT9_SYMBOLS 85                 //69 data + 16 sync
-#define NUM_T10_SYMBOLS 85                 //69 data + 16 sync
-#define NUM_WSPR_SYMBOLS 162               //(50+31)*2, embedded sync
-#define NUM_FT8_SYMBOLS 79
-#define NUM_FT4_SYMBOLS 105
-
-#define NUM_CW_SYMBOLS 250
-#define TX_SAMPLE_RATE 48000
-
-extern int volatile itone[NUM_WSPR_SYMBOLS];   //Audio tones for all Tx symbols
-extern int volatile icw[NUM_CW_SYMBOLS];	    //Dits for CW ID
 
 //--------------------------------------------------------------- MainWindow
 namespace Ui {
   class MainWindow;
 }
 
+class QProcessEnvironment;
 class QSettings;
 class QNetworkAccessManager;
 class QLineEdit;
@@ -91,7 +79,7 @@ public:
   // Multiple instances: call MainWindow() with *thekey
   explicit MainWindow(bool multiple, QSettings *, QSharedMemory *shdmem,
                       unsigned downSampleFactor, QNetworkAccessManager * network_manager,
-                      QWidget *parent = 0);
+                      QProcessEnvironment const&, QWidget *parent = 0);
   ~MainWindow();
 
 public slots:
@@ -99,6 +87,7 @@ public slots:
   void showSoundOutError(const QString& errorMsg);
   void showStatusMessage(const QString& statusMsg);
   void dataSink(qint64 frames);
+  void tci_mod_active(bool on) {m_tci_mod_active = on;}
   void diskDat();
   void freezeDecode(int n);
   void guiUpdate();
@@ -193,7 +182,7 @@ private slots:
   void on_actionSingleShot_toggled(bool checked);
   void on_actionAutoFilter_toggled(bool checked);
   void on_actionEnable_hound_mode_toggled(bool checked);
-  void on_actionUse_TX_frequency_jumps_toggled(bool checked);
+  void on_actionUse_TX_frequency_jumps_triggered(bool checked);
   void on_actionMTAuto_triggered();
   void on_actionMT1_triggered();
   void on_actionMT2_triggered();
@@ -207,6 +196,18 @@ private slots:
   void on_actionMT10_triggered();
   void on_actionMT11_triggered();
   void on_actionMT12_triggered();
+  void on_actionMT13_triggered();
+  void on_actionMT14_triggered();
+  void on_actionMT15_triggered();
+  void on_actionMT16_triggered();
+  void on_actionMT17_triggered();
+  void on_actionMT18_triggered();
+  void on_actionMT19_triggered();
+  void on_actionMT20_triggered();
+  void on_actionMT21_triggered();
+  void on_actionMT22_triggered();
+  void on_actionMT23_triggered();
+  void on_actionMT24_triggered();
   void on_actionAcceptUDPCQ_triggered();
   void on_actionAcceptUDPCQ73_triggered();
   void on_actionAcceptUDPAny_triggered();
@@ -359,6 +360,7 @@ private slots:
   void logChanged();
   bool stdCall(QString const& w);
   void ScrollBarPosition(int n);
+  void on_S_meter_button_clicked(bool checked);
 
 private:
   Q_SIGNAL void initializeAudioOutputStream (QAudioDeviceInfo,
@@ -387,6 +389,7 @@ private:
   void hideMenus (bool b);
 
   JTDXDateTime * m_jtdxtime;
+  QProcessEnvironment const& m_env;
   QDir m_dataDir;
   bool m_valid;
   QString m_revision;
@@ -394,11 +397,6 @@ private:
   QSettings * m_settings;
 
   QScopedPointer<Ui::MainWindow> ui;
-
-//  bool m_olek;
-//  bool m_olek2;
-//  QTranslator m_translator_from_resources;
-//  QTranslator m_translator_from_files;
 
   // other windows
   Configuration m_config;
@@ -424,6 +422,8 @@ private:
   SoundInput * m_soundInput;
   Modulator * m_modulator;
   SoundOutput * m_soundOutput;
+  int m_rx_audio_buffer_frames;
+  int m_tx_audio_buffer_frames;
   QThread m_audioThread;
   QClipboard *clipboard = QGuiApplication::clipboard();
 
@@ -438,7 +438,6 @@ private:
   quint64  m_lastDisplayFreq;
   quint64  m_mslastTX;
   quint64  m_mslastMon;
-//  quint64  m_msDecoderStarted;
 
   qint32  m_waterfallAvg;
   qint32  m_ntx;
@@ -519,6 +518,8 @@ private:
   bool    m_reply_me;
   bool	  m_reply_other;
   bool	  m_reply_CQ73;
+  bool	  m_tci_mod_active;
+  bool    m_tci;
   qint32  m_counter;
   qint32  m_currentMessageType;
   QString m_currentMessage;
@@ -701,8 +702,6 @@ private:
   QsoHistory m_qsoHistory;
   QsoHistory m_qsoHistory2;
   QString m_QSOText {""};
-  unsigned m_msAudioOutputBuffered;
-  unsigned m_framesAudioInputBuffered;
   unsigned m_downSampleFactor;
   QThread::Priority m_audioThreadPriority;
   bool m_bandEdited;
@@ -727,6 +726,7 @@ private:
   QHash<QString, QVariant> m_pwrBandTxMemory; // Remembers power level by band
   QHash<QString, QVariant> m_pwrBandTuneMemory; // Remembers power level by band for tuning
   QByteArray m_geometry;
+  qint32 m_ft8Freq[15] = {1810,1840,1908,3573,5357,7074,10136,14074,18100,21074,24915,28074,40680,50313,70154};
 
   //---------------------------------------------------- private functions
   void readSettings();

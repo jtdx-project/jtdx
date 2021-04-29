@@ -1,24 +1,24 @@
 module ft8_mod1
 
   parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
-  real*4 dd8(nps),dd8m(nps)
+  real*4 dd8(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
-  complex cw(nps),cfilt1(nps),cfilt2(nps),cfilt3(nps),cfilt4(nps),cfilt5(nps),cfilt6(nps),cfilt7(nps),   &
-          cfilt8(nps),cfilt9(nps),cfilt10(nps),cfilt11(nps),cfilt12(nps),cref1(nfr),cref2(nfr),cref3(nfr),  &
-          cref4(nfr),cref5(nfr),cref6(nfr),cref7(nfr),cref8(nfr),cref9(nfr),cref10(nfr),cref11(nfr),cref12(nfr), &
-          csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32),ctwkn(11,32)
-  character*37 allmessages(200),msgsd76(76),msg(56),msgroot
+  complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32), &
+          ctwkn(11,32),ctwk256(256)
+  character*37 allmessages(200),msgsd76(76),msg(56),msgroot,msgincall(174)
   character lasthcall*12,mycall12_0*12,mycall12_00*12,hiscall12_0*12,hisgrid4*4
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
-  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(64),smycnr(64),pivalue,facx,twopi,facc1,dt,sumxdt,avexdt
+  real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(24),smycnr(24),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt, &
+       xdtincall(174)
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58), &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
-          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decd,nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
+          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
-          nft8cycles,nft8swlcycles,ncandall
+          nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
+  data maskincallthr/0,30,45,55,65,75,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175/
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
   data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
   data     m73/0,1,1,1,1,1,1,0,1,0,0,1,0,1,0,0,0,0,1/
@@ -89,16 +89,22 @@ module ft8_mod1
   type (lastrxmsg_struct) lastrxmsg(1)
   data lastrxmsg%lstate/.false./
 
-  type callsigndt_struct
+  type callsigndtodd_struct
     real dt
     character*12 call2
-  end type callsigndt_struct
-  type (callsigndt_struct) calldt(200)
+  end type callsigndtodd_struct
+  type (callsigndtodd_struct) calldtodd(150)
+
+  type callsigndteven_struct
+    real dt
+    character*12 call2
+  end type callsigndteven_struct
+  type (callsigndteven_struct) calldteven(150)
 
   type incall_struct
     real xdt
     character*37 msg
   end type incall_struct
-  type (incall_struct) incall(20)
+  type (incall_struct) incall(30)
 
 end module ft8_mod1

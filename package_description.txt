@@ -1,0 +1,41 @@
+JTDX  is a  computer  program  designed  to  facilitate basic  amateur
+radio communication using very weak signals.
+.
+JTDX  Version  2.2 offers six different  protocols or modes: FT4, FT8,
+JT9, JT65, T10 and WSPR.
+.
+FT8 is the most popular mode of communication, JTDX  provides  matched 
+filter and own statistics based FT8 decoders with possibilty to decode 
+some signals as low as -30 dB SNR in  a  2500 Hz  bandwidth.  JTDX FT8
+decoders do use  information  collected  from  previous  intervals  to
+decode signals in last interval.
+.
+FT4 mode was initially designed for contesting, now being also used to 
+make fast contacts usually within continent.
+.
+T10 is forked JT9 mode especially designed  to  withstand   HF Doppler 
+frequency spread caused by radio wave dissipation by ionosphere or  by 
+reflection from fast moving polar  lights. T10  mode  uses  dual  tone 
+synchronization pattern allowing to decoder distinguish harmonics from 
+base signal. Also T10 provides excellent band capacity  with  improved 
+decoding of overlapped signals versus JT9 mode.
+Both JT9 and T10 decoders can decode signals as low as -28 dB  SNR  in 
+a 2500 Hz  bandwidth.
+.
+WSPR (pronounced  `whisper`) stands for (W)eak  (S)ignal (P)ropagation
+(R)eporter.   The WSPR  protocol  was designed  for probing  potential
+propagation  paths  using   low-power  transmissions.   WSPR  messages
+normally carry the transmitting  station’s callsign, grid locator, and
+transmitter power in  dBm, and they can be  decoded at signal-to-noise
+ratios as  low as  -28 dB  in a  2500 Hz  bandwidth.  WSPR  users with
+internet  access  can  automatically  upload reception  reports  to  a
+central  database called  wsprnet  that provides  a mapping  facility,
+archival storage,  and many other  features. WSPR has a  new companion
+FST4W which has  a similar message content but offers  up to 30 minute
+transmission periods for greater sensitivity on LF and MF.
+.
+JTDX  provides spectral displays for  receiver passbands as wide as 5
+kHz,  flexible  rig control  for  nearly  all  modern radios  used  by
+amateurs. The program runs equally well  on  Windows,  Macintosh,  and  
+Linux systems, and  installation packages  are available for all three
+platforms.
