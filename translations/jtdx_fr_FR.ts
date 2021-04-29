@@ -5049,7 +5049,37 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpacing=1&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F1 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Guide de l&apos;utilisateur en ligne&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F1 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;A propos de JTDX&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F2 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ouvrir la fenêtre de configuration&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F3 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Afficher les raccourcis clavier&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F4 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Effacer les messages d&apos;appel/de grille et de Tx DX&lt;/td&gt;&lt;b&gt;Alt+F4 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Exit le programme&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F5 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Afficher les commandes spéciales de la souris&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ouvrir le fichier suivant dans le répertoire&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Décoder tous les fichiers restants dans le répertoire&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F7 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ouvrir le journal par affectation dans la visionneuse du système d&apos;exploitation&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Move Rx frequency down 1 Hz&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Move Rx and Tx frequencies down 1 Hz&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Move Rx frequency up 1 Hz&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Move Rx and Tx frequencies up 1 Hz&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+1-6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Régler maintenant la transmission à ce numéro sur l&apos;onglet 1&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctl+1-6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Régler la prochaine transmission à ce numéro sur l&apos;onglet 1&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Effacer la liste des indicatifs recherchés&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Commutation en mode FT8/FT4&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Décoder à nouveau à la fréquence QSO&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Décodage complet (les deux fenêtres)&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Erasement&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Togging bypass all text filters&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Editer la boîte de message en texte libre&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Générer des messages standard&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctrl+L &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Consulter l&apos;indicatif dans la base de données, générer des messages standard&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+M &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Moniteur&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+N &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Activer Tx&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Q &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Journal de QSO&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+S &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Arrêter la surveillance&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+T &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tune&lt;/td&gt;&lt;/tr&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Enregistrer le dernier fichier *.wav complété&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Filtre, ce raccourci est pris en charge dans l&apos;interface utilisateur principale et l&apos;interface utilisateur du widegraph&lt;/td&gt;&lt;/tr&gt;.
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;.
+&lt;/tableau&gt;
+
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3240"/>
@@ -5091,7 +5121,44 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=5&gt;
+  &lt;tr&gt;
+    &lt;th align=&quot;right&quot;&gt;Cliquez sur&lt;/th&gt;
+    &lt;th align=&quot;left&quot;&gt;Action&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Chute d&apos;eau:&lt;/td&gt;
+    &lt;td&gt;Définir la fréquence Rx.&lt;br/&gt;
+        Double-clic pour régler la fréquence Rx et y décoder.&lt;br/&gt;
+        Ctrl-clic pour régler les fréquences Rx et Tx.&lt;br/&gt;
+        Déverrouillé TX=RX:&lt;br/&gt;
+        utiliser le bouton gauche pour régler la fréquence RX&lt;br/&gt;
+        utiliser ALT+bouton gauche pour régler la fréquence RX et activer le filtre&lt;br/&gt;
+        utiliser le bouton droit pour régler la fréquence TX
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Texte décodé:&lt;/td&gt;
+    &lt;td&gt;Double-clic pour copier le deuxième indicatif vers Dx Call,&lt;br/&gt;
+        locator à Dx Grid ; changer les fréquences Rx et Tx en&lt;br/&gt;.
+        fréquence du signal décodé ; générez des messages standard.&lt;br/&gt;
+        Si le premier indicatif d&apos;appel est le vôtre, la fréquence Tx n&apos;est pas&lt;br/&gt;
+        modifiée sauf si la touche CTRL est maintenue enfoncée lors du double-clic.&lt;br/&gt;&lt;br/&gt;
+        ALT+double-clic arrêtera également la Tx si le bouton Enable Tx est actif.&lt;br/&gt;&lt;br/&gt;
+        CTRL+ALT+double-clic ajoutera seulement le deuxième indicatif du message décodé&lt;br/&gt;.
+        message dans la liste des indicatifs recherchés.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Bouton d&apos;effacement:&lt;/td&gt;
+    &lt;td&gt;Cliquez sur le bouton droit pour effacer la fenêtre QSO.&lt;br/&gt;
+        Cliquez sur le bouton gauche pour effacer la fenêtre d&apos;activité de bande.&lt;br/&gt;
+        Double-cliquez sur le bouton gauche ou droit pour effacer les fenêtres QSO&lt;br/&gt;
+        et les fenêtres d&apos;activité de bande.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tableau&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4220"/>
@@ -7499,7 +7566,7 @@ pour évaluer la propagation et les performances des systèmes.</translation>
     <message>
         <location filename="../Configuration.ui" line="3071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Un clic droit permet de maintenir la liste des fréquences de travail. L&apos;option Reset permet de ramener la liste des fréquences aux valeurs par défaut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3668"/>

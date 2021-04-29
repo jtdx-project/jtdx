@@ -6619,7 +6619,7 @@ void MainWindow::band_changed (Frequency f)
     m_bandEdited = false;
     psk_Reporter->sendReport();      // Upload any queued spots before changing band
     m_okToPost = false;
-    if(!m_transmitting && !m_start2 && !m_monitoroff) monitor (true);
+    if(!m_transmitting && !m_start2 && m_monitoroff) { monitor (true); m_monitoroff=false; }
 
     m_nsecBandChanged=0;
     if(!m_transmitting && (oldband != newband || m_oldmode != m_mode) && m_rigOk && !m_config.rig_name().startsWith("None")) {

@@ -1,7 +1,7 @@
 subroutine cwfilter(swl,first,swlchanged)
 
   use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,csync,idtone25,csynccq, &
-                       NFILT1,NFILT2,endcorr,endcorrswl,ctwkw,ctwkn
+                       NFILT1,NFILT2,endcorr,endcorrswl,ctwkw,ctwkn,ctwk256
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
 
@@ -145,6 +145,14 @@ subroutine cwfilter(swl,first,swlchanged)
         phi=mod(phi+dphi,twopi)
       enddo
       k=k+1
+    enddo
+! lcqsignal
+    delf=3.125
+    dphi=twopi*delf*dt2
+    phi=0.0
+    do i=1,256
+      ctwk256(i)=cmplx(cos(phi),sin(phi))
+      phi=mod(phi+dphi,twopi)
     enddo
   endif
 
