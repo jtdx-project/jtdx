@@ -7219,12 +7219,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="2842"/>
         <source>EQSL OTH Nickname.</source>
-        <translation>EQSL OTH ニックネーム。</translation>
+        <translation>EQSL QTH ニックネーム。</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2856"/>
         <source>QTH N&amp;ickname:</source>
-        <translation>QTH とニックネーム：</translation>
+        <translation>QTH アカウント名：</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2872"/>
