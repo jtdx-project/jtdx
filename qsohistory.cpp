@@ -457,12 +457,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                         t.grid = param;
                         t.distance=Distance(_mylatlng,fromQth(param));
                       }
-                      if (tyyp == "CQ" || tyyp == "LP")
-                        t.tyyp = "";
-                      else if (tyyp == "ASIA")
-                        t.tyyp = "AS";
-                      else
-                        t.tyyp = tyyp;
+                      t.tyyp = tyyp;
                       t.continent = continent.trimmed();
                       t.mpx = mpx;
                       t.b_time = time;
