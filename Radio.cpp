@@ -143,7 +143,12 @@ namespace Radio
     auto const& match = prefix_re.match (prefix);  
     auto shorted = match.captured ("prefix");
     if (shorted.isEmpty() || region > -1) {
-        if (shorted.isEmpty()) shorted = prefix+"0";
+        if (shorted.isEmpty()) {
+          if (region > -1)
+            shorted = prefix+"0";
+          else
+            shorted = prefix;
+        }
         if (region > -1) shorted = shorted.left(shorted.size()-1) + QString::number(region);
         return shorted.toUpper ();
     } else return prefix;
