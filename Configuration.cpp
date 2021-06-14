@@ -1417,7 +1417,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   // validation
   //
   ui_->callsign_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9/-]+"}, this});
-  ui_->grid_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{0,2}[0-9]{0,2}"}, this});
+  ui_->grid_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{0,2}[0-9]{0,2}[A-Xa-x]{2,2}"}, this});
   ui_->logTime_line_edit->setValidator (new QRegExpValidator {QRegExp {"[0-9]+"}, this});
   ui_->content_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9,]+"}, this});
   ui_->countries_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9,/*]+"}, this});
@@ -2415,7 +2415,7 @@ void Configuration::impl::read_settings ()
   distance_in_comments_ = settings_->value("distanceToComments", false).toBool ();
   rig_params_.rig_name = settings_->value ("Rig", TransceiverFactory::basic_transceiver_name_).toString ();
   rig_is_dummy_ = TransceiverFactory::basic_transceiver_name_ == rig_params_.rig_name;
-  is_tci_ = "TCI Client" == rig_params_.rig_name;
+  is_tci_ = rig_params_.rig_name.startsWith("TCI Cli");
   rig_params_.tci_port = settings_->value ("CATTCIPort").toString ();
   rig_params_.network_port = settings_->value ("CATNetworkPort").toString ();
   rig_params_.usb_port = settings_->value ("CATUSBPort").toString ();
@@ -3108,7 +3108,7 @@ void Configuration::impl::accept ()
   rig_params_ = temp_rig_params; // now we can go live with the rig
                                  // related configuration parameters
   rig_is_dummy_ = TransceiverFactory::basic_transceiver_name_ == rig_params_.rig_name;
-  is_tci_ = "TCI Client" == rig_params_.rig_name;
+  is_tci_ = rig_params_.rig_name.startsWith("TCI Cli");
   // Check to see whether SoundInThread must be restarted,
   // and save user parameters.
   {

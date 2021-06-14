@@ -1028,6 +1028,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
 
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString().c_str(),"a");  
+  fprintf (pFile,"%s(%0.1f) JTDX v%s start, performance %d threads\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),
+      (version() + (m_tci ? " tci " : " ") + revision()).toStdString().c_str(),QThread::idealThreadCount ());
+  fclose (pFile);
+#endif
 //  printf ("is_tci: %d downsampleFactor %d\n",m_tci,m_downSampleFactor);
   if (m_tci) {
     Q_EMIT m_config.transceiver_period(double(NTMAX));
@@ -3729,12 +3735,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
       m_blankLine=true;
       m_notified=false;
       if(m_config.write_decoded_debug()) writeToALLTXT("Decoding finished");
-      if(m_logInitNeeded) {
-        if(m_config.write_decoded_debug()) writeToALLTXT("Log initialization is started: wsjtx_log.adi file was changed");
-        m_logBook.init(m_config.callNotif() ? m_config.my_callsign() : "",m_config.gridNotif() ? m_config.my_grid() : "",m_config.timeFrom());
-        countQSOs ();
-        m_logInitNeeded=false;
-      }
       QString slag="";
       qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2();
       if(!m_manualDecode && !m_diskData) {
@@ -4012,6 +4012,13 @@ void MainWindow::killFile ()
       QFile f2 {m_fnameWE + ".c2"};
       if(f2.exists()) f2.remove();
     }
+  }
+  if(m_logInitNeeded) {
+    printf("%s(%0.1f) Timing Log_init_needed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+    if(m_config.write_decoded_debug()) writeToALLTXT("Log initialization is started: wsjtx_log.adi file was changed");
+    m_logBook.init(m_config.callNotif() ? m_config.my_callsign() : "",m_config.gridNotif() ? m_config.my_grid() : "",m_config.timeFrom());
+    countQSOs ();
+    m_logInitNeeded=false;
   }
 }
 
@@ -6031,16 +6038,19 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
 void MainWindow::on_dxGridEntry_textChanged(const QString &t) //dxGrid changed
 {
   int n=t.length();
-  if(n!=4 and n!=6 and n!=8) {
+  if(n!=4 and n!=6 and n!=8 and n!=10) {
     if (n < 4 || n==5) {
         if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,1).toLower()) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,1).toLower());
         if (n < 4 && !m_hisGrid.isEmpty()) { ui->labAz->clear(); ui->labDist->clear(); m_hisGrid.clear(); statusUpdate (); }
     } else if (n==7){
-        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1)) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(2,1));
+        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1)) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1));
+    } else if (n==9){
+        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,1).toLower()) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,1).toLower());
     }  
+ 
     return;
   }
-  m_hisGrid=t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2);
+  m_hisGrid=t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,2).toLower();
   auto pos = ui->dxGridEntry->cursorPosition ();
   if (t != m_hisGrid) { ui->dxGridEntry->setText(m_hisGrid); ui->dxGridEntry->setCursorPosition (pos); }
   else {
