@@ -91,24 +91,24 @@ void PollingTransceiver::do_post_start (JTDXDateTime * jtdxtime)
   fclose (pFile);
 #endif
   if (fast_mode_) {
-    if (ms < 240)
-      QThread::msleep (240 - ms);
-    else if (ms > 270 && ms < 740 )
-      QThread::msleep (740 - ms);
-    else if (ms > 770)
-      QThread::msleep (1240 - ms);
+    if (ms < 300)
+      QThread::msleep (300 - ms);
+    else if (ms > 330 && ms < 800 )
+      QThread::msleep (800 - ms);
+    else if (ms > 830)
+      QThread::msleep (1300 - ms);
   }
   else if (ft4_mode_ && (sec == 5 || sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11)) {
-    if (ms < 740)
-      QThread::msleep (740-ms);
-    else if (ms > 770)
-      QThread::msleep (1740-ms);
+    if (ms < 800)
+      QThread::msleep (800-ms);
+    else if (ms > 830)
+      QThread::msleep (1800-ms);
   }
   else {
-    if (ms < 240)
-      QThread::msleep (240-ms);
-    else if (ms > 270)
-      QThread::msleep (1240-ms);
+    if (ms < 300)
+      QThread::msleep (300-ms);
+    else if (ms > 330)
+      QThread::msleep (1300-ms);
   }
   start_timer ();
   if (!next_state_.online ())
@@ -223,23 +223,26 @@ void PollingTransceiver::handle_timeout ()
       {
         int sec = m_jtdxtime->currentDateTimeUtc2().toString("ss").toInt() % 15;
         auto ms = m_jtdxtime->currentMSecsSinceEpoch2() % 1000;
+//        printf("%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d sec=%d ms=%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_,sec,ms);
 #if JTDX_DEBUG_TO_FILE
         FILE * pFile = fopen (debug_file_.c_str(),"a");
         fprintf(pFile,"%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d sec=%d ms=%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_,sec,ms);
         fclose (pFile);
 #endif
         if (!ft4_mode_ && !fast_mode_) {
-          if (ms < 240) {poll_timer_->stop (); QThread::msleep (240 - ms); poll_timer_->start (interval_);}
-          else if (ms > 270) {poll_timer_->stop (); QThread::msleep (1240 - ms); poll_timer_->start (interval_);}
+          if (ms < 300) {poll_timer_->stop (); QThread::msleep (300 - ms); poll_timer_->start (interval_);}
+          else if (ms > 330) {poll_timer_->stop (); QThread::msleep (1300 - ms); poll_timer_->start (interval_);}
         } else if (!fast_mode_) {
-          if ((sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11 || sec == 12) && ms < 740) {
-            poll_timer_->stop (); QThread::msleep (740 - ms); poll_timer_->start (interval_);
+          if ((sec == 6 || sec == 7 || sec == 8 || sec == 9 || sec == 10 || sec == 11 || sec == 12) && ms < 800) {
+            poll_timer_->stop (); QThread::msleep (800 - ms); poll_timer_->start (interval_);
           } else if (sec == 13 || sec == 14 || sec == 0 || sec == 1 || sec == 2 || sec == 3 || sec == 4 || sec == 5) {
-            if (ms < 240) {poll_timer_->stop (); QThread::msleep (240 - ms); poll_timer_->start (interval_);}
-            else if (ms > 270) {poll_timer_->stop (); QThread::msleep (1240 - ms); poll_timer_->start (interval_);}
+            if (ms < 300) {poll_timer_->stop (); QThread::msleep (300 - ms); poll_timer_->start (interval_);}
+            else if (ms > 330) {poll_timer_->stop (); QThread::msleep (1300 - ms); poll_timer_->start (interval_);}
           }
         }
+//        printf("%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d sec=%d ms=%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_,sec,ms);
         do_poll ();              // tell sub-classes to update our state
+//        printf("%s %d Poll end ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec);
 #if JTDX_DEBUG_TO_FILE
         pFile = fopen (debug_file_.c_str(),"a");
         fprintf(pFile,"%s %d Poll end ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec);
@@ -286,6 +289,7 @@ void PollingTransceiver::handle_timeout ()
           fclose (pFile);
 #endif
         }
+//        printf("\n");
       }
   catch (std::exception const& e)
     {

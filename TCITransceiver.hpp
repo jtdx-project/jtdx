@@ -47,10 +47,10 @@ class TCITransceiver final
   Q_OBJECT;                     // for translation context
 
 public:
-  static void register_transceivers (TransceiverFactory::Transceivers *, unsigned id);
+  static void register_transceivers (TransceiverFactory::Transceivers *, unsigned id1, unsigned id2);
 
   // takes ownership of wrapped Transceiver
-  explicit TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,
+  explicit TCITransceiver (std::unique_ptr<TransceiverBase> wrapped, QString const& rignr,
                                            QString const& address, bool use_for_ptt,
                                            int poll_interval, QObject * parent = nullptr);
 
@@ -73,6 +73,7 @@ Cmd_If,
 Cmd_Trx,
 Cmd_RxEnable,
 Cmd_TxEnable,
+Cmd_RxChannelEnable,
 Cmd_RitEnable,
 Cmd_RitOffset,
 Cmd_XitEnable,
@@ -104,7 +105,14 @@ Cmd_SqlEnable,
 Cmd_SqlLevel,
 Cmd_Drive,
 Cmd_TuneDrive,
-Cmd_Mute
+Cmd_Mute,
+Cmd_RxSensorsEnable,
+Cmd_TxSensorsEnable,
+Cmd_RxSensors,
+Cmd_TxSensors,
+Cmd_AgcMode,
+Cmd_AgcGain,
+Cmd_Lock
 };
 Q_ENUM (Tci_Cmd);
 
@@ -157,6 +165,7 @@ protected:
                      double toneSpacing, bool synchronize = true, double dBSNR = 99., double TRperiod=60.0) override;
   void do_modulator_stop(bool quick = false) override;
   
+  void rx2_enable (bool on);
   void rig_split ();
   void rig_power (bool on);
   void stream_audio (bool on);
@@ -172,8 +181,11 @@ protected:
   float * load (qint16 sample, float * dest)
   
   {
-    static constexpr float K = 0.499/0x7FFF;
-    float value  = (K*static_cast<float>(sample));
+    static constexpr float K1 = 0.999/0x7FFF;
+    static constexpr float K2 = 0.499/0x7FFF;
+    float value;
+    if (tx_top_)  value = K1*static_cast<float>(sample);
+    else  value = K2*static_cast<float>(sample);
     *dest++ = value;
     *dest++ = value;
       
@@ -190,10 +202,11 @@ private:
   void mysleep3 (int ms = 1);
   QString mode_to_command (QString) const;
   std::unique_ptr<TransceiverBase> wrapped_; // may be null
+  QString rx_;
+  QString server_;
   bool use_for_ptt_;
   QStringList errortable;
   QString error_;
-  QString server_;
   bool do_snr_;
   bool do_pwr_;
   bool rig_power_;
@@ -211,7 +224,9 @@ private:
   int nIqBytes;
   bool inConnected;
   bool tci_Ready;
-  bool freq_mode;  
+  bool ESDR3;
+  bool tx_top_;
+  bool band_change;
   QUrl url_;
   quint32 audioSampleRate;
   FILE * wavptr_;
@@ -230,7 +245,7 @@ private:
   QString other_frequency_;
   QString requested_drive_;
   QString drive_;
-
+  
   bool requested_stream_audio_;
   bool stream_audio_;
   bool audio_;
@@ -239,14 +254,19 @@ private:
   bool PTT_;
   bool requested_split_;
   bool split_;
+  bool requested_rx2_;
+  bool rx2_;
+  bool started_rx2_;
   unsigned int power_;
   unsigned int swr_;
   int level_;
   bool busy_rx_frequency_;
+  bool busy_mode_;  
   bool busy_other_frequency_;
+  bool busy_split_;
   bool busy_drive_;
   bool busy_PTT_; 
-  
+  bool busy_rx2_;  
   QHash<QString,Tci_Cmd> mapCmd_;
   JTDXDateTime * m_jtdxtime;
   // from Detector

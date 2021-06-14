@@ -5303,7 +5303,7 @@ UDP server %2:%3</translation>
 <context>
     <name>PollingTransceiver</name>
     <message>
-        <location filename="../PollingTransceiver.cpp" line="296"/>
+        <location filename="../PollingTransceiver.cpp" line="300"/>
         <source>Unexpected rig error</source>
         <translation>Neočekivana greška uređaja</translation>
     </message>
@@ -5892,185 +5892,195 @@ Greška(%2): %3</translation>
 <context>
     <name>TCITransceiver</name>
     <message>
-        <location filename="../TCITransceiver.cpp" line="131"/>
+        <location filename="../TCITransceiver.cpp" line="142"/>
         <source>ConnectionRefused</source>
         <translation>Vezaodbijena</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="132"/>
+        <location filename="../TCITransceiver.cpp" line="143"/>
         <source>RemoteHostClosed</source>
         <translation>RemoteHostZatvoren</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="133"/>
+        <location filename="../TCITransceiver.cpp" line="144"/>
         <source>HostNotFound</source>
         <translation>Hostnijepronađen</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="134"/>
+        <location filename="../TCITransceiver.cpp" line="145"/>
         <source>SocketAccess</source>
         <translation>Pristuppriključku</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="135"/>
+        <location filename="../TCITransceiver.cpp" line="146"/>
         <source>SocketResource</source>
         <translation>PriključniIzvor</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="136"/>
+        <location filename="../TCITransceiver.cpp" line="147"/>
         <source>SocketTimeout</source>
         <translation>IstekPriključka</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="137"/>
+        <location filename="../TCITransceiver.cpp" line="148"/>
         <source>DatagramTooLarge</source>
         <translation>Datagramjeprevelik</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="138"/>
+        <location filename="../TCITransceiver.cpp" line="149"/>
         <source>Network</source>
         <translation>Mreža</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="139"/>
+        <location filename="../TCITransceiver.cpp" line="150"/>
         <source>AddressInUse</source>
         <translation>Adresauupotrebi</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="140"/>
+        <location filename="../TCITransceiver.cpp" line="151"/>
         <source>SocketAddressNotAvailable</source>
         <translation>AdresaPrikjlučkaNiJeDostupna</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="141"/>
+        <location filename="../TCITransceiver.cpp" line="152"/>
         <source>UnsupportedSocketOperation</source>
         <translation>NepodržaniRadPrilkučka</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="142"/>
+        <location filename="../TCITransceiver.cpp" line="153"/>
         <source>UnfinishedSocketOperation</source>
         <translation>NedovršenaSocketOperacija</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="143"/>
+        <location filename="../TCITransceiver.cpp" line="154"/>
         <source>ProxyAuthenticationRequired</source>
         <translation>PotrebnajeProvjeraAutentičnostiProxyja</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="144"/>
+        <location filename="../TCITransceiver.cpp" line="155"/>
         <source>SslHandshakeFailed</source>
         <translation>SSRukovanjeNeuspješno</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="145"/>
+        <location filename="../TCITransceiver.cpp" line="156"/>
         <source>ProxyConnectionRefused</source>
         <translation>ProxyVezaJeOdbijena</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="146"/>
+        <location filename="../TCITransceiver.cpp" line="157"/>
         <source>ProxyConnectionClosed</source>
         <translation>ProxyVezaJeZatvorena</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="147"/>
+        <location filename="../TCITransceiver.cpp" line="158"/>
         <source>ProxyConnectionTimeout</source>
         <translation>ProxyVezaJeIstekla</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="148"/>
+        <location filename="../TCITransceiver.cpp" line="159"/>
         <source>ProxyNotFound</source>
         <translation>Proxynijepronađen</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="149"/>
+        <location filename="../TCITransceiver.cpp" line="160"/>
         <source>ProxyProtocol</source>
         <translation>ProxyProtocol</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="150"/>
+        <location filename="../TCITransceiver.cpp" line="161"/>
         <source>Operation</source>
         <translation>Djelovanje</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="151"/>
+        <location filename="../TCITransceiver.cpp" line="162"/>
         <source>SslInternal</source>
         <translation>SslInterni</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="152"/>
+        <location filename="../TCITransceiver.cpp" line="163"/>
         <source>SslInvalidUserData</source>
         <translation>Sslnevažećikorisničkipodaci</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="153"/>
+        <location filename="../TCITransceiver.cpp" line="164"/>
         <source>Temporary</source>
         <translation>Privremeno</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="154"/>
+        <location filename="../TCITransceiver.cpp" line="165"/>
         <source>UnknownSocket</source>
         <translation>NepoznatiPriključak</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="276"/>
+        <location filename="../TCITransceiver.cpp" line="294"/>
         <source>TCI websocket error: %1</source>
         <translation>TCI websocket greška: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="379"/>
+        <location filename="../TCITransceiver.cpp" line="405"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR nije se mogao uključiti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="382"/>
+        <location filename="../TCITransceiver.cpp" line="408"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR nije uključen</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="390"/>
+        <location filename="../TCITransceiver.cpp" line="415"/>
+        <source>TCI RX2 could not be enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="423"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio nije se moguće uključiti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="419"/>
-        <location filename="../TCITransceiver.cpp" line="1323"/>
+        <location filename="../TCITransceiver.cpp" line="460"/>
+        <location filename="../TCITransceiver.cpp" line="1458"/>
         <source>TCI could not be opened</source>
         <translation>TCI se nije moguće otvoriti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1123"/>
+        <location filename="../TCITransceiver.cpp" line="1242"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI nije uspio postaviti ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1130"/>
+        <location filename="../TCITransceiver.cpp" line="1251"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI bi trebao koristiti PTT putem CAT-a</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1184"/>
+        <location filename="../TCITransceiver.cpp" line="1294"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI nije uspio postaviti rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1195"/>
-        <location filename="../TCITransceiver.cpp" line="1209"/>
-        <location filename="../TCITransceiver.cpp" line="1307"/>
+        <location filename="../TCITransceiver.cpp" line="1313"/>
+        <location filename="../TCITransceiver.cpp" line="1440"/>
         <source>TCI failed set mode</source>
         <translation>TCI nije uspio postaviti način rada</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1261"/>
+        <location filename="../TCITransceiver.cpp" line="1364"/>
+        <location filename="../TCITransceiver.cpp" line="1407"/>
+        <source>TCI failed set split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1381"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI nije uspio postaviti txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1449"/>
+        <location filename="../TCITransceiver.cpp" line="1592"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI je poslao neprepoznatu frekvenciju</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1510"/>
+        <location filename="../TCITransceiver.cpp" line="1653"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulator nije u praznom hodu</translation>
     </message>
