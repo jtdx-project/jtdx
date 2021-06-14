@@ -6041,7 +6041,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei suuda aktiveerida RX2-te</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6079,7 +6079,7 @@ Error(%2): %3</source>
         <location filename="../TCITransceiver.cpp" line="1364"/>
         <location filename="../TCITransceiver.cpp" line="1407"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>Spliti aktiveerimine nurjus</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1381"/>
