@@ -2499,7 +2499,7 @@ void Configuration::impl::read_settings ()
   beepOnNewPx_ = settings_->value("BeepOnNewPx", false).toBool();
   beepOnNewCall_ = settings_->value("BeepOnNewCall", false).toBool();
   beepOnFirstMsg_ = settings_->value("BeepOnFirstMsg", false).toBool();
-  rig_params_.poll_interval = settings_->value ("Polling", 1).toInt (); if(!(rig_params_.poll_interval>=1 && rig_params_.poll_interval<=999)) rig_params_.poll_interval=1;
+  rig_params_.poll_interval = settings_->value ("Polling", 1).toInt (); if(!(rig_params_.poll_interval>=0 && rig_params_.poll_interval<=999)) rig_params_.poll_interval=1;
   rig_params_.split_mode = settings_->value ("SplitMode", QVariant::fromValue (TransceiverFactory::split_mode_none)).value<TransceiverFactory::SplitMode> ();
   udp_server_name_ = settings_->value ("UDPServer", "127.0.0.1").toString ();
   udp_server_port_ = settings_->value ("UDPServerPort", 2237).toUInt ();

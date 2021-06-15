@@ -726,8 +726,11 @@ quiet period when decoding is done.</string>
            <property name="suffix">
             <string> s</string>
            </property>
+           <property name="specialValueText">
+            <string>0.5 s</string>
+           </property>
            <property name="minimum">
-            <number>1</number>
+            <number>0</number>
            </property>
            <property name="maximum">
             <number>999</number>

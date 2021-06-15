@@ -18,8 +18,7 @@ namespace
 
 PollingTransceiver::PollingTransceiver (int poll_interval, QObject * parent)
   : TransceiverBase {parent}
-  , interval_ {(poll_interval & 0x7fff) * 1000}
-//  , interval_ {500}
+  , interval_ { (poll_interval & 0x7fff) == 0 ? 500 : (poll_interval & 0x7fff) * 1000}
   , poll_timer_ {nullptr}
   , ft4_mode_ {false}
   , fast_mode_ {interval_ == 500}
