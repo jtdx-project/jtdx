@@ -531,7 +531,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     old_status = t.status;
                     t.status = status;
                     t.tx = freq;
-                    if (old_status < SCQ) t.b_time = time;
+                    if (old_status < SCQ || tyyp == "S") t.b_time = time;
                   }
                   break;
                 }
