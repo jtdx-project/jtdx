@@ -6045,49 +6045,49 @@ Errore (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="460"/>
-        <location filename="../TCITransceiver.cpp" line="1458"/>
+        <location filename="../TCITransceiver.cpp" line="1460"/>
         <source>TCI could not be opened</source>
         <translation>Impossibile aprire TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1242"/>
+        <location filename="../TCITransceiver.cpp" line="1244"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI non è riuscito a impostare il ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1251"/>
+        <location filename="../TCITransceiver.cpp" line="1253"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI dovrebbe utilizzare PTT tramite CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1296"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI non è riuscito a impostare freqRx</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1313"/>
-        <location filename="../TCITransceiver.cpp" line="1440"/>
+        <location filename="../TCITransceiver.cpp" line="1315"/>
+        <location filename="../TCITransceiver.cpp" line="1442"/>
         <source>TCI failed set mode</source>
         <translation>TCI non è riuscito a impostare il modo</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1364"/>
-        <location filename="../TCITransceiver.cpp" line="1407"/>
+        <location filename="../TCITransceiver.cpp" line="1366"/>
+        <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1381"/>
+        <location filename="../TCITransceiver.cpp" line="1383"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI non è riuscito a impostare freqTx</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1592"/>
+        <location filename="../TCITransceiver.cpp" line="1594"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI ha inviato una frequenza non riconosciuta</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1653"/>
+        <location filename="../TCITransceiver.cpp" line="1655"/>
         <source>TCI modulator not Idle</source>
         <translation>Modulatore TCI inattivo</translation>
     </message>

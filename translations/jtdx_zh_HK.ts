@@ -6042,49 +6042,49 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="460"/>
-        <location filename="../TCITransceiver.cpp" line="1458"/>
+        <location filename="../TCITransceiver.cpp" line="1460"/>
         <source>TCI could not be opened</source>
         <translation>TCI 無法打開</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1242"/>
+        <location filename="../TCITransceiver.cpp" line="1244"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI 未能設置 ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1251"/>
+        <location filename="../TCITransceiver.cpp" line="1253"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI 應通過 CAT 使用 PTT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1296"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI 設置接收頻率失敗</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1313"/>
-        <location filename="../TCITransceiver.cpp" line="1440"/>
+        <location filename="../TCITransceiver.cpp" line="1315"/>
+        <location filename="../TCITransceiver.cpp" line="1442"/>
         <source>TCI failed set mode</source>
         <translation>TCI 設置模式失敗</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1364"/>
-        <location filename="../TCITransceiver.cpp" line="1407"/>
+        <location filename="../TCITransceiver.cpp" line="1366"/>
+        <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1381"/>
+        <location filename="../TCITransceiver.cpp" line="1383"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI 設置發射頻率失敗</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1592"/>
+        <location filename="../TCITransceiver.cpp" line="1594"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI 發送了未識別的頻率</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1653"/>
+        <location filename="../TCITransceiver.cpp" line="1655"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI 調製器不空閒</translation>
     </message>

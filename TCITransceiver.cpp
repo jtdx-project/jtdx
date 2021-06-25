@@ -424,7 +424,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
         }
     }
     if (ESDR3) {
-      const QString cmd = CmdRxSensorsEnable + SmDP + (do_snr_ ? "true" : "false") +  SmTZ;
+      const QString cmd = CmdRxSensorsEnable + SmDP + (do_snr_ ? "true" : "false") + SmCM + "500" +  SmTZ;
       sendTextMessage(cmd);
     } else if (do_snr_) {
       const QString cmd = CmdSmeter + SmDP + rx_ + SmCM + "0" +  SmTZ;
@@ -436,7 +436,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 
     do_poll ();
     if (ESDR3) {
-      const QString cmd = CmdTxSensorsEnable + SmDP + (do_pwr_ ? "true" : "false") +  SmTZ;
+      const QString cmd = CmdTxSensorsEnable + SmDP + (do_pwr_ ? "true" : "false") + SmCM + "500" +  SmTZ;
       sendTextMessage(cmd);
     }
     if (stream_audio_) do_audio(true);
@@ -597,11 +597,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
           break;	
         case Cmd_RxSensors:
           if(args.at(0)==rx_) level_ = args.at(1).split(".")[0].toInt() + 73;
+//            printf("Smeter=%d\n",level_);
           break;	
         case Cmd_TxSensors:
           if(args.at(0)==rx_) {
             power_ = 10 * args.at(3).split(".")[0].toInt() + args.at(3).split(".")[1].toInt();
             swr_ = 10 * args.at(4).split(".")[0].toInt() + args.at(4).split(".")[1].toInt();
+//            printf("Power=%d SWR=%d\n",power_,swr_);
           }
           break;	
         case Cmd_SWR:
