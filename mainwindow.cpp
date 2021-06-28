@@ -4757,7 +4757,7 @@ void MainWindow::startTx2()
         if (m_config.TX_messages ()) {
           t = " Transmitting " + m_mode + " ----------------------- " + m_config.bands ()->find (m_freqNominal);
           t=WSPR_hhmm(0) + ' ' + t.rightJustified (66, '-');
-          ui->decodedTextBrowser->appendText(t);
+          ui->decodedTextBrowser->appendText(t,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         }
 
         QFile f {m_dataDir.absoluteFilePath ("ALL_WSPR.TXT")};
@@ -7708,7 +7708,7 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
           t = " Receiving " + m_mode + " ----------------------- " +
               m_config.bands ()->find (m_dialFreqRxWSPR);
           t=WSPR_hhmm(-60) + ' ' + t.rightJustified (66, '-');
-          ui->decodedTextBrowser->appendText(t);
+          ui->decodedTextBrowser->appendText(t,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         }
         killFileTimer.start (int(750.0*m_TRperiod)); //Kill 3/4 period from now
       }
@@ -7782,11 +7782,11 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
         QString band;
         Frequency f=1000000.0*rxFields.at(3).toDouble()+0.5;
         band = ' ' + m_config.bands ()->find (f);
-        ui->decodedTextBrowser->appendText(band.rightJustified (71, '-'));
+        ui->decodedTextBrowser->appendText(band.rightJustified (71, '-'),Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         m_blankLine = false;
       }
       m_nWSPRdecodes += 1;
-      ui->decodedTextBrowser->appendText(rxLine);
+      ui->decodedTextBrowser->appendText(rxLine,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
     }
   }
 }

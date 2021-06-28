@@ -121,17 +121,17 @@ void DisplayText::mouseDoubleClickEvent(QMouseEvent *e)
 
 void DisplayText::insertLineSpacer(QString const& line)
 {
-    appendText (line, "#d3d3d3", "#000000", 0, " ", "#000000", " ", true);
+    appendText (line, Radio::convert_dark("#d3d3d3",useDarkStyle_), Radio::convert_dark("#000000",useDarkStyle_), 0, " ", Radio::convert_dark("#000000",useDarkStyle_), " ", true);
 }
 
 void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite)
 {
     QString servbg, s;
-    if (std_type == 2) servbg = "#ff0000";
-    else if (std_type == 5) servbg = "#0000ff";
-    else if (servis == "?") servbg = "#ffff00";
+    if (std_type == 2) servbg = Radio::convert_dark("#ff0000",useDarkStyle_);
+    else if (std_type == 5) servbg = Radio::convert_dark("#0000ff",useDarkStyle_);
+    else if (servis == "?") servbg = Radio::convert_dark("#ffff00",useDarkStyle_);
     else if (std_type == 3 && servis.length()>1) servbg = servis.mid(1);
-    else servbg = "#ffffff";
+    else servbg = Radio::convert_dark("#ffffff",useDarkStyle_);
     auto cursor = textCursor ();
     cursor.movePosition (QTextCursor::End);
     if (0 == cursor.position ())
@@ -155,8 +155,8 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
             m_charFormat.setFontWeight(QFont::Normal);
         }
     }
-    m_charFormat.setForeground(QColor(Radio::convert_dark(color,useDarkStyle_)));
-    m_charFormat.setBackground (QColor(Radio::convert_dark(bg,useDarkStyle_)));
+    m_charFormat.setForeground(QColor(color));
+    m_charFormat.setBackground (QColor(bg));
     if (text.length() < 50) {
         int ft = 23; 
         if (text.mid(4,1) == " ") ft = 21;
@@ -193,10 +193,10 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                             QStringList wantedCallList, QStringList wantedPrefixList, QStringList wantedGridList, 
                             QStringList wantedCountryList, bool windowPopup, QWidget* window)
 {
-    QString bgColor = "#ffffff";
-    QString txtColor = "#000000";
+    QString bgColor = Radio::convert_dark("#ffffff",useDarkStyle_);
+    QString txtColor = Radio::convert_dark("#000000",useDarkStyle_);
     QString swpColor = "";
-    QString servisColor = "#000000";
+    QString servisColor = Radio::convert_dark("#000000",useDarkStyle_);
     QString messageText;
     bool forceBold = false;
     bool strikethrough = false;
@@ -282,11 +282,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                         }
                         else {
                             std_type = 3;
-                            txtColor = "#000000";
+                            txtColor = Radio::convert_dark("#000000",useDarkStyle_);
                         }
                     } else {
                         std_type = 3;
-                        txtColor = "#000000";
+                        txtColor = Radio::convert_dark("#000000",useDarkStyle_);
                     }
                 } else {
                     std_type = 3;
@@ -869,8 +869,8 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         }
     }
     if (jt65bc) {
-        bgColor = "#ffffff";
-        txtColor = "#000000";
+        bgColor = Radio::convert_dark("#ffffff",useDarkStyle_);
+        txtColor = Radio::convert_dark("#000000",useDarkStyle_);
     }
     if (show_line) {
         if (!checkCall.isEmpty () && (std_type == 1 || std_type == 2 || std_type == 4 || (std_type == 3 && !param.isEmpty()))) {
@@ -1004,7 +1004,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
             qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq,modeTx);
           }
         if (wastx_ && ttime - last_tx < 2 && hide_TX_messages_)
-            appendText(t,bg,"#000000",0," ","#000000"," ",false,false,false,false,true);
+            appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_)," ",false,false,false,false,true);
         else
             appendText(t,bg);
     }
@@ -1015,7 +1015,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
 void DisplayText::displayQSY(QString text)
 {
   QString t = QDateTime::currentDateTimeUtc().toString("hhmmss") + "            " + text;
-  QString bg="#ff69b4";
+  QString bg=Radio::convert_dark("#ff69b4",useDarkStyle_);
   appendText(t,bg);
 }
 
