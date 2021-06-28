@@ -194,7 +194,7 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,QString
   , wav_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("tx.wav").toStdString()}
 {
     m_samplesPerFFT = 6912 / 2;
-    m_period = 15.0;
+    m_period = 120.0;
     tci_Ready = false;
     trxA = 0;
     trxB = 0;

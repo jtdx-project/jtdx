@@ -93,7 +93,7 @@ public:
       ,	tonespacing_ {-3.0}
       ,	synchronize_ {true}
       ,	dbsnr_ {99.}
-      ,	trperiod_ {15.0}
+      ,	trperiod_ {60.0}
       ,	spread_ {0.0}
       ,	nsym_ {79}
       , volume_ {0}
