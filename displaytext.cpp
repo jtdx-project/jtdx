@@ -1006,7 +1006,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
         if (wastx_ && ttime - last_tx < 2 && hide_TX_messages_)
             appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_)," ",false,false,false,false,true);
         else
-            appendText(t,bg);
+            appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_));
     }
     wastx_ = true;
     last_tx = ttime;
@@ -1016,6 +1016,6 @@ void DisplayText::displayQSY(QString text)
 {
   QString t = QDateTime::currentDateTimeUtc().toString("hhmmss") + "            " + text;
   QString bg=Radio::convert_dark("#ff69b4",useDarkStyle_);
-  appendText(t,bg);
+  appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_));
 }
 
