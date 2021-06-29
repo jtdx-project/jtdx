@@ -6041,7 +6041,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI RX2 n&apos;a pas pu être activé</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6079,7 +6079,7 @@ Erreur(%2) : %3</translation>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI n&apos;a pas réussi à mettre Split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>

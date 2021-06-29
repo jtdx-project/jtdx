@@ -6037,17 +6037,17 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="405"/>
         <source>TCI SDR could not be switched on</source>
-        <translation>No s&apos;ha pogut activar TCI SDR</translation>
+        <translation>No s&apos;ha pogut activar el TCI SDR</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="408"/>
         <source>TCI SDR is not switched on</source>
-        <translation>TCI SDR no està activat</translation>
+        <translation>no està activat el TCI SDR</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>no s&apos;ha pogut activar el TCI RX2</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6058,12 +6058,12 @@ Error (%2): %3</translation>
         <location filename="../TCITransceiver.cpp" line="460"/>
         <location filename="../TCITransceiver.cpp" line="1460"/>
         <source>TCI could not be opened</source>
-        <translation>No s&apos;ha pogut obrir TCI</translation>
+        <translation>No s&apos;ha pogut obrir el TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1244"/>
         <source>TCI failed to set ptt</source>
-        <translation>TCI no ha pogut configurar el ptt</translation>
+        <translation>no ha pogut configurar el ptt TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1253"/>
@@ -6079,18 +6079,18 @@ Error (%2): %3</translation>
         <location filename="../TCITransceiver.cpp" line="1315"/>
         <location filename="../TCITransceiver.cpp" line="1442"/>
         <source>TCI failed set mode</source>
-        <translation>TCI ha fallat en el mode de configuració</translation>
+        <translation>ha fallat en el mode de configuració TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>ha fallat conjunt split del TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
         <source>TCI failed set txfreq</source>
-        <translation>TCI ha fallat en establir la freqüència de TX</translation>
+        <translation>ha fallat en establir la freqüència de TX TCI</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1594"/>
@@ -6642,7 +6642,7 @@ període tranquil quan es realitza la descodificació.</translation>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
