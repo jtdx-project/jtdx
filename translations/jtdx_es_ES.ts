@@ -6045,7 +6045,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI RX2 no pudo ser activado</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6083,7 +6083,7 @@ Error (%2): %3</translation>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI falló en la división Split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
@@ -6640,7 +6640,7 @@ período tranquilo cuando se realiza la decodificación.</translation>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
