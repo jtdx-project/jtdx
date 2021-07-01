@@ -850,7 +850,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Balearic Is.</source>
-        <translation>Baleariske Øer</translation>
+        <translation>Baleariske Øer.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="138"/>
@@ -1365,7 +1365,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="240"/>
         <source>Peru</source>
-        <translation>Peu</translation>
+        <translation>Peru</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="241"/>
@@ -3881,8 +3881,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="1773"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; DT-vægtningsfunktionalitet for kandidatlisteudtynding, medianværdien af ​​DT-distribution af dekodede signaler skal indstilles der. Denne værdi afhænger af systemurets synkroniseringsnøjagtighed og af overfyldte bånd er tæt på den gennemsnitlige DT-værdi for dekodede signaler. Korrekt værdi øger afkodningseffektiviteten i kandidatlistens udtyndingsmulighed. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT-vægtningsfunktionalitet for kandidatlisteudtynding, medianværdien af ​​DT-distribution af dekodede signaler skal indstilles der. Denne værdi afhænger af systemurets synkroniseringsnøjagtighed og af overfyldte bånd er tæt på den gennemsnitlige DT-værdi for dekodede signaler. Korrekt værdi øger afkodningseffektiviteten i kandidatlistens udtyndingsmulighed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1776"/>
@@ -4504,7 +4503,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5650"/>
         <source>Call higher than new calls priority callsigns</source>
-        <translation>Kald kun højere  prioritet end nyt kaldesignal </translation>
+        <translation>Kald kun højere prioritet end nyt kaldesignal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5669"/>
@@ -5048,7 +5047,35 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</source>
         <extracomment>Keyboard shortcuts help window contents</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellspacing=1&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F1       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Online Bruger Guide&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F1  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Om JTDX&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F2       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Åben konfigurations vinduet&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F3       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Vis tastetur genveje&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F4       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Slet DX KaldesignalGrid og Tx meddelse&lt;/td&gt;&lt;td&gt;&lt;b&gt;Alt+F4   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Afslut program&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F5       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Vis specielle muse kommandoer&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F6       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Åben næste file i mappen&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+F6 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Dekod resterende filer i mappen&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F7       &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Åben log med operativ systemets tekst viser&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F11      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Flyt Rx frekvens 1 Hz ned&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F11 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Flyt Rx ogTx frekvenser 1 Hz ned&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;F12      &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Flyt Rx frekvens 1 Hz op&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F12 &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Flyt Rx og Tx frekvenser 1 Hz op&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Set Nu transmission til dette nummer på Tab 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctl+1-6  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Set Næste transmission til dette nummer på Tab 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Slet ønsket kaldesignal liste&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Skift til FT8/FT4 mode&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Dekod igen på QSO frekvensen&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Fuld dekodning (begge vinduer)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Slet&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Skift bypass alle tekt filtre&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Editere fri tekst meddelses boks&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Generer standard meddelser&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Stop Tx&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Ctrl+L   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Se efter kaldesignal i database, generer standard meddelser&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+M    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Monitor&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+N    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Start Tx&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Q    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Log QSO&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+S    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Stop monitor&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+T    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tune&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Gem seneste komplette *.wav fil&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Filter, denne genvej understøttes i Hoved UI og Vandfald UI&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;StopTx&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3246"/>
@@ -5090,12 +5117,50 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
   &lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table cellpadding=5&gt;
+  &lt;tr&gt;
+    &lt;th align=&quot;right&quot;&gt;Klik på&lt;/th&gt;
+    &lt;th align=&quot;left&quot;&gt;Aktion&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Vandfald:&lt;/td&gt;
+    &lt;td&gt;Set Rx Frekvens.&lt;br/&gt;
+        Dobbel-klik for set af Rx frequency og dekode der.&lt;br/&gt;
+        Ctrl-klik for set af Rx og Tx frekvenser.&lt;br/&gt;
+        Ulåst TX=RX:&lt;br/&gt;
+        brug venstre knap for set RX frekvens&lt;br/&gt;
+        brug ALT+venstre knap for set af RX frekvens og sætte Filter ON&lt;br/&gt;
+        brug højre knap for set af TX frekvens
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Dekodet text:&lt;/td&gt;
+    &lt;td&gt;Dobbelt-klik for at kopiere kaldesignal til DX Kaldesignal,&lt;br/&gt;
+        locator til Dx Grid; skift Rx og Tx frekvenser til&lt;br/&gt;
+        dekodede signal frekvens; generate standard meddelser.&lt;br/&gt;
+        Hvis første kaldesignal er dit eget, vil Tx frequency ikke ændres&lt;br/&gt;
+        med mindre CTRL holdes nede når der dobbelt klikkes.&lt;br/&gt;&lt;br/&gt;
+        ALT+dobbelt-klik vil også stoppe TX hvis Aktiviver TX knappen er aktiv.&lt;br/&gt;&lt;br/&gt;
+        CTRL+ALT+dobbel-klik vil kun tilføje kaldesignalet fra dekodet&lt;br/&gt;
+        meddelser til Ønsket kaldesignal listen.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;right&quot;&gt;Slet Knap:&lt;/td&gt;
+    &lt;td&gt;Klik på højre knap for at slette QSO vinduet.&lt;br/&gt;
+        Klick på venstre knap for at slette Bånd Aktivitets vinduet.&lt;br/&gt;
+        Dobbel-klik venstre elle højre knap for at slette QSO &lt;br/&gt;
+        og Bånd Aktivitets vinduet.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4227"/>
         <source>Please choose another Tx frequency. JTDX will not allow to Call below 1000 Hz in DXped mode.</source>
-        <translation>Vælg venligst en anden Tx frekvens. JTDX tillader IKKE TX under 1000Hz i DXped mode</translation>
+        <translatorcomment>Vælg venligst en anden Tx frekvens. JTDX tillader IKKE TX under 1000Hz i DXped mode</translatorcomment>
+        <translation>Vælg venligst en anden Tx frekvenst. JTDX tillader ikke TX under 1000 Hz i DXped mode.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4232"/>
@@ -5216,7 +5281,7 @@ er allerede i CALL3.TXT. Vil du erstatte det?</translation>
         <location filename="../mainwindow.cpp" line="7683"/>
         <source>Error: %1
 UDP server %2:%3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7829"/>
@@ -5972,7 +6037,7 @@ Fejl (%2):%3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI RX2 kan ikke Enables</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6010,7 +6075,7 @@ Fejl (%2):%3</translation>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI fejl ved Set Split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
@@ -6566,7 +6631,7 @@ stille periode, når dekodningen er udført.</translation>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
@@ -7515,7 +7580,7 @@ til vurdering af udbredelsesforhold og systemydelse.</translation>
     <message>
         <location filename="../Configuration.ui" line="3074"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Højre klik for at ændre listen over frekvenser. Reset indstillingen gør det muligt at bringe frekvenslisten tilbage til standardværdierne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3671"/>
