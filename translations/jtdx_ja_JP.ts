@@ -5997,7 +5997,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIはRX2を有効にできませんでした</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6035,7 +6035,7 @@ Error(%2): %3</source>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCIはスプリットに設定ができませんでした</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
@@ -7933,7 +7933,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="753"/>
