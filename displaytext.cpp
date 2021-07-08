@@ -171,8 +171,8 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
         cursor.insertText (text.mid(ft,26),m_charFormat);
         m_charFormat.setFontStrikeOut(false);
         m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
-        m_charFormat.setBackground (QColor(Radio::convert_dark(servbg,useDarkStyle_)));
-        m_charFormat.setForeground(QColor(Radio::convert_dark(servis_color,useDarkStyle_)));
+        m_charFormat.setBackground (QColor(servbg));
+        m_charFormat.setForeground(QColor(servis_color));
         cursor.insertText (servis.left(1),m_charFormat);
         m_charFormat.setBackground (QColor(Radio::convert_dark("#ffffff",useDarkStyle_)));
         m_charFormat.setForeground(QColor(Radio::convert_dark("#000000",useDarkStyle_)));

@@ -173,16 +173,16 @@ QString convert_dark(QString const& color, bool useDarkStyle)
              hexcolor = hexcolor xor 0xe6dcd2;
 
          } else {
-          if (r >= 0x40) r -= 0x40;
+          if (r >= 0x60) r -= 0x60;
           else r = 0;
-          if (g >= 0x40) g -= 0x40;
+          if (g >= 0x60) g -= 0x60;
           else g = 0;
           if (!(b == 0xff && r == 0 && g == 0)) {
-          if (b >= 0x40) b -= 0x40;
+          if (b >= 0x60) b -= 0x60;
           else b = 0;
           } else {
-            r += 0x40;
-            g += 0x40;
+            r += 0x60;
+            g += 0x60;
 
           }
           hexcolor = r << 16 | g << 8 | b;
