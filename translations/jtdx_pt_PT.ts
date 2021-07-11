@@ -3013,12 +3013,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use este contolo para ver ou esconder edição pontual de linha&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use este controlo para ver ou esconder a edição de linha&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
         <source>Spt</source>
-        <translation>Spt</translation>
+        <translation>Spot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="718"/>
@@ -6020,7 +6020,7 @@ Erro (%2):%3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI RX2 não pode ser ligado</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6058,7 +6058,7 @@ Erro (%2):%3</translation>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI falhou ao iniciar split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
@@ -6614,7 +6614,7 @@ período de silêncio quando a decodificação é feita.</translation>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
@@ -7445,7 +7445,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
 for assessing propagation and system performance.</source>
-        <translation type="unfinished">O programa pode enviar detalhes da sua estação e todos
+        <translation>O programa pode enviar detalhes da sua estação e todos
 sinais descodificados como pontos no site http://pskreporter.info.
 Isso é usado para análise de beacon reverso, o que é muito útil
 para avaliar a propagação e o desempenho do sistema.</translation>
