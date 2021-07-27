@@ -17,6 +17,7 @@ class DisplayText : public QTextEdit
 public:
     explicit DisplayText(QWidget *parent = 0);
     void setConfiguration(Configuration const *);
+    void setMyContinent (QString const&);
     void setContentFont (QFont const&);
     void insertLineSpacer(QString const&);
     int displayDecodedText(DecodedText* decodedText, QString myCall, QString hisCall, QString hisGrid,
@@ -79,6 +80,7 @@ private:
     bool otherMessagesMarker_;
     bool enableCountryFilter_;
     bool enableCallsignFilter_;
+    bool enableMyConinentFilter_;
     bool hidefree_;
     bool showcq_;
     bool showcqrrr73_;
@@ -93,6 +95,8 @@ private:
     unsigned last_tx = 0;
     QString mygrid_ = "";
     QString myhisCall_ = "";
+    QString myCall_ = "";
+    QString myContinent_ = "";
     QString color_MyCall_;
     QString color_CQ_;
     QString color_StandardCall_;

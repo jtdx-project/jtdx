@@ -6715,6 +6715,8 @@ void MainWindow::enable_DXCC_entity ()
     m_logBook.getDXCC(m_config.my_callsign(),countryName);
     auto items=countryName.split(",");
     m_m_continent = items[0];
+    ui->decodedTextBrowser->setMyContinent (m_m_continent);
+    ui->decodedTextBrowser2->setMyContinent (m_m_continent);
     m_m_prefix = items[1];
     m_qsoHistory.owndata(items[0],items[1],m_config.my_grid(),m_config.strictdirCQ ());
     m_strictdirCQ = m_config.strictdirCQ();

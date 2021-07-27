@@ -717,6 +717,7 @@ private:
   bool halttxreplyother_;
   bool hidefree_;
   bool hide2ndHash_;
+  bool hideOwnContinent_;
   bool showcq_;
   bool showcqrrr73_;
   bool showcq73_;
@@ -965,6 +966,7 @@ bool Configuration::strictdirCQ () const {return m_->strictdirCQ_;}
 bool Configuration::halttxreplyother () const {return m_->halttxreplyother_;}
 bool Configuration::hidefree () const {return m_->hidefree_;}
 bool Configuration::hide2ndHash () const {return m_->hide2ndHash_;}
+bool Configuration::hideOwnContinent () const {return m_->hideOwnContinent_;}
 bool Configuration::showcq () const {return m_->showcq_;}
 bool Configuration::showcqrrr73 () const {return m_->showcqrrr73_;}
 bool Configuration::showcq73 () const {return m_->showcq73_;}
@@ -1957,6 +1959,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->haltTxReplyOther_checkBox->setChecked (halttxreplyother_);
   ui_->HideFree_check_box->setChecked (hidefree_);
   ui_->Hide2ndHash_check_box->setChecked (hide2ndHash_);
+  ui_->HideOwnContinent_check_box->setChecked (hideOwnContinent_);
   ui_->ShowCQ_check_box->setChecked (showcq_);
   ui_->ShowCQRRR73_check_box->setChecked (showcqrrr73_);
   ui_->ShowCQ73_check_box->setChecked (showcq73_);
@@ -2251,6 +2254,7 @@ void Configuration::impl::read_settings ()
   else hidefree_ = false;
 
   hide2ndHash_ = settings_->value ("HideMsgsWith2ndCallAsHash", false).toBool ();
+  hideOwnContinent_ = settings_->value ("HideMsgsWithOwnContinent", false).toBool ();
 
   if(settings_->value ("ShowCQMsgsOnly").toString()=="false" || settings_->value ("ShowCQMsgsOnly").toString()=="true")
     showcq_ = settings_->value ("ShowCQMsgsOnly").toBool ();
@@ -2667,6 +2671,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("SeqHaltTxReplyOther", halttxreplyother_);
   settings_->setValue ("HideFreeMsgs", hidefree_);
   settings_->setValue ("HideMsgsWith2ndCallAsHash", hide2ndHash_);
+  settings_->setValue ("HideMsgsWithOwnContinent", hideOwnContinent_);
   settings_->setValue ("ShowCQMsgsOnly", showcq_);
   settings_->setValue ("ShowCQRRR73MsgsOnly", showcqrrr73_);
   settings_->setValue ("ShowCQ73MsgsOnly", showcq73_);
@@ -3327,6 +3332,7 @@ void Configuration::impl::accept ()
   halttxreplyother_ = ui_->haltTxReplyOther_checkBox->isChecked ();
   hidefree_ = ui_->HideFree_check_box->isChecked ();
   hide2ndHash_ = ui_->Hide2ndHash_check_box->isChecked ();
+  hideOwnContinent_ = ui_->HideOwnContinent_check_box->isChecked ();
   showcq_ = ui_->ShowCQ_check_box->isChecked ();
   showcqrrr73_ = ui_->ShowCQRRR73_check_box->isChecked ();
   showcq73_ = ui_->ShowCQ73_check_box->isChecked ();

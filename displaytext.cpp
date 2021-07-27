@@ -62,6 +62,7 @@ void DisplayText::setConfiguration(Configuration const * config)
   enableCountryFilter_ = config->enableCountryFilter();
   enableCallsignFilter_ = config->enableCallsignFilter();
   hidefree_ = config->hidefree();
+  enableMyConinentFilter_ = config->hideOwnContinent();
   showcq_ = config->showcq();
   showcqrrr73_ = config->showcqrrr73();
   showcq73_ = config->showcq73();
@@ -88,8 +89,14 @@ void DisplayText::setConfiguration(Configuration const * config)
   hideContinents_ = config->hideContinents();
   countries_ = config->countries();
   callsigns_ = config->callsigns();
-   
+  myCall_ = config->my_callsign();   
 }
+
+void DisplayText::setMyContinent(QString const& mycontinet)
+{
+    myContinent_ = mycontinet;
+}
+
 void DisplayText::setContentFont(QFont const& font)
 {
 //  setFont (font);
@@ -219,9 +226,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     QString servis = " ";
     QString cntry = " ";
     QString checkCall;
+    QString checkCall2;
     QString grid;
     QString tyyp="";
     QString countryName;
+    QString countryName2;
     QString mpx="";
     QString lotw="";
     QsoHistory::Status status = QsoHistory::NONE;
@@ -246,6 +255,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         auto const& parts = decodedText->message().split (' ', SkipEmptyParts);
         if (!hisCall.isEmpty () && messageText.contains(Radio::base_callsign (hisCall))) txtColor = color_StandardCall_;
         checkCall = decodedText->CQersCall(grid,tyyp);
+        checkCall2 = decodedText->call();
         if(!app_mode.startsWith("FT") && (messageText.contains("2nd-h") || messageText.contains("3rd-h"))) jt65bc = true;
         if (!checkCall.isEmpty ()) {
             if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
@@ -298,7 +308,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 param = grid;
             }
         }
-        else if (!myCall.isEmpty () && Radio::base_callsign (decodedText->call()) == myCall) {
+        else if (!myCall.isEmpty () && Radio::base_callsign (checkCall2) == myCall) {
                 std_type = 2;
                 txtColor = color_MyCall_;
                 actwind = true;
@@ -831,6 +841,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             auto callsigns = callsigns_.split(',');
             if (callsigns.contains(Radio::base_callsign (checkCall)))
                 show_line = false;
+        }
+        if ((enableMyConinentFilter_) && std_type != 2 && !jt65bc) {
+            logBook.getDXCC(/*in*/ checkCall2, /*out*/ countryName2);
+            auto coninent2 =  countryName2.split(',')[0];
+            if (coninent2 == myContinent_ || (std_type == 1 && myContinent_ == items[0])) show_line = false;
         }
     }
     

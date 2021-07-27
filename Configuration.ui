@@ -5254,6 +5254,13 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </widget>
          </item>
          <item>
+          <widget class="QCheckBox" name="HideOwnContinent_check_box">
+           <property name="text">
+            <string>Hide messages with own continent callsign</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="verticalSpacer_21">
            <property name="orientation">
             <enum>Qt::Vertical</enum>

@@ -121,6 +121,7 @@ public:
   bool halttxreplyother() const;
   bool hidefree() const;
   bool hide2ndHash() const;
+  bool hideOwnContinent() const;
   bool showcq() const;
   bool showcqrrr73() const;
   bool showcq73() const;
