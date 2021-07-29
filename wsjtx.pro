@@ -16,7 +16,7 @@ TARGET = wsjtx
 VERSION = "Not for Release"
 TEMPLATE = app
 DEFINES = QT5
-QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++17
 DEFINES += PROJECT_MANUAL="'\"http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main.html\"'"
 
 isEmpty (DESTDIR) {
