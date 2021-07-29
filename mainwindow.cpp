@@ -3682,7 +3682,7 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::S73: {
-        if (!m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall)
+//        if (!m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall)
           autoStopTx("S73, none received ");
         break;
       }
