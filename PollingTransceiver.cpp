@@ -238,7 +238,7 @@ void PollingTransceiver::handle_timeout ()
         
 //        printf("%s %d Poll start retries=%d fast_mode=%d ft4_mode=%d sec=%d ms=%lld\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec,retries_,fast_mode_,ft4_mode_,sec,ms);
         do_poll ();              // tell sub-classes to update our state
-        printf("%s %d Poll end ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec);
+//        printf("%s %d Poll end ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec);
 #if JTDX_DEBUG_TO_FILE
         pFile = fopen (debug_file_.c_str(),"a");
         fprintf(pFile,"%s %d Poll end ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sec);

@@ -292,7 +292,7 @@ void TransceiverBase::set (TransceiverState const& s,
   #endif
                 do_ptt (false);
                 do_post_ptt (false);
-                QThread::msleep (100); // some rigs cannot process CAT
+                if (!requested_.audio()) QThread::msleep (100); // some rigs cannot process CAT
                                        // commands while switching from
                                        // Tx to Rx
               }
