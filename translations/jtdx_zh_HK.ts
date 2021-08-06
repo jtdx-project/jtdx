@@ -1018,7 +1018,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation>瓦利斯 富圖納群島.</translation>
+        <translation>瓦利斯和富圖納群島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
@@ -1293,7 +1293,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation>庫爾島.</translation>
+        <translation>庫雷環礁.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
@@ -1323,7 +1323,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>美國維京島.</translation>
+        <translation>美屬維京島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1788,7 +1788,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
         <source>Anguilla</source>
-        <translation>安圭拉</translation>
+        <translation>安圭拉島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
@@ -1798,7 +1798,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation>英國維京島.</translation>
+        <translation>英屬維京島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
@@ -5049,13 +5049,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4216"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>請選擇另一個發射頻率. JTDX不會故意在WSPR子波段中發射另一種模式.</translation>
+        <translation>請選擇另一個發射頻率. JTDX不會故意在WSPR副頻段中發射另一種模式.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4221"/>
         <location filename="../mainwindow.cpp" line="4224"/>
         <source>WSPR Guard Band</source>
-        <translation>WSPR保護波段</translation>
+        <translation>WSPR保護頻段</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4354"/>

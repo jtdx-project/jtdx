@@ -608,7 +608,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>Dem. Rep. of the Congo</source>
-        <translation>刚果共和国</translation>
+        <translation>刚果民主共和国</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="90"/>
@@ -1018,7 +1018,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Wallis &amp; Futuna Is.</source>
-        <translation>瓦利斯 富图纳群岛.</translation>
+        <translation>瓦利斯和富图纳群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
@@ -1293,7 +1293,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Kure Is.</source>
-        <translation>库尔岛.</translation>
+        <translation>库雷环礁.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="227"/>
@@ -1323,7 +1323,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>US Virgin Is.</source>
-        <translation>美国维京岛.</translation>
+        <translation>美属维京岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="233"/>
@@ -1798,7 +1798,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>British Virgin Is.</source>
-        <translation>英国维京岛.</translation>
+        <translation>英属维京岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="328"/>
@@ -4039,7 +4039,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4788"/>
         <source>Waterfall</source>
-        <translation>频谱图</translation>
+        <translation>瀑布图</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4793"/>
@@ -5049,13 +5049,13 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="4216"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>请选择另一个发射频率. JTDX不会故意在 WSPR 子波段中发射另一种模式.</translation>
+        <translation>请选择另一个发射频率. JTDX不会故意在 WSPR 副频段中发射另一种模式.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4221"/>
         <location filename="../mainwindow.cpp" line="4224"/>
         <source>WSPR Guard Band</source>
-        <translation>WSPR保护波段</translation>
+        <translation>WSPR保护频段</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4354"/>
@@ -5585,27 +5585,27 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../WFPalette.cpp" line="78"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; too many colors.</source>
-        <translation type="unfinished">读取频谱图调色板文件时错误 &quot;%1:%2&quot; 太多颜色.</translation>
+        <translation>读取瀑布调色板文件时错误 &quot;%1:%2&quot; 太多颜色.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="84"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid triplet.</source>
-        <translation type="unfinished">读取频谱图调色板文件时错误 &quot;%1:%2&quot; 无效的三元组.</translation>
+        <translation>读取瀑布调色板文件时错误 &quot;%1:%2&quot; 无效的三元组.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="96"/>
         <source>Error reading waterfall palette file &quot;%1:%2&quot; invalid color.</source>
-        <translation type="unfinished">读取频谱图调色板文件时错误 &quot;%1:%2&quot; 无效的颜色.</translation>
+        <translation>读取瀑布调色板文件时错误 &quot;%1:%2&quot; 无效的颜色.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="104"/>
         <source>Error opening waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished">读取频谱图调色板文件时错误 &quot;%1&quot;: %2.</translation>
+        <translation>读取瀑布调色板文件时错误 &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location filename="../WFPalette.cpp" line="258"/>
         <source>Error writing waterfall palette file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished">读取频谱图调色板文件时错误 &quot;%1&quot;: %2.</translation>
+        <translation>读取瀑布调色板文件时错误 &quot;%1&quot;: %2.</translation>
     </message>
 </context>
 <context>
@@ -6033,7 +6033,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="415"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation>无法启用 TCI RX2</translation>
+        <translation>TCI RX2无法启用</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="423"/>
@@ -6071,7 +6071,7 @@ Error(%2): %3</source>
         <location filename="../TCITransceiver.cpp" line="1366"/>
         <location filename="../TCITransceiver.cpp" line="1409"/>
         <source>TCI failed set split</source>
-        <translation>TCI 设置异频失败</translation>
+        <translation>TCI设置异频失败</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1383"/>
@@ -6173,7 +6173,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="326"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frequency at left edge of waterfall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;波段在频谱图左边缘显示&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;波段在瀑布左边缘显示&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="329"/>
@@ -6188,7 +6188,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="357"/>
         <source>Number of FFTs averaged (controls waterfall scrolling rate)</source>
-        <translation type="unfinished">FFT 平均数(控制频谱图滚动速率)</translation>
+        <translation>FFT 平均数(控制瀑布滚动速率)</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="360"/>
@@ -6213,7 +6213,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="438"/>
         <source>Select waterfall palette</source>
-        <translation type="unfinished">选择频谱图调色板</translation>
+        <translation>选择瀑布调色板</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="468"/>
@@ -6268,7 +6268,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="593"/>
         <source>Waterfall gain</source>
-        <translation type="unfinished">频谱图增益</translation>
+        <translation>瀑布增益</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="630"/>
@@ -6286,7 +6286,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.ui" line="695"/>
         <source>Waterfall zero</source>
-        <translation type="unfinished">频谱图零度</translation>
+        <translation>瀑布零度</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="732"/>
@@ -6627,7 +6627,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="730"/>
         <source>0.5 s</source>
-        <translation>0.5 秒</translation>
+        <translation>0.5秒</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="798"/>
