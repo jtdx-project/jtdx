@@ -19,6 +19,8 @@ DisplayText::DisplayText(QWidget *parent) :
     viewport ()->setCursor (Qt::ArrowCursor);
     setWordWrapMode (QTextOption::NoWrap);
     setStyleSheet ("");
+    // max lines to limit heap usage
+    document ()->setMaximumBlockCount (10000);
 }
 
 void DisplayText::setConfiguration(Configuration const * config)
@@ -102,6 +104,7 @@ void DisplayText::setContentFont(QFont const& font)
 //  setFont (font);
   m_charFormat.setFont (font);
   bold_ = font.bold();
+  m_charFormat.setFontItalic(false);
 //  selectAll ();
 /*
   auto cursor = textCursor ();
@@ -131,7 +134,7 @@ void DisplayText::insertLineSpacer(QString const& line)
     appendText (line, Radio::convert_dark("#d3d3d3",useDarkStyle_), Radio::convert_dark("#000000",useDarkStyle_), 0, " ", Radio::convert_dark("#000000",useDarkStyle_), " ", true);
 }
 
-void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite)
+void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite, bool wanted)
 {
     QString servbg, s;
     if (std_type == 2) servbg = Radio::convert_dark("#ff0000",useDarkStyle_);
@@ -175,7 +178,15 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
         } 
         else if (underlined) m_charFormat.setUnderlineStyle(QTextCharFormat::SingleUnderline);
         else m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
+        if (wanted) {
+            m_charFormat.setFontItalic(true); m_charFormat.setForeground(QColor(color_MyCall_)); m_charFormat.setFontOverline(true);
+            if (!underlined && !DXped) m_charFormat.setFontUnderline(true);
+            }
         cursor.insertText (text.mid(ft,26),m_charFormat);
+        if (wanted) {
+            m_charFormat.setFontItalic(false); m_charFormat.setFontOverline(false);
+            if (!underlined && !DXped) m_charFormat.setFontUnderline(false);
+            }
         m_charFormat.setFontStrikeOut(false);
         m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
         m_charFormat.setBackground (QColor(servbg));
@@ -414,7 +425,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         bool callB4BandMode = true;
         bool gridB4 = true;
         bool gridB4BandMode = true;
-
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
         if (!lotw.isEmpty ()) {
             priority = 1;
@@ -895,7 +905,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             if(!redMarker_) std_type = 0;
             else if(blueMarker_ && !hisCall.isEmpty () && checkCall.contains(hisCall)) std_type = 5;
         }
-        appendText(messageText, bgColor, txtColor, std_type, servis, servisColor, cntry, forceBold, strikethrough, underlined, decodedText->isDXped());
+        appendText(messageText, bgColor, txtColor, std_type, servis, servisColor, cntry, forceBold, strikethrough, underlined, decodedText->isDXped(), false, bwantedCall||bwantedGrid||bwantedPrefix||bwantedCountry);
         wastx_ = false;
     }
         if (notified) inotified |= 1;

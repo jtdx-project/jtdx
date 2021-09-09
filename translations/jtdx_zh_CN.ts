@@ -568,7 +568,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="81"/>
         <source>Ghana</source>
-        <translation>迦纳</translation>
+        <translation>加纳</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="82"/>
@@ -3868,7 +3868,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable FT8 DXpedition Hound mode. MSHV multianswering mode is supported in common FT8 bands, WSJT-X DXpedition mode with frequency control is supported on the special DXpedition frequencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用FT8 DXpedition猎犬模式。常见的FT8频段支持MSHV多应答模式，特殊的DXpedition频段支持带频率控制的WSJT-X DXpedition模式。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用FT8 DX远征猎犬模式, MSHV 在常用的 FT8 频段中使用多回答模式, WSJT-X 设置频率控制下用远征猎犬模式并在特殊的DX远征频段上使用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1544"/>
@@ -4956,7 +4956,7 @@ list. The list can be maintained in Settings (F2).</source>
     &lt;th align=&quot;left&quot;&gt;动作&lt;/th&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td align=&quot;right&quot;&gt;频谱图:&lt;/td&gt;
+    &lt;td align=&quot;right&quot;&gt;瀑布图:&lt;/td&gt;
     &lt;td&gt;设置 Rx 频率.&lt;br/&gt;
         按两下以设置 Rx 频率并在当前位置解码.&lt;br/&gt;
         点击以设置 Rx 和 Tx 频率.&lt;br/&gt;
@@ -6296,7 +6296,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../widegraph.cpp" line="29"/>
         <source>Wide Graph</source>
-        <translation>宽图</translation>
+        <translation>频谱图</translation>
     </message>
 </context>
 <context>
