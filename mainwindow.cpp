@@ -5019,7 +5019,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   }
 
   auto t3 = decodedtext.string ().left(47);
-  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
+  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{1,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
   if(t4.size () < 6) return;             //Skip the rest if no decoded text
 
 
