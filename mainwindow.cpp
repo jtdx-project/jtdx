@@ -5590,6 +5590,7 @@ void MainWindow::clearDX (QString reason)
   QString dxcallclr=m_hisCall;
   clearDXfields("");
   genStdMsgs(QString {});
+  ui->RxFreqSpinBox->setValue (ui->TxFreqSpinBox->value ());
   if (1 == ui->tabWidget->currentIndex())
     {
       ui->genMsg->setText(ui->tx6->text());
