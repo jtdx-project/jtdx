@@ -236,7 +236,7 @@ void DecodedText::deCallAndGrid(/*out*/QString& call, QString& grid)
     call = match.captured ("word3");
     grid = match.captured ("word4");
   }
-  if (!_callRe.match(call).hasMatch() || call.contains("TU73") > 0 || call.contains("73GL") > 0) {
+  if (!_callRe.match(call).hasMatch() || _gridRe.match(call).hasMatch() || call.contains("TU73") > 0 || call.contains("73GL") > 0) {
     call = "";
   }
   if (!_gridRe.match(grid).hasMatch()) {
