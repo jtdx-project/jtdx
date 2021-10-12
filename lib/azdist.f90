@@ -12,7 +12,7 @@ subroutine azdist(MyGrid,HisGrid,utch,nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter)
   data mygrid0/"        "/,hisgrid0/"        "/,utch0/-999.d0/
   save
 
-  if(MyGrid.eq.HisGrid) then
+  if(MyGrid.eq.HisGrid .or. HisGrid.eq.'') then
      naz=0
      nel=0
      ndmiles=0
