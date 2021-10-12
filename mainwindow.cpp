@@ -6058,8 +6058,9 @@ void MainWindow::on_dxGridEntry_textChanged(const QString &t) //dxGrid changed
         statusUpdate ();
         qint64 nsec = m_jtdxtime->currentMSecsSinceEpoch2() % 86400;
         double utch=nsec/3600.0;
-        int nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter;
-        azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
+        int nAz=0,nEl=0,nDmiles=0,nDkm=0,nHotAz,nHotABetter;
+        if (!m_hisGrid.isEmpty() && !m_config.my_grid ().isEmpty())
+          azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
                 const_cast <char *> ((m_hisGrid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         QString t;
@@ -7769,8 +7770,9 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
       }
       if(!grid.isEmpty ()) {
         double utch=0.0;
-        int nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter;
-        azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
+        int nAz=0,nEl=0,nDmiles=0,nDkm=0,nHotAz,nHotABetter;
+        if (!grid.isEmpty() && !m_config.my_grid ().isEmpty())
+          azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
                 const_cast <char *> ((grid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         if(m_config.miles()) {
