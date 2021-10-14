@@ -87,7 +87,7 @@ private:
                     column_qsoText = 21};
     QString string_;
     QRegularExpression _cqLongerRe = QRegularExpression(" CQ ([A-Z]{2,2}|[0-9]{3,3}) ");
-    QRegularExpression _gridRe = QRegularExpression("^(?![Rr]{2}73)[A-Ra-r]{2,2}[0-9]{2,2}");
+    QRegularExpression _gridRe = QRegularExpression("^(?![Rr]{2}73)[A-Ra-r]{2,2}[0-9]{2,2}$");
     QRegularExpression _repRe = QRegularExpression("[<>]");
 //    QRegularExpression _callRe = QRegularExpression("(([A-Z]{1,2})|([A-Z][0-9]))[0-9][A-Z]{1,3}");
 //    QRegularExpression _callRe = QRegularExpression("([BFGIKMNRTW]|[A-Z0-9]{2})[0-9][A-Z0-9]{0,3}[A-Z]");
