@@ -382,7 +382,7 @@ Formāts:
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
-        <source>Kingdom of eSwatini</source>
+        <source>Kingdom of Eswatini</source>
         <translation>Svatini Karaliste</translation>
     </message>
     <message>

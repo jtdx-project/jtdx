@@ -382,7 +382,7 @@ Format:
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
-        <source>Kingdom of eSwatini</source>
+        <source>Kingdom of Eswatini</source>
         <translation>Królestwo eSwatini</translation>
     </message>
     <message>

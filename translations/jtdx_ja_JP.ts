@@ -387,8 +387,8 @@ Format:
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
-        <source>Kingdom of eSwatini</source>
-        <translation></translation>
+        <source>Kingdom of Eswatini</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>

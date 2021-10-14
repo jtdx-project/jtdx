@@ -42,7 +42,7 @@ void CountryDat::init(const QString filename,const QString filename2)
     _name.insert("Fiji",tr("Fiji"));
     _name.insert("Conway Reef",tr("Conway Reef"));
     _name.insert("Rotuma Island",tr("Rotuma Is."));
-    _name.insert("Kingdom of eSwatini",tr("Kingdom of eSwatini"));
+    _name.insert("Kingdom of Eswatini",tr("Kingdom of Eswatini"));
     _name.insert("Tunisia",tr("Tunisia"));
     _name.insert("Vietnam",tr("Vietnam"));
     _name.insert("Guinea",tr("Guinea"));

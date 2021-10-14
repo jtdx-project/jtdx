@@ -386,11 +386,6 @@ Formato:
         <translation>Is.Rotuma</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="45"/>
-        <source>Kingdom of eSwatini</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
         <source>Tunisia</source>
         <translation></translation>
@@ -804,6 +799,11 @@ Formato:
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
         <translation>Is.Juan Fernandez</translation>
+    </message>
+    <message>
+        <location filename="../logbook/countrydat.cpp" line="45"/>
+        <source>Kingdom of Eswatini</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
