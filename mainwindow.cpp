@@ -2129,7 +2129,7 @@ void MainWindow::on_hintButton_clicked (bool checked)
   m_hint=checked;
 }
 
-void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked); }
+void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked); if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#H")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());}
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
@@ -5968,6 +5968,7 @@ void MainWindow::on_spotLineEdit_textChanged(const QString &text)
   spotTextTmp.replace("#G",m_config.my_grid() + "<" + ui->propLineEdit->text() + ">" + ui->dxGridEntry->text(), Qt::CaseInsensitive);
   spotTextTmp.replace("#D", ui->labDist->text().replace(" ",""), Qt::CaseInsensitive);
   spotTextTmp.replace("#R", m_rpt+"dB", Qt::CaseInsensitive);
+  spotTextTmp.replace("#H", m_houndMode ? "F/H" : "");
   QString spotText;
   if(ui->spotLineEdit->text().isEmpty() && ui->propLineEdit->text().isEmpty()) { spotText="info: " + m_modeTx; }
   else if(ui->spotLineEdit->text().isEmpty() && !ui->propLineEdit->text().isEmpty()) { spotText="info: " + m_modeTx + " " + ui->propLineEdit->text(); }
