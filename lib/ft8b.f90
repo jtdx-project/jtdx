@@ -488,18 +488,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               else
                 s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
               endif
-            enddo
-            if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
-              if(srr.gt.2.3) then 
-                s2=s2**2
-              else
-                do kk1=0,511
-                  ss1=s2(kk1)
-                  if(ss1.lt.5.77) then; s2(kk1)=1+8.*ss1**2-0.12*ss1**4; else; s2(kk1)=(ss1+5.82)**2; endif
-                enddo
+              if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
+                if(srr.gt.2.3) then 
+                  s2(i)=s2(i)**2
+                else
+                  ss1=s2(i)
+                  if(ss1.lt.5.77) then; s2(i)=1+8.*ss1**2-0.12*ss1**4; else; s2(i)=(ss1+5.82)**2; endif
+                endif
               endif
-            endif
-            if(k1.eq.2 .and. srr.lt.2.5) s2=(0.5*s2)**3 ! -19dB SNR threshold
+              if(k1.eq.2 .and. srr.lt.2.5) s2(i)=(0.5*s2(i))**3 ! -19dB SNR threshold
+            enddo
             i32=1+(k-1)*3+(ihalf-1)*87
             if(nsym.eq.1) ibmax=2; if(nsym.eq.2) ibmax=5; if(nsym.eq.3) ibmax=8
             do ib=0,ibmax
