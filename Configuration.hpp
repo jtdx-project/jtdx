@@ -210,6 +210,7 @@ public:
   bool clear_DX () const;
   bool clear_DX_exit () const;
   bool miles () const;
+  bool scroll () const;
   int watchdog () const;
   int tunetimer () const;
   bool TX_messages () const;

@@ -836,6 +836,7 @@ private:
   bool clear_DX_;
   bool clear_DX_exit_;
   bool miles_;
+  bool scroll_;
   int watchdog_;
   int tunetimer_;
   bool TX_messages_;
@@ -1058,6 +1059,7 @@ bool Configuration::newPotential () const {return m_->newPotential_;}
 bool Configuration::clear_DX () const {return m_->clear_DX_;}
 bool Configuration::clear_DX_exit () const {return m_->clear_DX_exit_;}
 bool Configuration::miles () const {return m_->miles_;}
+bool Configuration::scroll () const {return m_->scroll_;}
 int Configuration::watchdog () const {return m_->watchdog_;}
 int Configuration::tunetimer () const {return m_->tunetimer_;}
 bool Configuration::TX_messages () const {return m_->TX_messages_;}
@@ -2068,6 +2070,7 @@ Radio::convert_dark("#fafbfe",useDarkStyle_),Radio::convert_dark("#dcdef1",useDa
   ui_->clear_DX_check_box->setChecked (clear_DX_);
   ui_->clear_DX_exit_check_box->setChecked (clear_DX_exit_);
   ui_->miles_check_box->setChecked (miles_);
+  ui_->scroll_check_box->setChecked (scroll_);
   ui_->tx_watchdog_spin_box->setValue (watchdog_);
   ui_->tune_timer_spin_box->setValue (tunetimer_);
   ui_->TX_messages_check_box->setChecked (TX_messages_);
@@ -2541,6 +2544,7 @@ void Configuration::impl::read_settings ()
   clear_DX_ = settings_->value ("ClearCallGrid", false).toBool ();
   clear_DX_exit_ = settings_->value ("ClearCallGridExit", false).toBool ();
   miles_ = settings_->value ("Miles", false).toBool ();
+  scroll_ = settings_->value ("Scroll", false).toBool ();
   watchdog_ = settings_->value ("TxWatchdogTimer", 6).toInt (); if(!(watchdog_>=0 && watchdog_<=99)) watchdog_=6;
   tunetimer_ = settings_->value ("TuneTimer", 30).toInt (); if(!(tunetimer_>=0 && tunetimer_<=300)) tunetimer_=30;
   TX_messages_ = settings_->value ("Tx2QSO", true).toBool ();
@@ -2805,6 +2809,7 @@ void Configuration::impl::write_settings ()
   settings_->setValue ("ClearCallGrid", clear_DX_);
   settings_->setValue ("ClearCallGridExit", clear_DX_exit_);
   settings_->setValue ("Miles", miles_);
+  settings_->setValue ("Scroll", scroll_);
   settings_->setValue ("TxWatchdogTimer", watchdog_);
   settings_->setValue ("TuneTimer", tunetimer_);
   settings_->setValue ("Tx2QSO", TX_messages_);
@@ -3400,6 +3405,7 @@ void Configuration::impl::accept ()
   clear_DX_ = ui_->clear_DX_check_box->isChecked ();
   clear_DX_exit_ = ui_->clear_DX_exit_check_box->isChecked ();
   miles_ = ui_->miles_check_box->isChecked ();
+  scroll_ = ui_->scroll_check_box->isChecked ();
   TX_messages_ = ui_->TX_messages_check_box->isChecked ();
   hide_TX_messages_ = ui_->hide_TX_messages_check_box->isChecked ();
   data_mode_ = static_cast<DataMode> (ui_->TX_mode_button_group->checkedId ());

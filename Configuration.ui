@@ -217,7 +217,7 @@
               <item>
                <widget class="QCheckBox" name="callNotif_check_box">
                 <property name="text">
-                 <string>Use current callsign</string>
+                 <string>Use current &amp;callsign</string>
                 </property>
                </widget>
               </item>
@@ -237,7 +237,7 @@
               <item>
                <widget class="QCheckBox" name="gridNotif_check_box">
                 <property name="text">
-                 <string>Use current grid</string>
+                 <string>Use curr&amp;ent grid</string>
                 </property>
                </widget>
               </item>
@@ -347,6 +347,16 @@
               </property>
              </widget>
             </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="scroll_check_box">
+              <property name="toolTip">
+               <string>Scroll message windows down not up.</string>
+              </property>
+              <property name="text">
+               <string>&amp;Scroll message windows down</string>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="0">
              <widget class="QCheckBox" name="miles_check_box">
               <property name="toolTip">
@@ -363,7 +373,7 @@
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When TX message is changed previous message will not be shown if it was transmitted for less than 2 seconds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
-               <string>Hide partially transmitted messages</string>
+               <string>&amp;Hide partially transmitted messages</string>
               </property>
              </widget>
             </item>
@@ -418,7 +428,7 @@
               <item>
                <widget class="QCheckBox" name="useDarkStyle_check_box">
                 <property name="text">
-                 <string>Use dark style</string>
+                 <string>Use dar&amp;k style</string>
                 </property>
                </widget>
               </item>
@@ -587,7 +597,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some rigs are not able to process CAT commands while transmitting. This means that if you are operating in split mode you may have to uncheck this option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Allow Tx frequency changes while transmitting</string>
+             <string>Allo&amp;w Tx frequency changes while transmitting</string>
             </property>
            </widget>
           </item>
@@ -597,7 +607,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this if you wish to automatically return to the last monitored frequency when monitor is enabled, leave it unchecked if you wish to have the current rig frequency maintained.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Monitor returns to last used frequency</string>
+             <string>Monitor returns to last used fre&amp;quency</string>
             </property>
            </widget>
           </item>

@@ -40,6 +40,7 @@ protected:
 
 private:
 
+    bool scroll_;
     bool bold_;
     bool wastx_;
     bool useDarkStyle_;

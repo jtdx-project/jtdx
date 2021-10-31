@@ -25,6 +25,7 @@ DisplayText::DisplayText(QWidget *parent) :
 
 void DisplayText::setConfiguration(Configuration const * config)
 {
+  scroll_ = config->scroll();
   useDarkStyle_ = config->useDarkStyle();
   displayCountryName_ = config->countryName();
   displayCountryPrefix_ = config->countryPrefix();
@@ -143,15 +144,22 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
     else if (std_type == 3 && servis.length()>1) servbg = servis.mid(1);
     else servbg = Radio::convert_dark("#ffffff",useDarkStyle_);
     auto cursor = textCursor ();
-    cursor.movePosition (QTextCursor::End);
-    if (0 == cursor.position ())
-        cursor.setCharFormat (m_charFormat);
-    else if (overwrite) {
-        cursor.select(QTextCursor::LineUnderCursor);
-        cursor.removeSelectedText();
-    } else
-        cursor.insertText ("\n");
-    
+    if (scroll_) {
+        cursor.movePosition (QTextCursor::Start);
+        if (overwrite) {
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+        }
+    } else {
+        cursor.movePosition (QTextCursor::End);
+        if (0 == cursor.position ())
+            cursor.setCharFormat (m_charFormat);
+        else if (overwrite) {
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+        } else
+            cursor.insertText ("\n");
+    }    
     if (forceBold) {
         if (bold_) { 
             m_charFormat.setFontWeight(QFont::Black);
@@ -198,7 +206,8 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
     } else {
         cursor.insertText (text.trimmed(),m_charFormat);
     }
-    cursor.movePosition (QTextCursor::StartOfLine);
+    if (scroll_ && !overwrite) cursor.insertText ("\n");
+    else cursor.movePosition (QTextCursor::StartOfLine);
     setTextCursor (cursor);
     ensureCursorVisible ();
     document ()->setMaximumBlockCount (document ()->maximumBlockCount ());
