@@ -60,7 +60,7 @@
     <message>
         <location filename="../Configuration.cpp" line="1369"/>
         <source>&amp;OK</source>
-        <translation>&amp;Kinnita</translation>
+        <translation>Ki&amp;nnita</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="1370"/>
@@ -6463,7 +6463,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="386"/>
         <source>Show &amp;prefix not name</source>
-        <translation>Kuva &amp;prefix mitte nimi</translation>
+        <translation>Kuva pre&amp;fix mitte nimi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="373"/>
@@ -6478,7 +6478,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>&amp;Tx sõnumid Rx sageduse aknasse</translation>
+        <translation>T&amp;x sõnumid Rx sageduse aknasse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="458"/>
@@ -6493,7 +6493,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="487"/>
         <source>Mon&amp;itor off at startup</source>
-        <translation>Mon&amp;itor väljas käivitumisel</translation>
+        <translation>Monitor v&amp;äljas käivitumisel</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="513"/>
@@ -7707,7 +7707,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation>Keri sõnumeid allap&amp;oole</translation>
+        <translation>Keri s&amp;õnumeid allapoole</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
@@ -7717,17 +7717,17 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation>&amp;Kasuta tumedat stiili</translation>
+        <translation>Ka&amp;suta tumedat stiili</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation>&amp;Luba Tx sageduse vahetus saatel olles</translation>
+        <translation>Lu&amp;ba Tx sageduse vahetus saatel olles</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation>Monitor taastav viimati &amp;kasutatud sageduse</translation>
+        <translation>Monitor taastav viimati kasutatud sa&amp;geduse</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="763"/>

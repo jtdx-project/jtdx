@@ -145,6 +145,12 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
     else servbg = Radio::convert_dark("#ffffff",useDarkStyle_);
     auto cursor = textCursor ();
     if (scroll_) {
+        if (document ()->blockCount() == 10000) {
+            cursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor, 9998);
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+            cursor.deleteChar();
+        }
         cursor.movePosition (QTextCursor::Start);
         if (overwrite) {
             cursor.select(QTextCursor::LineUnderCursor);
