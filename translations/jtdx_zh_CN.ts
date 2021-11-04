@@ -4771,8 +4771,8 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4390"/>
         <location filename="../mainwindow.cpp" line="4538"/>
         <location filename="../mainwindow.cpp" line="4777"/>
-        <location filename="../mainwindow.cpp" line="7238"/>
-        <location filename="../mainwindow.cpp" line="7481"/>
+        <location filename="../mainwindow.cpp" line="7239"/>
+        <location filename="../mainwindow.cpp" line="7482"/>
         <source>File Open Error</source>
         <translation>文件打开错误</translation>
     </message>
@@ -4783,9 +4783,9 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4391"/>
         <location filename="../mainwindow.cpp" line="4539"/>
         <location filename="../mainwindow.cpp" line="4778"/>
-        <location filename="../mainwindow.cpp" line="7239"/>
-        <location filename="../mainwindow.cpp" line="7482"/>
-        <location filename="../mainwindow.cpp" line="7836"/>
+        <location filename="../mainwindow.cpp" line="7240"/>
+        <location filename="../mainwindow.cpp" line="7483"/>
+        <location filename="../mainwindow.cpp" line="7837"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于附加: %2</translation>
     </message>
@@ -4990,7 +4990,7 @@ list. The list can be maintained in Settings (F2).</source>
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8071"/>
+        <location filename="../mainwindow.cpp" line="8072"/>
         <source>WD %1m</source>
         <translation>WD %1分钟</translation>
     </message>
@@ -5084,7 +5084,7 @@ list. The list can be maintained in Settings (F2).</source>
         <translation>接收 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7196"/>
+        <location filename="../mainwindow.cpp" line="7197"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>功率&lt;br&gt;%1 瓦</translation>
     </message>
@@ -5247,50 +5247,50 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>按下按钮将发射频率锁定到接收频率</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7274"/>
+        <location filename="../mainwindow.cpp" line="7275"/>
         <source>Rig Control Error</source>
         <translation>无线电设备控制错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7354"/>
+        <location filename="../mainwindow.cpp" line="7355"/>
         <source>Tune digital gain</source>
         <translation>调谐数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7355"/>
+        <location filename="../mainwindow.cpp" line="7356"/>
         <source>Transmit digital gain</source>
         <translation>发射数字增益</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7376"/>
         <source>Prefixes</source>
         <translation>前缀</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7451"/>
         <location filename="../mainwindow.cpp" line="7452"/>
+        <location filename="../mainwindow.cpp" line="7453"/>
         <source>Logd </source>
         <translation>记录 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7687"/>
+        <location filename="../mainwindow.cpp" line="7688"/>
         <source>Network Error</source>
         <translation>网络错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7689"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>错误: %1
 UDP 服务器 %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7835"/>
+        <location filename="../mainwindow.cpp" line="7836"/>
         <source>File Error</source>
         <translation>文件错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8057"/>
+        <location filename="../mainwindow.cpp" line="8058"/>
         <source>Tx watchdog expired</source>
         <translation>发射监管计时器已过期</translation>
     </message>
@@ -6021,70 +6021,70 @@ Error(%2): %3</source>
         <translation>TCI WebSocket 错误: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="405"/>
+        <location filename="../TCITransceiver.cpp" line="406"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR 无法打开</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="408"/>
+        <location filename="../TCITransceiver.cpp" line="409"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR 未打开</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="415"/>
+        <location filename="../TCITransceiver.cpp" line="416"/>
         <source>TCI RX2 could not be enabled</source>
         <translation>TCI RX2无法启用</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="423"/>
+        <location filename="../TCITransceiver.cpp" line="424"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI音频无法打开</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="460"/>
-        <location filename="../TCITransceiver.cpp" line="1460"/>
+        <location filename="../TCITransceiver.cpp" line="461"/>
+        <location filename="../TCITransceiver.cpp" line="1476"/>
         <source>TCI could not be opened</source>
         <translation>TCI无法打开</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1244"/>
+        <location filename="../TCITransceiver.cpp" line="1260"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI未能设置ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1253"/>
+        <location filename="../TCITransceiver.cpp" line="1269"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI应通过CAT使用PTT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1296"/>
+        <location filename="../TCITransceiver.cpp" line="1312"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI设置接收频率失败</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1315"/>
-        <location filename="../TCITransceiver.cpp" line="1442"/>
+        <location filename="../TCITransceiver.cpp" line="1331"/>
+        <location filename="../TCITransceiver.cpp" line="1458"/>
         <source>TCI failed set mode</source>
         <translation>TCI设置模式失败</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1366"/>
-        <location filename="../TCITransceiver.cpp" line="1409"/>
+        <location filename="../TCITransceiver.cpp" line="1382"/>
+        <location filename="../TCITransceiver.cpp" line="1425"/>
         <source>TCI failed set split</source>
         <translation>TCI设置异频失败</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1383"/>
+        <location filename="../TCITransceiver.cpp" line="1399"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI设置发射频率失败</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1594"/>
+        <location filename="../TCITransceiver.cpp" line="1610"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI发送了无法识别的频率</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1655"/>
+        <location filename="../TCITransceiver.cpp" line="1671"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI调制器被占用</translation>
     </message>

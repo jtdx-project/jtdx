@@ -7174,6 +7174,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
    }
 //   printf("%s(%0.1f) tranceiver update %d %d old %d new %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),
 //     m_jtdxtime->GetOffset(),m_tx_when_ready,g_iptt,m_rigState.ptt (),s.ptt ());
+  if (!s.ptt() && m_rigState.ptt () && (m_transmitting || m_tune)) haltTx("Halt Tx from rig detected ");
   if (s.ptt () && !m_rigState.ptt ()) // safe to start audio
                                       // (caveat - DX Lab Suite Commander)
     {

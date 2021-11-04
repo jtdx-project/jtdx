@@ -4766,8 +4766,8 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="4390"/>
         <location filename="../mainwindow.cpp" line="4538"/>
         <location filename="../mainwindow.cpp" line="4777"/>
-        <location filename="../mainwindow.cpp" line="7238"/>
-        <location filename="../mainwindow.cpp" line="7481"/>
+        <location filename="../mainwindow.cpp" line="7239"/>
+        <location filename="../mainwindow.cpp" line="7482"/>
         <source>File Open Error</source>
         <translation>Greška otvaranja datoteke</translation>
     </message>
@@ -4778,9 +4778,9 @@ popis. Popis se može održavati u Postavkama (F2).</translation>
         <location filename="../mainwindow.cpp" line="4391"/>
         <location filename="../mainwindow.cpp" line="4539"/>
         <location filename="../mainwindow.cpp" line="4778"/>
-        <location filename="../mainwindow.cpp" line="7239"/>
-        <location filename="../mainwindow.cpp" line="7482"/>
-        <location filename="../mainwindow.cpp" line="7836"/>
+        <location filename="../mainwindow.cpp" line="7240"/>
+        <location filename="../mainwindow.cpp" line="7483"/>
+        <location filename="../mainwindow.cpp" line="7837"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nemoguće otvoriti &quot;%1&quot; da bi se dodao: %2</translation>
     </message>
@@ -5233,60 +5233,60 @@ već je u CALL3.TXT, da li ga želiš zamijeniti?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pritisnite gumb za zaključavanje Tx frekvencije na Rx AF frekvenciji.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7196"/>
+        <location filename="../mainwindow.cpp" line="7197"/>
         <source>Pwr&lt;br&gt;%1 W</source>
         <translation>Pwr&lt;br&gt;%1 W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7274"/>
+        <location filename="../mainwindow.cpp" line="7275"/>
         <source>Rig Control Error</source>
         <translation>Greška kontrole RIG</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7354"/>
+        <location filename="../mainwindow.cpp" line="7355"/>
         <source>Tune digital gain</source>
         <translation>Jačina Tune Tona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7355"/>
+        <location filename="../mainwindow.cpp" line="7356"/>
         <source>Transmit digital gain</source>
         <translation>Jačina audio predaje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7376"/>
         <source>Prefixes</source>
         <translation>Prefiksi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7451"/>
         <location filename="../mainwindow.cpp" line="7452"/>
+        <location filename="../mainwindow.cpp" line="7453"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7687"/>
+        <location filename="../mainwindow.cpp" line="7688"/>
         <source>Network Error</source>
         <translation>Greška Mreže</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7689"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Greška: %1
 UDP server %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7835"/>
+        <location filename="../mainwindow.cpp" line="7836"/>
         <source>File Error</source>
         <translation>Greška datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8057"/>
+        <location filename="../mainwindow.cpp" line="8058"/>
         <source>Tx watchdog expired</source>
         <translation>TX Watchdog je istekao</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8071"/>
+        <location filename="../mainwindow.cpp" line="8072"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -6017,70 +6017,70 @@ Greška(%2): %3</translation>
         <translation>TCI websocket greška: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="405"/>
+        <location filename="../TCITransceiver.cpp" line="406"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR nije se mogao uključiti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="408"/>
+        <location filename="../TCITransceiver.cpp" line="409"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR nije uključen</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="415"/>
+        <location filename="../TCITransceiver.cpp" line="416"/>
         <source>TCI RX2 could not be enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="423"/>
+        <location filename="../TCITransceiver.cpp" line="424"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio nije se moguće uključiti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="460"/>
-        <location filename="../TCITransceiver.cpp" line="1460"/>
+        <location filename="../TCITransceiver.cpp" line="461"/>
+        <location filename="../TCITransceiver.cpp" line="1476"/>
         <source>TCI could not be opened</source>
         <translation>TCI se nije moguće otvoriti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1244"/>
+        <location filename="../TCITransceiver.cpp" line="1260"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI nije uspio postaviti ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1253"/>
+        <location filename="../TCITransceiver.cpp" line="1269"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI bi trebao koristiti PTT putem CAT-a</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1296"/>
+        <location filename="../TCITransceiver.cpp" line="1312"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI nije uspio postaviti rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1315"/>
-        <location filename="../TCITransceiver.cpp" line="1442"/>
+        <location filename="../TCITransceiver.cpp" line="1331"/>
+        <location filename="../TCITransceiver.cpp" line="1458"/>
         <source>TCI failed set mode</source>
         <translation>TCI nije uspio postaviti način rada</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1366"/>
-        <location filename="../TCITransceiver.cpp" line="1409"/>
+        <location filename="../TCITransceiver.cpp" line="1382"/>
+        <location filename="../TCITransceiver.cpp" line="1425"/>
         <source>TCI failed set split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1383"/>
+        <location filename="../TCITransceiver.cpp" line="1399"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI nije uspio postaviti txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1594"/>
+        <location filename="../TCITransceiver.cpp" line="1610"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI je poslao neprepoznatu frekvenciju</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1655"/>
+        <location filename="../TCITransceiver.cpp" line="1671"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulator nije u praznom hodu</translation>
     </message>

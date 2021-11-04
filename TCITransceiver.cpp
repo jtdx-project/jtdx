@@ -365,6 +365,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   busy_drive_ = false;
   busy_PTT_ = false;
   busy_rx2_ = false;
+  rx2_ = false;
   split_ = false;
   requested_split_ = false;
   PTT_ = false;
@@ -687,6 +688,11 @@ void TCITransceiver::onMessageReceived(const QString &str)
               if (args.at(1) == "false") PTT_ = false;
               else if (args.at(1) == "true") PTT_ = true;
               if (tci_Ready && requested_PTT_ == PTT_) tci_done3();
+              else if (tci_Ready && !PTT_) {
+                requested_PTT_ = PTT_;
+                update_PTT(PTT_);
+                power_ = 0; if (do_pwr_) update_power (0);
+              }  
             }
             break;
         case Cmd_AudioStart:
@@ -747,6 +753,14 @@ void TCITransceiver::onMessageReceived(const QString &str)
           fprintf (pFile,"%s(%0.1f) CmdStop : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
           fclose (pFile);
 #endif
+          if (tci_Ready && PTT_) {
+                PTT_ = false;
+                requested_PTT_ = PTT_;
+                update_PTT(PTT_);
+                power_ = 0; if (do_pwr_) update_power (0);
+                m_state = Idle;
+                Q_EMIT tci_mod_active(m_state != Idle);
+              }  
           _power_ = false;
           if (tci_timer1_->isActive()) { /*printf ("cmdstop done1\n");*/ tci_done1();}
           else {
@@ -1180,8 +1194,10 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
   fprintf (pFile,"%s(%0.1f) TCI do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
   fclose (pFile);
 #endif
-  if (busy_drive_ || !tci_Ready || requested_drive_ == drive || drive_ == drive) return;
-  else  busy_drive_ = true;
+  if (busy_drive_ || !tci_Ready || requested_drive_ == drive || drive_ == drive){ 
+  if (busy_drive_) busy_drive_ = false;
+  return;
+  } else  busy_drive_ = true;
   requested_drive_ = drive;
   if (ESDR3) {
     const QString cmd = CmdDrive + SmDP + rx_ + SmCM + drive + SmTZ;
@@ -1284,7 +1300,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
       const QString cmd = CmdVFO + SmDP + rx_ + SmCM + "0" + SmCM + requested_rx_frequency_ + SmTZ;
       sendTextMessage(cmd);
       mysleep1(1000);
-      if (band_change) mysleep1(500);
+//      if (band_change) mysleep1(500);
       if (requested_rx_frequency_ == rx_frequency_) update_rx_frequency (f);
       else {
 //        printf ("%s(%0.1f) TCI failed set rxfreq:%s->%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),rx_frequency_.toStdString().c_str(),requested_rx_frequency_.toStdString().c_str());

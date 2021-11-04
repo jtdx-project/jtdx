@@ -793,7 +793,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         mpx = items[1];
 
         if (!wantedCallList.isEmpty() && (wantedCallList.indexOf(Radio::base_callsign (checkCall)) >= 0 || wantedCallList.indexOf(checkCall) >= 0)) {
-            bwantedCall = true; show_line = true; 
+            bwantedCall = true; show_line = true;
         }
         for (int i=0; i<wantedPrefixList.size(); i++) {
             if (wantedPrefixList.at(i).size() > 1 && checkCall.startsWith(wantedPrefixList.at(i))) {
