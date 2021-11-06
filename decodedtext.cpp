@@ -73,7 +73,7 @@ QString DecodedText::CQersCall(QString& grid,QString& tyyp)
   auto const& match = callsign_re.match (message_);
   grid = match.captured ("grid");
   tyyp = match.captured ("tyyp");
-  if (tyyp == "CQ" || tyyp == "LP") tyyp = "";
+  if (tyyp == "CQ" || tyyp == "LP" || tyyp == "POTA" || tyyp == "SOTA" || tyyp == "IOTA") tyyp = "";
   else if (tyyp == "908") tyyp = "JA";
   else if (tyyp == "ASIA") tyyp = "AS";
   if (tyyp.size() > 2) return "";
