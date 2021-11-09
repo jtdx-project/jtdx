@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr,evencq,oddcq
+                         nincallthr,evencq,oddcq,numcqsig
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -73,14 +73,16 @@ contains
     type evencqtmp_struct
       real freq
       real xdt
+      complex cs(0:7,79)
     end type evencqtmp_struct
-    type(evencqtmp_struct) evencqtmp(20,24) ! 24 threads
+    type(evencqtmp_struct) evencqtmp(numcqsig,24) ! 20 sigs 24 threads
 
     type oddcqtmp_struct
       real freq
       real xdt
+      complex cs(0:7,79)
     end type oddcqtmp_struct
-    type(oddcqtmp_struct) oddcqtmp(20,24)
+    type(oddcqtmp_struct) oddcqtmp(numcqsig,24)
 
     this%callback => callback
 
@@ -325,8 +327,17 @@ contains
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
-    evencq(:,nthr)%freq=evencqtmp(:,nthr)%freq; evencq(:,nthr)%xdt=evencqtmp(:,nthr)%xdt; evencqtmp(:,nthr)%freq=6000.0
-    oddcq(:,nthr)%freq=oddcqtmp(:,nthr)%freq; oddcq(:,nthr)%xdt=oddcqtmp(:,nthr)%xdt; oddcqtmp(:,nthr)%freq=6000.0
+    if(levenint) then
+      evencq(1:ncqsignal,nthr)%freq=evencqtmp(1:ncqsignal,nthr)%freq
+      evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal,nthr)%xdt
+!      evencq(1:ncqsignal,nthr)%cs=evencqtmp(1:ncqsignal,nthr)%cs
+      evencqtmp(1:numcqsig,nthr)%freq=6000.0 ! reset all records
+    else if(loddint) then
+      oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal,nthr)%freq
+      oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal,nthr)%xdt
+!      oddcq(1:ncqsignal,nthr)%cs=oddcqtmp(1:ncqsignal,nthr)%cs
+      oddcqtmp(1:numcqsig,nthr)%freq=6000.0
+    endif
     ncandthr=nint(float(ncandthr)/npass)
     ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
     if(nmsgloc.gt.0) then

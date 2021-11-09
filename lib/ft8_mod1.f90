@@ -1,6 +1,6 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
+  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400,numcqsig=20) !NFRAME=1920*79
   real*4 dd8(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
   complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32), &
@@ -110,13 +110,15 @@ module ft8_mod1
   type evencq_struct
     real freq
     real xdt
+    complex cs(0:7,79)
   end type evencq_struct
-  type(evencq_struct) evencq(20,24) ! 24 threads
+  type(evencq_struct) evencq(numcqsig,24) ! 24 threads
 
   type oddcq_struct
     real freq
     real xdt
+    complex cs(0:7,79)
   end type oddcq_struct
-  type(oddcq_struct) oddcq(20,24)
+  type(oddcq_struct) oddcq(numcqsig,24)
 
 end module ft8_mod1
