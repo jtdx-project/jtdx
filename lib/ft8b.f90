@@ -1,8 +1,9 @@
-subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
+subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,  &
                 nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,               &
+                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,ncqsignal,npass,      &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens, &
-                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
+                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted, &
+                evencqtmp,oddcqtmp)
 !  use timer_module, only: timer
   use packjt77, only : unpack77
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
@@ -28,7 +29,25 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq
+
+  type tmpcq_struct
+    real freq
+    real xdt
+  end type tmpcq_struct
+  type(tmpcq_struct) tmpcq(40)
+
+  type evencqtmp_struct
+    real freq
+    real xdt
+  end type evencqtmp_struct
+  type(evencqtmp_struct) evencqtmp(20,24) ! 24 threads
+
+  type oddcqtmp_struct
+    real freq
+    real xdt
+  end type oddcqtmp_struct
+  type(oddcqtmp_struct) oddcqtmp(20,24)
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -851,6 +870,30 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                 i3=1; n3=1; iaptype=0; nbadcrc=0; lsd=.false.; exit
               endif
             endif
+
+            if(imainpass.eq.npass .and. lcqsignal .and. ipass.eq.13) then ! last pass
+              lfoundcq=.false.
+              do ik=1,40
+                if(tmpcq(ik)%freq.gt.5001.0) exit
+                if(abs(tmpcq(ik)%freq-f1).lt.5.0 .and. abs(tmpcq(ik)%xdt-xdt).lt.0.005) then ! max signal delay
+                  lfoundcq=.true.; exit
+                endif
+              enddo
+!if(.not.lfoundcq) print *,'ipass',ipass
+              if(.not.lfoundcq .and. ncqsignal.lt.20) then
+                ncqsignal=ncqsignal+1
+                if(levenint) then
+                  evencqtmp(ncqsignal,nthr)%freq=f1; evencqtmp(ncqsignal,nthr)%xdt=xdt
+!print *,'even_ncqsig',ncqsignal
+!print *,evencqtmp(ncqsignal,nthr)%freq,evencqtmp(ncqsignal,nthr)%xdt
+                else if(loddint) then
+                  oddcqtmp(ncqsignal,nthr)%freq=f1; oddcqtmp(ncqsignal,nthr)%xdt=xdt
+!print *,'odd_ncqsig',ncqsignal
+!print *,oddcqtmp(ncqsignal,nthr)%freq,oddcqtmp(ncqsignal,nthr)%xdt
+                endif
+              endif
+            endif
+
             if(nbadcrc.eq.1) cycle 
           endif
         endif

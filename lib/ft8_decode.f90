@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr
+                         nincallthr,evencq,oddcq
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -64,9 +64,27 @@ contains
     end type eventmp_struct
     type(eventmp_struct) eventmp(130)
 
+    type tmpcq_struct
+      real freq
+      real xdt
+    end type tmpcq_struct
+    type(tmpcq_struct) tmpcq(40)
+
+    type evencqtmp_struct
+      real freq
+      real xdt
+    end type evencqtmp_struct
+    type(evencqtmp_struct) evencqtmp(20,24) ! 24 threads
+
+    type oddcqtmp_struct
+      real freq
+      real xdt
+    end type oddcqtmp_struct
+    type(oddcqtmp_struct) oddcqtmp(20,24)
+
     this%callback => callback
 
-    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
+    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0; nmsgcq=0; tmpcq(:)%freq=6000.
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
     else if(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -78,7 +96,7 @@ contains
     endif
 
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
-    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0
+    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0; ncqsignal=0
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
@@ -187,12 +205,13 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
-                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,  &
+                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
+                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,npass,          &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
-                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
-        nsnr=nint(xsnr) 
+                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted, &
+                  evencqtmp,oddcqtmp)
+        nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
         if(nbadcrc.eq.0) then
@@ -261,6 +280,11 @@ contains
                 nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
 
+              if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.40) then
+                nmsgcq=nmsgcq+1; xdtr=xdt+0.5
+                tmpcq(nmsgcq)%freq=f1; tmpcq(nmsgcq)%xdt=xdtr
+              endif
+
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
                 if(levenint) then
@@ -301,6 +325,8 @@ contains
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
+    evencq(:,nthr)%freq=evencqtmp(:,nthr)%freq; evencq(:,nthr)%xdt=evencqtmp(:,nthr)%xdt; evencqtmp(:,nthr)%freq=6000.0
+    oddcq(:,nthr)%freq=oddcqtmp(:,nthr)%freq; oddcq(:,nthr)%xdt=oddcqtmp(:,nthr)%xdt; oddcqtmp(:,nthr)%freq=6000.0
     ncandthr=nint(float(ncandthr)/npass)
     ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
     if(nmsgloc.gt.0) then

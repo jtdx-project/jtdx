@@ -107,4 +107,16 @@ module ft8_mod1
   end type incall_struct
   type (incall_struct) incall(30)
 
+  type evencq_struct
+    real freq
+    real xdt
+  end type evencq_struct
+  type(evencq_struct) evencq(20,24) ! 24 threads
+
+  type oddcq_struct
+    real freq
+    real xdt
+  end type oddcq_struct
+  type(oddcq_struct) oddcq(20,24)
+
 end module ft8_mod1
