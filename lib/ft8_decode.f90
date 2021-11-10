@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr,evencq,oddcq,numcqsig
+                         nincallthr,evencq,oddcq,numcqsig,numdeccq
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -39,6 +39,7 @@ contains
 !integer*2 iwave(180000)
     real, DIMENSION(:), ALLOCATABLE :: dd8m
     real candidate(4,460),freqsub(200)
+    complex cstmp(0:7,79)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
@@ -68,7 +69,7 @@ contains
       real freq
       real xdt
     end type tmpcq_struct
-    type(tmpcq_struct) tmpcq(40)
+    type(tmpcq_struct) tmpcq(numdeccq)
 
     type evencqtmp_struct
       real freq
@@ -282,7 +283,7 @@ contains
                 nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
 
-              if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.40) then
+              if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.numdeccq) then
                 nmsgcq=nmsgcq+1; xdtr=xdt+0.5
                 tmpcq(nmsgcq)%freq=f1; tmpcq(nmsgcq)%xdt=xdtr
               endif
@@ -330,12 +331,16 @@ contains
     if(levenint) then
       evencq(1:ncqsignal,nthr)%freq=evencqtmp(1:ncqsignal,nthr)%freq
       evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal,nthr)%xdt
-!      evencq(1:ncqsignal,nthr)%cs=evencqtmp(1:ncqsignal,nthr)%cs
+      do ik=1,ncqsignal
+        cstmp=evencqtmp(ik,nthr)%cs; evencq(ik,nthr)%cs=cstmp
+      enddo
       evencqtmp(1:numcqsig,nthr)%freq=6000.0 ! reset all records
     else if(loddint) then
       oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal,nthr)%freq
       oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal,nthr)%xdt
-!      oddcq(1:ncqsignal,nthr)%cs=oddcqtmp(1:ncqsignal,nthr)%cs
+      do ik=1,ncqsignal
+        cstmp=oddcqtmp(ik,nthr)%cs; oddcq(ik,nthr)%cs=cstmp
+      enddo
       oddcqtmp(1:numcqsig,nthr)%freq=6000.0
     endif
     ncandthr=nint(float(ncandthr)/npass)
