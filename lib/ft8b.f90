@@ -507,6 +507,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
       endif
     endif
     do k1=1,nsubpasses
+      if(nweak.eq.1 .and. k1.eq.2) cycle
       if(k1.eq.2) cs=csr
       if(imainpass.eq.npass .and. lcqsignal .and.( nweak.eq.1 .or. (nweak.eq.2 .and. k1.eq.2))) cstmp2=cs
       do nsym=1,3
@@ -874,7 +875,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
         if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then ! chk ipass value
-!if(lcqsignal .and. k1.eq.3) print *,"ipass",ipass
           if(nweak.eq.2 .and. k1.eq.2) then
             if(imainpass.eq.npass .and. lcqsignal .and. ipass.eq.13) then ! last pass
               lfoundcq=.false.
@@ -884,20 +884,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   lfoundcq=.true.; exit
                 endif
               enddo
-!if(.not.lfoundcq) print *,'ipass',ipass
-!if(.not.lfoundcq) print *,'k1',k1
               if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
                 ncqsignal=ncqsignal+1
                 if(levenint) then
                   evencqtmp(ncqsignal,nthr)%freq=f1; evencqtmp(ncqsignal,nthr)%xdt=xdt
                   evencqtmp(ncqsignal,nthr)%cs=cstmp2
-!print *,'even_ncqsig',ncqsignal
-!print *,evencqtmp(ncqsignal,nthr)%freq,evencqtmp(ncqsignal,nthr)%xdt
                 else if(loddint) then
                   oddcqtmp(ncqsignal,nthr)%freq=f1; oddcqtmp(ncqsignal,nthr)%xdt=xdt
                   oddcqtmp(ncqsignal,nthr)%cs=cstmp2
-!print *,'odd_ncqsig',ncqsignal
-!print *,oddcqtmp(ncqsignal,nthr)%freq,oddcqtmp(ncqsignal,nthr)%xdt
                 endif
               endif
             endif
@@ -940,20 +934,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                     lfoundcq=.true.; exit
                   endif
                 enddo
-!if(.not.lfoundcq) print *,'ipass',ipass
-!if(.not.lfoundcq) print *,'k1',k1
                 if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
                   ncqsignal=ncqsignal+1
                   if(levenint) then
                     evencqtmp(ncqsignal,nthr)%freq=f1; evencqtmp(ncqsignal,nthr)%xdt=xdt
                     evencqtmp(ncqsignal,nthr)%cs=cstmp2
-!print *,'even_ncqsig',ncqsignal
-!print *,evencqtmp(ncqsignal,nthr)%freq,evencqtmp(ncqsignal,nthr)%xdt
                   else if(loddint) then
                     oddcqtmp(ncqsignal,nthr)%freq=f1; oddcqtmp(ncqsignal,nthr)%xdt=xdt
                     oddcqtmp(ncqsignal,nthr)%cs=cstmp2
-!print *,'odd_ncqsig',ncqsignal
-!print *,oddcqtmp(ncqsignal,nthr)%freq,oddcqtmp(ncqsignal,nthr)%xdt
                   endif
                 endif
               endif
