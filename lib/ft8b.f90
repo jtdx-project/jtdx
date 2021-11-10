@@ -488,7 +488,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 
     nweak=1
     if(lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) nweak=2
-    nsubpasses=nweak2
+    nsubpasses=nweak
     if(lcqsignal) then
       if(levenint) then
         do ik=1,numcqsig
@@ -506,7 +506,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         enddo
       endif
     endif
-    do k1=1,nweak
+    do k1=1,nsubpasses
       if(k1.eq.2) cs=csr
       if(imainpass.eq.npass .and. lcqsignal .and.( nweak.eq.1 .or. (nweak.eq.2 .and. k1.eq.2))) cstmp2=cs
       do nsym=1,3
@@ -521,12 +521,23 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               i1=i/64
               i2=iand(i,63)/8
               i33=iand(i,7)
-              if(nsym.eq.1) then
-                s2(i)=abs(cs(graymap(i33),ks))
-              elseif(nsym.eq.2) then
-                s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))
+              if(k1.eq.3) then
+                if(nsym.eq.1) then
+                  s2(i)=(abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks)))/2
+                elseif(nsym.eq.2) then
+                  s2(i)=(abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))+abs(csold(graymap(i2),ks)+csold(graymap(i33),ks1)))/2
+                else
+                  s2(i)=(abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2)) + &
+                    abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2)))/2
+                endif
               else
-                s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
+                if(nsym.eq.1) then
+                  s2(i)=abs(cs(graymap(i33),ks))
+                elseif(nsym.eq.2) then
+                  s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))
+                else
+                  s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
+                endif
               endif
               if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
                 if(srr.gt.2.3) then 
@@ -536,7 +547,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   if(ss1.lt.5.77) then; s2(i)=1+8.*ss1**2-0.12*ss1**4; else; s2(i)=(ss1+5.82)**2; endif
                 endif
               endif
-              if(k1.eq.2 .and. srr.lt.2.5) s2(i)=(0.5*s2(i))**3 ! -19dB SNR threshold
+              if(k1.gt.1 .and. srr.lt.2.5) s2(i)=(0.5*s2(i))**3 ! -19dB SNR threshold
             enddo
             i32=1+(k-1)*3+(ihalf-1)*87
             if(nsym.eq.1) ibmax=2; if(nsym.eq.2) ibmax=5; if(nsym.eq.3) ibmax=8
@@ -664,8 +675,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
           apmask=0; iaptype=0
           if(ipass.eq.1) then
             if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
-            if(k1.eq.2 .and. imainpass.gt.1) llrz=llrd
-          else if(ipass.eq.2) then; llrz=llrb; if(k1.eq.2) llrz=llra ! subpass 10661..10670
+            if(k1.gt.1 .and. imainpass.gt.1) llrz=llrd
+          else if(ipass.eq.2) then; llrz=llrb; if(k1.gt.1) llrz=llra ! subpass 10661..10670
           else if(ipass.eq.3) then; llrz=llrc
           else if(ipass.eq.4) then; llrz=llrd ! AP CQ
           endif
@@ -863,6 +874,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
         if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then ! chk ipass value
+!if(lcqsignal .and. k1.eq.3) print *,"ipass",ipass
           if(nweak.eq.2 .and. k1.eq.2) then
             if(imainpass.eq.npass .and. lcqsignal .and. ipass.eq.13) then ! last pass
               lfoundcq=.false.
@@ -891,7 +903,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
             endif
           endif
 
-          if(.not.lapon .or. k1.eq.2) cycle
+          if(.not.lapon .or. k1.gt.1) cycle
 
           if(lapon) then
             if(lqsothread .and. (.not.lhound .and. iaptype.ge.3 .or. lhound .and. (iaptype.eq.21 .or. iaptype.eq.23)) &
