@@ -538,7 +538,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="74"/>
         <source>Lesotho</source>
-        <translation>Lesoto</translation>
+        <translation>Lesotho</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="75"/>
@@ -628,7 +628,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="92"/>
         <source>Rwanda</source>
-        <translation>Rwanda</translation>
+        <translation>Ruanda</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="93"/>
@@ -1518,7 +1518,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation>Illa São Tomé i Príncepe</translation>
+        <translation>Illa São Tomé i Príncipe</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1643,7 +1643,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>C. African Rep.</source>
-        <translation>Rep. Centroafricana.</translation>
+        <translation>Rep. Centreafricana.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="296"/>
@@ -7307,42 +7307,42 @@ i Locator DX quan s&apos;envia un missatge de text 73 o lliure.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Utilitza l&apos;indicatiu actual</translation>
+        <translation>Utilitza l&apos;indi&amp;catiu actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Utilitza el teu locator actual</translation>
+        <translation>Utilitza el t&amp;eu locator actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplaçar les finestres de missatges cap avall, no cap amunt.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>De&amp;splaçar les finestres de missatges cap avall</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Amaga els missatges transmesos parcialment</translation>
+        <translation>&amp;Amaga els missatges transmesos parcialment</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Fes servir l&apos;estil fosc</translation>
+        <translation>&amp;Fes servir l&apos;estil fosc</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Permetre canvis de freqüència de transmissió mentre es transmet</translation>
+        <translation>&amp;Permetre canvis de freqüència de transmissió mentre es transmet</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">El monitor torna a l&apos;última freqüència utilitzada</translation>
+        <translation>El monitor torna a l&apos;última fre&amp;qüència utilitzada</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8379,7 +8379,7 @@ EA3RDG,EA3URO,1C0CAT &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Amagar missatges amb indicatiu del propi continent</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
