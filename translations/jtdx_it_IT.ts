@@ -803,7 +803,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation type="unfinished"></translation>
+        <translation>Regno di eSwatini</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="89"/>
@@ -7295,42 +7295,42 @@ e Griglia DX quando viene inviato un messaggio di testo o 73.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Usa questo Nominativo</translation>
+        <translation>Usa questo Nominativo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Usa questa Griglia</translation>
+        <translation>Usa questa Griglia</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorri la finestra dei messaggi verso il basso no verso l&apos;alto</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Scorri la finestra dei messaggi in basso</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Nascondi i msg non totalmente Tx</translation>
+        <translation>Nascondi i msg parzialmente trasmessi</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Usa il tema scuro</translation>
+        <translation>Usa il tema scuro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Consenti cambi di frequenza Tx durante la trasmissione</translation>
+        <translation>&amp;Consenti cambi di frequenza Tx durante la trasmissione</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">La ricezione ritorna sull&apos;ultima frequenza usata</translation>
+        <translation>La ricezione ritorna sull&apos;ultima frequenza usata</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8367,7 +8367,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascondi i messaggi del proprio continente</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
