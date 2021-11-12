@@ -494,14 +494,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         do ik=1,numcqsig
           if(evencq(ik,nthr)%freq.gt.5001.) exit
           if(abs(evencq(ik,nthr)%freq-f1).lt.2.0 .and. abs(evencq(ik,nthr)%xdt-xdt).lt.0.05) then
-            nsubpasses=3; csold=evencq(ik,nthr)%cs
+            nsubpasses=4; csold=evencq(ik,nthr)%cs
           endif
         enddo
       else if (loddint) then
         do ik=1,numcqsig
           if(oddcq(ik,nthr)%freq.gt.5001.) exit
           if(abs(oddcq(ik,nthr)%freq-f1).lt.2.0 .and. abs(oddcq(ik,nthr)%xdt-xdt).lt.0.05) then
-            nsubpasses=3; csold=oddcq(ik,nthr)%cs
+            nsubpasses=4; csold=oddcq(ik,nthr)%cs
           endif
         enddo
       endif
@@ -522,22 +522,31 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               i1=i/64
               i2=iand(i,63)/8
               i33=iand(i,7)
-              if(k1.eq.3) then
-                if(nsym.eq.1) then
-                  s2(i)=(abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks)))/2
-                elseif(nsym.eq.2) then
-                  s2(i)=(abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))+abs(csold(graymap(i2),ks)+csold(graymap(i33),ks1)))/2
-                else
-                  s2(i)=(abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2)) + &
-                    abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2)))/2
-                endif
-              else
+              if(k1.lt.3) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))
                 elseif(nsym.eq.2) then
                   s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))
                 else
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
+                endif
+              else if(k1.eq.3) then
+                if(nsym.eq.1) then
+                  s2(i)=abs(cs(graymap(i33),ks))**2+abs(csold(graymap(i33),ks))**2
+                elseif(nsym.eq.2) then
+                  s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))**2+abs(csold(graymap(i2),ks)+csold(graymap(i33),ks1))**2
+                else
+                  s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))**2 + &
+                    abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))**2
+                endif
+              else if(k1.eq.4) then
+                if(nsym.eq.1) then
+                  s2(i)=abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks))
+                elseif(nsym.eq.2) then
+                  s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))+abs(csold(graymap(i2),ks)+csold(graymap(i33),ks1))
+                else
+                  s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2)) + &
+                    abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))
                 endif
               endif
               if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
