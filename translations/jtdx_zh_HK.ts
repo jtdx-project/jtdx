@@ -348,7 +348,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Agalega &amp; St. Brandon</source>
-        <translation>阿加萊加群島 及 聖布蘭登群島</translation>
+        <translation>阿加萊加群島及聖布蘭登群島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
@@ -388,7 +388,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation>斯威士王國</translation>
+        <translation>斯威士蘭王國</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -408,7 +408,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="49"/>
         <source>Bouvet</source>
-        <translation>布威島</translation>
+        <translation>布韋島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="50"/>
@@ -733,7 +733,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation>費南德斯島.</translation>
+        <translation>胡安費南德斯島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -958,7 +958,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation>奧斯亞群島.</translation>
+        <translation>南方群島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
@@ -973,7 +973,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation>克利珀頓島</translation>
+        <translation>聖皮埃爾和密克隆島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
@@ -988,17 +988,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation>格羅裡奧索群島.</translation>
+        <translation>格洛里厄斯群島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
         <source>Juan de Nova, Europa</source>
-        <translation>胡安德諾瓦島, 歐洲</translation>
+        <translation>新胡安島歐羅巴島, 歐洲</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation>特羅梅林島.</translation>
+        <translation>特羅姆蘭島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
@@ -1008,7 +1008,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation>克爾格倫島.</translation>
+        <translation>凱爾蓋朗群島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
@@ -1058,7 +1058,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="179"/>
         <source>Guernsey</source>
-        <translation>格恩西島</translation>
+        <translation>根息島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
@@ -1073,7 +1073,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
         <source>Temotu Province</source>
-        <translation>特莫圖省</translation>
+        <translation>泰莫圖省</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="183"/>
@@ -1088,7 +1088,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="185"/>
         <source>Liechtenstein</source>
-        <translation>列支敦斯登</translation>
+        <translation>列支敦士登</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="186"/>
@@ -1118,7 +1118,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation>聖安德列斯</translation>
+        <translation>聖安德列斯和普羅維登西亞島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
@@ -1163,7 +1163,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation>AF 意大利</translation>
+        <translation>意大利非洲屬地</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
@@ -1283,7 +1283,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation>巴爾米拉島.</translation>
+        <translation>巴爾米拉環礁和賈維斯島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
@@ -1333,7 +1333,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation>德塞喬島.</translation>
+        <translation>德塞切奧島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
@@ -1423,7 +1423,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="252"/>
         <source>Papua New Guinea</source>
-        <translation>巴布亞紐几內亞</translation>
+        <translation>巴布亞新幾內亞</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="253"/>
@@ -1453,7 +1453,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation>沙巴和聖奧依斯坦圖斯</translation>
+        <translation>薩巴島和聖尤斯特歇斯島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
@@ -1468,7 +1468,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation>費爾南多群島</translation>
+        <translation>費爾南多迪諾羅尼亞群島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
@@ -1478,7 +1478,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Trindade &amp; Martim Vaz</source>
-        <translation>特林迪達島</translation>
+        <translation>特林達迪和馬丁瓦斯群島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
@@ -1513,7 +1513,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Sao Tome &amp; Principe</source>
-        <translation>聖多美普林西比</translation>
+        <translation>聖多美和普林西比</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="271"/>
@@ -1563,17 +1563,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation>西吉里巴斯</translation>
+        <translation>西基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>C. Kiribati</source>
-        <translation>中吉里巴斯</translation>
+        <translation>中基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>E. Kiribati</source>
-        <translation>東吉里巴斯</translation>
+        <translation>東基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
@@ -1633,7 +1633,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="294"/>
         <source>Corsica</source>
-        <translation>科西嘉</translation>
+        <translation>科西嘉島</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
@@ -1703,7 +1703,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation>安地卡及巴布達</translation>
+        <translation>安提瓜及巴布達</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
@@ -1728,7 +1728,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation>馬歇爾島.</translation>
+        <translation>馬紹爾群島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
@@ -1778,12 +1778,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation>威里斯島.</translation>
+        <translation>威利斯島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>聖誕節島.</translation>
+        <translation>聖誕島.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -1793,7 +1793,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Montserrat</source>
-        <translation>蒙特塞拉特</translation>
+        <translation>蒙特塞拉特岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
@@ -1883,7 +1883,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="344"/>
         <source>Burkina Faso</source>
-        <translation>布吉那法索</translation>
+        <translation>布吉納法索</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="345"/>
@@ -1983,7 +1983,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation>蘇丹</translation>
+        <translation>南蘇丹</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -1998,7 +1998,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>UK Base Areas on Cyprus</source>
-        <translation>英國賽普勒斯基地</translation>
+        <translation>英國塞浦路斯基地</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="368"/>
@@ -2028,7 +2028,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="373"/>
         <source>New Zealand</source>
-        <translation>紐西蘭</translation>
+        <translation>新西蘭</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="374"/>
@@ -3261,12 +3261,12 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The button provides choice between S-meter units and dBm. CAT shall be set up via Hamlib or TCI to get S-meter working, some rigs may not be supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;該按鈕提供了電平單位和dBm之間的選擇. CAT 應通過設定 Hamlib 或 TCI 以電平表工作，某些無線電設備可能不支援.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;該按鈕提供了電平單位和dBm之間的選擇. CAT 應設定通過 Hamlib 或 TCI 以電平表工作，某些無線電設備可能不支援.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT通過 Hamlib 設定, 支援獲取某些收發器的輸出功率數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT通過 Hamlib 設定, 支持獲取某些收發器的輸出功率數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1853"/>
@@ -3282,7 +3282,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="1925"/>
         <location filename="../mainwindow.ui" line="1941"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted callsigns. Autoselection under AutoSeq 1..7 will process wanted callsign according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0. Non FT8 modes only: for compound callsigns the base callsign shall be used in the list, sometimes base callsign will be copied from the decoded message: when logging such QSO user will have to change correspondent&apos;s callsign to compound one if needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的通緝呼號清單. 自動程序 1..7下的自動選擇..7將根據所選擇的 通知/優先級 處理所需的呼號, 此功能在 自動程序0 不受支援.僅適用於非FT8模式:對於復合呼號, 清單中應使用基本呼號, 有時基本呼號將從解碼的訊息中復制:當登錄時, 這種通聯用戶將不得不更改相應的如果需要的話, 用呼號表示復合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的通緝呼號清單. 自動程序 1..7下的自動選擇..7將根據所選擇的 通知/優先級 處理所需的呼號, 此功能在 自動程序0 不受支持.僅適用於非FT8模式:對於復合呼號, 清單中應使用基本呼號, 有時基本呼號將從解碼的訊息中復制:當登錄時, 這種通聯用戶將不得不更改相應的如果需要的話, 用呼號表示復合呼號.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1928"/>
@@ -3315,7 +3315,7 @@ Error: %2 - %3</source>
         <location filename="../mainwindow.ui" line="2007"/>
         <location filename="../mainwindow.ui" line="2023"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of the wanted grid squares where four char grid being supported only. Autoselection under AutoSeq 1..7 will process wanted grid according to the choosen notifications/priorities, this functionality is not supported under AutoSeq0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的所需網格方塊清單, 其中僅支援四個字符網格.自動程序下的 1..7 自動選擇將根據選擇的通知/優先級處理所需的網格, 此功能在自動請求下不受支援 自動程序0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逗號分隔的所需網格方塊清單, 其中僅支持四個字符網格.自動程序下的 1..7 自動選擇將根據選擇的通知/優先級處理所需的網格, 此功能在自動請求下不受支持 自動程序0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2010"/>
@@ -3478,12 +3478,12 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase decoded text(left) window. Right mouse button: Erase QSO Frequency window. Double-click for both windows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 清除波段活動(左) 視窗.鼠標右鍵: 清除接收訊息視窗(右)視窗.雙擊清除這兩個視窗.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除波段活動(左) 視窗.鼠標右鍵: 擦除接收訊息視窗(右)視窗.雙擊擦除這兩個視窗.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2763"/>
         <source>&amp;Erase</source>
-        <translation>清除視窗(&amp;E)</translation>
+        <translation>擦除視窗(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2788"/>
@@ -3528,7 +3528,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 清除 DX呼號 和 DX網格 視窗中的數據. 鼠標右鍵: 清除 DX呼號, DX網格視窗通聯曆史紀錄和黑名單中的數據. CTRL+鼠標右鍵: 從 DX呼號 視窗新增呼號到黑名單, 清除DX呼號 和 DX網格視窗, 和通聯曆史紀錄中的數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;鼠標左鍵: 擦除 DX呼號 和 DX網格 視窗中的數據. 鼠標右鍵: 擦除 DX呼號, DX網格視窗通聯曆史紀錄和黑名單中的數據. CTRL+鼠標右鍵: 從 DX呼號 視窗新增呼號到黑名單, 擦除DX呼號 和 DX網格視窗, 和通聯曆史紀錄中的數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2974"/>
@@ -3563,7 +3563,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
         <location filename="../mainwindow.ui" line="3200"/>
         <location filename="../mainwindow.ui" line="3822"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Directional CQ, range from AA to ZZ is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;支援CQ 指定范圍從 AA 到ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;支持CQ 指定范圍從 AA 到ZZ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3203"/>
@@ -4717,7 +4717,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.cpp" line="470"/>
         <source>Do you want to reconfigure the radio interface?</source>
-        <translation>是否要重新配置無線電設備接口?</translation>
+        <translation>是否要重新配置無線電設備界面?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="827"/>
@@ -4979,10 +4979,10 @@ list. The list can be maintained in Settings (F2).</source>
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td align=&quot;right&quot;&gt;清除按鈕:&lt;/td&gt;
-    &lt;td&gt;點擊右鍵以清除QSO視窗.&lt;br/&gt;
-        按下左鍵以清除波段活動視窗.&lt;br/&gt;
-        按兩鍵或右鍵以清除 QSO &lt;br/&gt;
+    &lt;td align=&quot;right&quot;&gt;擦除按鈕:&lt;/td&gt;
+    &lt;td&gt;點擊右鍵以擦除QSO視窗.&lt;br/&gt;
+        按下左鍵以擦除波段活動視窗.&lt;br/&gt;
+        按兩鍵或右鍵以擦除 QSO &lt;br/&gt;
         和波段活動視窗.
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -5143,7 +5143,7 @@ list. The list can be maintained in Settings (F2).</source>
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Ctrl+A    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;清除渴望清單&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+B/C  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;切換到 FT8/FT4 模式&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+D    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;在QSO頻率再次解碼&lt;/td&gt;&lt;td&gt;&lt;b&gt;Shift+D  &lt;/b&gt;&lt;/td&gt;&lt;td&gt;完全解碼 (兩個視窗)&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;清除&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+E    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;擦除&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+F    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;切換繞過全部文本過濾器&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ctrl+F   &lt;/b&gt;&lt;/td&gt;&lt;td&gt;編輯自定義文本訊息框&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+G    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;生成標準訊息&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+H    &lt;/b&gt;&lt;/td&gt;&lt;td&gt;停止 Tx&lt;/td&gt;&lt;/tr&gt;
@@ -5214,17 +5214,17 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <location filename="../mainwindow.cpp" line="6493"/>
         <location filename="../mainwindow.cpp" line="6505"/>
         <source>Confirm Erase</source>
-        <translation>確認清除</translation>
+        <translation>確認擦除</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6494"/>
         <source>Are you sure you want to erase file ALL.TXT ?</source>
-        <translation>是否確實要清除 ALL.TXT ?</translation>
+        <translation>是否確實要擦除 ALL.TXT ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6506"/>
         <source>Are you sure you want to erase your QSO LOG?</source>
-        <translation>是否確實要清除 通聯日誌?</translation>
+        <translation>是否確實要擦除 通聯日誌?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7133"/>
@@ -6439,12 +6439,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>將DXCC國家名稱附加到解碼的訊息中.</translation>
+        <translation>將DXCC國家或地區名稱附加到解碼的訊息中.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="412"/>
         <source>Show &amp;DXCC names</source>
-        <translation>顯示國家名稱(&amp;D)</translation>
+        <translation>顯示國家或地區名稱(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="383"/>
@@ -6571,7 +6571,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="696"/>
         <source>Radio interface configuration settings.</source>
-        <translation>設定無線電設備接口設定.</translation>
+        <translation>設定無線電設備界面設定.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="704"/>
@@ -6581,12 +6581,12 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="724"/>
         <source>Poll Interval:</source>
-        <translation>時間間隔:</translation>
+        <translation>輪詢間隔:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interval to poll rig for status. Longer intervals will mean that changes to the rig will take longer to be detected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為程式與無線電設備溝通的時間間隔.時間間隔較長,意味着對無線電設備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;為程式與無線電設備溝通的輪詢時間間隔.時間間隔較長,意味着對無線電設備的更改需要更長的時間才能檢測到.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="737"/>
@@ -6602,7 +6602,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="808"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request S meter data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting S meter data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求電平表數據: CAT 應通過 Hamlib 設定,Hamlib 確實支援為某些收發器獲取電平表數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求電平表數據: CAT 應通過 Hamlib 設定,Hamlib 確實支持為某些收發器獲取電平表數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="811"/>
@@ -6612,7 +6612,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request output power data from transceiver: CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求輸出功率數據: CAT 應通過 Hamlib 設定,Hamlib 確實支援獲取某些收發器的輸出功率數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;從收發器請求輸出功率數據: CAT 應通過 Hamlib 設定,Hamlib 確實支持獲取某些收發器的輸出功率數據.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="843"/>
@@ -6633,7 +6633,7 @@ quiet period when decoding is done.</source>
         <location filename="../Configuration.ui" line="885"/>
         <location filename="../Configuration.ui" line="1370"/>
         <source>Port:</source>
-        <translation>埠號:</translation>
+        <translation>序列埠:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="901"/>
@@ -6643,7 +6643,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="925"/>
         <source>Serial Port Parameters</source>
-        <translation>串口參數</translation>
+        <translation>序列埠參數</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="942"/>
@@ -6698,7 +6698,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1010"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data bits used to communicate with your radio&apos;s CAT interface (usually eight).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用於與無線電設備 CAT 接口通信的數據位數 (通常為 8 ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用於與無線電設備 CAT 界面通信的數據位數 (通常為 8 ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1013"/>
@@ -6725,7 +6725,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1067"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of stop bits used when communicating with your radio&apos;s CAT interface&lt;/p&gt;&lt;p&gt;(consult you radio&apos;s manual for details).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;與無線電設備 CAT 接口通信時使用的停止位數&lt;/p&gt;&lt;p&gt;(詳情請參閱無線電設備手冊).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;與無線電設備 CAT 界面通信時使用的停止位數&lt;/p&gt;&lt;p&gt;(詳情請參閱無線電設備手冊).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1070"/>
@@ -6745,7 +6745,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1121"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flow control protocol used between this computer and your radio&apos;s CAT interface (usually &amp;quot;None&amp;quot; but some require &amp;quot;Hardware&amp;quot;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;電腦和無線電設備 CAT 接口 (通常是 &quot;None&quot;) 之間使用的流量控制協議 (通常是 &quot;無&quot;,但有些要求硬件).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;電腦和無線電設備 CAT 界面 (通常是 &quot;None&quot;) 之間使用的流量控制協議 (通常是 &quot;無&quot;,但有些要求硬件).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1124"/>
@@ -6760,7 +6760,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="1162"/>
         <source>Software flow control (very rare on CAT interfaces).</source>
-        <translation>程式控制流 (在CAT接口上非常罕見).</translation>
+        <translation>程式控制流 (在CAT界面上非常罕見).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1165"/>
@@ -6779,7 +6779,7 @@ a few, particularly some Kenwood rigs, require it).</source>
     <message>
         <location filename="../Configuration.ui" line="1180"/>
         <source>&amp;Hardware</source>
-        <translation>硬件(&amp;H)</translation>
+        <translation>硬體(&amp;H)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1193"/>
@@ -6828,9 +6828,9 @@ a few, particularly some Kenwood rigs, require it).</source>
         <source>Some radios support PTT via CAT commands,
 use this option if your radio supports it and you have no
 other hardware interface for PTT.</source>
-        <translation>一些無線電設備通過CAT命令支援 PTT, 
-如果您的無線電設備支援此選項請使用此選項而且您沒有
-PTT的其它硬件接口.</translation>
+        <translation>一些無線電設備通過CAT命令支持 PTT, 
+如果您的無線電設備支持此選項請使用此選項而且您沒有
+PTT的其它硬件界面.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1313"/>
@@ -6840,7 +6840,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1323"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用RS-232 DTR 控制線切換無線電設備的PTT.一些商用接口單元也使用此方法.CAT序列埠的DTR控制線可用於此控制線,也可用於不同序列埠上的DTR控制線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用RS-232 DTR 控制線切換無線電設備的PTT.一些商用界面單元也使用此方法.CAT序列埠的DTR控制線可用於此控制線,也可用於不同序列埠上的DTR控制線.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1326"/>
@@ -6850,7 +6850,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您沒有無線電設備接口硬件,沒法PTT而是使用無線電設備的自動聲控來發射,請使用此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您沒有無線電設備界面硬件,沒法PTT而是使用無線電設備的自動聲控來發射,請使用此選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1342"/>
@@ -6860,7 +6860,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電設備的 PTT, 需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業接口單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 序列埠的 RTS 控制線可用於此, 也可以使用其他序列埠上的 RTS 控制線.請注意, 使用硬件流控制時, 此選項在 CAT 序列埠上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制線切換無線電設備的 PTT, 需要硬件將線路整數.&lt;/p&gt;&lt;p&gt;一些商業界面單元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 序列埠的 RTS 控制線可用於此, 也可以使用其他序列埠上的 RTS 控制線.請注意, 使用硬件流控制時, 此選項在 CAT 序列埠上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1355"/>
@@ -6870,7 +6870,7 @@ PTT的其它硬件接口.</translation>
     <message>
         <location filename="../Configuration.ui" line="1386"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;選擇用於 ptt 控制的RS-232 序列埠,當選擇上述DTR或RTS作為發射方法時,此選項可用.此埠號可以與用於CAT控制的埠號相同.對於某些接口類型,可以選擇特殊值CAT,這用於可以遠程控制串口控制線的非串行CAT接口 (例如 omnirig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;選擇用於 ptt 控制的RS-232 序列埠,當選擇上述DTR或RTS作為發射方法時,此選項可用.此埠號可以與用於CAT控制的埠號相同.對於某些界面類型,可以選擇特殊值CAT,這用於可以遠程控制串口控制線的非串行CAT界面 (例如 omnirig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1417"/>
@@ -6976,7 +6976,7 @@ radio interface behave as expected.</source>
         <translation>嘗試激活無線電設備.
 再次單擊以停用.通常沒有功率輸出
 因為此時沒有音頻生成.檢查無線電設備
-和/或您的無線電設備接口上
+和/或您的無線電設備界面上
 的任何發射指示是否如預期的那樣.</translation>
     </message>
     <message>
@@ -7003,7 +7003,7 @@ radio interface behave as expected.</source>
     <message>
         <location filename="../Configuration.ui" line="1717"/>
         <source>Audio interface settings</source>
-        <translation>音頻接口設定</translation>
+        <translation>音頻界面設定</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1723"/>
@@ -7194,7 +7194,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;預設情況下, 如果解碼了有效的 &apos;新DXCC&apos; 訊息, 別台回應我或解碼的 CQ/73 訊息的自動選擇, 則忽略 CQ 的接收/定向CQ. 此選項消除了 定向CQ 處理自動選擇中的 &apos;新 DXCC&apos; 異常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;選用定向CQ指定區域如AS NA AF…或首碼, 軟件將忽略非指定區域或首碼的其他電臺，包括新DXCC的CQ呼叫.渴望的呼號首碼，不受此定向限制.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2230"/>
@@ -7699,42 +7699,42 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">使用當前呼號</translation>
+        <translation>使用當前呼號(&amp;c)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">使用當前網格</translation>
+        <translation>使用當前網格(&amp;e)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>解碼資訊顯示在波段活動窗囗舊訊息之上.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>解碼資訊顯示在窗囗最上(&amp;S)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">隱藏已發射的訊息</translation>
+        <translation>隱藏已發射的訊息(&amp;H)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">使用深暗色樣式</translation>
+        <translation>使用深暗色樣式(&amp;k)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">允許發射期間改變頻率</translation>
+        <translation>允許發射期間改變頻率(&amp;w)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">開始監聽時使用上一次的頻率</translation>
+        <translation>開始監聽時使用上一次的頻率(&amp;q)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="763"/>
@@ -8360,7 +8360,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>隱藏自己洲大陸呼號的訊息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
@@ -8831,7 +8831,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <location filename="../Configuration.ui" line="6927"/>
         <location filename="../Configuration.ui" line="6940"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或發射路徑中的信號失真會產生 JT65A 信號(JT65B、JT65C 等)的諧波通過解碼信號的減法, 解碼JT65A信號諧波可以提高整體解碼效率.解碼深度與所需的 CPU 資源成正比, 將其設定為 1 以表示 CPU 速度較慢.更高的深度值將允許解碼更多的諧波.支援 JT65B 和 JT65C 解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或發射路徑中的信號失真會產生 JT65A 信號(JT65B、JT65C 等)的諧波通過解碼信號的減法, 解碼JT65A信號諧波可以提高整體解碼效率.解碼深度與所需的 CPU 資源成正比, 將其設定為 1 以表示 CPU 速度較慢.更高的深度值將允許解碼更多的諧波.支持 JT65B 和 JT65C 解碼.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="6930"/>
@@ -8866,7 +8866,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 resetting the radio interface and applying any
 soundcard changes</source>
         <translation>放棄或應用設定更改, 包括
-重置無線電設備接口並應用任何
+重置無線電設備界面並應用任何
 聲卡更改</translation>
     </message>
 </context>
