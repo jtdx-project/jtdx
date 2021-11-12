@@ -321,12 +321,8 @@ private:
   int m_j0;
   double m_toneFrequency0;
   
-  QByteArray m_tx1;
-  bool Stream1_zero;
-  bool Stream1_loaded;
-  QByteArray m_tx2;
-  bool Stream2_zero;
-  bool Stream2_loaded;
+  QByteArray m_tx1[8];
+  int tx_fifo;
   quint32 last_type;  
   std::string debug_file_;
   std::string wav_file_;

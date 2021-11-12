@@ -352,7 +352,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     connect( tci_timer3_, &QTimer::timeout, tci_loop3_, &QEventLoop::quit);
     connect( this, &TCITransceiver::tci_done3, tci_loop3_, &QEventLoop::quit);
   }
-  tx_top_ = true;
+  tx_fifo = 0; tx_top_ = true;
   tci_Ready = false;
   ESDR3 = false;
   band_change = false;
@@ -912,11 +912,12 @@ qDebug() << "IQ" << data.size() << pStream->length;
         writeAudioData(pStream->data,pStream->length);
 qDebug() << "Audio" << data.size() << pStream->length;
     } else if (pStream->type == TxChrono &&  pStream->receiver == rx_.toUInt()){
+        tx_fifo += 1; tx_fifo &= 7;
         int ssize = AudioHeaderSize+pStream->length*sizeof(float)*2;
 //        printf("%s(%0.1f) TxChrono ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
         quint16 tehtud;
-        if (m_tx1.size() != ssize) m_tx1.resize(ssize);
-        Data_Stream * pOStream1 = (Data_Stream*)(m_tx1.data());
+        if (m_tx1[tx_fifo].size() != ssize) m_tx1[tx_fifo].resize(ssize);
+        Data_Stream * pOStream1 = (Data_Stream*)(m_tx1[tx_fifo].data());
         pOStream1->receiver = pStream->receiver;
         pOStream1->sampleRate = pStream->sampleRate; 
         pOStream1->format = pStream->format;
@@ -924,8 +925,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
         pOStream1->crc = 0;
         pOStream1->length = pStream->length;
         pOStream1->type = TxAudioStream;
-        for (size_t i = 0; i < pStream->length; i++) pOStream1->data[i] = 0;
-
+//        for (size_t i = 0; i < pStream->length; i++) pOStream1->data[i] = 0;
 //        printf("%s(%0.1f) txAudioChrono %d %d %d",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),ssize,pStream->length,pStream->sampleRate);
         tehtud = readAudioData(pOStream1->data,pOStream1->length);
 //        printf(" %s(%0.1f) tehtud%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tehtud);
@@ -960,7 +960,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
           }
         }
 #endif
-        if (!inConnected || commander_->sendBinaryMessage(m_tx1) != m_tx1.size()) {
+        if (!inConnected || commander_->sendBinaryMessage(m_tx1[tx_fifo]) != m_tx1[tx_fifo].size()) {
 //          printf("%s(%0.1f) Sent 1 loaded failed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
 #if JTDX_DEBUG_TO_FILE
           FILE * pFile = fopen (debug_file_.c_str(),"a");  
