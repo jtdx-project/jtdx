@@ -6029,7 +6029,7 @@ Greška(%2): %3</translation>
     <message>
         <location filename="../TCITransceiver.cpp" line="416"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI RX2 nije moguće omogućiti</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="424"/>
@@ -6067,7 +6067,7 @@ Greška(%2): %3</translation>
         <location filename="../TCITransceiver.cpp" line="1382"/>
         <location filename="../TCITransceiver.cpp" line="1425"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI nije uspio postaviti split</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1399"/>
@@ -6593,7 +6593,7 @@ mirnom periodu kada se vrši dekodiranje.</translation>
     <message>
         <location filename="../Configuration.ui" line="740"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="808"/>
@@ -7695,42 +7695,42 @@ Kliknite desnom tipkom miša za umetanje i brisanje opcija.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Upotrijebi trenutni pozivni znak</translation>
+        <translation>Upotrijebi trenutni &amp;pozivni znak</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Koristite trenutni lokator</translation>
+        <translation>Koristite tr&amp;enutni lokator</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz dekodiranih poruka prema dolje, a ne prema gore.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prikaži poruke prema dolje</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Sakrijte djelomično poslane poruke</translation>
+        <translation>&amp;Sakrijte djelomično poslane poruke</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Koristi tamni stil</translation>
+        <translation>Koristi ta&amp;mni stil</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Dopustite izmjenu frekvencije Tx tijekom prijenosa</translation>
+        <translation>Dopus&amp;tite izmjenu frekvencije Tx tijekom prijenosa</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">Monitor se vraća na zadnju korištenu frekvenciju</translation>
+        <translation>Monitor se vraća na zadnju korištenu fre&amp;kvenciju</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="763"/>
@@ -8357,7 +8357,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakrij poruke pozivnih znakova sa vlastitog kontinenta</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>

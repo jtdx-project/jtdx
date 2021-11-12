@@ -3053,7 +3053,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="781"/>
         <location filename="../mainwindow.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DXSummit spot line edit: mode in the information field being spotted automatically, user can add own text message in the information field. Available macros: #D is for distance, #G is for &quot;Grid1&lt;&gt;Grid2&quot;, #R is for report value. Information field preview is available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Editar la línea de anuncio a DXSummit: el modo se detecta automáticamente, el usuario puede agregar su propio mensaje de texto en el campo de información. Macros disponibles: #D es para la distancia, #G es para &quot;Locator1 &lt;&gt; Locator2&quot;, #R es para el valor de la señal recibida. La vista previa del campo de información está disponible. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Editar la línea de anuncio a DXSummit: el modo se detecta automáticamente, el usuario puede agregar su propio mensaje de texto en el campo de información. Macros disponibles: #D es para la distancia, #G es para &quot;Locator1 &lt;&gt; Locator2&quot;, #H para indicar F/H cuando Hound está activado, #R es para el valor de la señal recibida. La vista previa del campo de información está disponible. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="784"/>
@@ -3531,7 +3531,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</t
     <message>
         <location filename="../mainwindow.ui" line="2971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left mouse button: Erase data from DX Call and DX Grid windows. Right mouse button: Erase data from DX Call, DX Grid windows, QSO history and blacklist. CTRL+Right mouse button: add callsign from DX Call window to blacklist, erase data from DX Call, DX Grid windows and QSO history.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Botón izquierdo del ratón: Borra los datos de las ventanas de la Llamada DX y Locator DX. Botón derecho del ratón: Borra los datos de las ventanas de la Llamada DX, Locator DX, el historial de QSO y la lista negra. CTRL+botón derecho del ratón: añadir el indicativo de la ventana Llamada DX a la lista negra, borrar los datos de las ventanas Llamada DX, Locator DX y el historial de QSO.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Botón izquierdo del ratón: Borra los datos de las ventanas de la Llamada DX y Locator DX e iguala RX=TX. Botón derecho del ratón: Borra los datos de las ventanas de la Llamada DX, Locator DX, el historial de QSO y la lista negra. CTRL+botón derecho del ratón: añadir el indicativo de la ventana Llamada DX a la lista negra, borrar los datos de las ventanas Llamada DX, Locator DX y el historial de QSO.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2974"/>
@@ -7305,42 +7305,42 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Usar indicativo actual</translation>
+        <translation>Usar indicativo a&amp;ctual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Usar locator actual</translation>
+        <translation>Usar locator actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplazar las ventanas de mensajes hacia abajo, no hacia arriba.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>De&amp;splazar las ventanas de mensajes hacia abajo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Ocultar mensajes parcialmente transmitidos</translation>
+        <translation>Ocultar mensajes parcialmente transmitidos</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Usar el estilo oscuro</translation>
+        <translation>Usar el estilo oscuro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Permitir cambios de frecuencia de transmisión mientras se transmite</translation>
+        <translation>Permitir cambios de frecuencia de transmisión mientras se transmite</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">El monitor vuelve a la última frecuencia utilizada</translation>
+        <translation>El monitor vuelve a la última frecuencia utilizada</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8378,7 +8378,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar mensajes con indicativos del continente propio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>

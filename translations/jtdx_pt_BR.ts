@@ -378,7 +378,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation type="unfinished"></translation>
+        <translation>Kingdom of Eswatini</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -7281,42 +7281,42 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Usar indicativo atual</translation>
+        <translation>Usar &amp;indicativo atual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Usar Grid Locator atual</translation>
+        <translation>Usar &amp;Grid Locator atual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Role as janelas da mensagem para baixo, não para cima.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rolar janelas de mensagem para baixo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Ocultar mensagens parcialmente emitidas</translation>
+        <translation>&amp;Ocultar mensagens parcialmente emitidas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Ativar estilo noturno</translation>
+        <translation>Ativar estilo &amp;noturno</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Permitir alterações de frequência de Tx durante a transmissão</translation>
+        <translation>&amp;Permitir alterações de frequência de Tx durante a transmissão</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">Monitor volta à última frequência usada</translation>
+        <translation>Monitor volta à última &amp;frequência usada</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8353,7 +8353,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/ html</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar mensagens com indicativo do próprio continente</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
