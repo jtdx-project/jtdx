@@ -9,6 +9,7 @@
 #include <QtWebSockets/QWebSocket>
 #include <QTimer>
 #include <QEventLoop>
+#include <mutex>
 
 typedef float REAL;
 
@@ -326,6 +327,7 @@ private:
   quint32 last_type;  
   std::string debug_file_;
   std::string wav_file_;
+  std::mutex mtx_;
 };
 
 #endif

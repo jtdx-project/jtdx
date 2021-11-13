@@ -878,7 +878,6 @@ void TCITransceiver::onBinaryReceived(const QByteArray &data)
             fwrite(&hdr,sizeof(hdr),1,wavptr_);
           }
 
-
         }
         else if (last_type == RxAudioStream) { // audio switched back to resceive
           if (wavptr_ != NULL) {
@@ -912,7 +911,7 @@ qDebug() << "IQ" << data.size() << pStream->length;
         writeAudioData(pStream->data,pStream->length);
 qDebug() << "Audio" << data.size() << pStream->length;
     } else if (pStream->type == TxChrono &&  pStream->receiver == rx_.toUInt()){
-        tx_fifo += 1; tx_fifo &= 7;
+        mtx_.lock(); tx_fifo += 1; tx_fifo &= 7;
         int ssize = AudioHeaderSize+pStream->length*sizeof(float)*2;
 //        printf("%s(%0.1f) TxChrono ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
         quint16 tehtud;
@@ -960,6 +959,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
           }
         }
 #endif
+        mtx_.unlock();
         if (!inConnected || commander_->sendBinaryMessage(m_tx1[tx_fifo]) != m_tx1[tx_fifo].size()) {
 //          printf("%s(%0.1f) Sent 1 loaded failed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
 #if JTDX_DEBUG_TO_FILE
