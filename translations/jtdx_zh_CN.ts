@@ -348,7 +348,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Agalega &amp; St. Brandon</source>
-        <translation>阿加莱加群岛 及 圣布兰登群岛</translation>
+        <translation>阿加莱加群岛及圣布兰登群岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="38"/>
@@ -733,7 +733,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>Juan Fernandez Is.</source>
-        <translation>费南德斯岛.</translation>
+        <translation>胡安费南德斯岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="115"/>
@@ -958,7 +958,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Austral Is.</source>
-        <translation>奥斯亚群岛.</translation>
+        <translation>南方群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
@@ -973,7 +973,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>St. Pierre &amp; Miquelo</source>
-        <translation>克利珀顿岛</translation>
+        <translation>圣皮埃尔和密克隆岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="163"/>
@@ -988,17 +988,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Glorioso Is.</source>
-        <translation>格罗里奥索群岛.</translation>
+        <translation>格洛里厄斯群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="166"/>
         <source>Juan de Nova, Europa</source>
-        <translation>胡安德诺瓦岛, 欧洲</translation>
+        <translation>新胡安岛欧罗巴岛, 欧洲</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Tromelin Is.</source>
-        <translation>特罗梅林岛.</translation>
+        <translation>特罗姆林岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
@@ -1008,7 +1008,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Kerguelen Is.</source>
-        <translation>克尔格伦岛.</translation>
+        <translation>凯尔盖朗群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="170"/>
@@ -1058,7 +1058,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="179"/>
         <source>Guernsey</source>
-        <translation>格恩西岛</translation>
+        <translation>根西岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
@@ -1073,7 +1073,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="182"/>
         <source>Temotu Province</source>
-        <translation>特莫图省</translation>
+        <translation>泰莫图省</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="183"/>
@@ -1088,7 +1088,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="185"/>
         <source>Liechtenstein</source>
-        <translation>列支敦斯登</translation>
+        <translation>列支敦士登</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="186"/>
@@ -1118,7 +1118,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>San Andres &amp; Providencia</source>
-        <translation>圣安德烈斯</translation>
+        <translation>圣安德烈斯和普罗维登西亚岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="192"/>
@@ -1163,7 +1163,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>AF Italy</source>
-        <translation>AF 意大利</translation>
+        <translation>意大利非洲属地</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="201"/>
@@ -1283,7 +1283,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Palmyra &amp; Jarvis Is.</source>
-        <translation>巴尔米拉岛.</translation>
+        <translation>巴尔米拉环礁和贾维斯岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="225"/>
@@ -1333,7 +1333,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>Desecheo Is.</source>
-        <translation>德索乔岛.</translation>
+        <translation>德舍乔岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="235"/>
@@ -1423,7 +1423,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="252"/>
         <source>Papua New Guinea</source>
-        <translation>巴布亚纽几内亚</translation>
+        <translation>巴布亚新几内亚</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="253"/>
@@ -1453,7 +1453,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Saba &amp; St. Eustatius</source>
-        <translation>沙巴和圣奥依斯坦图斯</translation>
+        <translation>萨巴岛和圣尤斯特歇斯岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="259"/>
@@ -1468,7 +1468,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Fernando de Noronha</source>
-        <translation>费尔南多群岛</translation>
+        <translation>费尔南多迪诺罗尼亚群岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="262"/>
@@ -1478,7 +1478,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Trindade &amp; Martim Vaz</source>
-        <translation>特林迪达岛</translation>
+        <translation>特林达迪和马丁瓦斯群岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="264"/>
@@ -1563,17 +1563,17 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>W. Kiribati</source>
-        <translation>西吉里巴斯</translation>
+        <translation>西基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>C. Kiribati</source>
-        <translation>中吉里巴斯</translation>
+        <translation>中基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>E. Kiribati</source>
-        <translation>东吉里巴斯</translation>
+        <translation>东基里巴斯</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="283"/>
@@ -1593,7 +1593,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
         <source>Palau</source>
-        <translation>帛琉</translation>
+        <translation>帕劳</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="287"/>
@@ -1633,7 +1633,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="294"/>
         <source>Corsica</source>
-        <translation>科西嘉</translation>
+        <translation>科西嘉岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="295"/>
@@ -1703,7 +1703,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Antigua &amp; Barbuda</source>
-        <translation>安地卡及巴布达</translation>
+        <translation>安提瓜和巴布达</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="309"/>
@@ -1728,7 +1728,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Marshall Is.</source>
-        <translation>马歇尔岛.</translation>
+        <translation>马绍尔群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="314"/>
@@ -1778,12 +1778,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Willis Is.</source>
-        <translation>威里斯岛.</translation>
+        <translation>威利斯岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Christmas Is.</source>
-        <translation>圣诞节岛.</translation>
+        <translation>圣诞岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="325"/>
@@ -1793,7 +1793,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Montserrat</source>
-        <translation>蒙特塞拉特</translation>
+        <translation>蒙特塞拉特岛</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="327"/>
@@ -1838,7 +1838,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Sandwich Is.</source>
-        <translation>南桑德韦奇岛.</translation>
+        <translation>南桑维奇群岛.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="336"/>
@@ -1883,7 +1883,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="344"/>
         <source>Burkina Faso</source>
-        <translation>布吉那法索</translation>
+        <translation>布基纳法索</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="345"/>
@@ -1983,7 +1983,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>Rep. of S. Sudan</source>
-        <translation>苏丹</translation>
+        <translation>南苏丹</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="365"/>
@@ -3398,7 +3398,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2446"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;绕过所有文本筛选过滤器选项, 杂项菜单中的直接按钮.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;绕过您在(文件-设置-过滤)中设置的筛选过滤选项和杂项菜单中勾选的选项.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2460"/>
@@ -3408,7 +3408,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 单次通联完毕及停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 本次通联结束后停止发射&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2505"/>
@@ -4039,7 +4039,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4788"/>
         <source>Waterfall</source>
-        <translation>瀑布图</translation>
+        <translation>频谱图</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4793"/>
@@ -5244,7 +5244,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7138"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>按下按钮将发射频率锁定到接收频率</translation>
+        <translation>黄色按钮:发射频率和接收频率相同;绿色按钮:发射频率和接收频率可以异频</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7275"/>
@@ -6439,12 +6439,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="409"/>
         <source>Append DXCC names to decoded messages.</source>
-        <translation>将DXCC国家名称附加到解码的信息中.</translation>
+        <translation>将DXCC国家或地区名称附加到解码的信息中.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="412"/>
         <source>Show &amp;DXCC names</source>
-        <translation>显示国家名称(&amp;D)</translation>
+        <translation>显示国家或地区名称(&amp;D)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="383"/>
@@ -6454,7 +6454,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="386"/>
         <source>Show &amp;prefix not name</source>
-        <translation>显示前缀(&amp;p)</translation>
+        <translation>显示为国家前缀(&amp;p)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="373"/>
@@ -6469,7 +6469,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>发出的信息在接收信息窗口显示(&amp;T)</translation>
+        <translation>在右侧窗口显示包含自己收发的信息(&amp;T)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="458"/>
@@ -7194,7 +7194,7 @@ both here.</source>
     <message>
         <location filename="../Configuration.ui" line="2227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;预设情况下, 如果解码了有效的 &apos;新DXCC&apos; 信息, 别台回应我或解码的 CQ/73 信息的自动选择, 则忽略 CQ 的接收/定向CQ. 此选项消除了 定向CQ 处理自动选择中的 &apos;新 DXCC&apos; 异常.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选用定向CQ指定区域如AS NA AF…或前缀, 软件将忽略非指定区域或前缀的其他电台，包括新DXCC的CQ呼叫.渴望的呼号前缀，不受此定向限制..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2230"/>
@@ -7292,7 +7292,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
         <source>Con&amp;vert mode to RTTY</source>
-        <translation>把日志纪录转成&amp;RTTY模式</translation>
+        <translation>把日志记录转成&amp;RTTY模式</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2450"/>
@@ -7400,7 +7400,7 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="2785"/>
         <source>Enable &amp;eQSL sending</source>
-        <translation>启用上传&amp;eQSL网站</translation>
+        <translation>启用上传&amp;eQSL网站(填写以下3项后才可以勾选)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2805"/>
@@ -7699,42 +7699,42 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">使用当前呼号</translation>
+        <translation>使用当前呼号(&amp;c)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">使用当前网格</translation>
+        <translation>使用当前网格(&amp;e)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>解码信息从上往下滚动.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>向下滚动解码消息(&amp;S)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">隐藏已发射的信息</translation>
+        <translation>隐藏已发射的信息(&amp;H)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">使用深暗色样式</translation>
+        <translation>使用深暗色样式(&amp;k)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">允许发射期间改变频率</translation>
+        <translation>允许发射期间改变频率(&amp;w)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">开始监听时使用上一次的频率</translation>
+        <translation>开始监听时使用上一次的频率(&amp;q)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="763"/>
@@ -7784,7 +7784,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="2481"/>
         <source>Distance to comments</source>
-        <translation>将距离信息添加到备注中</translation>
+        <translation>把距离信息写入备注栏</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2951"/>
@@ -8360,7 +8360,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏自己洲大陆呼号的信息</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
