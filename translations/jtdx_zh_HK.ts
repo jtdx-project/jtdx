@@ -3398,7 +3398,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2446"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bypass all text filters option, duplicates action in the Misc tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;繞過全部文本過濾器選項, 雜項選單中的直接按鈕.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;繞過設置過濾頁, 和雜項選單中的隱藏及過濾選項.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2460"/>
@@ -3408,7 +3408,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="2491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single shot QSO AutoSeq option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 單次通聯完畢及停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自動程序 本次通聯結束後停止發射&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2505"/>
@@ -4039,7 +4039,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="4788"/>
         <source>Waterfall</source>
-        <translation>瀑布圖</translation>
+        <translation>頻譜圖</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4793"/>
@@ -5244,7 +5244,7 @@ is already in CALL3.TXT, do you wish to replace it?</source>
     <message>
         <location filename="../mainwindow.cpp" line="7138"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>按下按鈕將發射頻率鎖定到接收頻率</translation>
+        <translation>綠色按鈕: 鎖定發射頻率, 黃色按鈕: 發射頻率移到接收頻率</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7275"/>
@@ -6454,7 +6454,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="386"/>
         <source>Show &amp;prefix not name</source>
-        <translation>顯示前綴(&amp;p)</translation>
+        <translation>顯示國家或地區前綴(&amp;p)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="373"/>
@@ -6469,7 +6469,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="399"/>
         <source>&amp;Tx messages to Rx frequency window</source>
-        <translation>發出的訊息在接收訊息視窗顯示(&amp;T)</translation>
+        <translation>發射的訊息在接收訊息視窗顯示(&amp;T)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="458"/>
@@ -7709,12 +7709,12 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation>解碼資訊顯示在波段活動窗囗舊訊息之上.</translation>
+        <translation>解碼訊息在波段活動窗囗從上往下滾動.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation>解碼資訊顯示在窗囗最上(&amp;S)</translation>
+        <translation>解碼訊息向下滾動(&amp;S)</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
@@ -7784,7 +7784,7 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="2481"/>
         <source>Distance to comments</source>
-        <translation>將距離資訊新增到註釋中</translation>
+        <translation>將距離資訊寫入註釋中</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2951"/>

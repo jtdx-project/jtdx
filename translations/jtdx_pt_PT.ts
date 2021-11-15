@@ -378,7 +378,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation type="unfinished"></translation>
+        <translation>Kingdom of Eswatini</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -3013,7 +3013,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide spot edit line&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use este controlo para ver ou esconder a edição de linha&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Use este controlo para ver ou ocultar a edição de linha&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="699"/>
@@ -3095,7 +3095,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1073"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button to spot DX call to dxsummit.fi (spotting shall be enabled in Reporting tab of the settings). Click by right mouse&apos;s button to add callsign to the &apos;Hide messages from callsigns&apos; filter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar activa na aba Reportes das configurações).Clique com botão direito do rato para adicionar indicativos á função de filtros &apos;Esconder mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique para anunciar uma estação DX no dxsummit.fi (a função terá que estar activa na aba Reportes das configurações).Clique com botão direito do rato para adicionar indicativos á função de filtros &apos;Ocultar mensagens dos indicativos&apos;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1076"/>
@@ -3234,7 +3234,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1519"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this control to show or hide wanted callsign/prefix edit lines&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use este controlo para ver ou esconder linha de edição de indicativos/prefixos procurados &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use este controlo para ver ou ocultar linha de edição de indicativos/prefixos procurados &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1522"/>
@@ -4518,7 +4518,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5709"/>
         <source>Hide FT8 dupe messages</source>
-        <translation>Esconder mensagens duplicadas de FT8</translation>
+        <translation>Ocultar mensagens duplicadas de FT8</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5717"/>
@@ -4640,7 +4640,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5996"/>
         <source>Hide telemetry messages</source>
-        <translation>Esconder mensagens de telemetria</translation>
+        <translation>Ocultar mensagens de telemetria</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6004"/>
@@ -5534,7 +5534,7 @@ Please verify the correct directory name was given.</source>
     <message>
         <location filename="../JTDXMessageBox.cpp" line="92"/>
         <source>Hide Details...</source>
-        <translation>Esconder detalhes...</translation>
+        <translation>Ocultar detalhes...</translation>
     </message>
 </context>
 <context>
@@ -7279,42 +7279,42 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Usar indicativo actual</translation>
+        <translation>Usar indicativo &amp;actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Usar QTH Locator actual</translation>
+        <translation>Usar QTH Locato&amp;r actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Deslocar janelas de mensagens para baixo e não para cima.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>De&amp;slocar janela de mensagens para baixo</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Esconder mensagens parcialmente emitidas</translation>
+        <translation>&amp;Ocultar mensagens parcialmente transmitidas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Usar modo escuro</translation>
+        <translation>Usar mod&amp;o escuro</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Permitir alterações de frequência Tx durante a transmissão</translation>
+        <translation>Per&amp;mitir alterações de frequência Tx durante a transmissão</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">Monitor volta à última frequência usada</translation>
+        <translation>Monitor volta à última fre&amp;quência usada</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8158,7 +8158,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="4940"/>
         <source>Hide messages from continents</source>
-        <translation>Esconder mensagens  de continentes</translation>
+        <translation>Ocultar mensagens de continentes</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="4952"/>
@@ -8203,7 +8203,7 @@ Clique com o botão direito do rato para inserir e excluir opções.</translatio
     <message>
         <location filename="../Configuration.ui" line="5007"/>
         <source>Hide messages from countries</source>
-        <translation>Esconder mensagens de países</translation>
+        <translation>Ocultar mensagens de países</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5027"/>
@@ -8351,7 +8351,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/ html</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar mensagens como o próprio  indicativo do continente</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
