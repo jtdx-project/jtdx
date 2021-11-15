@@ -16,7 +16,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
-          csig(32),csig0(151680),z1,csymb256(256),cstmp2(0:7,79),csold(0:7,79)
+          csig(32),csig0(151680),z1,csymb256(256),cstmp2(0:7,79),csold(0:7,79),cscs(0:7,79)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200), &
        s256(0:8)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
@@ -251,7 +251,11 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         if(scr.gt.1.0) then; csymb(32)=csymb(32)*scr; else; if(scr.gt.1.E-16) csymb(1)=csymb(1)/scr; endif
       endif
       do i=1,32; csymbr(i)=cmplx(real(csymb(33-i)),-aimag(csymb(33-i))); enddo
-      if(lreverse) csymb=csymbr
+      if(lreverse) then
+        call four2a(csymb,32,1,-1,1)
+        cscs(0:7,k)=csymb(1:8)/1e3
+        csymb=csymbr
+      endif
       call four2a(csymb,32,1,-1,1)
       cs(0:7,k)=csymb(1:8)/1e3
       if(lreverse) then; csr=cs
@@ -265,7 +269,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     ka=minloc(sp)-1; k=ka(1); if(k.lt.0) go to 128
     do kb=0,7
       if(kb.eq.k) cycle; spr=sp(kb)/sp(k)
-      if(spr.gt.1.5) then; s8(kb,:)=s8(kb,:)/spr; sprsqr=SQRT(spr); cs(kb,:)=cs(kb,:)/sprsqr; endif
+      if(spr.gt.1.5) then
+        s8(kb,:)=s8(kb,:)/spr; sprsqr=SQRT(spr)
+        cs(kb,:)=cs(kb,:)/sprsqr; csr(kb,:)=csr(kb,:)/sprsqr; cscs(kb,:)=cscs(kb,:)/sprsqr
+      endif
     enddo
 128 continue
 
@@ -490,18 +497,19 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     if(lft8subpass .or. swl .or. dfqso.lt.2.0 .or. lsubptxfreq) nweak=2
     nsubpasses=nweak
     if(lcqsignal) then
+      nsubpasses=3
       if(levenint) then
         do ik=1,numcqsig
           if(evencq(ik,nthr)%freq.gt.5001.) exit
           if(abs(evencq(ik,nthr)%freq-f1).lt.2.0 .and. abs(evencq(ik,nthr)%xdt-xdt).lt.0.05) then
-            nsubpasses=4; csold=evencq(ik,nthr)%cs
+            nsubpasses=5; csold=evencq(ik,nthr)%cs
           endif
         enddo
       else if (loddint) then
         do ik=1,numcqsig
           if(oddcq(ik,nthr)%freq.gt.5001.) exit
           if(abs(oddcq(ik,nthr)%freq-f1).lt.2.0 .and. abs(oddcq(ik,nthr)%xdt-xdt).lt.0.05) then
-            nsubpasses=4; csold=oddcq(ik,nthr)%cs
+            nsubpasses=5; csold=oddcq(ik,nthr)%cs
           endif
         enddo
       endif
@@ -532,6 +540,15 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                 endif
               else if(k1.eq.3) then
                 if(nsym.eq.1) then
+                  s2(i)=abs(cscs(graymap(i33),ks))**2+abs(csr(graymap(i33),ks))**2
+                elseif(nsym.eq.2) then
+                  s2(i)=abs(cscs(graymap(i2),ks)+cscs(graymap(i33),ks1))**2+abs(csr(graymap(i2),ks)+csr(graymap(i33),ks1))**2
+                else
+                  s2(i)=abs(cscs(graymap(i1),ks)+cscs(graymap(i2),ks1)+cscs(graymap(i33),ks2))**2 + &
+                    abs(csr(graymap(i1),ks)+csr(graymap(i2),ks1)+csr(graymap(i33),ks2))**2
+                endif
+              else if(k1.eq.4) then
+                if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))**2+abs(csold(graymap(i33),ks))**2
                 elseif(nsym.eq.2) then
                   s2(i)=abs(cs(graymap(i2),ks)+cs(graymap(i33),ks1))**2+abs(csold(graymap(i2),ks)+csold(graymap(i33),ks1))**2
@@ -539,7 +556,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))**2 + &
                     abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))**2
                 endif
-              else if(k1.eq.4) then
+              else if(k1.eq.5) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks))
                 elseif(nsym.eq.2) then
