@@ -698,6 +698,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 
       do ipass=1,npasses
         if(.not.swl .and. ipass.eq.4) cycle
+        if(k1.gt.2 .and. ipass.lt.4) cycle
         if(ipass.lt.5) then
           apmask=0; iaptype=0
           if(ipass.eq.1) then
