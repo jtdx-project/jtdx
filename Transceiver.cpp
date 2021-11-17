@@ -29,6 +29,7 @@ QDebug operator << (QDebug d, Transceiver::TransceiverState const& s)
     << "; VOLUME: " << s.volume_
     << "; LEVEL: " << s.level_ << "dBm"
     << "; POWER: " << s.power_ << "mWatts"
+    << "; SWR: " << s.swr_
     << ')';
   return d.space (); 
 }
@@ -64,7 +65,8 @@ bool operator != (Transceiver::TransceiverState const& lhs, Transceiver::Transce
     || lhs.nsym_ != rhs.nsym_
     || lhs.volume_ != rhs.volume_
     || lhs.level_ != rhs.level_
-    || lhs.power_ != rhs.power_;
+    || lhs.power_ != rhs.power_
+    || lhs.swr_ != rhs.swr_;
 }
 
 bool operator == (Transceiver::TransceiverState const& lhs, Transceiver::TransceiverState const& rhs)

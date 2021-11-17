@@ -7,7 +7,6 @@
 #if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 #include <QRandomGenerator>
 #endif
-
 #include "commons.h"
 
 #include "NetworkServerLookup.hpp"
@@ -380,6 +379,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   other_frequency_ = "";
   level_ = -54;
   power_ = 0;
+  swr_ = 0;
   m_bufferPos = 0;
   m_downSampleFactor =4;
   m_ns = 999;
@@ -692,6 +692,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
                 requested_PTT_ = PTT_;
                 update_PTT(PTT_);
                 power_ = 0; if (do_pwr_) update_power (0);
+                swr_ = 0; if (do_pwr_) update_swr (0);
               }  
             }
             break;
@@ -758,6 +759,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
                 requested_PTT_ = PTT_;
                 update_PTT(PTT_);
                 power_ = 0; if (do_pwr_) update_power (0);
+                swr_ = 0; if (do_pwr_) update_swr (0);
                 m_state = Idle;
                 Q_EMIT tci_mod_active(m_state != Idle);
               }  
@@ -1249,7 +1251,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
         if (requested_PTT_ == PTT_) {
           update_PTT(PTT_);
           if (PTT_ && do_snr_) update_level (-54);
-          else { power_ = 0; if (do_pwr_) update_power (0);}
+          else { power_ = 0; if (do_pwr_) update_power (0); swr_ = 0; if (do_pwr_) update_swr (0); }
         } else {
 //          printf ("%s(%0.1f) TCI failed set ptt %d->%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),PTT_,requested_PTT_);
 #if JTDX_DEBUG_TO_FILE
@@ -1478,7 +1480,7 @@ void TCITransceiver::do_poll ()
   update_split(split_);
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_mode (get_mode());
-  if (do_pwr_ && PTT_) update_power (power_ * 100);
+  if (do_pwr_ && PTT_) {update_power (power_ * 100); update_swr (swr_);}
   if (do_snr_ && !PTT_) {
       update_level (level_);
       if(!ESDR3) {

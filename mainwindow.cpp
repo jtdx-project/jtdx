@@ -2102,7 +2102,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       }
       if(!m_config.do_snr()) ui->S_meter_button->setText(tr("S meter"));
       ui->S_meter_button->setEnabled(m_config.do_snr());
-      if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
+      if(!m_config.do_pwr()) {ui->PWRlabel->setText(tr("Pwr")); ui->SWRlabel->setText("");}
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
       ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
   }
@@ -7193,8 +7193,16 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   if(m_config.do_snr() && m_rigState.level() != s.level()) {
       ui->S_meter_button->setText(Radio::convert_Smeter(s.level(),ui->S_meter_button->isChecked()));
   }
-  if(m_config.do_pwr() && m_rigState.power() != s.power()) {
+  if(m_config.do_pwr()) {
+    if (m_rigState.power() != s.power()) {
       ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(s.power()/1000.)));
+    }
+    if (m_rigState.swr() != s.swr()) {
+      if (s.swr() > 0)
+        ui->SWRlabel->setText(QString {"swr %1"}.arg (s.swr()/10.));
+      else
+        ui->SWRlabel->setText("");
+    }
   }    
   m_rigState = s;
   auto old_freqNominal = m_freqNominal;
