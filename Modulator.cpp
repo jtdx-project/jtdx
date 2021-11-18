@@ -207,7 +207,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
               ++framesGenerated;
               ++m_ic;
             } else {
-              printf("%s(%0.1f) Modulator Idle1 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
+//              printf("%s(%0.1f) Modulator Idle1 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
 #if JTDX_DEBUG_TO_FILE
               FILE * pFile = fopen (debug_file_.c_str(),"a");  
               fprintf (pFile,"%s(%0.1f) Modulator Idle1 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
@@ -291,7 +291,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
         if (m_amp == 0.0) { // TODO G4WJS: compare double with zero might not be wise
           if (icw[0] == 0) {
             // no CW ID to send
-            printf("%s(%0.1f) Modulator Idle2 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
+//            printf("%s(%0.1f) Modulator Idle2 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
 #if JTDX_DEBUG_TO_FILE
             FILE * pFile = fopen (debug_file_.c_str(),"a");  
             fprintf (pFile,"%s(%0.1f) Modulator Idle2 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
@@ -306,7 +306,7 @@ qint64 Modulator::readData (char * data, qint64 maxSize)
         m_frequency0 = m_frequency;
         // done for this chunk - continue on next call
         if (samples != end && framesGenerated) {
-          printf("%s(%0.1f) Modulator Idle3 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
+//          printf("%s(%0.1f) Modulator Idle3 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);
 #if JTDX_DEBUG_TO_FILE
           FILE * pFile = fopen (debug_file_.c_str(),"a");  
           fprintf (pFile,"%s(%0.1f) Modulator Idle3 %lld frames generated\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),framesGenerated);

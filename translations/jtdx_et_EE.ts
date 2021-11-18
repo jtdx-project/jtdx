@@ -3274,10 +3274,6 @@ Viga: %2 - %3</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nupuga saab valida ka näidatakse S palle või dBm. CAT peab olema läbi Hamlibi või TCI, et S-meeter töötaks, Kõik jaamad ei ole toetatud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib, Hamlib does support getting output power data for some transceivers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1853"/>
         <source> Pwr</source>
         <translation> Võimsus</translation>
