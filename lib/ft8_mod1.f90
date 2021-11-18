@@ -1,6 +1,6 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400,numcqsig=20,numdeccq=40) !NFRAME=1920*79
+  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400,numcqsig=20,numdeccq=40,nummycsig=5,numdecmyc=25) !NFRAME=1920*79
   real*4 dd8(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
   complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32), &
@@ -28,18 +28,21 @@ module ft8_mod1
   data mycall12_0/'dummy'/
   data mycall12_00/'dummy'/
   data hiscall12_0/'dummy'/
+! Hound OFF
   data naptypes(0,1:12)/0,0,0,2,2,2,1,1,1,31,36,35/ ! Tx6 CQ
   data naptypes(1,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx1
   data naptypes(2,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx2
   data naptypes(3,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx3
   data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4
   data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5
+! Hound mode
   data nhaptypes(0,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx6 CQ, possible in idle mode
   data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
   data nhaptypes(2,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx2 none
   data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport
   data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
   data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
+!non-standard DXCall
   data ndxnsaptypes(0,1:14)/1,1,1,31,31,0,36,36,0,0,31,36,35,0/       ! Tx6 CQ
   data ndxnsaptypes(1,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx1 Grid
   data ndxnsaptypes(2,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx2 Report
@@ -120,5 +123,19 @@ module ft8_mod1
     complex cs(0:7,79)
   end type oddcq_struct
   type(oddcq_struct) oddcq(numcqsig,24)
+
+  type evenmyc_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type evenmyc_struct
+  type(evenmyc_struct) evenmyc(nummycsig,24) ! 24 threads
+
+  type oddmyc_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type oddmyc_struct
+  type(oddmyc_struct) oddmyc(nummycsig,24)
 
 end module ft8_mod1

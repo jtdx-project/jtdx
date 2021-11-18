@@ -1,9 +1,9 @@
-subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,  &
-                nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,ncqsignal,npass,      &
-                i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens, &
-                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted, &
-                evencqtmp,oddcqtmp)
+subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,tmpmyc,        &
+                nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,               &
+                nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,        &
+                i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
+                ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
+                evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp)
 !  use timer_module, only: timer
   use packjt77, only : unpack77
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
@@ -11,7 +11,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                        msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
-                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq
+                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -29,7 +29,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc
 
   type tmpcq_struct
     real freq
@@ -42,14 +42,34 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     real xdt
     complex cs(0:7,79)
   end type evencqtmp_struct
-  type(evencqtmp_struct) evencqtmp(numcqsig,24) ! 20 sigs 24 threads
+  type(evencqtmp_struct) evencqtmp(numcqsig) ! 20 sigs 24 threads
 
   type oddcqtmp_struct
     real freq
     real xdt
     complex cs(0:7,79)
   end type oddcqtmp_struct
-  type(oddcqtmp_struct) oddcqtmp(numcqsig,24)
+  type(oddcqtmp_struct) oddcqtmp(numcqsig)
+
+  type tmpmyc_struct
+    real freq
+    real xdt
+  end type tmpmyc_struct
+  type(tmpmyc_struct) tmpmyc(numdecmyc)
+
+  type evenmyctmp_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type evenmyctmp_struct
+  type(evenmyctmp_struct) evenmyctmp(nummycsig) ! 5 sigs
+
+  type oddmyctmp_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type oddmyctmp_struct
+  type(oddmyctmp_struct) oddmyctmp(nummycsig)
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -476,9 +496,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     csymb256=cd0(i1:i1+255)*ctwk256
     call four2a(csymb256,256,1,-1,1)
     s256(0:8)=abs(csymb256(1:9))
-    iscq=0
+    iscq=0; nmic=0
     do k11=8,16
       ip=maxloc(s8(:,k11))
+      if(ip(1).eq.idtonemyc(k11-7)+1) nmic=nmic+1
       if(k11.lt.16) then
         if(ip(1).eq.1) iscq=iscq+1
       else
@@ -488,6 +509,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
     if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
+    lmycsignal=.false.; if(nmic.gt.3) lmycsignal=.true.
 
     lsubptxfreq=.false.
     if(lapon .and. lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
@@ -514,10 +536,31 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         enddo
       endif
     endif
-    do k1=1,nsubpasses
-      if(nweak.eq.1 .and. k1.eq.2) cycle
-      if(k1.eq.2) cs=csr
-      if(imainpass.eq.npass .and. lcqsignal .and.( nweak.eq.1 .or. (nweak.eq.2 .and. k1.eq.2))) cstmp2=cs
+    if(lmycsignal .and. lmycallstd) then
+      nsubpasses=6
+      if(levenint) then
+        do ik=1,nummycsig
+          if(evenmyc(ik,nthr)%freq.gt.5001.) exit
+          if(abs(evenmyc(ik,nthr)%freq-f1).lt.2.0 .and. abs(evenmyc(ik,nthr)%xdt-xdt).lt.0.05) then
+            nsubpasses=8; csold=evenmyc(ik,nthr)%cs
+          endif
+        enddo
+      else if (loddint) then
+        do ik=1,nummycsig
+          if(oddmyc(ik,nthr)%freq.gt.5001.) exit
+          if(abs(oddmyc(ik,nthr)%freq-f1).lt.2.0 .and. abs(oddmyc(ik,nthr)%xdt-xdt).lt.0.05) then
+            nsubpasses=8; csold=oddmyc(ik,nthr)%cs
+          endif
+        enddo
+      endif
+    endif
+
+    do isubp=1,nsubpasses
+      if(nweak.eq.1 .and. isubp.eq.2) cycle
+      if(isubp.gt.2 .and. isubp.lt.6 .and. .not.lcqsignal) cycle ! skip if it is only lmycsignal, can be both
+      if(isubp.eq.2) cs=csr
+      if(imainpass.eq.npass .and. (lcqsignal .or. lmycsignal) .and. ((nweak.eq.1 .and. isubp.eq.1) .or. &
+        (nweak.eq.2 .and. isubp.eq.2))) cstmp2=cs
       do nsym=1,3
         nt=2**(3*nsym)-1
         do ihalf=1,2
@@ -530,7 +573,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               i1=i/64
               i2=iand(i,63)/8
               i33=iand(i,7)
-              if(k1.lt.3) then
+              if(isubp.lt.3) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))
                 elseif(nsym.eq.2) then
@@ -538,7 +581,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                 else
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
                 endif
-              else if(k1.eq.3) then
+              else if(isubp.eq.3 .or. isubp.eq.6) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cscs(graymap(i33),ks))**2+abs(csr(graymap(i33),ks))**2
                 elseif(nsym.eq.2) then
@@ -547,7 +590,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   s2(i)=abs(cscs(graymap(i1),ks)+cscs(graymap(i2),ks1)+cscs(graymap(i33),ks2))**2 + &
                     abs(csr(graymap(i1),ks)+csr(graymap(i2),ks1)+csr(graymap(i33),ks2))**2
                 endif
-              else if(k1.eq.4) then
+              else if(isubp.eq.4 .or. isubp.eq.7) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))**2+abs(csold(graymap(i33),ks))**2
                 elseif(nsym.eq.2) then
@@ -556,7 +599,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))**2 + &
                     abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))**2
                 endif
-              else if(k1.eq.5) then
+              else if(isubp.eq.5 .or. isubp.eq.8) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks))
                 elseif(nsym.eq.2) then
@@ -566,7 +609,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                     abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))
                 endif
               endif
-              if(k1.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
+              if(isubp.eq.1 .and. srr.lt.2.5) then !  srr.lt.2.5 -19dB SNR threshold
                 if(srr.gt.2.3) then 
                   s2(i)=s2(i)**2
                 else
@@ -574,7 +617,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   if(ss1.lt.5.77) then; s2(i)=1+8.*ss1**2-0.12*ss1**4; else; s2(i)=(ss1+5.82)**2; endif
                 endif
               endif
-              if(k1.gt.1 .and. srr.lt.2.5) s2(i)=(0.5*s2(i))**3 ! -19dB SNR threshold
+              if(isubp.gt.1 .and. srr.lt.2.5) s2(i)=(0.5*s2(i))**3 ! -19dB SNR threshold
             enddo
             i32=1+(k-1)*3+(ihalf-1)*87
             if(nsym.eq.1) ibmax=2; if(nsym.eq.2) ibmax=5; if(nsym.eq.3) ibmax=8
@@ -698,13 +741,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
 
       do ipass=1,npasses
         if(.not.swl .and. ipass.eq.4) cycle
-        if(k1.gt.2 .and. ipass.lt.4) cycle
+        if(isubp.gt.2 .and. ipass.lt.4) cycle ! skip regular if lcqsignal or lmycsignal extra subpasses
+        if(isubp.gt.5 .and. (ipass.lt.8 .or. ipass.gt.10)) cycle ! skip other AP if lmycsignal extra subpasses
         if(ipass.lt.5) then
           apmask=0; iaptype=0
           if(ipass.eq.1) then
             if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
-            if(k1.gt.1 .and. imainpass.gt.1) llrz=llrd
-          else if(ipass.eq.2) then; llrz=llrb; if(k1.gt.1) llrz=llra ! subpass 10661..10670
+            if(isubp.gt.1 .and. imainpass.gt.1) llrz=llrd
+          else if(ipass.eq.2) then; llrz=llrb; if(isubp.gt.1) llrz=llra ! subpass 10661..10670
           else if(ipass.eq.3) then; llrz=llrc
           else if(ipass.eq.4) then; llrz=llrd ! AP CQ
           endif
@@ -715,7 +759,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
             if(.not.lapmyc .and. iaptype.eq.2) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
             if(stophint .and. iaptype.gt.2 .and. iaptype.lt.31) cycle
             if(lft8sdec .and. iaptype.ge.3 .and. iaptype.lt.31) cycle !already decoded
-
             if(iaptype.ge.3 .and. iaptype.lt.31 .and. loutapwid) cycle
             if(iaptype.gt.30 .and. (.not.lenabledxcsearch .or. len(trim(hiscall)).lt.3)) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
@@ -758,7 +801,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
                   if(smycnr(nthr).gt.1.2) then; llrz=llrb; else; cycle; endif
                 endif
                 if(swl) llrz=llrb
-                if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) cycle
+!                if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) cycle
               endif
             endif
 
@@ -902,29 +945,50 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
         nbadcrc=1; msg37=''
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
         if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then ! chk ipass value
-          if(nweak.eq.2 .and. k1.eq.2) then
-            if(imainpass.eq.npass .and. lcqsignal .and. ipass.eq.13) then ! last pass
-              lfoundcq=.false.
-              do ik=1,numdeccq
-                if(tmpcq(ik)%freq.gt.5001.0) exit
-                if(abs(tmpcq(ik)%freq-f1).lt.5.0 .and. abs(tmpcq(ik)%xdt-xdt).lt.0.05) then
-                  lfoundcq=.true.; exit
+          if(nweak.eq.2 .and. isubp.eq.2) then
+            if(imainpass.eq.npass) then ! last pass
+              if(lcqsignal .and. ipass.eq.13) then ! last pass
+                lfoundcq=.false.
+                do ik=1,numdeccq
+                  if(tmpcq(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpcq(ik)%freq-f1).lt.5.0 .and. abs(tmpcq(ik)%xdt-xdt).lt.0.05) then
+                    lfoundcq=.true.; exit
+                  endif
+                enddo
+                if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
+                  ncqsignal=ncqsignal+1
+                  if(levenint) then
+                    evencqtmp(ncqsignal)%freq=f1; evencqtmp(ncqsignal)%xdt=xdt
+                    evencqtmp(ncqsignal)%cs=cstmp2
+                  else if(loddint) then
+                    oddcqtmp(ncqsignal)%freq=f1; oddcqtmp(ncqsignal)%xdt=xdt
+                    oddcqtmp(ncqsignal)%cs=cstmp2
+                  endif
                 endif
-              enddo
-              if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
-                ncqsignal=ncqsignal+1
-                if(levenint) then
-                  evencqtmp(ncqsignal,nthr)%freq=f1; evencqtmp(ncqsignal,nthr)%xdt=xdt
-                  evencqtmp(ncqsignal,nthr)%cs=cstmp2
-                else if(loddint) then
-                  oddcqtmp(ncqsignal,nthr)%freq=f1; oddcqtmp(ncqsignal,nthr)%xdt=xdt
-                  oddcqtmp(ncqsignal,nthr)%cs=cstmp2
+              endif
+              if(lmycsignal .and. ipass.eq.10) then ! last pass
+                lfoundmyc=.false.
+                do ik=1,numdecmyc
+                  if(tmpmyc(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpmyc(ik)%freq-f1).lt.5.0 .and. abs(tmpmyc(ik)%xdt-xdt).lt.0.05) then ! max signal delay
+                    lfoundmyc=.true.; exit
+                  endif
+                enddo
+                if(.not.lfoundmyc .and. nmycsignal.lt.nummycsig) then
+                  nmycsignal=nmycsignal+1
+                  if(levenint) then
+                    evenmyctmp(nmycsignal)%freq=f1; evenmyctmp(nmycsignal)%xdt=xdt
+                    evenmyctmp(nmycsignal)%cs=cstmp2
+                  else if(loddint) then
+                    oddmyctmp(nmycsignal)%freq=f1; oddmyctmp(nmycsignal)%xdt=xdt
+                    oddmyctmp(nmycsignal)%cs=cstmp2
+                  endif
                 endif
               endif
             endif
           endif
 
-          if(.not.lapon .or. k1.gt.1) cycle
+          if(.not.lapon .or. isubp.gt.1) cycle
 
           if(lapon) then
             if(lqsothread .and. (.not.lhound .and. iaptype.ge.3 .or. lhound .and. (iaptype.eq.21 .or. iaptype.eq.23)) &
@@ -952,23 +1016,44 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freq
               endif
             endif
 
-            if(nweak.eq.1 .and. k1.eq.1) then
-              if(imainpass.eq.npass .and. lcqsignal .and. ipass.eq.13) then ! last pass
-                lfoundcq=.false.
-                do ik=1,numdeccq
-                  if(tmpcq(ik)%freq.gt.5001.0) exit
-                  if(abs(tmpcq(ik)%freq-f1).lt.5.0 .and. abs(tmpcq(ik)%xdt-xdt).lt.0.05) then ! max signal delay
-                    lfoundcq=.true.; exit
+            if(nweak.eq.1 .and. isubp.eq.1) then
+              if(imainpass.eq.npass) then  ! last pass
+                if(lcqsignal .and. ipass.eq.13) then ! last pass
+                  lfoundcq=.false.
+                  do ik=1,numdeccq
+                    if(tmpcq(ik)%freq.gt.5001.0) exit
+                    if(abs(tmpcq(ik)%freq-f1).lt.5.0 .and. abs(tmpcq(ik)%xdt-xdt).lt.0.05) then ! max signal delay
+                      lfoundcq=.true.; exit
+                    endif
+                  enddo
+                  if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
+                    ncqsignal=ncqsignal+1
+                    if(levenint) then
+                      evencqtmp(ncqsignal)%freq=f1; evencqtmp(ncqsignal)%xdt=xdt
+                      evencqtmp(ncqsignal)%cs=cstmp2
+                    else if(loddint) then
+                      oddcqtmp(ncqsignal)%freq=f1; oddcqtmp(ncqsignal)%xdt=xdt
+                      oddcqtmp(ncqsignal)%cs=cstmp2
+                    endif
                   endif
-                enddo
-                if(.not.lfoundcq .and. ncqsignal.lt.numcqsig) then
-                  ncqsignal=ncqsignal+1
-                  if(levenint) then
-                    evencqtmp(ncqsignal,nthr)%freq=f1; evencqtmp(ncqsignal,nthr)%xdt=xdt
-                    evencqtmp(ncqsignal,nthr)%cs=cstmp2
-                  else if(loddint) then
-                    oddcqtmp(ncqsignal,nthr)%freq=f1; oddcqtmp(ncqsignal,nthr)%xdt=xdt
-                    oddcqtmp(ncqsignal,nthr)%cs=cstmp2
+                endif
+                if(lmycsignal .and. ipass.eq.10) then ! last pass
+                  lfoundmyc=.false.
+                  do ik=1,numdecmyc
+                    if(tmpmyc(ik)%freq.gt.5001.0) exit
+                    if(abs(tmpmyc(ik)%freq-f1).lt.5.0 .and. abs(tmpmyc(ik)%xdt-xdt).lt.0.05) then ! max signal delay
+                      lfoundmyc=.true.; exit
+                    endif
+                  enddo
+                  if(.not.lfoundmyc .and. nmycsignal.lt.nummycsig) then
+                    nmycsignal=nmycsignal+1
+                    if(levenint) then
+                      evenmyctmp(nmycsignal)%freq=f1; evenmyctmp(nmycsignal)%xdt=xdt
+                      evenmyctmp(nmycsignal)%cs=cstmp2
+                    else if(loddint) then
+                      oddmyctmp(nmycsignal)%freq=f1; oddmyctmp(nmycsignal)%xdt=xdt
+                      oddmyctmp(nmycsignal)%cs=cstmp2
+                    endif
                   endif
                 endif
               endif

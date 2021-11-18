@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr,evencq,oddcq,numcqsig,numdeccq
+                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -39,7 +39,6 @@ contains
 !integer*2 iwave(180000)
     real, DIMENSION(:), ALLOCATABLE :: dd8m
     real candidate(4,460),freqsub(200)
-    complex cstmp(0:7,79)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: lapon,nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
@@ -76,18 +75,39 @@ contains
       real xdt
       complex cs(0:7,79)
     end type evencqtmp_struct
-    type(evencqtmp_struct) evencqtmp(numcqsig,24) ! 20 sigs 24 threads
+    type(evencqtmp_struct) evencqtmp(numcqsig) ! 20 sigs
 
     type oddcqtmp_struct
       real freq
       real xdt
       complex cs(0:7,79)
     end type oddcqtmp_struct
-    type(oddcqtmp_struct) oddcqtmp(numcqsig,24)
+    type(oddcqtmp_struct) oddcqtmp(numcqsig)
+
+    type tmpmyc_struct
+      real freq
+      real xdt
+    end type tmpmyc_struct
+    type(tmpmyc_struct) tmpmyc(numdecmyc)
+
+    type evenmyctmp_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type evenmyctmp_struct
+    type(evenmyctmp_struct) evenmyctmp(nummycsig) ! 5 sigs
+
+    type oddmyctmp_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type oddmyctmp_struct
+    type(oddmyctmp_struct) oddmyctmp(nummycsig)
 
     this%callback => callback
 
-    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0; nmsgcq=0; tmpcq(:)%freq=6000.
+    oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
+    nmsgcq=0; tmpcq(:)%freq=6000.; nmsgmyc=0; tmpmyc(:)%freq=6000.
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
     else if(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -99,7 +119,7 @@ contains
     endif
 
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
-    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0; ncqsignal=0
+    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0; ncqsignal=0; nmycsignal=0
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
@@ -208,12 +228,12 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,  &
-                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,  &
-                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,npass,          &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,tmpmyc,        &
+                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,               &
+                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
-                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted, &
-                  evencqtmp,oddcqtmp)
+                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
+                  evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
@@ -287,6 +307,13 @@ contains
                 nmsgcq=nmsgcq+1; xdtr=xdt+0.5
                 tmpcq(nmsgcq)%freq=f1; tmpcq(nmsgcq)%xdt=xdtr
               endif
+              if(lmycallstd) then
+                ispc1=index(msg37,' ')
+                if(msg37(1:ispc1-1).eq.trim(mycall) .and. nmsgmyc.lt.numdecmyc) then
+                  nmsgmyc=nmsgmyc+1; xdtr=xdt+0.5
+                  tmpmyc(nmsgmyc)%freq=f1; tmpmyc(nmsgmyc)%xdt=xdtr
+                endif
+              endif
 
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
@@ -329,19 +356,23 @@ contains
 ! write(10) h,iwave
 ! close(10)
     if(levenint) then
-      evencq(1:ncqsignal,nthr)%freq=evencqtmp(1:ncqsignal,nthr)%freq
-      evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal,nthr)%xdt
-      do ik=1,ncqsignal
-        cstmp=evencqtmp(ik,nthr)%cs; evencq(ik,nthr)%cs=cstmp
-      enddo
-      evencqtmp(1:numcqsig,nthr)%freq=6000.0 ! reset all records
+      evencq(1:ncqsignal,nthr)%freq=evencqtmp(1:ncqsignal)%freq
+      evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; evencq(ik,nthr)%cs=evencqtmp(ik)%cs; enddo
+      evencqtmp(1:numcqsig)%freq=6000.0 ! reset all records
+      evenmyc(1:nmycsignal,nthr)%freq=evenmyctmp(1:nmycsignal)%freq
+      evenmyc(1:nmycsignal,nthr)%xdt=evenmyctmp(1:nmycsignal)%xdt
+      do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=evenmyctmp(ik)%cs; enddo
+      evenmyctmp(1:nummycsig)%freq=6000.0
     else if(loddint) then
-      oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal,nthr)%freq
-      oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal,nthr)%xdt
-      do ik=1,ncqsignal
-        cstmp=oddcqtmp(ik,nthr)%cs; oddcq(ik,nthr)%cs=cstmp
-      enddo
-      oddcqtmp(1:numcqsig,nthr)%freq=6000.0
+      oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal)%freq
+      oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; oddcq(ik,nthr)%cs=oddcqtmp(ik)%cs; enddo
+      oddcqtmp(1:numcqsig)%freq=6000.0
+      oddmyc(1:nmycsignal,nthr)%freq=oddmyctmp(1:nmycsignal)%freq
+      oddmyc(1:nmycsignal,nthr)%xdt=oddmyctmp(1:nmycsignal)%xdt
+      do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=oddmyctmp(ik)%cs; enddo
+      oddmyctmp(1:nummycsig)%freq=6000.0 ! reset all records
     endif
     ncandthr=nint(float(ncandthr)/npass)
     ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
