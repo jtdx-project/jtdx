@@ -20,7 +20,7 @@ module ft8_decode
 
 contains
 
-  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,lapon,nsec, &
+  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
                     nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
 !use wavhdr
@@ -40,7 +40,7 @@ contains
     real, DIMENSION(:), ALLOCATABLE :: dd8m
     real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
-    logical, intent(in) :: lapon,nagainfil
+    logical, intent(in) :: nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
@@ -68,7 +68,7 @@ contains
       real freq
       real xdt
     end type tmpcq_struct
-    type(tmpcq_struct) tmpcq(numdeccq)
+    type(tmpcq_struct) tmpcq(numdeccq) ! 40 sigs
 
     type evencqtmp_struct
       real freq
@@ -88,7 +88,7 @@ contains
       real freq
       real xdt
     end type tmpmyc_struct
-    type(tmpmyc_struct) tmpmyc(numdecmyc)
+    type(tmpmyc_struct) tmpmyc(numdecmyc) ! 25 sigs
 
     type evenmyctmp_struct
       real freq
@@ -126,7 +126,7 @@ contains
 
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
 
-    if(lqsothread .and. lapon .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
+    if(lqsothread .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
 ! got incoming call
       do i=1,30
         if(incall(i)%msg(1:1).eq." ") exit
@@ -228,7 +228,7 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub,tmpcq,tmpmyc,        &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tmpcq,tmpmyc,              &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,               &
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
