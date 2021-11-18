@@ -507,7 +507,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
     if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
-    lmycsignal=.false.; if(nmic.gt.3) lmycsignal=.true.
+    lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
 
     lsubptxfreq=.false.
     if(lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
@@ -552,7 +552,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         enddo
       endif
     endif
-!print *,stophint
+
     do isubp=1,nsubpasses
       if(nweak.eq.1 .and. isubp.eq.2) cycle
       if(isubp.gt.2 .and. isubp.lt.6 .and. lmycsignal) cycle ! skip if it is lmycsignal, can be both
@@ -1456,8 +1456,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         msg37=''; nbadcrc=1; return
       endif
     endif
-!print *,lcqsignal,lmycsignal
-!print *,isubp,ipass,iaptype; print *,msg37
+
 !    if(lsubtract .and. .not.ldupemsg) then
     if(lsubtract) then
       noff=10; sync0=0.; syncp=0.; syncm=0.; k=1

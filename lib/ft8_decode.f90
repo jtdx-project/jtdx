@@ -28,7 +28,7 @@ contains
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc
+                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -307,7 +307,7 @@ contains
                 nmsgcq=nmsgcq+1; xdtr=xdt+0.5
                 tmpcq(nmsgcq)%freq=f1; tmpcq(nmsgcq)%xdt=xdtr
               endif
-              if(lmycallstd) then
+              if(lapmyc .and. lmycallstd) then
                 ispc1=index(msg37,' ')
                 if(msg37(1:ispc1-1).eq.trim(mycall) .and. nmsgmyc.lt.numdecmyc) then
                   nmsgmyc=nmsgmyc+1; xdtr=xdt+0.5
@@ -360,19 +360,23 @@ contains
       evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal)%xdt
       do ik=1,ncqsignal; evencq(ik,nthr)%cs=evencqtmp(ik)%cs; enddo
       evencqtmp(1:numcqsig)%freq=6000.0 ! reset all records
-      evenmyc(1:nmycsignal,nthr)%freq=evenmyctmp(1:nmycsignal)%freq
-      evenmyc(1:nmycsignal,nthr)%xdt=evenmyctmp(1:nmycsignal)%xdt
-      do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=evenmyctmp(ik)%cs; enddo
-      evenmyctmp(1:nummycsig)%freq=6000.0
+      if(lapmyc) then
+        evenmyc(1:nmycsignal,nthr)%freq=evenmyctmp(1:nmycsignal)%freq
+        evenmyc(1:nmycsignal,nthr)%xdt=evenmyctmp(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=evenmyctmp(ik)%cs; enddo
+        evenmyctmp(1:nummycsig)%freq=6000.0
+      endif
     else if(loddint) then
       oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal)%freq
       oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal)%xdt
       do ik=1,ncqsignal; oddcq(ik,nthr)%cs=oddcqtmp(ik)%cs; enddo
       oddcqtmp(1:numcqsig)%freq=6000.0
-      oddmyc(1:nmycsignal,nthr)%freq=oddmyctmp(1:nmycsignal)%freq
-      oddmyc(1:nmycsignal,nthr)%xdt=oddmyctmp(1:nmycsignal)%xdt
-      do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=oddmyctmp(ik)%cs; enddo
-      oddmyctmp(1:nummycsig)%freq=6000.0 ! reset all records
+      if(lapmyc) then
+        oddmyc(1:nmycsignal,nthr)%freq=oddmyctmp(1:nmycsignal)%freq
+        oddmyc(1:nmycsignal,nthr)%xdt=oddmyctmp(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=oddmyctmp(ik)%cs; enddo
+        oddmyctmp(1:nummycsig)%freq=6000.0 ! reset all records
+      endif
     endif
     ncandthr=nint(float(ncandthr)/npass)
     ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
