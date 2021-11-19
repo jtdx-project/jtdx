@@ -363,7 +363,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Rodriguez Is.</source>
-        <translation>Illa de Rodrigues.</translation>
+        <translation>Illa de Rodriguez.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="40"/>
@@ -393,7 +393,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation>Regne d&apos;eSwatini</translation>
+        <translation>Regne d&apos;Eswatini</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -1048,7 +1048,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="176"/>
         <source>Jersey</source>
-        <translation>Jersey</translation>
+        <translation>Illes Jersey</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="177"/>
@@ -1063,7 +1063,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="179"/>
         <source>Guernsey</source>
-        <translation>Guernsey</translation>
+        <translation>Illes Guernsey</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="180"/>
@@ -1273,7 +1273,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="221"/>
         <source>Guam</source>
-        <translation>Guam</translation>
+        <translation>Illes Guam</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
@@ -1908,7 +1908,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="348"/>
         <source>Myanmar</source>
-        <translation>Myanmar</translation>
+        <translation>Birmània</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="349"/>
@@ -1973,7 +1973,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="361"/>
         <source>Zimbabwe</source>
-        <translation>Zimbabwe</translation>
+        <translation>Zimbàbue</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="362"/>
@@ -3900,7 +3900,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT es configurarà mitjançant Hamlib o TCI, TCI i Hamlib per a alguns equips que admeten l&apos;obtenció de dades de potència de sortida.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -8379,7 +8379,7 @@ EA3RDG,EA3URO,1C0CAT &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Amagar l&apos;intercanvi de missatges entre operadors del mateix continent. Aquesta opció permet a l&apos;usuari facilitar la monitorització de la comunicació a través de distàncies intercontinentals.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
