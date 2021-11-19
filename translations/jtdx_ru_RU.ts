@@ -8427,7 +8427,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Опция позволяет выводить на экран только сообщения межконтинентальных QSO, что удобно для мониторинга дальнего прохождения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
