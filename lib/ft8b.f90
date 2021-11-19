@@ -18,7 +18,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1,csymb256(256),cstmp2(0:7,79),csold(0:7,79),cscs(0:7,79)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200), &
-       s256(0:8)
+       s256(0:8),s2563(0:26)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
@@ -507,6 +507,11 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
     if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
+    if(.not.lcqsignal .and. ip(1).eq.4 .or. ip(1).eq.6) then
+      s2563(0:8)=s256(0:8); s2563(9:26)=abs(csymb256(9:26))
+      ip(1)=maxloc(s2563,1)
+      if(ip(1).eq.4 .or. ip(1).eq.6) lcqsignal=.true.
+    endif
     lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
 
     lsubptxfreq=.false.
