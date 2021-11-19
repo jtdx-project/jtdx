@@ -3903,7 +3903,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT управление трансивером должно быть настроено через Hamlib или TCI, эти интерфейсы поддерживают передачу показаний выходной мощности для некоторых моделей трансиверов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -6046,7 +6046,7 @@ Error(%2): %3</source>
     <message>
         <location filename="../TCITransceiver.cpp" line="416"/>
         <source>TCI RX2 could not be enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI: сбой включения управления RX2</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="424"/>
@@ -6084,7 +6084,7 @@ Error(%2): %3</source>
         <location filename="../TCITransceiver.cpp" line="1384"/>
         <location filename="../TCITransceiver.cpp" line="1427"/>
         <source>TCI failed set split</source>
-        <translation type="unfinished"></translation>
+        <translation>TCI: Сбой включения разноса частот</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1401"/>
@@ -6619,7 +6619,7 @@ quiet period when decoding is done.</source>
     <message>
         <location filename="../Configuration.ui" line="740"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 c</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="808"/>
@@ -7751,42 +7751,46 @@ Right click for insert and delete options.</source>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Связи проведенные текущим позывным</translation>
+        <translation>Связи проведенные текущим позывным</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Связи проведенные с текущего QTH квадрата</translation>
+        <translation>Связи проведенные с текущего QTH квадрата</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Опция позволяет изменить направление
+смещения ранее декодированных сообщений
+в окнах с &apos;снизу-вверх&apos; на &apos;сверху-вниз&apos;,
+последнее декодированное сообщение
+будет всегда в верхней строке.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение сообщений в окнах вниз</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Скрыть частично переданные сообщения</translation>
+        <translation>Скрыть частично переданные сообщения</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Тёмный стиль интерфейса</translation>
+        <translation>Тёмный стиль интерфейса</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Разрешить изменение частоты TX при передаче</translation>
+        <translation>Разрешить изменение частоты TX при передаче</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">Монитор возвращается к последней используемой частоте</translation>
+        <translation>Монитор возвращается к последней использовавшейся частоте</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="763"/>
@@ -8423,7 +8427,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрыть обмен сообщениями внутри своего континента</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5292"/>
