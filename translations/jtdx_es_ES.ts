@@ -3900,7 +3900,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; CAT se configurará a través de Hamlib o TCI, TCI y Hamlib para algunos transceptores admite la obtención de datos de potencia de salida. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -8378,7 +8378,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Ocultar el intercambio de mensajes entre operadores del propio continente. Esta opción permite al usuario facilitar el monitoreo de la comunicación a través de distancias intercontinentales. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
