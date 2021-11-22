@@ -11,7 +11,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
-                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc
+                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -29,7 +29,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig
 
   type tmpcq_struct
     real freq
@@ -504,6 +504,17 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         if(ip(1).eq.2) iscq=iscq+1
       endif
     enddo
+
+lqsosig=.false.
+!if(lapmyc .and. dfqso.lt.2. .and. lhiscallstd .and. lmycallstd) then
+!nqsot=0
+!do k11=8,26
+!ip=maxloc(s8(:,k11))
+!if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+!enddo
+!if(nqsot.gt.6) lqsosig=.true.
+!endif
+
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
     if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
@@ -935,6 +946,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         if(nharderrors.lt.0) then
           ndeep=3
           if((dfqso.le.napwid .or. abs(nftx-f1).le.napwid) .and. .not.nagainfil) ndeep=4
+          if(lapmyc .and. lqsomsgdcd) ndeep=3 ! deep is not needed, reduce number of CPU cycles
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
 !          if(swl) ndeep=4 ! 29 decodes -23dB, 7..12sec to decode
           if(nagainfil) ndeep=5
