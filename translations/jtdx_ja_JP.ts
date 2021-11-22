@@ -388,7 +388,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Kingdom of Eswatini</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="46"/>
@@ -3914,7 +3914,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CATはHamlibまたはTCIを介して設定しなければなりません。TCIとHamlibは、いくつかのトランシーバーで出力データの取得をサポートしています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4403"/>
@@ -7903,42 +7903,42 @@ and DX Grid fields when a 73 or free text message is sent.</source>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">現在のコールサインを使う</translation>
+        <translation>現在のコールサインを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">現在のグリッドを使う</translation>
+        <translation>現在のグリッドを使う</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>最新の受信局を上部に表示し下にスクロール</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;最新の受信局を上部に表示し下にスクロール</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">部分的に送られたメッセージを隠す</translation>
+        <translation>&amp;部分的に送られたメッセージを隠す</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">ダークスタイルを使用する</translation>
+        <translation>ダークスタイルを使用する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">送信中のTx 周波数変更を許可</translation>
+        <translation>送信中のTx 周波数変更を許可</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">最後に使われた周波数に戻ってモニターする</translation>
+        <translation>最後に使われた周波数に戻ってモニターする</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="737"/>
@@ -8285,12 +8285,12 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自国のある大陸の局同士間の交信を非表示に。このオプションにより、ユーザーは大陸間の通信を簡単にモニターすることができます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>自国のある大陸の局同士間の交信を非表示に</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5295"/>

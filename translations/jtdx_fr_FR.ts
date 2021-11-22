@@ -3902,7 +3902,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>CAT doit être configuré via Hamlib ou TCI, TCI et Hamlib pour certains transceivers permettent d&apos;obtenir des données sur la puissance de sortie.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -8381,7 +8381,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Masquer les échanges de messages entre les opérateurs de son propre continent. Cette option permet à l&apos;utilisateur de faciliter le contrôle de la communication sur des distances intercontinentales.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
