@@ -1,6 +1,6 @@
 subroutine tone8(lmycallstd,lhiscallstd)
 
-  use ft8_mod1, only : itone56,idtone56,msg,csynce,mycall,hiscall
+  use ft8_mod1, only : itone56,idtone56,msg,csynce,mycall,hiscall,idtonecqdxcns
   complex csig0(151680)
   character msg37*37,msgsent37*37,mycall14*14,hiscall14*14
   character*4 rpt(56)
@@ -37,6 +37,14 @@ subroutine tone8(lmycallstd,lhiscallstd)
       itone56(i,1:79)=itone(1:79)
     enddo
     go to 2
+  endif
+
+  if(.not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
+    msg37=''; msg37='CQ '//trim(hiscall14)
+    i3=-1; n3=-1
+    call genft8(msg37,i3,n3,0,msgsent37,msgbits,itone)
+    idtonecqdxcns(1:29)=itone(8:36)
+    idtonecqdxcns(30:58)=itone(44:72)
   endif
 
   if(.not.lhiscallstd .and. lmycallstd) then

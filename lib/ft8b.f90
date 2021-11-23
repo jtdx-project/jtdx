@@ -11,7 +11,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp, &
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
-                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56
+                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56, &
+                       idtonecqdxcns
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -29,7 +30,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxsig
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
+             lcqdxcnssig
 
   type tmpcq_struct
     real freq
@@ -525,7 +527,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
     lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
 
-    ldxsig=.false.
+    ldxcsig=.false.; lcqdxcsig=.false.; lcqdxcnssig=.false.
     if(lmycallstd .and. stophint) then ! DXCall search
       ndxt=0
       if(lhiscallstd) then
@@ -533,16 +535,25 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           ip=maxloc(s8(:,k11))
           if(ip(1).eq.idtone56(1,k11-7)+1) ndxt=ndxt+1
         enddo
-        if(ndxt.gt.3) ldxsig=.true.
+        if(ndxt.gt.3) ldxcsig=.true.
+        if(lcqsignal .and. ldxcsig) lcqdxcsig=.true.
       else if(len(trim(hiscall)).gt.2) then ! nonstandard DXCall
+        ncqdxcnst=0
+        do k11=8,11
+          ip=maxloc(s8(:,k11))
+          if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
+        enddo
         do k11=12,30
           ip=maxloc(s8(:,k11))
           if(ip(1).eq.idtone56(54,k11-7)+1) ndxt=ndxt+1
+          if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
         enddo
         if(dfqso.lt.napwid) then
-          if(ndxt.gt.7) ldxsig=.true. ! relaxed threshold for RXF napwid
+          if(ndxt.gt.7) ldxcsig=.true. ! relaxed threshold for RXF napwid
+          if(ncqdxcnst.gt.9) lcqdxcnssig=.true.
         else
-          if(ndxt.gt.8) ldxsig=.true.
+          if(ndxt.gt.8) ldxcsig=.true.
+          if(ncqdxcnst.gt.10) lcqdxcnssig=.true.
         endif
       endif
     endif
@@ -798,7 +809,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
             if(iaptype.ge.2 .and. iaptype.lt.31 .and. apsym(1).gt.1) cycle  ! No, or nonstandard, mycall 
             if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, dxcall
-
+            if(iaptype.eq.31 .and. lcqdxcsig) cycle ! not CQ signal from std DXCall
+            if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
             llrz=llra; if(iaptype.gt.30) llrz=llrc
 
             if(iaptype.eq.1) then
@@ -875,6 +887,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(.not.lapmyc .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
             if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
+            if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
+            if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
 
 !!!        if(stophint .and. iaptype.gt.0 .and. iaptype.lt.5) cycle !!! to check stophint functionality
 !        if(lft8sdec .and. iaptype.gt.0 .and. iaptype.lt.5) cycle ! already decoded ! but may be false FT8S decode
@@ -971,7 +985,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if((dfqso.lt.napwid .or. (abs(nftx-f1).lt.napwid .and. lapmyc)) .and. .not.nagainfil) ndeep=4
             if(lapmyc .and. lqsomsgdcd .or. iaptype.eq.0) ndeep=3 ! deep is not needed, reduce number of CPU cycles
           endif
-          if(ldxsig .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
+          if(ldxcsig .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
 !          if(swl) ndeep=4 ! 29 decodes -23dB, 7..12sec to decode
           if(nagainfil) ndeep=5
