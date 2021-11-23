@@ -29,7 +29,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                             lhighsens,lcqcand,levenint,loddint
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxsig
 
   type tmpcq_struct
     real freq
@@ -505,15 +505,15 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     enddo
 
-lqsosig=.false.
-!if(lapmyc .and. dfqso.lt.2. .and. lhiscallstd .and. lmycallstd) then
-!nqsot=0
-!do k11=8,26
-!ip=maxloc(s8(:,k11))
-!if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
-!enddo
-!if(nqsot.gt.6) lqsosig=.true.
-!endif
+    lqsosig=.false. ! has support to nonstandard callsign
+    if((dfqso.lt.napwid .or. abs(nftx-f1).lt.napwid) .and. lapmyc .and. len(trim(hiscall)).gt.2) then
+    nqsot=0
+    do k11=8,26
+      ip=maxloc(s8(:,k11))
+      if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+    enddo
+    if(nqsot.gt.6) lqsosig=.true.
+    endif
 
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
@@ -524,6 +524,28 @@ lqsosig=.false.
       if(ip(1).eq.4 .or. ip(1).eq.6) lcqsignal=.true.
     endif
     lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
+
+    ldxsig=.false.
+    if(lmycallstd .and. stophint) then ! DXCall search
+      ndxt=0
+      if(lhiscallstd) then
+        do k11=17,26
+          ip=maxloc(s8(:,k11))
+          if(ip(1).eq.idtone56(1,k11-7)+1) ndxt=ndxt+1
+        enddo
+        if(ndxt.gt.3) ldxsig=.true.
+      else if(len(trim(hiscall)).gt.2) then ! nonstandard DXCall
+        do k11=12,30
+          ip=maxloc(s8(:,k11))
+          if(ip(1).eq.idtone56(54,k11-7)+1) ndxt=ndxt+1
+        enddo
+        if(dfqso.lt.napwid) then
+          if(ndxt.gt.7) ldxsig=.true. ! relaxed threshold for RXF napwid
+        else
+          if(ndxt.gt.8) ldxsig=.true.
+        endif
+      endif
+    endif
 
     lsubptxfreq=.false.
     if(lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
@@ -945,8 +967,11 @@ lqsosig=.false.
         dmin=0.0
         if(nharderrors.lt.0) then
           ndeep=3
-          if((dfqso.lt.napwid .or. (abs(nftx-f1).lt.napwid .and. lapmyc)) .and. .not.nagainfil) ndeep=4
-          if(lapmyc .and. lqsomsgdcd .or. iaptype.eq.0) ndeep=3 ! deep is not needed, reduce number of CPU cycles
+          if(lqsosig .or. lmycsignal) then
+            if((dfqso.lt.napwid .or. (abs(nftx-f1).lt.napwid .and. lapmyc)) .and. .not.nagainfil) ndeep=4
+            if(lapmyc .and. lqsomsgdcd .or. iaptype.eq.0) ndeep=3 ! deep is not needed, reduce number of CPU cycles
+          endif
+          if(ldxsig .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
 !          if(swl) ndeep=4 ! 29 decodes -23dB, 7..12sec to decode
           if(nagainfil) ndeep=5
