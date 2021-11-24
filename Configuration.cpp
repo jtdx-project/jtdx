@@ -5977,7 +5977,7 @@ void Configuration::impl::handle_transceiver_update (TransceiverState const& sta
   else
     {
 //      printf("%s(%0.1f) Coniguration #:%d %d transceiver_update close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),sequence_number,transceiver_command_number_);
-      close_rig ();
+      if (sequence_number == transceiver_command_number_) close_rig ();
     }
 
   // pass on to clients if current command is processed
@@ -6026,8 +6026,8 @@ void Configuration::impl::close_rig ()
   if (rig_active_)
     {
       ui_->test_CAT_push_button->setStyleSheet ("QPushButton {background-color: red;}");
-//      if (is_tci_) QThread::msleep (200);
       Q_EMIT stop_transceiver ();
+      if (is_tci_) QThread::msleep (5);
       for (auto const& connection: rig_connections_)
         {
           disconnect (connection);
