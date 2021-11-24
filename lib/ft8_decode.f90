@@ -27,8 +27,9 @@ contains
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,  &
+                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso, &
+                         lqsomsgdcd
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -103,6 +104,20 @@ contains
       complex cs(0:7,79)
     end type oddmyctmp_struct
     type(oddmyctmp_struct) oddmyctmp(nummycsig)
+
+    type evenqsotmp_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type evenqsotmp_struct
+    type(evenqsotmp_struct) evenqsotmp(1)
+
+    type oddqsotmp_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type oddqsotmp_struct
+    type(oddqsotmp_struct) oddqsotmp(1)
 
     this%callback => callback
 
@@ -233,7 +248,7 @@ contains
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                  evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp)
+                  evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp,evenqsotmp,oddqsotmp)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
@@ -365,6 +380,10 @@ contains
         evenmyc(1:nmycsignal,nthr)%xdt=evenmyctmp(1:nmycsignal)%xdt
         do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=evenmyctmp(ik)%cs; enddo
         evenmyctmp(1:nummycsig)%freq=6000.0
+        if(.not.lqsomsgdcd) then
+          evenqso(1,nthr)%freq=evenqsotmp(1)%freq; evenqso(1,nthr)%xdt=evenqsotmp(1)%xdt
+          evenqso(1,nthr)%cs=evenqsotmp(1)%cs; evenqsotmp(1)%freq=6000.0
+        endif
       endif
     else if(loddint) then
       oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal)%freq
@@ -376,6 +395,10 @@ contains
         oddmyc(1:nmycsignal,nthr)%xdt=oddmyctmp(1:nmycsignal)%xdt
         do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=oddmyctmp(ik)%cs; enddo
         oddmyctmp(1:nummycsig)%freq=6000.0 ! reset all records
+        if(.not.lqsomsgdcd) then
+          oddqso(1,nthr)%freq=oddqsotmp(1)%freq; oddqso(1,nthr)%xdt=oddqsotmp(1)%xdt
+          oddqso(1,nthr)%cs=oddqsotmp(1)%cs; oddqsotmp(1)%freq=6000.0
+        endif
       endif
     endif
     ncandthr=nint(float(ncandthr)/npass)
