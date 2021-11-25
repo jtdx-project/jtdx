@@ -520,9 +520,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
     lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
 
-    ldxcsig=.false.; lcqdxcsig=.false.; lcqdxcnssig=.false.
-    if(lmycallstd .and. stophint) then ! DXCall search
-      ndxt=0
+    ldxcsig=.false.; lcqdxcsig=.false.; lcqdxcnssig=.false.; ndxt=0
+    if(lmycallstd) then ! DXCall search or QSOsig
       if(lhiscallstd) then
         do k11=17,26
           ip=maxloc(s8(:,k11))
@@ -595,7 +594,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     endif
     lqsocandave=.false.
-    if(lapmyc .and. ldxcsig .and. lmycsignal .and. .not.lqsomsgdcd .and. lmycallstd .and. lhiscallstd .and. &
+    if(lapmyc .and. ndxt.gt.2 .and. nmic.gt.2 .and. .not.lqsomsgdcd .and. lmycallstd .and. lhiscallstd .and. &
        dfqso.lt.napwid/2.0) then
       lqsocandave=.true.
       nsubpasses=9
@@ -707,15 +706,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !   1        regular decoding, nsym=1 
 !   2        regular decoding, nsym=2 
 !   3        regular decoding, nsym=3 
-!   4        ap pass 1
-!   5        ap pass 2
-!   6        ap pass 3
-!   7        ap pass 4
-!   8        ap pass 5
-!   9        ap pass 6
-!  10        ap pass 7
-!  11        ap pass 8
-!  12        ap pass 9
+!   4        regular decoding, llrd
+!   5..18    ap passes
 
 ! iaptype Hound off
 !------------------------
@@ -784,7 +776,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       npasses=4
 ! iaptype 31,35,36 DX Call searching
       if(lhound) then; npasses=18 ! nhaptypes
-      else if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) &
+      else if(.not.lhound .and. (lhiscallstd .or. len(trim(hiscall)).lt.3)) &
              then; npasses=16 ! naptypes
       else if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then; npasses=18 ! ndxnsaptypes
       else if(.not.lhound .and. .not.lmycallstd) then; npasses=4
@@ -794,13 +786,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
       do ipass=1,npasses
         if(.not.swl .and. ipass.eq.4) cycle
-        if(isubp.gt.2 .and. ipass.lt.4) cycle ! skip regular decoding for extra subpasses
+        if(isubp.gt.2 .and. ipass.lt.5) cycle ! skip regular decoding for extra subpasses
         if(lqsocandave) then
           if(isubp.gt.2 .and. isubp.lt.9) cycle ! skip other extra subpasses if QSO signal, highiest priority
           if(lqsomsgdcd) cycle
         else if(lmycsignal .and. lmycallstd) then
-          if(isubp.lt.6) cycle ! skip CQ signal extra subpasses if MyCall signal
-          if(ipass.lt.8 .or. ipass.gt.10) cycle ! skip other AP if lmycsignal extra subpasses
+          if(isubp.gt.2 .and. isubp.lt.6) cycle ! skip CQ signal extra subpasses if MyCall signal
         endif
 
         if(ipass.lt.5) then
@@ -808,12 +799,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(ipass.eq.1) then
             if(.not.swl .and. imainpass.eq.1) then; llrz=llrd; else; llrz=llra; endif
             if(isubp.gt.1 .and. imainpass.gt.1) llrz=llrd
-          else if(ipass.eq.2) then; llrz=llrb; if(isubp.gt.1) llrz=llra ! subpass 10661..10670
+          else if(ipass.eq.2) then; llrz=llrb; if(isubp.gt.1) llrz=llra
           else if(ipass.eq.3) then; llrz=llrc
-          else if(ipass.eq.4) then; llrz=llrd ! AP CQ
+          else if(ipass.eq.4) then; llrz=llrd
           endif
         else
-          if(.not.lhound .and. (lhiscallstd .or. .not.lhiscallstd .and. len(trim(hiscall)).lt.3)) then
+          if(.not.lhound .and. (lhiscallstd .or. len(trim(hiscall)).lt.3)) then
             iaptype=naptypes(nQSOProgress,ipass-4); if(iaptype.eq.0) cycle
             if(lqsomsgdcd .and. iaptype.ge.3 .and. iaptype.lt.31) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.eq.2) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
@@ -827,6 +818,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(iaptype.eq.31 .and. lcqdxcsig) cycle ! not CQ signal from std DXCall
             if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
             if(lqsocandave .and. isubp.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
+            if(.not.lqsocandave .and. lmycsignal .and. lmycallstd .and. isubp.gt.5 .and. isubp.lt.9 .and. iaptype.ne.2) cycle ! skip other AP if lmycsignal extra subpasses)
             llrz=llra; if(iaptype.gt.30) llrz=llrc
 
             if(iaptype.eq.1) then
@@ -1001,7 +993,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if((dfqso.lt.napwid .or. (abs(nftx-f1).lt.napwid .and. lapmyc)) .and. .not.nagainfil) ndeep=4
             if(lapmyc .and. lqsomsgdcd .or. iaptype.eq.0) ndeep=3 ! deep is not needed, reduce number of CPU cycles
           endif
-          if(ldxcsig .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
+          if(ldxcsig .and. stophint .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
 !          if(swl) ndeep=4 ! 29 decodes -23dB, 7..12sec to decode
           if(nagainfil) ndeep=5
@@ -1043,8 +1035,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   tmpmycsig(nmycsignal)%cs=cstmp2
                 endif
               endif
-              if(lapmyc .and. ldxcsig .and. lmycsignal .and. lmycallstd .and. lhiscallstd .and. dfqso.lt.napwid/2.0 .and. &
-                 (iaptype.eq.3 .or. iaptype.eq.6)) then
+              if(lqsocandave .and. (iaptype.eq.3 .or. iaptype.eq.6)) then
                 tmpqsosig(1)%freq=f1; tmpqsosig(1)%xdt=xdt; tmpqsosig(1)%cs=cstmp2
               endif
             endif
@@ -1107,8 +1098,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   tmpmycsig(nmycsignal)%cs=cstmp2
                 endif
               endif
-              if(lapmyc .and. ldxcsig .and. lmycsignal .and. lmycallstd .and. lhiscallstd .and. dfqso.lt.napwid/2.0 .and. &
-                 (iaptype.eq.3 .or. iaptype.eq.6)) then
+              if(lqsocandave .and. (iaptype.eq.3 .or. iaptype.eq.6)) then
                 tmpqsosig(1)%freq=f1; tmpqsosig(1)%xdt=xdt; tmpqsosig(1)%cs=cstmp2
               endif
             endif

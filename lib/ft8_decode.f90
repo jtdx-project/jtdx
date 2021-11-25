@@ -358,7 +358,7 @@ contains
         evenmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
         evenmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
         do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
-        if(.not.lqsomsgdcd) then
+        if(.not.lqsomsgdcd .and. tmpqsosig(1)%freq.lt.5001.) then
           evenqso(1,nthr)%freq=tmpqsosig(1)%freq; evenqso(1,nthr)%xdt=tmpqsosig(1)%xdt
           evenqso(1,nthr)%cs=tmpqsosig(1)%cs
         endif
@@ -371,7 +371,7 @@ contains
         oddmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
         oddmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
         do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
-        if(.not.lqsomsgdcd) then
+        if(.not.lqsomsgdcd .and. tmpqsosig(1)%freq.lt.5001.) then
           oddqso(1,nthr)%freq=tmpqsosig(1)%freq; oddqso(1,nthr)%xdt=tmpqsosig(1)%xdt
           oddqso(1,nthr)%cs=tmpqsosig(1)%cs
         endif
