@@ -3,7 +3,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 nthr,lFreeText,imainpass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,        &
                 i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                 ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp,evenqsotmp,oddqsotmp)
+                evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp,qsotmp)
 !  use timer_module, only: timer
   use packjt77, only : unpack77
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap, &
@@ -31,7 +31,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig
+             lcqdxcnssig,lqsocandave
 
   type tmpcq_struct
     real freq
@@ -73,19 +73,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   end type oddmyctmp_struct
   type(oddmyctmp_struct) oddmyctmp(nummycsig)
 
-  type evenqsotmp_struct
+  type qsotmp_struct
     real freq
     real xdt
     complex cs(0:7,79)
-  end type evenqsotmp_struct
-  type(evenqsotmp_struct) evenqsotmp(1)
-
-  type oddqsotmp_struct
-    real freq
-    real xdt
-    complex cs(0:7,79)
-  end type oddqsotmp_struct
-  type(oddqsotmp_struct) oddqsotmp(1)
+  end type qsotmp_struct
+  type(qsotmp_struct) qsotmp(1)
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
@@ -615,19 +608,21 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         enddo
       endif
     endif
-!    if(lapmyc .and. ldxcsig .and. lmycsignal .and. .not.lqsomsgdcd .and. lmycallstd .and. lhiscallstd .and. &
-!       dfqso.lt.napwid/2.0) then
-!      nsubpasses=9
-!      if(levenint) then
-!          if(abs(evenqso(1,nthr)%freq-f1).lt.2.0 .and. abs(evenqso(1,nthr)%xdt-xdt).lt.0.05) then
-!            nsubpasses=11; csold=evenqso(1,nthr)%cs
-!          endif
-!      else if (loddint) then
-!          if(abs(oddqso(1,nthr)%freq-f1).lt.2.0 .and. abs(oddqso(1,nthr)%xdt-xdt).lt.0.05) then
-!            nsubpasses=11; csold=oddqso(1,nthr)%cs
-!          endif
-!      endif
-!    endif
+    lqsocandave=.false.
+    if(lapmyc .and. ldxcsig .and. lmycsignal .and. .not.lqsomsgdcd .and. lmycallstd .and. lhiscallstd .and. &
+       dfqso.lt.napwid/2.0) then
+      lqsocandave=.true.
+      nsubpasses=9
+      if(levenint) then
+          if(abs(evenqso(1,nthr)%freq-f1).lt.2.0 .and. abs(evenqso(1,nthr)%xdt-xdt).lt.0.05) then
+            nsubpasses=11; csold=evenqso(1,nthr)%cs
+          endif
+      else if (loddint) then
+          if(abs(oddqso(1,nthr)%freq-f1).lt.2.0 .and. abs(oddqso(1,nthr)%xdt-xdt).lt.0.05) then
+            nsubpasses=11; csold=oddqso(1,nthr)%cs
+          endif
+      endif
+    endif
 
     do isubp=1,nsubpasses
       if(nweak.eq.1 .and. isubp.eq.2) cycle
@@ -655,7 +650,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 else
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))
                 endif
-              else if(isubp.eq.3 .or. isubp.eq.6) then
+              else if(isubp.eq.3 .or. isubp.eq.6 .or. isubp.eq.9) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cscs(graymap(i33),ks))**2+abs(csr(graymap(i33),ks))**2
                 elseif(nsym.eq.2) then
@@ -664,7 +659,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   s2(i)=abs(cscs(graymap(i1),ks)+cscs(graymap(i2),ks1)+cscs(graymap(i33),ks2))**2 + &
                     abs(csr(graymap(i1),ks)+csr(graymap(i2),ks1)+csr(graymap(i33),ks2))**2
                 endif
-              else if(isubp.eq.4 .or. isubp.eq.7) then
+              else if(isubp.eq.4 .or. isubp.eq.7 .or. isubp.eq.10) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))**2+abs(csold(graymap(i33),ks))**2
                 elseif(nsym.eq.2) then
@@ -673,7 +668,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   s2(i)=abs(cs(graymap(i1),ks)+cs(graymap(i2),ks1)+cs(graymap(i33),ks2))**2 + &
                     abs(csold(graymap(i1),ks)+csold(graymap(i2),ks1)+csold(graymap(i33),ks2))**2
                 endif
-              else if(isubp.eq.5 .or. isubp.eq.8) then
+              else if(isubp.eq.5 .or. isubp.eq.8 .or. isubp.eq.11) then
                 if(nsym.eq.1) then
                   s2(i)=abs(cs(graymap(i33),ks))+abs(csold(graymap(i33),ks))
                 elseif(nsym.eq.2) then
@@ -813,8 +808,15 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
       do ipass=1,npasses
         if(.not.swl .and. ipass.eq.4) cycle
-        if(isubp.gt.2 .and. ipass.lt.4) cycle ! skip regular if lcqsignal or lmycsignal extra subpasses
-        if(isubp.gt.5 .and. (ipass.lt.8 .or. ipass.gt.10)) cycle ! skip other AP if lmycsignal extra subpasses
+        if(isubp.gt.2 .and. ipass.lt.4) cycle ! skip regular decoding for extra subpasses
+        if(lqsocandave) then
+          if(isubp.gt.2 .and. isubp.lt.9) cycle ! skip other extra subpasses if QSO signal, highiest priority
+          if(lqsomsgdcd) cycle
+        else if(lmycsignal .and. lmycallstd) then
+          if(isubp.lt.6) cycle ! skip CQ signal extra subpasses if MyCall signal
+          if(ipass.lt.8 .or. ipass.gt.10) cycle ! skip other AP if lmycsignal extra subpasses
+        endif
+
         if(ipass.lt.5) then
           apmask=0; iaptype=0
           if(ipass.eq.1) then
@@ -838,6 +840,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, dxcall
             if(iaptype.eq.31 .and. lcqdxcsig) cycle ! not CQ signal from std DXCall
             if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
+            if(lqsocandave .and. isubp.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
             llrz=llra; if(iaptype.gt.30) llrz=llrc
 
             if(iaptype.eq.1) then
@@ -915,6 +918,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
             if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
             if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
+            if(lqsocandave .and. isubp.gt.8 .and. (iaptype.lt.11 .or. iaptype.gt.14)) cycle ! QSO signal
 
 !!!        if(stophint .and. iaptype.gt.0 .and. iaptype.lt.5) cycle !!! to check stophint functionality
 !        if(lft8sdec .and. iaptype.gt.0 .and. iaptype.lt.5) cycle ! already decoded ! but may be false FT8S decode
@@ -1065,11 +1069,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
               if(lapmyc .and. ldxcsig .and. lmycsignal .and. lmycallstd .and. lhiscallstd .and. dfqso.lt.napwid/2.0 .and. &
                  (iaptype.eq.3 .or. iaptype.eq.6)) then
-                if(levenint) then
-                  evenqsotmp(1)%freq=f1; evenqsotmp(1)%xdt=xdt; evenqsotmp(1)%cs=cstmp2
-                else if(loddint) then
-                  oddqsotmp(1)%freq=f1; oddqsotmp(1)%xdt=xdt; oddqsotmp(1)%cs=cstmp2
-                endif
+                qsotmp(1)%freq=f1; qsotmp(1)%xdt=xdt; qsotmp(1)%cs=cstmp2
               endif
             endif
           endif
@@ -1143,11 +1143,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
               if(lapmyc .and. ldxcsig .and. lmycsignal .and. lmycallstd .and. lhiscallstd .and. dfqso.lt.napwid/2.0 .and. &
                  (iaptype.eq.3 .or. iaptype.eq.6)) then
-                if(levenint) then
-                  evenqsotmp(1)%freq=f1; evenqsotmp(1)%xdt=xdt; evenqsotmp(1)%cs=cstmp2
-                else if(loddint) then
-                  oddqsotmp(1)%freq=f1; oddqsotmp(1)%xdt=xdt; oddqsotmp(1)%cs=cstmp2
-                endif
+                qsotmp(1)%freq=f1; qsotmp(1)%xdt=xdt; qsotmp(1)%cs=cstmp2
               endif
             endif
           endif
