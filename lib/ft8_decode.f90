@@ -65,25 +65,18 @@ contains
     end type eventmp_struct
     type(eventmp_struct) eventmp(130)
 
-    type tmpcq_struct
+    type tmpcqdec_struct
       real freq
       real xdt
-    end type tmpcq_struct
-    type(tmpcq_struct) tmpcq(numdeccq) ! 40 sigs
+    end type tmpcqdec_struct
+    type(tmpcqdec_struct) tmpcqdec(numdeccq) ! 40 sigs
 
-    type evencqtmp_struct
+    type tmpcqsig_struct
       real freq
       real xdt
       complex cs(0:7,79)
-    end type evencqtmp_struct
-    type(evencqtmp_struct) evencqtmp(numcqsig) ! 20 sigs
-
-    type oddcqtmp_struct
-      real freq
-      real xdt
-      complex cs(0:7,79)
-    end type oddcqtmp_struct
-    type(oddcqtmp_struct) oddcqtmp(numcqsig)
+    end type tmpcqsig_struct
+    type(tmpcqsig_struct) tmpcqsig(numcqsig) ! 20 sigs
 
     type tmpmyc_struct
       real freq
@@ -91,33 +84,25 @@ contains
     end type tmpmyc_struct
     type(tmpmyc_struct) tmpmyc(numdecmyc) ! 25 sigs
 
-    type evenmyctmp_struct
+    type tmpmycsig_struct
       real freq
       real xdt
       complex cs(0:7,79)
-    end type evenmyctmp_struct
-    type(evenmyctmp_struct) evenmyctmp(nummycsig) ! 5 sigs
+    end type tmpmycsig_struct
+    type(tmpmycsig_struct) tmpmycsig(nummycsig) ! 5 sigs
 
-    type oddmyctmp_struct
+    type tmpqsosig_struct
       real freq
       real xdt
       complex cs(0:7,79)
-    end type oddmyctmp_struct
-    type(oddmyctmp_struct) oddmyctmp(nummycsig)
-
-    type qsotmp_struct
-      real freq
-      real xdt
-      complex cs(0:7,79)
-    end type qsotmp_struct
-    type(qsotmp_struct) qsotmp(1)
+    end type tmpqsosig_struct
+    type(tmpqsosig_struct) tmpqsosig(1)
 
     this%callback => callback
 
     oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
-    nmsgcq=0; tmpcq(:)%freq=6000.0; nmsgmyc=0; tmpmyc(:)%freq=6000.0
-    evencqtmp(:)%freq=6000.0; evenmyctmp(:)%freq=6000.0; qsotmp(1)%freq=6000.0
-    oddcqtmp(:)%freq=6000.0; oddmyctmp(:)%freq=6000.0
+    nmsgcq=0; tmpcqdec(:)%freq=6000.0; nmsgmyc=0; tmpmyc(:)%freq=6000.0
+    tmpcqsig(:)%freq=6000.0; tmpmycsig(:)%freq=6000.0; tmpqsosig(1)%freq=6000.0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
     else if(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -238,12 +223,12 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tmpcq,tmpmyc,              &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tmpcqdec,tmpmyc,              &
                   nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,               &
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                  evencqtmp,oddcqtmp,evenmyctmp,oddmyctmp,qsotmp)
+                  tmpcqsig,tmpmycsig,tmpqsosig)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
@@ -315,7 +300,7 @@ contains
 
               if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.numdeccq) then
                 nmsgcq=nmsgcq+1; xdtr=xdt+0.5
-                tmpcq(nmsgcq)%freq=f1; tmpcq(nmsgcq)%xdt=xdtr
+                tmpcqdec(nmsgcq)%freq=f1; tmpcqdec(nmsgcq)%xdt=xdtr
               endif
               if(lapmyc .and. lmycallstd) then
                 ispc1=index(msg37,' ')
@@ -366,29 +351,29 @@ contains
 ! write(10) h,iwave
 ! close(10)
     if(levenint) then
-      evencq(1:ncqsignal,nthr)%freq=evencqtmp(1:ncqsignal)%freq
-      evencq(1:ncqsignal,nthr)%xdt=evencqtmp(1:ncqsignal)%xdt
-      do ik=1,ncqsignal; evencq(ik,nthr)%cs=evencqtmp(ik)%cs; enddo
+      evencq(1:ncqsignal,nthr)%freq=tmpcqsig(1:ncqsignal)%freq
+      evencq(1:ncqsignal,nthr)%xdt=tmpcqsig(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; evencq(ik,nthr)%cs=tmpcqsig(ik)%cs; enddo
       if(lapmyc) then
-        evenmyc(1:nmycsignal,nthr)%freq=evenmyctmp(1:nmycsignal)%freq
-        evenmyc(1:nmycsignal,nthr)%xdt=evenmyctmp(1:nmycsignal)%xdt
-        do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=evenmyctmp(ik)%cs; enddo
+        evenmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
+        evenmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
         if(.not.lqsomsgdcd) then
-          evenqso(1,nthr)%freq=qsotmp(1)%freq; evenqso(1,nthr)%xdt=qsotmp(1)%xdt
-          evenqso(1,nthr)%cs=qsotmp(1)%cs
+          evenqso(1,nthr)%freq=tmpqsosig(1)%freq; evenqso(1,nthr)%xdt=tmpqsosig(1)%xdt
+          evenqso(1,nthr)%cs=tmpqsosig(1)%cs
         endif
       endif
     else if(loddint) then
-      oddcq(1:ncqsignal,nthr)%freq=oddcqtmp(1:ncqsignal)%freq
-      oddcq(1:ncqsignal,nthr)%xdt=oddcqtmp(1:ncqsignal)%xdt
-      do ik=1,ncqsignal; oddcq(ik,nthr)%cs=oddcqtmp(ik)%cs; enddo
+      oddcq(1:ncqsignal,nthr)%freq=tmpcqsig(1:ncqsignal)%freq
+      oddcq(1:ncqsignal,nthr)%xdt=tmpcqsig(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; oddcq(ik,nthr)%cs=tmpcqsig(ik)%cs; enddo
       if(lapmyc) then
-        oddmyc(1:nmycsignal,nthr)%freq=oddmyctmp(1:nmycsignal)%freq
-        oddmyc(1:nmycsignal,nthr)%xdt=oddmyctmp(1:nmycsignal)%xdt
-        do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=oddmyctmp(ik)%cs; enddo
+        oddmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
+        oddmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
         if(.not.lqsomsgdcd) then
-          oddqso(1,nthr)%freq=qsotmp(1)%freq; oddqso(1,nthr)%xdt=qsotmp(1)%xdt
-          oddqso(1,nthr)%cs=qsotmp(1)%cs
+          oddqso(1,nthr)%freq=tmpqsosig(1)%freq; oddqso(1,nthr)%xdt=tmpqsosig(1)%xdt
+          oddqso(1,nthr)%cs=tmpqsosig(1)%cs
         endif
       endif
     endif
