@@ -971,6 +971,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
 #endif
         }
     }
+//    else printf ("Unused binary message received type=%d receiver=%d\n",pStream->type,pStream->receiver);
 }
 
 void TCITransceiver::txAudioData(quint32 len, float * data)
@@ -1139,10 +1140,10 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
   void TCITransceiver::stream_audio (bool on)
 {
   TRACE_CAT ("TCITransceiver", on << state ());
-//  printf ("%s(%0.1f) TCI stream_audio:%d stream_audio_:%d requested_stream_audio_:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,stream_audio_,requested_stream_audio_);
+//  printf ("%s(%0.1f) TCI stream_audio:%d stream_audio_:%d requested_stream_audio_:%d rx_=%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,stream_audio_,requested_stream_audio_,rx_.toStdString().c_str());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI stream_audio:%d stream_audio_:%d requested_stream_audio_:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,stream_audio_,requested_stream_audio_);
+  fprintf (pFile,"%s(%0.1f) TCI stream_audio:%d stream_audio_:%d requested_stream_audio_:%d rx_=%s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),on,stream_audio_,requested_stream_audio_,rx_.toStdString().c_str());
   fclose (pFile);
 #endif
   if (on != stream_audio_ && tci_Ready) {
