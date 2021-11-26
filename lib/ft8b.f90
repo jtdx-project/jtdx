@@ -613,8 +613,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       if(nweak.eq.1 .and. isubp.eq.2) cycle
       if(isubp.gt.2 .and. isubp.lt.6 .and. lmycsignal) cycle ! skip if it is lmycsignal, can be both
       if(isubp.eq.2) cs=csr
-      if(imainpass.eq.npass .and. (lcqsignal .or. lmycsignal) .and. ((nweak.eq.1 .and. isubp.eq.1) .or. &
-        (nweak.eq.2 .and. isubp.eq.2))) cstmp2=cs
+      if(imainpass.eq.npass .and. (lcqsignal .or. lmycsignal .or. (ndxt.gt.2 .and. nmic.gt.2)) .and. &
+        ((nweak.eq.1 .and. isubp.eq.1) .or. (nweak.eq.2 .and. isubp.eq.2))) cstmp2=cs
       do nsym=1,3
         nt=2**(3*nsym)-1
         do ihalf=1,2
