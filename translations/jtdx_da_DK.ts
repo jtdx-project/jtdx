@@ -3891,7 +3891,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT skal konfigureres via Hamlib eller TCI, TCI og Hamlib, for nogle transceivere vil understøtte udgangseffektdata.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2049"/>
@@ -7296,42 +7296,42 @@ og DX Grid-felter, når der sendes en 73 eller fri tekstbesked.</translation>
     <message>
         <location filename="../Configuration.ui" line="220"/>
         <source>Use current &amp;callsign</source>
-        <translation type="unfinished">Brug dette kaldesignal</translation>
+        <translation>Brug dette &amp;kaldesignal</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation type="unfinished">Brug nuværende Grid</translation>
+        <translation>Brug nuvær&amp;ende Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
         <source>Scroll message windows down not up.</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll msg vindue ned ikke up.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="356"/>
         <source>&amp;Scroll message windows down</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Scroll msg vindue ned</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="376"/>
         <source>&amp;Hide partially transmitted messages</source>
-        <translation type="unfinished">Skjul delvist transmitterede meddelelser</translation>
+        <translation>&amp;Skjul delvist transmitterede meddelelser</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="431"/>
         <source>Use dar&amp;k style</source>
-        <translation type="unfinished">Brug Dark style</translation>
+        <translation>Brug Da&amp;rk style</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="600"/>
         <source>Allo&amp;w Tx frequency changes while transmitting</source>
-        <translation type="unfinished">Tillad skift af Tx krekvens mens der sendes</translation>
+        <translation>Tilla&amp;d skift af Tx krekvens mens der sendes</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="610"/>
         <source>Monitor returns to last used fre&amp;quency</source>
-        <translation type="unfinished">Monitor retur til senest brugte frekvens</translation>
+        <translation>Monitor retur til senest brugte fre&amp;kvens</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2420"/>
@@ -8368,12 +8368,12 @@ AA1AAA, BB1BB, CC1CC &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skjul beskeder mellem operatører på eget kontinent. Dette giver brugeren mulighed for at lette overvågningen af ​​kommunikation på tværs af interkontinenterne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
         <source>Hide messages with own continent callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Skjul beskeder indeholde kaldesignal fra eget kontinent</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5295"/>
