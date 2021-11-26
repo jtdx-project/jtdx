@@ -970,8 +970,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
           fclose (pFile);
 #endif
         }
-    }
-//    else printf ("Unused binary message received type=%d receiver=%d\n",pStream->type,pStream->receiver);
+    }// else printf ("Unused binary message received type=%d receiver=%d\n",pStream->type,pStream->receiver);
 }
 
 void TCITransceiver::txAudioData(quint32 len, float * data)
@@ -1481,7 +1480,7 @@ void TCITransceiver::do_poll ()
   update_split(split_);
   if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
   update_mode (get_mode());
-  if (do_pwr_ && PTT_) {update_power (power_ * 100); update_swr (swr_);}
+  if (do_pwr_ && PTT_) {update_power (power_ * 100); update_swr (swr_*10);}
   if (do_snr_ && !PTT_) {
       update_level (level_);
       if(!ESDR3) {

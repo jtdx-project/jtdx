@@ -1836,13 +1836,13 @@
              <widget class="QLabel" name="PWRlabel">
               <property name="minimumSize">
                <size>
-                <width>30</width>
+                <width>50</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>60</width>
+                <width>65</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -1861,13 +1861,13 @@
              <widget class="QSlider" name="outAttenuation">
               <property name="minimumSize">
                <size>
-                <width>30</width>
+                <width>50</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>60</width>
+                <width>65</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -1904,18 +1904,18 @@
              <widget class="QLabel" name="SWRlabel">
               <property name="minimumSize">
                <size>
-                <width>30</width>
+                <width>50</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>60</width>
+                <width>65</width>
                 <height>16777215</height>
                </size>
               </property>
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeft</set>
               </property>
              </widget>
             </item>

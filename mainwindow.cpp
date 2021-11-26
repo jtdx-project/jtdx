@@ -7199,7 +7199,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
     }
     if (m_rigState.swr() != s.swr()) {
       if (s.swr() > 0)
-        ui->SWRlabel->setText(QString {"swr %1"}.arg (s.swr()/10.));
+        ui->SWRlabel->setText(QString {"swr%1"}.arg (s.swr()/100.));
       else
         ui->SWRlabel->setText("");
     }

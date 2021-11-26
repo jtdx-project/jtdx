@@ -1258,8 +1258,8 @@ void HamlibTransceiver::do_poll ()
                     fclose (pFile);
 #endif
 //                    printf ("SWR %.3f\n",strength.f);
-                    if (strength.f > 1.0)
-                      update_swr (strength.f*10);
+                    if (strength.f > 1.000)
+                      update_swr (strength.f*100);
                     else
                       update_swr (0);
                   } else {
