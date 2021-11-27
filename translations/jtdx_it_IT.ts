@@ -11,12 +11,12 @@
     <message>
         <location filename="../Bands.cpp" line="137"/>
         <source>Lower frequency limit</source>
-        <translation>Limite di frequenza inferiore </translation>
+        <translation>Limite inferiore di frequenza</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="138"/>
         <source>Upper frequency limit</source>
-        <translation>Limite di frequenza superiore</translation>
+        <translation>Limite superiore di frequenza</translation>
     </message>
     <message>
         <location filename="../Bands.cpp" line="200"/>
@@ -1058,7 +1058,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Crozet Is.</source>
-        <translation>Is.di Crozet</translation>
+        <translation>Is.di Croze</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="169"/>
@@ -1088,7 +1088,7 @@ Formato:
     <message>
         <location filename="../logbook/countrydat.cpp" line="174"/>
         <source>Isle of Man</source>
-        <translation>Isola di Man</translation>
+        <translation>Is.di Man</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="175"/>
@@ -8367,7 +8367,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nascondi collegamenti tra operatori del proprio continente. Questa opzione consente all&apos;utente di monitorare facilmente le comunicazioni su distanze intercontinentali.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nascondi i messaggi tra operatori del tuo continente. Questa opzione consente all&apos;utente di monitorare facilmente le comunicazioni su distanze intercontinentali.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
