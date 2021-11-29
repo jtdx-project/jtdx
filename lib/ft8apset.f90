@@ -10,18 +10,18 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
   logical(1), intent(in) :: lmycallstd,lhiscallstd
 
   apsym=0; apsym(1)=99; apsym(30)=99
-  if(len(trim(mycall)).lt.3) return
+  if(len_trim(mycall).lt.3) return
 
   nohiscall=.false. 
   hiscallt=hiscall 
-  if(len(trim(hiscallt)).lt.3) then
+  if(len_trim(hiscallt).lt.3) then
      hiscallt=mycall  ! use mycall for dummy hiscall - mycall won't be hashed.
      nohiscall=.true.
   endif
 
 ! Encode a dummy standard message: i3=1, 28 1 28 1 1 15
 !
-  if(len(trim(hiscall)).gt.2) then
+  if(len_trim(hiscall).gt.2) then
     if(lhiscallstd) then; msg='CQ '//trim(hiscall)//' '//trim(hisgrid4) 
     else; msg='CQ '//trim(hiscall) 
     endif
@@ -34,11 +34,9 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     apcqsym=2*apcqsym-1
   endif
 
-  if(.not.lhound) then
-    if(lhiscallstd) then; msg=trim(mycall)//' '//trim(hiscallt)//' RRR'
-    else ; msg=trim(mycall)//' <'//trim(hiscallt)//'> -15' !!! to rework it for hash masks
-    endif
-
+  if(.not.lhound .and. lmycallstd .and. (lhiscallstd .or. nohiscall)) then
+    msg=trim(mycall)//' '//trim(hiscallt)//' RRR'
+    i3=0; n3=0
     call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
@@ -49,7 +47,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
   if(lhound) then
 ! standard messages from Fox, always base callsigns
-    if(len(trim(hisbcall)).gt.2 .and. len(trim(mybcall)).gt.2) then
+    if(len_trim(hisbcall).gt.2 .and. len_trim(mybcall).gt.2) then
       msg=trim(mybcall)//' '//trim(hisbcall)//' -15'
       call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
@@ -73,7 +71,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
     apsymsp=2*apsymsp-1!; if(nohiscall) apsymsp(30)=99
   endif
 
-  if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
+  if(.not.lhound .and. lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then
     msg=trim(mycall)//' <'//trim(hiscall)//'> -16' ! report, rreport
     call pack77(msg,i3,n3,c77,0)
     call unpack77(c77,1,msgchk,unpk77_success,25)
