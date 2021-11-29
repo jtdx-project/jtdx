@@ -613,7 +613,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       if(nweak.eq.1 .and. isubp.eq.2) cycle
       if(isubp.gt.2 .and. isubp.lt.6 .and. lmycsignal) cycle ! skip if it is lmycsignal, can be both
       if(isubp.eq.2) cs=csr
-      if(imainpass.eq.npass .and. (lcqsignal .or. lmycsignal .or. (ndxt.gt.2 .and. nmic.gt.2)) .and. &
+      if(imainpass.eq.npass-1 .and. (lcqsignal .or. lmycsignal) .and. &
+        ((nweak.eq.1 .and. isubp.eq.1) .or. (nweak.eq.2 .and. isubp.eq.2))) cstmp2=cs
+      if(imainpass.eq.npass .and. lapmyc .and. ndxt.gt.2 .and. nmic.gt.2 .and. &
         ((nweak.eq.1 .and. isubp.eq.1) .or. (nweak.eq.2 .and. isubp.eq.2))) cstmp2=cs
       do nsym=1,3
         nt=2**(3*nsym)-1
@@ -1006,7 +1008,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         if(count(cw.eq.0).eq.174) cycle           !Reject the all-zero codeword
         if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (ipass.gt.2 .and. nharderrors.gt.39)) then ! chk ipass value
           if(nweak.eq.2 .and. isubp.eq.2) then
-            if(imainpass.eq.npass) then ! last pass
+            if(imainpass.eq.npass-1) then
               if(lcqsignal .and. ipass.eq.13) then ! last pass
                 lfoundcq=.false.
                 do ik=1,numdeccq
@@ -1035,6 +1037,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   tmpmycsig(nmycsignal)%cs=cstmp2
                 endif
               endif
+            endif
+            if(imainpass.eq.npass) then
               if(lqsocandave .and. (iaptype.eq.3 .or. iaptype.eq.6)) then
                 tmpqsosig(1)%freq=f1; tmpqsosig(1)%xdt=xdt; tmpqsosig(1)%cs=cstmp2
               endif
@@ -1069,7 +1073,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           endif
 
           if(nweak.eq.1 .and. isubp.eq.1) then
-            if(imainpass.eq.npass) then  ! last pass
+            if(imainpass.eq.npass-1) then
               if(lcqsignal .and. ipass.eq.13) then ! last pass
                 lfoundcq=.false.
                 do ik=1,numdeccq
@@ -1098,6 +1102,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   tmpmycsig(nmycsignal)%cs=cstmp2
                 endif
               endif
+            endif
+            if(imainpass.eq.npass) then
               if(lqsocandave .and. (iaptype.eq.3 .or. iaptype.eq.6)) then
                 tmpqsosig(1)%freq=f1; tmpqsosig(1)%xdt=xdt; tmpqsosig(1)%cs=cstmp2
               endif
