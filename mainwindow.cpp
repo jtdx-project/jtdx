@@ -1159,7 +1159,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   int i3=0; int n3=0; int ntxhash=1;
   genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
-  styleChanged();
+  m_bHisCallStd=stdCall(m_hisCall); styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
 }
