@@ -5168,7 +5168,7 @@ UDP server %2:%3</source>
     <message>
         <location filename="../mainwindow.cpp" line="4216"/>
         <source>Please choose another Tx frequency. JTDX will not knowingly transmit another mode in the WSPR sub-band.</source>
-        <translation>別の送信周波数を選択してください。 JTDXは、のWSPRサブバンドで別のモードを故意に送信しません。</translation>
+        <translation>別の送信周波数を選択してください。 JTDXはWSPRサブバンドで別のモードを故意に送信できないように設定されています。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7198"/>
