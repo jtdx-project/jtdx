@@ -12,7 +12,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56, &
-                       idtonecqdxcns,evenqso,oddqso
+                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -711,7 +711,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !   4        regular decoding, llrd
 !   5..18    ap passes
 
-! iaptype Hound off
+! iaptype Hound OFF, MyCall is standard, DXCall is standard or empty
 !------------------------
 !   0        cycle
 !   1        CQ     ???    ???           (29+3=32 ap bits)
@@ -729,14 +729,33 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !  data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4 RRR,RR73
 !  data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5 73
 
-
 ! iaptype standard DxCall tracking, also valid in Hound mode
 !------------------------
 !   31        CQ  DxCall Grid(???)     (77 ap bits)
 !   35        ??? DxCall 73            (29+19 ap bits)
 !   36        ??? DxCall RR73          (29+19 ap bits)
 
-! iaptype Hound off DXCall is not empty and is nonstandard
+! iaptype Hound off, MyCall is nonstandard, DXCall is standard or empty
+!------------------------
+!   0         cycle
+!   1         CQ     ???    ???            (29+3=32 ap bits)
+!   40       <MyCall> ???  ???            (29+? ap bits) incoming call
+!   41       <MyCall> DxCall ???          (58 ap bits) REPORT/RREPORT
+!   43        MyCall <DxCall> 73            (77 ap bits)
+!   44        MyCall <DxCall> RR73          (77 ap bits)
+!   31        CQ  DxCall Grid(???)     (77 ap bits) standard DxCall tracking
+!   35        ??? DxCall 73            (29+19 ap bits) standard DxCall tracking
+!   36        ??? DxCall RR73          (29+19 ap bits) standard DxCall tracking
+
+! nmycnsaptypes(nQSOProgress, extra decoding pass)
+!  data nmycnsaptypes(0,1:15)/40,40,40,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx6 CQ
+!  data nmycnsaptypes(1,1:15)/41,41,41,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx1 DXcall MyCall
+!  data nmycnsaptypes(2,1:15)/41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/         ! Tx2 Report
+!  data nmycnsaptypes(3,1:15)/41,41,41,43,43,43,44,44,44,0,0,0,0,0,0/   ! Tx3 RRreport
+!  data nmycnsaptypes(4,1:15)/41,41,41,43,43,43,44,44,44,0,0,0,0,0,0/   ! Tx4 RRR,RR73
+!  data nmycnsaptypes(5,1:15)/44,44,44,43,43,43,1,1,1,0,0,0,0,0,0/      ! Tx5 73
+
+! iaptype Hound off, MyCall is standard, DXCall is not empty and is nonstandard
 !------------------------
 !   0         cycle
 !   1         CQ     ???    ???            (29+3=32 ap bits)
