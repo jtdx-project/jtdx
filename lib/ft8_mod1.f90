@@ -15,7 +15,7 @@ module ft8_mod1
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58), &
-          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,15)
+          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
@@ -37,12 +37,12 @@ module ft8_mod1
   data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4
   data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5
 ! Hound OFF, MyCall is non-standard, DXCall is standard or empty
-  data nmycnsaptypes(0,1:15)/40,40,40,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx6 CQ
-  data nmycnsaptypes(1,1:15)/41,41,41,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx1 DXcall MyCall
-  data nmycnsaptypes(2,1:15)/41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/         ! Tx2 Report
-  data nmycnsaptypes(3,1:15)/41,41,41,43,43,43,44,44,44,0,0,0,0,0,0/   ! Tx3 RRreport
-  data nmycnsaptypes(4,1:15)/41,41,41,43,43,43,44,44,44,0,0,0,0,0,0/   ! Tx4 RRR,RR73
-  data nmycnsaptypes(5,1:15)/44,44,44,43,43,43,1,1,1,0,0,0,0,0,0/      ! Tx5 73
+  data nmycnsaptypes(0,1:18)/40,40,40,1,1,1,31,31,31,36,36,36,35,35,35,0,0,0/ ! Tx6 CQ
+  data nmycnsaptypes(1,1:18)/0,0,0,41,41,41,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx1 DXcall MyCall
+  data nmycnsaptypes(2,1:18)/0,0,0,41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/          ! Tx2 Report
+  data nmycnsaptypes(3,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx3 RRreport
+  data nmycnsaptypes(4,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx4 RRR,RR73
+  data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,1,1,1,0,0,0/       ! Tx5 73
 ! Hound mode
   data nhaptypes(0,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx6 CQ, possible in idle mode
   data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
