@@ -37,12 +37,12 @@ module ft8_mod1
   data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4
   data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5
 ! Hound OFF, MyCall is non-standard, DXCall is standard or empty
-  data nmycnsaptypes(0,1:18)/40,40,40,1,1,1,31,31,31,36,36,36,35,35,35,0,0,0/ ! Tx6 CQ
-  data nmycnsaptypes(1,1:18)/0,0,0,41,41,41,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx1 DXcall MyCall
+  data nmycnsaptypes(0,1:18)/40,40,40,0,0,0,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx6 CQ
+  data nmycnsaptypes(1,1:18)/0,0,0,41,41,41,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx1 DXcall MyCall
   data nmycnsaptypes(2,1:18)/0,0,0,41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/          ! Tx2 Report
   data nmycnsaptypes(3,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx3 RRreport
   data nmycnsaptypes(4,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx4 RRR,RR73
-  data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,1,1,1,0,0,0/       ! Tx5 73
+  data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,0,0,0,1,1,1/       ! Tx5 73
 ! Hound mode
   data nhaptypes(0,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx6 CQ, possible in idle mode
   data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
