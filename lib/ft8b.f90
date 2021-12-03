@@ -962,7 +962,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(isubp1.gt.5) cycle ! so far CQ averaging only
               if(iaptype.gt.39 .and. .not.lapmyc) cycle
 if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
-if(iaptype.gt.40) cycle ! temp
 
               if(lcqsignal .and. iaptype.eq.1) then ! CQ
                 if(isubp2.eq.20) then; llrz=llrc
@@ -978,6 +977,24 @@ if(iaptype.gt.40) cycle ! temp
                 endif
 ! to check 3 tail bits
                 apmask(1:29)=1; llrz(1:29)=apmag*apsymmyns1(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
+              else if(iaptype.eq.41) then ! <MyCall>,DXCall,???
+                if(isubp2.eq.8) then; llrz=llrc
+                else if(isubp2.eq.9) then; llrz=llrb
+                else if(isubp2.eq.10) then; llrz=llra
+                endif
+                apmask(1:58)=1; llrz(1:58)=apmag*apsymmyns2; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
+              else if(iaptype.eq.43) then ! MyCall,<DXCall>,73
+                if(isubp2.eq.14) then; llrz=llrc
+                else if(isubp2.eq.15) then; llrz=llrb
+                else if(isubp2.eq.16) then; llrz=llra
+                endif
+                apmask(1:77)=1; llrz(1:77)=apmag*apsymmyns73
+              else if(iaptype.eq.44) then ! MyCall,<DXCall>,RR73
+                if(isubp2.eq.11) then; llrz=llrc
+                else if(isubp2.eq.12) then; llrz=llrb
+                else if(isubp2.eq.13) then; llrz=llra
+                endif
+                apmask(1:77)=1; llrz(1:77)=apmag*apsymmynsrr73
               endif
             else; cycle ! fallback
             endif
