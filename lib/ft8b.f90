@@ -738,11 +738,11 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 ! iaptype Hound off, MyCall is nonstandard, DXCall is standard or empty
 !------------------------
 !   0         cycle
-!   1         CQ     ???    ???            (29+3=32 ap bits)
-!   40       <MyCall> ???  ???            (29+? ap bits) incoming call
-!   41       <MyCall> DxCall ???          (58 ap bits) REPORT/RREPORT
-!   43        MyCall <DxCall> 73            (77 ap bits)
-!   44        MyCall <DxCall> RR73          (77 ap bits)
+!   1         CQ     ???    ???        (29+3=32 ap bits)
+!   40       <MyCall> ???  ???         (29+3=32 ap bits) incoming call
+!   41       <MyCall> DxCall ???       (58 ap bits) REPORT/RREPORT
+!   43        MyCall <DxCall> 73       (77 ap bits)
+!   44        MyCall <DxCall> RR73     (77 ap bits)
 !   31        CQ  DxCall Grid(???)     (77 ap bits) standard DxCall tracking
 !   35        ??? DxCall 73            (29+19 ap bits) standard DxCall tracking
 !   36        ??? DxCall RR73          (29+19 ap bits) standard DxCall tracking
@@ -960,7 +960,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               iaptype=nmycnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
               if(isubp1.gt.5) cycle ! so far CQ averaging only
-if(iaptype.gt.1) cycle ! to be filled in
+              if(iaptype.gt.39 .and. .not.lapmyc) cycle
+if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
+if(iaptype.gt.40) cycle ! temp
 
               if(lcqsignal .and. iaptype.eq.1) then ! CQ
                 if(isubp2.eq.20) then; llrz=llrc
@@ -969,6 +971,13 @@ if(iaptype.gt.1) cycle ! to be filled in
                 endif
                 apmask=0; apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
                 llrz(77)=apmag*(+1)
+              else if(iaptype.eq.40) then ! <MyCall>,???,???
+                if(isubp2.eq.5) then; llrz=llrc
+                else if(isubp2.eq.6) then; llrz=llrb
+                else if(isubp2.eq.7) then; llrz=llra
+                endif
+! to check 3 tail bits
+                apmask(1:29)=1; llrz(1:29)=apmag*apsymmyns1(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
               endif
             else; cycle ! fallback
             endif
