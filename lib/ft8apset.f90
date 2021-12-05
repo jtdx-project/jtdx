@@ -1,4 +1,4 @@
-subroutine ft8apset(lmycallstd,lhiscallstd)
+subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
 
   use packjt77
   use ft8_mod1, only : apsym,mycall,hiscall,apsymsp,lhound,apsymdxns1,apsymdxns2,mybcall,hisbcall,apcqsym,hisgrid4, &
@@ -19,6 +19,9 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
 
     first=.false.; mycallprev=mycall; lhoundprev=lhound
     apsym=0; apsym(1)=99; apsym(30)=99
+
+! shall hash both callsigns for making AP masks with nonstandard callsign message
+    if(.not.lhound) call fillhash(numthreads,.true.)
 
     lnohiscall=.false.
     hiscallt=hiscall
@@ -68,7 +71,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
         msg='<'//trim(mycall)//'> '//trim(hiscall)//' -15'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.1 .or. (msg.ne.msgchk .and. trim(msgchk).ne.'<...> '//trim(hiscall)//' -15') .or. .not.unpk77_success) return
+        if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) return
         read(c77,'(58i1)',err=1) apsymmyns2(1:58)
         apsymmyns2=2*apsymmyns2-1
 
@@ -76,14 +79,13 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
         msg=trim(mycall)//' <'//trim(hiscall)//'> RR73'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.4 .or. (msgchk(1:nlenmyc+2).ne.(trim(mycall)//' <')) .or. .not.unpk77_success) return
+        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
         read(c77,'(77i1)',err=1) apsymmynsrr73(1:77)
         apsymmynsrr73=2*apsymmynsrr73-1
-
         msg=trim(mycall)//' <'//trim(hiscall)//'> 73'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.4 .or. (msgchk(1:nlenmyc+2).ne.(trim(mycall)//' <')) .or. .not.unpk77_success) return
+        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
         read(c77,'(77i1)',err=1) apsymmyns73(1:77)
         apsymmyns73=2*apsymmyns73-1
 
@@ -92,7 +94,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd)
         msg='<'//trim(mycall)//'> ZZ1ZZZ -15'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.1 .or. (trim(msgchk).ne.'<...> ZZ1ZZZ -15' .and. msgchk.ne.msg) .or. .not.unpk77_success) return
+        if(i3.ne.1 .or. msgchk.ne.msg .or. .not.unpk77_success) return
         read(c77,'(29i1)',err=1) apsymmyns1(1:29)
         apsymmyns1=2*apsymmyns1-1
       endif

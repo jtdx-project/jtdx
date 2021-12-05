@@ -137,7 +137,6 @@ subroutine multimode_decoder(params)
      lcommonft8b=params%lcommonft8b; lagcc=params%nagcc; lhound=params%lhound
      nft8cycles=params%nft8cycles; nft8swlcycles=params%nft8swlcycles
      if(params%nagcc) call agccft8(params%nfa,params%nfb)
-     call ft8apset(params%lmycallstd,params%lhiscallstd)
      if((hiscall.ne.hiscall12_0 .and. hiscall.ne.'            ') &
         .or. (mycall.ne.mycall12_0 .and. mycall.ne.'            ')) then
         if(hiscall.ne.'            ') then
@@ -206,6 +205,7 @@ subroutine multimode_decoder(params)
      endif
      nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0; nFT8decdt=0; sumxdtt=0.0
      call fillhash(numthreads,.false.)
+     if(params%nmode.eq.8) call ft8apset(params%lmycallstd,params%lhiscallstd,numthreads)
 !do i=9595,9605; print *,i,dd8(i); enddo ! check wav files processing
 
 !     call timer('decft8  ',0)
