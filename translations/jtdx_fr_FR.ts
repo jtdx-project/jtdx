@@ -901,8 +901,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="147"/>
         <source>Belarus</source>
-        <translatorcomment>Bielorussie</translatorcomment>
-        <translation></translation>
+        <translation>Biélorussie</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="148"/>
