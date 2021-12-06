@@ -2129,7 +2129,7 @@ void MainWindow::on_hintButton_clicked (bool checked)
   m_hint=checked;
 }
 
-void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked); if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#H")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());}
+void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked);}
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
@@ -3127,7 +3127,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
 	}
     ui->actionUse_TX_frequency_jumps->setEnabled(false);
   }
-  setHoundAppearance(m_houndMode);
+  setHoundAppearance(m_houndMode); if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#H")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());
 }
 
 void MainWindow::on_actionUse_TX_frequency_jumps_triggered (bool checked) { m_houndTXfreqJumps=checked; }
