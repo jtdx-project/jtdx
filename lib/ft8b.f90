@@ -1052,6 +1052,7 @@ if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
           if(lqsosig .or. lmycsignal) then
             if((dfqso.lt.napwid .or. (abs(nftx-f1).lt.napwid .and. lapmyc)) .and. .not.nagainfil) ndeep=4
             if(lapmyc .and. lqsomsgdcd .or. iaptype.eq.0) ndeep=3 ! deep is not needed, reduce number of CPU cycles
+            if(.not.stophint .and. len_trim(hiscall).gt.2) ndeep=3 ! unload CPU, let ft8s pick up QSO message
           endif
           if(ldxcsig .and. stophint .and. dfqso.lt.napwid) ndeep=4 ! DXCall search inside RX napwid
 !          if(nagainfil .or. swl) ndeep=5 ! 30 against 26 -23dB, more than 15sec to decode and many false decodes
