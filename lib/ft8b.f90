@@ -839,7 +839,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
               if(iaptype.ge.2 .and. iaptype.lt.31 .and. apsym(1).gt.1) cycle  ! No, or nonstandard MyCall
               if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, DXCall
-              if(iaptype.eq.31 .and. lcqdxcsig) cycle ! not CQ signal from std DXCall
+              if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
               if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
               if(.not.lqsocandave .and. lmycsignal .and. isubp1.gt.5 .and. isubp1.lt.9 .and. iaptype.ne.2) cycle ! skip other AP if lmycsignal extra subpasses)
@@ -961,7 +961,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
               if(isubp1.gt.5) cycle ! so far CQ averaging only
               if(iaptype.gt.39 .and. .not.lapmyc) cycle
-if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
+              if(iaptype.gt.30 .and. iaptype.lt.40 .and. (.not.stophint .or. lnohiscall)) cycle ! in QSO, reduce number of CPU cycles
+              if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
+              if(iaptype.gt.34 .and. iaptype.lt.37 .and. .not.ldxcsig) cycle ! not DXCall signal
+              if(iaptype.gt.30 .and. iaptype.lt.40 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! if wideband DX search disabled
 
               if(lcqsignal .and. iaptype.eq.1) then ! CQ
                 if(isubp2.eq.20) then; llrz=llrc
@@ -970,6 +973,24 @@ if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
                 endif
                 apmask=0; apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
                 llrz(77)=apmag*(+1)
+              else if(iaptype.eq.31) then ! CQ  DxCall Grid(???) //std DX call
+                if(isubp2.eq.11) then; llrz=llrc
+                else if(isubp2.eq.12) then; llrz=llrb
+                else if(isubp2.eq.13) then; llrz=llra
+                endif
+                apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
+              else if(iaptype.eq.35) then ! ??? DxCall 73 //std DX call
+                if(isubp2.eq.17) then; llrz=llrc
+                else if(isubp2.eq.18) then; llrz=llrb
+                else if(isubp2.eq.19) then; llrz=llra
+                endif
+                apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*m73
+              else if(iaptype.eq.36) then ! ??? DxCall RR73 //std DX call
+                if(isubp2.eq.14) then; llrz=llrc
+                else if(isubp2.eq.15) then; llrz=llrb
+                else if(isubp2.eq.16) then; llrz=llra
+                endif
+                apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*mrr73
               else if(iaptype.eq.40) then ! <MyCall>,???,???
                 if(isubp2.eq.5) then; llrz=llrc
                 else if(isubp2.eq.6) then; llrz=llrb
