@@ -1260,13 +1260,6 @@ if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
     endif
 !print *,qual,msg37
     rxdt=xdt-0.5
-! -23 -3.3 N0S/W45ETOE <...>
-    if(i3.eq.4 .and. msg37(1:3).ne.'CQ ' .and. iaptype.eq.0 .and. ((xsnr.lt.-21.0 .and. rxdt.lt.-2.5) .or.xsnr.lt.-22.5)) then
-! exception for 'mycall <hiscall> RRR/RR73/73' type 4 msgs, <> brackets already parsed
-      if(len_trim(mycall).gt.2 .and. index(msg37,mycall//' ').lt.1) then
-        msg37=''; return
-      endif
-    endif
     if(iaptype.gt.34 .and. iaptype.lt.40) then ! DX Call searching false iaptype 35,36: 'CS7CYU/R FO5QB 73', 'T57KWP/R FO5QB RR73'
       ispc1=index(msg37,' ')
       if(ispc1.gt.5) then
