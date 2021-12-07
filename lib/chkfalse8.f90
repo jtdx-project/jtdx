@@ -26,8 +26,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! 0   5 71234567                             71                   71   Telemetry (18 hex)
 ! 0   5 81234567                             71                   71   Telemetry (18 hex)
 ! 0   5 8123456789ABCDEF01                   71                   71   Telemetry (18 hex)
-! 1     WA9XYZ/R KA1ABC/R R FN42             28 1 28 1 1 15       74   Standard msg
-! 1     WA9XYZ KA1ABC R-11                   28 1 28 1 1 15       74   Standard msg
+! 1     WA9XYZ/R KA1ABC/R R FN42             28 1 28 1 1 15       74   Standard msg, with std or non std callsign
+! 1     WA9XYZ KA1ABC R-11                   28 1 28 1 1 15       74   Standard msg, with std or non std callsign
 ! 1     CQ 039 P30KJE/R DR46
 ! 2     PA1XYZ/P GM4ABC/P R FN42             28 1 28 1 1 15       74   EU VHF Contest
 ! 2     CQ 039 P30KJE/P DR46
@@ -211,7 +211,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     if(msg37(1:2).eq.'<.') return
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(ispc1.gt.3 .and. ispc2.gt.7) then
-      call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
+      call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) return ! exception to incoming calls
+      call_b=msg37(ispc1+1:ispc2-1)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
