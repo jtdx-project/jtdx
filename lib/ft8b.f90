@@ -12,7 +12,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall, &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56, &
-                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73
+                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -521,25 +521,28 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
 
     ldxcsig=.false.; lcqdxcsig=.false.; lcqdxcnssig=.false.; ndxt=0
+    if(lhiscallstd) then
+      do k11=17,26
+        ip=maxloc(s8(:,k11))
+        if(ip(1).eq.idtone56(1,k11-7)+1) ndxt=ndxt+1
+      enddo
+      if(ndxt.gt.3) ldxcsig=.true.
+      if(lcqsignal .and. ldxcsig) lcqdxcsig=.true.
+    endif
     if(lmycallstd) then ! DXCall search or QSOsig
-      if(lhiscallstd) then
-        do k11=17,26
-          ip=maxloc(s8(:,k11))
-          if(ip(1).eq.idtone56(1,k11-7)+1) ndxt=ndxt+1
-        enddo
-        if(ndxt.gt.3) ldxcsig=.true.
-        if(lcqsignal .and. ldxcsig) lcqdxcsig=.true.
-      else if(len_trim(hiscall).gt.2) then ! nonstandard DXCall
+      if(.not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! nonstandard DXCall
         ncqdxcnst=0
         do k11=8,11
           ip=maxloc(s8(:,k11))
           if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
         enddo
+        ndxt=0
         do k11=12,30
           ip=maxloc(s8(:,k11))
           if(ip(1).eq.idtone56(54,k11-7)+1) ndxt=ndxt+1
           if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
         enddo
+        ldxcsig=.false.
         if(dfqso.lt.napwid) then
           if(ndxt.gt.7) ldxcsig=.true. ! relaxed threshold for RXF napwid
           if(ncqdxcnst.gt.9) lcqdxcnssig=.true.
@@ -984,13 +987,13 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 else if(isubp2.eq.18) then; llrz=llrb
                 else if(isubp2.eq.19) then; llrz=llra
                 endif
-                apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*m73
+                apmask(30:77)=1; llrz(30:58)=apmag*apsymdxstd(30:58); llrz(59:77)=apmag*m73
               else if(iaptype.eq.36) then ! ??? DxCall RR73 //std DX call
                 if(isubp2.eq.14) then; llrz=llrc
                 else if(isubp2.eq.15) then; llrz=llrb
                 else if(isubp2.eq.16) then; llrz=llra
                 endif
-                apmask(30:77)=1; llrz(30:58)=apmag*apsym(30:58); llrz(59:77)=apmag*mrr73
+                apmask(30:77)=1; llrz(30:58)=apmag*apsymdxstd(30:58); llrz(59:77)=apmag*mrr73
               else if(iaptype.eq.40) then ! <MyCall>,???,???
                 if(isubp2.eq.5) then; llrz=llrc
                 else if(isubp2.eq.6) then; llrz=llrb

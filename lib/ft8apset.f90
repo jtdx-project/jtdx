@@ -2,7 +2,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
 
   use packjt77
   use ft8_mod1, only : apsym,mycall,hiscall,apsymsp,lhound,apsymdxns1,apsymdxns2,mybcall,hisbcall,apcqsym,hisgrid4, &
-                       apsymdxnsrr73,apsymdxns73,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73
+                       apsymdxnsrr73,apsymdxns73,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd
   character*77 c77
   character*37 msg,msgchk
   character*12 hiscallt,mycallprev,hiscallprev
@@ -44,6 +44,17 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         if(lhiscallstd .and. i3.ne.1 .or. .not.lhiscallstd .and. i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
         read(c77,'(77i1)',err=1) apcqsym(1:77)
         apcqsym=2*apcqsym-1
+      endif
+
+      if(lhiscallstd .and. .not.lmycallstd) then
+        msg=trim(hiscall)//' '//trim(hiscall)//' RRR'
+        i3=0; n3=0
+        call pack77(msg,i3,n3,c77,0)
+        call unpack77(c77,1,msgchk,unpk77_success,25)
+!read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
+        if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
+        read(c77,'(58i1)',err=1) apsymdxstd(1:58)
+        apsymdxstd=2*apsymdxstd-1
       endif
 
       if(.not.lhound .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then
