@@ -655,9 +655,16 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
          if(islash.lt.6 .and. call_1(11:11).lt.':' .and. call_1(11:11).gt.'/') unpk77_success=.false.
        endif
      endif
-     if(icq.eq.0 .and. nrpt.eq.0) then
-       nmsglen=len_trim(msg)
-       if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false. ! protocol violation ! -23 -3.3 N0S/W45ETOE <...>
+     nmsglen=len_trim(msg)
+     if(nmsglen.gt.0) then
+       if((icq.eq.0 .and. nrpt.eq.0) .or. icq.eq.1) then
+! protocol violations
+! -23 -3.3 N0S/W45ETOE <...>
+!071445 -14  0.1  779 ~ <...>
+!071445 -14  0.1  779 ~ W5JZ  ! hash was associated
+! CQ <...>
+         if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
+       endif
      endif
 
   else if(i3.eq.5) then

@@ -1558,10 +1558,6 @@ if(iaptype.gt.1 .and. iaptype.lt.40) cycle ! to be filled in
 !print *,i3,n3
 
 ! protocol violations
-!071445 -14  0.1  779 ~ <...>
-!071445 -14  0.1  779 ~ W5JZ  ! hash was associated
-    if(i3.eq.4 .and. n3.eq.0 .and. len_trim(msg37).lt.9) then; nbadcrc=1; msg37=''; endif
-    if(i3.eq.4 .and. msg37(1:8).eq."CQ <...>") then; nbadcrc=1; msg37=''; endif ! false decode
 ! 713STG 869TK NO05  i3=2 n3=5, false decode, as per protocol type2 shall be /P message
     if(i3.eq.2 .and. index(msg37,'/P ').lt.1) then; msg37=''; nbadcrc=1; return; endif
 ! -18  0.5  584 ~ UA3ALE <...> PR07         *  AP decode with grid
