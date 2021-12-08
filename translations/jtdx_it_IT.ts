@@ -3898,7 +3898,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il CAT deve essere impostato tramite Hamlib o TCI, TCI e Hamlib poiché alcuni ricetrasmettitori supportano l&apos;acquisizione dei dati di potenza in uscita.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il CAT deve essere impostato tramite Hamlib o TCI, TCI e Hamlib in alcuni ricetrasmettitori supportano l&apos;acquisizione dei dati di potenza in uscita.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -8367,7 +8367,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nascondi i messaggi tra operatori del tuo continente. Questa opzione consente all&apos;utente di monitorare facilmente le comunicazioni su distanze intercontinentali.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nascondi i messaggi tra operatori del proprio continente. Questa opzione consente all&apos;utente di facilitare il monitoraggio della comunicazione su distanze intercontinentali.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
