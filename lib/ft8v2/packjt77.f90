@@ -656,9 +656,10 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
        endif
      endif
      nmsglen=len_trim(msg)
-     if(nmsglen.gt.0) then
+! protocol violations, also reported at wrong TX message packing
+! prevent broken message transmission
+     if(unpk77_success .and. nmsglen.gt.0) then
        if((icq.eq.0 .and. nrpt.eq.0) .or. icq.eq.1) then
-! protocol violations
 ! -23 -3.3 N0S/W45ETOE <...>
 !071445 -14  0.1  779 ~ <...>
 !071445 -14  0.1  779 ~ W5JZ  ! hash was associated
@@ -666,15 +667,17 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
          if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
        endif
      endif
-! protocol violations, also reported at wrong TX message packing
-! prevent broken message transmission
 ! <...> /BZZ/0ZZ/C
 ! <...> ZZZZ/0Z/Z/
 ! <...> OZZZZ/0ZZZ/
-     if(iflip.eq.0 .and. icq.eq.0 .and. nrpt.eq.0) then
+! <...> 0I/IZZZ/O K
+! <...> J/IZZZ/O K
+     if(unpk77_success .and. iflip.eq.0 .and. icq.eq.0 .and. nrpt.eq.0) then
        nlencall2=len_trim(call_2)
        if(nlencall2.gt.9) then
          if(call_2(1:1).eq.'/' .or. call_2(nlencall2:nlencall2).eq.'/') unpk77_success=.false.
+         nindxspace=index(call_2,' ')
+         if(nindxspace.gt.0 .and. nindxspace.lt.nlencall2) unpk77_success=.false.
        endif
      endif
 
