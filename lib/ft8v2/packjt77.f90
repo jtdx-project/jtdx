@@ -666,6 +666,17 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
          if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
        endif
      endif
+! protocol violations, also reported at wrong TX message packing
+! prevent broken message transmission
+! <...> /BZZ/0ZZ/C
+! <...> ZZZZ/0Z/Z/
+! <...> OZZZZ/0ZZZ/
+     if(iflip.eq.0 .and. icq.eq.0 .and. nrpt.eq.0) then
+       nlencall2=len_trim(call_2)
+       if(nlencall2.gt.9) then
+         if(call_2(1:1).eq.'/' .or. call_2(nlencall2:nlencall2).eq.'/') unpk77_success=.false.
+       endif
+     endif
 
   else if(i3.eq.5) then
      
