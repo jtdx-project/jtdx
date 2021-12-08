@@ -765,7 +765,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Madeira Is.</source>
-        <translation>Madeire</translation>
+        <translation>ile de Madeire</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="121"/>
@@ -901,7 +901,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="147"/>
         <source>Belarus</source>
-        <translation>Biélorussie</translation>
+        <translation>Bielorussie</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="148"/>
@@ -956,7 +956,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="158"/>
         <source>Fr. Polynesia</source>
-        <translation>Polynesie Francaise</translation>
+        <translation>Polynesie Fr.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="159"/>
@@ -966,7 +966,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation>Clipperton</translation>
+        <translation type="unfinished">ile de Clipperton</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
@@ -1081,8 +1081,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="183"/>
         <source>Hungary</source>
-        <translatorcomment>Hongrie</translatorcomment>
-        <translation></translation>
+        <translation>Hongrie</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="184"/>
@@ -3865,7 +3864,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4324"/>
         <source>Percentage of 2-minute sequences devoted to transmitting.</source>
-        <translation>Pourcentage de séquences de 2 minutes consacrées à la transmission. Pourcentage de séquences de 2 minutes consacrées à la transmission.</translation>
+        <translation>Pourcentage de séquences de 2 minutes consacrées à la transmission.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1389"/>
@@ -3901,7 +3900,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>CAT doit être configuré via Hamlib ou TCI, TCI et Hamlib pour certains transceivers permettent d&apos;obtenir des données sur la puissance de sortie.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT doit être configuré via Hamlib ou TCI, TCI et Hamlib pour certains transceivers permettent d&apos;obtenir des données sur la puissance de sortie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -5241,7 +5240,7 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7134"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to allow Tx/Rx AF frequencies split operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton poussoir pour permettre l&apos;opération de fractionnement des fréquences Tx/Rx AF.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Split inactif &lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7137"/>
@@ -5251,7 +5250,7 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="7138"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Push button to lock Tx frequency to the Rx AF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Bouton poussoir pour verrouiller la fréquence Tx sur la fréquence Rx AF.&lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;tête/&gt;&gt;corps&gt;&lt;p&gt;Split inactif &lt;/p&gt;&lt;/corps&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7283"/>
@@ -8380,7 +8379,7 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>Masquer les échanges de messages entre les opérateurs de son propre continent. Cette option permet à l&apos;utilisateur de faciliter le contrôle de la communication sur des distances intercontinentales.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Masquer l&apos;échange de messages entre les opérateurs de son propre continent. Cette option permet à l&apos;utilisateur de faciliter le contrôle de la communication sur des distances intercontinentales.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
