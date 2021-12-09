@@ -31,7 +31,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig,lqsocandave,lnohiscall
+             lcqdxcnssig,lqsocandave,lnohiscall,lcall1hash
 
   type tmpcqdec_struct
     real freq
@@ -68,6 +68,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
+  lcall1hash=.false.
   ldeepsync=.false.; if(lft8lowth .or. lft8subpass .or. swl) ldeepsync=.true.
   lcallsstd=.true.; if(.not.lmycallstd .or. .not.lhiscallstd) lcallsstd=.false.
 
@@ -1224,7 +1225,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           cycle
         endif
         if(iaptype.eq.1 .and. msg37(1:10).eq.'CQ DE AA00') then; nbadcrc=1; cycle; endif
-! print *,i3,n3,msg37
+        lcall1hash=.false.; if(msg37(1:1).eq.'<') lcall1hash=.true.
         nbadcrc=0  ! If we get this far: valid codeword, valid (i3,n3), nonquirky message.
         call get_tones_from_77bits(message77,itone)
 
@@ -1299,7 +1300,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
          (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
-      else; call chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
+      else; call chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
       endif
       if(nbadcrc.eq.1) then; msg37=''; return; endif
     endif
