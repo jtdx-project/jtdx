@@ -5995,7 +5995,7 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
   }
-  else { ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }
+  else { if(!m_houndMode) {ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }}
   auto pos = ui->dxCallEntry->cursorPosition (); 
   if (t != m_hisCall && !m_hisCall.isEmpty()) { ui->dxCallEntry->setText(m_hisCall); ui->dxCallEntry->setCursorPosition (pos); }
   else {

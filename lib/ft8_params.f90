@@ -1,7 +1,5 @@
-! This source code file was last time modified by Igor UA3DJY on 20181212
-! All changes are shown in the patch file coming together with the full JTDX source code.
-! LDPC (174,87) code
-parameter (KK=87)                     !Information bits (75 + CRC12)
+! LDPC (174,91) code
+parameter (KK=91)                     !Information bits (77 + CRC14)
 parameter (ND=58)                     !Data symbols
 parameter (NS=21)                     !Sync symbols (3 @ Costas 7x7)
 parameter (NN=79)                     !Total channel symbols NS+ND (79)
