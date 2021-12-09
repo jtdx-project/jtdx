@@ -5,7 +5,7 @@ The program is written in C and is a command-line program that reads from a
 for wspr-mode decoding. 
 
 USAGE: 
-       wsprd [options...] infile
+       wsprd_jtdx [options...] infile
 
 OPTIONS:
        -a <path> path to writeable data files, default="."
@@ -28,7 +28,7 @@ OPTIONS:
 infile can be either .wav or .c2
 
 e.g. 
-./wsprd -wf 14.0956 140709_2258.wav
+./wsprd_jtdx -wf 14.0956 140709_2258.wav
 
 Note that for .c2 files, the frequency within the file overrides the command
 line value.

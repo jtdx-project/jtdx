@@ -1228,19 +1228,19 @@ add_executable (message_aggregator
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
-generate_version_info (udp_daemon_VERSION_RESOURCES
-  NAME udp_daemon
+generate_version_info (udp_daemon_jtdx_VERSION_RESOURCES
+  NAME udp_daemon_jtdx
   BUNDLE ${PROJECT_BUNDLE_NAME}
   ICON ${WSJTX_ICON_FILE}
   FILE_DESCRIPTION "Example WSJT-X UDP Message Protocol daemon"
   )
 
-add_executable (udp_daemon
+add_executable (udp_daemon_jtdx
   ${UDPDaemon_CXXSRCS}
   jtdx.rc
-  ${udp_daemon_VERSION_RESOURCES}
+  ${udp_daemon_jtdx_VERSION_RESOURCES}
   )
-target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
+target_link_libraries (udp_daemon_jtdx Qt5::Core Qt5::Network)
 
 if (WSJT_CREATE_WINMAIN)
   set_target_properties (message_aggregator PROPERTIES WIN32_EXECUTABLE ON)
@@ -1266,7 +1266,7 @@ install (TARGETS jtdx
   )
 
 #install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
-install (TARGETS jtdxjt9 wsprd_jtdx udp_daemon
+install (TARGETS jtdxjt9 wsprd_jtdx udp_daemon_jtdx
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   )
