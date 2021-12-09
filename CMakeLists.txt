@@ -1098,15 +1098,15 @@ add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
 generate_version_info (wsprd_VERSION_RESOURCES
-  NAME wsprd
+  NAME wsprd_jtdx
   BUNDLE ${PROJECT_BUNDLE_NAME}
   ICON ${WSJTX_ICON_FILE}
   FILE_DESCRIPTION "WSPR mode decoder"
   )
-add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
+add_executable (wsprd_jtdx ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
 
-target_include_directories (wsprd PRIVATE ${FFTW3_INCLUDE_DIRS})
-target_link_libraries (wsprd ${FFTW3_LIBRARIES})
+target_include_directories (wsprd_jtdx PRIVATE ${FFTW3_INCLUDE_DIRS})
+target_link_libraries (wsprd_jtdx ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
@@ -1266,7 +1266,7 @@ install (TARGETS jtdx
   )
 
 #install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
-install (TARGETS jtdxjt9 wsprd udp_daemon
+install (TARGETS jtdxjt9 wsprd_jtdx udp_daemon
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   )

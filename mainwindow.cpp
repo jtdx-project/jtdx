@@ -1919,15 +1919,15 @@ void MainWindow::dataSink(qint64 frames)
       if(m_ndepth==3) depth_string=" -C 5000 -o 4";   //2 pass w subtract, Block detection and OSD.
 
       if(m_diskData) {
-        cmnd='"' + m_appDir + '"' + "/wsprd " + depth_string + " -a \"" +
+        cmnd='"' + m_appDir + '"' + "/wsprd_jtdx " + depth_string + " -a \"" +
             QDir::toNativeSeparators(m_dataDir.absolutePath()) + "\" \"" + m_path + "\"";
       } else {
-        cmnd='"' + m_appDir + '"' + "/wsprd " + depth_string + " -a \"" +
+        cmnd='"' + m_appDir + '"' + "/wsprd_jtdx " + depth_string + " -a \"" +
             QDir::toNativeSeparators(m_dataDir.absolutePath()) + "\" " +
             t2 + '"' + m_fnameWE + ".wav\"";
       }
       QString t3=cmnd;
-      int i1=cmnd.indexOf("/wsprd ");
+      int i1=cmnd.indexOf("/wsprd_jtdx ");
 //      cmnd=t3.left(i1+7) + t3.mid(i1+7);
       cmnd=t3.mid(0,i1+7) + t3.mid(i1+7);
       if(ui) ui->DecodeButton->setChecked (true);
