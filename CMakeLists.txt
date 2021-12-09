@@ -1265,7 +1265,8 @@ install (TARGETS jtdx
   BUNDLE DESTINATION . COMPONENT runtime
   )
 
-install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
+#install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
+install (TARGETS jtdxjt9 wsprd udp_daemon
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   )
