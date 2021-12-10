@@ -173,12 +173,14 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     islash1=index(msg37,'/')
     call_a=''; call_b=''
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    if(islash1.le.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+    if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
       call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
-      include 'call_q.f90'
-      falsedec=.false.
-      call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      if(call_b.ne.hiscall) then
+        include 'call_q.f90'
+        falsedec=.false.
+        call chkflscall(call_a,call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
     endif
 
     if(islash1.gt.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
@@ -198,6 +200,26 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
         falsedec=.false.
         call chkflscall(call_a,call_b,falsedec)
         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
+    endif
+  endif
+
+! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, checking for valid grid
+  if(i3.eq.1) then
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+        if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
+          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+            grid=msg37(ispc3+1:ispc4-1)
+            call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
+            if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
       endif
     endif
   endif
