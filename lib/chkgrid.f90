@@ -145,7 +145,8 @@ if(.not.lchkcall) then
        (grid(1:2).eq.'RO' .and. ((grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'3').or. &
         grid(3:4).eq.'63')) .or. &
        grid(1:4).eq.'AP30' .or. grid(1:4).eq.'QK36' .or. grid(1:4).eq.'QL20' .or. grid(1:4).eq.'RK39' .or. &
-       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00') lgvalid=.true.
+       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00' .or. grid(1:4).eq.'RB32' .or. &
+       grid(1:4).eq.'CP00') lgvalid=.true.
 
 if(lgvalid) then
       if(grid(1:2).eq.'FM' .and. (grid(3:4).eq.'12' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'23' .or. grid(3:4).eq.'24')) &
@@ -1090,7 +1091,8 @@ endif
        (grid(1:2).eq.'RO' .and. ((grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'3').or. &
         grid(3:4).eq.'63')) .or. &
        grid(1:4).eq.'AP30' .or. grid(1:4).eq.'QK36' .or. grid(1:4).eq.'QL20' .or. grid(1:4).eq.'RK39' .or. &
-       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00') lgvalid=.true.
+       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00' .or. grid(1:4).eq.'RB32' .or. &
+       grid(1:4).eq.'CP00') lgvalid=.true.
 
 if(lgvalid) then
       if(grid(1:2).eq.'FM' .and. (grid(3:4).eq.'12' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'23' .or. grid(3:4).eq.'24')) &
@@ -1266,7 +1268,8 @@ endif
        (grid(1:2).eq.'RO' .and. ((grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'3').or. &
         grid(3:4).eq.'63')) .or. &
        grid(1:4).eq.'AP30' .or. grid(1:4).eq.'QK36' .or. grid(1:4).eq.'QL20' .or. grid(1:4).eq.'RK39' .or. &
-       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00') lgvalid=.true.
+       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00' .or. grid(1:4).eq.'RB32' .or. &
+       grid(1:4).eq.'CP00') lgvalid=.true.
 
 if(lgvalid) then
       if(grid(1:2).eq.'FM' .and. (grid(3:4).eq.'12' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'23' .or. grid(3:4).eq.'24')) &
@@ -2082,7 +2085,8 @@ endif
        (grid(1:2).eq.'RO' .and. ((grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'0' .and. grid(4:4).lt.'3').or. &
         grid(3:4).eq.'63')) .or. &
        grid(1:4).eq.'AP30' .or. grid(1:4).eq.'QK36' .or. grid(1:4).eq.'QL20' .or. grid(1:4).eq.'RK39' .or. &
-       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00') lgvalid=.true.
+       grid(1:4).eq.'AK56' .or. grid(1:4).eq.'AH48' .or. grid(1:4).eq.'JA00' .or. grid(1:4).eq.'RB32' .or. &
+       grid(1:4).eq.'CP00') lgvalid=.true.
 
 if(lgvalid) then
       if(grid(1:2).eq.'FM' .and. (grid(3:4).eq.'12' .or. grid(3:4).eq.'22' .or. grid(3:4).eq.'23' .or. grid(3:4).eq.'24')) &

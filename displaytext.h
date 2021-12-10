@@ -17,6 +17,7 @@ class DisplayText : public QTextEdit
 public:
     explicit DisplayText(QWidget *parent = 0);
     void setConfiguration(Configuration const *);
+    void setMyContinent (QString const&);
     void setContentFont (QFont const&);
     void insertLineSpacer(QString const&);
     int displayDecodedText(DecodedText* decodedText, QString myCall, QString hisCall, QString hisGrid,
@@ -32,13 +33,14 @@ signals:
     void selectCallsign(bool alt, bool ctrl);
 
 public slots:
-  void appendText(QString const& text, QString const& bg = "#ffffff", QString const& color = "#000000", int std_type = 0, QString const& servis = " ", QString const& servis_color = "#000000", QString const& cntry = " ", bool forceBold = false, bool strikethrough = false, bool underline = false, bool DXped = false, bool overwrite = false);
+  void appendText(QString const& text, QString const& bg = "#ffffff", QString const& color = "#000000", int std_type = 0, QString const& servis = " ", QString const& servis_color = "#000000", QString const& cntry = " ", bool forceBold = false, bool strikethrough = false, bool underline = false, bool DXped = false, bool overwrite = false, bool wanted = false);
 
 protected:
     void mouseDoubleClickEvent(QMouseEvent *e);
 
 private:
 
+    bool scroll_;
     bool bold_;
     bool wastx_;
     bool useDarkStyle_;
@@ -79,6 +81,7 @@ private:
     bool otherMessagesMarker_;
     bool enableCountryFilter_;
     bool enableCallsignFilter_;
+    bool enableMyConinentFilter_;
     bool hidefree_;
     bool showcq_;
     bool showcqrrr73_;
@@ -93,6 +96,8 @@ private:
     unsigned last_tx = 0;
     QString mygrid_ = "";
     QString myhisCall_ = "";
+    QString myCall_ = "";
+    QString myContinent_ = "";
     QString color_MyCall_;
     QString color_CQ_;
     QString color_StandardCall_;

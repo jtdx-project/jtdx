@@ -25,7 +25,7 @@ void usage() {
     printf("       -s x (x is snr of signal that is written to .c2 file)\n");
     printf("\n");
     printf(" e.g. ./wsprsim -cds -28 -o 150613_1920.c2 \"K1ABC FN42 33\"\n");
-    printf(" then ./wsprd 150613_1920.c2\n");
+    printf(" then ./wsprd_jtdx 150613_1920.c2\n");
 }
 
 int add_signal_vector(float f0, float t0, float amp, unsigned char* symbols

@@ -515,7 +515,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                       if (t.continent.isEmpty ()) t.continent = continent.trimmed();
                       if (t.mpx.isEmpty ()) t.mpx = mpx;
                       t.r_rep = param;
-                      if (old_status < SCQ) t.b_time = time;
+                      if (old_status < SCQ || t.stx_c == NONE) t.b_time = time;
                       t.rx = freq;
       //                max_r_time = time;
                       as_active = true;
@@ -531,7 +531,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     old_status = t.status;
                     t.status = status;
                     t.tx = freq;
-                    if (old_status < SCQ) t.b_time = time;
+                    if (old_status < SCQ || tyyp == "S") t.b_time = time;
                   }
                   break;
                 }
@@ -546,7 +546,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                       if (t.continent.isEmpty ()) t.continent = continent.trimmed();
                       if (t.mpx.isEmpty ()) t.mpx = mpx;
                       t.r_rep = param;
-                      if (old_status < SCQ) t.b_time = time;
+                      if (old_status < SCQ || t.stx_c == NONE) t.b_time = time;
                       t.rx = freq;
       //                max_r_time = time;
                       as_active = true;

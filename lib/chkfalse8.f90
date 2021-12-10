@@ -1,10 +1,11 @@
-subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
+subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
   use ft8_mod1, only : mycall,hiscall
   character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12,callmask6*6
   character*6 mask6(3)
   integer, intent(in) :: i3,n3
   logical(1) falsedec,lchkcall,lgvalid,lwrongcall
+  logical(1), intent(in) :: lcall1hash
   data mask6/'001000','101000','011000'/
 
   call_a=''; call_b=''
@@ -26,8 +27,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
 ! 0   5 71234567                             71                   71   Telemetry (18 hex)
 ! 0   5 81234567                             71                   71   Telemetry (18 hex)
 ! 0   5 8123456789ABCDEF01                   71                   71   Telemetry (18 hex)
-! 1     WA9XYZ/R KA1ABC/R R FN42             28 1 28 1 1 15       74   Standard msg
-! 1     WA9XYZ KA1ABC R-11                   28 1 28 1 1 15       74   Standard msg
+! 1     WA9XYZ/R KA1ABC/R R FN42             28 1 28 1 1 15       74   Standard msg, with std or non std callsign
+! 1     WA9XYZ KA1ABC R-11                   28 1 28 1 1 15       74   Standard msg, with std or non std callsign
 ! 1     CQ 039 P30KJE/R DR46
 ! 2     PA1XYZ/P GM4ABC/P R FN42             28 1 28 1 1 15       74   EU VHF Contest
 ! 2     CQ 039 P30KJE/P DR46
@@ -172,12 +173,14 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     islash1=index(msg37,'/')
     call_a=''; call_b=''
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    if(islash1.le.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+    if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
       call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
-      include 'call_q.f90'
-      falsedec=.false.
-      call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      if(call_b.ne.hiscall) then
+        include 'call_q.f90'
+        falsedec=.false.
+        call chkflscall(call_a,call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
     endif
 
     if(islash1.gt.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
@@ -201,17 +204,62 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype)
     endif
   endif
 
+! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, checking for valid grid
+  if(i3.eq.1) then
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+        if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
+          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+            grid=msg37(ispc3+1:ispc4-1)
+            call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
+            if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+      endif
+    endif
+  endif
+
+! i3=1 n3=4
+! 000189 -23  0.4  300 ~ <...> QG6GFE CQ14
+! 110015 -21 -0.0 2050 ~ <...> NF7OEX CP03
+! check if grid is correct for call_2
+  if(lcall1hash .and. i3.eq.1) then ! hash can be associated with a valid callsign in the table
+    ispc1=index(msg37,' ')
+    if(msg37(1:ispc1-1).ne.mycall) then
+      ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      callsign=''; grid=''
+      callsign=msg37(ispc1+1:ispc2-1)
+      islash=index(callsign,'/')
+      if(islash.lt.1) then
+        include 'callsign_q.f90'
+        if(callsign.ne.hiscall) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2
+          if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+             msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+             msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+            grid=msg37(ispc2+1:ispc3-1)
+            call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+            if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+      endif
+    endif
+  endif
+
 ! i3=1 n3=1 '4P6NPC 5M5UJG BK49'
 ! i3=3 n3=1 '8Z7TLB JQ0OTZ 589 02'
 ! i3=0 n3=3 'CE3NTP 4C2DWN 5E ONE'
   if(((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) .or. (i3.eq.0 .and. n3.eq.3)) then
-! some exceptions, may be checked for valid grid
-! <...> DJ9KM JO40
-! <...> ON6DSL R-05
     if(msg37(1:2).eq.'<.') return
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(ispc1.gt.3 .and. ispc2.gt.7) then
-      call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
+      call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) return ! exception to incoming calls
+      call_b=msg37(ispc1+1:ispc2-1)
       include 'call_q.f90'
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)

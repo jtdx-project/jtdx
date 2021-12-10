@@ -20,15 +20,16 @@ module ft8_decode
 
 contains
 
-  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,lapon,nsec, &
+  subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
                     nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr, &
-                         nincallthr
+                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,  &
+                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso, &
+                         lqsomsgdcd
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -40,7 +41,7 @@ contains
     real, DIMENSION(:), ALLOCATABLE :: dd8m
     real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
-    logical, intent(in) :: lapon,nagainfil
+    logical, intent(in) :: nagainfil
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
@@ -64,9 +65,44 @@ contains
     end type eventmp_struct
     type(eventmp_struct) eventmp(130)
 
+    type tmpcqdec_struct
+      real freq
+      real xdt
+    end type tmpcqdec_struct
+    type(tmpcqdec_struct) tmpcqdec(numdeccq) ! 40 sigs
+
+    type tmpcqsig_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type tmpcqsig_struct
+    type(tmpcqsig_struct) tmpcqsig(numcqsig) ! 20 sigs
+
+    type tmpmyc_struct
+      real freq
+      real xdt
+    end type tmpmyc_struct
+    type(tmpmyc_struct) tmpmyc(numdecmyc) ! 25 sigs
+
+    type tmpmycsig_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type tmpmycsig_struct
+    type(tmpmycsig_struct) tmpmycsig(nummycsig) ! 5 sigs
+
+    type tmpqsosig_struct
+      real freq
+      real xdt
+      complex cs(0:7,79)
+    end type tmpqsosig_struct
+    type(tmpqsosig_struct) tmpqsosig(1)
+
     this%callback => callback
 
     oddtmp%lstate=.false.; eventmp%lstate=.false.; nmsgloc=0; ncandthr=0
+    nmsgcq=0; tmpcqdec(:)%freq=6000.0; nmsgmyc=0; tmpmyc(:)%freq=6000.0
+    tmpcqsig(:)%freq=6000.0; tmpmycsig(:)%freq=6000.0; tmpqsosig(1)%freq=6000.0
     if(hiscall.eq.'') then; lastrxmsg(1)%lstate=.false. 
     else if(lastrxmsg(1)%lstate .and. lasthcall.ne.hiscall .and. index(lastrxmsg(1)%lastmsg,trim(hiscall)).le.0) &
           then; lastrxmsg(1)%lstate=.false.
@@ -78,14 +114,14 @@ contains
     endif
 
     lrepliedother=.false.; lft8sdec=.false.; lqsothread=.false.; lsubtracted=.false.!; lthrdecd=.false.
-    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0
+    ncount=0; servis8=' '; mycalllen1=len_trim(mycall)+1; nincallthr(nthr)=0; nallocthr=0; ncqsignal=0; nmycsignal=0
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
 
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
 
-    if(lqsothread .and. lapon .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
+    if(lqsothread .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
 ! got incoming call
       do i=1,30
         if(incall(i)%msg(1:1).eq." ") exit
@@ -187,12 +223,13 @@ contains
 !if(nthr.eq.1) print *,ipass,'nthr1',newdat1
 !if(nthr.eq.2) print *,ipass,'nthr2',newdat1
 !write (*,"(F5.2,1x,I1,1x,I4,1x,F4.2)") candidate(2,icand)-0.5,ipass,nint(candidate(1,icand)),candidate(3,icand)
-        call ft8b(newdat1,nQSOProgress,nfqso,nftx,lapon,napwid,lsubtract,npos,freqsub, &
-                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,   &
-                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,                    &
+        call ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tmpcqdec,tmpmyc,              &
+                  nagainfil,iaptype,f1,xdt,nbadcrc,lft8sdec,msg37,msg37_2,xsnr,swl,stophint,               &
+                  nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
-                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted)
-        nsnr=nint(xsnr) 
+                  ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
+                  tmpcqsig,tmpmycsig,tmpqsosig)
+        nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
         if(nbadcrc.eq.0) then
@@ -261,6 +298,18 @@ contains
                 nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
 
+              if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.numdeccq) then
+                nmsgcq=nmsgcq+1; xdtr=xdt+0.5
+                tmpcqdec(nmsgcq)%freq=f1; tmpcqdec(nmsgcq)%xdt=xdtr
+              endif
+              if(lapmyc .and. lmycallstd) then
+                ispc1=index(msg37,' ')
+                if(msg37(1:ispc1-1).eq.trim(mycall) .and. nmsgmyc.lt.numdecmyc) then
+                  nmsgmyc=nmsgmyc+1; xdtr=xdt+0.5
+                  tmpmyc(nmsgmyc)%freq=f1; tmpmyc(nmsgmyc)%xdt=xdtr
+                endif
+              endif
+
               if(i3.eq.4 .and. msg37(1:3).eq.'CQ ' .and. mod(nsec,15).eq.0 .and. nmsgloc.lt.130) then
                 nmsgloc=nmsgloc+1
                 if(levenint) then
@@ -301,6 +350,33 @@ contains
 ! iwave(1:180000)=nint(dd8(1:180000))
 ! write(10) h,iwave
 ! close(10)
+    if(levenint) then
+      evencq(1:ncqsignal,nthr)%freq=tmpcqsig(1:ncqsignal)%freq
+      evencq(1:ncqsignal,nthr)%xdt=tmpcqsig(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; evencq(ik,nthr)%cs=tmpcqsig(ik)%cs; enddo
+      if(lapmyc) then
+        evenmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
+        evenmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; evenmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
+        if(.not.lqsomsgdcd .and. tmpqsosig(1)%freq.lt.5001.) then
+          evenqso(1,nthr)%freq=tmpqsosig(1)%freq; evenqso(1,nthr)%xdt=tmpqsosig(1)%xdt
+          evenqso(1,nthr)%cs=tmpqsosig(1)%cs
+        endif
+      endif
+    else if(loddint) then
+      oddcq(1:ncqsignal,nthr)%freq=tmpcqsig(1:ncqsignal)%freq
+      oddcq(1:ncqsignal,nthr)%xdt=tmpcqsig(1:ncqsignal)%xdt
+      do ik=1,ncqsignal; oddcq(ik,nthr)%cs=tmpcqsig(ik)%cs; enddo
+      if(lapmyc) then
+        oddmyc(1:nmycsignal,nthr)%freq=tmpmycsig(1:nmycsignal)%freq
+        oddmyc(1:nmycsignal,nthr)%xdt=tmpmycsig(1:nmycsignal)%xdt
+        do ik=1,nmycsignal; oddmyc(ik,nthr)%cs=tmpmycsig(ik)%cs; enddo
+        if(.not.lqsomsgdcd .and. tmpqsosig(1)%freq.lt.5001.) then
+          oddqso(1,nthr)%freq=tmpqsosig(1)%freq; oddqso(1,nthr)%xdt=tmpqsosig(1)%xdt
+          oddqso(1,nthr)%cs=tmpqsosig(1)%cs
+        endif
+      endif
+    endif
     ncandthr=nint(float(ncandthr)/npass)
     ncandallthr(nthr)=ncandallthr(nthr)+ncandthr
     if(nmsgloc.gt.0) then

@@ -542,6 +542,18 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
         if(ir.eq.0) msg=trim(call_1)//' '//trim(call_2)//' '//grid4
         if(ir.eq.1) msg=trim(call_1)//' '//trim(call_2)//' R '//grid4
         if(msg(1:3).eq.'CQ ' .and. ir.eq.1) unpk77_success=.false.
+!out of current realisation of protocol: GRID is always dropped at WSJT-X/JTDX transmission of the messages below
+!           i3          n3
+!           1           0
+!110015 -23  0.5 1450 ~ <...> Y96IHQ/R GL12
+!112215 -23  0.0 1606 ~ <...> 3U1TBM/R CC65
+!000102 -23  0.5  801 ~ <...> NV3QHV/R JF62
+        if(ir.eq.0 .and. call_1(1:1).eq.'<' .and. grid4.ne.'RR73') then ! hash value can also be associated with a valid callsign
+          nlencall2=len_trim(call_2)
+          if(nlencall2.gt.1) then
+            if(call_2(nlencall2-1:nlencall2).eq.'/R') unpk77_success=.false.
+          endif
+        endif
      else
         irpt=igrid4-MAXGRID4
         if(irpt.eq.1) msg=trim(call_1)//' '//trim(call_2)
@@ -556,7 +568,7 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
            if(ir.eq.0) msg=trim(call_1)//' '//trim(call_2)//' '//crpt
            if(ir.eq.1) msg=trim(call_1)//' '//trim(call_2)//' R'//crpt
         endif
-        if(msg(1:3).eq.'CQ ' .and. irpt.ge.2) unpk77_success=.false. 
+        if(msg(1:3).eq.'CQ ' .and. irpt.ge.2) unpk77_success=.false.
      endif
 
   else if(i3.eq.3) then
@@ -653,6 +665,31 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
          islash=index(call_1,'/'); if(islash.eq.1 .or. islash.eq.2 .or. islash.eq.11 .or. (islash.eq.10 .and. &
          call_1(11:11).gt.'@' .and. call_1(11:11).lt.'[' .and. call_1(11:11).ne.'P')) unpk77_success=.false.
          if(islash.lt.6 .and. call_1(11:11).lt.':' .and. call_1(11:11).gt.'/') unpk77_success=.false.
+       endif
+     endif
+     nmsglen=len_trim(msg)
+! protocol violations, also reported at wrong TX message packing
+! prevent broken message transmission
+     if(unpk77_success .and. nmsglen.gt.0) then
+       if((icq.eq.0 .and. nrpt.eq.0) .or. icq.eq.1) then
+! -23 -3.3 N0S/W45ETOE <...>
+!071445 -14  0.1  779 ~ <...>
+!071445 -14  0.1  779 ~ W5JZ  ! hash was associated
+! CQ <...>
+         if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
+       endif
+     endif
+! <...> /BZZ/0ZZ/C
+! <...> ZZZZ/0Z/Z/
+! <...> OZZZZ/0ZZZ/
+! <...> 0I/IZZZ/O K
+! <...> J/IZZZ/O K
+     if(unpk77_success .and. iflip.eq.0 .and. icq.eq.0 .and. nrpt.eq.0) then
+       nlencall2=len_trim(call_2)
+       if(nlencall2.gt.9) then
+         if(call_2(1:1).eq.'/' .or. call_2(nlencall2:nlencall2).eq.'/') unpk77_success=.false.
+         nindxspace=index(call_2,' ')
+         if(nindxspace.gt.0 .and. nindxspace.lt.nlencall2) unpk77_success=.false.
        endif
      endif
 

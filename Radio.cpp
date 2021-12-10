@@ -166,12 +166,34 @@ QString convert_dark(QString const& color, bool useDarkStyle)
     bool ok;
     auto hexcolor = color.mid(1).toUInt(&ok, 16);
     if (ok && useDarkStyle) {
-        hexcolor = hexcolor xor 0xe6dcd2;
+        auto r = (hexcolor & 0xff0000) >> 16;
+        auto g = (hexcolor & 0xff00) >> 8;
+        auto b = hexcolor & 0xff;
+        if (r==g && r==b) {
+             hexcolor = hexcolor xor 0xe6dcd2;
+
+         } else {
+          if (r >= 0x60) r -= 0x60;
+          else r = 0;
+          if (g >= 0x60) g -= 0x60;
+          else g = 0;
+          if (!(b == 0xff && r == 0 && g == 0)) {
+          if (b >= 0x60) b -= 0x60;
+          else b = 0;
+          } else {
+            r += 0x60;
+            g += 0x60;
+
+          }
+          hexcolor = r << 16 | g << 8 | b;
+        }
+//        hexcolor = hexcolor xor 0xe6dcd2;
         res.setNum(hexcolor,16);
         res = res.rightJustified(6, '0');
         res = "#" + res.right(6);
         
     } else res = color;
+//    printf ("%s -> %s\n",color.toStdString().c_str(),res.toStdString().c_str());
     return res;
 }
 

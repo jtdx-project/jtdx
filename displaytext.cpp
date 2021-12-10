@@ -19,10 +19,13 @@ DisplayText::DisplayText(QWidget *parent) :
     viewport ()->setCursor (Qt::ArrowCursor);
     setWordWrapMode (QTextOption::NoWrap);
     setStyleSheet ("");
+    // max lines to limit heap usage
+    document ()->setMaximumBlockCount (10000);
 }
 
 void DisplayText::setConfiguration(Configuration const * config)
 {
+  scroll_ = config->scroll();
   useDarkStyle_ = config->useDarkStyle();
   displayCountryName_ = config->countryName();
   displayCountryPrefix_ = config->countryPrefix();
@@ -62,6 +65,7 @@ void DisplayText::setConfiguration(Configuration const * config)
   enableCountryFilter_ = config->enableCountryFilter();
   enableCallsignFilter_ = config->enableCallsignFilter();
   hidefree_ = config->hidefree();
+  enableMyConinentFilter_ = config->hideOwnContinent();
   showcq_ = config->showcq();
   showcqrrr73_ = config->showcqrrr73();
   showcq73_ = config->showcq73();
@@ -88,13 +92,20 @@ void DisplayText::setConfiguration(Configuration const * config)
   hideContinents_ = config->hideContinents();
   countries_ = config->countries();
   callsigns_ = config->callsigns();
-   
+  myCall_ = config->my_callsign();   
 }
+
+void DisplayText::setMyContinent(QString const& mycontinet)
+{
+    myContinent_ = mycontinet;
+}
+
 void DisplayText::setContentFont(QFont const& font)
 {
 //  setFont (font);
   m_charFormat.setFont (font);
   bold_ = font.bold();
+  m_charFormat.setFontItalic(false);
 //  selectAll ();
 /*
   auto cursor = textCursor ();
@@ -121,27 +132,40 @@ void DisplayText::mouseDoubleClickEvent(QMouseEvent *e)
 
 void DisplayText::insertLineSpacer(QString const& line)
 {
-    appendText (line, "#d3d3d3", "#000000", 0, " ", "#000000", " ", true);
+    appendText (line, Radio::convert_dark("#d3d3d3",useDarkStyle_), Radio::convert_dark("#000000",useDarkStyle_), 0, " ", Radio::convert_dark("#000000",useDarkStyle_), " ", true);
 }
 
-void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite)
+void DisplayText::appendText(QString const& text, QString const& bg, QString const& color, int std_type, QString const& servis, QString const& servis_color, QString const& cntry, bool forceBold, bool strikethrough, bool underlined, bool DXped, bool overwrite, bool wanted)
 {
     QString servbg, s;
-    if (std_type == 2) servbg = "#ff0000";
-    else if (std_type == 5) servbg = "#0000ff";
-    else if (servis == "?") servbg = "#ffff00";
+    if (std_type == 2) servbg = Radio::convert_dark("#ff0000",useDarkStyle_);
+    else if (std_type == 5) servbg = Radio::convert_dark("#0000ff",useDarkStyle_);
+    else if (servis == "?") servbg = Radio::convert_dark("#ffff00",useDarkStyle_);
     else if (std_type == 3 && servis.length()>1) servbg = servis.mid(1);
-    else servbg = "#ffffff";
+    else servbg = Radio::convert_dark("#ffffff",useDarkStyle_);
     auto cursor = textCursor ();
-    cursor.movePosition (QTextCursor::End);
-    if (0 == cursor.position ())
-        cursor.setCharFormat (m_charFormat);
-    else if (overwrite) {
-        cursor.select(QTextCursor::LineUnderCursor);
-        cursor.removeSelectedText();
-    } else
-        cursor.insertText ("\n");
-    
+    if (scroll_) {
+        if (document ()->blockCount() == 10000) {
+            cursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor, 9998);
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+            cursor.deleteChar();
+        }
+        cursor.movePosition (QTextCursor::Start);
+        if (overwrite) {
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+        }
+    } else {
+        cursor.movePosition (QTextCursor::End);
+        if (0 == cursor.position ())
+            cursor.setCharFormat (m_charFormat);
+        else if (overwrite) {
+            cursor.select(QTextCursor::LineUnderCursor);
+            cursor.removeSelectedText();
+        } else
+            cursor.insertText ("\n");
+    }    
     if (forceBold) {
         if (bold_) { 
             m_charFormat.setFontWeight(QFont::Black);
@@ -155,8 +179,8 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
             m_charFormat.setFontWeight(QFont::Normal);
         }
     }
-    m_charFormat.setForeground(QColor(Radio::convert_dark(color,useDarkStyle_)));
-    m_charFormat.setBackground (QColor(Radio::convert_dark(bg,useDarkStyle_)));
+    m_charFormat.setForeground(QColor(color));
+    m_charFormat.setBackground (QColor(bg));
     if (text.length() < 50) {
         int ft = 23; 
         if (text.mid(4,1) == " ") ft = 21;
@@ -168,11 +192,19 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
         } 
         else if (underlined) m_charFormat.setUnderlineStyle(QTextCharFormat::SingleUnderline);
         else m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
+        if (wanted) {
+            m_charFormat.setFontItalic(true); m_charFormat.setForeground(QColor(color_MyCall_)); m_charFormat.setFontOverline(true);
+            if (!underlined && !DXped) m_charFormat.setFontUnderline(true);
+            }
         cursor.insertText (text.mid(ft,26),m_charFormat);
+        if (wanted) {
+            m_charFormat.setFontItalic(false); m_charFormat.setFontOverline(false);
+            if (!underlined && !DXped) m_charFormat.setFontUnderline(false);
+            }
         m_charFormat.setFontStrikeOut(false);
         m_charFormat.setUnderlineStyle(QTextCharFormat::NoUnderline);
-        m_charFormat.setBackground (QColor(Radio::convert_dark(servbg,useDarkStyle_)));
-        m_charFormat.setForeground(QColor(Radio::convert_dark(servis_color,useDarkStyle_)));
+        m_charFormat.setBackground (QColor(servbg));
+        m_charFormat.setForeground(QColor(servis_color));
         cursor.insertText (servis.left(1),m_charFormat);
         m_charFormat.setBackground (QColor(Radio::convert_dark("#ffffff",useDarkStyle_)));
         m_charFormat.setForeground(QColor(Radio::convert_dark("#000000",useDarkStyle_)));
@@ -180,7 +212,8 @@ void DisplayText::appendText(QString const& text, QString const& bg, QString con
     } else {
         cursor.insertText (text.trimmed(),m_charFormat);
     }
-    cursor.movePosition (QTextCursor::StartOfLine);
+    if (scroll_ && !overwrite) cursor.insertText ("\n");
+    else cursor.movePosition (QTextCursor::StartOfLine);
     setTextCursor (cursor);
     ensureCursorVisible ();
     document ()->setMaximumBlockCount (document ()->maximumBlockCount ());
@@ -193,10 +226,10 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                             QStringList wantedCallList, QStringList wantedPrefixList, QStringList wantedGridList, 
                             QStringList wantedCountryList, bool windowPopup, QWidget* window)
 {
-    QString bgColor = "#ffffff";
-    QString txtColor = "#000000";
+    QString bgColor = Radio::convert_dark("#ffffff",useDarkStyle_);
+    QString txtColor = Radio::convert_dark("#000000",useDarkStyle_);
     QString swpColor = "";
-    QString servisColor = "#000000";
+    QString servisColor = Radio::convert_dark("#000000",useDarkStyle_);
     QString messageText;
     bool forceBold = false;
     bool strikethrough = false;
@@ -219,9 +252,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
     QString servis = " ";
     QString cntry = " ";
     QString checkCall;
+    QString checkCall2;
     QString grid;
     QString tyyp="";
     QString countryName;
+    QString countryName2;
     QString mpx="";
     QString lotw="";
     QsoHistory::Status status = QsoHistory::NONE;
@@ -246,6 +281,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         auto const& parts = decodedText->message().split (' ', SkipEmptyParts);
         if (!hisCall.isEmpty () && messageText.contains(Radio::base_callsign (hisCall))) txtColor = color_StandardCall_;
         checkCall = decodedText->CQersCall(grid,tyyp);
+        checkCall2 = decodedText->call();
         if(!app_mode.startsWith("FT") && (messageText.contains("2nd-h") || messageText.contains("3rd-h"))) jt65bc = true;
         if (!checkCall.isEmpty ()) {
             if (grid.isEmpty ()) dummy = qsoHistory2.status(checkCall,grid);
@@ -282,11 +318,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                         }
                         else {
                             std_type = 3;
-                            txtColor = "#000000";
+                            txtColor = Radio::convert_dark("#000000",useDarkStyle_);
                         }
                     } else {
                         std_type = 3;
-                        txtColor = "#000000";
+                        txtColor = Radio::convert_dark("#000000",useDarkStyle_);
                     }
                 } else {
                     std_type = 3;
@@ -298,7 +334,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 param = grid;
             }
         }
-        else if (!myCall.isEmpty () && Radio::base_callsign (decodedText->call()) == myCall) {
+        else if (!myCall.isEmpty () && Radio::base_callsign (checkCall2) == myCall) {
                 std_type = 2;
                 txtColor = color_MyCall_;
                 actwind = true;
@@ -404,7 +440,6 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         bool callB4BandMode = true;
         bool gridB4 = true;
         bool gridB4BandMode = true;
-
         logBook.getLOTW(/*in*/ checkCall, /*out*/ lotw);
         if (!lotw.isEmpty ()) {
             priority = 1;
@@ -758,7 +793,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         mpx = items[1];
 
         if (!wantedCallList.isEmpty() && (wantedCallList.indexOf(Radio::base_callsign (checkCall)) >= 0 || wantedCallList.indexOf(checkCall) >= 0)) {
-            bwantedCall = true;            
+            bwantedCall = true; show_line = true;
         }
         for (int i=0; i<wantedPrefixList.size(); i++) {
             if (wantedPrefixList.at(i).size() > 1 && checkCall.startsWith(wantedPrefixList.at(i))) {
@@ -832,6 +867,11 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             if (callsigns.contains(Radio::base_callsign (checkCall)))
                 show_line = false;
         }
+        if ((enableMyConinentFilter_) && std_type != 2 && !jt65bc) {
+            logBook.getDXCC(/*in*/ checkCall2, /*out*/ countryName2);
+            auto coninent2 =  countryName2.split(',')[0];
+            if (coninent2 == myContinent_ || (std_type == 1 && myContinent_ == items[0])) show_line = false;
+        }
     }
     
     if (show_line && decodedText->isNonStd2() && hidefree_ && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
@@ -869,8 +909,8 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
         }
     }
     if (jt65bc) {
-        bgColor = "#ffffff";
-        txtColor = "#000000";
+        bgColor = Radio::convert_dark("#ffffff",useDarkStyle_);
+        txtColor = Radio::convert_dark("#000000",useDarkStyle_);
     }
     if (show_line) {
         if (!checkCall.isEmpty () && (std_type == 1 || std_type == 2 || std_type == 4 || (std_type == 3 && !param.isEmpty()))) {
@@ -880,7 +920,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             if(!redMarker_) std_type = 0;
             else if(blueMarker_ && !hisCall.isEmpty () && checkCall.contains(hisCall)) std_type = 5;
         }
-        appendText(messageText, bgColor, txtColor, std_type, servis, servisColor, cntry, forceBold, strikethrough, underlined, decodedText->isDXped());
+        appendText(messageText, bgColor, txtColor, std_type, servis, servisColor, cntry, forceBold, strikethrough, underlined, decodedText->isDXped(), false, bwantedCall||bwantedGrid||bwantedPrefix||bwantedCountry);
         wastx_ = false;
     }
         if (notified) inotified |= 1;
@@ -1004,9 +1044,9 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
             qsoHistory.message(call,status,0,param,tyyp,"","",ttime,"",txFreq,modeTx);
           }
         if (wastx_ && ttime - last_tx < 2 && hide_TX_messages_)
-            appendText(t,bg,"#000000",0," ","#000000"," ",false,false,false,false,true);
+            appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_)," ",false,false,false,false,true);
         else
-            appendText(t,bg);
+            appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_));
     }
     wastx_ = true;
     last_tx = ttime;
@@ -1015,7 +1055,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
 void DisplayText::displayQSY(QString text)
 {
   QString t = QDateTime::currentDateTimeUtc().toString("hhmmss") + "            " + text;
-  QString bg="#ff69b4";
-  appendText(t,bg);
+  QString bg=Radio::convert_dark("#ff69b4",useDarkStyle_);
+  appendText(t,bg,Radio::convert_dark("#000000",useDarkStyle_),0," ",Radio::convert_dark("#000000",useDarkStyle_));
 }
 

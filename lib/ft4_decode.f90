@@ -342,7 +342,7 @@ contains
                 if(falsedec) then; message=''; cycle; endif
               endif
               if(iaptype.eq.1 .and. xsnr.lt.-15.) then
-                nbadcrc=0; call chkfalse8(message,i3,n3,nbadcrc,iaptype)
+                nbadcrc=0; call chkfalse8(message,i3,n3,nbadcrc,iaptype,.false.)
                 if(nbadcrc.eq.1) then; message=''; cycle; endif
               endif
 ! EA1AHY M83WN/R R QA79   *

@@ -292,7 +292,7 @@ void TransceiverBase::set (TransceiverState const& s,
   #endif
                 do_ptt (false);
                 do_post_ptt (false);
-                QThread::msleep (100); // some rigs cannot process CAT
+                if (!requested_.audio()) QThread::msleep (100); // some rigs cannot process CAT
                                        // commands while switching from
                                        // Tx to Rx
               }
@@ -630,6 +630,12 @@ void TransceiverBase::update_power (unsigned int p)
 {
   actual_.power (p);
 //  requested_.power (p);    // track rig changes
+}
+
+void TransceiverBase::update_swr (unsigned int p)
+{
+  actual_.swr (p);
+//  requested_.swr (p);    // track rig changes
 }
 
 void TransceiverBase::update_complete (bool force_signal)

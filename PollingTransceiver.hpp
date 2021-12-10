@@ -59,6 +59,7 @@ private:
   Q_SLOT void handle_timeout ();
 
   int interval_;    // polling interval in milliseconds
+  int set_interval_;
   QTimer * poll_timer_;
   bool ft4_mode_;
   bool fast_mode_;

@@ -1015,7 +1015,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
       , "-r", QDir::toNativeSeparators (m_config.data_dir ().absolutePath ())
       };
   QProcessEnvironment new_env {m_env};
-  new_env.insert  ("OMP_STACKSIZE", "6M");
+  new_env.insert  ("OMP_STACKSIZE", "10M");
   proc_jtdxjt9.setProcessEnvironment (new_env);
   proc_jtdxjt9.start(QDir::toNativeSeparators (m_appDir) + QDir::separator () +
           "jtdxjt9", jt9_args, QIODevice::ReadWrite | QIODevice::Unbuffered);
@@ -1028,6 +1028,12 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   connect (&m_wav_future_watcher, &QFutureWatcher<void>::finished, this, &MainWindow::diskDat);
 
+#if JTDX_DEBUG_TO_FILE
+  FILE * pFile = fopen (QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("jtdx_debug.txt").toStdString().c_str(),"a");  
+  fprintf (pFile,"%s(%0.1f) JTDX v%s start, performance %d threads\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),
+      (version() + (m_tci ? " tci " : " ") + revision()).toStdString().c_str(),QThread::idealThreadCount ());
+  fclose (pFile);
+#endif
 //  printf ("is_tci: %d downsampleFactor %d\n",m_tci,m_downSampleFactor);
   if (m_tci) {
     Q_EMIT m_config.transceiver_period(double(NTMAX));
@@ -1153,7 +1159,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   int i3=0; int n3=0; int ntxhash=1;
   genft8_(message,&i3,&n3,&ntxhash,msgsent,const_cast<char *> (ft8msgbits),const_cast<int *> (itone),37,37);
 
-  styleChanged();
+  m_bHisCallStd=stdCall(m_hisCall); styleChanged();
   // this must be the last statement of constructor
   if (!m_valid) throw std::runtime_error {"Fatal initialization exception"};
 }
@@ -1913,15 +1919,15 @@ void MainWindow::dataSink(qint64 frames)
       if(m_ndepth==3) depth_string=" -C 5000 -o 4";   //2 pass w subtract, Block detection and OSD.
 
       if(m_diskData) {
-        cmnd='"' + m_appDir + '"' + "/wsprd " + depth_string + " -a \"" +
+        cmnd='"' + m_appDir + '"' + "/wsprd_jtdx " + depth_string + " -a \"" +
             QDir::toNativeSeparators(m_dataDir.absolutePath()) + "\" \"" + m_path + "\"";
       } else {
-        cmnd='"' + m_appDir + '"' + "/wsprd " + depth_string + " -a \"" +
+        cmnd='"' + m_appDir + '"' + "/wsprd_jtdx " + depth_string + " -a \"" +
             QDir::toNativeSeparators(m_dataDir.absolutePath()) + "\" " +
             t2 + '"' + m_fnameWE + ".wav\"";
       }
       QString t3=cmnd;
-      int i1=cmnd.indexOf("/wsprd ");
+      int i1=cmnd.indexOf("/wsprd_jtdx ");
 //      cmnd=t3.left(i1+7) + t3.mid(i1+7);
       cmnd=t3.mid(0,i1+7) + t3.mid(i1+7);
       if(ui) ui->DecodeButton->setChecked (true);
@@ -2096,7 +2102,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
       }
       if(!m_config.do_snr()) ui->S_meter_button->setText(tr("S meter"));
       ui->S_meter_button->setEnabled(m_config.do_snr());
-      if(!m_config.do_pwr()) ui->PWRlabel->setText(tr("Pwr"));
+      if(!m_config.do_pwr()) {ui->PWRlabel->setText(tr("Pwr")); ui->SWRlabel->setText("");}
       on_spotLineEdit_textChanged(ui->spotLineEdit->text());
       ui->bandComboBox->setCurrentText (m_config.bands ()->find (m_freqNominal));
   }
@@ -2123,7 +2129,7 @@ void MainWindow::on_hintButton_clicked (bool checked)
   m_hint=checked;
 }
 
-void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked); }
+void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked);}
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
 {
@@ -3121,7 +3127,7 @@ void MainWindow::on_actionEnable_hound_mode_toggled(bool checked)
 	}
     ui->actionUse_TX_frequency_jumps->setEnabled(false);
   }
-  setHoundAppearance(m_houndMode);
+  setHoundAppearance(m_houndMode); if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#H")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());
 }
 
 void MainWindow::on_actionUse_TX_frequency_jumps_triggered (bool checked) { m_houndTXfreqJumps=checked; }
@@ -3676,7 +3682,7 @@ void MainWindow::process_Auto()
         break;
       }
       case QsoHistory::S73: {
-        if (!m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall)
+//        if (!m_singleshot && !m_config.autolog() && m_lastloggedcall == m_hisCall)
           autoStopTx("S73, none received ");
         break;
       }
@@ -3729,12 +3735,6 @@ void MainWindow::readFromStdout()                             //readFromStdout
       m_blankLine=true;
       m_notified=false;
       if(m_config.write_decoded_debug()) writeToALLTXT("Decoding finished");
-      if(m_logInitNeeded) {
-        if(m_config.write_decoded_debug()) writeToALLTXT("Log initialization is started: wsjtx_log.adi file was changed");
-        m_logBook.init(m_config.callNotif() ? m_config.my_callsign() : "",m_config.gridNotif() ? m_config.my_grid() : "",m_config.timeFrom());
-        countQSOs ();
-        m_logInitNeeded=false;
-      }
       QString slag="";
       qint64 msDecFin=m_jtdxtime->currentMSecsSinceEpoch2();
       if(!m_manualDecode && !m_diskData) {
@@ -4012,6 +4012,13 @@ void MainWindow::killFile ()
       QFile f2 {m_fnameWE + ".c2"};
       if(f2.exists()) f2.remove();
     }
+  }
+  if(m_logInitNeeded) {
+    printf("%s(%0.1f) Timing Log_init_needed\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
+    if(m_config.write_decoded_debug()) writeToALLTXT("Log initialization is started: wsjtx_log.adi file was changed");
+    m_logBook.init(m_config.callNotif() ? m_config.my_callsign() : "",m_config.gridNotif() ? m_config.my_grid() : "",m_config.timeFrom());
+    countQSOs ();
+    m_logInitNeeded=false;
   }
 }
 
@@ -4750,7 +4757,7 @@ void MainWindow::startTx2()
         if (m_config.TX_messages ()) {
           t = " Transmitting " + m_mode + " ----------------------- " + m_config.bands ()->find (m_freqNominal);
           t=WSPR_hhmm(0) + ' ' + t.rightJustified (66, '-');
-          ui->decodedTextBrowser->appendText(t);
+          ui->decodedTextBrowser->appendText(t,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         }
 
         QFile f {m_dataDir.absoluteFilePath ("ALL_WSPR.TXT")};
@@ -5012,7 +5019,7 @@ void MainWindow::processMessage(QString const& messages, int position, bool alt,
   }
 
   auto t3 = decodedtext.string ().left(47);
-  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{2,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
+  auto t4 = t3.replace (QRegularExpression {" CQ ([A-Z]{1,2}|[0-9]{3,3}) "}, " CQ_\\1 ").split (" ", SkipEmptyParts);
   if(t4.size () < 6) return;             //Skip the rest if no decoded text
 
 
@@ -5583,6 +5590,7 @@ void MainWindow::clearDX (QString reason)
   QString dxcallclr=m_hisCall;
   clearDXfields("");
   genStdMsgs(QString {});
+  ui->RxFreqSpinBox->setValue (ui->TxFreqSpinBox->value ());
   if (1 == ui->tabWidget->currentIndex())
     {
       ui->genMsg->setText(ui->tx6->text());
@@ -5960,6 +5968,7 @@ void MainWindow::on_spotLineEdit_textChanged(const QString &text)
   spotTextTmp.replace("#G",m_config.my_grid() + "<" + ui->propLineEdit->text() + ">" + ui->dxGridEntry->text(), Qt::CaseInsensitive);
   spotTextTmp.replace("#D", ui->labDist->text().replace(" ",""), Qt::CaseInsensitive);
   spotTextTmp.replace("#R", m_rpt+"dB", Qt::CaseInsensitive);
+  spotTextTmp.replace("#H", m_houndMode ? "F/H" : "");
   QString spotText;
   if(ui->spotLineEdit->text().isEmpty() && ui->propLineEdit->text().isEmpty()) { spotText="info: " + m_modeTx; }
   else if(ui->spotLineEdit->text().isEmpty() && !ui->propLineEdit->text().isEmpty()) { spotText="info: " + m_modeTx + " " + ui->propLineEdit->text(); }
@@ -5986,7 +5995,7 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
     if(m_skipTx1) { m_skipTx1=false; ui->skipTx1->setChecked(false); ui->skipGrid->setChecked(false); on_txb1_clicked(); }
     ui->skipTx1->setEnabled(false); ui->skipGrid->setEnabled(false);
   }
-  else { ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }
+  else { if(!m_houndMode) {ui->skipTx1->setEnabled(true); ui->skipGrid->setEnabled(true); }}
   auto pos = ui->dxCallEntry->cursorPosition (); 
   if (t != m_hisCall && !m_hisCall.isEmpty()) { ui->dxCallEntry->setText(m_hisCall); ui->dxCallEntry->setCursorPosition (pos); }
   else {
@@ -6031,24 +6040,28 @@ void MainWindow::on_dxCallEntry_textChanged(const QString &t) //dxCall changed
 void MainWindow::on_dxGridEntry_textChanged(const QString &t) //dxGrid changed
 {
   int n=t.length();
-  if(n!=4 and n!=6 and n!=8) {
+  if(n!=4 and n!=6 and n!=8 and n!=10) {
     if (n < 4 || n==5) {
         if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,1).toLower()) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,1).toLower());
         if (n < 4 && !m_hisGrid.isEmpty()) { ui->labAz->clear(); ui->labDist->clear(); m_hisGrid.clear(); statusUpdate (); }
     } else if (n==7){
-        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1)) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(2,1));
+        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1)) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,1));
+    } else if (n==9){
+        if (t != t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,1).toLower()) ui->dxGridEntry->setText(t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,1).toLower());
     }  
+ 
     return;
   }
-  m_hisGrid=t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2);
+  m_hisGrid=t.left(2).toUpper() + t.mid(2,2) + t.mid(4,2).toLower() + t.mid(6,2) + t.mid(8,2).toLower();
   auto pos = ui->dxGridEntry->cursorPosition ();
   if (t != m_hisGrid) { ui->dxGridEntry->setText(m_hisGrid); ui->dxGridEntry->setCursorPosition (pos); }
   else {
         statusUpdate ();
         qint64 nsec = m_jtdxtime->currentMSecsSinceEpoch2() % 86400;
         double utch=nsec/3600.0;
-        int nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter;
-        azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
+        int nAz=0,nEl=0,nDmiles=0,nDkm=0,nHotAz,nHotABetter;
+        if (!m_hisGrid.isEmpty() && !m_config.my_grid ().isEmpty())
+          azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
                 const_cast <char *> ((m_hisGrid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         QString t;
@@ -6705,6 +6718,8 @@ void MainWindow::enable_DXCC_entity ()
     m_logBook.getDXCC(m_config.my_callsign(),countryName);
     auto items=countryName.split(",");
     m_m_continent = items[0];
+    ui->decodedTextBrowser->setMyContinent (m_m_continent);
+    ui->decodedTextBrowser2->setMyContinent (m_m_continent);
     m_m_prefix = items[1];
     m_qsoHistory.owndata(items[0],items[1],m_config.my_grid(),m_config.strictdirCQ ());
     m_strictdirCQ = m_config.strictdirCQ();
@@ -7159,6 +7174,7 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
    }
 //   printf("%s(%0.1f) tranceiver update %d %d old %d new %d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),
 //     m_jtdxtime->GetOffset(),m_tx_when_ready,g_iptt,m_rigState.ptt (),s.ptt ());
+  if (!s.ptt() && m_rigState.ptt () && (m_transmitting || m_tune)) haltTx("Halt Tx from rig detected ");
   if (s.ptt () && !m_rigState.ptt ()) // safe to start audio
                                       // (caveat - DX Lab Suite Commander)
     {
@@ -7177,8 +7193,16 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
   if(m_config.do_snr() && m_rigState.level() != s.level()) {
       ui->S_meter_button->setText(Radio::convert_Smeter(s.level(),ui->S_meter_button->isChecked()));
   }
-  if(m_config.do_pwr() && m_rigState.power() != s.power()) {
+  if(m_config.do_pwr()) {
+    if (m_rigState.power() != s.power()) {
       ui->PWRlabel->setText(QString {tr("Pwr<br>%1 W")}.arg (round(s.power()/1000.)));
+    }
+    if (m_rigState.swr() != s.swr()) {
+      if (s.swr() > 0)
+        ui->SWRlabel->setText(QString {"swr%1"}.arg (s.swr()/100.));
+      else
+        ui->SWRlabel->setText("");
+    }
   }    
   m_rigState = s;
   auto old_freqNominal = m_freqNominal;
@@ -7698,7 +7722,7 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
           t = " Receiving " + m_mode + " ----------------------- " +
               m_config.bands ()->find (m_dialFreqRxWSPR);
           t=WSPR_hhmm(-60) + ' ' + t.rightJustified (66, '-');
-          ui->decodedTextBrowser->appendText(t);
+          ui->decodedTextBrowser->appendText(t,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         }
         killFileTimer.start (int(750.0*m_TRperiod)); //Kill 3/4 period from now
       }
@@ -7756,8 +7780,9 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
       }
       if(!grid.isEmpty ()) {
         double utch=0.0;
-        int nAz,nEl,nDmiles,nDkm,nHotAz,nHotABetter;
-        azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
+        int nAz=0,nEl=0,nDmiles=0,nDkm=0,nHotAz,nHotABetter;
+        if (!grid.isEmpty() && !m_config.my_grid ().isEmpty())
+          azdist_(const_cast <char *> ((m_config.my_grid () + "        ").left (8).toLatin1().constData()),
                 const_cast <char *> ((grid + "        ").left (8).toLatin1().constData()),&utch,
                 &nAz,&nEl,&nDmiles,&nDkm,&nHotAz,&nHotABetter,8,8);
         if(m_config.miles()) {
@@ -7772,11 +7797,11 @@ void MainWindow::p1ReadFromStdout()                        //p1readFromStdout
         QString band;
         Frequency f=1000000.0*rxFields.at(3).toDouble()+0.5;
         band = ' ' + m_config.bands ()->find (f);
-        ui->decodedTextBrowser->appendText(band.rightJustified (71, '-'));
+        ui->decodedTextBrowser->appendText(band.rightJustified (71, '-'),Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
         m_blankLine = false;
       }
       m_nWSPRdecodes += 1;
-      ui->decodedTextBrowser->appendText(rxLine);
+      ui->decodedTextBrowser->appendText(rxLine,Radio::convert_dark("#ffffff",m_useDarkStyle),Radio::convert_dark("#000000",m_useDarkStyle),0," ",Radio::convert_dark("#000000",m_useDarkStyle));
     }
   }
 }

@@ -1098,15 +1098,15 @@ add_executable (jt9code lib/jt9code.f90 jtdx.rc)
 target_link_libraries (jt9code wsjt_fort wsjt_cxx)
 
 generate_version_info (wsprd_VERSION_RESOURCES
-  NAME wsprd
+  NAME wsprd_jtdx
   BUNDLE ${PROJECT_BUNDLE_NAME}
   ICON ${WSJTX_ICON_FILE}
   FILE_DESCRIPTION "WSPR mode decoder"
   )
-add_executable (wsprd ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
+add_executable (wsprd_jtdx ${wsprd_CSRCS} lib/indexx.f90 lib/wsprd/osdwspr.f90 ${wsprd_VERSION_RESOURCES})
 
-target_include_directories (wsprd PRIVATE ${FFTW3_INCLUDE_DIRS})
-target_link_libraries (wsprd ${FFTW3_LIBRARIES})
+target_include_directories (wsprd_jtdx PRIVATE ${FFTW3_INCLUDE_DIRS})
+target_link_libraries (wsprd_jtdx ${FFTW3_LIBRARIES})
 
 add_executable (wsprsim ${wsprsim_CSRCS})
 
@@ -1228,19 +1228,19 @@ add_executable (message_aggregator
   )
 target_link_libraries (message_aggregator wsjt_qt Qt5::Widgets)
 
-generate_version_info (udp_daemon_VERSION_RESOURCES
-  NAME udp_daemon
+generate_version_info (udp_daemon_jtdx_VERSION_RESOURCES
+  NAME udp_daemon_jtdx
   BUNDLE ${PROJECT_BUNDLE_NAME}
   ICON ${WSJTX_ICON_FILE}
   FILE_DESCRIPTION "Example WSJT-X UDP Message Protocol daemon"
   )
 
-add_executable (udp_daemon
+add_executable (udp_daemon_jtdx
   ${UDPDaemon_CXXSRCS}
   jtdx.rc
-  ${udp_daemon_VERSION_RESOURCES}
+  ${udp_daemon_jtdx_VERSION_RESOURCES}
   )
-target_link_libraries (udp_daemon Qt5::Core Qt5::Network)
+target_link_libraries (udp_daemon_jtdx Qt5::Core Qt5::Network)
 
 if (WSJT_CREATE_WINMAIN)
   set_target_properties (message_aggregator PROPERTIES WIN32_EXECUTABLE ON)
@@ -1265,7 +1265,8 @@ install (TARGETS jtdx
   BUNDLE DESTINATION . COMPONENT runtime
   )
 
-install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
+#install (TARGETS jtdxjt9 jt65code jt9code wsprd message_aggregator udp_daemon
+install (TARGETS jtdxjt9 wsprd_jtdx udp_daemon_jtdx
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
   )
@@ -1529,11 +1530,11 @@ set (CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
 set (CPACK_PACKAGE_VERSION_MAJOR ${WSJTX_VERSION_MAJOR})
 set (CPACK_PACKAGE_VERSION_MINOR ${WSJTX_VERSION_MINOR})
 set (CPACK_PACKAGE_VERSION_PATCH ${WSJTX_VERSION_PATCH})
-
 if (WIN32)
   set (CPACK_GENERATOR "NSIS")
 elseif (APPLE)
   set (CPACK_GENERATOR "DragNDrop")
+  set (CPACK_SYSTEM_NAME ${CMAKE_SYSTEM_NAME}-${PROJECT_ARCHITECTURE})
 else ()
   find_program (DPKG_BUILDER dpkg-buildpackage DOC "Debian package builder")
   if (DPKG_BUILDER)

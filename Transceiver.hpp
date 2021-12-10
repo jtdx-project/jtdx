@@ -93,12 +93,13 @@ public:
       ,	tonespacing_ {-3.0}
       ,	synchronize_ {true}
       ,	dbsnr_ {99.}
-      ,	trperiod_ {15.0}
+      ,	trperiod_ {60.0}
       ,	spread_ {0.0}
       ,	nsym_ {79}
       , volume_ {0}
       , level_ {0}
       , power_ {0}
+      , swr_ {0}
     {
     }
 
@@ -127,6 +128,7 @@ public:
     qreal volume () const {return volume_;}
     int level () const {return level_;}
     unsigned int power () const {return power_;}
+    unsigned int swr () const {return swr_;}
 
     void online (bool state) {online_ = state;}
     void frequency (Frequency f) {rx_frequency_ = f;}
@@ -153,6 +155,7 @@ public:
     void volume (qreal volume) {volume_ = volume;}
     void level (int strength) {level_ = strength;}
     void power (unsigned int mwpower) {power_ = mwpower;}
+    void swr (unsigned int mswr) {swr_ = mswr;}
 
   private:
     bool online_;
@@ -180,6 +183,7 @@ public:
     qreal volume_;
     int level_;
     unsigned int power_;
+    unsigned int swr_;
     
     // Don't forget to update the debug print and != operator if you
     // add more members here

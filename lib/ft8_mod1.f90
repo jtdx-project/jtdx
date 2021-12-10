@@ -1,6 +1,6 @@
 module ft8_mod1
 
-  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400) !NFRAME=1920*79
+  parameter (NPS=180000,NFR=151680,NFILT1=4000,NFILT2=3400,numcqsig=20,numdeccq=40,nummycsig=5,numdecmyc=25,nmaxthreads=24) !NFRAME=1920*79
   real*4 dd8(nps)
   real endcorr(NFILT1/2+1),endcorrswl(NFILT2/2+1)
   complex cw(nps),csync(0:6,32),csynce(0:18,32),csyncsd(0:18,32),csyncsdcq(0:57,32),csynccq(0:7,32),ctwkw(11,32), &
@@ -14,7 +14,8 @@ module ft8_mod1
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
           apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
-          nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24)
+          nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58), &
+          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
@@ -28,18 +29,28 @@ module ft8_mod1
   data mycall12_0/'dummy'/
   data mycall12_00/'dummy'/
   data hiscall12_0/'dummy'/
+! Hound OFF, MyCall is standard, DXCall is standard or empty
   data naptypes(0,1:12)/0,0,0,2,2,2,1,1,1,31,36,35/ ! Tx6 CQ
   data naptypes(1,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx1
   data naptypes(2,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx2
   data naptypes(3,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx3
   data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4
   data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5
+! Hound OFF, MyCall is non-standard, DXCall is standard or empty
+  data nmycnsaptypes(0,1:18)/40,40,40,0,0,0,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx6 CQ
+  data nmycnsaptypes(1,1:18)/0,0,0,41,41,41,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx1 DXcall MyCall
+  data nmycnsaptypes(2,1:18)/0,0,0,41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/          ! Tx2 Report
+  data nmycnsaptypes(3,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx3 RRreport
+  data nmycnsaptypes(4,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx4 RRR,RR73
+  data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,0,0,0,1,1,1/       ! Tx5 73
+! Hound mode
   data nhaptypes(0,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx6 CQ, possible in idle mode
   data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
   data nhaptypes(2,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx2 none
   data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport
   data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
   data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
+!non-standard DXCall
   data ndxnsaptypes(0,1:14)/1,1,1,31,31,0,36,36,0,0,31,36,35,0/       ! Tx6 CQ
   data ndxnsaptypes(1,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx1 Grid
   data ndxnsaptypes(2,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx2 Report
@@ -106,5 +117,47 @@ module ft8_mod1
     character*37 msg
   end type incall_struct
   type (incall_struct) incall(30)
+
+  type evencq_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type evencq_struct
+  type(evencq_struct) evencq(numcqsig,nmaxthreads) ! 24 threads
+
+  type oddcq_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type oddcq_struct
+  type(oddcq_struct) oddcq(numcqsig,nmaxthreads)
+
+  type evenmyc_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type evenmyc_struct
+  type(evenmyc_struct) evenmyc(nummycsig,nmaxthreads)
+
+  type oddmyc_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type oddmyc_struct
+  type(oddmyc_struct) oddmyc(nummycsig,nmaxthreads)
+
+  type evenqso_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type evenqso_struct
+  type(evenqso_struct) evenqso(1,nmaxthreads)
+
+  type oddqso_struct
+    real freq
+    real xdt
+    complex cs(0:7,79)
+  end type oddqso_struct
+  type(oddqso_struct) oddqso(1,nmaxthreads)
 
 end module ft8_mod1

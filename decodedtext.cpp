@@ -9,7 +9,7 @@ extern "C" {  bool stdmsg_(char const * msg, fortran_charlen_t); }
 
 namespace
 {
-  QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{2}|\d{3}))|...|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
+  QRegularExpression words_re {R"(^(?:(?<word1>(?:CQ|DE|QRZ)(?:\s?DX|\s(?:[A-Z]{1,2}|\d{3}))|...|[A-Z0-9/]+)\s)(?:(?<word2>[A-Z0-9/]+)(?:\s(?<word3>[-+A-Z0-9]+)(?:\s(?<word4>(?:OOO|(?!RR73)[A-R]{2}[0-9]{2})))?)?)?)"};
 }
 
 DecodedText::DecodedText (QString const& the_string, QObject *parent)
@@ -73,7 +73,7 @@ QString DecodedText::CQersCall(QString& grid,QString& tyyp)
   auto const& match = callsign_re.match (message_);
   grid = match.captured ("grid");
   tyyp = match.captured ("tyyp");
-  if (tyyp == "CQ" || tyyp == "LP") tyyp = "";
+  if (tyyp == "CQ" || tyyp == "LP" || tyyp == "POTA" || tyyp == "SOTA" || tyyp == "IOTA") tyyp = "";
   else if (tyyp == "908") tyyp = "JA";
   else if (tyyp == "ASIA") tyyp = "AS";
   if (tyyp.size() > 2) return "";
@@ -236,7 +236,7 @@ void DecodedText::deCallAndGrid(/*out*/QString& call, QString& grid)
     call = match.captured ("word3");
     grid = match.captured ("word4");
   }
-  if (!_callRe.match(call).hasMatch() || call.contains("TU73") > 0 || call.contains("73GL") > 0) {
+  if (!_callRe.match(call).hasMatch() || _gridRe.match(call).hasMatch() || call.contains("TU73") > 0 || call.contains("73GL") > 0) {
     call = "";
   }
   if (!_gridRe.match(grid).hasMatch()) {

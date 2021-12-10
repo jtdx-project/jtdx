@@ -679,7 +679,7 @@ unsigned long writec2file(char *c2filename, int trmin, double freq
 //***************************************************************************
 void usage(void)
 {
-    printf("Usage: wsprd [options...] infile\n");
+    printf("Usage: wsprd_jtdx [options...] infile\n");
     printf("       infile must have suffix .wav or .c2\n");
     printf("\n");
     printf("Options:\n");
