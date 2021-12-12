@@ -397,8 +397,8 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   mysleep1 (1500);
   if (ESDR3) mysleep1 (500); else mysleep1 (100);
 //  mysleep1 (100);
-  tci_Ready = true;
-  if (tci_Ready) {
+  if (error_.isEmpty()) {
+    tci_Ready = true;
     if (!_power_) {
       if (rig_power_) {
         rig_power(true);
