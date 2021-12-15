@@ -123,7 +123,7 @@ namespace Radio
   QString effective_prefix (QString callsign)
   {
     auto parts = callsign.split('/');
-    if (parts.size() == 2 && parts.at(1) == "P") return callsign;
+    if (parts.size() == 2 && (parts.at(1) == "P" || parts.at(1) == "A")) return callsign;
     auto prefix = parts.at(0);
     int size = prefix.size();
     int region = -1;
