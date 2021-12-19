@@ -13,7 +13,7 @@ module ft8_mod1
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58), &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
-          apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,14),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
+          apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58), &
           apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58)
   integer*1 gen(91,174)
@@ -51,12 +51,12 @@ module ft8_mod1
   data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
   data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
 !non-standard DXCall
-  data ndxnsaptypes(0,1:14)/1,1,1,31,31,0,36,36,0,0,31,36,35,0/       ! Tx6 CQ
-  data ndxnsaptypes(1,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx1 Grid
-  data ndxnsaptypes(2,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx2 Report
-  data ndxnsaptypes(3,1:14)/11,11,11,13,13,13,14,14,14,12,31,36,35,1/ ! Tx3 RRreport
-  data ndxnsaptypes(4,1:14)/11,11,11,13,13,13,14,14,14,12,31,36,35,1/ ! Tx4 RRR,RR73
-  data ndxnsaptypes(5,1:14)/14,14,14,13,13,13,1,1,1,12,31,36,35,0/    ! Tx5 73
+  data ndxnsaptypes(0,1:18)/1,1,1,31,31,0,36,36,0,0,31,36,35,0,0,0,0,0/       ! Tx6 CQ
+  data ndxnsaptypes(1,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx1 Grid
+  data ndxnsaptypes(2,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx2 Report
+  data ndxnsaptypes(3,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx3 RRreport
+  data ndxnsaptypes(4,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx4 RRR,RR73
+  data ndxnsaptypes(5,1:18)/14,14,14,13,13,13,1,1,1,12,31,36,35,0,0,0,0,0/    ! Tx5 73
   data avexdt/0.0/
   data first_osd/.true./
   

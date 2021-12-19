@@ -772,13 +772,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !   36        ??? DxCall RR73              (64 ap bits) ! full compound or just nonstandard callsign
 
 ! ndxnsaptypes(nQSOProgress, extra decoding pass)
-!  data ndxnsaptypes(0,1:14)/1,1,1,31,31,0,36,36,0,0,31,36,35,0/       ! Tx6 CQ
-!  data ndxnsaptypes(1,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx1 Grid
-!  data ndxnsaptypes(2,1:14)/11,11,11,1,1,1,31,36,0,0,31,36,35,0/      ! Tx2 Report
-!  data ndxnsaptypes(3,1:14)/11,11,11,13,13,13,14,14,14,12,31,36,35,1/ ! Tx3 RRreport
-!  data ndxnsaptypes(4,1:14)/11,11,11,13,13,13,14,14,14,12,31,36,35,1/ ! Tx4 RRR,RR73
-!  data ndxnsaptypes(5,1:14)/14,14,14,13,13,13,1,1,1,12,31,36,35,0/    ! Tx5 73
-
+!  data ndxnsaptypes(0,1:18)/1,1,1,31,31,0,36,36,0,0,31,36,35,0,0,0,0,0/       ! Tx6 CQ
+!  data ndxnsaptypes(1,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx1 Grid
+!  data ndxnsaptypes(2,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx2 Report
+!  data ndxnsaptypes(3,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx3 RRreport
+!  data ndxnsaptypes(4,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx4 RRR,RR73
+!  data ndxnsaptypes(5,1:18)/14,14,14,13,13,13,1,1,1,12,31,36,35,0,0,0,0,0/    ! Tx5 73
 
 ! iaptype Hound mode
 !------------------------
