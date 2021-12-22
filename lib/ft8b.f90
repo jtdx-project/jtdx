@@ -837,11 +837,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(.not.lapmyc .and. iaptype.eq.2) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
               if(stophint .and. iaptype.gt.2 .and. iaptype.lt.31) cycle
               if(lft8sdec .and. iaptype.ge.3 .and. iaptype.lt.31) cycle !already decoded
+              if(iaptype.gt.2 .and. lnohiscall) cycle ! no DXCall
               if(iaptype.ge.3 .and. iaptype.lt.31 .and. loutapwid) cycle
-              if(iaptype.gt.30 .and. (.not.lenabledxcsearch .or. lnohiscall)) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
+              if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
-              if(iaptype.ge.2 .and. iaptype.lt.31 .and. apsym(1).gt.1) cycle  ! No, or nonstandard MyCall
-              if(iaptype.ge.3 .and. apsym(30).gt.1) cycle ! No, or nonstandard, DXCall
               if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
               if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
@@ -1028,9 +1027,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! QSO message already decoded
             if(.not.lapmyc .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! skip AP for mycall in 2..3 minutes after last TX
             if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
-!          if(lft8sdec .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! already decoded ! but may be false FT8S decode
-
-            if((iaptype.eq.21 .or. iaptype.eq.23) .and. apsym(30).gt.1) cycle ! No dxcall 
+!            if(lft8sdec .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! already decoded ! but may be false FT8S decode
+            if((iaptype.eq.21 .or. iaptype.eq.23 .or. iaptype.eq.31 .or. iaptype.eq.36) .and. lnohiscall) cycle ! No dxcall
             fdelta=abs(f1-nfqso); fdeltam=modulo(fdelta,60.)
             if(nQSOProgress.gt.0 .and. iaptype.lt.31 .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! AP shall be applied to Fox frequencies
             if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! only Fox frequencies DX Call searching

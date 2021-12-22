@@ -18,7 +18,6 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
   if(hiscall.ne.hiscallprev .or. mycall.ne.mycallprev .or. (lhound.neqv.lhoundprev) .or. first) then ! first for lhound triggered
 
     first=.false.; mycallprev=mycall; lhoundprev=lhound
-    apsym=0; apsym(1)=99; apsym(30)=99
 
 ! shall hash both callsigns for making AP masks with nonstandard callsign message
     if(.not.lhound) call fillhash(numthreads,.true.)
@@ -41,7 +40,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-        if(lhiscallstd .and. i3.ne.1 .or. .not.lhiscallstd .and. i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
+        if(lhiscallstd .and. i3.ne.1 .or. .not.lhiscallstd .and. i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) go to 1
         read(c77,'(77i1)',err=1) apcqsym(1:77)
         apcqsym=2*apcqsym-1
       endif
@@ -52,8 +51,8 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-        if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
-        read(c77,'(58i1)',err=1) apsymdxstd(1:58)
+        if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) go to 2
+        read(c77,'(58i1)',err=2) apsymdxstd(1:58)
         apsymdxstd=2*apsymdxstd-1
       endif
 
@@ -63,16 +62,16 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-        read(c77,'(77i1)',err=1) apsymdxnsrr73(1:77)
+        if(i3.ne.4 .or. .not.unpk77_success) go to 3
+        read(c77,'(77i1)',err=3) apsymdxnsrr73(1:77)
         apsymdxnsrr73=2*apsymdxnsrr73-1
 
         msg='<W9XYZ> '//trim(hiscall)//' 73'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-        read(c77,'(77i1)',err=1) apsymdxns73(1:77)
+        if(i3.ne.4 .or. .not.unpk77_success) go to 4
+        read(c77,'(77i1)',err=4) apsymdxns73(1:77)
         apsymdxns73=2*apsymdxns73-1
       endif
     endif
@@ -82,22 +81,22 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         msg='<'//trim(mycall)//'> '//trim(hiscall)//' -15'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-        read(c77,'(58i1)',err=1) apsymmyns2(1:58)
+        if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 5
+        read(c77,'(58i1)',err=5) apsymmyns2(1:58)
         apsymmyns2=2*apsymmyns2-1
 
         nlenmyc=len_trim(mycall)
         msg=trim(mycall)//' <'//trim(hiscall)//'> RR73'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-        read(c77,'(77i1)',err=1) apsymmynsrr73(1:77)
+        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 6
+        read(c77,'(77i1)',err=6) apsymmynsrr73(1:77)
         apsymmynsrr73=2*apsymmynsrr73-1
         msg=trim(mycall)//' <'//trim(hiscall)//'> 73'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-        read(c77,'(77i1)',err=1) apsymmyns73(1:77)
+        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 7
+        read(c77,'(77i1)',err=7) apsymmyns73(1:77)
         apsymmyns73=2*apsymmyns73-1
 
       else if(lnohiscall) then
@@ -105,8 +104,8 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         msg='<'//trim(mycall)//'> ZZ1ZZZ -15'
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
-        if(i3.ne.1 .or. msgchk.ne.msg .or. .not.unpk77_success) return
-        read(c77,'(29i1)',err=1) apsymmyns1(1:29)
+        if(i3.ne.1 .or. msgchk.ne.msg .or. .not.unpk77_success) go to 8
+        read(c77,'(29i1)',err=8) apsymmyns1(1:29)
         apsymmyns1=2*apsymmyns1-1
       endif
     endif
@@ -119,8 +118,8 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
       call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-      if(i3.ne.4 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
-      read(c77,'(58i1)',err=1) apsym(1:58)
+      if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) go to 9
+      read(c77,'(58i1)',err=9) apsym(1:58)
       apsym=2*apsym-1; if(lnohiscall) apsym(30)=99
     endif
 
@@ -131,8 +130,8 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         call pack77(msg,i3,n3,c77,0)
         call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-        if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) return
-        read(c77,'(58i1)',err=1) apsym(1:58)
+        if(i3.ne.1 .or. (msg.ne.msgchk) .or. .not.unpk77_success) go to 9
+        read(c77,'(58i1)',err=9) apsym(1:58)
         apsym=2*apsym-1
       else
         apsym(30)=99
@@ -145,8 +144,8 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
       i1=0; i1=index(msgchk,'<'); if(i1.lt.15) return
-      if(i3.ne.0 .or. msg(1:i1).ne.msgchk(1:i1) .or. .not.unpk77_success) return
-      read(c77,'(66i1)',err=1) apsymsp(1:66)
+      if(i3.ne.0 .or. msg(1:i1).ne.msgchk(1:i1) .or. .not.unpk77_success) go to 10
+      read(c77,'(66i1)',err=10) apsymsp(1:66)
       apsymsp=2*apsymsp-1!; if(lnohiscall) apsymsp(30)=99
     endif
 
@@ -155,27 +154,37 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
       call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-      if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-      read(c77,'(58i1)',err=1) apsymdxns1(1:58)
+      if(i3.ne.1 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 11
+      read(c77,'(58i1)',err=11) apsymdxns1(1:58)
       apsymdxns1=2*apsymdxns1-1
 
       msg='<'//trim(mycall)//'> '//trim(hiscall)//' RR73'
       call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
-      if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) return
-      read(c77,'(58i1)',err=1) apsymdxns2(1:58)
+      if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 12
+      read(c77,'(58i1)',err=12) apsymdxns2(1:58)
       apsymdxns2=2*apsymdxns2-1
     endif
 
   endif
 
-  go to 2
+  go to 32
 
-1 apsym=0
-  apsym(1)=99
-  apsym(30)=99
+1 apcqsym=0; apcqsym(1)=99; apcqsym(30)=99; go to 32
+2 apsymdxstd=0; apsymdxstd(1)=99; apsymdxstd(30)=99; go to 32
+3 apsymdxnsrr73=0; apsymdxnsrr73(1)=99; apsymdxnsrr73(30)=99; go to 32
+4 apsymdxns73=0; apsymdxns73(1)=99; apsymdxns73(30)=99; go to 32
+5 apsymmyns2=0; apsymmyns2(1)=99; apsymmyns2(30)=99; go to 32
+6 apsymmynsrr73=0; apsymmynsrr73(1)=99; apsymmynsrr73(30)=99; go to 32
+7 apsymmyns73=0; apsymmyns73(1)=99; apsymmyns73(30)=99; go to 32
+8 apsymmyns1=0; apsymmyns1(1)=99; go to 32
+9 apsym=0; apsym(1)=99; apsym(30)=99; go to 32
+10 apsymsp=0; apsymsp(1)=99; apsymsp(30)=99; go to 32
+11 apsymdxns1=0; apsymdxns1(1)=99; apsymdxns1(30)=99; go to 32
+12 apsymdxns2=0; apsymdxns2(1)=99; apsymdxns2(30)=99; go to 32
 
-2 continue
+32 continue
+
   return
 end subroutine ft8apset
