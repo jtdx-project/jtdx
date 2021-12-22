@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1369"/>
+        <location filename="../Configuration.cpp" line="1370"/>
         <source>&amp;OK</source>
         <translation>確定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1370"/>
+        <location filename="../Configuration.cpp" line="1371"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1385"/>
+        <location filename="../Configuration.cpp" line="1386"/>
         <source>Create temporary directory error: </source>
         <translation>建立臨時目錄錯誤: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1391"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 另一個應用程序可能正在鎖定目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1408"/>
+        <location filename="../Configuration.cpp" line="1409"/>
         <source>Create data directory error: </source>
         <translation>建立數據目錄錯誤: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1417"/>
-        <location filename="../Configuration.cpp" line="1428"/>
+        <location filename="../Configuration.cpp" line="1418"/>
+        <location filename="../Configuration.cpp" line="1429"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>建立目錄錯誤 &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1588"/>
-        <location filename="../Configuration.cpp" line="1614"/>
-        <location filename="../Configuration.cpp" line="1666"/>
+        <location filename="../Configuration.cpp" line="1589"/>
+        <location filename="../Configuration.cpp" line="1615"/>
+        <location filename="../Configuration.cpp" line="1667"/>
         <source>&amp;Delete</source>
         <translation>刪除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1618"/>
-        <location filename="../Configuration.cpp" line="1670"/>
+        <location filename="../Configuration.cpp" line="1619"/>
+        <location filename="../Configuration.cpp" line="1671"/>
         <source>&amp;Insert ...</source>
         <translation>插入(&amp;I)...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1622"/>
+        <location filename="../Configuration.cpp" line="1623"/>
         <source>&amp;Load ...</source>
         <translation>載入(&amp;L) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1626"/>
+        <location filename="../Configuration.cpp" line="1627"/>
         <source>&amp;Save as ...</source>
         <translation>另存為(&amp;S) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1630"/>
+        <location filename="../Configuration.cpp" line="1631"/>
         <source>&amp;Merge ...</source>
         <translation>合併(&amp;M) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1634"/>
+        <location filename="../Configuration.cpp" line="1635"/>
         <source>&amp;Reset</source>
         <translation>重置(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2949"/>
+        <location filename="../Configuration.cpp" line="2950"/>
         <source>Serial Port:</source>
         <translation>序列埠:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2950"/>
+        <location filename="../Configuration.cpp" line="2951"/>
         <source>Serial port used for CAT control</source>
         <translation>用於CAT控制的序列埠</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2957"/>
+        <location filename="../Configuration.cpp" line="2958"/>
         <source>TCI Server:</source>
         <translation>TCI 伺服器:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2958"/>
+        <location filename="../Configuration.cpp" line="2959"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ Formats:
 	[IPv6-位址]:埠</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2970"/>
+        <location filename="../Configuration.cpp" line="2971"/>
         <source>Network Server:</source>
         <translation>網路伺服器:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2971"/>
+        <location filename="../Configuration.cpp" line="2972"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -177,12 +177,12 @@ IP v4-地址:埠號
 [IPv6-地址]:埠號</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2983"/>
+        <location filename="../Configuration.cpp" line="2984"/>
         <source>USB Device:</source>
         <translation>USB 設備:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2984"/>
+        <location filename="../Configuration.cpp" line="2985"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -193,132 +193,132 @@ Format:
 [VID[:PID[:供應商[:產品]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3019"/>
+        <location filename="../Configuration.cpp" line="3020"/>
         <source>Invalid audio input device</source>
         <translation>無效的音頻輸入設備</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3026"/>
+        <location filename="../Configuration.cpp" line="3027"/>
         <source>Invalid audio output device</source>
         <translation>無效的音頻輸出設備</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3032"/>
+        <location filename="../Configuration.cpp" line="3033"/>
         <source>Invalid PTT method</source>
         <translation>無效的PTT方法</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3042"/>
+        <location filename="../Configuration.cpp" line="3043"/>
         <source>Invalid PTT port</source>
         <translation>無效的PTT埠號</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3589"/>
+        <location filename="../Configuration.cpp" line="3590"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 在訊息內</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3590"/>
+        <location filename="../Configuration.cpp" line="3591"/>
         <source>CQ in message</source>
         <translation>CQ 在訊息內</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4773"/>
+        <location filename="../Configuration.cpp" line="4774"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX 解碼文本字型選擇</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
-        <location filename="../Configuration.cpp" line="5453"/>
+        <location filename="../Configuration.cpp" line="5427"/>
+        <location filename="../Configuration.cpp" line="5458"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Load Working Frequencies</source>
         <translation>載入工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
-        <location filename="../Configuration.cpp" line="5451"/>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5456"/>
+        <location filename="../Configuration.cpp" line="5510"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>頻率檔案 (*.qrg);;全部檔案 (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5436"/>
+        <location filename="../Configuration.cpp" line="5441"/>
         <source>Replace Working Frequencies</source>
         <translation>替換工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5437"/>
+        <location filename="../Configuration.cpp" line="5442"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>是否確實要放棄當前工作頻率, 並將其替換為載入的頻率?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5449"/>
+        <location filename="../Configuration.cpp" line="5454"/>
         <source>Merge Working Frequencies</source>
         <translation>合併工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5476"/>
-        <location filename="../Configuration.cpp" line="5485"/>
-        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5481"/>
+        <location filename="../Configuration.cpp" line="5490"/>
+        <location filename="../Configuration.cpp" line="5500"/>
         <source>Not a valid frequencies file</source>
         <translation>不是有效頻率檔案</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5476"/>
+        <location filename="../Configuration.cpp" line="5481"/>
         <source>Incorrect file magic</source>
         <translation>不正確的檔案內容</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5485"/>
+        <location filename="../Configuration.cpp" line="5490"/>
         <source>Version is too new</source>
         <translation>版本太新</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5500"/>
         <source>Contents corrupt</source>
         <translation>內容已損壞</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5510"/>
         <source>Save Working Frequencies</source>
         <translation>儲存工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5515"/>
+        <location filename="../Configuration.cpp" line="5520"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>只儲存選取的工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5517"/>
+        <location filename="../Configuration.cpp" line="5522"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>是否要儲存目前選擇的工作頻率? 按一下 否 可儲存全部.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5544"/>
+        <location filename="../Configuration.cpp" line="5549"/>
         <source>Reset Working Frequencies</source>
         <translation>重置工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5546"/>
+        <location filename="../Configuration.cpp" line="5551"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>您確定要放棄您當前的工作頻率並用預設值頻率替換它們嗎?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5606"/>
+        <location filename="../Configuration.cpp" line="5611"/>
         <source>Save Directory</source>
         <translation>儲存目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5622"/>
+        <location filename="../Configuration.cpp" line="5627"/>
         <source>Failed to open connection to rig</source>
         <translation>無法開啟與無線電設備的連接</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6012"/>
+        <location filename="../Configuration.cpp" line="6017"/>
         <source>Rig failure</source>
         <translation>無線電設備故障</translation>
     </message>
@@ -2957,7 +2957,7 @@ Error: %2 - %3</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../logqso.cpp" line="215"/>
+        <location filename="../logqso.cpp" line="222"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>無法開啟 &quot;%1&quot; 對於附加: %2</translation>
     </message>
@@ -5315,7 +5315,7 @@ UDP 伺服器 %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5371"/>
+        <location filename="../Configuration.cpp" line="5376"/>
         <source>OK</source>
         <translation>確定</translation>
     </message>
@@ -5323,184 +5323,184 @@ UDP 伺服器 %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5373"/>
+        <location filename="../Configuration.cpp" line="5378"/>
         <source>Directory:</source>
         <translation>目錄:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5374"/>
+        <location filename="../Configuration.cpp" line="5379"/>
         <source>File &amp;name:</source>
         <translation>檔案名稱(&amp;n):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5375"/>
+        <location filename="../Configuration.cpp" line="5380"/>
         <source>&amp;Open</source>
         <translation>開啟(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5376"/>
+        <location filename="../Configuration.cpp" line="5381"/>
         <source>&amp;Choose</source>
         <translation>選擇(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5377"/>
+        <location filename="../Configuration.cpp" line="5382"/>
         <source>&amp;Save</source>
         <translation>儲存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5379"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>All files (*)</source>
         <translation>全部檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5380"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>New Folder</source>
         <translation>新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5386"/>
         <source>Delete</source>
         <translation>刪除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5383"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>&amp;Delete</source>
         <translation>刪除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>&amp;Rename</source>
         <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>Show &amp;hidden files</source>
         <translation>顯示隱藏檔案(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>&amp;New Folder</source>
         <translation>新資料夾(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Look in:</source>
         <translation>檢視:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>Files of type:</source>
         <translation>檔案類型:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Go back</source>
         <translation>回去</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>Forward</source>
         <translation>向前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Go forward</source>
         <translation>前進</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Parent Directory</source>
         <translation>父目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Go to the parent directory</source>
         <translation>移至父目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Create New Folder</source>
         <translation>建立新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Create a New Folder</source>
         <translation>建立新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>List View</source>
         <translation>清單檢視</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Change to list view mode</source>
         <translation>變更為清單檢視模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Detail View</source>
         <translation>詳細資訊檢視</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Change to detail view mode</source>
         <translation>變更為詳細資訊檢視模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Sidebar</source>
         <translation>側欄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>List of places and bookmarks</source>
         <translation>地點與書籤清單</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; 是寫入保護.
 是否仍要將其刪除?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>是否確定要刪除 &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>Could not delete directory.</source>
         <translation>無法刪除目錄.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5509,7 +5509,7 @@ Please verify the correct directory name was given.</source>
 請驗證已給出正確的目錄名稱.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>Recent Places</source>
         <translation>近期的地方</translation>
     </message>
@@ -5517,22 +5517,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Name</source>
         <translation>姓名</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Type</source>
         <translation>類型</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Date Modified</source>
         <translation>變更日期</translation>
     </message>

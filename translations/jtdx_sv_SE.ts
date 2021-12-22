@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1369"/>
+        <location filename="../Configuration.cpp" line="1370"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1370"/>
+        <location filename="../Configuration.cpp" line="1371"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1385"/>
+        <location filename="../Configuration.cpp" line="1386"/>
         <source>Create temporary directory error: </source>
         <translation>Skapa tillfälligt katalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1391"/>
+        <location filename="../Configuration.cpp" line="1392"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,68 +82,68 @@ Another application may be locking the directory</source>
 En annan applikation kan låsa katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1408"/>
+        <location filename="../Configuration.cpp" line="1409"/>
         <source>Create data directory error: </source>
         <translation>Skapa datakatalogfel: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1417"/>
-        <location filename="../Configuration.cpp" line="1428"/>
+        <location filename="../Configuration.cpp" line="1418"/>
+        <location filename="../Configuration.cpp" line="1429"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translatorcomment>Kan inte Skapa katalog</translatorcomment>
         <translation>Skapa katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1588"/>
-        <location filename="../Configuration.cpp" line="1614"/>
-        <location filename="../Configuration.cpp" line="1666"/>
+        <location filename="../Configuration.cpp" line="1589"/>
+        <location filename="../Configuration.cpp" line="1615"/>
+        <location filename="../Configuration.cpp" line="1667"/>
         <source>&amp;Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1618"/>
-        <location filename="../Configuration.cpp" line="1670"/>
+        <location filename="../Configuration.cpp" line="1619"/>
+        <location filename="../Configuration.cpp" line="1671"/>
         <source>&amp;Insert ...</source>
         <translation>&amp;Föra in ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1622"/>
+        <location filename="../Configuration.cpp" line="1623"/>
         <source>&amp;Load ...</source>
         <translation>&amp;Ladda ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1626"/>
+        <location filename="../Configuration.cpp" line="1627"/>
         <source>&amp;Save as ...</source>
         <translation>&amp;Spara som ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1630"/>
+        <location filename="../Configuration.cpp" line="1631"/>
         <source>&amp;Merge ...</source>
         <translation>&amp;Sammanfoga ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1634"/>
+        <location filename="../Configuration.cpp" line="1635"/>
         <source>&amp;Reset</source>
         <translation>&amp;Återställ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2949"/>
+        <location filename="../Configuration.cpp" line="2950"/>
         <source>Serial Port:</source>
         <translation>Serieport:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2950"/>
+        <location filename="../Configuration.cpp" line="2951"/>
         <source>Serial port used for CAT control</source>
         <translation>Seriell port som används för CAT-kontroll</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2957"/>
+        <location filename="../Configuration.cpp" line="2958"/>
         <source>TCI Server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2958"/>
+        <location filename="../Configuration.cpp" line="2959"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -153,12 +153,12 @@ Formats:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2970"/>
+        <location filename="../Configuration.cpp" line="2971"/>
         <source>Network Server:</source>
         <translation>Nätverksserver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2971"/>
+        <location filename="../Configuration.cpp" line="2972"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -173,12 +173,12 @@ format:
 	[IPv6-adress]: port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2983"/>
+        <location filename="../Configuration.cpp" line="2984"/>
         <source>USB Device:</source>
         <translation>USB-enhet:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2984"/>
+        <location filename="../Configuration.cpp" line="2985"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -189,132 +189,132 @@ Formatera:
 	[VID [: PID [: VENDOR [: PRODUKT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3019"/>
+        <location filename="../Configuration.cpp" line="3020"/>
         <source>Invalid audio input device</source>
         <translation>Ogiltig ljudingångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3026"/>
+        <location filename="../Configuration.cpp" line="3027"/>
         <source>Invalid audio output device</source>
         <translation>Ogiltig ljudutgångsenhet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3032"/>
+        <location filename="../Configuration.cpp" line="3033"/>
         <source>Invalid PTT method</source>
         <translation>Ogiltig PTT-metod</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3042"/>
+        <location filename="../Configuration.cpp" line="3043"/>
         <source>Invalid PTT port</source>
         <translation>Ogiltig PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3589"/>
+        <location filename="../Configuration.cpp" line="3590"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 i meddelandet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3590"/>
+        <location filename="../Configuration.cpp" line="3591"/>
         <source>CQ in message</source>
         <translation>CQ i meddelande</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4773"/>
+        <location filename="../Configuration.cpp" line="4774"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX Decoded Text Font Choose</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
-        <location filename="../Configuration.cpp" line="5453"/>
+        <location filename="../Configuration.cpp" line="5427"/>
+        <location filename="../Configuration.cpp" line="5458"/>
         <source>Cancel</source>
         <translation>Annullera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Load Working Frequencies</source>
         <translation>Ladda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5449"/>
+        <location filename="../Configuration.cpp" line="5454"/>
         <source>Merge Working Frequencies</source>
         <translation>Slå samman arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5476"/>
-        <location filename="../Configuration.cpp" line="5485"/>
-        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5481"/>
+        <location filename="../Configuration.cpp" line="5490"/>
+        <location filename="../Configuration.cpp" line="5500"/>
         <source>Not a valid frequencies file</source>
         <translation>Inte en giltig frekvensfil</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5476"/>
+        <location filename="../Configuration.cpp" line="5481"/>
         <source>Incorrect file magic</source>
         <translation>Felaktig magi</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5485"/>
+        <location filename="../Configuration.cpp" line="5490"/>
         <source>Version is too new</source>
         <translation>Versionen är för ny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5500"/>
         <source>Contents corrupt</source>
         <translation>Innehållet är skadat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5510"/>
         <source>Save Working Frequencies</source>
         <translation>Spara arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5515"/>
+        <location filename="../Configuration.cpp" line="5520"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Spara endast utvalda arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5517"/>
+        <location filename="../Configuration.cpp" line="5522"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Är du säker på att du bara vill spara de arbetsfrekvenser som för närvarande är valda? Klicka på Nej för att spara alla.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5544"/>
+        <location filename="../Configuration.cpp" line="5549"/>
         <source>Reset Working Frequencies</source>
         <translation>Återställ arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5546"/>
+        <location filename="../Configuration.cpp" line="5551"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med standardfrekvenser?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5606"/>
+        <location filename="../Configuration.cpp" line="5611"/>
         <source>Save Directory</source>
         <translation>Spara katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5622"/>
+        <location filename="../Configuration.cpp" line="5627"/>
         <source>Failed to open connection to rig</source>
         <translation>Det gick inte att öppna anslutningen till riggen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6012"/>
+        <location filename="../Configuration.cpp" line="6017"/>
         <source>Rig failure</source>
         <translation>Riggfel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
-        <location filename="../Configuration.cpp" line="5451"/>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5456"/>
+        <location filename="../Configuration.cpp" line="5510"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvensfiler (* .qrg) ;; Alla filer (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5436"/>
+        <location filename="../Configuration.cpp" line="5441"/>
         <source>Replace Working Frequencies</source>
         <translation>Byt ut arbetsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5437"/>
+        <location filename="../Configuration.cpp" line="5442"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Är du säker på att du vill kassera dina nuvarande arbetsfrekvenser och ersätta dem med de laddade frekvenserna?</translation>
     </message>
@@ -2953,7 +2953,7 @@ Error: %2 - %3</translation>
         <translation>&amp;Annullera</translation>
     </message>
     <message>
-        <location filename="../logqso.cpp" line="215"/>
+        <location filename="../logqso.cpp" line="222"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan inte  öppna &quot;%1&quot; för bilaga:%2</translation>
     </message>
@@ -5248,7 +5248,7 @@ UDP-server%2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5371"/>
+        <location filename="../Configuration.cpp" line="5376"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5256,99 +5256,99 @@ UDP-server%2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5373"/>
+        <location filename="../Configuration.cpp" line="5378"/>
         <source>Directory:</source>
         <translation>KAtalog:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5374"/>
+        <location filename="../Configuration.cpp" line="5379"/>
         <source>File &amp;name:</source>
         <translation>Fil&amp;namn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5375"/>
+        <location filename="../Configuration.cpp" line="5380"/>
         <source>&amp;Open</source>
         <translation>&amp;Öppna</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5376"/>
+        <location filename="../Configuration.cpp" line="5381"/>
         <source>&amp;Choose</source>
         <translation>&amp;Välj</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5377"/>
+        <location filename="../Configuration.cpp" line="5382"/>
         <source>&amp;Save</source>
         <translation>&amp;Spara</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5379"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>All files (*)</source>
         <translation>Alla filer (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5380"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>New Folder</source>
         <translation>Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5386"/>
         <source>Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5383"/>
         <source>Cancel</source>
         <translation>Annulera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>&amp;Delete</source>
         <translation>&amp;Radera</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>&amp;Rename</source>
         <translation>&amp;Döp om</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>Show &amp;hidden files</source>
         <translation>Visa &amp;gömda filer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Ny katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Look in:</source>
         <translation>Titta i:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>Files of type:</source>
         <translation>Filer av typen:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; är skrivskyddat.
 Vill du radera det ändå?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Är du säker på att du vill ta bort &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>Could not delete directory.</source>
         <translation>Det gick inte att ta bort katalogen.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5357,92 +5357,92 @@ Katalogen hittades inte.
 Kontrollera att rätt katalognamn anges.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>Recent Places</source>
         <translation>Senaste postioner</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Back</source>
         <translation>Backa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Go back</source>
         <translation>Gå bakåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>Alt+Left</source>
         <translation>Alt+Vänster</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>Forward</source>
         <translation>Fram</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Go forward</source>
         <translation>Gå frammåt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Alt+Right</source>
         <translation>Alt+Höger</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Parent Directory</source>
         <translation>Övergripande katalog</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Go to the parent directory</source>
         <translation>Gå till överliggande katalogen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Alt+Up</source>
         <translation>Alt+Upp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Create New Folder</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Create a New Folder</source>
         <translation>Skapa en ny mapp</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>List View</source>
         <translation>List&amp;vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Change to list view mode</source>
         <translation>Byt till listvy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Detail View</source>
         <translation>Detaljerad vy</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Change to detail view mode</source>
         <translation>Byt till detaljvisningsläge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Sidebar</source>
         <translation>Sidebar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>List of places and bookmarks</source>
         <translation>Lista över platser och bokmärken</translation>
     </message>
@@ -5450,22 +5450,22 @@ Kontrollera att rätt katalognamn anges.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Name</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Size</source>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Date Modified</source>
         <translation>Datum ändrat</translation>
     </message>
