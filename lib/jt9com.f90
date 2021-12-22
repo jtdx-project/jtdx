@@ -61,7 +61,6 @@
      logical(c_bool) :: showharmonics
      logical(c_bool) :: lft8lowth
      logical(c_bool) :: lft8subpass
-     logical(c_bool) :: lft8latestart
      logical(c_bool) :: lhidetest
      logical(c_bool) :: lhidetelemetry
      logical(c_bool) :: lhideft8dupes

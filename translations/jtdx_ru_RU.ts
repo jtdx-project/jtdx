@@ -4501,7 +4501,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>ранний запуск декодера</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>

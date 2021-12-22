@@ -22,7 +22,7 @@ contains
 
   subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
-                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
+                    nagainfil,lft8lowth,lft8subpass,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
@@ -42,7 +42,7 @@ contains
     real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: nagainfil
-    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
+    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
     logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint
@@ -158,7 +158,7 @@ contains
 ! sliding search over +/- 2.5s relative to 0.5s TX start time
     jzb=-62 + avexdt*25.;  jzt=62 + avexdt*25.
 ! sliding search over +/- 3.5s relative to 0.5s TX start time
-    if(lft8latestart .or. swl) then; jzb=-86 + avexdt*25.;  jzt=86 + avexdt*25.; endif
+    if(swl) then; jzb=-86 + avexdt*25.;  jzt=86 + avexdt*25.; endif
 
     npass=3 ! fallback
     if(swl) then
