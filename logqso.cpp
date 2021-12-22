@@ -172,6 +172,13 @@ void LogQSO::accept()
     QString myadif;
     QByteArray myadif2;
     myadif="<BAND:" + QString::number(band.length()) + ">" + band;
+    myadif+=" <STATION_CALLSIGN:" + QString::number(m_myCall.length()) + ">" + m_myCall;
+    if (m_myGrid.length() > 7) {
+      myadif+=" <MY_GRIDSQUARE:8>" + m_myGrid.left(8);
+    }
+    else if (m_myGrid.length() > 3) {
+      myadif+=" <MY_GRIDSQUARE:" + QString::number(m_myGrid.length()) + ">" + m_myGrid;
+    }
     myadif+=" <CALL:" + QString::number(hisCall.length()) + ">" + hisCall;
     myadif+=" <FREQ:" + QString::number(strDialFreq.length()) + ">" + strDialFreq;
     if (mode == "FT4") myadif+=" <MODE:4>MFSK <SUBMODE:"  + QString::number(mode.length()) + ">" + mode;
