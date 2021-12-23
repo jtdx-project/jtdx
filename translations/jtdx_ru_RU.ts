@@ -231,7 +231,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка ввода QTH квадрата: поддерживается длина 4/6/8/10 символов</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4506,7 +4506,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation>ранний запуск декодера</translation>
+        <translation>Ранний запуск декодера</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>

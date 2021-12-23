@@ -10,11 +10,11 @@ module ft8_mod1
   character(len=12) :: mycall,hiscall,mybcall,hisbcall
   real allfreq(200),windowc1(0:54),windowx(0:200),scqnr(24),smycnr(24),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt, &
        xdtincall(174)
-  integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58), &
+  integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58),     &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
-          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66), &
-          apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77), &
-          nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58), &
+          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66),  &
+          apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),         &
+          nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58),              &
           apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
@@ -44,7 +44,7 @@ module ft8_mod1
   data nmycnsaptypes(4,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx4 RRR,RR73
   data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,0,0,0,1,1,1/       ! Tx5 73
 ! Hound mode
-  data nhaptypes(0,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx6 CQ, possible in idle mode
+  data nhaptypes(0,1:14)/1,1,1,111,111,111,31,31,31,36,36,36,0,0/ ! Tx6 CQ, possible in idle mode
   data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
   data nhaptypes(2,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx2 none
   data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport

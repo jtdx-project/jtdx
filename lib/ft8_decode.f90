@@ -45,7 +45,8 @@ contains
     logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint, &
+               lnohiscall,lnomycall
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -118,6 +119,9 @@ contains
 !print *,lastrxmsg(1)%lstate,lastrxmsg(1)%xdt,lastrxmsg(1)%lastmsg
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
+
+    lnohiscall=.false.; if(len_trim(hiscall).lt.3) lnohiscall=.true.
+    lnomycall=.false.; if(len_trim(mycall).lt.3) lnomycall=.true.
 
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
 
@@ -228,7 +232,7 @@ contains
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                  tmpcqsig,tmpmycsig,tmpqsosig)
+                  tmpcqsig,tmpmycsig,tmpqsosig,lnohiscall,lnomycall)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
