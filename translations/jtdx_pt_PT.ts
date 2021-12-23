@@ -218,97 +218,102 @@ Format:
         <translation>Seleccionador de fonte do texto do descodificadorJTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="4896"/>
+        <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>Load Working Frequencies</source>
         <translation>Carregar frequências de trabalho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
-        <location filename="../Configuration.cpp" line="5456"/>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5461"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Ficheiro de frequências (*.qrg);;Todos ficheiros (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
-        <location filename="../Configuration.cpp" line="5458"/>
+        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5463"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5441"/>
+        <location filename="../Configuration.cpp" line="5446"/>
         <source>Replace Working Frequencies</source>
         <translation>Repor frequências de trabalho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5442"/>
+        <location filename="../Configuration.cpp" line="5447"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Tem certeza de que deseja descartar as frequências de trabalho actuais e substituí-las pelas carregadas?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5459"/>
         <source>Merge Working Frequencies</source>
         <translation>Juntar frequências de trabalho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
-        <location filename="../Configuration.cpp" line="5490"/>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5486"/>
+        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Not a valid frequencies file</source>
         <translation>Não é um ficheiro de frequência válido</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
+        <location filename="../Configuration.cpp" line="5486"/>
         <source>Incorrect file magic</source>
         <translation>Ficheiro mágico incorrecto</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5490"/>
+        <location filename="../Configuration.cpp" line="5495"/>
         <source>Version is too new</source>
         <translation>Versão muito nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Contents corrupt</source>
         <translation>Conteudo corrupto</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Save Working Frequencies</source>
         <translation>Salvar frequências de trabalho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5520"/>
+        <location filename="../Configuration.cpp" line="5525"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Apenas salva as frequências de trabalho escolhidas</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5527"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Tem certeza de que deseja salvar apenas as frequências de trabalho atualmente seleccionadas. Clique Não para salvar todos.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5549"/>
+        <location filename="../Configuration.cpp" line="5554"/>
         <source>Reset Working Frequencies</source>
         <translation>Reiniciar frequências de trabalho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5551"/>
+        <location filename="../Configuration.cpp" line="5556"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Tem a certeza  que deseja descartar as actuais frequências e substitui-las pelos valores por defeito?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5611"/>
+        <location filename="../Configuration.cpp" line="5616"/>
         <source>Save Directory</source>
         <translation>Guardar directório</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5627"/>
+        <location filename="../Configuration.cpp" line="5632"/>
         <source>Failed to open connection to rig</source>
         <translation>Falha na abertura da ligação ao rádio</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6017"/>
+        <location filename="../Configuration.cpp" line="6022"/>
         <source>Rig failure</source>
         <translation>Falha do rádio</translation>
     </message>
@@ -5304,7 +5309,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5376"/>
+        <location filename="../Configuration.cpp" line="5381"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5312,191 +5317,191 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5383"/>
         <source>Directory:</source>
         <translation>Directório:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5379"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>File &amp;name:</source>
         <translation>Nome do &amp;ficheiro:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5380"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>&amp;Open</source>
         <translation>&amp;Abrir</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5386"/>
         <source>&amp;Choose</source>
         <translation>&amp;Escolher</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>&amp;Save</source>
         <translation>&amp;Salvar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>All files (*)</source>
         <translation>Todos os ficheiros (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>New Folder</source>
         <translation>Nova pasta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Delete</source>
         <translation>Apagar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>&amp;Delete</source>
         <translation>&amp;Apagar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Rename</source>
         <translation>&amp;Renomear</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Show &amp;hidden files</source>
         <translation>Mostrar ficheiros &amp;ocultos</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Nova pasta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>Look in:</source>
         <translation>Ver em:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Files of type:</source>
         <translation>Ficheiros do tipo:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; está protegido.
 Mesmo assim quer apagar?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Quer mesmo apagar &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Could not delete directory.</source>
         <translation>Não foi possivel apagar o directório.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
         <translation>%1 Directório não encontrado. Por favor verificar o nome do directório correcto.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Recent Places</source>
         <translation>Locais recentes</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Back</source>
         <translation>Voltar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Go back</source>
         <translation>Voltar para trás</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Alt+Left</source>
         <translation>Alt+Esq</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Forward</source>
         <translation>Frente</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Go forward</source>
         <translation>Ir para a frente</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Alt+Right</source>
         <translation>Alt+Direito</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>Parent Directory</source>
         <translation>Directório parental</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Go to the parent directory</source>
         <translation>Ir para directório parental</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Alt+Up</source>
         <translation>Alt+Cima</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Create New Folder</source>
         <translation>Criar nova pasta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Create a New Folder</source>
         <translation>Criar uma nova pasta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>List View</source>
         <translation>Vista em lista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Change to list view mode</source>
         <translation>Mudar para modo de visita</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Detail View</source>
         <translation>Detalhe da vista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Change to detail view mode</source>
         <translation>Mudar para mode de vista em detalhe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Sidebar</source>
         <translation>Barra lateral</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>List of places and bookmarks</source>
         <translation>Lista de sitios e favoritos</translation>
     </message>
@@ -5504,22 +5509,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Size</source>
         <translation>Tamanho</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Date Modified</source>
         <translation>Data modificada</translation>
     </message>

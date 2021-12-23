@@ -230,97 +230,102 @@ Format:
         <translation>JTDX-dekodet tekstskrifttype vælger</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
-        <location filename="../Configuration.cpp" line="5458"/>
+        <location filename="../Configuration.cpp" line="4896"/>
+        <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5463"/>
         <source>Cancel</source>
         <translation>Fortryd</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>Load Working Frequencies</source>
         <translation>Indlæs arbejdsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5459"/>
         <source>Merge Working Frequencies</source>
         <translation>Fusioner arbejdsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
-        <location filename="../Configuration.cpp" line="5490"/>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5486"/>
+        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Not a valid frequencies file</source>
         <translation>Ikke en gyldig frekvensfil</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
+        <location filename="../Configuration.cpp" line="5486"/>
         <source>Incorrect file magic</source>
         <translation>Forkert file magic</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5490"/>
+        <location filename="../Configuration.cpp" line="5495"/>
         <source>Version is too new</source>
         <translation>Version er for ny</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Contents corrupt</source>
         <translation>Indhold er korrupteret</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Save Working Frequencies</source>
         <translation>Gem Arbejdsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5520"/>
+        <location filename="../Configuration.cpp" line="5525"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Gem kun valgte Arbejdsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5527"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Er du sikker på, at du kun vil gemme de arbejdsfrekvenser, der i øjeblikket er valgt? Klik på Nej for at gemme alle.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5549"/>
+        <location filename="../Configuration.cpp" line="5554"/>
         <source>Reset Working Frequencies</source>
         <translation>Reset Arbejdsfrekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5551"/>
+        <location filename="../Configuration.cpp" line="5556"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Er du sikker på, at du vil kassere dine nuværende arbejdsfrekvenser og erstatte dem med standardfrekvenser?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5611"/>
+        <location filename="../Configuration.cpp" line="5616"/>
         <source>Save Directory</source>
         <translation>Gemme Mappe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5627"/>
+        <location filename="../Configuration.cpp" line="5632"/>
         <source>Failed to open connection to rig</source>
         <translation>Kunne ikke åbne forbindelsen til radioen</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6017"/>
+        <location filename="../Configuration.cpp" line="6022"/>
         <source>Rig failure</source>
         <translation>Radio fejl</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
-        <location filename="../Configuration.cpp" line="5456"/>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5461"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvens filer (*.qrg);;Alle filer (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5441"/>
+        <location filename="../Configuration.cpp" line="5446"/>
         <source>Replace Working Frequencies</source>
         <translation>Erstat Arbejds Frekvenser</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5442"/>
+        <location filename="../Configuration.cpp" line="5447"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Er du sikker på, at du vil kassere dine aktuelle arbejdsfrekvenser og erstatte dem med de indlæste frekvenser?</translation>
     </message>
@@ -5319,7 +5324,7 @@ UDP server %2:%3</source>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5376"/>
+        <location filename="../Configuration.cpp" line="5381"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5327,99 +5332,99 @@ UDP server %2:%3</source>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5383"/>
         <source>Directory:</source>
         <translation>Bibliotek:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5379"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>File &amp;name:</source>
         <translation>Fil &amp;navn:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5380"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>&amp;Open</source>
         <translation>&amp;Åben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5386"/>
         <source>&amp;Choose</source>
         <translation>&amp;Vælg</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>&amp;Save</source>
         <translation>&amp;Gem</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>All files (*)</source>
         <translation>Alle filer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>New Folder</source>
         <translation>Ny mappe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Delete</source>
         <translation>Slet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>Cancel</source>
         <translation>Afbryd</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>&amp;Delete</source>
         <translation>&amp;Slet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Rename</source>
         <translation>&amp;Omdøb</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Show &amp;hidden files</source>
         <translation>Vis &amp;skjulte filer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Ny Mappe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>Look in:</source>
         <translation>Se i:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Files of type:</source>
         <translation>Fil Type:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; er skrivebeskyttet.
 Vil du slette den alligevel?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Er du sikker på du vil slette %1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Could not delete directory.</source>
         <translation>Biblioteket kunne ikke slettes.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5428,92 +5433,92 @@ Bibliotek ikke fundet.
 Kontroller, at det korrekte navn blev angivet.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Recent Places</source>
         <translation>Nylige Steder</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Back</source>
         <translation>Tilbage</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Go back</source>
         <translation>Gå tilbage</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Alt+Left</source>
         <translation>Alt+Venstre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Forward</source>
         <translation>Frem</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Go forward</source>
         <translation>Gå frem</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Alt+Right</source>
         <translation>Alt+Højre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>Parent Directory</source>
         <translation>Hovedbibliotek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Go to the parent directory</source>
         <translation>Gå til hovedbiblioteket</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Alt+Up</source>
         <translation>Alt+Op</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Create New Folder</source>
         <translation>Opret ny mappe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Create a New Folder</source>
         <translation>Opret en ny mappe</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>List View</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Change to list view mode</source>
         <translation>Skift til liste</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Detail View</source>
         <translation>Detaljer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Change to detail view mode</source>
         <translation>Skift til detaljer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Sidebar</source>
         <translation>Sidebar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>List of places and bookmarks</source>
         <translation>Liste over placeringerog bogmærker</translation>
     </message>
@@ -5521,22 +5526,22 @@ Kontroller, at det korrekte navn blev angivet.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Name</source>
         <translation>Navn</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Size</source>
         <translation>Størrelse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Date Modified</source>
         <translation>Dato ændret</translation>
     </message>

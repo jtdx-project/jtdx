@@ -228,97 +228,102 @@ Format:
         <translation>JTDXデコードテキストフォントの選択</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
-        <location filename="../Configuration.cpp" line="5458"/>
+        <location filename="../Configuration.cpp" line="4896"/>
+        <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5463"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
-        <location filename="../Configuration.cpp" line="5456"/>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5461"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>Load Working Frequencies</source>
         <translation>周波数リストを読み込み</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5441"/>
+        <location filename="../Configuration.cpp" line="5446"/>
         <source>Replace Working Frequencies</source>
         <translation>周波数リストを置き換え</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5442"/>
+        <location filename="../Configuration.cpp" line="5447"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>現在の周波数リストを破棄して、ロードした周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5459"/>
         <source>Merge Working Frequencies</source>
         <translation>周波数リストを結合します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
-        <location filename="../Configuration.cpp" line="5490"/>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5486"/>
+        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Not a valid frequencies file</source>
         <translation>有効な周波数リストではありません</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5481"/>
+        <location filename="../Configuration.cpp" line="5486"/>
         <source>Incorrect file magic</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5490"/>
+        <location filename="../Configuration.cpp" line="5495"/>
         <source>Version is too new</source>
         <translation>バージョンが新しすぎます</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5500"/>
+        <location filename="../Configuration.cpp" line="5505"/>
         <source>Contents corrupt</source>
         <translation>内容が破損しています</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5510"/>
+        <location filename="../Configuration.cpp" line="5515"/>
         <source>Save Working Frequencies</source>
         <translation>周波数リストを保存します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5520"/>
+        <location filename="../Configuration.cpp" line="5525"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>選定した周波数だけ保存します</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5527"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>現在選択されている周波数のみを保存してもよろしいですか？すべて保存するには、[いいえ]をクリックします。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5549"/>
+        <location filename="../Configuration.cpp" line="5554"/>
         <source>Reset Working Frequencies</source>
         <translation>使用周波数のリセット</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5551"/>
+        <location filename="../Configuration.cpp" line="5556"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>現在の周波数リストを破棄して、デフォルトの周波数リストに置き換えてもよろしいですか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5611"/>
+        <location filename="../Configuration.cpp" line="5616"/>
         <source>Save Directory</source>
         <translation>ディレクトリを保存</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5627"/>
+        <location filename="../Configuration.cpp" line="5632"/>
         <source>Failed to open connection to rig</source>
         <translation>リグへの接続を開けませんでした</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6017"/>
+        <location filename="../Configuration.cpp" line="6022"/>
         <source>Rig failure</source>
         <translation>リグに障害あり</translation>
     </message>
@@ -5289,7 +5294,7 @@ UDP server %2:%3</source>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5376"/>
+        <location filename="../Configuration.cpp" line="5381"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5297,184 +5302,184 @@ UDP server %2:%3</source>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5378"/>
+        <location filename="../Configuration.cpp" line="5383"/>
         <source>Directory:</source>
         <translation>ディレクトリ:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5379"/>
+        <location filename="../Configuration.cpp" line="5384"/>
         <source>File &amp;name:</source>
         <translation>ファイル名:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5380"/>
+        <location filename="../Configuration.cpp" line="5385"/>
         <source>&amp;Open</source>
         <translation>開く</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5386"/>
         <source>&amp;Choose</source>
         <translation>選択する</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5382"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>&amp;Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>All files (*)</source>
         <translation>すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>New Folder</source>
         <translation>新しいフォルダー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>&amp;Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Rename</source>
         <translation>リネーム</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Show &amp;hidden files</source>
         <translation>隠しのファイルを表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>&amp;New Folder</source>
         <translation>新しいフォルダー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>Look in:</source>
         <translation>中をのぞく:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Files of type:</source>
         <translation>ファイルの形式:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Back</source>
         <translation>後ろ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Go back</source>
         <translation>戻る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Forward</source>
         <translation>前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Go forward</source>
         <translation>進む</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>Parent Directory</source>
         <translation>親ディレクトリ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Go to the parent directory</source>
         <translation>親ディレクトリへ進む</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Create New Folder</source>
         <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Create a New Folder</source>
         <translation>新しいフォルダーを作る</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>List View</source>
         <translation>リスト表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Change to list view mode</source>
         <translation>リスト表示モードに変更</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Detail View</source>
         <translation>詳細表示</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Change to detail view mode</source>
         <translation>詳細表示モードに変更</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Sidebar</source>
         <translation>サイドバー</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>List of places and bookmarks</source>
         <translation>場所とブックマークのリスト</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1 &apos;は書き込み保護されています。
 それを削除しますか？</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>&apos;%1&apos;を削除していいですか?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Could not delete directory.</source>
         <translation>ディレクトリは削除できません。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5483,7 +5488,7 @@ Please verify the correct directory name was given.</source>
 ディレクトリ名が正しいか確認してください。</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Recent Places</source>
         <translation>最近の場所</translation>
     </message>
@@ -5491,22 +5496,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Name</source>
         <translation>名前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Size</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Type</source>
         <translation>タイプ</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Date Modified</source>
         <translation>日付が変更されました</translation>
     </message>

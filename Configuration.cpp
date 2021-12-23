@@ -4892,7 +4892,12 @@ void Configuration::impl::on_grid_line_edit_textChanged ()
 void Configuration::impl::on_grid_line_edit_editingFinished ()
 {
   auto text = ui_->grid_line_edit->text (); auto grid_size = text.length();
-  if (grid_size == 9 ||  grid_size == 7 ||  grid_size == 5 || grid_size == 3 || grid_size == 1) ui_->grid_line_edit->setText (text.left(grid_size - 1));
+  if (grid_size == 3 || grid_size == 2 || grid_size == 1) {
+    JTDXMessageBox::critical_message (this, "JTDX", tr ("Enter Grid error: 4/6/8/10 char grid will be accepted"));
+    ui_->grid_line_edit->setFocus();
+    ui_->grid_line_edit->clear ();
+  }
+  else if (grid_size == 9 ||  grid_size == 7 ||  grid_size == 5) ui_->grid_line_edit->setText (text.left(grid_size - 1));
 }
 void Configuration::impl::on_content_line_edit_textChanged (QString const& text)
 {
