@@ -34,7 +34,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
       hiscallprev=hiscall
 ! Encode a dummy standard message: i3=1, 28 1 28 1 1 15
       if(len_trim(hiscall).gt.2) then
-        if(lhiscallstd) then; msg='CQ '//trim(hiscall)//' '//trim(hisgrid4)
+        if(lhiscallstd .and. len_trim(hisgrid4).eq.4) then; msg='CQ '//trim(hiscall)//' '//trim(hisgrid4)
         else; msg='CQ '//trim(hiscall)
         endif
 

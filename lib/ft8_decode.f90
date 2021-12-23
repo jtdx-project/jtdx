@@ -29,7 +29,7 @@ contains
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,  &
                          nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso, &
-                         lqsomsgdcd
+                         lqsomsgdcd,hisgrid4
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -46,7 +46,7 @@ contains
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
     logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint, &
-               lnohiscall,lnomycall
+               lnohiscall,lnomycall,lnohisgrid
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -122,6 +122,7 @@ contains
 
     lnohiscall=.false.; if(len_trim(hiscall).lt.3) lnohiscall=.true.
     lnomycall=.false.; if(len_trim(mycall).lt.3) lnomycall=.true.
+    lnohisgrid=.false.; if(len_trim(hisgrid4).ne.4) lnohisgrid=.true.
 
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
 
@@ -232,7 +233,7 @@ contains
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                  tmpcqsig,tmpmycsig,tmpqsosig,lnohiscall,lnomycall)
+                  tmpcqsig,tmpmycsig,tmpqsosig,lnohiscall,lnomycall,lnohisgrid)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)
