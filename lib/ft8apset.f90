@@ -1,8 +1,9 @@
 subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
 
   use packjt77
-  use ft8_mod1, only : apsym,mycall,hiscall,apsymsp,lhound,apsymdxns1,apsymdxns2,mybcall,hisbcall,apcqsym,hisgrid4, &
-                       apsymdxnsrr73,apsymdxns73,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd
+  use ft8_mod1, only : apsym,mycall,hiscall,apsymsp,lhound,apsymdxns1,apsymdxnsrrr,mybcall,hisbcall,apcqsym,hisgrid4,     &
+                       apsymdxnsrr73,apsymdxns73,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,apsymdxnsr73, &
+                       apsymdxns732
   character*77 c77
   character*37 msg,msgchk
   character*12 hiscallt,mycallprev,hiscallprev
@@ -158,13 +159,29 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
       read(c77,'(58i1)',err=11) apsymdxns1(1:58)
       apsymdxns1=2*apsymdxns1-1
 
-      msg='<'//trim(mycall)//'> '//trim(hiscall)//' RR73'
+      msg='<'//trim(mycall)//'> '//trim(hiscall)//' RRR'
       call pack77(msg,i3,n3,c77,0)
       call unpack77(c77,1,msgchk,unpk77_success,25)
 !read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
       if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 12
-      read(c77,'(58i1)',err=12) apsymdxns2(1:58)
-      apsymdxns2=2*apsymdxns2-1
+      read(c77,'(77i1)',err=12) apsymdxnsrrr(1:77)
+      apsymdxnsrrr=2*apsymdxnsrrr-1
+
+      msg='<'//trim(mycall)//'> '//trim(hiscall)//' RR73'
+      call pack77(msg,i3,n3,c77,0)
+      call unpack77(c77,1,msgchk,unpk77_success,25)
+!read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
+      if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 13
+      read(c77,'(77i1)',err=13) apsymdxnsr73(1:77)
+      apsymdxnsr73=2*apsymdxnsr73-1
+
+      msg='<'//trim(mycall)//'> '//trim(hiscall)//' 73'
+      call pack77(msg,i3,n3,c77,0)
+      call unpack77(c77,1,msgchk,unpk77_success,25)
+!read(c77(75:77),'(b3)') k3; print *,'i3 =',k3; print *,msgchk
+      if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 14
+      read(c77,'(77i1)',err=14) apsymdxns732(1:77)
+      apsymdxns732=2*apsymdxns732-1
     endif
 
   endif
@@ -182,7 +199,9 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
 9 apsym=0; apsym(1)=99; apsym(30)=99; go to 32
 10 apsymsp=0; apsymsp(1)=99; apsymsp(30)=99; go to 32
 11 apsymdxns1=0; apsymdxns1(1)=99; apsymdxns1(30)=99; go to 32
-12 apsymdxns2=0; apsymdxns2(1)=99; apsymdxns2(30)=99; go to 32
+12 apsymdxnsrrr=0; apsymdxnsrrr(1)=99; apsymdxnsrrr(30)=99; go to 32
+13 apsymdxnsr73=0; apsymdxnsr73(1)=99; apsymdxnsr73(30)=99; go to 32
+14 apsymdxns732=0; apsymdxns732(1)=99; apsymdxns732(30)=99; go to 32
 
 32 continue
 

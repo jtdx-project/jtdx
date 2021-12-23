@@ -13,9 +13,10 @@ module ft8_mod1
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58),     &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,12),icos7(0:6),graymap(0:7),nappasses(0:5), &
           nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66),  &
-          apsymdxns1(58),apsymdxns2(58),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),         &
+          apsymdxns1(58),apsymdxnsrrr(77),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),       &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58),              &
-          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58)
+          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58),     &
+          apsymdxnsr73(77),apsymdxns732(77)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1

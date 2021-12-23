@@ -9,10 +9,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,mrrr,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap,                   &
                        oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldteven,calldtodd,lqsomsgdcd,mycalllen1,              &
                        msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,scqnr,smycnr,mycall,hiscall,lhound,apsymsp,      &
-                       ndxnsaptypes,apsymdxns1,apsymdxns2,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
+                       ndxnsaptypes,apsymdxns1,apsymdxnsrrr,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,        &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,     &
-                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd
+                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd, &
+                       apsymdxnsr73,apsymdxns732
+
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
   character*37 msgsrcvd(130)
@@ -931,14 +933,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
 
               apmask=0
-              if(iaptype.eq.1) then ! CQ
+              if(iaptype.eq.1) then ! CQ ??? ???
                 apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
-              else if(iaptype.eq.11) then ! MyCall <DxCall> ???  ! report rreport
+              else if(iaptype.eq.11) then ! MyCall <DxCall> ???  ! report rreport type 1 msg
                 apmask(1:58)=1; llrz(1:58)=apmag*apsymdxns1; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
-              else if(iaptype.eq.12 .or. iaptype.eq.13 .or. iaptype.eq.14) then  ! i3=4, to rework mrrr m73 mrr73
-                apmask(1:77)=1; llrz(1:58)=apmag*apsymdxns2 ! <MyCall> DxCall RRR|73|RR73
-                if(iaptype.eq.12) llrz(59:77)=apmag*mrrr; if(iaptype.eq.13) llrz(59:77)=apmag*m73
-                if(iaptype.eq.14) llrz(59:77)=apmag*mrr73
+              else if(iaptype.eq.12) then  ! type 4 <MyCall> DxCall RRR
+                apmask(1:77)=1; llrz(1:77)=apmag*apsymdxnsrrr
+              else if(iaptype.eq.13) then  ! type 4 <MyCall> DxCall 73
+                apmask(1:77)=1; llrz(1:77)=apmag*apsymdxns732
+              else if(iaptype.eq.14) then  ! type 4 <MyCall> DxCall RR73
+                apmask(1:77)=1; llrz(1:77)=apmag*apsymdxnsr73
 ! <WA9XYZ> PJ4/KA1ABC RR73             13 58 1 2            74   Nonstandard call
 ! <WA9XYZ> PJ4/KA1ABC 73               13 58 1 2            74   Nonstandard call
               else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
@@ -1008,6 +1012,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 else if(isubp2.eq.9) then; llrz=llrb
                 else if(isubp2.eq.10) then; llrz=llra
                 endif
+! to check 3 tail bits
                 apmask(1:58)=1; llrz(1:58)=apmag*apsymmyns2; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
               else if(iaptype.eq.43) then ! MyCall,<DXCall>,73
                 if(isubp2.eq.14) then; llrz=llrc
@@ -1026,8 +1031,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             endif
 
           else if(lhound) then
-            iaptype=nhaptypes(nQSOProgress,isubp2-4) ! need to add scenario where user generated messages with no signal transmission
-            if(iaptype.eq.0) cycle
+            iaptype=nhaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
             if(lnomycall .and. iaptype.gt.1 .and. iaptype.lt.31) cycle ! skip AP if mycall is missed in config
             if(lnohiscall .and. (iaptype.eq.21 .or. iaptype.eq.23 .or. iaptype.eq.31 .or. iaptype.eq.36)) cycle  ! No dxcall
             if(.not.lnohiscall .and. (iaptype.eq.1 .or. iaptype.eq.111)) cycle ! DXCall is known, skip empty CQ masks
@@ -1590,7 +1594,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
 
 !print *,'iaptype',iaptype
-!print *,i3,n3
+!print *,i3,msg37
 
 ! protocol violations
 ! 713STG 869TK NO05  i3=2 n3=5, false decode, as per protocol type2 shall be /P message
