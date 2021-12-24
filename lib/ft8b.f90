@@ -960,15 +960,36 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
             else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty calls or compound/nonstandard calls
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
-              if(lqsomsgdcd .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! QSO message already decoded
-              if(iaptype.gt.1) cycle; if(isubp2.gt.4) llrz=llrc ! temporary solution, need to add AP masks here
+              if(iaptype.gt.1 .and. iaptype.lt.31) cycle
+              if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
 
               apmask=0
               if(iaptype.eq.1) then ! CQ ??? ???
+                if(isubp2.eq.5 .or. isubp2.eq.8 .or. isubp2.eq.11 .or. isubp2.eq.18) then; llrz=llrc
+                else if(isubp2.eq.6 .or. isubp2.eq.9 .or. isubp2.eq.12) then; llrz=llrb
+                else if(isubp2.eq.7 .or. isubp2.eq.10 .or. isubp2.eq.13) then; llrz=llra
+                endif
                 apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
                 llrz(77)=apmag*(+1)
+! nonstandard DXCall search masks below are for monitoring purpose in idle mode, QSO is not possible
+! wideband searching being used by default
+              else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
+                if(isubp2.eq.8 .or. isubp2.eq.11) then; llrz=llrb
+                else if(isubp2.eq.9) then; llrz=llra
+                else if(isubp2.eq.15) then; llrz=llrc
+                endif
+                apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
+              else if(iaptype.eq.35) then ! ??? DxCall 73 ! full compound or nonstandard
+                llrz=llrc
+                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxns73(14:77)
+              else if(iaptype.eq.36) then ! ??? DxCall RR73 ! full compound or nonstandard
+                if(isubp2.eq.16) then; llrz=llrc
+                else if(isubp2.eq.12) then; llrz=llrb
+                else if(isubp2.eq.11) then; llrz=llra
+                endif
+                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
               endif
-! need to add DXCall searching here for scenario with empty mycall, for monitoring purpose only
+
             else if(.not.lmycallstd .and. (lhiscallstd .or. lnohiscall)) then
               iaptype=nmycnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
