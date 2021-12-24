@@ -76,6 +76,7 @@ QString DecodedText::CQersCall(QString& grid,QString& tyyp)
   if (tyyp == "CQ" || tyyp == "LP" || tyyp == "POTA" || tyyp == "SOTA" || tyyp == "IOTA") tyyp = "";
   else if (tyyp == "908") tyyp = "JA";
   else if (tyyp == "ASIA") tyyp = "AS";
+  else if (tyyp == "USA") tyyp = "K";
   if (tyyp.size() > 2) return "";
   else return match.captured ("callsign");
 }
