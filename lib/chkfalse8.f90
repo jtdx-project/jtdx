@@ -255,10 +255,10 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! i3=3 n3=1 '8Z7TLB JQ0OTZ 589 02'
 ! i3=0 n3=3 'CE3NTP 4C2DWN 5E ONE'
   if(((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) .or. (i3.eq.0 .and. n3.eq.3)) then
-    if(msg37(1:2).eq.'<.') return
+    if(msg37(1:2).eq.'<.') go to 2
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(ispc1.gt.3 .and. ispc2.gt.7) then
-      call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) return ! exception to incoming calls
+      call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) go to 2 ! exception to incoming calls
       call_b=msg37(ispc1+1:ispc2-1)
       include 'call_q.f90'
       falsedec=.false.
@@ -267,11 +267,13 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     endif
   endif
 
+2 continue
+
   if(i3.eq.4) then
     ibrace1=index(msg37,'<.')
     if(index(msg37,'<.').gt.4) then
       callsign=''; callsign=msg37(1:ibrace1-2); islash=index(callsign,'/'); nlencall=len_trim(callsign)
-      if(nlencall.lt.1) return
+      if(nlencall.lt.1) go to 4
 ! i3=4 n3=2 '6397X6JN637 <...> RRR' 
 ! 'R 5QCDOIY9 <...> RR73'
       if(index(trim(callsign),' ').gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':')) then
@@ -335,6 +337,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! '<...> T99LMF GC41' need to understand how to check such message
   endif
 
+4 continue
+
   if(i3.eq.3 .and. msg37(1:3).eq.'TU;') then 
 !i3=3 n3=3 'TU; QV4UPP 632TGU 529'
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1 
@@ -364,29 +368,27 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
   if(iaptype.eq.2) then ! message starts with user's callsign
 ! 'UA3ALE A70DDN/R OF23'
+! 173630 -23  0.3  730 ~ ES6DO NH4CXV MA87         *Midway Is.
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     callsign=''; grid=''
     callsign=msg37(ispc1+1:ispc2-1)
-    islash=index(callsign,'/')
-    if(islash.gt.0) then
+    islash=index(callsign,'/R')
+    if(islash.gt.3) then
       calltmp='            '; calltmp=callsign(1:islash-1); callsign=calltmp
     endif
     include 'callsign_q.f90'
     if(callsign.ne.hiscall) then
       falsedec=.false.
-      islash=index(msg37,'/R ')
-      if(islash.gt.7) then
-        ispc3=index(msg37((ispc2+1):),' ')+ispc2
-        if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
-           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
-           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
-          grid=msg37(ispc2+1:ispc3-1)
-          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
-        endif
+      ispc3=index(msg37((ispc2+1):),' ')+ispc2
+      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+        grid=msg37(ispc2+1:ispc3-1)
+        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+        if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
       endif
-      call chkflscall('MYCALL      ',callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+!      call chkflscall('MYCALL      ',callsign,falsedec) ! too high risk to eliminate correct decode if callsign missed in ALLCALL7
+!      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
     endif
   endif
 

@@ -35,7 +35,7 @@ module ft8_mod1
   data naptypes(1,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx1
   data naptypes(2,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx2
   data naptypes(3,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx3
-  data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4
+  data naptypes(4,1:12)/3,3,3,4,5,6,2,2,2,31,36,35/ ! Tx4
   data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5
 ! Hound OFF, MyCall is non-standard, DXCall is standard or empty
   data nmycnsaptypes(0,1:18)/40,40,40,0,0,0,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx6 CQ

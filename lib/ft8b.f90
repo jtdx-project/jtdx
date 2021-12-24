@@ -732,7 +732,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !  data naptypes(1,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx1 Grid
 !  data naptypes(2,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx2 Report
 !  data naptypes(3,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx3 RRreport
-!  data naptypes(4,1:12)/3,3,3,4,5,6,0,0,0,31,36,35/ ! Tx4 RRR,RR73
+!  data naptypes(4,1:12)/3,3,3,4,5,6,2,2,2,31,36,35/ ! Tx4 RRR,RR73
 !  data naptypes(5,1:12)/3,3,3,2,2,2,1,1,1,31,36,35/ ! Tx5 73
 
 ! iaptype standard DxCall tracking, also valid in Hound mode
@@ -837,7 +837,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(lmycallstd .and. (lhiscallstd .or. lnohiscall)) then
               iaptype=naptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if(lqsomsgdcd .and. iaptype.ge.3 .and. iaptype.lt.31) cycle ! QSO message already decoded
-              if(.not.lapmyc .and. iaptype.eq.2) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
+              if(iaptype.eq.2) then
+                if(.not.lapmyc) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
+                if(nQSOProgress.ne.0 .and. nmic.lt.2) cycle ! reduce CPU load at QSO
+              endif
               if(stophint .and. iaptype.gt.2 .and. iaptype.lt.31) cycle
               if(lft8sdec .and. iaptype.ge.3 .and. iaptype.lt.31) cycle !already decoded
               if(iaptype.gt.2 .and. lnohiscall) cycle ! no DXCall
@@ -1325,8 +1328,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. &
            ((iaptype.eq.1 .or. iaptype.eq.4) .and. xsnr.lt.-18.5)) then
-      if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
-         (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
+      if(iaptype.ne.2) then
+        if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
+           (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
+      endif
       if(i3bit.eq.1) then; call chkspecial8(msg37,msg37_2,nbadcrc)
       else; call chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
       endif
