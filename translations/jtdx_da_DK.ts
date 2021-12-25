@@ -232,7 +232,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Enter Grid error: 4/6/8/10 karakterer accepteres</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4498,7 +4498,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidlig start af Dekoder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>

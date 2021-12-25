@@ -230,7 +230,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入網格錯誤: 祗接受4/6/8/10字元網格</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4495,7 +4495,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>提前啟動解碼</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
