@@ -230,7 +230,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci l&apos;errore di griglia: è consentita solo la griglia 4/6/8/10 </translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4500,7 +4500,7 @@ predefiniti. L&apos;elenco può essere gestito in Impostazioni (F2).</translatio
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>avvio anticipato del decoder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
