@@ -2639,7 +2639,7 @@ endif
 
 ! Fiji, Conway Reef, Rotuma Island 3D2
       else if(callsign(1:3).eq.'3D2') then
-        if((grid(1:2).eq.'RH' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'7'.and.grid(4:4).lt.':').or. &
+        if((grid(1:2).eq.'RH' .and. grid(3:3).gt.'7' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/'.and.grid(4:4).lt.'4').or. &
            (grid(1:3).eq.'AH0' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5') .or. &
            grid(1:4).eq.'RG78' .or. grid(1:4).eq.'AG08' .or. grid(1:4).eq.'AG09') lgvalid=.true.
 

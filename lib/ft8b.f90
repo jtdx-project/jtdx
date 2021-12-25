@@ -1348,8 +1348,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         endif
       endif
     else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. &
-           ((iaptype.eq.1 .or. iaptype.eq.4) .and. xsnr.lt.-18.5) .or. (iaptype.eq.2 .and. xsnr.lt.-14.5)) then
-      if(iaptype.ne.2) then
+           (iaptype.eq.1 .and. xsnr.lt.-18.5) .or. iaptype.eq.2 .or. iaptype.eq.3) then
+      if(iaptype.gt.3 .and. iaptype.lt.7) go to 4 ! skip, nothing to check
+      if(iaptype.ne.2 .and. iaptype.ne.3) then
         if((mybcall.ne."            " .and. index(msg37,mybcall).gt.0) .or. &
            (hisbcall.ne."            " .and. index(msg37,hisbcall).gt.0)) go to 256
       endif
@@ -1358,6 +1359,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
       if(nbadcrc.eq.1) then; msg37=''; return; endif
     endif
+    if(iaptype.eq.2 .or. iaptype.eq.3) go to 4 ! already checked
+
 ! still some false decodes can come around the thresholds, will focus on ' R ' in the message
 ! i3=2 'JC6OFB VF3BXC/P R GQ99'
 !print *,i3,n3,msg37
@@ -1486,11 +1489,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       msg37=''; msg37='DE '//trim(call_b)//' TU'
     endif
 
-! EA1AHY M83WN/R R QA79   *
 ! MS8QQS UX3QBS/P R NG63  i3=2 n3=7
 ! 3B4NDC/R C40AUZ/R R IR83  i3=1 n3=7
-! EA1AHY PW1BSL R GR47 i3=1 n3=3 mycall
-! EA1AHY PW1BSL R GR47 *  i3=1 n3=1 mycall
     if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
       ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
       if(msg37(ispc2:ispc3).eq.' R ' .and. ispc1.gt.3) then
@@ -1606,26 +1606,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   call chkflscall('CQ          ',call_b,falsedec)
                   if(falsedec) then; nbadcrc=1; msg37=''; return; endif
                 endif
-              endif
-            endif
-          endif
-        endif
-      endif
-    endif
-
-! -10 0.2 2106 ~ ES6DO M11VSM/R FE69       *England ! false FT8 AP type 2 decode
-    if(iaptype.eq.2) then ! checking high SNR signals
-      if(index(msg37,'/R').gt.10) then
-        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-        if(ispc2.gt.12) then
-          ispc3=index(msg37((ispc2+1):),' ')+ispc2
-          if(msg37((ispc2-2):(ispc2-1)).eq.'/R') then
-            if((ispc3-ispc2).eq.5) then
-              grid=msg37(ispc2+1:ispc3-1)
-              if(grid(2:2).gt."@" .and. grid(2:2).lt."S") then
-                call_b=''; call_b=msg37((ispc1+1):(ispc2-3))
-                call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
-                if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
               endif
             endif
           endif
