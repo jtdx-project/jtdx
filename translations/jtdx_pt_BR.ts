@@ -220,7 +220,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro ao inserir Grid: 4/6/8/10 caracteres serão aceitos no Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5428"/>
@@ -4483,7 +4483,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>início precoce do decodificador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
