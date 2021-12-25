@@ -234,7 +234,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Introdueix l&apos;error del Locator: s&apos;acceptarà un locator de 4/6/8/10 caràcters</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5428"/>
@@ -4503,7 +4503,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>inici d&apos;hora del descodificador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
@@ -6364,7 +6364,7 @@ Error (%2): %3</translation>
     <message>
         <location filename="../Configuration.ui" line="118"/>
         <source>Maidenhead locator (only the first four characters are required).</source>
-        <translation>Maidenhead locator (només es requereixen els primers quatre caràcters).</translation>
+        <translation>Locator Maidenhead (només es requereixen els quatre primers caràcters).</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="125"/>
@@ -8081,7 +8081,7 @@ Fes clic dret per inserir i eliminar opcions.</translation>
         <location filename="../Configuration.ui" line="4867"/>
         <location filename="../Configuration.ui" line="4886"/>
         <source>K1ABC</source>
-        <translation>EA3RDG</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="3862"/>
