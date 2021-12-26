@@ -340,11 +340,28 @@ function(gp_resolve_item context item exepath dirs resolved_item_var)
   else()
     set(rpaths "")
   endif()
+##  message (STATUS "'${context}' '${item}' '${exepath}' '${dirs}' '${resolved_item_var}' '${rpaths}'")
 
   # Is it already resolved?
   #
   if(IS_ABSOLUTE "${resolved_item}" AND EXISTS "${resolved_item}")
     set(resolved 1)
+  endif()
+
+  if(NOT resolved AND APPLE)
+    if(item MATCHES "^@rpath")
+      #
+      # @rpath references are relative to the paths built into the binaries with -rpath
+      # We handle this case like we do for other Unixes
+      #
+      string(REPLACE "@rpath/" "/opt/local/lib/gcc-devel/" norpath_item "${item}")
+      set(resolved_item "${norpath_item}")
+      if(IS_ABSOLUTE "${norpath_item}" AND EXISTS "${resolved_item}")
+        set(resolved 1)
+      else()
+        set(resolved_item "${item}")
+      endif()
+    endif()
   endif()
 
   if(NOT resolved)

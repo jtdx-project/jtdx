@@ -230,7 +230,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrez l&apos;erreur de grille : La grille char 4/6/8/10 sera acceptée</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5428"/>
@@ -971,7 +971,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Clipperton Is.</source>
-        <translation type="unfinished">ile de Clipperton</translation>
+        <translation>Île Clipperton</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
@@ -1616,7 +1616,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="289"/>
         <source>Iceland</source>
-        <translation>Icelande</translation>
+        <translation>Islande</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="290"/>
@@ -2061,7 +2061,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>S. Africa</source>
-        <translation>Afrique de Sud</translation>
+        <translation>Afrique du Sud</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="379"/>
@@ -4503,7 +4503,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>démarrage anticipé du décodeur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>

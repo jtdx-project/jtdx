@@ -231,7 +231,7 @@ Formato:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el error de locator: Se aceptará el locator de 4/6/8/10 caracteres</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4502,7 +4502,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>inicio anticipado del decodificador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
@@ -7315,7 +7315,7 @@ y campos DX Grid cuando se envía un mensaje de texto 73 o libre.</translation>
     <message>
         <location filename="../Configuration.ui" line="240"/>
         <source>Use curr&amp;ent grid</source>
-        <translation>Usar locator actual</translation>
+        <translation>Usar &amp;el locator actual</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="353"/>
