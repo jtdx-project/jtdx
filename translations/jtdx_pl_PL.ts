@@ -2497,267 +2497,267 @@ Błąd: %2 - %3</translation>
     <name>HamlibTransceiver</name>
     <message>
         <location filename="../HamlibTransceiver.cpp" line="214"/>
-        <location filename="../HamlibTransceiver.cpp" line="295"/>
+        <location filename="../HamlibTransceiver.cpp" line="299"/>
         <source>Hamlib initialisation error</source>
         <translation>Błąd inicjowania Hamlib</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="255"/>
+        <location filename="../HamlibTransceiver.cpp" line="259"/>
         <source>Command completed successfully</source>
         <translation>Polecenie wykonane prawidłowo</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="256"/>
+        <location filename="../HamlibTransceiver.cpp" line="260"/>
         <source>Invalid parameter</source>
         <translation>Niepoprawny parametr</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="257"/>
+        <location filename="../HamlibTransceiver.cpp" line="261"/>
         <source>Invalid configuration</source>
         <translation>Niepoprawna konfiguracja</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="258"/>
+        <location filename="../HamlibTransceiver.cpp" line="262"/>
         <source>Memory shortage</source>
         <translation>Zbyt mało pamięci</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="259"/>
+        <location filename="../HamlibTransceiver.cpp" line="263"/>
         <source>Feature not implemented</source>
         <translation>Niezaimplementowana funkcjonalność</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="260"/>
+        <location filename="../HamlibTransceiver.cpp" line="264"/>
         <source>Communication timed out</source>
         <translation>Przekroczony limit czasu komunikacji</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="261"/>
+        <location filename="../HamlibTransceiver.cpp" line="265"/>
         <source>IO error</source>
         <translation>Błąd wejścia/wyjścia (IO)</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="262"/>
+        <location filename="../HamlibTransceiver.cpp" line="266"/>
         <source>Internal Hamlib error</source>
         <translation>Błąd wewnętrzny Hamlib</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="263"/>
+        <location filename="../HamlibTransceiver.cpp" line="267"/>
         <source>Protocol error</source>
         <translation>Błąd protokołu</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="264"/>
+        <location filename="../HamlibTransceiver.cpp" line="268"/>
         <source>Command rejected by the rig</source>
         <translation>Polecenie odrzucone przez TRCVR</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="265"/>
+        <location filename="../HamlibTransceiver.cpp" line="269"/>
         <source>Command performed, but arg truncated, result not guaranteed</source>
         <translation>Polecenie wykonane, ale skrócone, rezultat niepewny</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="266"/>
+        <location filename="../HamlibTransceiver.cpp" line="270"/>
         <source>Feature not available</source>
         <translation>Niedostępna funkcjonalność</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="267"/>
+        <location filename="../HamlibTransceiver.cpp" line="271"/>
         <source>Target VFO unaccessible</source>
         <translation>Nieosiągalne docelowe VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="268"/>
+        <location filename="../HamlibTransceiver.cpp" line="272"/>
         <source>Communication bus error</source>
         <translation>Błąd szyny komunikacyjnej</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="269"/>
+        <location filename="../HamlibTransceiver.cpp" line="273"/>
         <source>Communication bus collision</source>
         <translation>Kolizja szyny komunikacyjnej</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="270"/>
+        <location filename="../HamlibTransceiver.cpp" line="274"/>
         <source>NULL RIG handle or invalid pointer parameter</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="271"/>
+        <location filename="../HamlibTransceiver.cpp" line="275"/>
         <source>Invalid VFO</source>
         <translation>Niewłaściwe VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="272"/>
+        <location filename="../HamlibTransceiver.cpp" line="276"/>
         <source>Argument out of domain of func</source>
         <translation>Argument poza dziedziną funkcji</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="322"/>
+        <location filename="../HamlibTransceiver.cpp" line="433"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
         <translation>Błąd pliku ustawień Hamlib: %1 w offsecie znaku %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="328"/>
+        <location filename="../HamlibTransceiver.cpp" line="439"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
         <translation>Błąd pliku ustawień Hamlib: najwyższy poziom musi być obiektem JSON</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="340"/>
+        <location filename="../HamlibTransceiver.cpp" line="451"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
         <translation>Błąd pliku ustawień Hamlib: konfiguracja musi być obiektem JSON</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="404"/>
+        <location filename="../HamlibTransceiver.cpp" line="359"/>
         <source>Unsupported CAT type</source>
         <translation>Nieobsługiwany typ CAT</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="461"/>
+        <location filename="../HamlibTransceiver.cpp" line="475"/>
         <source>Hamlib error: %1 while %2</source>
         <translation>Błąd Hamlib: %1 podczas %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="478"/>
+        <location filename="../HamlibTransceiver.cpp" line="492"/>
         <source>opening connection to rig</source>
         <translation>otwieranie połączenia do TRCVR</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="540"/>
+        <location filename="../HamlibTransceiver.cpp" line="554"/>
         <source>getting current frequency</source>
         <translation>pobieranie aktualnej częstotliwości</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="549"/>
+        <location filename="../HamlibTransceiver.cpp" line="563"/>
         <source>getting current mode</source>
         <translation>pobieranie aktualnej modulacji</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="598"/>
-        <location filename="../HamlibTransceiver.cpp" line="633"/>
+        <location filename="../HamlibTransceiver.cpp" line="612"/>
+        <location filename="../HamlibTransceiver.cpp" line="647"/>
         <source>exchanging VFOs</source>
         <translation>zamiana VFOs</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="606"/>
-        <location filename="../HamlibTransceiver.cpp" line="1162"/>
+        <location filename="../HamlibTransceiver.cpp" line="620"/>
+        <location filename="../HamlibTransceiver.cpp" line="1176"/>
         <source>getting other VFO frequency</source>
         <translation>pobieranie częstotliwości drugiego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="615"/>
+        <location filename="../HamlibTransceiver.cpp" line="629"/>
         <source>getting other VFO mode</source>
         <translation>pobieranie modulacji drugiego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="643"/>
+        <location filename="../HamlibTransceiver.cpp" line="657"/>
         <source>setting current VFO</source>
         <translation>ustawianie aktuanego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="652"/>
+        <location filename="../HamlibTransceiver.cpp" line="666"/>
         <source>getting frequency</source>
         <translation>pobieranie częstotliwości</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="661"/>
+        <location filename="../HamlibTransceiver.cpp" line="675"/>
         <source>getting mode</source>
         <translation>pobieranie modulacji</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="683"/>
-        <location filename="../HamlibTransceiver.cpp" line="1077"/>
+        <location filename="../HamlibTransceiver.cpp" line="697"/>
+        <location filename="../HamlibTransceiver.cpp" line="1091"/>
         <source>getting current VFO</source>
         <translation>pobieranie aktualnego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="742"/>
-        <location filename="../HamlibTransceiver.cpp" line="750"/>
+        <location filename="../HamlibTransceiver.cpp" line="756"/>
         <location filename="../HamlibTransceiver.cpp" line="764"/>
-        <location filename="../HamlibTransceiver.cpp" line="1136"/>
+        <location filename="../HamlibTransceiver.cpp" line="778"/>
+        <location filename="../HamlibTransceiver.cpp" line="1150"/>
         <source>getting current VFO frequency</source>
         <translation>pobieranie częstotliwości aktualnego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="748"/>
-        <location filename="../HamlibTransceiver.cpp" line="763"/>
-        <location filename="../HamlibTransceiver.cpp" line="770"/>
-        <location filename="../HamlibTransceiver.cpp" line="859"/>
-        <location filename="../HamlibTransceiver.cpp" line="877"/>
-        <location filename="../HamlibTransceiver.cpp" line="938"/>
+        <location filename="../HamlibTransceiver.cpp" line="762"/>
+        <location filename="../HamlibTransceiver.cpp" line="777"/>
+        <location filename="../HamlibTransceiver.cpp" line="784"/>
+        <location filename="../HamlibTransceiver.cpp" line="873"/>
+        <location filename="../HamlibTransceiver.cpp" line="891"/>
+        <location filename="../HamlibTransceiver.cpp" line="952"/>
         <source>setting frequency</source>
         <translation>ustawianie częstotliwości</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="867"/>
-        <location filename="../HamlibTransceiver.cpp" line="945"/>
-        <location filename="../HamlibTransceiver.cpp" line="1017"/>
-        <location filename="../HamlibTransceiver.cpp" line="1030"/>
+        <location filename="../HamlibTransceiver.cpp" line="881"/>
+        <location filename="../HamlibTransceiver.cpp" line="959"/>
+        <location filename="../HamlibTransceiver.cpp" line="1031"/>
+        <location filename="../HamlibTransceiver.cpp" line="1044"/>
         <source>getting current VFO mode</source>
         <translation>pobieranie modulacji aktualnego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="873"/>
-        <location filename="../HamlibTransceiver.cpp" line="882"/>
-        <location filename="../HamlibTransceiver.cpp" line="951"/>
-        <location filename="../HamlibTransceiver.cpp" line="1023"/>
-        <location filename="../HamlibTransceiver.cpp" line="1036"/>
+        <location filename="../HamlibTransceiver.cpp" line="887"/>
+        <location filename="../HamlibTransceiver.cpp" line="896"/>
+        <location filename="../HamlibTransceiver.cpp" line="965"/>
+        <location filename="../HamlibTransceiver.cpp" line="1037"/>
+        <location filename="../HamlibTransceiver.cpp" line="1050"/>
         <source>setting current VFO mode</source>
         <translation>ustawianie modulacji aktualnego VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="925"/>
-        <location filename="../HamlibTransceiver.cpp" line="994"/>
+        <location filename="../HamlibTransceiver.cpp" line="939"/>
+        <location filename="../HamlibTransceiver.cpp" line="1008"/>
         <source>setting/unsetting split mode</source>
         <translation>włączanie/wyłączanie trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="936"/>
-        <location filename="../HamlibTransceiver.cpp" line="976"/>
+        <location filename="../HamlibTransceiver.cpp" line="950"/>
+        <location filename="../HamlibTransceiver.cpp" line="990"/>
         <source>setting split mode</source>
         <translation>ustawianie trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="964"/>
+        <location filename="../HamlibTransceiver.cpp" line="978"/>
         <source>setting split TX frequency and mode</source>
         <translation>ustawianie częstotliwości TX i modulacji dla trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="969"/>
+        <location filename="../HamlibTransceiver.cpp" line="983"/>
         <source>setting split TX frequency</source>
         <translation>ustawianie częstotliwość TX dla trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1041"/>
+        <location filename="../HamlibTransceiver.cpp" line="1055"/>
         <source>getting split TX VFO mode</source>
         <translation>pobieranie TX VFO mode dla trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1048"/>
+        <location filename="../HamlibTransceiver.cpp" line="1062"/>
         <source>setting split TX VFO mode</source>
         <translation>ustawianie TX VFO mode dla trybu split</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1328"/>
+        <location filename="../HamlibTransceiver.cpp" line="1342"/>
         <source>getting PTT state</source>
         <translation>pobieranie statusu PTT</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1364"/>
+        <location filename="../HamlibTransceiver.cpp" line="1378"/>
         <source>setting PTT on</source>
         <translation>ustawianie PTT na włączone</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1372"/>
+        <location filename="../HamlibTransceiver.cpp" line="1386"/>
         <source>setting PTT off</source>
         <translation>ustawianie PTT na wyłączone</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1384"/>
+        <location filename="../HamlibTransceiver.cpp" line="1398"/>
         <source>setting a configuration item</source>
         <translation>ustawianie elementu konfiguracji</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1394"/>
+        <location filename="../HamlibTransceiver.cpp" line="1408"/>
         <source>getting a configuration item</source>
         <translation>pobieranie elementu konfiguracji</translation>
     </message>
