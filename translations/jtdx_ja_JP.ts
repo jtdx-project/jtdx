@@ -230,7 +230,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>入力されたGrid Locatorに誤りがあります。4桁、6桁、8桁、10桁のGrid Locatorが使用可能です</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5432"/>
@@ -4481,7 +4481,8 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>デコーダーの早い開始</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
