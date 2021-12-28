@@ -6,13 +6,13 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 tmpcqsig,tmpmycsig,tmpqsosig,lnohiscall,lnomycall,lnohisgrid)
 !  use timer_module, only: timer
   use packjt77, only : unpack77
-  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap,                   &
-                       oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldteven,calldtodd,lqsomsgdcd,mycalllen1,              &
-                       msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,mycall,hiscall,lhound,apsymsp,      &
+  use ft8_mod1, only : allmessages,ndecodes,apsym,mcq,m73,mrr73,icos7,naptypes,nhaptypes,one,graymap,                          &
+                       oddcopy,evencopy,lastrxmsg,lasthcall,nlasttx,calldteven,calldtodd,lqsomsgdcd,mycalllen1,                &
+                       msgroot,msgrootlen,allfreq,idtone25,lapmyc,idtonemyc,mycall,hiscall,lhound,apsymsp,                     &
                        ndxnsaptypes,apsymdxns1,apsymdxnsrrr,lenabledxcsearch,lwidedxcsearch,apcqsym,apsymdxnsrr73,apsymdxns73, &
-                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,        &
-                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,     &
-                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd, &
+                       mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,          &
+                       maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,       &
+                       idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,  &
                        apsymdxnsr73,apsymdxns732
 
   include 'ft8_params.f90'
@@ -1163,7 +1163,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(nweak.eq.2 .and. isubp1.eq.2) then
             if(ipass.eq.npass-1) then
               if(lcqsignal .and. (lhiscallstd .or. lnohiscall)) then
-                if(lmycallstd .and. isubp2.eq.13 .or. .not.lmycallstd .and. isubp2.eq.22) then ! last pass
+                if(lmycallstd .and. isubp2.eq.16 .or. .not.lmycallstd .and. isubp2.eq.22) then ! last pass
                   lfoundcq=.false.
                   do ik=1,numdeccq
                     if(tmpcqdec(ik)%freq.gt.5001.0) exit
@@ -1178,7 +1178,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   endif
                 endif
               endif
-              if(lmycsignal .and. isubp2.eq.10) then ! last pass
+              if(lmycsignal .and. isubp2.eq.13) then ! last pass
                 lfoundmyc=.false.
                 do ik=1,numdecmyc
                   if(tmpmyc(ik)%freq.gt.5001.0) exit
@@ -1230,7 +1230,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(nweak.eq.1 .and. isubp1.eq.1) then
             if(ipass.eq.npass-1) then
               if(lcqsignal .and. (lhiscallstd .or. lnohiscall)) then
-                if(lmycallstd .and. isubp2.eq.13 .or. .not.lmycallstd .and. isubp2.eq.22) then ! last pass
+                if(lmycallstd .and. isubp2.eq.16 .or. .not.lmycallstd .and. isubp2.eq.22) then ! last pass
                   lfoundcq=.false.
                   do ik=1,numdeccq
                     if(tmpcqdec(ik)%freq.gt.5001.0) exit
@@ -1245,7 +1245,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                   endif
                 endif
               endif
-              if(lmycsignal .and. isubp2.eq.10) then ! last pass
+              if(lmycsignal .and. isubp2.eq.13) then ! last pass
                 lfoundmyc=.false.
                 do ik=1,numdecmyc
                   if(tmpmyc(ik)%freq.gt.5001.0) exit
