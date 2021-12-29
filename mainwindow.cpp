@@ -6723,7 +6723,7 @@ void MainWindow::enable_DXCC_entity ()
     }
     QString countryName;
     m_logBook.getDXCC(m_config.my_callsign(),countryName);
-    auto items=countryName.split(",");
+    QStringList items=countryName.split(",");
     m_m_continent = items[0];
     ui->decodedTextBrowser->setMyContinent (m_m_continent);
     ui->decodedTextBrowser2->setMyContinent (m_m_continent);
@@ -7433,7 +7433,7 @@ bool MainWindow::shortList(QString callsign)
 
 bool MainWindow::isAutoSeq73(QString const& text)
 {
-  auto parts = text.split (' ', SkipEmptyParts);
+  QStringList parts = text.split (' ', SkipEmptyParts);
   auto partsSize = parts.size ();
   bool b=((partsSize > 0 && (parts[0] == "73" || parts[0] == "TNX" || parts[0] == "TKS" || parts[0] == "TU"))
        || (partsSize > 1 && (parts[1] == "73" || parts[1] == "TNX" || parts[1] == "TKS" || parts[1] == "TU"))
@@ -7655,7 +7655,7 @@ void MainWindow::replayDecodes ()
   Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', SkipEmptyParts))
     {
       if (message.size() >= 4 && message.left (4) != "----") {
-          auto const& parts = message.split (' ', SkipEmptyParts);
+          QStringList parts = message.split (' ', SkipEmptyParts);
           if (parts.size () >= 5 && parts[3].contains ('.')) { // WSPR
               postWSPRDecode (false, parts);
           } else {
@@ -7675,7 +7675,7 @@ void MainWindow::replayDecodes ()
 void MainWindow::postDecode (bool is_new, QString const& message)
 {
   auto const& decode = message.trimmed ();
-  auto const& parts = decode.left (22).split (' ', SkipEmptyParts);
+  QStringList parts = decode.left (22).split (' ', SkipEmptyParts);
   if (parts.size () >= 5) {
       auto has_seconds = parts[0].size () > 4;
       bool low_confidence=(QChar {'*'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1)) || (QChar {'^'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1));

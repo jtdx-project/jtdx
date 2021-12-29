@@ -557,7 +557,7 @@ void CountryDat::load()
           QString line1 = in.readLine();
           if ( !in.atEnd() )
           {
-            auto items = line1.split(',');
+            QStringList items = line1.split(',');
             if (items.size() > 1)
             {
                 last = QDate::fromString(items[1],"yyyy-MM-dd");

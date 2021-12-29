@@ -122,7 +122,7 @@ namespace Radio
   // the full call if no valid prefix (or prefix as a suffix) is specified
   QString effective_prefix (QString callsign)
   {
-    auto parts = callsign.split('/');
+    QStringList parts = callsign.split('/');
     if (parts.size() == 2 && (parts.at(1) == "P" || parts.at(1) == "A")) return callsign;
     auto prefix = parts.at(0);
     int size = prefix.size();
