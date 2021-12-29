@@ -220,7 +220,7 @@ Format:
     <message>
         <location filename="../Configuration.cpp" line="4896"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique erro no Grid: são aceites caracteres 4/6/8/10 no Grid</translation>
     </message>
     <message>
         <location filename="../Configuration.cpp" line="5428"/>
@@ -3886,7 +3886,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="1850"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CAT shall be set up via Hamlib or TCI, TCI and Hamlib for some transceivers does support getting output power data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; O CAT deverá ser configurado via Hamlib ou TCI, TCI e Hamlib em alguns transceptores suporta a obtenção de dados de potência de saída. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4330"/>
@@ -4483,7 +4483,7 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>início precoce de descodificação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
@@ -8356,7 +8356,7 @@ AA1AAA, BB1BB, CC1CC &lt;/p&gt; &lt;/body&gt; &lt;/ html</translation>
     <message>
         <location filename="../Configuration.ui" line="5269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Esconder troca de mensagens entre operadores do próprio continente. Esta opção permite ao usuário facilitar o monitoramento da comunicação em distâncias intercontinentais. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="5272"/>
