@@ -7585,7 +7585,7 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
 
   bool acceptMsg=false;
   if (m_acceptUDP==1) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ))"}); }
-  else if (m_acceptUDP==2) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ)|(.+ 73|.+ RR73)$)"}); }
+  else if (m_acceptUDP==2) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ)|(.+ 73|.+ RR73))"}); }
   else if (m_acceptUDP==3) { acceptMsg=true; }
   if (acceptMsg) {
 //msgBox(message_text);
