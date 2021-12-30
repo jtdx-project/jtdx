@@ -671,11 +671,13 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
 ! protocol violations, also reported at wrong TX message packing
 ! prevent broken message transmission
      if(unpk77_success .and. nmsglen.gt.0) then
-       if((icq.eq.0 .and. nrpt.eq.0) .or. icq.eq.1) then
+       indxp=index(msg,'/P ')
+       if((icq.eq.0 .and. nrpt.eq.0 .and. (indxp.lt.1 .or. indxp.gt.7)) .or. icq.eq.1) then
 ! -23 -3.3 N0S/W45ETOE <...>
 !071445 -14  0.1  779 ~ <...>
 !071445 -14  0.1  779 ~ W5JZ  ! hash was associated
 ! CQ <...>
+! with exception to broken by packing message 'JQ1AHT/P <JL1LOF/1> -15' wrongly being transmitted as type 4 message 'JQ1AHT/P <JL1LOF/1>'
          if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
        endif
      endif
