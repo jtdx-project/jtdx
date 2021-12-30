@@ -917,7 +917,7 @@ qDebug() << "Audio" << data.size() << pStream->length;
         int ssize = AudioHeaderSize+pStream->length*sizeof(float)*2;
 //        printf("%s(%0.1f) TxChrono ",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset());
         quint16 tehtud;
-        if (m_tx1[tx_fifo].size() != ssize) {m_tx1[tx_fifo].resize(ssize); m_tx1[tx_fifo].fill('\0x00');}
+        if (m_tx1[tx_fifo].size() != ssize) {m_tx1[tx_fifo].resize(ssize);/* m_tx1[tx_fifo].fill('\0x00');*/}
         Data_Stream * pOStream1 = (Data_Stream*)(m_tx1[tx_fifo].data());
         pOStream1->receiver = pStream->receiver;
         pOStream1->sampleRate = pStream->sampleRate; 
