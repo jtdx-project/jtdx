@@ -1,0 +1,30 @@
+:doctype: manpage
+:man source: AsciiDoc
+:man version: {revnumber}
+:man manual: JTDX Manual
+= rigctlcom-jtdx(1)
+
+== NAME
+
+rigctlcom-jtdx - Hamlib 4 rigctlcom Serial port passthru Kenwood TS-2000 emulator.
+
+== SYNOPSIS
+
+*rigctlcom-jtdx* [OPTIONS]
+
+== DESCRIPTION
+
+*wsjtx* uses a version of the *hamlib* CAT control library.  This
+ library is virtually identical to the current release version of
+ *hamlib*. If a *wsjtx* user wishes to use the *hamlib* TS-2000
+ emulator *rigctlcom* to allow CAT applications that do not talk to
+ *hamlib* to share CAT control control their transceiver; then this
+ special version of *rigctlcom* should be used since that too has the
+ modified *hamlib* code embedded with it.
+
+JTDX home page:: https://jtdx.tech/en/videos-guides
+
+JTDX User's Guide:: https://jtdx.tech/en/videos-guides
+
+== OPTIONS
+Refer to the *hamlib* documentation.

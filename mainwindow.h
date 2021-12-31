@@ -223,7 +223,7 @@ private slots:
   void on_actionFT8SensMin_toggled(bool checked);
   void on_actionlowFT8thresholds_toggled(bool checked);
   void on_actionFT8subpass_toggled(bool checked);
-  void on_actionFT8LateStart_toggled(bool checked);
+  void on_actionFT8EarlyStart_toggled(bool checked);
   void on_actionFT8WidebandDXCallSearch_toggled(bool checked);
   void on_actionBypass_text_filters_on_RX_frequency_toggled(bool checked);
   void on_actionBypass_all_text_filters_toggled(bool checked);
@@ -496,7 +496,7 @@ private:
   bool    m_showHarmonics;
   bool	  m_showMyCallMsgRxWindow;
   bool    m_showWantedCallRxWindow;
-  bool    m_FT8LateStart;
+  bool    m_FT8EarlyStart;
   bool    m_bypassRxfFilters;
   bool    m_bypassAllFilters;
   bool    m_windowPopup;

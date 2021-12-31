@@ -278,7 +278,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                 myhisCall_ = hisCall;
                 }
         }
-        auto const& parts = decodedText->message().split (' ', SkipEmptyParts);
+        QStringList parts = decodedText->message().split (' ', SkipEmptyParts);
         if (!hisCall.isEmpty () && messageText.contains(Radio::base_callsign (hisCall))) txtColor = color_StandardCall_;
         checkCall = decodedText->CQersCall(grid,tyyp);
         checkCall2 = decodedText->call();
@@ -789,7 +789,7 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             logBook.getDXCC(/*in*/ checkCall, /*out*/ countryName);
         }
 
-        auto items = countryName.split(',');
+        QStringList items = countryName.split(',');
         mpx = items[1];
 
         if (!wantedCallList.isEmpty() && (wantedCallList.indexOf(Radio::base_callsign (checkCall)) >= 0 || wantedCallList.indexOf(checkCall) >= 0)) {
@@ -852,24 +852,24 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             if (hideContinents_.contains(items[0]) && std_type != 2 && !jt65bc) {
                 show_line = false;
             } else if (enableCountryFilter_ && std_type != 2 && !jt65bc) {
-                auto countries = countries_.split(',');
+                QStringList countries = countries_.split(',');
                 if (countries.contains(items[1].toUpper()))
                     show_line = false;
             }
             if (show_line && enableCallsignFilter_ && std_type != 2 && !jt65bc) {
-                auto callsigns = callsigns_.split(',');
+                QStringList callsigns = callsigns_.split(',');
                 if (callsigns.contains(Radio::base_callsign (checkCall)))
                     show_line = false;
             }
         }
         else if (!bwantedCall && enableCallsignFilter_ && std_type != 2 && !jt65bc) {
-            auto callsigns = callsigns_.split(',');
+            QStringList callsigns = callsigns_.split(',');
             if (callsigns.contains(Radio::base_callsign (checkCall)))
                 show_line = false;
         }
         if ((enableMyConinentFilter_) && std_type != 2 && !jt65bc) {
             logBook.getDXCC(/*in*/ checkCall2, /*out*/ countryName2);
-            auto coninent2 =  countryName2.split(',')[0];
+            QString coninent2 =  countryName2.split(',')[0];
             if (coninent2 == myContinent_ || (std_type == 1 && myContinent_ == items[0])) show_line = false;
         }
     }
@@ -970,7 +970,7 @@ void DisplayText::displayTransmittedText(QString text, QString myCall, QString h
         ttime = 3600 * t.mid (0, 2).toUInt () + 60 * t.mid (2, 2).toUInt();
         if (t.mid (4, 2) != "  ") ttime += t.mid (4, 2).toUInt();        
 
-        auto const& parts = txs.at(i).split (' ', SkipEmptyParts);
+        QStringList parts = txs.at(i).split (' ', SkipEmptyParts);
         if (parts.size () > 1) 
           {
             QString param="";

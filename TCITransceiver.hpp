@@ -323,7 +323,7 @@ private:
   double m_toneFrequency0;
   
   QByteArray m_tx1[8];
-  int tx_fifo;
+  int tx_fifo, tx_fifo2;
   quint32 last_type;  
   std::string debug_file_;
   std::string wav_file_;

@@ -22,14 +22,14 @@ contains
 
   subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,nsec, &
                     napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
-                    nagainfil,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes,lhidehash)
+                    nagainfil,lft8lowth,lft8subpass,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
                          oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,  &
                          nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso, &
-                         lqsomsgdcd
+                         lqsomsgdcd,hisgrid4
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -42,10 +42,11 @@ contains
     real candidate(4,460),freqsub(200)
     integer, intent(in) :: nQSOProgress,nfqso,nft8rxfsens,nftx,nfa,nfb,ncandthin,ndtcenter,nsec,napwid,nthr,numthreads
     logical, intent(in) :: nagainfil
-    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lft8latestart,lhideft8dupes, &
+    logical(1), intent(in) :: swl,filter,stophint,lft8lowth,lft8subpass,lhideft8dupes, &
                               lhidehash,lmycallstd,lhiscallstd
     logical newdat1,lsubtract,ldupe,lFreeText,lspecial
-    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint
+    logical(1) lft8sdec,lft8s,lft8sd,lrepliedother,lhashmsg,lqsothread,lhidemsg,lhighsens,lcqcand,lsubtracted,levenint,loddint, &
+               lnohiscall,lnomycall,lnohisgrid
     character msg37*37,msg37_2*37,msg26*26,servis8*1,datetime*13,call2*12
     character*37 msgsrcvd(130)
 
@@ -119,6 +120,10 @@ contains
     write(datetime,1001) nutc        !### TEMPORARY ###
 1001 format("000000_",i6.6)
 
+    lnohiscall=.false.; if(len_trim(hiscall).lt.3) lnohiscall=.true.
+    lnomycall=.false.; if(len_trim(mycall).lt.3) lnomycall=.true.
+    lnohisgrid=.false.; if(len_trim(hisgrid4).ne.4) lnohisgrid=.true.
+
     if(nfqso.ge.nfa .and. nfqso.le.nfb) lqsothread=.true.
 
     if(lqsothread .and. .not.lastrxmsg(1)%lstate .and. .not.stophint .and. hiscall.ne.'') then
@@ -158,7 +163,7 @@ contains
 ! sliding search over +/- 2.5s relative to 0.5s TX start time
     jzb=-62 + avexdt*25.;  jzt=62 + avexdt*25.
 ! sliding search over +/- 3.5s relative to 0.5s TX start time
-    if(lft8latestart .or. swl) then; jzb=-86 + avexdt*25.;  jzt=86 + avexdt*25.; endif
+    if(swl) then; jzb=-86 + avexdt*25.;  jzt=86 + avexdt*25.; endif
 
     npass=3 ! fallback
     if(swl) then
@@ -228,7 +233,7 @@ contains
                   nthr,lFreeText,ipass,lft8subpass,lspecial,lcqcand,ncqsignal,nmycsignal,npass,            &
                   i3bit,lhidehash,lft8s,lmycallstd,lhiscallstd,levenint,loddint,lft8sd,i3,n3,nft8rxfsens,  &
                   ncount,msgsrcvd,lrepliedother,lhashmsg,lqsothread,lft8lowth,lhighsens,lsubtracted,       &
-                  tmpcqsig,tmpmycsig,tmpqsosig)
+                  tmpcqsig,tmpmycsig,tmpqsosig,lnohiscall,lnomycall,lnohisgrid)
         nsnr=nint(xsnr)
         xdt=xdt-0.5
         !call timer('ft8b    ',1)

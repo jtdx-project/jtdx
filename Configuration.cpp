@@ -452,6 +452,7 @@ private:
   Q_SLOT void on_PTT_method_button_group_buttonClicked (int);
   Q_SLOT void on_callsign_line_edit_textChanged ();
   Q_SLOT void on_grid_line_edit_textChanged ();
+  Q_SLOT void on_grid_line_edit_editingFinished ();
   Q_SLOT void on_content_line_edit_textChanged(QString const&);
   Q_SLOT void on_countries_line_edit_textChanged(QString const&);
   Q_SLOT void on_callsigns_line_edit_textChanged(QString const&);
@@ -1455,7 +1456,7 @@ Configuration::impl::impl (Configuration * self, QSettings * settings, QWidget *
   // validation
   //
   ui_->callsign_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9/-]+"}, this});
-  ui_->grid_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{0,2}[0-9]{0,2}[A-Xa-x]{2,2}"}, this});
+  ui_->grid_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Ra-r]{1,1}|[A-Ra-r]{2,2}|[A-Ra-r]{2,2}[0-9]{1,1}|[A-Ra-r]{2,2}[0-9]{2,2}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{1,1}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{1,1}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}[A-Xa-x]{1,1}|[A-Ra-r]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}[0-9]{2,2}[A-Xa-x]{2,2}"}, this});
   ui_->logTime_line_edit->setValidator (new QRegExpValidator {QRegExp {"[0-9]+"}, this});
   ui_->content_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9,]+"}, this});
   ui_->countries_line_edit->setValidator (new QRegExpValidator {QRegExp {"[A-Za-z0-9,/*]+"}, this});
@@ -4888,7 +4889,16 @@ void Configuration::impl::on_grid_line_edit_textChanged ()
   auto pos = ui_->grid_line_edit->cursorPosition (); auto text = ui_->grid_line_edit->text ();
   ui_->grid_line_edit->setText (text.left (4).toUpper () + text.mid (4).toLower ()); ui_->grid_line_edit->setCursorPosition (pos);
 }
-
+void Configuration::impl::on_grid_line_edit_editingFinished ()
+{
+  auto text = ui_->grid_line_edit->text (); auto grid_size = text.length();
+  if (grid_size == 3 || grid_size == 2 || grid_size == 1) {
+    JTDXMessageBox::critical_message (this, "JTDX", tr ("Enter Grid error: 4/6/8/10 char grid will be accepted"));
+    ui_->grid_line_edit->setFocus();
+    ui_->grid_line_edit->clear ();
+  }
+  else if (grid_size == 9 ||  grid_size == 7 ||  grid_size == 5) ui_->grid_line_edit->setText (text.left(grid_size - 1));
+}
 void Configuration::impl::on_content_line_edit_textChanged (QString const& text)
 {
   auto pos = ui_->content_line_edit->cursorPosition (); ui_->content_line_edit->setText(text.toUpper ()); ui_->content_line_edit->setCursorPosition (pos);
@@ -6027,7 +6037,7 @@ void Configuration::impl::close_rig ()
     {
       ui_->test_CAT_push_button->setStyleSheet ("QPushButton {background-color: red;}");
       Q_EMIT stop_transceiver ();
-      if (is_tci_) QThread::msleep (5);
+      if (is_tci_) QThread::msleep (10);
       for (auto const& connection: rig_connections_)
         {
           disconnect (connection);

@@ -73,7 +73,7 @@ void LogBook::matchCQZ(/*in*/const QString call,
             countryName = _countries.find(Radio::effective_prefix(call));
         }
         if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
-            auto items = countryName.split(',');
+            QStringList items = countryName.split(',');
             WorkedBefore = _log.matchCqz(items[3], "", "");
             if (!WorkedBefore) {
                 WorkedBeforeBandMode = false;
@@ -105,7 +105,7 @@ void LogBook::matchITUZ(/*in*/const QString call,
             countryName = _countries.find(Radio::effective_prefix(call));
         }
         if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
-            auto items = countryName.split(',');
+            QStringList items = countryName.split(',');
             WorkedBefore = _log.matchItuz(items[4], "", "");
             if (!WorkedBefore) {
                 WorkedBeforeBandMode = false;
@@ -136,7 +136,7 @@ void LogBook::matchDXCC(/*in*/const QString call,
             countryName = _countries.find(Radio::effective_prefix(call));
         }
         if (!countryName.isEmpty () && countryName.left(5) != "  ,?,") { //  is there, do checks
-            auto items = countryName.split(',');
+            QStringList items = countryName.split(',');
             QString country = items[0]+','+items[1]+','+items[2];
             WorkedBefore = _log.matchCountry(country, "", "");
             if (!WorkedBefore) {
