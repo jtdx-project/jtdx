@@ -1094,7 +1094,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   m_showHarmonics=ui->actionShow_messages_decoded_from_harmonics->isChecked();
   m_showMyCallMsgRxWindow=ui->actionMyCallRXFwindow->isChecked();
   m_showWantedCallRxWindow=ui->actionWantedCallRXFwindow->isChecked();
-  m_FT8LateStart=ui->actionFT8LateStart->isChecked();
+  m_FT8EarlyStart=ui->actionFT8EarlyStart->isChecked();
   m_bypassRxfFilters=ui->actionBypass_text_filters_on_RX_frequency->isChecked();
   m_bypassAllFilters=ui->actionBypass_all_text_filters->isChecked();
   m_windowPopup=ui->actionEnable_main_window_popup->isChecked();
@@ -1230,7 +1230,7 @@ void MainWindow::writeSettings()
   m_settings->setValue("ShowMyCallMessagesRxWindow",ui->actionMyCallRXFwindow->isChecked());
   m_settings->setValue("ShowWantedCallMessagesRxWindow",ui->actionWantedCallRXFwindow->isChecked());
   m_settings->setValue("FT8Sensitivity",m_ft8Sensitivity);
-  m_settings->setValue("FT8DecoderLateStart",ui->actionFT8LateStart->isChecked());
+  m_settings->setValue("FT8DecoderEarlyStart",ui->actionFT8EarlyStart->isChecked());
   m_settings->setValue("FT8WideDXCallSearch",m_FT8WideDxCallSearch);
   m_settings->setValue("BypassRXFreqTextFilters",ui->actionBypass_text_filters_on_RX_frequency->isChecked());
   m_settings->setValue("BypassAllTextFilters",ui->actionBypass_all_text_filters->isChecked());
@@ -1447,9 +1447,9 @@ void MainWindow::readSettings()
   else if(m_ft8Sensitivity==1) ui->actionlowFT8thresholds->setChecked(true);
   else if(m_ft8Sensitivity==2) ui->actionFT8subpass->setChecked(true);
 
-  if(m_settings->value("FT8DecoderLateStart").toString()!="false" && m_settings->value("FT8DecoderLateStart").toString()!="true") 
-    ui->actionFT8LateStart->setChecked(false);
-  else ui->actionFT8LateStart->setChecked(m_settings->value("FT8DecoderLateStart",false).toBool());
+  if(m_settings->value("FT8DecoderEarlyStart").toString()!="false" && m_settings->value("FT8DecoderEarlyStart").toString()!="true") 
+    ui->actionFT8EarlyStart->setChecked(false);
+  else ui->actionFT8EarlyStart->setChecked(m_settings->value("FT8DecoderEarlyStart",false).toBool());
 
   m_FT8WideDxCallSearch=m_settings->value("FT8WideDXCallSearch",false).toBool();
   ui->actionFT8WidebandDXCallSearch->setChecked(m_FT8WideDxCallSearch);
@@ -1613,7 +1613,11 @@ void MainWindow::setDecodedTextFont (QFont const& font)
 void MainWindow::setStopHSym()
 {
   m_hsymStop=179;
-  if(m_mode=="FT8")  m_hsymStop=50;
+  if(m_mode=="FT8") {
+    if(m_swl) m_hsymStop = 51;
+    else if(m_FT8EarlyStart) m_hsymStop = 49;
+    else m_hsymStop=50;  
+  }
   else if(m_mode=="FT4") m_hsymStop=21;
   else if(m_mode.startsWith("JT") or m_mode=="T10") { m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179; }
   else if(m_mode.startsWith ("WSPR")) m_hsymStop=396;
@@ -1808,7 +1812,6 @@ void MainWindow::dataSink(qint64 frames)
   if(ihsym==3*m_hsymStop/4) m_dialFreqRxWSPR=m_freqNominal;
   int nhsymEStopFT8 = m_hsymStop;
   if(m_diskData || m_mode.startsWith("WSPR")) m_delay=0;
-  else if(m_swl || m_FT8LateStart) nhsymEStopFT8 = 51;
 
 // let Win users to decode some intervals if some frames were dropped in system audio
 //#if defined(Q_OS_WIN)
@@ -1831,7 +1834,9 @@ void MainWindow::dataSink(qint64 frames)
       QDateTime now1 {m_jtdxtime->currentDateTimeUtc2 ()};
       quint64 n1=now1.toMSecsSinceEpoch()%15000;
       if(n1>14735) {
-        if(m_swl || m_FT8LateStart) ihsym=51; else ihsym=50;
+        if(m_swl) ihsym=51; 
+        else if(m_FT8EarlyStart) ihsym=49; 
+        else ihsym=50;
       } 
     }
   }
@@ -3177,7 +3182,7 @@ void MainWindow::on_actionWantedCallRXFwindow_toggled(bool checked) { m_showWant
 void MainWindow::on_actionFT8SensMin_toggled(bool checked) { if(checked) m_ft8Sensitivity=0; }
 void MainWindow::on_actionlowFT8thresholds_toggled(bool checked) { if(checked) m_ft8Sensitivity=1; }
 void MainWindow::on_actionFT8subpass_toggled(bool checked) { if(checked) m_ft8Sensitivity=2; }
-void MainWindow::on_actionFT8LateStart_toggled(bool checked) { m_FT8LateStart=checked; }
+void MainWindow::on_actionFT8EarlyStart_toggled(bool checked) { m_FT8EarlyStart=checked; }
 void MainWindow::on_actionFT8WidebandDXCallSearch_toggled(bool checked) { m_FT8WideDxCallSearch=checked; }
 void MainWindow::on_actionBypass_text_filters_on_RX_frequency_toggled(bool checked) { m_bypassRxfFilters=checked; }
 
@@ -3363,7 +3368,7 @@ void MainWindow::decode()                                       //decode()
   else  dec_data.params.lft8lowth=true;
   if(m_ft8Sensitivity==2) dec_data.params.lft8subpass=true;
   else dec_data.params.lft8subpass=false;
-  dec_data.params.lft8latestart=m_FT8LateStart;
+//  dec_data.params.lft8latestart=false;
   dec_data.params.lhidetest=(ui->actionHide_FT_contest_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhidetelemetry=(ui->actionHide_telemetry_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhideft8dupes=ui->actionHide_FT8_dupe_messages->isChecked() ? 1 : 0;
@@ -3745,7 +3750,9 @@ void MainWindow::readFromStdout()                             //readFromStdout
       if(m_diskData && m_mode.startsWith("FT")) { // estimated lag for FT4||FT8 wav file
         qint64 lagms=msDecFin-m_msDecStarted;
         if(m_mode=="FT8") {
-          if(m_FT8LateStart || m_swl) lagms-=300; else lagms-=600;
+          if(m_swl) lagms-=300; 
+          else if(m_FT8EarlyStart) lagms-=900; 
+          else lagms-=600;
         } else {
           lagms-=1430;	
         }
@@ -6716,7 +6723,7 @@ void MainWindow::enable_DXCC_entity ()
     }
     QString countryName;
     m_logBook.getDXCC(m_config.my_callsign(),countryName);
-    auto items=countryName.split(",");
+    QStringList items=countryName.split(",");
     m_m_continent = items[0];
     ui->decodedTextBrowser->setMyContinent (m_m_continent);
     ui->decodedTextBrowser2->setMyContinent (m_m_continent);
@@ -7426,7 +7433,7 @@ bool MainWindow::shortList(QString callsign)
 
 bool MainWindow::isAutoSeq73(QString const& text)
 {
-  auto parts = text.split (' ', SkipEmptyParts);
+  QStringList parts = text.split (' ', SkipEmptyParts);
   auto partsSize = parts.size ();
   bool b=((partsSize > 0 && (parts[0] == "73" || parts[0] == "TNX" || parts[0] == "TKS" || parts[0] == "TU"))
        || (partsSize > 1 && (parts[1] == "73" || parts[1] == "TNX" || parts[1] == "TKS" || parts[1] == "TU"))
@@ -7578,7 +7585,7 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
 
   bool acceptMsg=false;
   if (m_acceptUDP==1) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ))"}); }
-  else if (m_acceptUDP==2) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ)|(.+ 73|.+ RR73)$)"}); }
+  else if (m_acceptUDP==2) { acceptMsg=message_text.contains (QRegularExpression {R"(^(CQ |CQDX |QRZ)|(.+ 73|.+ RR73))"}); }
   else if (m_acceptUDP==3) { acceptMsg=true; }
   if (acceptMsg) {
 //msgBox(message_text);
@@ -7648,7 +7655,7 @@ void MainWindow::replayDecodes ()
   Q_FOREACH (auto const& message, ui->decodedTextBrowser->toPlainText ().split ('\n', SkipEmptyParts))
     {
       if (message.size() >= 4 && message.left (4) != "----") {
-          auto const& parts = message.split (' ', SkipEmptyParts);
+          QStringList parts = message.split (' ', SkipEmptyParts);
           if (parts.size () >= 5 && parts[3].contains ('.')) { // WSPR
               postWSPRDecode (false, parts);
           } else {
@@ -7668,7 +7675,7 @@ void MainWindow::replayDecodes ()
 void MainWindow::postDecode (bool is_new, QString const& message)
 {
   auto const& decode = message.trimmed ();
-  auto const& parts = decode.left (22).split (' ', SkipEmptyParts);
+  QStringList parts = decode.left (22).split (' ', SkipEmptyParts);
   if (parts.size () >= 5) {
       auto has_seconds = parts[0].size () > 4;
       bool low_confidence=(QChar {'*'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1)) || (QChar {'^'} == decode.mid (has_seconds ? 23 + 24 : 21 + 24, 1));

@@ -4,6 +4,7 @@ set (ASCIIDOC_MANS
   man1/jt65code.1.txt
   man1/rigctl-jtdx.1.txt
   man1/rigctld-jtdx.1.txt
+  man1/rigctlcom-jtdx.1.txt
   man1/message_aggregator.1.txt
   man1/udp_daemon.1.txt
   )

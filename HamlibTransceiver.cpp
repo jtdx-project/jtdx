@@ -244,7 +244,11 @@ HamlibTransceiver::HamlibTransceiver (TransceiverFactory::PTTMethod ptt_type, QS
         {
           set_conf ("ptt_type", "RTS");
         }
+      set_conf ("ptt_share", "1");
     }
+
+  // do this late to allow any configuration option to be overriden
+  load_user_settings ();
 }
 
 HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory::ParameterPack const& params,
@@ -299,55 +303,6 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
 
   if (!is_dummy_)
     {
-      //
-      // user defined Hamlib settings
-      //
-      auto settings_file_name = QStandardPaths::locate (
-#if QT_VERSION >= 0x050500
-                                                        QStandardPaths::AppConfigLocation
-#else
-                                                        QStandardPaths::ConfigLocation
-#endif
-                                                        , "hamlib_settings.json");
-      if (!settings_file_name.isEmpty ())
-        {
-          QFile settings_file {settings_file_name};
-          qDebug () << "Using Hamlib settings file:" << settings_file_name;
-          if (settings_file.open (QFile::ReadOnly))
-            {
-              QJsonParseError status;
-              auto settings_doc = QJsonDocument::fromJson (settings_file.readAll (), &status);
-              if (status.error)
-                {
-                  throw error {tr ("Hamlib settings file error: %1 at character offset %2")
-                      .arg (status.errorString ()).arg (status.offset)};
-                }
-              qDebug () << "Hamlib settings JSON:" << settings_doc.toJson ();
-              if (!settings_doc.isObject ())
-                {
-                  throw error {tr ("Hamlib settings file error: top level must be a JSON object")};
-                }
-              auto const& settings = settings_doc.object ();
-
-              //
-              // configuration settings
-              //
-              auto const& config = settings["config"];
-              if (!config.isUndefined ())
-                {
-                  if (!config.isObject ())
-                    {
-                      throw error {tr ("Hamlib settings file error: config must be a JSON object")};
-                    }
-                  auto const& config_list = config.toObject ();
-                  for (auto item = config_list.constBegin (); item != config_list.constEnd (); ++item)
-                    {
-                      set_conf (item.key ().toLocal8Bit ().constData ()
-                                , (*item).toVariant ().toString ().toLocal8Bit ().constData ());
-                    }
-                }
-            }
-        }
 
       if (params.poll_interval & rig__power) { set_conf ("auto_power_on","1"); }
       if (params.poll_interval & rig__power_off) { set_conf ("auto_power_off","1"); }
@@ -421,7 +376,9 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
     case TransceiverFactory::PTT_method_RTS:
       if (!params.ptt_port.isEmpty ()
           && params.ptt_port != "None"
-          && (is_dummy_ || params.ptt_port != params.serial_port))
+          && (is_dummy_
+              || RIG_PORT_SERIAL != rig_get_caps_int (model_, RIG_CAPS_PORT_TYPE)
+              || params.ptt_port != params.serial_port))
         {
 #if defined (WIN32)
           set_conf ("ptt_pathname", ("\\\\.\\" + params.ptt_port).toLatin1 ().data ());
@@ -438,13 +395,70 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
         {
           set_conf ("ptt_type", "RTS");
         }
+      set_conf ("ptt_share", "1");
     }
 
   // Make Icom CAT split commands less glitchy
   set_conf ("no_xchg", "1");
 
+  // do this late to allow any configuration option to be overriden
+  load_user_settings ();
+
   // would be nice to get events but not supported on Windows and also not on a lot of rigs
   // rig_set_freq_callback (rig_.data (), &frequency_change_callback, this);
+}
+
+void HamlibTransceiver::load_user_settings ()
+{
+      //
+      // user defined Hamlib settings
+      //
+      auto settings_file_name = QStandardPaths::locate (
+#if QT_VERSION >= 0x050500
+                                                        QStandardPaths::AppConfigLocation
+#else
+                                                        QStandardPaths::ConfigLocation
+#endif
+                                                        , "hamlib_settings.json");
+      if (!settings_file_name.isEmpty ())
+        {
+          QFile settings_file {settings_file_name};
+          qDebug () << "Using Hamlib settings file:" << settings_file_name;
+          if (settings_file.open (QFile::ReadOnly))
+            {
+              QJsonParseError status;
+              auto settings_doc = QJsonDocument::fromJson (settings_file.readAll (), &status);
+              if (status.error)
+                {
+                  throw error {tr ("Hamlib settings file error: %1 at character offset %2")
+                      .arg (status.errorString ()).arg (status.offset)};
+                }
+              qDebug () << "Hamlib settings JSON:" << settings_doc.toJson ();
+              if (!settings_doc.isObject ())
+                {
+                  throw error {tr ("Hamlib settings file error: top level must be a JSON object")};
+                }
+              auto const& settings = settings_doc.object ();
+
+              //
+              // configuration settings
+              //
+              auto const& config = settings["config"];
+              if (!config.isUndefined ())
+                {
+                  if (!config.isObject ())
+                    {
+                      throw error {tr ("Hamlib settings file error: config must be a JSON object")};
+                    }
+                  auto const& config_list = config.toObject ();
+                  for (auto item = config_list.constBegin (); item != config_list.constEnd (); ++item)
+                    {
+                      set_conf (item.key ().toLocal8Bit ().constData ()
+                                , (*item).toVariant ().toString ().toLocal8Bit ().constData ());
+                    }
+                }
+            }
+        }
 }
 
 void HamlibTransceiver::error_check (int ret_code, QString const& doing) const
@@ -493,7 +507,7 @@ m_jtdxtime = jtdxtime;
 //printf("rig id %d do_snr_ %d caps %llx do_pwr_ %d do_pwr2_ %d\n",model_,do_snr_,rig_get_caps_int (model_, RIG_CAPS_HAS_GET_LEVEL),do_pwr_,do_pwr2_);
 #if JTDX_DEBUG_TO_FILE
   pFile = fopen (debug_file_.c_str(),"a");
-  fprintf(pFile,"%s Transceiver opened\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+  fprintf(pFile,"%s Transceiver rig id %d do_snr_ %d caps %llx do_pwr_ %d do_pwr2_ %d do_swr %d opened\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),model_,do_snr_,rig_get_caps_int (model_, RIG_CAPS_HAS_GET_LEVEL),do_pwr_,do_pwr2_,do_swr_);
   fclose (pFile);
 #endif
 //  QThread::msleep (50);

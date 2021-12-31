@@ -20,9 +20,9 @@ void TransceiverBase::start (unsigned sequence_number,JTDXDateTime * jtdxdatetim
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");
   if (jtdxtime_ == nullptr)
-    fprintf(pFile,"Transceiver start\n");
+    fprintf(pFile,"Transceiver start #:%d\n",sequence_number);
   else
-    fprintf(pFile,"%s Transceiver start\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str());
+    fprintf(pFile,"%s Transceiver start #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),sequence_number);
   fclose (pFile);
 #endif
   try

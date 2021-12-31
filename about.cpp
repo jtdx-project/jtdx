@@ -32,7 +32,7 @@ CAboutDlg::CAboutDlg(QWidget *parent) :
                          "G7OED, HA3LI, IZ5ILJ, JA2BQX, JG1APX, JP1LRT, LU9DO, MM0HVU, N6ML, NL9222,<br>" 
                          "OE1MWW, ON3CQ, PA7TWO, PP5FMM, R3BB, RK3AOL, RX3ASP, RA4UDC, RW4O, R0JF,<br>"
                          "SM0LTV, SP2L, SV1IYF, UA3ALE, US-E-12, VE3NEA, VK3AMA, VK6KXW, VK7YUM, VR2UPU,<br>"
-                         "YL3GBC family and LY3BG family: Vytas and Rimas Kudelis. <br><br>"
+                         "W9MDB, YL3GBC family and LY3BG family: Vytas and Rimas Kudelis. <br><br>"
                          "<br><br>"
                          "JTDX is licensed under the terms of Version3<br>"
                          "of the GNU General Public License(GPL)<br>"

@@ -162,8 +162,63 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! TO DO via patterns: '175715 -18 -0.1 2519 ~ CQ P2PSR6UWBHS'
   endif
 
+  if(iaptype.eq.2) then ! message starts with user's callsign, 2nd callsign is random
+! 'ES1JA JA1QZQ/R R GD47'
+! 'UA3ALE A70DDN/R OF23'
+! 'ES6DO NH4CXV MA87'
+! 'EA1AHY PW1BSL R GR47' i3=1
+    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    callsign=''; grid=''
+    callsign=msg37(ispc1+1:ispc2-1)
+    islash=index(callsign,'/R')
+    if(islash.gt.3) then
+      calltmp='            '; calltmp=callsign(1:islash-1); callsign=calltmp
+    endif
+    include 'callsign_q.f90'
+    ispc3=index(msg37((ispc2+1):),' ')+ispc2
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      ispc4=index(msg37((ispc3+1):),' ')+ispc3
+      if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+         msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+         msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+    else if(indxr.lt.1) then
+      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+    endif
+    if(len_trim(grid).eq.4) then
+      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+      if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+    endif
+!      call chkflscall('MYCALL      ',callsign,falsedec) ! too high risk to eliminate correct decode if callsign missed in ALLCALL7
+!      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+    return ! no need in other checks
+  endif
+
+! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
+  if(iaptype.eq.3) then
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+        if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
+          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+            grid=msg37(ispc3+1:ispc4-1)
+            call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
+            if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+      endif
+    endif
+    return ! no need in other checks
+  endif
+
   if((i3.ge.1 .and. i3.le.3) .and. (index(msg37,' R ').gt.0 .or. index(msg37,'/R ').gt.0 .or. index(msg37,'/P ').gt.0)) then
-! i3=1: 'VF5RMP/P OW3ATG/P R MF' 'ES1JA JA1QZQ/R R GD47' '378YYA/R 9H5PQU R OL53'
+! i3=1: 'VF5RMP/P OW3ATG/P R MF' '378YYA/R 9H5PQU R OL53'
 ! i3=2: 'YT4MEY/P WL8QEW R IR03'
 ! i3=1: 'ER2XXD 8L7UWC R 529 26'			   
 ! i3=3 n3=1: '1M8JSH TI0CZQ R 539 42'
@@ -204,26 +259,6 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     endif
   endif
 
-! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, checking for valid grid
-  if(i3.eq.1) then
-    indxr=index(msg37,' R ')
-    if(indxr.gt.7) then
-      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
-        if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
-          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
-          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
-             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
-             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
-            grid=msg37(ispc3+1:ispc4-1)
-            call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
-            if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
-          endif
-        endif
-      endif
-    endif
-  endif
-
 ! i3=1 n3=4
 ! 000189 -23  0.4  300 ~ <...> QG6GFE CQ14
 ! 110015 -21 -0.0 2050 ~ <...> NF7OEX CP03
@@ -254,24 +289,28 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! i3=1 n3=1 '4P6NPC 5M5UJG BK49'
 ! i3=3 n3=1 '8Z7TLB JQ0OTZ 589 02'
 ! i3=0 n3=3 'CE3NTP 4C2DWN 5E ONE'
-  if(((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) .or. (i3.eq.0 .and. n3.eq.3)) then
-    if(msg37(1:2).eq.'<.') return
-    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    if(ispc1.gt.3 .and. ispc2.gt.7) then
-      call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) return ! exception to incoming calls
-      call_b=msg37(ispc1+1:ispc2-1)
-      include 'call_q.f90'
-      falsedec=.false.
-      call chkflscall(call_a,call_b,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+  if(iaptype.ne.2) then
+    if(((i3.eq.1 .or. i3.eq.3) .and. index(msg37,' R ').le.0 .and. index(msg37,'/').le.0) .or. (i3.eq.0 .and. n3.eq.3)) then
+      if(msg37(1:2).eq.'<.') go to 2
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(ispc1.gt.3 .and. ispc2.gt.7) then
+        call_a=msg37(1:ispc1-1); if(call_a.eq.mycall) go to 2 ! exception to incoming calls
+        call_b=msg37(ispc1+1:ispc2-1)
+        include 'call_q.f90'
+        falsedec=.false.
+        call chkflscall(call_a,call_b,falsedec)
+        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      endif
     endif
   endif
+
+2 continue
 
   if(i3.eq.4) then
     ibrace1=index(msg37,'<.')
     if(index(msg37,'<.').gt.4) then
       callsign=''; callsign=msg37(1:ibrace1-2); islash=index(callsign,'/'); nlencall=len_trim(callsign)
-      if(nlencall.lt.1) return
+      if(nlencall.lt.1) go to 4
 ! i3=4 n3=2 '6397X6JN637 <...> RRR' 
 ! 'R 5QCDOIY9 <...> RR73'
       if(index(trim(callsign),' ').gt.0 .or. (islash.lt.1 .and. callsign(nlencall:nlencall).lt.':')) then
@@ -335,6 +374,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! '<...> T99LMF GC41' need to understand how to check such message
   endif
 
+4 continue
+
   if(i3.eq.3 .and. msg37(1:3).eq.'TU;') then 
 !i3=3 n3=3 'TU; QV4UPP 632TGU 529'
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1 
@@ -360,34 +401,6 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! CQ_RLXA 551626 ^J65XI 
   if(i3.eq.0 .and. (msg37(1:3).eq.'CQ_' .or. index(msg37,'^').gt.0)) then
     nbadcrc=1; msg37=''; return
-  endif
-
-  if(iaptype.eq.2) then ! message starts with user's callsign
-! 'UA3ALE A70DDN/R OF23'
-    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-    callsign=''; grid=''
-    callsign=msg37(ispc1+1:ispc2-1)
-    islash=index(callsign,'/')
-    if(islash.gt.0) then
-      calltmp='            '; calltmp=callsign(1:islash-1); callsign=calltmp
-    endif
-    include 'callsign_q.f90'
-    if(callsign.ne.hiscall) then
-      falsedec=.false.
-      islash=index(msg37,'/R ')
-      if(islash.gt.7) then
-        ispc3=index(msg37((ispc2+1):),' ')+ispc2
-        if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
-           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
-           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
-          grid=msg37(ispc2+1:ispc3-1)
-          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
-        endif
-      endif
-      call chkflscall('MYCALL      ',callsign,falsedec)
-      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-    endif
   endif
 
   return

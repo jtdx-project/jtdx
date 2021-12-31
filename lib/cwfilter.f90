@@ -1,6 +1,6 @@
 subroutine cwfilter(swl,first,swlchanged)
 
-  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,mrrr,m73,mrr73,one,twopi,facc1,dt,csync,idtone25,csynccq, &
+  use ft8_mod1, only : cw,windowc1,windowx,pivalue,facx,mcq,m73,mrr73,one,twopi,facc1,dt,csync,idtone25,csynccq, &
                        NFILT1,NFILT2,endcorr,endcorrswl,ctwkw,ctwkn,ctwk256
   use jt65_mod9 ! callsign DB to memory
   use prog_args ! path to files
@@ -71,7 +71,7 @@ subroutine cwfilter(swl,first,swlchanged)
 
 !  if(ncontest.ne.ncontest0) then
     mcq=2*mcq-1
-    mrrr=2*mrrr-1
+!    mrrr=2*mrrr-1
     m73=2*m73-1
     mrr73=2*mrr73-1
 

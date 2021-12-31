@@ -289,7 +289,7 @@ endif
          (grid(1:2).eq.'GG' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'6').or. &
          (grid(1:2).eq.'FE' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'9') .or. &
          (grid(1:2).eq.'FD' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or. &
-         grid(1:4).eq.'GC07') lgvalid=.true.
+         grid(1:4).eq.'GC07' .or. grid(1:4).eq.'GC16') lgvalid=.true. ! LU1ZB in GC16
 
 if(lgvalid) then
       if(grid(1:2).eq.'GF' .and. (grid(3:4).eq.'16' .or. grid(3:4).eq.'17')) then; lgvalid=.false.
@@ -551,6 +551,12 @@ if(lgvalid) then
         else if(grid(1:2).eq.'OJ' .and. (grid(3:4).eq.'84' .or. grid(3:4).eq.'85')) then; lgvalid=.false.
         endif
 endif
+
+! D0,D1 prefixes in transmitted message, mapping is required to prevent treating it as false decodes
+    else if(callsign(1:2).eq.'D0' .or. callsign(1:2).eq.'D1') then
+      if(grid(1:3).eq.'KN8' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':' .or. &
+         grid(1:3).eq.'KN9' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':' .or. &
+         grid(1:4).eq.'LN08' .or. grid(1:4).eq.'LN09') lgvalid=.true.
 
 ! Angola D2,D3
     else if(callsign(1:2).eq.'D2' .or. callsign(1:2).eq.'D3') then
@@ -994,7 +1000,7 @@ endif
 
 ! Greece J4,SV..SZ
     else if(callsign(1:2).eq.'J4') then
-      if((grid(1:2).eq.'KM' .and. ((grid(3:3).gt.'0' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'4'.and.grid(4:4).lt.':').or. &
+      if((grid(1:2).eq.'KM' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'4'.and.grid(4:4).lt.':').or. &
           grid(3:4).eq.'46' .or. grid(3:4).eq.'24' .or. grid(3:4).eq.'34' .or. grid(3:4).eq.'14').and.grid(3:4).ne.'05').or. &
          grid(1:4).eq.'JM99' .or. &
          (grid(1:2).eq.'KN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. (grid(4:4).eq.'0' .or. grid(4:4).eq.'1'))) &
@@ -1167,7 +1173,7 @@ endif
          (grid(1:2).eq.'GG' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'6').or. &
          (grid(1:2).eq.'FE' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'9') .or. &
          (grid(1:2).eq.'FD' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or. &
-         grid(1:4).eq.'GC07') lgvalid=.true.
+         grid(1:4).eq.'GC07' .or. grid(1:4).eq.'GC16') lgvalid=.true. ! LU1ZB in GC16
 
 if(lgvalid) then
       if(grid(1:2).eq.'GF' .and. (grid(3:4).eq.'16' .or. grid(3:4).eq.'17')) then; lgvalid=.false.
@@ -1206,7 +1212,7 @@ endif
          (grid(1:2).eq.'GG' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'6').or. &
          (grid(1:2).eq.'FE' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'9') .or. &
          (grid(1:2).eq.'FD' .and. grid(3:3).gt.'2' .and. grid(3:3).lt.'8' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or. &
-         grid(1:4).eq.'GC07') lgvalid=.true.
+         grid(1:4).eq.'GC07' .or. grid(1:4).eq.'GC16') lgvalid=.true. ! LU1ZB in GC16
 
 if(lgvalid) then
       if(grid(1:2).eq.'GF' .and. (grid(3:4).eq.'16' .or. grid(3:4).eq.'17')) then; lgvalid=.false.
@@ -1555,7 +1561,7 @@ endif
   
 ! Greece J4,SV..SZ
     else if(callsign(2:2).gt.'U' .and. callsign(2:2).lt.'[') then
-      if((grid(1:2).eq.'KM' .and. ((grid(3:3).gt.'0' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'4'.and.grid(4:4).lt.':').or. &
+      if((grid(1:2).eq.'KM' .and. ((grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'4'.and.grid(4:4).lt.':').or. &
           grid(3:4).eq.'46' .or. grid(3:4).eq.'24' .or. grid(3:4).eq.'34' .or. grid(3:4).eq.'14').and.grid(3:4).ne.'05').or. &
          grid(1:4).eq.'JM99' .or. &
          (grid(1:2).eq.'KN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. (grid(4:4).eq.'0' .or. grid(4:4).eq.'1'))) &
@@ -2639,7 +2645,7 @@ endif
 
 ! Fiji, Conway Reef, Rotuma Island 3D2
       else if(callsign(1:3).eq.'3D2') then
-        if((grid(1:2).eq.'RH' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'4' .and. grid(4:4).gt.'7'.and.grid(4:4).lt.':').or. &
+        if((grid(1:2).eq.'RH' .and. grid(3:3).gt.'7' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/'.and.grid(4:4).lt.'4').or. &
            (grid(1:3).eq.'AH0' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5') .or. &
            grid(1:4).eq.'RG78' .or. grid(1:4).eq.'AG08' .or. grid(1:4).eq.'AG09') lgvalid=.true.
 

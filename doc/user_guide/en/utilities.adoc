@@ -1,8 +1,8 @@
 // Status=review
 
-The _WSJT-X_ packages include program *+rigctl-wsjtx[.exe]+*, which
+The _WSJT-X_ packages include program *+rigctl-jtdx[.exe]+*, which
 can be used to send CAT sequences to a rig from the command line, or
-from a batch file or shell script; and program *+rigctld-wsjtx[.exe]+*,
+from a batch file or shell script; and program *+rigctld-jtdx[.exe]+*,
 which allows other compatible applications to share a CAT connection
 to a rig.  These program versions include the latest Hamlib rig
 drivers -- the same ones used by _WSJT-X_ itself.

@@ -671,11 +671,13 @@ subroutine unpack77(c77,nrx,msg,unpk77_success,nthr)
 ! protocol violations, also reported at wrong TX message packing
 ! prevent broken message transmission
      if(unpk77_success .and. nmsglen.gt.0) then
-       if((icq.eq.0 .and. nrpt.eq.0) .or. icq.eq.1) then
+       indxp=index(msg,'/P ')
+       if((icq.eq.0 .and. nrpt.eq.0 .and. (indxp.lt.1 .or. indxp.gt.7)) .or. icq.eq.1) then
 ! -23 -3.3 N0S/W45ETOE <...>
 !071445 -14  0.1  779 ~ <...>
 !071445 -14  0.1  779 ~ W5JZ  ! hash was associated
 ! CQ <...>
+! with exception to broken by packing message 'JQ1AHT/P <JL1LOF/1> -15' wrongly being transmitted as type 4 message 'JQ1AHT/P <JL1LOF/1>'
          if(msg(nmsglen:nmsglen).eq.'>') unpk77_success=.false.
        endif
      endif
@@ -1265,7 +1267,7 @@ subroutine pack77_1(nwords,w,i3,n3,c77,ntxhash)
      irpt=irpt+35
   else if(c2.eq.'R+' .or. c2.eq.'R-') then
      ir=1
-     read(w(nwords)(2:),*) irpt
+     read(w(nwords)(2:),*,err=900) irpt
      if(irpt.ge.-50 .and. irpt.le.-31) irpt=irpt+101
      irpt=irpt+35
   else if(trim(w(nwords)).eq.'RRR') then
@@ -1423,6 +1425,7 @@ subroutine pack77_4(nwords,w,i3,n3,c77,ntxhash)
      if(call_2(1:1).eq.'<') call_2=w(2)(2:len(trim(w(2)))-1)
      call chkcall(call_1,bcall_1,ok1)
      call chkcall(call_2,bcall_2,ok2)
+     if(call_1.eq.bcall_1 .and. call_2.eq.bcall_2 .and. ok1 .and. ok2) go to 900
      icq=0
      if(trim(w(1)).eq.'CQ' .or. (ok1.and.ok2)) then
         if(trim(w(1)).eq.'CQ' .and. len(trim(w(2))).le.4) go to 900

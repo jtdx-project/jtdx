@@ -4609,7 +4609,7 @@ list. The list can be maintained in Settings (F2).</string>
      <addaction name="menuQSO_RX_freq_sensitivity"/>
      <addaction name="menuDecoder_sensitivity"/>
      <addaction name="separator"/>
-     <addaction name="actionFT8LateStart"/>
+     <addaction name="actionFT8EarlyStart"/>
      <addaction name="separator"/>
      <addaction name="actionFT8WidebandDXCallSearch"/>
     </widget>
@@ -5645,12 +5645,12 @@ list. The list can be maintained in Settings (F2).</string>
     <string>minimum</string>
    </property>
   </action>
-  <action name="actionFT8LateStart">
+  <action name="actionFT8EarlyStart">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>late start of decoder</string>
+    <string>early start of decoder</string>
    </property>
   </action>
   <action name="actionCallWorkedB4">
