@@ -552,6 +552,12 @@ if(lgvalid) then
         endif
 endif
 
+! D0,D1 prefixes in transmitted message, mapping is required to prevent treating it as false decodes
+    else if(callsign(1:2).eq.'D0' .or. callsign(1:2).eq.'D1') then
+      if(grid(1:3).eq.'KN8' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':' .or. &
+         grid(1:3).eq.'KN9' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':' .or. &
+         grid(1:4).eq.'LN08' .or. grid(1:4).eq.'LN09') lgvalid=.true.
+
 ! Angola D2,D3
     else if(callsign(1:2).eq.'D2' .or. callsign(1:2).eq.'D3') then
       if((grid(1:2).eq.'JI' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5').or. &
