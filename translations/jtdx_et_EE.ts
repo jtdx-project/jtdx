@@ -6055,49 +6055,49 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1478"/>
+        <location filename="../TCITransceiver.cpp" line="1483"/>
         <source>TCI could not be opened</source>
         <translation>TCI liidest ei saa avada</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1262"/>
+        <location filename="../TCITransceiver.cpp" line="1267"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI PTT sedmine ei õnnestunud</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1271"/>
+        <location filename="../TCITransceiver.cpp" line="1276"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI korral peab PTT olema defineeritud üle CAT-i</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1314"/>
+        <location filename="../TCITransceiver.cpp" line="1319"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI Rx sageduse seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1333"/>
-        <location filename="../TCITransceiver.cpp" line="1460"/>
+        <location filename="../TCITransceiver.cpp" line="1338"/>
+        <location filename="../TCITransceiver.cpp" line="1465"/>
         <source>TCI failed set mode</source>
         <translation>TCI modulatsiooni seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1384"/>
-        <location filename="../TCITransceiver.cpp" line="1427"/>
+        <location filename="../TCITransceiver.cpp" line="1389"/>
+        <location filename="../TCITransceiver.cpp" line="1432"/>
         <source>TCI failed set split</source>
         <translation>Spliti aktiveerimine nurjus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1401"/>
+        <location filename="../TCITransceiver.cpp" line="1406"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI Tx sageduse seadmine ebaõnnestus</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1612"/>
+        <location filename="../TCITransceiver.cpp" line="1617"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI saatis tundmatu sageduse</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1673"/>
+        <location filename="../TCITransceiver.cpp" line="1678"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulaator pole valmis</translation>
     </message>

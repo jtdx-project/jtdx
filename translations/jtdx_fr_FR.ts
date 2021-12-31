@@ -6058,49 +6058,49 @@ Erreur(%2) : %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1478"/>
+        <location filename="../TCITransceiver.cpp" line="1483"/>
         <source>TCI could not be opened</source>
         <translation>Le TCI n&apos;a pas pu être ouvert</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1262"/>
+        <location filename="../TCITransceiver.cpp" line="1267"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI n&apos;a pas réussi à mettre en place le ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1271"/>
+        <location filename="../TCITransceiver.cpp" line="1276"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI devrait utiliser les PTT via le CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1314"/>
+        <location filename="../TCITransceiver.cpp" line="1319"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI a échoué set rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1333"/>
-        <location filename="../TCITransceiver.cpp" line="1460"/>
+        <location filename="../TCITransceiver.cpp" line="1338"/>
+        <location filename="../TCITransceiver.cpp" line="1465"/>
         <source>TCI failed set mode</source>
         <translation>Le TCI a échoué en mode set</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1384"/>
-        <location filename="../TCITransceiver.cpp" line="1427"/>
+        <location filename="../TCITransceiver.cpp" line="1389"/>
+        <location filename="../TCITransceiver.cpp" line="1432"/>
         <source>TCI failed set split</source>
         <translation>TCI n&apos;a pas réussi à mettre Split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1401"/>
+        <location filename="../TCITransceiver.cpp" line="1406"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI a échoué set txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1612"/>
+        <location filename="../TCITransceiver.cpp" line="1617"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI a envoyé une fréquence non reconnue</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1673"/>
+        <location filename="../TCITransceiver.cpp" line="1678"/>
         <source>TCI modulator not Idle</source>
         <translation>Le modulateur TCI n&apos;est pas inactif</translation>
     </message>

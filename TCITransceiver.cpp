@@ -632,6 +632,11 @@ void TCITransceiver::onMessageReceived(const QString &str)
 //              if (requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
               if (band_change) tci_done1();
               else if (busy_other_frequency_) tci_done2();
+              else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_){
+                const QString cmd = CmdVFO + SmDP + rx_ + SmCM + "1" + SmCM + requested_other_frequency_ + SmTZ;
+                QThread::msleep(500);
+                sendTextMessage(cmd);
+              } 
             }
             break;
         case Cmd_Mode:
@@ -1474,7 +1479,7 @@ void TCITransceiver::do_poll ()
     fclose (pFile);
 #endif
   }
-  if (!inConnected && !error_.isEmpty()) throw error {error_};
+  if (!inConnected && !error_.isEmpty()) {tci_Ready = false; throw error {error_};}
   else if (!tci_Ready) throw error {tr ("TCI could not be opened")};
   update_rx_frequency (string_to_frequency (rx_frequency_));
   update_split(split_);

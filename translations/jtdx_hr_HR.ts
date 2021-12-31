@@ -6044,49 +6044,49 @@ Greška(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1478"/>
+        <location filename="../TCITransceiver.cpp" line="1483"/>
         <source>TCI could not be opened</source>
         <translation>TCI se nije moguće otvoriti</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1262"/>
+        <location filename="../TCITransceiver.cpp" line="1267"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI nije uspio postaviti ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1271"/>
+        <location filename="../TCITransceiver.cpp" line="1276"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI bi trebao koristiti PTT putem CAT-a</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1314"/>
+        <location filename="../TCITransceiver.cpp" line="1319"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI nije uspio postaviti rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1333"/>
-        <location filename="../TCITransceiver.cpp" line="1460"/>
+        <location filename="../TCITransceiver.cpp" line="1338"/>
+        <location filename="../TCITransceiver.cpp" line="1465"/>
         <source>TCI failed set mode</source>
         <translation>TCI nije uspio postaviti način rada</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1384"/>
-        <location filename="../TCITransceiver.cpp" line="1427"/>
+        <location filename="../TCITransceiver.cpp" line="1389"/>
+        <location filename="../TCITransceiver.cpp" line="1432"/>
         <source>TCI failed set split</source>
         <translation>TCI nije uspio postaviti split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1401"/>
+        <location filename="../TCITransceiver.cpp" line="1406"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI nije uspio postaviti txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1612"/>
+        <location filename="../TCITransceiver.cpp" line="1617"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI je poslao neprepoznatu frekvenciju</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1673"/>
+        <location filename="../TCITransceiver.cpp" line="1678"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulator nije u praznom hodu</translation>
     </message>
