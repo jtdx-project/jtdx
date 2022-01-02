@@ -1715,10 +1715,10 @@ void TCITransceiver::do_modulator_start (unsigned symbolsLength, double framesPe
   }
   m_state = (synchronize && m_silentFrames) ?
                         Synchronizing : Active;
-//  printf ("%s(%0.1f) TCI modulator startdelay_ms=%d ASR=%d mstr=%d mstr2=%d m_ic=%d s_Frames=%lld State=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames,m_state);
+//  printf ("%s(%0.1f) TCI modulator startdelay_ms=%d ASR=%d mstr=%d mstr2=%d m_ic=%d s_Frames=%lld synchronize=%d m_tuning=%d State=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames,synchronize,m_tuning,m_state);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI modulator startdelay_ms=%d ASR=%d mstr=%d mstr2=%d m_ic=%d s_Frames=%lld State=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames,m_state);
+  fprintf (pFile,"%s(%0.1f) TCI modulator startdelay_ms=%d ASR=%d mstr=%d mstr2=%d m_ic=%d s_Frames=%lld synchronize=%d m_tuning=%d State=%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),delay_ms,audioSampleRate,mstr,mstr2,m_ic,m_silentFrames,synchronize,m_tuning,m_state);
   fclose (pFile);
 #endif
   Q_EMIT tci_mod_active(m_state != Idle);
@@ -1759,7 +1759,7 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
   qint64 numFrames (maxSize/bytesPerFrame);
   float * samples (reinterpret_cast<float *> (data));
   float * end (samples + numFrames * bytesPerFrame);
-//  printf("%s(%0.1f) readAudioData %d %p %p\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),maxSize,samples,end);
+//  printf("%s(%0.1f) readAudioData %f %f %lld %lld %d %p %p\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),m_nsps,m_TRperiod,numFrames,m_silentFrames,maxSize,samples,end);
   qint64 framesGenerated (0);
 
   switch (m_state)
@@ -1933,7 +1933,7 @@ quint16 TCITransceiver::readAudioData (float * data, qint32 maxSize)
       // fall through
 
     case Idle:
-      break;
+      while (samples != end) samples = load (0, samples);
     }
 
   Q_ASSERT (Idle == m_state);
